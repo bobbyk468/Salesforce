@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Manufacturing Cloud AP validate?",
+      "question": "A manufacturer agrees to supply 50,000 units over the next year at an agreed price. What records this commitment?",
       "options": [
-        "Only reporting",
-        "Only Slack",
-        "Only basics",
-        "Fundamental knowledge and skills to design, build, and deploy solutions across Manufacturing Cloud"
+        "An opportunity that is left open for the whole of the twelve month period",
+        "A contract with the quantity written into its description field as text",
+        "A sales agreement",
+        "A quote that is regenerated each time the customer places a new order"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Sales agreements hold the committed quantities and prices over a term, and they track actuals against that commitment.",
+      "whyWrong": [
+        "An opportunity tracks a deal being won, not an ongoing supply commitment.",
+        "A quantity in free text cannot be measured against what was actually shipped.",
+        "Quotes price a proposal; they do not track delivery against a commitment."
+      ]
+    },
+    {
+      "question": "What does a sales agreement let a manufacturer compare?",
+      "options": [
+        "The forecast submitted by one sales region against that of another region",
+        "The number of open cases raised by the customer against the industry average",
+        "Planned quantities against actual orders",
+        "The list price of a product against the cost of manufacturing that product"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The value of a sales agreement is the planned versus actual view, which shows whether a customer is buying at the committed rate.",
+      "whyWrong": [
+        "Regional comparison is a forecasting report rather than an agreement.",
+        "Case volume is a service measure.",
+        "Margin analysis is a pricing and costing exercise."
+      ]
+    },
+    {
+      "question": "A customer is tracking well below their committed volume halfway through the term. What is the useful response?",
+      "options": [
+        "Immediately invoice the customer for the full shortfall against the commitment",
+        "Raise a case against the account so the service team can investigate it",
+        "Close the sales agreement and open a brand new one for the remaining period",
+        "Review the agreement with the customer and revise it"
       ],
       "correctAnswer": 3,
-      "explanation": "Accredited Manufacturing Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions across Manufacturing Cloud."
+      "explanation": "A shortfall is a commercial conversation. The agreement can be revised, and the planned versus actual view is what surfaces the problem early.",
+      "whyWrong": [
+        "Invoicing a shortfall mid-term is rarely what the agreement provides for.",
+        "A service case does not address a commercial shortfall.",
+        "Closing and reopening loses the history of what was committed."
+      ]
     },
     {
-      "question": "Which industry does Manufacturing Cloud serve?",
+      "question": "What is account-based forecasting designed to show?",
       "options": [
-        "Healthcare only",
-        "Education only",
-        "Manufacturing (e.g., production, supply chain)",
-        "Retail only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Manufacturing Cloud serves manufacturing industries."
-    },
-    {
-      "question": "What is a key use case for Manufacturing Cloud?",
-      "options": [
-        "Only CPQ",
-        "Only email",
-        "Production planning, supply chain, and shop floor",
-        "Only Slack"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Production planning, supply chain, and shop floor are key use cases."
-    },
-    {
-      "question": "Which role typically pursues Manufacturing Cloud AP?",
-      "options": [
-        "Partners and implementers in manufacturing",
-        "Designers only",
-        "Marketers",
-        "Sales only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Partners and implementers in manufacturing pursue this credential."
-    },
-    {
-      "question": "What does 'design, build, and deploy' mean in this context?",
-      "options": [
-        "Only UI",
-        "Only reports",
-        "Implementing end-to-end manufacturing solutions",
-        "Only dashboards"
-      ],
-      "correctAnswer": 2,
-      "explanation": "It means implementing end-to-end manufacturing solutions."
-    },
-    {
-      "question": "What does Manufacturing Cloud support for production?",
-      "options": [
-        "Only marketing",
-        "Production planning, work orders, and shop floor execution",
-        "Only sales",
-        "Only service"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Manufacturing Cloud supports production planning and execution."
-    },
-    {
-      "question": "Which object represents production work in Manufacturing Cloud?",
-      "options": [
-        "Work orders and production runs",
-        "Opportunity only",
-        "Campaign only",
-        "Lead only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Work orders and production runs represent production work."
-    },
-    {
-      "question": "What does supply chain management involve in manufacturing?",
-      "options": [
-        "Only service",
-        "Procurement, inventory, and planning",
-        "Only sales",
-        "Only marketing"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Supply chain covers procurement, inventory, and planning."
-    },
-    {
-      "question": "Which Salesforce product integrates with Manufacturing Cloud?",
-      "options": [
-        "Slack only",
-        "Commerce Cloud only",
-        "ERP, Field Service, and CRM",
-        "Marketing Cloud only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Manufacturing Cloud integrates with ERP and Field Service."
-    },
-    {
-      "question": "What is the purpose of shop floor management?",
-      "options": [
-        "Tracking production execution and real-time status",
-        "Only planning",
-        "Only reporting",
-        "Only procurement"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Shop floor management tracks production execution."
-    },
-    {
-      "question": "Which use case supports demand planning?",
-      "options": [
-        "Manual only",
-        "Reports only",
-        "Email only",
-        "Forecasting and demand signals for production"
+        "The manufacturing capacity available at each plant for the coming quarter",
+        "The commission each individual sales representative is due to be paid",
+        "The total pipeline value across every open opportunity in the business",
+        "Expected volume and revenue per account over time"
       ],
       "correctAnswer": 3,
-      "explanation": "Demand planning uses forecasts for production planning."
+      "explanation": "Account-based forecasting projects volumes and revenue for each account across periods, which suits businesses supplying the same customers repeatedly.",
+      "whyWrong": [
+        "Plant capacity is a supply-side planning concern.",
+        "Commission is a compensation calculation.",
+        "Pipeline value is standard opportunity forecasting."
+      ]
     },
     {
-      "question": "What is capacity planning in Manufacturing Cloud?",
+      "question": "A manufacturer sells through distributors who then sell to end customers. What does this structure require?",
       "options": [
-        "Only sales",
-        "Aligning production capacity with demand forecasts and work orders",
-        "Only procurement",
-        "Only reporting"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Capacity planning aligns production resources with expected demand."
-    },
-    {
-      "question": "Which object tracks material consumption in production?",
-      "options": [
-        "Work order components and material requirements",
-        "Lead only",
-        "Opportunity only",
-        "Campaign only"
+        "Visibility of demand beyond the direct customer",
+        "The removal of all end customer data from the manufacturer's systems",
+        "Direct invoicing of every end customer rather than of the distributor",
+        "A separate Salesforce org for each of the distributors in the channel"
       ],
       "correctAnswer": 0,
-      "explanation": "Work orders and component records track material usage in production."
+      "explanation": "Selling through a channel means the manufacturer's direct customer is not the consumer, so understanding real demand needs data from further down the chain.",
+      "whyWrong": [
+        "End customer insight is exactly what a channel business needs.",
+        "The distributor is the party being invoiced in this model.",
+        "Separate orgs per distributor would make consolidated visibility impossible."
+      ]
     },
     {
-      "question": "What is the benefit of Manufacturing Cloud for production?",
+      "question": "What is the purpose of a program in Manufacturing Cloud?",
       "options": [
-        "Only marketing",
-        "End-to-end visibility from planning to shop floor",
-        "Only CRM",
-        "Only service"
+        "To store the engineering drawings associated with each product variant",
+        "To group related agreements and activity for a customer initiative",
+        "To hold the training records of the staff working on the production line",
+        "To schedule the maintenance work carried out on equipment at each plant"
       ],
       "correctAnswer": 1,
-      "explanation": "Manufacturing Cloud provides end-to-end visibility."
+      "explanation": "Programs group the agreements, partners and activity that belong to a single customer or market initiative.",
+      "whyWrong": [
+        "Engineering documents sit in product data systems.",
+        "Training records are a human resources concern.",
+        "Maintenance scheduling is a field service or asset function."
+      ]
     },
     {
-      "question": "Which best practice applies to Manufacturing Cloud implementation?",
+      "question": "Why would a manufacturer use rebates alongside sales agreements?",
       "options": [
-        "Single product only",
-        "Ignore processes",
-        "No testing",
-        "Align with production and supply chain processes"
+        "To reward volume once a threshold is reached",
+        "To invoice the customer monthly rather than at the end of the full term",
+        "To reduce the list price of the product for every customer in the market",
+        "To record the cost of shipping the goods to the customer's premises"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Rebates pay back value after the fact when agreed volumes are achieved, which is a common way to incentivise commitment.",
+      "whyWrong": [
+        "Invoice frequency is a billing arrangement.",
+        "A market-wide price change is not a rebate.",
+        "Freight cost is a logistics charge."
+      ]
+    },
+    {
+      "question": "A sales agreement needs to reflect a price increase from the start of next quarter. How is this handled?",
+      "options": [
+        "Change the price book entry so every historical period is also updated",
+        "Add a note to the account so the sales team remember the new price",
+        "Revise the agreement with the new price and effective date",
+        "Delete the existing agreement and recreate it with the updated pricing used"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Agreements are revised, which keeps the record of what was previously agreed while applying the new terms from the effective date.",
+      "whyWrong": [
+        "Changing the price book retrospectively misstates what was agreed before.",
+        "A note is not a term and cannot be reported on.",
+        "Deleting and recreating destroys the history of the original commitment."
+      ]
+    },
+    {
+      "question": "What does the planned versus actual view depend on to be meaningful?",
+      "options": [
+        "Every product in the catalogue having a published list price against it",
+        "Orders being linked to the agreement",
+        "The customer having at least one open case raised against their account",
+        "The sales representative updating the forecast manually once each week"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Actuals come from orders matched to the agreement, so without that link the comparison has nothing to measure against.",
+      "whyWrong": [
+        "List prices matter for pricing but not for matching actuals.",
+        "Cases are unrelated to order volume.",
+        "Manual forecast updates are not the source of actuals."
+      ]
+    },
+    {
+      "question": "A manufacturer wants partners to submit their own sales data. What supports this?",
+      "options": [
+        "A requirement that partners install the manufacturer's own internal systems",
+        "A phone call made to each partner by the account manager every month",
+        "A monthly spreadsheet emailed to each partner for completion and return",
+        "A partner community where they can enter it"
       ],
       "correctAnswer": 3,
-      "explanation": "Align with production and supply chain processes."
+      "explanation": "A partner community lets channel partners submit data directly into the manufacturer's org, where it can be used without rekeying.",
+      "whyWrong": [
+        "Partners will not adopt a manufacturer's internal systems.",
+        "Phone collection does not scale and is not auditable.",
+        "Spreadsheets arrive in inconsistent formats and need manual consolidation."
+      ]
+    },
+    {
+      "question": "What distinguishes a sales agreement from a contract?",
+      "options": [
+        "The agreement tracks volumes and actuals over a term",
+        "The contract is used for new customers and the agreement for existing ones",
+        "The agreement covers services while the contract covers physical products",
+        "The contract is signed by the customer whereas the agreement never is"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Contracts record legal terms. Sales agreements add committed quantities, prices and the tracking of actual orders against them.",
+      "whyWrong": [
+        "Either can apply to new or existing customers.",
+        "Agreements are typically used for product volumes.",
+        "Both can be legally agreed; signature is not the distinction."
+      ]
+    },
+    {
+      "question": "A customer orders more than their committed volume. What should the agreement show?",
+      "options": [
+        "The excess recorded against a separate agreement created for the purpose",
+        "Actuals exceeding the planned quantity",
+        "The planned quantity automatically increased to match what was ordered",
+        "An error preventing the additional order from being accepted at all"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The planned versus actual view simply shows actuals above plan, which is useful information for the next negotiation.",
+      "whyWrong": [
+        "Splitting the excess onto another agreement obscures the real picture.",
+        "Plan figures represent what was agreed and should not silently change.",
+        "Exceeding a commitment is good news, not an error to block."
+      ]
+    },
+    {
+      "question": "Why is forecast accuracy particularly important in manufacturing?",
+      "options": [
+        "Production and raw materials are committed in advance",
+        "Customers are unable to place an order until a forecast has been approved",
+        "Sales representatives are paid entirely on the accuracy of their forecasts",
+        "Regulators require manufacturers to publish their forecasts each quarter"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Manufacturing commits capacity and materials ahead of demand, so a poor forecast means either unsold stock or unmet orders.",
+      "whyWrong": [
+        "Orders do not depend on forecast approval.",
+        "Compensation is not usually based on forecast accuracy alone.",
+        "Forecast publication is not a general regulatory requirement."
+      ]
+    },
+    {
+      "question": "What is the benefit of holding agreements and orders in the same system?",
+      "options": [
+        "The manufacturer no longer needs a separate finance or billing system",
+        "Every customer automatically gains access to their own agreement records",
+        "Actuals update against the commitment without rekeying",
+        "Prices are recalculated across the whole catalogue whenever one changes"
+      ],
+      "correctAnswer": 2,
+      "explanation": "When orders and agreements live together, the planned versus actual picture stays current without anyone transferring figures by hand.",
+      "whyWrong": [
+        "Finance systems are still needed for accounting.",
+        "Customer access is a separate sharing decision.",
+        "Catalogue-wide repricing is not a consequence of this."
+      ]
+    },
+    {
+      "question": "A sales agreement term is ending and the customer wants to continue. What is the appropriate step?",
+      "options": [
+        "Create an opportunity and take the customer through the full sales cycle",
+        "Renew the agreement for a new term",
+        "Extend the original term indefinitely so that it never reaches an end date",
+        "Leave the expired agreement active so the existing orders keep matching it"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Renewal creates the next term with revised quantities and prices, keeping the previous term as a record of what was agreed.",
+      "whyWrong": [
+        "A full new sales cycle ignores the existing relationship and agreement.",
+        "An indefinite term removes the renegotiation point the term exists for.",
+        "An expired agreement should not continue accepting new actuals."
+      ]
     }
   ]
 }

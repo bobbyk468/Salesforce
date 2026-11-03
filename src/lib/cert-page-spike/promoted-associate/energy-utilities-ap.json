@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Energy and Utilities Cloud AP validate?",
+      "question": "A utility needs to hold both the person who pays the bill and the physical property being supplied. How is this modelled?",
       "options": [
-        "Only basics",
-        "Only reporting",
-        "Only Slack",
-        "Fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud"
+        "Two separate customer accounts, one for the payer and one for the property",
+        "A single account record holding the supply address in its own address fields",
+        "A contact record for the payer with the property stored as a related note",
+        "A customer account linked to a service point"
       ],
       "correctAnswer": 3,
-      "explanation": "Accredited Energy and Utilities Cloud Professionals have fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud."
+      "explanation": "The payer and the point of supply are different things, so the service point represents the premise and links to the account that pays for it.",
+      "whyWrong": [
+        "Duplicating the account conflates a person with a place.",
+        "Address fields cannot represent a premise that outlives any one occupier.",
+        "A note is unstructured and cannot be reported on or billed against."
+      ]
     },
     {
-      "question": "Which industry does Energy and Utilities Cloud serve?",
+      "question": "What does a service point represent in Energy and Utilities Cloud?",
       "options": [
-        "Financial services only",
-        "Healthcare only",
-        "Retail only",
-        "Energy and utilities (e.g., electric, gas, water)"
+        "The meter reading taken at the end of each billing period for that address",
+        "The physical location where supply is delivered",
+        "The engineer appointment booked to attend the property for an inspection",
+        "The tariff that has been agreed with the customer for the current contract"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A service point is the premise or delivery point itself, which persists even as occupiers, meters and tariffs change.",
+      "whyWrong": [
+        "Readings are recorded against the service point rather than being it.",
+        "Appointments are work management records.",
+        "Tariffs are commercial terms attached to the contract."
+      ]
+    },
+    {
+      "question": "A customer moves out and a new occupier moves in at the same address. What should happen?",
+      "options": [
+        "The service point stays and the account link changes",
+        "Both occupiers are linked to the service point permanently for audit reasons",
+        "The service point is deleted and a new one created for the new occupier",
+        "A duplicate service point is created so each occupier has their own record"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The premise does not change when the occupier does, so the service point persists and its relationship to the paying account is updated.",
+      "whyWrong": [
+        "An open-ended link to a former occupier would keep billing them.",
+        "Deleting the service point loses the supply history for that address.",
+        "Duplicate service points for one address break consumption reporting."
+      ]
+    },
+    {
+      "question": "Why does a utility usually need interval or usage data rather than a single monthly figure?",
+      "options": [
+        "Billing systems are unable to process a single total for a whole month",
+        "Monthly figures cannot be stored in Salesforce without custom development work",
+        "Regulators require every reading to be published publicly within thirty days",
+        "Tariffs and demand vary by time of day"
       ],
       "correctAnswer": 3,
-      "explanation": "Energy and Utilities Cloud serves energy and utilities industries."
+      "explanation": "Time-of-use tariffs and demand charges depend on when energy was used, which a single monthly total cannot express.",
+      "whyWrong": [
+        "Monthly totals are processable; they are just less useful.",
+        "Monthly totals are perfectly storable; the issue is what they can tell you.",
+        "Publication of individual readings is not a general requirement."
+      ]
     },
     {
-      "question": "What is a key use case for Energy and Utilities Cloud?",
+      "question": "A customer disputes a bill and says the reading is wrong. What is the appropriate first step?",
       "options": [
-        "Only CPQ",
-        "Metering, billing, and customer engagement for utilities",
-        "Only Slack",
-        "Only email"
+        "Issue a full credit note for the disputed bill and close the case immediately",
+        "Send an engineer to replace the meter at the property before investigating",
+        "Check the reading history for the service point",
+        "Move the customer onto a different tariff to reduce the amount they owe"
       ],
-      "correctAnswer": 1,
-      "explanation": "Metering, billing, and customer engagement are key use cases."
+      "correctAnswer": 2,
+      "explanation": "The reading history shows whether the figure is consistent with past consumption, which is what tells you if there is a genuine problem.",
+      "whyWrong": [
+        "Crediting before investigating gives away revenue without establishing cause.",
+        "Replacing hardware is expensive and premature before checking the data.",
+        "Changing tariff does not address whether the reading was correct."
+      ]
     },
     {
-      "question": "Which role typically pursues Energy and Utilities AP?",
+      "question": "What is the purpose of a usage profile?",
       "options": [
-        "Sales only",
-        "Designers only",
-        "Marketers",
-        "Partners and implementers in energy and utilities"
+        "It describes a typical pattern of consumption",
+        "It lists the appliances the customer has declared as installed on the premise",
+        "It stores the credit score used to decide whether to offer a payment plan",
+        "It records every complaint the customer has raised over the last four years"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Usage profiles describe expected consumption patterns, which support estimating, forecasting and spotting anomalies.",
+      "whyWrong": [
+        "Appliance inventories are not what a usage profile is for.",
+        "Credit assessment is a separate commercial process.",
+        "Complaint history is case management rather than usage."
+      ]
+    },
+    {
+      "question": "A commercial customer has twelve sites on one contract. How should this be set up?",
+      "options": [
+        "One contract with the twelve addresses listed in a long text description",
+        "Twelve separate contracts, each one covering a single site and its supply",
+        "One contract covering twelve service points",
+        "Twelve customer accounts, each holding one site and its own contract terms"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A contract can cover many service points, which is what lets a single commercial agreement span multiple sites.",
+      "whyWrong": [
+        "Addresses in free text cannot be billed or reported against.",
+        "Separate contracts per site lose the single commercial agreement.",
+        "Splitting the customer into twelve accounts fragments the relationship."
+      ]
+    },
+    {
+      "question": "What distinguishes a regulated from a deregulated market in this context?",
+      "options": [
+        "Whether the customer can choose their supplier",
+        "Whether the utility is permitted to store customer data inside Salesforce",
+        "Whether the utility supplies electricity only or both electricity and gas",
+        "Whether meter readings are taken monthly or on a quarterly basis instead"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Deregulated markets let customers choose a retail supplier, which changes the processes a utility needs for switching and enrolment.",
+      "whyWrong": [
+        "Data residency is a separate legal question.",
+        "The commodities supplied are unrelated to regulation.",
+        "Reading frequency is an operational choice, not the market structure."
+      ]
+    },
+    {
+      "question": "A customer asks to spread their annual bill evenly across twelve months. What supports this?",
+      "options": [
+        "A new contract backdated to the start of the current financial year instead",
+        "A separate service point created to carry the fixed monthly instalments",
+        "A credit note issued each month for the difference against actual usage",
+        "A budget or levelised payment plan"
       ],
       "correctAnswer": 3,
-      "explanation": "Partners and implementers in energy and utilities pursue this credential."
+      "explanation": "Budget plans charge a level amount each month and reconcile against actual consumption periodically.",
+      "whyWrong": [
+        "Backdating a contract does not change how the customer pays.",
+        "Service points represent premises, not payment arrangements.",
+        "Monthly credit notes would misstate what the customer actually owes."
+      ]
     },
     {
-      "question": "What does 'deliver business value' mean in this context?",
+      "question": "What is the main reason to integrate with a meter data management system?",
       "options": [
-        "Only dashboards",
-        "Implementing solutions that drive outcomes for energy and utilities customers",
-        "Only reporting",
-        "Only shipping"
+        "It stores the customer's contact preferences and marketing consent records",
+        "It is the system of record for readings",
+        "It is the only system permitted by regulators to generate customer invoices",
+        "It manages the engineers and vehicles used for field service appointments"
       ],
       "correctAnswer": 1,
-      "explanation": "It means implementing solutions that drive outcomes for energy and utilities customers."
+      "explanation": "Meter data management holds and validates the readings, so Salesforce consumes that data rather than owning it.",
+      "whyWrong": [
+        "Consent and preferences live with the customer record.",
+        "Invoicing is done by the billing system, not the meter data platform.",
+        "Field resources are managed in field service."
+      ]
     },
     {
-      "question": "What does meter-to-cash represent in utilities?",
+      "question": "An agent needs to see consumption, billing and open cases for a customer on one screen. What achieves this?",
       "options": [
-        "Only billing",
-        "Only metering",
-        "End-to-end process from meter reading through billing and collection",
-        "Only service"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Meter-to-cash spans metering, billing, and revenue collection."
-    },
-    {
-      "question": "Which Energy and Utilities Cloud object supports customer engagement?",
-      "options": [
-        "Service points, accounts, and cases",
-        "Opportunity only",
-        "Lead only",
-        "Campaign only"
+        "A console layout bringing the related records together",
+        "A weekly report emailed to every agent covering all of their active customers",
+        "A nightly extract of the data into a spreadsheet the agent can search",
+        "A separate browser tab opened for each of the three systems involved"
       ],
       "correctAnswer": 0,
-      "explanation": "Service points, accounts, and cases support customer engagement."
+      "explanation": "A console layout surfaces related records in context, which is what lets an agent answer a question without leaving the record.",
+      "whyWrong": [
+        "A weekly report is stale by the time a customer calls.",
+        "A spreadsheet extract is neither current nor auditable.",
+        "Switching between systems slows every call and invites mistakes."
+      ]
     },
     {
-      "question": "What does outage management involve?",
+      "question": "Why would a utility use asset records alongside service points?",
       "options": [
-        "Only marketing",
-        "Only billing",
-        "Tracking and resolving service outages",
-        "Only metering"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Outage management tracks and resolves service interruptions."
-    },
-    {
-      "question": "Which Salesforce product integrates with Energy and Utilities Cloud?",
-      "options": [
-        "Commerce Cloud only",
-        "Marketing Cloud only",
-        "Billing, Field Service, and CRM",
-        "Slack only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Billing, Field Service, and CRM integrate with Energy and Utilities."
-    },
-    {
-      "question": "What is a service territory in utilities?",
-      "options": [
-        "A lead",
-        "A report",
-        "Geographic area for service delivery and metering",
-        "A campaign"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Service territories define geographic service areas."
-    },
-    {
-      "question": "Which use case supports customer self-service for utilities?",
-      "options": [
-        "Phone only",
-        "Experience Cloud and mobile for bill pay and outage reporting",
-        "Manual only",
-        "Email only"
+        "To record the marketing campaigns a customer has responded to over time",
+        "To track the equipment installed at a premise",
+        "To store the tariff rates that apply to each of the supply points it serves",
+        "To hold the regulatory filings the utility submits at the end of each year"
       ],
       "correctAnswer": 1,
-      "explanation": "Experience Cloud supports self-service portals."
+      "explanation": "Assets represent the physical equipment, such as meters, installed at a premise, which can be replaced while the premise stays the same.",
+      "whyWrong": [
+        "Campaign response belongs to marketing records.",
+        "Tariffs are commercial terms, not physical equipment.",
+        "Regulatory filings are documents, not installed assets."
+      ]
     },
     {
-      "question": "What does energy consumption data support?",
+      "question": "A new housing development adds 400 premises. What is the efficient way to bring them in?",
       "options": [
-        "Billing, demand response, and analytics",
-        "Only dashboards",
-        "Only billing",
-        "Only reports"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Consumption data drives billing and analytics."
-    },
-    {
-      "question": "Which best practice applies to Energy and Utilities implementation?",
-      "options": [
-        "Ignore compliance",
-        "Align with regulatory and meter-to-cash processes",
-        "Single product only",
-        "No testing"
+        "A single service point covering the whole development and its 400 premises",
+        "A bulk load of service points for the development",
+        "An individual case raised for each premise so an agent can create it by hand",
+        "A request to the meter data system asking it to create the records instead"
       ],
       "correctAnswer": 1,
-      "explanation": "Regulatory alignment and meter-to-cash are key."
+      "explanation": "Each premise needs its own service point, and 400 of them is a data load rather than a manual task.",
+      "whyWrong": [
+        "One service point cannot represent 400 separately billed premises.",
+        "Manual creation of 400 records is slow and inconsistent.",
+        "The meter data system does not own the Salesforce service point records."
+      ]
     },
     {
-      "question": "What is the purpose of Energy and Utilities Cloud?",
+      "question": "What does a work order typically represent for a utility?",
       "options": [
-        "Unify customer data, metering, and billing for utilities",
-        "Only service",
-        "Only marketing",
-        "Only CRM"
+        "The pattern of consumption expected at the premise over the coming year",
+        "The monthly invoice raised against the customer for their energy consumption",
+        "A job to be carried out at a premise",
+        "The contract the customer signed when they first took up the supply"
       ],
-      "correctAnswer": 0,
-      "explanation": "Energy and Utilities Cloud unifies customer, metering, and billing."
+      "correctAnswer": 2,
+      "explanation": "Work orders capture jobs such as installations, reads and repairs, and link to the service point where the work happens.",
+      "whyWrong": [
+        "Expected consumption is a usage profile.",
+        "Invoices are billing records.",
+        "Contracts are commercial agreements."
+      ]
     },
     {
-      "question": "What is AMI (Advanced Metering Infrastructure) in utilities?",
+      "question": "Which is the strongest argument for modelling premise and customer separately from the start?",
       "options": [
-        "Smart meters and systems that collect detailed consumption data",
-        "An outage tool only",
-        "A report",
-        "A billing object only"
+        "It allows the utility to avoid integrating with the meter data system",
+        "It means tariffs no longer need to be attached to any contract record",
+        "Premises outlast the customers who occupy them",
+        "It reduces the number of records that have to be stored in the database"
       ],
-      "correctAnswer": 0,
-      "explanation": "AMI enables automated meter reading and detailed consumption data for billing and analytics."
+      "correctAnswer": 2,
+      "explanation": "Supply history belongs to the address, and occupiers come and go, so separating them is what keeps consumption history intact across moves.",
+      "whyWrong": [
+        "Meter data integration is needed regardless of the model.",
+        "Tariffs still attach to contracts either way.",
+        "Separating the model adds records rather than reducing them."
+      ]
     }
   ]
 }

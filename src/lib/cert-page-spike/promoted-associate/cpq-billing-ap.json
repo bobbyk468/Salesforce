@@ -167,169 +167,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does CPQ and Billing Consultant AP validate?",
+      "question": "A contract is signed and the customer should now be invoiced monthly. What does CPQ Billing create to make this happen?",
       "options": [
-        "Only reporting",
-        "Only Slack",
-        "Fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Billing solutions",
-        "Only basics"
+        "A separate opportunity for each monthly invoice that needs to be raised",
+        "A billing schedule from the order product",
+        "A renewal contract covering each of the monthly periods in the term",
+        "A fresh quote that is generated automatically at the start of every month"
       ],
-      "correctAnswer": 2,
-      "explanation": "Accredited Salesforce CPQ and Billing Consultant Professionals have the fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Salesforce Billing solutions."
+      "correctAnswer": 1,
+      "explanation": "Billing schedules hold the periods and amounts to be invoiced, and they are created from the order products once the order is activated.",
+      "whyWrong": [
+        "Opportunities track sales, not the invoicing of an existing contract.",
+        "Renewals cover the next term rather than this term's invoices.",
+        "Quotes come before the order; they are not produced per invoice."
+      ]
     },
     {
-      "question": "Which products does this AP cover?",
+      "question": "What is the difference between an invoice and an invoice line in CPQ Billing?",
       "options": [
-        "Only Marketing Cloud",
-        "Only CPQ",
-        "Only Billing",
-        "Salesforce CPQ and Salesforce Billing"
+        "The invoice is for subscriptions and the invoice line is for one-off products",
+        "The invoice holds the tax while each invoice line holds the payment received",
+        "The invoice is the document; the lines are the charges on it",
+        "The invoice is a draft while the invoice line is the posted and final version"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An invoice groups invoice lines, and each line carries a charge for a product over a period.",
+      "whyWrong": [
+        "Both subscription and one-off charges appear as invoice lines.",
+        "Tax and payments are tracked separately from this distinction.",
+        "Draft and posted are statuses on the invoice, not the difference between the two objects."
+      ]
+    },
+    {
+      "question": "A customer upgrades mid-term and should only pay for the remaining months. What handles this?",
+      "options": [
+        "Proration on the amendment",
+        "A new contract that replaces the original one from the beginning of the term",
+        "A manual adjustment entered by finance on the next invoice to be raised",
+        "A credit note issued for the full value of the original annual contract"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An amendment prorates the change across the time left in the term, so the customer is charged for the period they actually get.",
+      "whyWrong": [
+        "Replacing the contract loses the original term and its history.",
+        "Manual adjustment is error-prone when the platform calculates it.",
+        "A full credit note reverses more than the change requires."
+      ]
+    },
+    {
+      "question": "What does revenue recognition in CPQ Billing determine?",
+      "options": [
+        "How much discount a sales user is allowed to apply to a given quote line",
+        "Which of the available payment methods the customer is permitted to use",
+        "When revenue is recorded, as opposed to when it is invoiced",
+        "Which currency the invoice will be presented in for an overseas customer"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Invoicing and revenue recognition are separate: you can invoice a year up front and recognise the revenue month by month.",
+      "whyWrong": [
+        "Discount limits are set in CPQ pricing and approvals.",
+        "Payment methods are part of payment handling, not revenue recognition.",
+        "Currency is a separate field on the account and the order."
+      ]
+    },
+    {
+      "question": "An invoice has been posted and contains an error. What is the correct way to fix it?",
+      "options": [
+        "Edit the posted invoice directly and then save the corrected version of it",
+        "Issue a credit note against it",
+        "Leave it and note the correction in the description field on the account",
+        "Delete the invoice from the system and create a replacement for the customer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Posted invoices are financial records, so corrections are made by issuing a credit note rather than altering history.",
+      "whyWrong": [
+        "Posted invoices are locked precisely so they cannot be edited.",
+        "A note on the account does not correct the customer's balance.",
+        "Deleting a financial record destroys the audit trail."
+      ]
+    },
+    {
+      "question": "What triggers the creation of an order in a CPQ and Billing flow?",
+      "options": [
+        "Saving the quote for the first time in the Quote Line Editor as a draft",
+        "Ordering the quote once it is accepted",
+        "Adding the first subscription product to the quote during configuration",
+        "Submitting the quote into the approval process for a manager to review"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The order is created from the accepted quote, and it is the order products that drive billing.",
+      "whyWrong": [
+        "Saving a draft quote does not commit anything.",
+        "Adding products changes the quote, not the order.",
+        "Approval is a step before acceptance, not order creation."
+      ]
+    },
+    {
+      "question": "A customer pays less than the invoiced amount. How should this be recorded?",
+      "options": [
+        "As an amendment to the contract reducing the total value of the term",
+        "As a brand new invoice raised for the balance that is still outstanding",
+        "As a partial payment allocated against the invoice",
+        "As a credit note for the difference between the two amounts involved"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Payments are allocated to invoices, and a partial payment leaves the remainder outstanding.",
+      "whyWrong": [
+        "The contract value has not changed because the customer underpaid.",
+        "The original invoice still carries the balance; a second one would double it.",
+        "A credit note reduces what is owed, which is not what a short payment means."
+      ]
+    },
+    {
+      "question": "What is the purpose of a billing rule in CPQ Billing?",
+      "options": [
+        "It restricts which products a particular sales user is allowed to add to a quote",
+        "It decides which approval chain a heavily discounted quote must travel through",
+        "It determines the order in which quote lines appear in the Quote Line Editor",
+        "It controls how and when charges are invoiced"
       ],
       "correctAnswer": 3,
-      "explanation": "It covers Salesforce CPQ and Salesforce Billing."
+      "explanation": "Billing rules govern invoicing behaviour, such as timing and whether a charge is billed at all.",
+      "whyWrong": [
+        "Product availability is controlled by product rules and price books.",
+        "Approval routing is handled by CPQ approvals.",
+        "Line display order is a presentation setting on the quote."
+      ]
     },
     {
-      "question": "What is a key activity for a CPQ and Billing Consultant?",
+      "question": "A subscription runs from January to December and is invoiced quarterly. How many billing periods result?",
       "options": [
-        "Scoping, designing, building, and deploying CPQ and Billing solutions",
-        "Only email",
-        "Only coding",
-        "Only reporting"
+        "Twelve, because a subscription is always invoiced on a monthly basis",
+        "One, because the whole subscription term is invoiced as a single charge",
+        "Four",
+        "Three, because the first quarter is billed as part of the order itself"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Quarterly invoicing over a twelve-month term produces four periods, each covering three months.",
+      "whyWrong": [
+        "Monthly invoicing would produce twelve, but the frequency here is quarterly.",
+        "A single charge would be annual invoicing, not quarterly.",
+        "No quarter is absorbed into the order; all four are billed."
+      ]
+    },
+    {
+      "question": "What does a tax rule in CPQ Billing do?",
+      "options": [
+        "It decides how tax is calculated on a charge",
+        "It prevents an invoice from being posted until a tax reference is supplied",
+        "It reports the total tax collected across the year for a given legal entity",
+        "It converts the tax amount into the functional currency of the organisation"
       ],
       "correctAnswer": 0,
-      "explanation": "They scope, design, build, and deploy CPQ and Billing solutions."
+      "explanation": "Tax rules and treatments determine the rate and method applied to a charge, whether calculated internally or by an external engine.",
+      "whyWrong": [
+        "Posting controls come from billing rules and validation, not tax rules.",
+        "Reporting is a separate activity from the rule that calculates tax.",
+        "Currency conversion is handled by the currency configuration."
+      ]
     },
     {
-      "question": "Which role typically pursues CPQ and Billing AP?",
+      "question": "Why would an implementation use evergreen rather than fixed-term subscriptions?",
       "options": [
-        "Sales only",
-        "Marketers",
-        "Designers only",
-        "Partners and consultants working with CPQ and Billing"
+        "The products involved are one-off purchases with no recurring element",
+        "The service continues until somebody cancels it",
+        "The contract has to be renegotiated at the end of each and every term",
+        "The customer wants to be invoiced once annually rather than every month"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Evergreen subscriptions have no end date and continue billing until cancelled, which suits services with no natural term.",
+      "whyWrong": [
+        "One-off products are not subscriptions at all.",
+        "Renegotiation at term end describes a fixed-term arrangement.",
+        "Invoice frequency is set separately from whether the term is fixed."
+      ]
+    },
+    {
+      "question": "An order is activated but no invoice appears. What is a likely cause?",
+      "options": [
+        "The billing schedule has not yet reached its next billing date",
+        "The quote was never submitted to a manager for approval before ordering",
+        "The customer record is missing the industry field required for reporting",
+        "The product was configured as a bundle rather than a standalone product"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Invoices are generated when the invoice run picks up schedules whose billing date has arrived, so a future date means nothing to invoice yet.",
+      "whyWrong": [
+        "Approval affects the quote, not whether invoicing runs.",
+        "Reporting fields do not block invoice generation.",
+        "Bundles bill normally through their order products."
+      ]
+    },
+    {
+      "question": "What is the role of an invoice run?",
+      "options": [
+        "It recalculates the prices on all open quotes against the current price book",
+        "It closes the accounting period so that no further postings can be made",
+        "It sends a copy of every outstanding invoice to the customer by email again",
+        "It generates invoices from schedules that are due"
       ],
       "correctAnswer": 3,
-      "explanation": "Partners and consultants working with CPQ and Billing pursue this credential."
+      "explanation": "The invoice run is the scheduled or manual process that picks up due billing schedules and produces invoices.",
+      "whyWrong": [
+        "Quote pricing is recalculated in CPQ, not by the invoice run.",
+        "Period close is an accounting activity outside the invoice run.",
+        "Delivery of invoices is a separate step from generating them."
+      ]
     },
     {
-      "question": "What does CPQ stand for?",
+      "question": "A customer cancels a subscription halfway through a prepaid annual term. What is normally produced?",
       "options": [
-        "Configure, Price, Quote",
-        "Customer Product Quality",
-        "Contract Pricing Query",
-        "Central Purchase Queue"
-      ],
-      "correctAnswer": 0,
-      "explanation": "CPQ stands for Configure, Price, Quote."
-    },
-    {
-      "question": "What does Salesforce Billing handle?",
-      "options": [
-        "Only products",
-        "Only discounts",
-        "Revenue recognition, invoicing, and subscription billing",
-        "Only quotes"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Billing manages invoicing, revenue recognition, and subscription lifecycle."
-    },
-    {
-      "question": "Which object is central to CPQ quote creation?",
-      "options": [
-        "Opportunity only",
-        "Quote with Quote Lines for products and pricing",
-        "Account only",
-        "Contract only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Quote and Quote Lines are the core CPQ objects for building proposals."
-    },
-    {
-      "question": "What is a Price Rule in CPQ used for?",
-      "options": [
-        "Reporting only",
-        "Validation only",
-        "Approval only",
-        "Applying custom pricing logic based on conditions"
+        "A renewal quote starting from the date the cancellation was processed",
+        "An amendment increasing the contract value for the cancelled period",
+        "A new invoice covering the remaining months that were never delivered",
+        "A credit for the unused portion of the term"
       ],
       "correctAnswer": 3,
-      "explanation": "Price Rules inject values into quote line fields based on conditions."
+      "explanation": "Cancelling a prepaid term leaves the customer in credit for the service they will not receive.",
+      "whyWrong": [
+        "A renewal is for continuing service, not for a cancellation.",
+        "Cancellation reduces rather than increases the contract value.",
+        "Invoicing undelivered service would charge them twice."
+      ]
     },
     {
-      "question": "What is a Product Bundle in CPQ?",
+      "question": "Which best describes the relationship between CPQ and Billing?",
       "options": [
-        "A report",
-        "A discount type",
-        "A parent product with optional or required child products",
-        "A quote template"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Bundles group parent and child products for configuration."
-    },
-    {
-      "question": "Which activity is part of CPQ scoping?",
-      "options": [
-        "Understanding product catalog, pricing, and quote requirements",
-        "Only reporting",
-        "Only deployment",
-        "Only coding"
+        "CPQ produces the order; Billing invoices what was ordered",
+        "Billing produces the quote and CPQ then collects the payment from the customer",
+        "They are alternative products and an organisation chooses one or the other",
+        "CPQ handles subscriptions while Billing handles only one-off product charges"
       ],
       "correctAnswer": 0,
-      "explanation": "Scoping involves gathering product, pricing, and process requirements."
-    },
-    {
-      "question": "What does a Discount Schedule do in CPQ?",
-      "options": [
-        "Sends emails only",
-        "Applies tiered discounts based on quantity or term",
-        "Validates only",
-        "Approves discounts"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Discount Schedules apply volume-based or term-based tier discounts."
-    },
-    {
-      "question": "Why is Salesforce Billing often paired with CPQ?",
-      "options": [
-        "Only for products",
-        "CPQ creates quotes/contracts; Billing handles invoicing and revenue",
-        "Only for reporting",
-        "Not related"
-      ],
-      "correctAnswer": 1,
-      "explanation": "CPQ handles configure-quote-contract; Billing handles invoicing and revenue."
-    },
-    {
-      "question": "What is the Quote Line Editor (QLE)?",
-      "options": [
-        "The interactive grid for configuring products and pricing on a quote",
-        "An approval step",
-        "A data import tool",
-        "A report"
-      ],
-      "correctAnswer": 0,
-      "explanation": "QLE is the grid where reps configure products and view pricing."
-    },
-    {
-      "question": "What is a Configuration Attribute in CPQ?",
-      "options": [
-        "A report filter",
-        "An approval rule",
-        "A product option that users select when configuring a bundle (e.g., color, size)",
-        "A discount type"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Configuration Attributes define selectable options for product configuration."
-    },
-    {
-      "question": "What is an Option Constraint in CPQ?",
-      "options": [
-        "A report filter",
-        "A rule defining dependencies between product options in a bundle",
-        "A discount type",
-        "An approval rule"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Option Constraints control which options are required or excluded based on configuration."
+      "explanation": "CPQ covers configure, price and quote through to the order. Billing takes the order and turns it into invoices, payments and revenue.",
+      "whyWrong": [
+        "Quoting is CPQ's role, and payment collection belongs to Billing.",
+        "They are designed to work together across quote to cash.",
+        "Billing invoices both subscription and one-off charges."
+      ]
     }
   ]
 }
