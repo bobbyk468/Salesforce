@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Media Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Media Cloud exam are: (1) Media Cloud Data Model — Media Order vs Standard Salesforce Order; (2) Programmatic vs Direct Sales Workflows — Different Insertion Order Types; (3) Rights Management — Content Rights Are Time-Boxed and Territory-Specific. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Media Cloud exam are: (1) Media Cloud Data Model: Media Order vs Standard Salesforce Order; (2) Programmatic vs Direct Sales Workflows: Different Insertion Order Types; (3) Rights Management: Content Rights Are Time-Boxed and Territory-Specific. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('media-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function MediaCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Media Cloud AP Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Media sales and advertising management</strong> — The advertising sales lifecycle: advertiser account management, request for proposal (RFP) intake, media planning and proposal creation, avails checking (available inventory), insertion order management, campaign trafficking, and advertiser billing and collections through the media billing workflow.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriber and audience management</strong> — Managing consumer subscribers (direct-to-consumer streaming or publication subscribers): sign-up and entitlement provisioning, subscription plan management, payment and billing, retention offer configuration for at-risk subscribers, churn prediction, and audience segmentation for personalised content and offers.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Media Cloud data model and OmniStudio</strong> — The Media Cloud data model built on the TMF standard (Products, Offers, Orders in the media context), OmniStudio for media-specific guided processes (subscriber sign-up OmniScripts, advertiser onboarding flows), and how Media Cloud integrates with content delivery, ad-tech, and billing systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Media sales and advertising management</strong>: The advertising sales lifecycle: advertiser account management, request for proposal (RFP) intake, media planning and proposal creation, avails checking (available inventory), insertion order management, campaign trafficking, and advertiser billing and collections through the media billing workflow.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriber and audience management</strong>: Managing consumer subscribers (direct-to-consumer streaming or publication subscribers): sign-up and entitlement provisioning, subscription plan management, payment and billing, retention offer configuration for at-risk subscribers, churn prediction, and audience segmentation for personalised content and offers.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Media Cloud data model and OmniStudio</strong>: The Media Cloud data model built on the TMF standard (Products, Offers, Orders in the media context), OmniStudio for media-specific guided processes (subscriber sign-up OmniScripts, advertiser onboarding flows), and how Media Cloud integrates with content delivery, ad-tech, and billing systems.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function MediaCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Analytics and Revenue Management</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OmniStudio is the technology foundation for Media Cloud — complete OmniStudio training before attempting Media Cloud AP.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OmniStudio is the technology foundation for Media Cloud, complete OmniStudio training before attempting Media Cloud AP.</p>
         </div>
       </section>
 
@@ -138,9 +138,9 @@ export default function MediaCloudApExamTipsPage() {
           (how ad agencies buy TV time, how streaming subscriptions work) is valuable context.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For advertising sales questions: the Media Cloud advertising workflow is: Advertiser/Agency contacts media company → RFP created → Media Planner checks avails and creates Proposal → Advertiser approves → Insertion Order generated → Campaign trafficked to ad server → Campaign delivers and data flows back → Advertiser billed. When a question asks about a specific stage, map it to the correct object in this workflow.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber questions: subscriber entitlement is what content they can access based on their plan (Basic, Standard, Premium). When a subscriber upgrades their plan, their entitlements are updated immediately. Retention offers (discount for 3 months to prevent cancellation) are triggered when a subscriber indicates intent to cancel. When a scenario says ’a subscriber is cancelling — what can we offer them’, the answer involves a retention offer workflow, not just a cancellation confirmation page.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio in media context: subscriber sign-up is an OmniScript that collects plan selection, payment info, and account creation. Content entitlement provisioning uses an Integration Procedure to connect Salesforce entitlement records with the content delivery system. When a question asks how a ’subscriber is granted access to premium content after payment’, the answer involves an Integration Procedure updating the entitlement in the content platform — not just a Salesforce record update.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For advertising sales questions: the Media Cloud advertising workflow is: Advertiser/Agency contacts media company → RFP created → Media Planner checks avails and creates Proposal → Advertiser approves → Insertion Order generated → Campaign trafficked to ad server → Campaign delivers and data flows back → Advertiser billed. When a question asks about a specific stage. Map it to the correct object in this workflow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber questions: subscriber entitlement is what content they can access based on their plan (Basic, Standard, Premium). When a subscriber upgrades their plan, their entitlements are updated immediately. Retention offers (discount for 3 months to prevent cancellation) are triggered when a subscriber indicates intent to cancel. When a scenario says ’a subscriber is cancelling; what can we offer them’, the answer involves a retention offer workflow, not just a cancellation confirmation page.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio in media context: subscriber sign-up is an OmniScript that collects plan selection, payment info, and account creation. Content entitlement provisioning uses an Integration Procedure to connect Salesforce entitlement records with the content delivery system. When a question asks how a ’subscriber is granted access to premium content after payment’, the answer involves an Integration Procedure updating the entitlement in the content platform, not just a Salesforce record update.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function MediaCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Media Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Media Cloud Data Model — Media Order vs Standard Salesforce Order</p>
-            <p className="text-sm text-gray-700">Media Cloud uses a Media Plan → Insertion Order → Line Item hierarchy for advertising sales, which is separate from the standard Salesforce Order → Order Product structure. Candidates apply standard Order logic to Media Cloud advertising scenarios — the exam expects the Media Plan data model for ad campaign booking and trafficking.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Media Cloud Data Model: Media Order vs Standard Salesforce Order</p>
+            <p className="text-sm text-gray-700">Media Cloud uses a Media Plan → Insertion Order → Line Item hierarchy for advertising sales, which is separate from the standard Salesforce Order → Order Product structure. Candidates apply standard Order logic to Media Cloud advertising scenarios, the exam expects the Media Plan data model for ad campaign booking and trafficking.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Programmatic vs Direct Sales Workflows — Different Insertion Order Types</p>
-            <p className="text-sm text-gray-700">Direct sales involve a media salesperson negotiating and booking ad placements manually (Insertion Order created in Salesforce). Programmatic sales are automated auction-based ad purchases through DSPs/SSPs. Media Cloud primarily manages the direct sales workflow. Candidates design full programmatic automation inside Salesforce — the exam focuses on direct sales Order Management and the handoff interfaces with ad servers.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Programmatic vs Direct Sales Workflows: Different Insertion Order Types</p>
+            <p className="text-sm text-gray-700">Direct sales involve a media salesperson negotiating and booking ad placements manually (Insertion Order created in Salesforce). Programmatic sales are automated auction-based ad purchases through DSPs/SSPs. Media Cloud primarily manages the direct sales workflow. Candidates design full programmatic automation inside Salesforce, the exam focuses on direct sales Order Management and the handoff interfaces with ad servers.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Rights Management — Content Rights Are Time-Boxed and Territory-Specific</p>
-            <p className="text-sm text-gray-700">Media Cloud tracks content rights (broadcast, streaming, digital) per territory and time window. A sports rights deal may grant a broadcaster rights only within a specific country and only for a specific season. Candidates use a single Rights record — the exam expects rights records with territory, channel, and date-range fields, and understands that rights violations occur when content is broadcast outside permitted windows.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Rights Management: Content Rights Are Time-Boxed and Territory-Specific</p>
+            <p className="text-sm text-gray-700">Media Cloud tracks content rights (broadcast, streaming, digital) per territory and time window. A sports rights deal may grant a broadcaster rights only within a specific country and only for a specific season. Candidates use a single Rights record, the exam expects rights records with territory, channel, and date-range fields, and understands that rights violations occur when content is broadcast outside permitted windows.</p>
           </div>
         </div>
       </section>

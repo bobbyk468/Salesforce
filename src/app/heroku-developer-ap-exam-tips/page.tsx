@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Heroku Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Heroku Developer exam are: (1) Ephemeral Filesystem — Files Written to Dyno Are Lost on Restart; (2) Config Vars vs .env — Environment Variables Are Not in Code; (3) Release Phase — Run Migrations Before New Code Goes Live. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Heroku Developer exam are: (1) Ephemeral Filesystem: Files Written to Dyno Are Lost on Restart; (2) Config Vars vs .env: Environment Variables Are Not in Code; (3) Release Phase: Run Migrations Before New Code Goes Live. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('heroku-developer-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function HerokuDeveloperApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Heroku Developer AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Application deployment and management</strong> — Deploying apps to Heroku via Git push, buildpacks (automatic detection of language and runtime), Procfile for defining process types, config vars for environment configuration, Heroku Pipelines for staging/production promotion workflows, and Review Apps for pull request preview environments.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Dynos and scaling</strong> — Dyno types (eco, basic, standard-1x, standard-2x, performance-M, performance-L), web dynos (handle HTTP requests), worker dynos (background jobs), one-off dynos (ad-hoc commands), dyno sleeping for eco/basic tier, horizontal scaling (more dynos), vertical scaling (larger dyno type), and autoscaling configuration.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Heroku Connect and Salesforce integration</strong> — Configuring Heroku Connect to sync Salesforce objects to Heroku Postgres, setting up field mappings and sync direction, handling polling interval and event-driven sync, conflict resolution strategies, and building Heroku applications that read and write Salesforce data via the synced Postgres database.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Application deployment and management</strong>: Deploying apps to Heroku via Git push, buildpacks (automatic detection of language and runtime), Procfile for defining process types, config vars for environment configuration, Heroku Pipelines for staging/production promotion workflows, and Review Apps for pull request preview environments.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Dynos and scaling</strong>: Dyno types (eco, basic, standard-1x, standard-2x, performance-M, performance-L), web dynos (handle HTTP requests), worker dynos (background jobs), one-off dynos (ad-hoc commands), dyno sleeping for eco/basic tier, horizontal scaling (more dynos), vertical scaling (larger dyno type), and autoscaling configuration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Heroku Connect and Salesforce integration</strong>: Configuring Heroku Connect to sync Salesforce objects to Heroku Postgres, setting up field mappings and sync direction, handling polling interval and event-driven sync, conflict resolution strategies, and building Heroku applications that read and write Salesforce data via the synced Postgres database.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function HerokuDeveloperApExamTipsPage() {
             <span className="font-medium text-gray-900">Add-ons and Monitoring</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Dyno types and Heroku Connect are the most distinctively Heroku topics — prioritise these over general web development knowledge.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Dyno types and Heroku Connect are the most distinctively Heroku topics, prioritise these over general web development knowledge.</p>
         </div>
       </section>
 
@@ -134,12 +134,12 @@ export default function HerokuDeveloperApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Heroku Developer AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a Heroku deployment or integration scenario and ask which Heroku feature,
-          command, or configuration achieves it. Think in terms of Heroku’s container model — every
+          command, or configuration achieves it. Think in terms of Heroku’s container model, every
           app component runs in ephemeral dynos.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dyno type questions: web dynos respond to HTTP requests — they are the only dyno type that receives web traffic. Worker dynos run background jobs (processing a queue, sending emails). One-off dynos run a single command and exit (database migration, admin task). When a scenario says ’run a database migration during deployment’, use a one-off dyno (heroku run) — not a web dyno or worker dyno.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Heroku Connect questions: Heroku Connect sync direction options are: (1) Salesforce to Heroku only (read-only mirror), (2) Heroku to Salesforce only (Heroku app writes to Salesforce), (3) Bidirectional (both can update, conflicts resolved by timestamp). When a scenario says ’a Heroku app needs to update customer records in Salesforce in real time’, configure a bidirectional or Heroku-to-Salesforce sync — not a read-only connection.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dyno type questions: web dynos respond to HTTP requests; they are the only dyno type that receives web traffic. Worker dynos run background jobs (processing a queue, sending emails). One-off dynos run a single command and exit (database migration, admin task). When a scenario says ’run a database migration during deployment’. Use a one-off dyno (heroku run), not a web dyno or worker dyno.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Heroku Connect questions: Heroku Connect sync direction options are: (1) Salesforce to Heroku only (read-only mirror), (2) Heroku to Salesforce only (Heroku app writes to Salesforce), (3) Bidirectional (both can update, conflicts resolved by timestamp). When a scenario says ’a Heroku app needs to update customer records in Salesforce in real time’, configure a bidirectional or Heroku-to-Salesforce sync, not a read-only connection.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scaling questions: horizontal scaling (adding more web dynos) handles more concurrent users. Vertical scaling (using a larger dyno type) handles more memory-intensive workloads. Autoscaling automatically adds web dynos when response time increases above a threshold. When a scenario says ’the app slows down during peak traffic hours due to memory exhaustion’, vertical scaling (larger dyno) is more appropriate than horizontal scaling (more small dynos).</li>
         </ul>
       </section>
@@ -151,7 +151,7 @@ export default function HerokuDeveloperApExamTipsPage() {
           Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Heroku Developer AP requires hands-on Heroku experience — deploy a real application,
+          Heroku Developer AP requires hands-on Heroku experience, deploy a real application,
           configure Heroku Connect to sync Salesforce data, and experiment with dyno scaling
           before booking. A free Heroku account provides sufficient access to practice all
           core exam concepts. The Heroku Dev Center is the primary reference documentation.
@@ -161,19 +161,19 @@ export default function HerokuDeveloperApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Heroku Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Ephemeral Filesystem — Files Written to Dyno Are Lost on Restart</p>
-            <p className="text-sm text-gray-700">Heroku dynos have an ephemeral filesystem: any file written during a dyno session is lost when the dyno restarts (which happens at least daily). Candidates design apps that write user uploads or generated files to the local filesystem — the exam expects external storage (AWS S3, Heroku Postgres) for persistent files.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Ephemeral Filesystem: Files Written to Dyno Are Lost on Restart</p>
+            <p className="text-sm text-gray-700">Heroku dynos have an ephemeral filesystem: any file written during a dyno session is lost when the dyno restarts (which happens at least daily). Candidates design apps that write user uploads or generated files to the local filesystem, the exam expects external storage (AWS S3, Heroku Postgres) for persistent files.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Config Vars vs .env — Environment Variables Are Not in Code</p>
-            <p className="text-sm text-gray-700">Config Vars are Heroku’s secure environment variable store — set via the dashboard or CLI and injected at runtime. They should never be hardcoded in application code or checked into version control. Candidates put API keys in .env files and push them to Git — the exam expects Config Vars for all secrets and environment-specific settings.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Config Vars vs .env: Environment Variables Are Not in Code</p>
+            <p className="text-sm text-gray-700">Config Vars are Heroku’s secure environment variable store, set via the dashboard or CLI and injected at runtime. They should never be hardcoded in application code or checked into version control. Candidates put API keys in .env files and push them to Git, the exam expects Config Vars for all secrets and environment-specific settings.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Release Phase — Run Migrations Before New Code Goes Live</p>
-            <p className="text-sm text-gray-700">The Release Phase is a Heroku feature that runs a command (e.g., a database migration script) after a new slug is built but before it is deployed to dynos. If the release phase command fails, the deployment is rolled back automatically. Candidates run migrations manually after deployment — the exam expects Release Phase configuration for zero-downtime database migrations.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Release Phase: Run Migrations Before New Code Goes Live</p>
+            <p className="text-sm text-gray-700">The Release Phase is a Heroku feature that runs a command (e.g., a database migration script) after a new slug is built but before it is deployed to dynos. If the release phase command fails, the deployment is rolled back automatically. Candidates run migrations manually after deployment, the exam expects Release Phase configuration for zero-downtime database migrations.</p>
           </div>
         </div>
       </section>

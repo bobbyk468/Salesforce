@@ -68,11 +68,11 @@
       },
       {
         "heading": "Scheduling and the Gantt",
-        "body": "The **Dispatcher Console** **Gantt** view shows all appointments on a timeline by resource. Drag-and-drop scheduling assigns appointments to resources. The Scheduling Policy defines the rules for the scheduler — constraints (working hours, required skills, territory) and objectives (minimise travel, maximise utilisation). Appointment Booking lets customers or agents select available slots. The In-Day Optimisation automatically reschedules appointments as the day changes (cancellations, new high-priority jobs). Know the difference between manual scheduling and automated optimisation."
+        "body": "The **Dispatcher Console** **Gantt** view shows all appointments on a timeline by resource. Drag-and-drop scheduling assigns appointments to resources. The Scheduling Policy defines the rules for the scheduler, constraints (working hours, required skills, territory) and objectives (minimise travel, maximise utilisation). Appointment Booking lets customers or agents select available slots. The In-Day Optimisation automatically reschedules appointments as the day changes (cancellations, new high-priority jobs). Know the difference between manual scheduling and automated optimisation."
       },
       {
         "heading": "Service Territories, Resources, and Skills",
-        "body": "Service Territories define the geographic areas where resources operate — Primary territory (where the resource primarily works) and Secondary/Relocation territories for expanded coverage. Service Resources are linked to Salesforce users (Employee type) or equipment (Equipment type). Skills define the competencies required for a Work Order — resources must have matching skills for skills-based routing. Operating Hours define when territories and resources are available. For a routing scenario, check the resource’s active territory membership, required skills and skill levels, and applicable operating hours."
+        "body": "Service Territories define the geographic areas where resources operate: Primary territory (where the resource primarily works) and Secondary/Relocation territories for expanded coverage. Service Resources are linked to Salesforce users (Employee type) or equipment (Equipment type). Skills define the competencies required for a Work Order; resources must have matching skills for skills-based routing. Operating Hours define when territories and resources are available. For a routing scenario. Check the resource’s active territory membership, required skills and skill levels, and applicable operating hours."
       },
       {
         "heading": "Mobile App and Offline Capabilities",
@@ -80,7 +80,7 @@
       },
       {
         "heading": "Parts and Inventory Management",
-        "body": "Products Required list the parts needed for a Work Order before the job. Products Consumed record actual parts used during the service visit. Return Orders handle parts returned to inventory. Locations track physical inventory (van stock, warehouse, customer site). Inventory transfers move stock between locations. The Service Report summarises the completed work, parts used, and technician notes — can be auto-generated and sent to the customer upon job completion. Know the difference between Products Required (planned) and Products Consumed (actual)."
+        "body": "Products Required list the parts needed for a Work Order before the job. Products Consumed record actual parts used during the service visit. Return Orders handle parts returned to inventory. Locations track physical inventory (van stock, warehouse, customer site). Inventory transfers move stock between locations. The Service Report summarises the completed work, parts used, and technician notes, can be auto-generated and sent to the customer upon job completion. Know the difference between Products Required (planned) and Products Consumed (actual)."
       }
     ]
   },
@@ -298,9 +298,9 @@
       "correctAnswer": 0,
       "explanation": "The Gantt allows manual drag-and-drop scheduling.",
       "whyWrong": [
-        "List View alone doesn't support drag-and-drop scheduling — that's the Gantt's specific function.",
-        "Map View alone doesn't support drag-and-drop scheduling — that's the Gantt's specific function.",
-        "Reports display data — they don't support interactive drag-and-drop scheduling."
+        "List View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
+        "Map View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
+        "Reports display data, they don't support interactive drag-and-drop scheduling."
       ]
     },
     {

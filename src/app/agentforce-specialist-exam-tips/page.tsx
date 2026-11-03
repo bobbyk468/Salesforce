@@ -105,7 +105,7 @@ export default function AgentforceSpecialistExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Agentforce Specialist</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The six published objective weights are 20%, 20%, 35%, 10%, 10%, and 5%; review all objectives.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Master Agent Actions, Topics, and the Einstein Trust Layer first — these appear in scenario questions across all sections.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Master Agent Actions, Topics, and the Einstein Trust Layer first, these appear in scenario questions across all sections.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice in a Trailhead Playground using Agentforce and Agent Builder before sitting the exam. Hands-on practice can help connect study to configuration tasks.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The current guide lists 72% passing; it allows 105 minutes for 60 scored and up to five unscored questions.</li>
         </ul>
@@ -171,9 +171,9 @@ export default function AgentforceSpecialistExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">3-Week Agentforce Specialist Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Configuration and Security (50%):</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create topics, assign actions, test conversations. Review documented Trust Layer capabilities and configuration, including the agent masking limitation. Review org security: profiles, permission sets, and how they govern agent access.</p>
-          <p><strong>Week 2 — Capabilities and Integration (50%):</strong> Practice with Prompt Builder — create and test flex prompts with merge fields. Build a Flow-based action and connect it to an Agent Topic. Study external action configuration (API-based actions, named credentials). Review best practices for testing agents and using the test panel in Agent Builder.</p>
-          <p><strong>Week 3:</strong> Full timed mock exams (60 Q / 105 min). Focus on scenario questions that combine configuration + security (e.g., &ldquo;a user cannot see the agent — what is the likely permission issue?&rdquo;). Re-test any weak sections. Review errors against the official objectives.</p>
+          <p><strong>Week 1: Configuration and Security (50%):</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create topics, assign actions, test conversations. Review documented Trust Layer capabilities and configuration, including the agent masking limitation. Review org security: profiles, permission sets, and how they govern agent access.</p>
+          <p><strong>Week 2: Capabilities and Integration (50%):</strong> Practice with Prompt Builder, create and test flex prompts with merge fields. Build a Flow-based action and connect it to an Agent Topic. Study external action configuration (API-based actions, named credentials). Review best practices for testing agents and using the test panel in Agent Builder.</p>
+          <p><strong>Week 3:</strong> Full timed mock exams (60 Q / 105 min). Focus on scenario questions that combine configuration + security (e.g., &ldquo;a user cannot see the agent; what is the likely permission issue?&rdquo;). Re-test any weak sections. Review errors against the official objectives.</p>
         </div>
       </section>
 
@@ -195,7 +195,7 @@ export default function AgentforceSpecialistExamTipsPage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Trust Layer questions:</strong> If a question mentions PII leaving the org or compliance requirements, the answer almost always involves confirming Einstein Trust Layer is active and auditing is enabled — not restricting LLM use entirely.</span>
+            <span><strong>Trust Layer questions:</strong> If a question mentions PII leaving the org or compliance requirements, the answer almost always involves confirming Einstein Trust Layer is active and auditing is enabled, not restricting LLM use entirely.</span>
           </li>
         </ul>
       </section>
@@ -222,16 +222,16 @@ export default function AgentforceSpecialistExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">Use the current Salesforce guide and product documentation to check terminology and configuration details.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Topics vs Actions vs Instructions — What Goes Where</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Topics vs Actions vs Instructions: What Goes Where</p>
             <p className="text-sm text-gray-700">Topics define an agent’s scope, instructions guide behavior, and actions are configured capabilities such as Flow or Apex actions. Data sources depend on configuration and access controls. Instructions provide behavior guidance; actions are configured capabilities. Consult the issuer objectives for exam scope.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Apex Actions vs Flow Actions — When to Use Each</p>
-            <p className="text-sm text-gray-700">Apex @InvocableMethod actions are used when the agent needs complex data processing, callouts, or operations not possible in Flow. Auto-Launched Flows are used for standard business logic, data manipulation, and multi-step orchestration. The exam tests which to recommend given a scenario: if it requires external API calls or complex Apex logic, use Apex; if it is achievable declaratively, use a Flow action.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Apex Actions vs Flow Actions: When to Use Each</p>
+            <p className="text-sm text-gray-700">Apex @InvocableMethod actions are used when the agent needs complex data processing, callouts, or operations not possible in Flow. Auto-Launched Flows are used for standard business logic, data manipulation, and multi-step orchestration. The exam tests which to recommend given a scenario: if it requires external API calls or complex Apex logic, use Apex; if it is achievable declaratively. Use a Flow action.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Data Cloud Grounding vs Standard Object Data Access</p>
-            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup — it is not automatic. Agent data sources depend on configured capabilities and access controls; Data 360 is not a universal prerequisite. See Salesforce documentation for supported sources and permissions.</p>
+            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup; it is not automatic. Agent data sources depend on configured capabilities and access controls; Data 360 is not a universal prerequisite. See Salesforce documentation for supported sources and permissions.</p>
           </div>
         </div>
       </section>

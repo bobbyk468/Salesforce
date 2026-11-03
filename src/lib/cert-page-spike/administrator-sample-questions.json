@@ -57,7 +57,7 @@
     "whyWrong": [
       "View All grants read access to all records, but viewing isn't the same as being able to transfer ownership.",
       "Modify All grants full edit/delete access on all records of an object, but doesn't specifically grant transfer rights over records you don't own.",
-      "Edit only lets a user modify records they already have access to — it doesn't grant the ability to transfer ownership of records they don't own."
+      "Edit only lets a user modify records they already have access to, it doesn't grant the ability to transfer ownership of records they don't own."
     ]
   },
   {
@@ -72,7 +72,7 @@
     "explanation": "Time-dependent actions are removed from the queue if the record no longer meets the workflow rule criteria when the action is scheduled to execute.",
     "whyWrong": [
       "Time-dependent actions that no longer apply are silently removed from the queue rather than triggering an error log entry.",
-      "The action doesn't execute anyway — Salesforce re-evaluates the record against the rule criteria at execution time and skips the action if it no longer qualifies.",
+      "The action doesn't execute anyway: Salesforce re-evaluates the record against the rule criteria at execution time and skips the action if it no longer qualifies.",
       "No automatic admin notification is generated when a time-dependent action is removed for no longer meeting criteria."
     ]
   },
@@ -87,8 +87,8 @@
     "correctAnswer": 3,
     "explanation": "Before Save flows run before the record is committed to the database, allowing you to modify field values or perform validation.",
     "whyWrong": [
-      "Platform Event isn't a record-triggered flow timing option — it's a separate trigger type based on event messages, not before/after save timing.",
-      "After Save triggers run after the record is committed to the database — too late to modify field values before save.",
+      "Platform Event isn't a record-triggered flow timing option, it's a separate trigger type based on event messages, not before/after save timing.",
+      "After Save triggers run after the record is committed to the database, too late to modify field values before save.",
       "After Delete triggers run following a delete operation, unrelated to modifying a record before it saves."
     ]
   },
@@ -103,9 +103,9 @@
     "correctAnswer": 0,
     "explanation": "Permission Sets extend user access by granting additional permissions, object access, and app access without modifying the user's profile.",
     "whyWrong": [
-      "Validation rules enforce data quality logic — they're unrelated to what Permission Sets do.",
-      "Permission Sets don't replace profiles — every user still needs exactly one profile; permission sets layer additional access on top.",
-      "Page layouts are configured separately from Permission Sets — layouts control field/related-list display, not access grants."
+      "Validation rules enforce data quality logic, they're unrelated to what Permission Sets do.",
+      "Permission Sets don't replace profiles, every user still needs exactly one profile; permission sets layer additional access on top.",
+      "Page layouts are configured separately from Permission Sets, layouts control field/related-list display, not access grants."
     ]
   },
   {
@@ -119,8 +119,8 @@
     "correctAnswer": 2,
     "explanation": "Lightning App Builder can be used to customize the Home page, allowing users to add and arrange components.",
     "whyWrong": [
-      "Validation rules enforce data entry rules — they have nothing to do with Home page layout customization.",
-      "Record types control which picklist values and page layouts are available for a record — they don't customize the Home page layout.",
+      "Validation rules enforce data entry rules; they have nothing to do with Home page layout customization.",
+      "Record types control which picklist values and page layouts are available for a record, they don't customize the Home page layout.",
       "Profiles control overall access and settings, but customizing the Home page layout is a separate Lightning App Builder capability, not a profile setting."
     ]
   },
@@ -136,8 +136,8 @@
     "explanation": "Campaign Influence reporting shows how marketing campaigns contributed to opportunity creation and closed revenue.",
     "whyWrong": [
       "Email open rates are a Marketing Cloud/Pardot-level metric, not what Campaign Influence reports on within core Sales Cloud.",
-      "Campaign Influence tracks more than spend — it connects campaigns to the opportunities and revenue they contributed to.",
-      "Lead source counts are a separate reporting dimension — Campaign Influence specifically links campaigns to opportunity outcomes, not just lead counts."
+      "Campaign Influence tracks more than spend, it connects campaigns to the opportunities and revenue they contributed to.",
+      "Lead source counts are a separate reporting dimension: Campaign Influence specifically links campaigns to opportunity outcomes, not just lead counts."
     ]
   },
   {
@@ -151,9 +151,9 @@
     "correctAnswer": 2,
     "explanation": "Case assignment rules support both rule criteria (field-based conditions) and formula criteria for complex logic.",
     "whyWrong": [
-      "'Rule criteria only' undersells the actual flexibility — assignment rules can also use formula-based criteria for more complex conditions.",
-      "'Formula only' excludes the simpler rule-criteria option that's also available — both mechanisms exist side by side.",
-      "Manual assignment is the fallback when no rule matches — it isn't itself a rule criteria type."
+      "'Rule criteria only' undersells the actual flexibility, assignment rules can also use formula-based criteria for more complex conditions.",
+      "'Formula only' excludes the simpler rule-criteria option that's also available, both mechanisms exist side by side.",
+      "Manual assignment is the fallback when no rule matches, it isn't itself a rule criteria type."
     ]
   },
   {
@@ -167,9 +167,9 @@
     "correctAnswer": 2,
     "explanation": "Queues allow cases to be routed to teams rather than individuals, enabling workload balancing and skill-based routing.",
     "whyWrong": [
-      "Queues organize records for teams to work from — they aren't a reporting tool.",
+      "Queues organize records for teams to work from, they aren't a reporting tool.",
       "Queues can trigger notifications, but that's a secondary feature, not their primary purpose.",
-      "Queues aren't a deletion mechanism — they're a routing and collaboration mechanism for shared work."
+      "Queues aren't a deletion mechanism, they're a routing and collaboration mechanism for shared work."
     ]
   },
   {
@@ -184,8 +184,8 @@
     "explanation": "Products and Price Books must be configured to enable the full opportunity-to-quote-to-order sales process.",
     "whyWrong": [
       "Lead is a separate object in the sales process, unrelated to enabling Products and Price Books on Opportunities.",
-      "Campaign tracks marketing campaign data — it isn't required to enable Products, Price Books, and Opportunities functionality.",
-      "Opportunity itself doesn't need to be 'enabled' via a separate object — Product and Price Book is the actual object relationship that must be set up to use products on opportunities."
+      "Campaign tracks marketing campaign data, it isn't required to enable Products, Price Books, and Opportunities functionality.",
+      "Opportunity itself doesn't need to be 'enabled' via a separate object: Product and Price Book is the actual object relationship that must be set up to use products on opportunities."
     ]
   },
   {
@@ -199,9 +199,9 @@
     "correctAnswer": 1,
     "explanation": "View All bypasses sharing rules and allows the user to see all records of that object in the organization.",
     "whyWrong": [
-      "'Delete all records' is part of Modify All, not View All — View All is read-only.",
+      "'Delete all records' is part of Modify All, not View All: View All is read-only.",
       "'Transfer all records' is a separate specific permission, not what View All grants.",
-      "'Edit all records' describes a different, broader permission (Modify All) — View All doesn't grant edit access."
+      "'Edit all records' describes a different, broader permission (Modify All): View All doesn't grant edit access."
     ]
   },
   {
@@ -216,7 +216,7 @@
     "explanation": "Matrix reports use both row and column grouping, with subtotals at the intersection of rows and columns.",
     "whyWrong": [
       "Tabular reports list rows in a simple flat list without any grouping or subtotals at row/column intersections.",
-      "Joined reports combine multiple report types side by side — they don't specifically provide the row/column subtotal grid Matrix does.",
+      "Joined reports combine multiple report types side by side, they don't specifically provide the row/column subtotal grid Matrix does.",
       "Summary reports group rows and show subtotals along one dimension, not intersecting rows and columns."
     ]
   },
@@ -231,9 +231,9 @@
     "correctAnswer": 0,
     "explanation": "Chatter Groups allow teams to collaborate, share files, and discuss work in a centralized feed.",
     "whyWrong": [
-      "Chatter Groups aren't a reporting feature — that's a distinct Salesforce capability.",
-      "Chatter Groups don't handle case assignment — that's managed by assignment rules and queues, not Chatter.",
-      "Chatter Groups don't replace email — they're a separate, complementary collaboration channel."
+      "Chatter Groups aren't a reporting feature, that's a distinct Salesforce capability.",
+      "Chatter Groups don't handle case assignment, that's managed by assignment rules and queues, not Chatter.",
+      "Chatter Groups don't replace email, they're a separate, complementary collaboration channel."
     ]
   }
 ]

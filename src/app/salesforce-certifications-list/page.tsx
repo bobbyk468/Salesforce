@@ -110,7 +110,7 @@ export default function SalesforceListPage() {
         </p>
         <p>
           If you are new to Salesforce, compare the Associate, Administrator, and Platform App Builder options first.
-          If you already work on Salesforce projects, use the role groups below to find the next credential that matches
+          If you already work on Salesforce projects. Use the role groups below to find the next credential that matches
           your product area, exam budget, and practical experience.
         </p>
       </section>

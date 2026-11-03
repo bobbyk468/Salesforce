@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most CRM Analytics candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the CRM Analytics exam are: (1) Dataflows vs Recipes — Two Different Data Preparation Tools; (2) XMD (Extended Metadata) — Formatting Is Not Stored in the Dataset; (3) SAQL vs Equals Filters — When to Use Each in Step Configuration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the CRM Analytics exam are: (1) Dataflows vs Recipes: Two Different Data Preparation Tools; (2) XMD (Extended Metadata): Formatting Is Not Stored in the Dataset; (3) SAQL vs Equals Filters: When to Use Each in Step Configuration. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('crm-analytics-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function CRMAnalyticsExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What CRM Analytics Consultant Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Dashboard design</strong> — Building lenses and dashboards with steps (query), widgets (charts, tables, numbers), filters, and bindings. Understanding the CRM Analytics dashboard designer, how steps connect to widgets, and how to use faceting for cross-filter interactions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data integration and preparation</strong> — Dataflows for connecting Salesforce data to analytics datasets, Recipes for more visual data preparation, and the augment/append/join transformation types. Row-level security (predicates) for controlling which data users can see in dashboards.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SAQL and Einstein Discovery</strong> — Reading and writing SAQL queries for calculated fields and custom step logic. Setting up Einstein Discovery models, understanding prediction scores and key influencer output, and writing back predictions to Salesforce records.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Dashboard design</strong>: Building lenses and dashboards with steps (query), widgets (charts, tables, numbers), filters, and bindings. Understanding the CRM Analytics dashboard designer, how steps connect to widgets, and how to use faceting for cross-filter interactions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data integration and preparation</strong>: Dataflows for connecting Salesforce data to analytics datasets, Recipes for more visual data preparation, and the augment/append/join transformation types. Row-level security (predicates) for controlling which data users can see in dashboards.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SAQL and Einstein Discovery</strong>: Reading and writing SAQL queries for calculated fields and custom step logic. Setting up Einstein Discovery models, understanding prediction scores and key influencer output, and writing back predictions to Salesforce records.</li>
         </ul>
       </section>
 
@@ -141,9 +141,9 @@ export default function CRMAnalyticsExamTipsPage() {
           back to the CRM Analytics component that delivers it.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions: row-level security in CRM Analytics uses security predicates — SAQL conditions applied to every dataset query that restrict which rows a user can see. Predicates reference user attributes (user ID, role, profile). For dynamic security based on user hierarchy, use the row-level security dataset with a join in the predicate.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions: row-level security in CRM Analytics uses security predicates: SAQL conditions applied to every dataset query that restrict which rows a user can see. Predicates reference user attributes (user ID, role, profile). For dynamic security based on user hierarchy. Use the row-level security dataset with a join in the predicate.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dataflow vs. recipe questions: Dataflows are JSON-configured ETL processes (more flexible, code-like configuration). Recipes are visually configured in a UI (more accessible for non-developers). For complex multi-dataset joins, Dataflows may be required; for standard preparation tasks, Recipes are preferred as best practice.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SAQL questions: read the question’s output requirement first. SAQL group by determines the grain; foreach determines which measures to compute; order by and limit control the result set. When a step needs a calculated field (e.g., win rate = closed won / total), it requires a custom SAQL step — not a standard step type.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SAQL questions: read the question’s output requirement first. SAQL group by determines the grain; foreach determines which measures to compute; order by and limit control the result set. When a step needs a calculated field (e.g., win rate = closed won / total), it requires a custom SAQL step, not a standard step type.</li>
         </ul>
       </section>
 
@@ -156,26 +156,26 @@ export default function CRMAnalyticsExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Build at least 3 complete CRM Analytics dashboards with dataflows, row-level security, and custom
           SAQL steps before booking. The SAQL and security predicate questions are very difficult to answer
-          correctly without hands-on experience — theoretical study alone is insufficient.
+          correctly without hands-on experience, theoretical study alone is insufficient.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most CRM Analytics Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Dataflows vs Recipes — Two Different Data Preparation Tools</p>
-            <p className="text-sm text-gray-700">Dataflows are the legacy CRM Analytics data preparation tool that runs on a schedule and outputs datasets. Recipes are the newer drag-and-drop interface for transforming data into datasets. New implementations should use Recipes. Candidates use Dataflow JSON syntax for Recipes or vice versa. Know that Recipes replaced Dataflows for most use cases — Dataflows are still used for specific advanced transformations.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Dataflows vs Recipes: Two Different Data Preparation Tools</p>
+            <p className="text-sm text-gray-700">Dataflows are the legacy CRM Analytics data preparation tool that runs on a schedule and outputs datasets. Recipes are the newer drag-and-drop interface for transforming data into datasets. New implementations should use Recipes. Candidates use Dataflow JSON syntax for Recipes or vice versa. Know that Recipes replaced Dataflows for most use cases; Dataflows are still used for specific advanced transformations.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. XMD (Extended Metadata) — Formatting Is Not Stored in the Dataset</p>
-            <p className="text-sm text-gray-700">XMD controls display properties: field labels, formatting (currency, percent), colours, and display order in lenses and dashboards. It is separate from the dataset schema. Candidates modify dataset schemas to change display formatting — the exam expects XMD modifications for presentation changes. Changing a field’s label in XMD does not change the underlying field name in SAQL.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. XMD (Extended Metadata): Formatting Is Not Stored in the Dataset</p>
+            <p className="text-sm text-gray-700">XMD controls display properties: field labels, formatting (currency, percent), colours, and display order in lenses and dashboards. It is separate from the dataset schema. Candidates modify dataset schemas to change display formatting, the exam expects XMD modifications for presentation changes. Changing a field’s label in XMD does not change the underlying field name in SAQL.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. SAQL vs Equals Filters — When to Use Each in Step Configuration</p>
-            <p className="text-sm text-gray-700">Equals Filters (the UI configuration) handle simple value comparisons in dashboard steps. SAQL (Salesforce Analytics Query Language) is needed for complex logic: date arithmetic, string manipulation, conditional aggregation. Candidates write SAQL for simple equality filters — the exam expects Equals Filters for those and SAQL only when the logic cannot be expressed in the UI filter interface.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. SAQL vs Equals Filters: When to Use Each in Step Configuration</p>
+            <p className="text-sm text-gray-700">Equals Filters (the UI configuration) handle simple value comparisons in dashboard steps. SAQL (Salesforce Analytics Query Language) is needed for complex logic: date arithmetic, string manipulation, conditional aggregation. Candidates write SAQL for simple equality filters, the exam expects Equals Filters for those and SAQL only when the logic cannot be expressed in the UI filter interface.</p>
           </div>
         </div>
       </section>

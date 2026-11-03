@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between a list and a data extension in Marketing Cloud?',
-    answer: 'Lists are simple, flat subscriber tables managed in Email Studio — they are easy to use but limited in size and flexibility. Data Extensions are custom relational database tables that support complex data models, multiple columns, relationships between tables, and SQL queries. Data Extensions are the preferred approach for any production Marketing Cloud implementation. The exam tests when to use each.',
+    answer: 'Lists are simple, flat subscriber tables managed in Email Studio; they are easy to use but limited in size and flexibility. Data Extensions are custom relational database tables that support complex data models, multiple columns, relationships between tables, and SQL queries. Data Extensions are the preferred approach for any production Marketing Cloud implementation. The exam tests when to use each.',
   },
   {
     question: 'What is the hardest part of the Email Specialist exam?',
@@ -94,7 +94,7 @@ export default function EmailSpecialistStudyGuidePage() {
           Marketing Cloud Engagement Specialist Study Guide ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Email Specialist exam — Journey Builder, deliverability, subscriber management, Content Builder, and free practice questions.
+          Your complete guide to passing the Email Specialist exam: Journey Builder, deliverability, subscriber management, Content Builder, and free practice questions.
         </p>
       </div>
 
@@ -159,13 +159,13 @@ export default function EmailSpecialistStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Marketing Cloud account structure — business units, user roles, sender profiles, reply mail management. Set up a trial org and navigate Email Studio.' },
-            { week: 'Week 2', focus: 'Subscriber management — All Subscribers, lists vs data extensions, subscriber key, profile centre, preference centre, unsubscribe flows.' },
-            { week: 'Week 3', focus: 'Email creation — Content Builder blocks and templates, dynamic content, AMPscript basics for personalisation, A/B testing setup.' },
-            { week: 'Week 4', focus: 'Email Sending & Delivery — send classifications, delivery profiles, SAP, STO. Bounce types (hard, soft, technical), suppression lists, compliance.' },
-            { week: 'Week 5', focus: 'Deliverability deep dive — SPF, DKIM, DMARC explained, IP warming, dedicated vs shared IPs, reputation monitoring, CAN-SPAM and GDPR.' },
-            { week: 'Week 6', focus: 'Journey Builder — entry sources, all journey activities, decision splits vs engagement splits, goal metrics, testing and activation.' },
-            { week: 'Week 7', focus: 'Reporting — tracking metrics, data views (Bounces, Clicks, Opens), Intelligence Reports, tracking extracts, custom reports.' },
+            { week: 'Week 1', focus: 'Marketing Cloud account structure, business units, user roles, sender profiles, reply mail management. Set up a trial org and navigate Email Studio.' },
+            { week: 'Week 2', focus: 'Subscriber management: All Subscribers, lists vs data extensions, subscriber key, profile centre, preference centre, unsubscribe flows.' },
+            { week: 'Week 3', focus: 'Email creation: Content Builder blocks and templates, dynamic content, AMPscript basics for personalisation, A/B testing setup.' },
+            { week: 'Week 4', focus: 'Email Sending & Delivery, send classifications, delivery profiles, SAP, STO. Bounce types (hard, soft, technical), suppression lists, compliance.' },
+            { week: 'Week 5', focus: 'Deliverability deep dive: SPF, DKIM, DMARC explained, IP warming, dedicated vs shared IPs, reputation monitoring, CAN-SPAM and GDPR.' },
+            { week: 'Week 6', focus: 'Journey Builder, entry sources, all journey activities, decision splits vs engagement splits, goal metrics, testing and activation.' },
+            { week: 'Week 7', focus: 'Reporting, tracking metrics, data views (Bounces, Clicks, Opens), Intelligence Reports, tracking extracts, custom reports.' },
             { week: 'Week 8', focus: 'Full mock exams. Focus on Journey Builder scenarios (which activity for which use case) and deliverability questions (which bounce type applies).' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -182,7 +182,7 @@ export default function EmailSpecialistStudyGuidePage() {
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Bounce type classification:</strong> Hard bounce = permanent delivery failure (invalid address) → automatically unsubscribed. Soft bounce = temporary failure (mailbox full, server unavailable) → retried. Technical bounce = infrastructure issue (block, challenge-response). Know which category triggers automatic unsubscription.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Journey entry source selection:</strong> Data Extension entry for scheduled or batch sends; Salesforce Data entry for CRM-triggered journeys; API Event for real-time triggers from external systems; Date-Based entry for anniversary or renewal journeys. For practice scenarios, match the trigger type to the entry source.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Decision Split vs Engagement Split:</strong> Decision Split branches based on data attributes (contact field values). Engagement Split branches based on email interaction behaviour (opened, clicked, not opened). Pick the right one based on whether the branching condition is data-driven or interaction-driven.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Suppression list vs publication list:</strong> Suppression lists prevent sends to specific addresses regardless of subscription status. Publication lists are opt-in lists for specific content types. A contact can be on a publication list but also suppressed — suppression always wins.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Suppression list vs publication list:</strong> Suppression lists prevent sends to specific addresses regardless of subscription status. Publication lists are opt-in lists for specific content types. A contact can be on a publication list but also suppressed; suppression always wins.</span></li>
         </ul>
       </div>
 
@@ -196,14 +196,14 @@ export default function EmailSpecialistStudyGuidePage() {
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Hard vs soft vs technical bounce types and automatic unsubscription rules</li>
           <li>Send classification components: sender profile, delivery profile, send classification</li>
-          <li>SPF, DKIM, DMARC — what each does and how they improve deliverability</li>
+          <li>SPF, DKIM, DMARC, what each does and how they improve deliverability</li>
           <li>Journey Builder entry sources: Data Extension, Salesforce Data, API Event, Date-Based</li>
-          <li>Decision Split vs Engagement Split — data-driven vs behaviour-driven branching</li>
+          <li>Decision Split vs Engagement Split, data-driven vs behaviour-driven branching</li>
           <li>Subscriber key and its role as the unique identifier in Marketing Cloud</li>
           <li>Suppression lists vs publication lists vs exclusion lists</li>
-          <li>Dynamic content — attribute-based and filter-based content blocks</li>
+          <li>Dynamic content, attribute-based and filter-based content blocks</li>
           <li>CAN-SPAM compliance requirements: unsubscribe mechanism, physical address, from name</li>
-          <li>Data views: Bounces, Clicks, Opens, Unsubscribes — used for SQL queries in reports</li>
+          <li>Data views: Bounces, Clicks, Opens, Unsubscribes, used for SQL queries in reports</li>
         </ol>
       </div>
 

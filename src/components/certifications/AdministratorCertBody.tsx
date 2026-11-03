@@ -103,7 +103,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 <Link href="/certifications" className="text-salesforce-blue font-medium hover:underline">
                   Salesforce certification path
                 </Link>{' '}
-                to compare all credentials by role — Administrator, Developer, Consultant, Architect, and more.
+                to compare all credentials by role: Administrator, Developer, Consultant, Architect, and more.
               </p>
             </section>
 
@@ -149,13 +149,13 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   Is the ADM-201 Exam Hard?
                 </h2>
                 <p className="text-sm text-gray-700 mb-3">
-                  The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting — but it does <em>not</em> require coding.
+                  The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting, but it does <em>not</em> require coding.
                 </p>
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
-                  <li><strong>60 multiple-choice questions</strong> in 105 minutes — roughly 1.75 minutes per question.</li>
-                  <li><strong>68% passing score</strong> — you can miss up to 19 questions and still pass.</li>
-                  <li><strong>No coding required</strong> — the exam is entirely declarative (clicks, not code).</li>
-                  <li><strong>Broad but not deep</strong> — expect questions across all 7 exam sections, weighted by the official outline.</li>
+                  <li><strong>60 multiple-choice questions</strong> in 105 minutes, roughly 1.75 minutes per question.</li>
+                  <li><strong>68% passing score</strong>: you can miss up to 19 questions and still pass.</li>
+                  <li><strong>No coding required</strong>: the exam is entirely declarative (clicks, not code).</li>
+                  <li><strong>Broad but not deep</strong>: expect questions across all 7 exam sections, weighted by the official outline.</li>
                 </ul>
                 <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                   <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
@@ -166,7 +166,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </div>
             </details>
 
-            {/* ADM-201 Exam Format Explained — targets "ADM-201 exam format" + "scenario-based questions" queries */}
+            {/* ADM-201 Exam Format Explained, targets "ADM-201 exam format" + "scenario-based questions" queries */}
             <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_980px]">
               <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
                 ADM-201 Exam Format Explained
@@ -200,24 +200,24 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">How Many Questions Are Scenario-Based?</h3>
                 <p className="text-sm text-gray-700 mb-3">
-                  Salesforce does not publish the exact breakdown, but based on candidate feedback, roughly <strong>40–50% of ADM-201 questions are scenario-based</strong>. These present a business situation — for example, &ldquo;A sales manager wants to restrict access to a set of records&rdquo; — and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options.
+                  Salesforce does not publish the exact breakdown, but based on candidate feedback, roughly <strong>40–50% of ADM-201 questions are scenario-based</strong>. These present a business situation, for example, &ldquo;A sales manager wants to restrict access to a set of records&rdquo; and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options.
                 </p>
                 <p className="text-sm text-gray-700 mb-3">
-                  Scenario questions require you to <em>apply</em> knowledge, not just recall it. This is why hands-on practice in a Salesforce Developer Edition org (free from Salesforce) is critical. Simply memorizing content is not enough — you need to understand <strong>when and why</strong> to use each feature.
+                  Scenario questions require you to <em>apply</em> knowledge, not just recall it. This is why hands-on practice in a Salesforce Developer Edition org (free from Salesforce) is critical. Simply memorizing content is not enough; you need to understand <strong>when and why</strong> to use each feature.
                 </p>
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass ADM-201 on Your First Attempt</h3>
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
                   <li><strong>Start with high-weight sections:</strong> Configuration &amp; Setup (20%) and Object Manager &amp; Lightning App Builder (20%) together cover 40% of the exam.</li>
                   <li><strong>Use a hands-on org:</strong> Set up a free Salesforce Developer Edition org and practice every feature you study.</li>
-                  <li><strong>Take timed mock exams:</strong> Simulate real conditions — 65 questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
+                  <li><strong>Take timed mock exams:</strong> Simulate real conditions: 65 questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
                   <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
                   <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
                 </ul>
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
                 <p className="text-sm text-gray-700">
-                  ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em> — you need to know a little about many topics. If you pass ADM-201 comfortably, you’re well-positioned for{' '}
+                  ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em>; you need to know a little about many topics. If you pass ADM-201 comfortably, you’re well-positioned for{' '}
                   <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
                     the Platform App Builder exam
                   </Link>.
@@ -304,23 +304,23 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             <div className="space-y-4 text-sm text-gray-700">
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Objects, Fields & Data Model</p>
-                <p>Standard Objects (Account, Contact, Lead, Opportunity, Case) are the backbone of Salesforce. Custom Objects extend the platform for business-specific data. Field types include Text, Number, Currency, Date, Picklist, Formula, Lookup, and Master-Detail. Roll-Up Summary fields aggregate child records (count, sum, min, max) — only available on Master-Detail. Junction Objects implement many-to-many relationships using two Master-Detail fields. The ADM-201 exam frequently presents a scenario and asks which field type or relationship to use — know cascade delete rules, sharing implications, and when a Lookup is preferable to Master-Detail.</p>
+                <p>Standard Objects (Account, Contact, Lead, Opportunity, Case) are the backbone of Salesforce. Custom Objects extend the platform for business-specific data. Field types include Text, Number, Currency, Date, Picklist, Formula, Lookup, and Master-Detail. Roll-Up Summary fields aggregate child records (count, sum, min, max), only available on Master-Detail. Junction Objects implement many-to-many relationships using two Master-Detail fields. The ADM-201 exam frequently presents a scenario and asks which field type or relationship to use, know cascade delete rules, sharing implications, and when a Lookup is preferable to Master-Detail.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Security Model: Profiles, Permission Sets, Roles & Sharing</p>
-                <p>Org-wide defaults (OWDs) set the baseline visibility for every record. Role hierarchy opens up access upward — managers see what their subordinates own. Profiles control what users CAN do (CRUD, page layouts, app access). Permission Sets grant additional permissions without changing the profile. Sharing Rules extend access horizontally to peers. Manual Sharing lets record owners share individual records. The exam tests layered security scenarios: know that OWD + Role Hierarchy + Sharing Rules all combine additively — the most permissive rule wins for access.</p>
+                <p>Org-wide defaults (OWDs) set the baseline visibility for every record. Role hierarchy opens up access upward, managers see what their subordinates own. Profiles control what users CAN do (CRUD, page layouts, app access). Permission Sets grant additional permissions without changing the profile. Sharing Rules extend access horizontally to peers. Manual Sharing lets record owners share individual records. The exam tests layered security scenarios: know that OWD + Role Hierarchy + Sharing Rules all combine additively, the most permissive rule wins for access.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Automation: Flows, Approval Processes & Email Alerts</p>
-                <p>Record-Triggered Flows are the primary automation tool for administrators — they replace Workflow Rules (retiring) and Process Builder (retiring). Before/After Save triggers fire at different points in the transaction; only After Save can create related records. Scheduled Flows process batches on a time basis. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario — Flows for complex logic, Approval Processes for structured human sign-off.</p>
+                <p>Record-Triggered Flows are the primary automation tool for administrators, they replace Workflow Rules (retiring) and Process Builder (retiring). Before/After Save triggers fire at different points in the transaction; only After Save can create related records. Scheduled Flows process batches on a time basis. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario: Flows for complex logic, Approval Processes for structured human sign-off.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Reports, Dashboards & List Views</p>
-                <p>Report Types determine which objects and fields are available. Tabular: flat row lists. Summary: grouped with subtotals. Matrix: two-dimensional grouping. Joined: up to 5 report blocks side by side. Dashboards display visual components (charts, gauges, metrics, tables) driven by reports; each component points to a single source report. The Running User determines whose data is shown. Dynamic Dashboards let each viewer see their own data (up to 5 per org in Enterprise). List Views are quick filtered record sets — shareable with groups or all users. Schedule Reports to deliver via email automatically.</p>
+                <p>Report Types determine which objects and fields are available. Tabular: flat row lists. Summary: grouped with subtotals. Matrix: two-dimensional grouping. Joined: up to 5 report blocks side by side. Dashboards display visual components (charts, gauges, metrics, tables) driven by reports; each component points to a single source report. The Running User determines whose data is shown. Dynamic Dashboards let each viewer see their own data (up to 5 per org in Enterprise). List Views are quick filtered record sets, shareable with groups or all users. Schedule Reports to deliver via email automatically.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Sales & Service Cloud Fundamentals</p>
-                <p>The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in one action. Opportunity Stages and Probability drive forecasting. Cases are the unit of customer support — they can be created via Web-to-Case, Email-to-Case, or manually. Queues hold Cases or Leads for team assignment. Escalation Rules auto-escalate cases based on age or criteria. Auto-Assignment Rules route incoming Cases or Leads to the right owner. Service Level Agreements (SLAs) are enforced via Entitlements and Milestones. The exam frequently asks about the correct feature for a given support or sales scenario.</p>
+                <p>The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in one action. Opportunity Stages and Probability drive forecasting. Cases are the unit of customer support; they can be created via Web-to-Case, Email-to-Case, or manually. Queues hold Cases or Leads for team assignment. Escalation Rules auto-escalate cases based on age or criteria. Auto-Assignment Rules route incoming Cases or Leads to the right owner. Service Level Agreements (SLAs) are enforced via Entitlements and Milestones. The exam frequently asks about the correct feature for a given support or sales scenario.</p>
               </div>
             </div>
           </div>
@@ -340,7 +340,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Sharing &amp; Security Is the Highest-Weighted Topic</p>
-                <p>Org-Wide Defaults, Role Hierarchies, Sharing Rules, Profiles, and Permission Sets — know how each layer grants or restricts access and the order in which they are evaluated. Most security questions hinge on knowing the minimum-access principle.</p>
+                <p>Org-Wide Defaults, Role Hierarchies, Sharing Rules, Profiles, and Permission Sets. Know how each layer grants or restricts access and the order in which they are evaluated. Most security questions hinge on knowing the minimum-access principle.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Reports vs. Dashboards</p>
@@ -373,7 +373,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               <RelatedCertifications currentSlug={slug} />
             </div>
 
-            {/* ADM-201 related guides — always-visible internal links */}
+            {/* ADM-201 related guides, always-visible internal links */}
             <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="adm201-guides-heading">
               <h2 id="adm201-guides-heading" className="text-base font-semibold text-gray-900 mb-3">ADM-201 Study Resources</h2>
               <ul className="space-y-2 text-sm">
@@ -399,7 +399,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   <Link href="/admin-certification-path" className="text-salesforce-blue font-medium hover:underline">
                     Salesforce Admin Certification Path →
                   </Link>
-                  <span className="text-gray-600 ml-2">What to take after ADM-201: App Builder, Advanced Admin, or Consultant track — with career context.</span>
+                  <span className="text-gray-600 ml-2">What to take after ADM-201: App Builder, Advanced Admin, or Consultant track, with career context.</span>
                 </li>
                 <li>
                   <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">

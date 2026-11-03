@@ -12,7 +12,7 @@ export default function LeadToCashArchitectureDiagram() {
     <figure id="lead-to-cash-architecture-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Lead-to-cash (Product-to-Cash) architecture (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Revenue Cloud spans the full P2C lifecycle — CPQ configures and quotes, Billing invoices per subscription or
+        Revenue Cloud spans the full P2C lifecycle: CPQ configures and quotes, Billing invoices per subscription or
         usage terms, and Revenue Recognition allocates revenue to accounting periods per ASC 606/IFRS 15.
       </p>
       <svg role="img" aria-labelledby="ltc-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 780 130" xmlns="http://www.w3.org/2000/svg">

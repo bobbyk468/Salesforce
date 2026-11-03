@@ -22,11 +22,11 @@
     "summary": "The B2C Solution Architect exam is hard. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>~63% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use B2C Commerce, Multi-Cloud, or Solution Design.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported B2C Commerce in a real org are better prepared than candidates who only memorize notes."
+      "<strong>~63% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong>: expect questions that test when to use B2C Commerce, Multi-Cloud, or Solution Design.",
+      "<strong>Hands-on context matters</strong>: candidates who have configured or supported B2C Commerce in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
   },
   "examFormat": {
     "heading": "B2C Solution Architect Exam Format Explained",
@@ -61,7 +61,7 @@
     "blocks": [
       {
         "heading": "Solution Design for B2C Retail",
-        "body": "B2C Solution Architects design solutions spanning Commerce Cloud (**storefront**), Marketing Cloud (email/journey), Service Cloud (support), and Order Management (fulfillment). The architect balances business requirements (conversion, retention, support cost) against technical constraints (API limits, data residency, licensing). Salesforce Customer 360 provides a unified identity across clouds via Marketing Cloud Personalization and Data Cloud. The exam presents complex multi-cloud business scenarios and tests which combination of products, connectors, and configuration choices best meets the requirements — know the capabilities and limits of each cloud."
+        "body": "B2C Solution Architects design solutions spanning Commerce Cloud (**storefront**), Marketing Cloud (email/journey), Service Cloud (support), and Order Management (fulfillment). The architect balances business requirements (conversion, retention, support cost) against technical constraints (API limits, data residency, licensing). Salesforce Customer 360 provides a unified identity across clouds via Marketing Cloud Personalization and Data Cloud. The exam presents complex multi-cloud business scenarios and tests which combination of products, connectors, and configuration choices best meets the requirements. Know the capabilities and limits of each cloud."
       },
       {
         "heading": "Multi-Cloud Integration Patterns",
@@ -77,7 +77,7 @@
       },
       {
         "heading": "Non-Functional Requirements & Governance",
-        "body": "B2C solutions must be designed for scale: peak traffic (Black Friday), global reach (multi-language, multi-currency, multi-region), and high availability (99.99% uptime SLA). Caching strategy across CDN, application, and browser layers reduces load time and infrastructure cost. Disaster recovery design defines RPO (Recovery Point Objective) and RTO (Recovery Time Objective). Release management for B2C spans multiple clouds — changes must be coordinated across Commerce Cloud code deployments, Marketing Cloud journey updates, and Salesforce metadata deployments. The exam tests how an architect balances speed to market against risk, and how to structure a release governance model for a multi-cloud B2C platform."
+        "body": "B2C solutions must be designed for scale: peak traffic (Black Friday), global reach (multi-language, multi-currency, multi-region), and high availability (99.99% uptime SLA). Caching strategy across CDN, application, and browser layers reduces load time and infrastructure cost. Disaster recovery design defines RPO (Recovery Point Objective) and RTO (Recovery Time Objective). Release management for B2C spans multiple clouds; changes must be coordinated across Commerce Cloud code deployments, Marketing Cloud journey updates, and Salesforce metadata deployments. The exam tests how an architect balances speed to market against risk, and how to structure a release governance model for a multi-cloud B2C platform."
       }
     ]
   },
@@ -241,7 +241,7 @@
       "whyWrong": [
         "Marketers aren't the typical role pursuing this architecture-focused credential.",
         "Sales roles aren't the typical audience for this technical architecture credential.",
-        "Designers aren't the typical audience — this targets architects and senior consultants."
+        "Designers aren't the typical audience, this targets architects and senior consultants."
       ]
     },
     {

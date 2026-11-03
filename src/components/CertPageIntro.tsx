@@ -53,7 +53,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
               "https://www.salesforce.com/trailblazer/krishnamohan"
             ],
             "jobTitle": "Salesforce Certified Professional",
-            "description": "14× Salesforce certified professional — ADM-201, PD1, PD2, Platform App Builder, Sales Cloud Consultant, and more.",
+            "description": "14× Salesforce certified professional: ADM-201, PD1, PD2, Platform App Builder, Sales Cloud Consultant, and more.",
             "knowsAbout": ["Salesforce", "Salesforce Administrator", "Salesforce Platform Developer", "Salesforce Consultant", "Salesforce Architect"]
           })
         }}
@@ -66,15 +66,15 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
       <p className="text-gray-700 leading-relaxed mb-3 text-sm sm:text-base">
         This page is your <strong className="text-gray-900">{primaryName}</strong>
         {examCode ? <> (exam <strong className="text-gray-900">{examCode}</strong>)</> : null}
-        {formerName ? <>—formerly <strong className="text-gray-900">{formerName}</strong></> : null}
+        {formerName ? <>, formerly <strong className="text-gray-900">{formerName}</strong>,</> : null}
         {' '}study guide. The exam tests skills that employers want. It is for {audience} who want a credential.
       </p>
 
       <h3 className="text-sm font-semibold text-gray-900 mt-4 mb-2">What you get here</h3>
       <ul className="text-gray-700 text-sm sm:text-base space-y-1.5 mb-4 list-disc list-inside">
-        <li><strong>Section weightage</strong> — See which topics have the most questions.</li>
-        <li><strong>Exam tips and prerequisites</strong> — A clear study plan.</li>
-        <li><strong>Sample practice questions</strong> — With clear explanations.</li>
+        <li><strong>Section weightage</strong>: See which topics have the most questions.</li>
+        <li><strong>Exam tips and prerequisites</strong>: A clear study plan.</li>
+        <li><strong>Sample practice questions</strong>: With clear explanations.</li>
       </ul>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
         Content is written for this certification only. Use it to match your study to the official outline and to see when you’re ready to book the exam.

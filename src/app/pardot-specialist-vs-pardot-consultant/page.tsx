@@ -46,7 +46,7 @@ const faqItems = [
   },
   {
     question: 'Should I take Pardot Specialist before Pardot Consultant?',
-    answer: 'Yes — Pardot Specialist is strongly recommended before Pardot Consultant. The Consultant exam assumes deep Specialist-level knowledge of all Pardot features and adds a consulting/architecture layer on top. Salesforce recommends holding Pardot Specialist before attempting Pardot Consultant. Most candidates who skip Specialist and go directly to Consultant find the exam significantly harder than expected.',
+    answer: 'Yes: Pardot Specialist is strongly recommended before Pardot Consultant. The Consultant exam assumes deep Specialist-level knowledge of all Pardot features and adds a consulting/architecture layer on top. Salesforce recommends holding Pardot Specialist before attempting Pardot Consultant. Most candidates who skip Specialist and go directly to Consultant find the exam significantly harder than expected.',
   },
   {
     question: 'Which Pardot certification has more job market value?',
@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What is the Pardot Consultant exam format?',
-    answer: 'The Pardot Consultant exam has 60 questions, 105-minute time limit, ~65% passing score, and a $200 fee. It is scenario-based — questions describe business requirements and client situations and ask which Pardot configuration, architecture, or approach best solves them. It covers Pardot across all features plus consulting topics: requirements gathering, solution design, data migration, and implementation strategy.',
+    answer: 'The Pardot Consultant exam has 60 questions, 105-minute time limit, ~65% passing score, and a $200 fee. It is scenario-based, questions describe business requirements and client situations and ask which Pardot configuration, architecture, or approach best solves them. It covers Pardot across all features plus consulting topics: requirements gathering, solution design, data migration, and implementation strategy.',
   },
   {
     question: 'Do I need Salesforce Admin (ADM-201) before Pardot Consultant?',
@@ -75,7 +75,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           Pardot Specialist vs Pardot Consultant ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Both Pardot certifications test the same platform — but at very different levels. Here’s which to take first and when to go for the Consultant credential.
+          Both Pardot certifications test the same platform, but at very different levels. Here’s which to take first and when to go for the Consultant credential.
         </p>
       </div>
 
@@ -120,7 +120,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             badge: 'Take First',
             badgeColor: 'bg-green-100 text-green-800',
             fee: '$200', questions: '60', time: '90 min', passing: '~65%',
-            level: 'Practitioner — hands-on execution',
+            level: 'Practitioner, hands-on execution',
             best: 'Marketing automation specialists, email marketers, marketing ops professionals',
             skills: ['Lead scoring and grading models', 'Engagement Studio programs', 'Forms, landing pages, and automation rules', 'Email marketing and deliverability', 'Pardot-Salesforce connector basics'],
           },
@@ -130,7 +130,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             badge: 'Take Second',
             badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
             fee: '$200', questions: '60', time: '105 min', passing: '~65%',
-            level: 'Strategic — architecture and consulting',
+            level: 'Strategic, architecture and consulting',
             best: 'Salesforce consulting partners, senior marketing ops architects, solution architects',
             skills: ['Multi-business-unit Pardot architecture', 'Implementation strategy and requirements gathering', 'Complex connector sync troubleshooting', 'Data migration and cleansing strategy', 'Governance and change management'],
           },
@@ -219,11 +219,11 @@ export default function PardotSpecialistVsPardotConsultantPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Day-to-day Pardot user — running campaigns, managing prospects, using Engagement Studio</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot Specialist</td></tr>
+              <tr><td className="py-2.5 pr-4">Day-to-day Pardot user, running campaigns, managing prospects, using Engagement Studio</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot Specialist</td></tr>
               <tr><td className="py-2.5 pr-4">Implementing Pardot for clients or designing the full marketing automation architecture</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">New to Pardot/MCAE — no prior certification</td><td className="py-2.5 font-semibold text-salesforce-blue">Specialist first — Consultant builds on Specialist knowledge</td></tr>
-              <tr><td className="py-2.5 pr-4">Consultant or agency delivering Pardot implementations</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant — required for partner-level credibility</td></tr>
-              <tr><td className="py-2.5 pr-4">Both — what order?</td><td className="py-2.5 font-semibold text-gray-700">Specialist first, then Consultant after 6+ months of hands-on use</td></tr>
+              <tr><td className="py-2.5 pr-4">New to Pardot/MCAE, no prior certification</td><td className="py-2.5 font-semibold text-salesforce-blue">Specialist first: Consultant builds on Specialist knowledge</td></tr>
+              <tr><td className="py-2.5 pr-4">Consultant or agency delivering Pardot implementations</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant, required for partner-level credibility</td></tr>
+              <tr><td className="py-2.5 pr-4">Both, what order?</td><td className="py-2.5 font-semibold text-gray-700">Specialist first, then Consultant after 6+ months of hands-on use</td></tr>
             </tbody>
           </table>
         </div>

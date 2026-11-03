@@ -41,7 +41,7 @@ const faqItems = [
   },
   {
     question: 'Do I need to know programming before becoming a Salesforce Developer?',
-    answer: 'Prior programming experience is very helpful but not strictly required. Salesforce recommends starting with ADM-201 (admin certification) before PD1 — the Salesforce platform, data model, and security model must be understood before writing Apex. If you have no programming background, budget extra time for Apex fundamentals. JavaScript knowledge is increasingly important for Lightning Web Components.',
+    answer: 'Prior programming experience is very helpful but not strictly required. Salesforce recommends starting with ADM-201 (admin certification) before PD1, the Salesforce platform, data model, and security model must be understood before writing Apex. If you have no programming background, budget extra time for Apex fundamentals. JavaScript knowledge is increasingly important for Lightning Web Components.',
   },
   {
     question: 'What is the Salesforce Platform Developer I (PD1) certification?',
@@ -49,11 +49,11 @@ const faqItems = [
   },
   {
     question: 'What is the Salesforce developer salary in 2026?',
-    answer: 'Entry-level Salesforce Developers (PD1 certified, 0–2 years experience) typically earn $75,000–$100,000 USD. Mid-level developers with PD1 + PD2 and 2–5 years of experience earn $100,000–$140,000. Senior developers and architects earn $140,000–$180,000+. Contract Salesforce developers typically earn $85–$130 per hour. Salaries vary significantly by location — US tech hubs pay 20–40% more than national averages.',
+    answer: 'Entry-level Salesforce Developers (PD1 certified, 0–2 years experience) typically earn $75,000–$100,000 USD. Mid-level developers with PD1 + PD2 and 2–5 years of experience earn $100,000–$140,000. Senior developers and architects earn $140,000–$180,000+. Contract Salesforce developers typically earn $85–$130 per hour. Salaries vary significantly by location: US tech hubs pay 20–40% more than national averages.',
   },
   {
     question: 'What comes after Platform Developer I?',
-    answer: 'After PD1, the most common next steps are: Platform Developer II (PD2) — tests advanced Apex patterns, integration architecture, performance optimisation; JavaScript Developer I — validates JavaScript/LWC skills specifically; Salesforce Architect path — starting with Integration Architect or Data Architect requires strong PD1 knowledge. Many developers also pursue administrator-track certs (App Builder, Advanced Admin) alongside their developer credentials.',
+    answer: 'After PD1, the most common next steps are: Platform Developer II (PD2), tests advanced Apex patterns, integration architecture, performance optimisation; JavaScript Developer I, validates JavaScript/LWC skills specifically; Salesforce Architect path, starting with Integration Architect or Data Architect requires strong PD1 knowledge. Many developers also pursue administrator-track certs (App Builder, Advanced Admin) alongside their developer credentials.',
   },
 ]
 
@@ -62,7 +62,7 @@ const steps = [
     step: '1',
     title: 'Learn Salesforce Platform Basics',
     time: '4–6 weeks',
-    description: 'Before writing a single line of Apex, you need to understand the Salesforce platform thoroughly. Start with Trailhead — the Salesforce Fundamentals trail covers objects, fields, the data model, security model (profiles, roles, sharing), and basic automation. Create a free Salesforce Developer Edition org and follow along hands-on.',
+    description: 'Before writing a single line of Apex, you need to understand the Salesforce platform thoroughly. Start with Trailhead, the Salesforce Fundamentals trail covers objects, fields, the data model, security model (profiles, roles, sharing), and basic automation. Create a free Salesforce Developer Edition org and follow along hands-on.',
     resources: ['Salesforce Platform Basics (Trailhead)', 'Data Modeling trail (Trailhead)', 'Free Salesforce Developer Edition org'],
   },
   {
@@ -90,7 +90,7 @@ const steps = [
     step: '5',
     title: 'Get Project Experience',
     time: 'Ongoing',
-    description: 'Certification opens doors, but project experience closes the deal. Contribute to Salesforce projects through pro bono work (Salesforce.org Nonprofit), open-source projects, or internal Salesforce implementations at your current employer. Document your work in a GitHub portfolio — Salesforce employers increasingly review code samples alongside certifications.',
+    description: 'Certification opens doors, but project experience closes the deal. Contribute to Salesforce projects through pro bono work (Salesforce.org Nonprofit), open-source projects, or internal Salesforce implementations at your current employer. Document your work in a GitHub portfolio: Salesforce employers increasingly review code samples alongside certifications.',
     resources: ['Salesforce.org Nonprofit volunteer opportunities', 'GitHub portfolio with Apex/LWC samples', 'Salesforce Stack Exchange (answer questions to build reputation)'],
   },
 ]
@@ -111,7 +111,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
           How to Become a Salesforce Developer ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          From zero to Salesforce Developer — the step-by-step path to PD1 certification, LWC skills, and your first Salesforce development role.
+          From zero to Salesforce Developer, the step-by-step path to PD1 certification, LWC skills, and your first Salesforce development role.
         </p>
       </div>
 
@@ -168,17 +168,17 @@ export default function HowToBecomeSalesforceDeveloperPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce Developer Certification Path</h2>
         <div className="space-y-3 text-sm text-gray-700">
           {[
-            { cert: 'ADM-201 (Administrator)', note: 'Recommended first — establishes Salesforce platform knowledge' },
-            { cert: 'Platform Developer I (PD1)', note: 'Core developer credential — Apex, LWC, SOQL, governor limits, deployment' },
+            { cert: 'ADM-201 (Administrator)', note: 'Recommended first, establishes Salesforce platform knowledge' },
+            { cert: 'Platform Developer I (PD1)', note: 'Core developer credential: Apex, LWC, SOQL, governor limits, deployment' },
             { cert: 'JavaScript Developer I', note: 'Validates JavaScript/ES6+ skills used in LWC development' },
-            { cert: 'Platform Developer II (PD2)', note: 'Advanced developer — Apex patterns, integration architecture, performance' },
+            { cert: 'Platform Developer II (PD2)', note: 'Advanced developer: Apex patterns, integration architecture, performance' },
             { cert: 'Architect Track', note: 'After PD1+PD2: Integration Architect, Data Architect → Application Architect → CTA' },
           ].map((item, i) => (
             <div key={item.cert} className="flex items-start gap-3">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
               <div>
                 <span className="font-semibold text-gray-900">{item.cert}</span>
-                <span className="text-gray-600"> — {item.note}</span>
+                <span className="text-gray-600">: {item.note}</span>
               </div>
             </div>
           ))}

@@ -53,19 +53,19 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Pardot Consultant exam sections?',
-    answer: 'Engagement Studio &amp; Automation (30%) and Lead Scoring, Grading &amp; Qualification (18%) together account for 48% of the exam. Mastering engagement programs — branching logic, triggers, and actions — is the single most important skill. Understanding how scores and grades work separately (score = interest level, grade = fit to ideal customer) is the second priority.',
+    answer: 'Engagement Studio &amp; Automation (30%) and Lead Scoring, Grading &amp; Qualification (18%) together account for 48% of the exam. Mastering engagement programs, branching logic, triggers, and actions, is the single most important skill. Understanding how scores and grades work separately (score = interest level, grade = fit to ideal customer) is the second priority.',
   },
   {
     question: 'How does the Salesforce-Pardot sync work for the exam?',
-    answer: 'Pardot syncs with Salesforce through the Connector. Prospects in Pardot map to Leads and Contacts in Salesforce. The sync runs every 2-10 minutes. Key exam rules: Pardot only syncs with Leads and Contacts — not Accounts or Opportunities directly. When a CRM value conflicts with a Pardot value, the CRM wins by default (unless overridden). Deleted CRM records do not delete Pardot prospects. Understanding sync direction and conflict resolution is frequently tested.',
+    answer: 'Pardot syncs with Salesforce through the Connector. Prospects in Pardot map to Leads and Contacts in Salesforce. The sync runs every 2-10 minutes. Key exam rules: Pardot only syncs with Leads and Contacts, not Accounts or Opportunities directly. When a CRM value conflicts with a Pardot value, the CRM wins by default (unless overridden). Deleted CRM records do not delete Pardot prospects. Understanding sync direction and conflict resolution is frequently tested.',
   },
   {
     question: 'What is the difference between automation rules and completion actions in Pardot?',
-    answer: 'Automation rules run retroactively against the entire prospect database and continuously — they fire whenever criteria are met, even for existing prospects. Completion actions run only at the moment a specific action is completed (e.g., form submit, email click) and only for new interactions. Segmentation rules are one-time static snapshots. For scenarios where you need to retroactively apply changes to existing prospects, automation rules are the answer; for real-time responses to new activity, completion actions are correct.',
+    answer: 'Automation rules run retroactively against the entire prospect database and continuously, they fire whenever criteria are met, even for existing prospects. Completion actions run only at the moment a specific action is completed (e.g., form submit, email click) and only for new interactions. Segmentation rules are one-time static snapshots. For scenarios where you need to retroactively apply changes to existing prospects, automation rules are the answer; for real-time responses to new activity, completion actions are correct.',
   },
   {
     question: 'What concepts do most Pardot (Account Engagement) Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Pardot (Account Engagement) Consultant exam are: (1) Completion Actions vs Automation Rules vs Dynamic Lists — Three Trigger Mechanisms; (2) Prospect Grades vs Scores — Profile Fit vs Engagement; (3) Pardot Business Units — Separate Instances Under One Salesforce Org. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Pardot (Account Engagement) Consultant exam are: (1) Completion Actions vs Automation Rules vs Dynamic Lists: Three Trigger Mechanisms; (2) Prospect Grades vs Scores: Profile Fit vs Engagement; (3) Pardot Business Units: Separate Instances Under One Salesforce Org. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('pardot-consultant-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function PardotConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Pardot Consultant Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Studio</strong> — Building multi-step lead nurturing programs with triggers (email open, link click, form submit, page visit), rules (score, grade, field value), and actions (send email, add to list, assign to user, notify). Understanding wait steps, branching paths, and how completion actions on assets interact with running programs.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead Scoring &amp; Grading</strong> — Score measures prospect engagement (behaviour-based, goes up/down). Grade measures fit to your ideal customer profile (demographic-based, A–F scale). Both are needed for sales-readiness decisions. Know which activities increase score, how custom scoring works, and what makes a prospect sales-ready based on both criteria.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Sync &amp; Connector</strong> — Prospect-to-Lead/Contact sync configuration, sync frequency, conflict resolution (CRM wins by default), assignment rules, custom field mapping, and the Pardot Connector user setup. Understanding what triggers a sync and what does not is tested extensively.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Studio</strong>: Building multi-step lead nurturing programs with triggers (email open, link click, form submit, page visit), rules (score, grade, field value), and actions (send email, add to list, assign to user, notify). Understanding wait steps, branching paths, and how completion actions on assets interact with running programs.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead Scoring &amp; Grading</strong>: Score measures prospect engagement (behaviour-based, goes up/down). Grade measures fit to your ideal customer profile (demographic-based, A–F scale). Both are needed for sales-readiness decisions. Know which activities increase score, how custom scoring works, and what makes a prospect sales-ready based on both criteria.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Sync &amp; Connector</strong>: Prospect-to-Lead/Contact sync configuration, sync frequency, conflict resolution (CRM wins by default), assignment rules, custom field mapping, and the Pardot Connector user setup. Understanding what triggers a sync and what does not is tested extensively.</li>
         </ul>
       </section>
 
@@ -140,14 +140,14 @@ export default function PardotConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Pardot Consultant Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Questions present a marketing automation requirement — a team wants to nurture leads who
-          downloaded a whitepaper but have not yet requested a demo — and ask which Pardot tool,
+          Questions present a marketing automation requirement, a team wants to nurture leads who
+          downloaded a whitepaper but have not yet requested a demo, and ask which Pardot tool,
           configuration, or sequence achieves the goal correctly.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation tool selection questions: Completion actions fire immediately when an asset interaction occurs (real-time, individual). Automation rules run continuously against all prospects matching criteria (retroactive, batch-style). Segmentation rules run once at creation (static snapshot). Engagement Studio orchestrates multi-step sequences with delays and branching. Match the right tool to the requirement: retroactive = automation rule; new-interaction-only = completion action; complex multi-step nurture = Engagement Studio.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scoring questions: Default score profile assigns +1 for email open, +5 for link click, +50 for form submit, +100 for request a demo form. Scores decay over time with inactivity. Scores can be manually adjusted. When a prospect’s score drops or is manually reset, it does not affect grade. Score and grade are completely independent — a prospect can have a high score (very engaged) but a low grade (wrong industry/company size).</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: Always check what triggers the sync — field edits in Pardot, form submissions, manual sync triggers, and connector user activity. The connector user in Salesforce must have the Pardot Connector permission set and API access. When a prospect is converted from Lead to Contact in Salesforce, Pardot automatically re-links to the Contact record if the email address matches.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scoring questions: Default score profile assigns +1 for email open, +5 for link click, +50 for form submit, +100 for request a demo form. Scores decay over time with inactivity. Scores can be manually adjusted. When a prospect’s score drops or is manually reset, it does not affect grade. Score and grade are completely independent, a prospect can have a high score (very engaged) but a low grade (wrong industry/company size).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: Always check what triggers the sync, field edits in Pardot, form submissions, manual sync triggers, and connector user activity. The connector user in Salesforce must have the Pardot Connector permission set and API access. When a prospect is converted from Lead to Contact in Salesforce, Pardot automatically re-links to the Contact record if the email address matches.</li>
         </ul>
       </section>
 
@@ -158,7 +158,7 @@ export default function PardotConsultantExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Build at least one complete Engagement Studio program in a Pardot sandbox before booking —
+          Build at least one complete Engagement Studio program in a Pardot sandbox before booking,
           include a branching path based on email open, a score threshold check, and a CRM assignment
           action. Candidates who have only studied theory consistently misidentify which automation
           tool to use in scenario questions because the tools’ distinctions only become clear
@@ -168,19 +168,19 @@ export default function PardotConsultantExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Pardot (Account Engagement) Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Completion Actions vs Automation Rules vs Dynamic Lists — Three Trigger Mechanisms</p>
-            <p className="text-sm text-gray-700">Completion Actions fire once when a specific form/email/link action occurs (form submit triggers email send). Automation Rules run continuously, checking all prospects against criteria at intervals — they can fire multiple times. Dynamic Lists update list membership in real time based on criteria but do not trigger actions. Candidates use Completion Actions for ongoing nurture logic — the exam expects Automation Rules for criteria-based continuous processing.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Completion Actions vs Automation Rules vs Dynamic Lists: Three Trigger Mechanisms</p>
+            <p className="text-sm text-gray-700">Completion Actions fire once when a specific form/email/link action occurs (form submit triggers email send). Automation Rules run continuously, checking all prospects against criteria at intervals; they can fire multiple times. Dynamic Lists update list membership in real time based on criteria but do not trigger actions. Candidates use Completion Actions for ongoing nurture logic, the exam expects Automation Rules for criteria-based continuous processing.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Prospect Grades vs Scores — Profile Fit vs Engagement</p>
-            <p className="text-sm text-gray-700">Score measures engagement: points added for email opens, clicks, form fills. Grade measures profile fit: how well a prospect matches the ideal customer profile (industry, company size, title). Candidates use Score to prioritise all leads — the exam expects both to be used together: high score + high grade = prioritise; high score + low grade = nurture; low score + high grade = re-engage.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Prospect Grades vs Scores: Profile Fit vs Engagement</p>
+            <p className="text-sm text-gray-700">Score measures engagement: points added for email opens, clicks, form fills. Grade measures profile fit: how well a prospect matches the ideal customer profile (industry, company size, title). Candidates use Score to prioritise all leads, the exam expects both to be used together: high score + high grade = prioritise; high score + low grade = nurture; low score + high grade = re-engage.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Pardot Business Units — Separate Instances Under One Salesforce Org</p>
-            <p className="text-sm text-gray-700">Pardot Business Units (BUs) allow multiple separate Pardot environments under one Salesforce org — each BU has its own prospects, lists, campaigns, and sending domains. Prospects are NOT shared between BUs by default. Candidates assume all Pardot BUs share one prospect database — the exam expects BU-specific prospect isolation and the Connected Campaigns feature for aligning Pardot and Salesforce campaign reporting.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Pardot Business Units: Separate Instances Under One Salesforce Org</p>
+            <p className="text-sm text-gray-700">Pardot Business Units (BUs) allow multiple separate Pardot environments under one Salesforce org, each BU has its own prospects, lists, campaigns, and sending domains. Prospects are NOT shared between BUs by default. Candidates assume all Pardot BUs share one prospect database, the exam expects BU-specific prospect isolation and the Connected Campaigns feature for aligning Pardot and Salesforce campaign reporting.</p>
           </div>
         </div>
       </section>

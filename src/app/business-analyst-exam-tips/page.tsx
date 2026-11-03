@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Business Analyst exam format?',
-    answer: 'The Salesforce Certified Business Analyst exam has 60 multiple-choice questions, a 105-minute time limit, a 72% passing score, and a $200 fee. The 72% passing score is higher than most Salesforce exams — preparation needs to be more thorough.',
+    answer: 'The Salesforce Certified Business Analyst exam has 60 multiple-choice questions, a 105-minute time limit, a 72% passing score, and a $200 fee. The 72% passing score is higher than most Salesforce exams; preparation needs to be more thorough.',
   },
   {
     question: 'What are the highest-weight Business Analyst exam sections?',
@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'Is the Salesforce Business Analyst certification hard?',
-    answer: 'The Business Analyst exam has a 72% passing threshold — significantly higher than the 65% required for most other Salesforce certifications. It tests soft skills like stakeholder management and requirements gathering, which are harder to study from documentation alone. Real project experience as a BA is strongly recommended.',
+    answer: 'The Business Analyst exam has a 72% passing threshold, significantly higher than the 65% required for most other Salesforce certifications. It tests soft skills like stakeholder management and requirements gathering, which are harder to study from documentation alone. Real project experience as a BA is strongly recommended.',
   },
   {
     question: 'What is the best way to prepare for the Salesforce Business Analyst exam?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Business Analyst candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Business Analyst exam are: (1) Process Mapping vs User Stories — Different Artefacts for Different Purposes; (2) Acceptance Criteria vs Definition of Done — Two Different Quality Gates; (3) Stakeholder Communication — RACI Matrix vs Communication Plan. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Business Analyst exam are: (1) Process Mapping vs User Stories: Different Artefacts for Different Purposes; (2) Acceptance Criteria vs Definition of Done: Two Different Quality Gates; (3) Stakeholder Communication: RACI Matrix vs Communication Plan. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('business-analyst-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function BusinessAnalystExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What the BA Exam Actually Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>BA methodology</strong> — Discovery workshops, requirements gathering, stakeholder management, and translating business needs into user stories with acceptance criteria.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Collaboration skills</strong> — How to run effective meetings, manage competing stakeholder priorities, and drive consensus on requirements.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce platform knowledge</strong> — Knowing which Salesforce features can meet specific business requirements, and how to document those decisions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>BA methodology</strong>: Discovery workshops, requirements gathering, stakeholder management, and translating business needs into user stories with acceptance criteria.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Collaboration skills</strong>: How to run effective meetings, manage competing stakeholder priorities, and drive consensus on requirements.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce platform knowledge</strong>: Knowing which Salesforce features can meet specific business requirements, and how to document those decisions.</li>
         </ul>
       </section>
 
@@ -137,12 +137,12 @@ export default function BusinessAnalystExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach BA Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           BA exam questions describe a business situation and ask what a Business Analyst should do next.
-          The correct answer follows the BA methodology — discovery before solutioning, stakeholders before systems.
+          The correct answer follows the BA methodology, discovery before solutioning, stakeholders before systems.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />When stakeholder conflict appears: facilitate, document, and escalate — never unilaterally choose a stakeholder’s preference.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />When stakeholder conflict appears: facilitate, document, and escalate, never unilaterally choose a stakeholder’s preference.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For user story questions: valid user stories follow "As a [role], I want [feature], so that [benefit]" with measurable acceptance criteria.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Note the 72% passing threshold — it is higher than most Salesforce exams. You need stronger preparation than for Administrator-track certs.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Note the 72% passing threshold; it is higher than most Salesforce exams. You need stronger preparation than for Administrator-track certs.</li>
         </ul>
       </section>
 
@@ -150,26 +150,26 @@ export default function BusinessAnalystExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          80%+ on 3 timed full mocks — the 72% threshold demands higher prep
+          80%+ on 3 timed full mocks, the 72% threshold demands higher prep
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Business Analyst Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Process Mapping vs User Stories — Different Artefacts for Different Purposes</p>
-            <p className="text-sm text-gray-700">Process maps (swim lane diagrams, flow charts) document current-state workflows across people and systems. User stories document future-state requirements from the user’s perspective ("As a [role], I want [capability] so that [benefit]"). Candidates write user stories when asked for a process map and vice versa. The exam tests when each is the appropriate analysis output — process map for AS-IS documentation; user stories for development backlog requirements.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Process Mapping vs User Stories: Different Artefacts for Different Purposes</p>
+            <p className="text-sm text-gray-700">Process maps (swim lane diagrams, flow charts) document current-state workflows across people and systems. User stories document future-state requirements from the user’s perspective ("As a [role], I want [capability] so that [benefit]"). Candidates write user stories when asked for a process map and vice versa. The exam tests when each is the appropriate analysis output, process map for AS-IS documentation; user stories for development backlog requirements.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Acceptance Criteria vs Definition of Done — Two Different Quality Gates</p>
-            <p className="text-sm text-gray-700">Acceptance Criteria define the specific conditions a feature must meet to be accepted by the Product Owner — they are story-specific. Definition of Done is a team-wide checklist that all stories must pass (code reviewed, tested, deployed to staging). Candidates merge these concepts. The exam distinguishes them: acceptance criteria vary per story; Definition of Done is universal and does not change story-by-story.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Acceptance Criteria vs Definition of Done: Two Different Quality Gates</p>
+            <p className="text-sm text-gray-700">Acceptance Criteria define the specific conditions a feature must meet to be accepted by the Product Owner; they are story-specific. Definition of Done is a team-wide checklist that all stories must pass (code reviewed, tested, deployed to staging). Candidates merge these concepts. The exam distinguishes them: acceptance criteria vary per story; Definition of Done is universal and does not change story-by-story.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Stakeholder Communication — RACI Matrix vs Communication Plan</p>
-            <p className="text-sm text-gray-700">A RACI matrix maps stakeholders to responsibilities: Responsible, Accountable, Consulted, Informed. A Communication Plan defines who receives what information, in what format, and at what frequency. They serve different purposes. Candidates use RACI to answer "how do you manage stakeholder updates?" — the exam expects a Communication Plan for that use case. RACI is for clarifying decision ownership, not managing information flow.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Stakeholder Communication: RACI Matrix vs Communication Plan</p>
+            <p className="text-sm text-gray-700">A RACI matrix maps stakeholders to responsibilities: Responsible, Accountable, Consulted, Informed. A Communication Plan defines who receives what information, in what format, and at what frequency. They serve different purposes. Candidates use RACI to answer "how do you manage stakeholder updates?", the exam expects a Communication Plan for that use case. RACI is for clarifying decision ownership, not managing information flow.</p>
           </div>
         </div>
       </section>

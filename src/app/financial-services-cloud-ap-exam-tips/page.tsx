@@ -55,15 +55,15 @@ const faqItems = [
   },
   {
     question: 'What is the FSC household model and why is it important for the exam?',
-    answer: 'FSC uses a household account model where multiple clients (person accounts) are grouped into a household (account). Financial advisors can view all household members’ financial accounts, life events, and relationship maps from a single household view. This is fundamental to FSC — the exam tests how to configure household relationships, manage primary household contacts, and use the household rollup summaries.',
+    answer: 'FSC uses a household account model where multiple clients (person accounts) are grouped into a household (account). Financial advisors can view all household members’ financial accounts, life events, and relationship maps from a single household view. This is fundamental to FSC, the exam tests how to configure household relationships, manage primary household contacts, and use the household rollup summaries.',
   },
   {
     question: 'What financial industry knowledge helps with the FSC AP exam?',
-    answer: 'Understanding financial services business processes — wealth management, retail banking, insurance, or mortgage lending — helps map scenarios to FSC features. Knowledge of financial concepts like AUM (assets under management), financial goals, life events (marriage, retirement, college funding), and how financial advisors manage client relationships is as important as knowing the FSC configuration.',
+    answer: 'Understanding financial services business processes, wealth management, retail banking, insurance, or mortgage lending, helps map scenarios to FSC features. Knowledge of financial concepts like AUM (assets under management), financial goals, life events (marriage, retirement, college funding), and how financial advisors manage client relationships is as important as knowing the FSC configuration.',
   },
   {
     question: 'What concepts do most Financial Services Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Financial Services Cloud exam are: (1) Household vs Individual vs Group — Three Account Models in FSC; (2) Financial Accounts vs Salesforce Accounts — Different Objects; (3) Actionable Relationship Centre (ARC) — Relationship Visibility Tool. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Financial Services Cloud exam are: (1) Household vs Individual vs Group: Three Account Models in FSC; (2) Financial Accounts vs Salesforce Accounts: Different Objects; (3) Actionable Relationship Centre (ARC): Relationship Visibility Tool. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('financial-services-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function FinancialServicesCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What FSC AP Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FSC data model and client management</strong> — Person accounts for individual clients, household accounts grouping family members, the FSC relationship map (showing connections between clients, accounts, and advisors), and life events (marriage, retirement, inheritance) that trigger advisor outreach and financial plan reviews.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Financial account management</strong> — FSC financial account types (bank accounts, investment accounts, insurance policies, loans), financial holdings (individual securities within an investment account), financial account roles (owner, joint owner, beneficiary), and how financial data rolls up to household-level views for the advisor.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advisor productivity and goals</strong> — Action plans for standardising client outreach workflows, financial goals (retirement, education, home purchase) with target values and timelines, referral management for cross-selling between advisors, and the FSC Action Launcher for quick access to common advisor tasks.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FSC data model and client management</strong>: Person accounts for individual clients, household accounts grouping family members, the FSC relationship map (showing connections between clients, accounts, and advisors), and life events (marriage, retirement, inheritance) that trigger advisor outreach and financial plan reviews.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Financial account management</strong>: FSC financial account types (bank accounts, investment accounts, insurance policies, loans), financial holdings (individual securities within an investment account), financial account roles (owner, joint owner, beneficiary), and how financial data rolls up to household-level views for the advisor.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advisor productivity and goals</strong>: Action plans for standardising client outreach workflows, financial goals (retirement, education, home purchase) with target values and timelines, referral management for cross-selling between advisors, and the FSC Action Launcher for quick access to common advisor tasks.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function FinancialServicesCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Compliance and Security</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The FSC data model (person accounts, households, financial accounts) is the foundation — understand it deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The FSC data model (person accounts, households, financial accounts) is the foundation, understand it deeply.</p>
         </div>
       </section>
 
@@ -134,13 +134,13 @@ export default function FinancialServicesCloudApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach FSC AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a financial services scenario and ask which FSC feature, object, or
-          configuration addresses it. Always use native FSC objects — not generic Salesforce
+          configuration addresses it. Always use native FSC objects, not generic Salesforce
           custom objects or opportunities for financial accounts.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For household questions: when a married couple are both clients, create them as two person accounts linked to one household account. The household account shows the combined financial picture for the advisor. The primary household contact is the main point of contact. When a scenario says ’show the advisor a combined view of both spouses’ investments’, the answer is the household rollup view.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For life event questions: life events trigger action plans for advisor follow-up. When a client has a baby, gets married, or retires, FSC can automatically create tasks for the advisor to schedule a financial review. Life events are linked to the client (person account) and can trigger reminders based on the event date.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For financial account questions: a Financial Account in FSC is a top-level account (like a brokerage account). Financial Holdings are the individual assets within that account (individual stocks, bonds, funds). Financial Account Roles define who has ownership or beneficiary rights. When a scenario asks about ’tracking individual securities within a portfolio’, the answer is Financial Holdings — not Financial Accounts.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For financial account questions: a Financial Account in FSC is a top-level account (like a brokerage account). Financial Holdings are the individual assets within that account (individual stocks, bonds, funds). Financial Account Roles define who has ownership or beneficiary rights. When a scenario asks about ’tracking individual securities within a portfolio’, the answer is Financial Holdings, not Financial Accounts.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function FinancialServicesCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Financial Services Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Household vs Individual vs Group — Three Account Models in FSC</p>
-            <p className="text-sm text-gray-700">Financial Services Cloud uses a multi-Account model: Individual (a person), Household (family unit of related Individuals), and Group (business entity or association). A Contact can have Primary and non-primary Account relationships. Candidates use a single Account-Contact relationship — the exam expects the FSC multi-Account model with Household as the primary financial planning unit.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Household vs Individual vs Group: Three Account Models in FSC</p>
+            <p className="text-sm text-gray-700">Financial Services Cloud uses a multi-Account model: Individual (a person), Household (family unit of related Individuals), and Group (business entity or association). A Contact can have Primary and non-primary Account relationships. Candidates use a single Account-Contact relationship, the exam expects the FSC multi-Account model with Household as the primary financial planning unit.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Financial Accounts vs Salesforce Accounts — Different Objects</p>
-            <p className="text-sm text-gray-700">In FSC, Financial Account is a custom object representing a bank account, investment portfolio, insurance policy, or loan — it is NOT the standard Salesforce Account object. The standard Account represents the client entity (person, household, business). Candidates use standard Salesforce Account fields to store balance and portfolio data — the exam expects Financial Account records.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Financial Accounts vs Salesforce Accounts: Different Objects</p>
+            <p className="text-sm text-gray-700">In FSC, Financial Account is a custom object representing a bank account, investment portfolio, insurance policy, or loan; it is NOT the standard Salesforce Account object. The standard Account represents the client entity (person, household, business). Candidates use standard Salesforce Account fields to store balance and portfolio data, the exam expects Financial Account records.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Actionable Relationship Centre (ARC) — Relationship Visibility Tool</p>
-            <p className="text-sm text-gray-700">ARC is the FSC visual relationship map showing how clients, households, financial accounts, and referral relationships connect. It is a read-only visualisation tool — not an editing interface. Candidates design relationship editing workflows using ARC — the exam expects ARC for viewing relationship networks and standard record edit pages for updating relationships.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Actionable Relationship Centre (ARC): Relationship Visibility Tool</p>
+            <p className="text-sm text-gray-700">ARC is the FSC visual relationship map showing how clients, households, financial accounts, and referral relationships connect. It is a read-only visualisation tool, not an editing interface. Candidates design relationship editing workflows using ARC, the exam expects ARC for viewing relationship networks and standard record edit pages for updating relationships.</p>
           </div>
         </div>
       </section>

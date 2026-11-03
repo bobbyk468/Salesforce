@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Application Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Application Architect exam are: (1) Application Architect Is a Role Credential — Not a Single Exam; (2) Multi-Org vs Single-Org — Recognising the Decisive Scenario Signals; (3) Large Data Volumes and Query Performance — Skinny Tables Are Not Indexes. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Application Architect exam are: (1) Application Architect Is a Role Credential: Not a Single Exam; (2) Multi-Org vs Single-Org: Recognising the Decisive Scenario Signals; (3) Large Data Volumes and Query Performance: Skinny Tables Are Not Indexes. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('application-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function ApplicationArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: How the Application Architect Credential Works</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>No single exam</strong> — Application Architect is a role-based credential earned automatically when you pass all four component exams. There is no separate Application Architect exam.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Four components</strong> — Platform App Builder (DEV-402), Platform Developer I (PD1), Data Architect, and Sharing &amp; Visibility Architect.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Recommended order</strong> — App Builder → PD1 → Data Architect → Sharing &amp; Visibility Architect. The first two build the foundation the latter two require.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>No single exam</strong>: Application Architect is a role-based credential earned automatically when you pass all four component exams. There is no separate Application Architect exam.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Four components</strong>: Platform App Builder (DEV-402), Platform Developer I (PD1), Data Architect, and Sharing &amp; Visibility Architect.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Recommended order</strong>: App Builder → PD1 → Data Architect → Sharing &amp; Visibility Architect. The first two build the foundation the latter two require.</li>
         </ul>
       </section>
 
@@ -152,10 +152,10 @@ export default function ApplicationArchitectExamTipsPage() {
           Salesforce feature for a given architectural constraint. The pattern is always: understand the constraint first, then select the solution.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>App Builder:</strong> Always prefer declarative over code. The exam tests your ability to solve requirements without Apex — Flow is the default answer for automation.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>App Builder:</strong> Always prefer declarative over code. The exam tests your ability to solve requirements without Apex; Flow is the default answer for automation.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>PD1:</strong> Governor limits are the key constraint. When a scenario involves bulk records, the answer always involves bulkification, SOQL outside loops, and proper test coverage.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Data Architect:</strong> Large data volume (LDV) questions test skinny tables, custom indexes, and query optimisation. Always consider the impact on query performance before recommending a data model.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Sharing &amp; Visibility:</strong> Read the sharing model in layers — OWD → role hierarchy → sharing rules → manual sharing. The answer is always the most restrictive configuration that still meets the stated requirement.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Sharing &amp; Visibility:</strong> Read the sharing model in layers: OWD → role hierarchy → sharing rules → manual sharing. The answer is always the most restrictive configuration that still meets the stated requirement.</li>
         </ul>
       </section>
 
@@ -167,7 +167,7 @@ export default function ApplicationArchitectExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Data Architect and Sharing &amp; Visibility Architect have lower first-attempt pass rates than App Builder and PD1.
-          Budget more preparation time for these two — real project experience designing data models and sharing configurations
+          Budget more preparation time for these two, real project experience designing data models and sharing configurations
           is strongly recommended before attempting them.
         </p>
       </section>
@@ -175,18 +175,18 @@ export default function ApplicationArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Application Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Application Architect Is a Role Credential — Not a Single Exam</p>
-            <p className="text-sm text-gray-700">The Salesforce Application Architect credential is awarded when you hold both the System Architect credential and the four domain architect exams (Data, Integration, Sharing &amp; Visibility, Dev Lifecycle). There is no single "Application Architect exam." Candidates often study for it as if it were one test. Focus on the four domain exams first, then earn System Architect — the Application Architect credential follows automatically.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Application Architect Is a Role Credential: Not a Single Exam</p>
+            <p className="text-sm text-gray-700">The Salesforce Application Architect credential is awarded when you hold both the System Architect credential and the four domain architect exams (Data, Integration, Sharing &amp; Visibility, Dev Lifecycle). There is no single "Application Architect exam." Candidates often study for it as if it were one test. Focus on the four domain exams first, then earn System Architect, the Application Architect credential follows automatically.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Multi-Org vs Single-Org — Recognising the Decisive Scenario Signals</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Multi-Org vs Single-Org: Recognising the Decisive Scenario Signals</p>
             <p className="text-sm text-gray-700">Single-org consolidates all business units into one instance (better data sharing, more governance complexity). Multi-org separates by business unit (more autonomy, harder cross-BU data access). Exam scenarios signal multi-org with: strict regulatory data isolation requirements, completely separate business processes with no cross-BU data sharing, or post-merger organisations with incompatible tech stacks.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Large Data Volumes and Query Performance — Skinny Tables Are Not Indexes</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Large Data Volumes and Query Performance: Skinny Tables Are Not Indexes</p>
             <p className="text-sm text-gray-700">Skinny tables are read-only Salesforce-managed tables that cache frequently queried field subsets to speed SOQL queries on high-volume objects. They are NOT the same as custom indexes. Custom indexes speed lookups on specific fields. Candidates use these terms interchangeably. Know when to request each from Salesforce Support and why standard indexes (on Lookup/Master-Detail fields and formula fields) are automatically maintained.</p>
           </div>
         </div>

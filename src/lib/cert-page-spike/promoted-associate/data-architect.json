@@ -33,7 +33,7 @@
     "intro": "The exam is proctored online or in-person. Here is the format:",
     "scenarioPercent": "Use the published exam objectives to guide preparation across the six weighted domains; practice explaining the trade-offs among appropriate data architecture options.",
     "bestWayToPass": [
-      "<strong>Know your LDV toolkit:</strong> Skinny tables, custom indexes, Async SOQL, Big Objects, and archiving strategies &mdash; know exactly when each applies and what it costs.",
+      "<strong>Know your LDV toolkit:</strong> Skinny tables, custom indexes, Async SOQL, Big Objects, and archiving strategies, know exactly when each applies and what it costs.",
       "<strong>Master the migration sequence:</strong> Understand parent-before-child load order, external ID upsert, Bulk API 2.0 limits, and rollback strategies for failed loads.",
       "<strong>Study MDM patterns:</strong> Compare approaches for golden records, attribute survivorship, data consolidation, and traceability.",
       "<strong>Review data governance:</strong> Consider privacy, classification, protection, stewardship, and enterprise governance requirements."
@@ -209,9 +209,9 @@
       "correctAnswer": 1,
       "explanation": "Skinny tables are denormalized tables that can improve report performance.",
       "whyWrong": [
-        "Skinny tables aren't for storing images — that's unrelated to their reporting-performance purpose.",
-        "Skinny tables aren't for sending emails — that's unrelated to their function.",
-        "Skinny tables aren't for CPQ configuration — that's unrelated to their function."
+        "Skinny tables aren't for storing images, that's unrelated to their reporting-performance purpose.",
+        "Skinny tables aren't for sending emails, that's unrelated to their function.",
+        "Skinny tables aren't for CPQ configuration, that's unrelated to their function."
       ]
     },
     {
@@ -225,7 +225,7 @@
       "correctAnswer": 1,
       "explanation": "Master-Detail enforces ownership and cascade delete; child cannot exist without parent.",
       "whyWrong": [
-        "Lookup relationships allow the child to exist without a parent — the opposite of what's needed here.",
+        "Lookup relationships allow the child to exist without a parent, the opposite of what's needed here.",
         "External Lookup connects to external system data, not a strict parent-child requirement.",
         "Indirect Lookup is used for external objects matching on specific fields, not enforcing a required parent."
       ]
@@ -241,7 +241,7 @@
       "correctAnswer": 1,
       "explanation": "Archiving involves moving historical data while preserving access and compliance.",
       "whyWrong": [
-        "'Only backup' undersells archiving strategy, which also considers ongoing access patterns, not just backup.",
+        "'Only backup' undersells archiving strategy; which also considers ongoing access patterns, not just backup.",
         "'Only delete' misrepresents archiving, which is about retaining accessible historical data, not deleting it outright.",
         "'Only export' undersells archiving strategy, which is broader than simple export."
       ]
@@ -259,7 +259,7 @@
       "whyWrong": [
         "A standard object doesn't have Big Object's specific high-volume, append-only optimization.",
         "A report type is a display configuration, not a data storage mechanism like Big Objects.",
-        "A dashboard visualizes data — it isn't itself a storage mechanism."
+        "A dashboard visualizes data, it isn't itself a storage mechanism."
       ]
     },
     {
@@ -305,7 +305,7 @@
       "correctAnswer": 1,
       "explanation": "Lookup allows optional parent; child can exist independently.",
       "whyWrong": [
-        "Master-Detail relationships require the parent to exist — the opposite of what's being asked.",
+        "Master-Detail relationships require the parent to exist, the opposite of what's being asked.",
         "Junction objects use two master-detail relationships, so children still require parents in that structure.",
         "External Lookup connects to external system records, which is a different scenario from a standard child-without-parent case."
       ]
@@ -371,7 +371,7 @@
       "whyWrong": [
         "A standard object doesn't have the append-only, high-volume optimization Big Objects provide.",
         "A custom object with triggers doesn't scale the same way as the purpose-built Big Object architecture.",
-        "External objects connect to external data — they aren't the native high-volume append-only storage type being asked about."
+        "External objects connect to external data, they aren't the native high-volume append-only storage type being asked about."
       ]
     },
     {
@@ -385,9 +385,9 @@
       "correctAnswer": 1,
       "explanation": "External Objects enable querying external systems in real time.",
       "whyWrong": [
-        "External Objects don't replace custom objects — they serve a different purpose (querying without replication).",
-        "External Objects aren't specifically an archiving mechanism — that's a different, distinct use case.",
-        "External Objects aren't a reporting tool — their benefit is querying live external data without replication."
+        "External Objects don't replace custom objects, they serve a different purpose (querying without replication).",
+        "External Objects aren't specifically an archiving mechanism, that's a different, distinct use case.",
+        "External Objects aren't a reporting tool, their benefit is querying live external data without replication."
       ]
     },
     {

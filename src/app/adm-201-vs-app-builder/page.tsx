@@ -44,15 +44,15 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Should you take ADM-201 or App Builder first?',
-    answer: 'Always start with ADM-201. The Platform App Builder certification builds directly on admin knowledge — custom objects, validation rules, and automation concepts are shared between both exams. ADM-201 provides the foundation.',
+    answer: 'Always start with ADM-201. The Platform App Builder certification builds directly on admin knowledge, custom objects, validation rules, and automation concepts are shared between both exams. ADM-201 provides the foundation.',
   },
   {
     question: 'Is ADM-201 harder than Platform App Builder?',
-    answer: 'ADM-201 is broader and generally considered harder due to its wider scope — 65 questions across 7 topic areas. App Builder is more focused on declarative development. Candidates with a development background may find App Builder easier.',
+    answer: 'ADM-201 is broader and generally considered harder due to its wider scope: 65 questions across 7 topic areas. App Builder is more focused on declarative development. Candidates with a development background may find App Builder easier.',
   },
   {
     question: 'Do ADM-201 and App Builder share exam content?',
-    answer: 'Yes — approximately 30% of content overlaps, particularly in automation (Flows, Process Builder), data modelling (custom objects, fields), and Lightning App Builder. Studying for both together is efficient.',
+    answer: 'Yes, approximately 30% of content overlaps, particularly in automation (Flows, Process Builder), data modelling (custom objects, fields), and Lightning App Builder. Studying for both together is efficient.',
   },
   {
     question: 'Which certification is more valuable: ADM-201 or App Builder?',
@@ -106,7 +106,7 @@ export default function Adm201VsAppBuilderPage() {
           certName: "Salesforce Administrator",
           certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
-          reason: "Always take Administrator first. It is the required foundation — App Builder explicitly builds on ADM-201 content, and many employers list Admin as a prerequisite for App Builder roles. Attempting App Builder without Admin knowledge is the most common reason candidates fail.",
+          reason: "Always take Administrator first. It is the required foundation: App Builder explicitly builds on ADM-201 content, and many employers list Admin as a prerequisite for App Builder roles. Attempting App Builder without Admin knowledge is the most common reason candidates fail.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin Certification Path",
         }}
@@ -184,7 +184,7 @@ export default function Adm201VsAppBuilderPage() {
             </ul>
           </div>
           <div className="rounded-lg border border-purple-200 bg-purple-50/50 p-4">
-            <p className="text-sm font-semibold text-purple-700 mb-2">DEV-402 (App Builder) — added to ADM-201</p>
+            <p className="text-sm font-semibold text-purple-700 mb-2">DEV-402 (App Builder), added to ADM-201</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>Solution Designer / Functional Consultant: $95–130k</li>
               <li>Opens Consultant &amp; Architect certification paths</li>
@@ -228,11 +228,11 @@ export default function Adm201VsAppBuilderPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Pursuing the Architect certification path later</td>
-                <td className="py-2.5 font-semibold text-purple-700">DEV-402 — it is an Architect path prerequisite</td>
+                <td className="py-2.5 font-semibold text-purple-700">DEV-402; it is an Architect path prerequisite</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Career switcher with no Salesforce background</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 first — broadest job-market entry point</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 first, broadest job-market entry point</td>
               </tr>
             </tbody>
           </table>

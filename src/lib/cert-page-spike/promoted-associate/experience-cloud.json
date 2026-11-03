@@ -1,6 +1,6 @@
 {
   "template": "associate",
-  "expertInsight": "Experience Cloud catches most candidates off guard with licensing nuances — the exam specifically tests when to use Partner Community vs. Customer Community Plus vs. Customer Community licenses for different access levels. I counted 6–8 questions on sharing rules vs. sharing sets vs. super user access. Memorize the sharing model comparison table before exam day; it's the single highest-leverage thing you can do in the final week.",
+  "expertInsight": "Experience Cloud catches most candidates off guard with licensing nuances, the exam specifically tests when to use Partner Community vs. Customer Community Plus vs. Customer Community licenses for different access levels. I counted 6–8 questions on sharing rules vs. sharing sets vs. super user access. Memorize the sharing model comparison table before exam day; it's the single highest-leverage thing you can do in the final week.",
   "whoIsThisFor": {
     "heading": "Who is the Experience Cloud Consultant exam for?",
     "personas": [
@@ -20,12 +20,12 @@
   },
   "examDifficulty": {
     "heading": "Is the Experience Cloud Consultant Exam Hard?",
-    "summary": "Experience Cloud Consultant is considered one of the harder consultant exams. The content covers niche topics — external user licensing, sharing sets, CMS, and template configuration — that require specific project experience.",
+    "summary": "Experience Cloud Consultant is considered one of the harder consultant exams. The content covers niche topics, external user licensing, sharing sets, CMS, and template configuration; that require specific project experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~~65% passing score</strong> — moderate threshold, but the content difficulty compensates.",
-      "<strong>Licensing-heavy</strong> — expect 6-8 questions on when to use Partner Community, Customer Community, and Customer Community Plus licenses.",
-      "<strong>Sharing model for external users</strong> — sharing sets, super user access, and sharing groups are heavily tested."
+      "<strong>~~65% passing score</strong>: moderate threshold, but the content difficulty compensates.",
+      "<strong>Licensing-heavy</strong>: expect 6-8 questions on when to use Partner Community, Customer Community, and Customer Community Plus licenses.",
+      "<strong>Sharing model for external users</strong>: sharing sets, super user access, and sharing groups are heavily tested."
     ],
     "passRateGuidance": "Build at least one Experience Cloud site with external users in a Developer Edition org before booking. Memorise the sharing model comparison table."
   },
@@ -34,7 +34,7 @@
     "intro": "The exam is proctored online or at a test centre through Webassessor. Here is the format:",
     "scenarioPercent": "About 55-~65% of questions are scenario-based. Common patterns include selecting the right license type for an external user access requirement, configuring sharing rules for portal users, and choosing the right Experience Cloud template for a business need.",
     "bestWayToPass": [
-      "<strong>Master the licensing model:</strong> Know the exact capabilities and limits of each Community license type — this is the single highest-tested topic.",
+      "<strong>Master the licensing model:</strong> Know the exact capabilities and limits of each Community license type; this is the single highest-tested topic.",
       "<strong>Understand sharing for external users:</strong> Sharing sets, sharing groups, and super user access are different from internal sharing and are tested in detail.",
       "<strong>Study CMS configuration:</strong> Know how to create content, build pages with Lightning components, and configure navigation.",
       "<strong>Practice template selection:</strong> Understand when to use Customer Service, Partner Central, Help Center, and custom templates."
@@ -67,23 +67,23 @@
     "blocks": [
       {
         "heading": "Site Templates and Their Use Cases",
-        "body": "Salesforce provides purpose-built templates: Customer Service for self-service portals with case management and Knowledge, Partner Central for channel partner portals with deal registration and lead distribution, Help Center for knowledge-first sites without case creation, and Build Your Own for maximum flexibility. The exam frequently presents a business requirement and asks which template fits — know the key differentiators of each."
+        "body": "Salesforce provides purpose-built templates: Customer Service for self-service portals with case management and Knowledge, Partner Central for channel partner portals with deal registration and lead distribution, Help Center for knowledge-first sites without case creation, and Build Your Own for maximum flexibility. The exam frequently presents a business requirement and asks which template fits. Know the key differentiators of each."
       },
       {
         "heading": "Sharing Model for External Users",
-        "body": "External user record access follows a different model than internal users. Sharing Sets grant access to records matching the user's Account or Contact — without roles or **sharing rules**. External Account Hierarchy allows partner users to see records owned by users below them in the partner account hierarchy. Sharing Rules extend access beyond these mechanisms. Guest users get access only through explicit guest user sharing rules. Know which mechanism to apply for each access scenario."
+        "body": "External user record access follows a different model than internal users. Sharing Sets grant access to records matching the user's Account or Contact, without roles or **sharing rules**. External Account Hierarchy allows partner users to see records owned by users below them in the partner account hierarchy. Sharing Rules extend access beyond these mechanisms. Guest users get access only through explicit guest user sharing rules. Know which mechanism to apply for each access scenario."
       },
       {
         "heading": "User Licensing: Customer, Partner, and Guest Users",
-        "body": "Experience Cloud supports multiple external user licence types: Customer Community (limited access, no roles), Customer Community Plus (supports roles and advanced sharing), and Partner Community (full CRM access for channel partners including Leads, Opportunities, and Campaigns). Guest Users have no licence and access via the dedicated Guest User profile. Licence type determines which objects and features are available — the exam tests licence selection for given scenarios."
+        "body": "Experience Cloud supports multiple external user licence types: Customer Community (limited access, no roles), Customer Community Plus (supports roles and advanced sharing), and Partner Community (full CRM access for channel partners including Leads, Opportunities, and Campaigns). Guest Users have no licence and access via the dedicated Guest User profile. Licence type determines which objects and features are available, the exam tests licence selection for given scenarios."
       },
       {
         "heading": "Audience Targeting and Personalisation",
-        "body": "Audiences define groups of users based on criteria — login status, profile, record field values, or geography. Components and pages can be shown or hidden based on audience membership. This enables a single site to serve multiple user types with different content without building multiple sites. The exam tests how to configure audiences and how visibility rules interact with page-level settings."
+        "body": "Audiences define groups of users based on criteria, login status, profile, record field values, or geography. Components and pages can be shown or hidden based on audience membership. This enables a single site to serve multiple user types with different content without building multiple sites. The exam tests how to configure audiences and how visibility rules interact with page-level settings."
       },
       {
         "heading": "Salesforce CMS and Knowledge for Content",
-        "body": "Salesforce Knowledge stores articles for FAQ, troubleshooting, and procedure content — surfaced in search and case creation for deflection. Salesforce CMS is a headless content management system for structured marketing content (banners, news, product pages) delivered across channels. Know when to use Knowledge (support content, case deflection) vs CMS (marketing content, multi-channel delivery) and how each is configured in Experience Cloud."
+        "body": "Salesforce Knowledge stores articles for FAQ, troubleshooting, and procedure content, surfaced in search and case creation for deflection. Salesforce CMS is a headless content management system for structured marketing content (banners, news, product pages) delivered across channels. Know when to use Knowledge (support content, case deflection) vs CMS (marketing content, multi-channel delivery) and how each is configured in Experience Cloud."
       }
     ]
   },
@@ -175,7 +175,7 @@
         "Customer Service"
       ],
       "correctAnswer": 3,
-      "explanation": "The Customer Service template is optimised for self-service portals — it includes pre-built components for case creation, case tracking, Knowledge article search, and community discussion.",
+      "explanation": "The Customer Service template is optimised for self-service portals, it includes pre-built components for case creation, case tracking, Knowledge article search, and community discussion.",
       "whyWrong": [
         "'Build Your Own' requires custom development, not the purpose-built self-service case template being asked about.",
         "Partner Central is designed for partner relationship management, not general customer self-service case tracking.",
@@ -191,7 +191,7 @@
         "To restrict site access to authenticated users only"
       ],
       "correctAnswer": 0,
-      "explanation": "Audience Targeting lets site builders define audiences (e.g., Gold Partners, UK Customers) based on criteria, then assign specific pages, components, or content variations to each audience — enabling personalised experiences without building multiple sites.",
+      "explanation": "Audience Targeting lets site builders define audiences (e.g., Gold Partners, UK Customers) based on criteria, then assign specific pages, components, or content variations to each audience, enabling personalised experiences without building multiple sites.",
       "whyWrong": [
         "Managing authentication/SSO is a security configuration, unrelated to Audience Targeting's content-personalization purpose.",
         "Tracking visitor analytics is a reporting function, not what Audience Targeting does.",
@@ -207,7 +207,7 @@
         "External Account Hierarchy"
       ],
       "correctAnswer": 1,
-      "explanation": "Sharing Sets grant external users (Customer Community or Partner Community licence holders) access to records that match their Account or Contact via a defined access mapping — without requiring sharing rules or roles.",
+      "explanation": "Sharing Sets grant external users (Customer Community or Partner Community licence holders) access to records that match their Account or Contact via a defined access mapping, without requiring sharing rules or roles.",
       "whyWrong": [
         "Manual Sharing is a one-off mechanism, not the systematic Account/Contact-based access mechanism being asked about.",
         "Role Hierarchy is an internal Salesforce access structure, not designed for external user access.",
@@ -223,11 +223,11 @@
         "Web-to-Case configured in Setup"
       ],
       "correctAnswer": 2,
-      "explanation": "Case deflection presents Knowledge Articles to users before they submit a case — suggesting solutions that may resolve the issue without agent involvement. Knowledge must be enabled and articles published to the site for deflection to work.",
+      "explanation": "Case deflection presents Knowledge Articles to users before they submit a case, suggesting solutions that may resolve the issue without agent involvement. Knowledge must be enabled and articles published to the site for deflection to work.",
       "whyWrong": [
-        "Einstein Case Classification routes cases after creation — it doesn't itself deflect cases from being created.",
+        "Einstein Case Classification routes cases after creation, it doesn't itself deflect cases from being created.",
         "Email-to-Case with routing is about processing submitted cases, not deflecting them before submission.",
-        "Web-to-Case captures cases from a public form — it doesn't deflect case creation through self-service."
+        "Web-to-Case captures cases from a public form, it doesn't deflect case creation through self-service."
       ]
     },
     {
@@ -241,7 +241,7 @@
       "correctAnswer": 1,
       "explanation": "Deal Registration allows channel partners to claim credit for potential deals by registering them through the partner portal. It prevents channel conflict and ensures partners receive appropriate credit when a deal closes.",
       "whyWrong": [
-        "'Deal Registration' is the correct answer — Partner Relationship Management is the broader category, not the specific feature name being tested here.",
+        "'Deal Registration' is the correct answer: Partner Relationship Management is the broader category, not the specific feature name being tested here.",
         "Lead Conversion is a Sales Cloud process, unrelated to partner deal tracking.",
         "Opportunity Management alone is a general sales feature, not the partner-specific deal registration capability being asked about."
       ]
@@ -249,7 +249,7 @@
     {
       "question": "Which types of users can access an Experience Cloud site?",
       "options": [
-        "Only authenticated users — guest access is not supported in Experience Cloud",
+        "Only authenticated users, guest access is not supported in Experience Cloud",
         "Only Salesforce internal users with a full Salesforce licence",
         "Only users with the System Administrator profile",
         "External users (customers, partners) with Community or Partner licences, and unauthenticated guest users without a login"
@@ -271,11 +271,11 @@
         "A tool for managing brand assets uploaded to Salesforce Files"
       ],
       "correctAnswer": 0,
-      "explanation": "The Branding Editor within Experience Builder allows non-technical admins to apply a consistent brand by setting primary colours, background colours, text fonts, and button styles — all via point-and-click configuration.",
+      "explanation": "The Branding Editor within Experience Builder allows non-technical admins to apply a consistent brand by setting primary colours, background colours, text fonts, and button styles, all via point-and-click configuration.",
       "whyWrong": [
-        "The Branding Editor is specifically a no-code declarative tool — it isn't a code editor.",
-        "The Branding Editor controls visual branding — it isn't an analytics panel.",
-        "The Branding Editor is for visual configuration — it isn't a file/asset management tool."
+        "The Branding Editor is specifically a no-code declarative tool, it isn't a code editor.",
+        "The Branding Editor controls visual branding, it isn't an analytics panel.",
+        "The Branding Editor is for visual configuration, it isn't a file/asset management tool."
       ]
     },
     {
@@ -289,7 +289,7 @@
       "correctAnswer": 2,
       "explanation": "Salesforce CMS is a headless content management system that enables content teams to create and publish structured content (news articles, product descriptions, banners) and deliver it to Experience Cloud sites, Marketing Cloud, and external channels via APIs.",
       "whyWrong": [
-        "Document Generation creates documents — it isn't the structured content management system across channels being described.",
+        "Document Generation creates documents, it isn't the structured content management system across channels being described.",
         "Chatter Groups are for collaboration, not structured multi-channel content publishing.",
         "Salesforce Knowledge manages articles but isn't the cross-channel structured content management system being described."
       ]
@@ -303,7 +303,7 @@
         "A reporting dashboard that shows site traffic and member engagement metrics"
       ],
       "correctAnswer": 0,
-      "explanation": "Workspaces is the central administration area for Experience Cloud sites — accessible from Setup. It contains Experience Builder (visual page editor), Administration (members, login, security), Moderation, Analytics, and Content management panels.",
+      "explanation": "Workspaces is the central administration area for Experience Cloud sites, accessible from Setup. It contains Experience Builder (visual page editor), Administration (members, login, security), Moderation, Analytics, and Content management panels.",
       "whyWrong": [
         "A collaborative document workspace is a different concept, not what Experience Builder Workspaces provides.",
         "A sandboxed testing environment is a different concept from the central admin management panel being described.",
@@ -319,7 +319,7 @@
         "A mobile app accelerator for generating native iOS and Android apps from a site"
       ],
       "correctAnswer": 2,
-      "explanation": "Lightning Bolt Solutions are pre-built site packages on AppExchange created by Salesforce ISV partners. They bundle a complete site template — including pages, themes, flows, and custom components — that can be installed and configured for rapid deployment.",
+      "explanation": "Lightning Bolt Solutions are pre-built site packages on AppExchange created by Salesforce ISV partners. They bundle a complete site template, including pages, themes, flows, and custom components; that can be installed and configured for rapid deployment.",
       "whyWrong": [
         "A Slack integration is unrelated to Lightning Bolt Solutions, which are AppExchange site templates.",
         "A Lightning Component adding chat is a specific component, not the broader packaged site template concept.",
@@ -331,15 +331,15 @@
       "options": [
         "Guest users are automatically assigned the Minimum Access - Salesforce profile",
         "Guest user access is managed exclusively through Experience Cloud Workspaces settings",
-        "A dedicated Guest User profile controls what unauthenticated visitors can see and do — including object permissions, field visibility, and record access via guest user sharing rules",
+        "A dedicated Guest User profile controls what unauthenticated visitors can see and do, including object permissions, field visibility, and record access via guest user sharing rules",
         "Guest users share the same profile as authenticated external users"
       ],
       "correctAnswer": 2,
-      "explanation": "Each Experience Cloud site has a dedicated Guest User profile. Admins control which objects guest users can read, which fields are visible, and which records they can access via guest user sharing rules. Salesforce has tightened guest user security in recent releases — the exam tests which access types require authentication.",
+      "explanation": "Each Experience Cloud site has a dedicated Guest User profile. Admins control which objects guest users can read, which fields are visible, and which records they can access via guest user sharing rules. Salesforce has tightened guest user security in recent releases, the exam tests which access types require authentication.",
       "whyWrong": [
-        "Guest users aren't automatically assigned 'Minimum Access - Salesforce' — they have a dedicated, sitespecific profile.",
-        "Guest user access isn't managed exclusively through Workspaces settings — it's controlled via the dedicated Guest User profile and sharing rules.",
-        "Guest users don't share the same profile as authenticated users — they have a distinct Guest User profile."
+        "Guest users aren't automatically assigned 'Minimum Access - Salesforce'; they have a dedicated, sitespecific profile.",
+        "Guest user access isn't managed exclusively through Workspaces settings, it's controlled via the dedicated Guest User profile and sharing rules.",
+        "Guest users don't share the same profile as authenticated users; they have a distinct Guest User profile."
       ]
     },
     {
@@ -351,9 +351,9 @@
         "Site.com Studio Component Visibility"
       ],
       "correctAnswer": 1,
-      "explanation": "Audience-Based Visibility in Experience Builder allows admins to define when a component or page is visible — such as showing a login prompt to guests and a personalised dashboard to authenticated members. Audiences can be based on login status, user attributes, or record data.",
+      "explanation": "Audience-Based Visibility in Experience Builder allows admins to define when a component or page is visible, such as showing a login prompt to guests and a personalised dashboard to authenticated members. Audiences can be based on login status, user attributes, or record data.",
       "whyWrong": [
-        "Profile-Based Page Assignments aren't the Experience Cloud-specific mechanism for this — that's Audience-Based Visibility.",
+        "Profile-Based Page Assignments aren't the Experience Cloud-specific mechanism for this, that's Audience-Based Visibility.",
         "Record Detail Page Layouts control field display on records, not member-vs-guest content differentiation.",
         "Site.com Studio is a legacy tool, not the current Experience Cloud mechanism for audience-based content visibility."
       ]
@@ -367,10 +367,10 @@
         "Enable the Opportunity object for guest user access in the site settings"
       ],
       "correctAnswer": 0,
-      "explanation": "Partner Community licences enable external partner users to access Salesforce objects including Opportunities. Sharing must be configured — via sharing rules, sharing sets, or External Account Hierarchy — to grant access to the specific records. Guest user access cannot be used for write operations on CRM records.",
+      "explanation": "Partner Community licences enable external partner users to access Salesforce objects including Opportunities. Sharing must be configured, via sharing rules, sharing sets, or External Account Hierarchy, to grant access to the specific records. Guest user access cannot be used for write operations on CRM records.",
       "whyWrong": [
-        "A custom Apex trigger for syncing is unnecessary — native sharing configuration already provides this access.",
-        "Giving partners full internal CRM licenses is costly and unnecessary — Partner Community licenses are the purpose-built solution.",
+        "A custom Apex trigger for syncing is unnecessary, native sharing configuration already provides this access.",
+        "Giving partners full internal CRM licenses is costly and unnecessary: Partner Community licenses are the purpose-built solution.",
         "Enabling guest user access would expose Opportunity data to unauthenticated visitors, which is inappropriate for this scenario."
       ]
     },
@@ -401,9 +401,9 @@
       "correctAnswer": 1,
       "explanation": "Sharing Sets grant record access to external users based on the Account or Contact linked to their community user record.",
       "whyWrong": [
-        "Sharing Sets aren't about site branding — that's a different, unrelated configuration area.",
-        "Sharing Sets aren't about internal file sharing — they're specifically for external user record access.",
-        "Sharing Sets aren't about dashboards specifically — that's a different reporting concern."
+        "Sharing Sets aren't about site branding, that's a different, unrelated configuration area.",
+        "Sharing Sets aren't about internal file sharing, they're specifically for external user record access.",
+        "Sharing Sets aren't about dashboards specifically, that's a different reporting concern."
       ]
     }
   ]

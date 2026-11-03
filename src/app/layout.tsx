@@ -91,7 +91,7 @@ export default function RootLayout({
     name: 'Trailblaze Prep',
     url: siteUrl,
     description:
-      'Independent Salesforce certification preparation resource: free practice questions, section-wise exam weightage, and study guides across Salesforce credential tracks — Admin, Developer, Consultant, Architect, Marketing, Designer, Tableau, MuleSoft, and Accredited Professional.',
+      'Independent Salesforce certification preparation resource: free practice questions, section-wise exam weightage, and study guides across Salesforce credential tracks: Admin, Developer, Consultant, Architect, Marketing, Designer, Tableau, MuleSoft, and Accredited Professional.',
     logo: `${siteUrl}/logo.png`,
     sameAs: SOCIAL_LINKS.filter(Boolean),
     foundingDate: '2025',

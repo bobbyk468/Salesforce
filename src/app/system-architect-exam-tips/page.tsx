@@ -64,7 +64,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most System Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the System Architect exam are: (1) System Architect Role Credential — Requires Four Domain Exams; (2) API Rate Limits vs Concurrency Limits — Volume vs Parallelism; (3) Event-Driven Architecture — When to Use Platform Events Over Direct Integration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the System Architect exam are: (1) System Architect Role Credential: Requires Four Domain Exams; (2) API Rate Limits vs Concurrency Limits: Volume vs Parallelism; (3) Event-Driven Architecture: When to Use Platform Events Over Direct Integration. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('system-architect-exam-tips'),
 ]
@@ -98,9 +98,9 @@ export default function SystemArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: System Architect Actually Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Cross-domain thinking:</strong> The exam tests how identity, integrations, and deployment decisions interact — not each in isolation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Cross-domain thinking:</strong> The exam tests how identity, integrations, and deployment decisions interact, not each in isolation.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Governance at scale:</strong> Org strategy, sandboxes, release management, and DevOps processes across large enterprise Salesforce implementations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security architecture:</strong> OAuth flows, SAML, SSO, Named Credentials, and connected app permissions — not just configuration, but architectural trade-offs.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security architecture:</strong> OAuth flows, SAML, SSO, Named Credentials, and connected app permissions, not just configuration, but architectural trade-offs.</li>
         </ul>
       </section>
 
@@ -119,7 +119,7 @@ export default function SystemArchitectExamTipsPage() {
             <span className="font-medium text-gray-900">Platform and Heroku Architecture</span>
             <span className="font-bold text-salesforce-blue ml-4">38%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Governance and Integrations/Identity together account for 62% — prioritise these first.</p>
+          <p className="text-xs text-gray-600 pt-1">Governance and Integrations/Identity together account for 62%, prioritise these first.</p>
         </div>
       </section>
 
@@ -129,7 +129,7 @@ export default function SystemArchitectExamTipsPage() {
           For each topic, understand not just <em>what</em> it is but <em>when</em> to recommend it vs alternatives.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>OAuth and SAML flows:</strong> Web Server, User-Agent, JWT Bearer Token, SAML Assertion — know which to recommend based on scenario constraints.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>OAuth and SAML flows:</strong> Web Server, User-Agent, JWT Bearer Token, SAML Assertion. Know which to recommend based on scenario constraints.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>CI/CD and DevOps:</strong> Sandbox strategy, scratch orgs, change sets vs SFDX vs metadata API deployments, release management governance.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Heroku architecture:</strong> When to use Heroku vs Salesforce platform, data residency decisions, Heroku Connect sync strategy.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Multi-org strategy:</strong> When to use one org vs multiple, sharing data across orgs, connected apps and external objects.</li>
@@ -154,19 +154,19 @@ export default function SystemArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most System Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. System Architect Role Credential — Requires Four Domain Exams</p>
-            <p className="text-sm text-gray-700">The System Architect credential requires four certifications: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate "System Architect exam." Candidates study for System Architect as a single test — understand that each domain exam is a standalone test and all four are required before the credential is awarded.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. System Architect Role Credential: Requires Four Domain Exams</p>
+            <p className="text-sm text-gray-700">The System Architect credential requires four certifications: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate "System Architect exam." Candidates study for System Architect as a single test, understand that each domain exam is a standalone test and all four are required before the credential is awarded.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. API Rate Limits vs Concurrency Limits — Volume vs Parallelism</p>
-            <p className="text-sm text-gray-700">API Rate Limits cap the total number of API calls per 24 hours (org-based). Concurrency Limits cap the number of simultaneous long-running API requests (5 for Apex REST). Candidates troubleshoot integration failures by increasing API rate limits — when errors occur under moderate volume but with complex queries, concurrency limits are more likely the cause.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. API Rate Limits vs Concurrency Limits: Volume vs Parallelism</p>
+            <p className="text-sm text-gray-700">API Rate Limits cap the total number of API calls per 24 hours (org-based). Concurrency Limits cap the number of simultaneous long-running API requests (5 for Apex REST). Candidates troubleshoot integration failures by increasing API rate limits, when errors occur under moderate volume but with complex queries, concurrency limits are more likely the cause.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Event-Driven Architecture — When to Use Platform Events Over Direct Integration</p>
-            <p className="text-sm text-gray-700">Platform Events decouple publishers (senders) from subscribers (receivers) — the publisher does not need to know who is listening or whether they are available. Direct API calls couple the caller to the called system (if the external system is down, the call fails). Candidates use direct callouts for all real-time data sharing — the exam expects Platform Events when decoupling, buffering, or fan-out (one event, multiple subscribers) is needed.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Event-Driven Architecture: When to Use Platform Events Over Direct Integration</p>
+            <p className="text-sm text-gray-700">Platform Events decouple publishers (senders) from subscribers (receivers), the publisher does not need to know who is listening or whether they are available. Direct API calls couple the caller to the called system (if the external system is down, the call fails). Candidates use direct callouts for all real-time data sharing, the exam expects Platform Events when decoupling, buffering, or fan-out (one event, multiple subscribers) is needed.</p>
           </div>
         </div>
       </section>

@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Communications Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Communications Cloud exam are: (1) Enterprise Product Catalog vs Standard Salesforce Products — Different Objects; (2) Order Decomposition — Fulfilment Orders Are Automatically Created; (3) CPQ in Communications Context — VlocityProduct vs Standard CPQ. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Communications Cloud exam are: (1) Enterprise Product Catalog vs Standard Salesforce Products: Different Objects; (2) Order Decomposition: Fulfilment Orders Are Automatically Created; (3) CPQ in Communications Context: VlocityProduct vs Standard CPQ. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('communications-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function CommunicationsCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Communications Cloud AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product catalogue and offer management</strong> — Product specifications (defining characteristics of a service: speed, data allowance, features), Offer bundles (packaging multiple products with a combined price), pricing models (recurring, one-time, usage-based), product rules for valid configurations, and how the catalogue drives the guided selling experience in OmniScripts.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Order management and fulfilment</strong> — Order decomposition (splitting a customer order into multiple fulfilment tasks), order orchestration workflows, integration with provisioning systems (OSS), order status tracking, and how order amendments and cancellations are handled in the TMF model.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Contract lifecycle and assets</strong> — Service contracts (the binding agreement between telecom and customer), installed assets (the active services on the customer’s account), contract amendments (adding/changing/removing services mid-term), renewals, and how the Asset-Based Ordering (ABO) model tracks changes to a customer’s service portfolio over time.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product catalogue and offer management</strong>: Product specifications (defining characteristics of a service: speed, data allowance, features), Offer bundles (packaging multiple products with a combined price), pricing models (recurring, one-time, usage-based), product rules for valid configurations, and how the catalogue drives the guided selling experience in OmniScripts.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Order management and fulfilment</strong>: Order decomposition (splitting a customer order into multiple fulfilment tasks), order orchestration workflows, integration with provisioning systems (OSS), order status tracking, and how order amendments and cancellations are handled in the TMF model.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Contract lifecycle and assets</strong>: Service contracts (the binding agreement between telecom and customer), installed assets (the active services on the customer’s account), contract amendments (adding/changing/removing services mid-term), renewals, and how the Asset-Based Ordering (ABO) model tracks changes to a customer’s service portfolio over time.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function CommunicationsCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">OmniStudio and Digital Commerce</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The TMF data model (Products, Offers, Orders, Subscriptions, Assets) is the foundation — know it deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The TMF data model (Products, Offers, Orders, Subscriptions, Assets) is the foundation. Know it deeply.</p>
         </div>
       </section>
 
@@ -138,9 +138,9 @@ export default function CommunicationsCloudApExamTipsPage() {
           broadband, and enterprise services are sold and managed) helps significantly.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product vs. offer questions: a Product Specification defines a single service (e.g., ’100Mbps Broadband’) with its characteristics. An Offer is a commercial bundle — combining products and their pricing into what the customer buys (e.g., ’Home Bundle: 100Mbps + TV + Phone for $89/month’). When a scenario describes ’create a package customers can buy’, the answer is an Offer — not a Product Specification alone.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product vs. offer questions: a Product Specification defines a single service (e.g., ’100Mbps Broadband’) with its characteristics. An Offer is a commercial bundle, combining products and their pricing into what the customer buys (e.g., ’Home Bundle: 100Mbps + TV + Phone for $89/month’). When a scenario describes ’create a package customers can buy’, the answer is an Offer, not a Product Specification alone.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For order decomposition questions: a customer order in telecoms often spans multiple fulfilment systems (billing, network provisioning, equipment dispatch). Order decomposition splits one customer order into multiple child orders routed to different systems. Each child order has its own status and completion criteria. When a scenario says ’the network team and billing team must each process their part of the order independently’, configure order decomposition rules.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ABO questions: Asset-Based Ordering means changes to a customer’s services start from what they currently have (their installed assets). An upgrade creates a new order that modifies the existing asset. A cancellation creates an order to terminate the asset. When a scenario says ’a customer wants to upgrade their mobile plan from 5GB to unlimited’, create a Change Order from the existing mobile service asset — not a new Quote from scratch.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ABO questions: Asset-Based Ordering means changes to a customer’s services start from what they currently have (their installed assets). An upgrade creates a new order that modifies the existing asset. A cancellation creates an order to terminate the asset. When a scenario says ’a customer wants to upgrade their mobile plan from 5GB to unlimited’, create a Change Order from the existing mobile service asset, not a new Quote from scratch.</li>
         </ul>
       </section>
 
@@ -152,7 +152,7 @@ export default function CommunicationsCloudApExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Communications Cloud AP is for implementation consultants on telecom and media projects.
-          Complete the OmniStudio Consultant credential before pursuing this AP — OmniStudio is the
+          Complete the OmniStudio Consultant credential before pursuing this AP: OmniStudio is the
           core technology. Prior experience with BSS/OSS systems and telecom business processes
           helps significantly with scenario interpretation.
         </p>
@@ -161,19 +161,19 @@ export default function CommunicationsCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Communications Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Enterprise Product Catalog vs Standard Salesforce Products — Different Objects</p>
-            <p className="text-sm text-gray-700">Communications Cloud uses the Vlocity (OmniStudio) Enterprise Product Catalog (EPC) for complex telecommunications product modelling — bundles, components, pricing, and eligibility rules. Standard Salesforce Products and Price Books do not handle the hierarchical, configurable nature of telco offers. Candidates answer product questions using standard Salesforce product logic — the exam expects EPC-specific concepts.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Enterprise Product Catalog vs Standard Salesforce Products: Different Objects</p>
+            <p className="text-sm text-gray-700">Communications Cloud uses the Vlocity (OmniStudio) Enterprise Product Catalog (EPC) for complex telecommunications product modelling, bundles, components, pricing, and eligibility rules. Standard Salesforce Products and Price Books do not handle the hierarchical, configurable nature of telco offers. Candidates answer product questions using standard Salesforce product logic, the exam expects EPC-specific concepts.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Order Decomposition — Fulfilment Orders Are Automatically Created</p>
-            <p className="text-sm text-gray-700">When an order is submitted in Communications Cloud, Order Management decomposes it into Fulfilment Orders and Fulfilment Order Line Items based on routing rules. This decomposition is automatic — developers do not manually create Fulfilment Orders. Candidates design manual Fulfilment Order creation logic — the exam expects configuration of the decomposition rules, not custom code.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Order Decomposition: Fulfilment Orders Are Automatically Created</p>
+            <p className="text-sm text-gray-700">When an order is submitted in Communications Cloud, Order Management decomposes it into Fulfilment Orders and Fulfilment Order Line Items based on routing rules. This decomposition is automatic; developers do not manually create Fulfilment Orders. Candidates design manual Fulfilment Order creation logic, the exam expects configuration of the decomposition rules, not custom code.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. CPQ in Communications Context — VlocityProduct vs Standard CPQ</p>
-            <p className="text-sm text-gray-700">Communications Cloud CPQ uses Vlocity/OmniStudio product modelling (not standard Salesforce CPQ). The pricing and configuration rules use Custom Price Methods and Product Actions within the EPC. Candidates apply standard Salesforce CPQ concepts (Price Rules, Product Rules) to Communications Cloud scenarios — these are different systems with different configuration paradigms.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. CPQ in Communications Context: VlocityProduct vs Standard CPQ</p>
+            <p className="text-sm text-gray-700">Communications Cloud CPQ uses Vlocity/OmniStudio product modelling (not standard Salesforce CPQ). The pricing and configuration rules use Custom Price Methods and Product Actions within the EPC. Candidates apply standard Salesforce CPQ concepts (Price Rules, Product Rules) to Communications Cloud scenarios; these are different systems with different configuration paradigms.</p>
           </div>
         </div>
       </section>

@@ -6,7 +6,7 @@ export default function B2BMultiCloudDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">B2B multi-cloud data flow (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         A buyer account created in <strong>Sales Cloud</strong> feeds pricing/catalog into <strong>B2B
-        Commerce</strong>; orders placed there flow to <strong>Order Management</strong> for fulfillment — the
+        Commerce</strong>; orders placed there flow to <strong>Order Management</strong> for fulfillment, the
         architect designs identity and data consistency across all three.
       </p>
       <svg role="img" aria-labelledby="b2bmc-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg">

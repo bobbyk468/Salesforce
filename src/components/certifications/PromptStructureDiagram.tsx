@@ -14,7 +14,7 @@ export default function PromptStructureDiagram() {
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         The <strong>system prompt</strong> sets persistent instructions, tone, and constraints for every request. The{' '}
         <strong>user message</strong> is the specific task or question. Claude's <strong>assistant response</strong>{' '}
-        is generated within those system-level boundaries — this is why a well-structured system prompt produces
+        is generated within those system-level boundaries; this is why a well-structured system prompt produces
         more consistent output than repeating instructions in every user message.
       </p>
       <svg
@@ -57,7 +57,7 @@ export default function PromptStructureDiagram() {
 
         <rect x="36" y="212" width="628" height="24" rx="6" fill="url(#psBox)" stroke="#64748b" strokeWidth="1.5" />
         <text x="350" y="228" textAnchor="middle" fill="#1e293b" fontWeight="600">
-          Assistant Response — generated within system-prompt boundaries
+          Assistant Response, generated within system-prompt boundaries
         </text>
       </svg>
     </figure>

@@ -22,11 +22,11 @@
     "summary": "This practice-test page supports Email Specialist readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Email Studio & Content, Data Extensions & Subscribers, or Send Management.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Email Specialist in a real org are better prepared than candidates who only memorize notes."
+      "<strong>~65% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong>: expect questions that test when to use Email Studio & Content, Data Extensions & Subscribers, or Send Management.",
+      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Email Specialist in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
   },
   "examFormat": {
     "heading": "Email Specialist Exam Format Explained",
@@ -65,15 +65,15 @@
       },
       {
         "heading": "Journey Builder & Triggered Sends",
-        "body": "**Journey Builder** orchestrates multi-step, multi-channel customer journeys. Entry Sources include **Data Extensions** (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation — good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ."
+        "body": "**Journey Builder** orchestrates multi-step, multi-channel customer journeys. Entry Sources include **Data Extensions** (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation, good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ."
       },
       {
         "heading": "Content Builder & Personalization",
-        "body": "**Content Builder** is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with **AMPscript** or **SSJS** for dynamic content. AMPscript is the scripting language for personalization — `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content."
+        "body": "**Content Builder** is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with **AMPscript** or **SSJS** for dynamic content. AMPscript is the scripting language for personalization; `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content."
       },
       {
         "heading": "Send Classifications & Deliverability",
-        "body": "Send Classifications define the unsubscribe behavior for a send: Commercial (subscriber can unsubscribe), Transactional (not subject to commercial opt-out rules). Sender Profiles, Delivery Profiles, and Send Classifications combine to control From address, reply-to, and unsubscribe handling. IP Warming is required when using a new dedicated IP — gradually increase send volume to build sender reputation. SPF, DKIM, and DMARC records authenticate sending domains and improve deliverability. Bounce handling: Soft Bounces (temporary, retry) vs. Hard Bounces (permanent, suppress). Spam complaints trigger suppression and affect sender reputation. The exam tests how to configure send classifications for a mixed transactional/commercial sender."
+        "body": "Send Classifications define the unsubscribe behavior for a send: Commercial (subscriber can unsubscribe), Transactional (not subject to commercial opt-out rules). Sender Profiles, Delivery Profiles, and Send Classifications combine to control From address, reply-to, and unsubscribe handling. IP Warming is required when using a new dedicated IP, gradually increase send volume to build sender reputation. SPF, DKIM, and DMARC records authenticate sending domains and improve deliverability. Bounce handling: Soft Bounces (temporary, retry) vs. Hard Bounces (permanent, suppress). Spam complaints trigger suppression and affect sender reputation. The exam tests how to configure send classifications for a mixed transactional/commercial sender."
       },
       {
         "heading": "Analytics & Reporting",
@@ -83,7 +83,7 @@
   },
   "scenarioTips": {
     "h2": "How to pass this Email Specialist practice test",
-    "intro": "This certification is heavy on send architecture, compliance, Journey Builder vs triggered sends, AMPscript, and reporting. Use these questions to stress-test recall under time limits, then use the heatmap to see whether misses cluster on content, data extensions, deliverability, or analytics — and revisit only those key concept blocks before the next run.",
+    "intro": "This certification is heavy on send architecture, compliance, Journey Builder vs triggered sends, AMPscript, and reporting. Use these questions to stress-test recall under time limits, then use the heatmap to see whether misses cluster on content, data extensions, deliverability, or analytics, and revisit only those key concept blocks before the next run.",
     "blocks": [
       {
         "heading": "Simulate real exam pacing",
@@ -91,7 +91,7 @@
       },
       {
         "heading": "Review every explanation",
-        "body": "Wrong answers often differ by one compliance or architecture nuance — transactional vs commercial classification, REST vs SOAP for a given task, or when **Journey Builder** is required over a simple triggered send. Read each explanation as a mini flashcard for those distinctions."
+        "body": "Wrong answers often differ by one compliance or architecture nuance, transactional vs commercial classification, REST vs SOAP for a given task, or when **Journey Builder** is required over a simple triggered send. Read each explanation as a mini flashcard for those distinctions."
       },
       {
         "heading": "Turn heatmap reds into targeted study",
@@ -99,7 +99,7 @@
       },
       {
         "heading": "Cross-check with the full Email Specialist page",
-        "body": "Use the main [Marketing Cloud Email Specialist](/certifications/email-specialist) certification page for official scope, weightage, and study sequencing when a whole topic feels weak — then return here to confirm the heatmap improves on that topic."
+        "body": "Use the main [Marketing Cloud Email Specialist](/certifications/email-specialist) certification page for official scope, weightage, and study sequencing when a whole topic feels weak, then return here to confirm the heatmap improves on that topic."
       },
       {
         "heading": "Confirm readiness before scheduling",

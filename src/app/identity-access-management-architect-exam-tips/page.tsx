@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is the hardest part of the IAM Architect exam?',
-    answer: 'OAuth flow selection is the most nuanced section — candidates must know all five OAuth flows (Web Server, User-Agent, JWT Bearer Token, Username-Password, Device), when each is appropriate, and the security implications of each. SAML vs. OAuth decision-making for SSO scenarios is also heavily tested.',
+    answer: 'OAuth flow selection is the most nuanced section; candidates must know all five OAuth flows (Web Server, User-Agent, JWT Bearer Token, Username-Password, Device), when each is appropriate, and the security implications of each. SAML vs. OAuth decision-making for SSO scenarios is also heavily tested.',
   },
   {
     question: 'What prerequisites help with the IAM Architect exam?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Identity & Access Management Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Identity & Access Management Architect exam are: (1) OAuth 2.0 Flows — Authorization Code vs JWT Bearer vs Client Credentials; (2) Named Credentials vs Auth. Providers — Outbound vs Inbound Identity; (3) Delegated Authentication vs SSO — Custom Login vs Federated Identity. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Identity & Access Management Architect exam are: (1) OAuth 2.0 Flows: Authorization Code vs JWT Bearer vs Client Credentials; (2) Named Credentials vs Auth. Providers: Outbound vs Inbound Identity; (3) Delegated Authentication vs SSO: Custom Login vs Federated Identity. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('identity-access-management-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function IamArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: IAM Architect Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OAuth flows</strong> — All five OAuth 2.0 flows, when each is appropriate, and the security trade-offs. JWT Bearer Token and Web Server flows are the most tested for enterprise scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SAML and SSO</strong> — SAML 2.0 configuration (IdP-initiated vs. SP-initiated), federation with external identity providers, and Just-in-Time (JIT) provisioning.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Connected Apps and scopes</strong> — Connected App design, OAuth scopes, IP restrictions, session policies, and when to use Named Credentials vs. Connected Apps for integrations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OAuth flows</strong>: All five OAuth 2.0 flows, when each is appropriate, and the security trade-offs. JWT Bearer Token and Web Server flows are the most tested for enterprise scenarios.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SAML and SSO</strong>: SAML 2.0 configuration (IdP-initiated vs. SP-initiated), federation with external identity providers, and Just-in-Time (JIT) provisioning.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Connected Apps and scopes</strong>: Connected App design, OAuth scopes, IP restrictions, session policies, and when to use Named Credentials vs. Connected Apps for integrations.</li>
         </ul>
       </section>
 
@@ -142,8 +142,8 @@ export default function IamArchitectExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Server-to-server with no user interaction = JWT Bearer Token flow. User logs in via web browser = Web Server flow. Mobile app with user = User-Agent flow. Legacy system with no browser = Username-Password (flag as insecure but still tested).</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SSO questions: IdP-initiated means the user starts at the identity provider; SP-initiated means the user starts at Salesforce. Know both flows and which metadata needs to be exchanged.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />JIT provisioning creates/updates Salesforce users on first login using attributes in the SAML assertion — use it when you cannot pre-provision users in bulk.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For MFA questions: Salesforce requires MFA for all users. Verify whether a third-party MFA (from an IdP like Okta) satisfies the Salesforce MFA requirement — it does if configured correctly.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />JIT provisioning creates/updates Salesforce users on first login using attributes in the SAML assertion. Use it when you cannot pre-provision users in bulk.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For MFA questions: Salesforce requires MFA for all users. Verify whether a third-party MFA (from an IdP like Okta) satisfies the Salesforce MFA requirement; it does if configured correctly.</li>
         </ul>
       </section>
 
@@ -163,19 +163,19 @@ export default function IamArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Identity &amp; Access Management Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. OAuth 2.0 Flows — Authorization Code vs JWT Bearer vs Client Credentials</p>
-            <p className="text-sm text-gray-700">Authorization Code flow is for user-facing apps where a human logs in (most common). JWT Bearer flow is for server-to-server integration where a trusted server asserts a user identity without a login prompt. Client Credentials flow is for machine-to-machine with no user context. Candidates use Authorization Code for server integrations — the exam expects JWT Bearer for server-to-server with user context assertion and Client Credentials for pure system calls.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. OAuth 2.0 Flows: Authorization Code vs JWT Bearer vs Client Credentials</p>
+            <p className="text-sm text-gray-700">Authorization Code flow is for user-facing apps where a human logs in (most common). JWT Bearer flow is for server-to-server integration where a trusted server asserts a user identity without a login prompt. Client Credentials flow is for machine-to-machine with no user context. Candidates use Authorization Code for server integrations, the exam expects JWT Bearer for server-to-server with user context assertion and Client Credentials for pure system calls.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Named Credentials vs Auth. Providers — Outbound vs Inbound Identity</p>
-            <p className="text-sm text-gray-700">Named Credentials store the endpoint URL, authentication method, and credentials for Salesforce making outbound callouts to external systems. Auth. Providers configure Salesforce as a service provider (SP) for inbound Single Sign-On — external users log in via an external Identity Provider (IdP). Candidates configure Named Credentials for SSO — the exam expects Auth. Provider + SAML or OIDC for SSO and Named Credentials for outbound callouts.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Named Credentials vs Auth. Providers: Outbound vs Inbound Identity</p>
+            <p className="text-sm text-gray-700">Named Credentials store the endpoint URL, authentication method, and credentials for Salesforce making outbound callouts to external systems. Auth. Providers configure Salesforce as a service provider (SP) for inbound Single Sign-On, external users log in via an external Identity Provider (IdP). Candidates configure Named Credentials for SSO, the exam expects Auth. Provider + SAML or OIDC for SSO and Named Credentials for outbound callouts.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Delegated Authentication vs SSO — Custom Login vs Federated Identity</p>
-            <p className="text-sm text-gray-700">Delegated Authentication calls a custom web service endpoint to validate Salesforce login credentials against an external system (legacy LDAP integration). SAML/OIDC SSO federates identity by trusting an external IdP’s assertion without re-validating credentials. Delegated Auth is legacy and should not be recommended for new implementations — the exam expects SAML or OIDC SSO for modern identity federation.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Delegated Authentication vs SSO: Custom Login vs Federated Identity</p>
+            <p className="text-sm text-gray-700">Delegated Authentication calls a custom web service endpoint to validate Salesforce login credentials against an external system (legacy LDAP integration). SAML/OIDC SSO federates identity by trusting an external IdP’s assertion without re-validating credentials. Delegated Auth is legacy and should not be recommended for new implementations, the exam expects SAML or OIDC SSO for modern identity federation.</p>
           </div>
         </div>
       </section>

@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Revenue Cloud Consultant exam sections?',
-    answer: 'CPQ Configuration (28%) and Billing and Invoicing (25%) together account for 53% of the exam. Understanding the full quote-to-cash lifecycle — from product catalogue and pricing through quoting, ordering, billing, and revenue recognition — is the core competency tested.',
+    answer: 'CPQ Configuration (28%) and Billing and Invoicing (25%) together account for 53% of the exam. Understanding the full quote-to-cash lifecycle, from product catalogue and pricing through quoting, ordering, billing, and revenue recognition, is the core competency tested.',
   },
   {
     question: 'Do I need CPQ Specialist certification before Revenue Cloud Consultant?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Revenue Cloud Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Revenue Cloud Consultant exam are: (1) CPQ Product Rules vs Revenue Cloud Contract Amendments — Different Lifecycles; (2) Asset-Based Ordering — Assets Drive Renewal and Amendment Logic; (3) Order vs Contract vs Subscription — Sequence Matters. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Revenue Cloud Consultant exam are: (1) CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles; (2) Asset-Based Ordering: Assets Drive Renewal and Amendment Logic; (3) Order vs Contract vs Subscription: Sequence Matters. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('revenue-cloud-consultant-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function RevenueCloudConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Revenue Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>CPQ configuration</strong> — Product catalogue, bundles, pricing rules, discounting, and quote templates. Revenue Cloud builds on CPQ as the quoting foundation — strong CPQ knowledge is assumed and tested.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Billing</strong> — Invoice generation triggers, payment processing, credit memos, billing rules, bill runs, and how billing integrates with the order management process. Understanding how quotes become orders and orders trigger invoices is critical.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriptions and revenue recognition</strong> — Subscription products, amendment billing (mid-term changes), renewal billing, proration rules, and revenue recognition schedules for deferred revenue compliance (ASC 606).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>CPQ configuration</strong>: Product catalogue, bundles, pricing rules, discounting, and quote templates. Revenue Cloud builds on CPQ as the quoting foundation, strong CPQ knowledge is assumed and tested.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Billing</strong>: Invoice generation triggers, payment processing, credit memos, billing rules, bill runs, and how billing integrates with the order management process. Understanding how quotes become orders and orders trigger invoices is critical.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriptions and revenue recognition</strong>: Subscription products, amendment billing (mid-term changes), renewal billing, proration rules, and revenue recognition schedules for deferred revenue compliance (ASC 606).</li>
         </ul>
       </section>
 
@@ -129,7 +129,7 @@ export default function RevenueCloudConsultantExamTipsPage() {
             <span className="font-medium text-gray-900">Revenue Recognition</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">CPQ + Billing + Subscriptions = 75%. The quote-to-cash lifecycle is the entire exam — know each stage deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">CPQ + Billing + Subscriptions = 75%. The quote-to-cash lifecycle is the entire exam. Know each stage deeply.</p>
         </div>
       </section>
 
@@ -141,9 +141,9 @@ export default function RevenueCloudConsultantExamTipsPage() {
           to identify where the issue occurs.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For billing trigger questions: invoices are generated from Orders, not Quotes. A bill run triggers invoice creation based on billing rules set on the order products. The billing date type (order activation, specific date, or anniversary) determines when the invoice generates — know the three billing date types.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For amendment questions: mid-term changes to subscriptions generate prorated charges or credits. An amendment quote is created from the existing contract — it does not restart the subscription term. Credit notes offset existing invoices; they do not cancel the order. Know the amendment billing flow.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For revenue recognition questions: revenue recognition rules define when revenue is recognised (immediately, over time, or on delivery). Revenue schedules spread recognised revenue across accounting periods. Deferred revenue sits on the balance sheet until recognition conditions are met — understand this accounting concept at a conceptual level.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For billing trigger questions: invoices are generated from Orders, not Quotes. A bill run triggers invoice creation based on billing rules set on the order products. The billing date type (order activation, specific date, or anniversary) determines when the invoice generates. Know the three billing date types.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For amendment questions: mid-term changes to subscriptions generate prorated charges or credits. An amendment quote is created from the existing contract; it does not restart the subscription term. Credit notes offset existing invoices; they do not cancel the order. Know the amendment billing flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For revenue recognition questions: revenue recognition rules define when revenue is recognised (immediately, over time, or on delivery). Revenue schedules spread recognised revenue across accounting periods. Deferred revenue sits on the balance sheet until recognition conditions are met, understand this accounting concept at a conceptual level.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function RevenueCloudConsultantExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Revenue Cloud Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. CPQ Product Rules vs Revenue Cloud Contract Amendments — Different Lifecycles</p>
-            <p className="text-sm text-gray-700">CPQ Product Rules govern what a sales rep can configure during quoting (compatibility, validation, selection). Contract Amendments in Revenue Cloud handle post-signature changes to active contracts (add products, change quantities, update pricing). Candidates apply CPQ quoting rules to amendment scenarios — the exam expects the Amendment workflow on the Contract record, not the quoting flow.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles</p>
+            <p className="text-sm text-gray-700">CPQ Product Rules govern what a sales rep can configure during quoting (compatibility, validation, selection). Contract Amendments in Revenue Cloud handle post-signature changes to active contracts (add products, change quantities, update pricing). Candidates apply CPQ quoting rules to amendment scenarios, the exam expects the Amendment workflow on the Contract record, not the quoting flow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Asset-Based Ordering — Assets Drive Renewal and Amendment Logic</p>
-            <p className="text-sm text-gray-700">Revenue Cloud creates Assets when a CPQ Quote Line is ordered. Renewals and amendments are driven by the Asset record (current entitlement), not the original Opportunity or Quote. Candidates trace amendments back to the original Opportunity — the exam expects Asset-Based Ordering logic where the Asset is the authoritative record of what a customer currently owns.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Asset-Based Ordering: Assets Drive Renewal and Amendment Logic</p>
+            <p className="text-sm text-gray-700">Revenue Cloud creates Assets when a CPQ Quote Line is ordered. Renewals and amendments are driven by the Asset record (current entitlement), not the original Opportunity or Quote. Candidates trace amendments back to the original Opportunity, the exam expects Asset-Based Ordering logic where the Asset is the authoritative record of what a customer currently owns.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Order vs Contract vs Subscription — Sequence Matters</p>
-            <p className="text-sm text-gray-700">The Revenue Cloud lifecycle: Quote → Order → Contract → Asset/Subscription. An Order activates the agreement. A Contract is created from the Order and represents the legally binding term. Subscriptions and Assets represent the ongoing entitlements. Candidates create Contracts directly from Opportunities — the exam expects the Quote → Order → Contract sequence with Subscriptions auto-created from Order Lines.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Order vs Contract vs Subscription: Sequence Matters</p>
+            <p className="text-sm text-gray-700">The Revenue Cloud lifecycle: Quote → Order → Contract → Asset/Subscription. An Order activates the agreement. A Contract is created from the Order and represents the legally binding term. Subscriptions and Assets represent the ongoing entitlements. Candidates create Contracts directly from Opportunities, the exam expects the Quote → Order → Contract sequence with Subscriptions auto-created from Order Lines.</p>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 export default function Header() {
   const desktopDetailsRefs = useRef<(HTMLDetailsElement | null)[]>([])
   const desktopMenuRefs = useRef<(HTMLDivElement | null)[]>([])
-  // Mobile menu: only mounts full DOM when opened — eliminates ~200 nodes on initial load
+  // Mobile menu: only mounts full DOM when opened, eliminates ~200 nodes on initial load
   const [mobileOpen, setMobileOpen] = useState(false)
   // Desktop dropdowns: only render sub-items after a category is first opened
   const [renderedDesktopCats, setRenderedDesktopCats] = useState<Set<string>>(new Set())
@@ -94,7 +94,7 @@ export default function Header() {
             </Link>
           </div>
 
-          {/* Mobile hamburger — content is only mounted after the first tap */}
+          {/* Mobile hamburger; content is only mounted after the first tap */}
           <div className="lg:hidden relative">
             <button
               onClick={() => setMobileOpen(o => !o)}
@@ -156,7 +156,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Choose your role — desktop dropdowns with lazy sub-item rendering */}
+      {/* Choose your role, desktop dropdowns with lazy sub-item rendering */}
       <div className="bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2 hidden lg:block">

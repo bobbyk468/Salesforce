@@ -19,14 +19,14 @@
   },
   "examDifficulty": {
     "heading": "Is the Net Zero Cloud Accredited Professional Exam Hard?",
-    "summary": "The Net Zero Cloud AP exam is moderately difficult because it tests carbon accounting concepts — Scope 1/2/3 emissions, data pipeline configuration, and reporting frameworks — that require domain knowledge beyond standard Salesforce admin skills.",
+    "summary": "The Net Zero Cloud AP exam is moderately difficult because it tests carbon accounting concepts: Scope 1/2/3 emissions, data pipeline configuration, and reporting frameworks; that require domain knowledge beyond standard Salesforce admin skills.",
     "bullets": [
       "<strong>60 questions</strong> in 90 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Emissions accounting</strong> &mdash; expect questions on Scope 1/2/3 classification and how Net Zero Cloud's data pipelines aggregate emissions data for reporting.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Net Zero Cloud in a real org are better prepared than candidates who only memorize notes."
+      "<strong>~65% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>Emissions accounting</strong>: expect questions on Scope 1/2/3 classification and how Net Zero Cloud's data pipelines aggregate emissions data for reporting.",
+      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Net Zero Cloud in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
   },
   "examFormat": {
     "heading": "Net Zero Cloud Accredited Professional Exam Format Explained",
@@ -66,7 +66,7 @@
       },
       {
         "heading": "Emissions Calculations & Emission Factors",
-        "body": "**Net Zero Cloud** calculates GHG emissions by multiplying activity data by an Emission Factor — a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments — RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC."
+        "body": "**Net Zero Cloud** calculates GHG emissions by multiplying activity data by an Emission Factor, a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments: RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC."
       },
       {
         "heading": "Sustainability Reporting & Disclosures",

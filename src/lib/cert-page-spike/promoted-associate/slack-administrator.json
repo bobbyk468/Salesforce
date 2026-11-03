@@ -26,7 +26,7 @@
       "<strong>Breadth is the difficulty.</strong> Settings, permissions, Enterprise Grid, Slack Connect, security, compliance and automation.",
       "<strong>Admin experience helps most.</strong> If you have actually set up SSO and app approvals, much of this is familiar."
     ],
-    "passRateGuidance": "You are ready when you can set up SSO and user provisioning, decide who may create channels and invite guests, approve an app, build a simple workflow, and explain retention. Aim for 75% or more on practice tests before booking."
+    "passRateGuidance": "You are ready when you can set up SSO and user provisioning, decide who may create channels and invite guests, approve an app. Build a simple workflow, and explain retention. Aim for 75% or more on practice tests before booking."
   },
   "examFormat": {
     "heading": "Slack Administrator Exam Format Explained",
@@ -66,7 +66,7 @@
     "blocks": [
       {
         "heading": "Workspaces, Channels and Roles",
-        "body": "A **workspace** is the container people log in to. **Channels** are where work happens: public channels anyone in the workspace can join, private channels by invitation, and shared channels that reach outside the company. Roles run from **Primary Owner** (one per workspace, the only role that can delete it or transfer ownership) through **Owners** and **Admins** to **Members**. **Multi-channel guests** can be added to several channels, **single-channel guests** to one. Admins decide who may create or archive channels, who may invite guests, and which channels everyone joins by default."
+        "body": "A **workspace** is the container people log in to. **Channels** are where work happens: public channels anyone in the workspace can join, private channels by invitation, and shared channels that reach outside the company. Roles run from **Primary Owner** (one per workspace; the only role that can delete it or transfer ownership) through **Owners** and **Admins** to **Members**. **Multi-channel guests** can be added to several channels, **single-channel guests** to one. Admins decide who may create or archive channels, who may invite guests, and which channels everyone joins by default."
       },
       {
         "heading": "Permissions, Security and Compliance",
@@ -100,7 +100,7 @@
       },
       {
         "heading": "Apps and Security",
-        "body": "Require app approval, keep an approved list, and review installed apps and their scopes."
+        "body": "Require app approval. Keep an approved list, and review installed apps and their scopes."
       },
       {
         "heading": "Compliance and Retention",
@@ -197,7 +197,7 @@
       "explanation": "Slack org-wide and workspace settings are managed in Slack Admin / Org settings.",
       "whyWrong": [
         "Salesforce settings are a different product, unrelated to Slack's own admin configuration.",
-        "Per-channel settings don't control org-wide configuration — that's managed centrally.",
+        "Per-channel settings don't control org-wide configuration, that's managed centrally.",
         "Email Studio is a Marketing Cloud tool, entirely unrelated to Slack settings."
       ]
     },
@@ -324,9 +324,9 @@
       "correctAnswer": 2,
       "explanation": "Shared channels enable secure collaboration between different organizations' Slack workspaces.",
       "whyWrong": [
-        "A channel with many members doesn't define what makes it 'shared' — that's about cross-workspace connection.",
-        "A public channel alone doesn't imply cross-workspace sharing — a shared channel specifically spans multiple workspaces.",
-        "A channel with integrations doesn't define what makes it 'shared' — that's about cross-workspace connection, not integrations."
+        "A channel with many members doesn't define what makes it 'shared', that's about cross-workspace connection.",
+        "A public channel alone doesn't imply cross-workspace sharing, a shared channel specifically spans multiple workspaces.",
+        "A channel with integrations doesn't define what makes it 'shared', that's about cross-workspace connection, not integrations."
       ]
     },
     {
@@ -372,8 +372,8 @@
       "correctAnswer": 3,
       "explanation": "SCIM and directory sync enable bulk user provisioning and lifecycle management.",
       "whyWrong": [
-        "Email invitations alone don't scale efficiently for large user bases — that's what SCIM provisioning addresses.",
-        "Manual addition alone doesn't scale — SCIM/directory sync is specifically built for managing users at scale.",
+        "Email invitations alone don't scale efficiently for large user bases, that's what SCIM provisioning addresses.",
+        "Manual addition alone doesn't scale: SCIM/directory sync is specifically built for managing users at scale.",
         "Channel invites manage channel membership, not organization-wide user provisioning at scale."
       ]
     },
@@ -389,7 +389,7 @@
       "explanation": "Compliance exports support eDiscovery and regulatory compliance requirements.",
       "whyWrong": [
         "'To create reports' misattributes compliance exports' purpose to a different, unrelated function.",
-        "Compliance exports aren't primarily for file backup — their purpose is legal/regulatory data export.",
+        "Compliance exports aren't primarily for file backup, their purpose is legal/regulatory data export.",
         "'To share channels' misattributes compliance exports' purpose to a different, unrelated function."
       ]
     },

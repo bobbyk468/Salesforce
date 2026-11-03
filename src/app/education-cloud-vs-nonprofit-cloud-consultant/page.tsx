@@ -81,7 +81,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
       <ContentPageAuthor />
       <section className="my-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Choosing current study material</h2>
-        <p className="text-sm text-gray-700">Education Cloud Consultant registration has closed, and Salesforce schedules formal retirement for February 1, 2027. Do not treat it as currently bookable; verify eligibility and lifecycle details with the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">Salesforce issuer notice</a>. For current certification planning, review the Nonprofit Cloud Consultant guide and confirm its objectives match your target product and data model.</p>
+        <p className="text-sm text-gray-700">Education Cloud Consultant registration has closed, and Salesforce schedules formal retirement for February 1, 2027. Do not treat it as currently bookable; verify eligibility and lifecycle details with the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">Salesforce issuer notice</a>. For current certification planning. Review the Nonprofit Cloud Consultant guide and confirm its objectives match your target product and data model.</p>
       </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">

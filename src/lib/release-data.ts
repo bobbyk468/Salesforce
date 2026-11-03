@@ -6,19 +6,19 @@
 export const RELEASE_CURRENT = "Summer '26"
 export const RELEASE_PREVIOUS = "Spring '26"
 
-/** Calendar year of the current release — used in page titles and content. Update alongside RELEASE_CURRENT. */
+/** Calendar year of the current release, used in page titles and content. Update alongside RELEASE_CURRENT. */
 export const RELEASE_YEAR = '2026'
 
-/** ISO date when content was last refreshed for current release — used for Article dateModified, freshness signals. */
+/** ISO date when content was last refreshed for current release, used for Article dateModified, freshness signals. */
 export const RELEASE_DATE = '2026-08-24'
 
 /** Human-readable version of RELEASE_DATE for visible E-E-A-T review notes. */
 export const RELEASE_DATE_DISPLAY = 'August 24, 2026'
 
 
-/** What's new in the current release vs previous — relevant to certification exams and study. */
+/** What's new in the current release vs previous, relevant to certification exams and study. */
 export const WHATS_NEW_CURRENT_RELEASE: string[] = [
-  'Agentforce and AI: Expanded Agentforce capabilities including multi-agent orchestration and enhanced Agent Builder tools—expect updated AI and automation objectives on Admin and Developer exams.',
+  'Agentforce and AI: Expanded Agentforce capabilities including multi-agent orchestration and enhanced Agent Builder tools, expect updated AI and automation objectives on Admin and Developer exams.',
   'Data Cloud: Expanded real-time data activation and identity resolution features; Data Cloud objectives now include deeper unification and segmentation topics.',
   'Automation & Platform: Enhanced Flow debugging, new Flow orchestration features, and platform performance improvements; Flow remains core to Admin and App Builder exams.',
   'Tableau & Analytics: New Tableau Pulse features for proactive analytics and AI-assisted insights; Tableau certs may reference updated data storytelling objectives.',

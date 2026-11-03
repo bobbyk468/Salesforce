@@ -1,6 +1,6 @@
 {
   "template": "associate",
-  "expertInsight": "Pardot is now officially Marketing Cloud Account Engagement (MCAE) — Salesforce made the rename in 2022. The exam code (CRT-302) and 'Pardot Consultant' title haven't changed, so that's still what you'll search for and what shows up on your credential. Just don't be thrown when every screenshot in Trailhead or the product itself says Account Engagement instead of Pardot.",
+  "expertInsight": "Pardot is now officially Marketing Cloud Account Engagement (MCAE): Salesforce made the rename in 2022. The exam code (CRT-302) and 'Pardot Consultant' title haven't changed, so that's still what you'll search for and what shows up on your credential. Just don't be thrown when every screenshot in Trailhead or the product itself says Account Engagement instead of Pardot.",
   "whoIsThisFor": {
     "heading": "Who is the Account Engagement Consultant exam for?",
     "personas": [
@@ -23,9 +23,9 @@
     "summary": "The Account Engagement Consultant exam is challenging. It tests strategic solution design for B2B marketing automation, including lead scoring and grading models, Engagement Studio program architecture, Salesforce sync configuration, and campaign attribution. Hands-on implementation experience is essential.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>68% passing score</strong> — slightly higher than some consultant exams, reflecting the depth of B2B marketing automation knowledge required.",
-      "<strong>Solution design focus</strong> — expect scenario questions asking you to design scoring models, multi-path Engagement Studio programs, and Salesforce sync architectures for specific business requirements.",
-      "<strong>CRM alignment tested</strong> — you must understand Pardot-Salesforce campaign alignment, the connector user’s permissions, and how B2B Marketing Analytics extends attribution reporting."
+      "<strong>68% passing score</strong>: slightly higher than some consultant exams, reflecting the depth of B2B marketing automation knowledge required.",
+      "<strong>Solution design focus</strong>: expect scenario questions asking you to design scoring models, multi-path Engagement Studio programs, and Salesforce sync architectures for specific business requirements.",
+      "<strong>CRM alignment tested</strong>: you must understand Pardot-Salesforce campaign alignment, the connector user’s permissions, and how B2B Marketing Analytics extends attribution reporting."
     ],
     "passRateGuidance": "Complete at least two full Pardot implementations covering scoring, Engagement Studio, and Salesforce sync before booking. Score 80%+ on practice exams to account for the higher passing threshold."
   },
@@ -67,7 +67,7 @@
     "blocks": [
       {
         "heading": "Implementation and Configuration",
-        "body": "The [Pardot Consultant](/certifications/pardot-consultant) exam focuses on strategic configuration beyond the Specialist level. Implementation includes Business Unit setup, connector configuration (Pardot-Salesforce sync settings), user management across roles (Admin, Marketing, Sales), and account-level settings. The consultant designs the overall marketing automation architecture — single vs multi-business unit strategy, campaign attribution model, and integration with Salesforce CRM campaigns. Know the difference between Pardot Admin permissions and Salesforce Connected User permissions."
+        "body": "The [Pardot Consultant](/certifications/pardot-consultant) exam focuses on strategic configuration beyond the Specialist level. Implementation includes Business Unit setup, connector configuration (Pardot-Salesforce sync settings), user management across roles (Admin, Marketing, Sales), and account-level settings. The consultant designs the overall marketing automation architecture, single vs multi-business unit strategy, campaign attribution model, and integration with Salesforce CRM campaigns. Know the difference between Pardot Admin permissions and Salesforce Connected User permissions."
       },
       {
         "heading": "Advanced Lead Nurturing Strategy",
@@ -75,15 +75,15 @@
       },
       {
         "heading": "Pardot-Salesforce Campaign Alignment",
-        "body": "Pardot Campaigns track first-touch attribution. Salesforce Campaigns track multi-touch attribution and enable influence reporting. Pardot Campaign Influence connects Pardot prospect activity to Salesforce Opportunities — configured via Campaign Influence settings. B2B Marketing Analytics (built on [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant)) provides advanced attribution dashboards. The consultant designs the campaign data model — Campaign Hierarchy, campaign member statuses, and attribution window settings — to align marketing and sales reporting."
+        "body": "Pardot Campaigns track first-touch attribution. Salesforce Campaigns track multi-touch attribution and enable influence reporting. Pardot Campaign Influence connects Pardot prospect activity to Salesforce Opportunities, configured via Campaign Influence settings. B2B Marketing Analytics (built on [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant)) provides advanced attribution dashboards. The consultant designs the campaign data model: Campaign Hierarchy, campaign member statuses, and attribution window settings, to align marketing and sales reporting."
       },
       {
         "heading": "Advanced Scoring, Grading, and Segmentation",
-        "body": "Scoring Categories maintain separate score totals per product or business unit. Custom scoring rules allow point adjustments for specific activities beyond defaults. Profile criteria drive grading — the consultant designs the grade thresholds (A through F) and profile attributes that match the ideal customer profile. Segmentation Rules create static lists from criteria at a point in time (unlike Dynamic Lists which are ongoing). The consultant architects the scoring and grading model to align with sales qualification criteria."
+        "body": "Scoring Categories maintain separate score totals per product or business unit. Custom scoring rules allow point adjustments for specific activities beyond defaults. Profile criteria drive grading, the consultant designs the grade thresholds (A through F) and profile attributes that match the ideal customer profile. Segmentation Rules create static lists from criteria at a point in time (unlike Dynamic Lists which are ongoing). The consultant architects the scoring and grading model to align with sales qualification criteria."
       },
       {
         "heading": "Reporting, ROI, and B2B Marketing Analytics",
-        "body": "The Pipeline Report connects Pardot activities to Salesforce Opportunities — showing which campaigns generated pipeline. Engagement History embedded on Salesforce records shows individual prospect activity timelines. B2B Marketing Analytics (**Einstein Analytics** for B2B) provides pre-built dashboards for engagement, pipeline influence, and campaign performance. The consultant designs the reporting strategy to demonstrate marketing ROI to leadership and aligns metrics to business outcomes (MQL-to-SQL rate, campaign attribution, pipeline influence %)."
+        "body": "The Pipeline Report connects Pardot activities to Salesforce Opportunities, showing which campaigns generated pipeline. Engagement History embedded on Salesforce records shows individual prospect activity timelines. B2B Marketing Analytics (**Einstein Analytics** for B2B) provides pre-built dashboards for engagement, pipeline influence, and campaign performance. The consultant designs the reporting strategy to demonstrate marketing ROI to leadership and aligns metrics to business outcomes (MQL-to-SQL rate, campaign attribution, pipeline influence %)."
       }
     ]
   },

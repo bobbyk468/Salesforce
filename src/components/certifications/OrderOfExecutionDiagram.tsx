@@ -15,7 +15,7 @@ export default function OrderOfExecutionDiagram() {
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         Salesforce runs a fixed sequence every time a record is saved. Validation and{' '}
         <strong>before-save</strong> logic run first, the record is written to the database, then{' '}
-        <strong>after-save</strong> automation (assignment rules, workflow, Flow, escalation) fires — with
+        <strong>after-save</strong> automation (assignment rules, workflow, Flow, escalation) fires, with
         post-commit actions like emails and async Apex running only after the transaction succeeds.
       </p>
       <svg

@@ -6,7 +6,7 @@ export default function CPQVsOmniStudioDiagram() {
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         <strong>Industries CPQ</strong> owns product, pricing, and quote/order logic for industry verticals.{' '}
         <strong>OmniStudio</strong> (OmniScript, FlexCards, Integration Procedures, DataRaptors) is the UI and
-        orchestration layer that often sits on top of it — the two are complementary, not competing.
+        orchestration layer that often sits on top of it, the two are complementary, not competing.
       </p>
       <svg role="img" aria-labelledby="cvo-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
         <title id="cvo-title">Industries CPQ owns product, pricing, and order logic; OmniStudio provides the guided UI and orchestration layer on top, calling into CPQ scripting</title>

@@ -26,7 +26,7 @@
       "<strong>Tool choice.</strong> Most questions come down to picking the right one of four tools for a job.",
       "<strong>Hands-on helps.</strong> If you have built and debugged an OmniScript that calls an Integration Procedure, much of this is familiar."
     ],
-    "passRateGuidance": "Build one OmniScript that reads data with a Data Mapper, calls an Integration Procedure and saves the result. Before you book, aim for 75% or more on practice tests and be able to explain where each piece of data comes from."
+    "passRateGuidance": "Build one OmniScript that reads data with a Data Mapper, calls an Integration Procedure and saves the result. Before you book. Aim for 75% or more on practice tests and be able to explain where each piece of data comes from."
   },
   "examFormat": {
     "heading": "OmniStudio Developer Exam Format Explained",
@@ -180,7 +180,7 @@
       "correctAnswer": 0,
       "explanation": "OmniScript provides declarative, step-by-step guided experiences without code.",
       "whyWrong": [
-        "LWC alone isn't OmniStudio's guided-experience tool — OmniScript is purpose-built for that.",
+        "LWC alone isn't OmniStudio's guided-experience tool: OmniScript is purpose-built for that.",
         "Visualforce is a legacy Salesforce Core UI framework, not an OmniStudio tool.",
         "Apex is a backend Salesforce Core language, not a guided-experience builder tool."
       ]
@@ -196,8 +196,8 @@
       "correctAnswer": 0,
       "explanation": "DataRaptors handle data extraction (DET), load (DLT), and transform (DTT) for OmniStudio.",
       "whyWrong": [
-        "DataRaptor isn't used for sending emails — that's outside its scope.",
-        "DataRaptor doesn't send Slack messages — it handles data extract/load/transform.",
+        "DataRaptor isn't used for sending emails, that's outside its scope.",
+        "DataRaptor doesn't send Slack messages, it handles data extract/load/transform.",
         "DataRaptor isn't a CPQ configuration tool."
       ]
     },
@@ -212,8 +212,8 @@
       "correctAnswer": 0,
       "explanation": "FlexCards display compact, card-based views of data with declarative layout.",
       "whyWrong": [
-        "Integration Procedure orchestrates backend logic — it isn't a visual card component.",
-        "DataRaptor moves and transforms data — it doesn't render a card-based UI.",
+        "Integration Procedure orchestrates backend logic, it isn't a visual card component.",
+        "DataRaptor moves and transforms data, it doesn't render a card-based UI.",
         "OmniScript builds guided flows, not compact card views."
       ]
     },
@@ -230,7 +230,7 @@
       "whyWrong": [
         "An email template is unrelated to backend orchestration logic.",
         "A report is a Salesforce analytics artifact, not an orchestration flow.",
-        "A dashboard visualizes data — it isn't an orchestration mechanism."
+        "A dashboard visualizes data, it isn't an orchestration mechanism."
       ]
     },
     {
@@ -262,7 +262,7 @@
       "whyWrong": [
         "DET is specifically for extraction, not the loading step.",
         "DET is the extract step, not the transform step (that's DTT).",
-        "DET isn't for sending emails — it's a data extraction tool."
+        "DET isn't for sending emails, it's a data extraction tool."
       ]
     },
     {
@@ -308,7 +308,7 @@
       "correctAnswer": 3,
       "explanation": "Conditional branching controls OmniScript flow.",
       "whyWrong": [
-        "OmniStudio does support conditional navigation — 'no support' is incorrect.",
+        "OmniStudio does support conditional navigation; 'no support' is incorrect.",
         "OmniScript navigation isn't limited to static, unconditional paths.",
         "OmniScript supports branching logic, not just strictly linear flows."
       ]
@@ -325,8 +325,8 @@
       "explanation": "Integration Procedure outputs return data to callers.",
       "whyWrong": [
         "Deleting data isn't the purpose of an Integration Procedure output.",
-        "Integration Procedure output returns data — it doesn't replace input logic.",
-        "Logging isn't the primary purpose of an Integration Procedure's output — returning data to the caller is."
+        "Integration Procedure output returns data, it doesn't replace input logic.",
+        "Logging isn't the primary purpose of an Integration Procedure's output, returning data to the caller is."
       ]
     },
     {
@@ -357,7 +357,7 @@
       "explanation": "Save behavior controls state persistence.",
       "whyWrong": [
         "Save behavior is distinct from navigation logic.",
-        "OmniScript Save behavior does control something specific — persistence of state — so 'nothing' is incorrect.",
+        "OmniScript Save behavior does control something specific, persistence of state, so 'nothing' is incorrect.",
         "Save behavior is distinct from validation logic."
       ]
     },
@@ -373,8 +373,8 @@
       "explanation": "Integration Procedures can invoke Apex.",
       "whyWrong": [
         "OmniScript orchestrates the guided experience but relies on Integration Procedures to invoke Apex.",
-        "FlexCard displays data — it doesn't invoke Apex directly.",
-        "DataRaptor moves/transforms data — it doesn't invoke Apex directly the way Integration Procedures can."
+        "FlexCard displays data, it doesn't invoke Apex directly.",
+        "DataRaptor moves/transforms data, it doesn't invoke Apex directly the way Integration Procedures can."
       ]
     },
     {
@@ -388,7 +388,7 @@
       "correctAnswer": 3,
       "explanation": "Merge fields display dynamic data in FlexCards.",
       "whyWrong": [
-        "DataRaptor is a separate tool — merge fields don't replace it.",
+        "DataRaptor is a separate tool, merge fields don't replace it.",
         "Merge fields display data; they don't send emails.",
         "Merge fields render data on the card; they don't generate reports."
       ]
@@ -405,8 +405,8 @@
       "explanation": "Reusable design, error handling, and testing support quality.",
       "whyWrong": [
         "Building for single use contradicts the reusability best practice.",
-        "Avoiding reuse leads to duplicated, harder-to-maintain solutions — the opposite of best practice.",
-        "Ignoring testing increases risk of production failures — the opposite of best practice."
+        "Avoiding reuse leads to duplicated, harder-to-maintain solutions, the opposite of best practice.",
+        "Ignoring testing increases risk of production failures, the opposite of best practice."
       ]
     }
   ]

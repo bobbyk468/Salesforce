@@ -36,19 +36,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How often do Salesforce certifications need to be maintained?',
-    answer: 'Salesforce releases three major platform releases per year (Spring, Summer, Winter). Each release brings a maintenance module requirement. For most certifications, you must complete the corresponding release maintenance module within approximately 30 days of its publication on Trailhead. If you hold multiple certifications in the same role category, they typically share a single maintenance module — you do not need to complete one per certification.',
+    answer: 'Salesforce releases three major platform releases per year (Spring, Summer, Winter). Each release brings a maintenance module requirement. For most certifications, you must complete the corresponding release maintenance module within approximately 30 days of its publication on Trailhead. If you hold multiple certifications in the same role category, they typically share a single maintenance module; you do not need to complete one per certification.',
   },
   {
     question: 'What happens if I miss the Salesforce certification maintenance deadline?',
-    answer: 'If you miss a maintenance deadline, your certification status changes from Active to Inactive on your Trailhead/Credential profile. Inactive certifications are not revoked permanently — you can reactivate by completing all outstanding maintenance modules. However, during the inactive period, you should not claim the certification on your resume or LinkedIn profile as currently active.',
+    answer: 'If you miss a maintenance deadline, your certification status changes from Active to Inactive on your Trailhead/Credential profile. Inactive certifications are not revoked permanently; you can reactivate by completing all outstanding maintenance modules. However, during the inactive period, you should not claim the certification on your resume or LinkedIn profile as currently active.',
   },
   {
     question: 'Where do I find the Salesforce certification maintenance modules?',
-    answer: 'Maintenance modules are published on Trailhead (trailhead.salesforce.com). Log in to Trailhead, go to your profile, and check the Credentials section — any certifications with pending maintenance will show an alert. You can also find maintenance modules by searching "maintenance" in the Trailhead module catalogue. Salesforce also sends email reminders to your registered email address.',
+    answer: 'Maintenance modules are published on Trailhead (trailhead.salesforce.com). Log in to Trailhead, go to your profile, and check the Credentials section, any certifications with pending maintenance will show an alert. You can also find maintenance modules by searching "maintenance" in the Trailhead module catalogue. Salesforce also sends email reminders to your registered email address.',
   },
   {
     question: 'Do maintenance modules cost anything?',
-    answer: 'No — Salesforce certification maintenance modules are completely free. They are short Trailhead modules (typically 20–60 minutes) covering new features and changes in the latest release that relate to your certification area. There are no fees for maintenance, unlike some certifications from other vendors that require paid renewals or retakes.',
+    answer: 'No: Salesforce certification maintenance modules are completely free. They are short Trailhead modules (typically 20–60 minutes) covering new features and changes in the latest release that relate to your certification area. There are no fees for maintenance, unlike some certifications from other vendors that require paid renewals or retakes.',
   },
   {
     question: 'Do all Salesforce certifications require maintenance?',
@@ -61,12 +61,12 @@ export default function SalesforceCertificationMaintenancePage() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/salesforce-certification-maintenance" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
-      {/* Breaking news banner — Summer '26 maintenance now live */}
+      {/* Breaking news banner: Summer '26 maintenance now live */}
       <div className="mb-6 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 px-5 py-4">
         <span className="shrink-0 mt-0.5 text-sm font-bold text-red-600 uppercase tracking-wide">Breaking</span>
         <div>
           <p className="text-sm font-semibold text-red-800">
-            Summer ’26 maintenance modules are now live on Trailhead — released August 2026.
+            Summer ’26 maintenance modules are now live on Trailhead, released August 2026.
           </p>
           <p className="text-sm text-red-700 mt-0.5">
             Deadline to complete: <strong>April 16, 2027.</strong> Log in to{' '}
@@ -88,7 +88,7 @@ export default function SalesforceCertificationMaintenancePage() {
           Salesforce Certification Maintenance Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Everything you need to know about keeping your Salesforce certifications active — maintenance schedule, where to find modules, and what happens if you miss a deadline. See also <Link href="/salesforce-certification-validity" className="text-salesforce-dark hover:underline font-medium">certification validity and expiry</Link>.
+          Everything you need to know about keeping your Salesforce certifications active, maintenance schedule, where to find modules, and what happens if you miss a deadline. See also <Link href="/salesforce-certification-validity" className="text-salesforce-dark hover:underline font-medium">certification validity and expiry</Link>.
         </p>
       </div>
 
@@ -111,21 +111,21 @@ export default function SalesforceCertificationMaintenancePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">How Salesforce Certification Maintenance Works</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p>Salesforce releases three major platform updates per year — <strong>Spring</strong> (January/February), <strong>Summer</strong> (May/June), and <strong>Winter</strong> (September/October). Each release introduces new features and changes to the platform.</p>
-          <p>For each release, Salesforce publishes <strong>maintenance modules on Trailhead</strong> — one or a few short modules per certification role category. You must complete the module within approximately <strong>30 days</strong> of its publication to keep your certification in Active status.</p>
-          <p>Certifications within the same role category typically share one maintenance module. For example, a candidate holding both ADM-201 and Advanced Administrator typically completes a single Administrator-category maintenance module — not two separate ones.</p>
+          <p>Salesforce releases three major platform updates per year: <strong>Spring</strong> (January/February), <strong>Summer</strong> (May/June), and <strong>Winter</strong> (September/October). Each release introduces new features and changes to the platform.</p>
+          <p>For each release, Salesforce publishes <strong>maintenance modules on Trailhead</strong>: one or a few short modules per certification role category. You must complete the module within approximately <strong>30 days</strong> of its publication to keep your certification in Active status.</p>
+          <p>Certifications within the same role category typically share one maintenance module. For example, a candidate holding both ADM-201 and Advanced Administrator typically completes a single Administrator-category maintenance module, not two separate ones.</p>
         </div>
       </div>
 
       {/* Step by step */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">How to Complete Maintenance — Step by Step</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How to Complete Maintenance: Step by Step</h2>
         <div className="space-y-4">
           {[
             { step: '1', title: 'Watch for Salesforce release announcements', desc: 'Salesforce announces each release on the Salesforce blog and Trust.salesforce.com. Sign up for Salesforce release email notifications to get notified when maintenance modules are available.' },
             { step: '2', title: 'Log in to Trailhead', desc: 'Go to trailhead.salesforce.com and log in with your Salesforce credentials (the same account linked to your certification). Navigate to your profile and click "Credentials".' },
             { step: '3', title: 'Check for pending maintenance', desc: 'Any certifications with outstanding maintenance requirements will show an alert icon. Click the certification to see the required maintenance module(s) and the deadline.' },
-            { step: '4', title: 'Complete the maintenance module', desc: 'Click through to the Trailhead module, read each unit, and complete the challenge (multiple-choice quiz). Maintenance modules typically take 20–60 minutes. You can pause and resume at any time.' },
+            { step: '4', title: 'Complete the maintenance module', desc: 'Click through to the Trailhead module. Read each unit, and complete the challenge (multiple-choice quiz). Maintenance modules typically take 20–60 minutes. You can pause and resume at any time.' },
             { step: '5', title: 'Verify your status', desc: 'After completing the module, your certification status updates to Active for the new release. Your Trailhead profile badge will reflect the updated maintenance date.' },
           ].map((item) => (
             <div key={item.step} className="flex gap-4">
@@ -143,10 +143,10 @@ export default function SalesforceCertificationMaintenancePage() {
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-8">
         <h2 className="text-lg font-bold text-amber-900 mb-3">What If You Miss the Maintenance Deadline?</h2>
         <div className="space-y-2 text-sm text-amber-800">
-          <p><strong>Your certification becomes Inactive</strong> — it is not permanently revoked, but it will show as Inactive on your Trailhead credential profile.</p>
+          <p><strong>Your certification becomes Inactive</strong>: it is not permanently revoked, but it will show as Inactive on your Trailhead credential profile.</p>
           <p><strong>To reactivate:</strong> Complete all outstanding maintenance modules. Your status returns to Active immediately after completion.</p>
           <p><strong>During inactive status:</strong> Do not represent yourself as actively certified on your resume, LinkedIn, or to clients. The Inactive status is visible on the public Trailhead verification system.</p>
-          <p><strong>No penalty fees:</strong> Reactivation is free — just complete the overdue modules. Unlike some other certification programmes, Salesforce does not charge for reactivation.</p>
+          <p><strong>No penalty fees:</strong> Reactivation is free, just complete the overdue modules. Unlike some other certification programmes, Salesforce does not charge for reactivation.</p>
         </div>
       </div>
 

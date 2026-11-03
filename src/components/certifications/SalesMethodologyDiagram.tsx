@@ -6,7 +6,7 @@ export default function SalesMethodologyDiagram() {
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         Sales Foundations blends two distinct skill sets: <strong>Salesforce product knowledge</strong> (navigating
         Sales Cloud, logging activities) and <strong>customer-centric selling methodology</strong> (discovery, value
-        proposition, team selling) — most exam scenarios test the intersection of both.
+        proposition, team selling), most exam scenarios test the intersection of both.
       </p>
       <svg role="img" aria-labelledby="sm-diagram-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
         <title id="sm-diagram-title">Two overlapping circles: Salesforce product knowledge and sales methodology, with the exam testing the overlap of applying methodology within the Salesforce platform</title>

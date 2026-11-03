@@ -3,7 +3,7 @@ import { slugToDisplayName } from '@/lib/cert-seo-data'
 
 /**
  * Renders a contextual parent-child link from an exam-tips page to its main certification page.
- * Replaces the duplicated "Exam At a Glance" stats block — facts live on the cert page, strategy lives here.
+ * Replaces the duplicated "Exam At a Glance" stats block, facts live on the cert page, strategy lives here.
  */
 export default function ExamTipsCertLink({ certSlug }: { certSlug: string }) {
   const displayName = slugToDisplayName(certSlug)

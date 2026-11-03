@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Energy & Utilities candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Energy & Utilities exam are: (1) Service Points vs Premises vs Assets — Three Separate Objects; (2) Meter Reading vs Meter Data Management — Operational vs Analytical; (3) Billing Account vs Service Account — Revenue vs Service Delivery. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Energy & Utilities exam are: (1) Service Points vs Premises vs Assets: Three Separate Objects; (2) Meter Reading vs Meter Data Management: Operational vs Analytical; (3) Billing Account vs Service Account: Revenue vs Service Delivery. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('energy-utilities-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function EnergyUtilitiesApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Energy &amp; Utilities Cloud AP Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Customer engagement and service management</strong> — Managing utility customer accounts (Account + Premises + Service Point relationships), handling billing inquiries and payment arrangements, processing service transfers (move in/move out), and outage management workflows for field crew dispatch and customer communication during outages.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniStudio digital services</strong> — OmniScripts for customer self-service (start service, stop service, report outage, enrol in programmes), FlexCards for agent desktop views of customer accounts and service history, DataRaptors for reading EUC-specific data, and Integration Procedures for complex utility transactions spanning multiple systems.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>EUC data model and configuration</strong> — The EUC data model: Premises (physical address), Service Points (meters at the premises), Service Agreements (the contract for each service type), Billing Accounts, and Usage data. Understanding how these relate to each other and to standard Salesforce Account/Contact records. Configuring EUC settings for your utility type (electric, gas, water).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Customer engagement and service management</strong>: Managing utility customer accounts (Account + Premises + Service Point relationships), handling billing inquiries and payment arrangements, processing service transfers (move in/move out), and outage management workflows for field crew dispatch and customer communication during outages.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniStudio digital services</strong>: OmniScripts for customer self-service (start service, stop service, report outage, enrol in programmes), FlexCards for agent desktop views of customer accounts and service history, DataRaptors for reading EUC-specific data, and Integration Procedures for complex utility transactions spanning multiple systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>EUC data model and configuration</strong>: The EUC data model: Premises (physical address), Service Points (meters at the premises), Service Agreements (the contract for each service type), Billing Accounts, and Usage data. Understanding how these relate to each other and to standard Salesforce Account/Contact records. Configuring EUC settings for your utility type (electric, gas, water).</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function EnergyUtilitiesApExamTipsPage() {
             <span className="font-medium text-gray-900">Analytics and Reporting</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OmniStudio knowledge is essential — EUC digital services are built entirely on OmniStudio components.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OmniStudio knowledge is essential: EUC digital services are built entirely on OmniStudio components.</p>
         </div>
       </section>
 
@@ -138,8 +138,8 @@ export default function EnergyUtilitiesApExamTipsPage() {
           helps interpret scenarios correctly.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: a customer (Account) can have multiple Premises (properties they occupy). Each Premises can have multiple Service Points (meters — electric meter, gas meter). Each Service Point has a Service Agreement (the active service contract). A single customer moving from one house to another creates a Move Out (stop service at old Premises) and Move In (start service at new Premises) transaction.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio questions: a ’Start Service’ customer journey uses an OmniScript to collect the new address, verify eligibility, look up available Service Points using a DataRaptor, create the Service Agreement using an Integration Procedure, and confirm the start date. When a question asks how to ’build a multi-step customer web form to start electric service’, OmniScript is the answer — not Flow or a custom LWC form.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: a customer (Account) can have multiple Premises (properties they occupy). Each Premises can have multiple Service Points (meters, electric meter, gas meter). Each Service Point has a Service Agreement (the active service contract). A single customer moving from one house to another creates a Move Out (stop service at old Premises) and Move In (start service at new Premises) transaction.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio questions: a ’Start Service’ customer journey uses an OmniScript to collect the new address, verify eligibility, look up available Service Points using a DataRaptor, create the Service Agreement using an Integration Procedure, and confirm the start date. When a question asks how to ’build a multi-step customer web form to start electric service’, OmniScript is the answer, not Flow or a custom LWC form.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For outage management questions: outages are tracked against the Premises (which addresses are affected). Service crews are dispatched using Field Service Lightning integration. Customer notification uses Marketing Cloud or outbound messaging. When a question describes ’automatically notify all affected customers when an outage is restored’, the answer involves outage status updates triggering customer communications through Marketing Cloud or Messaging.</li>
         </ul>
       </section>
@@ -153,7 +153,7 @@ export default function EnergyUtilitiesApExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Energy &amp; Utilities Cloud AP is for consultants and in-house teams implementing EUC for
           electric, gas, or water utilities. Complete the OmniStudio Consultant credential before
-          pursuing EUC AP — OmniStudio is the core technology layer. The EUC Trailmix and
+          pursuing EUC AP: OmniStudio is the core technology layer. The EUC Trailmix and
           implementation guide on Trailhead are the primary study resources.
         </p>
       </section>
@@ -161,19 +161,19 @@ export default function EnergyUtilitiesApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Energy &amp; Utilities Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Service Points vs Premises vs Assets — Three Separate Objects</p>
-            <p className="text-sm text-gray-700">A Premise is a physical location (123 Main St). A Service Point is the specific utility connection at a premise (electric meter, gas meter). An Asset is the physical equipment (the meter device itself). Candidates conflate Premise and Service Point — a single Premise can have multiple Service Points (one for electricity, one for gas). The exam tests which object to update for each utility operation.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Service Points vs Premises vs Assets: Three Separate Objects</p>
+            <p className="text-sm text-gray-700">A Premise is a physical location (123 Main St). A Service Point is the specific utility connection at a premise (electric meter, gas meter). An Asset is the physical equipment (the meter device itself). Candidates conflate Premise and Service Point, a single Premise can have multiple Service Points (one for electricity, one for gas). The exam tests which object to update for each utility operation.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Meter Reading vs Meter Data Management — Operational vs Analytical</p>
-            <p className="text-sm text-gray-700">Meter Reading records capture individual consumption readings at a point in time. Meter Data Management (MDM) systems aggregate, validate, and process high-frequency smart meter data (AMI). Candidates design detailed MDM logic inside Salesforce — the exam expects MDM integration (external system) with Salesforce receiving processed billing data, not raw smart meter streams.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Meter Reading vs Meter Data Management: Operational vs Analytical</p>
+            <p className="text-sm text-gray-700">Meter Reading records capture individual consumption readings at a point in time. Meter Data Management (MDM) systems aggregate, validate, and process high-frequency smart meter data (AMI). Candidates design detailed MDM logic inside Salesforce, the exam expects MDM integration (external system) with Salesforce receiving processed billing data, not raw smart meter streams.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Billing Account vs Service Account — Revenue vs Service Delivery</p>
-            <p className="text-sm text-gray-700">Billing Accounts hold the financial relationship (invoice address, payment terms, balance). Service Accounts represent the utility service delivery relationship at a location. One Billing Account can have multiple Service Accounts. Candidates update the Billing Account for service address changes — the exam expects Service Account updates for delivery-location changes.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Billing Account vs Service Account: Revenue vs Service Delivery</p>
+            <p className="text-sm text-gray-700">Billing Accounts hold the financial relationship (invoice address, payment terms, balance). Service Accounts represent the utility service delivery relationship at a location. One Billing Account can have multiple Service Accounts. Candidates update the Billing Account for service address changes, the exam expects Service Account updates for delivery-location changes.</p>
           </div>
         </div>
       </section>

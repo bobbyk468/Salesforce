@@ -5,7 +5,7 @@ export default function DataToDashboardDiagram() {
     <figure id="data-to-dashboard-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Data source to dashboard pipeline (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Every Tableau project follows the same five stages — this pipeline structure underlies most Data Analyst
+        Every Tableau project follows the same five stages, this pipeline structure underlies most Data Analyst
         exam scenarios about calculated fields, joins, and dashboard actions.
       </p>
       <svg role="img" aria-labelledby="dtd-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 780 130" xmlns="http://www.w3.org/2000/svg">

@@ -59,11 +59,11 @@ const faqItems = [
   },
   {
     question: 'How is NPSP Consultant different from Nonprofit Cloud Consultant?',
-    answer: 'NPSP Consultant focuses specifically on the NPSP managed package — its configuration, fundraising features, household model, and data management tools. Nonprofit Cloud Consultant is the broader, more current credential that covers the full Nonprofit Cloud product suite including NPSP plus Volunteer Management, Outcome Management, and the newer native Nonprofit Cloud features. For new candidates, Nonprofit Cloud Consultant is typically the better investment as it is the active, forward-looking credential.',
+    answer: 'NPSP Consultant focuses specifically on the NPSP managed package, its configuration, fundraising features, household model, and data management tools. Nonprofit Cloud Consultant is the broader, more current credential that covers the full Nonprofit Cloud product suite including NPSP plus Volunteer Management, Outcome Management, and the newer native Nonprofit Cloud features. For new candidates, Nonprofit Cloud Consultant is typically the better investment as it is the active, forward-looking credential.',
   },
   {
     question: 'What is the NPSP household account model?',
-    answer: 'The NPSP household account model stores each household as an Account record, with individual family members as Contact records linked to that Account. This differs from the standard Salesforce model where each Contact can be linked to any Account type. NPSP\'s household model enables household-level giving totals, household-level communication preferences, and household naming conventions — all critical for nonprofit fundraising and donor management.',
+    answer: 'The NPSP household account model stores each household as an Account record, with individual family members as Contact records linked to that Account. This differs from the standard Salesforce model where each Contact can be linked to any Account type. NPSP\'s household model enables household-level giving totals, household-level communication preferences, and household naming conventions, all critical for nonprofit fundraising and donor management.',
   },
   {
     question: 'What is the NPSP Consultant exam format?',
@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'Do I need the Salesforce Administrator certification first?',
-    answer: 'Yes — the Administrator certification (or equivalent experience) is strongly recommended before NPSP Consultant. NPSP runs on the Salesforce platform and the exam assumes solid Salesforce Admin knowledge. Questions about NPSP configuration layer on top of core platform concepts. Candidates without Admin knowledge often struggle on the implementation and configuration sections.',
+    answer: 'Yes, the Administrator certification (or equivalent experience) is strongly recommended before NPSP Consultant. NPSP runs on the Salesforce platform and the exam assumes solid Salesforce Admin knowledge. Questions about NPSP configuration layer on top of core platform concepts. Candidates without Admin knowledge often struggle on the implementation and configuration sections.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function NonprofitSuccessPackConsultantStudyGuidePage() {
           Salesforce NPSP Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Nonprofit Success Pack Consultant exam — NPSP household model, fundraising configuration, gift management, and data import.
+          A complete study guide for the Salesforce Certified Nonprofit Success Pack Consultant exam: NPSP household model, fundraising configuration, gift management, and data import.
         </p>
       </div>
 

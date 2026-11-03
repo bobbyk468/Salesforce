@@ -54,23 +54,23 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the difference between OmniStudio Consultant and OmniStudio Developer certifications?',
-    answer: 'OmniStudio Developer focuses on the technical HOW — building and configuring OmniScripts, DataRaptors, FlexCards, and Integration Procedures. OmniStudio Consultant focuses on the strategic WHY and WHAT — gathering requirements, selecting the right OmniStudio component for each use case, designing solutions, and managing implementations end to end. Consultants need to understand capabilities without necessarily building everything themselves.',
+    answer: 'OmniStudio Developer focuses on the technical HOW, building and configuring OmniScripts, DataRaptors, FlexCards, and Integration Procedures. OmniStudio Consultant focuses on the strategic WHY and WHAT, gathering requirements, selecting the right OmniStudio component for each use case, designing solutions, and managing implementations end to end. Consultants need to understand capabilities without necessarily building everything themselves.',
   },
   {
     question: 'Who should take the OmniStudio Consultant exam?',
-    answer: 'OmniStudio Consultant is designed for functional consultants and solution architects implementing Salesforce Industries solutions. It is ideal for project leads, business analysts, and lead consultants who design OmniStudio solutions and work with clients — rather than developers who build them. Many candidates hold both OmniStudio Developer and Consultant credentials.',
+    answer: 'OmniStudio Consultant is designed for functional consultants and solution architects implementing Salesforce Industries solutions. It is ideal for project leads, business analysts, and lead consultants who design OmniStudio solutions and work with clients, rather than developers who build them. Many candidates hold both OmniStudio Developer and Consultant credentials.',
   },
   {
     question: 'What is the OmniStudio Consultant exam format?',
-    answer: 'The exam has 60 questions, a 105-minute time limit, approximately 65% passing score, and a $200 fee. Questions are scenario-based — given a business requirement, choose the correct OmniStudio component or design decision. No formal prerequisites exist, but hands-on OmniStudio experience and completion of OmniStudio Developer (or equivalent knowledge) is strongly recommended.',
+    answer: 'The exam has 60 questions, a 105-minute time limit, approximately 65% passing score, and a $200 fee. Questions are scenario-based, given a business requirement, choose the correct OmniStudio component or design decision. No formal prerequisites exist, but hands-on OmniStudio experience and completion of OmniStudio Developer (or equivalent knowledge) is strongly recommended.',
   },
   {
     question: 'What is the key difference between OmniScript and Integration Procedure in solution design?',
-    answer: 'OmniScript is for user-facing guided experiences — it runs in the browser and presents a step-by-step UI to agents or customers. Integration Procedures run server-side and orchestrate data operations (reads, writes, transformations, external callouts). In solution design, when a requirement involves a multi-step guided process for a user → OmniScript. When it involves data orchestration without a UI → Integration Procedure. OmniScripts frequently call Integration Procedures to fetch and save data.',
+    answer: 'OmniScript is for user-facing guided experiences, it runs in the browser and presents a step-by-step UI to agents or customers. Integration Procedures run server-side and orchestrate data operations (reads, writes, transformations, external callouts). In solution design, when a requirement involves a multi-step guided process for a user → OmniScript. When it involves data orchestration without a UI → Integration Procedure. OmniScripts frequently call Integration Procedures to fetch and save data.',
   },
   {
     question: 'How is OmniStudio deployed across environments?',
-    answer: 'OmniStudio components (OmniScripts, DataRaptors, FlexCards, Integration Procedures) are deployed using OmniStudio DataPacks — JSON export files that represent all component configuration. DataPacks are exported from source environment, version-controlled, and imported into target environments (UAT, Production). Components must be activated after import before they are available to users. Understanding the DataPack deployment process is tested on the consultant exam.',
+    answer: 'OmniStudio components (OmniScripts, DataRaptors, FlexCards, Integration Procedures) are deployed using OmniStudio DataPacks: JSON export files that represent all component configuration. DataPacks are exported from source environment, version-controlled, and imported into target environments (UAT, Production). Components must be activated after import before they are available to users. Understanding the DataPack deployment process is tested on the consultant exam.',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
           Salesforce OmniStudio Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the OmniStudio Consultant exam — requirements gathering, solution design, component selection, implementation, and delivery best practices.
+          Your complete guide to passing the OmniStudio Consultant exam, requirements gathering, solution design, component selection, implementation, and delivery best practices.
         </p>
       </div>
 
@@ -158,12 +158,12 @@ export default function OmnistudioConsultantStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">6-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'OmniStudio component overview — understand what each of the four core components does (OmniScript, DataRaptor, FlexCard, Integration Procedure) and the primary use case for each.' },
-            { week: 'Week 2', focus: 'Requirements gathering — practice mapping business requirements to OmniStudio components. Given a scenario, identify whether it needs an OmniScript (guided UI), FlexCard (record display), or Integration Procedure (data logic).' },
-            { week: 'Week 3', focus: 'Solution design patterns — component reuse (shared DataRaptors, shared Integration Procedures), data flow design, UX considerations for OmniScript step groups and FlexCard layout.' },
-            { week: 'Week 4', focus: 'Implementation best practices — naming conventions, versioning, activation/deactivation, managing components across environments with DataPacks.' },
-            { week: 'Week 5', focus: 'Testing — Preview mode, hyperlink testing, UAT approaches for OmniStudio, performance considerations (large DataRaptor queries, Integration Procedure parallel execution).' },
-            { week: 'Week 6', focus: 'Full mock exams. Focus on component selection scenarios — given a business requirement, choose the right OmniStudio component and justify the design decision.' },
+            { week: 'Week 1', focus: 'OmniStudio component overview, understand what each of the four core components does (OmniScript, DataRaptor, FlexCard, Integration Procedure) and the primary use case for each.' },
+            { week: 'Week 2', focus: 'Requirements gathering, practice mapping business requirements to OmniStudio components. Given a scenario, identify whether it needs an OmniScript (guided UI), FlexCard (record display), or Integration Procedure (data logic).' },
+            { week: 'Week 3', focus: 'Solution design patterns, component reuse (shared DataRaptors, shared Integration Procedures), data flow design, UX considerations for OmniScript step groups and FlexCard layout.' },
+            { week: 'Week 4', focus: 'Implementation best practices, naming conventions, versioning, activation/deactivation, managing components across environments with DataPacks.' },
+            { week: 'Week 5', focus: 'Testing: Preview mode, hyperlink testing, UAT approaches for OmniStudio, performance considerations (large DataRaptor queries, Integration Procedure parallel execution).' },
+            { week: 'Week 6', focus: 'Full mock exams. Focus on component selection scenarios, given a business requirement, choose the right OmniStudio component and justify the design decision.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -177,22 +177,22 @@ export default function OmnistudioConsultantStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Component selection decision tree:</strong> User needs to complete a guided multi-step process? → OmniScript. Agent needs to view contextual data on a record page? → FlexCard. Need server-side data orchestration (read, write, transform, callout)? → Integration Procedure. Need to read/write Salesforce data or transform JSON? → DataRaptor.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Reuse over rebuild:</strong> OmniStudio Consultant questions often test whether you choose a reusable component design (shared Integration Procedure called by multiple OmniScripts) vs duplicating logic. Always favour reuse — it is the correct design pattern.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Reuse over rebuild:</strong> OmniStudio Consultant questions often test whether you choose a reusable component design (shared Integration Procedure called by multiple OmniScripts) vs duplicating logic. Always favour reuse; it is the correct design pattern.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>DataPack deployment:</strong> OmniStudio components are deployed via DataPacks, not change sets or SFDX packages. Export from source org, commit to version control, import to target org, activate. Know the sequence and why activation is required after import.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Versioning and activation:</strong> OmniStudio components have version numbers. Only one version can be active at a time. Deactivating the current version and activating a new version is the standard approach for updates — not overwriting the active version directly.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Versioning and activation:</strong> OmniStudio components have version numbers. Only one version can be active at a time. Deactivating the current version and activating a new version is the standard approach for updates, not overwriting the active version directly.</span></li>
         </ul>
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong>. Discovery &amp; Analysis (30%) and Solution Design (28%) together are 58% of the exam — the consultant exam is more strategic than technical. If you can correctly map a business requirement to the right OmniStudio component and justify the design decision, you are ready.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong>. Discovery &amp; Analysis (30%) and Solution Design (28%) together are 58% of the exam, the consultant exam is more strategic than technical. If you can correctly map a business requirement to the right OmniStudio component and justify the design decision, you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
-          <li>Component selection: OmniScript vs FlexCard vs Integration Procedure vs DataRaptor — when to use each</li>
-          <li>DataRaptor types: Extract, Load, Transform, Turbo Extract — correct type for each data operation</li>
+          <li>Component selection: OmniScript vs FlexCard vs Integration Procedure vs DataRaptor, when to use each</li>
+          <li>DataRaptor types: Extract, Load, Transform, Turbo Extract, correct type for each data operation</li>
           <li>Solution reuse: shared Integration Procedures and DataRaptors across multiple OmniScripts</li>
           <li>DataPack deployment: export, version control, import, activate sequence</li>
           <li>OmniScript component versioning and activation/deactivation process</li>

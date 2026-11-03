@@ -65,11 +65,11 @@ const faqItems = [
   },
   {
     question: 'Do I need hands-on Pardot experience to pass the Consultant exam?',
-    answer: 'Yes — the Pardot Consultant exam is scenario-heavy and tests applied knowledge, not just feature memorisation. Candidates without hands-on experience with Pardot (at least 6–12 months of implementation or admin experience) typically struggle with consultant-level questions. Access to a Pardot developer org or sandbox is strongly recommended for hands-on practice during study.',
+    answer: 'Yes, the Pardot Consultant exam is scenario-heavy and tests applied knowledge, not just feature memorisation. Candidates without hands-on experience with Pardot (at least 6–12 months of implementation or admin experience) typically struggle with consultant-level questions. Access to a Pardot developer org or sandbox is strongly recommended for hands-on practice during study.',
   },
   {
     question: 'How does the Pardot Consultant exam differ from the Specialist?',
-    answer: 'The Specialist exam tests whether you can operate Pardot (build emails, create forms, set up automation). The Consultant exam tests whether you can design Pardot solutions for clients — choosing the right architecture for complex scenarios, configuring multi-business-unit setups, advising on B2B lead management strategy, and troubleshooting advanced integrations. The Consultant exam has more "which approach is best for this scenario" questions vs feature-specific "how do you do X" questions.',
+    answer: 'The Specialist exam tests whether you can operate Pardot (build emails, create forms, set up automation). The Consultant exam tests whether you can design Pardot solutions for clients, choosing the right architecture for complex scenarios, configuring multi-business-unit setups, advising on B2B lead management strategy, and troubleshooting advanced integrations. The Consultant exam has more "which approach is best for this scenario" questions vs feature-specific "how do you do X" questions.',
   },
   {
     question: 'What Salesforce CRM knowledge is needed for the Pardot Consultant exam?',
@@ -96,7 +96,7 @@ export default function PardotConsultantStudyGuidePage() {
           Salesforce Pardot Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Marketing Cloud Account Engagement Consultant (Pardot Consultant) exam — exam sections, B2B marketing automation concepts, a study plan, and passing tips.
+          A complete study guide for the Salesforce Certified Marketing Cloud Account Engagement Consultant (Pardot Consultant) exam, exam sections, B2B marketing automation concepts, a study plan, and passing tips.
         </p>
       </div>
 
@@ -204,14 +204,14 @@ export default function PardotConsultantStudyGuidePage() {
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
           <li><Link href="/pardot-consultant-vs-marketing-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Pardot Consultant vs Marketing Cloud Consultant comparison</Link></li>
-          <li><Link href="/pardot-specialist-vs-pardot-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Pardot Specialist vs Pardot Consultant — key differences</Link></li>
+          <li><Link href="/pardot-specialist-vs-pardot-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Pardot Specialist vs Pardot Consultant, key differences</Link></li>
         </ul>
       </div>
 
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Pardot Consultant Questions</h2>
-        <p className="text-white mb-6">Free practice questions for the Account Engagement Consultant exam — test scenario-based knowledge before the real exam.</p>
+        <p className="text-white mb-6">Free practice questions for the Account Engagement Consultant exam, test scenario-based knowledge before the real exam.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/pardot-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Pardot Consultant Practice
@@ -234,7 +234,7 @@ export default function PardotConsultantStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Pardot Consultant free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Pardot Consultant free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/pardot-consultant"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

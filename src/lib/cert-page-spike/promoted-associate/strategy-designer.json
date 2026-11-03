@@ -26,7 +26,7 @@
       "<strong>Method focus.</strong> Research, synthesis, problem framing, facilitation and measuring value.",
       "<strong>Judgement questions.</strong> Many questions ask what you should do next in a project, not what a tool does."
     ],
-    "passRateGuidance": "People who have run discovery and research on real projects do best. Before you book, aim for 80% or more on practice tests, since the pass mark is higher than most."
+    "passRateGuidance": "People who have run discovery and research on real projects do best. Before you book. Aim for 80% or more on practice tests, since the pass mark is higher than most."
   },
   "examFormat": {
     "heading": "Strategy Designer Exam Format Explained",
@@ -66,7 +66,7 @@
     "blocks": [
       {
         "heading": "Human-Centered Design Strategy",
-        "body": "Human-centred design starts with the people who will use a solution. Before suggesting features, learn about their goals, tasks and frustrations. **Research methods** include interviews, watching people at work (contextual inquiry), surveys and looking at usage data. Pick the method that fits the question: interviews and observation for why people do things, surveys and data for how many. Plan research with a clear goal, recruit the right participants, and avoid leading questions."
+        "body": "Human-centred design starts with the people who will use a solution. Before suggesting features. Learn about their goals, tasks and frustrations. **Research methods** include interviews, watching people at work (contextual inquiry), surveys and looking at usage data. Pick the method that fits the question: interviews and observation for why people do things, surveys and data for how many. Plan research with a clear goal, recruit the right participants, and avoid leading questions."
       },
       {
         "heading": "Service Design and Journey Mapping",
@@ -82,7 +82,7 @@
       },
       {
         "heading": "Ethics, Inclusion, and Responsible Design",
-        "body": "Design choices affect people, so think about who might be left out or harmed. **Inclusive design** means involving a wide range of users, including people with disabilities, and following accessibility standards. Be open about how data is collected and used. Watch for bias in research, such as only talking to the easiest users to reach. With AI features, think about trust, transparency and what happens when the AI gets it wrong."
+        "body": "Design choices affect people, so think about who might be left out or harmed. **Inclusive design** means involving a wide range of users, including people with disabilities, and following accessibility standards. Be open about how data is collected and used. Watch for bias in research, such as only talking to the easiest users to reach. With AI features. Think about trust, transparency and what happens when the AI gets it wrong."
       }
     ]
   },

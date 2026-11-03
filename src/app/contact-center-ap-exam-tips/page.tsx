@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Contact Center candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Contact Center exam are: (1) Omni-Channel Flow vs Legacy Routing Configuration — New vs Old; (2) Enhanced Omni-Channel vs Standard Omni-Channel — Capacity Model Difference; (3) Service Channel vs Routing Configuration — Not the Same Thing. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Contact Center exam are: (1) Omni-Channel Flow vs Legacy Routing Configuration: New vs Old; (2) Enhanced Omni-Channel vs Standard Omni-Channel: Capacity Model Difference; (3) Service Channel vs Routing Configuration: Not the Same Thing. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('contact-center-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function ContactCenterApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Contact Center AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Omni-Channel routing</strong> — Configuring Omni-Channel presence statuses, routing configurations (queue-based, skills-based, external), service channels (cases, chats, calls), agent capacity management, routing priority and overflow, and the Supervisor panel for real-time queue monitoring and agent coaching.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Service Cloud Voice</strong> — Integrating Amazon Connect telephony with Salesforce, configuring the agent desktop for voice calls, IVR (Interactive Voice Response) flow design, real-time transcription, Einstein AI features during calls (Next Best Action, call summaries), and post-call automation (case creation, survey triggers).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Digital channels and Einstein Bots</strong> — Configuring chat, messaging (SMS, WhatsApp, Facebook Messenger), and email channels in Omni-Channel. Building Einstein Bots for self-service deflection — intent recognition, dialogue flows, bot-to-agent transfer when the bot cannot resolve the issue, and measuring bot containment rate.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Omni-Channel routing</strong>: Configuring Omni-Channel presence statuses, routing configurations (queue-based, skills-based, external), service channels (cases, chats, calls), agent capacity management, routing priority and overflow, and the Supervisor panel for real-time queue monitoring and agent coaching.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Service Cloud Voice</strong>: Integrating Amazon Connect telephony with Salesforce, configuring the agent desktop for voice calls, IVR (Interactive Voice Response) flow design, real-time transcription, Einstein AI features during calls (Next Best Action, call summaries), and post-call automation (case creation, survey triggers).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Digital channels and Einstein Bots</strong>: Configuring chat, messaging (SMS, WhatsApp, Facebook Messenger), and email channels in Omni-Channel. Building Einstein Bots for self-service deflection, intent recognition, dialogue flows, bot-to-agent transfer when the bot cannot resolve the issue, and measuring bot containment rate.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function ContactCenterApExamTipsPage() {
             <span className="font-medium text-gray-900">Analytics and Reporting</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Omni-Channel + Voice + Digital Channels = 80% — know the routing model differences thoroughly.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Omni-Channel + Voice + Digital Channels = 80%, know the routing model differences thoroughly.</p>
         </div>
       </section>
 
@@ -135,11 +135,11 @@ export default function ContactCenterApExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a contact center requirement and ask which Salesforce configuration,
           channel, or routing model addresses it. Think from the contact center manager’s perspective
-          — what does the agent and supervisor experience need to look like?
+; what does the agent and supervisor experience need to look like?
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For routing questions: queue-based routing = next available agent in the queue regardless of skills. Skills-based routing = match work to agents with specific required skills (e.g., language, product expertise). When a scenario says ’route Spanish-language chats to Spanish-speaking agents’, skills-based routing is the answer — not queue-based routing.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For bot questions: Einstein Bots handle routine inquiries automatically (order status, password reset) before escalating to an agent. The bot-to-agent transfer passes the conversation context so the agent sees the full conversation history. When a question says ’reduce simple inbound inquiries without hiring more agents’, Einstein Bot deflection is the answer — not adding more queues or agents.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For routing questions: queue-based routing = next available agent in the queue regardless of skills. Skills-based routing = match work to agents with specific required skills (e.g., language, product expertise). When a scenario says ’route Spanish-language chats to Spanish-speaking agents’, skills-based routing is the answer, not queue-based routing.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For bot questions: Einstein Bots handle routine inquiries automatically (order status, password reset) before escalating to an agent. The bot-to-agent transfer passes the conversation context so the agent sees the full conversation history. When a question says ’reduce simple inbound inquiries without hiring more agents’, Einstein Bot deflection is the answer, not adding more queues or agents.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Voice questions: Service Cloud Voice creates a call record and case automatically when a call is received (if configured). Real-time transcription shows what the customer is saying in the agent desktop. Einstein Next Best Action suggests responses during the call. After the call, Einstein auto-generates a call summary that populates the case. When a question asks ’how to reduce after-call work time’, Einstein call summaries is the answer.</li>
         </ul>
       </section>
@@ -161,19 +161,19 @@ export default function ContactCenterApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Contact Center Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Omni-Channel Flow vs Legacy Routing Configuration — New vs Old</p>
-            <p className="text-sm text-gray-700">Omni-Channel Flow uses Flow Builder to route work items dynamically using any record field, agent capacity, or skill. Legacy routing uses static Queue → Routing Configuration → Routing Rule setup. New implementations should use Omni-Channel Flow. Candidates design routing using the legacy Queue/Routing Configuration approach for scenarios that describe dynamic, condition-based routing — the exam expects Omni-Channel Flow for those cases.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Omni-Channel Flow vs Legacy Routing Configuration: New vs Old</p>
+            <p className="text-sm text-gray-700">Omni-Channel Flow uses Flow Builder to route work items dynamically using any record field, agent capacity, or skill. Legacy routing uses static Queue → Routing Configuration → Routing Rule setup. New implementations should use Omni-Channel Flow. Candidates design routing using the legacy Queue/Routing Configuration approach for scenarios that describe dynamic, condition-based routing, the exam expects Omni-Channel Flow for those cases.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Enhanced Omni-Channel vs Standard Omni-Channel — Capacity Model Difference</p>
-            <p className="text-sm text-gray-700">Standard Omni-Channel uses numeric capacity (each work item costs a set number of capacity units). Enhanced Omni-Channel uses a Percent-of-Capacity model, where each work item type consumes a percentage of total capacity. Candidates answer capacity planning questions using Standard model logic when the scenario describes percentage-based capacity — know which model applies to which scenario.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Enhanced Omni-Channel vs Standard Omni-Channel: Capacity Model Difference</p>
+            <p className="text-sm text-gray-700">Standard Omni-Channel uses numeric capacity (each work item costs a set number of capacity units). Enhanced Omni-Channel uses a Percent-of-Capacity model, where each work item type consumes a percentage of total capacity. Candidates answer capacity planning questions using Standard model logic when the scenario describes percentage-based capacity. Know which model applies to which scenario.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Service Channel vs Routing Configuration — Not the Same Thing</p>
-            <p className="text-sm text-gray-700">A Service Channel defines the source of work items (Live Chat, Case, Voice, Messaging). A Routing Configuration defines the rules for how work from a channel is assigned to agents (queue priority, routing model). Candidates configure the Service Channel when asked to set routing priority — the exam expects Routing Configuration changes for priority adjustments.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Service Channel vs Routing Configuration: Not the Same Thing</p>
+            <p className="text-sm text-gray-700">A Service Channel defines the source of work items (Live Chat, Case, Voice, Messaging). A Routing Configuration defines the rules for how work from a channel is assigned to agents (queue priority, routing model). Candidates configure the Service Channel when asked to set routing priority, the exam expects Routing Configuration changes for priority adjustments.</p>
           </div>
         </div>
       </section>

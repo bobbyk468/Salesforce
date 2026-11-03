@@ -1,5 +1,5 @@
 // Maps Salesforce release names to the ISO end-of-cycle date.
-// Used as validThrough in Occupation schema — signals to Google when salary data expires.
+// Used as validThrough in Occupation schema, signals to Google when salary data expires.
 // Update this map alongside RELEASE_CURRENT in release-data.ts each season.
 
 const RELEASE_WINDOWS: Record<string, string> = {

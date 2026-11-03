@@ -1,4 +1,4 @@
-/** Node.js vs. browser execution context for JavaScript Developer I — where LWC code
+/** Node.js vs. browser execution context for JavaScript Developer I, where LWC code
  * actually runs versus where standard JS tooling runs. */
 export default function LWCExecutionDiagram() {
   return (

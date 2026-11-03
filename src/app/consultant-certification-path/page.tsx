@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'Can I take multiple consultant certifications?',
-    answer: 'Yes — many Salesforce consultants hold multiple cloud certifications. Common pairings are Sales Cloud + Service Cloud (for full CRM consultants), or Sales Cloud + Experience Cloud (for customer portal implementations). Each certification adds a distinct specialisation and increases your value to clients.',
+    answer: 'Yes, many Salesforce consultants hold multiple cloud certifications. Common pairings are Sales Cloud + Service Cloud (for full CRM consultants), or Sales Cloud + Experience Cloud (for customer portal implementations). Each certification adds a distinct specialisation and increases your value to clients.',
   },
 ]
 
@@ -84,11 +84,11 @@ export default function ConsultantCertificationPathPage() {
 
       {/* Foundation */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Step 1: Foundation — Salesforce Administrator (ADM-201)</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Step 1: Foundation: Salesforce Administrator (ADM-201)</h2>
         <p className="text-sm text-gray-700 mb-3">
           All consultant certifications assume ADM-201-level knowledge of the Salesforce platform. Before pursuing any
           consultant certification, ensure you are comfortable with objects, fields, automation, security model, and
-          reports — the topics the consultant exams build on.
+          reports, the topics the consultant exams build on.
         </p>
         <Link href="/adm-201-exam-tips" className="inline-flex items-center gap-2 text-sm text-salesforce-blue font-medium hover:underline">
           ADM-201 exam tips <ArrowRight className="h-3 w-3" />
@@ -164,11 +164,11 @@ export default function ConsultantCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Additional Consultant Specialisations</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pardot Specialist / Pardot Consultant</strong> — Marketing automation with Account Engagement. Specialist before Consultant. <Link href="/pardot-specialist-exam-tips" className="text-salesforce-blue underline">Pardot exam tips</Link></li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Revenue Cloud Consultant</strong> — CPQ, billing, revenue recognition. Requires CPQ knowledge before attempting.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Analyst</strong> — Discovery, user stories, stakeholder management. 72% passing score — higher than standard certs. <Link href="/business-analyst-exam-tips" className="text-salesforce-blue underline">BA exam tips</Link></li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Nonprofit Cloud Consultant</strong> — NPSP data model, donor management, grant tracking for nonprofit organisations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Health Cloud Consultant</strong> — Patient/member management, care coordination, healthcare compliance (HIPAA).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pardot Specialist / Pardot Consultant</strong>: Marketing automation with Account Engagement. Specialist before Consultant. <Link href="/pardot-specialist-exam-tips" className="text-salesforce-blue underline">Pardot exam tips</Link></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Revenue Cloud Consultant</strong>: CPQ, billing, revenue recognition. Requires CPQ knowledge before attempting.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Analyst</strong>: Discovery, user stories, stakeholder management. 72% passing score, higher than standard certs. <Link href="/business-analyst-exam-tips" className="text-salesforce-blue underline">BA exam tips</Link></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Nonprofit Cloud Consultant</strong>: NPSP data model, donor management, grant tracking for nonprofit organisations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Health Cloud Consultant</strong>: Patient/member management, care coordination, healthcare compliance (HIPAA).</li>
         </ul>
       </section>
 

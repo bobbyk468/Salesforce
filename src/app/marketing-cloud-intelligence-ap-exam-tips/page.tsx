@@ -59,11 +59,11 @@ const faqItems = [
   },
   {
     question: 'What is data harmonisation in Marketing Cloud Intelligence?',
-    answer: 'Data harmonisation maps incoming data fields from different sources to a unified MCI data model. For example, Facebook calls it "Impressions" and Google calls it "Impr." — harmonisation maps both to a single "Impressions" metric in MCI. The exam tests how to configure field mappings, create custom dimensions and metrics, set up cross-channel calculated metrics, and handle data conflicts when sources use different definitions.',
+    answer: 'Data harmonisation maps incoming data fields from different sources to a unified MCI data model. For example, Facebook calls it "Impressions" and Google calls it "Impr.", harmonisation maps both to a single "Impressions" metric in MCI. The exam tests how to configure field mappings, create custom dimensions and metrics, set up cross-channel calculated metrics, and handle data conflicts when sources use different definitions.',
   },
   {
     question: 'What concepts do most Marketing Cloud Intelligence candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Marketing Cloud Intelligence exam are: (1) Streams vs Workspaces — Data Ingestion vs Analysis; (2) Harmonised vs Raw Data — Why Metrics Don\'t Match Source Platforms; (3) Calculated Metrics vs Standard Metrics — Custom Formulas for Cross-Channel KPIs. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Intelligence exam are: (1) Streams vs Workspaces: Data Ingestion vs Analysis; (2) Harmonised vs Raw Data: Why Metrics Don\'t Match Source Platforms; (3) Calculated Metrics vs Standard Metrics: Custom Formulas for Cross-Channel KPIs. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('marketing-cloud-intelligence-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function MarketingCloudIntelligenceApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: MCI AP Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data streams and connections</strong> — Configuring TotalConnect data streams from marketing platforms (Google Ads, Facebook/Meta Ads, SFMC, Salesforce CRM, LinkedIn), setting up API and file-based connectors, scheduling automated data pulls, validating data stream health, and troubleshooting failed connections and missing data.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data harmonisation and modelling</strong> — Mapping source fields to MCI dimensions and metrics, creating custom dimensions (campaign taxonomy fields), calculated metrics (ROAS = Revenue / Ad Spend), cross-channel currency normalisation, and the MCI data model (Workspaces, Data Streams, Dimensions, Metrics, Custom KPIs).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Dashboard design and KPIs</strong> — Building executive marketing dashboards with widgets (bar charts, scorecards, trend lines), configuring custom KPI alerts and goals, using Einstein Insights for AI-powered anomaly detection and recommendations, sharing dashboards via links and scheduled email reports, and managing user access and workspace permissions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data streams and connections</strong>: Configuring TotalConnect data streams from marketing platforms (Google Ads, Facebook/Meta Ads, SFMC, Salesforce CRM, LinkedIn), setting up API and file-based connectors, scheduling automated data pulls, validating data stream health, and troubleshooting failed connections and missing data.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data harmonisation and modelling</strong>: Mapping source fields to MCI dimensions and metrics, creating custom dimensions (campaign taxonomy fields), calculated metrics (ROAS = Revenue / Ad Spend), cross-channel currency normalisation, and the MCI data model (Workspaces, Data Streams, Dimensions, Metrics, Custom KPIs).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Dashboard design and KPIs</strong>: Building executive marketing dashboards with widgets (bar charts, scorecards, trend lines), configuring custom KPI alerts and goals, using Einstein Insights for AI-powered anomaly detection and recommendations, sharing dashboards via links and scheduled email reports, and managing user access and workspace permissions.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function MarketingCloudIntelligenceApExamTipsPage() {
             <span className="font-medium text-gray-900">Einstein Insights and Automation</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Data connections + harmonisation = 55% — getting clean, unified data into MCI is the core implementation challenge.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Data connections + harmonisation = 55%, getting clean, unified data into MCI is the core implementation challenge.</p>
         </div>
       </section>
 
@@ -139,8 +139,8 @@ export default function MarketingCloudIntelligenceApExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data stream questions: when a data stream shows missing data, check: (1) the connection credentials are valid, (2) the API permissions include the required data, (3) the date range of the data pull covers the expected period, (4) the field mappings are correctly configured. When a stream shows ’No Data’ after a connection change, the most common cause is a permission scope issue on the connected account credentials.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For harmonisation questions: cross-channel metrics require mapping each source’s field name to one MCI metric. If Facebook uses ’Link Clicks’ and Google uses ’Clicks’ for the same concept, map both to a single ’Clicks’ metric in MCI. Calculated metrics combine metrics with formulas: CTR = Clicks / Impressions × 100. ROAS = Revenue / Cost. When a scenario says ’create a single clicks metric across all ad platforms’, configure a harmonised metric mapping — not separate widgets for each platform.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI alert questions: Einstein Insights automatically detects anomalies in your metrics (a sudden drop in CTR, an unusual spike in cost). KPI Goals set target values for tracking progress. When a scenario says ’alert the marketing team when ROAS drops below 3x’, configure a KPI Goal with an alert threshold — not a scheduled report or custom Flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For harmonisation questions: cross-channel metrics require mapping each source’s field name to one MCI metric. If Facebook uses ’Link Clicks’ and Google uses ’Clicks’ for the same concept. Map both to a single ’Clicks’ metric in MCI. Calculated metrics combine metrics with formulas: CTR = Clicks / Impressions × 100. ROAS = Revenue / Cost. When a scenario says ’create a single clicks metric across all ad platforms’, configure a harmonised metric mapping, not separate widgets for each platform.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI alert questions: Einstein Insights automatically detects anomalies in your metrics (a sudden drop in CTR, an unusual spike in cost). KPI Goals set target values for tracking progress. When a scenario says ’alert the marketing team when ROAS drops below 3x’, configure a KPI Goal with an alert threshold, not a scheduled report or custom Flow.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function MarketingCloudIntelligenceApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Intelligence Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Streams vs Workspaces — Data Ingestion vs Analysis</p>
-            <p className="text-sm text-gray-700">Streams are the data connectors that ingest raw marketing performance data from ad platforms, email tools, and CRMs into Marketing Cloud Intelligence. Workspaces are the analysis environments where data is combined, visualised, and reported. Candidates try to configure analytics in the Stream setup — Streams are only for ingestion; all analysis happens in Workspaces.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Streams vs Workspaces: Data Ingestion vs Analysis</p>
+            <p className="text-sm text-gray-700">Streams are the data connectors that ingest raw marketing performance data from ad platforms, email tools, and CRMs into Marketing Cloud Intelligence. Workspaces are the analysis environments where data is combined, visualised, and reported. Candidates try to configure analytics in the Stream setup; Streams are only for ingestion; all analysis happens in Workspaces.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Harmonised vs Raw Data — Why Metrics Don’t Match Source Platforms</p>
-            <p className="text-sm text-gray-700">Marketing Cloud Intelligence harmonises metrics from disparate platforms into a common schema (e.g., mapping "clicks" from Google Ads, Meta Ads, and Marketing Cloud into one unified "Clicks" metric). Raw data from each platform may use different field names and definitions. Candidates expect raw platform numbers to appear unchanged — the exam expects understanding of the harmonisation layer and why numbers may differ slightly from native platform reports.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Harmonised vs Raw Data: Why Metrics Don’t Match Source Platforms</p>
+            <p className="text-sm text-gray-700">Marketing Cloud Intelligence harmonises metrics from disparate platforms into a common schema (e.g., mapping "clicks" from Google Ads, Meta Ads, and Marketing Cloud into one unified "Clicks" metric). Raw data from each platform may use different field names and definitions. Candidates expect raw platform numbers to appear unchanged, the exam expects understanding of the harmonisation layer and why numbers may differ slightly from native platform reports.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Calculated Metrics vs Standard Metrics — Custom Formulas for Cross-Channel KPIs</p>
-            <p className="text-sm text-gray-700">Standard metrics are ingested directly from source platforms (impressions, clicks, cost). Calculated metrics are custom formulas built in Intelligence (CPC = Cost / Clicks, ROAS = Revenue / Cost). Candidates try to pull ROAS and blended CPM directly from data streams — these cross-platform KPIs require Calculated Metric configuration in the workspace.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Calculated Metrics vs Standard Metrics: Custom Formulas for Cross-Channel KPIs</p>
+            <p className="text-sm text-gray-700">Standard metrics are ingested directly from source platforms (impressions, clicks, cost). Calculated metrics are custom formulas built in Intelligence (CPC = Cost / Clicks, ROAS = Revenue / Cost). Candidates try to pull ROAS and blended CPM directly from data streams, these cross-platform KPIs require Calculated Metric configuration in the workspace.</p>
           </div>
         </div>
       </section>

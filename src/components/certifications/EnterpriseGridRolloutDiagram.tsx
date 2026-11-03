@@ -11,7 +11,7 @@ export default function EnterpriseGridRolloutDiagram() {
     <figure id="enterprise-grid-rollout-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Enterprise Grid rollout change-management phases (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        A successful Slack rollout is a change-management effort, not just a technical one — it moves through
+        A successful Slack rollout is a change-management effort, not just a technical one, it moves through
         discovery, design, a small pilot, phased org-wide rollout with champions, then ongoing optimization.
       </p>
       <svg role="img" aria-labelledby="egr-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 780 130" xmlns="http://www.w3.org/2000/svg">

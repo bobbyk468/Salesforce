@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'Who is the Slack Administrator certification for?',
-    answer: 'The Salesforce Certified Slack Administrator certification is designed for IT administrators, Salesforce admins, and operations professionals who manage Slack at the enterprise level — setting up workspaces, managing users and security, configuring compliance settings, and administering integrations. It is a strong credential for IT professionals at Salesforce customer organisations and consulting partners who need to demonstrate Slack administration expertise.',
+    answer: 'The Salesforce Certified Slack Administrator certification is designed for IT administrators, Salesforce admins, and operations professionals who manage Slack at the enterprise level, setting up workspaces, managing users and security, configuring compliance settings, and administering integrations. It is a strong credential for IT professionals at Salesforce customer organisations and consulting partners who need to demonstrate Slack administration expertise.',
   },
   {
     question: 'What is the Slack Administrator exam format?',
@@ -63,15 +63,15 @@ const faqItems = [
   },
   {
     question: 'Do I need the Salesforce Administrator certification first?',
-    answer: 'No — the Slack Administrator certification is independent of the core Salesforce Administrator credential. You can take it without any prior Salesforce certifications. However, if you are primarily a Salesforce admin who also manages Slack, the Salesforce Administrator knowledge is a useful complement. The exam focuses specifically on Slack platform administration, not the broader Salesforce CRM platform.',
+    answer: 'No, the Slack Administrator certification is independent of the core Salesforce Administrator credential. You can take it without any prior Salesforce certifications. However, if you are primarily a Salesforce admin who also manages Slack, the Salesforce Administrator knowledge is a useful complement. The exam focuses specifically on Slack platform administration, not the broader Salesforce CRM platform.',
   },
   {
     question: 'What Slack plan features does the exam cover?',
-    answer: 'The exam covers features across Slack Free, Pro, Business+, and Enterprise Grid plans. Governance and compliance features (data retention policies, DLP integrations, eDiscovery exports, SSO) are Enterprise Grid features. Exam questions often test which plan is required for specific features — know the feature tier distinctions, especially what requires Enterprise Grid vs Business+ plans.',
+    answer: 'The exam covers features across Slack Free, Pro, Business+, and Enterprise Grid plans. Governance and compliance features (data retention policies, DLP integrations, eDiscovery exports, SSO) are Enterprise Grid features. Exam questions often test which plan is required for specific features. Know the feature tier distinctions, especially what requires Enterprise Grid vs Business+ plans.',
   },
   {
     question: 'How important is hands-on Slack experience for passing this exam?',
-    answer: 'Hands-on experience with Slack as an administrator is strongly recommended — ideally at the Business+ or Enterprise Grid level where governance and compliance features are available. Many exam questions involve scenario-based administration decisions that are difficult to answer without real workspace management experience. If you do not have admin access at work, Slack offers a free trial that can be used to explore most admin settings.',
+    answer: 'Hands-on experience with Slack as an administrator is strongly recommended, ideally at the Business+ or Enterprise Grid level where governance and compliance features are available. Many exam questions involve scenario-based administration decisions that are difficult to answer without real workspace management experience. If you do not have admin access at work, Slack offers a free trial that can be used to explore most admin settings.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function SlackAdministratorStudyGuidePage() {
           Salesforce Slack Administrator Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Slack Administrator exam — workspace configuration, user security, compliance, app integrations, and Slack Connect.
+          A complete study guide for the Salesforce Certified Slack Administrator exam, workspace configuration, user security, compliance, app integrations, and Slack Connect.
         </p>
       </div>
 

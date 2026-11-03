@@ -39,7 +39,7 @@ const faqItems = [
   },
   {
     question: 'What is the hardest Salesforce certification?',
-    answer: 'The Salesforce Certified Technical Architect (CTA) Board Review is universally considered the hardest credential in the Salesforce ecosystem — and one of the most rigorous in enterprise software. It requires holding both Application Architect and System Architect credentials (8 individual certs total), then passing a live 2-hour presentation to a panel of senior Salesforce architects. There are fewer than 1,000 CTAs globally. Candidates typically have 8–12 years of Salesforce experience and often attempt the board multiple times.',
+    answer: 'The Salesforce Certified Technical Architect (CTA) Board Review is universally considered the hardest credential in the Salesforce ecosystem, and one of the most rigorous in enterprise software. It requires holding both Application Architect and System Architect credentials (8 individual certs total), then passing a live 2-hour presentation to a panel of senior Salesforce architects. There are fewer than 1,000 CTAs globally. Candidates typically have 8–12 years of Salesforce experience and often attempt the board multiple times.',
   },
   {
     question: 'Is Platform Developer I (PD1) hard?',
@@ -47,11 +47,11 @@ const faqItems = [
   },
   {
     question: 'Is the Salesforce Administrator (ADM-201) exam hard?',
-    answer: 'ADM-201 is moderately challenging for complete beginners. The exam covers a broad range of Salesforce features — objects, security model (profiles, roles, sharing rules), automation, reports, dashboards, and data management — and requires 68% to pass. Most candidates without Salesforce experience pass in 8–12 weeks of part-time study. The biggest challenge is the breadth of topics — no single section is very deep, but all areas need solid coverage.',
+    answer: 'ADM-201 is moderately challenging for complete beginners. The exam covers a broad range of Salesforce features, objects, security model (profiles, roles, sharing rules), automation, reports, dashboards, and data management; and requires 68% to pass. Most candidates without Salesforce experience pass in 8–12 weeks of part-time study. The biggest challenge is the breadth of topics, no single section is very deep, but all areas need solid coverage.',
   },
   {
     question: 'Do Salesforce consultant exams have a higher fail rate than admin exams?',
-    answer: 'Yes, consultant exams generally have higher fail rates than ADM-201. Consultant exams (Sales Cloud, Service Cloud, Experience Cloud) test scenario-based application of Salesforce features to real business requirements — not just feature knowledge. Questions typically describe a business problem and ask which Salesforce configuration solves it. This requires both feature knowledge and consulting judgment, which is harder to study for than factual recall.',
+    answer: 'Yes, consultant exams generally have higher fail rates than ADM-201. Consultant exams (Sales Cloud, Service Cloud, Experience Cloud) test scenario-based application of Salesforce features to real business requirements, not just feature knowledge. Questions typically describe a business problem and ask which Salesforce configuration solves it. This requires both feature knowledge and consulting judgment, which is harder to study for than factual recall.',
   },
 ]
 
@@ -113,8 +113,8 @@ const tiers = [
     borderColor: 'border-purple-200',
     description: 'The most demanding Salesforce credentials. Reserved for deeply experienced professionals.',
     certs: [
-      { name: 'Application Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential — pass all 4 arch certs: Data, Sharing, Integration, Dev Lifecycle.' },
-      { name: 'System Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential — pass IAM, Heroku + 2 shared architect certs.' },
+      { name: 'Application Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, pass all 4 arch certs: Data, Sharing, Integration, Dev Lifecycle.' },
+      { name: 'System Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, pass IAM, Heroku + 2 shared architect certs.' },
       { name: 'CTA Board Review', fee: '$6,000+', questions: 'Live', passing: 'Panel', note: 'Live 2-hour architecture presentation. Fewer than 1,000 CTAs worldwide.' },
     ],
   },
@@ -135,7 +135,7 @@ export default function SalesforceCertificationDifficultyPage() {
           Salesforce Certification Difficulty Ranking ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Every major Salesforce certification ranked from easiest to hardest — with exam format, tips, and recommended study approach for each tier.
+          Every major Salesforce certification ranked from easiest to hardest, with exam format, tips, and recommended study approach for each tier.
         </p>
       </div>
 
@@ -194,7 +194,7 @@ export default function SalesforceCertificationDifficultyPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with the Right Cert</h2>
-        <p className="text-white mb-6">Free practice questions for every certification — from AI Associate to CTA prep.</p>
+        <p className="text-white mb-6">Free practice questions for every certification, from AI Associate to CTA prep.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/ai-associate" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Start: AI Associate (Easiest)

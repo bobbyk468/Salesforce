@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: 'What order should I take the Application Architect domain exams?',
-    answer: 'Most candidates start with Advanced Administrator and Platform Developer I — both are well-established exams with abundant study materials and lower fees ($200 each). Data Architect and Sharing & Visibility Architect (both $400) are typically taken after, as they build heavily on the administration and development knowledge from the first two exams. Starting with the cheaper exams also makes strategic sense to build momentum before the higher-cost architect exams.',
+    answer: 'Most candidates start with Advanced Administrator and Platform Developer I; both are well-established exams with abundant study materials and lower fees ($200 each). Data Architect and Sharing & Visibility Architect (both $400) are typically taken after, as they build heavily on the administration and development knowledge from the first two exams. Starting with the cheaper exams also makes strategic sense to build momentum before the higher-cost architect exams.',
   },
   {
     question: 'What is the total cost to earn the Application Architect credential?',
@@ -66,11 +66,11 @@ const faqItems = [
   },
   {
     question: 'Do any Application Architect exams overlap with System Architect?',
-    answer: 'Yes — Data Architect and Sharing & Visibility Architect appear in both the Application Architect and System Architect credential requirements. Passing these two exams counts toward both credentials simultaneously. For candidates pursuing the full CTA path (which requires both credentials), this overlap reduces the total unique exams needed from nine to seven.',
+    answer: 'Yes: Data Architect and Sharing & Visibility Architect appear in both the Application Architect and System Architect credential requirements. Passing these two exams counts toward both credentials simultaneously. For candidates pursuing the full CTA path (which requires both credentials), this overlap reduces the total unique exams needed from nine to seven.',
   },
   {
     question: 'What experience level is the Application Architect credential for?',
-    answer: 'The Application Architect credential is designed for experienced Salesforce professionals — typically those with 4–7+ years of hands-on platform experience covering both administration and development. The Advanced Administrator exam assumes deep declarative customisation experience; the Platform Developer I exam requires genuine Apex and LWC development ability. The Data Architect and Sharing & Visibility Architect exams require senior-level thinking about platform design at scale.',
+    answer: 'The Application Architect credential is designed for experienced Salesforce professionals, typically those with 4–7+ years of hands-on platform experience covering both administration and development. The Advanced Administrator exam assumes deep declarative customisation experience; the Platform Developer I exam requires genuine Apex and LWC development ability. The Data Architect and Sharing & Visibility Architect exams require senior-level thinking about platform design at scale.',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function ApplicationArchitectStudyGuidePage() {
           Salesforce Application Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          The Application Architect credential is earned by passing four domain exams — not a single test. Here is what each exam covers, the recommended study order, and how to efficiently prepare for all four.
+          The Application Architect credential is earned by passing four domain exams, not a single test. Here is what each exam covers, the recommended study order, and how to efficiently prepare for all four.
         </p>
       </div>
 
@@ -108,7 +108,7 @@ export default function ApplicationArchitectStudyGuidePage() {
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-blue-900 mb-1">Multi-exam credential</h2>
-        <p className="text-sm text-blue-800">Application Architect requires passing four domain exams — two at $200 (Advanced Administrator, Platform Developer I) and two at $400 (Data Architect, Sharing &amp; Visibility Architect). The credential is automatically awarded when all four are active. Both Application Architect and System Architect are required to apply for the CTA Board Review.</p>
+        <p className="text-sm text-blue-800">Application Architect requires passing four domain exams, two at $200 (Advanced Administrator, Platform Developer I) and two at $400 (Data Architect, Sharing &amp; Visibility Architect). The credential is automatically awarded when all four are active. Both Application Architect and System Architect are required to apply for the CTA Board Review.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -153,10 +153,10 @@ export default function ApplicationArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Recommended Study Order</h2>
         <div className="space-y-3 text-sm text-gray-700">
           {[
-            { phase: 'Phase 1', text: 'Advanced Administrator — Start here if you have a strong admin background. If you already hold this cert, it counts — no need to retake it.' },
-            { phase: 'Phase 2', text: 'Platform Developer I — Complete this before the architect exams. Having both ADM and PD1 gives you the full application layer perspective the architect exams assume.' },
-            { phase: 'Phase 3', text: 'Data Architect — Now tackle the $400 architect exams. Data architecture is a natural progression from admin/dev knowledge and provides context for sharing design.' },
-            { phase: 'Phase 4', text: 'Sharing & Visibility Architect — Finish here. Sharing model design becomes much clearer once you deeply understand the data model from Data Architect study.' },
+            { phase: 'Phase 1', text: 'Advanced Administrator: Start here if you have a strong admin background. If you already hold this cert, it counts; no need to retake it.' },
+            { phase: 'Phase 2', text: 'Platform Developer I: Complete this before the architect exams. Having both ADM and PD1 gives you the full application layer perspective the architect exams assume.' },
+            { phase: 'Phase 3', text: 'Data Architect: Now tackle the $400 architect exams. Data architecture is a natural progression from admin/dev knowledge and provides context for sharing design.' },
+            { phase: 'Phase 4', text: 'Sharing & Visibility Architect: Finish here. Sharing model design becomes much clearer once you deeply understand the data model from Data Architect study.' },
           ].map((item) => (
             <div key={item.phase} className="flex gap-3">
               <span className="font-bold text-salesforce-blue min-w-[72px] flex-shrink-0">{item.phase}</span>
@@ -196,7 +196,7 @@ export default function ApplicationArchitectStudyGuidePage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-600 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both credentials — passing them once fulfils requirements for both.</p>
+        <p className="text-xs text-gray-600 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both credentials, passing them once fulfils requirements for both.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -213,7 +213,7 @@ export default function ApplicationArchitectStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ System Architect vs Application Architect — which to take first?</Link></li>
+          <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ System Architect vs Application Architect, which to take first?</Link></li>
         </ul>
       </div>
 
@@ -243,7 +243,7 @@ export default function ApplicationArchitectStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Application Architect free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Application Architect free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/application-architect"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

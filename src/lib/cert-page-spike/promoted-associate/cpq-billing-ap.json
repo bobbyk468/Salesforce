@@ -19,19 +19,19 @@
   },
   "examDifficulty": {
     "heading": "Is the CPQ and Billing AP Exam Hard?",
-    "summary": "The CPQ and Billing AP is moderately difficult. The ~65% passing score is standard, but the exam spans two products &mdash; Salesforce CPQ and Salesforce Billing &mdash; requiring knowledge of the full quote-to-cash lifecycle from product configuration through revenue recognition.",
+    "summary": "The CPQ and Billing AP is moderately difficult. The ~65% passing score is standard, but the exam spans two products: Salesforce CPQ and Salesforce Billing, requiring knowledge of the full quote-to-cash lifecycle from product configuration through revenue recognition.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> &mdash; a standard threshold, but covering both CPQ and Billing doubles the surface area you need to study.",
-      "<strong>Two-product breadth</strong> &mdash; the exam tests CPQ configuration (bundles, rules, discounts) alongside Billing concepts (invoicing, usage billing, revenue recognition) in a single sitting.",
-      "<strong>Process knowledge critical</strong> &mdash; understanding the complete object chain from Quote through Invoice and Revenue Schedule is more important than memorizing individual features."
+      "<strong>~65% passing score</strong>: a standard threshold, but covering both CPQ and Billing doubles the surface area you need to study.",
+      "<strong>Two-product breadth</strong>: the exam tests CPQ configuration (bundles, rules, discounts) alongside Billing concepts (invoicing, usage billing, revenue recognition) in a single sitting.",
+      "<strong>Process knowledge critical</strong>: understanding the complete object chain from Quote through Invoice and Revenue Schedule is more important than memorizing individual features."
     ],
-    "passRateGuidance": "Walk through a complete quote-to-cash scenario in a developer org &mdash; creating a quote, generating an order, running an invoice, and configuring a revenue schedule &mdash; before booking the exam."
+    "passRateGuidance": "Walk through a complete quote-to-cash scenario in a developer org, creating a quote, generating an order, running an invoice, and configuring a revenue schedule, before booking the exam."
   },
   "examFormat": {
     "heading": "CPQ and Billing AP Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Expect scenario questions that follow a deal through the full lifecycle &mdash; from quote configuration to invoice generation and revenue recognition. Common patterns describe a billing requirement (monthly subscription billed in advance, usage-based overage) and ask which Billing configuration meets it.",
+    "scenarioPercent": "Expect scenario questions that follow a deal through the full lifecycle, from quote configuration to invoice generation and revenue recognition. Common patterns describe a billing requirement (monthly subscription billed in advance, usage-based overage) and ask which Billing configuration meets it.",
     "bestWayToPass": [
       "<strong>Trace the full object chain:</strong> Know how Quote &rarr; Quote Line &rarr; Order &rarr; Order Product &rarr; Invoice &rarr; Invoice Line connects, and what triggers each object’s creation.",
       "<strong>Study Billing rules deeply:</strong> Understand Bill Now vs. Bill in Advance vs. Bill in Arrears, billing frequency options, and how invoice consolidation groups charges by account.",
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers the full Salesforce quote-to-cash process — CPQ product configuration, pricing rules, Billing invoice generation, subscription management, and revenue recognition.",
+    "description": "This exam covers the full Salesforce quote-to-cash process: CPQ product configuration, pricing rules, Billing invoice generation, subscription management, and revenue recognition.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -63,19 +63,19 @@
     "blocks": [
       {
         "heading": "Quote-to-Cash Process & Billing Setup",
-        "body": "**CPQ** Billing extends Salesforce CPQ to handle the full Quote-to-Cash cycle: Quote → Order → Contract → Invoice → Payment. Billing must be enabled in CPQ Settings. The Order object bridges CPQ and Billing — when a Quote is contracted, an Order is created, and Billing creates invoices from Order Products. Billing Policies define the invoice generation schedule, payment terms, and invoice consolidation rules. Legal Entities represent the billing entities within a company — important for multi-national deployments. Tax Integration (Avalara, Vertex) calculates tax on invoices. The AP exam tests the configuration sequence for a new Billing setup and the object relationships in Quote-to-Cash."
+        "body": "**CPQ** Billing extends Salesforce CPQ to handle the full Quote-to-Cash cycle: Quote → Order → Contract → Invoice → Payment. Billing must be enabled in CPQ Settings. The Order object bridges CPQ and Billing, when a Quote is contracted, an Order is created, and Billing creates invoices from Order Products. Billing Policies define the invoice generation schedule, payment terms, and invoice consolidation rules. Legal Entities represent the billing entities within a company, important for multi-national deployments. Tax Integration (Avalara, Vertex) calculates tax on invoices. The AP exam tests the configuration sequence for a new Billing setup and the object relationships in Quote-to-Cash."
       },
       {
         "heading": "Invoice Generation & Billing Rules",
-        "body": "Invoices are generated from Order Products based on Billing Rules — which define when and how charges are billed. Bill Now generates an invoice immediately. Bill in Advance bills at the start of a period. Bill in Arrears bills at the end of a period. Billing Frequency options: Monthly, Quarterly, Annually, or one-time. Invoice Run triggers invoice generation for all eligible Order Products. Invoice Lines represent individual charges. Credit Notes handle adjustments and cancellations. Billing Batches process large volumes asynchronously. The exam tests how to configure billing rules for common scenarios (annual subscription billed monthly, one-time setup fee billed immediately with first invoice)."
+        "body": "Invoices are generated from Order Products based on Billing Rules, which define when and how charges are billed. Bill Now generates an invoice immediately. Bill in Advance bills at the start of a period. Bill in Arrears bills at the end of a period. Billing Frequency options: Monthly, Quarterly, Annually, or one-time. Invoice Run triggers invoice generation for all eligible Order Products. Invoice Lines represent individual charges. Credit Notes handle adjustments and cancellations. Billing Batches process large volumes asynchronously. The exam tests how to configure billing rules for common scenarios (annual subscription billed monthly, one-time setup fee billed immediately with first invoice)."
       },
       {
         "heading": "Usage-Based Billing",
-        "body": "Usage Billing handles variable charges based on consumption — API calls, data transfer, seat count. Usage Summaries aggregate raw usage data into billable amounts for an invoice period. Usage Rate Cards define the price per unit or tier. Rated Usage is the calculated charge ready for invoicing. Usage data can be imported via CSV, API, or custom integration. Overage billing charges usage above the included amount in a subscription. The AP exam tests how to configure usage billing for a SaaS scenario (base subscription + overage), how usage summaries feed invoice lines, and how to test the billing calculation with sample usage data."
+        "body": "Usage Billing handles variable charges based on consumption: API calls, data transfer, seat count. Usage Summaries aggregate raw usage data into billable amounts for an invoice period. Usage Rate Cards define the price per unit or tier. Rated Usage is the calculated charge ready for invoicing. Usage data can be imported via CSV, API, or custom integration. Overage billing charges usage above the included amount in a subscription. The AP exam tests how to configure usage billing for a SaaS scenario (base subscription + overage), how usage summaries feed invoice lines, and how to test the billing calculation with sample usage data."
       },
       {
         "heading": "Payment Processing & Dunning",
-        "body": "Payment Gateways in **CPQ** Billing connect to payment processors (Stripe, CyberSource, Adyen) to tokenize and charge payment methods. Payment Terms define when payment is due after invoice generation (Net 30, Due on Receipt). Auto-Pay automatically charges the stored payment method on the invoice due date. Dunning Processes handle failed payments — automated retry schedules, dunning emails, and account holds after N failed attempts. Payment Allocations apply payments to specific invoices. Refunds and Credit Memos reverse billed charges. The exam tests how to configure auto-pay, design a dunning workflow, and handle the scenario where a payment fails and needs to be retried."
+        "body": "Payment Gateways in **CPQ** Billing connect to payment processors (Stripe, CyberSource, Adyen) to tokenize and charge payment methods. Payment Terms define when payment is due after invoice generation (Net 30, Due on Receipt). Auto-Pay automatically charges the stored payment method on the invoice due date. Dunning Processes handle failed payments, automated retry schedules, dunning emails, and account holds after N failed attempts. Payment Allocations apply payments to specific invoices. Refunds and Credit Memos reverse billed charges. The exam tests how to configure auto-pay, design a dunning workflow, and handle the scenario where a payment fails and needs to be retried."
       },
       {
         "heading": "Revenue Recognition & Reporting",
@@ -85,7 +85,7 @@
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce CPQ and Billing Accredited Professional Exam",
-    "intro": "The CPQ & Billing AP exam tests the full quote-to-cash process. Focus on CPQ configuration, Billing order generation, invoice processing, and revenue recognition — the complete lifecycle from quoting to recognizing revenue.",
+    "intro": "The CPQ & Billing AP exam tests the full quote-to-cash process. Focus on CPQ configuration, Billing order generation, invoice processing, and revenue recognition, the complete lifecycle from quoting to recognizing revenue.",
     "blocks": [
       {
         "heading": "CPQ-to-Billing Object Chain",

@@ -26,7 +26,7 @@
       "<strong>External users trip people up.</strong> Experience Cloud sharing sets, external org-wide defaults and guest user rules come up often.",
       "<strong>Performance is tested too.</strong> Know what makes sharing recalculation slow, such as data skew and very deep role hierarchies."
     ],
-    "passRateGuidance": "You will do best if you have designed a sharing model for a real org, not just added a sharing rule here and there. Before you book, aim for 75% or more on practice tests and be able to explain, step by step, why a user can see a record."
+    "passRateGuidance": "You will do best if you have designed a sharing model for a real org, not just added a sharing rule here and there. Before you book. Aim for 75% or more on practice tests and be able to explain, step by step, why a user can see a record."
   },
   "examFormat": {
     "heading": "Sharing and Visibility Architect Exam Format Explained",
@@ -82,7 +82,7 @@
       },
       {
         "heading": "Sharing Performance and Audit",
-        "body": "Sharing gets slow when one user owns a huge number of records (ownership skew) or one parent record has thousands of child records (account data skew). Both cause long sharing recalculations and record locking. Fixes include spreading ownership across several users, placing integration users high or outside the role hierarchy, and using **Defer Sharing Calculations** during large data changes. For audits, use the Sharing button on a record to see why each user has access, Setup Audit Trail for configuration changes, and Field History Tracking or Shield Field Audit Trail for data changes."
+        "body": "Sharing gets slow when one user owns a huge number of records (ownership skew) or one parent record has thousands of child records (account data skew). Both cause long sharing recalculations and record locking. Fixes include spreading ownership across several users, placing integration users high or outside the role hierarchy, and using **Defer Sharing Calculations** during large data changes. For audits. Use the Sharing button on a record to see why each user has access, Setup Audit Trail for configuration changes, and Field History Tracking or Shield Field Audit Trail for data changes."
       }
     ]
   },

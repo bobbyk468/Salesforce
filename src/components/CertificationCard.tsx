@@ -84,7 +84,7 @@ export default function CertificationCard({
         ) : componentExams && componentExams.length > 0 ? (
           <div className="mb-6 rounded-lg border border-violet-200 bg-violet-50 p-4">
             <p className="text-sm font-semibold text-gray-900 mb-3">
-              This credential is earned by passing {componentExams.length} component exams — not a single test:
+              This credential is earned by passing {componentExams.length} component exams, not a single test:
             </p>
             <div className="space-y-2">
               {componentExams.map((exam) => (

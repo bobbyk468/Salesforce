@@ -4,7 +4,7 @@ export default function TSMArchitectureDiagram() {
     <figure id="tsm-architecture-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Tableau Services Manager (TSM) architecture (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        TSM is the command-line/API layer for installing, configuring, and managing the Tableau Server topology —
+        TSM is the command-line/API layer for installing, configuring, and managing the Tableau Server topology,
         it controls which processes (VizQL, Backgrounder, Repository) run on which node.
       </p>
       <svg role="img" aria-labelledby="tsma-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">

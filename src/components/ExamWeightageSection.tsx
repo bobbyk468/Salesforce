@@ -36,7 +36,7 @@ export default function ExamWeightageSection({ sections, title = 'Exam Weightage
         )}
       </div>
 
-      {/* Semantic table for crawlers and assistive tech — visually hidden, same data as bars above */}
+      {/* Semantic table for crawlers and assistive tech, visually hidden, same data as bars above */}
       <table className="sr-only" aria-label={title}>
         <thead>
           <tr>

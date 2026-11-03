@@ -47,11 +47,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Certified Technical Architect (CTA)?',
-    answer: 'The Salesforce Certified Technical Architect (CTA) is the highest-level Salesforce credential. Unlike other Salesforce certifications, there is no multiple-choice exam — the CTA is awarded via a live Board Review where candidates present and defend a complex architectural solution to a panel of senior Salesforce architects. As of 2026, fewer than 700 people worldwide hold the CTA credential.',
+    answer: 'The Salesforce Certified Technical Architect (CTA) is the highest-level Salesforce credential. Unlike other Salesforce certifications, there is no multiple-choice exam, the CTA is awarded via a live Board Review where candidates present and defend a complex architectural solution to a panel of senior Salesforce architects. As of 2026, fewer than 700 people worldwide hold the CTA credential.',
   },
   {
     question: 'What are the prerequisites for the CTA Board Review?',
-    answer: 'To apply for the CTA Board Review, you must hold both the Salesforce Certified Application Architect credential AND the Salesforce Certified System Architect credential. Application Architect requires passing 4 domain exams; System Architect requires passing 5 domain exams (with 2 overlapping). This means a minimum of 7 unique exams — totalling approximately $2,600 in exam fees — before you can even apply for the board review.',
+    answer: 'To apply for the CTA Board Review, you must hold both the Salesforce Certified Application Architect credential AND the Salesforce Certified System Architect credential. Application Architect requires passing 4 domain exams; System Architect requires passing 5 domain exams (with 2 overlapping). This means a minimum of 7 unique exams, totalling approximately $2,600 in exam fees, before you can even apply for the board review.',
   },
   {
     question: 'What does the CTA Board Review involve?',
@@ -96,7 +96,7 @@ export default function TechnicalArchitectStudyGuidePage() {
           Salesforce CTA Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          The Salesforce Certified Technical Architect (CTA) is earned through a live Board Review — not a multiple-choice exam. This guide covers prerequisites, the board review process, what the panel evaluates, and how to prepare.
+          The Salesforce Certified Technical Architect (CTA) is earned through a live Board Review, not a multiple-choice exam. This guide covers prerequisites, the board review process, what the panel evaluates, and how to prepare.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ export default function TechnicalArchitectStudyGuidePage() {
 
       <div className="bg-purple-50 border border-purple-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-purple-900 mb-1">No multiple-choice exam</h2>
-        <p className="text-sm text-purple-800">The CTA is awarded via a live Board Review where you present an architectural solution to a panel of senior Salesforce architects. Before applying, you must hold both the Application Architect and System Architect credentials — requiring 7 unique domain exams. Fewer than 700 people worldwide hold the CTA as of 2026.</p>
+        <p className="text-sm text-purple-800">The CTA is awarded via a live Board Review where you present an architectural solution to a panel of senior Salesforce architects. Before applying, you must hold both the Application Architect and System Architect credentials, requiring 7 unique domain exams. Fewer than 700 people worldwide hold the CTA as of 2026.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -159,9 +159,9 @@ export default function TechnicalArchitectStudyGuidePage() {
           {[
             { title: 'Architectural thinking', body: 'Do you consider scalability, security, integration, and performance holistically? Do your designs account for enterprise-scale complexity?' },
             { title: 'Communication clarity', body: 'Can you explain complex architectural decisions in clear language appropriate for both technical and non-technical audiences?' },
-            { title: 'Tradeoff articulation', body: 'Can you clearly explain what you are trading off with each design choice — and why the tradeoff is acceptable for this scenario?' },
+            { title: 'Tradeoff articulation', body: 'Can you clearly explain what you are trading off with each design choice, and why the tradeoff is acceptable for this scenario?' },
             { title: 'Experience confidence', body: 'Do your answers reflect genuine hands-on implementation experience, or theoretical knowledge only? The panel probes for this directly.' },
-            { title: 'Solution completeness', body: 'Does your solution address all aspects of the scenario — including security, data migration, integrations, and change management?' },
+            { title: 'Solution completeness', body: 'Does your solution address all aspects of the scenario, including security, data migration, integrations, and change management?' },
             { title: 'Handling challenges', body: 'When the panel challenges your assumptions or proposes alternatives, can you defend your design confidently and update it appropriately?' },
           ].map((item) => (
             <div key={item.title} className="bg-gray-50 rounded-xl p-4">
@@ -209,7 +209,7 @@ export default function TechnicalArchitectStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Certified Technical Architect (CTA) free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Certified Technical Architect (CTA) free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/technical-architect"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

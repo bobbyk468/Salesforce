@@ -27,7 +27,7 @@ export interface CertPrerequisite {
 export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   // ─── Associate / Foundation ───────────────────────────────────────────────
-  // (foundation certs have no prerequisites — they ARE the starting point)
+  // (foundation certs have no prerequisites, they ARE the starting point)
 
   'ai-associate': {
     slug: 'ai-associate',
@@ -257,7 +257,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'application-architect': {
     slug: 'application-architect',
-    notes: 'Auto-awarded credential — earned by passing App Builder, PD1, Data Architect, and Sharing & Visibility Architect. See the component-exam list on the page instead of a single prerequisite.',
+    notes: 'Auto-awarded credential, earned by passing App Builder, PD1, Data Architect, and Sharing & Visibility Architect. See the component-exam list on the page instead of a single prerequisite.',
   },
 
   'system-architect': {

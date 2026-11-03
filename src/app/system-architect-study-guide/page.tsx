@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What order should I take the System Architect exams?',
-    answer: 'Most people take Platform Developer I first, because the architect exams assume you know Apex and the data model. After that, pick the architect exam closest to your day job. Many start with Integration Architect, then Identity and Access Management, and finish with Development Lifecycle and Deployment.',
+    answer: 'Most people take Platform Developer I first, because the architect exams assume you know Apex and the data model. After that. Pick the architect exam closest to your day job. Many start with Integration Architect, then Identity and Access Management, and finish with Development Lifecycle and Deployment.',
   },
   {
     question: 'How long does it take to earn the System Architect credential?',
@@ -147,7 +147,7 @@ export default function SystemArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Recommended Study Order</h2>
         <div className="space-y-3 text-sm text-gray-700">
           {[
-            { phase: 'Phase 1', text: 'Platform Developer I. Start here. The architect exams assume you can read Apex, know the governor limits and understand the data model.' },
+            { phase: 'Phase 1', text: 'Platform Developer I. Start here. The architect exams assume you can read Apex. Know the governor limits and understand the data model.' },
             { phase: 'Phase 2', text: 'Integration Architect. Patterns, APIs, error handling and middleware. It builds directly on what you learned about callouts and async Apex in Platform Developer I.' },
             { phase: 'Phase 3', text: 'Identity and Access Management Architect. SAML, OAuth and user provisioning are a world of their own, so give this exam focused time. Integration work helps, since OAuth shows up in both.' },
             { phase: 'Phase 4', text: 'Dev Lifecycle and Deployment Architect. Many people finish here, because release planning is easier to think about once you have seen the other areas.' },
@@ -165,7 +165,7 @@ export default function SystemArchitectStudyGuidePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
           {[
             { title: 'Technical architecture depth', body: 'Shows you can design how Salesforce connects to other systems, how people log in, and how changes reach production safely.' },
-            { title: 'CTA prerequisite', body: 'System Architect (plus Application Architect) is required before applying for the Certified Technical Architect Board Review — the highest Salesforce credential.' },
+            { title: 'CTA prerequisite', body: 'System Architect (plus Application Architect) is required before applying for the Certified Technical Architect Board Review, the highest Salesforce credential.' },
             { title: 'Partner tier impact', body: 'Salesforce consulting partners count System Architect credentials toward partner tier requirements, making holders especially valuable to employers.' },
             { title: 'Career premium', body: 'System Architect holders typically qualify for senior architect and principal architect roles commanding significant salary premium over standard certification holders.' },
           ].map((item) => (
@@ -191,8 +191,8 @@ export default function SystemArchitectStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ System Architect vs Application Architect — full comparison</Link></li>
-          <li><Link href="/how-to-become-salesforce-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to become a Salesforce Architect — career path guide</Link></li>
+          <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ System Architect vs Application Architect, full comparison</Link></li>
+          <li><Link href="/how-to-become-salesforce-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to become a Salesforce Architect, career path guide</Link></li>
         </ul>
       </div>
 
@@ -222,7 +222,7 @@ export default function SystemArchitectStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the System Architect free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the System Architect free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/system-architect"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

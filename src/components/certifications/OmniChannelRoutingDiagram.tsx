@@ -1,7 +1,7 @@
 /**
  * Omni-Channel routing logic for Service Cloud: how an incoming work item is matched
  * to an available, skilled agent via routing configuration, presence status, and
- * capacity — the core mechanism tested on the Service Cloud exam.
+ * capacity, the core mechanism tested on the Service Cloud exam.
  */
 export default function OmniChannelRoutingDiagram() {
   return (

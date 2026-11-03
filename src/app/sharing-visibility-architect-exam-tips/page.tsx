@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What is the hardest part of the Sharing & Visibility Architect exam?',
-    answer: 'The performance implications of sharing configurations are the hardest area — candidates must understand when complex sharing rules cause query performance degradation at large data volumes, and when to recommend implicit sharing vs. explicit sharing vs. manual sharing. These architectural trade-offs require real project experience.',
+    answer: 'The performance implications of sharing configurations are the hardest area; candidates must understand when complex sharing rules cause query performance degradation at large data volumes, and when to recommend implicit sharing vs. explicit sharing vs. manual sharing. These architectural trade-offs require real project experience.',
   },
   {
     question: 'What concepts do most Sharing & Visibility Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Sharing & Visibility Architect exam are: (1) OWD + Role Hierarchy + Sharing Rules — The Correct Evaluation Order; (2) With Sharing vs Without Sharing vs Inherited Sharing in Apex; (3) Territory Management vs Role Hierarchy — Two Separate Sharing Mechanisms. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Sharing & Visibility Architect exam are: (1) OWD + Role Hierarchy + Sharing Rules: The Correct Evaluation Order; (2) With Sharing vs Without Sharing vs Inherited Sharing in Apex; (3) Territory Management vs Role Hierarchy: Two Separate Sharing Mechanisms. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('sharing-visibility-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function SharingVisibilityArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Sharing & Visibility Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing model design</strong> — OWD strategy, role hierarchy depth trade-offs, implicit vs. explicit sharing, and when each sharing mechanism is the right architectural choice.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance implications</strong> — How sharing rule complexity affects query performance at large data volumes, and when to favour restrictive OWDs over permissive ones to maintain performance.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special sharing scenarios</strong> — Community/portal user access, territory management sharing, Apex managed sharing, and sharing for external users.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing model design</strong>: OWD strategy, role hierarchy depth trade-offs, implicit vs. explicit sharing, and when each sharing mechanism is the right architectural choice.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance implications</strong>: How sharing rule complexity affects query performance at large data volumes, and when to favour restrictive OWDs over permissive ones to maintain performance.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special sharing scenarios</strong>: Community/portal user access, territory management sharing, Apex managed sharing, and sharing for external users.</li>
         </ul>
       </section>
 
@@ -129,7 +129,7 @@ export default function SharingVisibilityArchitectExamTipsPage() {
             <span className="font-medium text-gray-900">Large Data Volumes and Performance</span>
             <span className="font-bold text-salesforce-blue ml-4">12%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Designing the Sharing Model is 35% alone — this is your single most important study topic.</p>
+          <p className="text-xs text-gray-600 pt-1">Designing the Sharing Model is 35% alone; this is your single most important study topic.</p>
         </div>
       </section>
 
@@ -141,9 +141,9 @@ export default function SharingVisibilityArchitectExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />The OWD baseline principle: set OWDs to the most restrictive setting required by any subset of users. Never set OWD to Public Read/Write if any user group needs restricted access.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Sharing rule order: role hierarchy grants access UP the hierarchy (not sideways). Criteria-based sharing rules open access across the hierarchy. Manual sharing is for ad-hoc exceptions — it is not an architectural solution.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Sharing rule order: role hierarchy grants access UP the hierarchy (not sideways). Criteria-based sharing rules open access across the hierarchy. Manual sharing is for ad-hoc exceptions; it is not an architectural solution.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For performance questions: sharing recalculation at large data volumes is expensive. Overly complex sharing rules (many criteria-based rules + large record counts) cause performance degradation. Simpler role-hierarchy-based sharing is always more performant.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Apex managed sharing: only use it when standard sharing mechanisms cannot meet the requirement. It requires a sharing reason and bypasses normal recalculation — know the implications.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Apex managed sharing: only use it when standard sharing mechanisms cannot meet the requirement. It requires a sharing reason and bypasses normal recalculation. Know the implications.</li>
         </ul>
       </section>
 
@@ -156,26 +156,26 @@ export default function SharingVisibilityArchitectExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Sharing &amp; Visibility Architect has one of the highest retry rates of any Salesforce exam.
           The performance implications and Apex managed sharing scenarios are not learnable from
-          documentation alone — design real sharing models in a sandbox before sitting the exam.
+          documentation alone, design real sharing models in a sandbox before sitting the exam.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Sharing &amp; Visibility Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. OWD + Role Hierarchy + Sharing Rules — The Correct Evaluation Order</p>
-            <p className="text-sm text-gray-700">Salesforce evaluates record access in this order: OWD (baseline) → Role Hierarchy (opens access upward) → Sharing Rules (open access horizontally) → Manual Sharing (record-by-record grants). Candidates apply sharing rules expecting them to restrict access below OWD — sharing rules can only OPEN access, never restrict below OWD. The only way to restrict below OWD is to change OWD itself.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. OWD + Role Hierarchy + Sharing Rules: The Correct Evaluation Order</p>
+            <p className="text-sm text-gray-700">Salesforce evaluates record access in this order: OWD (baseline) → Role Hierarchy (opens access upward) → Sharing Rules (open access horizontally) → Manual Sharing (record-by-record grants). Candidates apply sharing rules expecting them to restrict access below OWD, sharing rules can only OPEN access, never restrict below OWD. The only way to restrict below OWD is to change OWD itself.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. With Sharing vs Without Sharing vs Inherited Sharing in Apex</p>
-            <p className="text-sm text-gray-700">Apex classes declared "with sharing" enforce the running user’s sharing rules. "Without sharing" bypasses sharing (runs as admin). "Inherited sharing" passes the sharing context from the calling class. Candidates use "without sharing" for all utility classes to avoid access issues — the exam expects "with sharing" for user-facing operations and "without sharing" only for system-level operations with a documented security justification.</p>
+            <p className="text-sm text-gray-700">Apex classes declared "with sharing" enforce the running user’s sharing rules. "Without sharing" bypasses sharing (runs as admin). "Inherited sharing" passes the sharing context from the calling class. Candidates use "without sharing" for all utility classes to avoid access issues, the exam expects "with sharing" for user-facing operations and "without sharing" only for system-level operations with a documented security justification.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Territory Management vs Role Hierarchy — Two Separate Sharing Mechanisms</p>
-            <p className="text-sm text-gray-700">The Role Hierarchy extends record access to managers above the record owner. Territory Management grants access to accounts and their related records based on geographic or segment-based territory assignment — independent of the Role Hierarchy. A user can gain access to an Account through Territory assignment even if they are not above the owner in the Role Hierarchy. Candidates assume territory access is role-based.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Territory Management vs Role Hierarchy: Two Separate Sharing Mechanisms</p>
+            <p className="text-sm text-gray-700">The Role Hierarchy extends record access to managers above the record owner. Territory Management grants access to accounts and their related records based on geographic or segment-based territory assignment, independent of the Role Hierarchy. A user can gain access to an Account through Territory assignment even if they are not above the owner in the Role Hierarchy. Candidates assume territory access is role-based.</p>
           </div>
         </div>
       </section>

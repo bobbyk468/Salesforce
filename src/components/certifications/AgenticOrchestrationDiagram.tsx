@@ -14,7 +14,7 @@ export default function AgenticOrchestrationDiagram() {
       </figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         A <strong>coordinator</strong> agent decomposes a task and dispatches it to specialized{' '}
-        <strong>subagents</strong>. Each subagent's output is <strong>evaluated</strong> against defined criteria —
+        <strong>subagents</strong>. Each subagent's output is <strong>evaluated</strong> against defined criteria,
         on success it's returned to the coordinator; on failure the system <strong>retries with a narrower scope</strong>{' '}
         or <strong>escalates to a human</strong> rather than looping indefinitely.
       </p>

@@ -22,9 +22,9 @@
     "summary": "The Advanced Cross-Channel AP exam is moderately difficult. It goes well beyond single-channel email marketing and requires deep knowledge of Journey Builder’s advanced features, Mobile Studio, Advertising Studio, and Einstein engagement tools. Candidates who have only worked with Email Studio will find this exam challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — standard for AP-level exams.",
-      "<strong>Multi-channel depth</strong> — you need hands-on experience with MobileConnect (SMS), MobilePush, Advertising Studio audience sync, and cross-channel Journey Builder design.",
-      "<strong>Einstein features tested</strong> — Engagement Scoring, Send Time Optimization, and Content Selection are all fair game."
+      "<strong>~65% passing score</strong>: standard for AP-level exams.",
+      "<strong>Multi-channel depth</strong>: you need hands-on experience with MobileConnect (SMS), MobilePush, Advertising Studio audience sync, and cross-channel Journey Builder design.",
+      "<strong>Einstein features tested</strong>: Engagement Scoring, Send Time Optimization, and Content Selection are all fair game."
     ],
     "passRateGuidance": "Build at least 2-3 multi-channel journeys using SMS and push alongside email before booking. Practice configuring Advertising Studio audiences and Einstein engagement splits."
   },
@@ -62,7 +62,7 @@
     "blocks": [
       {
         "heading": "Advanced Journey Builder Design",
-        "body": "Advanced Cross-Channel builds on the Foundations cert. Advanced Journey features: Einstein Engagement Splits (AI-based routing by engagement score), Random Splits for A/B/n testing at scale, Engagement Frequency Splits (route by how often a contact has received messages), Wait Until Event (pause until a specific event occurs). Multi-journey coordination — managing contact entry into multiple journeys simultaneously. The exam tests how to design complex multi-branch journeys and when to use each split type."
+        "body": "Advanced Cross-Channel builds on the Foundations cert. Advanced Journey features: Einstein Engagement Splits (AI-based routing by engagement score), Random Splits for A/B/n testing at scale, Engagement Frequency Splits (route by how often a contact has received messages), Wait Until Event (pause until a specific event occurs). Multi-journey coordination, managing contact entry into multiple journeys simultaneously. The exam tests how to design complex multi-branch journeys and when to use each split type."
       },
       {
         "heading": "Mobile Messaging: MobileConnect and MobilePush",
@@ -70,11 +70,11 @@
       },
       {
         "heading": "Advertising Studio: Audience Sync",
-        "body": "**Advertising Studio** syncs Marketing Cloud subscriber data with advertising platforms. Facebook Custom Audiences — sync email lists or Data Extension contacts to Facebook for matched advertising. Google Customer Match — same concept for Google Ads. Lead Ads — capture leads from Facebook/Google into Marketing Cloud **Data Extensions**. Audience Builder creates unified audiences across multiple data sources. The exam tests how to create, activate, and suppress audiences in advertising platforms using Marketing Cloud data."
+        "body": "**Advertising Studio** syncs Marketing Cloud subscriber data with advertising platforms. Facebook Custom Audiences, sync email lists or Data Extension contacts to Facebook for matched advertising. Google Customer Match, same concept for Google Ads. Lead Ads, capture leads from Facebook/Google into Marketing Cloud **Data Extensions**. Audience Builder creates unified audiences across multiple data sources. The exam tests how to create, activate, and suppress audiences in advertising platforms using Marketing Cloud data."
       },
       {
         "heading": "Contact Builder and Data Architecture",
-        "body": "**Contact Builder** is the unified data management layer. Attribute Groups link **Data Extensions** to Contact records using a key field (usually **Subscriber Key**). Data Designer creates the contact data schema — defining which DEs store which attributes, and how they relate to the Contact record. The Contact model supports cross-channel identity — Email, SMS, push, and advertising all reference the same contact. The exam tests Contact Builder data model design and how to link multiple data sources into a unified Contact profile."
+        "body": "**Contact Builder** is the unified data management layer. Attribute Groups link **Data Extensions** to Contact records using a key field (usually **Subscriber Key**). Data Designer creates the contact data schema, defining which DEs store which attributes, and how they relate to the Contact record. The Contact model supports cross-channel identity: Email, SMS, push, and advertising all reference the same contact. The exam tests Contact Builder data model design and how to link multiple data sources into a unified Contact profile."
       },
       {
         "heading": "Einstein Features: Engagement Scoring and Recommendations",

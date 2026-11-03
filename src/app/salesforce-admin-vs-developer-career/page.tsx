@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Is it better to be a Salesforce Admin or Developer?',
-    answer: 'Neither path is objectively better — it depends on your strengths and interests. Admins focus on configuration, process design, and user adoption; they work more with business stakeholders. Developers focus on custom code (Apex, LWC), integrations, and complex automations; they work more with technical architecture. Developers typically earn 10–20% more at equivalent experience levels, but admin roles are more abundant and often easier to enter without a programming background.',
+    answer: 'Neither path is objectively better, it depends on your strengths and interests. Admins focus on configuration, process design, and user adoption; they work more with business stakeholders. Developers focus on custom code (Apex, LWC), integrations, and complex automations; they work more with technical architecture. Developers typically earn 10–20% more at equivalent experience levels, but admin roles are more abundant and often easier to enter without a programming background.',
   },
   {
     question: 'What does a Salesforce Administrator do day to day?',
@@ -52,11 +52,11 @@ const faqItems = [
   },
   {
     question: 'Can I switch from Salesforce Admin to Developer?',
-    answer: 'Yes. Many Salesforce Developers start as Admins. The transition path: earn Platform Developer I certification after Administrator, build hands-on Apex and LWC projects in a sandbox, and seek roles that blend admin and developer work (e.g. "Salesforce Consultant" or "Platform Developer" at smaller firms). Strong admin knowledge makes you a better developer — you understand what you are building for.',
+    answer: 'Yes. Many Salesforce Developers start as Admins. The transition path: earn Platform Developer I certification after Administrator, build hands-on Apex and LWC projects in a sandbox, and seek roles that blend admin and developer work (e.g. "Salesforce Consultant" or "Platform Developer" at smaller firms). Strong admin knowledge makes you a better developer, you understand what you are building for.',
   },
   {
     question: 'Which certifications do I need for Admin vs Developer careers?',
-    answer: 'Admin path: Salesforce Administrator (ADM-201) is the foundation; Advanced Administrator and specialist certs (CPQ, Service Cloud) follow. Developer path: Administrator first, then Platform Developer I (PD1), then Platform Developer II (PD2). Do not skip Administrator for the developer path — platform knowledge from the Admin cert is essential for good development work.',
+    answer: 'Admin path: Salesforce Administrator (ADM-201) is the foundation; Advanced Administrator and specialist certs (CPQ, Service Cloud) follow. Developer path: Administrator first, then Platform Developer I (PD1), then Platform Developer II (PD2). Do not skip Administrator for the developer path, platform knowledge from the Admin cert is essential for good development work.',
   },
 ]
 
@@ -87,7 +87,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
           "You prefer configuration, automation, and business process work over coding",
           "You want the broadest range of job opportunities from a single certification",
           "You come from a non-technical, operations, or project management background",
-          "You want a faster path to employment — Admin roles are the highest volume",
+          "You want a faster path to employment: Admin roles are the highest volume",
           ],
         }}
         certB={{
@@ -105,7 +105,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
           certName: "Salesforce Administrator",
           certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
-          reason: "Administrator is the better starting point for most career switchers — higher job volume, faster time to employment, and it remains useful even if you pivot to developer later. Only start with Developer I if you have an existing coding background and are certain about the technical path.",
+          reason: "Administrator is the better starting point for most career switchers, higher job volume, faster time to employment, and it remains useful even if you pivot to developer later. Only start with Developer I if you have an existing coding background and are certain about the technical path.",
           careerPathSlug: "which-salesforce-certification-first",
           careerPathLabel: "Which Certification First Guide",
         }}
@@ -154,9 +154,9 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
             <tbody className="divide-y divide-gray-50">
               {[
                 { aspect: 'Primary output', admin: 'Config, flows, reports', dev: 'Code (Apex, LWC), integrations' },
-                { aspect: 'Coding required', admin: 'Minimal or none', dev: 'Yes — Apex, JavaScript, SOQL' },
-                { aspect: 'Entry barrier', admin: 'Lower — declarative focus', dev: 'Higher — programming background helps' },
-                { aspect: 'Stakeholder contact', admin: 'High — business users, analysts', dev: 'Moderate — PMs, architects' },
+                { aspect: 'Coding required', admin: 'Minimal or none', dev: 'Yes: Apex, JavaScript, SOQL' },
+                { aspect: 'Entry barrier', admin: 'Lower, declarative focus', dev: 'Higher, programming background helps' },
+                { aspect: 'Stakeholder contact', admin: 'High, business users, analysts', dev: 'Moderate: PMs, architects' },
                 { aspect: 'Certification path', admin: 'Admin → Advanced Admin → specialist', dev: 'Admin → PD1 → PD2' },
               ].map((row) => (
                 <tr key={row.aspect}>
@@ -172,7 +172,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Hybrid Roles</h2>
-        <p className="text-sm text-gray-700 mb-2">Many roles blend admin and developer work — "Salesforce Consultant," "Technical Consultant," or "Platform Developer" at consultancies and mid-size firms. These roles often require both Administrator and Platform Developer I certifications. Starting as an Admin and adding PD1 is a common path into these hybrid positions.</p>
+        <p className="text-sm text-gray-700 mb-2">Many roles blend admin and developer work, "Salesforce Consultant," "Technical Consultant," or "Platform Developer" at consultancies and mid-size firms. These roles often require both Administrator and Platform Developer I certifications. Starting as an Admin and adding PD1 is a common path into these hybrid positions.</p>
         <Link href="/certification-path" className="text-sm font-semibold text-salesforce-blue hover:underline">View Certification Paths →</Link>
       </div>
 
@@ -197,12 +197,12 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Path</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">No programming experience — comfortable with configuration tools</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin path — ADM-201 → Advanced Admin or Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">Have Java, Python, or any programming background</td><td className="py-2.5 font-semibold text-purple-700">Developer path — PD1 → PD2 → Architect track</td></tr>
-              <tr><td className="py-2.5 pr-4">Want to get employed in Salesforce within 3–6 months</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin — faster to cert, more entry-level openings</td></tr>
-              <tr><td className="py-2.5 pr-4">Targeting $120k+ senior roles long-term</td><td className="py-2.5 font-semibold text-purple-700">Developer — higher salary ceiling ($130–160k at senior level)</td></tr>
-              <tr><td className="py-2.5 pr-4">Prefer business analysis, process design, and user training</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin — BA and Consultant tracks suit this well</td></tr>
-              <tr><td className="py-2.5 pr-4">Enjoy debugging, building custom solutions, and integration work</td><td className="py-2.5 font-semibold text-purple-700">Developer — Apex, LWC, and Integration Architect tracks</td></tr>
+              <tr><td className="py-2.5 pr-4">No programming experience, comfortable with configuration tools</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin path: ADM-201 → Advanced Admin or Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Have Java, Python, or any programming background</td><td className="py-2.5 font-semibold text-purple-700">Developer path: PD1 → PD2 → Architect track</td></tr>
+              <tr><td className="py-2.5 pr-4">Want to get employed in Salesforce within 3–6 months</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin, faster to cert, more entry-level openings</td></tr>
+              <tr><td className="py-2.5 pr-4">Targeting $120k+ senior roles long-term</td><td className="py-2.5 font-semibold text-purple-700">Developer, higher salary ceiling ($130–160k at senior level)</td></tr>
+              <tr><td className="py-2.5 pr-4">Prefer business analysis, process design, and user training</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin: BA and Consultant tracks suit this well</td></tr>
+              <tr><td className="py-2.5 pr-4">Enjoy debugging, building custom solutions, and integration work</td><td className="py-2.5 font-semibold text-purple-700">Developer: Apex, LWC, and Integration Architect tracks</td></tr>
             </tbody>
           </table>
         </div>

@@ -74,7 +74,7 @@ const faqItems = [
   },
   {
     question: 'What is API-led connectivity in MuleSoft?',
-    answer: 'API-led connectivity is MuleSoft\'s recommended architecture pattern using three layers: System APIs (connect to backend systems like Salesforce, SAP, databases), Process APIs (orchestrate business logic using System API data), and Experience APIs (deliver data formatted for specific consumers — mobile, web, Salesforce). This layered approach improves reusability and reduces point-to-point integrations.',
+    answer: 'API-led connectivity is MuleSoft\'s recommended architecture pattern using three layers: System APIs (connect to backend systems like Salesforce, SAP, databases), Process APIs (orchestrate business logic using System API data), and Experience APIs (deliver data formatted for specific consumers, mobile, web, Salesforce). This layered approach improves reusability and reduces point-to-point integrations.',
   },
   {
     question: 'How long should I study for the MuleSoft Developer I exam?',
@@ -172,14 +172,14 @@ export default function MulesoftDeveloperIStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Anypoint Platform overview — API-led connectivity, platform components (Studio, Design Center, Exchange, Runtime Manager). Install Anypoint Studio.' },
-            { week: 'Week 2', focus: 'RAML & API Design — design a RAML 1.0 API spec in Design Center. Define resources, methods, data types, examples, and traits.' },
-            { week: 'Week 3', focus: 'Building Mule 4 flows — HTTP Listener, Logger, Set Variable, Scatter-Gather, Choice router. Build your first REST API with Mule 4.' },
-            { week: 'Week 4', focus: 'DataWeave 2.0 — transform JSON to XML and back, use map, filter, reduce, groupBy, pluck. Practice in the DataWeave Playground before moving to Studio.' },
-            { week: 'Week 5', focus: 'Connectors — configure Database connector (SELECT/INSERT), Salesforce connector, Anypoint MQ. Build a flow that reads from a DB and publishes to a queue.' },
-            { week: 'Week 6', focus: 'Error handling — On Error Propagate vs On Error Continue, error type hierarchy, global vs local error handling. Test error scenarios in Studio.' },
+            { week: 'Week 1', focus: 'Anypoint Platform overview: API-led connectivity, platform components (Studio, Design Center, Exchange, Runtime Manager). Install Anypoint Studio.' },
+            { week: 'Week 2', focus: 'RAML & API Design, design a RAML 1.0 API spec in Design Center. Define resources, methods, data types, examples, and traits.' },
+            { week: 'Week 3', focus: 'Building Mule 4 flows: HTTP Listener, Logger, Set Variable, Scatter-Gather, Choice router. Build your first REST API with Mule 4.' },
+            { week: 'Week 4', focus: 'DataWeave 2.0, transform JSON to XML and back, use map, filter, reduce, groupBy, pluck. Practice in the DataWeave Playground before moving to Studio.' },
+            { week: 'Week 5', focus: 'Connectors, configure Database connector (SELECT/INSERT), Salesforce connector, Anypoint MQ. Build a flow that reads from a DB and publishes to a queue.' },
+            { week: 'Week 6', focus: 'Error handling: On Error Propagate vs On Error Continue, error type hierarchy, global vs local error handling. Test error scenarios in Studio.' },
             { week: 'Week 7', focus: 'Sub-flows, private flows, and flow references. Deployment to CloudHub via Studio and Runtime Manager. MUnit basics for testing a simple flow.' },
-            { week: 'Week 8', focus: 'Full mock exams under 120-minute time pressure. Review DataWeave questions carefully — read the data payload closely before choosing the output format.' },
+            { week: 'Week 8', focus: 'Full mock exams under 120-minute time pressure. Review DataWeave questions carefully. Read the data payload closely before choosing the output format.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -194,9 +194,9 @@ export default function MulesoftDeveloperIStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>API layer selection:</strong> System API → connects to a backend (database, Salesforce, ERP). Process API → orchestrates business logic using multiple System APIs. Experience API → formats data for a specific consumer (mobile app, portal). The exam presents a requirement and asks which API layer to implement.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Error handling — Propagate vs Continue:</strong> On Error Propagate rethrows the error (transaction is rolled back, calling flow receives the error). On Error Continue swallows the error (flow continues to the next message processor). Use Propagate when failures must surface; use Continue when errors are expected and should be handled gracefully.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>DataWeave output format:</strong> Always read the question carefully for the required output type (JSON vs XML vs CSV). The syntax for map, filter, and reduce is the same regardless of format — the output directive changes the serialisation.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Scatter-Gather vs Choice:</strong> Scatter-Gather runs routes in parallel and aggregates all results. Choice router is a conditional branch — only one route runs. Use Scatter-Gather when you need data from multiple sources simultaneously; use Choice when you need one path based on a condition.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Error handling: Propagate vs Continue:</strong> On Error Propagate rethrows the error (transaction is rolled back, calling flow receives the error). On Error Continue swallows the error (flow continues to the next message processor). Use Propagate when failures must surface; use Continue when errors are expected and should be handled gracefully.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>DataWeave output format:</strong> Always read the question carefully for the required output type (JSON vs XML vs CSV). The syntax for map, filter, and reduce is the same regardless of format, the output directive changes the serialisation.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Scatter-Gather vs Choice:</strong> Scatter-Gather runs routes in parallel and aggregates all results. Choice router is a conditional branch, only one route runs. Use Scatter-Gather when you need data from multiple sources simultaneously; use Choice when you need one path based on a condition.</span></li>
         </ul>
       </div>
 
@@ -214,7 +214,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
           <li>Mule 4 flow components: sources (Listener), processors (Transform, Logger), and targets</li>
           <li>DataWeave map, filter, reduce, groupBy, pluck, and flatten functions</li>
           <li>Scatter-Gather (parallel) vs Choice (conditional) routers</li>
-          <li>Sub-flows vs private flows — differences and use cases</li>
+          <li>Sub-flows vs private flows, differences and use cases</li>
           <li>On Error Propagate vs On Error Continue and when to use each</li>
           <li>Mule error type hierarchy: MULE, HTTP, CONNECTIVITY, TRANSFORMATION</li>
           <li>Database connector: SELECT, INSERT, UPDATE, DELETE operations and result streaming</li>

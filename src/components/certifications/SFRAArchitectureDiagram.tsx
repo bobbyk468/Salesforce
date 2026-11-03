@@ -28,7 +28,7 @@ export default function SFRAArchitectureDiagram() {
         <text x="616" y="102" textAnchor="middle" fill="#334155">Renders HTML response</text>
         <path d="M 251 124 L 251 152" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4 3" />
         <rect x="140" y="152" width="222" height="40" rx="8" fill="#f1f5f9" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="4 3" />
-        <text x="251" y="176" textAnchor="middle" fill="#475569">Custom cartridge extends/overrides — base SFRA untouched</text>
+        <text x="251" y="176" textAnchor="middle" fill="#475569">Custom cartridge extends/overrides, base SFRA untouched</text>
       </svg>
     </figure>
   )

@@ -4,7 +4,7 @@ export default function EducationDataModelDiagram() {
     <figure id="education-data-model-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Education Cloud unified data model (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        A <strong>Contact</strong> tracks a person across their entire lifecycle — prospect, applicant, student,
+        A <strong>Contact</strong> tracks a person across their entire lifecycle, prospect, applicant, student,
         alumnus. <strong>Program Enrollment</strong> links them to a <strong>Program</strong> and its{' '}
         <strong>Terms/Courses</strong>, replacing the separate legacy EDA/Hierarchy objects with one connected model.
       </p>

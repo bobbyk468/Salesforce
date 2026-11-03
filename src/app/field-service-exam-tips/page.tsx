@@ -114,9 +114,9 @@ export default function FieldServiceExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Topic Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FSL data model</strong> — Service territories, service resources, service appointments, work orders, work types, and how these objects relate to Cases and Assets in Service Cloud.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Scheduling and optimisation</strong> — Scheduling policies, work rules, service objectives, and the difference between manual scheduling, drip-feed scheduling, and global optimisation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mobile workforce management</strong> — Field Service mobile app configuration, inventory and parts management, and how technicians interact with work orders in the field.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FSL data model</strong>: Service territories, service resources, service appointments, work orders, work types, and how these objects relate to Cases and Assets in Service Cloud.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Scheduling and optimisation</strong>: Scheduling policies, work rules, service objectives, and the difference between manual scheduling, drip-feed scheduling, and global optimisation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mobile workforce management</strong>: Field Service mobile app configuration, inventory and parts management, and how technicians interact with work orders in the field.</li>
         </ul>
       </section>
 
@@ -140,7 +140,7 @@ export default function FieldServiceExamTipsPage() {
           Focus on the stated business requirement, record lifecycle, and applicable product behavior before comparing configuration options.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For territory questions: service territories define where resources work. A resource must be assigned to a territory to receive appointments there. Operating hours on territories and resources control availability — know which takes precedence.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For territory questions: service territories define where resources work. A resource must be assigned to a territory to receive appointments there. Operating hours on territories and resources control availability. Know which takes precedence.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scheduling questions: work rules define constraints (skills required, travel time, availability). Service objectives define preferences (minimise travel, prioritise urgent work). Policy = combination of rules and objectives. Know this hierarchy.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For mobile questions: the Field Service mobile app uses connected content to show related objects offline. Configurations made in the FSL managed package settings control what technicians see on mobile.</li>
         </ul>

@@ -41,7 +41,7 @@ const faqItems = [
   },
   {
     question: 'Do all Salesforce exams have the same passing score?',
-    answer: 'No. Associate-level exams ($75) typically require around 70%. Specialist and Professional exams ($200) generally require 62–68% depending on the exam. Architect exams ($400) often require around 67%. Salesforce does not disclose exact thresholds — these figures come from candidate reports and study guide publishers.',
+    answer: 'No. Associate-level exams ($75) typically require around 70%. Specialist and Professional exams ($200) generally require 62–68% depending on the exam. Architect exams ($400) often require around 67%. Salesforce does not disclose exact thresholds, these figures come from candidate reports and study guide publishers.',
   },
   {
     question: 'How is the Salesforce exam score calculated?',
@@ -49,11 +49,11 @@ const faqItems = [
   },
   {
     question: 'What score should I aim for on practice exams?',
-    answer: 'Aim for 75%+ on multiple full-length timed practice exams before booking the real exam. This provides a safety margin — if the passing threshold is ~65%, scoring 75% on practice gives you buffer for exam-day variability, harder questions, or nerves. Consistently scoring below 70% on practice suggests more study is needed.',
+    answer: 'Aim for 75%+ on multiple full-length timed practice exams before booking the real exam. This provides a safety margin, if the passing threshold is ~65%, scoring 75% on practice gives you buffer for exam-day variability, harder questions, or nerves. Consistently scoring below 70% on practice suggests more study is needed.',
   },
   {
     question: 'Does the Technical Architect (CTA) exam have a passing score?',
-    answer: 'The CTA is not a multiple-choice exam. It is a live Board Review where you present a hypothetical architecture to a panel of CTAs. There is no numerical passing score — the board evaluates you on six criteria (architecture, design, security, scalability, etc.) and makes a pass/fail decision. Preparation focuses on presentation skills and architecture storytelling, not a percentage threshold.',
+    answer: 'The CTA is not a multiple-choice exam. It is a live Board Review where you present a hypothetical architecture to a panel of CTAs. There is no numerical passing score, the board evaluates you on six criteria (architecture, design, security, scalability, etc.) and makes a pass/fail decision. Preparation focuses on presentation skills and architecture storytelling, not a percentage threshold.',
   },
 ]
 
@@ -62,7 +62,7 @@ const passingScores = [
   { tier: 'Specialist', fee: '$200', typicalScore: '~62–65%', examples: 'Email Specialist, Pardot Specialist, Platform Developer I' },
   { tier: 'Professional / Consultant', fee: '$200', typicalScore: '~63–68%', examples: 'Administrator, Sales Cloud Consultant, Service Cloud Consultant' },
   { tier: 'Architect', fee: '$400', typicalScore: '~67%', examples: 'Integration Architect, Data Architect, Sharing & Visibility Architect' },
-  { tier: 'Technical Architect (CTA)', fee: 'Board Review', typicalScore: 'N/A — Board evaluation', examples: 'Live presentation, no multiple-choice score' },
+  { tier: 'Technical Architect (CTA)', fee: 'Board Review', typicalScore: 'N/A: Board evaluation', examples: 'Live presentation, no multiple-choice score' },
 ]
 
 export default function SalesforceCertificationPassingScorePage() {
@@ -80,7 +80,7 @@ export default function SalesforceCertificationPassingScorePage() {
           Salesforce Certification Passing Score by Tier ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Salesforce does not publish official passing scores. This page summarises the typical thresholds by certification tier, based on candidate reports and industry consensus — and what to aim for on practice exams.
+          Salesforce does not publish official passing scores. This page summarises the typical thresholds by certification tier, based on candidate reports and industry consensus, and what to aim for on practice exams.
         </p>
       </div>
 
@@ -140,7 +140,7 @@ export default function SalesforceCertificationPassingScorePage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Until You Hit 75%+</h2>
-        <p className="text-white mb-6">Free practice questions for every Salesforce certification — simulate the real exam and track your score.</p>
+        <p className="text-white mb-6">Free practice questions for every Salesforce certification, simulate the real exam and track your score.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse All Certifications
         </Link>

@@ -1,5 +1,5 @@
 /**
- * Freshness badge shown on each certification page — signals that the exam
+ * Freshness badge shown on each certification page, signals that the exam
  * weightage, practice questions, and study content are current.
  */
 
@@ -47,7 +47,7 @@ export default function ReleaseNoteBadge() {
           <Sparkles className="h-5 w-5 flex-shrink-0 text-blue-600" />
           <div className="flex-1">
             <p className="font-semibold text-gray-900">Free, No Sign-Up</p>
-            <p className="mt-1 text-sm text-gray-600">Start practicing immediately — no account or email required</p>
+            <p className="mt-1 text-sm text-gray-600">Start practicing immediately, no account or email required</p>
           </div>
         </div>
       </div>

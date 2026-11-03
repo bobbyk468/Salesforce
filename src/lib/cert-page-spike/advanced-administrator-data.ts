@@ -9,7 +9,7 @@ const sampleQuestions = advancedAdministratorSampleQuestionsJson as SpikeSampleQ
 export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
   template: 'associate',
   introLead: [
-    { type: 'text', text: "If you haven't passed the entry-level admin exam yet, start with our " },
+    { type: 'text', text: "If you haven't passed the entry-level admin exam yet. Start with our " },
     { type: 'link', href: '/certifications/administrator', label: 'ADM-201 study guide' },
     { type: 'text', text: ' first. For faster prep, use our ' },
     { type: 'link', href: '/adm-201-exam-tips', label: `ADM-201 exam tips (${RELEASE_CURRENT})` },
@@ -32,9 +32,9 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
     summary: 'The Advanced Administrator exam is moderately difficult. It builds directly on ADM-201 but goes significantly deeper into security, automation, and change management topics.',
     bullets: [
       '<strong>60 multiple-choice questions</strong> in 105 minutes.',
-      '<strong>65% passing score</strong> — you can miss up to 21 questions.',
-      '<strong>Deeper than ADM-201</strong> — advanced Flow patterns, delegated administration, territory management, and complex sharing rules are all tested.',
-      '<strong>Requires real-world experience</strong> — scenario questions assume you have managed a production Salesforce org.',
+      '<strong>65% passing score</strong>: you can miss up to 21 questions.',
+      '<strong>Deeper than ADM-201</strong>: advanced Flow patterns, delegated administration, territory management, and complex sharing rules are all tested.',
+      '<strong>Requires real-world experience</strong>: scenario questions assume you have managed a production Salesforce org.',
     ],
     passRateGuidance: 'Score 75%+ on 3 full practice exams before booking. Focus on the areas where ADM-201 was surface-level: advanced security, approval processes with cross-object conditions, and change sets.',
   },
@@ -77,23 +77,23 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
     blocks: [
       {
         heading: 'The Salesforce Security Model (Layered Access)',
-        body: 'Record access is built in layers: OWD sets the baseline (Private, Public Read Only, Public Read/Write). Role Hierarchy grants managers access to subordinates\' records. Sharing Rules extend access to groups or roles based on ownership or criteria. Manual Sharing grants one-off access. Object and field access is controlled separately by Profiles and Permission Sets. The exam frequently tests which layer to use for a given access requirement — and that access can only be opened wider, never restricted below OWD.',
+        body: 'Record access is built in layers: OWD sets the baseline (Private, Public Read Only, Public Read/Write). Role Hierarchy grants managers access to subordinates\' records. Sharing Rules extend access to groups or roles based on ownership or criteria. Manual Sharing grants one-off access. Object and field access is controlled separately by Profiles and Permission Sets. The exam frequently tests which layer to use for a given access requirement, and that access can only be opened wider, never restricted below OWD.',
       },
       {
         heading: 'Advanced Automation: Flow vs Approval Process',
-        body: 'Flows handle complex multi-step logic, branching, loops, and real-time or scheduled automation. Approval Processes handle structured human sign-off workflows with defined approvers, multi-level steps, and approval/rejection actions. The exam tests when to use each — use Approval Processes for discount or contract sign-off scenarios; use Flow for dynamic automation without human involvement. Workflow Rules are legacy and being retired in favor of Flow.',
+        body: 'Flows handle complex multi-step logic, branching, loops, and real-time or scheduled automation. Approval Processes handle structured human sign-off workflows with defined approvers, multi-level steps, and approval/rejection actions. The exam tests when to use each, use Approval Processes for discount or contract sign-off scenarios; use Flow for dynamic automation without human involvement. Workflow Rules are legacy and being retired in favor of Flow.',
       },
       {
         heading: 'Delegated Administration and Permission Set Groups',
-        body: 'Delegated Administrators can manage users within defined profiles without full admin access — ideal for HR managers or regional admins. Permission Set Groups bundle multiple permission sets for easier assignment. Muting Permission Sets within a group suppress specific permissions without removing the entire set. The exam tests the difference between these features and when each is appropriate.',
+        body: 'Delegated Administrators can manage users within defined profiles without full admin access, ideal for HR managers or regional admins. Permission Set Groups bundle multiple permission sets for easier assignment. Muting Permission Sets within a group suppress specific permissions without removing the entire set. The exam tests the difference between these features and when each is appropriate.',
       },
       {
         heading: 'Data Management: Duplicate Rules, External IDs, and Custom Metadata',
-        body: 'Matching Rules identify duplicate records based on field comparisons. Duplicate Rules define what happens when duplicates are detected (alert, block, or log). External ID fields enable upsert operations via API and Data Loader — critical for integrations. Custom Metadata Types differ from Custom Settings in that metadata records are deployable via Change Sets and packages, while Custom Settings data must be manually recreated in each org.',
+        body: 'Matching Rules identify duplicate records based on field comparisons. Duplicate Rules define what happens when duplicates are detected (alert, block, or log). External ID fields enable upsert operations via API and Data Loader, critical for integrations. Custom Metadata Types differ from Custom Settings in that metadata records are deployable via Change Sets and packages, while Custom Settings data must be manually recreated in each org.',
       },
       {
         heading: 'Advanced Reporting: Joined Reports and Cross Filters',
-        body: 'Joined Reports combine up to 5 report blocks from different report types in a single view — useful for comparing Opportunities vs. Cases for the same account. Cross Filters let you filter report results based on the presence or absence of related records (e.g., Accounts without Open Opportunities). Both are Advanced Administrator-level reporting features the exam regularly tests, along with report subscriptions, bucket fields, and report types.',
+        body: 'Joined Reports combine up to 5 report blocks from different report types in a single view, useful for comparing Opportunities vs. Cases for the same account. Cross Filters let you filter report results based on the presence or absence of related records (e.g., Accounts without Open Opportunities). Both are Advanced Administrator-level reporting features the exam regularly tests, along with report subscriptions, bucket fields, and report types.',
       },
     ],
   },

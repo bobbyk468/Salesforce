@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What prerequisites are recommended for B2C Commerce Architect?',
-    answer: 'Salesforce recommends holding the B2C Commerce Developer certification before attempting the Architect exam. The exam assumes deep hands-on experience implementing B2C Commerce solutions — typically 3–5+ years of development and architecture experience on the platform. Knowledge of SFRA, Commerce APIs, integration patterns, and headless commerce architecture is essential.',
+    answer: 'Salesforce recommends holding the B2C Commerce Developer certification before attempting the Architect exam. The exam assumes deep hands-on experience implementing B2C Commerce solutions, typically 3–5+ years of development and architecture experience on the platform. Knowledge of SFRA, Commerce APIs, integration patterns, and headless commerce architecture is essential.',
   },
   {
     question: 'What is headless commerce and how does it relate to this exam?',
@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'What integration patterns are covered in the B2C Commerce Architect exam?',
-    answer: 'The exam covers integration patterns for: OMS (Order Management System) — real-time vs asynchronous order sync; ERP — product, price, and inventory synchronisation; PIM (Product Information Management) — catalogue data feeds and product import; payment gateways — PCI compliant tokenisation and checkout flow design; and Customer Service Cloud — case creation from commerce events. Understanding which pattern is appropriate for each integration type is key.',
+    answer: 'The exam covers integration patterns for: OMS (Order Management System), real-time vs asynchronous order sync; ERP, product, price, and inventory synchronisation; PIM (Product Information Management), catalogue data feeds and product import; payment gateways: PCI compliant tokenisation and checkout flow design; and Customer Service Cloud, case creation from commerce events. Understanding which pattern is appropriate for each integration type is key.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function B2cCommerceArchitectStudyGuidePage() {
           Salesforce B2C Commerce Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified B2C Commerce Architect exam — multi-site architecture, integration design, headless commerce, performance, and security compliance.
+          A complete study guide for the Salesforce Certified B2C Commerce Architect exam, multi-site architecture, integration design, headless commerce, performance, and security compliance.
         </p>
       </div>
 
@@ -176,7 +176,7 @@ export default function B2cCommerceArchitectStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the B2C Commerce Architect free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the B2C Commerce Architect free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/b2c-commerce-architect"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

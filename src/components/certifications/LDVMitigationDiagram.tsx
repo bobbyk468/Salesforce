@@ -10,7 +10,7 @@ export default function LDVMitigationDiagram() {
     <figure id="ldv-mitigation-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">LDV mitigation strategies (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Large Data Volume orgs (millions of records) need proactive design — skinny tables and indexing to keep
+        Large Data Volume orgs (millions of records) need proactive design, skinny tables and indexing to keep
         queries selective, and archiving to Big Objects to keep active tables lean.
       </p>
       <svg role="img" aria-labelledby="ldv-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 620 130" xmlns="http://www.w3.org/2000/svg">

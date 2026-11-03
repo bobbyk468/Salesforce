@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between a DataRaptor and an Integration Procedure?',
-    answer: 'DataRaptors are low-code tools for reading, transforming, and writing Salesforce data — they work directly with standard and custom Salesforce objects via SOQL. Integration Procedures are server-side processes that orchestrate multiple actions (DataRaptors, HTTP actions, Apex) in sequence, often used to aggregate data from multiple sources for OmniScripts or FlexCards.',
+    answer: 'DataRaptors are low-code tools for reading, transforming, and writing Salesforce data, they work directly with standard and custom Salesforce objects via SOQL. Integration Procedures are server-side processes that orchestrate multiple actions (DataRaptors, HTTP actions, Apex) in sequence, often used to aggregate data from multiple sources for OmniScripts or FlexCards.',
   },
   {
     question: 'What prerequisites help with the OmniStudio Developer exam?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most OmniStudio Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the OmniStudio Developer exam are: (1) Custom LWC in OmniScript — Override vs Embed; (2) Activation — OmniScripts and FlexCards Must Be Activated Before Use; (3) Type vs Sub-Type — OmniScript Identity Keys. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the OmniStudio Developer exam are: (1) Custom LWC in OmniScript: Override vs Embed; (2) Activation: OmniScripts and FlexCards Must Be Activated Before Use; (3) Type vs Sub-Type: OmniScript Identity Keys. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('omnistudio-developer-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function OmniStudioDeveloperExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What OmniStudio Developer Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong> — Building guided interaction flows with steps, elements, and conditional navigation. Understanding script reuse, error handling, and how OmniScripts call Integration Procedures and DataRaptors to load and save data.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong> — The four DataRaptor types: Extract (read Salesforce data), Transform (reshape data), Load (write to Salesforce), and Turbo Extract (optimised read without transformation). Know when to use each type.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FlexCards and Integration Procedures</strong> — FlexCards display contextual data in a card format, sourced via DataRaptors or Integration Procedures. Integration Procedures orchestrate multi-step server actions including HTTP callouts to external systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong>: Building guided interaction flows with steps, elements, and conditional navigation. Understanding script reuse, error handling, and how OmniScripts call Integration Procedures and DataRaptors to load and save data.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong>: The four DataRaptor types: Extract (read Salesforce data), Transform (reshape data), Load (write to Salesforce), and Turbo Extract (optimised read without transformation). Know when to use each type.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FlexCards and Integration Procedures</strong>: FlexCards display contextual data in a card format, sourced via DataRaptors or Integration Procedures. Integration Procedures orchestrate multi-step server actions including HTTP callouts to external systems.</li>
         </ul>
       </section>
 
@@ -138,12 +138,12 @@ export default function OmniStudioDeveloperExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a business interaction or data requirement and ask which OmniStudio tool or
           configuration achieves it. The correct answer always uses the most appropriate native OmniStudio
-          component — not Apex or standard Salesforce automation when OmniStudio tools exist.
+          component, not Apex or standard Salesforce automation when OmniStudio tools exist.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For tool selection questions: OmniScript = guided UI flow for agents/users. FlexCard = read-only data display on a record page. Integration Procedure = server-side orchestration (no UI). DataRaptor = Salesforce data read/write/transform. Match the requirement to the right tool.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For DataRaptor type questions: when the requirement involves reading Salesforce records for display, use Extract. When reshaping data between systems, use Transform. When saving user input back to Salesforce, use Load. Turbo Extract is for performance-optimised reads without field mapping.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Integration Procedure questions: they run server-side and can call HTTP actions, DataRaptors, and Apex remote actions in sequence. When a scenario requires calling an external REST API from within an OmniScript, the answer is an Integration Procedure with an HTTP Action element — not a direct Apex callout from the OmniScript.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Integration Procedure questions: they run server-side and can call HTTP actions, DataRaptors, and Apex remote actions in sequence. When a scenario requires calling an external REST API from within an OmniScript, the answer is an Integration Procedure with an HTTP Action element, not a direct Apex callout from the OmniScript.</li>
         </ul>
       </section>
 
@@ -156,7 +156,7 @@ export default function OmniStudioDeveloperExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           OmniStudio is a distinct tool ecosystem used primarily in Industries Cloud implementations.
           Candidates without direct OmniStudio project experience should complete the full Trailhead
-          OmniStudio Developer trail and Superbadge before booking — the exam tests specific
+          OmniStudio Developer trail and Superbadge before booking, the exam tests specific
           configuration decisions that only become clear from hands-on practice.
         </p>
       </section>
@@ -164,19 +164,19 @@ export default function OmniStudioDeveloperExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most OmniStudio Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Custom LWC in OmniScript — Override vs Embed</p>
-            <p className="text-sm text-gray-700">You can embed a custom LWC inside an OmniScript as a custom component (extends LightningElement, uses omniscript-mixin). You can also override a built-in OmniScript element with a custom LWC. These are different extension patterns. Candidates write standalone LWCs and try to integrate them — the exam expects the correct mixin-based pattern for embedding custom components in OmniScript context.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Custom LWC in OmniScript: Override vs Embed</p>
+            <p className="text-sm text-gray-700">You can embed a custom LWC inside an OmniScript as a custom component (extends LightningElement, uses omniscript-mixin). You can also override a built-in OmniScript element with a custom LWC. These are different extension patterns. Candidates write standalone LWCs and try to integrate them, the exam expects the correct mixin-based pattern for embedding custom components in OmniScript context.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Activation — OmniScripts and FlexCards Must Be Activated Before Use</p>
-            <p className="text-sm text-gray-700">After creating or editing an OmniScript or FlexCard in OmniStudio, the component must be Activated (compiled and deployed) before end users can interact with it. Changes made after activation require re-activation. Candidates edit components and expect changes to appear immediately — the exam expects Activation as a required step after any modification.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Activation: OmniScripts and FlexCards Must Be Activated Before Use</p>
+            <p className="text-sm text-gray-700">After creating or editing an OmniScript or FlexCard in OmniStudio, the component must be Activated (compiled and deployed) before end users can interact with it. Changes made after activation require re-activation. Candidates edit components and expect changes to appear immediately, the exam expects Activation as a required step after any modification.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Type vs Sub-Type — OmniScript Identity Keys</p>
-            <p className="text-sm text-gray-700">Every OmniScript is identified by a Type and Sub-Type (e.g., Type: "Order", SubType: "NewOrder"). The combination must be unique. Versioning creates new versions under the same Type/Sub-Type. FlexCards use a similar naming convention. Candidates name OmniScripts without understanding the Type/Sub-Type identity model — the exam tests how to locate, version, and call specific OmniScripts using their Type/Sub-Type.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Type vs Sub-Type: OmniScript Identity Keys</p>
+            <p className="text-sm text-gray-700">Every OmniScript is identified by a Type and Sub-Type (e.g., Type: "Order", SubType: "NewOrder"). The combination must be unique. Versioning creates new versions under the same Type/Sub-Type. FlexCards use a similar naming convention. Candidates name OmniScripts without understanding the Type/Sub-Type identity model, the exam tests how to locate, version, and call specific OmniScripts using their Type/Sub-Type.</p>
           </div>
         </div>
       </section>

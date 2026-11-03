@@ -42,10 +42,10 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between B2B and B2C Solution Architect certifications?',
-    answer: 'The Salesforce B2B Solution Architect certification focuses on enterprise sales and commerce architectures — integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and partner portals across complex B2B sales cycles. The B2C Solution Architect certification focuses on consumer-facing commerce architectures — B2C Commerce (Salesforce Commerce Cloud), Marketing Cloud personalisation, and omnichannel consumer engagement. B2B is enterprise/manufacturing/distribution focused; B2C is retail/consumer goods focused.',
+    answer: 'The Salesforce B2B Solution Architect certification focuses on enterprise sales and commerce architectures, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and partner portals across complex B2B sales cycles. The B2C Solution Architect certification focuses on consumer-facing commerce architectures: B2C Commerce (Salesforce Commerce Cloud), Marketing Cloud personalisation, and omnichannel consumer engagement. B2B is enterprise/manufacturing/distribution focused; B2C is retail/consumer goods focused.',
   },
   {
-    question: 'Which should I take — B2B or B2C Solution Architect?',
+    question: 'Which should I take: B2B or B2C Solution Architect?',
     answer: 'Choose based on your client and project experience. If you work with enterprise clients on complex sales cycles (CPQ, Revenue Cloud, partner communities, B2B Commerce) → B2B Solution Architect. If you work on consumer e-commerce and retail implementations (Salesforce Commerce Cloud, Marketing Cloud personalisation, loyalty programmes) → B2C Solution Architect. The two certifications serve fundamentally different industry segments.',
   },
   {
@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: 'Are B2B and B2C Solution Architect exams similar in format?',
-    answer: 'Both exams follow the same format: 60 questions, 120 minutes, approximately 68% passing score, and a $400 fee. Both are scenario-based, testing multi-cloud architecture decisions rather than single-product features. The key difference is the Salesforce product ecosystem each exam covers — B2B Commerce, CPQ, Revenue Cloud (B2B) vs B2C Commerce, Marketing Cloud, personalisation (B2C).',
+    answer: 'Both exams follow the same format: 60 questions, 120 minutes, approximately 68% passing score, and a $400 fee. Both are scenario-based, testing multi-cloud architecture decisions rather than single-product features. The key difference is the Salesforce product ecosystem each exam covers: B2B Commerce, CPQ, Revenue Cloud (B2B) vs B2C Commerce, Marketing Cloud, personalisation (B2C).',
   },
 ]
 
@@ -107,7 +107,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
           certName: "B2B Solution Architect",
           certSlug: "b2b-solution-architect",
           examTipsSlug: "b2b-solution-architect-exam-tips",
-          reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud — otherwise B2B gives you wider applicability.",
+          reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud, otherwise B2B gives you wider applicability.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",
         }}

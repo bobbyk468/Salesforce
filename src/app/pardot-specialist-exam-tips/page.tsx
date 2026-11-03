@@ -61,7 +61,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between Pardot Specialist and Pardot Consultant?',
-    answer: 'The Pardot Specialist certification tests execution-level knowledge — configuring forms, automations, email templates, and Engagement Studio programs. The Pardot Consultant exam tests architectural and strategy-level decisions — how to design a full Pardot implementation for a client. Specialist should be completed before Consultant.',
+    answer: 'The Pardot Specialist certification tests execution-level knowledge, configuring forms, automations, email templates, and Engagement Studio programs. The Pardot Consultant exam tests architectural and strategy-level decisions, how to design a full Pardot implementation for a client. Specialist should be completed before Consultant.',
   },
   {
     question: 'Which Account Engagement concepts are useful to review?',
@@ -104,10 +104,10 @@ export default function PardotSpecialistExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Pardot Specialist Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Exam format</strong> — 60 multiple-choice/multiple-select questions and up to five unscored questions; 90 minutes; 72% passing score.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead management</strong> — Lead scoring, grading, prospect lifecycle stages, and how Account Engagement syncs with Salesforce CRM records.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Studio</strong> — Building nurture programs, setting wait steps, branching rules, and completion actions based on prospect behavior.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Forms and landing pages</strong> — Form handlers, progressive profiling, thank-you page redirects, and conversion tracking configuration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Exam format</strong>: 60 multiple-choice/multiple-select questions and up to five unscored questions; 90 minutes; 72% passing score.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead management</strong>: Lead scoring, grading, prospect lifecycle stages, and how Account Engagement syncs with Salesforce CRM records.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Studio</strong>: Building nurture programs, setting wait steps, branching rules, and completion actions based on prospect behavior.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Forms and landing pages</strong>: Form handlers, progressive profiling, thank-you page redirects, and conversion tracking configuration.</li>
         </ul>
       </section>
 
@@ -142,9 +142,9 @@ export default function PardotSpecialistExamTipsPage() {
           For practice scenarios, identify the requirement and match it to the relevant Account Engagement feature or configuration.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead scoring questions: understand the difference between score (implicit behaviour) and grade (explicit fit) — and when to use each to trigger sales alerts.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead scoring questions: understand the difference between score (implicit behaviour) and grade (explicit fit), and when to use each to trigger sales alerts.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Engagement Studio: know when to use a Wait step vs a Rule step vs an Action step, and the order in which Pardot evaluates them.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: understand that Pardot syncs with the assigned user’s CRM permissions — connector user setup is a common exam topic.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: understand that Pardot syncs with the assigned user’s CRM permissions, connector user setup is a common exam topic.</li>
         </ul>
       </section>
 
@@ -165,15 +165,15 @@ export default function PardotSpecialistExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">Use these distinctions as a focused review list alongside the official exam objectives.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Engagement Studio vs Automation Rules — Nurture vs Batch Processing</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Engagement Studio vs Automation Rules: Nurture vs Batch Processing</p>
             <p className="text-sm text-gray-700">Engagement Studio (Engagement Programs) orchestrates time-based, multi-step nurture sequences triggered by prospect actions or timing. Automation Rules evaluate prospect criteria and apply actions. Compare the capabilities of each when choosing a tool for a workflow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Email Preference Centre vs Unsubscribe — Opt-Down vs Opt-Out</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Email Preference Centre vs Unsubscribe: Opt-Down vs Opt-Out</p>
             <p className="text-sm text-gray-700">Unsubscribe behavior and preference management serve different purposes. Review how Account Engagement configuration affects opt-out status and communication preferences for a prospect.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Visitor vs Prospect — Anonymous vs Known</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Visitor vs Prospect: Anonymous vs Known</p>
             <p className="text-sm text-gray-700">A Visitor is an anonymous person who has visited an Account Engagement-tracked page. A Prospect is an identified person with an email address. Review how identification affects the records and available engagement activities.</p>
           </div>
         </div>

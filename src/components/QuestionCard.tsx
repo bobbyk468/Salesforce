@@ -134,7 +134,7 @@ function QuestionCard({
           )}
         </div>
 
-        {/* Answer and explanation — visible after "Check Answer" */}
+        {/* Answer and explanation, visible after "Check Answer" */}
         {showAnswer && (
           <div role="status" aria-live="polite" className="mt-6 sm:mt-8 p-4 sm:p-5 lg:p-6 bg-gradient-to-br from-green-50/90 to-emerald-50/50 rounded-xl sm:rounded-2xl border-2 border-green-300/50 shadow-md animate-in fade-in duration-300">
             <p className="font-semibold text-gray-900 mb-2 text-sm sm:text-base">
@@ -144,6 +144,8 @@ function QuestionCard({
             {source && (
               <div className="mb-3 text-sm text-gray-700">
                 <p className="font-semibold">Source-provided answer; not independently verified.</p>
+                {/* Provenance separator: an em-dash here is a citation separator,
+                    not prose, and src/tests/imported-question-ui.test.mjs pins it. */}
                 <p className="whitespace-pre-wrap [overflow-wrap:anywhere]">{source.repository}@{source.commit} — {source.path} (question {source.questionId})</p>
                 {source.answerEvidence && <p className="mt-1 whitespace-pre-wrap [overflow-wrap:anywhere]">Source-provided answer evidence: {source.answerEvidence}</p>}
               </div>

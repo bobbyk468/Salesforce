@@ -27,7 +27,7 @@
       "<strong>Many patterns tested.</strong> Expect REST, SOAP, Bulk API, Platform Events, Change Data Capture, outbound messages and MuleSoft.",
       "<strong>Limits matter.</strong> Callout limits (100 per transaction, 120 seconds total) and async Apex come up often."
     ],
-    "passRateGuidance": "People with a few years of real integration work tend to do best. Before you book, aim for 75% or more on practice tests, and make sure you can sketch an integration on a whiteboard and explain why you chose each piece."
+    "passRateGuidance": "People with a few years of real integration work tend to do best. Before you book. Aim for 75% or more on practice tests, and make sure you can sketch an integration on a whiteboard and explain why you chose each piece."
   },
   "examFormat": {
     "heading": "Integration Architect Exam Format Explained",
@@ -86,7 +86,7 @@
       },
       {
         "heading": "Salesforce APIs: REST, SOAP, Bulk, Streaming, and Connect",
-        "body": "Each API fits a different job. **REST API** uses JSON and is the default for small, real-time reads and writes, both into Salesforce and out through Apex callouts. **SOAP API** uses XML and a WSDL, and you mostly see it with older enterprise systems that want a strict contract. **Bulk API 2.0** handles millions of records in the background and is the usual choice for data migration and large nightly loads. **Change Data Capture** sends an event every time a record changes, with only the fields that changed. **Composite API** groups several REST calls into one request, which saves round trips. **Connect API** gives ready-made endpoints for things like Chatter and Experience Cloud. The exam asks which API fits a given amount of data, speed and direction, and which limits apply. Remember 100 callouts per transaction, a 6 MB heap limit for synchronous Apex and the daily API call allowance for your org."
+        "body": "Each API fits a different job. **REST API** uses JSON and is the default for small, real-time reads and writes, both into Salesforce and out through Apex callouts. **SOAP API** uses XML and a WSDL, and you mostly see it with older enterprise systems that want a strict contract. **Bulk API 2.0** handles millions of records in the background and is the usual choice for data migration and large nightly loads. **Change Data Capture** sends an event every time a record changes; with only the fields that changed. **Composite API** groups several REST calls into one request, which saves round trips. **Connect API** gives ready-made endpoints for things like Chatter and Experience Cloud. The exam asks which API fits a given amount of data, speed and direction, and which limits apply. Remember 100 callouts per transaction, a 6 MB heap limit for synchronous Apex and the daily API call allowance for your org."
       },
       {
         "heading": "Error Handling, Idempotency, and Recovery",
@@ -116,7 +116,7 @@
       },
       {
         "heading": "Platform Events & Change Data Capture",
-        "body": "**Platform Events** when you design the message yourself and want publisher and subscriber kept apart. **CDC** when you just need to copy record changes somewhere else. In both cases, know how the replay ID lets a subscriber catch up after it was offline."
+        "body": "**Platform Events** when you design the message yourself and want publisher and subscriber kept apart. **CDC** when you just need to copy record changes somewhere else. In both cases. Know how the replay ID lets a subscriber catch up after it was offline."
       },
       {
         "heading": "Middleware & MuleSoft",

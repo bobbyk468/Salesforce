@@ -47,7 +47,7 @@ const breadcrumbItems = [
 const examSections = [
   { name: 'Identity Protocols & Concepts', weight: 30, note: 'SAML 2.0: assertions (authentication, attribute, authorisation), SP-initiated vs IdP-initiated SSO flows. OAuth 2.0: authorisation code, implicit, client credentials, device, JWT bearer token flows. OpenID Connect: ID token, UserInfo endpoint, OIDC as identity layer on top of OAuth. When to use SAML vs OAuth vs OIDC.' },
   { name: 'SSO Design & Implementation', weight: 25, note: 'Configuring Salesforce as an Identity Provider (IdP) and as a Service Provider (SP). My Domain: requirement for SSO, custom subdomain design. Federated authentication vs delegated authentication vs Salesforce-managed credentials. Just-in-time (JIT) provisioning for user creation via SSO. Single Logout (SLO) design.' },
-  { name: 'OAuth & Connected Apps', weight: 25, note: 'Connected Apps: creating, configuring scopes, IP relaxation, permitted users, session policies. Named credentials: per-user vs named principal OAuth. OAuth flows: which flow for which use case — web app (Web Server), mobile (PKCE), server-to-server (JWT Bearer), legacy (Username-Password). Token storage, refresh tokens, and expiry.' },
+  { name: 'OAuth & Connected Apps', weight: 25, note: 'Connected Apps: creating, configuring scopes, IP relaxation, permitted users, session policies. Named credentials: per-user vs named principal OAuth. OAuth flows: which flow for which use case, web app (Web Server), mobile (PKCE), server-to-server (JWT Bearer), legacy (Username-Password). Token storage, refresh tokens, and expiry.' },
   { name: 'Community & External Identity', weight: 15, note: 'Experience Cloud identity: self-registration, social login (Google, Facebook, LinkedIn), External Identity licences. Auth providers: configuring third-party social login via Auth Provider framework. Registration handlers: custom Apex to control user provisioning from external IdPs. Digital experiences and B2C identity patterns.' },
   { name: 'MFA & Security Policies', weight: 5, note: 'Salesforce MFA enforcement: Salesforce Authenticator, TOTP apps, security keys. MFA requirement timeline and enforcement for direct logins. Session security levels and policies. IP restrictions: trusted IP ranges at org level, profile level, connected app level. Login hours and session timeout configuration.' },
 ]
@@ -55,11 +55,11 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce IAM Architect certification?',
-    answer: 'The Identity & Access Management Architect certification validates expertise in designing identity solutions for Salesforce — including SSO (SAML, OAuth, OIDC), connected apps, external identity for Experience Cloud, MFA enforcement, and session security. The exam has 60 questions, ~110-minute time limit, ~68% passing score, and a $400 fee. It is part of the System Architect credential path.',
+    answer: 'The Identity & Access Management Architect certification validates expertise in designing identity solutions for Salesforce, including SSO (SAML, OAuth, OIDC), connected apps, external identity for Experience Cloud, MFA enforcement, and session security. The exam has 60 questions, ~110-minute time limit, ~68% passing score, and a $400 fee. It is part of the System Architect credential path.',
   },
   {
     question: 'What is the difference between SAML and OAuth?',
-    answer: 'SAML (Security Assertion Markup Language) is an XML-based protocol designed for SSO — it passes authentication assertions between an Identity Provider and a Service Provider, allowing users to sign in once and access multiple applications. OAuth 2.0 is an authorisation framework — it grants applications access to resources on behalf of a user without sharing credentials. OpenID Connect (OIDC) adds an identity layer on top of OAuth, returning a signed ID token with user identity claims. For Salesforce SSO, SAML is traditional enterprise IdP integration; OAuth/OIDC is used for API access and modern apps.',
+    answer: 'SAML (Security Assertion Markup Language) is an XML-based protocol designed for SSO, it passes authentication assertions between an Identity Provider and a Service Provider, allowing users to sign in once and access multiple applications. OAuth 2.0 is an authorisation framework, it grants applications access to resources on behalf of a user without sharing credentials. OpenID Connect (OIDC) adds an identity layer on top of OAuth, returning a signed ID token with user identity claims. For Salesforce SSO, SAML is traditional enterprise IdP integration; OAuth/OIDC is used for API access and modern apps.',
   },
   {
     question: 'What is JIT provisioning in Salesforce?',
@@ -67,7 +67,7 @@ const faqItems = [
   },
   {
     question: 'Which OAuth flow should I use for server-to-server integration?',
-    answer: 'For server-to-server integrations where no user is present (background jobs, integration middleware), use the OAuth 2.0 JWT Bearer Token Flow. The server signs a JWT with a private key (the corresponding certificate is uploaded to the Connected App), and exchanges it for an access token — no user interaction required. This is more secure than Username-Password flow (which passes credentials in the request) and is the recommended pattern for Salesforce APIs in automated processes.',
+    answer: 'For server-to-server integrations where no user is present (background jobs, integration middleware). Use the OAuth 2.0 JWT Bearer Token Flow. The server signs a JWT with a private key (the corresponding certificate is uploaded to the Connected App), and exchanges it for an access token, no user interaction required. This is more secure than Username-Password flow (which passes credentials in the request) and is the recommended pattern for Salesforce APIs in automated processes.',
   },
   {
     question: 'How long should I study for the IAM Architect exam?',
@@ -94,7 +94,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
           Salesforce Identity &amp; Access Management Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the IAM Architect exam — SAML, OAuth 2.0, OIDC, SSO design, connected apps, JIT provisioning, and MFA.
+          Your complete guide to passing the IAM Architect exam: SAML, OAuth 2.0, OIDC, SSO design, connected apps, JIT provisioning, and MFA.
         </p>
       </div>
 
@@ -159,15 +159,15 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Identity fundamentals — understand authentication vs authorisation vs federation. Study SAML 2.0 assertions, IdP vs SP roles, and SP-initiated vs IdP-initiated flows at a conceptual level.' },
-            { week: 'Week 2', focus: 'OAuth 2.0 flows — study all major flows: Authorisation Code (+ PKCE), Client Credentials, JWT Bearer, Device, Username-Password. Draw a sequence diagram for each. Understand which flows Salesforce supports.' },
-            { week: 'Week 3', focus: 'Salesforce as SP — configure SSO in a dev org using a free IdP (Okta Developer or Auth0 free tier). Set up My Domain, create an Auth Provider, and test SP-initiated login.' },
-            { week: 'Week 4', focus: 'Salesforce as IdP — configure Salesforce as an Identity Provider for a connected app. Test IdP-initiated SSO. Understand when Salesforce acts as each role.' },
-            { week: 'Week 5', focus: 'JIT Provisioning — configure JIT provisioning in your dev org. Map SAML attributes to Salesforce user fields. Test automatic user creation on first SSO login.' },
-            { week: 'Week 6', focus: 'Connected Apps — create and configure a connected app with OAuth 2.0. Test the Web Server flow using Postman. Configure scopes, IP relaxation, and permitted users.' },
-            { week: 'Week 7', focus: 'Named credentials — configure per-user OAuth and named principal OAuth named credentials. Understand when each is appropriate for external integrations.' },
-            { week: 'Week 8', focus: 'External Identity — configure social login (Google) in an Experience Cloud site using Auth Provider. Write a custom registration handler in Apex.' },
-            { week: 'Week 9', focus: 'MFA and security policies — configure MFA in your org using Salesforce Authenticator. Review session security levels, IP restriction layers, and login hour policies.' },
+            { week: 'Week 1', focus: 'Identity fundamentals, understand authentication vs authorisation vs federation. Study SAML 2.0 assertions, IdP vs SP roles, and SP-initiated vs IdP-initiated flows at a conceptual level.' },
+            { week: 'Week 2', focus: 'OAuth 2.0 flows, study all major flows: Authorisation Code (+ PKCE), Client Credentials, JWT Bearer, Device, Username-Password. Draw a sequence diagram for each. Understand which flows Salesforce supports.' },
+            { week: 'Week 3', focus: 'Salesforce as SP, configure SSO in a dev org using a free IdP (Okta Developer or Auth0 free tier). Set up My Domain, create an Auth Provider, and test SP-initiated login.' },
+            { week: 'Week 4', focus: 'Salesforce as IdP, configure Salesforce as an Identity Provider for a connected app. Test IdP-initiated SSO. Understand when Salesforce acts as each role.' },
+            { week: 'Week 5', focus: 'JIT Provisioning, configure JIT provisioning in your dev org. Map SAML attributes to Salesforce user fields. Test automatic user creation on first SSO login.' },
+            { week: 'Week 6', focus: 'Connected Apps, create and configure a connected app with OAuth 2.0. Test the Web Server flow using Postman. Configure scopes, IP relaxation, and permitted users.' },
+            { week: 'Week 7', focus: 'Named credentials, configure per-user OAuth and named principal OAuth named credentials. Understand when each is appropriate for external integrations.' },
+            { week: 'Week 8', focus: 'External Identity, configure social login (Google) in an Experience Cloud site using Auth Provider. Write a custom registration handler in Apex.' },
+            { week: 'Week 9', focus: 'MFA and security policies, configure MFA in your org using Salesforce Authenticator. Review session security levels, IP restriction layers, and login hour policies.' },
             { week: 'Week 10', focus: 'Full mock exams. Identity Protocols (30%) + SSO Design (25%) = 55% of the exam. Master SAML vs OAuth decision scenarios. Aim for 75%+ before booking.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -182,7 +182,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>SAML = SSO for enterprise users; OAuth = API access:</strong> When a scenario says "employees need to log into Salesforce using their corporate credentials," the answer is SAML SSO. When a scenario says "an application needs to access Salesforce data on behalf of a user," the answer is OAuth 2.0.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>JWT Bearer for server-to-server:</strong> Any scenario involving background jobs, integration middleware, or automated processes accessing Salesforce APIs — without a user present — should use JWT Bearer Token flow. Never Username-Password flow for production systems.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>JWT Bearer for server-to-server:</strong> Any scenario involving background jobs, integration middleware, or automated processes accessing Salesforce APIs, without a user present, should use JWT Bearer Token flow. Never Username-Password flow for production systems.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>JIT for large user populations:</strong> If a scenario involves many external users who should be automatically provisioned, JIT is the correct answer over manual user creation or pre-provisioning scripts. JIT can create and update users with every login.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>My Domain is required:</strong> SSO, connected apps with OAuth, and Lightning features all require My Domain. Any question about enabling SSO for an org assumes My Domain is configured first.</span></li>
         </ul>
@@ -190,7 +190,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. IAM Architect is protocol-heavy — many candidates who know Salesforce well struggle because they haven’t worked with SAML and OAuth deeply. Hands-on SSO configuration is the best preparation. If you can configure SSO end-to-end from scratch, you are ready.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. IAM Architect is protocol-heavy, many candidates who know Salesforce well struggle because they haven’t worked with SAML and OAuth deeply. Hands-on SSO configuration is the best preparation. If you can configure SSO end-to-end from scratch, you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -202,9 +202,9 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
           <li>My Domain: why it is required, custom subdomain, login policy settings</li>
           <li>JIT provisioning: attribute mapping, user creation and update on login</li>
           <li>Connected Apps: scopes, IP relaxation, permitted users, session policies</li>
-          <li>Named credentials: per-user OAuth vs named principal — when each applies</li>
+          <li>Named credentials: per-user OAuth vs named principal, when each applies</li>
           <li>Auth Providers: configuring social login, custom registration handlers</li>
-          <li>MFA: Salesforce Authenticator, TOTP, security keys — enforcement levels</li>
+          <li>MFA: Salesforce Authenticator, TOTP, security keys, enforcement levels</li>
           <li>Session security: trusted IP ranges, login hours, session timeout, security levels</li>
         </ol>
       </div>

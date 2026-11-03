@@ -223,7 +223,7 @@
       "correctAnswer": 1,
       "explanation": "FIXED LOD expressions compute a value at the declared dimension granularity regardless of what dimensions are on the Rows/Columns shelves.",
       "whyWrong": [
-        "This describes a regular aggregate filtered by view dimensions — the opposite of FIXED, which ignores view dimensions.",
+        "This describes a regular aggregate filtered by view dimensions, the opposite of FIXED, which ignores view dimensions.",
         "A cross-database join is a data-connection concept, unrelated to LOD expressions.",
         "A running total is a table calculation concept, not what FIXED LOD computes."
       ]
@@ -239,9 +239,9 @@
       "correctAnswer": 0,
       "explanation": "Without a context filter, Tableau computes Top N across all data first, then applies other filters. Context filters reverse that order.",
       "whyWrong": [
-        "Context filters don't affect chart color formatting — that's unrelated to their function.",
-        "Context filters aren't about connecting to live data sources — that's a separate data connection setting.",
-        "Context filters aren't specifically for creating dual-axis charts — that's an unrelated visualization feature."
+        "Context filters don't affect chart color formatting, that's unrelated to their function.",
+        "Context filters aren't about connecting to live data sources, that's a separate data connection setting.",
+        "Context filters aren't specifically for creating dual-axis charts, that's an unrelated visualization feature."
       ]
     },
     {
@@ -255,8 +255,8 @@
       "correctAnswer": 1,
       "explanation": "Live connections deliver fresh data on every view load; Extracts trade real-time currency for faster query performance.",
       "whyWrong": [
-        "Accuracy isn't the differentiator — both connection types can be accurate; the difference is real-time versus cached/refreshed data.",
-        "Live connections can absolutely be used on dashboards — this option denies a real capability.",
+        "Accuracy isn't the differentiator, both connection types can be accurate; the difference is real-time versus cached/refreshed data.",
+        "Live connections can absolutely be used on dashboards, this option denies a real capability.",
         "Extracts work with many data source types, not just Excel files."
       ]
     },
@@ -269,11 +269,11 @@
         "A dashboard layout configuration option"
       ],
       "correctAnswer": 1,
-      "explanation": "Parameters accept user input at runtime — combine them with calculated fields or filters to create interactive, dynamic views.",
+      "explanation": "Parameters accept user input at runtime, combine them with calculated fields or filters to create interactive, dynamic views.",
       "whyWrong": [
-        "A Parameter doesn't automatically remove rows — that's a filter's function, not a parameter's.",
-        "A Parameter isn't a data source connection setting — it's an input control used within calculations/filters.",
-        "A Parameter isn't a dashboard layout option — that's an unrelated dashboard configuration concept."
+        "A Parameter doesn't automatically remove rows, that's a filter's function, not a parameter's.",
+        "A Parameter isn't a data source connection setting, it's an input control used within calculations/filters.",
+        "A Parameter isn't a dashboard layout option, that's an unrelated dashboard configuration concept."
       ]
     },
     {
@@ -285,11 +285,11 @@
         "Blending is always faster than joining at the database level"
       ],
       "correctAnswer": 0,
-      "explanation": "Blending is useful when data lives in two different source systems and a database-level join is not possible — Tableau aggregates each source separately and combines results.",
+      "explanation": "Blending is useful when data lives in two different source systems and a database-level join is not possible: Tableau aggregates each source separately and combines results.",
       "whyWrong": [
-        "Blending doesn't create a new permanent combined data source — it links at the view level, not permanently.",
-        "There is a real, meaningful difference between blending and joining — this option denies it.",
-        "Blending isn't always faster than joining — performance depends on the specific scenario, not a fixed rule."
+        "Blending doesn't create a new permanent combined data source, it links at the view level, not permanently.",
+        "There is a real, meaningful difference between blending and joining, this option denies it.",
+        "Blending isn't always faster than joining, performance depends on the specific scenario, not a fixed rule."
       ]
     },
     {
@@ -301,7 +301,7 @@
         "Treemap"
       ],
       "correctAnswer": 2,
-      "explanation": "A histogram groups continuous data into defined intervals (bins) and shows frequency — the standard chart for distribution analysis.",
+      "explanation": "A histogram groups continuous data into defined intervals (bins) and shows frequency, the standard chart for distribution analysis.",
       "whyWrong": [
         "A pie chart shows part-to-whole composition, not distribution across bins.",
         "A Gantt chart shows timeline/duration data, not distribution of a continuous measure.",
@@ -317,11 +317,11 @@
         "INCLUDE creates a table calculation on the result set"
       ],
       "correctAnswer": 2,
-      "explanation": "INCLUDE takes the view's dimensions and adds more — useful for computing per-member averages while the view aggregates at a higher level.",
+      "explanation": "INCLUDE takes the view's dimensions and adds more, useful for computing per-member averages while the view aggregates at a higher level.",
       "whyWrong": [
-        "INCLUDE isn't limited to date dimensions — it works with any dimension type.",
-        "INCLUDE doesn't ignore filters — that's a mischaracterization of its actual behavior.",
-        "INCLUDE doesn't create a table calculation — it's a distinct LOD expression type."
+        "INCLUDE isn't limited to date dimensions, it works with any dimension type.",
+        "INCLUDE doesn't ignore filters, that's a mischaracterization of its actual behavior.",
+        "INCLUDE doesn't create a table calculation, it's a distinct LOD expression type."
       ]
     },
     {
@@ -333,9 +333,9 @@
         "A data source filter that excludes null values globally"
       ],
       "correctAnswer": 0,
-      "explanation": "Filter actions allow users to click a mark and drill into filtered views — a core interactivity pattern in Tableau dashboards.",
+      "explanation": "Filter actions allow users to click a mark and drill into filtered views, a core interactivity pattern in Tableau dashboards.",
       "whyWrong": [
-        "A context filter applies within a single worksheet — it isn't the cross-worksheet interactive action being described.",
+        "A context filter applies within a single worksheet, it isn't the cross-worksheet interactive action being described.",
         "A server-side filter applied automatically to all worksheets describes a data source filter, not the interactive Filter Action being asked about.",
         "A data source filter excluding nulls is a different, static filtering mechanism, not an interactive dashboard action."
       ]
@@ -349,11 +349,11 @@
         "Table calculations are always computed faster than database aggregations"
       ],
       "correctAnswer": 1,
-      "explanation": "Table calculations (RUNNING_SUM, WINDOW_AVG, RANK, etc.) operate on the result set in the view — not on source rows.",
+      "explanation": "Table calculations (RUNNING_SUM, WINDOW_AVG, RANK, etc.) operate on the result set in the view, not on source rows.",
       "whyWrong": [
-        "Table calculations absolutely can be used with date/time fields — this option denies a real capability.",
-        "Table calculations don't run on the database — they run on data already returned to Tableau, the opposite of this claim.",
-        "Table calculations aren't inherently faster than database aggregations — that's not the defining characteristic."
+        "Table calculations absolutely can be used with date/time fields, this option denies a real capability.",
+        "Table calculations don't run on the database, they run on data already returned to Tableau, the opposite of this claim.",
+        "Table calculations aren't inherently faster than database aggregations, that's not the defining characteristic."
       ]
     },
     {
@@ -381,10 +381,10 @@
         "Use the Marks card to manually overlay two chart types"
       ],
       "correctAnswer": 0,
-      "explanation": "Dual Axis overlays two measures on independent axes in the same chart — right-click the second measure pill to enable it.",
+      "explanation": "Dual Axis overlays two measures on independent axes in the same chart, right-click the second measure pill to enable it.",
       "whyWrong": [
         "Blending a second data source and overlaying sheets isn't the standard dual-axis creation method.",
-        "Dragging two dimensions onto Rows doesn't create a dual-axis chart — that's unrelated to the dual-axis mechanism.",
+        "Dragging two dimensions onto Rows doesn't create a dual-axis chart, that's unrelated to the dual-axis mechanism.",
         "Manually overlaying chart types via the Marks card isn't how dual-axis charts are actually created in Tableau."
       ]
     },
@@ -399,7 +399,7 @@
       "correctAnswer": 3,
       "explanation": "Certification is applied by Data Stewards or admins to published data sources, signalling to consumers that the data is authoritative and maintained.",
       "whyWrong": [
-        "A Viewer license user has read-only access — they don't have the ability to certify data sources.",
+        "A Viewer license user has read-only access, they don't have the ability to certify data sources.",
         "Tableau Desktop Specialist is an entry-level certification, not a role responsible for certifying data sources.",
         "Server hardware administration is an infrastructure role, unrelated to data source certification, which is a governance/content role."
       ]

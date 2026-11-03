@@ -39,7 +39,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Do Salesforce certifications increase salary?',
-    answer: 'Yes — Salesforce certifications are directly linked to higher compensation. According to Mason Frank\'s annual Salesforce salary survey, certified professionals earn 15–25% more than non-certified peers in equivalent roles. Multiple certifications compound the effect, with professionals holding 3+ certifications commanding the highest salaries.',
+    answer: 'Yes: Salesforce certifications are directly linked to higher compensation. According to Mason Frank\'s annual Salesforce salary survey, certified professionals earn 15–25% more than non-certified peers in equivalent roles. Multiple certifications compound the effect, with professionals holding 3+ certifications commanding the highest salaries.',
   },
   {
     question: 'Which Salesforce certification pays the most?',
@@ -71,7 +71,7 @@ export default function SalesforceCertificationSalaryPage() {
         </h1>
         <p className="text-lg text-gray-600">
           Salesforce certifications are among the highest-ROI professional credentials in enterprise technology.
-          Here is what certified Salesforce professionals earn across roles, experience levels, and certification tracks —
+          Here is what certified Salesforce professionals earn across roles, experience levels, and certification tracks,
           and which certifications deliver the largest salary uplift.
         </p>
       </header>
@@ -145,7 +145,7 @@ export default function SalesforceCertificationSalaryPage() {
       <section className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Estimate Your Certification ROI</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Salary uplift depends on experience, geography, and role scope. To compare the exam fee, study time, likely salary uplift, and payback period by track, use the Salesforce certification ROI calculator.
+          Salary uplift depends on experience, geography, and role scope. To compare the exam fee, study time, likely salary uplift, and payback period by track. Use the Salesforce certification ROI calculator.
         </p>
         <Link
           href="/salesforce-certification-roi-calculator"
@@ -227,13 +227,13 @@ export default function SalesforceCertificationSalaryPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Actually Drives Salesforce Salary?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Certifications are a signal — but they are not the primary salary driver. These factors matter more:
+          Certifications are a signal, but they are not the primary salary driver. These factors matter more:
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Years of hands-on experience</strong> — Employers pay for real implementations, not exam passes. Certified professionals with 5+ years consistently earn at the top of salary ranges.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Certification stack (multiple certs)</strong> — The largest salary premiums come from 3+ certifications. Each additional certification signals both breadth and commitment to the platform.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Industry and cloud specialisation</strong> — Marketing Cloud, Revenue Cloud, and Health Cloud specialists command premiums due to lower supply of certified professionals.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Consulting vs. in-house</strong> — Consultant/contractor roles at System Integrators (SIs) like Accenture, Deloitte, and Slalom typically pay more than equivalent in-house roles, especially in the United States.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Years of hands-on experience</strong>: Employers pay for real implementations, not exam passes. Certified professionals with 5+ years consistently earn at the top of salary ranges.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Certification stack (multiple certs)</strong>: The largest salary premiums come from 3+ certifications. Each additional certification signals both breadth and commitment to the platform.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Industry and cloud specialisation</strong>: Marketing Cloud, Revenue Cloud, and Health Cloud specialists command premiums due to lower supply of certified professionals.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Consulting vs. in-house</strong>: Consultant/contractor roles at System Integrators (SIs) like Accenture, Deloitte, and Slalom typically pay more than equivalent in-house roles, especially in the United States.</li>
         </ul>
       </section>
 

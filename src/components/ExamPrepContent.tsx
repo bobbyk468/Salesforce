@@ -92,7 +92,7 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
         </div>
       </div>
 
-      {/* Study strategy — split into short sentences for readability */}
+      {/* Study strategy, split into short sentences for readability */}
       <div className="bg-gradient-to-br from-white via-indigo-50/20 to-white rounded-xl sm:rounded-2xl shadow-lg border border-indigo-100/50 overflow-hidden hover:shadow-xl transition-shadow duration-300 backdrop-blur-sm">
         <div className="bg-gradient-to-r from-indigo-600/90 to-purple-600/90 p-4 sm:p-5 text-white flex items-center gap-3">
           <Zap className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
@@ -120,7 +120,7 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
                 <>
                   The <strong className="text-gray-900">{certName}</strong> exam has {logistics.questions} questions in {logistics.duration}
                   {logistics.passingScore ? `, passing score ${logistics.passingScore}` : ''}. Most Salesforce exams test scenario-based
-                  decisions — focus on when to use each feature, not just terms.
+                  decisions. Focus on when to use each feature, not just terms.
                 </>
               ) : (
                 <>
@@ -132,7 +132,7 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
             <ul className="space-y-2 text-xs sm:text-sm text-gray-700 list-disc list-inside">
               {topSectionNames ? (
                 <li>
-                  Study <strong className="text-gray-900">{topSectionNames}</strong> first — together they carry {topSectionShare}% of
+                  Study <strong className="text-gray-900">{topSectionNames}</strong> first, together they carry {topSectionShare}% of
                   the exam.
                 </li>
               ) : (

@@ -40,7 +40,7 @@ const faqItems = [
   },
   {
     question: 'Can I take a Salesforce exam online from home?',
-    answer: 'Yes — Salesforce offers online proctored exams through Kryterion\'s Sentinel system. You take the exam on your own computer with a webcam, while an AI-monitored system verifies your identity and exam environment. Requirements: a quiet, private room with no other people; a computer with a working webcam and microphone; a stable internet connection; and government-issued photo ID. Online proctored exams are available 24/7.',
+    answer: 'Yes: Salesforce offers online proctored exams through Kryterion\'s Sentinel system. You take the exam on your own computer with a webcam, while an AI-monitored system verifies your identity and exam environment. Requirements: a quiet, private room with no other people; a computer with a working webcam and microphone; a stable internet connection; and government-issued photo ID. Online proctored exams are available 24/7.',
   },
   {
     question: 'What ID do I need for a Salesforce exam?',
@@ -48,11 +48,11 @@ const faqItems = [
   },
   {
     question: 'How far in advance should I book my Salesforce exam?',
-    answer: 'Book your exam at least 1–2 weeks in advance to get your preferred date, time, and format (online or testing centre). Online proctored slots are available 24/7 and typically have more availability than testing centres. Some candidates book their exam before finishing their study period to create a firm deadline — this motivates consistent study. If you need to reschedule, Webassessor allows rescheduling up to 24 hours before the exam without penalty.',
+    answer: 'Book your exam at least 1–2 weeks in advance to get your preferred date, time, and format (online or testing centre). Online proctored slots are available 24/7 and typically have more availability than testing centres. Some candidates book their exam before finishing their study period to create a firm deadline, this motivates consistent study. If you need to reschedule, Webassessor allows rescheduling up to 24 hours before the exam without penalty.',
   },
   {
     question: 'Can I reschedule or cancel my Salesforce exam?',
-    answer: 'Yes — you can reschedule or cancel your exam through Webassessor up to 24 hours before your scheduled exam time without penalty. Within 24 hours of the exam, the cancellation and rescheduling policy may result in forfeiture of your exam fee. Check the current Kryterion/Webassessor terms when you book, as policies can vary.',
+    answer: 'Yes; you can reschedule or cancel your exam through Webassessor up to 24 hours before your scheduled exam time without penalty. Within 24 hours of the exam, the cancellation and rescheduling policy may result in forfeiture of your exam fee. Check the current Kryterion/Webassessor terms when you book, as policies can vary.',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function HowToRegisterSalesforceExamPage() {
           How to Register for a Salesforce Certification Exam ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete step-by-step guide to booking your Salesforce exam — Webassessor setup, exam format selection, identity requirements, and exam day preparation.
+          A complete step-by-step guide to booking your Salesforce exam: Webassessor setup, exam format selection, identity requirements, and exam day preparation.
         </p>
       </div>
 
@@ -79,12 +79,12 @@ export default function HowToRegisterSalesforceExamPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Step-by-Step Registration Guide</h2>
         <div className="space-y-5">
           {[
-            { step: '1', title: 'Create a Webassessor account', desc: 'Go to webassessor.com/salesforce and click "Create Account". Use your full legal name exactly as it appears on your government-issued photo ID — mismatches cause exam day problems. Use an email address you check regularly for exam confirmations and reminders.' },
+            { step: '1', title: 'Create a Webassessor account', desc: 'Go to webassessor.com/salesforce and click "Create Account". Use your full legal name exactly as it appears on your government-issued photo ID, mismatches cause exam day problems. Use an email address you check regularly for exam confirmations and reminders.' },
             { step: '2', title: 'Link your Trailhead account', desc: 'In Webassessor, go to Account Settings and link your Salesforce Trailhead/org account. This connection ensures your passed certifications appear on your Trailhead profile automatically. Without linking, your certifications will not appear publicly.' },
-            { step: '3', title: 'Find your target exam', desc: 'From the Webassessor dashboard, click "Register for an Exam". Search for the certification you want (e.g., "Administrator", "Platform Developer I"). Verify you are selecting the correct exam — some certifications have similarly named versions (e.g., maintenance vs initial certification).' },
+            { step: '3', title: 'Find your target exam', desc: 'From the Webassessor dashboard, click "Register for an Exam". Search for the certification you want (e.g., "Administrator", "Platform Developer I"). Verify you are selecting the correct exam, some certifications have similarly named versions (e.g., maintenance vs initial certification).' },
             { step: '4', title: 'Choose exam format: online or testing centre', desc: 'Select Online Proctored (take from home, available 24/7, requires webcam + quiet room) or Testing Centre (attend a Kryterion testing centre in person, more structured environment). Both formats have the same exam content, passing score, and result validity.' },
             { step: '5', title: 'Select your date and time', desc: 'Choose an available slot that gives you sufficient remaining study time. For online exams, slots are available around the clock. Testing centre availability varies by location. Book at least 1 week ahead to secure your preferred slot.' },
-            { step: '6', title: 'Complete payment', desc: 'Pay the exam fee by credit or debit card. If you have a voucher code (retake discount or event voucher), enter it at checkout — the fee will be adjusted. Keep your payment confirmation and exam confirmation email.' },
+            { step: '6', title: 'Complete payment', desc: 'Pay the exam fee by credit or debit card. If you have a voucher code (retake discount or event voucher), enter it at checkout, the fee will be adjusted. Keep your payment confirmation and exam confirmation email.' },
             { step: '7', title: 'Prepare for exam day', desc: 'For online proctored: test your system at least 24 hours before (Kryterion provides a system check tool). Prepare a quiet, private room. Have your government-issued photo ID ready. For testing centre: arrive 15 minutes early. Bring two forms of ID. No personal items are allowed in the exam room.' },
           ].map((item) => (
             <div key={item.step} className="flex gap-4">
@@ -128,7 +128,7 @@ export default function HowToRegisterSalesforceExamPage() {
         <ul className="space-y-1 text-sm text-amber-800">
           <li>⚠ <strong>Name mismatch:</strong> Your Webassessor name must exactly match your ID. Even a middle name difference can cause issues.</li>
           <li>⚠ <strong>Not linking Trailhead:</strong> Without linking accounts, passed certs will not appear on your public profile.</li>
-          <li>⚠ <strong>Booking without system check:</strong> For online proctored, test your system at least 24 hours before — not 5 minutes before.</li>
+          <li>⚠ <strong>Booking without system check:</strong> For online proctored, test your system at least 24 hours before, not 5 minutes before.</li>
           <li>⚠ <strong>Missing the retake voucher:</strong> After a failed attempt, log into Webassessor to access your ~50% retake discount before paying full price again.</li>
         </ul>
       </div>
@@ -156,7 +156,7 @@ export default function HowToRegisterSalesforceExamPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Get Ready to Book</h2>
-        <p className="text-white mb-6">Practice until you score 75%+ on mock exams — then book your exam with confidence.</p>
+        <p className="text-white mb-6">Practice until you score 75%+ on mock exams, then book your exam with confidence.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

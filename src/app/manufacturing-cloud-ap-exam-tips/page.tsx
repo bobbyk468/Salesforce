@@ -47,7 +47,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Manufacturing Cloud Accredited Professional exam?',
-    answer: 'Manufacturing Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150). It tests Manufacturing Cloud’s specialised capabilities: account-based forecasting, sales agreements, rebate management, and the Manufacturing Cloud data model for complex B2B relationships. Practitioners with hands-on Manufacturing Cloud experience typically pass in 3–4 weeks. Sales agreements — including agreement terms, actuals calculation, and renewal workflows — are the most tested and most commonly missed topic.',
+    answer: 'Manufacturing Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150). It tests Manufacturing Cloud’s specialised capabilities: account-based forecasting, sales agreements, rebate management, and the Manufacturing Cloud data model for complex B2B relationships. Practitioners with hands-on Manufacturing Cloud experience typically pass in 3–4 weeks. Sales agreements, including agreement terms, actuals calculation, and renewal workflows, are the most tested and most commonly missed topic.',
   },
   {
     question: 'What are the highest-weight Manufacturing Cloud AP exam sections?',
@@ -55,7 +55,7 @@ const faqItems = [
   },
   {
     question: 'What is a Sales Agreement in Manufacturing Cloud?',
-    answer: 'A Sales Agreement is Manufacturing Cloud’s core object for managing long-term customer contracts — replacing the standard opportunity for annualised revenue tracking. Sales agreements track planned vs. actual quantities and revenue over the agreement period (typically monthly or quarterly). They allow manufacturers to see which customers are over or under their agreed purchase volumes and trigger account manager actions.',
+    answer: 'A Sales Agreement is Manufacturing Cloud’s core object for managing long-term customer contracts, replacing the standard opportunity for annualised revenue tracking. Sales agreements track planned vs. actual quantities and revenue over the agreement period (typically monthly or quarterly). They allow manufacturers to see which customers are over or under their agreed purchase volumes and trigger account manager actions.',
   },
   {
     question: 'How does Manufacturing Cloud differ from standard Sales Cloud for the exam?',
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Manufacturing Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Manufacturing Cloud exam are: (1) Sales Agreements vs Opportunities — Recurring Revenue vs One-Time Sales; (2) Account Forecasting vs Opportunity Forecasting — Two Different Forecast Models; (3) Run Rate vs Planned Volume — Baseline vs Committed. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Manufacturing Cloud exam are: (1) Sales Agreements vs Opportunities: Recurring Revenue vs One-Time Sales; (2) Account Forecasting vs Opportunity Forecasting: Two Different Forecast Models; (3) Run Rate vs Planned Volume: Baseline vs Committed. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('manufacturing-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function ManufacturingCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Manufacturing Cloud AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sales agreements</strong> — Manufacturing Cloud’s Sales Agreement object for managing long-term customer contracts: planned quantities and revenue by period, actual vs. planned variance tracking, agreement actuals sync from orders or invoices, and how sales agreements replace opportunities for contract-based revenue management.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Account-based forecasting</strong> — Bottom-up demand forecasting using account-level data: configuring forecast periods, forecast metrics (quantity, revenue), rolling up forecasts from agreements and opportunities, and how account managers use ABF to review and adjust their account-level demand predictions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Rebate management and partner network</strong> — Configuring rebate programmes (volume-based, revenue-based rebate thresholds), tracking customer eligibility and accruals, managing the partner ecosystem through Experience Cloud, and Partner Visit Management for field sales rep activities at customer sites.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sales agreements</strong>: Manufacturing Cloud’s Sales Agreement object for managing long-term customer contracts: planned quantities and revenue by period, actual vs. planned variance tracking, agreement actuals sync from orders or invoices, and how sales agreements replace opportunities for contract-based revenue management.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Account-based forecasting</strong>: Bottom-up demand forecasting using account-level data: configuring forecast periods, forecast metrics (quantity, revenue), rolling up forecasts from agreements and opportunities, and how account managers use ABF to review and adjust their account-level demand predictions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Rebate management and partner network</strong>: Configuring rebate programmes (volume-based, revenue-based rebate thresholds), tracking customer eligibility and accruals, managing the partner ecosystem through Experience Cloud, and Partner Visit Management for field sales rep activities at customer sites.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function ManufacturingCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Partner Network Management</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Sales Agreements + ABF = 55% — these two topics are the core of Manufacturing Cloud.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Sales Agreements + ABF = 55%, these two topics are the core of Manufacturing Cloud.</p>
         </div>
       </section>
 
@@ -138,9 +138,9 @@ export default function ManufacturingCloudApExamTipsPage() {
           volumes) vs. Opportunities (new deals) vs. Account-Based Forecasting (demand planning).
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Sales Agreement questions: use Sales Agreements for existing customers with annual purchase commitments — not for new business opportunities. A Sales Agreement has planned periods (monthly/quarterly buckets) with planned revenue and quantity. Actuals sync from completed orders. When a scenario says ’track whether a key customer is buying their contracted volume’, the answer is Sales Agreements with actuals.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Sales Agreement questions: use Sales Agreements for existing customers with annual purchase commitments, not for new business opportunities. A Sales Agreement has planned periods (monthly/quarterly buckets) with planned revenue and quantity. Actuals sync from completed orders. When a scenario says ’track whether a key customer is buying their contracted volume’, the answer is Sales Agreements with actuals.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ABF questions: Account-Based Forecasting rolls up data from Sales Agreements (contracted revenue) and Opportunities (new pipeline) to give a complete account-level demand picture. Account managers can adjust forecasts based on their account knowledge. When a question says ’give the account manager a single view of total expected revenue from this account’, the answer is Account-Based Forecasting.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For rebate questions: rebate programmes have eligibility criteria (customer must be in a specific tier or region), accrual rules (earn X% rebate for every $1,000 in purchases), and payout schedules (paid quarterly or annually). When a question describes ’automatically calculate how much rebate each customer has earned’, Rebate Management is the answer — not a custom Flow or Apex.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For rebate questions: rebate programmes have eligibility criteria (customer must be in a specific tier or region), accrual rules (earn X% rebate for every $1,000 in purchases), and payout schedules (paid quarterly or annually). When a question describes ’automatically calculate how much rebate each customer has earned’, Rebate Management is the answer, not a custom Flow or Apex.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function ManufacturingCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Manufacturing Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Sales Agreements vs Opportunities — Recurring Revenue vs One-Time Sales</p>
-            <p className="text-sm text-gray-700">Sales Agreements are long-term contracts between manufacturers and distributors/dealers with committed volumes and pricing over a period. Opportunities are one-time sales pipeline records. Candidates use Opportunities for tracking annual volume commitments — the exam expects Sales Agreements for recurring contract-based revenue with planned vs actual volume tracking.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Sales Agreements vs Opportunities: Recurring Revenue vs One-Time Sales</p>
+            <p className="text-sm text-gray-700">Sales Agreements are long-term contracts between manufacturers and distributors/dealers with committed volumes and pricing over a period. Opportunities are one-time sales pipeline records. Candidates use Opportunities for tracking annual volume commitments, the exam expects Sales Agreements for recurring contract-based revenue with planned vs actual volume tracking.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Account Forecasting vs Opportunity Forecasting — Two Different Forecast Models</p>
-            <p className="text-sm text-gray-700">Account Forecasting in Manufacturing Cloud generates period-based forecasts for accounts based on historical actuals and planned volumes from Sales Agreements. Standard Opportunity Forecasting rolls up pipeline-stage-weighted opportunities. These are separate systems. Candidates combine them — the exam expects Account Forecasting for manufacturing account-level volume predictions.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Account Forecasting vs Opportunity Forecasting: Two Different Forecast Models</p>
+            <p className="text-sm text-gray-700">Account Forecasting in Manufacturing Cloud generates period-based forecasts for accounts based on historical actuals and planned volumes from Sales Agreements. Standard Opportunity Forecasting rolls up pipeline-stage-weighted opportunities. These are separate systems. Candidates combine them, the exam expects Account Forecasting for manufacturing account-level volume predictions.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Run Rate vs Planned Volume — Baseline vs Committed</p>
-            <p className="text-sm text-gray-700">Run Rate is the annualised volume based on recent actual sales (baseline projection). Planned Volume is the committed amount in a Sales Agreement. Candidates use Run Rate as the authoritative forecast — the exam expects Planned Volume from Sales Agreements as the primary committed forecast, with Run Rate as a comparison/validation signal.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Run Rate vs Planned Volume: Baseline vs Committed</p>
+            <p className="text-sm text-gray-700">Run Rate is the annualised volume based on recent actual sales (baseline projection). Planned Volume is the committed amount in a Sales Agreement. Candidates use Run Rate as the authoritative forecast, the exam expects Planned Volume from Sales Agreements as the primary committed forecast, with Run Rate as a comparison/validation signal.</p>
           </div>
         </div>
       </section>

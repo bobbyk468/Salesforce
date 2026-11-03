@@ -22,11 +22,11 @@
     "summary": "This practice-test page supports ADM-201 readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>68% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Configuration & Setup, Object Manager & Fields, or Reports & Dashboards.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Administrator in a real org are better prepared than candidates who only memorize notes."
+      "<strong>68% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong>: expect questions that test when to use Configuration & Setup, Object Manager & Fields, or Reports & Dashboards.",
+      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Administrator in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
   },
   "examFormat": {
     "heading": "Administrator Exam Format Explained",
@@ -66,15 +66,15 @@
       },
       {
         "heading": "Security & Access Control",
-        "body": "**Object-level security**: set via Profiles and **Permission Sets** (CRUD). **Field-level security**: set via Profiles and Permission Sets per field. **Record-level security**: OWDs, **Role Hierarchy**, **Sharing Rules**, **Manual Sharing**, Teams. The principle of least privilege applies — start restrictive, open up selectively. Login Hours and Login IP Ranges restrict when and where users can log in. **Connected Apps** and **OAuth** govern API access. Delegated Administration lets non-sysadmin users manage specific user groups. Practice questions often present a user who can/cannot see something and ask what setting to change."
+        "body": "**Object-level security**: set via Profiles and **Permission Sets** (CRUD). **Field-level security**: set via Profiles and Permission Sets per field. **Record-level security**: OWDs, **Role Hierarchy**, **Sharing Rules**, **Manual Sharing**, Teams. The principle of least privilege applies, start restrictive, open up selectively. Login Hours and Login IP Ranges restrict when and where users can log in. **Connected Apps** and **OAuth** govern API access. Delegated Administration lets non-sysadmin users manage specific user groups. Practice questions often present a user who can/cannot see something and ask what setting to change."
       },
       {
         "heading": "Automation & Process Logic",
-        "body": "Flows are the primary answer for most automation questions in ADM-201. Record-Triggered (before/after save), Screen Flows (guided UI), Scheduled Flows (time-based), and Autolaunched Flows (called from other automation). **Validation Rules** fire before the record saves — use them to enforce data quality. Formula fields are read-only calculated fields that update automatically. **Roll-Up Summary** fields aggregate child data on the parent. Default field values pre-fill fields on new records. Cross-Object Formulas reference parent object fields (up to 5 levels for Lookup, 1 level for **Master-Detail** from child to parent in roll-up direction)."
+        "body": "Flows are the primary answer for most automation questions in ADM-201. Record-Triggered (before/after save), Screen Flows (guided UI), Scheduled Flows (time-based), and Autolaunched Flows (called from other automation). **Validation Rules** fire before the record saves. Use them to enforce data quality. Formula fields are read-only calculated fields that update automatically. **Roll-Up Summary** fields aggregate child data on the parent. Default field values pre-fill fields on new records. Cross-Object Formulas reference parent object fields (up to 5 levels for Lookup, 1 level for **Master-Detail** from child to parent in roll-up direction)."
       },
       {
         "heading": "Reports & Dashboards for Practice Questions",
-        "body": "Exam practice questions frequently test who can see what on a dashboard. The Running User setting on a standard dashboard means everyone sees data as that user. Dynamic Dashboards (up to 5) let viewers see their own data — requires \"Run Reports\" permission. Dashboard components (charts, gauges, tables, metrics, Visualforce) each point to a source report. Report Schedules can be set to run reports and email results on a schedule. Custom Report Types define the objects and join conditions available to report builders. Bucket fields in reports let you group values without a formula field."
+        "body": "Exam practice questions frequently test who can see what on a dashboard. The Running User setting on a standard dashboard means everyone sees data as that user. Dynamic Dashboards (up to 5) let viewers see their own data, requires \"Run Reports\" permission. Dashboard components (charts, gauges, tables, metrics, Visualforce) each point to a source report. Report Schedules can be set to run reports and email results on a schedule. Custom Report Types define the objects and join conditions available to report builders. Bucket fields in reports let you group values without a formula field."
       },
       {
         "heading": "AppExchange & Change Management",
@@ -88,19 +88,19 @@
     "blocks": [
       {
         "heading": "Simulate real exam pacing",
-        "body": "Complete a full block of practice questions in one sitting with no **Trailhead**, notes, or search. The live exam rewards quick pattern recognition on sharing, Flow vs older automation, and report formats — rehearsal without lookups trains that recall."
+        "body": "Complete a full block of practice questions in one sitting with no **Trailhead**, notes, or search. The live exam rewards quick pattern recognition on sharing, Flow vs older automation, and report formats, rehearsal without lookups trains that recall."
       },
       {
         "heading": "Review every explanation",
-        "body": "For every miss, read the explanation and the “why wrong” pattern: ADM-201 often swaps plausible distractors (e.g., Lookup vs **Master-Detail**, profile vs permission set, **OWD** vs sharing rule). Noting why each distractor fails prevents the same trap on a reworded question."
+        "body": "For every miss. Read the explanation and the “why wrong” pattern: ADM-201 often swaps plausible distractors (e.g., Lookup vs **Master-Detail**, profile vs permission set, **OWD** vs sharing rule). Noting why each distractor fails prevents the same trap on a reworded question."
       },
       {
         "heading": "Drill weak sections from the heatmap",
-        "body": "After two or three passes, if Automation or Security dominates your errors, pause new questions and spend a focused session on that topic alone — then return here and confirm the heatmap shifts before moving on."
+        "body": "After two or three passes, if Automation or Security dominates your errors, pause new questions and spend a focused session on that topic alone, then return here and confirm the heatmap shifts before moving on."
       },
       {
         "heading": "Pair with the full administrator guide",
-        "body": "When a topic stays red on the heatmap, use the main Platform Administrator page for study plan context, exam weightage, and FAQs, then come back to this practice test to verify the gap is closed."
+        "body": "When a topic stays red on the heatmap. Use the main Platform Administrator page for study plan context, exam weightage, and FAQs, then come back to this practice test to verify the gap is closed."
       },
       {
         "heading": "Book the real exam when scores stabilize",

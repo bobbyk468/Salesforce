@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'Do I need to know how to code for the UX Designer exam?',
-    answer: 'No — the UX Designer exam does not test coding skills. It tests design thinking, user research methods, wireframing, prototyping, and how to apply the Salesforce Lightning Design System (SLDS). Knowledge of SLDS components and their accessibility requirements is tested at a conceptual level, not a coding level.',
+    answer: 'No, the UX Designer exam does not test coding skills. It tests design thinking, user research methods, wireframing, prototyping, and how to apply the Salesforce Lightning Design System (SLDS). Knowledge of SLDS components and their accessibility requirements is tested at a conceptual level, not a coding level.',
   },
   {
     question: 'What is the best way to prepare for the Salesforce UX Designer exam?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most UX Designer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the UX Designer exam are: (1) User Research vs Usability Testing — Discovery vs Validation; (2) Wireframes vs Prototypes vs Mockups — Fidelity Levels; (3) Accessibility — WCAG AA Is the Standard Minimum. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the UX Designer exam are: (1) User Research vs Usability Testing: Discovery vs Validation; (2) Wireframes vs Prototypes vs Mockups: Fidelity Levels; (3) Accessibility: WCAG AA Is the Standard Minimum. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('ux-designer-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function UxDesignerExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What UX Designer Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Human-centred design</strong> — The double-diamond process (discover, define, develop, deliver), design thinking methodology, and when to use each phase of the design process.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>User research methods</strong> — When to use interviews, surveys, card sorting, contextual inquiry, and usability testing, and how to synthesise findings into actionable insights.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Lightning Design System (SLDS)</strong> — Design tokens, component library usage, accessibility standards (WCAG), and how SLDS applies to Salesforce Experience Cloud and custom Lightning components.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Human-centred design</strong>: The double-diamond process (discover, define, develop, deliver), design thinking methodology, and when to use each phase of the design process.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>User research methods</strong>: When to use interviews, surveys, card sorting, contextual inquiry, and usability testing, and how to synthesise findings into actionable insights.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Lightning Design System (SLDS)</strong>: Design tokens, component library usage, accessibility standards (WCAG), and how SLDS applies to Salesforce Experience Cloud and custom Lightning components.</li>
         </ul>
       </section>
 
@@ -137,12 +137,12 @@ export default function UxDesignerExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach UX Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           UX Designer questions describe a design challenge and ask which method, deliverable, or approach best fits.
-          The correct answer always follows the design thinking process — research before ideation, ideation before testing.
+          The correct answer always follows the design thinking process, research before ideation, ideation before testing.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For research method questions: identify whether the goal is to understand problems (qualitative: interviews, contextual inquiry) or validate solutions (quantitative: surveys, A/B testing, analytics).</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For prototyping questions: low-fidelity prototypes (sketches, wireframes) belong in early ideation; high-fidelity prototypes are for usability testing — know which stage calls for each.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SLDS questions: always choose the standard SLDS component over custom CSS — the exam rewards use of the design system over reinventing existing patterns.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For prototyping questions: low-fidelity prototypes (sketches, wireframes) belong in early ideation; high-fidelity prototypes are for usability testing. Know which stage calls for each.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SLDS questions: always choose the standard SLDS component over custom CSS, the exam rewards use of the design system over reinventing existing patterns.</li>
         </ul>
       </section>
 
@@ -154,26 +154,26 @@ export default function UxDesignerExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The UX Designer exam rewards candidates who can apply design thinking in context, not just recall definitions.
-          Practice scenario questions from Trailhead Focus on Force or similar — memorising the phases alone is not enough.
+          Practice scenario questions from Trailhead Focus on Force or similar, memorising the phases alone is not enough.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most UX Designer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. User Research vs Usability Testing — Discovery vs Validation</p>
-            <p className="text-sm text-gray-700">User Research is done early to understand user needs, mental models, and pain points before designing (interviews, contextual inquiry, surveys). Usability Testing validates a specific design prototype or working product by observing users attempting tasks. Candidates use Usability Testing to discover user needs — the exam expects User Research for discovery and Usability Testing for design validation.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. User Research vs Usability Testing: Discovery vs Validation</p>
+            <p className="text-sm text-gray-700">User Research is done early to understand user needs, mental models, and pain points before designing (interviews, contextual inquiry, surveys). Usability Testing validates a specific design prototype or working product by observing users attempting tasks. Candidates use Usability Testing to discover user needs, the exam expects User Research for discovery and Usability Testing for design validation.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Wireframes vs Prototypes vs Mockups — Fidelity Levels</p>
-            <p className="text-sm text-gray-700">Wireframes are low-fidelity structural layouts (boxes and lines) showing information architecture and layout without visual design. Mockups are high-fidelity static visuals showing exactly what the final product looks like. Prototypes are interactive (low or high fidelity) simulating user interactions. Candidates use "wireframe" and "prototype" interchangeably — the exam distinguishes these by fidelity and interactivity.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Wireframes vs Prototypes vs Mockups: Fidelity Levels</p>
+            <p className="text-sm text-gray-700">Wireframes are low-fidelity structural layouts (boxes and lines) showing information architecture and layout without visual design. Mockups are high-fidelity static visuals showing exactly what the final product looks like. Prototypes are interactive (low or high fidelity) simulating user interactions. Candidates use "wireframe" and "prototype" interchangeably, the exam distinguishes these by fidelity and interactivity.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Accessibility — WCAG AA Is the Standard Minimum</p>
-            <p className="text-sm text-gray-700">WCAG (Web Content Accessibility Guidelines) Level AA is the standard minimum for enterprise web accessibility: 4.5:1 contrast ratio for normal text, keyboard navigability, screen reader support. Level AAA is aspirational but not required. Candidates design for visual aesthetics first and treat accessibility as optional — the exam expects WCAG AA compliance as a baseline design requirement, not a post-development add-on.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Accessibility: WCAG AA Is the Standard Minimum</p>
+            <p className="text-sm text-gray-700">WCAG (Web Content Accessibility Guidelines) Level AA is the standard minimum for enterprise web accessibility: 4.5:1 contrast ratio for normal text, keyboard navigability, screen reader support. Level AAA is aspirational but not required. Candidates design for visual aesthetics first and treat accessibility as optional, the exam expects WCAG AA compliance as a baseline design requirement, not a post-development add-on.</p>
           </div>
         </div>
       </section>

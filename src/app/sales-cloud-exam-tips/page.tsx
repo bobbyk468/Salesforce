@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What is the best way to study for Sales Cloud Consultant?',
-    answer: 'Focus on understanding sales process design, not just feature configuration. Study opportunity stages, forecasting categories, territory management, and CPQ integration at a conceptual level. Practice scenario-based questions — the exam tests what you would recommend in a given business context, not just what a feature does.',
+    answer: 'Focus on understanding sales process design, not just feature configuration. Study opportunity stages, forecasting categories, territory management, and CPQ integration at a conceptual level. Practice scenario-based questions, the exam tests what you would recommend in a given business context, not just what a feature does.',
   },
   {
     question: 'What concepts do most Sales Cloud Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Sales Cloud Consultant exam are: (1) Forecasting Categories — Not the Same as Opportunity Stage; (2) Collaborative Forecasting vs Territory Forecasting — Role Hierarchy vs Territory Model; (3) Lead Conversion Field Mapping — Not All Fields Map Automatically. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Sales Cloud Consultant exam are: (1) Forecasting Categories: Not the Same as Opportunity Stage; (2) Collaborative Forecasting vs Territory Forecasting: Role Hierarchy vs Territory Model; (3) Lead Conversion Field Mapping: Not All Fields Map Automatically. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('sales-cloud-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function SalesCloudExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Sales Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sales process design</strong> — Opportunity stages, forecasting categories, pipeline management, and territory hierarchy design for specific business scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Solution design trade-offs</strong> — When to use standard Salesforce features vs custom development, and how to map business requirements to the right Sales Cloud capabilities.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration and data migration</strong> — Sales data import strategies, duplicate management, and how Sales Cloud integrates with ERP, marketing, and CPQ systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sales process design</strong>: Opportunity stages, forecasting categories, pipeline management, and territory hierarchy design for specific business scenarios.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Solution design trade-offs</strong>: When to use standard Salesforce features vs custom development, and how to map business requirements to the right Sales Cloud capabilities.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration and data migration</strong>: Sales data import strategies, duplicate management, and how Sales Cloud integrates with ERP, marketing, and CPQ systems.</li>
         </ul>
       </section>
 
@@ -145,7 +145,7 @@ export default function SalesCloudExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Identify the primary sales process requirement before evaluating options (forecasting, pipeline visibility, territory coverage, etc.).</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Prefer standard Salesforce features over custom code — the exam rewards declarative solutions.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Prefer standard Salesforce features over custom code, the exam rewards declarative solutions.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For territory management questions: understand Enterprise Territory Management vs classic territories and when each applies.</li>
         </ul>
       </section>
@@ -157,7 +157,7 @@ export default function SalesCloudExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The 65% passing score is lower than it appears — the scenario-based format means one wrong assumption
+          The 65% passing score is lower than it appears, the scenario-based format means one wrong assumption
           can cascade. Aim for 75%+ consistently in practice before booking.
         </p>
       </section>
@@ -165,19 +165,19 @@ export default function SalesCloudExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Sales Cloud Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Forecasting Categories — Not the Same as Opportunity Stage</p>
-            <p className="text-sm text-gray-700">Salesforce Forecast Categories are rollup buckets: Pipeline, Best Case, Commit, Closed Won, Omitted. They map from Opportunity Stage but can be overridden. Candidates answer "what determines the forecast category?" with Stage — but the exam tests the distinction: Stage drives the default category, but sales reps can override the category independently of Stage. Forecast visibility is driven by the Forecast Category, not the Stage directly.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Forecasting Categories: Not the Same as Opportunity Stage</p>
+            <p className="text-sm text-gray-700">Salesforce Forecast Categories are rollup buckets: Pipeline, Best Case, Commit, Closed Won, Omitted. They map from Opportunity Stage but can be overridden. Candidates answer "what determines the forecast category?" with Stage, but the exam tests the distinction: Stage drives the default category, but sales reps can override the category independently of Stage. Forecast visibility is driven by the Forecast Category, not the Stage directly.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Collaborative Forecasting vs Territory Forecasting — Role Hierarchy vs Territory Model</p>
-            <p className="text-sm text-gray-700">Collaborative Forecasting rolls up quota and pipeline through the standard Role Hierarchy. Territory Forecasting rolls up through the Territory Model (which may differ from the role structure). They are separate systems — enabling one does not enable the other. Candidates assume one forecast setup covers both — the exam expects explicit configuration of each independently.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Collaborative Forecasting vs Territory Forecasting: Role Hierarchy vs Territory Model</p>
+            <p className="text-sm text-gray-700">Collaborative Forecasting rolls up quota and pipeline through the standard Role Hierarchy. Territory Forecasting rolls up through the Territory Model (which may differ from the role structure). They are separate systems, enabling one does not enable the other. Candidates assume one forecast setup covers both, the exam expects explicit configuration of each independently.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Lead Conversion Field Mapping — Not All Fields Map Automatically</p>
-            <p className="text-sm text-gray-700">When converting a Lead, Salesforce maps standard Lead fields to standard Account, Contact, and Opportunity fields automatically. Custom Lead fields do NOT map to converted object fields unless explicitly configured in Lead Field Mapping. Candidates expect all custom Lead data to appear on the converted Contact — the exam expects Lead Field Mapping configuration for every custom field that should survive conversion.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Lead Conversion Field Mapping: Not All Fields Map Automatically</p>
+            <p className="text-sm text-gray-700">When converting a Lead, Salesforce maps standard Lead fields to standard Account, Contact, and Opportunity fields automatically. Custom Lead fields do NOT map to converted object fields unless explicitly configured in Lead Field Mapping. Candidates expect all custom Lead data to appear on the converted Contact, the exam expects Lead Field Mapping configuration for every custom field that should survive conversion.</p>
           </div>
         </div>
       </section>

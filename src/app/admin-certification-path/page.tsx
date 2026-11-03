@@ -70,7 +70,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'None',
     timeEstimate: '6–8 weeks',
-    why: 'ADM-201 is the foundation of the admin track and the most widely held Salesforce credential. It tests every core admin function: security model, automation (Flow Builder), data management, reports and dashboards, and the sales/service application setup. Almost every Salesforce admin role lists this as a requirement — it is the starting point for any admin career path.',
+    why: 'ADM-201 is the foundation of the admin track and the most widely held Salesforce credential. It tests every core admin function: security model, automation (Flow Builder), data management, reports and dashboards, and the sales/service application setup. Almost every Salesforce admin role lists this as a requirement; it is the starting point for any admin career path.',
     topics: ['Security model (OWD, roles, profiles, permission sets)', 'Flow Builder and approval processes', 'Reports and dashboards', 'Data import and management', 'Cases and Knowledge basics'],
   },
   {
@@ -83,7 +83,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'None (ADM-201 strongly recommended)',
     timeEstimate: '4–6 weeks',
-    why: 'App Builder validates your ability to design and build custom Salesforce applications using declarative tools. It builds directly on ADM-201 fundamentals and adds data modelling depth, complex app design patterns, and Lightning app configuration. Many admin roles expect both ADM-201 and App Builder — together they show full declarative build capability.',
+    why: 'App Builder validates your ability to design and build custom Salesforce applications using declarative tools. It builds directly on ADM-201 fundamentals and adds data modelling depth, complex app design patterns, and Lightning app configuration. Many admin roles expect both ADM-201 and App Builder, together they show full declarative build capability.',
     topics: ['Custom object modelling', 'Complex field types (formula, roll-up)', 'Lightning app design', 'Page layout and record type strategy', 'Automation design patterns'],
   },
   {
@@ -109,7 +109,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'ADM-201 required',
     timeEstimate: '6–8 weeks',
-    why: 'Once you have ADM-201 and App Builder, Consultant certifications let you specialise by business domain. Sales Cloud Consultant focuses on CRM implementation — lead-to-opportunity-to-close process, forecasting, and territory management. Service Cloud Consultant focuses on case management, Omni-Channel, entitlements, and Knowledge. Choose the one that matches your current client work or job market target.',
+    why: 'Once you have ADM-201 and App Builder, Consultant certifications let you specialise by business domain. Sales Cloud Consultant focuses on CRM implementation, lead-to-opportunity-to-close process, forecasting, and territory management. Service Cloud Consultant focuses on case management, Omni-Channel, entitlements, and Knowledge. Choose the one that matches your current client work or job market target.',
     topics: ['Sales: lead conversion, products/price books, forecasting', 'Service: case management, Omni-Channel routing, entitlements', 'Solution design scenarios', 'Business requirement analysis', 'Deployment and adoption strategy'],
   },
 ]

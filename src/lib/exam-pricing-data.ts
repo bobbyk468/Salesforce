@@ -1,4 +1,4 @@
-// Centralised Salesforce exam pricing tiers — single source of truth.
+// Centralised Salesforce exam pricing tiers, single source of truth.
 // Used by ExamLogisticsSection (cert pages) and ExamPricingCard (study guides / exam tips).
 
 export type PricingTier = 'associate' | 'standard' | 'ap' | 'architect' | 'cta-panel' | 'cta-board'
@@ -10,7 +10,7 @@ export interface TierPricing {
   retake: number       // 0 = free
   feeDisplay: string
   retakeDisplay: string
-  note?: string        // e.g. "No retake discount — same fee applies"
+  note?: string        // e.g. "No retake discount, same fee applies"
 }
 
 export const PRICING_TIERS: Record<PricingTier, TierPricing> = {
@@ -37,7 +37,7 @@ export const PRICING_TIERS: Record<PricingTier, TierPricing> = {
     retake: 150,
     feeDisplay: '$150',
     retakeDisplay: '$150',
-    note: 'No retake discount — same fee applies for every attempt.',
+    note: 'No retake discount, same fee applies for every attempt.',
   },
   architect: {
     tier: 'architect',
@@ -49,7 +49,7 @@ export const PRICING_TIERS: Record<PricingTier, TierPricing> = {
   },
   'cta-panel': {
     tier: 'cta-panel',
-    label: 'CTA — Panel Review',
+    label: 'CTA: Panel Review',
     fee: 1500,
     retake: 750,
     feeDisplay: '$1,500',
@@ -57,7 +57,7 @@ export const PRICING_TIERS: Record<PricingTier, TierPricing> = {
   },
   'cta-board': {
     tier: 'cta-board',
-    label: 'CTA — Board Review',
+    label: 'CTA: Board Review',
     fee: 4500,
     retake: 2250,
     feeDisplay: '$4,500',
@@ -78,7 +78,7 @@ export function tierFromFeeString(feeStr: string): TierPricing {
 }
 
 // ---------------------------------------------------------------------------
-// India GST (18 %) — informational note shown on all pricing displays.
+// India GST (18 %), informational note shown on all pricing displays.
 // Salesforce adds GST on top of the USD fee for registrations in India.
 // The INR approximation uses a fixed rate; actual rate at checkout may vary.
 // ---------------------------------------------------------------------------
@@ -89,5 +89,5 @@ export function getIndiaGstNote(feeUsd: number): string {
   if (feeUsd === 0) return ''
   const withGst = Math.round(feeUsd * (1 + GST_RATE))
   const inr = Math.round(feeUsd * USD_INR_APPROX * (1 + GST_RATE) / 100) * 100
-  return `India: +18% GST applies — approx. $${withGst} USD (~₹${inr.toLocaleString('en-IN')}) per attempt`
+  return `India: +18% GST applies, approx. $${withGst} USD (~₹${inr.toLocaleString('en-IN')}) per attempt`
 }

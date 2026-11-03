@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Consumer Goods Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Consumer Goods Cloud exam are: (1) Retail Execution Visits vs Service Appointments — Different Objects in CGC; (2) Assessments vs Surveys — Purpose-Built Retail Audit Tool; (3) My Route Planning — Optimisation Is Not Automatic. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Consumer Goods Cloud exam are: (1) Retail Execution Visits vs Service Appointments: Different Objects in CGC; (2) Assessments vs Surveys: Purpose-Built Retail Audit Tool; (3) My Route Planning: Optimisation Is Not Automatic. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('consumer-goods-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What Consumer Goods Cloud AP Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Retail execution and visit management</strong> — Configuring visit plans and recurring visit schedules for field reps, setting up activity types (shelf audit, planogram check, order capture, competitive pricing survey), territory management for field rep coverage, and the visit execution workflow in the CGC mobile app.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>KPI and assessment management</strong> — Configuring KPIs for measuring retail execution quality (share of shelf, out-of-stock percentage, promotion display compliance, facings count), Assessment Tasks with pass/fail or numeric scoring, photo capture tasks for visual evidence, and how KPI results roll up for manager visibility and trend analysis.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Account and order management</strong> — Account hierarchies (national account → regional → store level), trade promotion planning and execution tracking, order capture in the mobile app, and integrating CGC with backend ERP systems for order fulfilment and inventory data.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Retail execution and visit management</strong>: Configuring visit plans and recurring visit schedules for field reps, setting up activity types (shelf audit, planogram check, order capture, competitive pricing survey), territory management for field rep coverage, and the visit execution workflow in the CGC mobile app.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>KPI and assessment management</strong>: Configuring KPIs for measuring retail execution quality (share of shelf, out-of-stock percentage, promotion display compliance, facings count), Assessment Tasks with pass/fail or numeric scoring, photo capture tasks for visual evidence, and how KPI results roll up for manager visibility and trend analysis.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Account and order management</strong>: Account hierarchies (national account → regional → store level), trade promotion planning and execution tracking, order capture in the mobile app, and integrating CGC with backend ERP systems for order fulfilment and inventory data.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Mobile and Platform Configuration</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Retail Execution + KPI = 60% — understanding the field rep’s in-store workflow is essential.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Retail Execution + KPI = 60%, understanding the field rep’s in-store workflow is essential.</p>
         </div>
       </section>
 
@@ -134,13 +134,13 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach CGC AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a CPG field sales scenario and ask which Consumer Goods Cloud feature
-          or configuration achieves it. Think from the field rep and sales manager perspective —
+          or configuration achieves it. Think from the field rep and sales manager perspective,
           what do they need to see and do during a store visit?
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For visit planning questions: visit plans define which stores a rep visits and how frequently. Activity types define what the rep does during each visit (shelf check, order capture, competitor pricing). When a scenario says ’the rep must photograph the shelf and count the number of facings for each SKU’, configure a Photo Capture activity type and a Numeric KPI assessment task — not a custom note or attachment field.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For visit planning questions: visit plans define which stores a rep visits and how frequently. Activity types define what the rep does during each visit (shelf check, order capture, competitor pricing). When a scenario says ’the rep must photograph the shelf and count the number of facings for each SKU’, configure a Photo Capture activity type and a Numeric KPI assessment task, not a custom note or attachment field.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI questions: KPIs are measured outcomes from visit assessments. An out-of-stock KPI measures whether a product is available on the shelf (Pass/Fail). A share of shelf KPI measures the percentage of shelf space (numeric). When a manager asks ’which of my reps’ stores have the most out-of-stocks’, the answer is a KPI dashboard summarising the out-of-stock assessment results across all visits.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For account hierarchy questions: national accounts (Walmart HQ) have regional offices and individual stores below them. Trade promotions are managed at the national account level but measured at the store level. When a scenario says ’apply a promotional price to all 500 Walmart stores nationwide’, configure the promotion at the national account level — not store by store.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For account hierarchy questions: national accounts (Walmart HQ) have regional offices and individual stores below them. Trade promotions are managed at the national account level but measured at the store level. When a scenario says ’apply a promotional price to all 500 Walmart stores nationwide’, configure the promotion at the national account level, not store by store.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Consumer Goods Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Retail Execution Visits vs Service Appointments — Different Objects in CGC</p>
-            <p className="text-sm text-gray-700">Consumer Goods Cloud uses the Visit object (not Service Appointments) for retail execution. Visits are linked to Accounts (retail stores), have planned and actual dates, and are assigned to field representatives. Service Appointments are a Field Service Lightning concept. Candidates conflate these because both involve scheduling field staff — the exam expects Visit-based logic for retail execution scenarios.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Retail Execution Visits vs Service Appointments: Different Objects in CGC</p>
+            <p className="text-sm text-gray-700">Consumer Goods Cloud uses the Visit object (not Service Appointments) for retail execution. Visits are linked to Accounts (retail stores), have planned and actual dates, and are assigned to field representatives. Service Appointments are a Field Service Lightning concept. Candidates conflate these because both involve scheduling field staff, the exam expects Visit-based logic for retail execution scenarios.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Assessments vs Surveys — Purpose-Built Retail Audit Tool</p>
-            <p className="text-sm text-gray-700">Consumer Goods Cloud includes purpose-built Assessment Tasks for retail audits (shelf compliance, planogram adherence, product availability). These are not the same as Salesforce Surveys (customer feedback tool). Exam scenarios about store audits and compliance checks expect Assessment Task configuration — not Surveys or custom LWC components.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Assessments vs Surveys: Purpose-Built Retail Audit Tool</p>
+            <p className="text-sm text-gray-700">Consumer Goods Cloud includes purpose-built Assessment Tasks for retail audits (shelf compliance, planogram adherence, product availability). These are not the same as Salesforce Surveys (customer feedback tool). Exam scenarios about store audits and compliance checks expect Assessment Task configuration, not Surveys or custom LWC components.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. My Route Planning — Optimisation Is Not Automatic</p>
-            <p className="text-sm text-gray-700">My Route feature in Consumer Goods Cloud helps field reps plan their store visits for the day. Route optimisation (shortest path, priority-based sequencing) requires configuration of visit priority rules and territory setup. Candidates assume optimisation is on by default — the exam tests configuration of the underlying Visit Plan and Priority Score fields that drive the route.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. My Route Planning: Optimisation Is Not Automatic</p>
+            <p className="text-sm text-gray-700">My Route feature in Consumer Goods Cloud helps field reps plan their store visits for the day. Route optimisation (shortest path, priority-based sequencing) requires configuration of visit priority rules and territory setup. Candidates assume optimisation is on by default, the exam tests configuration of the underlying Visit Plan and Priority Score fields that drive the route.</p>
           </div>
         </div>
       </section>

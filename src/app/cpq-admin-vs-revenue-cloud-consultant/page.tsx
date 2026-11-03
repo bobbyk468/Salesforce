@@ -41,8 +41,8 @@ const faqItems = [
     answer: 'CPQ Administrator focuses on the quoting and product configuration layer: product bundles, pricing rules, discount schedules, quote templates, and contract generation within Salesforce CPQ. Revenue Cloud Consultant covers the full quote-to-cash lifecycle: CPQ fundamentals plus billing (invoicing, payment terms), revenue recognition (ASC 606), subscription management, and the integration between CPQ and Salesforce Billing. Revenue Cloud is the broader credential covering the downstream monetisation process after a quote is accepted.',
   },
   {
-    question: 'Which certification should I take first — CPQ Admin or Revenue Cloud Consultant?',
-    answer: 'Take CPQ Administrator first. Revenue Cloud Consultant assumes strong CPQ knowledge as a foundation — approximately 30–40% of the Revenue Cloud exam overlaps with CPQ product and pricing concepts. Most candidates for Revenue Cloud Consultant already hold CPQ Administrator or have equivalent project experience. If your role involves only CPQ (quoting, pricing, contracts) without billing, CPQ Admin is sufficient. If your role includes billing and revenue recognition, pursue Revenue Cloud Consultant after CPQ Admin.',
+    question: 'Which certification should I take first: CPQ Admin or Revenue Cloud Consultant?',
+    answer: 'Take CPQ Administrator first. Revenue Cloud Consultant assumes strong CPQ knowledge as a foundation, approximately 30–40% of the Revenue Cloud exam overlaps with CPQ product and pricing concepts. Most candidates for Revenue Cloud Consultant already hold CPQ Administrator or have equivalent project experience. If your role involves only CPQ (quoting, pricing, contracts) without billing, CPQ Admin is sufficient. If your role includes billing and revenue recognition, pursue Revenue Cloud Consultant after CPQ Admin.',
   },
   {
     question: 'What does Salesforce Billing add to CPQ?',
@@ -50,11 +50,11 @@ const faqItems = [
   },
   {
     question: 'How much overlap is there between CPQ Admin and Revenue Cloud Consultant exams?',
-    answer: 'Approximately 30–40% overlap. Both exams test CPQ product configuration, pricing cascade, bundles, quote templates, and contract generation. Revenue Cloud Consultant adds billing schedules, invoice management, payment processing, revenue recognition, amendment and renewal flows in the context of billing, and the Salesforce Billing data model. The overlap means CPQ Admin knowledge transfers directly — it is not wasted study time.',
+    answer: 'Approximately 30–40% overlap. Both exams test CPQ product configuration, pricing cascade, bundles, quote templates, and contract generation. Revenue Cloud Consultant adds billing schedules, invoice management, payment processing, revenue recognition, amendment and renewal flows in the context of billing, and the Salesforce Billing data model. The overlap means CPQ Admin knowledge transfers directly; it is not wasted study time.',
   },
   {
     question: 'What experience is recommended for Revenue Cloud Consultant?',
-    answer: 'Salesforce recommends 2+ years of CPQ implementation experience and exposure to Salesforce Billing projects before attempting Revenue Cloud Consultant. Candidates should understand the full quote-to-cash process end-to-end and have configured at least one CPQ implementation. Revenue Cloud Consultant is more scenario-based and harder than CPQ Admin — the exam tests consulting judgment on complex billing and revenue recognition scenarios.',
+    answer: 'Salesforce recommends 2+ years of CPQ implementation experience and exposure to Salesforce Billing projects before attempting Revenue Cloud Consultant. Candidates should understand the full quote-to-cash process end-to-end and have configured at least one CPQ implementation. Revenue Cloud Consultant is more scenario-based and harder than CPQ Admin, the exam tests consulting judgment on complex billing and revenue recognition scenarios.',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
           CPQ Administrator vs Revenue Cloud Consultant ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Both certifications cover the quote-to-cash process — but at different stages. CPQ owns the quoting layer; Revenue Cloud extends it through billing and revenue recognition.
+          Both certifications cover the quote-to-cash process, but at different stages. CPQ owns the quoting layer; Revenue Cloud extends it through billing and revenue recognition.
         </p>
       </div>
 
@@ -170,8 +170,8 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
             <tbody className="divide-y divide-gray-50">
               {[
                 { aspect: 'Process coverage', a: 'Opportunity → Contract', b: 'Opportunity → Revenue Recognition' },
-                { aspect: 'Billing tested?', a: 'No', b: 'Yes — core topic' },
-                { aspect: 'Revenue recognition?', a: 'No', b: 'Yes — ASC 606' },
+                { aspect: 'Billing tested?', a: 'No', b: 'Yes, core topic' },
+                { aspect: 'Revenue recognition?', a: 'No', b: 'Yes: ASC 606' },
                 { aspect: 'Difficulty', a: 'Challenging', b: 'Very Hard' },
                 { aspect: 'Recommended prior cert', a: 'ADM-201 helpful', b: 'CPQ Admin required' },
                 { aspect: 'Time limit', a: '105 minutes', b: '105 minutes' },
@@ -212,10 +212,10 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr><td className="py-2.5 pr-4">Configuring CPQ product rules, price books, and quote templates</td><td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin</td></tr>
               <tr><td className="py-2.5 pr-4">Implementing subscription billing, contracts, and renewals end-to-end</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">New to CPQ — want the narrower, more achievable entry credential</td><td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin — start here</td></tr>
+              <tr><td className="py-2.5 pr-4">New to CPQ, want the narrower, more achievable entry credential</td><td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin, start here</td></tr>
               <tr><td className="py-2.5 pr-4">Working with Salesforce Billing (invoices, payments, revenue recognition)</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">Consulting on full quote-to-cash transformation projects</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant — broader scope</td></tr>
-              <tr><td className="py-2.5 pr-4">Want both — what order?</td><td className="py-2.5 font-semibold text-gray-700">CPQ Admin first, then Revenue Cloud Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Consulting on full quote-to-cash transformation projects</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant, broader scope</td></tr>
+              <tr><td className="py-2.5 pr-4">Want both, what order?</td><td className="py-2.5 font-semibold text-gray-700">CPQ Admin first, then Revenue Cloud Consultant</td></tr>
             </tbody>
           </table>
         </div>

@@ -4,9 +4,9 @@ export default function RPAvsComposerDiagram() {
     <figure id="rpa-composer-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">RPA vs. API-based automation decision logic (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Use <strong>RPA</strong> when a system has no usable API — it automates the UI directly, clicking and typing
+        Use <strong>RPA</strong> when a system has no usable API, it automates the UI directly, clicking and typing
         like a human. Use <strong>API-led automation</strong> (Composer, MuleSoft flows) whenever a stable API
-        exists — it's faster, more reliable, and easier to maintain than UI automation.
+        exists, it's faster, more reliable, and easier to maintain than UI automation.
       </p>
       <svg role="img" aria-labelledby="rpa-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
         <title id="rpa-title">Decision: does the target system have a usable API? If yes, use API-led automation; if no, use RPA to automate the UI directly</title>
@@ -20,12 +20,12 @@ export default function RPAvsComposerDiagram() {
         <text x="410" y="82" fill="#059669" fontWeight="600">Yes</text>
         <rect x="30" y="104" width="260" height="88" rx="8" fill="#fee2e2" stroke="#dc2626" strokeWidth="2" />
         <text x="160" y="128" textAnchor="middle" fill="#0f172a" fontWeight="700">RPA (Robotic Process Automation)</text>
-        <text x="160" y="148" textAnchor="middle" fill="#334155">Automates the UI directly —</text>
+        <text x="160" y="148" textAnchor="middle" fill="#334155">Automates the UI directly</text>
         <text x="160" y="164" textAnchor="middle" fill="#334155">clicks, types, reads screens</text>
         <text x="160" y="180" textAnchor="middle" fill="#334155">Fragile if the UI changes</text>
         <rect x="310" y="104" width="260" height="88" rx="8" fill="#ecfdf5" stroke="#059669" strokeWidth="2" />
         <text x="440" y="128" textAnchor="middle" fill="#0f172a" fontWeight="700">API-led (Composer/MuleSoft)</text>
-        <text x="440" y="148" textAnchor="middle" fill="#334155">Calls the API contract directly —</text>
+        <text x="440" y="148" textAnchor="middle" fill="#334155">Calls the API contract directly</text>
         <text x="440" y="164" textAnchor="middle" fill="#334155">faster, more reliable</text>
         <text x="440" y="180" textAnchor="middle" fill="#334155">Preferred whenever available</text>
       </svg>

@@ -55,11 +55,11 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Service Cloud Consultant exam sections?',
-    answer: 'Service Cloud Solution Design (22%) is the largest section — it tests your ability to design service architectures for complex requirements. Case Management (15%) and Knowledge Management (18%) are the next two highest. Together the top three sections account for 55% of the exam.',
+    answer: 'Service Cloud Solution Design (22%) is the largest section, it tests your ability to design service architectures for complex requirements. Case Management (15%) and Knowledge Management (18%) are the next two highest. Together the top three sections account for 55% of the exam.',
   },
   {
     question: 'What is Omni-Channel in Service Cloud and why is it tested heavily?',
-    answer: 'Omni-Channel is Salesforce’s unified routing engine that distributes work (cases, chats, leads, custom objects) to agents based on their availability, capacity, and skills. The exam tests: routing models (queue-based routing — first-in-first-out to a queue; skills-based routing — match work to agents with the right skill set; external routing — route through third-party CTI), agent capacity (size-based vs tab-based), and presence statuses. Omni-Channel is one of the most commonly failed topics because it has many configuration nuances.',
+    answer: 'Omni-Channel is Salesforce’s unified routing engine that distributes work (cases, chats, leads, custom objects) to agents based on their availability, capacity, and skills. The exam tests: routing models (queue-based routing, first-in-first-out to a queue; skills-based routing, match work to agents with the right skill set; external routing, route through third-party CTI), agent capacity (size-based vs tab-based), and presence statuses. Omni-Channel is one of the most commonly failed topics because it has many configuration nuances.',
   },
   {
     question: 'How does entitlement management work in Service Cloud?',
@@ -97,7 +97,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
         </h1>
         <p className="text-lg text-gray-600">
           The Service Cloud Consultant certification validates your ability to design and implement
-          Salesforce-based contact centre and customer service solutions — from Omni-Channel routing
+          Salesforce-based contact centre and customer service solutions, from Omni-Channel routing
           and entitlement management to Knowledge bases and CTI integration. This guide covers every
           exam section at the depth needed to pass.
         </p>
@@ -168,28 +168,28 @@ export default function ServiceCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Knowledge Management (18%)
             </p>
-            <p>Salesforce Knowledge is the built-in knowledge base for agent and customer self-service. Key topics: <strong>Lightning Knowledge</strong> (the current standard — single Knowledge object, custom fields per record type; replaces Classic Knowledge’s article types). <strong>Data Categories</strong> — hierarchical categories that control article visibility (which customer communities see which articles, which agents see which internal articles). <strong>Article lifecycle:</strong> draft → In Review → Published → Archived. <strong>Knowledge search:</strong> how articles surface in the Service Console search, in Experience Cloud portals, and in Einstein Search. Know the difference between Lightning Knowledge (record types replace article types) and Classic Knowledge (deprecated but still tested for migrations).</p>
+            <p>Salesforce Knowledge is the built-in knowledge base for agent and customer self-service. Key topics: <strong>Lightning Knowledge</strong> (the current standard, single Knowledge object, custom fields per record type; replaces Classic Knowledge’s article types). <strong>Data Categories</strong>: hierarchical categories that control article visibility (which customer communities see which articles, which agents see which internal articles). <strong>Article lifecycle:</strong> draft → In Review → Published → Archived. <strong>Knowledge search:</strong> how articles surface in the Service Console search, in Experience Cloud portals, and in Einstein Search. Know the difference between Lightning Knowledge (record types replace article types) and Classic Knowledge (deprecated but still tested for migrations).</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Omni-Channel (15%)
             </p>
-            <p>Omni-Channel routes work items to agents. Know the three routing models: <strong>Queue-based routing</strong> — work items go into a queue, agents pull from the queue or work is pushed based on capacity; <strong>Skills-based routing</strong> — work is matched to agents who have the required skill (routing configurations specify which skill is needed); <strong>External routing</strong> — integration with third-party routing systems (e.g., telephony ACD). <strong>Agent capacity:</strong> Size-based (each work item has a weight; agent receives work until capacity is full) vs Tab-based (each open work item tab counts as 1, regardless of type). <strong>Presence statuses:</strong> define what types of work an agent can receive while in each status — know that agents can decline work if it is not the right type for their current status.</p>
+            <p>Omni-Channel routes work items to agents. Know the three routing models: <strong>Queue-based routing</strong>: work items go into a queue, agents pull from the queue or work is pushed based on capacity; <strong>Skills-based routing</strong>: work is matched to agents who have the required skill (routing configurations specify which skill is needed); <strong>External routing</strong>: integration with third-party routing systems (e.g., telephony ACD). <strong>Agent capacity:</strong> Size-based (each work item has a weight; agent receives work until capacity is full) vs Tab-based (each open work item tab counts as 1, regardless of type). <strong>Presence statuses:</strong> define what types of work an agent can receive while in each status. Know that agents can decline work if it is not the right type for their current status.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Case Management (15%)
             </p>
-            <p>Case routing: Assignment Rules evaluate conditions top-down and assign to a user or queue when criteria match — if no rule matches, the case goes to the default case owner. Escalation Rules: trigger time-based escalations (e.g., if a case is open for 4 hours without a response, escalate to manager). Auto-response rules: send automated email replies to contacts when cases are created via web-to-case or email-to-case. <strong>Email-to-Case:</strong> inbound emails create cases — know how threading (Reply-To address format) keeps replies associated to the correct case. <strong>Web-to-Case:</strong> HTML form submissions create cases — know field mapping and spam filtering.</p>
+            <p>Case routing: Assignment Rules evaluate conditions top-down and assign to a user or queue when criteria match, if no rule matches, the case goes to the default case owner. Escalation Rules: trigger time-based escalations (e.g., if a case is open for 4 hours without a response, escalate to manager). Auto-response rules: send automated email replies to contacts when cases are created via web-to-case or email-to-case. <strong>Email-to-Case:</strong> inbound emails create cases. Know how threading (Reply-To address format) keeps replies associated to the correct case. <strong>Web-to-Case:</strong> HTML form submissions create cases, know field mapping and spam filtering.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Entitlement Management (8%)
             </p>
-            <p>Entitlements link to Accounts (or Contacts, Assets) and define the SLA terms. An <strong>Entitlement Process</strong> defines the milestone sequence — each milestone has a time trigger, completion criteria, and optional actions (warning email at 75% elapsed time, escalation email on breach). <strong>Entitlement Templates</strong> auto-apply an entitlement to a case when the contact, account, or asset has an active entitlement. Know that milestones can be paused (e.g., waiting for customer response) using milestone completion criteria on the case.</p>
+            <p>Entitlements link to Accounts (or Contacts, Assets) and define the SLA terms. An <strong>Entitlement Process</strong> defines the milestone sequence, each milestone has a time trigger, completion criteria, and optional actions (warning email at 75% elapsed time, escalation email on breach). <strong>Entitlement Templates</strong> auto-apply an entitlement to a case when the contact, account, or asset has an active entitlement. Know that milestones can be paused (e.g., waiting for customer response) using milestone completion criteria on the case.</p>
           </div>
         </div>
       </section>
@@ -197,12 +197,12 @@ export default function ServiceCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Service Cloud Consultant Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Solution Design (22%):</strong> Study contact centre architecture patterns, channel strategy design, and Salesforce Call Centre + CTI integration concepts. Practice: design a service architecture on paper for a given scenario (e.g., a retail company with email, chat, and phone channels).</p>
-          <p><strong>Week 2 — Knowledge Management (18%):</strong> Enable Lightning Knowledge in a Developer Edition org. Create record types, data categories, and the article lifecycle workflow. Configure Knowledge search in the Service Console. Understand the migration path from Classic to Lightning Knowledge.</p>
-          <p><strong>Week 3 — Omni-Channel (15%):</strong> Configure Omni-Channel in a sandbox: create a service channel, routing configuration, presence statuses, and queue. Enable skills-based routing. Assign an agent and test work routing. Understand the Omni-Channel Supervisor dashboard for real-time monitoring.</p>
-          <p><strong>Week 4 — Case Management (15%):</strong> Configure Email-to-Case (with threading) and Web-to-Case. Build assignment rules, escalation rules, and auto-response rules. Practice: trace a case from web submission through assignment rule routing to escalation.</p>
-          <p><strong>Week 5 — Entitlements, Console &amp; Integration (8% + 10% + 12%):</strong> Build an entitlement process with 2 milestones and breach actions. Configure the Service Console: Highlights Panel, utility bar, macros. Study CTI and third-party integration concepts for contact centres.</p>
-          <p><strong>Week 6:</strong> Full timed mock exams. Score 75%+ before booking. Focus revision on Omni-Channel routing configuration — it is the most consistently failed topic.</p>
+          <p><strong>Week 1: Solution Design (22%):</strong> Study contact centre architecture patterns, channel strategy design, and Salesforce Call Centre + CTI integration concepts. Practice: design a service architecture on paper for a given scenario (e.g., a retail company with email, chat, and phone channels).</p>
+          <p><strong>Week 2: Knowledge Management (18%):</strong> Enable Lightning Knowledge in a Developer Edition org. Create record types, data categories, and the article lifecycle workflow. Configure Knowledge search in the Service Console. Understand the migration path from Classic to Lightning Knowledge.</p>
+          <p><strong>Week 3: Omni-Channel (15%):</strong> Configure Omni-Channel in a sandbox: create a service channel, routing configuration, presence statuses, and queue. Enable skills-based routing. Assign an agent and test work routing. Understand the Omni-Channel Supervisor dashboard for real-time monitoring.</p>
+          <p><strong>Week 4: Case Management (15%):</strong> Configure Email-to-Case (with threading) and Web-to-Case. Build assignment rules, escalation rules, and auto-response rules. Practice: trace a case from web submission through assignment rule routing to escalation.</p>
+          <p><strong>Week 5: Entitlements, Console &amp; Integration (8% + 10% + 12%):</strong> Build an entitlement process with 2 milestones and breach actions. Configure the Service Console: Highlights Panel, utility bar, macros. Study CTI and third-party integration concepts for contact centres.</p>
+          <p><strong>Week 6:</strong> Full timed mock exams. Score 75%+ before booking. Focus revision on Omni-Channel routing configuration; it is the most consistently failed topic.</p>
         </div>
       </section>
 
@@ -211,15 +211,15 @@ export default function ServiceCloudConsultantStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Omni-Channel routing questions:</strong> When a scenario requires work to go to the next available agent in a queue (no skill matching), the answer is queue-based routing. When cases must be matched to agents with specific skills (e.g., Spanish-speaking agents for Spanish cases), the answer is skills-based routing. When the routing system is third-party telephony (a call centre ACD), the answer is external routing. Agents must have a Presence Status that includes the relevant service channel — if a status doesn’t include the channel, agents in that status won’t receive that type of work.</span>
+            <span><strong>Omni-Channel routing questions:</strong> When a scenario requires work to go to the next available agent in a queue (no skill matching), the answer is queue-based routing. When cases must be matched to agents with specific skills (e.g., Spanish-speaking agents for Spanish cases), the answer is skills-based routing. When the routing system is third-party telephony (a call centre ACD), the answer is external routing. Agents must have a Presence Status that includes the relevant service channel, if a status doesn’t include the channel, agents in that status won’t receive that type of work.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Knowledge visibility questions:</strong> Data Categories control which articles are visible to which audiences — internal (agent-only), partner, and customer (public). If a scenario says certain articles should only be visible to premium customers, the answer involves Data Category visibility settings on the Experience Cloud site. If articles should only be visible to agents (not customers), the answer is setting the article’s channel to &ldquo;Internal App&rdquo; only.</span>
+            <span><strong>Knowledge visibility questions:</strong> Data Categories control which articles are visible to which audiences, internal (agent-only), partner, and customer (public). If a scenario says certain articles should only be visible to premium customers, the answer involves Data Category visibility settings on the Experience Cloud site. If articles should only be visible to agents (not customers), the answer is setting the article’s channel to &ldquo;Internal App&rdquo; only.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Case routing questions:</strong> Assignment rules assign new cases — they evaluate top-down and stop at the first matching rule. Escalation rules handle cases that have been open too long — they use time-based triggers. Auto-response rules send emails — they fire only on case creation. If a scenario asks what happens when no assignment rule matches, the answer is the case goes to the Default Case Owner (configurable in Support Settings).</span>
+            <span><strong>Case routing questions:</strong> Assignment rules assign new cases, they evaluate top-down and stop at the first matching rule. Escalation rules handle cases that have been open too long, they use time-based triggers. Auto-response rules send emails, they fire only on case creation. If a scenario asks what happens when no assignment rule matches, the answer is the case goes to the Default Case Owner (configurable in Support Settings).</span>
           </li>
         </ul>
       </section>
@@ -232,7 +232,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The most common failure mode for Service Cloud Consultant is insufficient hands-on Omni-Channel
-          experience. Candidates who study Omni-Channel conceptually — without configuring it in a sandbox —
+          experience. Candidates who study Omni-Channel conceptually, without configuring it in a sandbox,
           consistently miss routing model questions because the distinctions only become clear through
           hands-on configuration. Build at least one Omni-Channel routing setup before booking.
         </p>
@@ -256,7 +256,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Field Service vs Service Cloud Consultant — which cert to take?</Link></li>
+          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Field Service vs Service Cloud Consultant, which cert to take?</Link></li>
         </ul>
       </div>
 
@@ -317,7 +317,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Service Cloud Consultant free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Service Cloud Consultant free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/service-cloud"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

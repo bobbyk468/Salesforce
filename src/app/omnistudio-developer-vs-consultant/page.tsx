@@ -40,15 +40,15 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Should I take OmniStudio Developer or Consultant first?',
-    answer: 'There is no official prerequisite, but most candidates take OmniStudio Consultant first. The Consultant exam covers the full OmniStudio toolset (OmniScripts, DataRaptors, FlexCards, Integration Procedures) from a solution design perspective — it is the foundation for understanding what each component does and when to use it. The Developer exam then goes deeper into customisation, Apex extension patterns, and LWC overrides.',
+    answer: 'There is no official prerequisite, but most candidates take OmniStudio Consultant first. The Consultant exam covers the full OmniStudio toolset (OmniScripts, DataRaptors, FlexCards, Integration Procedures) from a solution design perspective; it is the foundation for understanding what each component does and when to use it. The Developer exam then goes deeper into customisation, Apex extension patterns, and LWC overrides.',
   },
   {
     question: 'What is the difference between OmniStudio Developer and Consultant exams?',
-    answer: 'OmniStudio Consultant validates that you can design and configure OmniStudio solutions using the declarative toolset — selecting the right component for a business requirement, building DataRaptors, configuring Integration Procedures, and designing FlexCards. OmniStudio Developer validates that you can extend OmniStudio with code: LWC custom components, Apex methods, TypeScript overrides in OmniScripts, and advanced Integration Procedure performance patterns.',
+    answer: 'OmniStudio Consultant validates that you can design and configure OmniStudio solutions using the declarative toolset, selecting the right component for a business requirement, building DataRaptors, configuring Integration Procedures, and designing FlexCards. OmniStudio Developer validates that you can extend OmniStudio with code: LWC custom components, Apex methods, TypeScript overrides in OmniScripts, and advanced Integration Procedure performance patterns.',
   },
   {
     question: 'Is OmniStudio Developer harder than OmniStudio Consultant?',
-    answer: 'OmniStudio Developer is generally considered harder because it requires both declarative OmniStudio knowledge AND coding skills (LWC, Apex, TypeScript). OmniStudio Consultant focuses on configuration and design — it is accessible to consultants without deep coding backgrounds. Developer requires hands-on development experience with the OmniStudio SDK.',
+    answer: 'OmniStudio Developer is generally considered harder because it requires both declarative OmniStudio knowledge AND coding skills (LWC, Apex, TypeScript). OmniStudio Consultant focuses on configuration and design; it is accessible to consultants without deep coding backgrounds. Developer requires hands-on development experience with the OmniStudio SDK.',
   },
   {
     question: 'Which industries use OmniStudio certifications most?',
@@ -110,8 +110,8 @@ export default function OmnistudioDeveloperVsConsultantPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Difficulty</td>
-                <td className="py-2.5 pr-4">Moderate — learn all 4 core components deeply</td>
-                <td className="py-2.5">Hard — requires coding depth plus full Consultant knowledge</td>
+                <td className="py-2.5 pr-4">Moderate, learn all 4 core components deeply</td>
+                <td className="py-2.5">Hard, requires coding depth plus full Consultant knowledge</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
@@ -130,10 +130,10 @@ export default function OmnistudioDeveloperVsConsultantPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">The 4 Core OmniStudio Components (Both Exams)</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong> — Guided multi-step processes (e.g., customer onboarding, quote creation). Developer exam adds TypeScript overrides and custom LWC steps.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong> — Data extraction, transformation, and loading without code. Developer exam adds custom Apex integration patterns for DataRaptors.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration Procedures</strong> — Server-side, multi-step data orchestration. Developer exam tests Apex-callable Integration Procedures and performance optimisation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FlexCards</strong> — Contextual data display cards on Lightning pages. Developer exam adds custom LWC child actions and complex data binding patterns.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong>: Guided multi-step processes (e.g., customer onboarding, quote creation). Developer exam adds TypeScript overrides and custom LWC steps.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong>: Data extraction, transformation, and loading without code. Developer exam adds custom Apex integration patterns for DataRaptors.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration Procedures</strong>: Server-side, multi-step data orchestration. Developer exam tests Apex-callable Integration Procedures and performance optimisation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FlexCards</strong>: Contextual data display cards on Lightning pages. Developer exam adds custom LWC child actions and complex data binding patterns.</li>
         </ul>
       </section>
 
@@ -162,23 +162,23 @@ export default function OmnistudioDeveloperVsConsultantPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
                 <td className="py-2.5 pr-4">Building FlexCards, OmniScripts, and Integration Procedures in Anypoint Studio</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">OmniStudio Developer — technical build credential</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">OmniStudio Developer, technical build credential</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Advising on when and how to use OmniStudio for industry cloud implementations</td>
-                <td className="py-2.5 font-semibold text-purple-700">OmniStudio Consultant — use-case and solution design focus</td>
+                <td className="py-2.5 font-semibold text-purple-700">OmniStudio Consultant, use-case and solution design focus</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Vlocity/OmniStudio developer coming from a Salesforce Industries background</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Developer — directly maps to your hands-on skills</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Developer, directly maps to your hands-on skills</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Functional consultant scoping OmniStudio solutions for telco, insurance, or health</td>
                 <td className="py-2.5 font-semibold text-purple-700">Consultant</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Both — which first?</td>
-                <td className="py-2.5 font-semibold text-gray-700">Developer first — hands-on knowledge underpins the Consultant exam content too</td>
+                <td className="py-2.5 pr-4">Both, which first?</td>
+                <td className="py-2.5 font-semibold text-gray-700">Developer first, hands-on knowledge underpins the Consultant exam content too</td>
               </tr>
             </tbody>
           </table>

@@ -68,7 +68,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between Pardot forms and form handlers?',
-    answer: 'Pardot forms are hosted by Pardot — you embed them on your website using a code snippet or iFrame. They support progressive profiling (showing different fields to returning visitors) and are fully tracked. Form handlers are for your own externally-hosted forms — Pardot receives the form submission data via an endpoint URL and creates/updates the prospect record. Form handlers do not support progressive profiling. Use form handlers when you cannot replace an existing form on your website.',
+    answer: 'Pardot forms are hosted by Pardot, you embed them on your website using a code snippet or iFrame. They support progressive profiling (showing different fields to returning visitors) and are fully tracked. Form handlers are for your own externally-hosted forms: Pardot receives the form submission data via an endpoint URL and creates/updates the prospect record. Form handlers do not support progressive profiling. Use form handlers when you cannot replace an existing form on your website.',
   },
   {
     question: 'Is ADM-201 required before Pardot Specialist?',
@@ -95,7 +95,7 @@ export default function PardotSpecialistStudyGuidePage() {
           Salesforce Marketing Cloud Account Engagement Specialist Study Guide ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Pardot Specialist exam — lead scoring and grading, email marketing, Engagement Studio, forms, landing pages, and Salesforce integration.
+          Your complete guide to passing the Pardot Specialist exam, lead scoring and grading, email marketing, Engagement Studio, forms, landing pages, and Salesforce integration.
         </p>
       </div>
 
@@ -160,13 +160,13 @@ export default function PardotSpecialistStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Pardot fundamentals — understand the visitor-to-prospect lifecycle, the Salesforce-Pardot sync, connected campaigns, and the Pardot Lightning app navigation.' },
-            { week: 'Week 2', focus: 'Scoring & Grading — configure a custom scoring model in your Pardot account. Set up prospect grading criteria. Practice identifying high-score vs high-grade scenarios.' },
-            { week: 'Week 3', focus: 'Forms & Landing Pages — build a Pardot form with progressive profiling. Create a form handler for an external form. Build and publish a landing page. Test completion actions.' },
-            { week: 'Week 4', focus: 'Email Marketing — create a list email, configure an autoresponder, and set up A/B testing. Review deliverability settings: SPF/DKIM, opt-out compliance, bounce handling.' },
-            { week: 'Week 5', focus: 'Automation Rules & Segmentation — build automation rules with multi-condition logic. Create segmentation lists. Compare automation rules vs segmentation rules vs completion actions.' },
-            { week: 'Week 6', focus: 'Engagement Studio — build a nurture program with action, trigger, and rule steps. Configure a branching sequence based on email open and form submission triggers.' },
-            { week: 'Week 7', focus: 'Administration — review Salesforce connector settings, field sync behaviour, business units, and user roles. Practice identifying which user role can perform each action.' },
+            { week: 'Week 1', focus: 'Pardot fundamentals, understand the visitor-to-prospect lifecycle, the Salesforce-Pardot sync, connected campaigns, and the Pardot Lightning app navigation.' },
+            { week: 'Week 2', focus: 'Scoring & Grading, configure a custom scoring model in your Pardot account. Set up prospect grading criteria. Practice identifying high-score vs high-grade scenarios.' },
+            { week: 'Week 3', focus: 'Forms & Landing Pages. Build a Pardot form with progressive profiling. Create a form handler for an external form. Build and publish a landing page. Test completion actions.' },
+            { week: 'Week 4', focus: 'Email Marketing, create a list email, configure an autoresponder, and set up A/B testing. Review deliverability settings: SPF/DKIM, opt-out compliance, bounce handling.' },
+            { week: 'Week 5', focus: 'Automation Rules & Segmentation, build automation rules with multi-condition logic. Create segmentation lists. Compare automation rules vs segmentation rules vs completion actions.' },
+            { week: 'Week 6', focus: 'Engagement Studio. Build a nurture program with action, trigger, and rule steps. Configure a branching sequence based on email open and form submission triggers.' },
+            { week: 'Week 7', focus: 'Administration, review Salesforce connector settings, field sync behaviour, business units, and user roles. Practice identifying which user role can perform each action.' },
             { week: 'Week 8', focus: 'Use practice questions to review weaker areas. The official outline weights Lead Management at 24%, Forms and Landing Pages at 20%, Email Marketing at 20%, and Engagement Studio at 17%.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -183,7 +183,7 @@ export default function PardotSpecialistStudyGuidePage() {
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Scoring = engagement, Grading = fit:</strong> A prospect’s score reflects activity; a grade reflects fit against profile criteria. Use both concepts when reviewing qualification workflows.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Automation rules run in real time; segmentation rules are static:</strong> Automation rules trigger when a prospect matches criteria (even as behaviour changes). Segmentation rules are point-in-time: they evaluate prospects and create a static list. Dynamic lists update continuously, like automation rules.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Engagement Studio step types:</strong> Action = do something now. Trigger = wait for a behaviour. Rule = branch based on a field or attribute. Practice identifying the appropriate step type for a desired workflow.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Form vs form handler:</strong> If you can replace the form on the website, use a Pardot form (better tracking, progressive profiling). If the form is locked (third-party system, complex front-end), use a form handler. Practice matching each form option to its documented use case.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Form vs form handler:</strong> If you can replace the form on the website. Use a Pardot form (better tracking, progressive profiling). If the form is locked (third-party system, complex front-end). Use a form handler. Practice matching each form option to its documented use case.</span></li>
         </ul>
       </div>
 
@@ -201,7 +201,7 @@ export default function PardotSpecialistStudyGuidePage() {
           <li>Automation rules vs segmentation rules vs completion actions vs dynamic lists</li>
           <li>Pardot forms vs form handlers: capabilities, limitations, when to use each</li>
           <li>Progressive profiling: how it works, field rotation logic</li>
-          <li>Engagement Studio step types: Action, Trigger, Rule — and examples of each</li>
+          <li>Engagement Studio step types: Action, Trigger, Rule, and examples of each</li>
           <li>Salesforce connector: sync direction, sync frequency, field mapping, connected campaigns</li>
           <li>Email deliverability: SPF, DKIM, dedicated IP, CAN-SPAM/GDPR compliance</li>
           <li>Business Units: purpose, limitations on cross-BU data access</li>
@@ -222,7 +222,7 @@ export default function PardotSpecialistStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/pardot-specialist-vs-pardot-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Pardot Specialist vs Pardot Consultant — which level to target?</Link></li>
+          <li><Link href="/pardot-specialist-vs-pardot-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Pardot Specialist vs Pardot Consultant, which level to target?</Link></li>
           <li><Link href="/pardot-consultant-vs-marketing-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Pardot Consultant vs Marketing Cloud Consultant</Link></li>
         </ul>
       </div>

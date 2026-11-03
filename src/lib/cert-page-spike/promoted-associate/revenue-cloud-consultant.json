@@ -66,7 +66,7 @@
       },
       {
         "heading": "Catalog Management and Product Configuration",
-        "body": "Catalog Management organizes product information as a reusable source for selling. Salesforce preparation material covers product categories, classifications, attributes, products, and bundles. In the product-configuration objective, use the Product Configurator to customize product components and attributes, validate a configuration, and select out-of-the-box functionality that meets the stated requirement. See Salesforce’s [Product Catalog Management module](https://trailhead.salesforce.com/content/learn/modules/product-catalog-management-with-revenue-cloud) for product and bundle coverage."
+        "body": "Catalog Management organizes product information as a reusable source for selling. Salesforce preparation material covers product categories, classifications, attributes, products, and bundles. In the product-configuration objective. Use the Product Configurator to customize product components and attributes, validate a configuration, and select out-of-the-box functionality that meets the stated requirement. See Salesforce’s [Product Catalog Management module](https://trailhead.salesforce.com/content/learn/modules/product-catalog-management-with-revenue-cloud) for product and bundle coverage."
       },
       {
         "heading": "Pricing and Quote Design",

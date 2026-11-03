@@ -19,7 +19,7 @@ export interface ExamPrepContent {
 
 const DEFAULT_PREP: ExamPrepContent = {
   examTips: [
-    'Study the highest-weight sections first—they have the most questions.',
+    'Study the highest-weight sections first, they have the most questions.',
     'Use the official Trailhead trailmix; align your study with the exam outline.',
     'Take timed practice exams to build pacing (about 1.5–2 min per question).',
     'Review wrong answers and understand why the correct option is right.',
@@ -33,11 +33,11 @@ const DEFAULT_PREP: ExamPrepContent = {
 export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   administrator: {
     examTips: [
-      'Configuration and Setup + Object Manager together are ~40%—master Lightning App Builder and Object Manager first.',
+      'Configuration and Setup + Object Manager together are ~40%. Master Lightning App Builder and Object Manager first.',
       'Know the difference between Process Builder, Flow, and Workflow (and when to use each).',
       'Security is always tested: roles, profiles, permission sets, sharing rules, OWD.',
       'Practice building reports (summary, matrix, joined) and dashboards from scratch.',
-      'Review standard objects: Account, Contact, Lead, Opportunity, Case—and their relationships.',
+      'Review standard objects: Account, Contact, Lead, Opportunity, Case, and their relationships.',
     ],
     prerequisites: ['6+ months Salesforce Admin experience', 'Platform Fundamentals or equivalent knowledge'],
     focusAreas: ['Configuration and Setup', 'Object Manager and Lightning App Builder', 'Security and Access', 'Automation (Flow vs Workflow)'],
@@ -47,7 +47,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'advanced-administrator': {
     ...DEFAULT_PREP,
     examTips: [
-      'Security and Organization Setup are heavily weighted—know sharing, roles, and license types.',
+      'Security and Organization Setup are heavily weighted, know sharing, roles, and license types.',
       'Understand advanced automation: flows, process builder, approval processes.',
       'Be ready for scenario questions that combine multiple features.',
       'Know limits: roll-up summary fields, workflow rules, validation rules per object.',
@@ -59,7 +59,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'app-builder': {
     ...DEFAULT_PREP,
     examTips: [
-      'Data Modeling and User Interface are ~42% combined—master relationships, page layouts, record types.',
+      'Data Modeling and User Interface are ~42% combined, master relationships, page layouts, record types.',
       'Business Logic and Process Automation is the largest section; know Flow and validation rules well.',
       'Understand when to use Master-Detail vs Lookup and cascade delete behavior.',
       'Practice creating apps with Lightning App Builder and assigning to profiles.',
@@ -71,7 +71,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'sales-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design is 25%—practice translating business requirements into Salesforce features.',
+      'Solution Design is 25%. Practice translating business requirements into Salesforce features.',
       'Know Lead conversion, assignment rules, and lead lifecycle inside out.',
       'Opportunity management: stages, products, forecasting, territory management.',
       'Be ready for “what would you recommend?” scenario questions.',
@@ -84,7 +84,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'service-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design is 25%—focus on case management, entitlements, and knowledge.',
+      'Solution Design is 25%. Focus on case management, entitlements, and knowledge.',
       'Know Omnichannel, queues, case assignment, and escalation.',
       'Understand Knowledge article types, data categories, and deflection.',
       'Practice scenario questions: “Customer wants X; what do you configure?”',
@@ -96,7 +96,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'developer-1': {
     ...DEFAULT_PREP,
     examTips: [
-      'Logic and User Interface are 50% combined—Apex triggers, LWC, and when to use each.',
+      'Logic and User Interface are 50% combined, Apex triggers, LWC, and when to use each.',
       'Know governor limits: SOQL 100, DML 150, etc., and how to avoid hitting them.',
       'Testing: minimum code coverage, positive and negative tests, Test.runAs().',
       'Understand @AuraEnabled, @InvocableMethod, and when to use REST vs SOAP.',
@@ -109,7 +109,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'developer-2': {
     ...DEFAULT_PREP,
     examTips: [
-      'Architecture and Logic are heavily weighted—design patterns, trigger frameworks, async Apex.',
+      'Architecture and Logic are heavily weighted, design patterns, trigger frameworks, async Apex.',
       'Know when to use Queueable, Batch, Future, and Scheduled Apex.',
       'Understand namespaced packages, unlocked packages, and dependency management.',
       'Be ready for “how would you design?” and “what is the best approach?” questions.',
@@ -121,7 +121,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'email-specialist': {
     ...DEFAULT_PREP,
     examTips: [
-      'Email Content and Send Management are 45%—AMPscript, content blocks, send time optimization.',
+      'Email Content and Send Management are 45%, AMPscript, content blocks, send time optimization.',
       'Know Data Extensions, Sendable Data Extensions, and list vs data extension use cases.',
       'Tracking: opens, clicks, unsubscribes, and how to configure in Email Studio.',
       'Review Journey Builder and Automation Studio for automated sends.',
@@ -133,20 +133,20 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'platform-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'All three sections are roughly equal—cover the whole outline.',
+      'All three sections are roughly equal, cover the whole outline.',
       'Know standard objects and the basic data model (Account, Contact, Lead, Opportunity).',
       'Understand navigation: App Launcher, list views, and basic reports.',
       'No coding; focus on concepts and “what is this used for?”',
     ],
     prerequisites: ['Trailhead or introductory Salesforce experience'],
     focusAreas: ['Customer 360 Platform Basics', 'Navigation and Data Model', 'Reports and Dashboards'],
-    studyStrategy: 'Complete the official Trailhead trailmix. Use a Developer Edition org to click through every feature mentioned in the outline. This is an entry-level cert—breadth over depth.',
+    studyStrategy: 'Complete the official Trailhead trailmix. Use a Developer Edition org to click through every feature mentioned in the outline. This is an entry-level cert, breadth over depth.',
     whyItMatters: 'The first step on the Salesforce credential path; often required before Administrator.',
   },
   'ai-associate': {
     ...DEFAULT_PREP,
     examTips: [
-      'AI Concepts and Einstein Capabilities are 70%—know what each Einstein product does.',
+      'AI Concepts and Einstein Capabilities are 70%. Know what each Einstein product does.',
       'Understand Responsible AI: bias, transparency, and ethical use.',
       'Know where Einstein appears in Sales, Service, and Marketing Cloud.',
       'Review Trailhead AI modules and the official exam guide.',
@@ -158,7 +158,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'data-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four domains are 25%—study the full outline evenly.',
+      'All four domains are 25%. Study the full outline evenly.',
       'Data Modeling: normalization, LDV, big objects, external objects.',
       'Know Identity and Access Management architect concepts (SSO, SAML, OAuth).',
       'Integration and Development Lifecycle: when to use what, and governance.',
@@ -170,7 +170,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'application-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Each of the four pillars is 25%—no section can be skipped.',
+      'Each of the four pillars is 25%. No section can be skipped.',
       'Data Architecture: data model, LDV, integration patterns for data.',
       'Identity and Access: SSO, federation, user lifecycle.',
       'Be ready for “design a solution that meets X and Y requirements.”',
@@ -182,7 +182,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'experience-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design and Site Setup are 50%—know templates, sharing, and audiences.',
+      'Solution Design and Site Setup are 50%. Know templates, sharing, and audiences.',
       'Understand Sharing Sets, external users, and how to expose records to communities.',
       'Know the difference between Experience Cloud and Sites (Classic).',
       'Practice configuring a sample site: branding, pages, and sharing.',
@@ -194,7 +194,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'field-service': {
     ...DEFAULT_PREP,
     examTips: [
-      'Scheduling and Mobile are 50%—understand dispatch, Gantt, and mobile app configuration.',
+      'Scheduling and Mobile are 50%. Understand dispatch, Gantt, and mobile app configuration.',
       'Know work orders, service appointments, and the field service data model.',
       'Understand optimization (scheduling policies) and manual vs automatic dispatch.',
       'Review assets, product inventory, and parts ordering if applicable.',
@@ -218,8 +218,8 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'tableau-desktop-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'Connecting to Data and Dimensions/Measures are 50%—know data types and the shelf.',
-      'Views and Dashboards are 35%—build charts and dashboards from scratch.',
+      'Connecting to Data and Dimensions/Measures are 50%. Know data types and the shelf.',
+      'Views and Dashboards are 35%. Build charts and dashboards from scratch.',
       'Understand filters: context, dimensions, measures, and filter order.',
       'No LOD or advanced calcs; focus on basics.',
     ],
@@ -230,9 +230,9 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'technical-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design is 30%—practice whiteboarding end-to-end solutions.',
+      'Solution Design is 30%. Practice whiteboarding end-to-end solutions.',
       'Know security, integration, and data architecture deeply.',
-      'The Review Board is presentation and Q&A—practice explaining and defending designs.',
+      'The Review Board is presentation and Q&A, practice explaining and defending designs.',
       'Review past CTA scenario examples and time yourself.',
     ],
     prerequisites: ['Application Architect', 'System Architect', 'Years of complex implementation experience'],
@@ -255,7 +255,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'business-analyst': {
     ...DEFAULT_PREP,
     examTips: [
-      'Requirements and Solution Design are 50%—practice discovery and documentation.',
+      'Requirements and Solution Design are 50%. Practice discovery and documentation.',
       'Know stakeholder collaboration and how to translate business needs into Salesforce.',
       'Understand success metrics and analytics for solution validation.',
       'Be ready for “how would you gather requirements?” and “what would you recommend?”',
@@ -267,7 +267,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'cpq-administrator': {
     ...DEFAULT_PREP,
     examTips: [
-      'Products and Pricing are 55%—product rules, price rules, and configuration.',
+      'Products and Pricing are 55%. Product rules, price rules, and configuration.',
       'Know the CPQ data model: Product, Price Book, Quote, Contract.',
       'Understand quote line editor, configuration attributes, and bundles.',
       'Practice “how do you configure X?” for common CPQ scenarios.',
@@ -279,7 +279,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'data-360-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'Data Cloud Architecture and Data Model are 50%—know identity resolution and data model.',
+      'Data Cloud Architecture and Data Model are 50%. Know identity resolution and data model.',
       'Understand activation (Marketing, Sales, Service) and segments.',
       'Know governance: data quality, consent, and retention.',
       'Review Data Cloud setup and connector types.',
@@ -291,7 +291,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'javascript-developer-i': {
     ...DEFAULT_PREP,
     examTips: [
-      'LWC and Aura are 30%—know component lifecycle, decorators, and events.',
+      'LWC and Aura are 30%. Know component lifecycle, decorators, and events.',
       'JavaScript fundamentals: ES6+, async, DOM, and debugging.',
       'Understand when to use LWC vs Aura and migration considerations.',
       'Testing: Jest for LWC, and debugging in browser and VS Code.',
@@ -303,7 +303,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-engagement-admin': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Setup, Subscriber/Data, Content/Journey, Analytics.',
+      'All four sections are 25%. Cover Setup, Subscriber/Data, Content/Journey, Analytics.',
       'Know subscriber data model, data extensions, and sendable DEs.',
       'Understand Journey Builder, Email Studio, and Automation Studio.',
       'Review Setup: business units, users, and permissions.',
@@ -315,7 +315,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-developer-i': {
     ...DEFAULT_PREP,
     examTips: [
-      'Mule Applications and DataWeave are 55%—build flows and transform data.',
+      'Mule Applications and DataWeave are 55%. Build flows and transform data.',
       'Know Anypoint Platform: design center, runtime, and deployment.',
       'Understand connectors, error handling, and logging.',
       'Practice building a simple API and a flow that calls an external system.',
@@ -327,7 +327,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-integration-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'Integration Concepts and Anypoint Platform are 70%—know APIs and design.',
+      'Integration Concepts and Anypoint Platform are 70%. Know APIs and design.',
       'Understand REST, API design, and basic security (OAuth).',
       'No heavy coding; focus on concepts and “what is this used for?”',
       'Complete the MuleSoft Integration Fundamentals trail on Trailhead.',
@@ -339,7 +339,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'nonprofit-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Nonprofit Cloud Data Model and Program/Case are 50%—know NPSP and NPC objects.',
+      'Nonprofit Cloud Data Model and Program/Case are 50%. Know NPSP and NPC objects.',
       'Understand donations, households, and program management.',
       'Know reporting: roll-ups, dashboards, and common nonprofit metrics.',
       'Review NPC release notes and implementation guides.',
@@ -351,7 +351,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'pardot-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'Lead Management and Email/Engagement are 50%—know automation and scoring.',
+      'Lead Management and Email/Engagement are 50%. Know automation and scoring.',
       'Understand Account Engagement (Pardot) setup and Salesforce connector.',
       'Know reporting: engagement metrics, ROI, and attribution.',
       'Be ready for “how would you implement X?” scenario questions.',
@@ -363,7 +363,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'revenue-cloud-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'CPQ Configuration and Quoting/Contracts are 55%—know product and price rules.',
+      'CPQ Configuration and Quoting/Contracts are 55%. Know product and price rules.',
       'Understand the Revenue Cloud data model and CPQ + Billing integration.',
       'Know contract lifecycle and renewal scenarios.',
       'Practice “how do you configure X?” for CPQ and Billing.',
@@ -375,8 +375,8 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'tableau-data-analyst': {
     ...DEFAULT_PREP,
     examTips: [
-      'Data Connection/Prep and Calculations are 50%—know LOD and table calcs.',
-      'Visualization and Dashboards are 35%—build various chart types and dashboards.',
+      'Data Connection/Prep and Calculations are 50%. Know LOD and table calcs.',
+      'Visualization and Dashboards are 35%. Build various chart types and dashboards.',
       'Understand dimensions vs measures and the shelf (Rows, Columns, Marks).',
       'Practice building a dashboard with filters and actions.',
     ],
@@ -387,7 +387,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'ux-designer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Research and Prototyping + Design and Delivery are 70%—know the design process.',
+      'Research and Prototyping + Design and Delivery are 70%. Know the design process.',
       'Understand UX research methods and when to use each.',
       'Know accessibility and inclusive design basics.',
       'Be ready for “what would you do next?” and “what method would you use?”',
@@ -400,7 +400,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'integration-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Integration Architecture and Patterns are 55%—know when to use REST, SOAP, and event-driven patterns.',
+      'Integration Architecture and Patterns are 55%. Know when to use REST, SOAP, and event-driven patterns.',
       'Understand identity and access management for integrations (OAuth, SAML, certificates).',
       'Know integration patterns: point-to-point, hub-and-spoke, publish-subscribe.',
       'Be ready for "how would you integrate X with Y?" scenario questions.',
@@ -412,7 +412,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'sharing-visibility-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Sharing Model and Visibility/Security are 60%—know OWD, sharing rules, and data access patterns.',
+      'Sharing Model and Visibility/Security are 60%. Know OWD, sharing rules, and data access patterns.',
       'Understand when to use private, public read-only, public read/write, and controlled by parent.',
       'Know sharing calculation and performance implications of complex sharing models.',
       'Be ready for "how would you design sharing for X requirement?" questions.',
@@ -424,7 +424,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'system-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four pillars are 25%—no section can be skipped.',
+      'All four pillars are 25%. No section can be skipped.',
       'Data Architecture: LDV, data modeling, integration patterns for data.',
       'Integration Architecture: APIs, middleware, event-driven architecture.',
       'Be ready for "design a solution that meets X and Y requirements."',
@@ -436,7 +436,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'identity-access-management-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Identity and SSO + Access Management are 60%—know SAML, OAuth, SSO flows, and user provisioning.',
+      'Identity and SSO + Access Management are 60%. Know SAML, OAuth, SSO flows, and user provisioning.',
       'Understand federation, delegated authentication, and when to use each.',
       'Know security and compliance: MFA, session management, audit trails.',
       'Be ready for "how would you implement SSO for X scenario?" questions.',
@@ -448,7 +448,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'dev-lifecycle-deployment-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'CI/CD and Version Control is 30%—know Git workflows, CI/CD pipelines, and deployment strategies.',
+      'CI/CD and Version Control is 30%. Know Git workflows, CI/CD pipelines, and deployment strategies.',
       'Understand release management: sandboxes, change sets, unlocked packages, source tracking.',
       'Know environments and metadata: what goes where, and governance.',
       'Be ready for "how would you deploy X?" and "what is the best approach?" questions.',
@@ -460,9 +460,9 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'technical-architect-evaluation': {
     ...DEFAULT_PREP,
     examTips: [
-      'Scenario Analysis is 40%—practice reading complex scenarios and identifying requirements.',
-      'Solution Design is 35%—know how to design secure, scalable, integrated solutions.',
-      'Time management is critical—you have limited time for scenario analysis and design.',
+      'Scenario Analysis is 40%. Practice reading complex scenarios and identifying requirements.',
+      'Solution Design is 35%. Know how to design secure, scalable, integrated solutions.',
+      'Time management is critical, you have limited time for scenario analysis and design.',
       'Review past CTA evaluation scenarios and practice under time pressure.',
     ],
     prerequisites: ['Application Architect', 'System Architect', 'Years of complex implementation experience'],
@@ -472,10 +472,10 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'technical-architect-review-board': {
     ...DEFAULT_PREP,
     examTips: [
-      'Presentation and Design Defense are 70%—practice explaining and defending your designs.',
-      'Know your solution inside and out—you will be asked "why did you choose X?"',
+      'Presentation and Design Defense are 70%. Practice explaining and defending your designs.',
+      'Know your solution inside and out, you will be asked "why did you choose X?"',
       'Practice handling tough questions and alternative approaches.',
-      'Time your presentation—you have limited time to present and defend.',
+      'Time your presentation, you have limited time to present and defend.',
     ],
     prerequisites: ['Passed Technical Architect Evaluation', 'Strong communication skills'],
     focusAreas: ['Presentation', 'Design Defense', 'Board Q&A'],
@@ -484,7 +484,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2b-solution-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2B Commerce Architecture is 30%—know catalog, pricing, checkout, and integration patterns.',
+      'B2B Commerce Architecture is 30%. Know catalog, pricing, checkout, and integration patterns.',
       'Understand B2B-specific features: buyer groups, contracts, payment terms.',
       'Know integration patterns: ERP, PIM, payment gateways.',
       'Be ready for "how would you architect X for B2B?" questions.',
@@ -496,7 +496,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2c-commerce-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2C Commerce Architecture is 30%—know storefront, experience, and integration patterns.',
+      'B2C Commerce Architecture is 30%. Know storefront, experience, and integration patterns.',
       'Understand B2C-specific features: personalization, promotions, cart and checkout.',
       'Know performance and security: caching, CDN, PCI compliance.',
       'Be ready for "how would you architect X for B2C?" questions.',
@@ -508,7 +508,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2c-solution-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2C Solution Design and Commerce/Experience are 60%—know how to design end-to-end B2C solutions.',
+      'B2C Solution Design and Commerce/Experience are 60%. Know how to design end-to-end B2C solutions.',
       'Understand integration patterns: CRM, marketing, payment, fulfillment.',
       'Know governance: how to manage multiple sites, brands, and regions.',
       'Be ready for "how would you design X solution?" questions.',
@@ -520,7 +520,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'heroku-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Heroku Architecture is 30%—know dynos, add-ons, buildpacks, and scaling strategies.',
+      'Heroku Architecture is 30%. Know dynos, add-ons, buildpacks, and scaling strategies.',
       'Understand scaling and performance: horizontal vs vertical scaling, caching, database optimization.',
       'Know security and data: encryption, compliance, data residency.',
       'Be ready for "how would you architect X on Heroku?" questions.',
@@ -532,7 +532,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-catalyst-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Integration Strategy, Anypoint Platform, API Design, and Best Practices.',
+      'All four sections are 25%. Cover Integration Strategy, Anypoint Platform, API Design, and Best Practices.',
       'Know integration strategy: when to use APIs, ESB, and event-driven patterns.',
       'Understand Anypoint Platform: design center, runtime, and API Manager.',
       'Be ready for "how would you recommend X?" consultant-style questions.',
@@ -544,7 +544,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-platform-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Integration Architecture is 30%—know API-led connectivity and integration patterns.',
+      'Integration Architecture is 30%. Know API-led connectivity and integration patterns.',
       'Understand Anypoint Platform: design center, runtime, API Manager, and governance.',
       'Know API and Security: OAuth, policies, rate limiting, and security best practices.',
       'Be ready for "how would you architect X?" questions.',
@@ -556,7 +556,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-integration-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Integration Architecture is 30%—know integration patterns and when to use each.',
+      'Integration Architecture is 30%. Know integration patterns and when to use each.',
       'Understand API Design: REST, SOAP, event-driven, and API versioning.',
       'Know Security and Patterns: authentication, authorization, and common integration patterns.',
       'Be ready for "how would you design X integration?" questions.',
@@ -569,7 +569,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'advanced-field-service-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Field Service Configuration, Scheduling, Mobile, and Assets.',
+      'All four sections are 25%. Cover Field Service Configuration, Scheduling, Mobile, and Assets.',
       'Know scheduling and dispatch: optimization, Gantt, and manual vs automatic dispatch.',
       'Understand mobile execution: Field Service Mobile app, offline capabilities, and data sync.',
       'Be ready for "how do you configure X?" questions.',
@@ -581,7 +581,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2b-commerce-admin-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2B Commerce Setup is 30%—know catalog, pricing, buyer groups, and contracts.',
+      'B2B Commerce Setup is 30%. Know catalog, pricing, buyer groups, and contracts.',
       'Understand catalog and pricing: product catalogs, price lists, and pricing rules.',
       'Know orders and integration: order management, payment, and ERP integration.',
       'Be ready for "how do you configure X?" questions.',
@@ -593,7 +593,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2b-commerce-developer-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2B Development is 30%—know Cart and Checkout customization, APIs, and integration.',
+      'B2B Development is 30%. Know Cart and Checkout customization, APIs, and integration.',
       'Understand cart and checkout: cart calculation, checkout flows, and payment integration.',
       'Know integration: REST APIs, webhooks, and external system integration.',
       'Be ready for "how do you develop X?" questions.',
@@ -605,7 +605,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'communications-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Channels and Flows are 35%—know SMS, voice, email, and messaging channels.',
+      'Channels and Flows are 35%. Know SMS, voice, email, and messaging channels.',
       'Understand Communications Cloud setup: org configuration, channels, and flows.',
       'Know analytics and best practices: reporting, monitoring, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -617,7 +617,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'consumer-goods-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Consumer Goods Cloud and Retail Execution are 70%—know the CGC data model and retail execution features.',
+      'Consumer Goods Cloud and Retail Execution are 70%. Know the CGC data model and retail execution features.',
       'Understand retail execution: visits, surveys, orders, and inventory.',
       'Know integration and analytics: ERP integration, reporting, and dashboards.',
       'Be ready for "how do you configure X?" questions.',
@@ -629,7 +629,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'consumer-goods-tpm-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Trade Promotion Management is 40%—know TPM data model, planning, and execution.',
+      'Trade Promotion Management is 40%. Know TPM data model, planning, and execution.',
       'Understand planning and execution: promotion planning, budgets, and execution tracking.',
       'Know analytics: ROI, performance, and reporting.',
       'Be ready for "how do you configure X?" questions.',
@@ -641,7 +641,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'contact-center-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Omnichannel and Flows are 35%—know Contact Center setup, channels, and flows.',
+      'Omnichannel and Flows are 35%. Know Contact Center setup, channels, and flows.',
       'Understand Contact Center setup: org configuration, channels, and routing.',
       'Know analytics and best practices: reporting, monitoring, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -653,7 +653,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'cpq-billing-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'CPQ and Billing + Quoting and Contracts are 70%—know CPQ configuration, quoting, and billing.',
+      'CPQ and Billing + Quoting and Contracts are 70%. Know CPQ configuration, quoting, and billing.',
       'Understand CPQ and Billing: product rules, price rules, quotes, and contracts.',
       'Know billing and revenue: billing processes, revenue recognition, and invoicing.',
       'Be ready for "how do you configure X?" questions.',
@@ -665,7 +665,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'energy-utilities-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Energy and Utilities Cloud is 40%—know the E&U data model, service territories, and work orders.',
+      'Energy and Utilities Cloud is 40%. Know the E&U data model, service territories, and work orders.',
       'Understand configuration: service territories, work orders, and asset management.',
       'Know best practices: implementation patterns, reporting, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -677,7 +677,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'financial-services-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Financial Services Cloud is 40%—know the FSC data model, households, and financial accounts.',
+      'Financial Services Cloud is 40%. Know the FSC data model, households, and financial accounts.',
       'Understand configuration and data: households, accounts, goals, and financial accounts.',
       'Know best practices: implementation patterns, reporting, and compliance.',
       'Be ready for "how do you configure X?" questions.',
@@ -689,7 +689,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'health-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Health Cloud is 40%—know the Health Cloud data model, care plans, and patient management.',
+      'Health Cloud is 40%. Know the Health Cloud data model, care plans, and patient management.',
       'Understand care plans and configuration: care plans, care teams, and patient management.',
       'Know best practices: implementation patterns, reporting, and compliance.',
       'Be ready for "how do you configure X?" questions.',
@@ -701,7 +701,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'heroku-developer-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Heroku Development and Apps/Add-ons are 70%—know dynos, buildpacks, add-ons, and deployment.',
+      'Heroku Development and Apps/Add-ons are 70%. Know dynos, buildpacks, add-ons, and deployment.',
       'Understand Heroku development: dynos, buildpacks, config vars, and deployment.',
       'Know deployment and best practices: Git deployment, CI/CD, and monitoring.',
       'Be ready for "how do you develop X?" questions.',
@@ -713,7 +713,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'loyalty-management-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Loyalty Management is 40%—know loyalty programs, points, rewards, and member management.',
+      'Loyalty Management is 40%. Know loyalty programs, points, rewards, and member management.',
       'Understand program configuration: programs, rules, points, and rewards.',
       'Know integration: API integration, external systems, and data sync.',
       'Be ready for "how do you configure X?" questions.',
@@ -725,7 +725,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'manufacturing-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Manufacturing Cloud is 40%—know the Manufacturing Cloud data model, work orders, and production.',
+      'Manufacturing Cloud is 40%. Know the Manufacturing Cloud data model, work orders, and production.',
       'Understand configuration: work orders, production, and inventory.',
       'Know best practices: implementation patterns, reporting, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -737,7 +737,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-advanced-cross-channel-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Cross-Channel Strategy and Journey Builder/Email are 70%—know cross-channel marketing and journey design.',
+      'Cross-Channel Strategy and Journey Builder/Email are 70%. Know cross-channel marketing and journey design.',
       'Understand cross-channel strategy: email, SMS, push, and social channels.',
       'Know analytics and best practices: reporting, optimization, and compliance.',
       'Be ready for "how do you configure X?" questions.',
@@ -749,7 +749,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-intelligence-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Marketing Cloud Intelligence is 40%—know Intelligence, Ad Studio, and analytics.',
+      'Marketing Cloud Intelligence is 40%. Know Intelligence, Ad Studio, and analytics.',
       'Understand Intelligence: data models, insights, and reporting.',
       'Know Ad Studio and analytics: ad creation, targeting, and performance.',
       'Be ready for "how do you configure X?" questions.',
@@ -761,7 +761,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-personalization-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Personalization Strategy and Web/Mobile Personalization are 70%—know personalization strategy and implementation.',
+      'Personalization Strategy and Web/Mobile Personalization are 70%. Know personalization strategy and implementation.',
       'Understand personalization strategy: audience segmentation, content, and optimization.',
       'Know web and mobile personalization: implementation, testing, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -773,7 +773,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'media-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Media Cloud is 45%—know Media Cloud setup, configuration, and best practices.',
+      'Media Cloud is 45%. Know Media Cloud setup, configuration, and best practices.',
       'Understand Media Cloud: setup, configuration, and media management.',
       'Know best practices: implementation patterns, reporting, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -785,7 +785,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'net-zero-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Net Zero Cloud is 45%—know Net Zero Cloud setup, sustainability, and reporting.',
+      'Net Zero Cloud is 45%. Know Net Zero Cloud setup, sustainability, and reporting.',
       'Understand Net Zero Cloud: setup, sustainability tracking, and reporting.',
       'Know sustainability and reporting: carbon tracking, goals, and compliance.',
       'Be ready for "how do you configure X?" questions.',
@@ -797,7 +797,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'order-management-admin-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Order Management is 40%—know Order Management setup, configuration, and best practices.',
+      'Order Management is 40%. Know Order Management setup, configuration, and best practices.',
       'Understand Order Management: setup, orchestration, and fulfillment.',
       'Know best practices: implementation patterns, reporting, and optimization.',
       'Be ready for "how do you configure X?" questions.',
@@ -809,7 +809,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'order-management-developer-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Order Management Development is 40%—know Order Management development, integration, and APIs.',
+      'Order Management Development is 40%. Know Order Management development, integration, and APIs.',
       'Understand Order Management development: customization, integration, and APIs.',
       'Know integration and APIs: REST APIs, webhooks, and external system integration.',
       'Be ready for "how do you develop X?" questions.',
@@ -821,7 +821,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'process-automation-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Process Automation is 40%—know Flow, Process Builder, and automation best practices.',
+      'Process Automation is 40%. Know Flow, Process Builder, and automation best practices.',
       'Understand Flow and automation: Flow types, Process Builder, and approval processes.',
       'Know best practices: automation patterns, performance, and governance.',
       'Be ready for "how do you automate X?" questions.',
@@ -833,7 +833,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'public-sector-solutions-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Public Sector Solutions is 45%—know Public Sector setup, configuration, and best practices.',
+      'Public Sector Solutions is 45%. Know Public Sector setup, configuration, and best practices.',
       'Understand Public Sector Solutions: setup, configuration, and government-specific features.',
       'Know configuration and best practices: implementation patterns, reporting, and compliance.',
       'Be ready for "how do you configure X?" questions.',
@@ -846,7 +846,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'email-specialist-practice-test': {
     ...DEFAULT_PREP,
     examTips: [
-      'Content and Sends are 35%—know email creation, AMPscript, and send management.',
+      'Content and Sends are 35%. Know email creation, AMPscript, and send management.',
       'Understand subscriber management: lists, data extensions, and segmentation.',
       'Know tracking and data: opens, clicks, unsubscribes, and reporting.',
       'Practice with Marketing Cloud Email Studio.',
@@ -858,7 +858,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'administrator-practice-test': {
     ...DEFAULT_PREP,
     examTips: [
-      'All sections are roughly equal—cover Configuration, Security, Automation, Data, and Sales/Service.',
+      'All sections are roughly equal, cover Configuration, Security, Automation, Data, and Sales/Service.',
       'Know configuration and setup: Lightning App Builder, Object Manager, and security.',
       'Understand automation: Flow, Process Builder, and Workflow Rules.',
       'Practice with timed practice tests to build pacing.',
@@ -870,7 +870,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'pardot-specialist': {
     ...DEFAULT_PREP,
     examTips: [
-      'Account Engagement Basics and Lead/List Management are 55%—know Pardot setup and lead management.',
+      'Account Engagement Basics and Lead/List Management are 55%. Know Pardot setup and lead management.',
       'Understand Account Engagement basics: setup, connector, and user management.',
       'Know lead and list management: lists, segmentation, and lead assignment.',
       'Be ready for "how do you configure X?" questions.',
@@ -882,7 +882,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Strategy, Subscriber/Data, Email/Journey, and Analytics.',
+      'All four sections are 25%. Cover Strategy, Subscriber/Data, Email/Journey, and Analytics.',
       'Know Marketing Cloud strategy: multi-channel marketing and campaign design.',
       'Understand subscriber and data management: data extensions, lists, and segmentation.',
       'Be ready for "how would you implement X?" consultant-style questions.',
@@ -894,7 +894,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'nonprofit-success-pack-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover NPSP Data Model, Donations, Configuration, and Reporting.',
+      'All four sections are 25%. Cover NPSP Data Model, Donations, Configuration, and Reporting.',
       'Know NPSP data model: accounts, contacts, households, and donations.',
       'Understand donations and households: gift entry, payment processing, and household management.',
       'Be ready for "how do you configure X?" questions.',
@@ -906,7 +906,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'education-cloud-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Education Cloud Data Model, Admissions, Configuration, and Reporting.',
+      'All four sections are 25%. Cover Education Cloud Data Model, Admissions, Configuration, and Reporting.',
       'Know Education Cloud data model: students, programs, courses, and admissions.',
       'Understand admissions and student lifecycle: application process, enrollment, and student management.',
       'Be ready for "how do you configure X?" questions.',
@@ -918,7 +918,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'crm-analytics-einstein-discovery-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover CRM Analytics Setup, Data Prep, Lens/Dashboards, and Einstein Discovery.',
+      'All four sections are 25%. Cover CRM Analytics Setup, Data Prep, Lens/Dashboards, and Einstein Discovery.',
       'Know CRM Analytics setup: org setup, data sources, and connections.',
       'Understand data preparation and datasets: data transformation, recipes, and datasets.',
       'Be ready for "how do you configure X?" questions.',
@@ -930,7 +930,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2c-commerce-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2C Commerce Architecture and Storefront/Scripts are 55%—know B2C development and customization.',
+      'B2C Commerce Architecture and Storefront/Scripts are 55%. Know B2C development and customization.',
       'Understand B2C Commerce architecture: storefront, scripts, and APIs.',
       'Know storefront and scripts: ISML, controllers, and script development.',
       'Be ready for "how do you develop X?" questions.',
@@ -942,7 +942,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'industries-cpq-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'CPQ Data Model and Product/Pricing + Configuration/Scripting are 80%—know CPQ development deeply.',
+      'CPQ Data Model and Product/Pricing + Configuration/Scripting are 80%. Know CPQ development deeply.',
       'Understand CPQ data model: products, price books, quotes, and configuration.',
       'Know configuration and scripting: product rules, price rules, and CPQ APIs.',
       'Be ready for "how do you develop X?" questions.',
@@ -954,7 +954,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-engagement-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Marketing Cloud Development and AMPscript/SSJS are 55%—know Marketing Cloud development.',
+      'Marketing Cloud Development and AMPscript/SSJS are 55%. Know Marketing Cloud development.',
       'Understand Marketing Cloud development: AMPscript, SSJS, and APIs.',
       'Know API and integration: REST APIs, SOAP APIs, and external system integration.',
       'Be ready for "how do you develop X?" questions.',
@@ -966,7 +966,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-developer-ii': {
     ...DEFAULT_PREP,
     examTips: [
-      'Advanced Mule Development is 30%—know advanced Mule concepts, patterns, and best practices.',
+      'Advanced Mule Development is 30%. Know advanced Mule concepts, patterns, and best practices.',
       'Understand API Design and Security: RESTful APIs, OAuth, and API security.',
       'Know error handling and performance: error handling strategies and performance optimization.',
       'Be ready for "how do you develop X?" questions.',
@@ -978,7 +978,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-hyperautomation-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Hyperautomation Concepts and RPA/Integration are 55%—know hyperautomation and RPA.',
+      'Hyperautomation Concepts and RPA/Integration are 55%. Know hyperautomation and RPA.',
       'Understand hyperautomation concepts: automation, RPA, and integration patterns.',
       'Know RPA and integration: RPA tools, integration, and automation design.',
       'Be ready for "how do you develop X?" questions.',
@@ -990,7 +990,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'slack-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Slack API/Events and Apps/Workflows are 60%—know Slack development and app creation.',
+      'Slack API/Events and Apps/Workflows are 60%. Know Slack development and app creation.',
       'Understand Slack API and Events: Events API, Web API, and event handling.',
       'Know apps and workflows: Slack apps, Workflow Builder, and automation.',
       'Be ready for "how do you develop X?" questions.',
@@ -1002,7 +1002,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'slack-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Slack Strategy, Channels/Workflows, Salesforce Integration, and Governance.',
+      'All four sections are 25%. Cover Slack Strategy, Channels/Workflows, Salesforce Integration, and Governance.',
       'Know Slack strategy and design: workspace design, channel strategy, and adoption.',
       'Understand channels and workflows: channel management, Workflow Builder, and automation.',
       'Be ready for "how would you implement X?" consultant-style questions.',
@@ -1014,7 +1014,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'omnistudio-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'OmniStudio Overview and Digital Flows/FlexCards are 55%—know OmniStudio configuration and design.',
+      'OmniStudio Overview and Digital Flows/FlexCards are 55%. Know OmniStudio configuration and design.',
       'Understand OmniStudio overview: OmniScript, FlexCards, and DataRaptors.',
       'Know digital flows and FlexCards: flow design, card configuration, and data transformation.',
       'Be ready for "how do you configure X?" questions.',
@@ -1026,7 +1026,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'omnistudio-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'OmniStudio Development and FlexCards/Digital Flows are 60%—know OmniStudio development.',
+      'OmniStudio Development and FlexCards/Digital Flows are 60%. Know OmniStudio development.',
       'Understand OmniStudio development: OmniScript customization, FlexCard development, and scripting.',
       'Know integration and scripting: DataRaptors, integration procedures, and JavaScript.',
       'Be ready for "how do you develop X?" questions.',
@@ -1038,7 +1038,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'sales-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'Sales Fundamentals and Salesforce CRM Basics are 75%—know sales fundamentals and CRM basics.',
+      'Sales Fundamentals and Salesforce CRM Basics are 75%. Know sales fundamentals and CRM basics.',
       'Understand sales fundamentals: sales process, customer-centric methodology, and best practices.',
       'Know Salesforce CRM basics: leads, opportunities, accounts, and contacts.',
       'Be ready for "what is X used for?" questions.',
@@ -1050,7 +1050,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'strategy-designer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Strategy and Discovery + Solution Design are 65%—know strategy design and discovery methods.',
+      'Strategy and Discovery + Solution Design are 65%. Know strategy design and discovery methods.',
       'Understand strategy and discovery: discovery methods, stakeholder engagement, and requirements gathering.',
       'Know solution design: experience strategy, solution design, and delivery.',
       'Be ready for "how would you design X?" questions.',
@@ -1062,7 +1062,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'tableau-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Tableau Architecture is 30%—know Tableau Server architecture, governance, and scalability.',
+      'Tableau Architecture is 30%. Know Tableau Server architecture, governance, and scalability.',
       'Understand governance and security: user management, permissions, and security models.',
       'Know scalability and performance: server architecture, performance tuning, and optimization.',
       'Be ready for "how would you architect X?" questions.',
@@ -1074,7 +1074,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'tableau-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'Requirements and Design + Data/Visualization are 65%—know Tableau consulting and solution design.',
+      'Requirements and Design + Data/Visualization are 65%. Know Tableau consulting and solution design.',
       'Understand requirements and design: discovery, requirements gathering, and solution design.',
       'Know data and visualization: data preparation, visualization design, and dashboard creation.',
       'Be ready for "how would you implement X?" consultant-style questions.',
@@ -1086,7 +1086,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'tableau-server-administrator': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%—cover Installation, Security, User/Content Management, and Performance.',
+      'All four sections are 25%. Cover Installation, Security, User/Content Management, and Performance.',
       'Know installation and deployment: Tableau Server installation, configuration, and deployment.',
       'Understand security and authentication: authentication methods, SSL, and security best practices.',
       'Be ready for "how do you configure X?" questions.',

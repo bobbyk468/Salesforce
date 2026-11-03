@@ -13,8 +13,8 @@ export default function ExecutionContextDiagram() {
         Execution context: Triggers, Flow, and Process Builder share one transaction (exam mental model)
       </figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        All automation that fires on a single DML operation — before/after triggers, Record-Triggered Flows, and
-        Process Builder — runs inside <strong>one execution context</strong>. Governor limits (SOQL queries, DML
+        All automation that fires on a single DML operation, before/after triggers, Record-Triggered Flows, and
+        Process Builder, runs inside <strong>one execution context</strong>. Governor limits (SOQL queries, DML
         statements, CPU time) accumulate across all of them, not per-automation. This is why bulkification and
         avoiding recursive updates matters for PD1.
       </p>
@@ -70,11 +70,11 @@ export default function ExecutionContextDiagram() {
         <path d="M 435 216 L 435 232" stroke="#0b5cab" strokeWidth="2" markerEnd="url(#ecArrow)" />
         <rect x="36" y="232" width="522" height="28" rx="6" fill="#fee2e2" stroke="#dc2626" strokeWidth="1.5" />
         <text x="297" y="250" textAnchor="middle" fill="#7f1d1d" fontWeight="600">
-          If a Flow/Process re-updates the record, before/after triggers can re-fire — watch for recursion
+          If a Flow/Process re-updates the record, before/after triggers can re-fire. Watch for recursion
         </text>
 
         <text x="310" y="298" textAnchor="middle" fill="#475569">
-          Governor limits (100 SOQL, 150 DML, CPU time) apply to the WHOLE box above — not per automation
+          Governor limits (100 SOQL, 150 DML, CPU time) apply to the WHOLE box above, not per automation
         </text>
       </svg>
     </figure>

@@ -22,9 +22,9 @@
     "summary": "MuleSoft Developer II is a hard exam. It assumes you already hold Developer I knowledge and tests advanced topics like batch processing, custom policies, CI/CD pipeline design, and production deployment strategies that require real project experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>70% passing score</strong> — the same threshold as Developer I, but the content is significantly more complex.",
-      "<strong>Advanced DataWeave</strong> — expect pattern matching, custom modules, recursive functions, and complex nested transformations.",
-      "<strong>Production experience matters</strong> — candidates with at least 6–12 months of hands-on Mule development in a production environment pass at significantly higher rates."
+      "<strong>70% passing score</strong>: the same threshold as Developer I, but the content is significantly more complex.",
+      "<strong>Advanced DataWeave</strong>: expect pattern matching, custom modules, recursive functions, and complex nested transformations.",
+      "<strong>Production experience matters</strong>: candidates with at least 6–12 months of hands-on Mule development in a production environment pass at significantly higher rates."
     ],
     "passRateGuidance": "Complete at least one production MuleSoft project with CI/CD before booking. Score 85%+ on practice exams since the real exam questions are more nuanced."
   },
@@ -33,7 +33,7 @@
     "intro": "The exam is proctored online or in-person. Here is the format:",
     "scenarioPercent": "About 50–60% of questions are scenario-based. Common patterns include designing batch processing jobs for high-volume data, choosing the right API security policy combination, configuring CI/CD pipelines with Maven, and troubleshooting production deployment issues.",
     "bestWayToPass": [
-      "<strong>Go deep on DataWeave:</strong> Practice pattern matching, custom modules, and recursive transformations — the exam tests advanced syntax beyond basic map and filter.",
+      "<strong>Go deep on DataWeave:</strong> Practice pattern matching, custom modules, and recursive transformations, the exam tests advanced syntax beyond basic map and filter.",
       "<strong>Build CI/CD pipelines:</strong> Configure Maven-based automated deployments to CloudHub and write MUnit tests with at least 80% coverage.",
       "<strong>Master batch processing:</strong> Know Batch Job phases, Batch Aggregator commit sizes, and how to handle failed records in high-volume data scenarios.",
       "<strong>Learn API security policies:</strong> Practice applying OAuth 2.0, JWT validation, rate limiting, and custom policies through API Manager."
@@ -66,23 +66,23 @@
     "blocks": [
       {
         "heading": "Advanced DataWeave: Functions and Modules",
-        "body": "DataWeave II advanced features: pattern matching (match/case for type-based branching), named functions (fun myFunc(arg) = ...), lambda functions (vars), and custom modules (import from external .dwl files). Complex scenarios: transforming nested arrays, handling nulls with default and orElse, type coercion. The exam presents complex transformation requirements and tests whether the developer can write efficient, readable DataWeave code — understanding when to use map vs reduce vs mapObject is critical."
+        "body": "DataWeave II advanced features: pattern matching (match/case for type-based branching), named functions (fun myFunc(arg) = ...), lambda functions (vars), and custom modules (import from external .dwl files). Complex scenarios: transforming nested arrays, handling nulls with default and orElse, type coercion. The exam presents complex transformation requirements and tests whether the developer can write efficient, readable DataWeave code, understanding when to use map vs reduce vs mapObject is critical."
       },
       {
         "heading": "Batch Processing in Mule",
-        "body": "Batch Job scope processes large datasets in records. Phases: On Complete (runs after all records processed), On Input (optional pre-processing), Batch Steps (process each record). Batch Aggregator accumulates records before processing — commit size defines how many records are committed together. Failed records can be routed separately. Database.Stateful equivalent: use Batch Job Record Variables to carry state. The exam tests Batch Job configuration for high-volume data processing scenarios."
+        "body": "Batch Job scope processes large datasets in records. Phases: On Complete (runs after all records processed), On Input (optional pre-processing), Batch Steps (process each record). Batch Aggregator accumulates records before processing, commit size defines how many records are committed together. Failed records can be routed separately. Database.Stateful equivalent: use Batch Job Record Variables to carry state. The exam tests Batch Job configuration for high-volume data processing scenarios."
       },
       {
         "heading": "API Security: Policies and OAuth",
-        "body": "Anypoint API Manager applies security policies to deployed APIs. Common policies: Client ID Enforcement (all clients must register and send client ID), **OAuth** 2.0 Token Enforcement (validate Bearer tokens), IP Allowlist, Rate Limiting (throttle by client or overall). Policies are applied through API Manager and injected into the runtime automatically — no code changes needed. The exam tests which policy combination to use for a given security requirement (authentication + authorisation + throttling)."
+        "body": "Anypoint API Manager applies security policies to deployed APIs. Common policies: Client ID Enforcement (all clients must register and send client ID), **OAuth** 2.0 Token Enforcement (validate Bearer tokens), IP Allowlist, Rate Limiting (throttle by client or overall). Policies are applied through API Manager and injected into the runtime automatically, no code changes needed. The exam tests which policy combination to use for a given security requirement (authentication + authorisation + throttling)."
       },
       {
         "heading": "Performance: Scatter-Gather and Cache Scope",
-        "body": "Scatter-Gather executes multiple routes in parallel and aggregates responses — ideal for fan-out calls where all responses are needed. Each route runs concurrently; Scatter-Gather waits for all routes to complete before aggregating. Cache Scope stores responses for a configurable TTL — reduces redundant external calls. Reconnection strategies handle transient connectivity failures. Async processing (VM connector, queues) decouples processing speed from response time. The exam tests when each performance pattern is appropriate."
+        "body": "Scatter-Gather executes multiple routes in parallel and aggregates responses, ideal for fan-out calls where all responses are needed. Each route runs concurrently; Scatter-Gather waits for all routes to complete before aggregating. Cache Scope stores responses for a configurable TTL, reduces redundant external calls. Reconnection strategies handle transient connectivity failures. Async processing (VM connector, queues) decouples processing speed from response time. The exam tests when each performance pattern is appropriate."
       },
       {
         "heading": "CI/CD with Anypoint: Maven and CloudHub Deployment",
-        "body": "Anypoint Maven Plugin enables automated deployment in CI/CD pipelines. pom.xml configuration includes CloudHub credentials, region, and worker configuration. Anypoint CLI provides command-line deployment and management. API Autodiscovery links a deployed Mule app to an API definition in API Manager — enables policy enforcement. The deployment pipeline: unit tests (MUnit) → build JAR → deploy to CloudHub → run integration tests → promote to production. The exam tests CI/CD pipeline design and Maven plugin configuration."
+        "body": "Anypoint Maven Plugin enables automated deployment in CI/CD pipelines. pom.xml configuration includes CloudHub credentials, region, and worker configuration. Anypoint CLI provides command-line deployment and management. API Autodiscovery links a deployed Mule app to an API definition in API Manager, enables policy enforcement. The deployment pipeline: unit tests (MUnit) → build JAR → deploy to CloudHub → run integration tests → promote to production. The exam tests CI/CD pipeline design and Maven plugin configuration."
       }
     ]
   },
@@ -180,7 +180,7 @@
       "correctAnswer": 0,
       "explanation": "MuleSoft Developer II validates ability to work on production-ready Mule applications and DevOps practices.",
       "whyWrong": [
-        "Developer II goes beyond basic APIs — it targets production-grade, DevOps-ready development.",
+        "Developer II goes beyond basic APIs, it targets production-grade, DevOps-ready development.",
         "UI design is unrelated to MuleSoft Developer II's backend integration focus.",
         "Email development is unrelated to MuleSoft Developer II's integration focus."
       ]
@@ -213,7 +213,7 @@
       "explanation": "Error handling scope and global error handlers provide consistent error handling and recovery.",
       "whyWrong": [
         "Apex try/catch is a Salesforce Core concept, not how Mule flows handle errors.",
-        "Ignoring errors is the opposite of a best practice — it leads to unhandled failures in production.",
+        "Ignoring errors is the opposite of a best practice, it leads to unhandled failures in production.",
         "Deleting the flow doesn't address error handling at all."
       ]
     },
@@ -261,7 +261,7 @@
       "explanation": "on-error-continue allows flow to continue after handling the error.",
       "whyWrong": [
         "Having no error strategy leaves failures unhandled, which isn't a valid Mule pattern.",
-        "on-error-propagate stops flow execution and passes the error up — the opposite of continuing.",
+        "on-error-propagate stops flow execution and passes the error up, the opposite of continuing.",
         "'on-error-delete' isn't a real Mule error-handling strategy."
       ]
     },
@@ -278,7 +278,7 @@
       "whyWrong": [
         "Batch processing works with structured data, not specifically emails.",
         "Batch processing is about data volume, not API creation.",
-        "Batch processing complements flows — it doesn't replace them."
+        "Batch processing complements flows, it doesn't replace them."
       ]
     },
     {
@@ -326,7 +326,7 @@
       "whyWrong": [
         "'On Error' handles exceptions, not scheduled execution.",
         "HTTP Listener responds to incoming requests, not scheduled triggers.",
-        "Logger records messages — it doesn't trigger scheduled execution."
+        "Logger records messages, it doesn't trigger scheduled execution."
       ]
     },
     {
@@ -341,8 +341,8 @@
       "explanation": "Custom policies enforce custom logic on API requests.",
       "whyWrong": [
         "Policies enforce behavior; they aren't a deletion mechanism.",
-        "Policies aren't limited to creation actions — they enforce ongoing rules like rate limiting and validation.",
-        "Custom policies extend API Manager's capabilities — they don't replace APIs themselves."
+        "Policies aren't limited to creation actions, they enforce ongoing rules like rate limiting and validation.",
+        "Custom policies extend API Manager's capabilities, they don't replace APIs themselves."
       ]
     },
     {
@@ -358,7 +358,7 @@
       "whyWrong": [
         "Transactions can span more than a single flow's local processing.",
         "'Try' scope handles errors but doesn't provide transactional guarantees across multiple operations.",
-        "Mule does support transactional scope — 'no scope' is incorrect."
+        "Mule does support transactional scope; 'no scope' is incorrect."
       ]
     },
     {
@@ -372,7 +372,7 @@
       "correctAnswer": 1,
       "explanation": "Idempotency prevents duplicate processing on retries.",
       "whyWrong": [
-        "Idempotency specifically addresses duplicate processing — 'no support' misstates its purpose.",
+        "Idempotency specifically addresses duplicate processing; 'no support' misstates its purpose.",
         "Idempotency is about correctness, not intentionally slowing down processing.",
         "Idempotency is about correctness (avoiding duplicates), not raw execution speed."
       ]
@@ -389,7 +389,7 @@
       "explanation": "Blue-green and rolling deployments support zero-downtime.",
       "whyWrong": [
         "Manual-only deployment doesn't inherently provide zero-downtime guarantees.",
-        "A full restart causes downtime — the opposite of the zero-downtime goal.",
+        "A full restart causes downtime, the opposite of the zero-downtime goal.",
         "Having no deployment strategy risks downtime, which contradicts the goal of zero-downtime releases."
       ]
     },

@@ -13,8 +13,8 @@ export default function AMPscriptExecutionDiagram() {
         <title id="ampe-title">AMPscript block at the top of the email runs first setting variables, then the HTML body renders using inline AMPscript and personalization strings that reference those variables</title>
         <defs><marker id="ampeArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b5cab" /></marker></defs>
         <rect x="16" y="16" width="668" height="60" rx="8" fill="#dbeafe" stroke="#0b5cab" strokeWidth="2" />
-        <text x="350" y="38" textAnchor="middle" fill="#0f172a" fontWeight="700">1. AMPscript Block — %%[ ... ]%%</text>
-        <text x="350" y="58" textAnchor="middle" fill="#334155">Runs first, top to bottom — VAR declarations, Lookup() calls</text>
+        <text x="350" y="38" textAnchor="middle" fill="#0f172a" fontWeight="700">1. AMPscript Block: %%[ ... ]%%</text>
+        <text x="350" y="58" textAnchor="middle" fill="#334155">Runs first, top to bottom: VAR declarations, Lookup() calls</text>
         <path d="M 350 76 L 350 100" stroke="#0b5cab" strokeWidth="2" markerEnd="url(#ampeArrow)" />
         <rect x="16" y="108" width="668" height="60" rx="8" fill="#ecfdf5" stroke="#059669" strokeWidth="2" />
         <text x="350" y="130" textAnchor="middle" fill="#0f172a" fontWeight="700">2. HTML Body Renders</text>

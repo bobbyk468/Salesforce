@@ -4,7 +4,7 @@ import { getRuntimeSecret } from '@/lib/runtime-secrets'
 import { readBoundedJson } from '@/lib/read-bounded-json'
 
 // ---------------------------------------------------------------------------
-// BM25 — retrieval at query time with no external deps or API calls
+// BM25, retrieval at query time with no external deps or API calls
 // ---------------------------------------------------------------------------
 
 const K1 = 1.5
@@ -146,7 +146,7 @@ Do not use general Salesforce knowledge, external sources, prior conversation de
 If the context is incomplete, say that Trailblaze Prep does not yet cover that detail, then answer only the portion that the context supports.
 Keep answers under 180 words unless the user asks for detail.
 Do not use markdown headers or bullet symbols. Write in plain, clear sentences.
-Never invent exam questions, passing percentages, or fees — only cite figures found in the context.
+Never invent exam questions, passing percentages, or fees, only cite figures found in the context.
 
 After every answer, on a new line write exactly this (no deviations):
 FOLLOW_UP: <question 1> | <question 2> | <question 3> | <question 4>

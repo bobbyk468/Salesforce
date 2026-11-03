@@ -26,7 +26,7 @@
       "<strong>Design reasoning.</strong> Most questions turn on non-functional needs like reliability, speed, scale and security.",
       "<strong>Whole platform scope.</strong> API-led layers, deployment options, messaging, transactions, monitoring and governance all come up."
     ],
-    "passRateGuidance": "People who have designed and run Mule apps in production do best. Before you book, aim for 75% or more on practice tests and make sure you can explain when to use a queue, a transaction or an idempotent filter."
+    "passRateGuidance": "People who have designed and run Mule apps in production do best. Before you book. Aim for 75% or more on practice tests and make sure you can explain when to use a queue, a transaction or an idempotent filter."
   },
   "examFormat": {
     "heading": "MuleSoft Integration Architect Exam Format Explained",

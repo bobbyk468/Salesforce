@@ -55,11 +55,11 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2B Solution Architect certification?',
-    answer: 'The B2B Solution Architect certification validates ability to design multi-cloud solutions for B2B (business-to-business) scenarios — integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and Experience Cloud for complex enterprise sales and channel partner environments. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
+    answer: 'The B2B Solution Architect certification validates ability to design multi-cloud solutions for B2B (business-to-business) scenarios, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and Experience Cloud for complex enterprise sales and channel partner environments. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
   },
   {
     question: 'What certifications should I hold before B2B Solution Architect?',
-    answer: 'No formal prerequisites are required, but Salesforce recommends: Sales Cloud Consultant, CPQ Administrator, Experience Cloud Consultant, and Revenue Cloud Consultant as foundational credentials. Most candidates attempting B2B Solution Architect have 4–6 years of Salesforce experience across multiple clouds. The exam is cross-cloud scenario-based — you need real project experience with B2B Commerce, CPQ, and Revenue Cloud.',
+    answer: 'No formal prerequisites are required, but Salesforce recommends: Sales Cloud Consultant, CPQ Administrator, Experience Cloud Consultant, and Revenue Cloud Consultant as foundational credentials. Most candidates attempting B2B Solution Architect have 4–6 years of Salesforce experience across multiple clouds. The exam is cross-cloud scenario-based; you need real project experience with B2B Commerce, CPQ, and Revenue Cloud.',
   },
   {
     question: 'What is the quote-to-cash process in Salesforce?',
@@ -67,7 +67,7 @@ const faqItems = [
   },
   {
     question: 'What is B2B Commerce Cloud?',
-    answer: 'Salesforce B2B Commerce Cloud (part of Commerce Cloud) is a self-service purchasing portal for business buyers — enabling B2B customers to browse product catalogues, configure orders, get quotes, and complete purchases online without a sales rep. It integrates with CPQ for complex product configuration, Account hierarchy for multi-level buyer access, and Revenue Cloud for billing. Unlike B2C Commerce (storefront for consumers), B2B Commerce is optimised for account-based purchasing with complex pricing and approval flows.',
+    answer: 'Salesforce B2B Commerce Cloud (part of Commerce Cloud) is a self-service purchasing portal for business buyers, enabling B2B customers to browse product catalogues, configure orders, get quotes, and complete purchases online without a sales rep. It integrates with CPQ for complex product configuration, Account hierarchy for multi-level buyer access, and Revenue Cloud for billing. Unlike B2C Commerce (storefront for consumers), B2B Commerce is optimised for account-based purchasing with complex pricing and approval flows.',
   },
   {
     question: 'How is B2B Solution Architect different from Sales Cloud Consultant?',
@@ -94,7 +94,7 @@ export default function B2bSolutionArchitectStudyGuidePage() {
           Salesforce B2B Solution Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the B2B Solution Architect exam — multi-cloud B2B design, CPQ, Revenue Cloud, partner portals, and quote-to-cash architecture.
+          Your complete guide to passing the B2B Solution Architect exam, multi-cloud B2B design, CPQ, Revenue Cloud, partner portals, and quote-to-cash architecture.
         </p>
       </div>
 
@@ -159,14 +159,14 @@ export default function B2bSolutionArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1–2', focus: 'B2B fundamentals — map the B2B buyer journey from awareness to purchase to renewal. Understand how each Salesforce cloud (Sales, CPQ, Revenue, B2B Commerce, Experience) fits into the process.' },
-            { week: 'Week 3', focus: 'Sales Cloud for B2B — opportunity management, account hierarchy, partner account relationships, and Sales Cloud reporting for B2B scenarios.' },
-            { week: 'Week 4', focus: 'CPQ deep dive — product bundles, pricing cascade, quote templates, and contract generation. Build a realistic CPQ scenario in a sandbox.' },
-            { week: 'Week 5', focus: 'Revenue Cloud — billing schedules, invoice generation, revenue recognition, amendments, and evergreen vs fixed-term contracts.' },
-            { week: 'Week 6', focus: 'B2B Commerce Cloud — storefront architecture, product catalogue, account-based pricing, order management, and CPQ integration for complex product configuration.' },
-            { week: 'Week 7', focus: 'Experience Cloud for partners — PRM features: deal registration, lead distribution, MDF, partner roles, and account hierarchy for partner access.' },
-            { week: 'Week 8', focus: 'Cross-cloud integration design — map data flows between B2B Commerce, CPQ, Revenue Cloud, and ERP. Design integration patterns for quote-to-cash.' },
-            { week: 'Week 9', focus: 'Architecture scenarios — practice multi-cloud architecture diagramming. Given a B2B business requirement, design the complete Salesforce solution using the right clouds and integrations.' },
+            { week: 'Week 1–2', focus: 'B2B fundamentals. Map the B2B buyer journey from awareness to purchase to renewal. Understand how each Salesforce cloud (Sales, CPQ, Revenue, B2B Commerce, Experience) fits into the process.' },
+            { week: 'Week 3', focus: 'Sales Cloud for B2B, opportunity management, account hierarchy, partner account relationships, and Sales Cloud reporting for B2B scenarios.' },
+            { week: 'Week 4', focus: 'CPQ deep dive, product bundles, pricing cascade, quote templates, and contract generation. Build a realistic CPQ scenario in a sandbox.' },
+            { week: 'Week 5', focus: 'Revenue Cloud, billing schedules, invoice generation, revenue recognition, amendments, and evergreen vs fixed-term contracts.' },
+            { week: 'Week 6', focus: 'B2B Commerce Cloud, storefront architecture, product catalogue, account-based pricing, order management, and CPQ integration for complex product configuration.' },
+            { week: 'Week 7', focus: 'Experience Cloud for partners: PRM features: deal registration, lead distribution, MDF, partner roles, and account hierarchy for partner access.' },
+            { week: 'Week 8', focus: 'Cross-cloud integration design, map data flows between B2B Commerce, CPQ, Revenue Cloud, and ERP. Design integration patterns for quote-to-cash.' },
+            { week: 'Week 9', focus: 'Architecture scenarios, practice multi-cloud architecture diagramming. Given a B2B business requirement, design the complete Salesforce solution using the right clouds and integrations.' },
             { week: 'Week 10', focus: 'Full mock exams. The exam is entirely scenario-based. Focus on which cloud to use when and how clouds integrate. Aim for 75%+ before booking.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -189,7 +189,7 @@ export default function B2bSolutionArchitectStudyGuidePage() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. B2B Solution Architect is entirely scenario-based and requires genuine multi-cloud project experience. Reading Trailhead alone is insufficient — you need to have architected and implemented solutions involving at least 3 of the B2B clouds tested.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. B2B Solution Architect is entirely scenario-based and requires genuine multi-cloud project experience. Reading Trailhead alone is insufficient; you need to have architected and implemented solutions involving at least 3 of the B2B clouds tested.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -222,7 +222,7 @@ export default function B2bSolutionArchitectStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/b2b-vs-b2c-solution-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ B2B vs B2C Solution Architect — full certification comparison</Link></li>
+          <li><Link href="/b2b-vs-b2c-solution-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ B2B vs B2C Solution Architect, full certification comparison</Link></li>
         </ul>
       </div>
 

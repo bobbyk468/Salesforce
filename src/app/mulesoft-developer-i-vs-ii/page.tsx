@@ -107,7 +107,7 @@ export default function MulesoftDeveloperIVsIIPage() {
           certName: "MuleSoft Developer I",
           certSlug: "mulesoft-developer-i",
           examTipsSlug: "mulesoft-developer-i-exam-tips",
-          reason: "MuleSoft Developer I is the required foundation — both in terms of knowledge and employer expectations. Developer II content assumes full mastery of Developer I concepts. Most candidates take 6–12 months between the two.",
+          reason: "MuleSoft Developer I is the required foundation, both in terms of knowledge and employer expectations. Developer II content assumes full mastery of Developer I concepts. Most candidates take 6–12 months between the two.",
           
         }}
       />
@@ -141,8 +141,8 @@ export default function MulesoftDeveloperIVsIIPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Difficulty</td>
-                <td className="py-2.5 pr-4">Moderate — build proficiency with the platform</td>
-                <td className="py-2.5">Hard — production-grade architecture decisions</td>
+                <td className="py-2.5 pr-4">Moderate, build proficiency with the platform</td>
+                <td className="py-2.5">Hard, production-grade architecture decisions</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
@@ -167,10 +167,10 @@ export default function MulesoftDeveloperIVsIIPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Developer II Tests Beyond Developer I</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced DataWeave</strong> — Complex transformations, reduce/map/filter functions, custom modules, format conversion at production scale, and performance-optimised transformation patterns.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling architecture</strong> — On-error-continue vs. on-error-propagate, global vs. flow-scoped error handlers, designing for idempotency and retry logic in production integrations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API security at scale</strong> — OAuth 2.0 flows, client ID enforcement, rate limiting policies, JWT validation, and mTLS for inter-service communication in enterprise API layers.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>High availability design</strong> — Clustering, CloudHub worker sizing, persistent queues with Anypoint MQ, and designing integrations that tolerate downstream system failures gracefully.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced DataWeave</strong>: Complex transformations, reduce/map/filter functions, custom modules, format conversion at production scale, and performance-optimised transformation patterns.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling architecture</strong>: On-error-continue vs. on-error-propagate, global vs. flow-scoped error handlers, designing for idempotency and retry logic in production integrations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API security at scale</strong>: OAuth 2.0 flows, client ID enforcement, rate limiting policies, JWT validation, and mTLS for inter-service communication in enterprise API layers.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>High availability design</strong>: Clustering, CloudHub worker sizing, persistent queues with Anypoint MQ, and designing integrations that tolerate downstream system failures gracefully.</li>
         </ul>
       </section>
 
@@ -198,23 +198,23 @@ export default function MulesoftDeveloperIVsIIPage() {
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
-                <td className="py-2.5 pr-4">New to MuleSoft — building first Mule apps or DataWeave transformations</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">MuleSoft Developer I — required starting point</td>
+                <td className="py-2.5 pr-4">New to MuleSoft, building first Mule apps or DataWeave transformations</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">MuleSoft Developer I, required starting point</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Experienced MuleSoft developer with 2+ years building production integrations</td>
-                <td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer II — validates advanced expertise</td>
+                <td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer II, validates advanced expertise</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Working on error handling, batch processing, and performance optimisation</td>
-                <td className="py-2.5 font-semibold text-purple-700">Developer II — these topics are core to the advanced exam</td>
+                <td className="py-2.5 font-semibold text-purple-700">Developer II, these topics are core to the advanced exam</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Targeting MuleSoft Integration Architect certification next</td>
-                <td className="py-2.5 font-semibold text-purple-700">Developer II — strongly recommended before Architect exams</td>
+                <td className="py-2.5 font-semibold text-purple-700">Developer II, strongly recommended before Architect exams</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Both — what is the right gap between them?</td>
+                <td className="py-2.5 pr-4">Both; what is the right gap between them?</td>
                 <td className="py-2.5 font-semibold text-gray-700">Dev I first, then Dev II after 12–18 months of real project experience</td>
               </tr>
             </tbody>

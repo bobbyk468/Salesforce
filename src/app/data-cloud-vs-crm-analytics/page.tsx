@@ -44,19 +44,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Data Cloud and CRM Analytics in Salesforce?',
-    answer: 'Salesforce Data Cloud (formerly Customer Data Platform) is a real-time data platform that unifies customer data from multiple sources into a single customer profile — focusing on data ingestion, identity resolution, segmentation, and activation. CRM Analytics (formerly Einstein Analytics / Tableau CRM) is a business intelligence and analytics platform for building dashboards, reports, and AI predictions on Salesforce data. Data Cloud is about unified data; CRM Analytics is about analysing and visualising it.',
+    answer: 'Salesforce Data Cloud (formerly Customer Data Platform) is a real-time data platform that unifies customer data from multiple sources into a single customer profile, focusing on data ingestion, identity resolution, segmentation, and activation. CRM Analytics (formerly Einstein Analytics / Tableau CRM) is a business intelligence and analytics platform for building dashboards, reports, and AI predictions on Salesforce data. Data Cloud is about unified data; CRM Analytics is about analysing and visualising it.',
   },
   {
     question: 'Which is more valuable: Data Cloud Consultant or CRM Analytics Consultant?',
-    answer: 'Data Cloud Consultant is higher demand in 2026 due to the strategic focus on AI and unified customer data. Data Cloud underpins Agentforce, Einstein AI, and Marketing Cloud Personalisation — making it central to enterprise Salesforce strategy. CRM Analytics Consultant is valuable for analytics-heavy roles and industries with strong BI requirements. If you work on enterprise data strategy or AI activation, prioritise Data Cloud.',
+    answer: 'Data Cloud Consultant is higher demand in 2026 due to the strategic focus on AI and unified customer data. Data Cloud underpins Agentforce, Einstein AI, and Marketing Cloud Personalisation, making it central to enterprise Salesforce strategy. CRM Analytics Consultant is valuable for analytics-heavy roles and industries with strong BI requirements. If you work on enterprise data strategy or AI activation, prioritise Data Cloud.',
   },
   {
     question: 'Do Data Cloud and CRM Analytics overlap?',
-    answer: 'There is some conceptual overlap — both involve data, and Data Cloud data can be used to fuel CRM Analytics dashboards. However, the exam content is very different. Data Cloud Consultant focuses on data streams, identity resolution, segmentation, calculated insights, and data model unification. CRM Analytics Consultant focuses on datasets, recipes, dashboards, lenses, SAQL queries, and Einstein Discovery predictions.',
+    answer: 'There is some conceptual overlap, both involve data, and Data Cloud data can be used to fuel CRM Analytics dashboards. However, the exam content is very different. Data Cloud Consultant focuses on data streams, identity resolution, segmentation, calculated insights, and data model unification. CRM Analytics Consultant focuses on datasets, recipes, dashboards, lenses, SAQL queries, and Einstein Discovery predictions.',
   },
   {
     question: 'Is Data Cloud Consultant harder than CRM Analytics Consultant?',
-    answer: 'Both exams are comparable in difficulty (60 questions, 105 min, 65%, $200). Data Cloud is often considered more conceptually challenging because the technology is newer and the data architecture concepts (identity resolution, streaming ingestion, calculated insights) are less familiar to most consultants. CRM Analytics is harder in terms of technical tooling depth — SAQL queries and recipe-level data transformations require hands-on platform experience.',
+    answer: 'Both exams are comparable in difficulty (60 questions, 105 min, 65%, $200). Data Cloud is often considered more conceptually challenging because the technology is newer and the data architecture concepts (identity resolution, streaming ingestion, calculated insights) are less familiar to most consultants. CRM Analytics is harder in terms of technical tooling depth: SAQL queries and recipe-level data transformations require hands-on platform experience.',
   },
 ]
 
@@ -73,7 +73,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
           Salesforce Data Cloud Consultant vs CRM Analytics Consultant: Which to Take?
         </h1>
         <p className="text-lg text-gray-600">
-          Both certifications involve data — but they serve very different purposes. Data Cloud unifies customer data
+          Both certifications involve data, but they serve very different purposes. Data Cloud unifies customer data
           for AI and activation. CRM Analytics builds BI dashboards and predictions. Here’s how to choose.
         </p>
       </header>
@@ -106,7 +106,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
           certName: "Data Cloud Consultant",
           certSlug: "data-360-consultant",
           examTipsSlug: "data-360-consultant-exam-tips",
-          reason: "Data Cloud Consultant is the higher-growth investment — demand is accelerating and certified talent is genuinely scarce. CRM Analytics is a strong credential for analytics-focused roles, but Data Cloud commands a higher salary premium and broader client demand in 2026.",
+          reason: "Data Cloud Consultant is the higher-growth investment; demand is accelerating and certified talent is genuinely scarce. CRM Analytics is a strong credential for analytics-focused roles, but Data Cloud commands a higher salary premium and broader client demand in 2026.",
           
         }}
       />
@@ -140,8 +140,8 @@ export default function DataCloudVsCrmAnalyticsPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Market Demand (2026)</td>
-                <td className="py-2.5 pr-4">High — central to Agentforce and AI strategy</td>
-                <td className="py-2.5">Moderate — established, BI-specific roles</td>
+                <td className="py-2.5 pr-4">High, central to Agentforce and AI strategy</td>
+                <td className="py-2.5">Moderate, established, BI-specific roles</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Best For</td>
@@ -163,7 +163,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>Data Cloud Consultant</strong> if your work involves customer data unification, Marketing Cloud, AI/Agentforce implementations, or enterprise data strategy.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>CRM Analytics Consultant</strong> if your work involves building dashboards, operationalising BI for sales teams, or using Einstein Discovery for embedded predictions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />If you are unsure, <strong>Data Cloud</strong> has higher strategic value in 2026 as it underpins Agentforce, real-time personalisation, and enterprise AI — demand is growing faster than CRM Analytics roles.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />If you are unsure, <strong>Data Cloud</strong> has higher strategic value in 2026 as it underpins Agentforce, real-time personalisation, and enterprise AI; demand is growing faster than CRM Analytics roles.</li>
         </ul>
       </section>
 
@@ -200,7 +200,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Working with real-time data activation and audience-based personalisation</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud — CDP/real-time activation is its core strength</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud: CDP/real-time activation is its core strength</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Visualising Salesforce data for sales, service, or ops reporting</td>
@@ -208,7 +208,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">High demand project skill to develop in 2025+</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud — fastest-growing Salesforce product area</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud, fastest-growing Salesforce product area</td>
               </tr>
             </tbody>
           </table>

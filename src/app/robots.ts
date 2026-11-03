@@ -6,7 +6,7 @@ import { MetadataRoute } from 'next'
 const rawUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const baseUrl = rawUrl.replace(/^(https?:\/\/)(?!www\.)trailblazeprep\.com/, '$1www.trailblazeprep.com')
 if (rawUrl !== baseUrl) {
-  console.warn('[robots] NEXT_PUBLIC_SITE_URL uses apex host — auto-corrected to www. Set NEXT_PUBLIC_SITE_URL=https://www.trailblazeprep.com in Vercel.')
+  console.warn('[robots] NEXT_PUBLIC_SITE_URL uses apex host, auto-corrected to www. Set NEXT_PUBLIC_SITE_URL=https://www.trailblazeprep.com in Vercel.')
 }
 const host = (() => {
   try {

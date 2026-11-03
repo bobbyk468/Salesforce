@@ -57,15 +57,15 @@ const faqItems = [
   },
   {
     question: 'What prerequisites do I need for the Integration Architect exam?',
-    answer: 'There are no hard prerequisites, but Salesforce recommends Platform Developer I (PD1) and experience with REST/SOAP APIs before attempting Integration Architect. Real integration project experience — connecting Salesforce to ERP, marketing, or billing systems — is essential for the scenario-based questions.',
+    answer: 'There are no hard prerequisites, but Salesforce recommends Platform Developer I (PD1) and experience with REST/SOAP APIs before attempting Integration Architect. Real integration project experience, connecting Salesforce to ERP, marketing, or billing systems, is essential for the scenario-based questions.',
   },
   {
     question: 'What is the difference between Integration Architect and Platform Developer II for integrations?',
-    answer: 'Platform Developer II tests how to write integration code (REST callouts, SOAP, Named Credentials, HttpCalloutMock). Integration Architect tests when and how to choose the right integration pattern at an architectural level — REST vs. SOAP vs. bulk API vs. streaming, middleware vs. point-to-point vs. ESB, and security architecture for integrations.',
+    answer: 'Platform Developer II tests how to write integration code (REST callouts, SOAP, Named Credentials, HttpCalloutMock). Integration Architect tests when and how to choose the right integration pattern at an architectural level: REST vs. SOAP vs. bulk API vs. streaming, middleware vs. point-to-point vs. ESB, and security architecture for integrations.',
   },
   {
     question: 'What concepts do most Integration Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Integration Architect exam are: (1) Real-Time vs Near-Real-Time vs Batch — Choosing the Right Integration Pattern; (2) Idempotency — Why Retry Logic Requires Idempotent Operations; (3) Salesforce Connect vs Heroku Connect vs MuleSoft — Three Different Integration Approaches. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Integration Architect exam are: (1) Real-Time vs Near-Real-Time vs Batch: Choosing the Right Integration Pattern; (2) Idempotency: Why Retry Logic Requires Idempotent Operations; (3) Salesforce Connect vs Heroku Connect vs MuleSoft: Three Different Integration Approaches. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('integration-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function IntegrationArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Integration Architect Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration pattern selection</strong> — When to use REST vs. SOAP vs. Bulk API vs. Streaming API vs. Platform Events, and the trade-offs of each for specific integration scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Middleware architecture</strong> — When to recommend point-to-point integration vs. middleware (MuleSoft, Dell Boomi) vs. a custom ESB, and the governance implications of each choice.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security for integrations</strong> — OAuth flows (User-Agent, Username-Password, JWT Bearer, Web Server), Named Credentials, and certificate management for secure system-to-system communication.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration pattern selection</strong>: When to use REST vs. SOAP vs. Bulk API vs. Streaming API vs. Platform Events, and the trade-offs of each for specific integration scenarios.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Middleware architecture</strong>: When to recommend point-to-point integration vs. middleware (MuleSoft, Dell Boomi) vs. a custom ESB, and the governance implications of each choice.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security for integrations</strong>: OAuth flows (User-Agent, Username-Password, JWT Bearer, Web Server), Named Credentials, and certificate management for secure system-to-system communication.</li>
         </ul>
       </section>
 
@@ -155,7 +155,7 @@ export default function IntegrationArchitectExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Integration Architect has a lower first-attempt pass rate than most architect component exams.
-          The questions require genuine integration project experience — candidates who have only studied
+          The questions require genuine integration project experience, candidates who have only studied
           theory consistently fail middleware and OAuth flow questions.
         </p>
       </section>
@@ -163,19 +163,19 @@ export default function IntegrationArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Integration Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Real-Time vs Near-Real-Time vs Batch — Choosing the Right Integration Pattern</p>
-            <p className="text-sm text-gray-700">Real-time integration executes synchronously during a transaction (callout mid-save) — adds latency and risk of timeout. Near-real-time uses Platform Events or Change Data Capture to trigger async processing within seconds. Batch syncs data on a schedule (hourly, nightly). Candidates recommend real-time callouts for data that needs to be "current" — the exam expects near-real-time (Platform Events) for that pattern and real-time only for blocking decisions (credit checks, inventory holds).</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Real-Time vs Near-Real-Time vs Batch: Choosing the Right Integration Pattern</p>
+            <p className="text-sm text-gray-700">Real-time integration executes synchronously during a transaction (callout mid-save), adds latency and risk of timeout. Near-real-time uses Platform Events or Change Data Capture to trigger async processing within seconds. Batch syncs data on a schedule (hourly, nightly). Candidates recommend real-time callouts for data that needs to be "current", the exam expects near-real-time (Platform Events) for that pattern and real-time only for blocking decisions (credit checks, inventory holds).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Idempotency — Why Retry Logic Requires Idempotent Operations</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Idempotency: Why Retry Logic Requires Idempotent Operations</p>
             <p className="text-sm text-gray-700">An idempotent operation produces the same result whether executed once or multiple times. Integration retries can cause duplicate records or double-charges if operations are not idempotent. Exam scenarios about retry handling expect idempotency design: use upsert (not insert) on retry, include a correlation ID, check if a record already exists before creating. Candidates design retry without idempotency safeguards.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Salesforce Connect vs Heroku Connect vs MuleSoft — Three Different Integration Approaches</p>
-            <p className="text-sm text-gray-700">Salesforce Connect exposes external data as External Objects in real time without importing it (best for small record sets queried infrequently). Heroku Connect maintains a Postgres replica of Salesforce data for high-performance querying. MuleSoft API-led connectivity builds reusable integration APIs across systems. Candidates recommend MuleSoft for all integration scenarios — the exam tests which tool fits the specific requirement.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Salesforce Connect vs Heroku Connect vs MuleSoft: Three Different Integration Approaches</p>
+            <p className="text-sm text-gray-700">Salesforce Connect exposes external data as External Objects in real time without importing it (best for small record sets queried infrequently). Heroku Connect maintains a Postgres replica of Salesforce data for high-performance querying. MuleSoft API-led connectivity builds reusable integration APIs across systems. Candidates recommend MuleSoft for all integration scenarios, the exam tests which tool fits the specific requirement.</p>
           </div>
         </div>
       </section>

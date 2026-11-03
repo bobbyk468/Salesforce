@@ -29,7 +29,7 @@ export default function CertMockScoreGuide({ slug }: Props) {
           </h3>
           <p className="text-sm text-gray-700 mb-2">
             The official passing score is <strong>{passingScore}</strong>. We recommend booking when you consistently score{' '}
-            <strong>{config.target}%+</strong> on timed mock exams — that gives you a{' '}
+            <strong>{config.target}%+</strong> on timed mock exams; that gives you a{' '}
             <strong>{config.buffer}%+ buffer</strong> above the pass mark to account for exam-day nerves and unfamiliar question wording.
           </p>
           <p className="text-sm text-gray-700">

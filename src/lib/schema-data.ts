@@ -162,7 +162,7 @@ export function getCourseJsonLd({
     copyrightYear: new Date().getFullYear(),
     hasCourseInstance: {
       '@type': 'CourseInstance',
-      name: `${name} — Exam Prep`,
+      name: `${name}: Exam Prep`,
       courseMode: 'online',
     },
   }

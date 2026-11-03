@@ -87,7 +87,7 @@ export default function BecomeCtaPage() {
           Become a Certified Technical Architect
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-          Flow from zero experience to CTA. Follow the path below—each box is a certification you can study.
+          Flow from zero experience to CTA. Follow the path below, each box is a certification you can study.
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-sm">
           <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700">
@@ -110,8 +110,8 @@ export default function BecomeCtaPage() {
             CTA evaluation and review board. This page gives you the sequence so you can see where each certification fits.
           </p>
           <p>
-            If you are early in your career, use the first two phases to build a realistic foundation. If you are already
-            leading implementations, use the architect phases to identify missing domains such as identity, integration, data,
+            If you are early in your career. Use the first two phases to build a realistic foundation. If you are already
+            leading implementations. Use the architect phases to identify missing domains such as identity, integration, data,
             sharing, deployment lifecycle, and application architecture. The goal is to prevent random certification chasing
             and turn the CTA journey into a staged plan.
           </p>
@@ -145,7 +145,7 @@ export default function BecomeCtaPage() {
               </div>
             </div>
 
-            {/* Row: [Box] → [Box] → [Box] — left to right flow (scroll on small screens) */}
+            {/* Row: [Box] → [Box] → [Box], left to right flow (scroll on small screens) */}
             <div className="flex flex-nowrap items-stretch gap-0 min-h-[100px] pb-2 md:pb-0 overflow-x-auto">
               {phase.certs.map((cert, certIndex) => (
                 <div key={cert.href} className="flex items-stretch gap-0 flex-shrink-0">

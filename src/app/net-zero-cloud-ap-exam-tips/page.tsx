@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Net Zero Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Net Zero Cloud exam are: (1) Scope 1 vs Scope 2 vs Scope 3 Emissions — Different Tracking Responsibilities; (2) Carbon Credits vs Carbon Offsets — Purchased vs Generated; (3) Emission Factors — Why Records Don\'t Match Industry Benchmarks. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Net Zero Cloud exam are: (1) Scope 1 vs Scope 2 vs Scope 3 Emissions: Different Tracking Responsibilities; (2) Carbon Credits vs Carbon Offsets: Purchased vs Generated; (3) Emission Factors: Why Records Don\'t Match Industry Benchmarks. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('net-zero-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function NetZeroCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Net Zero Cloud AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Carbon accounting and emissions data</strong> — Configuring emission factors for electricity, fuel, and transportation; setting up data ingestion from utility bills, ERP systems, and IoT sensors; calculating Scope 1 (direct), Scope 2 (energy), and Scope 3 (value chain) emissions; and the GHG Protocol methodology for carbon accounting.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sustainability target setting and tracking</strong> — Setting science-based reduction targets (SBTi alignment), tracking progress against targets over time, managing carbon offset purchases and retirement of carbon credits, and using Net Zero Cloud’s dashboards to monitor sustainability performance across business units and geographies.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>ESG reporting and disclosure</strong> — Generating reports for CDP, TCFD, GHG Protocol, and SEC climate disclosure requirements. Configuring audit trails for data lineage and assurance. Managing supplier sustainability data collection via supplier scorecards. Understanding the difference between mandatory and voluntary reporting frameworks.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Carbon accounting and emissions data</strong>: Configuring emission factors for electricity, fuel, and transportation; setting up data ingestion from utility bills, ERP systems, and IoT sensors; calculating Scope 1 (direct), Scope 2 (energy), and Scope 3 (value chain) emissions; and the GHG Protocol methodology for carbon accounting.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sustainability target setting and tracking</strong>: Setting science-based reduction targets (SBTi alignment), tracking progress against targets over time, managing carbon offset purchases and retirement of carbon credits, and using Net Zero Cloud’s dashboards to monitor sustainability performance across business units and geographies.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>ESG reporting and disclosure</strong>: Generating reports for CDP, TCFD, GHG Protocol, and SEC climate disclosure requirements. Configuring audit trails for data lineage and assurance. Managing supplier sustainability data collection via supplier scorecards. Understanding the difference between mandatory and voluntary reporting frameworks.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function NetZeroCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Net Zero Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Scope 1 vs Scope 2 vs Scope 3 Emissions — Different Tracking Responsibilities</p>
-            <p className="text-sm text-gray-700">Scope 1: direct emissions from owned/controlled sources (company vehicles, on-site combustion). Scope 2: indirect emissions from purchased electricity, heat, or steam. Scope 3: all other indirect emissions in the value chain (business travel, supply chain, customer product use). Candidates use a single Emission record for all scopes — the exam expects Scope-specific record types and understanding that Scope 3 data often comes from external suppliers via data ingestion.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Scope 1 vs Scope 2 vs Scope 3 Emissions: Different Tracking Responsibilities</p>
+            <p className="text-sm text-gray-700">Scope 1: direct emissions from owned/controlled sources (company vehicles, on-site combustion). Scope 2: indirect emissions from purchased electricity, heat, or steam. Scope 3: all other indirect emissions in the value chain (business travel, supply chain, customer product use). Candidates use a single Emission record for all scopes, the exam expects Scope-specific record types and understanding that Scope 3 data often comes from external suppliers via data ingestion.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Carbon Credits vs Carbon Offsets — Purchased vs Generated</p>
-            <p className="text-sm text-gray-700">Carbon Credits are purchased instruments that represent the right to emit one tonne of CO2. Carbon Offsets are projects (reforestation, renewable energy) that reduce or remove emissions, generating credits. In Net Zero Cloud, purchased offsets are tracked as Sustainability Adjustments. Candidates conflate these — the exam distinguishes between emissions reduction (operational improvements) and offset purchases (compensating for remaining emissions).</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Carbon Credits vs Carbon Offsets: Purchased vs Generated</p>
+            <p className="text-sm text-gray-700">Carbon Credits are purchased instruments that represent the right to emit one tonne of CO2. Carbon Offsets are projects (reforestation, renewable energy) that reduce or remove emissions, generating credits. In Net Zero Cloud, purchased offsets are tracked as Sustainability Adjustments. Candidates conflate these, the exam distinguishes between emissions reduction (operational improvements) and offset purchases (compensating for remaining emissions).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Emission Factors — Why Records Don’t Match Industry Benchmarks</p>
-            <p className="text-sm text-gray-700">Net Zero Cloud calculates emissions by multiplying activity data (litres of fuel, kWh of electricity) by Emission Factors (kg CO2e per unit). Emission Factor libraries are sourced from regulatory bodies (EPA, IPCC) and vary by region and time period. Candidates assume a single global emission factor for electricity — the exam expects region-specific grid emission factors (European electricity is cleaner than coal-heavy grids).</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Emission Factors: Why Records Don’t Match Industry Benchmarks</p>
+            <p className="text-sm text-gray-700">Net Zero Cloud calculates emissions by multiplying activity data (litres of fuel, kWh of electricity) by Emission Factors (kg CO2e per unit). Emission Factor libraries are sourced from regulatory bodies (EPA, IPCC) and vary by region and time period. Candidates assume a single global emission factor for electricity, the exam expects region-specific grid emission factors (European electricity is cleaner than coal-heavy grids).</p>
           </div>
         </div>
       </section>

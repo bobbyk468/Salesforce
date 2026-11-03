@@ -71,7 +71,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
           certification path
         </Link>{' '}
         to understand where this certification fits.{' '}
-        {topSection && <>The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%) — see the full breakdown, study tips, and practice questions below.</>}
+        {topSection && <>The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), see the full breakdown, study tips, and practice questions below.</>}
         {studyGuideLink && <> See our{studyGuideLink}</>}
         {extraLinks}
       </p>
@@ -94,7 +94,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
         to understand where this certification fits.{' '}
         {topSection ? (
           <>
-            The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%) — see the full breakdown, study tips, and practice questions below.
+            The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), see the full breakdown, study tips, and practice questions below.
           </>
         ) : (
           <>Below you’ll find exam weightage, study tips, and practice questions.</>
@@ -113,7 +113,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
       to understand where this certification fits in your career.{' '}
       {topSection ? (
         <>
-          The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%) — see the full breakdown, study tips, and practice questions below.
+          The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), see the full breakdown, study tips, and practice questions below.
         </>
       ) : (
         <>Below you’ll find exam weightage, study tips, and practice questions.</>

@@ -63,7 +63,7 @@ export const CERTIFICATION_TESTIMONIALS: Record<string, StudentTestimonial[]> = 
       company: 'Manufacturing Tech',
       certificationSlug: 'app-builder',
       story:
-        'Coming from an Admin background, App Builder felt like learning a new language. The key was hands-on building—I created sample apps with custom objects, relationships, and Flows. Formula fields and rollup summaries clicked after I built real examples. Process Automation (25% of exam) is critical to master.',
+        'Coming from an Admin background, App Builder felt like learning a new language. The key was hands-on building, I created sample apps with custom objects, relationships, and Flows. Formula fields and rollup summaries clicked after I built real examples. Process Automation (25% of exam) is critical to master.',
       result: 'Passed with 71% on second attempt',
       timeToPass: '10 weeks',
       rating: 4,
@@ -84,7 +84,7 @@ export const CERTIFICATION_TESTIMONIALS: Record<string, StudentTestimonial[]> = 
       role: 'Junior Developer',
       certificationSlug: 'app-builder',
       story:
-        'I focused heavily on Security & Deployment (25% of exam)—validations, sharing, encryption. Understanding Lightning Pages over outdated Visualforce was crucial. Building sample apps in a real org and practicing cross-object formulas transformed my confidence.',
+        'I focused heavily on Security & Deployment (25% of exam). Validations, sharing, encryption. Understanding Lightning Pages over outdated Visualforce was crucial. Building sample apps in a real org and practicing cross-object formulas transformed my confidence.',
       result: 'Passed with 74% on first attempt',
       timeToPass: '8 weeks',
       rating: 5,
@@ -98,7 +98,7 @@ export const CERTIFICATION_TESTIMONIALS: Record<string, StudentTestimonial[]> = 
       company: 'Enterprise Solutions',
       certificationSlug: 'advanced-administrator',
       story:
-        'With 18 months admin experience, I was ready for Advanced Admin challenges. Complex sharing scenarios were intense—understanding SharingReasons, PermissionSetGroups, and territory management required lab time. The advanced automation questions (dynamic Flows, decision trees) separated passers from non-passers.',
+        'With 18 months admin experience, I was ready for Advanced Admin challenges. Complex sharing scenarios were intense, understanding SharingReasons, PermissionSetGroups, and territory management required lab time. The advanced automation questions (dynamic Flows, decision trees) separated passers from non-passers.',
       result: 'Passed with 76% on first attempt',
       timeToPass: '10 weeks',
       rating: 5,
@@ -123,7 +123,7 @@ export const CERTIFICATION_TESTIMONIALS: Record<string, StudentTestimonial[]> = 
       company: 'Software Company',
       certificationSlug: 'platform-developer-i',
       story:
-        'I came from a non-programming background. Learning Apex was the steepest part—classes, methods, asynchronous operations. Lightning Web Components syntax clicked faster once I understood the lifecycle. Governor limits and batch processing were high-exam-weight topics.',
+        'I came from a non-programming background. Learning Apex was the steepest part, classes, methods, asynchronous operations. Lightning Web Components syntax clicked faster once I understood the lifecycle. Governor limits and batch processing were high-exam-weight topics.',
       result: 'Passed with 73% on first attempt',
       timeToPass: '12 weeks',
       rating: 4,
@@ -175,7 +175,7 @@ export const CERTIFICATION_TESTIMONIALS: Record<string, StudentTestimonial[]> = 
       company: 'Non-Profit Org',
       certificationSlug: 'platform-foundations',
       story:
-        'As someone new to Salesforce, Platform Foundations was the perfect starting point. It covered the core concepts—Customer 360, data model, reports—without overwhelming me. After passing this, I felt confident to pursue the Admin certification.',
+        'As someone new to Salesforce, Platform Foundations was the perfect starting point. It covered the core concepts, Customer 360, data model, reports, without overwhelming me. After passing this, I felt confident to pursue the Admin certification.',
       result: 'Passed with 85% on first attempt',
       timeToPass: '3 weeks',
       rating: 5,

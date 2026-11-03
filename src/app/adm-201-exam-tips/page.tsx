@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'How long should I study for ADM-201?',
-    answer: 'Most candidates with some Salesforce experience need 4–6 weeks of dedicated study. Build hands-on skills in a free Developer Edition org — ADM-201 is scenario-based and rewards practical experience over memorisation.',
+    answer: 'Most candidates with some Salesforce experience need 4–6 weeks of dedicated study. Build hands-on skills in a free Developer Edition org: ADM-201 is scenario-based and rewards practical experience over memorisation.',
   },
   {
     question: 'Is ADM-201 hard to pass on the first attempt?',
@@ -64,7 +64,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most ADM-201 candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the ADM-201 exam are: (1) OWD vs Profiles vs Roles — Three Layers, One Wrong Answer; (2) Flow vs Process Builder — Know the Exam\'s Recommended Tool; (3) Reports vs Dashboards — Joined Reports and Filter Limits. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the ADM-201 exam are: (1) OWD vs Profiles vs Roles: Three Layers, One Wrong Answer; (2) Flow vs Process Builder: Know the Exam\'s Recommended Tool; (3) Reports vs Dashboards: Joined Reports and Filter Limits. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('adm-201-exam-tips'),
 ]
@@ -148,19 +148,19 @@ export default function Adm201ExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most ADM-201 Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. OWD vs Profiles vs Roles — Three Layers, One Wrong Answer</p>
-            <p className="text-sm text-gray-700">Organisation-Wide Defaults (OWD) sets the baseline access floor for all records. Profiles control object and field permissions — what objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from candidates applying the right rule to the wrong layer: using roles to restrict access (you can’t — roles only open access upward) or forgetting that profiles cannot override OWD to restrict access.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. OWD vs Profiles vs Roles: Three Layers, One Wrong Answer</p>
+            <p className="text-sm text-gray-700">Organisation-Wide Defaults (OWD) sets the baseline access floor for all records. Profiles control object and field permissions, what objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from candidates applying the right rule to the wrong layer: using roles to restrict access (you can’t; roles only open access upward) or forgetting that profiles cannot override OWD to restrict access.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Flow vs Process Builder — Know the Exam’s Recommended Tool</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Flow vs Process Builder: Know the Exam’s Recommended Tool</p>
             <p className="text-sm text-gray-700">Salesforce has deprecated Process Builder and Workflow Rules in favour of Record-Triggered Flows. Exam scenarios now expect Flow as the answer when the question describes record-based automation. Candidates who still default to &ldquo;use Process Builder&rdquo; lose those marks. Know the four Flow types: Record-Triggered, Scheduled, Screen, and Auto-Launched, and when each is appropriate.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Reports vs Dashboards — Joined Reports and Filter Limits</p>
-            <p className="text-sm text-gray-700">Joined Reports allow cross-object reporting across multiple report types in a single view — a feature candidates frequently forget exists. Dashboard filter limitations trip up candidates: dashboard filters only support field equality (exact match), not contains or starts-with. Also know that dashboard refresh frequency is limited by Salesforce edition.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Reports vs Dashboards: Joined Reports and Filter Limits</p>
+            <p className="text-sm text-gray-700">Joined Reports allow cross-object reporting across multiple report types in a single view, a feature candidates frequently forget exists. Dashboard filter limitations trip up candidates: dashboard filters only support field equality (exact match), not contains or starts-with. Also know that dashboard refresh frequency is limited by Salesforce edition.</p>
           </div>
         </div>
       </section>

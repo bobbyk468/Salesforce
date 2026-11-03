@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What coding languages does the MC Engagement Developer exam cover?',
-    answer: 'The exam primarily covers AMPscript (Marketing Cloud\'s native personalisation language) and Server-Side JavaScript (SSJS). You need to be able to read, interpret, and debug code written in both languages. The exam also covers Marketing Cloud REST and SOAP API usage, though you do not need to write full API implementations from memory — understanding request/response structures and authentication methods is sufficient.',
+    answer: 'The exam primarily covers AMPscript (Marketing Cloud\'s native personalisation language) and Server-Side JavaScript (SSJS). You need to be able to read, interpret, and debug code written in both languages. The exam also covers Marketing Cloud REST and SOAP API usage, though you do not need to write full API implementations from memory, understanding request/response structures and authentication methods is sufficient.',
   },
   {
     question: 'What is the MC Engagement Developer exam format?',
@@ -67,7 +67,7 @@ const faqItems = [
   },
   {
     question: 'What experience level is needed for the MC Engagement Developer exam?',
-    answer: 'The exam targets developers with at least 1–2 years of hands-on Marketing Cloud development experience. Candidates should have real experience building AMPscript personalisation, creating CloudPages, working with data extensions, and using the Marketing Cloud API. Candidates without hands-on development experience — even with theoretical study — typically find the debugging and coding sections very difficult.',
+    answer: 'The exam targets developers with at least 1–2 years of hands-on Marketing Cloud development experience. Candidates should have real experience building AMPscript personalisation, creating CloudPages, working with data extensions, and using the Marketing Cloud API. Candidates without hands-on development experience, even with theoretical study, typically find the debugging and coding sections very difficult.',
   },
   {
     question: 'What is the difference between MC Engagement Developer and MC Engagement Admin?',
@@ -94,7 +94,7 @@ export default function MarketingCloudEngagementDeveloperStudyGuidePage() {
           Marketing Cloud Engagement Developer Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Marketing Cloud Engagement Developer exam — AMPscript, SSJS, data management, REST API, and debugging techniques to pass with confidence.
+          A complete study guide for the Salesforce Certified Marketing Cloud Engagement Developer exam: AMPscript, SSJS, data management, REST API, and debugging techniques to pass with confidence.
         </p>
       </div>
 
@@ -200,7 +200,7 @@ export default function MarketingCloudEngagementDeveloperStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/marketing-cloud-admin-vs-developer" className="text-sm text-salesforce-dark hover:underline font-medium">→ Marketing Cloud Admin vs Developer — full comparison</Link></li>
+          <li><Link href="/marketing-cloud-admin-vs-developer" className="text-sm text-salesforce-dark hover:underline font-medium">→ Marketing Cloud Admin vs Developer, full comparison</Link></li>
         </ul>
       </div>
 

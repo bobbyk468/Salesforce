@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce NPSP Consultant exam format?',
-    answer: 'The Nonprofit Success Pack (NPSP) Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce NPSP (Nonprofit Success Pack) — the legacy managed package for nonprofits — including the household account model, donations, grants, and engagement plans.',
+    answer: 'The Nonprofit Success Pack (NPSP) Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce NPSP (Nonprofit Success Pack), the legacy managed package for nonprofits, including the household account model, donations, grants, and engagement plans.',
   },
   {
     question: 'What are the highest-weight NPSP Consultant exam sections?',
@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What is the difference between NPSP Consultant and Nonprofit Cloud Consultant?',
-    answer: 'NPSP Consultant tests the legacy Nonprofit Success Pack managed package. Nonprofit Cloud Consultant tests the newer NPC (Nonprofit Cloud) platform. For organisations still on NPSP, this certification is relevant. Salesforce is migrating nonprofits to NPC over time — check which platform your clients use before deciding which exam to pursue.',
+    answer: 'NPSP Consultant tests the legacy Nonprofit Success Pack managed package. Nonprofit Cloud Consultant tests the newer NPC (Nonprofit Cloud) platform. For organisations still on NPSP, this certification is relevant. Salesforce is migrating nonprofits to NPC over time. Check which platform your clients use before deciding which exam to pursue.',
   },
   {
     question: 'What concepts do most NPSP Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the NPSP Consultant exam are: (1) Affiliation vs Relationship — Organisation Connection vs Person Connection; (2) Gift Entry — Templates Are Required for Batch Processing; (3) Engagement Plans — Not the Same as Campaigns. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the NPSP Consultant exam are: (1) Affiliation vs Relationship: Organisation Connection vs Person Connection; (2) Gift Entry: Templates Are Required for Batch Processing; (3) Engagement Plans: Not the Same as Campaigns. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('nonprofit-success-pack-consultant-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function NPSPConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What NPSP Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Household account model</strong> — How NPSP creates Household Accounts for every Contact, household naming rules, address management, and how NPSP handles relationship management between family members. One-to-one vs. household vs. individual account models.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Opportunity and gift management</strong> — NPSP donations flow through Opportunities with a record type. Soft Credits attribute a gift to multiple people. Hard Credits represent the primary donor. Gift Entry (Batch Gift Entry) for high-volume donation processing. Recurring Donations for monthly/annual giving.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Plans and Relationships</strong> — Engagement Plans for automated outreach sequences (tasks, calls, emails) triggered by donor stages. NPSP Relationships for tracking how contacts know each other (spouse, parent, colleague). Report types unique to NPSP for donor reporting.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Household account model</strong>: How NPSP creates Household Accounts for every Contact, household naming rules, address management, and how NPSP handles relationship management between family members. One-to-one vs. household vs. individual account models.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Opportunity and gift management</strong>: NPSP donations flow through Opportunities with a record type. Soft Credits attribute a gift to multiple people. Hard Credits represent the primary donor. Gift Entry (Batch Gift Entry) for high-volume donation processing. Recurring Donations for monthly/annual giving.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Plans and Relationships</strong>: Engagement Plans for automated outreach sequences (tasks, calls, emails) triggered by donor stages. NPSP Relationships for tracking how contacts know each other (spouse, parent, colleague). Report types unique to NPSP for donor reporting.</li>
         </ul>
       </section>
 
@@ -137,13 +137,13 @@ export default function NPSPConsultantExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach NPSP Consultant Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a nonprofit scenario and ask which NPSP feature or configuration achieves it.
-          NPSP has unique objects and automation that work differently from standard Salesforce —
+          NPSP has unique objects and automation that work differently from standard Salesforce,
           always choose the NPSP-native approach over custom Salesforce solutions.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For household questions: when a couple donates together, they share one Household Account. Soft Credits give attribution to both spouses. When a child becomes an adult and moves out, they get a new Household Account. NPSP automates household account creation — know when to configure vs. when to let automation handle it.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For recurring donation questions: NPSP Recurring Donations automatically create child Opportunities on a schedule. The Recurring Donation object holds the amount, frequency, and status. When a donor upgrades their monthly gift, update the Recurring Donation record — not the child Opportunities directly.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For engagement plan questions: Engagement Plan Templates define the sequence of tasks. An Engagement Plan is instantiated on a Contact when triggered by a stage change. Tasks in the plan have relative due dates (e.g., Day 3, Day 7). When a client needs automated donor stewardship sequences, Engagement Plans — not Process Builder or Flow — are the NPSP native answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For household questions: when a couple donates together, they share one Household Account. Soft Credits give attribution to both spouses. When a child becomes an adult and moves out, they get a new Household Account. NPSP automates household account creation. Know when to configure vs. when to let automation handle it.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For recurring donation questions: NPSP Recurring Donations automatically create child Opportunities on a schedule. The Recurring Donation object holds the amount, frequency, and status. When a donor upgrades their monthly gift, update the Recurring Donation record, not the child Opportunities directly.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For engagement plan questions: Engagement Plan Templates define the sequence of tasks. An Engagement Plan is instantiated on a Contact when triggered by a stage change. Tasks in the plan have relative due dates (e.g., Day 3, Day 7). When a client needs automated donor stewardship sequences, Engagement Plans, not Process Builder or Flow, are the NPSP native answer.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function NPSPConsultantExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most NPSP Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Affiliation vs Relationship — Organisation Connection vs Person Connection</p>
-            <p className="text-sm text-gray-700">Affiliations link a Contact to a non-Household Account (their employer, a board membership, a programme affiliation). Relationships link two Contacts to each other (spouse, sibling, colleague). Candidates use Relationships for all connection types — the exam expects Affiliations for Contact-to-Organisation connections and Relationships for Contact-to-Contact.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Affiliation vs Relationship: Organisation Connection vs Person Connection</p>
+            <p className="text-sm text-gray-700">Affiliations link a Contact to a non-Household Account (their employer, a board membership, a programme affiliation). Relationships link two Contacts to each other (spouse, sibling, colleague). Candidates use Relationships for all connection types, the exam expects Affiliations for Contact-to-Organisation connections and Relationships for Contact-to-Contact.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Gift Entry — Templates Are Required for Batch Processing</p>
-            <p className="text-sm text-gray-700">NPSP Gift Entry requires a Gift Entry Template to be configured before batch gifts can be entered. Templates define which fields appear, default values, and matching rules for donors. Candidates try to enter gifts without configuring a template first — the exam expects Gift Entry Template setup as the prerequisite for efficient batch gift processing.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Gift Entry: Templates Are Required for Batch Processing</p>
+            <p className="text-sm text-gray-700">NPSP Gift Entry requires a Gift Entry Template to be configured before batch gifts can be entered. Templates define which fields appear, default values, and matching rules for donors. Candidates try to enter gifts without configuring a template first, the exam expects Gift Entry Template setup as the prerequisite for efficient batch gift processing.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Engagement Plans — Not the Same as Campaigns</p>
-            <p className="text-sm text-gray-700">Engagement Plans are NPSP-specific task templates that define a sequence of outreach tasks (call, email, letter) assigned to a constituent over time. Salesforce Campaigns track marketing lists and ROI. Candidates use Campaigns for stewardship outreach sequences — the exam expects Engagement Plans for personalised, task-driven constituent outreach.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Engagement Plans: Not the Same as Campaigns</p>
+            <p className="text-sm text-gray-700">Engagement Plans are NPSP-specific task templates that define a sequence of outreach tasks (call, email, letter) assigned to a constituent over time. Salesforce Campaigns track marketing lists and ROI. Candidates use Campaigns for stewardship outreach sequences, the exam expects Engagement Plans for personalised, task-driven constituent outreach.</p>
           </div>
         </div>
       </section>

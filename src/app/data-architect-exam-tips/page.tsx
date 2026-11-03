@@ -103,9 +103,9 @@ export default function DataArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Data Architect Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data modelling decisions</strong> — Object relationships, field strategy, external IDs, data normalisation vs. denormalisation trade-offs at scale.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Large data volume (LDV) strategy</strong> — When and how to use skinny tables, custom indexes, query optimisation, and the impact of record volume on performance.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Master data management</strong> — Duplicate management, data governance frameworks, external system integration patterns, and data quality strategy.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data modelling decisions</strong>: Object relationships, field strategy, external IDs, data normalisation vs. denormalisation trade-offs at scale.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Large data volume (LDV) strategy</strong>: When and how to use skinny tables, custom indexes, query optimisation, and the impact of record volume on performance.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Master data management</strong>: Duplicate management, data governance frameworks, external system integration patterns, and data quality strategy.</li>
         </ul>
       </section>
 
@@ -141,9 +141,9 @@ export default function DataArchitectExamTipsPage() {
           the scenario's requirements and trade-offs.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LDV questions: identify whether the bottleneck is SOQL performance, storage, or UI response time — each has a different solution (custom index, skinny table, or query optimisation).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LDV questions: identify whether the bottleneck is SOQL performance, storage, or UI response time; each has a different solution (custom index, skinny table, or query optimisation).</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: prefer normalised models in transactional systems; consider denormalisation only when query performance at millions of records is explicitly required.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For MDM questions: external IDs are the key tool for upsert operations and cross-system record matching — know when to use a single external ID vs. multiple external IDs per object.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For MDM questions: external IDs are the key tool for upsert operations and cross-system record matching. Know when to use a single external ID vs. multiple external IDs per object.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For migration planning: compare data quality at load time, large-volume migration performance, and export requirements before selecting tools and methods.</li>
         </ul>
       </section>
@@ -166,15 +166,15 @@ export default function DataArchitectExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">Compare these platform capabilities against the query and data requirements in a design scenario.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Skinny Tables vs Custom Indexes — Different Performance Tools, Different Use Cases</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Skinny Tables vs Custom Indexes: Different Performance Tools, Different Use Cases</p>
             <p className="text-sm text-gray-700">Skinny tables can avoid joins for supported read-only operations and are maintained by Salesforce; contact Salesforce Support to request them. Custom indexes help the query optimizer when they suit the filter and data distribution. These are distinct options, not interchangeable fixes.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. External Objects vs Big Objects — Real-Time vs Archive</p>
+            <p className="font-semibold text-gray-900 mb-1">2. External Objects vs Big Objects: Real-Time vs Archive</p>
             <p className="text-sm text-gray-700">External Objects surface data held in an external system through Salesforce Connect. Big Objects support high-volume data storage and access patterns on the Salesforce platform. Select an approach based on data location, access needs, and the applicable platform capabilities.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Data Masking vs Field Encryption vs Classic Encryption — Three Security Layers</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Data Masking vs Field Encryption vs Classic Encryption: Three Security Layers</p>
             <p className="text-sm text-gray-700">Field-level encryption, Shield Platform Encryption, and sandbox data masking serve different protection goals. Compare them against the data sensitivity, access needs, environment, and compliance requirements; check current Salesforce documentation for supported fields and feature behavior.</p>
           </div>
         </div>

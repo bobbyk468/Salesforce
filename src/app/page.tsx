@@ -362,14 +362,14 @@ export default async function Home() {
               </div>
             </div>
 
-            {/* Right: sample practice question card (desktop only) — rotates across cert tracks */}
+            {/* Right: sample practice question card (desktop only), rotates across cert tracks */}
             <div className="hidden lg:block">
               <HeroSampleQuestionCard questions={homepageQuestions} />
             </div>
 
           </div>
 
-          {/* Popular reads — SEO internal links */}
+          {/* Popular reads: SEO internal links */}
           <p className="text-sm text-gray-500 mt-10">
             Popular:{' '}
             <Link href="/adm-201-exam-tips" className="underline hover:text-salesforce-dark font-medium">ADM-201 exam tips</Link>
@@ -407,7 +407,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Features — Why Trailblaze Prep */}
+      {/* Features: Why Trailblaze Prep */}
       <section className="py-20 px-4 bg-gray-50 cv-auto" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl mx-auto mb-4">
@@ -447,7 +447,7 @@ export default async function Home() {
                 <BadgeCheck className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Study guides</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Crisp, exam-focused notes &mdash; no fluff. Skim the night before or read top-to-bottom over a weekend.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Crisp, exam-focused notes, no fluff. Skim the night before or read top-to-bottom over a weekend.</p>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">

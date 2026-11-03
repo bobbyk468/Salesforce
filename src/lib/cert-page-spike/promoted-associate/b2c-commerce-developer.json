@@ -19,12 +19,12 @@
   },
   "examDifficulty": {
     "heading": "Is the B2C Commerce Developer Exam Hard?",
-    "summary": "The B2C Commerce Developer exam is considered one of the harder Salesforce developer certifications. The ~65% passing score is moderate, but the exam covers the full SFCC stack &mdash; from SFRA architecture and ISML templates to OCAPI/SCAPI integration and Business Manager configuration &mdash; demanding broad and deep hands-on experience.",
+    "summary": "The B2C Commerce Developer exam is considered one of the harder Salesforce developer certifications. The ~65% passing score is moderate, but the exam covers the full SFCC stack, from SFRA architecture and ISML templates to OCAPI/SCAPI integration and Business Manager configuration, demanding broad and deep hands-on experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong> &mdash; moderate on paper, but the breadth of topics (SFRA, scripting, APIs, data model, deployment) makes it demanding.",
-      "<strong>Full-stack depth</strong> &mdash; questions span server-side controllers, ISML templates, client-side JavaScript, and Business Manager operations, so you cannot skip any layer.",
-      "<strong>Hands-on SFRA experience essential</strong> &mdash; real project experience with SFRA controller development and at least one OCAPI or SCAPI integration is the strongest preparation."
+      "<strong>~65% passing score</strong>: moderate on paper, but the breadth of topics (SFRA, scripting, APIs, data model, deployment) makes it demanding.",
+      "<strong>Full-stack depth</strong>: questions span server-side controllers, ISML templates, client-side JavaScript, and Business Manager operations, so you cannot skip any layer.",
+      "<strong>Hands-on SFRA experience essential</strong>: real project experience with SFRA controller development and at least one OCAPI or SCAPI integration is the strongest preparation."
     ],
     "passRateGuidance": "Spend time in a B2C Commerce sandbox building custom controllers, overriding SFRA templates, and configuring jobs in Business Manager before booking the exam."
   },
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "B2C Commerce Developer",
-    "description": "This exam covers full-stack SFCC development — SFRA cartridge architecture, ISML templates, controller scripting, OCAPI/SCAPI integration, and Business Manager configuration.",
+    "description": "This exam covers full-stack SFCC development: SFRA cartridge architecture, ISML templates, controller scripting, OCAPI/SCAPI integration, and Business Manager configuration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -66,11 +66,11 @@
     "blocks": [
       {
         "heading": "SFRA Architecture: Cartridges & Override Pattern",
-        "body": "**SFRA** is the Salesforce B2C Commerce reference architecture built on a cartridge system. **cartridges** are modular packages containing controllers, templates, models, and static assets. The cartridge path (configured in **Business Manager**) defines override priority — the leftmost cartridge wins. To customize, create a custom cartridge that overrides specific controllers or templates without editing base cartridges. This keeps base cartridge upgrades non-destructive. The `server.extend` and `server.replace` patterns in controllers allow adding before/after steps or completely replacing a route. The developer exam tests the correct use of the override pattern and common mistakes that break cartridge path resolution."
+        "body": "**SFRA** is the Salesforce B2C Commerce reference architecture built on a cartridge system. **cartridges** are modular packages containing controllers, templates, models, and static assets. The cartridge path (configured in **Business Manager**) defines override priority, the leftmost cartridge wins. To customize, create a custom cartridge that overrides specific controllers or templates without editing base cartridges. This keeps base cartridge upgrades non-destructive. The `server.extend` and `server.replace` patterns in controllers allow adding before/after steps or completely replacing a route. The developer exam tests the correct use of the override pattern and common mistakes that break cartridge path resolution."
       },
       {
         "heading": "Controllers, Scripts & Server-Side Logic",
-        "body": "**SFRA** controllers are JavaScript modules using the `server` framework. Routes handle GET and POST requests and render templates or return JSON. Middleware functions (authentication, CSRF, consent) can be prepended to any route. Models and helpers contain business logic separated from controllers. `dw.system`, `dw.order`, `dw.catalog` — the Digital SDK — provides access to Commerce Cloud server-side APIs. Custom scripts (`.js` files in `cartridge/scripts/`) encapsulate reusable logic. The exam tests how to add a middleware step to an existing controller route, how to call a custom script from a controller, and common governor limit considerations in server-side scripts."
+        "body": "**SFRA** controllers are JavaScript modules using the `server` framework. Routes handle GET and POST requests and render templates or return JSON. Middleware functions (authentication, CSRF, consent) can be prepended to any route. Models and helpers contain business logic separated from controllers. `dw.system`, `dw.order`, `dw.catalog`, the Digital SDK, provides access to Commerce Cloud server-side APIs. Custom scripts (`.js` files in `cartridge/scripts/`) encapsulate reusable logic. The exam tests how to add a middleware step to an existing controller route, how to call a custom script from a controller, and common governor limit considerations in server-side scripts."
       },
       {
         "heading": "Templates (ISML) & Client-Side Assets",
@@ -226,7 +226,7 @@
         "It defines the visual styling applied across the storefront's pages"
       ],
       "correctAnswer": 1,
-      "explanation": "Controllers receive the request, run the server-side logic and choose the template or JSON response to return.",
+      "explanation": "Controllers receive the request. Run the server-side logic and choose the template or JSON response to return.",
       "whyWrong": [
         "Product data lives in the catalogue and system objects.",
         "Imports are configured as jobs.",

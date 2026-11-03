@@ -37,7 +37,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce exam retake policy?',
-    answer: 'Salesforce does not impose a mandatory waiting period between exam attempts. You can reschedule your retake as soon as you are ready — practically speaking, scheduling logistics through Webassessor/Kryterion mean you will have at least 24 hours between attempts. There is no published limit on the number of attempts for most certifications. The retake fee is approximately 50% of the original exam fee.',
+    answer: 'Salesforce does not impose a mandatory waiting period between exam attempts. You can reschedule your retake as soon as you are ready, practically speaking, scheduling logistics through Webassessor/Kryterion mean you will have at least 24 hours between attempts. There is no published limit on the number of attempts for most certifications. The retake fee is approximately 50% of the original exam fee.',
   },
   {
     question: 'How much does a Salesforce exam retake cost?',
@@ -45,15 +45,15 @@ const faqItems = [
   },
   {
     question: 'How many times can I retake a Salesforce certification exam?',
-    answer: 'Salesforce does not publish a hard limit on retake attempts for most standard certification exams. You can attempt as many times as needed — though you will pay the retake fee for each attempt after the first. Practically speaking, if you are failing repeatedly, it signals a need for more structured study rather than simply rescheduling. Note: the CTA Board Review has specific policies — failed candidates typically must wait 6 months before reapplying.',
+    answer: 'Salesforce does not publish a hard limit on retake attempts for most standard certification exams. You can attempt as many times as needed, though you will pay the retake fee for each attempt after the first. Practically speaking, if you are failing repeatedly, it signals a need for more structured study rather than simply rescheduling. Note: the CTA Board Review has specific policies, failed candidates typically must wait 6 months before reapplying.',
   },
   {
     question: 'What score report do I receive after failing?',
-    answer: 'Salesforce provides a score report that shows your overall score and your performance in each exam section (e.g., you scored 60% in Data Management but 80% in Sharing Model Design). This breakdown is extremely valuable for retake preparation — it tells you exactly which sections need more study. The score report is available in your Webassessor account immediately after the exam.',
+    answer: 'Salesforce provides a score report that shows your overall score and your performance in each exam section (e.g., you scored 60% in Data Management but 80% in Sharing Model Design). This breakdown is extremely valuable for retake preparation, it tells you exactly which sections need more study. The score report is available in your Webassessor account immediately after the exam.',
   },
   {
     question: 'Does failing a Salesforce exam affect my record permanently?',
-    answer: 'No — failed attempts do not appear on your public Trailhead profile or certification verification. Your Trailhead credential page only shows active certifications you have passed. Employers and clients using the Salesforce certification verification tool will only see certifications you currently hold — not your exam history or number of attempts.',
+    answer: 'No, failed attempts do not appear on your public Trailhead profile or certification verification. Your Trailhead credential page only shows active certifications you have passed. Employers and clients using the Salesforce certification verification tool will only see certifications you currently hold, not your exam history or number of attempts.',
   },
 ]
 
@@ -72,7 +72,7 @@ export default function SalesforceExamRetakePolicyPage() {
           Salesforce Exam Retake Policy ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Everything you need to know if you did not pass your Salesforce certification — retake costs, waiting periods, score reports, and how to prepare for your next attempt.
+          Everything you need to know if you did not pass your Salesforce certification; retake costs, waiting periods, score reports, and how to prepare for your next attempt.
         </p>
       </div>
 
@@ -124,9 +124,9 @@ export default function SalesforceExamRetakePolicyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">What to Do After Failing</h2>
         <div className="space-y-4">
           {[
-            { step: '1', title: 'Review your score report by section', desc: 'Log into Webassessor immediately after the exam. Your score report shows performance per section (e.g., 52% in Data Modelling, 78% in Security). Identify the two or three sections where you scored below the passing threshold — those are your retake focus areas.' },
+            { step: '1', title: 'Review your score report by section', desc: 'Log into Webassessor immediately after the exam. Your score report shows performance per section (e.g., 52% in Data Modelling, 78% in Security). Identify the two or three sections where you scored below the passing threshold; those are your retake focus areas.' },
             { step: '2', title: 'Do not reschedule immediately', desc: 'Resist the urge to rebook within 48 hours. Most candidates who fail and immediately retake without additional study fail again. Give yourself 2–4 weeks to close the specific gaps identified in your score report.' },
-            { step: '3', title: 'Change your study approach', desc: 'If you relied primarily on Trailhead reading, add hands-on practice in a sandbox. If you did hands-on work, add scenario-based practice questions that simulate exam conditions. Most failures result from one weak study method — diversify your approach.' },
+            { step: '3', title: 'Change your study approach', desc: 'If you relied primarily on Trailhead reading, add hands-on practice in a sandbox. If you did hands-on work, add scenario-based practice questions that simulate exam conditions. Most failures result from one weak study method, diversify your approach.' },
             { step: '4', title: 'Target your weak sections specifically', desc: 'Focus 70% of retake study time on sections where you scored below passing. Do not waste time re-studying areas where you already scored above passing.' },
             { step: '5', title: 'Practice exam conditions', desc: 'Complete full timed mock exams (same question count and time limit as the real exam) to build stamina and time management. Many candidates know the material but run out of time. Practise managing 60 questions in 90–105 minutes.' },
           ].map((item) => (
@@ -142,7 +142,7 @@ export default function SalesforceExamRetakePolicyPage() {
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
-        <h2 className="text-base font-bold text-amber-900 mb-2">CTA Board Review — Different Policy</h2>
+        <h2 className="text-base font-bold text-amber-900 mb-2">CTA Board Review: Different Policy</h2>
         <p className="text-sm text-amber-800">The Salesforce Certified Technical Architect (CTA) Board Review has different retake rules than standard exams. Candidates who do not pass the live board presentation typically wait 6 months before reapplying and must resubmit application materials. Check the official Salesforce CTA programme page for current Board Review retake policies.</p>
       </div>
 

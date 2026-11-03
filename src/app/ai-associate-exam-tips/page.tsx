@@ -26,7 +26,7 @@ export default function HistoricalAiResource() {
       <section className="mt-8 space-y-5">
         <h2 className="text-2xl font-bold">Before choosing another exam</h2>
         <p>Check the current credential catalog rather than using an old AI Associate booking link. Salesforce points learners to Agentblazer Status for current AI and Agentforce learning.</p>
-        <p>Agentblazer Status is a learning program; do not assume it is the same credential or exam. If a certification fits your role, review the current Agentforce Specialist guide, recommended experience, and registration terms.</p>
+        <p>Agentblazer Status is a learning program; do not assume it is the same credential or exam. If a certification fits your role. Review the current Agentforce Specialist guide, recommended experience, and registration terms.</p>
         <h2 className="text-2xl font-bold">Build a useful preparation plan</h2>
         <p>Start with the official objectives for the credential you select. Map each objective to a hands-on exercise, record what you cannot yet explain, and revisit those gaps using the issuer documentation.</p>
         <p>Use independent practice questions to assess reasoning, not to memorize supposed live exam answers. No score on this site guarantees a pass on a different exam.</p>

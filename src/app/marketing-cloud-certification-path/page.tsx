@@ -24,7 +24,7 @@ const breadcrumbItems = [
 ]
 
 const faqItems = [
-  { question: 'Which Salesforce Marketing Cloud certification should I take first?', answer: 'For Marketing Cloud Engagement, start with Email Specialist. For Account Engagement, start with Pardot Specialist. For implementation consulting, move to Marketing Cloud Consultant after hands-on experience.' },
+  { question: 'Which Salesforce Marketing Cloud certification should I take first?', answer: 'For Marketing Cloud Engagement. Start with Email Specialist. For Account Engagement. Start with Pardot Specialist. For implementation consulting, move to Marketing Cloud Consultant after hands-on experience.' },
   { question: 'Do I need coding for Marketing Cloud certification?', answer: 'Email Specialist does not require heavy coding, but AMPscript and data extension knowledge help. Marketing Cloud Developer requires stronger technical skills with APIs, scripting, and custom integrations.' },
   { question: 'Is Marketing Cloud Consultant harder than Email Specialist?', answer: 'Yes. Marketing Cloud Consultant is more scenario-based and tests solution design, implementation judgment, data architecture, and governance.' },
 ]
@@ -83,7 +83,7 @@ export default function MarketingCloudCertificationPathPage() {
       </section>
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Best First Marketing Cloud Cert</h2>
-        <p className="text-sm text-gray-700">If you use Marketing Cloud Engagement, start with <Link href="/certifications/email-specialist" className="text-salesforce-blue hover:underline">Email Specialist</Link>. If you use Account Engagement/Pardot, start with <Link href="/certifications/pardot-specialist" className="text-salesforce-blue hover:underline">Pardot Specialist</Link>.</p>
+        <p className="text-sm text-gray-700">If you use Marketing Cloud Engagement. Start with <Link href="/certifications/email-specialist" className="text-salesforce-blue hover:underline">Email Specialist</Link>. If you use Account Engagement/Pardot. Start with <Link href="/certifications/pardot-specialist" className="text-salesforce-blue hover:underline">Pardot Specialist</Link>.</p>
       </section>
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Choose the Right Marketing Cloud Path</h2>

@@ -42,15 +42,15 @@ const faqItems = [
   },
   {
     question: 'Which should I take: Pardot Consultant or Marketing Cloud Consultant?',
-    answer: 'Choose based on which platform your clients or employer use. If you work with B2B companies using Marketing Cloud Account Engagement (Pardot) for lead nurturing and CRM-integrated marketing, take Pardot Consultant. If you work with B2C brands running large-scale email, SMS, and cross-channel campaigns in Marketing Cloud Engagement, take Marketing Cloud Consultant. Both are valuable; neither is universally "better" — it depends entirely on your work context.',
+    answer: 'Choose based on which platform your clients or employer use. If you work with B2B companies using Marketing Cloud Account Engagement (Pardot) for lead nurturing and CRM-integrated marketing, take Pardot Consultant. If you work with B2C brands running large-scale email, SMS, and cross-channel campaigns in Marketing Cloud Engagement, take Marketing Cloud Consultant. Both are valuable; neither is universally "better", it depends entirely on your work context.',
   },
   {
     question: 'Can I hold both Pardot Consultant and Marketing Cloud Consultant?',
-    answer: 'Yes — both certifications can be held simultaneously and are independently maintained. Many marketing technology consultants at Salesforce partners hold both, as some enterprise clients use both Pardot for B2B sales enablement and Marketing Cloud Engagement for B2C campaigns. Holding both demonstrates broad marketing cloud expertise and is a career differentiator for senior MC consultant roles.',
+    answer: 'Yes, both certifications can be held simultaneously and are independently maintained. Many marketing technology consultants at Salesforce partners hold both, as some enterprise clients use both Pardot for B2B sales enablement and Marketing Cloud Engagement for B2C campaigns. Holding both demonstrates broad marketing cloud expertise and is a career differentiator for senior MC consultant roles.',
   },
   {
     question: 'Which is more in demand: Pardot or Marketing Cloud Consultant?',
-    answer: 'Marketing Cloud Consultant is generally more in demand in terms of job posting volume — Marketing Cloud Engagement powers high-volume consumer digital marketing programs at large enterprises. Pardot Consultant is highly valued in the B2B SaaS, technology, financial services, and professional services sectors where B2B marketing automation and Salesforce CRM integration are critical. Demand varies significantly by industry and company type.',
+    answer: 'Marketing Cloud Consultant is generally more in demand in terms of job posting volume: Marketing Cloud Engagement powers high-volume consumer digital marketing programs at large enterprises. Pardot Consultant is highly valued in the B2B SaaS, technology, financial services, and professional services sectors where B2B marketing automation and Salesforce CRM integration are critical. Demand varies significantly by industry and company type.',
   },
   {
     question: 'What experience is needed before taking each consultant exam?',
@@ -71,7 +71,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
           Pardot Consultant vs Marketing Cloud Consultant ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Both are Salesforce marketing certifications — but they serve completely different marketing contexts. Here is how to decide which one to pursue based on your role and clients.
+          Both are Salesforce marketing certifications, but they serve completely different marketing contexts. Here is how to decide which one to pursue based on your role and clients.
         </p>
       </div>
 
@@ -160,9 +160,9 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr><td className="py-2.5 pr-4">B2B marketing automation, lead scoring, and CRM-synced campaigns</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot (MCAE) Consultant</td></tr>
               <tr><td className="py-2.5 pr-4">High-volume B2C email campaigns, Journey Builder, or multi-channel marketing</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">Enterprise B2B company using Salesforce CRM for sales pipeline</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot — tight CRM integration is the core use case</td></tr>
+              <tr><td className="py-2.5 pr-4">Enterprise B2B company using Salesforce CRM for sales pipeline</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot, tight CRM integration is the core use case</td></tr>
               <tr><td className="py-2.5 pr-4">Client sends millions of emails to consumers and needs personalised journeys</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">Want the higher-demand credential in the 2025 job market</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant — broader demand</td></tr>
+              <tr><td className="py-2.5 pr-4">Want the higher-demand credential in the 2025 job market</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant, broader demand</td></tr>
             </tbody>
           </table>
         </div>

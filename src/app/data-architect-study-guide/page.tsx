@@ -94,7 +94,7 @@ export default function DataArchitectStudyGuidePage() {
           Salesforce Platform Data Architect Study Guide ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Salesforce Data Architect exam — data modelling, MDM patterns, large data volume strategy, Shield, and ETL design.
+          Your complete guide to passing the Salesforce Data Architect exam, data modelling, MDM patterns, large data volume strategy, Shield, and ETL design.
         </p>
       </div>
 
@@ -159,15 +159,15 @@ export default function DataArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Data model foundations — revisit object relationships (lookup, master-detail, junction), field types, record types, and custom metadata types vs custom settings.' },
-            { week: 'Week 2', focus: 'Schema design — design a data model for a complex scenario (e.g., multi-product company with accounts, contacts, opportunities, assets). Review Salesforce sharing implications of your model.' },
-            { week: 'Week 3', focus: 'Master Data Management — study MDM patterns (consolidation, coexistence, centralisation). Configure Duplicate Management: matching rules, duplicate rules, and merge.' },
-            { week: 'Week 4', focus: 'Large Data Volume fundamentals — skinny tables, custom indexes, selective SOQL queries. Run EXPLAIN PLAN on slow queries in your dev org.' },
-            { week: 'Week 5', focus: 'Data skew — ownership skew and lookup skew. Practice identifying skew in data model diagrams and selecting the correct mitigation.' },
-            { week: 'Week 6', focus: 'Archiving strategies — big objects (create one in your dev org), external archiving patterns, Salesforce Connect and external objects for federated data.' },
+            { week: 'Week 1', focus: 'Data model foundations, revisit object relationships (lookup, master-detail, junction), field types, record types, and custom metadata types vs custom settings.' },
+            { week: 'Week 2', focus: 'Schema design, design a data model for a complex scenario (e.g., multi-product company with accounts, contacts, opportunities, assets). Review Salesforce sharing implications of your model.' },
+            { week: 'Week 3', focus: 'Master Data Management, study MDM patterns (consolidation, coexistence, centralisation). Configure Duplicate Management: matching rules, duplicate rules, and merge.' },
+            { week: 'Week 4', focus: 'Large Data Volume fundamentals, skinny tables, custom indexes, selective SOQL queries. Run EXPLAIN PLAN on slow queries in your dev org.' },
+            { week: 'Week 5', focus: 'Data skew, ownership skew and lookup skew. Practice identifying skew in data model diagrams and selecting the correct mitigation.' },
+            { week: 'Week 6', focus: 'Archiving strategies, big objects (create one in your dev org), external archiving patterns, Salesforce Connect and external objects for federated data.' },
             { week: 'Week 7', focus: 'Review governance objectives: data stewardship, metadata, privacy, classification, and protection of personal and sensitive data.' },
-            { week: 'Week 8', focus: 'Data migration — ETL tool comparison, External IDs for upsert, Bulk API 2.0 job lifecycle, data validation and rollback strategy.' },
-            { week: 'Week 9', focus: 'Governance — data stewardship, metadata management, data quality KPIs, master data ownership. Salesforce Health Check and Security Scoring.' },
+            { week: 'Week 8', focus: 'Data migration: ETL tool comparison, External IDs for upsert, Bulk API 2.0 job lifecycle, data validation and rollback strategy.' },
+            { week: 'Week 9', focus: 'Governance, data stewardship, metadata management, data quality KPIs, master data ownership. Salesforce Health Check and Security Scoring.' },
             { week: 'Week 10', focus: 'Review all six official domains, revisit any weak areas, and use practice questions to explain your design choices.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -197,7 +197,7 @@ export default function DataArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Object relationship types and when to use lookup vs master-detail</li>
-          <li>Three MDM patterns: consolidation, coexistence, centralisation — and when to use each</li>
+          <li>Three MDM patterns: consolidation, coexistence, centralisation, and when to use each</li>
           <li>Duplicate Management: matching rules, duplicate rules, merge workflow</li>
           <li>LDV: custom indexes, skinny tables, selective SOQL, EXPLAIN PLAN</li>
           <li>Ownership skew and lookup skew: causes, symptoms, and mitigation</li>

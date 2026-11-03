@@ -26,7 +26,7 @@
       "<strong>New data model.</strong> Order Summary, Fulfillment Order, Return Order, Change Order and their related objects.",
       "<strong>Flow-driven processes.</strong> Much of the order lifecycle is run by flows, so know which flows do what."
     ],
-    "passRateGuidance": "Set up a trial org with Order Management and push a test order all the way through fulfilment, cancellation and return. Before you book, aim for 75% or more on practice tests."
+    "passRateGuidance": "Set up a trial org with Order Management and push a test order all the way through fulfilment, cancellation and return. Before you book. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Order Management Administrator AP Exam Format Explained",
@@ -35,7 +35,7 @@
     "bestWayToPass": [
       "<strong>Draw the data model:</strong> Order, Order Summary, Order Item Summary, Fulfillment Order, Return Order and Change Order.",
       "<strong>Follow one order through its life:</strong> Placed, routed, fulfilled, invoiced, then cancelled or returned.",
-      "<strong>Know the role of flows:</strong> Many steps, like creating fulfilment orders or handling exceptions, run in flows you can change.",
+      "<strong>Know the role of flows:</strong> Many steps, like creating fulfilment orders or handling exceptions. Run in flows you can change.",
       "<strong>Learn Omnichannel Inventory basics:</strong> Locations, location groups, availability and reservations."
     ]
   },

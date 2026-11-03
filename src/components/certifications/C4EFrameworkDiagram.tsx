@@ -4,7 +4,7 @@ export default function C4EFrameworkDiagram() {
     <figure id="c4e-framework-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Center for Enablement (C4E) framework (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        C4E is a cross-functional team — <strong>Central IT</strong> provides governance, <strong>LOB (Line of
+        C4E is a cross-functional team: <strong>Central IT</strong> provides governance, <strong>LOB (Line of
         Business) teams</strong> consume and build with reusable assets, and both contribute back to a shared{' '}
         <strong>Anypoint Exchange</strong> catalog, accelerating delivery org-wide.
       </p>

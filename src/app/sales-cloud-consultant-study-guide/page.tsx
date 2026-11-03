@@ -97,7 +97,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
         </h1>
         <p className="text-lg text-gray-600">
           The Salesforce Sales Cloud Consultant certification validates your ability to implement end-to-end
-          Sales Cloud solutions — from translating business requirements into configuration decisions to
+          Sales Cloud solutions, from translating business requirements into configuration decisions to
           designing territory hierarchies, forecasting models, and opportunity management workflows.
           This guide covers every exam section at the depth needed to pass.
         </p>
@@ -161,28 +161,28 @@ export default function SalesCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Sales Practices (25%)
             </p>
-            <p>This is not a purely technical section — it tests your understanding of sales business processes and how to translate them into Salesforce. Know common sales methodologies (MEDDIC, Challenger, solution selling) and how they map to Sales Cloud features. Questions ask: given this business requirement (e.g., &ldquo;sales managers need to see only their team’s pipeline&rdquo;), which Sales Cloud feature or configuration achieves it? <strong>Common mistake:</strong> jumping to a technical solution without understanding the business need first.</p>
+            <p>This is not a purely technical section, it tests your understanding of sales business processes and how to translate them into Salesforce. Know common sales methodologies (MEDDIC, Challenger, solution selling) and how they map to Sales Cloud features. Questions ask: given this business requirement (e.g., &ldquo;sales managers need to see only their team’s pipeline&rdquo;), which Sales Cloud feature or configuration achieves it? <strong>Common mistake:</strong> jumping to a technical solution without understanding the business need first.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Implementation Strategies (22%)
             </p>
-            <p>Tests your ability to design a Sales Cloud implementation plan. Key areas: when to configure vs customise vs buy from AppExchange, data migration strategy (Extract-Transform-Load sequence, data validation before migration), testing phases (unit, UAT, regression), and change management (training, adoption measurement, rollout strategy). Know the difference between a data migration and a data integration — migration is a one-time move; integration is ongoing sync.</p>
+            <p>Tests your ability to design a Sales Cloud implementation plan. Key areas: when to configure vs customise vs buy from AppExchange, data migration strategy (Extract-Transform-Load sequence, data validation before migration), testing phases (unit, UAT, regression), and change management (training, adoption measurement, rollout strategy). Know the difference between a data migration and a data integration; migration is a one-time move; integration is ongoing sync.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Sales Cloud Solution Design (15%)
             </p>
-            <p>The most technically demanding section. <strong>Territory Management:</strong> Enterprise Territory Management (ETM) vs Classic Territories — ETM supports multiple territory models, territory types, and rule-based assignment. Know the ETM object model: Territory Model → Territory Type → Territory → Territory Assignment Rule. <strong>Forecasting:</strong> Collaborative Forecasting (the current standard) supports multiple forecast types per org. Know the difference between Forecast Category (from opportunity stage) and Forecast Override (manager adjustments). <strong>CPQ:</strong> know at a conceptual level when a CPQ tool is needed vs standard Products and Price Books.</p>
+            <p>The most technically demanding section. <strong>Territory Management:</strong> Enterprise Territory Management (ETM) vs Classic Territories: ETM supports multiple territory models, territory types, and rule-based assignment. Know the ETM object model: Territory Model → Territory Type → Territory → Territory Assignment Rule. <strong>Forecasting:</strong> Collaborative Forecasting (the current standard) supports multiple forecast types per org. Know the difference between Forecast Category (from opportunity stage) and Forecast Override (manager adjustments). <strong>CPQ:</strong> know at a conceptual level when a CPQ tool is needed vs standard Products and Price Books.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Marketing and Leads (13%)
             </p>
-            <p>Lead lifecycle from creation to conversion: lead sources, lead assignment rules (routing to queues or users based on criteria), web-to-lead forms, lead conversion (what maps to Account, Contact, Opportunity and what does not). Duplicate management: matching rules vs duplicate rules — matching rules identify duplicates; duplicate rules define what to do when duplicates are found (alert, block, merge). Campaign management: campaign member statuses, campaign influence, and ROI reporting.</p>
+            <p>Lead lifecycle from creation to conversion: lead sources, lead assignment rules (routing to queues or users based on criteria), web-to-lead forms, lead conversion (what maps to Account, Contact, Opportunity and what does not). Duplicate management: matching rules vs duplicate rules, matching rules identify duplicates; duplicate rules define what to do when duplicates are found (alert, block, merge). Campaign management: campaign member statuses, campaign influence, and ROI reporting.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -197,11 +197,11 @@ export default function SalesCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Sales Cloud Consultant Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Sales Practices (25%):</strong> Study sales methodologies and how they map to Salesforce. Review real-world Sales Cloud implementations you have done. Practice explaining requirements-to-solution decisions out loud — the exam tests consultant thinking, not just configuration knowledge.</p>
-          <p><strong>Week 2 — Implementation Strategies (22%):</strong> Study implementation lifecycle: requirements gathering → solution design → build → test → deploy. Review data migration methodology, ETL sequence, and change management. Practice: design a data migration plan for moving opportunities from a legacy CRM to Salesforce.</p>
-          <p><strong>Week 3 — Territory Management &amp; Forecasting (key parts of 15%):</strong> This week alone on ETM and Collaborative Forecasting — these are the most complex topics. Enable ETM in a sandbox org, create a territory model with hierarchy, and configure assignment rules. Set up Collaborative Forecasting with at least two forecast types.</p>
-          <p><strong>Week 4 — Leads, Opportunities, Accounts (13% + 12% + 8%):</strong> Lead lifecycle, assignment rules, duplicate management, opportunity stage design, products and price books, account hierarchies. Practice: configure a complete lead-to-opportunity-to-close workflow in a Developer Edition org.</p>
-          <p><strong>Week 5 — Consulting Practices &amp; Targeted Revision:</strong> Review consulting skills (requirements workshops, stakeholder management), then revisit weakest sections from practice exams.</p>
+          <p><strong>Week 1: Sales Practices (25%):</strong> Study sales methodologies and how they map to Salesforce. Review real-world Sales Cloud implementations you have done. Practice explaining requirements-to-solution decisions out loud, the exam tests consultant thinking, not just configuration knowledge.</p>
+          <p><strong>Week 2: Implementation Strategies (22%):</strong> Study implementation lifecycle: requirements gathering → solution design → build → test → deploy. Review data migration methodology, ETL sequence, and change management. Practice: design a data migration plan for moving opportunities from a legacy CRM to Salesforce.</p>
+          <p><strong>Week 3: Territory Management &amp; Forecasting (key parts of 15%):</strong> This week alone on ETM and Collaborative Forecasting; these are the most complex topics. Enable ETM in a sandbox org, create a territory model with hierarchy, and configure assignment rules. Set up Collaborative Forecasting with at least two forecast types.</p>
+          <p><strong>Week 4: Leads, Opportunities, Accounts (13% + 12% + 8%):</strong> Lead lifecycle, assignment rules, duplicate management, opportunity stage design, products and price books, account hierarchies. Practice: configure a complete lead-to-opportunity-to-close workflow in a Developer Edition org.</p>
+          <p><strong>Week 5: Consulting Practices &amp; Targeted Revision:</strong> Review consulting skills (requirements workshops, stakeholder management), then revisit weakest sections from practice exams.</p>
           <p><strong>Week 6:</strong> Timed full mocks (60 Q / 105 min). Score 75%+ consistently before booking.</p>
         </div>
       </section>
@@ -215,7 +215,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Forecasting questions:</strong> Identify what the manager needs: to see team roll-up forecasts (Collaborative Forecasting with manager override), to track quotas vs pipeline (quota management + Collaborative Forecasting), or to see historical accuracy (Einstein Forecasting). Forecast categories (Commit, Best Case, Pipeline, Omitted) are set by opportunity stage — the mapping is configurable per stage.</span>
+            <span><strong>Forecasting questions:</strong> Identify what the manager needs: to see team roll-up forecasts (Collaborative Forecasting with manager override), to track quotas vs pipeline (quota management + Collaborative Forecasting), or to see historical accuracy (Einstein Forecasting). Forecast categories (Commit, Best Case, Pipeline, Omitted) are set by opportunity stage, the mapping is configurable per stage.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -249,7 +249,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
           <li>Account hierarchy: how sharing rolls up through the hierarchy</li>
           <li>Campaign influence: how to attribute revenue to campaigns</li>
           <li>When to use Configure vs Customise vs Buy (AppExchange)</li>
-          <li>Data migration sequence: extract, transform, validate, load — always validate before loading</li>
+          <li>Data migration sequence: extract, transform, validate, load, always validate before loading</li>
         </ol>
       </section>
 
@@ -306,7 +306,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Sales Cloud Consultant free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Sales Cloud Consultant free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/sales-cloud"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

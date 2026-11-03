@@ -5,7 +5,7 @@ export default function ReplyMailManagementDiagram() {
     <figure id="reply-mail-mgmt-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Reply Mail Management (RMM) flow (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        RMM inspects inbound replies to marketing sends and automatically classifies them — out-of-office and
+        RMM inspects inbound replies to marketing sends and automatically classifies them, out-of-office and
         auto-replies are filtered out, while genuine replies route to a real inbox for follow-up.
       </p>
       <svg role="img" aria-labelledby="rmm-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 700 170" xmlns="http://www.w3.org/2000/svg">

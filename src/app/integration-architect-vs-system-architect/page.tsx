@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Integration Architect and System Architect?',
-    answer: 'Salesforce Integration Architect focuses specifically on enterprise integration patterns: designing synchronous and asynchronous integrations, API management with MuleSoft, middleware selection, data migration architecture, and Salesforce governor limits in integration contexts. System Architect is the credential that consolidates the full System Architect track — it validates that you have passed Integration Architect, Identity &amp; Access Management Architect, and Dev Lifecycle &amp; Deployment Architect, completing the System Architect level of the CTA pathway.',
+    answer: 'Salesforce Integration Architect focuses specifically on enterprise integration patterns: designing synchronous and asynchronous integrations, API management with MuleSoft, middleware selection, data migration architecture, and Salesforce governor limits in integration contexts. System Architect is the credential that consolidates the full System Architect track, it validates that you have passed Integration Architect, Identity &amp; Access Management Architect, and Dev Lifecycle &amp; Deployment Architect, completing the System Architect level of the CTA pathway.',
   },
   {
     question: 'Do I need Integration Architect before System Architect?',
@@ -106,7 +106,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
           certName: "Integration Architect",
           certSlug: "integration-architect",
           examTipsSlug: "integration-architect-exam-tips",
-          reason: "Integration Architect is a strong standalone credential with real salary impact — worth pursuing on its own merits. System Architect is a milestone on the CTA path, not a target in isolation. Only pursue System Architect if you are genuinely committed to reaching CTA.",
+          reason: "Integration Architect is a strong standalone credential with real salary impact, worth pursuing on its own merits. System Architect is a milestone on the CTA path, not a target in isolation. Only pursue System Architect if you are genuinely committed to reaching CTA.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",
         }}
@@ -162,9 +162,9 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Integration Architect: Core Topics to Master</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration patterns</strong> — Request/reply, fire-and-forget, batch data sync, publish/subscribe (Platform Events, Change Data Capture). Knowing when to use synchronous vs. asynchronous patterns is the core skill tested.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API management</strong> — MuleSoft API-led connectivity (System/Process/Experience API layers), Salesforce Connect for external objects, API limits (concurrent API calls, daily API limits), and API versioning strategy.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data migration</strong> — Choosing between Apex Data Loader, Data Import Wizard, and ETL tools for different data volumes; migration sequencing for related objects; deduplication strategies; and post-migration validation approaches.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration patterns</strong>: Request/reply, fire-and-forget, batch data sync, publish/subscribe (Platform Events, Change Data Capture). Knowing when to use synchronous vs. asynchronous patterns is the core skill tested.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API management</strong>: MuleSoft API-led connectivity (System/Process/Experience API layers), Salesforce Connect for external objects, API limits (concurrent API calls, daily API limits), and API versioning strategy.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data migration</strong>: Choosing between Apex Data Loader, Data Import Wizard, and ETL tools for different data volumes; migration sequencing for related objects; deduplication strategies; and post-migration validation approaches.</li>
         </ul>
       </section>
 
@@ -201,7 +201,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">MuleSoft, REST/SOAP, or enterprise integration background</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect — your background aligns directly</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect, your background aligns directly</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Targeting the full CTA (Certified Technical Architect) path</td>
@@ -209,7 +209,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Standalone specialist credential needed for an integration-focused role</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect — faster, targeted credential</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect, faster, targeted credential</td>
               </tr>
             </tbody>
           </table>

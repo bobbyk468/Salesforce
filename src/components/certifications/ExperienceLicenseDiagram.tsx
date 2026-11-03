@@ -11,7 +11,7 @@ export default function ExperienceLicenseDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Experience Cloud license comparison (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         License choice determines both <strong>cost</strong> and <strong>access model</strong>. Customer licenses use
-        Sharing Sets tied to Account/Contact; Partner licenses use the full role hierarchy for deeper CRM access —
+        Sharing Sets tied to Account/Contact; Partner licenses use the full role hierarchy for deeper CRM access,
         this distinction drives most license-selection exam scenarios.
       </p>
       <svg role="img" aria-labelledby="el-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg">

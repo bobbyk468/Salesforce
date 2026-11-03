@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What prerequisites are needed for B2B Solution Architect?',
-    answer: 'Salesforce recommends Sales Cloud Consultant + CPQ Specialist + Pardot Consultant (or equivalent experience) as the foundation. This is an expert-level exam — most candidates have 5+ years of Salesforce implementation experience across multiple clouds. Architect-level thinking (trade-offs, cross-cloud integration, long-term maintainability) is required.',
+    answer: 'Salesforce recommends Sales Cloud Consultant + CPQ Specialist + Pardot Consultant (or equivalent experience) as the foundation. This is an expert-level exam, most candidates have 5+ years of Salesforce implementation experience across multiple clouds. Architect-level thinking (trade-offs, cross-cloud integration, long-term maintainability) is required.',
   },
   {
     question: 'What concepts do most B2B Solution Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the B2B Solution Architect exam are: (1) Account-Based vs Contact-Based Data Models — B2B vs B2C Architecture Decision; (2) Revenue Lifecycle Management vs CPQ — Knowing When Each Fits; (3) Integration Architecture — Point-to-Point vs ESB vs API-Led Connectivity. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the B2B Solution Architect exam are: (1) Account-Based vs Contact-Based Data Models: B2B vs B2C Architecture Decision; (2) Revenue Lifecycle Management vs CPQ: Knowing When Each Fits; (3) Integration Architecture: Point-to-Point vs ESB vs API-Led Connectivity. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('b2b-solution-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function B2BSolutionArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What B2B Solution Architect Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Multi-cloud B2B architecture</strong> — Designing solutions that span Sales Cloud, CPQ, Revenue Cloud, Pardot/Account Engagement, Service Cloud, and Experience Cloud. Understanding how data flows across clouds, where master data lives, and how to avoid data silos.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead-to-cash process design</strong> — Architecting the full B2B sales cycle: Pardot for marketing automation → Sales Cloud for pipeline management → CPQ for quoting → Revenue Cloud for billing → Service Cloud for post-sale support. Integration points and data hand-offs between each stage.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Discovery and recommendation</strong> — Conducting architecture discovery with stakeholders, identifying constraints and non-functional requirements (NFRs), evaluating trade-offs between solution approaches, and recommending the right architecture for a given B2B business context.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Multi-cloud B2B architecture</strong>: Designing solutions that span Sales Cloud, CPQ, Revenue Cloud, Pardot/Account Engagement, Service Cloud, and Experience Cloud. Understanding how data flows across clouds, where master data lives, and how to avoid data silos.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead-to-cash process design</strong>: Architecting the full B2B sales cycle: Pardot for marketing automation → Sales Cloud for pipeline management → CPQ for quoting → Revenue Cloud for billing → Service Cloud for post-sale support. Integration points and data hand-offs between each stage.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Discovery and recommendation</strong>: Conducting architecture discovery with stakeholders, identifying constraints and non-functional requirements (NFRs), evaluating trade-offs between solution approaches, and recommending the right architecture for a given B2B business context.</li>
         </ul>
       </section>
 
@@ -129,7 +129,7 @@ export default function B2BSolutionArchitectExamTipsPage() {
             <span className="font-medium text-gray-900">Understand B2B Business Processes</span>
             <span className="font-bold text-salesforce-blue ml-4">17%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Multi-Cloud Architecture = 35% — the single largest section. Know every cloud’s role in the B2B sales lifecycle.</p>
+          <p className="text-xs text-gray-600 pt-1">Multi-Cloud Architecture = 35%, the single largest section. Know every cloud’s role in the B2B sales lifecycle.</p>
         </div>
       </section>
 
@@ -137,13 +137,13 @@ export default function B2BSolutionArchitectExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach B2B Solution Architect Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a B2B enterprise scenario and ask which multi-cloud architecture, integration
-          approach, or design decision is most appropriate. Think at the systems level — not just
-          individual features — and consider the long-term implications of each choice.
+          approach, or design decision is most appropriate. Think at the systems level, not just
+          individual features, and consider the long-term implications of each choice.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For cross-cloud data questions: Account and Contact are master data in Salesforce CRM — they should not be duplicated. Pardot syncs prospects to Leads/Contacts in Sales Cloud. CPQ reads Account and Contact from Sales Cloud — it does not maintain its own. Revenue Cloud extends Order and Contract objects in Sales Cloud. Know where each cloud’s data lives.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead management questions: Pardot prospects become Salesforce Leads when they meet a score/grade threshold. Leads convert to Contacts when sales qualifies them. The Pardot-Sales Cloud sync must be carefully designed — connected campaigns, marketing attribution, and lead scoring alignment are common exam topics.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For architecture trade-off questions: architect-level questions have no single correct technical answer — they have a most appropriate answer given the context. Evaluate options against: simplicity (fewest moving parts), maintainability (who owns it long-term), performance (NFRs), and cost (licence implications of adding another cloud).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For cross-cloud data questions: Account and Contact are master data in Salesforce CRM; they should not be duplicated. Pardot syncs prospects to Leads/Contacts in Sales Cloud. CPQ reads Account and Contact from Sales Cloud; it does not maintain its own. Revenue Cloud extends Order and Contract objects in Sales Cloud. Know where each cloud’s data lives.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead management questions: Pardot prospects become Salesforce Leads when they meet a score/grade threshold. Leads convert to Contacts when sales qualifies them. The Pardot-Sales Cloud sync must be carefully designed, connected campaigns, marketing attribution, and lead scoring alignment are common exam topics.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For architecture trade-off questions: architect-level questions have no single correct technical answer; they have a most appropriate answer given the context. Evaluate options against: simplicity (fewest moving parts), maintainability (who owns it long-term), performance (NFRs), and cost (licence implications of adding another cloud).</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function B2BSolutionArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2B Solution Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Account-Based vs Contact-Based Data Models — B2B vs B2C Architecture Decision</p>
-            <p className="text-sm text-gray-700">B2B Salesforce implementations are account-centric: Contacts belong to Accounts, and Opportunities, Cases, and revenue are tracked at the Account level. B2C implementations are contact/person-account centric. When a B2B scenario adds consumer-facing channels, candidates default to Person Accounts — but the exam expects a clear rationale tied to the client’s business model before recommending that change.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Account-Based vs Contact-Based Data Models: B2B vs B2C Architecture Decision</p>
+            <p className="text-sm text-gray-700">B2B Salesforce implementations are account-centric: Contacts belong to Accounts, and Opportunities, Cases, and revenue are tracked at the Account level. B2C implementations are contact/person-account centric. When a B2B scenario adds consumer-facing channels, candidates default to Person Accounts, but the exam expects a clear rationale tied to the client’s business model before recommending that change.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Revenue Lifecycle Management vs CPQ — Knowing When Each Fits</p>
-            <p className="text-sm text-gray-700">CPQ (Salesforce Configure, Price, Quote) handles product configuration, pricing rules, and quote generation. Revenue Lifecycle Management (RLM) extends this to subscription management, usage-based billing, and contract amendments. Candidates recommend CPQ for scenarios that describe subscription renewals, amendments, and billing — the exam expects RLM for those patterns.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Revenue Lifecycle Management vs CPQ: Knowing When Each Fits</p>
+            <p className="text-sm text-gray-700">CPQ (Salesforce Configure, Price, Quote) handles product configuration, pricing rules, and quote generation. Revenue Lifecycle Management (RLM) extends this to subscription management, usage-based billing, and contract amendments. Candidates recommend CPQ for scenarios that describe subscription renewals, amendments, and billing, the exam expects RLM for those patterns.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Integration Architecture — Point-to-Point vs ESB vs API-Led Connectivity</p>
-            <p className="text-sm text-gray-700">Point-to-point integrations create direct connections between systems and become unmaintainable at scale. ESB (Enterprise Service Bus) centralises integration logic but creates a single point of failure. API-led connectivity (MuleSoft) layers APIs into System, Process, and Experience tiers for reusability and resilience. Exam scenarios describe scale and reuse requirements — candidates over-recommend ESB when API-led is the correct answer.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Integration Architecture: Point-to-Point vs ESB vs API-Led Connectivity</p>
+            <p className="text-sm text-gray-700">Point-to-point integrations create direct connections between systems and become unmaintainable at scale. ESB (Enterprise Service Bus) centralises integration logic but creates a single point of failure. API-led connectivity (MuleSoft) layers APIs into System, Process, and Experience tiers for reusability and resilience. Exam scenarios describe scale and reuse requirements, candidates over-recommend ESB when API-led is the correct answer.</p>
           </div>
         </div>
       </section>

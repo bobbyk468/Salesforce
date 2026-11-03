@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between Platform Events and CDC?',
-    answer: 'Platform Events are custom event messages you define and publish to the Salesforce event bus — used for near-real-time notifications between systems. Change Data Capture (CDC) automatically publishes change events whenever Salesforce records are created, updated, deleted, or undeleted — used for data replication to external systems. Both use the CometD streaming protocol and replay IDs for guaranteed delivery.',
+    answer: 'Platform Events are custom event messages you define and publish to the Salesforce event bus, used for near-real-time notifications between systems. Change Data Capture (CDC) automatically publishes change events whenever Salesforce records are created, updated, deleted, or undeleted, used for data replication to external systems. Both use the CometD streaming protocol and replay IDs for guaranteed delivery.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function IntegrationArchitectStudyGuidePage() {
           Salesforce Integration Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Salesforce Integration Architect exam — integration patterns, API design, async strategies, error handling, and governance.
+          Your complete guide to passing the Salesforce Integration Architect exam, integration patterns, API design, async strategies, error handling, and governance.
         </p>
       </div>
 
@@ -159,15 +159,15 @@ export default function IntegrationArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Integration fundamentals — review all Salesforce API types (REST, SOAP, Bulk, Streaming, Metadata, Tooling, Connect). Understand when to use each.' },
-            { week: 'Week 2', focus: 'Integration Patterns — study all 5 Salesforce integration patterns. Map each pattern to the Salesforce features that implement it.' },
-            { week: 'Week 3', focus: 'Platform Events &amp; CDC — set up Platform Events in a dev org, publish and subscribe. Configure Change Data Capture for a custom object.' },
-            { week: 'Week 4', focus: 'Apex Callouts — build REST and SOAP callouts in Apex. Configure named credentials and remote site settings. Understand callout governor limits.' },
-            { week: 'Week 5', focus: 'Async Apex for integration — Queueable Apex with callouts, Batch Apex for data sync, Future methods. When to use each pattern.' },
-            { week: 'Week 6', focus: 'OAuth flows and authentication — Web Server, User-Agent, JWT Bearer, Username-Password, Device flows. Connected Apps and named credentials.' },
-            { week: 'Week 7', focus: 'Error handling and idempotency — dead-letter queues, retry patterns, Platform Event replay, idempotency keys in REST APIs.' },
-            { week: 'Week 8', focus: 'MuleSoft &amp; middleware — API-led connectivity concepts (system, process, experience APIs), Anypoint Platform role in enterprise integration.' },
-            { week: 'Week 9', focus: 'Performance and scalability — governor limits per transaction, how async patterns bypass callout limits, monitoring and alerting.' },
+            { week: 'Week 1', focus: 'Integration fundamentals, review all Salesforce API types (REST, SOAP, Bulk, Streaming, Metadata, Tooling, Connect). Understand when to use each.' },
+            { week: 'Week 2', focus: 'Integration Patterns, study all 5 Salesforce integration patterns. Map each pattern to the Salesforce features that implement it.' },
+            { week: 'Week 3', focus: 'Platform Events &amp; CDC, set up Platform Events in a dev org, publish and subscribe. Configure Change Data Capture for a custom object.' },
+            { week: 'Week 4', focus: 'Apex Callouts, build REST and SOAP callouts in Apex. Configure named credentials and remote site settings. Understand callout governor limits.' },
+            { week: 'Week 5', focus: 'Async Apex for integration: Queueable Apex with callouts, Batch Apex for data sync, Future methods. When to use each pattern.' },
+            { week: 'Week 6', focus: 'OAuth flows and authentication: Web Server, User-Agent, JWT Bearer, Username-Password, Device flows. Connected Apps and named credentials.' },
+            { week: 'Week 7', focus: 'Error handling and idempotency, dead-letter queues, retry patterns, Platform Event replay, idempotency keys in REST APIs.' },
+            { week: 'Week 8', focus: 'MuleSoft &amp; middleware: API-led connectivity concepts (system, process, experience APIs), Anypoint Platform role in enterprise integration.' },
+            { week: 'Week 9', focus: 'Performance and scalability, governor limits per transaction, how async patterns bypass callout limits, monitoring and alerting.' },
             { week: 'Week 10', focus: 'Full mock exams. Focus heavily on scenario questions: which integration pattern, which API, which async mechanism. Aim for 75%+.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -181,10 +181,10 @@ export default function IntegrationArchitectStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Know the 5 integration patterns cold:</strong> Remote Process Invocation (sync), Remote Process Invocation (async), Batch Data Sync, Remote Call-In, and UI Update. Each question’s scenario will map to one — identify it before selecting an answer.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Know the 5 integration patterns cold:</strong> Remote Process Invocation (sync), Remote Process Invocation (async), Batch Data Sync, Remote Call-In, and UI Update. Each question’s scenario will map to one, identify it before selecting an answer.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Async beats sync for large volumes:</strong> If a scenario involves high volume, long-running external calls, or fire-and-forget notification, the answer is almost always an async pattern (Queueable, Batch, Platform Events) over a synchronous callout.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Platform Events for event-driven:</strong> When a scenario requires near-real-time notification to multiple subscribers (decoupled architecture), Platform Events is the correct answer over direct callouts or polling.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Named credentials for callout security:</strong> Any question about securing external HTTP callouts should point to named credentials — they abstract authentication and avoid storing credentials in Apex code.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Named credentials for callout security:</strong> Any question about securing external HTTP callouts should point to named credentials, they abstract authentication and avoid storing credentials in Apex code.</span></li>
         </ul>
       </div>
 
@@ -202,7 +202,7 @@ export default function IntegrationArchitectStudyGuidePage() {
           <li>Change Data Capture: what triggers events, high-volume events, supported objects</li>
           <li>Apex callout limits: 100 callouts/transaction, 120s timeout, heap impact</li>
           <li>Queueable vs Future vs Batch Apex for async integration scenarios</li>
-          <li>OAuth 2.0 flows: Web Server, JWT Bearer, Username-Password — when each applies</li>
+          <li>OAuth 2.0 flows: Web Server, JWT Bearer, Username-Password, when each applies</li>
           <li>Named credentials: types (Legacy, Per-User, Named Principal), protocol support</li>
           <li>Idempotency and retry design: why it matters and how to implement it</li>
           <li>Bulk API 2.0 vs REST API for large-volume inbound data loads</li>

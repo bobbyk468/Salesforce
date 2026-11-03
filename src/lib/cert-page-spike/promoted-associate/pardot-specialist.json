@@ -27,7 +27,7 @@
       "<strong>Exam objectives:</strong> Visitors and Prospects (8%), Administration (11%), Forms, Form Handlers and Landing Pages (20%), Lead Management (24%), Email Marketing (20%), and Engagement Studio (17%).",
       "<strong>Preparation:</strong> Review how scoring, grading, automation, prospect records, and Salesforce integration work against the official objectives."
     ],
-    "passRateGuidance": "Use hands-on practice to review the official objectives, build a sample Engagement Studio program, and explain scoring, grading, and prospect sync behavior."
+    "passRateGuidance": "Use hands-on practice to review the official objectives. Build a sample Engagement Studio program, and explain scoring, grading, and prospect sync behavior."
   },
   "examFormat": {
     "heading": "Account Engagement Specialist Exam Format Explained",
@@ -107,11 +107,11 @@
     "blocks": [
       {
         "heading": "Scoring vs Grading: Interest vs Fit",
-        "body": "**Scoring** is activity-based — it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. **Grading** is attribute-based — it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The official exam outline includes both scoring and grading under Lead Management."
+        "body": "**Scoring** is activity-based, it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. **Grading** is attribute-based, it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The official exam outline includes both scoring and grading under Lead Management."
       },
       {
         "heading": "Automation Hierarchy: Completion Actions vs Automation Rules vs Engagement Studio",
-        "body": "**Completion Actions** fire once when a prospect interacts with a specific asset (form submitted, email clicked). **Automation Rules** continuously evaluate all prospects against criteria and fire actions when criteria are met — they can run repeatedly. **Engagement Studio** is for time-based nurture with conditional branching — it combines wait steps and actions into a visual programme. Know when each is appropriate and when they overlap."
+        "body": "**Completion Actions** fire once when a prospect interacts with a specific asset (form submitted, email clicked). **Automation Rules** continuously evaluate all prospects against criteria and fire actions when criteria are met; they can run repeatedly. **Engagement Studio** is for time-based nurture with conditional branching, it combines wait steps and actions into a visual programme. Know when each is appropriate and when they overlap."
       },
       {
         "heading": "Pardot-Salesforce Sync: Field Sync Behaviour",
@@ -119,17 +119,17 @@
       },
       {
         "heading": "Prospects and Visitors: Identification and Tracking",
-        "body": "An anonymous website visitor becomes a Prospect when identified by email — via a form submission or a tracked email click that places a browser cookie. Pardot tracks all subsequent page views under that prospect record. **Dynamic Lists** automatically update membership as prospect attributes change. Scoring Categories maintain separate scores per product line. Know how each mechanism connects to prospect lifecycle stages."
+        "body": "An anonymous website visitor becomes a Prospect when identified by email, via a form submission or a tracked email click that places a browser cookie. Pardot tracks all subsequent page views under that prospect record. **Dynamic Lists** automatically update membership as prospect attributes change. Scoring Categories maintain separate scores per product line. Know how each mechanism connects to prospect lifecycle stages."
       },
       {
         "heading": "Pardot Forms vs Form Handlers",
-        "body": "Pardot Forms are fully hosted by Pardot — they support progressive profiling (showing new fields on repeat visits), built-in validation, and native landing page embedding. Form Handlers connect Pardot to existing third-party forms on external websites — the visitor submits to the third-party form, which posts data to Pardot in the background. Use Form Handlers when you cannot replace an existing form; use Pardot Forms for new data capture assets."
+        "body": "Pardot Forms are fully hosted by Pardot, they support progressive profiling (showing new fields on repeat visits), built-in validation, and native landing page embedding. Form Handlers connect Pardot to existing third-party forms on external websites, the visitor submits to the third-party form, which posts data to Pardot in the background. Use Form Handlers when you cannot replace an existing form; use Pardot Forms for new data capture assets."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Account Engagement Specialist Exam",
-    "intro": "The Account Engagement Specialist exam tests hands-on configuration knowledge. Focus on the execution side — automation rules, dynamic lists, email sends, and form configuration — rather than high-level solution design.",
+    "intro": "The Account Engagement Specialist exam tests hands-on configuration knowledge. Focus on the execution side, automation rules, dynamic lists, email sends, and form configuration, rather than high-level solution design.",
     "blocks": [
       {
         "heading": "Automation Rules vs. Segmentation Rules",

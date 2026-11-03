@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Tableau Desktop Foundations exam?',
-    answer: 'The Tableau Desktop Foundations requires a 70%+ passing score and tests hands-on Tableau platform skills that cannot be mastered through reading alone. Daily practice in Tableau Desktop or Tableau Cloud is essential — this is a skills-based exam. Most candidates need 6–8 weeks of consistent hands-on practice. Calculated fields, LOD expressions, and dashboard interactivity actions are the most commonly missed topics.',
+    answer: 'The Tableau Desktop Foundations requires a 70%+ passing score and tests hands-on Tableau platform skills that cannot be mastered through reading alone. Daily practice in Tableau Desktop or Tableau Cloud is essential; this is a skills-based exam. Most candidates need 6–8 weeks of consistent hands-on practice. Calculated fields, LOD expressions, and dashboard interactivity actions are the most commonly missed topics.',
   },
   {
     question: 'What are the highest-weight Tableau Desktop Foundations exam sections?',
@@ -52,15 +52,15 @@ const faqItems = [
   },
   {
     question: 'What is the difference between Tableau Desktop Foundations and the BI Analyst exam?',
-    answer: 'Tableau Desktop Foundations is the entry-level Tableau certification — testing basic skills like connecting to data and building standard charts. The Business Intelligence Analyst exam is the intermediate-level certification testing more advanced skills like LOD expressions, table calculations, and complex dashboard actions. Foundations is the recommended starting point for Tableau beginners.',
+    answer: 'Tableau Desktop Foundations is the entry-level Tableau certification, testing basic skills like connecting to data and building standard charts. The Business Intelligence Analyst exam is the intermediate-level certification testing more advanced skills like LOD expressions, table calculations, and complex dashboard actions. Foundations is the recommended starting point for Tableau beginners.',
   },
   {
     question: 'What are dimensions and measures in Tableau and why do they matter?',
-    answer: 'Dimensions are categorical fields (text, dates) that define the granularity of a view — they go on Rows and Columns shelves. Measures are numeric fields that are aggregated — they appear as pills in the view. Understanding the dimension vs. measure distinction is fundamental to Tableau and is tested across multiple questions on every Tableau exam.',
+    answer: 'Dimensions are categorical fields (text, dates) that define the granularity of a view; they go on Rows and Columns shelves. Measures are numeric fields that are aggregated, they appear as pills in the view. Understanding the dimension vs. measure distinction is fundamental to Tableau and is tested across multiple questions on every Tableau exam.',
   },
   {
     question: 'What concepts do most Tableau Desktop Foundations candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Tableau Desktop Foundations exam are: (1) Connecting to Data — Live vs Extract in Desktop; (2) Show Me vs Drag-and-Drop — When Tableau Automatically Selects Chart Types; (3) Groups vs Sets — Static vs Dynamic Membership. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Tableau Desktop Foundations exam are: (1) Connecting to Data: Live vs Extract in Desktop; (2) Show Me vs Drag-and-Drop: When Tableau Automatically Selects Chart Types; (3) Groups vs Sets: Static vs Dynamic Membership. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('tableau-desktop-foundations-exam-tips'),
 ]
@@ -79,7 +79,7 @@ export default function TableauDesktopFoundationsExamTipsPage() {
         </h1>
         <p className="text-lg text-gray-600">
           The Tableau Desktop Foundations exam is Tableau’s entry-level certification. It tests basic Tableau
-          skills — connecting data, building charts, using filters. These tips focus on the fundamental
+          skills, connecting data, building charts, using filters. These tips focus on the fundamental
           concepts and chart-building skills that define this accessible certification.
         </p>
       </header>
@@ -92,9 +92,9 @@ export default function TableauDesktopFoundationsExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Tableau Desktop Foundations Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data connection basics</strong> — Connecting to Excel, CSV, and simple database sources; understanding dimensions vs. measures; using data pane filters; and basic data types (string, number, date, boolean).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Standard chart types</strong> — Building bar charts, line charts, scatter plots, maps (with geographic dimensions), pie charts, and text tables. Understanding which chart type best suits which type of data comparison (comparison, trend, distribution, relationship).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Filters, groups, and sets</strong> — Applying dimension filters, measure filters, and context filters. Creating groups to combine dimension values. Using basic calculated fields for simple IF/THEN logic and string/date manipulations. Basic dashboard creation with layout containers.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data connection basics</strong>: Connecting to Excel, CSV, and simple database sources; understanding dimensions vs. measures; using data pane filters; and basic data types (string, number, date, boolean).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Standard chart types</strong>: Building bar charts, line charts, scatter plots, maps (with geographic dimensions), pie charts, and text tables. Understanding which chart type best suits which type of data comparison (comparison, trend, distribution, relationship).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Filters, groups, and sets</strong>: Applying dimension filters, measure filters, and context filters. Creating groups to combine dimension values. Using basic calculated fields for simple IF/THEN logic and string/date manipulations. Basic dashboard creation with layout containers.</li>
         </ul>
       </section>
 
@@ -125,12 +125,12 @@ export default function TableauDesktopFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Desktop Foundations Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a data visualisation requirement and ask which chart type, filter, or Tableau
-          feature achieves it. Focus on matching the requirement to the simplest correct Tableau approach —
+          feature achieves it. Focus on matching the requirement to the simplest correct Tableau approach,
           this is a foundations exam, not an advanced one.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For chart type questions: bar chart = compare categories. Line chart = show trends over time. Scatter plot = show relationship between two measures. Map = show geographic data. Pie chart = show part-to-whole (use sparingly). When a question says ’compare sales across regions’, bar chart is the standard answer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For filter type questions: dimension filters filter by category value (show only USA). Measure filters filter by aggregated value (show only where SUM(Sales) &gt; $1,000). Context filters make a dimension filter a ’top filter’ for downstream filters — they run first. The order of filter application matters.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For filter type questions: dimension filters filter by category value (show only USA). Measure filters filter by aggregated value (show only where SUM(Sales) &gt; $1,000). Context filters make a dimension filter a ’top filter’ for downstream filters, they run first. The order of filter application matters.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For calculation questions: IF/THEN calculated fields create category labels from numeric or text fields. String functions (LEFT, RIGHT, CONTAINS, MID) manipulate text. Date functions (DATETRUNC, DATEDIFF, DATEPART) work with date fields. When a question says ’classify sales as High/Medium/Low based on amount’, the answer is an IF/THEN calculated field.</li>
         </ul>
       </section>
@@ -144,7 +144,7 @@ export default function TableauDesktopFoundationsExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Tableau Desktop Foundations is the most accessible Tableau certification. Most candidates with
           1–2 months of hands-on Tableau Desktop practice can pass. Download Tableau Public (free) and
-          build 5–10 basic dashboards using Tableau’s sample datasets. Hands-on practice is essential —
+          build 5–10 basic dashboards using Tableau’s sample datasets. Hands-on practice is essential:
           Tableau skills cannot be learned purely from reading.
         </p>
       </section>
@@ -152,19 +152,19 @@ export default function TableauDesktopFoundationsExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Tableau Desktop Foundations Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Connecting to Data — Live vs Extract in Desktop</p>
-            <p className="text-sm text-gray-700">In Tableau Desktop, connecting Live keeps data in the original source and queries it each time the view is opened. Creating an Extract saves data to a local .hyper file for faster performance. Candidates use Live for all connections assuming it is always "better" — the exam expects Extracts for offline use, performance improvement, and reducing database load.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Connecting to Data: Live vs Extract in Desktop</p>
+            <p className="text-sm text-gray-700">In Tableau Desktop, connecting Live keeps data in the original source and queries it each time the view is opened. Creating an Extract saves data to a local .hyper file for faster performance. Candidates use Live for all connections assuming it is always "better", the exam expects Extracts for offline use, performance improvement, and reducing database load.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Show Me vs Drag-and-Drop — When Tableau Automatically Selects Chart Types</p>
-            <p className="text-sm text-gray-700">"Show Me" recommends chart types based on the current fields on the canvas. Drag-and-drop lets you manually control marks and shelves for custom visualisations. Candidates use Show Me for all visualisations then struggle to modify the result — the exam expects you to understand which shelves (Rows, Columns, Marks card) drive which visual encoding so you can manually build views Show Me cannot create.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Show Me vs Drag-and-Drop: When Tableau Automatically Selects Chart Types</p>
+            <p className="text-sm text-gray-700">"Show Me" recommends chart types based on the current fields on the canvas. Drag-and-drop lets you manually control marks and shelves for custom visualisations. Candidates use Show Me for all visualisations then struggle to modify the result, the exam expects you to understand which shelves (Rows, Columns, Marks card) drive which visual encoding so you can manually build views Show Me cannot create.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Groups vs Sets — Static vs Dynamic Membership</p>
-            <p className="text-sm text-gray-700">Groups manually combine members of a dimension into named categories (North + South = "Southern Region") — static, created by the user. Sets are saved subsets of dimension members based on conditions or manual selection — they can be dynamic (update when data changes) or fixed. Candidates use Groups when they need a condition-based dynamic category — the exam expects Dynamic Sets for criteria-driven grouping.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Groups vs Sets: Static vs Dynamic Membership</p>
+            <p className="text-sm text-gray-700">Groups manually combine members of a dimension into named categories (North + South = "Southern Region"), static, created by the user. Sets are saved subsets of dimension members based on conditions or manual selection; they can be dynamic (update when data changes) or fixed. Candidates use Groups when they need a condition-based dynamic category, the exam expects Dynamic Sets for criteria-driven grouping.</p>
           </div>
         </div>
       </section>

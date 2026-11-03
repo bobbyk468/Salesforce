@@ -391,7 +391,7 @@ function ContactPageContent() {
                         {isQuestionBankFlow(examParam) ? (
                           <>Exam: <strong>{examParam}</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice + personalized study plan. Add your message below and we’ll respond with pricing and access details.</>
                         ) : (
-                          <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we’ll get back to you.</>
+                          <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled, add your message and we’ll get back to you.</>
                         )}
                       </p>
                     )}

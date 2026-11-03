@@ -22,11 +22,11 @@
     "summary": "The Order Management Developer AP is moderately difficult. The ~65% passing score is standard, but the exam tests deep technical skills including OMS Connect APIs, Flow orchestration, Platform Events, and custom fulfillment adapter development that require hands-on coding experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> &mdash; standard threshold, but the technical depth of OMS API and Apex integration questions makes it harder than the number suggests.",
-      "<strong>API-level knowledge required</strong> &mdash; questions test specific ConnectApi methods, REST API endpoints, and Platform Event patterns rather than high-level concepts.",
-      "<strong>Integration complexity</strong> &mdash; the exam expects you to design solutions for external fulfillment provider integration, idempotent retry logic, and asynchronous event processing."
+      "<strong>~65% passing score</strong>: standard threshold, but the technical depth of OMS API and Apex integration questions makes it harder than the number suggests.",
+      "<strong>API-level knowledge required</strong>: questions test specific ConnectApi methods, REST API endpoints, and Platform Event patterns rather than high-level concepts.",
+      "<strong>Integration complexity</strong>: the exam expects you to design solutions for external fulfillment provider integration, idempotent retry logic, and asynchronous event processing."
     ],
-    "passRateGuidance": "Write Apex that calls OMS Connect APIs, build a Flow-based order orchestration, and implement at least one external fulfillment integration in a developer org before booking."
+    "passRateGuidance": "Write Apex that calls OMS Connect APIs. Build a Flow-based order orchestration, and implement at least one external fulfillment integration in a developer org before booking."
   },
   "examFormat": {
     "heading": "Order Management Developer AP Exam Format Explained",
@@ -66,11 +66,11 @@
       },
       {
         "heading": "Order Orchestration with Flow",
-        "body": "OMS uses Salesforce Flow for order orchestration — automating the sequence of fulfillment, payment, notification, and return steps. Flow Orchestration (multi-stage orchestration) coordinates parallel and sequential work across teams and systems. Record-Triggered Flows respond to order state changes (e.g., when a Fulfillment Order is marked Fulfilled, trigger invoicing). Subflows modularize complex orchestration logic. **Platform Events** integrate OMS with external systems asynchronously — publish an event when an order state changes, subscribe in MuleSoft or an external ESB. The developer exam tests how to design an order orchestration flow, how to implement a re-try mechanism for failed API calls in a flow, and how to use Platform Events for async integration."
+        "body": "OMS uses Salesforce Flow for order orchestration, automating the sequence of fulfillment, payment, notification, and return steps. Flow Orchestration (multi-stage orchestration) coordinates parallel and sequential work across teams and systems. Record-Triggered Flows respond to order state changes (e.g., when a Fulfillment Order is marked Fulfilled, trigger invoicing). Subflows modularize complex orchestration logic. **Platform Events** integrate OMS with external systems asynchronously, publish an event when an order state changes, subscribe in MuleSoft or an external ESB. The developer exam tests how to design an order orchestration flow, how to implement a re-try mechanism for failed API calls in a flow, and how to use Platform Events for async integration."
       },
       {
         "heading": "Custom Fulfillment & External Integration",
-        "body": "External Fulfillment Providers receive Fulfillment Orders via outbound REST calls or **Platform Events**. The External Fulfillment Provider framework allows developers to register custom adapters that translate Salesforce Fulfillment Orders into 3PL-specific formats. Order callbacks update Salesforce when the 3PL ships or cancels — implemented as inbound REST endpoints in Salesforce (Experience Cloud, Salesforce Sites, or Functions). Error handling: when an external call fails, the flow must log the error, alert ops, and optionally retry. Idempotency keys prevent duplicate fulfillment on retry. The developer exam tests how to implement a custom fulfillment adapter, how to expose an inbound callback endpoint, and how to handle idempotent retries."
+        "body": "External Fulfillment Providers receive Fulfillment Orders via outbound REST calls or **Platform Events**. The External Fulfillment Provider framework allows developers to register custom adapters that translate Salesforce Fulfillment Orders into 3PL-specific formats. Order callbacks update Salesforce when the 3PL ships or cancels, implemented as inbound REST endpoints in Salesforce (Experience Cloud, Salesforce Sites, or Functions). Error handling: when an external call fails, the flow must log the error, alert ops, and optionally retry. Idempotency keys prevent duplicate fulfillment on retry. The developer exam tests how to implement a custom fulfillment adapter, how to expose an inbound callback endpoint, and how to handle idempotent retries."
       },
       {
         "heading": "Testing OMS Customizations",
@@ -78,7 +78,7 @@
       },
       {
         "heading": "Performance & Scalability Considerations",
-        "body": "High-volume order management requires careful attention to **governor limits**. Bulk order processing uses **Apex** Batch jobs rather than synchronous Apex. **SOQL** queries on Order Summary and child objects must use selective filters — add custom indexes on frequently queried fields (external order ID, status, created date). Platform Event subscriptions use CometD for streaming — design for at-least-once delivery and idempotent consumers. Large Return Order batches should be processed asynchronously to avoid CPU time limits. The OCI inventory check API has rate limits — design a caching layer for high-frequency availability checks. The developer exam tests how to design an OMS customization that handles 10,000+ daily orders without hitting governor limits."
+        "body": "High-volume order management requires careful attention to **governor limits**. Bulk order processing uses **Apex** Batch jobs rather than synchronous Apex. **SOQL** queries on Order Summary and child objects must use selective filters, add custom indexes on frequently queried fields (external order ID, status, created date). Platform Event subscriptions use CometD for streaming, design for at-least-once delivery and idempotent consumers. Large Return Order batches should be processed asynchronously to avoid CPU time limits. The OCI inventory check API has rate limits, design a caching layer for high-frequency availability checks. The developer exam tests how to design an OMS customization that handles 10,000+ daily orders without hitting governor limits."
       }
     ]
   },

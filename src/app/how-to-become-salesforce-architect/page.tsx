@@ -39,7 +39,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How long does it take to become a Salesforce Architect?',
-    answer: 'The Application Architect credential (4 individual architect certs) typically takes 2–4 years after PD1. The full CTA path (Application Architect + System Architect + CTA evaluation) takes 4–8 years for most candidates. The CTA board review is one of the most rigorous credentialling processes in enterprise software — most successful candidates have 8–12 years of Salesforce experience and have led multiple large enterprise implementations.',
+    answer: 'The Application Architect credential (4 individual architect certs) typically takes 2–4 years after PD1. The full CTA path (Application Architect + System Architect + CTA evaluation) takes 4–8 years for most candidates. The CTA board review is one of the most rigorous credentialling processes in enterprise software, most successful candidates have 8–12 years of Salesforce experience and have led multiple large enterprise implementations.',
   },
   {
     question: 'What certifications are required for Salesforce Application Architect?',
@@ -51,11 +51,11 @@ const faqItems = [
   },
   {
     question: 'What is the CTA Board Review?',
-    answer: 'The CTA (Certified Technical Architect) Board Review is a live, in-person or virtual presentation to a panel of senior Salesforce architects. Candidates receive a complex business scenario in advance and present a Salesforce architecture solution — whiteboarding, defending design decisions, and responding to challenging questions. The evaluation is pass/fail. Most candidates attempt it multiple times before passing.',
+    answer: 'The CTA (Certified Technical Architect) Board Review is a live, in-person or virtual presentation to a panel of senior Salesforce architects. Candidates receive a complex business scenario in advance and present a Salesforce architecture solution, whiteboarding, defending design decisions, and responding to challenging questions. The evaluation is pass/fail. Most candidates attempt it multiple times before passing.',
   },
   {
     question: 'What is the Salesforce architect salary in 2026?',
-    answer: 'Application Architects typically earn $130,000–$160,000 USD. System Architects and CTAs earn $160,000–$200,000+. Salesforce CTAs are among the highest-paid professionals in the Salesforce ecosystem — there are fewer than 1,000 CTAs globally as of 2026. Contract architects typically earn $150–$250 per hour depending on specialisation and location.',
+    answer: 'Application Architects typically earn $130,000–$160,000 USD. System Architects and CTAs earn $160,000–$200,000+. Salesforce CTAs are among the highest-paid professionals in the Salesforce ecosystem; there are fewer than 1,000 CTAs globally as of 2026. Contract architects typically earn $150–$250 per hour depending on specialisation and location.',
   },
 ]
 
@@ -64,21 +64,21 @@ const stages = [
     stage: 'Foundation',
     time: '6–12 months',
     title: 'Admin + Developer Foundation',
-    description: 'The architect path requires mastery of the full Salesforce platform before specialising. Pass ADM-201 (administrator), then Platform Developer I (PD1). These two certifications give you the platform foundation — data model, security model, automation, Apex, LWC — needed for all architect-level thinking.',
+    description: 'The architect path requires mastery of the full Salesforce platform before specialising. Pass ADM-201 (administrator), then Platform Developer I (PD1). These two certifications give you the platform foundation, data model, security model, automation, Apex, LWC, needed for all architect-level thinking.',
     certs: ['ADM-201 (Platform Administrator)', 'Platform Developer I (PD1)'],
   },
   {
     stage: 'Experience',
     time: '2–4 years',
     title: 'Build Hands-On Implementation Experience',
-    description: 'No amount of studying replaces hands-on project experience. Architects are expected to have led multiple large, complex Salesforce implementations — multi-org environments, custom integrations, large data volumes, complex sharing models. Work as a senior developer or technical lead on at least 3–5 enterprise Salesforce projects before pursuing architect certifications.',
+    description: 'No amount of studying replaces hands-on project experience. Architects are expected to have led multiple large, complex Salesforce implementations, multi-org environments, custom integrations, large data volumes, complex sharing models. Work as a senior developer or technical lead on at least 3–5 enterprise Salesforce projects before pursuing architect certifications.',
     certs: ['Lead developer or technical architect role on enterprise projects', 'Experience across multiple clouds (Sales, Service, Platform, Marketing)'],
   },
   {
     stage: 'App Architect',
     time: '1–2 years',
     title: 'Application Architect (4 Certs, Auto-Awarded)',
-    description: 'Pursue the four Application Architect component exams in parallel or sequentially — Platform App Builder and Platform Developer I (already covered in the Foundation stage above) plus Data Architect and Sharing and Visibility Architect. Once all four are passed, Salesforce automatically awards the credential; there is no separate Application Architect exam.',
+    description: 'Pursue the four Application Architect component exams in parallel or sequentially: Platform App Builder and Platform Developer I (already covered in the Foundation stage above) plus Data Architect and Sharing and Visibility Architect. Once all four are passed, Salesforce automatically awards the credential; there is no separate Application Architect exam.',
     certs: ['Platform App Builder (already completed)', 'Platform Developer I (already completed)', 'Data Architect', 'Sharing and Visibility Architect'],
   },
   {
@@ -111,7 +111,7 @@ export default function HowToBecomeSalesforceArchitectPage() {
           How to Become a Salesforce Architect ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          The complete roadmap from ADM-201 to Certified Technical Architect (CTA) — certifications, experience milestones, timeline, and salary data.
+          The complete roadmap from ADM-201 to Certified Technical Architect (CTA), certifications, experience milestones, timeline, and salary data.
         </p>
       </div>
 

@@ -55,7 +55,7 @@ const faqItems = [
   },
   {
     question: 'How does LWC customisation work in Salesforce B2B Commerce?',
-    answer: 'B2B Commerce storefront pages are built from standard LWC components provided by Salesforce. Developers customise the storefront by overriding these standard components with custom LWC implementations. Custom components use the same component name and folder structure to override the default. The exam tests how to correctly override standard components, use the B2B Commerce LWC component library, and handle data communication between components.',
+    answer: 'B2B Commerce storefront pages are built from standard LWC components provided by Salesforce. Developers customise the storefront by overriding these standard components with custom LWC implementations. Custom components use the same component name and folder structure to override the default. The exam tests how to correctly override standard components. Use the B2B Commerce LWC component library, and handle data communication between components.',
   },
   {
     question: 'What B2B Commerce APIs does the Developer AP exam test?',
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most B2B Commerce Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the B2B Commerce Developer exam are: (1) LWC Commerce Components vs Base Components — Extension vs Replacement; (2) Integration Framework: Commerce APIs vs Apex vs Platform Events; (3) Guest Browsing vs Authenticated Checkout — Session Context Matters. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the B2B Commerce Developer exam are: (1) LWC Commerce Components vs Base Components: Extension vs Replacement; (2) Integration Framework: Commerce APIs vs Apex vs Platform Events; (3) Guest Browsing vs Authenticated Checkout: Session Context Matters. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('b2b-commerce-developer-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function B2bCommerceDeveloperApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What B2B Commerce Developer AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>LWC storefront customisation</strong> — Overriding standard B2B Commerce LWC components (product detail page, cart, search results), using the B2B Commerce LWC component library and communication patterns, implementing custom product tiles and detail page extensions, and extending Experience Builder pages with custom B2B Commerce components.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Cart and checkout extension</strong> — Using ConnectApi.CommerceCartApi for programmatic cart operations (Apex), implementing custom checkout integrations using the CheckoutExtension interface (for custom tax calculation, custom shipping providers, custom payment gateways), and handling checkout flow stages with custom Apex that plugs into the B2B checkout orchestration.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Headless commerce and APIs</strong> — Using the Salesforce B2B Commerce REST API for headless storefront implementations, API authentication for external storefront clients, webhook and event integration patterns, and how headless B2B Commerce differs from the standard Experience Cloud storefront approach.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>LWC storefront customisation</strong>: Overriding standard B2B Commerce LWC components (product detail page, cart, search results), using the B2B Commerce LWC component library and communication patterns, implementing custom product tiles and detail page extensions, and extending Experience Builder pages with custom B2B Commerce components.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Cart and checkout extension</strong>: Using ConnectApi.CommerceCartApi for programmatic cart operations (Apex), implementing custom checkout integrations using the CheckoutExtension interface (for custom tax calculation, custom shipping providers, custom payment gateways), and handling checkout flow stages with custom Apex that plugs into the B2B checkout orchestration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Headless commerce and APIs</strong>: Using the Salesforce B2B Commerce REST API for headless storefront implementations, API authentication for external storefront clients, webhook and event integration patterns, and how headless B2B Commerce differs from the standard Experience Cloud storefront approach.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function B2bCommerceDeveloperApExamTipsPage() {
             <span className="font-medium text-gray-900">Testing and Deployment</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. LWC component override patterns are the most distinctive developer skill for B2B Commerce — know them deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. LWC component override patterns are the most distinctive developer skill for B2B Commerce. Know them deeply.</p>
         </div>
       </section>
 
@@ -135,12 +135,12 @@ export default function B2bCommerceDeveloperApExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a B2B Commerce customisation requirement and ask which developer
           approach achieves it. Prefer standard B2B Commerce extension points over custom code
-          — the exam rewards using the platform’s designed extension mechanisms.
+, the exam rewards using the platform’s designed extension mechanisms.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For component customisation questions: to customise the product detail page, override the standard c/productDetailPage component with a custom component of the same name. Custom components should be placed in the correct namespace to take precedence. When a scenario says ’add custom content to the product detail page without modifying Salesforce code’, override the standard PDP component — never modify the managed package code directly.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For checkout extension questions: custom checkout integrations implement the CheckoutExtension interface. Each checkout stage (shipping, tax, payment) can have a custom Apex handler. The custom handler receives the CartId and must update the cart with the calculated result (shipping cost, tax amount). When a scenario says ’calculate custom shipping rates from our internal shipping API during checkout’, implement a custom Shipping CheckoutExtension — not a Flow or Process Builder action.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ConnectApi questions: use ConnectApi.CommerceCartApi in Apex to programmatically interact with carts. Key methods: addItemToCart, deleteCartItem, getCartItems, createCart. These require a WebStore ID and an effective account ID. When a scenario describes adding products to a customer’s cart programmatically from an external system, use ConnectApi.CommerceCartApi — not direct DML on CartItem objects.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For component customisation questions: to customise the product detail page, override the standard c/productDetailPage component with a custom component of the same name. Custom components should be placed in the correct namespace to take precedence. When a scenario says ’add custom content to the product detail page without modifying Salesforce code’, override the standard PDP component, never modify the managed package code directly.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For checkout extension questions: custom checkout integrations implement the CheckoutExtension interface. Each checkout stage (shipping, tax, payment) can have a custom Apex handler. The custom handler receives the CartId and must update the cart with the calculated result (shipping cost, tax amount). When a scenario says ’calculate custom shipping rates from our internal shipping API during checkout’, implement a custom Shipping CheckoutExtension, not a Flow or Process Builder action.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ConnectApi questions: use ConnectApi.CommerceCartApi in Apex to programmatically interact with carts. Key methods: addItemToCart, deleteCartItem, getCartItems, createCart. These require a WebStore ID and an effective account ID. When a scenario describes adding products to a customer’s cart programmatically from an external system, use ConnectApi.CommerceCartApi, not direct DML on CartItem objects.</li>
         </ul>
       </section>
 
@@ -152,7 +152,7 @@ export default function B2bCommerceDeveloperApExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           B2B Commerce Developer AP requires hands-on LWC development experience. Set up a B2B Commerce
-          scratch org using SFDX and build a custom component override before the exam — the override
+          scratch org using SFDX and build a custom component override before the exam, the override
           pattern is only intuitive after doing it hands-on. The Salesforce B2B Commerce Developer
           Trailmix is the primary study resource.
         </p>
@@ -161,18 +161,18 @@ export default function B2bCommerceDeveloperApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2B Commerce Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. LWC Commerce Components vs Base Components — Extension vs Replacement</p>
-            <p className="text-sm text-gray-700">B2B Commerce on Lightning uses base LWC commerce components (product detail, cart, checkout) that can be extended or replaced. Extending a base component inherits its functionality and adds custom logic. Replacing it means writing the entire component from scratch. Candidates choose "replace" for simple customisations — the exam expects "extend." Only replace when the base component cannot be modified to meet requirements.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. LWC Commerce Components vs Base Components: Extension vs Replacement</p>
+            <p className="text-sm text-gray-700">B2B Commerce on Lightning uses base LWC commerce components (product detail, cart, checkout) that can be extended or replaced. Extending a base component inherits its functionality and adds custom logic. Replacing it means writing the entire component from scratch. Candidates choose "replace" for simple customisations, the exam expects "extend." Only replace when the base component cannot be modified to meet requirements.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Integration Framework: Commerce APIs vs Apex vs Platform Events</p>
             <p className="text-sm text-gray-700">The B2B Commerce Integration Framework uses Apex extension points (CartExtension, ShippingProvider, TaxProvider) to plug in external logic. Candidates use ad-hoc Platform Events or custom REST APIs instead. Know the specific Apex extension point for each commerce integration: tax calculation = TaxProvider, shipping rates = ShippingProvider, cart validation = CartValidationOutput.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Guest Browsing vs Authenticated Checkout — Session Context Matters</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Guest Browsing vs Authenticated Checkout: Session Context Matters</p>
             <p className="text-sm text-gray-700">Guest users can browse a B2B Commerce storefront but cannot add to cart or check out without authenticating. The guest user context has a different Experience Cloud licence type than the authenticated buyer. Candidates design features that work in guest context and forget that adding to cart requires authentication. Exam scenarios about "users cannot add items to cart" expect the answer "buyer is not authenticated."</p>
           </div>
         </div>

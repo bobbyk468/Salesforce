@@ -26,7 +26,7 @@ export default function SlackWorkspaceOrgDiagram() {
             <text x={w.x + 70} y="174" textAnchor="middle" fill="#334155">members, app installs</text>
           </g>
         ))}
-        <text x="310" y="224" textAnchor="middle" fill="#475569">Local settings can only tighten — never override — an Org-level policy</text>
+        <text x="310" y="224" textAnchor="middle" fill="#475569">Local settings can only tighten, never override, an Org-level policy</text>
       </svg>
     </figure>
   )

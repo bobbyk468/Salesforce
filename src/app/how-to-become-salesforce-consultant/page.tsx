@@ -37,19 +37,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How long does it take to become a Salesforce Consultant?',
-    answer: 'From no prior Salesforce experience to first consultant role, expect 6–12 months. The certification path is: ADM-201 (8–12 weeks) → first consultant specialisation (8–12 weeks). Finding your first role often takes 1–3 months after certification. Candidates with prior CRM, sales ops, or service operations experience typically move faster — their domain knowledge accelerates the consultant exam preparation.',
+    answer: 'From no prior Salesforce experience to first consultant role, expect 6–12 months. The certification path is: ADM-201 (8–12 weeks) → first consultant specialisation (8–12 weeks). Finding your first role often takes 1–3 months after certification. Candidates with prior CRM, sales ops, or service operations experience typically move faster, their domain knowledge accelerates the consultant exam preparation.',
   },
   {
     question: 'What is the difference between a Salesforce Administrator and a Salesforce Consultant?',
-    answer: 'A Salesforce Administrator manages and configures Salesforce for their own organisation (internal role). A Salesforce Consultant implements Salesforce for client organisations — they gather requirements, design solutions, configure Salesforce, train users, and manage go-live. Consultants typically work for Salesforce implementation partners (SIs) or consulting firms. The consultant career is more client-facing, project-based, and typically higher-compensated.',
+    answer: 'A Salesforce Administrator manages and configures Salesforce for their own organisation (internal role). A Salesforce Consultant implements Salesforce for client organisations, they gather requirements, design solutions, configure Salesforce, train users, and manage go-live. Consultants typically work for Salesforce implementation partners (SIs) or consulting firms. The consultant career is more client-facing, project-based, and typically higher-compensated.',
   },
   {
-    question: 'Which consultant certification should I take first — Sales Cloud or Service Cloud?',
+    question: 'Which consultant certification should I take first: Sales Cloud or Service Cloud?',
     answer: 'Choose based on your professional background. Sales operations, CRM, or revenue operations experience → Sales Cloud Consultant. Customer support, contact centre, or service operations experience → Service Cloud Consultant. Both exams have the same format (60 questions, 105 minutes, ~65% passing, $200) and similar difficulty. Both require ADM-201 knowledge. Most consultants eventually hold both credentials.',
   },
   {
     question: 'Do I need project experience before the consultant exam?',
-    answer: 'Formal prerequisites exist only for a few consultant certifications, but hands-on project experience dramatically improves exam performance. Consultant exams are scenario-heavy — they present a business requirement and ask how you would configure Salesforce to meet it. Candidates who have configured Sales Cloud or Service Cloud in a real implementation find the scenarios much more intuitive than those relying purely on theoretical study.',
+    answer: 'Formal prerequisites exist only for a few consultant certifications, but hands-on project experience dramatically improves exam performance. Consultant exams are scenario-heavy, they present a business requirement and ask how you would configure Salesforce to meet it. Candidates who have configured Sales Cloud or Service Cloud in a real implementation find the scenarios much more intuitive than those relying purely on theoretical study.',
   },
   {
     question: 'What is the Salesforce consultant salary in 2026?',
@@ -70,13 +70,13 @@ const steps = [
     title: 'Choose Your First Specialisation',
     time: 'Decision point',
     description: 'Salesforce has 15+ consultant certifications. Choose your first based on your professional background and target market. Sales Cloud Consultant is the most in-demand. Service Cloud Consultant is #2. Experience Cloud, Data Cloud, and Field Service are strong specialisations for higher-value projects. Marketing Cloud (requires Email Specialist prerequisite) opens Marketing Technology projects.',
-    resources: ['Sales Cloud Consultant — highest demand, broadest job market', 'Service Cloud Consultant — contact centre and support operations focus', 'Experience Cloud Consultant — digital portals and communities focus'],
+    resources: ['Sales Cloud Consultant, highest demand, broadest job market', 'Service Cloud Consultant, contact centre and support operations focus', 'Experience Cloud Consultant, digital portals and communities focus'],
   },
   {
     step: '3',
     title: 'Study Your Consultant Certification',
     time: '8–12 weeks',
-    description: 'Consultant exams test scenario-based application of Salesforce features to business requirements — not just configuration knowledge. Study the exam sections (Sales Practices, Implementation Strategy, Solution Design for Sales Cloud), use Trailhead, review Salesforce documentation for the specific features tested, and practice with scenario questions. Hands-on sandbox configuration is essential.',
+    description: 'Consultant exams test scenario-based application of Salesforce features to business requirements, not just configuration knowledge. Study the exam sections (Sales Practices, Implementation Strategy, Solution Design for Sales Cloud), use Trailhead, review Salesforce documentation for the specific features tested, and practice with scenario questions. Hands-on sandbox configuration is essential.',
     resources: ['Trailblaze Prep free consultant practice questions', 'Official Salesforce Study Guide (trailhead.salesforce.com/credentials)', 'Trailhead: Sales Cloud consultant Trailmix'],
   },
   {
@@ -111,7 +111,7 @@ export default function HowToBecomeSalesforceConsultantPage() {
           How to Become a Salesforce Consultant ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          From ADM-201 to your first Salesforce Consultant role — the step-by-step path, certification choices, salary data, and resources to get you there.
+          From ADM-201 to your first Salesforce Consultant role, the step-by-step path, certification choices, salary data, and resources to get you there.
         </p>
       </div>
 
@@ -168,7 +168,7 @@ export default function HowToBecomeSalesforceConsultantPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Top Consultant Certification Combinations</h2>
         <div className="space-y-3 text-sm text-gray-700">
           {[
-            { combo: 'ADM-201 + Sales Cloud Consultant + Service Cloud Consultant', desc: 'Covers 80%+ of CRM implementations — the most in-demand combination globally.' },
+            { combo: 'ADM-201 + Sales Cloud Consultant + Service Cloud Consultant', desc: 'Covers 80%+ of CRM implementations, the most in-demand combination globally.' },
             { combo: 'ADM-201 + Sales Cloud Consultant + Experience Cloud Consultant', desc: 'Strong for projects combining CRM with customer/partner portals.' },
             { combo: 'ADM-201 + Service Cloud Consultant + Field Service Consultant', desc: 'Ideal for field operations, utilities, and service-intensive industries.' },
             { combo: 'ADM-201 + Sales Cloud + Data Cloud Consultant', desc: 'High-value combination as Data Cloud adoption grows in 2026.' },

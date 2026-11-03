@@ -89,7 +89,7 @@
     "blocks": [
       {
         "heading": "Data Modelling and Large Data Volumes",
-        "body": "From the Data Architect exam. Choose relationships for how the data behaves, not for convenience. A **lookup** is a loose link where either record can exist alone. A **master-detail** link makes the child depend on its parent, inherits the parent's sharing, and allows roll-up summary fields, but it also means deleting the parent deletes the children. **External objects** show data that stays in another system. **Big objects** hold very large volumes of historical data that is written and read but rarely updated. For large tables, keep queries **selective** by filtering on indexed fields, watch for **data skew** where one parent owns too many children, and plan archiving before volumes become a problem."
+        "body": "From the Data Architect exam. Choose relationships for how the data behaves, not for convenience. A **lookup** is a loose link where either record can exist alone. A **master-detail** link makes the child depend on its parent, inherits the parent's sharing, and allows roll-up summary fields, but it also means deleting the parent deletes the children. **External objects** show data that stays in another system. **Big objects** hold very large volumes of historical data that is written and read but rarely updated. For large tables, keep queries **selective** by filtering on indexed fields. Watch for **data skew** where one parent owns too many children, and plan archiving before volumes become a problem."
       },
       {
         "heading": "Choosing Between Configuration and Code",

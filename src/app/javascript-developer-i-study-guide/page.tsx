@@ -56,15 +56,15 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce JavaScript Developer I certification?',
-    answer: 'The Salesforce JavaScript Developer I certification validates JavaScript skills relevant to building Salesforce Lightning Web Components (LWC) and client-side solutions. It tests JavaScript fundamentals, ES6+ features, asynchronous programming, browser APIs, and testing — not Salesforce-specific APIs. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee.',
+    answer: 'The Salesforce JavaScript Developer I certification validates JavaScript skills relevant to building Salesforce Lightning Web Components (LWC) and client-side solutions. It tests JavaScript fundamentals, ES6+ features, asynchronous programming, browser APIs, and testing, not Salesforce-specific APIs. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee.',
   },
   {
     question: 'Do I need Salesforce experience for the JavaScript Developer I exam?',
-    answer: 'The JavaScript Developer I exam does not require prior Salesforce experience. It tests JavaScript language skills directly — most questions are about vanilla JavaScript, not Salesforce-specific APIs like apex or wire decorators. However, the certification is intended for developers who will use JavaScript in a Salesforce context (LWC, Visualforce, custom apps).',
+    answer: 'The JavaScript Developer I exam does not require prior Salesforce experience. It tests JavaScript language skills directly, most questions are about vanilla JavaScript, not Salesforce-specific APIs like apex or wire decorators. However, the certification is intended for developers who will use JavaScript in a Salesforce context (LWC, Visualforce, custom apps).',
   },
   {
     question: 'How is JavaScript Developer I different from Platform Developer I (PD1)?',
-    answer: 'PD1 tests Salesforce-platform skills: Apex, Visualforce, Lightning components, governor limits, and Salesforce data model. JavaScript Developer I tests pure JavaScript language skills: ES6+, asynchronous programming, OOP with classes, browser DOM, and testing. Many developers take both — PD1 for Salesforce back-end, JS Dev I for front-end JavaScript skills.',
+    answer: 'PD1 tests Salesforce-platform skills: Apex, Visualforce, Lightning components, governor limits, and Salesforce data model. JavaScript Developer I tests pure JavaScript language skills: ES6+, asynchronous programming, OOP with classes, browser DOM, and testing. Many developers take both: PD1 for Salesforce back-end, JS Dev I for front-end JavaScript skills.',
   },
   {
     question: 'What ES6+ features are tested on the JavaScript Developer I exam?',
@@ -72,7 +72,7 @@ const faqItems = [
   },
   {
     question: 'How long should I study for the JavaScript Developer I exam?',
-    answer: 'Plan for 6–8 weeks with 8–12 hours per week. Candidates with strong JavaScript experience can prepare in 4 weeks. The best preparation is writing code — build small projects using each concept (a Promise chain, an ES6 class hierarchy, an event-driven DOM app) rather than only reading documentation. Use the browser DevTools console to test snippets.',
+    answer: 'Plan for 6–8 weeks with 8–12 hours per week. Candidates with strong JavaScript experience can prepare in 4 weeks. The best preparation is writing code, build small projects using each concept (a Promise chain, an ES6 class hierarchy, an event-driven DOM app) rather than only reading documentation. Use the browser DevTools console to test snippets.',
   },
 ]
 
@@ -96,7 +96,7 @@ export default function JavascriptDeveloperIStudyGuidePage() {
           Salesforce JavaScript Developer I Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the JavaScript Developer I exam — ES6+, async programming, OOP, DOM events, testing, and free practice questions.
+          Your complete guide to passing the JavaScript Developer I exam: ES6+, async programming, OOP, DOM events, testing, and free practice questions.
         </p>
       </div>
 
@@ -165,12 +165,12 @@ export default function JavascriptDeveloperIStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">6-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Variables, scope, hoisting — understand var vs let vs const, temporal dead zone, block vs function scope, and how hoisting affects declarations.' },
-            { week: 'Week 2', focus: 'Objects, Functions & Classes — write ES6 classes with inheritance, practice closures, arrow functions, destructuring, spread/rest, and the module pattern.' },
-            { week: 'Week 3', focus: 'Browser & DOM — query and manipulate the DOM, add event listeners, understand bubbling vs capturing, implement event delegation on a list.' },
-            { week: 'Week 4', focus: 'Async programming — write Promises from scratch, chain .then()/.catch(), use Promise.all() and Promise.race(), refactor to async/await, handle errors properly.' },
-            { week: 'Week 5', focus: 'Error handling & Debugging — implement try/catch/finally, create custom Error classes, practice reading stack traces, use Chrome DevTools breakpoints.' },
-            { week: 'Week 6', focus: 'Testing with Jest — write unit tests for functions (describe, it, expect), mock dependencies, test async functions. Then full mock exams under time pressure.' },
+            { week: 'Week 1', focus: 'Variables, scope, hoisting, understand var vs let vs const, temporal dead zone, block vs function scope, and how hoisting affects declarations.' },
+            { week: 'Week 2', focus: 'Objects, Functions & Classes, write ES6 classes with inheritance, practice closures, arrow functions, destructuring, spread/rest, and the module pattern.' },
+            { week: 'Week 3', focus: 'Browser & DOM, query and manipulate the DOM, add event listeners, understand bubbling vs capturing, implement event delegation on a list.' },
+            { week: 'Week 4', focus: 'Async programming, write Promises from scratch, chain .then()/.catch(), use Promise.all() and Promise.race(), refactor to async/await, handle errors properly.' },
+            { week: 'Week 5', focus: 'Error handling & Debugging, implement try/catch/finally, create custom Error classes, practice reading stack traces, use Chrome DevTools breakpoints.' },
+            { week: 'Week 6', focus: 'Testing with Jest, write unit tests for functions (describe, it, expect), mock dependencies, test async functions. Then full mock exams under time pressure.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -184,7 +184,7 @@ export default function JavascriptDeveloperIStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Scope and hoisting traps:</strong> var declarations are hoisted to the top of their function scope; let and const are hoisted to their block scope but not initialised (temporal dead zone). Many exam questions present code and ask what it outputs — trace through hoisting first.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Scope and hoisting traps:</strong> var declarations are hoisted to the top of their function scope; let and const are hoisted to their block scope but not initialised (temporal dead zone). Many exam questions present code and ask what it outputs, trace through hoisting first.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Promise chaining vs async/await:</strong> Both are tested. Know that async functions always return a Promise, that await unwraps the Promise value, and that errors in async functions must be caught with try/catch. Know that Promise.all() rejects if ANY promise rejects.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Event bubbling vs capturing:</strong> Events bubble from the target element up to the document. Event capturing goes down from the document to the target. addEventListener’s third argument (true = capture, false = bubble, default). Event.stopPropagation() stops the phase; Event.preventDefault() blocks default browser behaviour.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>this keyword context:</strong> In a regular function, this is determined by how the function is called. Arrow functions inherit this from their enclosing lexical scope. This distinction is commonly tested in class method and callback scenarios.</span></li>
@@ -194,18 +194,18 @@ export default function JavascriptDeveloperIStudyGuidePage() {
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Objects, Functions &amp; Classes (25%) and Variables (23%) together account for nearly half the exam — master scope, closures, and ES6 class syntax first. Many exam questions show a code snippet and ask what it outputs, so trace through execution order carefully.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Objects, Functions &amp; Classes (25%) and Variables (23%) together account for nearly half the exam, master scope, closures, and ES6 class syntax first. Many exam questions show a code snippet and ask what it outputs, so trace through execution order carefully.</p>
       </div>
 
       {/* Top 10 Review */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
-          <li>var vs let vs const — scope, hoisting, temporal dead zone</li>
-          <li>Closures — function remembering its outer scope variables after outer function returns</li>
+          <li>var vs let vs const, scope, hoisting, temporal dead zone</li>
+          <li>Closures, function remembering its outer scope variables after outer function returns</li>
           <li>ES6 classes: constructor, inheritance (extends/super), static methods, getters/setters</li>
-          <li>Arrow functions — no own this, no arguments object, implicit return</li>
-          <li>Destructuring: object and array syntax &mdash; pulling values from objects and arrays into variables</li>
+          <li>Arrow functions, no own this, no arguments object, implicit return</li>
+          <li>Destructuring: object and array syntax, pulling values from objects and arrays into variables</li>
           <li>Promises: then/catch/finally chains, Promise.all, Promise.race, Promise.allSettled</li>
           <li>async/await: error handling with try/catch, parallel execution with Promise.all</li>
           <li>Event bubbling vs capturing and event.stopPropagation vs preventDefault</li>
@@ -231,7 +231,7 @@ export default function JavascriptDeveloperIStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/javascript-developer-i-vs-pd1" className="text-sm text-salesforce-dark hover:underline font-medium">→ JavaScript Developer I vs Platform Developer I — comparison</Link></li>
+          <li><Link href="/javascript-developer-i-vs-pd1" className="text-sm text-salesforce-dark hover:underline font-medium">→ JavaScript Developer I vs Platform Developer I, comparison</Link></li>
         </ul>
       </div>
 

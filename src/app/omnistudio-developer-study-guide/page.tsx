@@ -54,7 +54,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce OmniStudio Developer certification?',
-    answer: 'The Salesforce OmniStudio Developer certification validates skills in building guided UI experiences (OmniScript), data components (DataRaptors), cards (FlexCards), and server-side orchestration (Integration Procedures) using Salesforce OmniStudio — the low-code framework used primarily in Salesforce Industries clouds. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee.',
+    answer: 'The Salesforce OmniStudio Developer certification validates skills in building guided UI experiences (OmniScript), data components (DataRaptors), cards (FlexCards), and server-side orchestration (Integration Procedures) using Salesforce OmniStudio, the low-code framework used primarily in Salesforce Industries clouds. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee.',
   },
   {
     question: 'Who should take the OmniStudio Developer exam?',
@@ -62,15 +62,15 @@ const faqItems = [
   },
   {
     question: 'What is the difference between OmniScript and Integration Procedure?',
-    answer: 'OmniScript is a client-side guided UI framework — it runs in the browser and creates step-by-step forms and guided flows for users. Integration Procedures are server-side logic components — they run on the server and orchestrate data operations (Salesforce reads/writes, external callouts, data transformations). OmniScripts typically call Integration Procedures to fetch or save data.',
+    answer: 'OmniScript is a client-side guided UI framework, it runs in the browser and creates step-by-step forms and guided flows for users. Integration Procedures are server-side logic components, they run on the server and orchestrate data operations (Salesforce reads/writes, external callouts, data transformations). OmniScripts typically call Integration Procedures to fetch or save data.',
   },
   {
     question: 'What are the four DataRaptor types?',
-    answer: 'DataRaptor Extract reads data from Salesforce objects and returns JSON. DataRaptor Load writes data to Salesforce objects from JSON. DataRaptor Transform manipulates JSON data without touching Salesforce (pure data transformation). DataRaptor Turbo Extract is a fast, key-based read optimised for simple single-object lookups — faster than Extract but less flexible.',
+    answer: 'DataRaptor Extract reads data from Salesforce objects and returns JSON. DataRaptor Load writes data to Salesforce objects from JSON. DataRaptor Transform manipulates JSON data without touching Salesforce (pure data transformation). DataRaptor Turbo Extract is a fast, key-based read optimised for simple single-object lookups, faster than Extract but less flexible.',
   },
   {
     question: 'How long should I study for the OmniStudio Developer exam?',
-    answer: 'Plan for 6–8 weeks with 10–12 hours per week. Hands-on practice is essential — build real OmniScripts, DataRaptors, FlexCards, and Integration Procedures in a dev org with OmniStudio enabled. The exam is scenario-based, testing which OmniStudio component to use for a given requirement and how to configure it correctly.',
+    answer: 'Plan for 6–8 weeks with 10–12 hours per week. Hands-on practice is essential, build real OmniScripts, DataRaptors, FlexCards, and Integration Procedures in a dev org with OmniStudio enabled. The exam is scenario-based, testing which OmniStudio component to use for a given requirement and how to configure it correctly.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function OmnistudioDeveloperStudyGuidePage() {
           Salesforce OmniStudio Developer Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the OmniStudio Developer exam — OmniScript, DataRaptors, FlexCards, Integration Procedures, and scenario-based practice.
+          Your complete guide to passing the OmniStudio Developer exam: OmniScript, DataRaptors, FlexCards, Integration Procedures, and scenario-based practice.
         </p>
       </div>
 
@@ -163,11 +163,11 @@ export default function OmnistudioDeveloperStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">6-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'OmniStudio foundations — enable OmniStudio in a dev org, explore App Designer, understand the four core components and when each is used.' },
-            { week: 'Week 2', focus: 'DataRaptors — build all four DataRaptor types (Extract, Load, Transform, Turbo Extract). Practice field mapping, formula functions, and filter conditions.' },
-            { week: 'Week 3', focus: 'OmniScript — build a multi-step OmniScript using Text Block, Type Ahead, Formula, Set Values, and Navigation Action steps. Practice conditional visibility and data JSON path expressions.' },
-            { week: 'Week 4', focus: 'Integration Procedures — build an Integration Procedure with DataRaptor actions, Set Values, Conditional actions, and Loop actions. Test parallel execution for performance.' },
-            { week: 'Week 5', focus: 'FlexCards — build FlexCards with DataRaptor and Integration Procedure datasources. Configure card states, conditional rendering, flyout panels, and embedded FlexCards.' },
+            { week: 'Week 1', focus: 'OmniStudio foundations, enable OmniStudio in a dev org, explore App Designer, understand the four core components and when each is used.' },
+            { week: 'Week 2', focus: 'DataRaptors, build all four DataRaptor types (Extract, Load, Transform, Turbo Extract). Practice field mapping, formula functions, and filter conditions.' },
+            { week: 'Week 3', focus: 'OmniScript. Build a multi-step OmniScript using Text Block, Type Ahead, Formula, Set Values, and Navigation Action steps. Practice conditional visibility and data JSON path expressions.' },
+            { week: 'Week 4', focus: 'Integration Procedures. Build an Integration Procedure with DataRaptor actions, Set Values, Conditional actions, and Loop actions. Test parallel execution for performance.' },
+            { week: 'Week 5', focus: 'FlexCards, build FlexCards with DataRaptor and Integration Procedure datasources. Configure card states, conditional rendering, flyout panels, and embedded FlexCards.' },
             { week: 'Week 6', focus: 'Full mock exams. Focus on scenarios: given a requirement, which component should you use? Which DataRaptor type? Which Integration Procedure element? Review weak areas.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -184,7 +184,7 @@ export default function OmnistudioDeveloperStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Component selection framework:</strong> Needs UI? → OmniScript. Needs to display data on a record page? → FlexCard. Needs server-side data orchestration? → Integration Procedure. Needs to read/write Salesforce data or transform JSON? → DataRaptor.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>DataRaptor type selection:</strong> Reading multiple related objects? Use Extract. Writing to Salesforce? Use Load. Transforming JSON without Salesforce? Use Transform. Reading a single record by ID for speed? Use Turbo Extract.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Integration Procedure execution order:</strong> By default, elements run sequentially. Use the Parallel option on a Loop Block or Group to run multiple actions simultaneously — always test that parallel elements are truly independent before enabling.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Integration Procedure execution order:</strong> By default, elements run sequentially. Use the Parallel option on a Loop Block or Group to run multiple actions simultaneously, always test that parallel elements are truly independent before enabling.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>OmniScript data JSON:</strong> All OmniScript data lives in a single JSON document. Use %node:value% syntax to reference values from other steps. Set Values steps are used to initialise or copy data within the JSON.</span></li>
         </ul>
       </div>
@@ -192,7 +192,7 @@ export default function OmnistudioDeveloperStudyGuidePage() {
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. OmniScript (32%) is the largest section — make sure you know all major step types and the data JSON model. DataRaptors (26%) are the second biggest focus. Together these two sections account for 58% of the exam.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. OmniScript (32%) is the largest section, make sure you know all major step types and the data JSON model. DataRaptors (26%) are the second biggest focus. Together these two sections account for 58% of the exam.</p>
       </div>
 
       {/* Top 10 Review */}

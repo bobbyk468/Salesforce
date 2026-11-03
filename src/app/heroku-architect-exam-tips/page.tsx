@@ -60,7 +60,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Heroku Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Heroku Architect exam are: (1) Heroku Connect — Bidirectional Sync Has Write Conflict Rules; (2) Dyno Types — Web vs Worker vs One-Off; (3) Add-ons vs Buildpacks — Services vs Build Configuration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Heroku Architect exam are: (1) Heroku Connect: Bidirectional Sync Has Write Conflict Rules; (2) Dyno Types: Web vs Worker vs One-Off; (3) Add-ons vs Buildpacks: Services vs Build Configuration. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('heroku-architect-exam-tips'),
 ]
@@ -92,9 +92,9 @@ export default function HerokuArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Heroku Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Heroku platform architecture</strong> — Dyno types (web, worker, one-off), process model, add-ons ecosystem (Heroku Postgres, Redis, Kafka), buildpacks, Pipelines for CI/CD, review apps, and Private Spaces for network-isolated deployments.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce integration patterns</strong> — Heroku Connect for bidirectional data sync with Salesforce, direct Salesforce REST/SOAP API calls from Heroku apps, Platform Events for event-driven integration, and External Objects via Salesforce Connect pointing to Heroku Postgres.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security and scalability</strong> — Heroku Private Spaces for compliance (PCI, HIPAA), Shield Postgres for encryption at rest, configuring SSL/TLS for Heroku apps, horizontal scaling (dyno formation), and database connection pooling for high-throughput applications.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Heroku platform architecture</strong>: Dyno types (web, worker, one-off), process model, add-ons ecosystem (Heroku Postgres, Redis, Kafka), buildpacks, Pipelines for CI/CD, review apps, and Private Spaces for network-isolated deployments.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce integration patterns</strong>: Heroku Connect for bidirectional data sync with Salesforce, direct Salesforce REST/SOAP API calls from Heroku apps, Platform Events for event-driven integration, and External Objects via Salesforce Connect pointing to Heroku Postgres.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security and scalability</strong>: Heroku Private Spaces for compliance (PCI, HIPAA), Shield Postgres for encryption at rest, configuring SSL/TLS for Heroku apps, horizontal scaling (dyno formation), and database connection pooling for high-throughput applications.</li>
         </ul>
       </section>
 
@@ -131,7 +131,7 @@ export default function HerokuArchitectExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For integration pattern questions: Heroku Connect = near-real-time bidirectional sync of Salesforce data to Postgres (best for data that Heroku apps read and write back to Salesforce). Direct API = synchronous Salesforce API calls for real-time reads/writes. Platform Events = event-driven async integration. External Objects = read Heroku Postgres data from Salesforce without syncing it.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For compliance questions: Heroku Private Spaces provide network isolation (no public internet exposure), a dedicated runtime environment, and compliance features for PCI DSS and HIPAA. Heroku Shield adds additional encryption and logging. When a scenario mentions regulated data (payment cards, health data), Private Spaces + Shield is the answer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scaling questions: horizontal scaling = add more dynos (handles more concurrent requests). Vertical scaling = increase dyno size (handles larger memory workloads). Worker dynos process background jobs — scale them separately from web dynos. Connection pooling (PgBouncer) is required when many dynos need database connections simultaneously.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scaling questions: horizontal scaling = add more dynos (handles more concurrent requests). Vertical scaling = increase dyno size (handles larger memory workloads). Worker dynos process background jobs, scale them separately from web dynos. Connection pooling (PgBouncer) is required when many dynos need database connections simultaneously.</li>
         </ul>
       </section>
 
@@ -143,8 +143,8 @@ export default function HerokuArchitectExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Heroku Architect is a specialist certification primarily taken by Salesforce technical architects
-          who need to design Heroku-based solutions. Real Heroku deployment experience — building and
-          deploying an application, configuring Heroku Connect, and managing a Private Spaces environment —
+          who need to design Heroku-based solutions. Real Heroku deployment experience, building and
+          deploying an application, configuring Heroku Connect, and managing a Private Spaces environment,
           is strongly recommended before booking.
         </p>
       </section>
@@ -152,19 +152,19 @@ export default function HerokuArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Heroku Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Heroku Connect — Bidirectional Sync Has Write Conflict Rules</p>
-            <p className="text-sm text-gray-700">Heroku Connect synchronises data between a Heroku Postgres database and Salesforce objects. By default it is unidirectional (Salesforce to Postgres). Enabling bidirectional sync introduces write conflicts when both sides update the same record. Candidates assume bidirectional sync just works — the exam expects knowledge of the "Salesforce wins" vs "database wins" conflict resolution setting and when each applies.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Heroku Connect: Bidirectional Sync Has Write Conflict Rules</p>
+            <p className="text-sm text-gray-700">Heroku Connect synchronises data between a Heroku Postgres database and Salesforce objects. By default it is unidirectional (Salesforce to Postgres). Enabling bidirectional sync introduces write conflicts when both sides update the same record. Candidates assume bidirectional sync just works, the exam expects knowledge of the "Salesforce wins" vs "database wins" conflict resolution setting and when each applies.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Dyno Types — Web vs Worker vs One-Off</p>
-            <p className="text-sm text-gray-700">Web dynos handle HTTP requests and must respond within 30 seconds (otherwise Heroku returns a timeout). Worker dynos run background jobs with no time limit (used for long-running processes, queue processing). One-off dynos are for ad-hoc tasks (database migrations, scripts). Candidates run long-running jobs on Web dynos — the exam expects Worker dynos for async processing.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Dyno Types: Web vs Worker vs One-Off</p>
+            <p className="text-sm text-gray-700">Web dynos handle HTTP requests and must respond within 30 seconds (otherwise Heroku returns a timeout). Worker dynos run background jobs with no time limit (used for long-running processes, queue processing). One-off dynos are for ad-hoc tasks (database migrations, scripts). Candidates run long-running jobs on Web dynos, the exam expects Worker dynos for async processing.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Add-ons vs Buildpacks — Services vs Build Configuration</p>
-            <p className="text-sm text-gray-700">Add-ons are third-party services attached to a Heroku app (Postgres database, Redis cache, monitoring tools) — they are provisioned and billed separately. Buildpacks are scripts that transform your code into a runnable slug at build time (Node.js buildpack installs npm packages, Python buildpack installs pip packages). Candidates confuse add-ons (runtime services) with buildpacks (build-time configuration).</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Add-ons vs Buildpacks: Services vs Build Configuration</p>
+            <p className="text-sm text-gray-700">Add-ons are third-party services attached to a Heroku app (Postgres database, Redis cache, monitoring tools); they are provisioned and billed separately. Buildpacks are scripts that transform your code into a runnable slug at build time (Node.js buildpack installs npm packages, Python buildpack installs pip packages). Candidates confuse add-ons (runtime services) with buildpacks (build-time configuration).</p>
           </div>
         </div>
       </section>

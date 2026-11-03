@@ -55,15 +55,15 @@ const faqItems = [
   },
   {
     question: 'What is a care plan in Health Cloud and how does the exam test it?',
-    answer: 'A care plan in Health Cloud is a structured set of goals and tasks assigned to a patient or member to manage their health outcomes. Care plan templates provide reusable frameworks for common conditions. The exam tests how to configure care plan templates, assign care teams, set goals with target dates, and track care plan progress — critical for care coordination use cases.',
+    answer: 'A care plan in Health Cloud is a structured set of goals and tasks assigned to a patient or member to manage their health outcomes. Care plan templates provide reusable frameworks for common conditions. The exam tests how to configure care plan templates, assign care teams, set goals with target dates, and track care plan progress, critical for care coordination use cases.',
   },
   {
     question: 'What healthcare industry knowledge helps with the Health Cloud AP exam?',
-    answer: 'Understanding how healthcare organisations operate — patient intake, care coordination, provider networks, member management for payers, and clinical data — helps map business scenarios to Health Cloud features. Knowledge of HIPAA compliance concepts (PHI protection, access controls) and how Health Cloud addresses them through its security model is also tested.',
+    answer: 'Understanding how healthcare organisations operate, patient intake, care coordination, provider networks, member management for payers, and clinical data, helps map business scenarios to Health Cloud features. Knowledge of HIPAA compliance concepts (PHI protection, access controls) and how Health Cloud addresses them through its security model is also tested.',
   },
   {
     question: 'What concepts do most Health Cloud candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Health Cloud exam are: (1) Patient vs Member vs Person Account — Health Cloud Data Model; (2) Care Plans vs Care Programs — Individual vs Population Health; (3) Utilisation Management vs Prior Authorisation — Two Different Processes. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Health Cloud exam are: (1) Patient vs Member vs Person Account: Health Cloud Data Model; (2) Care Plans vs Care Programs: Individual vs Population Health; (3) Utilisation Management vs Prior Authorisation: Two Different Processes. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('health-cloud-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function HealthCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Health Cloud AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Patient and member management</strong> — Health Cloud’s person account model for patients and members, household accounts for family units, care team setup (primary care provider, care coordinator, specialist roles), and how to manage clinical relationships and referrals within Health Cloud.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Care plan configuration</strong> — Creating and using care plan templates for common conditions, setting goals with target values and dates, assigning tasks to care team members, tracking care plan progress and goal achievement, and using care gaps to identify patients who need outreach.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Provider network and data model</strong> — Configuring provider networks and provider specialties, managing provider-patient relationships, Health Cloud’s clinical data model for social determinants of health, and HIPAA-compliant access controls for protected health information (PHI).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Patient and member management</strong>: Health Cloud’s person account model for patients and members, household accounts for family units, care team setup (primary care provider, care coordinator, specialist roles), and how to manage clinical relationships and referrals within Health Cloud.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Care plan configuration</strong>: Creating and using care plan templates for common conditions, setting goals with target values and dates, assigning tasks to care team members, tracking care plan progress and goal achievement, and using care gaps to identify patients who need outreach.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Provider network and data model</strong>: Configuring provider networks and provider specialties, managing provider-patient relationships, Health Cloud’s clinical data model for social determinants of health, and HIPAA-compliant access controls for protected health information (PHI).</li>
         </ul>
       </section>
 
@@ -134,13 +134,13 @@ export default function HealthCloudApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Health Cloud AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a healthcare or life sciences scenario and ask which Health Cloud feature,
-          object, or configuration addresses it. Always use native Health Cloud features — not generic
+          object, or configuration addresses it. Always use native Health Cloud features, not generic
           Salesforce objects like custom cases or custom relationship objects.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care coordination questions: a care team is the group of clinical and non-clinical staff coordinating a patient’s care. Each care team member has a role (Primary Care Physician, Care Coordinator, Specialist). When a scenario says ’who is responsible for coordinating this patient’s care’, find the Care Coordinator role on the care team — not just any team member.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care coordination questions: a care team is the group of clinical and non-clinical staff coordinating a patient’s care. Each care team member has a role (Primary Care Physician, Care Coordinator, Specialist). When a scenario says ’who is responsible for coordinating this patient’s care’, find the Care Coordinator role on the care team, not just any team member.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care plan questions: care gaps identify patients who have not received a recommended clinical service (e.g., annual wellness visit). Care plan tasks are assigned to care team members with due dates. Goals have target values (e.g., blood pressure below 120/80). When a scenario says ’automatically identify patients who haven’t had their screening’, the answer is care gaps.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: Health Cloud uses person accounts (individual patients) and household accounts (family groups). Clinical data (diagnoses, medications, allergies) is stored in health-specific objects linked to the person account. When a question asks about storing a patient’s medication list, the answer is the Health Cloud Medication object — not a custom field on Contact.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: Health Cloud uses person accounts (individual patients) and household accounts (family groups). Clinical data (diagnoses, medications, allergies) is stored in health-specific objects linked to the person account. When a question asks about storing a patient’s medication list, the answer is the Health Cloud Medication object, not a custom field on Contact.</li>
         </ul>
       </section>
 
@@ -161,19 +161,19 @@ export default function HealthCloudApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Health Cloud Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Patient vs Member vs Person Account — Health Cloud Data Model</p>
-            <p className="text-sm text-gray-700">Health Cloud uses Person Accounts for patients (an Account-Contact fusion). A Member is a Person Account enrolled in a health plan. These are not separate object types — they are the same Person Account with different record types. Candidates create separate Contact records for patients — the exam expects Person Accounts as the Patient/Member data model.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Patient vs Member vs Person Account: Health Cloud Data Model</p>
+            <p className="text-sm text-gray-700">Health Cloud uses Person Accounts for patients (an Account-Contact fusion). A Member is a Person Account enrolled in a health plan. These are not separate object types; they are the same Person Account with different record types. Candidates create separate Contact records for patients, the exam expects Person Accounts as the Patient/Member data model.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Care Plans vs Care Programs — Individual vs Population Health</p>
-            <p className="text-sm text-gray-700">A Care Plan is an individualised treatment plan for one patient with goals, problems, and tasks. A Care Program is a population-level health initiative (diabetes management programme) that patients can be enrolled in. Candidates recommend Care Programs for individual patient care management — the exam expects Care Plans for individual patient interactions and Care Programs for managing patient populations.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Care Plans vs Care Programs: Individual vs Population Health</p>
+            <p className="text-sm text-gray-700">A Care Plan is an individualised treatment plan for one patient with goals, problems, and tasks. A Care Program is a population-level health initiative (diabetes management programme) that patients can be enrolled in. Candidates recommend Care Programs for individual patient care management, the exam expects Care Plans for individual patient interactions and Care Programs for managing patient populations.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Utilisation Management vs Prior Authorisation — Two Different Processes</p>
-            <p className="text-sm text-gray-700">Utilisation Management reviews whether proposed treatments meet medical necessity criteria. Prior Authorisation is the specific approval request submitted by a provider before a service is rendered. In Health Cloud, these are separate workflows. Candidates use a generic Case for both — the exam expects the UM Request record for prior authorisation workflows with member, provider, and clinical review fields.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Utilisation Management vs Prior Authorisation: Two Different Processes</p>
+            <p className="text-sm text-gray-700">Utilisation Management reviews whether proposed treatments meet medical necessity criteria. Prior Authorisation is the specific approval request submitted by a provider before a service is rendered. In Health Cloud, these are separate workflows. Candidates use a generic Case for both, the exam expects the UM Request record for prior authorisation workflows with member, provider, and clinical review fields.</p>
           </div>
         </div>
       </section>

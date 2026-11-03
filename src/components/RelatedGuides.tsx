@@ -10,7 +10,7 @@ interface RelatedGuidesProps {
 }
 
 /**
- * Related guides section for internal linking — improves crawl paths and PageRank flow.
+ * Related guides section for internal linking, improves crawl paths and PageRank flow.
  */
 export default function RelatedGuides({ links }: RelatedGuidesProps) {
   if (links.length === 0) return null

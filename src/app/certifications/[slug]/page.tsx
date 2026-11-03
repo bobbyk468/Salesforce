@@ -21,7 +21,7 @@ const PRACTICE_TEST_SLUGS = ['administrator-practice-test', 'email-specialist-pr
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
   if (!isSpikedCertSlug(slug)) notFound()
-  // Practice test pages are canonicalized to parent cert pages — noindex prevents
+  // Practice test pages are canonicalized to parent cert pages, noindex prevents
   // GSC "Duplicate without user-selected canonical" warnings.
   if (PRACTICE_TEST_SLUGS.includes(slug)) {
     return { ...getCertMetadata(slug), robots: { index: false, follow: true } }

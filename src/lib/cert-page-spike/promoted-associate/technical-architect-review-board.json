@@ -38,7 +38,7 @@
       "<strong>Rehearse hostile questioning:</strong> The questioning is where most candidates come apart. Practise being interrupted."
     ]
   },
-  "practiceQuestionsIntroSuffix": "— practice thinking like a CTA and defending architecture decisions for the Review Board.",
+  "practiceQuestionsIntroSuffix": ", practice thinking like a CTA and defending architecture decisions for the Review Board.",
   "certificationCard": {
     "code": "CTA Step 2",
     "description": "The final stage of CTA. You receive an enterprise scenario, design a full solution, then present and defend it to a panel of Certified Technical Architects. Passing earns the credential.",
@@ -75,7 +75,7 @@
       },
       {
         "heading": "Handling the Questioning",
-        "body": "This is where most candidates are decided. Expect judges to challenge your choices, propose alternatives and introduce complications. For each significant decision, know the requirement it serves, the alternative you rejected, and the cost you accepted. When a challenge is sound, acknowledge it and adjust: that reads as judgement. When it is not, defend your position calmly with the reasoning. Both instant capitulation and refusal to engage are negative signals. Saying you do not know, then explaining how you would find out, is better than inventing an answer."
+        "body": "This is where most candidates are decided. Expect judges to challenge your choices, propose alternatives and introduce complications. For each significant decision. Know the requirement it serves, the alternative you rejected, and the cost you accepted. When a challenge is sound, acknowledge it and adjust: that reads as judgement. When it is not, defend your position calmly with the reasoning. Both instant capitulation and refusal to engage are negative signals. Saying you do not know, then explaining how you would find out, is better than inventing an answer."
       },
       {
         "heading": "Common Reasons Candidates Fail",

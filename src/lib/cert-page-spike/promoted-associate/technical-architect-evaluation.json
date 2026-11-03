@@ -26,7 +26,7 @@
       "<strong>It gates the board.</strong> Passing this stage is what gives you access to the review board.",
       "<strong>Fee:</strong> third-party sources put this stage at around US$1,500, with the board separate. Confirm current fees with Salesforce."
     ],
-    "passRateGuidance": "You are ready when you can read a scenario, produce a defensible design inside the time given, and explain each choice without notes. If you have never been challenged on a design out loud, practise that before booking."
+    "passRateGuidance": "You are ready when you can read a scenario, produce a defensible design inside the time given, and explain each choice without notes. If you have never been challenged on a design out loud. Practise that before booking."
   },
   "examFormat": {
     "heading": "Technical Architect Evaluation Exam Format Explained",
@@ -38,7 +38,7 @@
       "<strong>Practise with a timer:</strong> The constraint is time, not knowledge. Produce complete designs under the clock before you book."
     ]
   },
-  "practiceQuestionsIntroSuffix": "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.",
+  "practiceQuestionsIntroSuffix": ", practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.",
   "certificationCard": {
     "code": "CTA Step 1",
     "description": "Stage one of the CTA assessment. You work through an enterprise scenario with a Salesforce evaluator, design a solution and discuss it. Passing opens access to the review board.",
@@ -398,7 +398,7 @@
         "Memorising Salesforce limits"
       ],
       "correctAnswer": 2,
-      "explanation": "The format tests designing and defending under time pressure, which only live practice develops.",
+      "explanation": "The format tests designing and defending under time pressure; which only live practice develops.",
       "whyWrong": [
         "Passive review does not build the defence skill.",
         "Those guides cover the prerequisite exams.",

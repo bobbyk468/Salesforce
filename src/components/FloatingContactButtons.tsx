@@ -27,7 +27,7 @@ export default function FloatingContactButtons() {
 
   return (
     <>
-      {/* WhatsApp — hidden on desktop (lg+) since the docked ContactSidebar already
+      {/* WhatsApp, hidden on desktop (lg+) since the docked ContactSidebar already
           offers WhatsApp/email; on mobile, held back until the hero has scrolled
           out of view so it doesn't cover the hero CTA and stats. */}
       <div

@@ -26,7 +26,7 @@
       "<strong>Scheduling depth.</strong> Scheduling policies, work rules, service objectives and the types of optimisation.",
       "<strong>Real setups.</strong> Crews, multi-day work, shifts, inventory and the mobile app all come up."
     ],
-    "passRateGuidance": "People who have tuned scheduling in a live Field Service org do best. Before you book, aim for 75% or more on practice tests and make sure you can explain why a given appointment was or wasn't scheduled."
+    "passRateGuidance": "People who have tuned scheduling in a live Field Service org do best. Before you book. Aim for 75% or more on practice tests and make sure you can explain why a given appointment was or wasn't scheduled."
   },
   "examFormat": {
     "heading": "Advanced Field Service Accredited Professional Exam Format Explained",
@@ -182,7 +182,7 @@
       ]
     },
     {
-      "question": "The business wants schedules that cut down on driving time, while still meeting all the rules. What should be adjusted?",
+      "question": "The business wants schedules that cut down on driving time; while still meeting all the rules. What should be adjusted?",
       "options": [
         "The minimise travel objective weight",
         "The number of work types",
@@ -258,7 +258,7 @@
       "whyWrong": [
         "Manual creation is easy to forget.",
         "A report doesn't create the work.",
-        "Cases are for issues, and still need manual creation."
+        "Cases are for issues; and still need manual creation."
       ]
     },
     {

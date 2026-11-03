@@ -13,7 +13,7 @@ export default function FlowVsApexDiagram() {
       </figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         App Builder exam scenarios almost always reduce to one question: <strong>can this be built
-        declaratively?</strong> Default to Flow — it's faster to build, easier to maintain, and requires no code
+        declaratively?</strong> Default to Flow, it's faster to build, easier to maintain, and requires no code
         deployment. Reach for Apex only when the requirement genuinely exceeds what Flow can do.
       </p>
       <svg
@@ -52,7 +52,7 @@ export default function FlowVsApexDiagram() {
         <rect x="16" y="184" width="270" height="72" rx="8" fill="#ecfdf5" stroke="#059669" strokeWidth="2" />
         <text x="151" y="208" textAnchor="middle" fill="#0f172a" fontWeight="700">Use Flow</text>
         <text x="151" y="226" textAnchor="middle" fill="#334155">Record-Triggered Flow, Screen Flow,</text>
-        <text x="151" y="242" textAnchor="middle" fill="#334155">or Scheduled Flow — default choice</text>
+        <text x="151" y="242" textAnchor="middle" fill="#334155">or Scheduled Flow, default choice</text>
 
         <rect x="334" y="184" width="270" height="164" rx="8" fill="#fee2e2" stroke="#dc2626" strokeWidth="2" />
         <text x="469" y="208" textAnchor="middle" fill="#0f172a" fontWeight="700">Use Apex when Flow can't:</text>

@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Marketing Cloud Engagement Admin candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Admin exam are: (1) Role-Based Access in Marketing Cloud — Roles vs Permissions; (2) IP Warming — New Sending IPs Need Gradual Volume Ramp; (3) Sender Authentication — SPF, DKIM, and DMARC Are All Required. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Admin exam are: (1) Role-Based Access in Marketing Cloud: Roles vs Permissions; (2) IP Warming: New Sending IPs Need Gradual Volume Ramp; (3) Sender Authentication: SPF, DKIM, and DMARC Are All Required. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('marketing-cloud-engagement-admin-exam-tips'),
 ]
@@ -102,9 +102,9 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What Marketing Cloud Admin Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Email Studio</strong> — Building, testing, and sending emails. Send classifications (commercial vs transactional), triggered sends, A/B testing, content blocks, dynamic content rules, and subscriber lists vs data extensions as the sending audience.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Automation Studio</strong> — Building multi-step automations using SQL Query, File Transfer, Import, Send, Data Extract, and Script activities. Understanding scheduled vs triggered automation entry sources and the correct activity order for audience building workflows.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Contact Builder &amp; Data Extensions</strong> — Designing the Contact data model, attribute groups, population configuration, and data relationships. Creating sendable data extensions, managing subscriber keys, and synchronising Salesforce CRM data via Marketing Cloud Connect.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Email Studio</strong>: Building, testing, and sending emails. Send classifications (commercial vs transactional), triggered sends, A/B testing, content blocks, dynamic content rules, and subscriber lists vs data extensions as the sending audience.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Automation Studio</strong>: Building multi-step automations using SQL Query, File Transfer, Import, Send, Data Extract, and Script activities. Understanding scheduled vs triggered automation entry sources and the correct activity order for audience building workflows.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Contact Builder &amp; Data Extensions</strong>: Designing the Contact data model, attribute groups, population configuration, and data relationships. Creating sendable data extensions, managing subscriber keys, and synchronising Salesforce CRM data via Marketing Cloud Connect.</li>
         </ul>
       </section>
 
@@ -138,13 +138,13 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Marketing Cloud Admin Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Questions present a business scenario — a marketing team wants to send a transactional receipt,
-          automate a welcome journey, or import a customer list nightly — and ask which configuration
+          Questions present a business scenario, a marketing team wants to send a transactional receipt,
+          automate a welcome journey, or import a customer list nightly, and ask which configuration
           or tool achieves the requirement correctly and efficiently.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For send classification questions: transactional sends bypass unsubscribe rules because they are legally required communications (receipts, password resets). Commercial sends must honour the unsubscribe opt-out. Misclassifying a commercial send as transactional violates CAN-SPAM — always identify the business purpose before choosing classification.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation sequencing questions: Import Activity must complete before a Query Activity that references the newly imported data extension. Data Extract and File Transfer activities work together to export data to SFTP — File Transfer moves the extract to an external location; running File Transfer alone without Data Extract first produces nothing. Order matters in automation flows.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For send classification questions: transactional sends bypass unsubscribe rules because they are legally required communications (receipts, password resets). Commercial sends must honour the unsubscribe opt-out. Misclassifying a commercial send as transactional violates CAN-SPAM, always identify the business purpose before choosing classification.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation sequencing questions: Import Activity must complete before a Query Activity that references the newly imported data extension. Data Extract and File Transfer activities work together to export data to SFTP: File Transfer moves the extract to an external location; running File Transfer alone without Data Extract first produces nothing. Order matters in automation flows.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data extension vs list questions: Lists are legacy and simpler but less powerful. Data extensions support multiple fields per subscriber, SQL queries, and are preferred for complex data models. When a scenario mentions "custom attributes", multi-field subscriber data, or SQL queries, the answer is almost always a data extension, not a list.</li>
         </ul>
       </section>
@@ -156,8 +156,8 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Build at least one complete automation in a Marketing Cloud sandbox — an import, query, and
-          scheduled send workflow — before taking this exam. Candidates who have only studied
+          Build at least one complete automation in a Marketing Cloud sandbox, an import, query, and
+          scheduled send workflow, before taking this exam. Candidates who have only studied
           conceptually consistently fail Automation Studio scenario questions because the tool’s
           activity logic (what runs in what order, and why) only becomes clear through hands-on use.
         </p>
@@ -165,19 +165,19 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Engagement Admin Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Role-Based Access in Marketing Cloud — Roles vs Permissions</p>
-            <p className="text-sm text-gray-700">Marketing Cloud uses Roles (Administrator, Analyst, Content Creator, Viewer) that bundle permissions. You can also apply individual permissions on top of or restricted from a role. Candidates assume roles are all-or-nothing — the exam expects nuanced role + individual permission configuration when a user needs most of a role’s access but not all.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Role-Based Access in Marketing Cloud: Roles vs Permissions</p>
+            <p className="text-sm text-gray-700">Marketing Cloud uses Roles (Administrator, Analyst, Content Creator, Viewer) that bundle permissions. You can also apply individual permissions on top of or restricted from a role. Candidates assume roles are all-or-nothing, the exam expects nuanced role + individual permission configuration when a user needs most of a role’s access but not all.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. IP Warming — New Sending IPs Need Gradual Volume Ramp</p>
-            <p className="text-sm text-gray-700">New dedicated IPs for Marketing Cloud sending start with no reputation. ISPs (Gmail, Yahoo, Outlook) filter mail from new IPs heavily until a positive sending history is established. IP warming gradually increases send volume over 4–8 weeks. Candidates launch full-volume campaigns immediately on new IPs — the exam expects an IP warming plan as a prerequisite for high-volume new IP deployments.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. IP Warming: New Sending IPs Need Gradual Volume Ramp</p>
+            <p className="text-sm text-gray-700">New dedicated IPs for Marketing Cloud sending start with no reputation. ISPs (Gmail, Yahoo, Outlook) filter mail from new IPs heavily until a positive sending history is established. IP warming gradually increases send volume over 4–8 weeks. Candidates launch full-volume campaigns immediately on new IPs, the exam expects an IP warming plan as a prerequisite for high-volume new IP deployments.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Sender Authentication — SPF, DKIM, and DMARC Are All Required</p>
-            <p className="text-sm text-gray-700">SPF (Sender Policy Framework) authorises which mail servers can send on behalf of a domain. DKIM adds a cryptographic signature to emails. DMARC tells receiving servers what to do when SPF/DKIM checks fail (quarantine or reject). All three are required for enterprise deliverability. Candidates configure SPF and DKIM but skip DMARC — the exam expects DMARC as the critical policy layer that ties SPF and DKIM together.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Sender Authentication: SPF, DKIM, and DMARC Are All Required</p>
+            <p className="text-sm text-gray-700">SPF (Sender Policy Framework) authorises which mail servers can send on behalf of a domain. DKIM adds a cryptographic signature to emails. DMARC tells receiving servers what to do when SPF/DKIM checks fail (quarantine or reject). All three are required for enterprise deliverability. Candidates configure SPF and DKIM but skip DMARC, the exam expects DMARC as the critical policy layer that ties SPF and DKIM together.</p>
           </div>
         </div>
       </section>

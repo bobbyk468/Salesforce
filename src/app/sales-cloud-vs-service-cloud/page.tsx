@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'Can you take both Sales Cloud and Service Cloud Consultant certifications?',
-    answer: 'Yes — many Salesforce consultants hold both certifications. They are not mutually exclusive, and many client implementations require both. Taking both makes you a more versatile CRM consultant and increases your billable rate potential.',
+    answer: 'Yes, many Salesforce consultants hold both certifications. They are not mutually exclusive, and many client implementations require both. Taking both makes you a more versatile CRM consultant and increases your billable rate potential.',
   },
   {
     question: 'Which is harder, Sales Cloud or Service Cloud Consultant?',
@@ -99,7 +99,7 @@ export default function SalesCloudVsServiceCloudPage() {
           conditions: [
           "Your clients run call centres, field service, or customer support operations",
           "You work with cases, entitlements, Omni-Channel, or Knowledge",
-          "You are in a service-intensive industry — telco, utilities, retail",
+          "You are in a service-intensive industry, telco, utilities, retail",
           "You want to differentiate from the larger pool of Sales Cloud consultants",
           ],
         }}
@@ -107,7 +107,7 @@ export default function SalesCloudVsServiceCloudPage() {
           certName: "Sales Cloud Consultant",
           certSlug: "sales-cloud",
           examTipsSlug: "sales-cloud-exam-tips",
-          reason: "Sales Cloud Consultant has the broadest demand — almost every Salesforce implementation involves Sales Cloud at some level. Take it first to maximise consulting opportunities, then add Service Cloud to double your client-facing credential coverage.",
+          reason: "Sales Cloud Consultant has the broadest demand, almost every Salesforce implementation involves Sales Cloud at some level. Take it first to maximise consulting opportunities, then add Service Cloud to double your client-facing credential coverage.",
           careerPathSlug: "certification-path",
           careerPathLabel: "Salesforce Certification Path",
         }}
@@ -153,8 +153,8 @@ export default function SalesCloudVsServiceCloudPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Difficulty (Perceived)</td>
-                <td className="py-2.5 pr-4">Moderate — territory management is the hardest section</td>
-                <td className="py-2.5">Moderate-Hard — omnichannel routing and entitlements trip up many candidates</td>
+                <td className="py-2.5 pr-4">Moderate, territory management is the hardest section</td>
+                <td className="py-2.5">Moderate-Hard, omnichannel routing and entitlements trip up many candidates</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
@@ -181,7 +181,7 @@ export default function SalesCloudVsServiceCloudPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Content Differences</h2>
         <div className="grid sm:grid-cols-2 gap-6 text-sm">
           <div>
-            <p className="font-semibold text-salesforce-blue mb-2">Sales Cloud — Unique Topics</p>
+            <p className="font-semibold text-salesforce-blue mb-2">Sales Cloud: Unique Topics</p>
             <ul className="space-y-1.5 text-gray-700">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Enterprise Territory Management vs. classic territories</li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Forecasting types (collaborative, adjustable, predictive)</li>
@@ -191,7 +191,7 @@ export default function SalesCloudVsServiceCloudPage() {
             </ul>
           </div>
           <div>
-            <p className="font-semibold text-emerald-700 mb-2">Service Cloud — Unique Topics</p>
+            <p className="font-semibold text-emerald-700 mb-2">Service Cloud: Unique Topics</p>
             <ul className="space-y-1.5 text-gray-700">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Omnichannel routing (queue-based, skills-based, external routing)</li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Entitlement management and service contracts</li>
@@ -207,7 +207,7 @@ export default function SalesCloudVsServiceCloudPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which to Take First?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          The answer depends entirely on your current project experience — take the exam for the cloud you are actively implementing.
+          The answer depends entirely on your current project experience. Take the exam for the cloud you are actively implementing.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
@@ -261,7 +261,7 @@ export default function SalesCloudVsServiceCloudPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Already have ADM-201, targeting Consultant track</td>
-                <td className="py-2.5 font-semibold text-gray-700">Either — choose by your project experience; Service Cloud is more in demand</td>
+                <td className="py-2.5 font-semibold text-gray-700">Either, choose by your project experience; Service Cloud is more in demand</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Want both to maximise consulting marketability</td>

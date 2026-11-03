@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Mulesoft Integration Architect exam?',
-    answer: 'The Mulesoft Integration Architect requires 70% to pass — higher than most Salesforce certifications — making it among the more demanding exams in the ecosystem. It tests MuleSoft Anypoint Platform capabilities, API design patterns, and integration architecture at a depth that requires hands-on MuleSoft Studio and Runtime experience. Most candidates need 8–12 weeks of dedicated preparation and access to a MuleSoft trial environment. Dataweave transformation logic and error handling patterns are typically the hardest sections.',
+    answer: 'The Mulesoft Integration Architect requires 70% to pass, higher than most Salesforce certifications, making it among the more demanding exams in the ecosystem. It tests MuleSoft Anypoint Platform capabilities, API design patterns, and integration architecture at a depth that requires hands-on MuleSoft Studio and Runtime experience. Most candidates need 8–12 weeks of dedicated preparation and access to a MuleSoft trial environment. Dataweave transformation logic and error handling patterns are typically the hardest sections.',
   },
   {
     question: 'What are the highest-weight MuleSoft Integration Architect exam sections?',
@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between MuleSoft Integration Architect and Platform Architect?',
-    answer: 'MuleSoft Integration Architect focuses on technical integration solution design — API-led connectivity patterns, Mule application architecture, error handling, and performance optimisation. MuleSoft Platform Architect focuses on enterprise platform strategy — governance, Centre for Enablement, deployment model selection, and platform-wide API strategy. Integration Architect is more technical and implementation-focused; Platform Architect is more strategic.',
+    answer: 'MuleSoft Integration Architect focuses on technical integration solution design: API-led connectivity patterns, Mule application architecture, error handling, and performance optimisation. MuleSoft Platform Architect focuses on enterprise platform strategy, governance, Centre for Enablement, deployment model selection, and platform-wide API strategy. Integration Architect is more technical and implementation-focused; Platform Architect is more strategic.',
   },
   {
     question: 'What Anypoint Platform concepts are most tested in the Integration Architect exam?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most MuleSoft Integration Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Architect exam are: (1) API Policies — Rate Limiting vs Throttling vs SLA Tiers; (2) Anypoint VPC and VPN — Private Network Architecture; (3) API Autodiscovery — Linking a Mule App to API Manager. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Architect exam are: (1) API Policies: Rate Limiting vs Throttling vs SLA Tiers; (2) Anypoint VPC and VPN: Private Network Architecture; (3) API Autodiscovery: Linking a Mule App to API Manager. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('mulesoft-integration-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function MuleSoftIntegrationArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What MuleSoft Integration Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration solution design</strong> — Designing three-tier API-led connectivity (system APIs for backend access, process APIs for orchestration, experience APIs for consumers), selecting synchronous vs. asynchronous patterns, and designing for scalability, reuse, and maintainability.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform architecture</strong> — Configuring CloudHub workers and vCores, Anypoint MQ for asynchronous messaging, API Manager policy chains, Object Store for state persistence, and Anypoint Monitoring for observability. Selecting the right Anypoint component for each integration requirement.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling and resilience</strong> — Global error handlers vs. local error handlers, on-error-continue vs. on-error-propagate, designing retry policies (fixed, exponential backoff), circuit breaker patterns, dead-letter queues for failed message recovery, and idempotency design for duplicate message handling.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration solution design</strong>: Designing three-tier API-led connectivity (system APIs for backend access, process APIs for orchestration, experience APIs for consumers), selecting synchronous vs. asynchronous patterns, and designing for scalability, reuse, and maintainability.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform architecture</strong>: Configuring CloudHub workers and vCores, Anypoint MQ for asynchronous messaging, API Manager policy chains, Object Store for state persistence, and Anypoint Monitoring for observability. Selecting the right Anypoint component for each integration requirement.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling and resilience</strong>: Global error handlers vs. local error handlers, on-error-continue vs. on-error-propagate, designing retry policies (fixed, exponential backoff), circuit breaker patterns, dead-letter queues for failed message recovery, and idempotency design for duplicate message handling.</li>
         </ul>
       </section>
 
@@ -137,12 +137,12 @@ export default function MuleSoftIntegrationArchitectExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Integration Architect Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe an enterprise integration challenge and ask which Anypoint architecture,
-          pattern, or component best addresses it. Think in terms of reusability and decoupling —
+          pattern, or component best addresses it. Think in terms of reusability and decoupling:
           API-led connectivity exists to prevent point-to-point spaghetti integrations.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API-led questions: System APIs expose backend systems (ERP, databases) — they should not contain business logic. Process APIs orchestrate and transform data from system APIs. Experience APIs tailor data for specific consumer needs (mobile app, web, partner). When a scenario asks where to put business transformation logic, the answer is always the Process API layer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For error handling questions: on-error-continue catches the error, executes the error scope, and continues with the next message in the flow. on-error-propagate catches the error, executes the error scope, and propagates the error to the caller. When a scenario says ’log the error but continue processing other records in a batch’, use on-error-continue. When a scenario says ’return an error response to the client’, use on-error-propagate.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API-led questions: System APIs expose backend systems (ERP, databases); they should not contain business logic. Process APIs orchestrate and transform data from system APIs. Experience APIs tailor data for specific consumer needs (mobile app, web, partner). When a scenario asks where to put business transformation logic, the answer is always the Process API layer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For error handling questions: on-error-continue catches the error, executes the error scope, and continues with the next message in the flow. on-error-propagate catches the error, executes the error scope, and propagates the error to the caller. When a scenario says ’log the error but continue processing other records in a batch’. Use on-error-continue. When a scenario says ’return an error response to the client’. Use on-error-propagate.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pattern selection: synchronous (request-reply) when the caller needs an immediate response. Asynchronous (Anypoint MQ, event-driven) when the caller can proceed without waiting. Batch processing for large volume data migration. When a scenario describes ’fire and forget’ or ’processing 1 million records overnight’, the answer is asynchronous messaging or batch processing.</li>
         </ul>
       </section>
@@ -157,26 +157,26 @@ export default function MuleSoftIntegrationArchitectExamTipsPage() {
           MuleSoft Integration Architect requires both deep MuleSoft technical knowledge and enterprise
           architecture thinking. Candidates typically have MuleSoft Developer I/II certification and
           2+ years of Anypoint Platform project experience. The exam tests architectural decision-making
-          under constraint — not just knowing what features exist.
+          under constraint, not just knowing what features exist.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Integration Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. API Policies — Rate Limiting vs Throttling vs SLA Tiers</p>
-            <p className="text-sm text-gray-700">Rate Limiting blocks API calls that exceed the defined limit (hard stop, returns 429). Throttling queues excess calls and processes them when capacity is available (soft limit, adds latency). SLA Tiers grant different rate limits to different API consumers (Gold = 1000 req/min, Silver = 100 req/min). Candidates use rate limiting when throttling is appropriate — know the difference: rate limiting = reject; throttling = delay.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. API Policies: Rate Limiting vs Throttling vs SLA Tiers</p>
+            <p className="text-sm text-gray-700">Rate Limiting blocks API calls that exceed the defined limit (hard stop, returns 429). Throttling queues excess calls and processes them when capacity is available (soft limit, adds latency). SLA Tiers grant different rate limits to different API consumers (Gold = 1000 req/min, Silver = 100 req/min). Candidates use rate limiting when throttling is appropriate. Know the difference: rate limiting = reject; throttling = delay.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Anypoint VPC and VPN — Private Network Architecture</p>
-            <p className="text-sm text-gray-700">An Anypoint VPC (Virtual Private Cloud) creates a private network for CloudHub-deployed Mule apps, isolating them from the public internet. A VPN extends the VPC to an on-premises network. Candidates design Anypoint VPC for all network security — the exam also expects knowledge of Transit Gateway (connecting multiple VPCs) and Dedicated Load Balancers (exposing internal APIs on custom domains).</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Anypoint VPC and VPN: Private Network Architecture</p>
+            <p className="text-sm text-gray-700">An Anypoint VPC (Virtual Private Cloud) creates a private network for CloudHub-deployed Mule apps, isolating them from the public internet. A VPN extends the VPC to an on-premises network. Candidates design Anypoint VPC for all network security, the exam also expects knowledge of Transit Gateway (connecting multiple VPCs) and Dedicated Load Balancers (exposing internal APIs on custom domains).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. API Autodiscovery — Linking a Mule App to API Manager</p>
-            <p className="text-sm text-gray-700">API Autodiscovery connects a deployed Mule application to its API Manager instance using an API ID and Environment Credentials. Without this, API Manager policies are not applied to the running Mule app. Candidates configure policies in API Manager and expect them to apply automatically — the exam expects Autodiscovery configuration in the Mule app to link the two systems.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. API Autodiscovery: Linking a Mule App to API Manager</p>
+            <p className="text-sm text-gray-700">API Autodiscovery connects a deployed Mule application to its API Manager instance using an API ID and Environment Credentials. Without this, API Manager policies are not applied to the running Mule app. Candidates configure policies in API Manager and expect them to apply automatically, the exam expects Autodiscovery configuration in the Mule app to link the two systems.</p>
           </div>
         </div>
       </section>

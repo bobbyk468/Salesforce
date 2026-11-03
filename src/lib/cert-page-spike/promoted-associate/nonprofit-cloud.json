@@ -22,11 +22,11 @@
     "summary": "The Nonprofit Cloud exam is moderate. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Nonprofit Data Model, NPSP Configuration, or Donation Management.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Nonprofit Cloud and NPSP in a real org are better prepared than candidates who only memorize notes."
+      "<strong>65% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong>: expect questions that test when to use Nonprofit Data Model, NPSP Configuration, or Donation Management.",
+      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Nonprofit Cloud and NPSP in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
   },
   "examFormat": {
     "heading": "Nonprofit Cloud Exam Format Explained",
@@ -66,15 +66,15 @@
     "blocks": [
       {
         "heading": "NPSP Core Data Model: Households and Affiliations",
-        "body": "Nonprofit Success Pack (**NPSP**) is the data model foundation for Nonprofit Cloud. The Household Account Model creates an Account for each individual Contact (their household), automatically named \"[Last Name] Household.\" This differs from the standard B2B account model. Affiliations link Contacts to organisational Accounts (employer, chapter, board membership) — distinguishing where someone lives (Household) from where they work or serve (Organisation). The consultant configures the NPSP settings to match the nonprofit's engagement model and explains the household model to clients who are new to NPSP."
+        "body": "Nonprofit Success Pack (**NPSP**) is the data model foundation for Nonprofit Cloud. The Household Account Model creates an Account for each individual Contact (their household), automatically named \"[Last Name] Household.\" This differs from the standard B2B account model. Affiliations link Contacts to organisational Accounts (employer, chapter, board membership), distinguishing where someone lives (Household) from where they work or serve (Organisation). The consultant configures the NPSP settings to match the nonprofit's engagement model and explains the household model to clients who are new to NPSP."
       },
       {
         "heading": "Fundraising: Opportunities, Payments, and Recurring Donations",
-        "body": "In **NPSP**, Opportunities represent donations and grants. Payment objects track actual received payments against an Opportunity — a single donation can have multiple scheduled payments. **Recurring Donations** create a series of Opportunities automatically on a schedule (monthly, quarterly, annual). Soft Credits allow non-donors (spouses, organisations that encouraged a gift) to receive credit for a donation without being the primary donor. The consultant configures NPSP payment settings, recurring donation schedules, and soft credit relationships to match the organisation's fundraising model."
+        "body": "In **NPSP**, Opportunities represent donations and grants. Payment objects track actual received payments against an Opportunity, a single donation can have multiple scheduled payments. **Recurring Donations** create a series of Opportunities automatically on a schedule (monthly, quarterly, annual). Soft Credits allow non-donors (spouses, organisations that encouraged a gift) to receive credit for a donation without being the primary donor. The consultant configures NPSP payment settings, recurring donation schedules, and soft credit relationships to match the organisation's fundraising model."
       },
       {
         "heading": "Program Management: Services and Deliveries",
-        "body": "Program Management Module (PMM) tracks services delivered to beneficiaries. Key objects: Program (a service offering — food bank, job training), Program Engagement (a specific client's ongoing participation in a program), Service (a type of service — food box delivery, coaching session), Service Delivery (a specific instance of a service delivered to a client on a date). The consultant configures PMM to match the organisation's service model, sets up program-specific fields, and designs reports to measure program outcomes and client outcomes over time."
+        "body": "Program Management Module (PMM) tracks services delivered to beneficiaries. Key objects: Program (a service offering, food bank, job training), Program Engagement (a specific client's ongoing participation in a program), Service (a type of service, food box delivery, coaching session), Service Delivery (a specific instance of a service delivered to a client on a date). The consultant configures PMM to match the organisation's service model, sets up program-specific fields, and designs reports to measure program outcomes and client outcomes over time."
       },
       {
         "heading": "Grant Management: Funds and Allocations",
@@ -196,9 +196,9 @@
       "correctAnswer": 3,
       "explanation": "Household Accounts group related individual contacts (family members) together, allowing you to track household giving and communications.",
       "whyWrong": [
-        "Household Accounts aren't for tracking volunteer activities — that's a separate NPSP feature.",
-        "Household Accounts aren't for managing foundation grants — that's a separate NPSP feature.",
-        "Household Accounts aren't for tracking corporate donors — that's a different account type."
+        "Household Accounts aren't for tracking volunteer activities, that's a separate NPSP feature.",
+        "Household Accounts aren't for managing foundation grants, that's a separate NPSP feature.",
+        "Household Accounts aren't for tracking corporate donors, that's a different account type."
       ]
     },
     {
@@ -308,9 +308,9 @@
       "correctAnswer": 2,
       "explanation": "Volunteer Jobs and Volunteer Hours track volunteer engagement.",
       "whyWrong": [
-        "Campaign alone doesn't track volunteer hours specifically — that's a separate NPSP feature.",
-        "Opportunity alone doesn't track volunteer hours specifically — that's a separate NPSP feature.",
-        "Household alone doesn't track volunteer hours specifically — that's a separate NPSP feature."
+        "Campaign alone doesn't track volunteer hours specifically, that's a separate NPSP feature.",
+        "Opportunity alone doesn't track volunteer hours specifically, that's a separate NPSP feature.",
+        "Household alone doesn't track volunteer hours specifically, that's a separate NPSP feature."
       ]
     },
     {
@@ -326,7 +326,7 @@
       "whyWrong": [
         "'To create campaigns' misattributes Payment records' purpose to a different, unrelated function.",
         "'To manage households' misattributes Payment records' purpose to a different, unrelated function.",
-        "Payment records don't replace Opportunities — they track individual payments against them."
+        "Payment records don't replace Opportunities, they track individual payments against them."
       ]
     },
     {
@@ -390,7 +390,7 @@
       "whyWrong": [
         "'To track donations only' misattributes Primary Affiliation's purpose to a different NPSP function.",
         "'To manage campaigns' misattributes Primary Affiliation's purpose to a different, unrelated function.",
-        "Primary Affiliation doesn't replace Household — they serve distinct, complementary purposes."
+        "Primary Affiliation doesn't replace Household, they serve distinct, complementary purposes."
       ]
     },
     {

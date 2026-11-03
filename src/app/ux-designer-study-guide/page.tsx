@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'Who should take the Salesforce UX Designer certification?',
-    answer: 'The UX Designer certification is designed for Salesforce professionals who design user experiences on the Salesforce platform — including UX designers, UI designers, business analysts, admins who design user flows, and developers who want a formal UX credential. It is a strong complement to the Salesforce Administrator certification for professionals who focus on adoption and usability. No coding experience is required.',
+    answer: 'The UX Designer certification is designed for Salesforce professionals who design user experiences on the Salesforce platform, including UX designers, UI designers, business analysts, admins who design user flows, and developers who want a formal UX credential. It is a strong complement to the Salesforce Administrator certification for professionals who focus on adoption and usability. No coding experience is required.',
   },
   {
     question: 'What is the UX Designer exam format?',
@@ -67,7 +67,7 @@ const faqItems = [
   },
   {
     question: 'What prior experience is useful for the UX Designer exam?',
-    answer: 'Candidates with experience in user research methods, wireframing tools (Figma, Sketch, Balsamiq), and Lightning App Builder will have an advantage. Familiarity with UX methodology — discovery, prototyping, usability testing — is more important than Salesforce-specific technical knowledge. Most questions test the application of UX principles in a Salesforce context, not platform configuration knowledge.',
+    answer: 'Candidates with experience in user research methods, wireframing tools (Figma, Sketch, Balsamiq), and Lightning App Builder will have an advantage. Familiarity with UX methodology, discovery, prototyping, usability testing, is more important than Salesforce-specific technical knowledge. Most questions test the application of UX principles in a Salesforce context, not platform configuration knowledge.',
   },
   {
     question: 'How does UX Designer compare to Strategy Designer?',
@@ -94,7 +94,7 @@ export default function UxDesignerStudyGuidePage() {
           Salesforce UX Designer Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified UX Designer exam — exam sections, what each topic tests, a focused study plan, and scenario tips to pass with confidence.
+          A complete study guide for the Salesforce Certified UX Designer exam, exam sections, what each topic tests, a focused study plan, and scenario tips to pass with confidence.
         </p>
       </div>
 
@@ -199,7 +199,7 @@ export default function UxDesignerStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/ux-designer-vs-strategy-designer" className="text-sm text-salesforce-dark hover:underline font-medium">→ UX Designer vs Strategy Designer — which cert should you take first?</Link></li>
+          <li><Link href="/ux-designer-vs-strategy-designer" className="text-sm text-salesforce-dark hover:underline font-medium">→ UX Designer vs Strategy Designer, which cert should you take first?</Link></li>
         </ul>
       </div>
 
@@ -214,7 +214,7 @@ export default function UxDesignerStudyGuidePage() {
       <DifficultyHeatmap slug="ux-designer" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice UX Designer Questions</h2>
-        <p className="text-white mb-6">Free practice questions for the Salesforce UX Designer exam — test your knowledge before the real thing.</p>
+        <p className="text-white mb-6">Free practice questions for the Salesforce UX Designer exam, test your knowledge before the real thing.</p>
         <Link href="/certifications/ux-designer" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

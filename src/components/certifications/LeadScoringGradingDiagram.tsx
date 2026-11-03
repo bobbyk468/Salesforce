@@ -4,8 +4,8 @@ export default function LeadScoringGradingDiagram() {
     <figure id="lead-scoring-grading-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Scoring vs. grading: interest vs. fit (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        <strong>Scoring</strong> rises with engagement activity (opens, clicks, form fills) — it measures{' '}
-        <em>interest</em>. <strong>Grading</strong> is set from profile attributes (title, industry, company size) —
+        <strong>Scoring</strong> rises with engagement activity (opens, clicks, form fills), it measures{' '}
+        <em>interest</em>. <strong>Grading</strong> is set from profile attributes (title, industry, company size),
         it measures <em>fit</em>. Sales should prioritize prospects that are high on both axes.
       </p>
       <svg role="img" aria-labelledby="lsg-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">

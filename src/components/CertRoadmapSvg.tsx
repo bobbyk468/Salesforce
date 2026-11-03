@@ -1,7 +1,7 @@
 /**
  * SVG certification roadmap visuals for each learning path.
  * Optimised for Google Image Search indexing and E-E-A-T content signals.
- * Each roadmap is an accessible, purely declarative SVG — no JS required.
+ * Each roadmap is an accessible, purely declarative SVG, no JS required.
  */
 
 // ─── Admin Path ────────────────────────────────────────────────────────────────
@@ -30,9 +30,9 @@ export function AdminCertRoadmap() {
           </marker>
         </defs>
 
-        {/* Step 1 — ADM-201 (centre top) */}
+        {/* Step 1: ADM-201 (centre top) */}
         <rect x="280" y="10" width="200" height="52" rx="10" fill="#1589EE" />
-        <text x="380" y="30" textAnchor="middle" fill="white" fontSize="11" fontWeight="700">STEP 1 — START HERE</text>
+        <text x="380" y="30" textAnchor="middle" fill="white" fontSize="11" fontWeight="700">STEP 1: START HERE</text>
         <text x="380" y="48" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">ADM-201 Administrator</text>
 
         {/* Arrow down from ADM-201 */}
@@ -41,17 +41,17 @@ export function AdminCertRoadmap() {
         {/* Branch label */}
         <text x="380" y="112" textAnchor="middle" fill="#6B7280" fontSize="11">Choose your next step</text>
 
-        {/* Arrow left — App Builder */}
+        {/* Arrow left: App Builder */}
         <line x1="330" y1="120" x2="200" y2="145" stroke="#1589EE" strokeWidth="2" markerEnd="url(#arrowA)" />
-        {/* Arrow right — Advanced Admin */}
+        {/* Arrow right: Advanced Admin */}
         <line x1="430" y1="120" x2="560" y2="145" stroke="#1589EE" strokeWidth="2" markerEnd="url(#arrowA)" />
 
-        {/* Step 2a — App Builder */}
+        {/* Step 2a: App Builder */}
         <rect x="60" y="145" width="200" height="52" rx="10" fill="#0070D2" />
         <text x="160" y="165" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">STEP 2A</text>
         <text x="160" y="183" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">Platform App Builder</text>
 
-        {/* Step 2b — Advanced Admin */}
+        {/* Step 2b: Advanced Admin */}
         <rect x="500" y="145" width="200" height="52" rx="10" fill="#0070D2" />
         <text x="600" y="165" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">STEP 2B</text>
         <text x="600" y="183" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">Advanced Administrator</text>
@@ -110,7 +110,7 @@ export function DeveloperCertRoadmap() {
 
         {/* PD1 */}
         <rect x="250" y="10" width="200" height="52" rx="10" fill="#1589EE" />
-        <text x="350" y="30" textAnchor="middle" fill="white" fontSize="11" fontWeight="700">STEP 1 — START HERE</text>
+        <text x="350" y="30" textAnchor="middle" fill="white" fontSize="11" fontWeight="700">STEP 1: START HERE</text>
         <text x="350" y="48" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">Platform Developer I (PD1)</text>
 
         <line x1="350" y1="62" x2="350" y2="100" stroke="#1589EE" strokeWidth="2" markerEnd="url(#arrowD)" />
@@ -139,7 +139,7 @@ export function DeveloperCertRoadmap() {
 
         {/* Integration Architect */}
         <rect x="380" y="248" width="230" height="52" rx="10" fill="#7C3AED" />
-        <text x="495" y="268" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">STEP 3 — ARCHITECT TRACK</text>
+        <text x="495" y="268" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">STEP 3: ARCHITECT TRACK</text>
         <text x="495" y="286" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">Integration Architect</text>
 
         <line x1="495" y1="300" x2="495" y2="335" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#arrowDG)" />

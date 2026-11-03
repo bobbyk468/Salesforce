@@ -50,15 +50,15 @@ const faqItems = [
   },
   {
     question: 'Is App Builder easier than Platform Developer I?',
-    answer: 'Yes — App Builder is generally considered easier than Platform Developer I. App Builder tests declarative (no-code) platform knowledge and shares significant overlap with ADM-201 content. Platform Developer I requires Apex programming, Salesforce Object Query Language (SOQL), SOSL, triggers, test classes, and LWC fundamentals — a coding skill set that requires dedicated technical preparation.',
+    answer: 'Yes: App Builder is generally considered easier than Platform Developer I. App Builder tests declarative (no-code) platform knowledge and shares significant overlap with ADM-201 content. Platform Developer I requires Apex programming, Salesforce Object Query Language (SOQL), SOSL, triggers, test classes, and LWC fundamentals, a coding skill set that requires dedicated technical preparation.',
   },
   {
     question: 'Do I need to know how to code for the App Builder exam?',
-    answer: 'No. The App Builder exam tests declarative development — Lightning App Builder, Lightning pages, custom objects and fields, validation rules, formula fields, flows, process automation, and AppExchange. No Apex code or LWC JavaScript is required. However, the exam does test understanding of when to use declarative vs programmatic approaches (i.e., recognising scenarios where code is needed vs not).',
+    answer: 'No. The App Builder exam tests declarative development: Lightning App Builder, Lightning pages, custom objects and fields, validation rules, formula fields, flows, process automation, and AppExchange. No Apex code or LWC JavaScript is required. However, the exam does test understanding of when to use declarative vs programmatic approaches (i.e., recognising scenarios where code is needed vs not).',
   },
   {
     question: 'What coding skills does Platform Developer I require?',
-    answer: 'Platform Developer I (PD1) requires proficiency in: Apex (classes, triggers, governor limits, asynchronous Apex — future, queueable, batch, scheduled), SOQL and SOSL queries, Visualforce pages (basics), Lightning Web Components (LWC fundamentals — HTML, CSS, JavaScript), and Salesforce testing framework (writing test classes, assert methods, achieving 75%+ code coverage). Apex triggers and governor limits are the most heavily tested topics.',
+    answer: 'Platform Developer I (PD1) requires proficiency in: Apex (classes, triggers, governor limits, asynchronous Apex, future, queueable, batch, scheduled), SOQL and SOSL queries, Visualforce pages (basics), Lightning Web Components (LWC fundamentals: HTML, CSS, JavaScript), and Salesforce testing framework (writing test classes, assert methods, achieving 75%+ code coverage). Apex triggers and governor limits are the most heavily tested topics.',
   },
 ]
 
@@ -99,7 +99,7 @@ export default function AppBuilderVsDeveloperIPage() {
           certSlug: "developer-1",
           examTipsSlug: "pd1-exam-tips",
           conditions: [
-          "You write — or plan to write — Apex code",
+          "You write, or plan to write: Apex code",
           "You work in a developer role and need the credential to match",
           "You want the highest salary ceiling among non-architect certs",
           "You already understand SOQL, triggers, and governor limits",
@@ -109,7 +109,7 @@ export default function AppBuilderVsDeveloperIPage() {
           certName: "Platform App Builder",
           certSlug: "app-builder",
           examTipsSlug: "app-builder-exam-tips",
-          reason: "App Builder is the natural next step after Admin for most Salesforce professionals — no coding required, strong salary bump, and it opens the architect path. Only pivot to Platform Developer I first if you are actively writing Apex code in your current role.",
+          reason: "App Builder is the natural next step after Admin for most Salesforce professionals, no coding required, strong salary bump, and it opens the architect path. Only pivot to Platform Developer I first if you are actively writing Apex code in your current role.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin & Builder Certification Path",
         }}
@@ -145,8 +145,8 @@ export default function AppBuilderVsDeveloperIPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Coding Required</td>
-                <td className="py-2.5 pr-4">No — declarative only</td>
-                <td className="py-2.5">Yes — Apex, LWC, SOQL required</td>
+                <td className="py-2.5 pr-4">No, declarative only</td>
+                <td className="py-2.5">Yes: Apex, LWC, SOQL required</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Primary Focus</td>
@@ -155,13 +155,13 @@ export default function AppBuilderVsDeveloperIPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Overlap with ADM-201</td>
-                <td className="py-2.5 pr-4">High — ~40% shared knowledge base</td>
-                <td className="py-2.5">Low — ~20% shared (data model, security)</td>
+                <td className="py-2.5 pr-4">High: ~40% shared knowledge base</td>
+                <td className="py-2.5">Low: ~20% shared (data model, security)</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Difficulty</td>
-                <td className="py-2.5 pr-4">Moderate — manageable with platform experience</td>
-                <td className="py-2.5">Moderate-Hard — requires active coding practice</td>
+                <td className="py-2.5 pr-4">Moderate, manageable with platform experience</td>
+                <td className="py-2.5">Moderate-Hard, requires active coding practice</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
@@ -183,7 +183,7 @@ export default function AppBuilderVsDeveloperIPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Content Differences</h2>
         <div className="grid sm:grid-cols-2 gap-6 text-sm">
           <div>
-            <p className="font-semibold text-salesforce-blue mb-2">App Builder — Unique Topics</p>
+            <p className="font-semibold text-salesforce-blue mb-2">App Builder: Unique Topics</p>
             <ul className="space-y-1.5 text-gray-700">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Lightning App Builder and Lightning Experience customisation</li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Screen flows, record-triggered flows, scheduled flows</li>
@@ -193,7 +193,7 @@ export default function AppBuilderVsDeveloperIPage() {
             </ul>
           </div>
           <div>
-            <p className="font-semibold text-emerald-700 mb-2">Platform Developer I — Unique Topics</p>
+            <p className="font-semibold text-emerald-700 mb-2">Platform Developer I: Unique Topics</p>
             <ul className="space-y-1.5 text-gray-700">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Apex classes, triggers, and DML operations</li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />SOQL and SOSL queries; bulkification patterns</li>
@@ -210,7 +210,7 @@ export default function AppBuilderVsDeveloperIPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which to Take First?</h2>
         <p className="text-sm text-gray-700 mb-3">
           Choose based on your current role and whether you write code in your Salesforce work.
-          You can hold both certifications — they are complementary, not competing.
+          You can hold both certifications; they are complementary, not competing.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
@@ -247,11 +247,11 @@ export default function AppBuilderVsDeveloperIPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
                 <td className="py-2.5 pr-4">No coding experience, declarative-only background</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder — no Apex required</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder, no Apex required</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Java, Python, or any OOP programming experience</td>
-                <td className="py-2.5 font-semibold text-purple-700">PD1 — your coding skills transfer directly to Apex</td>
+                <td className="py-2.5 font-semibold text-purple-700">PD1, your coding skills transfer directly to Apex</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Want to stay in declarative/no-code Salesforce roles</td>
@@ -263,11 +263,11 @@ export default function AppBuilderVsDeveloperIPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Pursuing the Architect certification track</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder — required prerequisite for Architect path</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder, required prerequisite for Architect path</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Admin background, now adding development skills</td>
-                <td className="py-2.5 font-semibold text-gray-700">App Builder first, then PD1 — builds naturally</td>
+                <td className="py-2.5 font-semibold text-gray-700">App Builder first, then PD1, builds naturally</td>
               </tr>
             </tbody>
           </table>

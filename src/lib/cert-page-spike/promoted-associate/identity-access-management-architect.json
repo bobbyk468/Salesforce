@@ -78,7 +78,7 @@
       },
       {
         "heading": "Connected Apps: Scopes, Policies and Sessions",
-        "body": "A **Connected App** is how an outside application is registered with Salesforce. Its **scopes** limit what a token may do, for example reading data, managing the user's account or acting offline with a refresh token. **Policies** control who may use it: admin pre-authorised, so only chosen profiles or permission sets can connect, or self-authorised, where any user may approve it. You can restrict it to trusted **IP ranges**, set how long sessions last, and set a refresh token policy such as expiring after a period of inactivity. Newer orgs may use External Client Apps for the same purpose. Revoking the app's tokens cuts off access immediately."
+        "body": "A **Connected App** is how an outside application is registered with Salesforce. Its **scopes** limit what a token may do, for example reading data, managing the user's account or acting offline with a refresh token. **Policies** control who may use it: admin pre-authorised; so only chosen profiles or permission sets can connect, or self-authorised, where any user may approve it. You can restrict it to trusted **IP ranges**, set how long sessions last, and set a refresh token policy such as expiring after a period of inactivity. Newer orgs may use External Client Apps for the same purpose. Revoking the app's tokens cuts off access immediately."
       },
       {
         "heading": "Provisioning, Multi-Factor and My Domain",
@@ -260,9 +260,9 @@
       "correctAnswer": 2,
       "explanation": "IdP authenticates users and asserts identity to Salesforce.",
       "whyWrong": [
-        "A permission set controls object/field access — it isn't an authentication system.",
-        "A profile controls access levels — it isn't an authentication/identity-asserting system.",
-        "Salesforce alone isn't the IdP in this scenario — the IdP is the external system asserting identity."
+        "A permission set controls object/field access, it isn't an authentication system.",
+        "A profile controls access levels, it isn't an authentication/identity-asserting system.",
+        "Salesforce alone isn't the IdP in this scenario, the IdP is the external system asserting identity."
       ]
     },
     {
@@ -325,7 +325,7 @@
       "explanation": "Auth. Provider configures external IdP (SAML/OAuth) connection.",
       "whyWrong": [
         "'To create users only' undersells Auth. Provider's broader identity connection purpose.",
-        "Auth. Provider doesn't replace SSO — it configures the external connection SSO relies on.",
+        "Auth. Provider doesn't replace SSO, it configures the external connection SSO relies on.",
         "'To assign permission sets' is unrelated to what an Auth. Provider configures."
       ]
     },
@@ -410,5 +410,5 @@
       ]
     }
   ],
-  "expertInsight": "This exam rewards precision. Several OAuth flows can technically move a token around, but only one fits the situation described, and the deciding detail is usually whether a person is present and whether the app can keep a secret. Learn to spot those two things in the question. The other area worth drilling is SAML: know which side starts the login, and what breaks when the clock or the entity ID is wrong."
+  "expertInsight": "This exam rewards precision. Several OAuth flows can technically move a token around; but only one fits the situation described, and the deciding detail is usually whether a person is present and whether the app can keep a secret. Learn to spot those two things in the question. The other area worth drilling is SAML: know which side starts the login, and what breaks when the clock or the entity ID is wrong."
 }

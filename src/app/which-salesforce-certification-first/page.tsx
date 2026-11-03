@@ -36,19 +36,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the most popular first Salesforce certification?',
-    answer: 'The Salesforce Administrator (ADM-201) is the most popular first Salesforce certification. It is the foundational professional credential that opens the most career paths — admin roles, consultant roles, and BA roles all commonly require or prefer it. For complete beginners who want the lowest-cost entry point, the AI Associate ($75) has become a popular starting credential before committing to the full Administrator study programme.',
+    answer: 'The Salesforce Administrator (ADM-201) is the most popular first Salesforce certification. It is the foundational professional credential that opens the most career paths, admin roles, consultant roles, and BA roles all commonly require or prefer it. For complete beginners who want the lowest-cost entry point, the AI Associate ($75) has become a popular starting credential before committing to the full Administrator study programme.',
   },
   {
     question: 'Can I get a Salesforce certification with no experience?',
-    answer: 'Yes — the three associate-level certifications ($75 each) are designed for beginners with no prior experience: AI Associate, Salesforce Platform Foundations, and MuleSoft Integration Foundations. The AI Associate is the most widely recommended beginner certification. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
+    answer: 'Yes, the three associate-level certifications ($75 each) are designed for beginners with no prior experience: AI Associate, Salesforce Platform Foundations, and MuleSoft Integration Foundations. The AI Associate is the most widely recommended beginner certification. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
   },
   {
     question: 'Is the Salesforce Administrator certification the best first cert?',
-    answer: 'Administrator is the best first certification for most people pursuing a full Salesforce career. It is the most recognised entry-level professional credential, required or preferred for admin, junior consultant, BA, and CRM analyst roles. The only scenario where Administrator is not the best first cert: if you are unsure about committing to Salesforce and want a low-cost preview — in which case AI Associate ($75) is a better starting point.',
+    answer: 'Administrator is the best first certification for most people pursuing a full Salesforce career. It is the most recognised entry-level professional credential, required or preferred for admin, junior consultant, BA, and CRM analyst roles. The only scenario where Administrator is not the best first cert: if you are unsure about committing to Salesforce and want a low-cost preview, in which case AI Associate ($75) is a better starting point.',
   },
   {
     question: 'Should a developer start with Administrator or Platform Developer I?',
-    answer: 'Developers with a software engineering background should still start with Administrator (ADM-201). It builds the declarative Salesforce knowledge that underpins good Apex development — understanding the platform deeply before coding on it. Platform Developer I (PD1) is significantly harder without Administrator-level platform knowledge. Most Salesforce developers recommend Admin → PD1 as the standard developer entry path, even for experienced software engineers.',
+    answer: 'Developers with a software engineering background should still start with Administrator (ADM-201). It builds the declarative Salesforce knowledge that underpins good Apex development, understanding the platform deeply before coding on it. Platform Developer I (PD1) is significantly harder without Administrator-level platform knowledge. Most Salesforce developers recommend Admin → PD1 as the standard developer entry path, even for experienced software engineers.',
   },
   {
     question: 'How long does it take to get the first Salesforce certification?',
@@ -71,7 +71,7 @@ export default function WhichSalesforceCertificationFirstPage() {
           Which Salesforce Certification Should I Get First? ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          The right first certification depends on your background and career goal. Here is a clear, practical guide to choosing the best starting point — no fluff.
+          The right first certification depends on your background and career goal. Here is a clear, practical guide to choosing the best starting point, no fluff.
         </p>
       </div>
 
@@ -164,7 +164,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                { cert: 'AI Associate', fee: '$75', for: 'Anyone — universal entry point, no experience needed' },
+                { cert: 'AI Associate', fee: '$75', for: 'Anyone, universal entry point, no experience needed' },
                 { cert: 'Platform Foundations', fee: '$75', for: 'Beginners building toward Administrator credential' },
                 { cert: 'MuleSoft Integration Foundations', fee: '$75', for: 'Integration and API beginners' },
                 { cert: 'Salesforce Administrator (ADM-201)', fee: '$200', for: 'Admin, consultant, BA career paths' },
@@ -196,7 +196,7 @@ export default function WhichSalesforceCertificationFirstPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it? — honest analysis</Link></li>
+          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it?, honest analysis</Link></li>
           <li><Link href="/salesforce-free-certification" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to get a free Salesforce certification</Link></li>
         </ul>
       </div>
@@ -204,7 +204,7 @@ export default function WhichSalesforceCertificationFirstPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Free Practice Questions</h2>
-        <p className="text-white mb-6">Free practice questions for every Salesforce certification — no signup required.</p>
+        <p className="text-white mb-6">Free practice questions for every Salesforce certification, no signup required.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/ai-associate" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             AI Associate Practice

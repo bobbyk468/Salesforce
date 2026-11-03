@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What is a data extension in Marketing Cloud and why does it matter?',
-    answer: 'A data extension is Marketing Cloud’s primary data storage object — essentially a table that stores subscriber data for targeting and personalisation. Data extensions replace the legacy All Subscribers list for most use cases. Understanding when to use data extensions vs. lists, and how to relate data extensions to All Subscribers, is a core concept for all Marketing Cloud certifications.',
+    answer: 'A data extension is Marketing Cloud’s primary data storage object, essentially a table that stores subscriber data for targeting and personalisation. Data extensions replace the legacy All Subscribers list for most use cases. Understanding when to use data extensions vs. lists, and how to relate data extensions to All Subscribers, is a core concept for all Marketing Cloud certifications.',
   },
   {
     question: 'What concepts do most Marketing Cloud Engagement Foundations candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Foundations exam are: (1) Contact vs Subscriber — Two Different Identity Concepts; (2) All Subscribers List vs Publication Lists vs Data Extensions for Sending; (3) Email Studio vs Journey Builder — One-Time vs Ongoing. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Foundations exam are: (1) Contact vs Subscriber: Two Different Identity Concepts; (2) All Subscribers List vs Publication Lists vs Data Extensions for Sending; (3) Email Studio vs Journey Builder: One-Time vs Ongoing. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('marketing-cloud-engagement-foundations-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Marketing Cloud Foundations Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Email Studio basics</strong> — Creating emails with the drag-and-drop Content Builder, using basic AMPscript for personalisation (%%FirstName%% syntax), setting up send classifications (from name, from address, reply-to), and the send flow (define audience, select content, schedule, review, send).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriber and data management</strong> — All Subscribers vs. data extensions, subscriber statuses (Active, Held, Unsubscribed, Bounced), managing unsubscribes and opt-outs, creating lists and data extensions for targeting, and CAN-SPAM compliance basics.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Marketing Cloud platform</strong> — Business unit structure, user roles and permissions, Email Studio vs. Content Builder, basic Automation Studio for scheduling, and Marketing Cloud connect (integration with Salesforce CRM).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Email Studio basics</strong>: Creating emails with the drag-and-drop Content Builder, using basic AMPscript for personalisation (%%FirstName%% syntax), setting up send classifications (from name, from address, reply-to), and the send flow (define audience, select content, schedule, review, send).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriber and data management</strong>: All Subscribers vs. data extensions, subscriber statuses (Active, Held, Unsubscribed, Bounced), managing unsubscribes and opt-outs, creating lists and data extensions for targeting, and CAN-SPAM compliance basics.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Marketing Cloud platform</strong>: Business unit structure, user roles and permissions, Email Studio vs. Content Builder, basic Automation Studio for scheduling, and Marketing Cloud connect (integration with Salesforce CRM).</li>
         </ul>
       </section>
 
@@ -137,13 +137,13 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Marketing Cloud Foundations Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a basic email marketing scenario and ask which Marketing Cloud feature, tool,
-          or setting achieves it. Focus on the native Marketing Cloud approach — not custom code
+          or setting achieves it. Focus on the native Marketing Cloud approach, not custom code
           (AMPscript at scale is for Email Specialist, not Foundations).
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber status questions: Active = can receive emails. Held = had a bounce, temporarily suppressed. Unsubscribed = opted out of all emails from this business unit. Bounced = permanent hard bounce, removed from sends. When a subscriber clicks ’unsubscribe’, their status becomes Unsubscribed — not Bounced.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For content questions: Content Builder is the modern content creation tool. Classic Email Studio templates are the legacy approach. Content Builder reusable blocks allow a single piece of content to be used in multiple emails — changes to the block update all emails. When a question says ’manage content centrally’, Content Builder reusable blocks is the answer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For compliance questions: CAN-SPAM requires a physical postal address in every commercial email, a clear unsubscribe mechanism, and honouring opt-outs within 10 business days. Marketing Cloud handles compliance through Send Classifications — every email send must have a Send Classification that defines the from address and unsubscribe profile.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber status questions: Active = can receive emails. Held = had a bounce, temporarily suppressed. Unsubscribed = opted out of all emails from this business unit. Bounced = permanent hard bounce, removed from sends. When a subscriber clicks ’unsubscribe’, their status becomes Unsubscribed, not Bounced.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For content questions: Content Builder is the modern content creation tool. Classic Email Studio templates are the legacy approach. Content Builder reusable blocks allow a single piece of content to be used in multiple emails, changes to the block update all emails. When a question says ’manage content centrally’, Content Builder reusable blocks is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For compliance questions: CAN-SPAM requires a physical postal address in every commercial email, a clear unsubscribe mechanism, and honouring opt-outs within 10 business days. Marketing Cloud handles compliance through Send Classifications, every email send must have a Send Classification that defines the from address and unsubscribe profile.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Engagement Foundations Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Contact vs Subscriber — Two Different Identity Concepts</p>
-            <p className="text-sm text-gray-700">A Contact in Marketing Cloud is a person record in Contact Builder identified by a Contact Key (often Salesforce CRM ID). A Subscriber is an email-specific opt-in record with a Subscriber Key. The same person can be both a Contact and a Subscriber, but they are stored differently. Candidates use the terms interchangeably — the exam distinguishes them: Contacts are cross-channel; Subscribers are email-channel specific.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Contact vs Subscriber: Two Different Identity Concepts</p>
+            <p className="text-sm text-gray-700">A Contact in Marketing Cloud is a person record in Contact Builder identified by a Contact Key (often Salesforce CRM ID). A Subscriber is an email-specific opt-in record with a Subscriber Key. The same person can be both a Contact and a Subscriber, but they are stored differently. Candidates use the terms interchangeably, the exam distinguishes them: Contacts are cross-channel; Subscribers are email-channel specific.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. All Subscribers List vs Publication Lists vs Data Extensions for Sending</p>
-            <p className="text-sm text-gray-700">The All Subscribers list is the master opt-out tracking list — it cannot be used for targeting sends. Publication Lists are opt-in subscription lists for specific content. Data Extensions (filtered or full) are the recommended targeting method for all complex sends. Candidates target sends using the All Subscribers list — the exam expects Data Extensions or Publication Lists for targeting.</p>
+            <p className="text-sm text-gray-700">The All Subscribers list is the master opt-out tracking list, it cannot be used for targeting sends. Publication Lists are opt-in subscription lists for specific content. Data Extensions (filtered or full) are the recommended targeting method for all complex sends. Candidates target sends using the All Subscribers list, the exam expects Data Extensions or Publication Lists for targeting.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Email Studio vs Journey Builder — One-Time vs Ongoing</p>
-            <p className="text-sm text-gray-700">Email Studio is used for one-time or ad-hoc batch sends (campaigns, announcements). Journey Builder is used for ongoing automated programs triggered by events (welcome series, re-engagement journeys). Candidates build welcome emails in Email Studio — the exam expects Journey Builder for any automated, triggered, multi-step sequence.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Email Studio vs Journey Builder: One-Time vs Ongoing</p>
+            <p className="text-sm text-gray-700">Email Studio is used for one-time or ad-hoc batch sends (campaigns, announcements). Journey Builder is used for ongoing automated programs triggered by events (welcome series, re-engagement journeys). Candidates build welcome emails in Email Studio, the exam expects Journey Builder for any automated, triggered, multi-step sequence.</p>
           </div>
         </div>
       </section>

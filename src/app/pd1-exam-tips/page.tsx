@@ -56,15 +56,15 @@ const faqItems = [
   },
   {
     question: 'How long does it take to prepare for PD1?',
-    answer: '6–8 weeks with daily coding practice. Writing Apex code hands-on is essential — candidates who only read Trailhead without practising tend to struggle with scenario questions.',
+    answer: '6–8 weeks with daily coding practice. Writing Apex code hands-on is essential, candidates who only read Trailhead without practising tend to struggle with scenario questions.',
   },
   {
     question: 'What is the hardest part of the PD1 exam?',
-    answer: 'Governor limits and bulkification. Every Apex scenario expects bulk-safe code — no SOQL or DML inside loops, use of Maps and Sets for batch operations, and correct trigger context variable usage.',
+    answer: 'Governor limits and bulkification. Every Apex scenario expects bulk-safe code, no SOQL or DML inside loops, use of Maps and Sets for batch operations, and correct trigger context variable usage.',
   },
   {
     question: 'What concepts do most PD1 candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the PD1 exam are: (1) SOQL Inside For-Loops: The Governor Limit That Kills Your Score; (2) @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer; (3) Test Classes: Coverage Is Not Enough — Assertions Are Required. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the PD1 exam are: (1) SOQL Inside For-Loops: The Governor Limit That Kills Your Score; (2) @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer; (3) Test Classes: Coverage Is Not Enough: Assertions Are Required. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('pd1-exam-tips'),
 ]
@@ -102,9 +102,9 @@ export default function Pd1ExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass PD1</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Logic and Process Automation is 28% of the exam — master Apex triggers, governor limits, and async patterns first.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Logic and Process Automation is 28% of the exam, master Apex triggers, governor limits, and async patterns first.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Write real Apex code every day. PD1 scenarios require you to identify bugs and select correct patterns, not just recall facts.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take timed mocks (60 questions / 110 minutes). You are ready when you consistently score 78%+ — the passing score is 68%.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take timed mocks (60 questions / 110 minutes). You are ready when you consistently score 78%+, the passing score is 68%.</li>
         </ul>
       </section>
 
@@ -159,16 +159,16 @@ export default function Pd1ExamTipsPage() {
           </table>
         </div>
         <p className="text-xs text-gray-600 mt-3">
-          The exam will ask you to identify code that violates these limits — especially SOQL/DML inside for loops.
+          The exam will ask you to identify code that violates these limits, especially SOQL/DML inside for loops.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week PD1 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Salesforce Fundamentals &amp; Data Modeling (45%):</strong> Platform data model, object relationships (lookup vs master-detail), field types, schema builder, SOQL (relationship queries, aggregate functions, dynamic SOQL), SOSL, and DML operations.</p>
-          <p><strong>Week 2 — Logic and Process Automation (28%):</strong> Apex fundamentals, trigger events (before/after, isNew, isUpdate, isDelete), bulkification patterns, governor limits, async Apex (Future, Batch, Queueable, Scheduled), and error handling.</p>
-          <p><strong>Week 3 — Testing, Deployment &amp; UI (27%):</strong> Writing @isTest classes, Test.startTest()/stopTest(), Test.runAs(), mock data, 75% coverage requirement, debugging logs, changeset/metadata deployment, and LWC fundamentals (@api, @wire, @AuraEnabled).</p>
+          <p><strong>Week 1: Salesforce Fundamentals &amp; Data Modeling (45%):</strong> Platform data model, object relationships (lookup vs master-detail), field types, schema builder, SOQL (relationship queries, aggregate functions, dynamic SOQL), SOSL, and DML operations.</p>
+          <p><strong>Week 2: Logic and Process Automation (28%):</strong> Apex fundamentals, trigger events (before/after, isNew, isUpdate, isDelete), bulkification patterns, governor limits, async Apex (Future, Batch, Queueable, Scheduled), and error handling.</p>
+          <p><strong>Week 3: Testing, Deployment &amp; UI (27%):</strong> Writing @isTest classes, Test.startTest()/stopTest(), Test.runAs(), mock data, 75% coverage requirement, debugging logs, changeset/metadata deployment, and LWC fundamentals (@api, @wire, @AuraEnabled).</p>
           <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 110 min), weak-area targeted revision, and final review of governor limit scenarios before booking.</p>
         </div>
       </section>
@@ -182,7 +182,7 @@ export default function Pd1ExamTipsPage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Code review questions:</strong> Look for DML or SOQL inside a loop first — that is the most common governor limit trap. If you see it, the answer involves moving operations outside the loop.</span>
+            <span><strong>Code review questions:</strong> Look for DML or SOQL inside a loop first; that is the most common governor limit trap. If you see it, the answer involves moving operations outside the loop.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -213,19 +213,19 @@ export default function Pd1ExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most PD1 Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. SOQL Inside For-Loops: The Governor Limit That Kills Your Score</p>
-            <p className="text-sm text-gray-700">The 101-query governor limit means any SOQL statement inside a loop will fail at runtime when processing more than 100 records. Exam scenarios show code snippets and ask you to identify the bug. The wrong-answer trap is selecting &ldquo;reduce batch size&rdquo; — the correct fix is always &ldquo;move the SOQL outside the loop and use a Map or List.&rdquo; Train yourself to scan every for-loop in a code snippet and ask: is there a SOQL or DML statement inside?</p>
+            <p className="text-sm text-gray-700">The 101-query governor limit means any SOQL statement inside a loop will fail at runtime when processing more than 100 records. Exam scenarios show code snippets and ask you to identify the bug. The wrong-answer trap is selecting &ldquo;reduce batch size&rdquo; the correct fix is always &ldquo;move the SOQL outside the loop and use a Map or List.&rdquo; Train yourself to scan every for-loop in a code snippet and ask: is there a SOQL or DML statement inside?</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer</p>
-            <p className="text-sm text-gray-700">LWC decorator questions are a guaranteed exam topic. <code className="bg-amber-100 px-1 rounded text-xs">@wire</code> connects a property to a Salesforce data service (Apex or UI API) reactively. <code className="bg-amber-100 px-1 rounded text-xs">@api</code> exposes a property or method to a parent component — it is public. <code className="bg-amber-100 px-1 rounded text-xs">@track</code> is largely deprecated in modern LWC; plain properties are now reactive by default. The trap: candidates use @track thinking it makes a property &ldquo;reactive&rdquo; when @wire is what actually connects to the server.</p>
+            <p className="text-sm text-gray-700">LWC decorator questions are a guaranteed exam topic. <code className="bg-amber-100 px-1 rounded text-xs">@wire</code> connects a property to a Salesforce data service (Apex or UI API) reactively. <code className="bg-amber-100 px-1 rounded text-xs">@api</code> exposes a property or method to a parent component; it is public. <code className="bg-amber-100 px-1 rounded text-xs">@track</code> is largely deprecated in modern LWC; plain properties are now reactive by default. The trap: candidates use @track thinking it makes a property &ldquo;reactive&rdquo; when @wire is what actually connects to the server.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough — Assertions Are Required</p>
-            <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong — the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation — calling a real endpoint in a test will throw an exception, not just fail silently.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough: Assertions Are Required</p>
+            <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong, the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation, calling a real endpoint in a test will throw an exception, not just fail silently.</p>
           </div>
         </div>
       </section>

@@ -55,11 +55,11 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the MuleSoft Platform Architect certification?',
-    answer: 'The MuleSoft Certified Platform Architect validates expertise in designing and operating the Anypoint Platform infrastructure — deployment architecture, connectivity management, platform security, and operational monitoring. It focuses on the platform itself rather than individual integration design, distinguishing it from the Integration Architect certification which focuses on integration pattern and API design decisions.',
+    answer: 'The MuleSoft Certified Platform Architect validates expertise in designing and operating the Anypoint Platform infrastructure, deployment architecture, connectivity management, platform security, and operational monitoring. It focuses on the platform itself rather than individual integration design, distinguishing it from the Integration Architect certification which focuses on integration pattern and API design decisions.',
   },
   {
     question: 'How does Platform Architect differ from Integration Architect?',
-    answer: 'MuleSoft Integration Architect focuses on integration and API design decisions — which patterns to use, how to design APIs, how to structure integrations. MuleSoft Platform Architect focuses on Anypoint Platform infrastructure — how to deploy and operate the platform, configure API Manager, manage the runtime environment, and implement platform governance. Many senior MuleSoft professionals pursue both certifications.',
+    answer: 'MuleSoft Integration Architect focuses on integration and API design decisions, which patterns to use, how to design APIs, how to structure integrations. MuleSoft Platform Architect focuses on Anypoint Platform infrastructure, how to deploy and operate the platform, configure API Manager, manage the runtime environment, and implement platform governance. Many senior MuleSoft professionals pursue both certifications.',
   },
   {
     question: 'What is the MuleSoft Platform Architect exam format?',
@@ -67,7 +67,7 @@ const faqItems = [
   },
   {
     question: 'What deployment models does the exam cover?',
-    answer: 'The exam covers all Anypoint Platform deployment models: CloudHub 1.0 and CloudHub 2.0 (Salesforce-managed cloud), Runtime Fabric (RTF) for customer-managed Kubernetes environments, and standalone/hybrid on-premises deployments. You need to understand the tradeoffs between each model — operational control, cost, latency, compliance requirements — and be able to select the appropriate model for given scenario requirements.',
+    answer: 'The exam covers all Anypoint Platform deployment models: CloudHub 1.0 and CloudHub 2.0 (Salesforce-managed cloud), Runtime Fabric (RTF) for customer-managed Kubernetes environments, and standalone/hybrid on-premises deployments. You need to understand the tradeoffs between each model, operational control, cost, latency, compliance requirements, and be able to select the appropriate model for given scenario requirements.',
   },
   {
     question: 'What is the Centre for Enablement (C4E) and why does it matter?',
@@ -94,7 +94,7 @@ export default function MulesoftPlatformArchitectStudyGuidePage() {
           MuleSoft Platform Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the MuleSoft Certified Platform Architect exam — Anypoint Platform deployment models, API Manager, security, operations, and governance strategy.
+          A complete study guide for the MuleSoft Certified Platform Architect exam: Anypoint Platform deployment models, API Manager, security, operations, and governance strategy.
         </p>
       </div>
 

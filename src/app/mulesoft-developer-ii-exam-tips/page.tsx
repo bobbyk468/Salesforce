@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'Do I need MuleSoft Developer I before Developer II?',
-    answer: 'MuleSoft Developer I is the recommended (and effectively required) prerequisite for Developer II. Developer II assumes complete knowledge of Developer I content — flows, connectors, DataWeave, error handling — and builds advanced patterns on top. Candidates without Developer I knowledge will struggle significantly with Developer II material.',
+    answer: 'MuleSoft Developer I is the recommended (and effectively required) prerequisite for Developer II. Developer II assumes complete knowledge of Developer I content, flows, connectors, DataWeave, error handling, and builds advanced patterns on top. Candidates without Developer I knowledge will struggle significantly with Developer II material.',
   },
   {
     question: 'What concepts do most MuleSoft Developer II candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Developer II exam are: (1) Batch Processing — Batch Job Phases and Error Handling; (2) Async vs Sync Flow Execution — When Flow Runs Are Detached; (3) Watermark in Polling — Tracking Processed Records Across Runs. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Developer II exam are: (1) Batch Processing: Batch Job Phases and Error Handling; (2) Async vs Sync Flow Execution: When Flow Runs Are Detached; (3) Watermark in Polling: Tracking Processed Records Across Runs. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('mulesoft-developer-ii-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function MuleSoftDeveloperIIExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What MuleSoft Developer II Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API-led connectivity</strong> — Three-tier architecture (Experience, Process, System APIs), how to correctly layer business logic, API specifications with RAML, and the trade-offs of each architecture decision.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform management</strong> — CloudHub deployment, API Manager, API policies (rate limiting, client ID enforcement, OAuth), API Analytics, and environment management across development, staging, and production.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Async messaging and batch</strong> — Anypoint MQ (queues, exchanges, message acknowledgement), batch processing (batch jobs, batch steps, on-complete phase), and when to use async patterns vs. synchronous flows.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API-led connectivity</strong>: Three-tier architecture (Experience, Process, System APIs), how to correctly layer business logic, API specifications with RAML, and the trade-offs of each architecture decision.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform management</strong>: CloudHub deployment, API Manager, API policies (rate limiting, client ID enforcement, OAuth), API Analytics, and environment management across development, staging, and production.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Async messaging and batch</strong>: Anypoint MQ (queues, exchanges, message acknowledgement), batch processing (batch jobs, batch steps, on-complete phase), and when to use async patterns vs. synchronous flows.</li>
         </ul>
       </section>
 
@@ -137,13 +137,13 @@ export default function MuleSoftDeveloperIIExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Developer II Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe an enterprise integration requirement and ask which architecture pattern, Anypoint
-          component, or deployment approach is correct. Think about the three-layer API model first —
+          component, or deployment approach is correct. Think about the three-layer API model first,
           which layer should own the logic described in the scenario?
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API-led architecture questions: System APIs connect to core backends (SAP, databases, legacy systems) — no business logic here. Process APIs orchestrate data from multiple System APIs and implement business logic. Experience APIs tailor output for a specific channel (mobile, web portal). Logic in the wrong layer = wrong answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API-led architecture questions: System APIs connect to core backends (SAP, databases, legacy systems), no business logic here. Process APIs orchestrate data from multiple System APIs and implement business logic. Experience APIs tailor output for a specific channel (mobile, web portal). Logic in the wrong layer = wrong answer.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Anypoint MQ questions: queues deliver to one consumer; exchanges (topic/fifo) can fan out to multiple subscribers. Acknowledgement modes: AUTO (ack on receive), MANUAL (ack after processing), NONE (no ack). Use MANUAL when you need guaranteed processing before acknowledging.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API policy questions: Rate Limiting throttles by request count per time window. Client ID Enforcement requires consumers to pass a client ID. OAuth 2.0 policy validates access tokens. Apply policies in API Manager — they attach to an API instance, not the Mule application code directly.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API policy questions: Rate Limiting throttles by request count per time window. Client ID Enforcement requires consumers to pass a client ID. OAuth 2.0 policy validates access tokens. Apply policies in API Manager, they attach to an API instance, not the Mule application code directly.</li>
         </ul>
       </section>
 
@@ -154,7 +154,7 @@ export default function MuleSoftDeveloperIIExamTipsPage() {
           78%+ on 3 timed full mocks before booking (70% passing score)
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Developer II has a 70% passing score — the same as Developer I but with more complex architectural
+          Developer II has a 70% passing score, the same as Developer I but with more complex architectural
           content. Real API-led project experience is important: candidates who have designed and implemented
           a three-tier MuleSoft architecture perform significantly better on the architecture design questions.
         </p>
@@ -163,19 +163,19 @@ export default function MuleSoftDeveloperIIExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Developer II Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Batch Processing — Batch Job Phases and Error Handling</p>
-            <p className="text-sm text-gray-700">Mule Batch Jobs have three phases: Input (record collection), Process (on-record parallel processing), and On Complete (summary handling after all records are processed). Errors in the Process phase are per-record — a failed record does not stop other records from processing. Candidates design Batch Jobs expecting a single error to halt processing — the exam expects per-record error handling and the acceptPolicy setting that controls how failures affect the batch.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Batch Processing: Batch Job Phases and Error Handling</p>
+            <p className="text-sm text-gray-700">Mule Batch Jobs have three phases: Input (record collection), Process (on-record parallel processing), and On Complete (summary handling after all records are processed). Errors in the Process phase are per-record, a failed record does not stop other records from processing. Candidates design Batch Jobs expecting a single error to halt processing, the exam expects per-record error handling and the acceptPolicy setting that controls how failures affect the batch.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Async vs Sync Flow Execution — When Flow Runs Are Detached</p>
-            <p className="text-sm text-gray-700">By default, flows called via Flow Reference execute synchronously (in the same thread as the caller). Async scopes run a sub-flow asynchronously in a new thread, and the caller does not wait for the result. Candidates use Async scope expecting the caller to receive the async response — Async is fire-and-forget. Know when to use each based on whether the caller needs the processing result.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Async vs Sync Flow Execution: When Flow Runs Are Detached</p>
+            <p className="text-sm text-gray-700">By default, flows called via Flow Reference execute synchronously (in the same thread as the caller). Async scopes run a sub-flow asynchronously in a new thread, and the caller does not wait for the result. Candidates use Async scope expecting the caller to receive the async response; Async is fire-and-forget. Know when to use each based on whether the caller needs the processing result.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Watermark in Polling — Tracking Processed Records Across Runs</p>
-            <p className="text-sm text-gray-700">A Watermark in a Scheduler-triggered polling flow tracks the last-processed record (e.g., last timestamp) so subsequent runs only retrieve new or updated records. Without Watermark, every run re-processes all records. Candidates implement custom tracking variables for incremental polling — the exam expects the built-in Watermark feature with an Object Store for persistence across Mule runtime restarts.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Watermark in Polling: Tracking Processed Records Across Runs</p>
+            <p className="text-sm text-gray-700">A Watermark in a Scheduler-triggered polling flow tracks the last-processed record (e.g., last timestamp) so subsequent runs only retrieve new or updated records. Without Watermark, every run re-processes all records. Candidates implement custom tracking variables for incremental polling, the exam expects the built-in Watermark feature with an Object Store for persistence across Mule runtime restarts.</p>
           </div>
         </div>
       </section>

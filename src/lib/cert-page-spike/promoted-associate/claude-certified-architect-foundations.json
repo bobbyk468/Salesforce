@@ -19,23 +19,23 @@
   },
   "examDifficulty": {
     "heading": "Is the Claude Certified Architect Foundations Exam Hard?",
-    "summary": "The CCAR-F is a significant step up from the Developer exam. It tests system-design judgment — decomposing problems into agent workflows, choosing MCP transport protocols, configuring Claude Code for team-wide consistency, and designing prompt architectures that stay reliable under production load. Candidates who have designed and operated a real multi-agent system find the exam manageable; those with only single-agent or prototype experience will find the orchestration and reliability domains challenging.",
+    "summary": "The CCAR-F is a significant step up from the Developer exam. It tests system-design judgment, decomposing problems into agent workflows, choosing MCP transport protocols, configuring Claude Code for team-wide consistency, and designing prompt architectures that stay reliable under production load. Candidates who have designed and operated a real multi-agent system find the exam manageable; those with only single-agent or prototype experience will find the orchestration and reliability domains challenging.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes — two minutes per question, which is tight for scenario-heavy architecture questions that require evaluating tradeoffs.",
-      "<strong>720/1000 passing score</strong> — you must perform well across all five domains, especially the heavily weighted Agentic Architecture section.",
-      "<strong>Agentic Architecture carries the most weight at 27%</strong> — expect multi-step orchestration scenarios where you must choose between single-agent, hub-and-spoke, and pipeline patterns based on real constraints.",
-      "<strong>Hands-on system design experience is essential</strong> — candidates who have built an MCP server, configured Claude Code at the team level, and debugged a multi-agent failure loop report the exam aligns closely with real-world problems."
+      "<strong>60 multiple-choice questions</strong> in 120 minutes, two minutes per question, which is tight for scenario-heavy architecture questions that require evaluating tradeoffs.",
+      "<strong>720/1000 passing score</strong>: you must perform well across all five domains, especially the heavily weighted Agentic Architecture section.",
+      "<strong>Agentic Architecture carries the most weight at 27%</strong>: expect multi-step orchestration scenarios where you must choose between single-agent, hub-and-spoke, and pipeline patterns based on real constraints.",
+      "<strong>Hands-on system design experience is essential</strong>: candidates who have built an MCP server, configured Claude Code at the team level, and debugged a multi-agent failure loop report the exam aligns closely with real-world problems."
     ],
     "passRateGuidance": "If you can design a multi-agent workflow, explain when to use stdio vs. SSE transport for MCP, and write a CLAUDE.md hierarchy that resolves cleanly, you are ready to book."
   },
   "examFormat": {
     "heading": "Claude Certified Architect Foundations Exam Format Explained",
     "intro": "The exam is proctored online. Here is the format:",
-    "scenarioPercent": "Almost every question describes a production system with specific constraints — latency requirements, compliance needs, team structure, failure modes — and asks which architectural decision best addresses the scenario. The exam tests tradeoff reasoning, not implementation syntax.",
+    "scenarioPercent": "Almost every question describes a production system with specific constraints, latency requirements, compliance needs, team structure, failure modes, and asks which architectural decision best addresses the scenario. The exam tests tradeoff reasoning, not implementation syntax.",
     "bestWayToPass": [
-      "<strong>Build a multi-agent workflow end-to-end:</strong> Implement a coordinator that delegates to subagents, pass context between them, handle failures, and monitor the pipeline — this directly maps to the exam’s largest domain.",
+      "<strong>Build a multi-agent workflow end-to-end:</strong> Implement a coordinator that delegates to subagents, pass context between them, handle failures, and monitor the pipeline, this directly maps to the exam’s largest domain.",
       "<strong>Stand up an MCP server with real tools:</strong> Expose a database lookup and a file reader, connect them to Claude Code, and debug tool-selection errors by refining your schemas.",
-      "<strong>Configure Claude Code on a real codebase:</strong> Write CLAUDE.md files at different directory levels, create custom slash commands, and set up hooks — the exam tests the configuration hierarchy and conflict-resolution rules.",
+      "<strong>Configure Claude Code on a real codebase:</strong> Write CLAUDE.md files at different directory levels, create custom slash commands, and set up hooks, the exam tests the configuration hierarchy and conflict-resolution rules.",
       "<strong>Study failure modes, not just happy paths:</strong> What happens when a tool call fails mid-pipeline, when the context window fills up, or when an agent loops indefinitely? Catalog these scenarios and write recovery strategies for each."
     ]
   },
@@ -69,11 +69,11 @@
       },
       {
         "heading": "Claude Code for Teams and CI/CD",
-        "body": "Claude Code is a terminal-based coding agent. You need to understand how CLAUDE.md files layer — user-level defaults, repo-root project context, directory-level overrides — and how to write custom slash commands, set permission hooks, and plug Claude Code into continuous integration pipelines so it can review pull requests, run migrations, or enforce style guides automatically."
+        "body": "Claude Code is a terminal-based coding agent. You need to understand how CLAUDE.md files layer, user-level defaults, repo-root project context, directory-level overrides, and how to write custom slash commands, set permission hooks, and plug Claude Code into continuous integration pipelines so it can review pull requests, run migrations, or enforce style guides automatically."
       },
       {
         "heading": "Prompt Architecture for Complex Applications",
-        "body": "At the architect level, prompts are system components, not one-off instructions. You need to know how to enforce JSON output via tool-use schemas, build few-shot examples that handle edge cases, and design validation-and-retry loops that feed parsing errors back to Claude so it self-corrects. Expect questions on context-window budgeting — how much of the window to reserve for instructions vs. user content vs. tool results."
+        "body": "At the architect level, prompts are system components, not one-off instructions. You need to know how to enforce JSON output via tool-use schemas, build few-shot examples that handle edge cases, and design validation-and-retry loops that feed parsing errors back to Claude so it self-corrects. Expect questions on context-window budgeting, how much of the window to reserve for instructions vs. user content vs. tool results."
       },
       {
         "heading": "Keeping Systems Reliable as They Scale",
@@ -87,7 +87,7 @@
     "blocks": [
       {
         "heading": "Build a Multi-Agent Workflow End-to-End",
-        "body": "Pick a task that naturally decomposes — say, research a topic, draft a report, and fact-check the result — and implement it with a coordinator agent that delegates to subagents. Pay attention to how you pass context between agents, where failures happen, and what metrics you would monitor. That experience directly maps to exam questions."
+        "body": "Pick a task that naturally decomposes, say, research a topic, draft a report, and fact-check the result, and implement it with a coordinator agent that delegates to subagents. Pay attention to how you pass context between agents, where failures happen, and what metrics you would monitor. That experience directly maps to exam questions."
       },
       {
         "heading": "Stand Up an MCP Server",
@@ -95,11 +95,11 @@
       },
       {
         "heading": "Configure Claude Code on a Real Codebase",
-        "body": "Write CLAUDE.md files at different directory levels and observe how Claude Code merges them. Create a custom slash command, set up a pre-commit hook, and run Claude Code in a CI job. The exam tests the configuration hierarchy and conflict-resolution rules — hands-on experience makes those questions obvious."
+        "body": "Write CLAUDE.md files at different directory levels and observe how Claude Code merges them. Create a custom slash command, set up a pre-commit hook, and run Claude Code in a CI job. The exam tests the configuration hierarchy and conflict-resolution rules, hands-on experience makes those questions obvious."
       },
       {
         "heading": "Practice Architectural Tradeoff Conversations",
-        "body": "The exam is not about right vs. wrong — it is about better vs. worse given constraints. When you see a question with four plausible answers, ask yourself which option handles the constraint the question emphasized (latency? cost? security? compliance?) without introducing a new failure mode. That lens resolves most ambiguous choices."
+        "body": "The exam is not about right vs. wrong; it is about better vs. worse given constraints. When you see a question with four plausible answers, ask yourself which option handles the constraint the question emphasized (latency? cost? security? compliance?) without introducing a new failure mode. That lens resolves most ambiguous choices."
       },
       {
         "heading": "Study Failure Modes, Not Just Happy Paths",
@@ -248,7 +248,7 @@
       "explanation": "Instructions are guidance the model may weigh against other context. Hooks are deterministic code the harness runs.",
       "whyWrong": [
         "Hooks fire around tool calls during the session, not after it.",
-        "Hooks can be configured at project level, not only centrally.",
+        "Hooks can be configured at project level; not only centrally.",
         "Token cost is a minor consideration next to whether the rule is guaranteed."
       ]
     },

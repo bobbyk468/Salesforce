@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What makes the Dev Lifecycle & Deployment Architect exam hard?',
-    answer: 'The exam requires architectural thinking about DevOps — not just knowledge of tools. Candidates must recommend sandbox strategies for organisations with multiple parallel development streams, design CI/CD pipelines, and understand the trade-offs between scratch orgs vs. sandboxes vs. packaging models. Real release management experience is essential.',
+    answer: 'The exam requires architectural thinking about DevOps, not just knowledge of tools. Candidates must recommend sandbox strategies for organisations with multiple parallel development streams, design CI/CD pipelines, and understand the trade-offs between scratch orgs vs. sandboxes vs. packaging models. Real release management experience is essential.',
   },
   {
     question: 'What concepts do most Dev Lifecycle & Deployment Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Dev Lifecycle & Deployment Architect exam are: (1) Unlocked Packages vs Change Sets vs Metadata API — Choosing the Right Deployment Tool; (2) Scratch Orgs vs Sandboxes — Source-Driven vs Org-Driven Development; (3) CI/CD Pipeline Stages — What Runs in Each Environment. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Dev Lifecycle & Deployment Architect exam are: (1) Unlocked Packages vs Change Sets vs Metadata API: Choosing the Right Deployment Tool; (2) Scratch Orgs vs Sandboxes: Source-Driven vs Org-Driven Development; (3) CI/CD Pipeline Stages: What Runs in Each Environment. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('dev-lifecycle-deployment-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function DevLifecycleDeploymentArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Dev Lifecycle & Deployment Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Environment strategy</strong> — Sandbox type selection (Developer, Developer Pro, Partial Copy, Full), environment hierarchy design for parallel development streams, and scratch org vs. sandbox decisions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Release management</strong> — Source-driven development with SFDX, unlocked packages vs. change sets, CI/CD pipeline design, and branching strategy for Salesforce teams.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deployment strategy</strong> — When to use change sets vs. SFDX CLI vs. package-based deployment, metadata dependency management, and rollback strategy.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Environment strategy</strong>: Sandbox type selection (Developer, Developer Pro, Partial Copy, Full), environment hierarchy design for parallel development streams, and scratch org vs. sandbox decisions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Release management</strong>: Source-driven development with SFDX, unlocked packages vs. change sets, CI/CD pipeline design, and branching strategy for Salesforce teams.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deployment strategy</strong>: When to use change sets vs. SFDX CLI vs. package-based deployment, metadata dependency management, and rollback strategy.</li>
         </ul>
       </section>
 
@@ -143,7 +143,7 @@ export default function DevLifecycleDeploymentArchitectExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For sandbox selection: Developer = individual dev work, no data needed; Partial Copy = testing with a subset of production data; Full = UAT/performance testing with production-scale data. Cost increases significantly from Developer → Full.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Change sets are simple but create deployment dependencies that are hard to manage at scale. Recommend SFDX + source control when the scenario involves multiple parallel development streams or CI/CD requirements.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Unlocked packages enable modular deployment and versioning — recommend them when the scenario requires packaging components for reuse across multiple orgs or precise version rollback.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Unlocked packages enable modular deployment and versioning, recommend them when the scenario requires packaging components for reuse across multiple orgs or precise version rollback.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For CI/CD questions: scratch orgs are disposable and ideal for automated testing pipelines. Sandboxes are persistent and better for long-running integration testing. Know the lifecycle differences.</li>
         </ul>
       </section>
@@ -164,19 +164,19 @@ export default function DevLifecycleDeploymentArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Dev Lifecycle &amp; Deployment Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Unlocked Packages vs Change Sets vs Metadata API — Choosing the Right Deployment Tool</p>
-            <p className="text-sm text-gray-700">Change Sets are UI-based, work only between related orgs, and have no version control. Metadata API is scriptable but stateless (no package versioning). Unlocked Packages are modular, versioned, and installable across unrelated orgs — they are the modern recommended approach for complex org development. Candidates recommend Change Sets for all deployments — the exam expects Unlocked Packages for independent module deployment and CI/CD pipelines.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Unlocked Packages vs Change Sets vs Metadata API: Choosing the Right Deployment Tool</p>
+            <p className="text-sm text-gray-700">Change Sets are UI-based; work only between related orgs, and have no version control. Metadata API is scriptable but stateless (no package versioning). Unlocked Packages are modular, versioned, and installable across unrelated orgs; they are the modern recommended approach for complex org development. Candidates recommend Change Sets for all deployments, the exam expects Unlocked Packages for independent module deployment and CI/CD pipelines.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Scratch Orgs vs Sandboxes — Source-Driven vs Org-Driven Development</p>
-            <p className="text-sm text-gray-700">Scratch Orgs are temporary, configuration-driven development environments spun up from source code — they enforce source-driven development. Sandboxes are copies of production (or another sandbox) and are better for QA and UAT. Candidates use sandboxes for development — the exam expects scratch orgs for feature development in a DX-based CI/CD pipeline.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Scratch Orgs vs Sandboxes: Source-Driven vs Org-Driven Development</p>
+            <p className="text-sm text-gray-700">Scratch Orgs are temporary, configuration-driven development environments spun up from source code, they enforce source-driven development. Sandboxes are copies of production (or another sandbox) and are better for QA and UAT. Candidates use sandboxes for development, the exam expects scratch orgs for feature development in a DX-based CI/CD pipeline.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. CI/CD Pipeline Stages — What Runs in Each Environment</p>
-            <p className="text-sm text-gray-700">A typical Salesforce CI/CD pipeline: develop in scratch orgs → run unit tests in CI org → deploy to SIT sandbox → UAT sandbox → staging sandbox → production. Candidates skip stages or run unit tests only in production deployment — the exam expects unit tests to run at every stage, with integration tests in SIT and user acceptance in UAT.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. CI/CD Pipeline Stages: What Runs in Each Environment</p>
+            <p className="text-sm text-gray-700">A typical Salesforce CI/CD pipeline: develop in scratch orgs → run unit tests in CI org → deploy to SIT sandbox → UAT sandbox → staging sandbox → production. Candidates skip stages or run unit tests only in production deployment, the exam expects unit tests to run at every stage, with integration tests in SIT and user acceptance in UAT.</p>
           </div>
         </div>
       </section>

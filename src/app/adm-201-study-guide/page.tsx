@@ -97,7 +97,7 @@ export default function Adm201StudyGuidePage() {
         <p className="text-lg text-gray-600">
           The Salesforce Administrator (ADM-201) certification is the most widely held Salesforce credential and the
           recommended starting point for most Salesforce careers. This study guide covers every exam section with
-          the depth you need to pass — not just the topic list.
+          the depth you need to pass, not just the topic list.
         </p>
       </header>
 
@@ -135,7 +135,7 @@ export default function Adm201StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">ADM-201 Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          The top three sections together account for 54% of the exam. Do not neglect the lower-weight sections — 4% is still 2–3 questions.
+          The top three sections together account for 54% of the exam. Do not neglect the lower-weight sections: 4% is still 2–3 questions.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -176,7 +176,7 @@ export default function Adm201StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Data and Analytics Management (17%)
             </p>
-            <p>Data import (Import Wizard vs Data Loader — use Import Wizard for up to 50k records and standard objects; Data Loader for bulk operations or custom objects), data quality management, deduplication, reports (tabular, summary, matrix, joined) and dashboards (chart types, running user, scheduled refresh). Know sharing rules: criteria-based vs ownership-based, and how they interact with OWD.</p>
+            <p>Data import (Import Wizard vs Data Loader, use Import Wizard for up to 50k records and standard objects; Data Loader for bulk operations or custom objects), data quality management, deduplication, reports (tabular, summary, matrix, joined) and dashboards (chart types, running user, scheduled refresh). Know sharing rules: criteria-based vs ownership-based, and how they interact with OWD.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -190,7 +190,7 @@ export default function Adm201StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Sales and Marketing Applications (11%)
             </p>
-            <p>Lead lifecycle (lead status, conversion, mapping fields), opportunity stages and forecasting, products and price books (standard vs custom), campaigns and campaign member statuses, and activity management. Know how lead conversion maps to Accounts, Contacts, and Opportunities — and what does not transfer automatically.</p>
+            <p>Lead lifecycle (lead status, conversion, mapping fields), opportunity stages and forecasting, products and price books (standard vs custom), campaigns and campaign member statuses, and activity management. Know how lead conversion maps to Accounts, Contacts, and Opportunities, and what does not transfer automatically.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -211,7 +211,7 @@ export default function Adm201StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Productivity and Collaboration (4%)
             </p>
-            <p>Chatter settings (enable/disable per profile, groups, files), task and event management, email templates (text, HTML, letterhead), and Salesforce mobile app configuration (mobile navigation, compact layouts). Fewer questions but straightforward — do not skip this section.</p>
+            <p>Chatter settings (enable/disable per profile, groups, files), task and event management, email templates (text, HTML, letterhead), and Salesforce mobile app configuration (mobile navigation, compact layouts). Fewer questions but straightforward, do not skip this section.</p>
           </div>
         </div>
       </section>
@@ -220,11 +220,11 @@ export default function Adm201StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week ADM-201 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Configuration and Security (20%):</strong> Org setup, user management, profiles, permission sets, OWD, role hierarchy, sharing rules, and field-level security. Use Trailhead’s &ldquo;Salesforce Platform Basics&rdquo; and &ldquo;Data Security&rdquo; modules. Practice: configure a new user with a custom profile, then restrict access to a specific object using FLS.</p>
-          <p><strong>Week 2 — Object Manager and App Builder (17%):</strong> Custom objects, field types (formula, roll-up summary), record types, page layouts, validation rules, and Lightning App Builder components. Practice: build a custom object with a roll-up summary field and a master-detail relationship. Assign different page layouts per record type.</p>
-          <p><strong>Week 3 — Data Management and Analytics (17%):</strong> Import Wizard vs Data Loader, deduplication, report types (summary, matrix, joined), dashboard components, and scheduled reports. Practice: build a matrix report for pipeline by stage and owner. Create a dashboard with a funnel chart.</p>
-          <p><strong>Week 4 — Automation and Process (14%):</strong> Flow Builder (record-triggered, screen flows), approval processes, and the order of execution. Practice: build a record-triggered flow that creates a follow-up task when an Opportunity reaches Closed Won. Configure a two-step approval process.</p>
-          <p><strong>Week 5 — Sales, Service, Agentforce, and Productivity (32%):</strong> Lead conversion, products and price books, case management (queues, assignment rules, escalation), Salesforce Knowledge, entitlements, Agent Builder basics, and Chatter. Review scenario-based use cases for each.</p>
+          <p><strong>Week 1: Configuration and Security (20%):</strong> Org setup, user management, profiles, permission sets, OWD, role hierarchy, sharing rules, and field-level security. Use Trailhead’s &ldquo;Salesforce Platform Basics&rdquo; and &ldquo;Data Security&rdquo; modules. Practice: configure a new user with a custom profile, then restrict access to a specific object using FLS.</p>
+          <p><strong>Week 2: Object Manager and App Builder (17%):</strong> Custom objects, field types (formula, roll-up summary), record types, page layouts, validation rules, and Lightning App Builder components. Practice: build a custom object with a roll-up summary field and a master-detail relationship. Assign different page layouts per record type.</p>
+          <p><strong>Week 3: Data Management and Analytics (17%):</strong> Import Wizard vs Data Loader, deduplication, report types (summary, matrix, joined), dashboard components, and scheduled reports. Practice: build a matrix report for pipeline by stage and owner. Create a dashboard with a funnel chart.</p>
+          <p><strong>Week 4: Automation and Process (14%):</strong> Flow Builder (record-triggered, screen flows), approval processes, and the order of execution. Practice: build a record-triggered flow that creates a follow-up task when an Opportunity reaches Closed Won. Configure a two-step approval process.</p>
+          <p><strong>Week 5: Sales, Service, Agentforce, and Productivity (32%):</strong> Lead conversion, products and price books, case management (queues, assignment rules, escalation), Salesforce Knowledge, entitlements, Agent Builder basics, and Chatter. Review scenario-based use cases for each.</p>
           <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min), weak-area targeted revision. Score 75%+ consistently before booking.</p>
         </div>
       </section>
@@ -270,7 +270,7 @@ export default function Adm201StudyGuidePage() {
             <Link href="/certifications/agentforce-specialist" className="text-salesforce-blue font-medium hover:underline">
               Salesforce Certified Agentforce Specialist
             </Link>
-            — free practice questions, syllabus-aligned weightage, and scenario tips on one page.
+, free practice questions, syllabus-aligned weightage, and scenario tips on one page.
           </li>
         </ul>
       </section>
@@ -281,11 +281,11 @@ export default function Adm201StudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Security questions:</strong> Always start by identifying whether the requirement is about object access (profiles/permission sets) or record visibility (OWD + sharing rules + role hierarchy). These are the most frequently tested — and most frequently confused — concepts.</span>
+            <span><strong>Security questions:</strong> Always start by identifying whether the requirement is about object access (profiles/permission sets) or record visibility (OWD + sharing rules + role hierarchy). These are the most frequently tested, and most frequently confused, concepts.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Automation questions:</strong> If the requirement says &ldquo;without code&rdquo; and happens on record save, the answer is almost always Flow (record-triggered). If it requires user input, Screen Flow. If it needs multi-level approval, Approval Process. Workflow Rules and Process Builder are legacy — the exam still tests them but favours Flow.</span>
+            <span><strong>Automation questions:</strong> If the requirement says &ldquo;without code&rdquo; and happens on record save, the answer is almost always Flow (record-triggered). If it requires user input, Screen Flow. If it needs multi-level approval, Approval Process. Workflow Rules and Process Builder are legacy, the exam still tests them but favours Flow.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -293,7 +293,7 @@ export default function Adm201StudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Relationship field questions:</strong> If the child record must not exist without the parent, master-detail. If the child can exist independently, lookup. Roll-up summary fields only work on master-detail relationships — this is a common distractor answer when the question uses lookup relationships.</span>
+            <span><strong>Relationship field questions:</strong> If the child record must not exist without the parent, master-detail. If the child can exist independently, lookup. Roll-up summary fields only work on master-detail relationships; this is a common distractor answer when the question uses lookup relationships.</span>
           </li>
         </ul>
       </section>
@@ -320,14 +320,14 @@ export default function Adm201StudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
           <li>OWD settings (Private / Public Read Only / Public Read-Write / Controlled by Parent) and what each allows</li>
-          <li>Role hierarchy: visibility vs access — roles affect who can see records, not what they can do</li>
-          <li>Profile vs Permission Set vs Permission Set Group — when to use each</li>
+          <li>Role hierarchy: visibility vs access, roles affect who can see records, not what they can do</li>
+          <li>Profile vs Permission Set vs Permission Set Group, when to use each</li>
           <li>Validation rule order of execution and when they fire (before triggers, after page save)</li>
           <li>Record-triggered flow: before-save vs after-save and why before-save is more efficient</li>
-          <li>Import Wizard vs Data Loader — limits, supported objects, and use cases</li>
-          <li>Master-detail vs lookup — required parent, roll-up eligibility, cascade delete</li>
+          <li>Import Wizard vs Data Loader, limits, supported objects, and use cases</li>
+          <li>Master-detail vs lookup, required parent, roll-up eligibility, cascade delete</li>
           <li>Approval process components: entry criteria, initial submission actions, approval steps, final actions</li>
-          <li>Lead conversion — what fields map, what does not auto-populate on the converted account</li>
+          <li>Lead conversion, what fields map, what does not auto-populate on the converted account</li>
           <li>Report types: tabular (no grouping), summary (row grouping), matrix (row + column), joined (multiple report types)</li>
         </ol>
       </section>
@@ -376,7 +376,7 @@ export default function Adm201StudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Salesforce Administrator (ADM-201) free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Salesforce Administrator (ADM-201) free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/administrator"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

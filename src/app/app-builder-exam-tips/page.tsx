@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'How hard is the Platform App Builder exam?',
-    answer: 'Moderate difficulty — it sits one step above ADM-201. Most candidates with admin experience pass in 4–6 weeks of study. Hands-on practice in a Developer Edition org is essential.',
+    answer: 'Moderate difficulty, it sits one step above ADM-201. Most candidates with admin experience pass in 4–6 weeks of study. Hands-on practice in a Developer Edition org is essential.',
   },
   {
     question: 'What is the difference between ADM-201 and App Builder?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most App Builder candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the App Builder exam are: (1) Declarative-First: The Exam Always Prefers Flow Over Apex; (2) Master-Detail vs Lookup: The Sharing and Roll-Up Difference; (3) Lightning App Builder Visibility Rules vs Profile-Based Assignment. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the App Builder exam are: (1) Declarative-First: The Exam Always Prefers Flow Over Apex; (2) Master-Detail vs Lookup: The Sharing and Roll-Up Difference; (3) Lightning App Builder Visibility Rules vs Profile-Based Assignment. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('app-builder-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function AppBuilderExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass DEV-402</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The DEV-402 has 60 questions in 105 minutes. Passing score is 63%. Aim for 76%+ on full mocks before booking.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Highest-weight sections: Data Modelling &amp; Management (24%) and Process Automation &amp; Logic (27%) — cover these first.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Highest-weight sections: Data Modelling &amp; Management (24%) and Process Automation &amp; Logic (27%), cover these first.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice declaratively in a Developer Edition org. The exam rewards hands-on understanding of when and why to use each feature.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The ADM-201 (Salesforce Administrator) is a recommended prerequisite — take it first if you haven’t already.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The ADM-201 (Salesforce Administrator) is a recommended prerequisite. Take it first if you haven’t already.</li>
         </ul>
       </section>
 
@@ -136,9 +136,9 @@ export default function AppBuilderExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week DEV-402 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1:</strong> Data Modelling &amp; Management — object relationships (lookup vs master-detail, junction objects), roll-up summary fields, formula fields, validation rules, and schema design patterns.</p>
-          <p><strong>Week 2:</strong> Process Automation &amp; Logic — Record-Triggered Flows for field updates and cross-object automation, Approval Processes for multi-step human approvals, and when to choose each tool. Workflow Rules and Process Builder are legacy — know them for elimination only.</p>
-          <p><strong>Week 3:</strong> Security &amp; App Design — OWD, role hierarchy, sharing rules, permission sets, field-level security, Lightning App Builder (page types, Dynamic Forms), record types, page layout assignments.</p>
+          <p><strong>Week 1:</strong> Data Modelling &amp; Management, object relationships (lookup vs master-detail, junction objects), roll-up summary fields, formula fields, validation rules, and schema design patterns.</p>
+          <p><strong>Week 2:</strong> Process Automation &amp; Logic: Record-Triggered Flows for field updates and cross-object automation, Approval Processes for multi-step human approvals, and when to choose each tool. Workflow Rules and Process Builder are legacy. Know them for elimination only.</p>
+          <p><strong>Week 3:</strong> Security &amp; App Design: OWD, role hierarchy, sharing rules, permission sets, field-level security, Lightning App Builder (page types, Dynamic Forms), record types, page layout assignments.</p>
           <p><strong>Week 4:</strong> Full mock exams (aim for 76%+), revision of weak sections, reporting &amp; dashboards, and mobile/deployment basics. Book the exam only after hitting the mock benchmark consistently.</p>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function AppBuilderExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Relationship questions:</strong> Use Master-Detail when child records should cascade-delete with the parent and when you need roll-up summary fields. Use Lookup when the child can exist independently. A junction object (two master-detail relationships) solves many-to-many.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Automation questions:</strong> Default answer is Flow (Record-Triggered). Choose Approval Process only when a multi-step human approval with rejection paths is described. Never choose Workflow Rule or Process Builder unless the scenario explicitly forbids Flow.</span></li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Security questions:</strong> Read the security model in order — OWD sets the baseline, role hierarchy opens up, sharing rules grant additional access, Field-Level Security and page layouts control visibility. Permission Sets grant permissions beyond a profile. Record Types control picklist values and page layout assignment, not field visibility.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Security questions:</strong> Read the security model in order: OWD sets the baseline, role hierarchy opens up, sharing rules grant additional access, Field-Level Security and page layouts control visibility. Permission Sets grant permissions beyond a profile. Record Types control picklist values and page layout assignment, not field visibility.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Watch for key phrases:</strong> &ldquo;without code&rdquo; = declarative only; &ldquo;most efficient&rdquo; = native feature over custom-built; &ldquo;administrators only&rdquo; = profile-based; &ldquo;certain users&rdquo; = permission sets or sharing rules.</span></li>
         </ul>
       </section>
@@ -175,19 +175,19 @@ export default function AppBuilderExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most App Builder Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Declarative-First: The Exam Always Prefers Flow Over Apex</p>
-            <p className="text-sm text-gray-700">When a scenario can be solved by either a Record-Triggered Flow or an Apex trigger, the correct exam answer is always Flow. This is the &ldquo;declarative-first&rdquo; principle. The trap is candidates who have real-world Apex experience choosing the code solution — the exam penalises this. Only choose Apex when the scenario explicitly states something Flow cannot do, such as complex callouts or cross-object DML that Flow does not support.</p>
+            <p className="text-sm text-gray-700">When a scenario can be solved by either a Record-Triggered Flow or an Apex trigger, the correct exam answer is always Flow. This is the &ldquo;declarative-first&rdquo; principle. The trap is candidates who have real-world Apex experience choosing the code solution, the exam penalises this. Only choose Apex when the scenario explicitly states something Flow cannot do, such as complex callouts or cross-object DML that Flow does not support.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Master-Detail vs Lookup: The Sharing and Roll-Up Difference</p>
-            <p className="text-sm text-gray-700">Master-Detail relationships roll up summary fields (Count, Sum, Min, Max) from child to parent automatically — Lookup relationships cannot. More critically, Master-Detail OWD is inherited: if a Master record is Private, child records follow that access level regardless of the child object’s own OWD. Lookup child records do NOT inherit OWD. Exam scenarios ask you to choose between them — if the scenario mentions roll-up summaries or shared security, choose Master-Detail.</p>
+            <p className="text-sm text-gray-700">Master-Detail relationships roll up summary fields (Count, Sum, Min, Max) from child to parent automatically: Lookup relationships cannot. More critically, Master-Detail OWD is inherited: if a Master record is Private, child records follow that access level regardless of the child object’s own OWD. Lookup child records do NOT inherit OWD. Exam scenarios ask you to choose between them, if the scenario mentions roll-up summaries or shared security, choose Master-Detail.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Lightning App Builder Visibility Rules vs Profile-Based Assignment</p>
-            <p className="text-sm text-gray-700">Component Visibility Rules in Lightning App Builder control whether a component is rendered on the page based on record field values, user permissions, or device type — they do NOT prevent the page from loading. Profile-based Page Layout Assignment controls which layout a profile sees. Candidates confuse these: if a scenario says &ldquo;only show this component to managers,&rdquo; the answer is Visibility Rules (using a custom permission or profile check), not a separate page layout.</p>
+            <p className="text-sm text-gray-700">Component Visibility Rules in Lightning App Builder control whether a component is rendered on the page based on record field values, user permissions, or device type; they do NOT prevent the page from loading. Profile-based Page Layout Assignment controls which layout a profile sees. Candidates confuse these: if a scenario says &ldquo;only show this component to managers,&rdquo; the answer is Visibility Rules (using a custom permission or profile check), not a separate page layout.</p>
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ export default function HerokuConnectSyncDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Heroku Connect bidirectional sync (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         Heroku Connect maps Salesforce objects to Postgres tables and polls both sides on a schedule (or via
-        streaming), writing changes in whichever direction is configured — this lets a Heroku app read/write
+        streaming), writing changes in whichever direction is configured; this lets a Heroku app read/write
         Salesforce data without direct API calls.
       </p>
       <svg role="img" aria-labelledby="hcs-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">

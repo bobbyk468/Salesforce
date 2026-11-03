@@ -35,7 +35,7 @@
     "bestWayToPass": [
       "<strong>Build a recipe, not just a dashboard.</strong> Load data, join it, aggregate it, output a dataset. The transformation questions become obvious once you have done this.",
       "<strong>Practise security predicates until the syntax is automatic.</strong> They are the most commonly failed topic and they are learnable in an afternoon.",
-      "<strong>Create a story end to end.</strong> Pick a dataset, let Discovery build a model, read the metrics, then deploy the prediction to an object. Doing it once covers a surprising amount of ground.",
+      "<strong>Create a story end to end.</strong> Pick a dataset, let Discovery build a model. Read the metrics, then deploy the prediction to an object. Doing it once covers a surprising amount of ground.",
       "<strong>Know when SAQL is actually needed.</strong> Most dashboard work does not require it, and the exam tests whether you know where the line is as much as it tests the syntax."
     ]
   },
@@ -82,7 +82,7 @@
       },
       {
         "heading": "Row-Level Security",
-        "body": "This is the section that decides results. A dataset is a flat snapshot and does not inherit Salesforce record access by default, so when a dataset is registered it is visible in full to anyone who can see it. There are two ways to restrict it. A security predicate is a filter expression stored on the dataset and applied to every query, written against dataset columns and user attributes, for example 'OwnerId' == \"$User.Id\". Predicates can express hierarchies by combining a flattened role column with the running user's role. The alternative is inherited sharing, where the dataset is configured to respect the sharing of the underlying Salesforce object, which is simpler to maintain and the right answer when the requirement is just mirror Salesforce sharing. Inherited sharing has limits on the number of records it can handle, which is exactly the trade-off questions probe: use inheritance for straightforward sharing on moderate volumes, write a predicate when the rule is custom or the volume is large."
+        "body": "This is the section that decides results. A dataset is a flat snapshot and does not inherit Salesforce record access by default, so when a dataset is registered it is visible in full to anyone who can see it. There are two ways to restrict it. A security predicate is a filter expression stored on the dataset and applied to every query, written against dataset columns and user attributes, for example 'OwnerId' == \"$User.Id\". Predicates can express hierarchies by combining a flattened role column with the running user's role. The alternative is inherited sharing, where the dataset is configured to respect the sharing of the underlying Salesforce object, which is simpler to maintain and the right answer when the requirement is just mirror Salesforce sharing. Inherited sharing has limits on the number of records it can handle, which is exactly the trade-off questions probe: use inheritance for straightforward sharing on moderate volumes. Write a predicate when the rule is custom or the volume is large."
       }
     ]
   },

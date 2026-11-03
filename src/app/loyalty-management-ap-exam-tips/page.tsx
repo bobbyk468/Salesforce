@@ -59,11 +59,11 @@ const faqItems = [
   },
   {
     question: 'What is a Loyalty Partner in Salesforce Loyalty Management?',
-    answer: 'Loyalty Partners are external companies that participate in the programme — allowing members to earn or redeem points outside the primary brand (e.g., airline miles earned at a hotel partner). The exam tests how to configure partner earning rules, set up partner API integration for real-time point accrual, and manage the financial settlement between the loyalty programme operator and the partner.',
+    answer: 'Loyalty Partners are external companies that participate in the programme, allowing members to earn or redeem points outside the primary brand (e.g., airline miles earned at a hotel partner). The exam tests how to configure partner earning rules, set up partner API integration for real-time point accrual, and manage the financial settlement between the loyalty programme operator and the partner.',
   },
   {
     question: 'What concepts do most Loyalty Management candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Loyalty Management exam are: (1) Loyalty Program vs Loyalty Programme Member vs Member Tier — Three Separate Records; (2) Accrual vs Redemption Transactions — Points In vs Points Out; (3) Promotion vs Voucher vs Reward — Three Offer Mechanics. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Loyalty Management exam are: (1) Loyalty Program vs Loyalty Programme Member vs Member Tier: Three Separate Records; (2) Accrual vs Redemption Transactions: Points In vs Points Out; (3) Promotion vs Voucher vs Reward: Three Offer Mechanics. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('loyalty-management-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function LoyaltyManagementApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Loyalty Management AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Loyalty programme configuration</strong> — Setting up loyalty programmes with tiers (Bronze/Silver/Gold/Platinum), defining tier qualification rules (spend threshold, purchase frequency), tier maintenance period (calendar year vs. rolling 12 months), and configuring tier-specific benefits, earning multipliers, and reward catalogues.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Points and rewards management</strong> — Point accrual rules (earn X points per $1 spent, bonus points for specific products), point expiry rules (points expire after 12 months of inactivity), redemption rules (minimum threshold to redeem, redemption rate), and reward voucher issuance and management through the Rewards Catalogue.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Member management and promotions</strong> — Loyalty member enrolment and profile management, promotional campaigns (double points for a limited period), segment-based targeted promotions, partner programme integration for cross-brand earning, and using Data Cloud or Marketing Cloud to drive personalised loyalty communications.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Loyalty programme configuration</strong>: Setting up loyalty programmes with tiers (Bronze/Silver/Gold/Platinum), defining tier qualification rules (spend threshold, purchase frequency), tier maintenance period (calendar year vs. rolling 12 months), and configuring tier-specific benefits, earning multipliers, and reward catalogues.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Points and rewards management</strong>: Point accrual rules (earn X points per $1 spent, bonus points for specific products), point expiry rules (points expire after 12 months of inactivity), redemption rules (minimum threshold to redeem, redemption rate), and reward voucher issuance and management through the Rewards Catalogue.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Member management and promotions</strong>: Loyalty member enrolment and profile management, promotional campaigns (double points for a limited period), segment-based targeted promotions, partner programme integration for cross-brand earning, and using Data Cloud or Marketing Cloud to drive personalised loyalty communications.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function LoyaltyManagementApExamTipsPage() {
             <span className="font-medium text-gray-900">Partner Integration and Analytics</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Tier configuration and point accrual/redemption rules are the defining mechanics — understand them thoroughly.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Tier configuration and point accrual/redemption rules are the defining mechanics, understand them thoroughly.</p>
         </div>
       </section>
 
@@ -139,7 +139,7 @@ export default function LoyaltyManagementApExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For tier qualification questions: tier qualifications are typically based on accumulated qualifying points or spend within a measurement period. The measurement period can be calendar year (resets Jan 1) or rolling 12 months (always looks back 12 months). Tier downgrade occurs at the end of the period if the member falls below the threshold. When a scenario says ’members keep their status until the end of the year even if they fall below the requirement’, set a fixed calendar year period with end-of-year evaluation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For points questions: accrual rules define when and how many points are earned (1 point per $1 at checkout, 500 bonus points for a first purchase). Accrual processes run when a transaction event is received. Point liability is the financial cost of outstanding unredeemed points. When a scenario says ’award 2x points during the holiday season’, configure a promotional accrual rule with a date range — not a permanent rule change.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For points questions: accrual rules define when and how many points are earned (1 point per $1 at checkout, 500 bonus points for a first purchase). Accrual processes run when a transaction event is received. Point liability is the financial cost of outstanding unredeemed points. When a scenario says ’award 2x points during the holiday season’, configure a promotional accrual rule with a date range, not a permanent rule change.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For partner questions: partner earning rules define which partner transactions earn points and at what rate. Partner settlement calculates how much the programme owes the partner (or vice versa) for points earned through partner activities. When a question says ’hotel stays earn airline miles at a 1 mile per dollar rate’, configure a Partner Accrual Rule linking the hotel partner’s transactions to the airline loyalty programme.</li>
         </ul>
       </section>
@@ -161,19 +161,19 @@ export default function LoyaltyManagementApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Loyalty Management Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Loyalty Program vs Loyalty Programme Member vs Member Tier — Three Separate Records</p>
-            <p className="text-sm text-gray-700">A Loyalty Program is the top-level programme definition (name, currency, tiers). A Loyalty Programme Member is the individual customer enrolled in the programme with their points balance and tier status. A Member Tier is the classification record (Bronze, Silver, Gold) linked to the programme. Candidates store tier information on the Loyalty Program record — the exam expects Member Tier records and the Tier field on the Programme Member.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Loyalty Program vs Loyalty Programme Member vs Member Tier: Three Separate Records</p>
+            <p className="text-sm text-gray-700">A Loyalty Program is the top-level programme definition (name, currency, tiers). A Loyalty Programme Member is the individual customer enrolled in the programme with their points balance and tier status. A Member Tier is the classification record (Bronze, Silver, Gold) linked to the programme. Candidates store tier information on the Loyalty Program record, the exam expects Member Tier records and the Tier field on the Programme Member.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Accrual vs Redemption Transactions — Points In vs Points Out</p>
-            <p className="text-sm text-gray-700">Accrual transactions add points to a member’s balance (purchase, bonus promotion). Redemption transactions deduct points (reward claim, discount). These are separate Transaction Journal record types. Candidates use a single transaction type for both — the exam expects separate Transaction Journal entries with the correct Type field (Accrual vs Redemption) and expects the ledger balance to reflect both.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Accrual vs Redemption Transactions: Points In vs Points Out</p>
+            <p className="text-sm text-gray-700">Accrual transactions add points to a member’s balance (purchase, bonus promotion). Redemption transactions deduct points (reward claim, discount). These are separate Transaction Journal record types. Candidates use a single transaction type for both, the exam expects separate Transaction Journal entries with the correct Type field (Accrual vs Redemption) and expects the ledger balance to reflect both.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Promotion vs Voucher vs Reward — Three Offer Mechanics</p>
-            <p className="text-sm text-gray-700">Promotions offer bonus points or discounts for a limited time. Vouchers are single-use codes that grant a specific benefit. Rewards are items members redeem accumulated points for. Candidates use Promotion records for voucher distribution — the exam expects Voucher Definition and Voucher records for code-based offers and Reward records for the points redemption catalogue.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Promotion vs Voucher vs Reward: Three Offer Mechanics</p>
+            <p className="text-sm text-gray-700">Promotions offer bonus points or discounts for a limited time. Vouchers are single-use codes that grant a specific benefit. Rewards are items members redeem accumulated points for. Candidates use Promotion records for voucher distribution, the exam expects Voucher Definition and Voucher records for code-based offers and Reward records for the points redemption catalogue.</p>
           </div>
         </div>
       </section>

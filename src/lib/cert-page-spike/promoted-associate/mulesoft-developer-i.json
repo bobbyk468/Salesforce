@@ -70,15 +70,15 @@
       },
       {
         "heading": "Anypoint Platform and Development Lifecycle",
-        "body": "**Anypoint Platform** is MuleSoft's integration platform — Design, Develop, Deploy, Manage. **Anypoint Studio** is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. **CloudHub** is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
+        "body": "**Anypoint Platform** is MuleSoft's integration platform: Design, Develop, Deploy, Manage. **Anypoint Studio** is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. **CloudHub** is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
       },
       {
         "heading": "Mule Events, Flows, and Core Concepts",
-        "body": "A Mule Event carries the message through the flow: Payload (the message data), Attributes (metadata about the source, like HTTP headers), Variables (flow-level storage), Error (in error handling context). A Flow has a Source (event trigger — HTTP listener, file listener, scheduler), Processors (transform, route, call), and Target (destination system). Sub-flows are reusable flow fragments without a source. Private flows can be called but not directly triggered. The developer exam tests Mule event structure and when to use each flow type."
+        "body": "A Mule Event carries the message through the flow: Payload (the message data), Attributes (metadata about the source, like HTTP headers), Variables (flow-level storage), Error (in error handling context). A Flow has a Source (event trigger: HTTP listener, file listener, scheduler), Processors (transform, route, call), and Target (destination system). Sub-flows are reusable flow fragments without a source. Private flows can be called but not directly triggered. The developer exam tests Mule event structure and when to use each flow type."
       },
       {
         "heading": "DataWeave 2.0 Transformations",
-        "body": "**DataWeave** is MuleSoft's transformation language — used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios."
+        "body": "**DataWeave** is MuleSoft's transformation language, used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios."
       },
       {
         "heading": "API Design with RAML and API-First",
@@ -86,7 +86,7 @@
       },
       {
         "heading": "Error Handling: On Error Continue vs Propagate",
-        "body": "Error handling in Mule uses Try scope, On Error Continue, and On Error Propagate. On Error Continue: catches the error, executes the handler, and resumes the flow after the error scope — the client receives the handler's response. On Error Propagate: catches the error, executes the handler, and re-throws the error — the client receives an error response. Error types follow a hierarchy: ANY (catch all), CONNECTIVITY, EXPRESSION, ROUTING, SECURITY. The exam tests which handler type is appropriate and how error types are matched."
+        "body": "Error handling in Mule uses Try scope, On Error Continue, and On Error Propagate. On Error Continue: catches the error, executes the handler, and resumes the flow after the error scope, the client receives the handler's response. On Error Propagate: catches the error, executes the handler, and re-throws the error, the client receives an error response. Error types follow a hierarchy: ANY (catch all), CONNECTIVITY, EXPRESSION, ROUTING, SECURITY. The exam tests which handler type is appropriate and how error types are matched."
       }
     ]
   },

@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Data Cloud and Marketing Cloud?',
-    answer: 'Data Cloud is Salesforce’s customer data platform (CDP) — it unifies customer data from multiple sources (CRM, web, mobile, data warehouses) into a single customer profile with identity resolution and real-time data streaming. Marketing Cloud (Marketing Cloud Engagement / SFMC) is an email and digital marketing execution platform for sending campaigns, journeys, and automated messaging. Data Cloud feeds unified audience segments INTO Marketing Cloud for activation; Marketing Cloud is the channel for execution.',
+    answer: 'Data Cloud is Salesforce’s customer data platform (CDP), it unifies customer data from multiple sources (CRM, web, mobile, data warehouses) into a single customer profile with identity resolution and real-time data streaming. Marketing Cloud (Marketing Cloud Engagement / SFMC) is an email and digital marketing execution platform for sending campaigns, journeys, and automated messaging. Data Cloud feeds unified audience segments INTO Marketing Cloud for activation; Marketing Cloud is the channel for execution.',
   },
   {
     question: 'Are Data Cloud and Marketing Cloud certifications related?',
@@ -48,11 +48,11 @@ const faqItems = [
   },
   {
     question: 'Is Data Cloud Consultant harder than Marketing Cloud certifications?',
-    answer: 'Data Cloud Consultant is considered harder than most Marketing Cloud certifications because it tests a more complex technical domain — data modelling, identity resolution, data streams, calculated insights with SQL, and activation configuration. Marketing Cloud certifications range from moderate (Admin, Email Specialist) to hard (Developer, requiring AMPscript and SSJS proficiency). Data Cloud Consultant has a 62% passing score, which is lower than most exams, reflecting its difficulty.',
+    answer: 'Data Cloud Consultant is considered harder than most Marketing Cloud certifications because it tests a more complex technical domain, data modelling, identity resolution, data streams, calculated insights with SQL, and activation configuration. Marketing Cloud certifications range from moderate (Admin, Email Specialist) to hard (Developer, requiring AMPscript and SSJS proficiency). Data Cloud Consultant has a 62% passing score, which is lower than most exams, reflecting its difficulty.',
   },
   {
     question: 'Which should I pursue first: Data Cloud or Marketing Cloud?',
-    answer: 'Take Marketing Cloud certifications first if you work in campaign execution, email marketing operations, or Marketing Cloud administration. Take Data Cloud Consultant first if you implement CDP solutions, data architecture, or work on customer data unification projects. Many organisations are now implementing Data Cloud as the data foundation for Marketing Cloud activation — in that context, Data Cloud expertise is the higher-value and more strategically important credential.',
+    answer: 'Take Marketing Cloud certifications first if you work in campaign execution, email marketing operations, or Marketing Cloud administration. Take Data Cloud Consultant first if you implement CDP solutions, data architecture, or work on customer data unification projects. Many organisations are now implementing Data Cloud as the data foundation for Marketing Cloud activation, in that context, Data Cloud expertise is the higher-value and more strategically important credential.',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function DataCloudVsMarketingCloudPage() {
         </h1>
         <p className="text-lg text-gray-600">
           Data Cloud and Marketing Cloud are frequently confused because they both deal with customer data
-          and marketing. But they serve very different purposes — Data Cloud is the data unification layer;
+          and marketing. But they serve very different purposes: Data Cloud is the data unification layer;
           Marketing Cloud is the campaign execution layer. Here is how their certifications compare
           and how to choose the right path for your career.
         </p>
@@ -135,7 +135,7 @@ export default function DataCloudVsMarketingCloudPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Technical Depth</td>
-                <td className="py-2.5 pr-4">High — data modelling, SQL, identity resolution</td>
+                <td className="py-2.5 pr-4">High, data modelling, SQL, identity resolution</td>
                 <td className="py-2.5">Admin: Moderate · Developer: High (AMPscript, SSJS, API)</td>
               </tr>
               <tr>
@@ -155,8 +155,8 @@ export default function DataCloudVsMarketingCloudPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Market Demand 2026</td>
-                <td className="py-2.5 pr-4">Very High — enterprise CDP adoption accelerating</td>
-                <td className="py-2.5">High — SFMC remains the dominant marketing automation platform</td>
+                <td className="py-2.5 pr-4">Very High, enterprise CDP adoption accelerating</td>
+                <td className="py-2.5">High: SFMC remains the dominant marketing automation platform</td>
               </tr>
             </tbody>
           </table>
@@ -167,8 +167,8 @@ export default function DataCloudVsMarketingCloudPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Certification Path to Choose?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Your choice should follow your current project work. The two platforms complement each other —
-          Data Cloud feeds segments to Marketing Cloud for activation — but the certifications target
+          Your choice should follow your current project work. The two platforms complement each other:
+          Data Cloud feeds segments to Marketing Cloud for activation, but the certifications target
           different specialisations.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
@@ -215,15 +215,15 @@ export default function DataCloudVsMarketingCloudPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Client needs a CDP to centralise data from web, app, CRM, and offline sources</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud — designed for cross-channel data unification</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud, designed for cross-channel data unification</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Client needs to send personalised marketing communications at scale</td>
-                <td className="py-2.5 font-semibold text-purple-700">Marketing Cloud — campaign execution is its primary function</td>
+                <td className="py-2.5 font-semibold text-purple-700">Marketing Cloud, campaign execution is its primary function</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Fastest-growing Salesforce skill to develop in 2025+</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud — enormous demand, limited supply of certified professionals</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud, enormous demand, limited supply of certified professionals</td>
               </tr>
             </tbody>
           </table>

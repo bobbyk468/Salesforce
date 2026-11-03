@@ -56,11 +56,11 @@ const faqItems = [
   },
   {
     question: 'What is DataWeave and how important is it for the exam?',
-    answer: 'DataWeave is MuleSoft’s data transformation language — the primary way to map, filter, and reshape data in Mule 4 flows. The published Transforming Data objective is weighted 10%. You need to be comfortable reading and writing DataWeave 2.0 scripts: using map, filter, mapObject, pluck, and conditional logic to transform JSON, XML, and CSV payloads.',
+    answer: 'DataWeave is MuleSoft’s data transformation language, the primary way to map, filter, and reshape data in Mule 4 flows. The published Transforming Data objective is weighted 10%. You need to be comfortable reading and writing DataWeave 2.0 scripts: using map, filter, mapObject, pluck, and conditional logic to transform JSON, XML, and CSV payloads.',
   },
   {
     question: 'What is the difference between MuleSoft Developer I and Developer II?',
-    answer: 'Developer I covers foundational Mule 4 application development — flows, connectors, DataWeave, and basic error handling. Developer II tests advanced topics: Anypoint MQ, batch processing, API-led connectivity design patterns, custom policy implementation, and advanced DataWeave. Developer I is the prerequisite foundation for Developer II.',
+    answer: 'Developer I covers foundational Mule 4 application development, flows, connectors, DataWeave, and basic error handling. Developer II tests advanced topics: Anypoint MQ, batch processing, API-led connectivity design patterns, custom policy implementation, and advanced DataWeave. Developer I is the prerequisite foundation for Developer II.',
   },
   {
     question: 'Which Mule 4 concepts can I review?',
@@ -103,9 +103,9 @@ export default function MuleSoftDeveloperIExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What MuleSoft Developer I Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mule 4 application design</strong> — Flows vs. subflows, event processors (choice, scatter-gather, for-each, parallel-for-each), message structure (payload, attributes, variables), and how data flows through a Mule application.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataWeave 2.0</strong> — Reading and writing DataWeave scripts to transform JSON, XML, and CSV. Key functions: map, filter, mapObject, pluck, groupBy, flatten, and type coercion. Understanding DataWeave’s functional programming model is essential.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Connectors and error handling</strong> — HTTP Request connector, Database connector, File connector, error types (connectivity, expression, security), On Error Continue vs. On Error Propagate, and retry strategies.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mule 4 application design</strong>: Flows vs. subflows, event processors (choice, scatter-gather, for-each, parallel-for-each), message structure (payload, attributes, variables), and how data flows through a Mule application.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataWeave 2.0</strong>: Reading and writing DataWeave scripts to transform JSON, XML, and CSV. Key functions: map, filter, mapObject, pluck, groupBy, flatten, and type coercion. Understanding DataWeave’s functional programming model is essential.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Connectors and error handling</strong>: HTTP Request connector, Database connector, File connector, error types (connectivity, expression, security), On Error Continue vs. On Error Propagate, and retry strategies.</li>
         </ul>
       </section>
 
@@ -146,15 +146,15 @@ export default function MuleSoftDeveloperIExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">Use the official objectives as a checklist; no candidate-frequency claims are made here.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. DataWeave Type System — Coercion, Null Safety, and Default Operator</p>
-            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast — check DataWeave null-handling behavior in current product documentation. The default operator (??) provides a fallback value when an expression is null. payload.field default ’N/A’ prevents null propagation. The exam guide includes data transformation objectives; it does not publish question-frequency data.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. DataWeave Type System: Coercion, Null Safety, and Default Operator</p>
+            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast, check DataWeave null-handling behavior in current product documentation. The default operator (??) provides a fallback value when an expression is null. payload.field default ’N/A’ prevents null propagation. The exam guide includes data transformation objectives; it does not publish question-frequency data.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Error Handling Scope — Try, On Error Continue vs On Error Propagate</p>
-            <p className="text-sm text-gray-700">On Error Continue catches the error, executes the error handler, and continues the flow as if the error did not occur — the original message proceeds. On Error Propagate catches the error, executes the error handler, and then re-throws the error — the calling flow receives the error. Select the error handler behavior that matches whether processing should continue or propagate the error. Know which error scopes nest inside which.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Error Handling Scope: Try, On Error Continue vs On Error Propagate</p>
+            <p className="text-sm text-gray-700">On Error Continue catches the error, executes the error handler, and continues the flow as if the error did not occur, the original message proceeds. On Error Propagate catches the error, executes the error handler, and then re-throws the error, the calling flow receives the error. Select the error handler behavior that matches whether processing should continue or propagate the error. Know which error scopes nest inside which.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. CloudHub vs Runtime Fabric — Worker Size vs Container Config</p>
+            <p className="font-semibold text-gray-900 mb-1">3. CloudHub vs Runtime Fabric: Worker Size vs Container Config</p>
             <p className="text-sm text-gray-700">CloudHub 1.0 uses workers (vCores, memory sizes) on Salesforce-managed infrastructure. CloudHub 2.0 and Runtime Fabric use containers with explicit memory/vCPU allocation on Kubernetes. Exam questions about deployment options test which platform applies to which scenario: customer-managed Kubernetes clusters = RTF; fully managed Salesforce cloud = CloudHub. Consult current deployment documentation for platform-specific resource configuration.</p>
           </div>
         </div>

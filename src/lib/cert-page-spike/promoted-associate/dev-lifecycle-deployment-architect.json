@@ -26,7 +26,7 @@
       "<strong>Real-world problems.</strong> Expect questions on deleting metadata, deployment order and what to do when there is no built-in rollback.",
       "<strong>Pipeline design.</strong> You need to know how source control, scratch orgs and automated tests fit together in CI/CD."
     ],
-    "passRateGuidance": "People who have run releases for a team do best. Before you book, aim for 75% or more on practice tests and make sure you can draw an environment plan for a project with several teams."
+    "passRateGuidance": "People who have run releases for a team do best. Before you book. Aim for 75% or more on practice tests and make sure you can draw an environment plan for a project with several teams."
   },
   "examFormat": {
     "heading": "Development Lifecycle and Deployment Architect Exam Format Explained",
@@ -78,7 +78,7 @@
       },
       {
         "heading": "Testing in the Deployment Pipeline",
-        "body": "Apex code needs at least 75% overall test coverage to deploy to production, and every trigger needs some coverage. You choose the test level: **RunLocalTests** (the default for production when Apex is in the deployment), **RunSpecifiedTests** (faster, but each class in the deployment then needs 75% coverage from the tests you pick), or **RunAllTestsInOrg**. Beyond unit tests, plan for integration testing in a Partial Copy sandbox, user acceptance testing in a Full sandbox, and regression testing before each release. Tests should create their own data and not depend on data in the org."
+        "body": "Apex code needs at least 75% overall test coverage to deploy to production, and every trigger needs some coverage. You choose the test level: **RunLocalTests** (the default for production when Apex is in the deployment), **RunSpecifiedTests** (faster, but each class in the deployment then needs 75% coverage from the tests you pick), or **RunAllTestsInOrg**. Beyond unit tests. Plan for integration testing in a Partial Copy sandbox, user acceptance testing in a Full sandbox, and regression testing before each release. Tests should create their own data and not depend on data in the org."
       },
       {
         "heading": "Release Management and Deployment Order",
@@ -228,7 +228,7 @@
       "correctAnswer": 1,
       "explanation": "With Git as the source of truth, a sandbox refresh loses nothing, and every change has a history with an author.",
       "whyWrong": [
-        "A Full sandbox can be refreshed too, and still has no change history.",
+        "A Full sandbox can be refreshed too; and still has no change history.",
         "A spreadsheet is manual, unreliable and not a real record of changes.",
         "Refreshing less often only delays the problem."
       ]
@@ -244,7 +244,7 @@
       "correctAnswer": 2,
       "explanation": "With RunSpecifiedTests, every class and trigger in the package must reach 75% coverage from the tests you chose.",
       "whyWrong": [
-        "Classes need coverage too, not only triggers.",
+        "Classes need coverage too; not only triggers.",
         "90% is not a Salesforce requirement.",
         "Coverage rules still apply. They just apply per class instead of org-wide."
       ]

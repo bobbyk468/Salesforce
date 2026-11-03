@@ -26,7 +26,7 @@
       "<strong>Data model focus.</strong> Patients, care teams, care plans and the clinical objects based on FHIR.",
       "<strong>Industry processes.</strong> Care management, appointments, utilisation management and data integration."
     ],
-    "passRateGuidance": "Set up a patient with a care plan and care team in a trial org before the exam. Before you book, aim for 75% or more on practice tests."
+    "passRateGuidance": "Set up a patient with a care plan and care team in a trial org before the exam. Before you book. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Health Cloud Accredited Professional Exam Format Explained",

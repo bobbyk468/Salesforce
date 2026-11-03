@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'How does the Slack Consultant exam differ from the Slack Administrator exam?',
-    answer: 'The Slack Administrator exam focuses on workspace management and administration tasks. The Slack Consultant exam focuses on implementation strategy: requirements gathering, solution design, adoption planning, and Salesforce integration. Consultants advise clients on how to deploy and use Slack effectively — administrators manage the ongoing platform.',
+    answer: 'The Slack Administrator exam focuses on workspace management and administration tasks. The Slack Consultant exam focuses on implementation strategy: requirements gathering, solution design, adoption planning, and Salesforce integration. Consultants advise clients on how to deploy and use Slack effectively, administrators manage the ongoing platform.',
   },
   {
     question: 'What Salesforce integration knowledge is needed for Slack Consultant?',
@@ -60,7 +60,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Slack Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Slack Consultant exam are: (1) Workflow Builder vs Slack API — No-Code vs Pro-Code; (2) Canvas vs Posts vs Bookmarks — Persistent Content Types; (3) Salesforce for Slack Integration — Connected App vs Custom Integration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Slack Consultant exam are: (1) Workflow Builder vs Slack API: No-Code vs Pro-Code; (2) Canvas vs Posts vs Bookmarks: Persistent Content Types; (3) Salesforce for Slack Integration: Connected App vs Custom Integration. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('slack-consultant-exam-tips'),
 ]
@@ -78,7 +78,7 @@ export default function SlackConsultantExamTipsPage() {
           Slack Consultant Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Slack Consultant exam tests your ability to implement Slack for enterprise clients — from solution
+          The Slack Consultant exam tests your ability to implement Slack for enterprise clients, from solution
           design through adoption. These tips focus on the implementation strategy, Workflow Builder automation,
           and Salesforce integration that define this exam.
         </p>
@@ -92,9 +92,9 @@ export default function SlackConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Slack Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Solution design</strong> — Mapping client requirements to Slack features: channel strategy (public vs. private, naming conventions), Enterprise Grid design for multi-division organisations, Slack Connect for external collaboration, and workspace vs. channel governance decisions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Workflow automation</strong> — Building automations with Workflow Builder (no-code), using Workflow Builder with Salesforce triggers, understanding when to use Workflow Builder vs. custom Slack apps (API-based automation), and common workflow patterns for sales and service teams.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce integration and adoption</strong> — Slack for Salesforce app configuration, surfacing Salesforce data in Slack, sending Salesforce alerts to Slack channels, change management strategy for Slack adoption, and success metrics for deployment.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Solution design</strong>: Mapping client requirements to Slack features: channel strategy (public vs. private, naming conventions), Enterprise Grid design for multi-division organisations, Slack Connect for external collaboration, and workspace vs. channel governance decisions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Workflow automation</strong>: Building automations with Workflow Builder (no-code), using Workflow Builder with Salesforce triggers, understanding when to use Workflow Builder vs. custom Slack apps (API-based automation), and common workflow patterns for sales and service teams.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce integration and adoption</strong>: Slack for Salesforce app configuration, surfacing Salesforce data in Slack, sending Salesforce alerts to Slack channels, change management strategy for Slack adoption, and success metrics for deployment.</li>
         </ul>
       </section>
 
@@ -129,9 +129,9 @@ export default function SlackConsultantExamTipsPage() {
           what is the simplest, most native Slack solution that meets the stated requirement?
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For channel design questions: use public channels for team-wide communication and knowledge sharing; private channels for sensitive topics. Shared channels (Slack Connect) for external collaboration. Too many channels creates noise — the correct design consolidates to the minimum needed for effective communication.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For channel design questions: use public channels for team-wide communication and knowledge sharing; private channels for sensitive topics. Shared channels (Slack Connect) for external collaboration. Too many channels creates noise, the correct design consolidates to the minimum needed for effective communication.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: Workflow Builder is the no-code answer for most scenarios. Custom Slack apps (using the Slack API) are for complex requirements beyond Workflow Builder capabilities. When a scenario says ’without coding’ or ’non-technical admin’, the answer is Workflow Builder.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For adoption questions: successful Slack deployments start with executive sponsorship and a champion network. Phased rollout — starting with a pilot team — is preferred over big-bang deployment. Success metrics include messages sent, channels active, and response time improvements — not just adoption rate.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For adoption questions: successful Slack deployments start with executive sponsorship and a champion network. Phased rollout, starting with a pilot team, is preferred over big-bang deployment. Success metrics include messages sent, channels active, and response time improvements, not just adoption rate.</li>
         </ul>
       </section>
 
@@ -152,19 +152,19 @@ export default function SlackConsultantExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Slack Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Workflow Builder vs Slack API — No-Code vs Pro-Code</p>
-            <p className="text-sm text-gray-700">Workflow Builder is a no-code tool for automating Slack-native actions: sending messages, collecting form responses, posting to channels on a trigger. The Slack API is for complex integrations requiring custom logic, external data, or dynamic responses. Candidates recommend Workflow Builder for all automation — the exam expects Workflow Builder for simple, Slack-native automations and API/Bolt for complex custom integrations.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Workflow Builder vs Slack API: No-Code vs Pro-Code</p>
+            <p className="text-sm text-gray-700">Workflow Builder is a no-code tool for automating Slack-native actions: sending messages, collecting form responses, posting to channels on a trigger. The Slack API is for complex integrations requiring custom logic, external data, or dynamic responses. Candidates recommend Workflow Builder for all automation, the exam expects Workflow Builder for simple, Slack-native automations and API/Bolt for complex custom integrations.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Canvas vs Posts vs Bookmarks — Persistent Content Types</p>
-            <p className="text-sm text-gray-700">Canvas is the collaborative document surface in a channel for shared notes, meeting agendas, and project details. Posts are formatted messages — they appear in the channel timeline. Bookmarks are pinned links/resources in a channel header. Candidates use Posts for all persistent reference content — the exam expects Canvas for collaborative, editable documents and Bookmarks for quick-access links.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Canvas vs Posts vs Bookmarks: Persistent Content Types</p>
+            <p className="text-sm text-gray-700">Canvas is the collaborative document surface in a channel for shared notes, meeting agendas, and project details. Posts are formatted messages, they appear in the channel timeline. Bookmarks are pinned links/resources in a channel header. Candidates use Posts for all persistent reference content, the exam expects Canvas for collaborative, editable documents and Bookmarks for quick-access links.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Salesforce for Slack Integration — Connected App vs Custom Integration</p>
-            <p className="text-sm text-gray-700">The Salesforce for Slack app is a pre-built integration (Salesforce Records app) that lets users view, create, and update Salesforce records from Slack using the official AppExchange app. Custom Slack-Salesforce integrations use the Slack API + Salesforce REST API. Candidates design custom integrations for standard CRM lookups — the exam expects the AppExchange-native Salesforce for Slack app for standard record operations.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Salesforce for Slack Integration: Connected App vs Custom Integration</p>
+            <p className="text-sm text-gray-700">The Salesforce for Slack app is a pre-built integration (Salesforce Records app) that lets users view, create, and update Salesforce records from Slack using the official AppExchange app. Custom Slack-Salesforce integrations use the Slack API + Salesforce REST API. Candidates design custom integrations for standard CRM lookups, the exam expects the AppExchange-native Salesforce for Slack app for standard record operations.</p>
           </div>
         </div>
       </section>

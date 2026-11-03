@@ -19,21 +19,21 @@
   },
   "examDifficulty": {
     "heading": "Is the Tableau Server Administrator Exam Hard?",
-    "summary": "The Tableau Server Administrator exam is moderately difficult. It requires fluency with TSM commands, server process architecture, and real troubleshooting scenarios — studying documentation without hands-on server management experience leaves significant gaps.",
+    "summary": "The Tableau Server Administrator exam is moderately difficult. It requires fluency with TSM commands, server process architecture, and real troubleshooting scenarios, studying documentation without hands-on server management experience leaves significant gaps.",
     "bullets": [
-      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, which is manageable for candidates familiar with the admin interface.",
-      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
-      "<strong>TSM command-line fluency is essential</strong> — the exam tests specific TSM operations for configuration, backup, restore, and maintenance.",
-      "<strong>Hands-on server administration helps most</strong> — candidates who have managed extract refreshes, configured authentication, and used Admin Views pass at higher rates."
+      "<strong>45 questions</strong> in 90 minutes, roughly two minutes per question, which is manageable for candidates familiar with the admin interface.",
+      "<strong>~70% passing score</strong>: you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>TSM command-line fluency is essential</strong>: the exam tests specific TSM operations for configuration, backup, restore, and maintenance.",
+      "<strong>Hands-on server administration helps most</strong>: candidates who have managed extract refreshes, configured authentication, and used Admin Views pass at higher rates."
     ],
     "passRateGuidance": "Book when you can confidently run TSM commands, troubleshoot failed extract refreshes, configure SAML SSO, and interpret Admin Views without looking up steps."
   },
   "examFormat": {
     "heading": "Tableau Server Administrator Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe server issues — failed extract refreshes, slow dashboard loads, authentication errors — and ask you to identify the correct diagnostic or resolution step.",
+    "scenarioPercent": "Scenario questions describe server issues, failed extract refreshes, slow dashboard loads, authentication errors, and ask you to identify the correct diagnostic or resolution step.",
     "bestWayToPass": [
-      "<strong>TSM commands:</strong> Memorize key TSM operations — tsm status, tsm configuration set/get, tsm maintenance backup/restore, and tsm restart.",
+      "<strong>TSM commands:</strong> Memorize key TSM operations, tsm status, tsm configuration set/get, tsm maintenance backup/restore, and tsm restart.",
       "<strong>Process architecture:</strong> Know what each Tableau Server process does (VizQL, Backgrounder, Data Server, Repository) and which logs to check when it fails.",
       "<strong>Authentication configuration:</strong> Understand SAML SSO, Active Directory sync, OpenID Connect, and Kerberos setup, including common troubleshooting steps.",
       "<strong>Admin Views:</strong> Practice using built-in monitoring dashboards (Background Tasks, Traffic to Views, Stats for Space Used) for proactive maintenance."
@@ -62,7 +62,7 @@
     "blocks": [
       {
         "heading": "Tableau Server Architecture and Processes",
-        "body": "Tableau Server runs as a set of processes that can be distributed across multiple nodes. Key processes: VizQL Server (renders views), Application Server (handles web requests, API calls), Data Server (manages data connections and caching), Backgrounder (runs extract refreshes, subscriptions, flows), Data Engine (stores and queries Hyper extract files), Repository (PostgreSQL — stores user, content, and workgroup metadata). Single-node deployments run all processes on one machine. Multi-node clusters distribute processes for scale and redundancy."
+        "body": "Tableau Server runs as a set of processes that can be distributed across multiple nodes. Key processes: VizQL Server (renders views), Application Server (handles web requests, API calls), Data Server (manages data connections and caching), Backgrounder (runs extract refreshes, subscriptions, flows), Data Engine (stores and queries Hyper extract files), Repository (PostgreSQL, stores user, content, and workgroup metadata). Single-node deployments run all processes on one machine. Multi-node clusters distribute processes for scale and redundancy."
       },
       {
         "heading": "Installation, Configuration, and TSM",
@@ -70,15 +70,15 @@
       },
       {
         "heading": "User Management and Licensing",
-        "body": "Site Roles determine what users can do: Creator (can create and publish workbooks, edit in web), Explorer (can view and interact, limited edit), Viewer (view only). User limit is set by the licence type. Active Directory group sync automates user management — AD group membership maps to Tableau site roles. Multi-site Tableau Server can have users assigned to multiple sites with different roles per site. Licensing compliance: the admin monitors licence usage and usage reports to ensure the organisation stays within licence limits."
+        "body": "Site Roles determine what users can do: Creator (can create and publish workbooks, edit in web), Explorer (can view and interact, limited edit), Viewer (view only). User limit is set by the licence type. Active Directory group sync automates user management: AD group membership maps to Tableau site roles. Multi-site Tableau Server can have users assigned to multiple sites with different roles per site. Licensing compliance: the admin monitors licence usage and usage reports to ensure the organisation stays within licence limits."
       },
       {
         "heading": "Content Management: Projects and Permissions",
-        "body": "Projects organise content (workbooks, data sources, flows) in a hierarchy. Top-level projects and nested projects support complex permission models. Permission capabilities: View, Download, Edit, Publish, Connect, Move, Delete — each can be Allowed, Denied, or Inherited. Permissions inherit from the project to its content — child projects inherit from parent unless overridden. Locking project permissions prevents users from changing content permissions. The admin designs the project hierarchy to match organisational structure and governance requirements."
+        "body": "Projects organise content (workbooks, data sources, flows) in a hierarchy. Top-level projects and nested projects support complex permission models. Permission capabilities: View, Download, Edit, Publish, Connect, Move, Delete; each can be Allowed, Denied, or Inherited. Permissions inherit from the project to its content, child projects inherit from parent unless overridden. Locking project permissions prevents users from changing content permissions. The admin designs the project hierarchy to match organisational structure and governance requirements."
       },
       {
         "heading": "Monitoring, Maintenance, and Troubleshooting",
-        "body": "Admin Views are built-in dashboards for monitoring server health: Background Tasks, User Activity, Traffic to Views, Disk Space. tsm jobs commands manage and monitor background tasks. Log files in ProgramData/Tableau capture detailed process activity — useful for troubleshooting failed extract refreshes, slow view rendering, and authentication issues. Tableau Server repository (PostgreSQL) can be queried for advanced analytics on server usage. Scheduled extract refreshes: the admin monitors success rates and investigates failures (data source credentials, network issues, query timeouts)."
+        "body": "Admin Views are built-in dashboards for monitoring server health: Background Tasks, User Activity, Traffic to Views, Disk Space. tsm jobs commands manage and monitor background tasks. Log files in ProgramData/Tableau capture detailed process activity, useful for troubleshooting failed extract refreshes, slow view rendering, and authentication issues. Tableau Server repository (PostgreSQL) can be queried for advanced analytics on server usage. Scheduled extract refreshes: the admin monitors success rates and investigates failures (data source credentials, network issues, query timeouts)."
       }
     ]
   },

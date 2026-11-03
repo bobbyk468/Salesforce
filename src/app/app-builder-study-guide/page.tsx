@@ -51,7 +51,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How many sections does the App Builder exam have?',
-    answer: 'The Salesforce Platform App Builder exam covers 5 sections: Business Logic and Process Automation (28%), Salesforce Fundamentals (23%), Data Modeling and Management (20%), User Interface (17%), and App Deployment (12%). Business Logic and Process Automation is the single largest section — Flow Builder mastery is essential.',
+    answer: 'The Salesforce Platform App Builder exam covers 5 sections: Business Logic and Process Automation (28%), Salesforce Fundamentals (23%), Data Modeling and Management (20%), User Interface (17%), and App Deployment (12%). Business Logic and Process Automation is the single largest section: Flow Builder mastery is essential.',
   },
   {
     question: 'What is the passing score for the App Builder exam?',
@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'Is App Builder harder than ADM-201?',
-    answer: 'App Builder and ADM-201 are similar in difficulty but test different skills. ADM-201 is broader (7 sections covering the whole platform); App Builder is narrower and deeper on declarative customisation — particularly Flow Builder, custom objects, and Lightning App Builder. Candidates who passed ADM-201 typically find App Builder 20–30% more focused but achievable in 3–4 weeks of targeted study.',
+    answer: 'App Builder and ADM-201 are similar in difficulty but test different skills. ADM-201 is broader (7 sections covering the whole platform); App Builder is narrower and deeper on declarative customisation, particularly Flow Builder, custom objects, and Lightning App Builder. Candidates who passed ADM-201 typically find App Builder 20–30% more focused but achievable in 3–4 weeks of targeted study.',
   },
   {
     question: 'What Flow Builder topics does App Builder test?',
@@ -161,35 +161,35 @@ export default function AppBuilderStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Business Logic and Process Automation (28%)
             </p>
-            <p>Flow Builder is the dominant topic here. <strong>Record-triggered flows:</strong> before-save triggers update fields on the triggering record without DML (faster, more efficient); after-save triggers are needed when you must query or update related records after insert. <strong>Screen flows:</strong> collect user input through screens, use input components (text, picklist, lookup), and can launch from a button on a record page. <strong>Approval processes:</strong> entry criteria, initial submission actions, one or multiple approval steps, final approval/rejection actions. <strong>Validation rules:</strong> evaluate before triggers fire — return an error message when a specific formula is TRUE. <strong>Order of execution</strong> (simplified): system validation → before triggers → custom validation rules → after triggers → assignment rules → workflow rules → flows → process builder → escalation rules.</p>
+            <p>Flow Builder is the dominant topic here. <strong>Record-triggered flows:</strong> before-save triggers update fields on the triggering record without DML (faster, more efficient); after-save triggers are needed when you must query or update related records after insert. <strong>Screen flows:</strong> collect user input through screens, use input components (text, picklist, lookup), and can launch from a button on a record page. <strong>Approval processes:</strong> entry criteria, initial submission actions, one or multiple approval steps, final approval/rejection actions. <strong>Validation rules:</strong> evaluate before triggers fire, return an error message when a specific formula is TRUE. <strong>Order of execution</strong> (simplified): system validation → before triggers → custom validation rules → after triggers → assignment rules → workflow rules → flows → process builder → escalation rules.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Salesforce Fundamentals (23%)
             </p>
-            <p>Platform basics, MVC architecture, and sharing model. <strong>Declarative vs programmatic:</strong> always prefer declarative (Flow, validation rules, formula fields) unless the requirement cannot be met declaratively — the exam rewards the least-code answer. <strong>Sharing model:</strong> org-wide defaults (OWD) control the baseline access; roles grant upward visibility; sharing rules open access horizontally; manual sharing allows one-off exceptions. <strong>User management:</strong> profiles control object access (CRUD) and app access; permission sets grant additional permissions without changing the profile; permission set groups bundle multiple permission sets.</p>
+            <p>Platform basics, MVC architecture, and sharing model. <strong>Declarative vs programmatic:</strong> always prefer declarative (Flow, validation rules, formula fields) unless the requirement cannot be met declaratively, the exam rewards the least-code answer. <strong>Sharing model:</strong> org-wide defaults (OWD) control the baseline access; roles grant upward visibility; sharing rules open access horizontally; manual sharing allows one-off exceptions. <strong>User management:</strong> profiles control object access (CRUD) and app access; permission sets grant additional permissions without changing the profile; permission set groups bundle multiple permission sets.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Data Modeling and Management (20%)
             </p>
-            <p><strong>Object relationships:</strong> master-detail (required parent, cascade delete, roll-up summary fields available), lookup (optional parent, no cascade delete, no roll-up), many-to-many via junction object (two master-detail relationships). <strong>Field types:</strong> formula fields are read-only calculated fields; roll-up summary fields summarise (COUNT, SUM, MIN, MAX) child records — only available on master-detail parent. <strong>Schema considerations:</strong> a lookup field can be converted to master-detail if no existing records violate the required parent rule. <strong>Import tools:</strong> Import Wizard (up to 50,000 records, standard + select custom objects, no CLI), Data Loader (bulk operations, all objects, command-line capable, schedule-able).</p>
+            <p><strong>Object relationships:</strong> master-detail (required parent, cascade delete, roll-up summary fields available), lookup (optional parent, no cascade delete, no roll-up), many-to-many via junction object (two master-detail relationships). <strong>Field types:</strong> formula fields are read-only calculated fields; roll-up summary fields summarise (COUNT, SUM, MIN, MAX) child records, only available on master-detail parent. <strong>Schema considerations:</strong> a lookup field can be converted to master-detail if no existing records violate the required parent rule. <strong>Import tools:</strong> Import Wizard (up to 50,000 records, standard + select custom objects, no CLI), Data Loader (bulk operations, all objects, command-line capable, schedule-able).</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               User Interface (17%)
             </p>
-            <p><strong>Lightning App Builder:</strong> three page types — Home pages (org, app, or user default), Record pages (per object, per record type, per app), App pages (custom tabs). <strong>Dynamic pages:</strong> Component visibility rules hide/show components based on field values or user attributes — no custom code needed. <strong>App Manager:</strong> create Lightning apps with custom branding, utility bar, and navigation items. <strong>Compact layouts</strong> control the fields shown in the highlights panel on record pages and in mobile cards. Record types control page layout, picklist values, and business process assignment.</p>
+            <p><strong>Lightning App Builder:</strong> three page types: Home pages (org, app, or user default), Record pages (per object, per record type, per app), App pages (custom tabs). <strong>Dynamic pages:</strong> Component visibility rules hide/show components based on field values or user attributes, no custom code needed. <strong>App Manager:</strong> create Lightning apps with custom branding, utility bar, and navigation items. <strong>Compact layouts</strong> control the fields shown in the highlights panel on record pages and in mobile cards. Record types control page layout, picklist values, and business process assignment.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               App Deployment (12%)
             </p>
-            <p><strong>Change sets:</strong> outbound change sets (source org — add components), inbound change sets (target org — validate and deploy). Change sets cannot delete components; use metadata API or CLI for destructive changes. <strong>Sandbox types:</strong> Developer (5 MB data, 1/day refresh), Developer Pro (1 GB data), Partial Copy (5 GB data, sampled), Full (full copy of prod, 29-day refresh). <strong>Packages:</strong> unmanaged packages = full source, upgradeable only by customer; managed packages = locked code, upgradeable by publisher (AppExchange). <strong>Order of deployment:</strong> validate (dry run) → check for errors → deploy → activate flows, rules, permission sets.</p>
+            <p><strong>Change sets:</strong> outbound change sets (source org, add components), inbound change sets (target org, validate and deploy). Change sets cannot delete components; use metadata API or CLI for destructive changes. <strong>Sandbox types:</strong> Developer (5 MB data, 1/day refresh), Developer Pro (1 GB data), Partial Copy (5 GB data, sampled), Full (full copy of prod, 29-day refresh). <strong>Packages:</strong> unmanaged packages = full source; upgradeable only by customer; managed packages = locked code, upgradeable by publisher (AppExchange). <strong>Order of deployment:</strong> validate (dry run) → check for errors → deploy → activate flows, rules, permission sets.</p>
           </div>
         </div>
       </section>
@@ -223,10 +223,10 @@ export default function AppBuilderStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week App Builder Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Business Logic and Process Automation (28%):</strong> Flow Builder deep dive — record-triggered (before/after), screen flows, scheduled flows, approval processes, validation rules, and order of execution. Practice: build a record-triggered flow that creates a follow-up task on Opportunity close, and a screen flow for new case intake.</p>
-          <p><strong>Week 2 — Fundamentals + Data Modeling (43%):</strong> Sharing model (OWD, roles, sharing rules), profiles vs permission sets, MVC, custom objects, field types (formula, roll-up summary, lookup, master-detail), schema design patterns, Import Wizard vs Data Loader. Practice: design a data model for a custom app (e.g., event management) with proper relationship types.</p>
-          <p><strong>Week 3 — UI + Deployment (29%):</strong> Lightning App Builder (page types, dynamic components, component visibility), compact layouts, record types, App Manager. Change sets, sandbox types, package types, deployment order. Practice: create a custom Lightning app with a custom record page using dynamic components.</p>
-          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Score 73%+ consistently before booking (App Builder passing is 63% — aim 10 points above).</p>
+          <p><strong>Week 1: Business Logic and Process Automation (28%):</strong> Flow Builder deep dive, record-triggered (before/after), screen flows, scheduled flows, approval processes, validation rules, and order of execution. Practice: build a record-triggered flow that creates a follow-up task on Opportunity close, and a screen flow for new case intake.</p>
+          <p><strong>Week 2: Fundamentals + Data Modeling (43%):</strong> Sharing model (OWD, roles, sharing rules), profiles vs permission sets, MVC, custom objects, field types (formula, roll-up summary, lookup, master-detail), schema design patterns, Import Wizard vs Data Loader. Practice: design a data model for a custom app (e.g., event management) with proper relationship types.</p>
+          <p><strong>Week 3: UI + Deployment (29%):</strong> Lightning App Builder (page types, dynamic components, component visibility), compact layouts, record types, App Manager. Change sets, sandbox types, package types, deployment order. Practice: create a custom Lightning app with a custom record page using dynamic components.</p>
+          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Score 73%+ consistently before booking (App Builder passing is 63%, aim 10 points above).</p>
         </div>
       </section>
 
@@ -244,7 +244,7 @@ export default function AppBuilderStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Deployment questions:</strong> Change sets are used to move metadata between related orgs (sandbox → production with the same organization). Unmanaged packages are for distributing customisations. Managed packages are for AppExchange listings. If the question asks about deleting components, change sets cannot do it — metadata API is required.</span>
+            <span><strong>Deployment questions:</strong> Change sets are used to move metadata between related orgs (sandbox → production with the same organization). Unmanaged packages are for distributing customisations. Managed packages are for AppExchange listings. If the question asks about deleting components, change sets cannot do it, metadata API is required.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -262,8 +262,8 @@ export default function AppBuilderStudyGuidePage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           App Builder has the lowest passing score (63%) of the three admin-track exams, but do not be
-          overconfident — the Flow Builder questions involve detailed scenario analysis. The most common failure
-          mode is weak performance on deployment questions (change sets, sandbox types) — do not neglect the 12%
+          overconfident, the Flow Builder questions involve detailed scenario analysis. The most common failure
+          mode is weak performance on deployment questions (change sets, sandbox types), do not neglect the 12%
           App Deployment section even though it is the smallest.
         </p>
       </section>
@@ -272,16 +272,16 @@ export default function AppBuilderStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
-          <li>Before-save vs after-save record-triggered flow — when to use each and why</li>
+          <li>Before-save vs after-save record-triggered flow, when to use each and why</li>
           <li>Order of execution: validation rules fire before triggers; flows fire after DML</li>
-          <li>Formula fields vs roll-up summary fields — read-only, when each is appropriate</li>
-          <li>Master-detail vs lookup — required parent, cascade delete, roll-up eligibility</li>
+          <li>Formula fields vs roll-up summary fields, read-only, when each is appropriate</li>
+          <li>Master-detail vs lookup, required parent, cascade delete, roll-up eligibility</li>
           <li>OWD settings and their effect on record visibility (not field access)</li>
-          <li>Lightning App Builder page types: Home, Record, App — scope of each</li>
-          <li>Component visibility rules — what attributes you can filter on (field values, user attributes)</li>
+          <li>Lightning App Builder page types: Home, Record, App, scope of each</li>
+          <li>Component visibility rules, what attributes you can filter on (field values, user attributes)</li>
           <li>Sandbox types: Developer (5 MB), Developer Pro (1 GB), Partial Copy (5 GB), Full (full copy)</li>
           <li>Change set limitations: cannot delete metadata, cannot move between unrelated orgs</li>
-          <li>Import Wizard vs Data Loader — 50k record limit, object support, scheduling capability</li>
+          <li>Import Wizard vs Data Loader: 50k record limit, object support, scheduling capability</li>
         </ol>
       </section>
 
@@ -341,7 +341,7 @@ export default function AppBuilderStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/app-builder-vs-developer-i" className="text-sm text-salesforce-dark hover:underline font-medium">→ App Builder vs Platform Developer I — full comparison</Link></li>
+          <li><Link href="/app-builder-vs-developer-i" className="text-sm text-salesforce-dark hover:underline font-medium">→ App Builder vs Platform Developer I, full comparison</Link></li>
         </ul>
       </div>
 
@@ -387,7 +387,7 @@ export default function AppBuilderStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Platform App Builder free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Platform App Builder free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/app-builder"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

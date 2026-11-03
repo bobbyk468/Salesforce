@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'Is MuleSoft Foundations a prerequisite for other MuleSoft certs?',
-    answer: 'No — it is an entry-level standalone certification. However, the concepts it validates (API-led connectivity, Anypoint Platform) provide a strong foundation before taking MuleSoft Developer I.',
+    answer: 'No; it is an entry-level standalone certification. However, the concepts it validates (API-led connectivity, Anypoint Platform) provide a strong foundation before taking MuleSoft Developer I.',
   },
   {
     question: 'How hard is the MuleSoft Integration Foundations exam?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most MuleSoft Integration Foundations candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Foundations exam are: (1) API-Led Connectivity Layers — Which Layer Handles Which Scenario; (2) Anypoint Platform Components — Which Tool Does What; (3) DataWeave — Output Directives and Basic Transformation Syntax. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Foundations exam are: (1) API-Led Connectivity Layers: Which Layer Handles Which Scenario; (2) Anypoint Platform Components: Which Tool Does What; (3) DataWeave: Output Directives and Basic Transformation Syntax. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('mulesoft-integration-foundations-exam-tips'),
 ]
@@ -85,7 +85,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         </h1>
         <p className="text-lg text-gray-600">
           The MuleSoft Integration Foundations certification targets project team members who need working knowledge
-          of API-led connectivity and the Anypoint Platform — not developers writing Mule code. These tips help you
+          of API-led connectivity and the Anypoint Platform, not developers writing Mule code. These tips help you
           focus on the right concepts and avoid over-engineering your study plan.
         </p>
       </header>
@@ -105,7 +105,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass MuleSoft Integration Foundations</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 40 questions in 70 minutes. Passing score is 70% (28/40 questions). Aim for 80%+ on practice sets before booking.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam fee is $75 USD — significantly lower than most Salesforce/MuleSoft certifications. It is accessible to non-developers on a project team.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam fee is $75 USD, significantly lower than most Salesforce/MuleSoft certifications. It is accessible to non-developers on a project team.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />API-led connectivity (System, Process, Experience layers) is the most-tested concept. Understand the purpose of each layer and why the pattern exists.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Know what each Anypoint Platform tool does: Design Center, Exchange, Studio, API Manager, Runtime Manager. Questions often describe a task and ask which tool handles it.</li>
         </ul>
@@ -115,7 +115,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">3-Week MuleSoft Integration Foundations Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <p><strong>Week 1:</strong> Integration fundamentals and API-led connectivity. Understand why point-to-point integration creates spaghetti architecture and how API-led connectivity solves it with reusable, composable layers. Memorise the three layers: System APIs (unlock data from systems of record), Process APIs (orchestrate and transform), Experience APIs (tailor data to the consumer channel).</p>
-          <p><strong>Week 2:</strong> Anypoint Platform tools. Design Center (API design in RAML or OpenAPI), Anypoint Exchange (asset marketplace for APIs and connectors), Anypoint Studio (local IDE for building Mule apps), API Manager (security policies, rate limits, SLA tiers, client app management), Runtime Manager (deploy and monitor Mule apps, view logs and metrics). DataWeave is MuleSoft’s data transformation language — know what it does, not how to write it.</p>
+          <p><strong>Week 2:</strong> Anypoint Platform tools. Design Center (API design in RAML or OpenAPI), Anypoint Exchange (asset marketplace for APIs and connectors), Anypoint Studio (local IDE for building Mule apps), API Manager (security policies, rate limits, SLA tiers, client app management), Runtime Manager (deploy and monitor Mule apps, view logs and metrics). DataWeave is MuleSoft’s data transformation language. Know what it does, not how to write it.</p>
           <p><strong>Week 3:</strong> Core concepts and terminology. Mule Events (payload + attributes + variables), Connectors (pre-built, reusable components for systems like Salesforce, SAP, databases), the business value of composable integration (reuse, self-service, reduced IT backlog). Practice with full 40-question mock exams targeting 80%+ before booking.</p>
         </div>
       </section>
@@ -129,7 +129,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>API layer questions:</strong> System API = unlock SAP, Salesforce, databases (backend, stable, change rarely). Process API = orchestrate calls to multiple System APIs, apply business logic, transform data. Experience API = expose data tailored to mobile, web, or partner portals. If a question says &ldquo;expose data from SAP&rdquo; the answer is System API. If &ldquo;combine data from three systems&rdquo; it is Process API.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Anypoint Platform tool questions:</strong> Design = Design Center. Publish/discover assets = Exchange. Build locally = Studio. Apply security policies and manage client access = API Manager. Deploy and monitor = Runtime Manager. Know these five associations cold.</span></li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Business value questions:</strong> The key outcome of API-led connectivity is reuse and self-service. Teams can consume published APIs without rebuilding integrations, reducing time-to-delivery. Avoid answers that focus only on cost savings — the primary value is speed and reusability.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Business value questions:</strong> The key outcome of API-led connectivity is reuse and self-service. Teams can consume published APIs without rebuilding integrations, reducing time-to-delivery. Avoid answers that focus only on cost savings, the primary value is speed and reusability.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Terminology questions:</strong> A Connector provides pre-built connectivity to an external system. A Mule Event is the unit of data flowing through a flow (payload + attributes + variables). DataWeave transforms data formats (JSON to XML, CSV to JSON, etc.) within integration flows.</span></li>
         </ul>
       </section>
@@ -153,18 +153,18 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Integration Foundations Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. API-Led Connectivity Layers — Which Layer Handles Which Scenario</p>
+            <p className="font-semibold text-gray-900 mb-1">1. API-Led Connectivity Layers: Which Layer Handles Which Scenario</p>
             <p className="text-sm text-gray-700">System APIs connect directly to backend systems of record (SAP, Salesforce, databases). Process APIs orchestrate calls across multiple System APIs and apply business logic. Experience APIs expose tailored data to specific consumers (mobile app, partner portal, web). Exam scenarios describe an integration need and expect you to identify the correct layer. The most common mistake: placing business logic (order orchestration) in an Experience API instead of a Process API.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Anypoint Platform Components — Which Tool Does What</p>
-            <p className="text-sm text-gray-700">Candidates confuse: Design Center (API design with RAML/OAS specifications), Anypoint Studio (IDE for building Mule apps locally), Exchange (asset marketplace for reusable APIs and connectors), Runtime Manager (deployment and monitoring), API Manager (applying policies and managing client access). Exam scenarios describe a task and expect the correct tool — &ldquo;apply a rate-limiting policy&rdquo; = API Manager; &ldquo;publish a reusable connector&rdquo; = Exchange.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Anypoint Platform Components: Which Tool Does What</p>
+            <p className="text-sm text-gray-700">Candidates confuse: Design Center (API design with RAML/OAS specifications), Anypoint Studio (IDE for building Mule apps locally), Exchange (asset marketplace for reusable APIs and connectors), Runtime Manager (deployment and monitoring), API Manager (applying policies and managing client access). Exam scenarios describe a task and expect the correct tool: &ldquo;apply a rate-limiting policy&rdquo; = API Manager; &ldquo;publish a reusable connector&rdquo; = Exchange.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. DataWeave — Output Directives and Basic Transformation Syntax</p>
+            <p className="font-semibold text-gray-900 mb-1">3. DataWeave: Output Directives and Basic Transformation Syntax</p>
             <p className="text-sm text-gray-700">DataWeave scripts must begin with %dw 2.0 followed by an output directive (e.g., output application/json). payload accesses the incoming message body. map transforms arrays element-by-element. filter selects elements matching a condition. Candidates forget the output directive (causing a runtime error) or confuse map (which transforms each element) with pluck (which converts an object to an array of key-value pairs).</p>
           </div>
         </div>
@@ -185,7 +185,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare the Alternatives</h2>
         <ul className="space-y-2">
           <li><Link href="/mulesoft-integration-foundations-study-guide" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Integration Foundations full study guide</Link></li>
-          <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations — which to take?</Link></li>
+          <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations, which to take?</Link></li>
         </ul>
       </div>
 

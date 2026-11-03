@@ -60,7 +60,7 @@
     "scenarioPercent": "The official guide does not publish a percentage of scenario-based questions. Practice applying the stated objectives to realistic email, data, automation, and reporting requirements.",
     "bestWayToPass": [
       "<strong>Know the subscriber data model:</strong> All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and how global unsubscribes override everything else.",
-      "<strong>Learn core AMPscript functions:</strong> Lookup(), LookupRows(), AttributeValue(), and IIF() cover most exam scenarios &mdash; practice reading code snippets and predicting output.",
+      "<strong>Learn core AMPscript functions:</strong> Lookup(), LookupRows(), AttributeValue(), and IIF() cover most exam scenarios, practice reading code snippets and predicting output.",
       "<strong>Distinguish Journey Builder from Automation Studio:</strong> Journey Builder is customer-behavior-driven; Automation Studio is schedule/event-driven. Know which activities are exclusive to each tool.",
       "<strong>Understand email authentication:</strong> Know what SPF, DKIM, and DMARC each do, how the Sender Authentication Package bundles them, and how IP warming protects sender reputation."
     ]
@@ -131,15 +131,15 @@
     "blocks": [
       {
         "heading": "Email Deliverability: SPF, DKIM, and DMARC",
-        "body": "SPF lists authorised sending IPs in DNS. DKIM adds a cryptographic signature to email headers — receiving servers verify authenticity using the domain's public key. DMARC defines policy (none, quarantine, reject) when SPF or DKIM fails. All three are included in Marketing Cloud's Sender Authentication Package (SAP). The exam tests what each does and which threat each addresses."
+        "body": "SPF lists authorised sending IPs in DNS. DKIM adds a cryptographic signature to email headers, receiving servers verify authenticity using the domain's public key. DMARC defines policy (none, quarantine, reject) when SPF or DKIM fails. All three are included in Marketing Cloud's Sender Authentication Package (SAP). The exam tests what each does and which threat each addresses."
       },
       {
         "heading": "Subscriber Management and List Types",
-        "body": "**All Subscribers list** is the master subscriber list — it controls global unsubscribes. Publication Lists are opt-in lists for specific content types. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends. **Data Extensions** store relational data and support segmentation with SQL queries and Data Filters. Know the precedence: global unsubscribes override everything."
+        "body": "**All Subscribers list** is the master subscriber list, it controls global unsubscribes. Publication Lists are opt-in lists for specific content types. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends. **Data Extensions** store relational data and support segmentation with SQL queries and Data Filters. Know the precedence: global unsubscribes override everything."
       },
       {
         "heading": "Send Classification and Commercial vs Transactional",
-        "body": "Commercial emails are marketing messages — require the CAN-SPAM unsubscribe footer. Transactional emails (order confirmations, receipts) can bypass commercial unsubscribe rules but must be genuinely transactional. In Marketing Cloud, Send Classifications define whether a send is commercial or transactional — misclassifying marketing emails as transactional violates CAN-SPAM."
+        "body": "Commercial emails are marketing messages, require the CAN-SPAM unsubscribe footer. Transactional emails (order confirmations, receipts) can bypass commercial unsubscribe rules but must be genuinely transactional. In Marketing Cloud, Send Classifications define whether a send is commercial or transactional, misclassifying marketing emails as transactional violates CAN-SPAM."
       },
       {
         "heading": "AMPscript Key Functions",
@@ -147,7 +147,7 @@
       },
       {
         "heading": "Tracking Metrics to Know",
-        "body": "Delivered Rate = (Sent &minus; Bounces) / Sent. Open Rate = Unique Opens / Delivered. Click-to-Open Rate (CTOR) = Clicks / Opens — measures content relevance. Hard bounces = permanent failures (invalid address). Soft bounces = temporary failures (mailbox full). Marketing Cloud auto-unsubscribes hard-bounced addresses. Match the metric to the business question asked in each scenario."
+        "body": "Delivered Rate = (Sent &minus; Bounces) / Sent. Open Rate = Unique Opens / Delivered. Click-to-Open Rate (CTOR) = Clicks / Opens, measures content relevance. Hard bounces = permanent failures (invalid address). Soft bounces = temporary failures (mailbox full). Marketing Cloud auto-unsubscribes hard-bounced addresses. Match the metric to the business question asked in each scenario."
       }
     ]
   },
@@ -382,7 +382,7 @@
       "explanation": "Engagement rates are measured against what actually reached the mailbox, which is the delivered count.",
       "whyWrong": [
         "Click-to-open rate uses opens; click-through rate uses delivered.",
-        "Sent includes bounces, which never reached anyone.",
+        "Sent includes bounces; which never reached anyone.",
         "Account-wide subscriber counts are unrelated to one send."
       ]
     },

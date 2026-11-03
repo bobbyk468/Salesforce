@@ -47,7 +47,7 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Collaboration with Stakeholders', weight: 21, note: 'Facilitation techniques — workshops, interviews, observation, surveys. Managing conflicting requirements, building consensus, and communicating with executives vs end users.' },
+  { name: 'Collaboration with Stakeholders', weight: 21, note: 'Facilitation techniques, workshops, interviews, observation, surveys. Managing conflicting requirements, building consensus, and communicating with executives vs end users.' },
   { name: 'Business Analysis Planning', weight: 18, note: 'Defining the BA approach, planning deliverables, estimating effort, and setting success metrics. Understanding project governance, roles, and agile vs waterfall BA activities.' },
   { name: 'Needs Assessment', weight: 18, note: 'Identifying business problems and opportunities, defining as-is vs to-be state, root cause analysis, solution scoping, and building a business case for Salesforce investment.' },
   { name: 'Customer Discovery', weight: 17, note: 'Uncovering stakeholder needs through empathy mapping, discovery sessions, and user story mapping. Documenting personas and journeys in a Salesforce context.' },
@@ -63,15 +63,15 @@ const faqItems = [
   },
   {
     question: 'Is ADM-201 required before the Business Analyst exam?',
-    answer: 'ADM-201 is not a formal prerequisite, but Salesforce strongly recommends it. The Business Analyst exam tests scenario-based Salesforce knowledge — understanding objects, automation, reporting, and the data model. Candidates without ADM-201 knowledge struggle with the Analysis and Solution Evaluation sections where Salesforce features are referenced directly.',
+    answer: 'ADM-201 is not a formal prerequisite, but Salesforce strongly recommends it. The Business Analyst exam tests scenario-based Salesforce knowledge, understanding objects, automation, reporting, and the data model. Candidates without ADM-201 knowledge struggle with the Analysis and Solution Evaluation sections where Salesforce features are referenced directly.',
   },
   {
     question: 'How long should I study for the Business Analyst certification?',
-    answer: 'Most candidates spend 6–10 weeks preparing, averaging 8–12 hours per week. The exam heavily favours scenario-based thinking over feature memorisation — practising stakeholder scenarios, writing user stories, and tracing requirements through delivery is more effective than rote study. Candidates with prior BA experience often prepare in 4–6 weeks.',
+    answer: 'Most candidates spend 6–10 weeks preparing, averaging 8–12 hours per week. The exam heavily favours scenario-based thinking over feature memorisation, practising stakeholder scenarios, writing user stories, and tracing requirements through delivery is more effective than rote study. Candidates with prior BA experience often prepare in 4–6 weeks.',
   },
   {
     question: 'What is the hardest section of the Business Analyst exam?',
-    answer: 'Collaboration with Stakeholders (21%) and Business Analysis Planning (18%) are typically the hardest sections. They test nuanced facilitation skills — choosing the right elicitation technique for a given scenario (interview vs workshop vs survey) and planning BA activities across project types (agile, waterfall, hybrid).',
+    answer: 'Collaboration with Stakeholders (21%) and Business Analysis Planning (18%) are typically the hardest sections. They test nuanced facilitation skills, choosing the right elicitation technique for a given scenario (interview vs workshop vs survey) and planning BA activities across project types (agile, waterfall, hybrid).',
   },
   {
     question: 'What resources are best for the Business Analyst exam?',
@@ -99,7 +99,7 @@ export default function BusinessAnalystStudyGuidePage() {
           Salesforce Business Analyst Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Everything you need to pass the Salesforce Certified Business Analyst exam — exam sections, study plan, scenario tips, and free practice questions.
+          Everything you need to pass the Salesforce Certified Business Analyst exam, exam sections, study plan, scenario tips, and free practice questions.
         </p>
       </div>
 
@@ -168,13 +168,13 @@ export default function BusinessAnalystStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Customer Discovery & Needs Assessment — empathy mapping, discovery sessions, as-is/to-be analysis, business case fundamentals.' },
-            { week: 'Week 2', focus: 'Business Analysis Planning — BA approach selection, agile vs waterfall activities, planning workshops, effort estimation.' },
-            { week: 'Week 3', focus: 'Collaboration with Stakeholders — facilitation techniques, elicitation methods (interviews, workshops, surveys, observation), conflict resolution.' },
-            { week: 'Week 4', focus: 'Analysis — user stories, acceptance criteria, MoSCoW prioritisation, process flow diagrams, backlog grooming.' },
-            { week: 'Week 5', focus: 'Traceability & Monitoring + Solution Evaluation — requirements traceability matrices, adoption metrics, gap analysis, iteration planning.' },
-            { week: 'Week 6', focus: 'Salesforce Feature Knowledge — data model, automation (Flow), security model, reports/dashboards, AppExchange (for Analysis and Solution Evaluation sections).' },
-            { week: 'Week 7', focus: 'Scenario practice — work through 50–60 scenario-based questions covering all 7 sections. Focus on identifying the right BA technique for each scenario.' },
+            { week: 'Week 1', focus: 'Customer Discovery & Needs Assessment, empathy mapping, discovery sessions, as-is/to-be analysis, business case fundamentals.' },
+            { week: 'Week 2', focus: 'Business Analysis Planning: BA approach selection, agile vs waterfall activities, planning workshops, effort estimation.' },
+            { week: 'Week 3', focus: 'Collaboration with Stakeholders, facilitation techniques, elicitation methods (interviews, workshops, surveys, observation), conflict resolution.' },
+            { week: 'Week 4', focus: 'Analysis, user stories, acceptance criteria, MoSCoW prioritisation, process flow diagrams, backlog grooming.' },
+            { week: 'Week 5', focus: 'Traceability & Monitoring + Solution Evaluation, requirements traceability matrices, adoption metrics, gap analysis, iteration planning.' },
+            { week: 'Week 6', focus: 'Salesforce Feature Knowledge, data model, automation (Flow), security model, reports/dashboards, AppExchange (for Analysis and Solution Evaluation sections).' },
+            { week: 'Week 7', focus: 'Scenario practice, work through 50–60 scenario-based questions covering all 7 sections. Focus on identifying the right BA technique for each scenario.' },
             { week: 'Week 8', focus: 'Full mock exams, review weak areas, and timed practice. Aim for consistent 75%+ on practice sets before scheduling the real exam.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -199,14 +199,14 @@ export default function BusinessAnalystStudyGuidePage() {
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling your real exam. The Business Analyst exam is scenario-heavy — if you can correctly identify the right BA technique in a given situation, you are ready. Focus extra time on Collaboration with Stakeholders (21%) and Business Analysis Planning (18%) as these carry the most weight.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling your real exam. The Business Analyst exam is scenario-heavy, if you can correctly identify the right BA technique in a given situation, you are ready. Focus extra time on Collaboration with Stakeholders (21%) and Business Analysis Planning (18%) as these carry the most weight.</p>
       </div>
 
       {/* Top 10 Review */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
-          <li>Elicitation techniques: interviews, workshops, surveys, observation — when to use each</li>
+          <li>Elicitation techniques: interviews, workshops, surveys, observation, when to use each</li>
           <li>User story format and acceptance criteria writing</li>
           <li>MoSCoW prioritisation and story point estimation</li>
           <li>As-is vs to-be process mapping and gap analysis</li>

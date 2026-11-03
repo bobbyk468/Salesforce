@@ -6,7 +6,7 @@ export default function B2CSolutionIntegrationDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">B2C multi-cloud integration pattern (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         <strong>B2C Commerce</strong> captures purchase behavior, syncs it to <strong>Marketing Cloud</strong> for
-        personalized campaigns, and hands off post-purchase issues to <strong>Service Cloud</strong> — all three
+        personalized campaigns, and hands off post-purchase issues to <strong>Service Cloud</strong>: all three
         need a shared customer identity to stay in sync.
       </p>
       <svg role="img" aria-labelledby="b2csi-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">

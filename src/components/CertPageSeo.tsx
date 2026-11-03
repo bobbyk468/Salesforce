@@ -8,7 +8,7 @@ import {
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
 import { getFaqPageJsonLd } from '@/lib/schema-data'
 
-/** Same 2-question slice CertPageFaq renders — schema must match visible content. */
+/** Same 2-question slice CertPageFaq renders; schema must match visible content. */
 const VISIBLE_FAQ_COUNT = 2
 
 const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'

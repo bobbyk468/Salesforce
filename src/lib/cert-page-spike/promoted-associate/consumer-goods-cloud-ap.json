@@ -22,9 +22,9 @@
     "summary": "The Consumer Goods Cloud AP exam is moderately difficult. It tests CPG-specific workflows like visit planning, in-store execution, direct store delivery, and retail analytics. Candidates without exposure to consumer goods field operations will find the domain terminology and retail execution concepts challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>Field execution workflows</strong> — you must understand visit plans, route optimisation, shelf audits, and how surveys capture compliance data during store visits.",
-      "<strong>Order and inventory management</strong> — questions cover direct store delivery (van sales), pricing rules, and inventory tracking at the vehicle level."
+      "<strong>~65% passing score</strong>: roughly 39 correct answers needed.",
+      "<strong>Field execution workflows</strong>: you must understand visit plans, route optimisation, shelf audits, and how surveys capture compliance data during store visits.",
+      "<strong>Order and inventory management</strong>: questions cover direct store delivery (van sales), pricing rules, and inventory tracking at the vehicle level."
     ],
     "passRateGuidance": "Score 75%+ on practice exams and ensure you understand the end-to-end retail execution workflow before booking. Hands-on experience with Consumer Goods Cloud visit planning or in-store audit configuration is strongly recommended."
   },
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers Consumer Goods Cloud implementation — visit planning, retail execution, in-store audits, direct store delivery, and field team performance management for CPG companies.",
+    "description": "This exam covers Consumer Goods Cloud implementation, visit planning, retail execution, in-store audits, direct store delivery, and field team performance management for CPG companies.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -61,11 +61,11 @@
     "blocks": [
       {
         "heading": "Visit Planning & Route Optimization",
-        "body": "Consumer Goods Cloud supports field sales and merchandising teams that visit retail stores. Visit Plans define which stores to visit, visit frequency, and visit activities. Route Optimization calculates the most efficient travel sequence for a sales rep's daily visits. Visit Templates specify which tasks (surveys, order taking, shelf audits) are required at each store type. Priority scoring ranks stores for visit scheduling based on sales volume or compliance risk. The AP exam tests how to configure visit plans, assign them to field teams, and set up route optimization rules — know the difference between manual route assignment and automated optimization."
+        "body": "Consumer Goods Cloud supports field sales and merchandising teams that visit retail stores. Visit Plans define which stores to visit, visit frequency, and visit activities. Route Optimization calculates the most efficient travel sequence for a sales rep's daily visits. Visit Templates specify which tasks (surveys, order taking, shelf audits) are required at each store type. Priority scoring ranks stores for visit scheduling based on sales volume or compliance risk. The AP exam tests how to configure visit plans, assign them to field teams, and set up route optimization rules. Know the difference between manual route assignment and automated optimization."
       },
       {
         "heading": "In-Store Execution & Retail Audits",
-        "body": "During a store visit, the field rep uses the Salesforce mobile app to complete Activities: shelf audits (planogram compliance), order capture, promotions execution, and competitive data collection. Surveys capture structured data — product availability, shelf position, facing count. Photos attached to visit records document compliance issues. Einstein Vision can analyze shelf images for planogram compliance. Key Performance Indicators (KPIs) measure execution quality per store and rep. The exam tests how to configure survey questions, how photos are attached and surfaced in reports, and how to set up KPI targets for field team performance management."
+        "body": "During a store visit, the field rep uses the Salesforce mobile app to complete Activities: shelf audits (planogram compliance), order capture, promotions execution, and competitive data collection. Surveys capture structured data, product availability, shelf position, facing count. Photos attached to visit records document compliance issues. Einstein Vision can analyze shelf images for planogram compliance. Key Performance Indicators (KPIs) measure execution quality per store and rep. The exam tests how to configure survey questions, how photos are attached and surfaced in reports, and how to set up KPI targets for field team performance management."
       },
       {
         "heading": "Order Management & Direct Store Delivery",
@@ -197,7 +197,7 @@
       ]
     },
     {
-      "question": "A rep must check shelf stock, take a photo and place a reorder during one visit. How is this structured?",
+      "question": "A rep must check shelf stock. Take a photo and place a reorder during one visit. How is this structured?",
       "options": [
         "As three separate visits to the same outlet on the same day of the week",
         "As three cases raised against the retailer's account for someone to action",
@@ -361,7 +361,7 @@
       "options": [
         "It is held on the device until an administrator approves the upload manually",
         "It syncs to the org automatically",
-        "It is discarded, because only data captured while online can be trusted",
+        "It is discarded; because only data captured while online can be trusted",
         "It is emailed to the field manager as an attachment for them to key in"
       ],
       "correctAnswer": 1,

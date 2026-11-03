@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Is the Technical Architect worth pursuing?',
-    answer: 'The Technical Architect is the most prestigious credential in the Salesforce ecosystem — held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
+    answer: 'The Technical Architect is the most prestigious credential in the Salesforce ecosystem, held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
   },
   {
     question: 'What prerequisites are needed before attempting the CTA?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Technical Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Technical Architect exam are: (1) CTA Is a Review Board — Not a Written Exam; (2) Holistic Architecture — Every Decision Involves Trade-Offs; (3) Governance and Delivery — Architecture Without Delivery Plan Is Incomplete. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Technical Architect exam are: (1) CTA Is a Review Board: Not a Written Exam; (2) Holistic Architecture: Every Decision Involves Trade-Offs; (3) Governance and Delivery: Architecture Without Delivery Plan Is Incomplete. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('technical-architect-exam-tips'),
 ]
@@ -84,7 +84,7 @@ export default function TechnicalArchitectExamTipsPage() {
           Salesforce Certified Technical Architect (CTA) Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Salesforce CTA is the highest Salesforce credential — requiring both a written evaluation
+          The Salesforce CTA is the highest Salesforce credential, requiring both a written evaluation
           exam and a live Review Board presentation. These tips cover the CTA pathway, evaluation exam
           strategy, and Review Board preparation for the most elite Salesforce certification.
         </p>
@@ -104,9 +104,9 @@ export default function TechnicalArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What the CTA Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Enterprise architecture breadth</strong> — Advanced data modelling (large data volumes, skinny tables, custom indexes), integration architecture (SOAP, REST, event-driven, middleware), security architecture (authentication, authorisation, field-level security at scale), and deployment strategy for large complex orgs with multiple environments and release trains.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Multi-cloud solution design</strong> — Designing solutions that span multiple Salesforce clouds (Sales Cloud, Service Cloud, Experience Cloud, Marketing Cloud, MuleSoft) and integrate with external systems. Understanding which cloud handles which business function and how they exchange data without creating tight coupling.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Review Board presentation skills</strong> — Presenting a well-structured architecture solution to a panel of CTA examiners: clearly defining the problem, making and defending architectural trade-offs, communicating technical decisions in business terms, and answering probing follow-up questions under pressure.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Enterprise architecture breadth</strong>: Advanced data modelling (large data volumes, skinny tables, custom indexes), integration architecture (SOAP, REST, event-driven, middleware), security architecture (authentication, authorisation, field-level security at scale), and deployment strategy for large complex orgs with multiple environments and release trains.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Multi-cloud solution design</strong>: Designing solutions that span multiple Salesforce clouds (Sales Cloud, Service Cloud, Experience Cloud, Marketing Cloud, MuleSoft) and integrate with external systems. Understanding which cloud handles which business function and how they exchange data without creating tight coupling.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Review Board presentation skills</strong>: Presenting a well-structured architecture solution to a panel of CTA examiners: clearly defining the problem, making and defending architectural trade-offs, communicating technical decisions in business terms, and answering probing follow-up questions under pressure.</li>
         </ul>
       </section>
 
@@ -138,12 +138,12 @@ export default function TechnicalArchitectExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Review Board scenarios describe a complex enterprise with multiple business requirements,
           technical constraints, and competing priorities. The examiners evaluate your ability to
-          make defensible architectural decisions — not just list features.
+          make defensible architectural decisions, not just list features.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Structure every architectural decision as: context (what constraint or requirement drives this decision), options considered (what alternatives you evaluated), chosen approach (what you selected and why), and trade-offs accepted (what you gave up and why that is acceptable). Examiners probe every ’why’ — know your justifications cold.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For integration questions: synchronous integration (REST/SOAP) when the caller needs an immediate response and latency is acceptable. Event-driven (Platform Events, Change Data Capture) when decoupling is more important than immediacy. Middleware (MuleSoft) when transformation, routing, or orchestration is needed. Never use callouts in Apex triggers — always use async patterns.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For large data volume questions: when record counts exceed 10 million, consider: skinny tables for frequently-queried field subsets, custom indexes for non-selective fields, archiving strategies (Big Objects), and query optimisation. Batch Apex is the standard for processing large volumes — know its limits (50 million records per batch job, 2,000 Apex jobs in the queue).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Structure every architectural decision as: context (what constraint or requirement drives this decision), options considered (what alternatives you evaluated), chosen approach (what you selected and why), and trade-offs accepted (what you gave up and why that is acceptable). Examiners probe every ’why’. Know your justifications cold.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For integration questions: synchronous integration (REST/SOAP) when the caller needs an immediate response and latency is acceptable. Event-driven (Platform Events, Change Data Capture) when decoupling is more important than immediacy. Middleware (MuleSoft) when transformation, routing, or orchestration is needed. Never use callouts in Apex triggers, always use async patterns.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For large data volume questions: when record counts exceed 10 million, consider: skinny tables for frequently-queried field subsets, custom indexes for non-selective fields, archiving strategies (Big Objects), and query optimisation. Batch Apex is the standard for processing large volumes, know its limits (50 million records per batch job, 2,000 Apex jobs in the queue).</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function TechnicalArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Technical Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. CTA Is a Review Board — Not a Written Exam</p>
-            <p className="text-sm text-gray-700">The Certified Technical Architect credential is awarded via a Review Board presentation: a panel of existing CTAs evaluates a candidate on a scenario they prepare and defend live. There is no multiple-choice exam. Candidates prepare for CTA like a standard exam — the Review Board requires deep scenario analysis, architecture defence, and communication skills, not just technical knowledge recall.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. CTA Is a Review Board: Not a Written Exam</p>
+            <p className="text-sm text-gray-700">The Certified Technical Architect credential is awarded via a Review Board presentation: a panel of existing CTAs evaluates a candidate on a scenario they prepare and defend live. There is no multiple-choice exam. Candidates prepare for CTA like a standard exam, the Review Board requires deep scenario analysis, architecture defence, and communication skills, not just technical knowledge recall.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Holistic Architecture — Every Decision Involves Trade-Offs</p>
-            <p className="text-sm text-gray-700">The CTA Review Board evaluates whether candidates can make defensible architecture decisions under constraints (budget, timeline, org maturity, data volume). "Best practice" answers that ignore constraints are penalised. Candidates recommend ideal-state architectures — the exam expects pragmatic recommendations that explicitly acknowledge trade-offs and justify the chosen approach given the scenario constraints.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Holistic Architecture: Every Decision Involves Trade-Offs</p>
+            <p className="text-sm text-gray-700">The CTA Review Board evaluates whether candidates can make defensible architecture decisions under constraints (budget, timeline, org maturity, data volume). "Best practice" answers that ignore constraints are penalised. Candidates recommend ideal-state architectures, the exam expects pragmatic recommendations that explicitly acknowledge trade-offs and justify the chosen approach given the scenario constraints.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Governance and Delivery — Architecture Without Delivery Plan Is Incomplete</p>
-            <p className="text-sm text-gray-700">A sound CTA proposal covers not just the technical architecture but also: governance model (who owns what), release/deployment strategy, testing approach, and post-go-live support model. Candidates present technology-only solutions — the board expects end-to-end delivery considerations including team structure, change management, and risk mitigation.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Governance and Delivery: Architecture Without Delivery Plan Is Incomplete</p>
+            <p className="text-sm text-gray-700">A sound CTA proposal covers not just the technical architecture but also: governance model (who owns what), release/deployment strategy, testing approach, and post-go-live support model. Candidates present technology-only solutions, the board expects end-to-end delivery considerations including team structure, change management, and risk mitigation.</p>
           </div>
         </div>
       </section>

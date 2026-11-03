@@ -30,7 +30,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     whyWrong: [
       "Workflow Rules can update fields or send notifications, but they don't handle the record-ownership assignment logic Lead Assignment Rules are built for.",
       "Process Builder can trigger actions on record changes, but lead-to-rep routing by territory is the specific job of Lead Assignment Rules, not a general Process Builder use case.",
-      "Flow can be built to reassign records, but it's not the purpose-built, native tool Salesforce provides for lead routing — that's Lead Assignment Rules."
+      "Flow can be built to reassign records, but it's not the purpose-built, native tool Salesforce provides for lead routing, that's Lead Assignment Rules."
     ]
   },
   {
@@ -46,7 +46,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     whyWrong: [
       "Assigning records to users is handled by assignment rules, not Validation Rules.",
       "Sending email notifications is an automation action (Flow/Workflow), not what Validation Rules do.",
-      "Validation Rules block invalid saves — they don't automatically update field values themselves."
+      "Validation Rules block invalid saves, they don't automatically update field values themselves."
     ]
   },
   {
@@ -60,9 +60,9 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     correctAnswer: 2,
     explanation: "Public Read/Write sharing setting allows all users to see, edit, and transfer all records regardless of who owns them.",
     whyWrong: [
-      "Private restricts visibility to the record owner and their role hierarchy above — the opposite of universal visibility.",
+      "Private restricts visibility to the record owner and their role hierarchy above, the opposite of universal visibility.",
       "Public Read Only lets everyone view records but not edit them, so it doesn't grant full read/write/transfer access.",
-      "Controlled by Parent inherits sharing from a related parent record — it doesn't itself grant blanket org-wide visibility."
+      "Controlled by Parent inherits sharing from a related parent record, it doesn't itself grant blanket org-wide visibility."
     ]
   },
   {
@@ -77,8 +77,8 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     explanation: "A Formula field with Number return type can calculate the difference between two date fields, returning the number of days as a numeric value.",
     whyWrong: [
       "A Formula field with Date return type produces a date value, not the numeric day-count difference requested here.",
-      "A plain Number field stores a manually entered or DML-set value — it can't automatically calculate the difference between two other fields.",
-      "A plain Date field just stores a single date — it has no calculation capability on its own."
+      "A plain Number field stores a manually entered or DML-set value; it can't automatically calculate the difference between two other fields.",
+      "A plain Date field just stores a single date; it has no calculation capability on its own."
     ]
   },
   {
@@ -94,7 +94,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     whyWrong: [
       "A single master-detail relationship is allowed, but the actual platform maximum is higher than 1.",
       "3 exceeds the actual platform limit for master-detail relationships on a custom object.",
-      "The limit is not unlimited — Salesforce caps master-detail relationships specifically to preserve sharing and cascade-delete integrity."
+      "The limit is not unlimited: Salesforce caps master-detail relationships specifically to preserve sharing and cascade-delete integrity."
     ]
   },
   {
@@ -108,9 +108,9 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     correctAnswer: 0,
     explanation: "Field History Tracking allows administrators to track changes to specific fields on standard and custom objects, storing up to 20 fields per object.",
     whyWrong: [
-      "Audit Trail (Setup Audit Trail) logs configuration/setup changes made by admins — it doesn't track individual field value changes on records.",
-      "Change Data Capture streams record change events for external integration — it isn't the admin-facing feature for tracking field history on the record detail page.",
-      "Field Updates are an automation action that changes a field's value — they don't track or display a history of past changes."
+      "Audit Trail (Setup Audit Trail) logs configuration/setup changes made by admins, it doesn't track individual field value changes on records.",
+      "Change Data Capture streams record change events for external integration, it isn't the admin-facing feature for tracking field history on the record detail page.",
+      "Field Updates are an automation action that changes a field's value, they don't track or display a history of past changes."
     ]
   },
   {
@@ -142,7 +142,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
     whyWrong: [
       "Linking two objects together is done through the relationship field itself (master-detail/lookup), not the Roll-Up Summary Field.",
       "Validating data entry is the role of Validation Rules, not Roll-Up Summary Fields.",
-      "Sending email notifications is an automation action — Roll-Up Summary Fields only calculate and display aggregated values."
+      "Sending email notifications is an automation action: Roll-Up Summary Fields only calculate and display aggregated values."
     ]
   },
 ]

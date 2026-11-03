@@ -57,15 +57,15 @@ const faqItems = [
   },
   {
     question: 'What is the hardest part of the CPQ Specialist exam?',
-    answer: 'Pricing rule logic is the most complex area — candidates must understand the sequence of price calculations (before/after override, discount schedules vs. pricing rules), when each pricing method applies, and how price waterfall fields interact. Product bundle configuration with nested options and constraints is also challenging.',
+    answer: 'Pricing rule logic is the most complex area; candidates must understand the sequence of price calculations (before/after override, discount schedules vs. pricing rules), when each pricing method applies, and how price waterfall fields interact. Product bundle configuration with nested options and constraints is also challenging.',
   },
   {
     question: 'What prerequisites help with the CPQ Specialist exam?',
-    answer: 'Salesforce Administrator (ADM-201) provides the foundation. Real hands-on experience configuring Salesforce CPQ (formerly Steelbrick) is strongly recommended — the exam tests practical configuration knowledge that cannot be learned theoretically. Trailhead CPQ Specialist modules are essential study material.',
+    answer: 'Salesforce Administrator (ADM-201) provides the foundation. Real hands-on experience configuring Salesforce CPQ (formerly Steelbrick) is strongly recommended, the exam tests practical configuration knowledge that cannot be learned theoretically. Trailhead CPQ Specialist modules are essential study material.',
   },
   {
     question: 'What concepts do most CPQ Administrator candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the CPQ Administrator exam are: (1) Price Rules vs Discount Schedules — Two Ways to Affect Price; (2) Product Rules: Validation vs Alert vs Selection vs Filter; (3) Quote Line Editor vs Product Catalog — Two Different Entry Points. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the CPQ Administrator exam are: (1) Price Rules vs Discount Schedules: Two Ways to Affect Price; (2) Product Rules: Validation vs Alert vs Selection vs Filter; (3) Quote Line Editor vs Product Catalog: Two Different Entry Points. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('cpq-administrator-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function CPQAdministratorExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: CPQ Specialist Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Products and bundles</strong> — Product options, feature categories, configuration attributes, option constraints, and product rules (validation, selection, filter, alert). Understanding nested bundles and dynamic options is essential.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pricing</strong> — Price waterfall (list price → best price → customer price → net price), discount schedules, block pricing, pricing rules, and price actions. Know the sequence and when each pricing mechanism applies.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Quotes and approvals</strong> — Quote templates, line columns, quote document generation, approval rules and conditions, and how approvals chain together. Also covers subscription products, amendments, and renewals.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Products and bundles</strong>: Product options, feature categories, configuration attributes, option constraints, and product rules (validation, selection, filter, alert). Understanding nested bundles and dynamic options is essential.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pricing</strong>: Price waterfall (list price → best price → customer price → net price), discount schedules, block pricing, pricing rules, and price actions. Know the sequence and when each pricing mechanism applies.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Quotes and approvals</strong>: Quote templates, line columns, quote document generation, approval rules and conditions, and how approvals chain together. Also covers subscription products, amendments, and renewals.</li>
         </ul>
       </section>
 
@@ -137,11 +137,11 @@ export default function CPQAdministratorExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach CPQ Specialist Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a quoting or pricing requirement and ask which CPQ feature or configuration achieves it.
-          The correct answer is always the most native CPQ approach — not custom Apex or standard Salesforce automation.
+          The correct answer is always the most native CPQ approach, not custom Apex or standard Salesforce automation.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product rule questions: understand the four types — Validation (prevents invalid selections), Selection (auto-adds/removes options), Alert (shows warnings), Filter (hides options). Match the rule type to the business requirement described.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pricing questions: pricing rules fire before or after the standard price waterfall. ’Before Calculate’ rules modify unit price fields; ’After Calculate’ rules override the result. Discount schedules apply to line quantity — know the slab/range vs. percent-of-total types.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product rule questions: understand the four types: Validation (prevents invalid selections), Selection (auto-adds/removes options), Alert (shows warnings), Filter (hides options). Match the rule type to the business requirement described.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pricing questions: pricing rules fire before or after the standard price waterfall. ’Before Calculate’ rules modify unit price fields; ’After Calculate’ rules override the result. Discount schedules apply to line quantity. Know the slab/range vs. percent-of-total types.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscription questions: subscription products have a Subscription Type and Subscription Term. Renewals create new Opportunities and Quotes automatically when Renewal Forecast is enabled. Know the difference between Evergreen and Termed subscriptions.</li>
         </ul>
       </section>
@@ -163,18 +163,18 @@ export default function CPQAdministratorExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most CPQ Administrator Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Price Rules vs Discount Schedules — Two Ways to Affect Price</p>
-            <p className="text-sm text-gray-700">Discount Schedules automatically apply tiered discounts based on quantity or term — they are table-driven and apply before Price Rules. Price Rules are condition-based (if field X = Y, then set price field Z to value) and apply in a defined sequence. Candidates apply Price Rules for volume discount scenarios — the exam expects Discount Schedules for table-driven volume pricing.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Price Rules vs Discount Schedules: Two Ways to Affect Price</p>
+            <p className="text-sm text-gray-700">Discount Schedules automatically apply tiered discounts based on quantity or term; they are table-driven and apply before Price Rules. Price Rules are condition-based (if field X = Y, then set price field Z to value) and apply in a defined sequence. Candidates apply Price Rules for volume discount scenarios, the exam expects Discount Schedules for table-driven volume pricing.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Product Rules: Validation vs Alert vs Selection vs Filter</p>
             <p className="text-sm text-gray-700">Validation rules block a quote from being saved if a product combination is invalid. Alert rules warn the user but allow saving. Selection rules automatically add, remove, or hide products based on configuration choices. Filter rules narrow down products shown in the Product Catalog based on criteria. Candidates use Validation when they should use Alert (blocking vs warning distinction) or use Selection when Filter is appropriate.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Quote Line Editor vs Product Catalog — Two Different Entry Points</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Quote Line Editor vs Product Catalog: Two Different Entry Points</p>
             <p className="text-sm text-gray-700">The Product Catalog is the source where sales reps search and add products to a quote. The Quote Line Editor (QLE) is where they review, adjust quantities, apply discounts, and configure selected products. Proration, bundling, and block pricing logic all operate within the QLE. Candidates design product search and filtering in the QLE when it belongs in the Product Catalog search configuration.</p>
           </div>
         </div>

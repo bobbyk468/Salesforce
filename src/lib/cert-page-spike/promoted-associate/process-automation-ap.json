@@ -26,7 +26,7 @@
       "<strong>Flow types and timing.</strong> Record-triggered (before or after save), scheduled, screen, autolaunched and platform event flows.",
       "<strong>Good design.</strong> Fault paths, avoiding queries and updates inside loops, testing and deployment."
     ],
-    "passRateGuidance": "Build a few record-triggered flows, including one with a scheduled path and one with a fault path, before the exam. Before you book, aim for 75% or more on practice tests."
+    "passRateGuidance": "Build a few record-triggered flows, including one with a scheduled path and one with a fault path, before the exam. Before you book. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Process Automation AP Exam Format Explained",
@@ -73,7 +73,7 @@
       },
       {
         "heading": "Triggered Automation: Apex Triggers",
-        "body": "Flow covers most automation, but **Apex** is better when logic is very complex, needs heavy processing of large data sets, or must do things Flow can't. If an object has both triggers and flows, know the **order of execution**: before-save flows run before before triggers, and after-save flows run after after triggers. Too many automations on one object make it hard to know what runs when, so keep automation per object organised, often with one flow per trigger type and clear entry conditions."
+        "body": "Flow covers most automation, but **Apex** is better when logic is very complex, needs heavy processing of large data sets, or must do things Flow can't. If an object has both triggers and flows. Know the **order of execution**: before-save flows run before before triggers, and after-save flows run after after triggers. Too many automations on one object make it hard to know what runs when, so keep automation per object organised, often with one flow per trigger type and clear entry conditions."
       },
       {
         "heading": "Testing, Debugging & Best Practices",

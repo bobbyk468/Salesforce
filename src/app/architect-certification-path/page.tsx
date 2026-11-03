@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'Do I need Application Architect before System Architect?',
-    answer: 'Application Architect and System Architect are independent role-based credentials — you do not need one to pursue the other. However, both are typically required for the Certified Technical Architect (CTA). Most candidates earn Application Architect first since its components (App Builder, PD1) are more accessible entry points.',
+    answer: 'Application Architect and System Architect are independent role-based credentials; you do not need one to pursue the other. However, both are typically required for the Certified Technical Architect (CTA). Most candidates earn Application Architect first since its components (App Builder, PD1) are more accessible entry points.',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function ArchitectCertificationPathPage() {
           Salesforce Architect Certification Path ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          The Salesforce architect track has two role-based credentials — Application Architect and System Architect —
+          The Salesforce architect track has two role-based credentials: Application Architect and System Architect,
           each earned by passing a set of component exams. Both lead to the Certified Technical Architect (CTA),
           the highest Salesforce credential. Here is the full roadmap.
         </p>
@@ -126,7 +126,7 @@ export default function ArchitectCertificationPathPage() {
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
-              <p className="font-semibold text-gray-900">Salesforce Administrator (ADM-201) — Foundation</p>
+              <p className="font-semibold text-gray-900">Salesforce Administrator (ADM-201): Foundation</p>
               <p className="text-sm text-gray-600 mt-0.5">Not a component exam but required knowledge base. Platform security model, object relationships, and declarative automation are tested across all architect components.</p>
               <Link href="/adm-201-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">ADM-201 exam tips →</Link>
             </div>
@@ -134,7 +134,7 @@ export default function ArchitectCertificationPathPage() {
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
-              <p className="font-semibold text-gray-900">Platform App Builder (DEV-402) — Component 1</p>
+              <p className="font-semibold text-gray-900">Platform App Builder (DEV-402): Component 1</p>
               <p className="text-sm text-gray-600 mt-0.5">Data modelling, Flow automation, Lightning App Builder, and security model. 68% passing score. Most candidates take 4-6 weeks to prepare.</p>
               <Link href="/app-builder-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">App Builder exam tips →</Link>
             </div>
@@ -142,7 +142,7 @@ export default function ArchitectCertificationPathPage() {
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">3</span>
             <div>
-              <p className="font-semibold text-gray-900">Platform Developer I (PD1) — Component 2</p>
+              <p className="font-semibold text-gray-900">Platform Developer I (PD1): Component 2</p>
               <p className="text-sm text-gray-600 mt-0.5">Apex fundamentals, SOQL/DML, governor limits, triggers, and LWC. 68% passing score. Requires hands-on Apex coding practice.</p>
               <Link href="/pd1-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
@@ -150,7 +150,7 @@ export default function ArchitectCertificationPathPage() {
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">4</span>
             <div>
-              <p className="font-semibold text-gray-900">Data Architect — Component 3</p>
+              <p className="font-semibold text-gray-900">Data Architect: Component 3</p>
               <p className="text-sm text-gray-600 mt-0.5">Data modelling at scale, large data volumes, master data management, and migration strategy. 63% passing score. Requires real LDV project experience.</p>
               <Link href="/data-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Data Architect exam tips →</Link>
             </div>
@@ -158,7 +158,7 @@ export default function ArchitectCertificationPathPage() {
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">5</span>
             <div>
-              <p className="font-semibold text-gray-900">Sharing &amp; Visibility Architect — Component 4</p>
+              <p className="font-semibold text-gray-900">Sharing &amp; Visibility Architect: Component 4</p>
               <p className="text-sm text-gray-600 mt-0.5">OWD design, sharing rule strategy, performance implications, and Apex managed sharing. 63% passing score. Highest retry rate of the four components.</p>
               <Link href="/sharing-visibility-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Sharing &amp; Visibility exam tips →</Link>
             </div>
@@ -174,7 +174,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
               <p className="font-semibold text-gray-900">Platform Developer I (PD1)</p>
-              <p className="text-sm text-gray-600 mt-0.5">The only exam shared with Application Architect — if you've already earned Application Architect, this is already done. Apex, triggers, LWC, and governor limits.</p>
+              <p className="text-sm text-gray-600 mt-0.5">The only exam shared with Application Architect, if you've already earned Application Architect, this is already done. Apex, triggers, LWC, and governor limits.</p>
               <Link href="/pd1-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function ArchitectCertificationPathPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/how-to-become-salesforce-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to become a Salesforce Architect — step-by-step guide</Link></li>
+          <li><Link href="/how-to-become-salesforce-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to become a Salesforce Architect, step-by-step guide</Link></li>
           <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ System Architect vs Application Architect comparison</Link></li>
         </ul>
       </div>
@@ -229,7 +229,7 @@ export default function ArchitectCertificationPathPage() {
           and System Architect credentials, then involves a written submission (Architect Evaluation) and a live review board presentation.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The CTA Review Board is a live scenario presentation to a panel of existing CTAs — preparation takes months and requires deep, cross-domain architectural knowledge.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The CTA Review Board is a live scenario presentation to a panel of existing CTAs, preparation takes months and requires deep, cross-domain architectural knowledge.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Less than 1% of Salesforce professionals hold the CTA credential. It is the pinnacle of the Salesforce certification hierarchy.</li>
         </ul>
         <Link href="/become-cta" className="inline-flex items-center gap-2 mt-3 text-sm text-salesforce-blue font-medium hover:underline">

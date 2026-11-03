@@ -16,7 +16,7 @@ export default function SalesProcessFlowDiagram() {
         A <strong>Lead</strong> is unqualified prospect data. On conversion, Salesforce creates an{' '}
         <strong>Account</strong>, <strong>Contact</strong>, and <strong>Opportunity</strong> together. The
         Opportunity progresses through sales stages, generates a <strong>Quote</strong> with products and pricing,
-        and reaching Closed Won marks the deal complete — this Lead→Account/Contact/Opportunity relationship is one
+        and reaching Closed Won marks the deal complete, this Lead→Account/Contact/Opportunity relationship is one
         of the most tested object flows on Sales Cloud exams.
       </p>
       <svg

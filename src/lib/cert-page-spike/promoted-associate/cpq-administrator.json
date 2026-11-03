@@ -26,7 +26,7 @@
       "<strong>Product rules and price rules get confused constantly.</strong> Product rules decide what can be on the quote. Price rules change values on the quote lines.",
       "<strong>The pricing sequence is examinable in order.</strong> List, special, regular, customer, net, and what each stage can alter."
     ],
-    "passRateGuidance": "The honest test is whether you have built one. Configure a bundle with options and constraints, add a discount schedule, write a price rule that fires on the Quote Line Editor, contract the quote and then run a renewal and an amendment. If you have not done that cycle end to end at least once, reading about it will not be enough."
+    "passRateGuidance": "The honest test is whether you have built one. Configure a bundle with options and constraints, add a discount schedule. Write a price rule that fires on the Quote Line Editor, contract the quote and then run a renewal and an amendment. If you have not done that cycle end to end at least once, reading about it will not be enough."
   },
   "examFormat": {
     "heading": "CPQ Administrator Exam Format Explained",
@@ -266,7 +266,7 @@
       ]
     },
     {
-      "question": "A sales user must be warned that a configuration is unusual, but still allowed to proceed. Which product rule type fits?",
+      "question": "A sales user must be warned that a configuration is unusual; but still allowed to proceed. Which product rule type fits?",
       "options": [
         "Validation",
         "Selection",

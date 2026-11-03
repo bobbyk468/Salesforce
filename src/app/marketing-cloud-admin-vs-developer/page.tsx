@@ -54,11 +54,11 @@ const faqItems = [
   },
   {
     question: 'Is Marketing Cloud Developer harder than MC Admin?',
-    answer: 'Marketing Cloud Developer is generally harder for candidates without marketing technology coding experience. It requires proficiency in AMPscript (SFMC’s scripting language for personalisation), SSJS for complex server-side logic, REST/SOAP API for external system integration, and Guide Template Language (GTL) for dynamic content. Admin is harder for pure developers who lack marketing operations knowledge — it tests configuration, deliverability, and data management topics that require platform familiarity.',
+    answer: 'Marketing Cloud Developer is generally harder for candidates without marketing technology coding experience. It requires proficiency in AMPscript (SFMC’s scripting language for personalisation), SSJS for complex server-side logic, REST/SOAP API for external system integration, and Guide Template Language (GTL) for dynamic content. Admin is harder for pure developers who lack marketing operations knowledge, it tests configuration, deliverability, and data management topics that require platform familiarity.',
   },
   {
     question: 'What is AMPscript and is it tested heavily in MC Developer?',
-    answer: 'AMPscript is Salesforce Marketing Cloud’s proprietary scripting language used in email content, landing pages, and SMS messages to create dynamic, personalised content. It is the most heavily tested technical skill in the Marketing Cloud Developer exam — expect questions on AMPscript syntax, lookuprows functions, IF/ELSE logic, FOR loops for iterating rows, and SET/OUTPUT block patterns for rendering personalised content in emails.',
+    answer: 'AMPscript is Salesforce Marketing Cloud’s proprietary scripting language used in email content, landing pages, and SMS messages to create dynamic, personalised content. It is the most heavily tested technical skill in the Marketing Cloud Developer exam, expect questions on AMPscript syntax, lookuprows functions, IF/ELSE logic, FOR loops for iterating rows, and SET/OUTPUT block patterns for rendering personalised content in emails.',
   },
 ]
 
@@ -87,7 +87,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
           certSlug: "marketing-cloud-engagement-admin",
           examTipsSlug: "marketing-cloud-engagement-admin-exam-tips",
           conditions: [
-          "You configure Marketing Cloud — Business Units, users, and deliverability",
+          "You configure Marketing Cloud: Business Units, users, and deliverability",
           "You work in a platform admin or operations role within Marketing Cloud",
           "You do not write AMPscript or SSJS",
           "You want a foundational Marketing Cloud credential",
@@ -108,7 +108,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
           certName: "Marketing Cloud Engagement Admin",
           certSlug: "marketing-cloud-engagement-admin",
           examTipsSlug: "marketing-cloud-engagement-admin-exam-tips",
-          reason: "Admin is the foundational credential — take it first to understand the platform architecture before adding Developer-level complexity. The exception: if you are already a developer with AMPscript experience, Developer is a better direct investment.",
+          reason: "Admin is the foundational credential. Take it first to understand the platform architecture before adding Developer-level complexity. The exception: if you are already a developer with AMPscript experience, Developer is a better direct investment.",
           
         }}
       />
@@ -142,7 +142,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Recommended Order</td>
-                <td className="py-2.5 pr-4" colSpan={2}>Take Admin first, then Developer — Admin knowledge underlies all Developer scenarios.</td>
+                <td className="py-2.5 pr-4" colSpan={2}>Take Admin first, then Developer: Admin knowledge underlies all Developer scenarios.</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Best For</td>
@@ -162,9 +162,9 @@ export default function MarketingCloudAdminVsDeveloperPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Technical Skills: Developer Exam Focus</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong> — Variable declaration (VAR, SET), data retrieval (LOOKUP, LOOKUPROWS), conditional logic (IF/ELSEIF/ENDIF), loops (FOR/NEXT), and output functions (OUTPUT). Used in email body, subject lines, and landing pages.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SSJS (Server-Side JavaScript)</strong> — Interacts with Marketing Cloud APIs and data extensions server-side; used for complex logic that AMPscript cannot handle, such as multi-step data manipulation on landing page submission.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>REST API</strong> — Triggering sends, managing subscribers, pulling campaign data into external systems. Key endpoints: /messaging/v1/messageDefinitionSends, /contacts/v1/contacts, /data/v1/async.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong>: Variable declaration (VAR, SET), data retrieval (LOOKUP, LOOKUPROWS), conditional logic (IF/ELSEIF/ENDIF), loops (FOR/NEXT), and output functions (OUTPUT). Used in email body, subject lines, and landing pages.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SSJS (Server-Side JavaScript)</strong>: Interacts with Marketing Cloud APIs and data extensions server-side; used for complex logic that AMPscript cannot handle, such as multi-step data manipulation on landing page submission.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>REST API</strong>: Triggering sends, managing subscribers, pulling campaign data into external systems. Key endpoints: /messaging/v1/messageDefinitionSends, /contacts/v1/contacts, /data/v1/async.</li>
         </ul>
       </section>
 
@@ -195,11 +195,11 @@ export default function MarketingCloudAdminVsDeveloperPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
                 <td className="py-2.5 pr-4">Business user managing journeys, data extensions, and automations in Marketing Cloud</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">MC Admin — platform configuration focus</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">MC Admin, platform configuration focus</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Writing AMPscript, SSJS, or building custom API integrations for Marketing Cloud</td>
-                <td className="py-2.5 font-semibold text-purple-700">MC Developer — technical implementation credential</td>
+                <td className="py-2.5 font-semibold text-purple-700">MC Developer, technical implementation credential</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Managing users, roles, security, and account configuration</td>
@@ -210,8 +210,8 @@ export default function MarketingCloudAdminVsDeveloperPage() {
                 <td className="py-2.5 font-semibold text-purple-700">MC Developer</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Both — which is more in demand in the job market?</td>
-                <td className="py-2.5 font-semibold text-gray-700">MC Developer — higher salary premium for technical MC skills</td>
+                <td className="py-2.5 pr-4">Both; which is more in demand in the job market?</td>
+                <td className="py-2.5 font-semibold text-gray-700">MC Developer, higher salary premium for technical MC skills</td>
               </tr>
             </tbody>
           </table>

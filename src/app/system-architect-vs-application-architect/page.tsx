@@ -38,11 +38,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between System Architect and Application Architect?',
-    answer: 'Application Architect is auto-awarded once you pass four component exams: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect — no separate proctored exam. System Architect requires Platform Developer I plus Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. It is also auto-awarded, with no separate exam. Application Architect is more application-layer-and-declarative-focused; System Architect is more infrastructure, integration, and platform-focused.',
+    answer: 'Application Architect is auto-awarded once you pass four component exams: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect, no separate proctored exam. System Architect requires Platform Developer I plus Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. It is also auto-awarded, with no separate exam. Application Architect is more application-layer-and-declarative-focused; System Architect is more infrastructure, integration, and platform-focused.',
   },
   {
     question: 'Which should I pursue first: System Architect or Application Architect?',
-    answer: 'Most candidates start with Application Architect — three of its four component exams (App Builder, Data Architect, Sharing & Visibility) cost $200–$400 each and are more accessible than System Architect’s infrastructure-heavy domains. Application Architect also builds the foundation before tackling System Architect’s deeper integration and identity topics. Candidates with strong integration or security backgrounds may find System Architect’s domain exams more natural to start with.',
+    answer: 'Most candidates start with Application Architect, three of its four component exams (App Builder, Data Architect, Sharing & Visibility) cost $200–$400 each and are more accessible than System Architect’s infrastructure-heavy domains. Application Architect also builds the foundation before tackling System Architect’s deeper integration and identity topics. Candidates with strong integration or security backgrounds may find System Architect’s domain exams more natural to start with.',
   },
   {
     question: 'How much does it cost to earn both credentials?',
@@ -50,11 +50,11 @@ const faqItems = [
   },
   {
     question: 'Are both credentials required for the CTA?',
-    answer: 'Yes — both the System Architect credential AND the Application Architect credential must be held before applying for the Salesforce Certified Technical Architect (CTA) Board Review. You cannot apply for CTA with only one of the two credentials. Both must be in Active status at the time of CTA application.',
+    answer: 'Yes, both the System Architect credential AND the Application Architect credential must be held before applying for the Salesforce Certified Technical Architect (CTA) Board Review. You cannot apply for CTA with only one of the two credentials. Both must be in Active status at the time of CTA application.',
   },
   {
     question: 'Do overlapping exams count toward both credentials?',
-    answer: 'Platform Developer I is the only exam shared between the two credentials — pass it once and it counts toward both Application Architect and System Architect. Data Architect and Sharing and Visibility Architect count only toward Application Architect; Integration Architect, IAM Architect, and Dev Lifecycle Architect count only toward System Architect. This overlap reduces the total unique exams needed from nine to eight for candidates pursuing both credentials plus CTA.',
+    answer: 'Platform Developer I is the only exam shared between the two credentials, pass it once and it counts toward both Application Architect and System Architect. Data Architect and Sharing and Visibility Architect count only toward Application Architect; Integration Architect, IAM Architect, and Dev Lifecycle Architect count only toward System Architect. This overlap reduces the total unique exams needed from nine to eight for candidates pursuing both credentials plus CTA.',
   },
 ]
 
@@ -71,7 +71,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
           System Architect vs Application Architect ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Both are multi-exam Salesforce architect credentials required for CTA — but they cover different domains and have different entry points. Here is how they compare and which to pursue first.
+          Both are multi-exam Salesforce architect credentials required for CTA, but they cover different domains and have different entry points. Here is how they compare and which to pursue first.
         </p>
       </div>
 
@@ -138,7 +138,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
                 { area: 'Number of exams', app: '4 (auto-awarded)', sys: '4 (auto-awarded)' },
                 { area: 'Min first exam cost', app: '$200 (App Builder or PD1)', sys: '$200 (PD1, shared) or $400 (domain exams)' },
                 { area: 'Study material availability', app: 'Abundant (App Builder & PD1 are popular)', sys: 'Less abundant for architect-level exams' },
-                { area: 'Recommended first', app: 'Yes — lower entry cost', sys: 'After Application Architect' },
+                { area: 'Recommended first', app: 'Yes, lower entry cost', sys: 'After Application Architect' },
                 { area: 'Best background', app: 'Admin/developer professionals', sys: 'Senior architects, integration specialists' },
                 { area: 'Avg Salary', app: '$130–160k (US)', sys: '$140–170k (US)' },
                 { area: 'CTA requirement', app: 'Required (with System Arch)', sys: 'Required (with Application Arch)' },
@@ -177,7 +177,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr><td className="py-2.5 pr-4">Strong in declarative development (Flows, App Builder, data modelling)</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
               <tr><td className="py-2.5 pr-4">Strong in integrations, identity, deployment, and multi-org architecture</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
-              <tr><td className="py-2.5 pr-4">Targeting CTA (Certified Technical Architect) — need both</td><td className="py-2.5 font-semibold text-gray-700">Application Architect first (shared exams reduce total effort)</td></tr>
+              <tr><td className="py-2.5 pr-4">Targeting CTA (Certified Technical Architect), need both</td><td className="py-2.5 font-semibold text-gray-700">Application Architect first (shared exams reduce total effort)</td></tr>
               <tr><td className="py-2.5 pr-4">Solution architect role focused on org design and data architecture</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
               <tr><td className="py-2.5 pr-4">Technical architect role focused on SSO, APIs, and deployment pipelines</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
             </tbody>

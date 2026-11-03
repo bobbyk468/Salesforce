@@ -28,7 +28,7 @@
       "<strong>Code reasoning.</strong> Expect to be shown logic and asked what happens with 200 records, or after a retry.",
       "<strong>Check the guide for extras.</strong> Salesforce has at times paired this credential with hands-on requirements, so confirm the current ones in the official exam guide."
     ],
-    "passRateGuidance": "Most people who pass have a couple of years writing Apex daily. Before you book, aim for 80% or more on practice tests, and make sure you can write a trigger handler and a batch class from memory."
+    "passRateGuidance": "Most people who pass have a couple of years writing Apex daily. Before you book. Aim for 80% or more on practice tests, and make sure you can write a trigger handler and a batch class from memory."
   },
   "examFormat": {
     "heading": "Platform Developer II Exam Format Explained",
@@ -184,7 +184,7 @@
       "whyWrong": [
         "Factory Pattern creates objects of varying types based on input, but doesn't guarantee a single reusable instance.",
         "Decorator Pattern adds behavior to an object dynamically; it doesn't restrict instantiation to one instance.",
-        "Strategy Pattern swaps interchangeable algorithms at runtime — it's about behavior, not instance control."
+        "Strategy Pattern swaps interchangeable algorithms at runtime, it's about behavior, not instance control."
       ]
     },
     {
@@ -198,9 +198,9 @@
       "correctAnswer": 3,
       "explanation": "@TestSetup creates test data once at the beginning of the test class, and that data is available to all test methods, improving test performance.",
       "whyWrong": [
-        "@TestSetup creates real records via DML, not mocks — mocking external callouts requires HttpCalloutMock instead.",
+        "@TestSetup creates real records via DML, not mocks, mocking external callouts requires HttpCalloutMock instead.",
         "@TestSetup has no effect on governor limits; each test method still runs under standard limits.",
-        "@TestSetup does not affect test parallelization — that's controlled separately via test class settings."
+        "@TestSetup does not affect test parallelization, that's controlled separately via test class settings."
       ]
     },
     {
@@ -214,8 +214,8 @@
       "correctAnswer": 1,
       "explanation": "Callouts cannot be made directly from triggers. Use @future(callout=true) or Queueable with Database.AllowsCallouts to make asynchronous callouts.",
       "whyWrong": [
-        "Database.executeBatch starts a batch job asynchronously but doesn't itself make an HTTP callout — you'd still need callout logic inside the batch's execute method.",
-        "Triggers cannot make callouts directly — Salesforce throws a runtime error because triggers run inside an existing transaction that can't be safely suspended.",
+        "Database.executeBatch starts a batch job asynchronously but doesn't itself make an HTTP callout, you'd still need callout logic inside the batch's execute method.",
+        "Triggers cannot make callouts directly: Salesforce throws a runtime error because triggers run inside an existing transaction that can't be safely suspended.",
         "Platform Events solve pub/sub messaging, not the specific restriction on synchronous callouts from trigger context."
       ]
     },
@@ -230,8 +230,8 @@
       "correctAnswer": 0,
       "explanation": "Platform Events provide loosely coupled, asynchronous communication between systems, making integrations more scalable and maintainable.",
       "whyWrong": [
-        "Platform Events are asynchronous by nature, so they're not faster for real-time execution — the benefit is decoupling, not speed.",
-        "Platform Events don't inherently lower governor limits — they run under standard Apex limits like any other transaction.",
+        "Platform Events are asynchronous by nature, so they're not faster for real-time execution, the benefit is decoupling, not speed.",
+        "Platform Events don't inherently lower governor limits, they run under standard Apex limits like any other transaction.",
         "Error handling isn't better by default with Platform Events; failed subscribers still need their own retry/error logic."
       ]
     },
@@ -246,7 +246,7 @@
       "correctAnswer": 2,
       "explanation": "To chain batch jobs, you call Database.executeBatch in the finish method of the current batch job to start the next batch.",
       "whyWrong": [
-        "Database.Stateful only preserves instance variable values across batch execute calls — it has nothing to do with chaining to a new job.",
+        "Database.Stateful only preserves instance variable values across batch execute calls; it has nothing to do with chaining to a new job.",
         "Database.Batchable is the interface a batch class implements, but implementing it alone doesn't chain jobs.",
         "Database.AllowsCallouts permits HTTP callouts inside a batch job; it doesn't enable chaining to another batch."
       ]
@@ -262,8 +262,8 @@
       "correctAnswer": 0,
       "explanation": "Database.Stateful preserves instance variable values across batch iterations.",
       "whyWrong": [
-        "Database.Stateful has no effect on execution speed — its purpose is state retention, not performance.",
-        "Database.Stateful does not bypass or raise governor limits — each batch chunk still runs under normal limits.",
+        "Database.Stateful has no effect on execution speed, its purpose is state retention, not performance.",
+        "Database.Stateful does not bypass or raise governor limits, each batch chunk still runs under normal limits.",
         "Database.AllowsCallouts is the separate interface needed to permit callouts in batch Apex."
       ]
     },
@@ -279,7 +279,7 @@
       "explanation": "Trigger Handler pattern separates trigger logic from business logic for maintainability.",
       "whyWrong": [
         "Factory alone handles object creation logic, not the separation of trigger and business logic layers.",
-        "Decorator alone adds behavior to objects dynamically — it's unrelated to organizing trigger-to-handler flow.",
+        "Decorator alone adds behavior to objects dynamically, it's unrelated to organizing trigger-to-handler flow.",
         "Singleton alone controls instance creation; it doesn't structurally separate trigger code from business logic."
       ]
     },
@@ -294,9 +294,9 @@
       "correctAnswer": 2,
       "explanation": "Queueable supports chaining, complex parameters, and job ID tracking.",
       "whyWrong": [
-        "Queueable Apex has the same governor limits as @future in most respects — lower limits isn't the actual benefit.",
+        "Queueable Apex has the same governor limits as @future in most respects, lower limits isn't the actual benefit.",
         "Queueable isn't inherently faster than @future; both run asynchronously on the same execution model.",
-        "Queueable Apex runs asynchronously, just like @future — it does not run synchronously."
+        "Queueable Apex runs asynchronously, just like @future; it does not run synchronously."
       ]
     },
     {
@@ -310,7 +310,7 @@
       "correctAnswer": 3,
       "explanation": "Apex exposed to LWC must enforce FLS and sharing rules.",
       "whyWrong": [
-        "Apex exposed to LWC always requires enforcing security — 'no security needed' is never correct for user-facing code.",
+        "Apex exposed to LWC always requires enforcing security; 'no security needed' is never correct for user-facing code.",
         "Sharing alone is insufficient; field-level security must also be enforced so users can't see restricted fields.",
         "FLS alone is insufficient; sharing rules must also be respected so users only see records they're permitted to access."
       ]
@@ -343,7 +343,7 @@
       "explanation": "Heap: 6 MB sync, 12 MB async (approximate).",
       "whyWrong": [
         "1 MB is far below the actual synchronous heap limit of 6 MB.",
-        "6 MB applies only to synchronous Apex — asynchronous contexts get a higher limit, so this option is incomplete.",
+        "6 MB applies only to synchronous Apex, asynchronous contexts get a higher limit, so this option is incomplete.",
         "Apex heap size is never unlimited; Salesforce enforces strict limits to protect the multi-tenant platform."
       ]
     },
@@ -358,9 +358,9 @@
       "correctAnswer": 0,
       "explanation": "Test.isRunningTest() detects test context for mock responses or conditional logic.",
       "whyWrong": [
-        "Test.isRunningTest() doesn't skip tests — it lets code branch its behavior when running inside a test context.",
+        "Test.isRunningTest() doesn't skip tests; it lets code branch its behavior when running inside a test context.",
         "It has no effect on execution speed; it's a conditional check, not a performance optimization.",
-        "It doesn't bypass governor limits — those still apply identically whether or not code is running in a test."
+        "It doesn't bypass governor limits; those still apply identically whether or not code is running in a test."
       ]
     },
     {
@@ -376,7 +376,7 @@
       "whyWrong": [
         "@AuraEnabled exposes Apex methods to Lightning components (LWC/Aura), not to Flow or Process Builder.",
         "@RestResource exposes Apex as a REST web service endpoint, unrelated to Flow invocation.",
-        "A plain trigger cannot be invoked directly by Process Builder or Flow — it only fires on DML against its object."
+        "A plain trigger cannot be invoked directly by Process Builder or Flow; it only fires on DML against its object."
       ]
     },
     {
@@ -392,7 +392,7 @@
       "whyWrong": [
         "Batch processing is handled by Batchable Apex, a different mechanism from event-driven Platform Events.",
         "Scheduled jobs are handled by the Schedulable interface, not Platform Events.",
-        "Platform Events are inherently asynchronous — they don't apply to synchronous-only trigger scenarios."
+        "Platform Events are inherently asynchronous, they don't apply to synchronous-only trigger scenarios."
       ]
     },
     {
@@ -406,7 +406,7 @@
       "correctAnswer": 1,
       "explanation": "@TestSetup creates data once for all test methods, improving performance.",
       "whyWrong": [
-        "Creating data in every test method duplicates DML work and slows down the whole test class — the opposite of the correct approach.",
+        "Creating data in every test method duplicates DML work and slows down the whole test class, the opposite of the correct approach.",
         "Minimal assertions might make a test file shorter, but it doesn't affect execution performance and reduces test quality.",
         "SeeAllData=true is discouraged because it ties tests to org data and can cause unpredictable, slower, and fragile test runs."
       ]

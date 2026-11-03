@@ -6,7 +6,7 @@ export default function DataWeaveTransformDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">DataWeave transformation pipeline (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         A DataWeave script declares its <strong>output directive</strong> (e.g. <code>%dw 2.0 output application/json</code>),
-        then maps the input payload — regardless of source format (JSON, XML, CSV) — into the target structure using
+        then maps the input payload, regardless of source format (JSON, XML, CSV), into the target structure using
         functions like <code>map</code>, <code>filter</code>, and <code>pluck</code>.
       </p>
       <svg role="img" aria-labelledby="dw-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg">

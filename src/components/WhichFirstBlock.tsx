@@ -58,7 +58,7 @@ export default function WhichFirstBlock({ certA, certB, recommendation }: Props)
         ))}
       </div>
 
-      {/* Our Recommendation — h3 for Featured Snippet eligibility */}
+      {/* Our Recommendation, h3 for Featured Snippet eligibility */}
       <div className="px-5 py-5 border-t border-gray-100 bg-blue-50/50">
         <h3 className="text-sm font-bold text-gray-900 mb-2">
           Our Recommendation: Start with {recommendation.certName}

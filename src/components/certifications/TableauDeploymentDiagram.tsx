@@ -1,12 +1,12 @@
-/** Tableau deployment architecture vs. dashboarding scope for Tableau Consultant —
+/** Tableau deployment architecture vs. dashboarding scope for Tableau Consultant,
  * distinguishes consulting-level implementation concerns from dashboard-building. */
 export default function TableauDeploymentDiagram() {
   return (
     <figure id="tableau-deployment-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Deployment architecture vs. dashboard building (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        The Consultant exam tests project-level decisions — <strong>data source strategy</strong>, <strong>
-        governance/certification</strong>, and <strong>stakeholder requirements</strong> — layered above the actual
+        The Consultant exam tests project-level decisions: <strong>data source strategy</strong>, <strong>
+        governance/certification</strong>, and <strong>stakeholder requirements</strong>: layered above the actual
         dashboard-building skill tested at the Data Analyst level.
       </p>
       <svg role="img" aria-labelledby="td-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">

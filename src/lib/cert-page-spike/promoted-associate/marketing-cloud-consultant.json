@@ -22,9 +22,9 @@
     "summary": "Marketing Cloud Consultant is a challenging exam. It tests solution architecture across Journey Builder, Automation Studio, Contact Builder, and CRM integration. You need both technical depth and the ability to translate business requirements into a scalable Marketing Cloud design.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>67% passing score</strong> — standard for consultant-level Salesforce exams.",
-      "<strong>Breadth of coverage</strong> — you must know data architecture, Journey Builder vs Automation Studio selection, and Marketing Cloud Connect configuration.",
-      "<strong>Real-world design skills</strong> — expect scenario questions that require you to recommend the right tool for a given business requirement."
+      "<strong>67% passing score</strong>: standard for consultant-level Salesforce exams.",
+      "<strong>Breadth of coverage</strong>: you must know data architecture, Journey Builder vs Automation Studio selection, and Marketing Cloud Connect configuration.",
+      "<strong>Real-world design skills</strong>: expect scenario questions that require you to recommend the right tool for a given business requirement."
     ],
     "passRateGuidance": "Complete at least two end-to-end Marketing Cloud implementations before booking. Score 80%+ on practice exams to feel confident on test day."
   },

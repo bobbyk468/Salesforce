@@ -80,11 +80,11 @@
       },
       {
         "heading": "Territory Management",
-        "body": "**Enterprise Territory Management** assigns accounts to territories using rules, and gives the users in a territory access to those accounts and their opportunities. A **territory model** can be built and tested in planning state before it is activated, and only one model is active at a time. **Territory types** and hierarchies organise the structure, for example by region then by segment. Territory assignment can run automatically from rules or be set by hand. Forecasts can be produced by territory as well as by role, which is why the exam often pairs the two topics. Know what happens to access when an account is reassigned."
+        "body": "**Enterprise Territory Management** assigns accounts to territories using rules, and gives the users in a territory access to those accounts and their opportunities. A **territory model** can be built and tested in planning state before it is activated; and only one model is active at a time. **Territory types** and hierarchies organise the structure, for example by region then by segment. Territory assignment can run automatically from rules or be set by hand. Forecasts can be produced by territory as well as by role, which is why the exam often pairs the two topics. Know what happens to access when an account is reassigned."
       },
       {
         "heading": "Sales Productivity and Reporting",
-        "body": "Several features exist to save reps time, and the exam expects you to pick the right one. **Email templates** and **Einstein Activity Capture** reduce manual logging. **Path** shows guidance for each stage on the record page. **Kanban** views let reps drag opportunities between stages. **Sales Engagement** supports cadences of calls and emails. For reporting, know the difference between a **report type**, a **summary report** and a **joined report**, and that **dashboards** need a running user that determines whose data viewers see. Pipeline reports, win-rate reports and forecast reports are the ones most often described in scenarios."
+        "body": "Several features exist to save reps time, and the exam expects you to pick the right one. **Email templates** and **Einstein Activity Capture** reduce manual logging. **Path** shows guidance for each stage on the record page. **Kanban** views let reps drag opportunities between stages. **Sales Engagement** supports cadences of calls and emails. For reporting. Know the difference between a **report type**, a **summary report** and a **joined report**, and that **dashboards** need a running user that determines whose data viewers see. Pipeline reports, win-rate reports and forecast reports are the ones most often described in scenarios."
       }
     ]
   },
@@ -160,7 +160,7 @@
       "correctAnswer": 1,
       "explanation": "Lead Assignment Rules automatically assign leads to users or queues based on criteria you define, such as geographic region, industry, or lead source.",
       "whyWrong": [
-        "Workflow Rules can update fields but aren't the purpose-built tool for routing leads by region — that's the specific job of Lead Assignment Rules.",
+        "Workflow Rules can update fields but aren't the purpose-built tool for routing leads by region, that's the specific job of Lead Assignment Rules.",
         "Process Builder can trigger actions on record changes, but lead routing by criteria like territory is natively handled by Lead Assignment Rules, not a typical Process Builder use case.",
         "Apex Triggers could technically implement this, but it's unnecessary custom code when the native Lead Assignment Rules feature already solves it declaratively."
       ]
@@ -176,8 +176,8 @@
       "correctAnswer": 1,
       "explanation": "Opportunity Splits allow you to share credit for an opportunity among multiple team members, with each member receiving a percentage of the revenue credit.",
       "whyWrong": [
-        "Splits share existing revenue credit among team members — they don't create separate child opportunity records.",
-        "Opportunity Splits doesn't divide an opportunity into separate stages — stages remain a single sequential field on the opportunity.",
+        "Splits share existing revenue credit among team members, they don't create separate child opportunity records.",
+        "Opportunity Splits doesn't divide an opportunity into separate stages, stages remain a single sequential field on the opportunity.",
         "Tracking competing opportunities is a different feature (Competitors related list), not what Splits are for."
       ]
     },
@@ -193,7 +193,7 @@
       "explanation": "Collaborative Forecasts allow managers to see forecasts from their team, adjust amounts, and roll up forecasts through the hierarchy.",
       "whyWrong": [
         "Territory Forecast rolls up by territory assignment, not specifically by direct-report role hierarchy as described.",
-        "Role Hierarchy Forecast isn't a standard Salesforce forecast type name — the actual roll-up-by-hierarchy feature is Collaborative Forecasts.",
+        "Role Hierarchy Forecast isn't a standard Salesforce forecast type name, the actual roll-up-by-hierarchy feature is Collaborative Forecasts.",
         "Individual Forecast shows only one user's own opportunities, not their reports' pipeline."
       ]
     },
@@ -210,7 +210,7 @@
       "whyWrong": [
         "A generic Custom Object could store competitor data, but Salesforce provides a purpose-built Competitors related list natively for this exact use case.",
         "Path is a visual stage-guidance tool, unrelated to tracking competitor information.",
-        "Big Deal Alert notifies about high-value opportunities — it has nothing to do with tracking competitors."
+        "Big Deal Alert notifies about high-value opportunities; it has nothing to do with tracking competitors."
       ]
     },
     {
@@ -224,8 +224,8 @@
       "correctAnswer": 0,
       "explanation": "Path provides visual guidance through each stage of a record, highlighting key fields to complete and offering tips for success at each stage.",
       "whyWrong": [
-        "Path doesn't send automated emails — that's a separate automation feature (Flow/Workflow).",
-        "Path doesn't automatically progress the stage itself — a user still manually moves the opportunity forward.",
+        "Path doesn't send automated emails, that's a separate automation feature (Flow/Workflow).",
+        "Path doesn't automatically progress the stage itself, a user still manually moves the opportunity forward.",
         "Path is a visual guidance tool, not a forecasting/revenue calculation feature."
       ]
     },
@@ -241,7 +241,7 @@
       "explanation": "Products define what you sell, Price Books define pricing, and Opportunity Products link products to opportunities with specific quantities and prices.",
       "whyWrong": [
         "Products alone define what's sellable, but pricing and opportunity-level tracking need the other two pieces as well.",
-        "Opportunity Products alone can't exist without Products and Price Books configured first — all three work together.",
+        "Opportunity Products alone can't exist without Products and Price Books configured first, all three work together.",
         "Price Books alone define pricing, but you still need Products and Opportunity Products to actually track them on deals."
       ]
     },
@@ -256,8 +256,8 @@
       "correctAnswer": 1,
       "explanation": "Sales Processes allow you to define different sales stages and associate them with record types, enabling different sales methodologies for different types of opportunities.",
       "whyWrong": [
-        "Sales Processes don't automate opportunity record creation — that's handled by other tools (Flow, APIs, manual creation).",
-        "Sales Processes define stage/record-type structure, not revenue calculation — that's forecasting.",
+        "Sales Processes don't automate opportunity record creation, that's handled by other tools (Flow, APIs, manual creation).",
+        "Sales Processes define stage/record-type structure, not revenue calculation, that's forecasting.",
         "Assigning opportunities to reps is a separate function (ownership/assignment rules), not what Sales Processes define."
       ]
     },
@@ -289,7 +289,7 @@
       "explanation": "Path provides visual guidance and recommended actions at each opportunity stage, helping sales reps know what to do next.",
       "whyWrong": [
         "Einstein Opportunity Insights surfaces AI-driven signals about deal risk/health, but the specific stage-based visual guidance described is Path's function.",
-        "Opportunity Teams defines who's collaborating on a deal — it doesn't provide next-step recommendations.",
+        "Opportunity Teams defines who's collaborating on a deal, it doesn't provide next-step recommendations.",
         "Salesforce Inbox is an email productivity tool, not a stage-based next-step recommendation feature."
       ]
     },
@@ -304,8 +304,8 @@
       "correctAnswer": 3,
       "explanation": "Lead Assignment Rules support round-robin distribution, automatically distributing leads evenly among assigned users or queues.",
       "whyWrong": [
-        "Workflow Rules can't perform round-robin distribution logic — that's a native capability of Lead Assignment Rules with round-robin queues.",
-        "Process Builder isn't the native round-robin distribution mechanism — Lead Assignment Rules provide this out of the box.",
+        "Workflow Rules can't perform round-robin distribution logic, that's a native capability of Lead Assignment Rules with round-robin queues.",
+        "Process Builder isn't the native round-robin distribution mechanism: Lead Assignment Rules provide this out of the box.",
         "Apex Triggers could build custom round-robin logic, but it's unnecessary complexity when native Lead Assignment Rules already provide this."
       ]
     },
@@ -321,8 +321,8 @@
       "explanation": "Collaborative Forecasts allow managers to see forecasts from their team, make adjustments, and roll up forecasts through the role hierarchy.",
       "whyWrong": [
         "Automated email notifications are a separate automation feature, not what Collaborative Forecasts provides.",
-        "Collaborative Forecasts isn't an external-system integration tool — it's an internal forecasting and roll-up feature.",
-        "Collaborative Forecasts doesn't automatically create opportunity records — it forecasts based on existing ones."
+        "Collaborative Forecasts isn't an external-system integration tool, it's an internal forecasting and roll-up feature.",
+        "Collaborative Forecasts doesn't automatically create opportunity records, it forecasts based on existing ones."
       ]
     },
     {
@@ -336,9 +336,9 @@
       "correctAnswer": 3,
       "explanation": "Activities include both Tasks (to-dos) and Events (calendar items) that can be associated with opportunities, accounts, contacts, and leads.",
       "whyWrong": [
-        "Tasks alone is one piece of activity tracking, but Events also count — the complete answer includes both.",
+        "Tasks alone is one piece of activity tracking, but Events also count, the complete answer includes both.",
         "'Activities' as a standalone option is a category label, not a specific answer distinct from the actual Tasks + Events options being tested.",
-        "Events alone is one piece of activity tracking, but Tasks also count — the complete answer includes both."
+        "Events alone is one piece of activity tracking, but Tasks also count, the complete answer includes both."
       ]
     },
     {
@@ -352,7 +352,7 @@
       "correctAnswer": 3,
       "explanation": "Sales Processes define the stages and record types for different sales methodologies, ensuring consistency across the sales team.",
       "whyWrong": [
-        "Workflow Rules automate field updates/notifications — they don't define or enforce a sales methodology's stage structure.",
+        "Workflow Rules automate field updates/notifications, they don't define or enforce a sales methodology's stage structure.",
         "Validation Rules enforce data-entry correctness, not the sequence of a sales methodology's stages.",
         "Sharing Rules control record visibility, unrelated to enforcing a specific sales methodology."
       ]
@@ -384,9 +384,9 @@
       "correctAnswer": 0,
       "explanation": "Sales Forecasting lets managers predict revenue using opportunity data; Collaborative Forecasts support quota and custom forecast types.",
       "whyWrong": [
-        "Lead Assignment Rules route leads to reps — they have nothing to do with forecasting revenue from opportunities.",
+        "Lead Assignment Rules route leads to reps; they have nothing to do with forecasting revenue from opportunities.",
         "Reports alone display data but don't perform the roll-up forecasting calculations themselves.",
-        "Territory Management organizes sales coverage by region/account — it isn't the revenue forecasting mechanism itself."
+        "Territory Management organizes sales coverage by region/account, it isn't the revenue forecasting mechanism itself."
       ]
     }
   ],

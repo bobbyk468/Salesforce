@@ -55,23 +55,23 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce Revenue Cloud Consultant certification?',
-    answer: 'The Salesforce Revenue Cloud Consultant certification validates skills in implementing Salesforce Revenue Cloud — the end-to-end quote-to-cash solution covering CPQ, contracting, billing, and revenue recognition. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee. Sales Cloud Consultant and CPQ Administrator experience are strongly recommended before sitting this exam.',
+    answer: 'The Salesforce Revenue Cloud Consultant certification validates skills in implementing Salesforce Revenue Cloud, the end-to-end quote-to-cash solution covering CPQ, contracting, billing, and revenue recognition. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee. Sales Cloud Consultant and CPQ Administrator experience are strongly recommended before sitting this exam.',
   },
   {
     question: 'What is the difference between Revenue Cloud and CPQ?',
-    answer: 'Salesforce CPQ (Configure, Price, Quote) handles the configure-to-quote portion of the sales process — product configuration, pricing, quoting, and approval workflows. Revenue Cloud extends CPQ into post-sale processes: order management, contracting, billing (invoice generation, payment collection), and revenue recognition. Revenue Cloud includes CPQ functionality and adds billing and revenue lifecycle management.',
+    answer: 'Salesforce CPQ (Configure, Price, Quote) handles the configure-to-quote portion of the sales process, product configuration, pricing, quoting, and approval workflows. Revenue Cloud extends CPQ into post-sale processes: order management, contracting, billing (invoice generation, payment collection), and revenue recognition. Revenue Cloud includes CPQ functionality and adds billing and revenue lifecycle management.',
   },
   {
     question: 'What is a billing schedule in Revenue Cloud?',
-    answer: 'A billing schedule defines when and how often a customer is invoiced for a subscription product. It consists of an invoice schedule (when invoices are generated — monthly, quarterly, annually) and a payment schedule (when payments are due relative to invoices). Revenue Cloud generates billing schedule records automatically from order product data and the billing treatment configured on the product.',
+    answer: 'A billing schedule defines when and how often a customer is invoiced for a subscription product. It consists of an invoice schedule (when invoices are generated, monthly, quarterly, annually) and a payment schedule (when payments are due relative to invoices). Revenue Cloud generates billing schedule records automatically from order product data and the billing treatment configured on the product.',
   },
   {
     question: 'What prerequisites are recommended for Revenue Cloud Consultant?',
-    answer: 'Sales Cloud Consultant and CPQ Administrator are strongly recommended before Revenue Cloud Consultant. Revenue Cloud builds directly on CPQ — you need deep CPQ knowledge (product bundles, pricing cascade, subscription management, order activation, contract generation) before layering in billing and revenue recognition. Many candidates also have Sales Cloud Consultant from prior Salesforce experience.',
+    answer: 'Sales Cloud Consultant and CPQ Administrator are strongly recommended before Revenue Cloud Consultant. Revenue Cloud builds directly on CPQ; you need deep CPQ knowledge (product bundles, pricing cascade, subscription management, order activation, contract generation) before layering in billing and revenue recognition. Many candidates also have Sales Cloud Consultant from prior Salesforce experience.',
   },
   {
     question: 'How long should I study for the Revenue Cloud Consultant exam?',
-    answer: 'Plan for 8–10 weeks with 10–15 hours per week, assuming CPQ Administrator knowledge. If you do not have CPQ Admin background, add 4–6 more weeks to cover CPQ fundamentals first. Revenue Cloud is a complex, interconnected product — hands-on sandbox experience configuring billing schedules, order activation, and invoice generation is essential for the scenario-based exam questions.',
+    answer: 'Plan for 8–10 weeks with 10–15 hours per week, assuming CPQ Administrator knowledge. If you do not have CPQ Admin background, add 4–6 more weeks to cover CPQ fundamentals first. Revenue Cloud is a complex, interconnected product, hands-on sandbox experience configuring billing schedules, order activation, and invoice generation is essential for the scenario-based exam questions.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
           Salesforce Revenue Cloud Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Revenue Cloud Consultant exam — CPQ, billing schedules, revenue recognition, and implementation strategy.
+          Your complete guide to passing the Revenue Cloud Consultant exam: CPQ, billing schedules, revenue recognition, and implementation strategy.
         </p>
       </div>
 
@@ -159,14 +159,14 @@ export default function RevenueCloudConsultantStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Revenue Cloud architecture — understand how CPQ, Orders, Contracts, Billing, and Revenue Recognition connect. Enable Revenue Cloud in a dev org.' },
-            { week: 'Week 2', focus: 'Product catalog — subscription products, usage-based products, evergreen vs fixed-term settings, and billing treatment configuration.' },
-            { week: 'Week 3', focus: 'CPQ review — product bundles, pricing cascade, amendment and renewal flows. Understand how CPQ quotes feed into Revenue Cloud orders.' },
-            { week: 'Week 4', focus: 'Orders & Contracts — activate an order, generate a contract, process an amendment, create a renewal. Understand reduction orders for cancellations.' },
-            { week: 'Week 5', focus: 'Billing — configure billing schedules (invoice + payment schedules), billing periods, billing treatments. Run the billing batch and review generated invoices.' },
-            { week: 'Week 6', focus: 'Usage-based billing — configure usage summaries, rated usage, and aggregation methods. Understand the difference from subscription billing.' },
-            { week: 'Week 7', focus: 'Revenue recognition — revenue schedules, distribution methods, ASC 606 compliance concepts. Configure a revenue recognition rule and review revenue schedules.' },
-            { week: 'Week 8', focus: 'Full mock exams. Focus on billing schedule scenarios and the order-to-invoice flow. Revenue Cloud has many interconnected steps — trace each one end to end.' },
+            { week: 'Week 1', focus: 'Revenue Cloud architecture, understand how CPQ, Orders, Contracts, Billing, and Revenue Recognition connect. Enable Revenue Cloud in a dev org.' },
+            { week: 'Week 2', focus: 'Product catalog, subscription products, usage-based products, evergreen vs fixed-term settings, and billing treatment configuration.' },
+            { week: 'Week 3', focus: 'CPQ review, product bundles, pricing cascade, amendment and renewal flows. Understand how CPQ quotes feed into Revenue Cloud orders.' },
+            { week: 'Week 4', focus: 'Orders & Contracts, activate an order, generate a contract, process an amendment, create a renewal. Understand reduction orders for cancellations.' },
+            { week: 'Week 5', focus: 'Billing, configure billing schedules (invoice + payment schedules), billing periods, billing treatments. Run the billing batch and review generated invoices.' },
+            { week: 'Week 6', focus: 'Usage-based billing, configure usage summaries, rated usage, and aggregation methods. Understand the difference from subscription billing.' },
+            { week: 'Week 7', focus: 'Revenue recognition, revenue schedules, distribution methods, ASC 606 compliance concepts. Configure a revenue recognition rule and review revenue schedules.' },
+            { week: 'Week 8', focus: 'Full mock exams. Focus on billing schedule scenarios and the order-to-invoice flow. Revenue Cloud has many interconnected steps, trace each one end to end.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -180,15 +180,15 @@ export default function RevenueCloudConsultantStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Trace the full quote-to-cash flow:</strong> Quote → Order → Contract → Billing Schedule → Invoice → Payment → Revenue Schedule. Knowing which object is created at each step, and what triggers each transition, is tested heavily.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Billing treatment determines billing schedule:</strong> Billing treatment on a product order item drives the invoice schedule (frequency) and payment schedule. Different products in the same order can have different billing treatments — invoiced monthly, annually, or at delivery.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Evergreen vs fixed-term:</strong> Evergreen subscriptions auto-renew indefinitely until cancelled. Fixed-term subscriptions have a defined end date. Revenue recognition and renewal flows differ significantly — know the key distinctions for each type.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Billing treatment determines billing schedule:</strong> Billing treatment on a product order item drives the invoice schedule (frequency) and payment schedule. Different products in the same order can have different billing treatments, invoiced monthly, annually, or at delivery.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Evergreen vs fixed-term:</strong> Evergreen subscriptions auto-renew indefinitely until cancelled. Fixed-term subscriptions have a defined end date. Revenue recognition and renewal flows differ significantly. Know the key distinctions for each type.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Reduction orders for cancellations:</strong> When a customer cancels part of a subscription, a reduction order is created to reduce quantities or end-date specific order products. This triggers corresponding billing and revenue recognition adjustments. Understand when a reduction order is used vs a standard amendment.</span></li>
         </ul>
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Product Catalog &amp; CPQ (28%) and Orders &amp; Contracts (24%) together are 52% of the exam — strong CPQ Administrator knowledge is essential. Billing &amp; Invoicing (22%) is the most uniquely Revenue Cloud section and requires hands-on sandbox practice.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Product Catalog &amp; CPQ (28%) and Orders &amp; Contracts (24%) together are 52% of the exam, strong CPQ Administrator knowledge is essential. Billing &amp; Invoicing (22%) is the most uniquely Revenue Cloud section and requires hands-on sandbox practice.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -221,7 +221,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant — which cert is right?</Link></li>
+          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant, which cert is right?</Link></li>
         </ul>
       </div>
 

@@ -67,7 +67,7 @@ const faqItems = [
   },
   {
     question: 'Do I need the Salesforce Administrator certification before Nonprofit Cloud Consultant?',
-    answer: 'Salesforce strongly recommends the Administrator certification as a prerequisite. The exam assumes solid platform knowledge — configuration, security, automation, and reporting. Nonprofit Cloud Consultant questions are layered on top of standard Salesforce knowledge, so candidates without admin-level expertise need to build that foundation first. Most successful candidates have at least 1–2 years of hands-on Salesforce experience in nonprofit settings.',
+    answer: 'Salesforce strongly recommends the Administrator certification as a prerequisite. The exam assumes solid platform knowledge, configuration, security, automation, and reporting. Nonprofit Cloud Consultant questions are layered on top of standard Salesforce knowledge, so candidates without admin-level expertise need to build that foundation first. Most successful candidates have at least 1–2 years of hands-on Salesforce experience in nonprofit settings.',
   },
   {
     question: 'How is Nonprofit Cloud Consultant different from the NPSP Consultant credential?',
@@ -94,7 +94,7 @@ export default function NonprofitCloudConsultantStudyGuidePage() {
           Salesforce Nonprofit Cloud Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Agentforce Nonprofit Consultant exam — NPSP data model, fundraising, volunteer management, and programme outcomes measurement.
+          A complete study guide for the Salesforce Certified Agentforce Nonprofit Consultant exam: NPSP data model, fundraising, volunteer management, and programme outcomes measurement.
         </p>
       </div>
 
@@ -177,7 +177,7 @@ export default function NonprofitCloudConsultantStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Education Cloud vs Nonprofit Cloud Consultant — comparison</Link></li>
+          <li><Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Education Cloud vs Nonprofit Cloud Consultant, comparison</Link></li>
         </ul>
       </div>
 

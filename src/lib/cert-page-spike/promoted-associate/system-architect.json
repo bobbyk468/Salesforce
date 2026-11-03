@@ -98,7 +98,7 @@
       },
       {
         "heading": "Authentication Patterns: OAuth 2.0 Flows",
-        "body": "From the Identity and Access Management exam. **Web server flow** when a person logs in through a browser and the app can keep a secret on its server. **User-agent flow** for apps that run in a browser or on a phone. **JWT bearer flow** for server-to-server access with no person present. **Device flow** for things like TVs or command-line tools with no proper keyboard. **Refresh tokens** let an app get a new access token without asking the user again. Each flow is set up in a Connected App or External Client App, which also controls scopes and policies."
+        "body": "From the Identity and Access Management exam. **Web server flow** when a person logs in through a browser and the app can keep a secret on its server. **User-agent flow** for apps that run in a browser or on a phone. **JWT bearer flow** for server-to-server access with no person present. **Device flow** for things like TVs or command-line tools with no proper keyboard. **Refresh tokens** let an app get a new access token without asking the user again. Each flow is set up in a Connected App or External Client App; which also controls scopes and policies."
       },
       {
         "heading": "API-Led Connectivity and Middleware (MuleSoft)",
@@ -224,7 +224,7 @@
       "correctAnswer": 2,
       "explanation": "The JWT bearer flow is meant for server-to-server access. The server signs a token with a certificate, and no password or user is needed.",
       "whyWrong": [
-        "The device flow is for devices with limited input, such as TVs, and still needs a person.",
+        "The device flow is for devices with limited input, such as TVs; and still needs a person.",
         "The web server flow needs a person to log in through a browser.",
         "The user-agent flow is for browser or mobile apps with a user present."
       ]
@@ -350,7 +350,7 @@
         "Stop sharing the data"
       ],
       "correctAnswer": 0,
-      "explanation": "A single System API in front of SAP, reused by everyone, means only one connection to change when SAP changes.",
+      "explanation": "A single System API in front of SAP, reused by everyone; means only one connection to change when SAP changes.",
       "whyWrong": [
         "Another direct link adds to the mess.",
         "Nightly copies are stale and still need five integrations.",

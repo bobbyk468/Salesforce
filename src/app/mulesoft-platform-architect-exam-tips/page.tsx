@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Mulesoft Platform Architect exam?',
-    answer: 'The Mulesoft Platform Architect requires 70% to pass — higher than most Salesforce certifications — making it among the more demanding exams in the ecosystem. It tests MuleSoft Anypoint Platform capabilities, API design patterns, and integration architecture at a depth that requires hands-on MuleSoft Studio and Runtime experience. Most candidates need 8–12 weeks of dedicated preparation and access to a MuleSoft trial environment. Dataweave transformation logic and error handling patterns are typically the hardest sections.',
+    answer: 'The Mulesoft Platform Architect requires 70% to pass, higher than most Salesforce certifications, making it among the more demanding exams in the ecosystem. It tests MuleSoft Anypoint Platform capabilities, API design patterns, and integration architecture at a depth that requires hands-on MuleSoft Studio and Runtime experience. Most candidates need 8–12 weeks of dedicated preparation and access to a MuleSoft trial environment. Dataweave transformation logic and error handling patterns are typically the hardest sections.',
   },
   {
     question: 'What are the highest-weight MuleSoft Platform Architect exam sections?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most MuleSoft Platform Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Platform Architect exam are: (1) CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric — Deployment Options; (2) Shared vs Dedicated Load Balancer — Public vs Private Endpoint Exposure; (3) Object Store v2 — Scoped to Deployment, Not Shared Across Workers by Default. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Platform Architect exam are: (1) CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric: Deployment Options; (2) Shared vs Dedicated Load Balancer: Public vs Private Endpoint Exposure; (3) Object Store v2: Scoped to Deployment, Not Shared Across Workers by Default. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('mulesoft-platform-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function MuleSoftPlatformArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What MuleSoft Platform Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API strategy and architecture</strong> — Designing enterprise API portfolios using API-led connectivity, defining API standards (RAML, versioning strategy, error handling), managing the API lifecycle (design, publish, manage, retire), and building reusable API assets in Anypoint Exchange.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform governance</strong> — Designing governance frameworks for API lifecycle, setting up environments and business groups, configuring API Manager policies at scale, and using Anypoint Governance (API Governance) for automated compliance checking.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deployment architecture</strong> — Selecting between CloudHub 1.0, CloudHub 2.0, Runtime Fabric, and on-premises deployment based on requirement constraints (compliance, latency, control, cost). Designing high-availability Mule runtime clusters and understanding VPC peering for private connectivity.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API strategy and architecture</strong>: Designing enterprise API portfolios using API-led connectivity, defining API standards (RAML, versioning strategy, error handling), managing the API lifecycle (design, publish, manage, retire), and building reusable API assets in Anypoint Exchange.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform governance</strong>: Designing governance frameworks for API lifecycle, setting up environments and business groups, configuring API Manager policies at scale, and using Anypoint Governance (API Governance) for automated compliance checking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deployment architecture</strong>: Selecting between CloudHub 1.0, CloudHub 2.0, Runtime Fabric, and on-premises deployment based on requirement constraints (compliance, latency, control, cost). Designing high-availability Mule runtime clusters and understanding VPC peering for private connectivity.</li>
         </ul>
       </section>
 
@@ -137,12 +137,12 @@ export default function MuleSoftPlatformArchitectExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Platform Architect Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe enterprise integration challenges and ask which platform architecture, governance
-          approach, or deployment decision is most appropriate. Think at the enterprise level — not just
+          approach, or deployment decision is most appropriate. Think at the enterprise level, not just
           the individual API level. The correct answer balances developer productivity with governance.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For deployment questions: CloudHub 1.0 = fully managed, least control, fastest setup. CloudHub 2.0 = managed with private spaces for compliance, better isolation. Runtime Fabric = self-managed Kubernetes, maximum control, highest overhead. On-premises = for data sovereignty requirements where cloud is not permitted. Match the deployment to the stated compliance/control/cost requirements.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: a C4E provides templates, best practices, and reusable APIs to accelerate development. It is a team of enablers — not a bottleneck team that builds all integrations. The C4E creates the tools and standards; other teams use them autonomously. When a scenario says ’how to scale MuleSoft adoption without creating a central IT bottleneck’, C4E is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: a C4E provides templates, best practices, and reusable APIs to accelerate development. It is a team of enablers, not a bottleneck team that builds all integrations. The C4E creates the tools and standards; other teams use them autonomously. When a scenario says ’how to scale MuleSoft adoption without creating a central IT bottleneck’, C4E is the answer.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API governance questions: Anypoint Governance checks APIs against rulesets automatically (RAML linting, security standards). API Manager policies enforce security at runtime. Business groups and environments control who can manage which APIs. When a question asks how to enforce API security standards across all teams, Anypoint Governance rulesets + API Manager policies is the answer.</li>
         </ul>
       </section>
@@ -154,7 +154,7 @@ export default function MuleSoftPlatformArchitectExamTipsPage() {
           76%+ on 3 timed full mocks before booking (70% passing score)
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          MuleSoft Platform Architect requires enterprise integration strategy experience — not just
+          MuleSoft Platform Architect requires enterprise integration strategy experience, not just
           development skills. Candidates with MuleSoft Developer I/II and real-world Anypoint Platform
           management experience are the target audience. Understanding C4E at a conceptual level
           and the trade-offs between deployment models requires project exposure, not just study.
@@ -164,19 +164,19 @@ export default function MuleSoftPlatformArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Platform Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric — Deployment Options</p>
-            <p className="text-sm text-gray-700">CloudHub 1.0 is the shared managed runtime (workers). CloudHub 2.0 is the containerised replacement with improved scalability and clustering. Runtime Fabric (RTF) is a self-managed Kubernetes-based runtime for deploying Mule apps in customer-owned infrastructure. Candidates recommend CloudHub for all deployments — the exam expects RTF for data sovereignty requirements or cloud-control mandates.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric: Deployment Options</p>
+            <p className="text-sm text-gray-700">CloudHub 1.0 is the shared managed runtime (workers). CloudHub 2.0 is the containerised replacement with improved scalability and clustering. Runtime Fabric (RTF) is a self-managed Kubernetes-based runtime for deploying Mule apps in customer-owned infrastructure. Candidates recommend CloudHub for all deployments, the exam expects RTF for data sovereignty requirements or cloud-control mandates.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Shared vs Dedicated Load Balancer — Public vs Private Endpoint Exposure</p>
-            <p className="text-sm text-gray-700">A Shared Load Balancer exposes Mule apps on a Salesforce-managed domain (tenant.us-e1.cloudhub.io) — suitable for non-production or public APIs. A Dedicated Load Balancer (DLB) exposes apps on a custom domain with SSL termination and network ACLs — required for production APIs that need branded domains or IP whitelisting. Candidates use Shared Load Balancers for production — the exam expects DLB for production, custom-domain requirements.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Shared vs Dedicated Load Balancer: Public vs Private Endpoint Exposure</p>
+            <p className="text-sm text-gray-700">A Shared Load Balancer exposes Mule apps on a Salesforce-managed domain (tenant.us-e1.cloudhub.io), suitable for non-production or public APIs. A Dedicated Load Balancer (DLB) exposes apps on a custom domain with SSL termination and network ACLs, required for production APIs that need branded domains or IP whitelisting. Candidates use Shared Load Balancers for production, the exam expects DLB for production, custom-domain requirements.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Object Store v2 — Scoped to Deployment, Not Shared Across Workers by Default</p>
-            <p className="text-sm text-gray-700">Object Store v2 persists key-value data across Mule runtime restarts. By default, Object Store is scoped to a single CloudHub worker — in a multi-worker deployment, workers do not share Object Store data unless explicitly configured. Candidates design session state management assuming Object Store is shared — the exam expects Persistent Object Store (shared across workers) or sticky sessions for stateful applications.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Object Store v2: Scoped to Deployment, Not Shared Across Workers by Default</p>
+            <p className="text-sm text-gray-700">Object Store v2 persists key-value data across Mule runtime restarts. By default, Object Store is scoped to a single CloudHub worker, in a multi-worker deployment, workers do not share Object Store data unless explicitly configured. Candidates design session state management assuming Object Store is shared, the exam expects Persistent Object Store (shared across workers) or sticky sessions for stateful applications.</p>
           </div>
         </div>
       </section>

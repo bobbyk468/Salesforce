@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Platform Foundations exam format?',
-    answer: 'The Salesforce Platform Foundations exam has 45 multiple-choice questions, a 70-minute time limit, a 65% passing score, and a $150 fee. It is an entry-level certification testing fundamental Salesforce platform concepts: navigation, objects, fields, automation basics, security model, and reports — positioned as a stepping stone before the full Administrator exam.',
+    answer: 'The Salesforce Platform Foundations exam has 45 multiple-choice questions, a 70-minute time limit, a 65% passing score, and a $150 fee. It is an entry-level certification testing fundamental Salesforce platform concepts: navigation, objects, fields, automation basics, security model, and reports, positioned as a stepping stone before the full Administrator exam.',
   },
   {
     question: 'What are the highest-weight Platform Foundations exam sections?',
@@ -57,15 +57,15 @@ const faqItems = [
   },
   {
     question: 'What is the difference between Platform Foundations and Administrator (ADM-201)?',
-    answer: 'Platform Foundations is an entry-level certification for beginners — it tests fundamental platform knowledge at a shallower depth than ADM-201. ADM-201 is the full administrator certification testing deeper knowledge across more topics. Platform Foundations is ideal for those who need to demonstrate basic Salesforce literacy before pursuing ADM-201 or a specialist certification.',
+    answer: 'Platform Foundations is an entry-level certification for beginners, it tests fundamental platform knowledge at a shallower depth than ADM-201. ADM-201 is the full administrator certification testing deeper knowledge across more topics. Platform Foundations is ideal for those who need to demonstrate basic Salesforce literacy before pursuing ADM-201 or a specialist certification.',
   },
   {
     question: 'Who should take Platform Foundations instead of going straight to ADM-201?',
-    answer: 'Platform Foundations is recommended for professionals new to Salesforce who need to quickly demonstrate platform competency — business users, project managers, sales reps, or people starting in a Salesforce admin role. Those with 3+ months of Salesforce exposure may be better served by targeting ADM-201 directly to avoid unnecessary exam fees.',
+    answer: 'Platform Foundations is recommended for professionals new to Salesforce who need to quickly demonstrate platform competency, business users, project managers, sales reps, or people starting in a Salesforce admin role. Those with 3+ months of Salesforce exposure may be better served by targeting ADM-201 directly to avoid unnecessary exam fees.',
   },
   {
     question: 'What concepts do most Platform Foundations candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Platform Foundations exam are: (1) Standard Objects vs Custom Objects — What You Can and Cannot Modify; (2) Profiles vs Permission Sets — Baseline vs Extension; (3) App Launcher vs Navigation Bar vs Home Page — Three Separate Customisation Areas. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Platform Foundations exam are: (1) Standard Objects vs Custom Objects: What You Can and Cannot Modify; (2) Profiles vs Permission Sets: Baseline vs Extension; (3) App Launcher vs Navigation Bar vs Home Page: Three Separate Customisation Areas. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('platform-foundations-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function PlatformFoundationsExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Platform Foundations Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Core platform concepts</strong> — Standard and custom objects, field types (text, number, picklist, lookup, master-detail), record pages, Lightning App Builder, and how Salesforce organises and relates data across objects.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data and security model</strong> — The Salesforce security model: profiles (object-level access), permission sets (additional permissions), OWDs and sharing rules (record-level access). Understanding who can see which records and how sharing is controlled.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Automation and reporting</strong> — Basic Flow automation (screen flows for user interaction, auto-launched for background automation), validation rules, formula fields, and creating reports and dashboards. Basic understanding of Salesforce automation options and when to use each.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Core platform concepts</strong>: Standard and custom objects, field types (text, number, picklist, lookup, master-detail), record pages, Lightning App Builder, and how Salesforce organises and relates data across objects.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data and security model</strong>: The Salesforce security model: profiles (object-level access), permission sets (additional permissions), OWDs and sharing rules (record-level access). Understanding who can see which records and how sharing is controlled.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Automation and reporting</strong>: Basic Flow automation (screen flows for user interaction, auto-launched for background automation), validation rules, formula fields, and creating reports and dashboards. Basic understanding of Salesforce automation options and when to use each.</li>
         </ul>
       </section>
 
@@ -137,13 +137,13 @@ export default function PlatformFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Platform Foundations Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a basic Salesforce configuration or business requirement and ask which feature,
-          field type, or setting addresses it. Focus on standard Salesforce features — not custom development
+          field type, or setting addresses it. Focus on standard Salesforce features, not custom development
           or advanced configuration that would be out of scope for a foundations exam.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For field type questions: Text fields store alphanumeric data. Number fields store numeric values. Lookup fields create a relationship to another object. Master-Detail fields create a tighter parent-child relationship where the child can’t exist without the parent. Formula fields calculate values from other fields — they are read-only.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For field type questions: Text fields store alphanumeric data. Number fields store numeric values. Lookup fields create a relationship to another object. Master-Detail fields create a tighter parent-child relationship where the child can’t exist without the parent. Formula fields calculate values from other fields; they are read-only.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions: profiles control which objects and fields a user can access. Permission sets add additional access on top of profiles. OWDs (Organisation-Wide Defaults) set the baseline sharing level for each object. Sharing rules open up access beyond OWDs. You can never use these to restrict access below what a profile grants.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: validation rules prevent saving invalid data. Formula fields calculate read-only values. Flow automates processes (screen flow for guided users, auto-launched for background logic). When a scenario says ’when a record is saved, automatically update a field’, the answer is an auto-launched Flow triggered on record save — not a manual process.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: validation rules prevent saving invalid data. Formula fields calculate read-only values. Flow automates processes (screen flow for guided users, auto-launched for background logic). When a scenario says ’when a record is saved, automatically update a field’, the answer is an auto-launched Flow triggered on record save, not a manual process.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function PlatformFoundationsExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Platform Foundations Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Standard Objects vs Custom Objects — What You Can and Cannot Modify</p>
-            <p className="text-sm text-gray-700">Standard Objects (Account, Contact, Opportunity, Case) are provided by Salesforce and cannot be deleted — you can add fields, page layouts, and validation rules but cannot remove the core fields. Custom Objects are fully user-defined and can be deleted if no records exist. Candidates try to delete standard objects or standard fields — the exam expects knowledge of what is modifiable on standard vs custom objects.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Standard Objects vs Custom Objects: What You Can and Cannot Modify</p>
+            <p className="text-sm text-gray-700">Standard Objects (Account, Contact, Opportunity, Case) are provided by Salesforce and cannot be deleted; you can add fields, page layouts, and validation rules but cannot remove the core fields. Custom Objects are fully user-defined and can be deleted if no records exist. Candidates try to delete standard objects or standard fields, the exam expects knowledge of what is modifiable on standard vs custom objects.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Profiles vs Permission Sets — Baseline vs Extension</p>
-            <p className="text-sm text-gray-700">Profiles define the baseline permissions for a group of users: what objects they can access, what apps they see, login hours. Permission Sets add permissions ON TOP of a profile — they cannot restrict what a profile already grants. Candidates use Permission Sets to restrict access — the exam expects Profiles for restriction and Permission Sets for expansion.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Profiles vs Permission Sets: Baseline vs Extension</p>
+            <p className="text-sm text-gray-700">Profiles define the baseline permissions for a group of users: what objects they can access, what apps they see, login hours. Permission Sets add permissions ON TOP of a profile, they cannot restrict what a profile already grants. Candidates use Permission Sets to restrict access, the exam expects Profiles for restriction and Permission Sets for expansion.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. App Launcher vs Navigation Bar vs Home Page — Three Separate Customisation Areas</p>
-            <p className="text-sm text-gray-700">The App Launcher shows all apps available to a user (customised via profiles and permission sets). The Navigation Bar (within a Lightning App) defines the tabs visible in a specific app. The Home Page displays components relevant to the user’s role. Candidates customise the App Launcher when they mean the Navigation Bar — the exam distinguishes these as separate customisation surfaces.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. App Launcher vs Navigation Bar vs Home Page: Three Separate Customisation Areas</p>
+            <p className="text-sm text-gray-700">The App Launcher shows all apps available to a user (customised via profiles and permission sets). The Navigation Bar (within a Lightning App) defines the tabs visible in a specific app. The Home Page displays components relevant to the user’s role. Candidates customise the App Launcher when they mean the Navigation Bar, the exam distinguishes these as separate customisation surfaces.</p>
           </div>
         </div>
       </section>

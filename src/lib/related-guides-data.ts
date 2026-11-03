@@ -1,4 +1,4 @@
-/** Related guides for internal linking — used on study guides, vs pages, and hub pages. */
+/** Related guides for internal linking, used on study guides, vs pages, and hub pages. */
 export function getRelatedGuides(currentSlug: string): { href: string; anchorText: string }[] {
   const guides: Record<string, { href: string; anchorText: string }[]> = {
     'ux-designer-vs-strategy-designer': [

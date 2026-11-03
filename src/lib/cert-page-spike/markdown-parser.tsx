@@ -63,7 +63,7 @@ export function parseMarkdown(input: string): MarkdownSegment[] {
         if (text) segments.push({ type: 'text', text })
         pos = input.length
       } else if (nextPatternPos === pos) {
-        // Special char at current pos didn't form a valid pattern — consume it as plain text
+        // Special char at current pos didn't form a valid pattern, consume it as plain text
         // to avoid infinite loop (e.g. lone * in "dw.* API" or unclosed brackets)
         const char = input[pos]
         const last = segments[segments.length - 1]

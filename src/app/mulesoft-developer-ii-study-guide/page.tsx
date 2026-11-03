@@ -59,15 +59,15 @@ const faqItems = [
   },
   {
     question: 'What prerequisites are required for MuleSoft Developer II?',
-    answer: 'MuleSoft Developer I (MCIA-Level-1) is a formal prerequisite — you must hold Developer I before you can sit Developer II. Beyond the formal requirement, strong real-world Mule 4 project experience is essential. Developer II tests advanced patterns that typically require 1–2 years of hands-on Anypoint Platform development experience after Developer I.',
+    answer: 'MuleSoft Developer I (MCIA-Level-1) is a formal prerequisite; you must hold Developer I before you can sit Developer II. Beyond the formal requirement, strong real-world Mule 4 project experience is essential. Developer II tests advanced patterns that typically require 1–2 years of hands-on Anypoint Platform development experience after Developer I.',
   },
   {
     question: 'What is watermarking in MuleSoft and why is it tested?',
-    answer: 'Watermarking is a pattern for incremental data processing — tracking which records have already been processed so subsequent runs only process new or updated records. In MuleSoft, watermarking is implemented using the Object Store connector to persist the last processed timestamp or ID between flow executions. It is commonly combined with batch processing for large dataset integrations and is directly tested on Developer II.',
+    answer: 'Watermarking is a pattern for incremental data processing, tracking which records have already been processed so subsequent runs only process new or updated records. In MuleSoft, watermarking is implemented using the Object Store connector to persist the last processed timestamp or ID between flow executions. It is commonly combined with batch processing for large dataset integrations and is directly tested on Developer II.',
   },
   {
     question: 'What is a custom policy in MuleSoft API Manager?',
-    answer: 'Custom policies are reusable API governance rules applied to APIs via API Manager. They are built using the MuleSoft Policy Development Kit (PDK) — writing policy logic in DataWeave and configuring policy metadata. Custom policies can enforce authentication, rate limiting, data transformation, logging, or any custom requirement that the out-of-the-box policies do not cover. Building and applying custom policies is a key Developer II topic.',
+    answer: 'Custom policies are reusable API governance rules applied to APIs via API Manager. They are built using the MuleSoft Policy Development Kit (PDK), writing policy logic in DataWeave and configuring policy metadata. Custom policies can enforce authentication, rate limiting, data transformation, logging, or any custom requirement that the out-of-the-box policies do not cover. Building and applying custom policies is a key Developer II topic.',
   },
   {
     question: 'How long should I study for the MuleSoft Developer II exam?',
@@ -94,7 +94,7 @@ export default function MulesoftDeveloperIiStudyGuidePage() {
           MuleSoft Developer II Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing MuleSoft Developer II — advanced DataWeave, custom policies, batch processing, reliable messaging, and security.
+          Your complete guide to passing MuleSoft Developer II, advanced DataWeave, custom policies, batch processing, reliable messaging, and security.
         </p>
       </div>
 
@@ -159,14 +159,14 @@ export default function MulesoftDeveloperIiStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Review Developer I foundations — ensure solid knowledge of flow design, DataWeave basics, connectors, and error handling before advancing to Level II content.' },
-            { week: 'Week 2', focus: 'Advanced DataWeave — recursive functions, custom DataWeave modules, streaming large payloads, multipart and binary output formats, and performance optimisation.' },
-            { week: 'Week 3', focus: 'Reliable messaging — idempotent message filter, Anypoint MQ publish/consume, message acknowledgement, dead-letter queues, and the VM connector for in-memory messaging.' },
-            { week: 'Week 4', focus: 'Batch processing — batch job phases (Process Records, On Complete), batch size tuning, watermarking with Object Store for incremental processing, error handling in batch.' },
-            { week: 'Week 5', focus: 'Security — TLS/HTTPS configuration, secure properties encryption, Anypoint Secret Manager, OAuth 2.0 enforcement, and applying out-of-the-box API policies.' },
-            { week: 'Week 6', focus: 'Custom policies — Policy Development Kit (PDK), writing DataWeave policy logic, policy YAML metadata, deploying custom policies to API Manager, and applying to APIs.' },
-            { week: 'Week 7', focus: 'API governance — Anypoint Exchange organisation, API versioning strategies (URI versioning, header versioning), API Notebooks for documentation.' },
-            { week: 'Week 8', focus: 'Full mock exams under 120-minute time pressure. Focus on advanced DataWeave scenarios and batch/watermarking questions — these are most commonly tested and missed.' },
+            { week: 'Week 1', focus: 'Review Developer I foundations, ensure solid knowledge of flow design, DataWeave basics, connectors, and error handling before advancing to Level II content.' },
+            { week: 'Week 2', focus: 'Advanced DataWeave, recursive functions, custom DataWeave modules, streaming large payloads, multipart and binary output formats, and performance optimisation.' },
+            { week: 'Week 3', focus: 'Reliable messaging, idempotent message filter, Anypoint MQ publish/consume, message acknowledgement, dead-letter queues, and the VM connector for in-memory messaging.' },
+            { week: 'Week 4', focus: 'Batch processing, batch job phases (Process Records, On Complete), batch size tuning, watermarking with Object Store for incremental processing, error handling in batch.' },
+            { week: 'Week 5', focus: 'Security: TLS/HTTPS configuration, secure properties encryption, Anypoint Secret Manager, OAuth 2.0 enforcement, and applying out-of-the-box API policies.' },
+            { week: 'Week 6', focus: 'Custom policies: Policy Development Kit (PDK), writing DataWeave policy logic, policy YAML metadata, deploying custom policies to API Manager, and applying to APIs.' },
+            { week: 'Week 7', focus: 'API governance: Anypoint Exchange organisation, API versioning strategies (URI versioning, header versioning), API Notebooks for documentation.' },
+            { week: 'Week 8', focus: 'Full mock exams under 120-minute time pressure. Focus on advanced DataWeave scenarios and batch/watermarking questions; these are most commonly tested and missed.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -179,16 +179,16 @@ export default function MulesoftDeveloperIiStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Reliable messaging pattern:</strong> Use Anypoint MQ for durable, asynchronous message passing between Mule applications or to external systems. Use the VM connector for in-memory, within-application messaging (no external MQ required). Idempotent message filter prevents duplicate processing — use with a correlation ID and Object Store.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Batch job phases:</strong> Process Records phase processes each record in parallel (configurable batch size). On Complete phase runs once after all records are processed — use it for post-processing summaries, notifications, or cleanup. Error handling in batch is per-record — failed records go to failed records and do not stop successful records.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Reliable messaging pattern:</strong> Use Anypoint MQ for durable, asynchronous message passing between Mule applications or to external systems. Use the VM connector for in-memory, within-application messaging (no external MQ required). Idempotent message filter prevents duplicate processing. Use with a correlation ID and Object Store.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Batch job phases:</strong> Process Records phase processes each record in parallel (configurable batch size). On Complete phase runs once after all records are processed. Use it for post-processing summaries, notifications, or cleanup. Error handling in batch is per-record, failed records go to failed records and do not stop successful records.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Watermarking implementation:</strong> On each run, retrieve the last watermark from Object Store → use it to query only new/updated records → process records → update the watermark in Object Store with the new max value. This ensures each run only processes incremental data.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Custom policy vs built-in policy:</strong> Use built-in policies (Rate Limiting, OAuth 2.0, IP Allowlist) when available — they are maintained by MuleSoft and require no code. Build a custom policy only when the requirement cannot be met by any built-in policy. The exam tests knowing when a custom policy is the right tool.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Custom policy vs built-in policy:</strong> Use built-in policies (Rate Limiting, OAuth 2.0, IP Allowlist) when available; they are maintained by MuleSoft and require no code. Build a custom policy only when the requirement cannot be met by any built-in policy. The exam tests knowing when a custom policy is the right tool.</span></li>
         </ul>
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong> given the 70% passing score. Advanced Application Development (35%) is the heaviest section — master reliable messaging, Object Store, and Anypoint MQ before test day. Advanced DataWeave (20%) requires writing and reading complex expressions fluently.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong> given the 70% passing score. Advanced Application Development (35%) is the heaviest section, master reliable messaging, Object Store, and Anypoint MQ before test day. Advanced DataWeave (20%) requires writing and reading complex expressions fluently.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

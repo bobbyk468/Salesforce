@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2C Commerce Developer certification?',
-    answer: 'The B2C Commerce Developer (formerly Demandware Developer) certification validates skills in developing and customising Salesforce B2C Commerce Cloud (SFCC) storefronts — including SFRA architecture, cartridge development, ISML templates, controllers, Business Manager configuration, and OCAPI integrations. The exam has 60 questions, 90-minute time limit, ~65% passing score, and a $200 fee.',
+    answer: 'The B2C Commerce Developer (formerly Demandware Developer) certification validates skills in developing and customising Salesforce B2C Commerce Cloud (SFCC) storefronts, including SFRA architecture, cartridge development, ISML templates, controllers, Business Manager configuration, and OCAPI integrations. The exam has 60 questions, 90-minute time limit, ~65% passing score, and a $200 fee.',
   },
   {
     question: 'What is SFRA in Salesforce Commerce Cloud?',
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is a cartridge in B2C Commerce?',
-    answer: 'A cartridge is a deployable module in Salesforce B2C Commerce that contains controllers, templates, models, scripts, and static assets. Cartridges are stacked in a cartridge path — when a file is requested, SFCC searches cartridges in path order and uses the first match found. This enables customisation: a custom cartridge placed first in the path overrides SFRA\'s base cartridge files without modifying the originals, making future upgrades easier.',
+    answer: 'A cartridge is a deployable module in Salesforce B2C Commerce that contains controllers, templates, models, scripts, and static assets. Cartridges are stacked in a cartridge path, when a file is requested, SFCC searches cartridges in path order and uses the first match found. This enables customisation: a custom cartridge placed first in the path overrides SFRA\'s base cartridge files without modifying the originals, making future upgrades easier.',
   },
   {
     question: 'What is OCAPI in B2C Commerce?',
@@ -94,7 +94,7 @@ export default function B2cCommerceDeveloperStudyGuidePage() {
           Salesforce B2C Commerce Developer Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the B2C Commerce Developer exam — SFRA architecture, cartridge development, ISML templates, OCAPI, Business Manager, and order management.
+          Your complete guide to passing the B2C Commerce Developer exam: SFRA architecture, cartridge development, ISML templates, OCAPI, Business Manager, and order management.
         </p>
       </div>
 
@@ -159,13 +159,13 @@ export default function B2cCommerceDeveloperStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'SFCC environment — set up a Business Manager sandbox, navigate the admin interface, configure a site. Explore the SFRA repository on GitHub and understand the folder structure.' },
-            { week: 'Week 2', focus: 'Cartridge architecture — create a custom cartridge, add it to the cartridge path, override an SFRA template. Understand cartridge inheritance by modifying a product detail page template.' },
-            { week: 'Week 3', focus: 'ISML templates — practise all ISML tags: <isif>, <isloop>, <isset>, <isinclude>, <isprint>. Build a custom template component that renders dynamic product data from a controller.' },
-            { week: 'Week 4', focus: 'Controllers — create custom routes using server.get and server.post. Work with req, res, and pdict. Implement a middleware function. Test controller output in a browser.' },
-            { week: 'Week 5', focus: 'Business Manager configuration — set up a product catalog, configure pricing (pricebooks), create a promotion, set up shipping methods and payment methods.' },
-            { week: 'Week 6', focus: 'OCAPI — make REST calls to the Shop API (browse products, add to cart) and Data API (export orders). Configure OCAPI settings in Business Manager. Understand authentication.' },
-            { week: 'Week 7', focus: 'Order management and integrations — trace the order lifecycle in Business Manager. Set up a job for order export. Review payment integration patterns and tax calculation options.' },
+            { week: 'Week 1', focus: 'SFCC environment, set up a Business Manager sandbox, navigate the admin interface, configure a site. Explore the SFRA repository on GitHub and understand the folder structure.' },
+            { week: 'Week 2', focus: 'Cartridge architecture, create a custom cartridge, add it to the cartridge path, override an SFRA template. Understand cartridge inheritance by modifying a product detail page template.' },
+            { week: 'Week 3', focus: 'ISML templates, practise all ISML tags: <isif>, <isloop>, <isset>, <isinclude>, <isprint>. Build a custom template component that renders dynamic product data from a controller.' },
+            { week: 'Week 4', focus: 'Controllers, create custom routes using server.get and server.post. Work with req, res, and pdict. Implement a middleware function. Test controller output in a browser.' },
+            { week: 'Week 5', focus: 'Business Manager configuration, set up a product catalog, configure pricing (pricebooks), create a promotion, set up shipping methods and payment methods.' },
+            { week: 'Week 6', focus: 'OCAPI, make REST calls to the Shop API (browse products, add to cart) and Data API (export orders). Configure OCAPI settings in Business Manager. Understand authentication.' },
+            { week: 'Week 7', focus: 'Order management and integrations, trace the order lifecycle in Business Manager. Set up a job for order export. Review payment integration patterns and tax calculation options.' },
             { week: 'Week 8', focus: 'Full mock exams. SFRA Architecture (30%) and ISML/Controllers (22%) = 52% of the exam. Master cartridge path resolution and controller middleware chain. Aim for 75%+ before booking.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -182,13 +182,13 @@ export default function B2cCommerceDeveloperStudyGuidePage() {
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Cartridge path order is critical:</strong> The first cartridge in the path wins when multiple cartridges have the same file. Custom cartridges should be placed before SFRA’s base cartridge (app_storefront_base) in the path. Any question about overriding default behaviour should mention adding a custom cartridge at the front of the path.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>server.append vs server.prepend:</strong> Use server.append to add middleware after the default route handler (e.g., add data to an existing response). Use server.prepend to add middleware before (e.g., authentication check). Use server.replace to completely override the route. Know which to use for a given customisation requirement.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>OCAPI Data API for backend, Shop API for storefront:</strong> The Data API handles merchant operations (catalog, orders, pricing management) and requires Business Manager OAuth. The Shop API handles shopper operations (browse, cart, checkout) and can use anonymous or JWT-authenticated sessions.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Jobs for batch operations:</strong> Any scenario involving scheduled or batch processing (order export, inventory import, price updates) should use the SFCC Job framework — not ad-hoc API calls. Jobs run in Business Manager and can execute script modules on a schedule.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Jobs for batch operations:</strong> Any scenario involving scheduled or batch processing (order export, inventory import, price updates) should use the SFCC Job framework, not ad-hoc API calls. Jobs run in Business Manager and can execute script modules on a schedule.</span></li>
         </ul>
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. B2C Commerce Developer is very hands-on — most questions describe a specific development scenario (override a template, extend a controller, configure OCAPI) and test exact implementation knowledge. There is no substitute for hands-on SFRA development experience.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. B2C Commerce Developer is very hands-on, most questions describe a specific development scenario (override a template, extend a controller, configure OCAPI) and test exact implementation knowledge. There is no substitute for hands-on SFRA development experience.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -196,14 +196,14 @@ export default function B2cCommerceDeveloperStudyGuidePage() {
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>SFRA cartridge hierarchy: cartridge path, inheritance, base cartridge (app_storefront_base)</li>
           <li>Creating a custom cartridge and adding it to the cartridge path</li>
-          <li>ISML syntax: isif, isloop, isset, isinclude, isprint — and when to use each</li>
+          <li>ISML syntax: isif, isloop, isset, isinclude, isprint, and when to use each</li>
           <li>Controllers: server.get, server.post, server.append, server.prepend, server.replace</li>
           <li>Middleware chain: how middleware functions execute, next() pattern</li>
           <li>pdict: what it is, how controllers pass data to templates</li>
           <li>OCAPI: Shop API vs Data API, authentication methods, rate limits</li>
           <li>Business Manager: catalog, pricebooks, promotions, content slots</li>
           <li>Job framework: job steps, scheduling, custom Script job steps</li>
-          <li>Order lifecycle: New → Open → Failed → Cancelled → Completed — what triggers each transition</li>
+          <li>Order lifecycle: New → Open → Failed → Cancelled → Completed, what triggers each transition</li>
         </ol>
       </div>
 

@@ -285,7 +285,7 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'mulesoft-platform-architect': '$400',
   'mulesoft-integration-architect': '$400',
   'tableau-architect': '$400',
-  // $75 (Foundations — free retake)
+  // $75 (Foundations, free retake)
   'platform-foundations': '$75',
   'sales-foundations': '$75',
   'tableau-desktop-foundations': '$75',
@@ -849,119 +849,119 @@ export function getCertMetaDescription(slug: string): string {
   }
   const ctrDescriptionOverrides: Record<string, string> = {
     'app-builder':
-      `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free — 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
+      `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free: 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
     administrator:
-      `Free sample practice questions; official exam format: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free sample practice questions; official exam format: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'marketing-cloud-consultant':
       `Marketing Cloud Consultant: Free sample practice questions; official exam format: 60 questions; no sign-up, 67% passing. Sample Qs, exam tips & ${TITLE_YEAR} study guide.`,
     'business-analyst':
       `Business Analyst certification: Free sample practice questions; official exam format: 60 questions; no sign-up, ~65% passing, 105 min. Sample Qs & ${TITLE_YEAR} study guide.`,
     'sales-cloud':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'advanced-administrator':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'email-specialist':
       'Email Specialist practice: official guide lists 60 scored questions plus up to 5 unscored, 90 minutes and 67% passing. Start free practice.',
     'mulesoft-hyperautomation-developer':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'sharing-visibility-architect':
       `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 67% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'identity-access-management-architect':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'developer-2':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'cpq-administrator':
-      `CPQ certification: Free Salesforce CPQ Administrator practice. Start free — 15 sample questions, 60 exam Q, ~65% passing. ${TITLE_YEAR} study guide. $200 fee.`,
+      `CPQ certification: Free Salesforce CPQ Administrator practice. Start free: 15 sample questions, 60 exam Q, ~65% passing. ${TITLE_YEAR} study guide. $200 fee.`,
     'pardot-consultant':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'pardot-specialist':
-      `Free Pardot Specialist certification practice: 60 questions, 72% passing score, 90 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free Pardot Specialist certification practice: 60 questions, 72% passing score, 90 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'experience-cloud':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'slack-developer':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'tableau-data-analyst':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'mulesoft-integration-foundations':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
     'technical-architect':
-      `Free CTA practice scenarios: board-style design questions, solution defense prep, and architecture trade-off drills. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free CTA practice scenarios: board-style design questions, solution defense prep, and architecture trade-off drills. $6,000 total fee. ${RELEASE_YEAR}, no sign-up.`,
     'technical-architect-review-board':
-      `Free CTA Review Board prep: practice presenting and defending architecture decisions, scenario walkthroughs, and board Q&A drills. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free CTA Review Board prep: practice presenting and defending architecture decisions, scenario walkthroughs, and board Q&A drills. $6,000 total fee. ${RELEASE_YEAR}, no sign-up.`,
     'integration-architect':
-      `Integration Architect: Free practice exam — no sign-up. 60 Qs, 67% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
+      `Integration Architect: Free practice exam, no sign-up. 60 Qs, 67% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
     'data-architect':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 58% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 58% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'system-architect':
       `Salesforce System Architect: no separate exam. Earned with PD1, Integration, IAM and Dev Lifecycle Architect. Free sample questions and ${TITLE_YEAR} study guide.`,
     // Extended coverage: All remaining certs for universal CTR optimization
     'advanced-field-service-ap': `Advanced Field Service AP exam prep: covers work order lifecycle, scheduling optimization & mobile worker tools. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'administrator-practice-test': `Free ADM-201 mock test: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'administrator-practice-test': `Free ADM-201 mock test: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'agentforce-specialist': 'Agentforce Specialist practice: official guide lists 60 scored questions plus up to 5 unscored, 105 minutes and 72% passing. Start free practice.',
-    'ai-associate': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 65% passing score, 70 min. Exam retired Feb 2026. ${RELEASE_YEAR} — no sign-up.`,
-    'application-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~58% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'ai-associate': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 65% passing score, 70 min. Exam retired Feb 2026. ${RELEASE_YEAR}, no sign-up.`,
+    'application-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~58% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'b2b-commerce-admin-ap': `B2B Commerce Admin AP exam prep: covers storefront setup, catalog management, buyer groups & entitlements. 60 Qs, 75% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'b2b-commerce-developer-ap': `B2B Commerce Developer AP exam prep: covers storefront customization, APIs, checkout & integration. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'b2b-solution-architect': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions, key concepts and exam tips. 60 questions, $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'b2c-commerce-architect': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions, key concepts and exam tips. 60 questions, 105 min, $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'b2c-commerce-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2c-solution-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'b2c-commerce-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'b2c-solution-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'communications-cloud-ap': `Communications Cloud AP exam prep: covers telecom billing, subscriptions, product catalog & order management. 55 Qs, 56% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'consumer-goods-cloud-ap': `Consumer Goods Cloud AP exam prep: covers retail execution, visits, surveys & route accounting. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'consumer-goods-tpm-ap': `Consumer Goods TPM AP exam prep: covers trade promotion planning, fund management & deductions. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'contact-center-ap': `Contact Center AP exam prep: covers Service Cloud Voice, CTI, omni-channel routing & agent experience. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'cpq-billing-ap': `CPQ & Billing AP exam prep: covers configure-price-quote, subscription billing, amendments & renewals. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'crm-analytics-einstein-discovery-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'data-360-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'developer-1': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'crm-analytics-einstein-discovery-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'data-360-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'developer-1': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'dev-lifecycle-deployment-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 65% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'education-cloud-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'email-specialist-practice-test': `Free Email Specialist mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'education-cloud-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'email-specialist-practice-test': `Free Email Specialist mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'energy-utilities-ap': `Energy & Utilities AP exam prep: covers meter management, rates, service agreements & billing. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'field-service': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'field-service': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'financial-services-cloud-ap': `Financial Services Cloud AP exam prep: covers wealth management, insurance, mortgages & referral management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'health-cloud-ap': `Health Cloud AP exam prep: covers patient management, care coordination, care plans & provider search. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'heroku-architect': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions on dynos, data, Private Spaces and Heroku Connect. 60 questions, $400 fee. ${RELEASE_YEAR}.`,
     'heroku-developer-ap': `Heroku Developer AP exam prep: covers dynos, pipelines, add-ons, deployment & Heroku Postgres. 60 Qs, 68% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'industries-cpq-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'javascript-developer-i': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'lightning-web-components-specialist': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'industries-cpq-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'javascript-developer-i': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'lightning-web-components-specialist': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'loyalty-management-ap': `Loyalty Management AP exam prep: covers loyalty programs, points, tiers, member benefits & partner integration. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'manufacturing-cloud-ap': `Manufacturing Cloud AP exam prep: covers run rate business, account-based forecasting & rebate management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'marketing-cloud-advanced-cross-channel-ap': `MC Advanced Cross-Channel AP exam prep: covers MC Advertising, Social, Push & Journey Builder integrations. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'marketing-cloud-engagement-admin': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-engagement-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-engagement-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~65% passing score, 75 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'marketing-cloud-engagement-admin': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'marketing-cloud-engagement-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'marketing-cloud-engagement-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~65% passing score, 75 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'marketing-cloud-intelligence-ap': `MC Intelligence AP exam prep: covers Datorama data connectors, dashboards, KPI tracking & AI insights. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'marketing-cloud-personalization-ap': `MC Personalization AP exam prep: covers real-time segmentation, Einstein decisions & Interaction Studio. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'media-cloud-ap': `Media Cloud AP exam prep: covers media rights management, ad sales, revenue recognition & media orders. 60 Qs, 66% pass, 75 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'mulesoft-catalyst-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'mulesoft-catalyst-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'mulesoft-developer-i': 'MuleSoft Developer study notes and original practice questions. Check the linked official exam guide and current booking details. Start free practice.',
-    'mulesoft-developer-ii': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'mulesoft-developer-ii': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'mulesoft-integration-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; exam format: about 60 questions, 70% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'mulesoft-platform-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'mulesoft-platform-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
     'net-zero-cloud-ap': `Net Zero Cloud AP exam prep: covers carbon accounting, emissions tracking, ESG reporting & sustainability goals. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'nonprofit-cloud': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'nonprofit-success-pack-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'omnistudio-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'omnistudio-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'nonprofit-cloud': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'nonprofit-success-pack-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'omnistudio-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'omnistudio-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'order-management-admin-ap': `Order Management Admin AP exam prep: covers order lifecycle, fulfillment, returns & inventory management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'order-management-developer-ap': `Order Management Developer AP exam prep: covers OMS APIs, custom flows, integrations & developer toolkit. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'platform-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'platform-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
     'process-automation-ap': `Process Automation AP exam prep: covers Flow Builder, approval processes, automation rules & invocable actions. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'public-sector-solutions-ap': `Public Sector Solutions AP exam prep: covers grants management, licensing, inspections & case management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'revenue-cloud-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'sales-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 62% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'service-cloud': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 78% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'slack-administrator': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'revenue-cloud-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'sales-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 62% passing score, 70 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'service-cloud': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 78% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'slack-administrator': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     'slack-consultant': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions on rollout, Workflow Builder, governance and adoption. 60 questions, $200 fee. ${RELEASE_YEAR}.`,
     'strategy-designer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 70% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'tableau-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 59 questions, 63% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-desktop-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 48% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-server-administrator': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'technical-architect-evaluation': `Free CTA Evaluation prep: scenario-based architecture questions, multiple-choice sections, and timed design exercises. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
-    'ux-designer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'tableau-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 59 questions, 63% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'tableau-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'tableau-desktop-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 48% passing score, 70 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'tableau-server-administrator': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
+    'technical-architect-evaluation': `Free CTA Evaluation prep: scenario-based architecture questions, multiple-choice sections, and timed design exercises. $6,000 total fee. ${RELEASE_YEAR}, no sign-up.`,
+    'ux-designer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
     // Claude (Anthropic) certifications
   }
   const override = ctrDescriptionOverrides[slug]
@@ -983,7 +983,7 @@ export function getCertMetaDescription(slug: string): string {
   const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
   const desc =
     formerName && standardized.length < 145
-      ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${standardized}`
+      ? `${primaryName}${examCode ? ` (${examCode})`: ''}, formerly ${formerName}. ${standardized}`
       : standardized
   
   const finalDesc = finalizeMetaDescription(desc)
@@ -1011,7 +1011,7 @@ export function getCertMetadata(slug: string): Metadata {
   const canonicalSlug = PRACTICE_TEST_TO_PARENT[slug] || slug
   const canonicalUrl = `${baseUrl}/certifications/${canonicalSlug}`
   const primaryName = getCertPrimaryName(slug, certName)
-  // Per-cert dynamic OG image — shows cert name, "Free Practice" badge, release year
+  // Per-cert dynamic OG image, shows cert name, "Free Practice" badge, release year
   const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(primaryName)}`
 
   return {
@@ -1113,11 +1113,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Is ADM-201 harder than Platform App Builder (DEV-402)?',
-      answer: 'ADM-201 is generally considered slightly easier than Platform App Builder because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is broader — you need to know a little about many topics across 7 exam sections.',
+      answer: 'ADM-201 is generally considered slightly easier than Platform App Builder because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is broader; you need to know a little about many topics across 7 exam sections.',
     },
     {
       question: 'What is the best way to pass the ADM-201 exam on the first attempt?',
-      answer: 'Focus on high-weight sections first (Configuration & Setup and Object Manager together are 40%). Practice in a free Developer Edition org. Take timed mock exams and aim for 75%+ before booking. Review wrong answers deeply — understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
+      answer: 'Focus on high-weight sections first (Configuration & Setup and Object Manager together are 40%). Practice in a free Developer Edition org. Take timed mock exams and aim for 75%+ before booking. Review wrong answers deeply, understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
     },
     {
       question: 'What are the 7 exam sections for ADM-201 and which have the highest weight?',
@@ -1129,15 +1129,15 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between a role hierarchy and sharing rules in Salesforce?',
-      answer: 'Role hierarchy determines automatic record access based on reporting structure—users above someone in the hierarchy can always see their records. Sharing rules allow you to grant access to records based on criteria (e.g., all accounts in a region) or public groups regardless of hierarchy.',
+      answer: 'Role hierarchy determines automatic record access based on reporting structure, users above someone in the hierarchy can always see their records. Sharing rules allow you to grant access to records based on criteria (e.g., all accounts in a region) or public groups regardless of hierarchy.',
     },
     {
       question: 'What are org-wide defaults (OWD) and why are they important?',
-      answer: 'Org-wide defaults set the baseline sharing level for each object. Options are: Private (only owner and high-hierarchy users), Public Read-Only (everyone can read), or Public Read/Write. You typically set OWD to Private then use sharing rules and roles to grant appropriate access—this is considered best practice.',
+      answer: 'Org-wide defaults set the baseline sharing level for each object. Options are: Private (only owner and high-hierarchy users), Public Read-Only (everyone can read), or Public Read/Write. You typically set OWD to Private then use sharing rules and roles to grant appropriate access, this is considered best practice.',
     },
     {
       question: 'What is the difference between a workflow rule and a flow in Salesforce?',
-      answer: 'Workflow Rules (legacy) automate simple, record-change triggered actions like field updates and email alerts. Flows (current) are more powerful and flexible—they support complex business logic, multiple triggers, and can update multiple objects. Salesforce recommends using Flows for new automation rather than Workflows.',
+      answer: 'Workflow Rules (legacy) automate simple, record-change triggered actions like field updates and email alerts. Flows (current) are more powerful and flexible, they support complex business logic, multiple triggers, and can update multiple objects. Salesforce recommends using Flows for new automation rather than Workflows.',
     },
     {
       question: 'What is a Lightning App and when should I create one?',
@@ -1151,7 +1151,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'app-builder': [
     {
       question: 'What is the difference between Platform Administrator and Platform App Builder certifications?',
-      answer: 'Platform Administrator focuses on day-to-day administration, security, and user management. Platform App Builder focuses on declarative development—building custom applications using clicks, not code. App Builder is ideal for those who want to build custom apps without programming.',
+      answer: 'Platform Administrator focuses on day-to-day administration, security, and user management. Platform App Builder focuses on declarative development, building custom applications using clicks, not code. App Builder is ideal for those who want to build custom apps without programming.',
     },
     {
       question: 'What is the DEV-402 exam fee and passing score in Summer \'26?',
@@ -1175,7 +1175,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is a Lightning Page and how is it different from a custom Visualforce page?',
-      answer: 'Lightning Pages (declarative) are built by dragging and dropping components—no coding needed. Visualforce pages (coded) require programming knowledge. Lightning Pages are the modern approach; Salesforce is moving away from Visualforce.',
+      answer: 'Lightning Pages (declarative) are built by dragging and dropping components, no coding needed. Visualforce pages (coded) require programming knowledge. Lightning Pages are the modern approach; Salesforce is moving away from Visualforce.',
     },
     {
       question: 'What is the difference between a regulated field and a standard field in Salesforce?',
@@ -1183,7 +1183,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How do Flows work and when should I use them instead of Workflows?',
-      answer: 'Flows are a visual, no-code tool that automate complex business processes. They can handle multiple decision branches, involve multiple objects, and trigger on various events. Workflows are deprecated—Salesforce recommends Flows for all new automation.',
+      answer: 'Flows are a visual, no-code tool that automate complex business processes. They can handle multiple decision branches, involve multiple objects, and trigger on various events. Workflows are deprecated, Salesforce recommends Flows for all new automation.',
     },
     {
       question: 'What are the best practices for DEV-402 exam preparation?',
@@ -1195,7 +1195,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the hardest section of the DEV-402 Platform App Builder exam?',
-      answer: 'Most candidates find the Security and Access section (22%) and Process Automation (24%) the hardest — together they account for nearly half the exam. Security questions require understanding the full sharing model stack: OWD → roles → sharing rules → field-level security → page layouts. Automation questions require knowing when to use Flow vs Approval Process vs legacy Workflow. The key trap: choosing legacy tools (Workflow, Process Builder) over Flow.',
+      answer: 'Most candidates find the Security and Access section (22%) and Process Automation (24%) the hardest, together they account for nearly half the exam. Security questions require understanding the full sharing model stack: OWD → roles → sharing rules → field-level security → page layouts. Automation questions require knowing when to use Flow vs Approval Process vs legacy Workflow. The key trap: choosing legacy tools (Workflow, Process Builder) over Flow.',
     },
   ],
   'sales-cloud': [
@@ -1217,7 +1217,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How is Sales Cloud Consultant different from Platform Administrator?',
-      answer: 'Platform Administrator (ADM-201) tests broad admin operations — security, automation, and org setup. Sales Cloud Consultant focuses on designing and implementing sales process solutions for clients: lead management, pipeline, forecasting, territory hierarchies, and marketing campaign integration. The Consultant exam is more scenario-heavy and solution-design oriented.',
+      answer: 'Platform Administrator (ADM-201) tests broad admin operations, security, automation, and org setup. Sales Cloud Consultant focuses on designing and implementing sales process solutions for clients: lead management, pipeline, forecasting, territory hierarchies, and marketing campaign integration. The Consultant exam is more scenario-heavy and solution-design oriented.',
     },
     {
       question: 'What is Sales Cloud territory management and how is it tested?',
@@ -1233,11 +1233,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the role of Campaign Influence in Sales Cloud?',
-      answer: 'Campaign Influence connects marketing campaigns to won opportunities to show marketing\'s impact on revenue. Primary Campaign Source (on the opportunity) tracks the most influential campaign. Campaign Influence models (Salesforce, Primary Source, or custom AI-driven Einstein Attribution) distribute revenue credit across multiple campaigns. The Sales Cloud Consultant exam tests which model to recommend for a given scenario and how Campaign Influence differs from Campaign ROI reporting. Common scenario: "Marketing wants to see which campaigns contributed to opportunities in the pipeline" — the answer is Campaign Influence, not Campaign ROI.',
+      answer: 'Campaign Influence connects marketing campaigns to won opportunities to show marketing\'s impact on revenue. Primary Campaign Source (on the opportunity) tracks the most influential campaign. Campaign Influence models (Salesforce, Primary Source, or custom AI-driven Einstein Attribution) distribute revenue credit across multiple campaigns. The Sales Cloud Consultant exam tests which model to recommend for a given scenario and how Campaign Influence differs from Campaign ROI reporting. Common scenario: "Marketing wants to see which campaigns contributed to opportunities in the pipeline", the answer is Campaign Influence, not Campaign ROI.',
     },
     {
       question: 'What are the most common failure points for Sales Cloud Consultant candidates?',
-      answer: 'Common failure points: (1) Forecasting — confusing forecast categories, not understanding cumulative rollup, or not knowing the impact of opportunity stage on forecast category mapping; (2) Territory Management — confusing ETM with sharing rules or role hierarchy for record access; (3) Solution Design questions — choosing a feature that solves the problem technically but is not the recommended Salesforce best-practice approach; (4) Integration with Marketing Cloud — not knowing Campaign Influence and Pardot/Account Engagement sync behaviour. Aim for 75%+ on timed mocks consistently before booking.',
+      answer: 'Common failure points: (1) Forecasting, confusing forecast categories, not understanding cumulative rollup, or not knowing the impact of opportunity stage on forecast category mapping; (2) Territory Management, confusing ETM with sharing rules or role hierarchy for record access; (3) Solution Design questions, choosing a feature that solves the problem technically but is not the recommended Salesforce best-practice approach; (4) Integration with Marketing Cloud, not knowing Campaign Influence and Pardot/Account Engagement sync behaviour. Aim for 75%+ on timed mocks consistently before booking.',
     },
   ],
   'service-cloud': [
@@ -1263,23 +1263,23 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is Omni-Channel routing in Service Cloud and how is it tested?',
-      answer: 'Omni-Channel automatically routes work items (cases, chats, messaging sessions) to the most appropriate available agent based on routing logic. Two routing models: Queue-based routing (routes to queues, agents pull work) and Skills-based routing (routes directly to agents with the right skills and capacity). Key concepts the exam tests: routing configurations (push vs pull), presence statuses, capacity models (concurrent vs effort-based), and service channels. Most common exam scenario: "route live chat sessions to agents with the Spanish language skill and available capacity" — answer is Skills-based routing with a skill requirement.',
+      answer: 'Omni-Channel automatically routes work items (cases, chats, messaging sessions) to the most appropriate available agent based on routing logic. Two routing models: Queue-based routing (routes to queues, agents pull work) and Skills-based routing (routes directly to agents with the right skills and capacity). Key concepts the exam tests: routing configurations (push vs pull), presence statuses, capacity models (concurrent vs effort-based), and service channels. Most common exam scenario: "route live chat sessions to agents with the Spanish language skill and available capacity"; answer is Skills-based routing with a skill requirement.',
     },
     {
       question: 'What are Entitlements and Service Contracts in Service Cloud?',
-      answer: 'Entitlements define what support a customer is entitled to — the support terms attached to an account or asset (e.g., "Phone Support 24/7", "Web Support 9-5 M-F"). Service Contracts are the commercial agreements with customers that contain the entitlement terms. Entitlement Process defines the SLA timelines and escalation milestones. The exam tests: when to use Entitlements vs Service Contracts, how Milestone Actions trigger when SLAs are at risk, and how Entitlements are linked to Cases to track SLA compliance. Common failure point: confusing Entitlements with Case Assignment Rules or Escalation Rules.',
+      answer: 'Entitlements define what support a customer is entitled to, the support terms attached to an account or asset (e.g., "Phone Support 24/7", "Web Support 9-5 M-F"). Service Contracts are the commercial agreements with customers that contain the entitlement terms. Entitlement Process defines the SLA timelines and escalation milestones. The exam tests: when to use Entitlements vs Service Contracts, how Milestone Actions trigger when SLAs are at risk, and how Entitlements are linked to Cases to track SLA compliance. Common failure point: confusing Entitlements with Case Assignment Rules or Escalation Rules.',
     },
     {
       question: 'What is Salesforce Knowledge and how does the exam test its configuration?',
-      answer: 'Salesforce Knowledge is a knowledge base for creating, managing, and publishing articles that agents and customers can search. Key concepts: Article Types (categories of articles — FAQ, How-To, Product), Data Categories (hierarchical classification for visibility and search), and Publication Channels (Internal, Salesforce Sites, Customer Community). The exam tests: how to configure Knowledge to show relevant articles during case creation, how Data Categories control article visibility for different user groups, and how to set up suggested articles in Case Feed. Common scenario: "agents should see relevant articles automatically when working on a case" — answer involves Knowledge Sidebar and article suggestions configuration.',
+      answer: 'Salesforce Knowledge is a knowledge base for creating, managing, and publishing articles that agents and customers can search. Key concepts: Article Types (categories of articles: FAQ, How-To, Product), Data Categories (hierarchical classification for visibility and search), and Publication Channels (Internal, Salesforce Sites, Customer Community). The exam tests: how to configure Knowledge to show relevant articles during case creation, how Data Categories control article visibility for different user groups, and how to set up suggested articles in Case Feed. Common scenario: "agents should see relevant articles automatically when working on a case", answer involves Knowledge Sidebar and article suggestions configuration.',
     },
     {
       question: 'What are the most common reasons Service Cloud Consultant candidates fail?',
-      answer: 'Common failure points: (1) Omni-Channel configuration — confusing queue-based vs skills-based routing, or not knowing how presence statuses affect agent availability; (2) Entitlements — confusing Entitlement Processes with Case Escalation Rules; (3) Solution Design questions — choosing a feature that works technically but is not Salesforce\'s recommended best-practice approach (e.g., choosing a custom solution when Einstein Case Routing exists); (4) Contact Center analytics — not knowing which standard report types cover case volume, CSAT, or SLA compliance. Aim for 77%+ on timed mocks (67% real threshold, 10% buffer) before booking.',
+      answer: 'Common failure points: (1) Omni-Channel configuration, confusing queue-based vs skills-based routing, or not knowing how presence statuses affect agent availability; (2) Entitlements, confusing Entitlement Processes with Case Escalation Rules; (3) Solution Design questions, choosing a feature that works technically but is not Salesforce\'s recommended best-practice approach (e.g., choosing a custom solution when Einstein Case Routing exists); (4) Contact Center analytics, not knowing which standard report types cover case volume, CSAT, or SLA compliance. Aim for 77%+ on timed mocks (67% real threshold, 10% buffer) before booking.',
     },
     {
       question: 'What is CTI integration in Service Cloud and when does the exam test it?',
-      answer: 'CTI (Computer Telephony Integration) connects phone systems to Salesforce, enabling agents to handle calls directly in the browser via Open CTI or Service Cloud Voice. Open CTI is an API that connects third-party phone systems to Salesforce without browser plugins. Service Cloud Voice is Salesforce\'s native telephony integration with Amazon Connect, including real-time transcription and AI-powered agent guidance. The exam tests when to recommend CTI vs standard phone workflows and the capabilities of Service Cloud Voice. Key differentiator: if real-time call transcription or voice AI is required, recommend Service Cloud Voice — not generic Open CTI.',
+      answer: 'CTI (Computer Telephony Integration) connects phone systems to Salesforce, enabling agents to handle calls directly in the browser via Open CTI or Service Cloud Voice. Open CTI is an API that connects third-party phone systems to Salesforce without browser plugins. Service Cloud Voice is Salesforce\'s native telephony integration with Amazon Connect, including real-time transcription and AI-powered agent guidance. The exam tests when to recommend CTI vs standard phone workflows and the capabilities of Service Cloud Voice. Key differentiator: if real-time call transcription or voice AI is required, recommend Service Cloud Voice, not generic Open CTI.',
     },
   ],
   'developer-1': [
@@ -1297,7 +1297,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What are the most common reasons candidates fail PD1?',
-      answer: 'Common failure points: (1) not knowing governor limits (SOQL 100/transaction, DML 150/transaction) and when they trigger, (2) writing DML or SOQL inside a for loop — the exam\'s most common trap, (3) misunderstanding the 75% code coverage rule and how Test.startTest()/stopTest() affect limit resets, and (4) confusing @AuraEnabled, @RestResource, and @InvocableMethod annotations.',
+      answer: 'Common failure points: (1) not knowing governor limits (SOQL 100/transaction, DML 150/transaction) and when they trigger, (2) writing DML or SOQL inside a for loop, the exam\'s most common trap, (3) misunderstanding the 75% code coverage rule and how Test.startTest()/stopTest() affect limit resets, and (4) confusing @AuraEnabled, @RestResource, and @InvocableMethod annotations.',
     },
     {
       question: 'How long should I study for PD1 and what mock score means I am ready?',
@@ -1309,19 +1309,19 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between a Future method and a Queueable class in Salesforce?',
-      answer: '@Future methods are the simplest form of async Apex — they run in a separate transaction, support HTTP callouts (when callout=true), and resolve mixed DML errors. Limitations: cannot be chained, cannot pass sObjects directly, limited monitoring. Queueable Apex (implements Queueable) is more powerful: it can be chained (job enqueues another job), can pass complex objects, and provides a Job ID for monitoring via AsyncApexJob. PD1 exam rule: if the question involves chaining async jobs or monitoring job completion, the answer is Queueable. If it\'s a simple callout from a trigger, Future method is often acceptable.',
+      answer: '@Future methods are the simplest form of async Apex, they run in a separate transaction, support HTTP callouts (when callout=true), and resolve mixed DML errors. Limitations: cannot be chained, cannot pass sObjects directly, limited monitoring. Queueable Apex (implements Queueable) is more powerful: it can be chained (job enqueues another job), can pass complex objects, and provides a Job ID for monitoring via AsyncApexJob. PD1 exam rule: if the question involves chaining async jobs or monitoring job completion, the answer is Queueable. If it\'s a simple callout from a trigger, Future method is often acceptable.',
     },
     {
       question: 'What are the most important Apex annotations PD1 candidates must know?',
-      answer: '@isTest — marks a class or method as a test class (does not count toward code coverage). @TestVisible — exposes private methods/variables to test classes without changing access modifiers. @AuraEnabled — exposes an Apex method to Lightning components (LWC and Aura). @InvocableMethod — exposes an Apex method as an action in Flow. @RemoteAction — exposes methods to Visualforce pages via JavaScript remoting. @RestResource / @HttpGet / @HttpPost — creates REST API endpoints in Apex. The PD1 exam frequently presents a scenario and asks which annotation to add.',
+      answer: '@isTest, marks a class or method as a test class (does not count toward code coverage). @TestVisible, exposes private methods/variables to test classes without changing access modifiers. @AuraEnabled, exposes an Apex method to Lightning components (LWC and Aura). @InvocableMethod, exposes an Apex method as an action in Flow. @RemoteAction, exposes methods to Visualforce pages via JavaScript remoting. @RestResource / @HttpGet / @HttpPost, creates REST API endpoints in Apex. The PD1 exam frequently presents a scenario and asks which annotation to add.',
     },
     {
       question: 'What is the difference between SOQL and SOSL and when should each be used?',
-      answer: 'SOQL (Salesforce Object Query Language) queries a specific object and its related objects: SELECT Id, Name FROM Account WHERE CreatedDate = TODAY. Use SOQL when you know the object and want records matching specific criteria. SOSL (Salesforce Object Search Language) searches across multiple objects simultaneously using text search: FIND \'Smith\' IN ALL FIELDS RETURNING Account, Contact, Lead. Use SOSL when you need to search across multiple objects for a text string — for example, building a search feature that returns results from any object. PD1 tip: if a scenario says "search across multiple objects for a keyword," the answer is SOSL, not SOQL.',
+      answer: 'SOQL (Salesforce Object Query Language) queries a specific object and its related objects: SELECT Id, Name FROM Account WHERE CreatedDate = TODAY. Use SOQL when you know the object and want records matching specific criteria. SOSL (Salesforce Object Search Language) searches across multiple objects simultaneously using text search: FIND \'Smith\' IN ALL FIELDS RETURNING Account, Contact, Lead. Use SOSL when you need to search across multiple objects for a text string, for example, building a search feature that returns results from any object. PD1 tip: if a scenario says "search across multiple objects for a keyword," the answer is SOSL, not SOQL.',
     },
     {
       question: 'How does Salesforce\'s security model relate to PD1 Apex development?',
-      answer: 'PD1 tests "with sharing" vs "without sharing" class declarations: "with sharing" enforces the running user\'s sharing rules and OWD (recommended for most cases); "without sharing" bypasses sharing and runs with system-level access. If a class doesn\'t specify sharing, it inherits from the calling class. PD1 also tests CRUD/FLS enforcement — Apex does not automatically enforce field-level security or CRUD permissions (unlike Visualforce or LWC). Developers must explicitly check Schema.DescribeFieldResult or use Security.stripInaccessible() to enforce FLS. This is a common exam differentiator.',
+      answer: 'PD1 tests "with sharing" vs "without sharing" class declarations: "with sharing" enforces the running user\'s sharing rules and OWD (recommended for most cases); "without sharing" bypasses sharing and runs with system-level access. If a class doesn\'t specify sharing, it inherits from the calling class. PD1 also tests CRUD/FLS enforcement; Apex does not automatically enforce field-level security or CRUD permissions (unlike Visualforce or LWC). Developers must explicitly check Schema.DescribeFieldResult or use Security.stripInaccessible() to enforce FLS. This is a common exam differentiator.',
     },
   ],
   'data-architect': [
@@ -1363,7 +1363,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What are the three pillars of responsible AI that appear on the AI Associate exam?',
-      answer: 'The AI Associate exam emphasises Salesforce\'s Trusted AI principles: (1) Responsible — ensuring AI is designed and used ethically, (2) Accountable — maintaining human oversight of AI decisions, and (3) Transparent — making AI reasoning understandable. Expect questions on bias mitigation, data governance, and when AI output should be reviewed by a human.',
+      answer: 'The AI Associate exam emphasises Salesforce\'s Trusted AI principles: (1) Responsible, ensuring AI is designed and used ethically, (2) Accountable, maintaining human oversight of AI decisions, and (3) Transparent, making AI reasoning understandable. Expect questions on bias mitigation, data governance, and when AI output should be reviewed by a human.',
     },
   ],
   'platform-foundations': [
@@ -1430,7 +1430,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the PD2 passing score and exam fee in Summer \'26?',
-      answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, 120 minutes, and a passing score of 70%. The exam fee is $200 USD (retake $100 USD). PD1 certification is a mandatory prerequisite — you cannot sit PD2 without it.',
+      answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, 120 minutes, and a passing score of 70%. The exam fee is $200 USD (retake $100 USD). PD1 certification is a mandatory prerequisite, you cannot sit PD2 without it.',
     },
     {
       question: 'What design patterns are tested in Platform Developer II?',
@@ -1498,7 +1498,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is identity resolution in Data Cloud and why does it appear on the exam?',
-      answer: 'Identity resolution is the process of matching and merging records from different data sources into a single unified profile (called a Unified Individual). It uses rulesets to reconcile duplicate contacts from CRM, marketing, e-commerce, and other sources. The exam tests how to configure reconciliation rules, match rules, and understand the output — the Unified Individual and its related objects.',
+      answer: 'Identity resolution is the process of matching and merging records from different data sources into a single unified profile (called a Unified Individual). It uses rulesets to reconcile duplicate contacts from CRM, marketing, e-commerce, and other sources. The exam tests how to configure reconciliation rules, match rules, and understand the output, the Unified Individual and its related objects.',
     },
     {
       question: 'What is the difference between a Data Stream and a Data Lake Object in Data Cloud?',
@@ -1636,11 +1636,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How long should I study for the Marketing Cloud Email Specialist exam?',
-      answer: 'Most candidates with some Marketing Cloud experience study for 4–6 weeks. Hands-on practice in Email Studio, Content Builder, and Automation Studio is essential — reading alone is insufficient. Target 77%+ on timed full mocks (60 Q / 105 min) before booking.',
+      answer: 'Most candidates with some Marketing Cloud experience study for 4–6 weeks. Hands-on practice in Email Studio, Content Builder, and Automation Studio is essential, reading alone is insufficient. Target 77%+ on timed full mocks (60 Q / 105 min) before booking.',
     },
     {
       question: 'What is the difference between a hard bounce and a soft bounce in Marketing Cloud?',
-      answer: 'Hard bounces are permanent delivery failures — the email address is invalid or the server explicitly rejects it. Marketing Cloud automatically marks hard-bounced addresses as Bounced and excludes them from future sends. Soft bounces are temporary failures (mailbox full, server busy) — Marketing Cloud retries soft bounces before converting them to bounced status. The exam tests which action Marketing Cloud takes automatically for each bounce type.',
+      answer: 'Hard bounces are permanent delivery failures, the email address is invalid or the server explicitly rejects it. Marketing Cloud automatically marks hard-bounced addresses as Bounced and excludes them from future sends. Soft bounces are temporary failures (mailbox full, server busy): Marketing Cloud retries soft bounces before converting them to bounced status. The exam tests which action Marketing Cloud takes automatically for each bounce type.',
     },
     {
       question: 'What AMPscript functions are most commonly tested in the Email Specialist exam?',
@@ -1690,15 +1690,15 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between MuleSoft Integration Foundations and MuleSoft Developer I?',
-      answer: 'Integration Foundations ($75, 40 questions, 70 min) is a conceptual entry-level cert focused on API-led connectivity terminology and Anypoint Platform awareness — no coding required. MuleSoft Developer I ($200, 60 questions) is a hands-on technical certification requiring knowledge of Anypoint Studio, DataWeave transformations, and building Mule applications. Foundations suits project team members; Developer I is for practising integration developers.',
+      answer: 'Integration Foundations ($75, 40 questions, 70 min) is a conceptual entry-level cert focused on API-led connectivity terminology and Anypoint Platform awareness, no coding required. MuleSoft Developer I ($200, 60 questions) is a hands-on technical certification requiring knowledge of Anypoint Studio, DataWeave transformations, and building Mule applications. Foundations suits project team members; Developer I is for practising integration developers.',
     },
     {
       question: 'How hard is the MuleSoft Integration Foundations exam?',
-      answer: 'Most candidates find the exam accessible with 1–2 weeks of focused preparation. It tests conceptual understanding — API-led connectivity layers (System, Process, Experience), Anypoint Platform components, and integration terminology. No hands-on coding is required. Candidates with project management or business analyst backgrounds frequently pass with structured study.',
+      answer: 'Most candidates find the exam accessible with 1–2 weeks of focused preparation. It tests conceptual understanding: API-led connectivity layers (System, Process, Experience), Anypoint Platform components, and integration terminology. No hands-on coding is required. Candidates with project management or business analyst backgrounds frequently pass with structured study.',
     },
     {
       question: 'How should I study for the MuleSoft Integration Foundations exam?',
-      answer: 'Recommended approach: (1) Complete the MuleSoft Integration Foundations preparation trail on Trailhead, (2) Memorise the three API-led connectivity layers and what each does, (3) Understand each Anypoint Platform component — Design Center, API Manager, Runtime Manager, Anypoint Exchange, and Anypoint Studio, (4) Practice with mock questions. Most candidates are ready in 1–2 weeks with 1–2 hours of daily study.',
+      answer: 'Recommended approach: (1) Complete the MuleSoft Integration Foundations preparation trail on Trailhead, (2) Memorise the three API-led connectivity layers and what each does, (3) Understand each Anypoint Platform component: Design Center, API Manager, Runtime Manager, Anypoint Exchange, and Anypoint Studio, (4) Practice with mock questions. Most candidates are ready in 1–2 weeks with 1–2 hours of daily study.',
     },
     {
       question: 'Can I take the MuleSoft Integration Foundations exam online?',
@@ -1864,7 +1864,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How hard is the Salesforce Slack Developer certification?',
-      answer: 'The Slack Developer exam is moderately difficult. Candidates with JavaScript or Node.js experience and hands-on Slack app building practice generally find it manageable with 4–6 weeks of preparation. The main challenge is breadth — Block Kit, Events API, Web API, Bolt Framework, OAuth, Socket Mode, modals, shortcuts, and App Home all need to be understood at a working level.',
+      answer: 'The Slack Developer exam is moderately difficult. Candidates with JavaScript or Node.js experience and hands-on Slack app building practice generally find it manageable with 4–6 weeks of preparation. The main challenge is breadth: Block Kit, Events API, Web API, Bolt Framework, OAuth, Socket Mode, modals, shortcuts, and App Home all need to be understood at a working level.',
     },
     {
       question: 'Do I need to know the Bolt Framework for the Slack Developer exam?',
@@ -1872,7 +1872,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between the Slack Events API and the Web API?',
-      answer: 'The Events API is push-based — Slack sends event payloads to your app\'s endpoint when subscribed events occur (message posted, user joined, reaction added). The Web API is a request/response HTTP API your app calls to take actions (post messages, open modals, update profiles). Apps use both: Events API to listen and react, Web API to act. Socket Mode delivers Events API payloads over WebSocket instead of HTTP, eliminating the need for a public endpoint.',
+      answer: 'The Events API is push-based: Slack sends event payloads to your app\'s endpoint when subscribed events occur (message posted, user joined, reaction added). The Web API is a request/response HTTP API your app calls to take actions (post messages, open modals, update profiles). Apps use both: Events API to listen and react, Web API to act. Socket Mode delivers Events API payloads over WebSocket instead of HTTP, eliminating the need for a public endpoint.',
     },
   ],
   'omnistudio-developer': [
@@ -1904,7 +1904,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between a price rule and a discount schedule in Salesforce CPQ?',
-      answer: 'A price rule evaluates conditions and injects a calculated price into a field — it is logic-driven and can reference lookup tables, formulas, or custom fields. A discount schedule applies tiered or block discounts based on quantity or term — it is data-driven and configured on the product directly. Both can apply simultaneously and the exam tests when to use each.',
+      answer: 'A price rule evaluates conditions and injects a calculated price into a field; it is logic-driven and can reference lookup tables, formulas, or custom fields. A discount schedule applies tiered or block discounts based on quantity or term; it is data-driven and configured on the product directly. Both can apply simultaneously and the exam tests when to use each.',
     },
   ],
   'business-analyst': [
@@ -1926,7 +1926,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What makes the Business Analyst exam harder than expected?',
-      answer: 'Most candidates underestimate the depth of process analysis and stakeholder management questions. The exam is scenario-based — you must identify the best BA action for a given situation. Common traps: choosing a solution before understanding the root problem, skipping stakeholder validation steps, or writing user stories without clear acceptance criteria.',
+      answer: 'Most candidates underestimate the depth of process analysis and stakeholder management questions. The exam is scenario-based; you must identify the best BA action for a given situation. Common traps: choosing a solution before understanding the root problem, skipping stakeholder validation steps, or writing user stories without clear acceptance criteria.',
     },
   ],
   'agentforce-specialist': [
@@ -1957,11 +1957,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between an Agentforce Topic and an Agentforce Action?',
-      answer: 'A Topic defines an area of expertise — it tells the agent when a request falls within its scope (via a natural language description) and provides the context, instructions, and available Actions for that domain. An Action is the discrete task the agent executes within a Topic: this could be a Flow, an Apex method, an external API call, a Prompt Template, or a standard action like escalating to a human agent. Think of Topics as "departments" and Actions as "tasks within that department." The exam frequently presents a requirement and asks whether to configure a Topic, an Action, or both.',
+      answer: 'A Topic defines an area of expertise, it tells the agent when a request falls within its scope (via a natural language description) and provides the context, instructions, and available Actions for that domain. An Action is the discrete task the agent executes within a Topic: this could be a Flow, an Apex method, an external API call, a Prompt Template, or a standard action like escalating to a human agent. Think of Topics as "departments" and Actions as "tasks within that department." The exam frequently presents a requirement and asks whether to configure a Topic, an Action, or both.',
     },
     {
       question: 'What are Guardrails in Agentforce and how do they differ from Agent Instructions?',
-      answer: 'Guardrails are negative constraints — explicit rules for what the agent must never do or say (e.g., "never make pricing commitments", "never discuss competitor products"). Agent Instructions are positive directives — they define the agent\'s persona, tone, response style, and scope. Guardrails prevent harmful or off-brand behaviour; Instructions guide on-brand, effective responses. The exam tests knowledge of both and asks candidates to identify which configuration element prevents a specific unwanted agent behaviour.',
+      answer: 'Guardrails are negative constraints, explicit rules for what the agent must never do or say (e.g., "never make pricing commitments", "never discuss competitor products"). Agent Instructions are positive directives, they define the agent\'s persona, tone, response style, and scope. Guardrails prevent harmful or off-brand behaviour; Instructions guide on-brand, effective responses. The exam tests knowledge of both and asks candidates to identify which configuration element prevents a specific unwanted agent behaviour.',
     },
     {
       question: 'How does Data Cloud grounding work with Agentforce?',
@@ -2119,15 +2119,15 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the difference between a FIXED, INCLUDE, and EXCLUDE LOD expression in Tableau?',
-      answer: 'FIXED computes an aggregate at a declared dimension level, independent of the view\'s dimensions — used for totals or ratios that must not change as the view changes. INCLUDE adds dimensions to the view\'s existing level of detail, computing at a finer granularity. EXCLUDE removes dimensions from the view\'s level, computing at a coarser level. On the exam: "regardless of the view" → FIXED; "per customer within each region" → INCLUDE; "average across all products, ignoring the product filter" → EXCLUDE.',
+      answer: 'FIXED computes an aggregate at a declared dimension level, independent of the view\'s dimensions, used for totals or ratios that must not change as the view changes. INCLUDE adds dimensions to the view\'s existing level of detail, computing at a finer granularity. EXCLUDE removes dimensions from the view\'s level, computing at a coarser level. On the exam: "regardless of the view" → FIXED; "per customer within each region" → INCLUDE; "average across all products, ignoring the product filter" → EXCLUDE.',
     },
     {
       question: 'How long should I study for the Tableau Data Analyst exam?',
-      answer: 'Most candidates need 4–6 weeks of preparation with hands-on Tableau Desktop practice as the core activity. Theory alone is not sufficient — build real dashboards, practise LOD expressions in a workbook, and experiment with context filters and table calculations. Target 80%+ on practice assessments before booking. The exam tests applied knowledge, not just definitions.',
+      answer: 'Most candidates need 4–6 weeks of preparation with hands-on Tableau Desktop practice as the core activity. Theory alone is not sufficient, build real dashboards, practise LOD expressions in a workbook, and experiment with context filters and table calculations. Target 80%+ on practice assessments before booking. The exam tests applied knowledge, not just definitions.',
     },
     {
       question: 'What is the difference between data blending and data joining in Tableau?',
-      answer: 'Joining combines tables from the same data source connection at query time — the result is a single table sent to Tableau. Blending links two separate data source connections at the view level — Tableau queries each source independently and combines aggregated results on a common linking dimension. Use joining when tables are in the same database; use blending when data lives in different systems that cannot share a connection.',
+      answer: 'Joining combines tables from the same data source connection at query time, the result is a single table sent to Tableau. Blending links two separate data source connections at the view level: Tableau queries each source independently and combines aggregated results on a common linking dimension. Use joining when tables are in the same database; use blending when data lives in different systems that cannot share a connection.',
     },
   ],
   'tableau-desktop-foundations': [
@@ -2450,18 +2450,18 @@ const CERT_BASE_FAQ_OVERRIDES: Partial<
     prepare: {
       question: 'How should I prepare for the Agentforce Specialist certification exam?',
       answer:
-        'Use the official Agentforce Specialist Trailmix, then build at least one agent in a sandbox (Topics, Actions, Trust Layer behavior). Prioritise the difficulty heatmap “Hard” sections, review the FAQs on this page, and schedule the exam when your mock scores are consistent.',
+        'Use the official Agentforce Specialist Trailmix, then build at least one agent in a sandbox (Topics, Actions, Trust Layer behavior). Prioritise the difficulty heatmap “Hard” sections. Review the FAQs on this page, and schedule the exam when your mock scores are consistent.',
     },
     officialOutline: {
       question: 'Where is the official Salesforce Agentforce Specialist exam guide?',
       answer:
-        'Salesforce publishes the official exam guide in the Trailhead certification catalog (exam name: Salesforce Certified Agentforce Specialist). Cross-check the published outline with this page’s weightage and topics — we align content to that guide for exam prep.',
+        'Salesforce publishes the official exam guide in the Trailhead certification catalog (exam name: Salesforce Certified Agentforce Specialist). Cross-check the published outline with this page’s weightage and topics, we align content to that guide for exam prep.',
     },
   },
   'claude-certified-associate': {
     coverage: {
       question: 'What is covered on the Claude Certified Associate – Foundations (CCAO-F) exam?',
-      answer: 'The CCAO-F covers prompt engineering, output evaluation (the largest domain), model selection, Projects and configuration, responsible AI, workflow integration, and troubleshooting. All questions are scenario-based — no coding required.',
+      answer: 'The CCAO-F covers prompt engineering, output evaluation (the largest domain), model selection, Projects and configuration, responsible AI, workflow integration, and troubleshooting. All questions are scenario-based, no coding required.',
     },
     officialOutline: {
       question: 'Where can I find the official CCAO-F exam guide?',
@@ -2515,13 +2515,13 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   }
   const faqName = getCertFaqName(slug, certTitle)
   const formerName = getCertFormerName(slug)
-  const formerlyPhrase = formerName ? `—formerly ${formerName}—` : ''
+  const formerlyPhrase = formerName ? ` (formerly ${formerName})` : ''
   const baseOverrides = CERT_BASE_FAQ_OVERRIDES[slug]
 
   // Get cert-specific FAQs if available
   const certSpecificFaqs = CERT_SPECIFIC_FAQS[slug] || []
 
-  // Base FAQs (always included) — also used for FAQPage schema
+  // Base FAQs (always included), also used for FAQPage schema
   const baseCoverage: FaqItem = {
     question: `What is covered on the ${faqName} exam?`,
     answer: formerName
@@ -2537,7 +2537,7 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   const basePrepare: FaqItem = {
     question: `How do I prepare for the ${faqName} certification?`,
     answer: formerName
-      ? `Use the exam tips, prerequisites, and study strategy on this ${faqName} study guide${formerlyPhrase} Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`
+      ? `Use the exam tips, prerequisites, and study strategy on this ${faqName} study guide${formerlyPhrase}. Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`
       : `Use the exam tips, prerequisites, and study strategy on this page. Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`,
   }
   const baseOfficial: FaqItem = {
@@ -2599,7 +2599,7 @@ export function getCertFaqJsonLd(slug: string, certTitle: string) {
   }
 }
 
-/** JSON-LD HowTo for "How to prepare for [exam]" — supports rich results. */
+/** JSON-LD HowTo for "How to prepare for [exam]", supports rich results. */
 export function getCertHowToJsonLd(slug: string, certTitle: string) {
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const name = examCode ? `How to prepare for the ${certTitle} (${examCode}) exam` : `How to prepare for the ${certTitle} exam`
@@ -2608,7 +2608,7 @@ export function getCertHowToJsonLd(slug: string, certTitle: string) {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name,
-    description: `Step-by-step guide to prepare for the ${certTitle} certification exam: review exam weightage, study by section, practice with questions, and book your exam.`,
+    description: `Step-by-step guide to prepare for the ${certTitle} certification exam: review exam weightage. Study by section. Practice with questions, and book your exam.`,
     url,
     step: [
       { '@type': 'HowToStep', name: 'Review the exam outline and section weightage', text: 'Check the official exam guide and use the section-wise weightage on this page to prioritize topics.' },
@@ -2619,7 +2619,7 @@ export function getCertHowToJsonLd(slug: string, certTitle: string) {
   }
 }
 
-/** JSON-LD Table for exam section weightage — targets Featured Snippets for "X exam weightage" queries. */
+/** JSON-LD Table for exam section weightage, targets Featured Snippets for "X exam weightage" queries. */
 export function getExamWeightageTableJsonLd(
   slug: string,
   certTitle: string
@@ -2652,11 +2652,11 @@ export function getCertH1Text(slug: string): string {
   if (slug === 'administrator') {
     return `Salesforce Certified Platform Administrator (ADM-201) Study Guide & Free Practice Questions (${TITLE_YEAR})`
   }
-  // PD1: align H1 with title tag intent — "Free Practice Exam" is the highest-CTR signal
+  // PD1: align H1 with title tag intent, "Free Practice Exam" is the highest-CTR signal
   if (slug === 'developer-1') {
     return `Salesforce PD1 Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
   }
-  // Custom H1s for top pages by GSC impressions — matches title intent for higher CTR
+  // Custom H1s for top pages by GSC impressions, matches title intent for higher CTR
   if (slug === 'email-specialist') {
     return `Salesforce Email Specialist Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
   }

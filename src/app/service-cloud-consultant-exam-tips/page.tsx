@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'Do I need ADM-201 for the Service Cloud Consultant exam?',
-    answer: 'Salesforce recommends ADM-201 as a prerequisite but does not officially require it. However, strong Salesforce admin knowledge is essential — most exam scenarios require an understanding of platform-wide configuration.',
+    answer: 'Salesforce recommends ADM-201 as a prerequisite but does not officially require it. However, strong Salesforce admin knowledge is essential, most exam scenarios require an understanding of platform-wide configuration.',
   },
   {
     question: 'How long to study for Service Cloud Consultant?',
@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Service Cloud Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Service Cloud Consultant exam are: (1) Entitlement Processes vs Service Contracts vs Warranties; (2) Omni-Channel Routing Models — Least Active vs Most Available; (3) Knowledge Visibility — Data Categories vs Topics vs Article Types. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Service Cloud Consultant exam are: (1) Entitlement Processes vs Service Contracts vs Warranties; (2) Omni-Channel Routing Models: Least Active vs Most Available; (3) Knowledge Visibility: Data Categories vs Topics vs Article Types. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('service-cloud-consultant-exam-tips'),
 ]
@@ -85,7 +85,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
         </h1>
         <p className="text-lg text-gray-600">
           The Salesforce Service Cloud Consultant certification tests your ability to design and implement
-          customer service solutions. Unlike the ADM-201, this exam requires you to make <em>design decisions</em> —
+          customer service solutions. Unlike the ADM-201, this exam requires you to make <em>design decisions</em>,
           the right feature for the right scenario. These tips focus on where candidates lose marks.
         </p>
       </header>
@@ -106,7 +106,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Service Cloud Consultant</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Prerequisite: ADM-201 certification is required before sitting this exam.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Solution Design (25%) is the highest-weight section — every question here requires knowing which Service Cloud feature best solves the described business problem.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Solution Design (25%) is the highest-weight section, every question here requires knowing which Service Cloud feature best solves the described business problem.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Know Omni-Channel routing in detail: routing models (queue-based, skill-based), capacity, and Service Channel setup are consistently tested.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Exam: 60 questions, 105 minutes, 67% passing score. Target 77%+ on mocks before booking.</li>
         </ul>
@@ -150,7 +150,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">Omni-Channel Routing</p>
-            <p>Omni-Channel routes work items to the most qualified available agent. Know: queue-based routing (items go to a queue, agents pull from it) vs skill-based routing (items route directly to an agent with matching skills). Understand capacity — agents have a work capacity limit and items have a capacity weight. Pending-status issues often come from capacity being maxed.</p>
+            <p>Omni-Channel routes work items to the most qualified available agent. Know: queue-based routing (items go to a queue, agents pull from it) vs skill-based routing (items route directly to an agent with matching skills). Understand capacity; agents have a work capacity limit and items have a capacity weight. Pending-status issues often come from capacity being maxed.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">Salesforce Knowledge</p>
@@ -162,7 +162,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">Service Console and CTI</p>
-            <p>The Service Console is a multi-pane interface optimised for high-volume support. Know the components: utility bar (persistent tools), subtabs (related records), keyboard shortcuts, and macros (repeatable action sequences). CTI (Computer Telephony Integration) integrates phone systems — Open CTI vs Salesforce CTI Toolkit — and is commonly tested in the configuration section.</p>
+            <p>The Service Console is a multi-pane interface optimised for high-volume support. Know the components: utility bar (persistent tools), subtabs (related records), keyboard shortcuts, and macros (repeatable action sequences). CTI (Computer Telephony Integration) integrates phone systems: Open CTI vs Salesforce CTI Toolkit; and is commonly tested in the configuration section.</p>
           </div>
         </div>
       </section>
@@ -171,9 +171,9 @@ export default function ServiceCloudConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week Service Cloud Consultant Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Case Management and Data Model (40%):</strong> Case lifecycle (web-to-case, email-to-case, assignment rules, escalation, auto-response), entitlements and milestones, service contracts, assets, and the service data model. Practice: configure a case assignment rule that routes by case origin and product.</p>
-          <p><strong>Week 2 — Configuration and Automation (40%):</strong> Service Console setup, Omni-Channel (routing config, service channels, queues, capacity), macros, Knowledge base (article record types, data categories, approval workflows). Practice: set up Omni-Channel with two service channels and test capacity-based routing.</p>
-          <p><strong>Week 3 — Solution Design and Analytics (35%):</strong> Focus on design scenarios — given a business requirement, choose between Knowledge vs FAQ page, Email-to-Case vs Web-to-Case, Omni-Channel vs case queues. Review service analytics: SLA reports, case resolution time, CSAT, first contact resolution. Practice: design a solution for a 50-agent contact centre described in a scenario.</p>
+          <p><strong>Week 1: Case Management and Data Model (40%):</strong> Case lifecycle (web-to-case, email-to-case, assignment rules, escalation, auto-response), entitlements and milestones, service contracts, assets, and the service data model. Practice: configure a case assignment rule that routes by case origin and product.</p>
+          <p><strong>Week 2: Configuration and Automation (40%):</strong> Service Console setup, Omni-Channel (routing config, service channels, queues, capacity), macros, Knowledge base (article record types, data categories, approval workflows). Practice: set up Omni-Channel with two service channels and test capacity-based routing.</p>
+          <p><strong>Week 3: Solution Design and Analytics (35%):</strong> Focus on design scenarios, given a business requirement, choose between Knowledge vs FAQ page, Email-to-Case vs Web-to-Case, Omni-Channel vs case queues. Review service analytics: SLA reports, case resolution time, CSAT, first contact resolution. Practice: design a solution for a 50-agent contact centre described in a scenario.</p>
           <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min), weak-area revision. Score 77%+ consistently before booking.</p>
         </div>
       </section>
@@ -196,7 +196,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Knowledge visibility questions:</strong> Data categories control which users can see which articles. Channel settings control where articles appear (internal, community, public). If agents see an article but customers cannot, check the channel setting and data category visibility — not the article status.</span>
+            <span><strong>Knowledge visibility questions:</strong> Data categories control which users can see which articles. Channel settings control where articles appear (internal, community, public). If agents see an article but customers cannot. Check the channel setting and data category visibility, not the article status.</span>
           </li>
         </ul>
       </section>
@@ -213,7 +213,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Service Cloud Consultant fails are often caused by weak knowledge of Omni-Channel routing and entitlements.
-          If you are consistently missing Solution Design questions, focus on feature selection scenarios: build a
+          If you are consistently missing Solution Design questions. Focus on feature selection scenarios: build a
           decision table listing each Service Cloud feature, when to use it, and when not to use it.
         </p>
       </section>
@@ -222,18 +222,18 @@ export default function ServiceCloudConsultantExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Service Cloud Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Entitlement Processes vs Service Contracts vs Warranties</p>
-            <p className="text-sm text-gray-700">Entitlement Processes are SLA templates with milestones and time-based actions (e.g., auto-escalate if not resolved within 4 hours). Service Contracts are agreements with customers that entitlements are linked to. Warranties are product-based coverage records. Candidates mix these three up on scenario questions — an entitlement process is the workflow; a service contract is the commercial agreement; a warranty is the product coverage.</p>
+            <p className="text-sm text-gray-700">Entitlement Processes are SLA templates with milestones and time-based actions (e.g., auto-escalate if not resolved within 4 hours). Service Contracts are agreements with customers that entitlements are linked to. Warranties are product-based coverage records. Candidates mix these three up on scenario questions, an entitlement process is the workflow; a service contract is the commercial agreement; a warranty is the product coverage.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Omni-Channel Routing Models — Least Active vs Most Available</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Omni-Channel Routing Models: Least Active vs Most Available</p>
             <p className="text-sm text-gray-700">Least Active routing assigns work to the agent with the fewest open work items (good for complex cases requiring focus). Most Available routing assigns to the agent with the most remaining capacity relative to their max (good for high-volume queues). Getting these backwards in routing design scenarios is a common failure point. Also know skills-based routing vs queue-based routing and when each applies.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Knowledge Visibility — Data Categories vs Topics vs Article Types</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Knowledge Visibility: Data Categories vs Topics vs Article Types</p>
             <p className="text-sm text-gray-700">Data Categories control which articles are visible to which customer profiles and in which channels (public site, partner community, internal). Topics are a simpler tagging system for search and navigation but do not control visibility. Article Types define the structure/layout of articles. Candidates answer data category questions using topic logic and lose marks.</p>
           </div>
         </div>

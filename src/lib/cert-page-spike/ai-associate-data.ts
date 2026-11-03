@@ -30,9 +30,9 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       'The Salesforce AI Associate exam is beginner-friendly, but it is not a pure vocabulary test. It checks whether you can connect AI concepts, responsible data use, and Salesforce Einstein use cases to realistic CRM scenarios.',
     bullets: [
       '<strong>40 multiple-choice questions</strong> in 70 minutes.',
-      '<strong>65% passing score</strong> — build enough margin that ethics and data-governance questions do not surprise you.',
-      '<strong>Conceptual, not code-heavy</strong> — you do not need Apex, Python, or machine-learning math.',
-      '<strong>Responsible AI focus</strong> — expect questions about bias, hallucinations, data quality, privacy, and human oversight.',
+      '<strong>65% passing score</strong>: build enough margin that ethics and data-governance questions do not surprise you.',
+      '<strong>Conceptual, not code-heavy</strong>: you do not need Apex, Python, or machine-learning math.',
+      '<strong>Responsible AI focus</strong>: expect questions about bias, hallucinations, data quality, privacy, and human oversight.',
     ],
     passRateGuidance:
       'This retired exam cannot be booked. Use the practice material as a historical learning review; verify current Salesforce AI learning options with Salesforce.',
@@ -116,7 +116,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
     blocks: [
       {
         heading: 'Predictive AI vs Generative AI',
-        body: 'Predictive AI uses historical data to forecast outcomes — Einstein Opportunity Scoring, Next Best Action, and Lead Scoring are predictive. Generative AI creates new content from prompts — Einstein Copilot, Sales Email generation, and Case Summaries are generative. The exam tests which type applies to a given use case.',
+        body: 'Predictive AI uses historical data to forecast outcomes: Einstein Opportunity Scoring, Next Best Action, and Lead Scoring are predictive. Generative AI creates new content from prompts: Einstein Copilot, Sales Email generation, and Case Summaries are generative. The exam tests which type applies to a given use case.',
       },
       {
         heading: 'Einstein Trust Layer',
@@ -128,22 +128,22 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       },
       {
         heading: 'Grounding and Hallucinations',
-        body: 'Grounding connects AI prompts to real CRM data so responses reflect actual customer records. Without grounding, generative AI may hallucinate — producing confident but incorrect outputs. Prompt templates in Salesforce merge static instructions with live CRM data to reduce hallucinations. Know how grounding mitigates this risk.',
+        body: 'Grounding connects AI prompts to real CRM data so responses reflect actual customer records. Without grounding, generative AI may hallucinate, producing confident but incorrect outputs. Prompt templates in Salesforce merge static instructions with live CRM data to reduce hallucinations. Know how grounding mitigates this risk.',
       },
       {
         heading: 'Data Quality and AI Bias',
-        body: 'AI models are trained on historical data — poor data quality (duplicates, missing values, outdated records) leads to inaccurate predictions. Biased training data produces biased outputs. Responsible AI requires auditing training data, testing for disparate impact across demographics, and ongoing monitoring after deployment. Data governance is a prerequisite for trustworthy AI.',
+        body: 'AI models are trained on historical data, poor data quality (duplicates, missing values, outdated records) leads to inaccurate predictions. Biased training data produces biased outputs. Responsible AI requires auditing training data, testing for disparate impact across demographics, and ongoing monitoring after deployment. Data governance is a prerequisite for trustworthy AI.',
       },
     ],
   },
   scenarioTips: {
     h2: 'How to Pass the Salesforce AI Associate Exam',
     intro:
-      "The AI Associate exam tests foundational AI literacy — it is a conceptual understanding exam, not a coding exam. Focus on AI ethics, Salesforce's Trusted AI principles, and recognizing Einstein features and their use cases.",
+      "The AI Associate exam tests foundational AI literacy; it is a conceptual understanding exam, not a coding exam. Focus on AI ethics, Salesforce's Trusted AI principles, and recognizing Einstein features and their use cases.",
     blocks: [
       {
         heading: "Salesforce's Trusted AI Principles",
-        body: 'Know the five principles: Responsible, Accountable, Transparent, Empowering, and Inclusive. Questions about AI ethics and governance will reference these principles — understand what each means in practice.',
+        body: 'Know the five principles: Responsible, Accountable, Transparent, Empowering, and Inclusive. Questions about AI ethics and governance will reference these principles, understand what each means in practice.',
       },
       {
         heading: 'AI Terminology at a Glance',
@@ -151,7 +151,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       },
       {
         heading: 'Einstein Features & Use Cases',
-        body: 'Know Einstein Lead Scoring, Opportunity Insights, Einstein Bots, Einstein Search, Einstein Next Best Action, and Einstein Copilot at a feature level — what each does and when to recommend it to a business.',
+        body: 'Know Einstein Lead Scoring, Opportunity Insights, Einstein Bots, Einstein Search, Einstein Next Best Action, and Einstein Copilot at a feature level, what each does and when to recommend it to a business.',
       },
       {
         heading: 'Bias, Fairness & Model Drift',
@@ -196,9 +196,9 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       explanation:
         'The AI Associate is designed for individuals who may have knowledge of AI, whether beginners or more experienced.',
       whyWrong: [
-        'The credential isn’t restricted to developers — it’s a conceptual, non-coding certification open to any role.',
-        'It isn’t restricted to architects — no prior Salesforce architecture experience is required.',
-        'It isn’t restricted to marketers — the content applies broadly across roles that touch AI-driven CRM features.',
+        'The credential isn’t restricted to developers, it’s a conceptual, non-coding certification open to any role.',
+        'It isn’t restricted to architects, no prior Salesforce architecture experience is required.',
+        'It isn’t restricted to marketers, the content applies broadly across roles that touch AI-driven CRM features.',
       ],
     },
     {
@@ -213,7 +213,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       explanation:
         'It validates foundational skills in ethical and responsible data handling as they apply to AI in CRM.',
       whyWrong: [
-        'The certification is conceptual, not coding-focused — it doesn’t validate programming ability.',
+        'The certification is conceptual, not coding-focused, it doesn’t validate programming ability.',
         'Reporting skills are a separate Salesforce competency unrelated to AI ethics and data handling.',
         'Integration skills are a technical/developer competency, not what this credential is designed to validate.',
       ],
@@ -230,9 +230,9 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       explanation:
         'The Einstein Trust Layer provides data masking, secure data retrieval, toxicity detection, and audit trails to ensure AI outputs are safe, private, and traceable within the Salesforce platform.',
       whyWrong: [
-        'A performance dashboard reports metrics after the fact — it doesn’t provide the real-time privacy protections the Trust Layer delivers.',
-        'The Trust Layer isn’t a payment security feature — it’s specifically about AI data privacy and output safety.',
-        'It isn’t an authentication protocol for external providers — it operates on the data and prompts themselves, not provider login.',
+        'A performance dashboard reports metrics after the fact, it doesn’t provide the real-time privacy protections the Trust Layer delivers.',
+        'The Trust Layer isn’t a payment security feature, it’s specifically about AI data privacy and output safety.',
+        'It isn’t an authentication protocol for external providers, it operates on the data and prompts themselves, not provider login.',
       ],
     },
     {
@@ -247,9 +247,9 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       explanation:
         'Predictive AI (e.g., Einstein Opportunity Scoring) uses historical data to forecast future outcomes. Generative AI (e.g., Einstein Copilot) generates new content from prompts and context.',
       whyWrong: [
-        'Both types of AI can work with numerical and text data — the distinction isn’t about data type, it’s about forecasting versus content creation.',
-        'There is a meaningful, well-defined difference between predictive and generative AI in CRM — this option denies a real distinction.',
-        'Generative AI doesn’t require more historical data than predictive AI — the two use data differently, not in greater or lesser volume.',
+        'Both types of AI can work with numerical and text data, the distinction isn’t about data type, it’s about forecasting versus content creation.',
+        'There is a meaningful, well-defined difference between predictive and generative AI in CRM, this option denies a real distinction.',
+        'Generative AI doesn’t require more historical data than predictive AI, the two use data differently, not in greater or lesser volume.',
       ],
     },
     {
@@ -257,7 +257,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       options: ['Accountability', 'Transparency', 'Fairness', 'Safety'],
       correctAnswer: 1,
       explanation:
-        'Transparency means AI systems should be understandable — users and administrators should be able to see why the AI made a recommendation or generated a response.',
+        'Transparency means AI systems should be understandable, users and administrators should be able to see why the AI made a recommendation or generated a response.',
       whyWrong: [
         'Accountability is about who is responsible for AI outcomes, not about the model explaining its outputs.',
         'Fairness addresses bias and equitable treatment across groups, not explainability.',
@@ -276,16 +276,16 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       explanation:
         'AI bias occurs when training data does not represent the full population, leading to outputs that systematically disadvantage certain groups. Responsible AI requires monitoring and mitigating bias.',
       whyWrong: [
-        'Bias isn’t a deliberate design choice — it typically arises unintentionally from unrepresentative training data.',
+        'Bias isn’t a deliberate design choice, it typically arises unintentionally from unrepresentative training data.',
         'Response speed differences between AI and humans are a performance characteristic, unrelated to bias.',
-        'Bias isn’t an optional feature flag — it’s an unintended systemic issue that must be actively monitored and mitigated.',
+        'Bias isn’t an optional feature flag, it’s an unintended systemic issue that must be actively monitored and mitigated.',
       ],
     },
     {
       question: 'Why is data quality critical for AI outcomes in Salesforce?',
       options: [
         'Data quality only matters for reporting dashboards, not AI models',
-        'AI models learn from historical data — poor quality data leads to inaccurate predictions, biased outputs, and unreliable AI recommendations',
+        'AI models learn from historical data, poor quality data leads to inaccurate predictions, biased outputs, and unreliable AI recommendations',
         'High data volume automatically compensates for low data quality in AI training',
         'Data quality affects only the speed of AI processing, not the accuracy',
       ],
@@ -294,7 +294,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
         'AI models are only as good as the data they train on. Duplicate records, missing values, and inaccurate data produce unreliable AI outputs. Data governance and hygiene are prerequisites for trustworthy AI.',
       whyWrong: [
         'Data quality affects AI model outputs directly, not just reporting dashboards.',
-        'High volume doesn’t offset low quality — more bad data just produces more unreliable outputs at scale.',
+        'High volume doesn’t offset low quality, more bad data just produces more unreliable outputs at scale.',
         'Data quality affects the accuracy and reliability of outputs, not just processing speed.',
       ],
     },
@@ -311,8 +311,8 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
         'Grounding connects generative AI prompts to specific CRM data (accounts, cases, opportunities) so responses reflect real customer context rather than generic or hallucinated information.',
       whyWrong: [
         'Grounding is about connecting to real CRM data, not simply limiting output length.',
-        'Grounding uses your own CRM data, not external internet sources — that would be a different capability.',
-        'Grounding isn’t about restricting metadata access — it’s about supplying relevant CRM context to the prompt.',
+        'Grounding uses your own CRM data, not external internet sources; that would be a different capability.',
+        'Grounding isn’t about restricting metadata access, it’s about supplying relevant CRM context to the prompt.',
       ],
     },
     {
@@ -320,7 +320,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       options: ['Transparency', 'Fairness', 'Accountability', 'Inclusivity'],
       correctAnswer: 2,
       explanation:
-        'Accountability means identifying who is responsible for AI outcomes and maintaining human oversight — especially for high-stakes decisions.',
+        'Accountability means identifying who is responsible for AI outcomes and maintaining human oversight, especially for high-stakes decisions.',
       whyWrong: [
         'Transparency is about explainability of AI outputs, not about who is responsible for the outcomes.',
         'Fairness addresses bias and equitable treatment, not human responsibility for decisions.',
@@ -372,11 +372,11 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       ],
       correctAnswer: 1,
       explanation:
-        'Prompt templates merge business instructions with real CRM data (such as account name, case history) to produce grounded, contextual AI responses — reducing the need for users to craft prompts manually.',
+        'Prompt templates merge business instructions with real CRM data (such as account name, case history) to produce grounded, contextual AI responses, reducing the need for users to craft prompts manually.',
       whyWrong: [
-        'A prompt template isn’t a Flow — it doesn’t update records on its own; it generates AI content.',
-        'It isn’t a Contact-object email template — it’s a generative AI construct that merges instructions with live CRM data.',
-        'It isn’t a permission set — it has nothing to do with controlling user access to Einstein features.',
+        'A prompt template isn’t a Flow, it doesn’t update records on its own; it generates AI content.',
+        'It isn’t a Contact-object email template, it’s a generative AI construct that merges instructions with live CRM data.',
+        'It isn’t a permission set; it has nothing to do with controlling user access to Einstein features.',
       ],
     },
     {
@@ -389,7 +389,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       ],
       correctAnswer: 1,
       explanation:
-        'The AI Associate focuses on foundational AI concepts — predictive vs generative AI, the Einstein Trust Layer, responsible AI principles, data quality, and how AI is applied across the Salesforce platform. No coding required.',
+        'The AI Associate focuses on foundational AI concepts, predictive vs generative AI, the Einstein Trust Layer, responsible AI principles, data quality, and how AI is applied across the Salesforce platform. No coding required.',
       whyWrong: [
         'Writing Python scripts is developer-level work, unrelated to this conceptual, no-code certification.',
         'Administering Einstein Analytics dashboards is a separate CRM Analytics skill, not the AI Associate focus.',
@@ -409,9 +409,9 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       explanation:
         'The Einstein Trust Layer automatically masks PII in prompts sent to external LLMs and enforces a zero data retention agreement with model providers, ensuring customer data is not stored or used for training.',
       whyWrong: [
-        'Einstein Activity Capture logs sales activities like emails and events — it doesn’t mask data sent to external LLMs.',
+        'Einstein Activity Capture logs sales activities like emails and events, it doesn’t mask data sent to external LLMs.',
         'A custom Apex trigger is a possible manual workaround, but it isn’t the built-in platform feature designed for this.',
-        'Field-Level Security controls which fields users can see — it doesn’t address data sent externally to an LLM.',
+        'Field-Level Security controls which fields users can see, it doesn’t address data sent externally to an LLM.',
       ],
     },
     {
@@ -425,11 +425,11 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       ],
       correctAnswer: 1,
       explanation:
-        'Einstein Opportunity Scoring is predictive AI — it uses historical data to forecast outcomes like win probability.',
+        'Einstein Opportunity Scoring is predictive AI, it uses historical data to forecast outcomes like win probability.',
       whyWrong: [
         'Einstein Copilot is a generative AI assistant, not the predictive scoring capability described.',
         'Prompt Builder is a tool for authoring prompt templates, not a predictive-outcome feature.',
-        'Data Cloud alone is a data platform — it doesn’t itself generate a predictive win-likelihood score without a scoring model on top.',
+        'Data Cloud alone is a data platform, it doesn’t itself generate a predictive win-likelihood score without a scoring model on top.',
       ],
     },
   ],

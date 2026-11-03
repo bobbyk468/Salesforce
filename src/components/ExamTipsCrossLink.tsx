@@ -16,7 +16,7 @@ export default function ExamTipsCrossLink({ examTipsSlug, certName }: Props) {
         <Link href={`/${examTipsSlug}`} className="font-semibold text-amber-700 hover:underline">
           Prepare with our {certName} Exam Tips &amp; Strategy Guide
         </Link>
-        {' '}— high-weight topics, scenario tactics, and mock-test targets for first-attempt success.
+        {' '}, high-weight topics, scenario tactics, and mock-test targets for first-attempt success.
       </p>
     </div>
   )

@@ -104,9 +104,9 @@ export default function EducationCloudConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Selected Education Product Learning Themes</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education data model</strong> — Compare the institution’s chosen Education Cloud platform data model with the EDA managed package; map entities and relationships from documented requirements.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education processes</strong> — Recruitment and admissions, academic operations, student success, advancement, and alumni relations appear in Salesforce’s product documentation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration and data management</strong> — How Salesforce Education Cloud integrates with Student Information Systems (SIS), the importance of unique student IDs, and data migration from legacy systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education data model</strong>: Compare the institution’s chosen Education Cloud platform data model with the EDA managed package; map entities and relationships from documented requirements.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education processes</strong>: Recruitment and admissions, academic operations, student success, advancement, and alumni relations appear in Salesforce’s product documentation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration and data management</strong>: How Salesforce Education Cloud integrates with Student Information Systems (SIS), the importance of unique student IDs, and data migration from legacy systems.</li>
         </ul>
       </section>
 
@@ -165,15 +165,15 @@ export default function EducationCloudConsultantExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">Use these prompts to structure practice against the published guide’s solution-design and implementation objectives.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA) — Confirm the Model</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA): Confirm the Model</p>
             <p className="text-sm text-gray-700">Start by identifying whether a scenario uses the EDA managed package or the Education Cloud platform solution. Verify the applicable account model and relationship semantics in documentation for that product before proposing a schema.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Recruitment and Admissions — Map the Workflow</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Recruitment and Admissions: Map the Workflow</p>
             <p className="text-sm text-gray-700">For recruitment and admissions, trace a prospective learner from initial interest through application and enrollment. Determine which records, staff workflows, portal steps, and integration points the institution’s chosen product actually uses; avoid assuming every deployment shares identical stages or objects.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Student Success — Define Outcomes and Ownership</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Student Success: Define Outcomes and Ownership</p>
             <p className="text-sm text-gray-700">For student-success design, clarify the intervention goal, responsible staff, signal source, access rules, and follow-up process. Select an available product feature only after checking the organization’s licensed capabilities and documented behavior.</p>
           </div>
         </div>

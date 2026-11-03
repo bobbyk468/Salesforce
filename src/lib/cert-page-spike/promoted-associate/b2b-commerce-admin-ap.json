@@ -26,7 +26,7 @@
       "<strong>Setup order matters.</strong> Many questions are about what must be in place before a buyer can see a product or check out.",
       "<strong>Hands-on helps a lot.</strong> If you have built a test store yourself, many questions will feel familiar."
     ],
-    "passRateGuidance": "Build a store in a trial or sandbox org before the exam. Before you book, aim for 85% or more on practice tests, since the pass mark leaves little room for error."
+    "passRateGuidance": "Build a store in a trial or sandbox org before the exam. Before you book. Aim for 85% or more on practice tests, since the pass mark leaves little room for error."
   },
   "examFormat": {
     "heading": "B2B Commerce Administrator AP Exam Format Explained",
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Product Catalog & Pricing",
-        "body": "Products live in a **catalog** organised into **categories**. A product can be simple or have variations, such as size and colour, set up with a variation parent and variation attributes. Prices come from **price books**, and each buyer group is assigned the price books it should use. If a buyer sees no price, check that the product is in a price book linked to their buyer group. After changing products, categories or searchable fields, **rebuild the search index** so the changes appear in the store."
+        "body": "Products live in a **catalog** organised into **categories**. A product can be simple or have variations, such as size and colour, set up with a variation parent and variation attributes. Prices come from **price books**, and each buyer group is assigned the price books it should use. If a buyer sees no price. Check that the product is in a price book linked to their buyer group. After changing products, categories or searchable fields, **rebuild the search index** so the changes appear in the store."
       },
       {
         "heading": "Buyer Account & Contact Management",
@@ -95,7 +95,7 @@
       },
       {
         "heading": "Buyer Groups & Entitlements",
-        "body": "If a buyer can't see a product, check the entitlement policy on their buyer group. If they can't see a price, check the price book on the buyer group."
+        "body": "If a buyer can't see a product. Check the entitlement policy on their buyer group. If they can't see a price. Check the price book on the buyer group."
       },
       {
         "heading": "Cart & Checkout Configuration",
@@ -245,7 +245,7 @@
       ]
     },
     {
-      "question": "Visitors should be able to browse products before logging in, but only logged-in buyers can place orders. What should be turned on?",
+      "question": "Visitors should be able to browse products before logging in; but only logged-in buyers can place orders. What should be turned on?",
       "options": [
         "A second store for guests",
         "Self-registration only",

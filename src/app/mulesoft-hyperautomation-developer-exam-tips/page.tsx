@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What is MuleSoft RPA and how is it different from standard MuleSoft integration?',
-    answer: 'MuleSoft RPA automates repetitive UI-based tasks where APIs are not available — clicking buttons, filling forms, scraping screen data. Standard MuleSoft integration uses APIs to connect systems directly. The exam tests when to use RPA (no API available, legacy system with UI only) vs. API integration (API available) — choosing correctly is a key exam skill.',
+    answer: 'MuleSoft RPA automates repetitive UI-based tasks where APIs are not available, clicking buttons, filling forms, scraping screen data. Standard MuleSoft integration uses APIs to connect systems directly. The exam tests when to use RPA (no API available, legacy system with UI only) vs. API integration (API available), choosing correctly is a key exam skill.',
   },
   {
     question: 'What prerequisites help with the MuleSoft Hyperautomation Developer exam?',
@@ -60,7 +60,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most MuleSoft Hyperautomation Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Hyperautomation Developer exam are: (1) RPA vs API Integration — When Each Is the Right Tool; (2) Composer vs Anypoint Studio — Low-Code vs Pro-Code; (3) Process Automation vs RPA — Orchestration vs Execution. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Hyperautomation Developer exam are: (1) RPA vs API Integration: When Each Is the Right Tool; (2) Composer vs Anypoint Studio: Low-Code vs Pro-Code; (3) Process Automation vs RPA: Orchestration vs Execution. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('mulesoft-hyperautomation-developer-exam-tips'),
 ]
@@ -92,9 +92,9 @@ export default function MuleSoftHyperautomationDeveloperExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: MuleSoft Hyperautomation Developer Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Process automation design</strong> — Selecting the right automation approach: API-led integration for connected systems, RPA for legacy UI-based tasks, AI Document Understanding for unstructured data extraction, and how to combine these in a single automation flow.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>MuleSoft RPA</strong> — Building and configuring RPA processes using MuleSoft RPA Manager and RPA Recorder. Understanding bot deployment, process execution triggers, and how RPA integrates with Mule flows as an action within a larger automation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AI and document automation</strong> — MuleSoft AI Chain for LLM integration, Document Understanding for structured data extraction from PDFs and images, and Intelligent Document Processing (IDP) patterns for high-volume document automation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Process automation design</strong>: Selecting the right automation approach: API-led integration for connected systems, RPA for legacy UI-based tasks, AI Document Understanding for unstructured data extraction, and how to combine these in a single automation flow.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>MuleSoft RPA</strong>: Building and configuring RPA processes using MuleSoft RPA Manager and RPA Recorder. Understanding bot deployment, process execution triggers, and how RPA integrates with Mule flows as an action within a larger automation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AI and document automation</strong>: MuleSoft AI Chain for LLM integration, Document Understanding for structured data extraction from PDFs and images, and Intelligent Document Processing (IDP) patterns for high-volume document automation.</li>
         </ul>
       </section>
 
@@ -129,9 +129,9 @@ export default function MuleSoftHyperautomationDeveloperExamTipsPage() {
           If no, use RPA. If unstructured data is involved, use Document Understanding.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For tool selection questions: use RPA only when no API exists and the task requires UI interaction with a legacy system. If an API is available, Mule integration is always preferred over RPA — RPA is slower, less reliable, and harder to maintain than API calls.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For RPA configuration questions: RPA processes are built in RPA Builder, published to RPA Manager, and deployed to RPA Bots. A Mule flow triggers the bot via the RPA Connector. The RPA process runs locally on the bot machine — it is not a cloud-native component. Know this architecture.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Document Understanding questions: AI-powered extraction works on PDFs, images, and emails. Models are trained on document templates in Document Understanding. Extracted data flows into a Mule flow for further processing. When accuracy thresholds are not met, a human review step is triggered — know how to configure this fallback.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For tool selection questions: use RPA only when no API exists and the task requires UI interaction with a legacy system. If an API is available, Mule integration is always preferred over RPA: RPA is slower, less reliable, and harder to maintain than API calls.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For RPA configuration questions: RPA processes are built in RPA Builder, published to RPA Manager, and deployed to RPA Bots. A Mule flow triggers the bot via the RPA Connector. The RPA process runs locally on the bot machine; it is not a cloud-native component. Know this architecture.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Document Understanding questions: AI-powered extraction works on PDFs, images, and emails. Models are trained on document templates in Document Understanding. Extracted data flows into a Mule flow for further processing. When accuracy thresholds are not met, a human review step is triggered. Know how to configure this fallback.</li>
         </ul>
       </section>
 
@@ -152,19 +152,19 @@ export default function MuleSoftHyperautomationDeveloperExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Hyperautomation Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. RPA vs API Integration — When Each Is the Right Tool</p>
-            <p className="text-sm text-gray-700">MuleSoft RPA automates tasks through UI interaction (screen scraping, form filling) for systems without APIs. API integration connects systems with published APIs — it is faster, more reliable, and should always be preferred over RPA when an API exists. Candidates recommend RPA for legacy system integration — the exam expects API integration first and RPA only when no API is available.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. RPA vs API Integration: When Each Is the Right Tool</p>
+            <p className="text-sm text-gray-700">MuleSoft RPA automates tasks through UI interaction (screen scraping, form filling) for systems without APIs. API integration connects systems with published APIs; it is faster, more reliable, and should always be preferred over RPA when an API exists. Candidates recommend RPA for legacy system integration, the exam expects API integration first and RPA only when no API is available.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Composer vs Anypoint Studio — Low-Code vs Pro-Code</p>
-            <p className="text-sm text-gray-700">MuleSoft Composer is a low-code integration tool for business users — drag-and-drop connectors for common SaaS apps (Salesforce, Slack, NetSuite). Anypoint Studio is the full-featured IDE for professional developers. Candidates recommend Anypoint Studio for all integrations — the exam expects Composer for business-user-managed, SaaS-to-SaaS integrations that do not require custom transformation logic.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Composer vs Anypoint Studio: Low-Code vs Pro-Code</p>
+            <p className="text-sm text-gray-700">MuleSoft Composer is a low-code integration tool for business users, drag-and-drop connectors for common SaaS apps (Salesforce, Slack, NetSuite). Anypoint Studio is the full-featured IDE for professional developers. Candidates recommend Anypoint Studio for all integrations, the exam expects Composer for business-user-managed, SaaS-to-SaaS integrations that do not require custom transformation logic.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Process Automation vs RPA — Orchestration vs Execution</p>
-            <p className="text-sm text-gray-700">Salesforce Flow (Process Automation) orchestrates multi-step business processes across Salesforce records and connected systems via API calls. MuleSoft RPA executes specific UI-based tasks on legacy applications. In a Hyperautomation solution, Flow orchestrates the overall process and calls RPA for steps that require UI interaction. Candidates design RPA to handle the entire workflow — the exam expects Flow to orchestrate and RPA only for the UI-automation steps.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Process Automation vs RPA: Orchestration vs Execution</p>
+            <p className="text-sm text-gray-700">Salesforce Flow (Process Automation) orchestrates multi-step business processes across Salesforce records and connected systems via API calls. MuleSoft RPA executes specific UI-based tasks on legacy applications. In a Hyperautomation solution, Flow orchestrates the overall process and calls RPA for steps that require UI interaction. Candidates design RPA to handle the entire workflow, the exam expects Flow to orchestrate and RPA only for the UI-automation steps.</p>
           </div>
         </div>
       </section>

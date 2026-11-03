@@ -85,7 +85,7 @@ const priceTiers = [
     tier: 'Core Certifications',
     fee: '$200',
     retake: '$100',
-    note: 'Admin, Developer, Consultant, and most Specialist certs — the largest group',
+    note: 'Admin, Developer, Consultant, and most Specialist certs, the largest group',
     certs: [
       { name: 'Platform Administrator (ADM-201)', href: '/certifications/administrator' },
       { name: 'Platform Developer I (PD1)', href: '/certifications/developer-1' },
@@ -193,7 +193,7 @@ export default function SalesforceCertificationCostPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-10">
         <h2 className="text-xl font-bold text-gray-900 mb-1">Regional Pricing: USD vs INR</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Pearson VUE pricing in India is typically lower than the USD list price. The table below shows approximate INR equivalents at current exchange rates. Always confirm the final price in your Salesforce certification account before booking — regional pricing can change.
+          Pearson VUE pricing in India is typically lower than the USD list price. The table below shows approximate INR equivalents at current exchange rates. Always confirm the final price in your Salesforce certification account before booking, regional pricing can change.
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
@@ -335,7 +335,7 @@ export default function SalesforceCertificationCostPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Prepare Before You Pay</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Free practice questions and exam weightage for every cert — no sign-up required.
+          Free practice questions and exam weightage for every cert, no sign-up required.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What SQL knowledge is needed for Marketing Cloud Developer?',
-    answer: 'Marketing Cloud uses SQL for Query Activities in Automation Studio — queries run against data extensions (not a traditional database). You need standard SELECT, WHERE, JOIN, and GROUP BY. Specific Marketing Cloud SQL nuances: you cannot use subqueries in some contexts, data extensions are referenced by name as tables, and results write to a target data extension. The SQL tested is relatively straightforward ANSI SQL.',
+    answer: 'Marketing Cloud uses SQL for Query Activities in Automation Studio, queries run against data extensions (not a traditional database). You need standard SELECT, WHERE, JOIN, and GROUP BY. Specific Marketing Cloud SQL nuances: you cannot use subqueries in some contexts, data extensions are referenced by name as tables, and results write to a target data extension. The SQL tested is relatively straightforward ANSI SQL.',
   },
   {
     question: 'What concepts do most Marketing Cloud Engagement Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Developer exam are: (1) Server-Side JavaScript (SSJS) vs AMPscript — When to Use Each; (2) REST API vs SOAP API — Modern vs Legacy in Marketing Cloud; (3) Transactional Messaging API — Not the Same as Journey API. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Developer exam are: (1) Server-Side JavaScript (SSJS) vs AMPscript: When to Use Each; (2) REST API vs SOAP API: Modern vs Legacy in Marketing Cloud; (3) Transactional Messaging API: Not the Same as Journey API. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('marketing-cloud-engagement-developer-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function MarketingCloudEngagementDeveloperExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Marketing Cloud Developer Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong> — Writing AMPscript for dynamic email and landing page personalisation. Key functions: Lookup(), LookupRows(), LookupOrderedRows(), IIF(), FormatDate(), Format(), RetrieveSalesforceObjects(), and ContentBlockByID(). Know the syntax differences between email and Cloud Page AMPscript.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Server-Side JavaScript (SSJS) and SQL</strong> — SSJS for Cloud Pages and Automation Studio scripting. SQL Query Activities against data extensions for audience segmentation. Understanding which language to use in which Marketing Cloud context.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Marketing Cloud APIs</strong> — REST and SOAP API endpoints for subscriber management, data extension operations, and triggered send initiation. OAuth 2.0 authentication for API access, and when to use REST vs. SOAP for specific operations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong>: Writing AMPscript for dynamic email and landing page personalisation. Key functions: Lookup(), LookupRows(), LookupOrderedRows(), IIF(), FormatDate(), Format(), RetrieveSalesforceObjects(), and ContentBlockByID(). Know the syntax differences between email and Cloud Page AMPscript.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Server-Side JavaScript (SSJS) and SQL</strong>: SSJS for Cloud Pages and Automation Studio scripting. SQL Query Activities against data extensions for audience segmentation. Understanding which language to use in which Marketing Cloud context.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Marketing Cloud APIs</strong>: REST and SOAP API endpoints for subscriber management, data extension operations, and triggered send initiation. OAuth 2.0 authentication for API access, and when to use REST vs. SOAP for specific operations.</li>
         </ul>
       </section>
 
@@ -143,7 +143,7 @@ export default function MarketingCloudEngagementDeveloperExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For AMPscript function questions: Lookup() returns a single field value from a data extension row; LookupRows() returns all rows matching the filter as a rowset; LookupOrderedRows() returns rows in a specified order. When you need to loop through multiple rows, use LookupRows() with a FOR loop.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SSJS vs. AMPscript questions: AMPscript runs inline in emails and Cloud Pages; SSJS runs in Script Activities in Automation Studio and Cloud Pages. SSJS cannot be used in email sends (only AMPscript can). For automations that need to query and write data without sending an email, SSJS Script Activity is the correct answer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API questions: REST API uses JSON and is preferred for new integrations; SOAP API uses XML and is required for some legacy operations (email send definitions, data extension row operations). OAuth 2.0 Client Credentials grant type is used for server-to-server API access — no user login required.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API questions: REST API uses JSON and is preferred for new integrations; SOAP API uses XML and is required for some legacy operations (email send definitions, data extension row operations). OAuth 2.0 Client Credentials grant type is used for server-to-server API access, no user login required.</li>
         </ul>
       </section>
 
@@ -156,7 +156,7 @@ export default function MarketingCloudEngagementDeveloperExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Build at least 5 dynamic emails using AMPscript with data extension lookups and conditional
           content before booking. The exam tests practical scripting knowledge that cannot be learned
-          theoretically — candidates without hands-on AMPscript experience fail the code-reading
+          theoretically, candidates without hands-on AMPscript experience fail the code-reading
           questions consistently.
         </p>
       </section>
@@ -164,19 +164,19 @@ export default function MarketingCloudEngagementDeveloperExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Engagement Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Server-Side JavaScript (SSJS) vs AMPscript — When to Use Each</p>
-            <p className="text-sm text-gray-700">AMPscript is a lightweight scripting language evaluated at send time for per-record personalisation (lookups, string functions, conditional content). SSJS runs before rendering for complex logic: API callouts, loops over multiple records, creating Core objects. Candidates use AMPscript for API callouts — AMPscript cannot make HTTP requests; SSJS is required for outbound callouts from Cloud Pages or email sends.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Server-Side JavaScript (SSJS) vs AMPscript: When to Use Each</p>
+            <p className="text-sm text-gray-700">AMPscript is a lightweight scripting language evaluated at send time for per-record personalisation (lookups, string functions, conditional content). SSJS runs before rendering for complex logic: API callouts, loops over multiple records, creating Core objects. Candidates use AMPscript for API callouts: AMPscript cannot make HTTP requests; SSJS is required for outbound callouts from Cloud Pages or email sends.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. REST API vs SOAP API — Modern vs Legacy in Marketing Cloud</p>
-            <p className="text-sm text-gray-700">The Marketing Cloud REST API is the modern interface: faster, JSON-based, supports Journey Builder, Contact Builder, and most new features. The SOAP API is legacy: XML-based, supports email sends, subscriber management, and list operations. New integrations should use REST. Candidates use SOAP for new subscriber-creation integrations — the exam expects REST for new implementations.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. REST API vs SOAP API: Modern vs Legacy in Marketing Cloud</p>
+            <p className="text-sm text-gray-700">The Marketing Cloud REST API is the modern interface: faster, JSON-based, supports Journey Builder, Contact Builder, and most new features. The SOAP API is legacy: XML-based, supports email sends, subscriber management, and list operations. New integrations should use REST. Candidates use SOAP for new subscriber-creation integrations, the exam expects REST for new implementations.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Transactional Messaging API — Not the Same as Journey API</p>
-            <p className="text-sm text-gray-700">The Transactional Messaging API sends a single triggered email or SMS immediately to one recipient (order confirmation, password reset). The Journey API injects a contact into a Journey for multi-step orchestration. Candidates use the Journey API for all triggered single messages — the exam expects Transactional Messaging API for immediate one-off sends and Journey API for multi-step nurture.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Transactional Messaging API: Not the Same as Journey API</p>
+            <p className="text-sm text-gray-700">The Transactional Messaging API sends a single triggered email or SMS immediately to one recipient (order confirmation, password reset). The Journey API injects a contact into a Journey for multi-step orchestration. Candidates use the Journey API for all triggered single messages, the exam expects Transactional Messaging API for immediate one-off sends and Journey API for multi-step nurture.</p>
           </div>
         </div>
       </section>

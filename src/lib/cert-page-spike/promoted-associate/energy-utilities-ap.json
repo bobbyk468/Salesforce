@@ -22,9 +22,9 @@
     "summary": "The Energy &amp; Utilities AP exam is moderately difficult. It tests utility-specific concepts including the service point data model, OmniStudio-powered customer journeys, meter-to-cash workflows, and billing system integration. Candidates without exposure to utility industry operations will find the domain terminology and regulatory context challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>Industry-specific data model</strong> — you must understand premises, service points, meters, and how customer billing accounts relate to physical service locations.",
-      "<strong>OmniStudio and integration knowledge</strong> — questions cover OmniScripts for start/stop service, FlexCards for agent consoles, and integration patterns with external billing systems like SAP IS-U."
+      "<strong>~65% passing score</strong>: roughly 39 correct answers needed.",
+      "<strong>Industry-specific data model</strong>: you must understand premises, service points, meters, and how customer billing accounts relate to physical service locations.",
+      "<strong>OmniStudio and integration knowledge</strong>: questions cover OmniScripts for start/stop service, FlexCards for agent consoles, and integration patterns with external billing systems like SAP IS-U."
     ],
     "passRateGuidance": "Score 75%+ on practice exams and ensure you can explain the relationship between accounts, premises, service points, and meters before booking. Experience with at least one utility industry Salesforce implementation or familiarity with meter-to-cash processes is strongly recommended."
   },
@@ -61,7 +61,7 @@
     "blocks": [
       {
         "heading": "Energy & Utilities Cloud Data Model",
-        "body": "Energy & Utilities Cloud (EUC) provides an industry-specific data model for energy providers. Core objects: Account (residential or commercial customer), Premise (the physical service location — address where energy is delivered), Service Point (the meter connection at a premise), Asset (the meter or equipment), Service Order (a field work request — connect, disconnect, meter reading). The consultant understands how customer billing accounts relate to premises and service points in a one-to-many hierarchy, as a single customer may have multiple premises."
+        "body": "Energy & Utilities Cloud (EUC) provides an industry-specific data model for energy providers. Core objects: Account (residential or commercial customer), Premise (the physical service location, address where energy is delivered), Service Point (the meter connection at a premise), Asset (the meter or equipment), Service Order (a field work request, connect, disconnect, meter reading). The consultant understands how customer billing accounts relate to premises and service points in a one-to-many hierarchy, as a single customer may have multiple premises."
       },
       {
         "heading": "OmniStudio-Powered Customer Journeys",
@@ -73,11 +73,11 @@
       },
       {
         "heading": "Customer Portal and Self-Service",
-        "body": "Experience Cloud provides the customer-facing portal for energy utility customers. Self-service capabilities: view bills and payment history, make payments, report outages, start/stop/transfer service, manage account preferences. **Knowledge articles** address common questions (how to read your meter, what to do during an outage). The consultant configures the Experience Cloud site for utility customers — balancing self-service capabilities with the utility's compliance requirements around data access and service request validation."
+        "body": "Experience Cloud provides the customer-facing portal for energy utility customers. Self-service capabilities: view bills and payment history, make payments, report outages, start/stop/transfer service, manage account preferences. **Knowledge articles** address common questions (how to read your meter, what to do during an outage). The consultant configures the Experience Cloud site for utility customers, balancing self-service capabilities with the utility's compliance requirements around data access and service request validation."
       },
       {
         "heading": "Billing Integration and Account Management",
-        "body": "Utility billing systems (SAP IS-U, Oracle CC&B, Avertra) are external to Salesforce — Energy & Utilities Cloud serves as the CRM and customer engagement layer, not the billing system of record. Integration patterns: billing data (current balance, payment history, usage) syncs from the billing system to Salesforce via API or batch. Service requests flow from Salesforce to the billing system to activate or terminate service. The consultant designs the integration architecture — which data to sync, how frequently, and how to handle sync conflicts between systems."
+        "body": "Utility billing systems (SAP IS-U, Oracle CC&B, Avertra) are external to Salesforce: Energy & Utilities Cloud serves as the CRM and customer engagement layer, not the billing system of record. Integration patterns: billing data (current balance, payment history, usage) syncs from the billing system to Salesforce via API or batch. Service requests flow from Salesforce to the billing system to activate or terminate service. The consultant designs the integration architecture, which data to sync, how frequently, and how to handle sync conflicts between systems."
       }
     ]
   },

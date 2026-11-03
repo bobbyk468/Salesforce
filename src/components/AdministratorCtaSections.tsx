@@ -18,7 +18,7 @@ export default function AdministratorCtaSections() {
         </p>
         <p className="text-gray-600 text-xs max-w-md mx-auto mb-4">
           Want to ensure you pass on your first try? Contact us for more information on our full 60-question mock exams and a personalized study plan. You can also reach out to{' '}
-          <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>—mention ADM-201.
+          <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a> and mention ADM-201.
         </p>
         <Link
           href="/contact#exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"
@@ -30,7 +30,7 @@ export default function AdministratorCtaSections() {
 
       <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">
         <h2 id="dumps-comparison-heading" className="text-lg font-bold text-gray-900 mb-3">
-          ADM-201 Practice Questions vs Exam Dumps — What’s the Difference?
+          ADM-201 Practice Questions vs Exam Dumps: What’s the Difference?
         </h2>
         <p className="text-sm text-gray-700 mb-4">
           Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here’s why original practice questions are a better investment:

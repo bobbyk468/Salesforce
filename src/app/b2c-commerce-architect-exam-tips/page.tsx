@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What is Headless Commerce and does the B2C Commerce Architect exam test it?',
-    answer: 'Headless Commerce separates the front-end presentation layer from the B2C Commerce back-end — the storefront is built with a custom front-end (React, Vue) consuming Commerce APIs (OCAPI or SCAPI). Yes, the Architect exam tests when to choose Headless vs. SFRA: Headless for maximum front-end flexibility, SFRA for faster time-to-market with a managed front-end framework.',
+    answer: 'Headless Commerce separates the front-end presentation layer from the B2C Commerce back-end, the storefront is built with a custom front-end (React, Vue) consuming Commerce APIs (OCAPI or SCAPI). Yes, the Architect exam tests when to choose Headless vs. SFRA: Headless for maximum front-end flexibility, SFRA for faster time-to-market with a managed front-end framework.',
   },
   {
     question: 'What concepts do most B2C Commerce Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the B2C Commerce Architect exam are: (1) Site Architecture — One Site vs Multiple Sites for Multi-Region; (2) OCAPI vs SCAPI — Legacy vs Modern API Layer; (3) Quota Limits — Why Performance Degrades Under Load. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the B2C Commerce Architect exam are: (1) Site Architecture: One Site vs Multiple Sites for Multi-Region; (2) OCAPI vs SCAPI: Legacy vs Modern API Layer; (3) Quota Limits: Why Performance Degrades Under Load. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('b2c-commerce-architect-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function B2CCommerceArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What B2C Commerce Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Architecture and design</strong> — SFRA vs. Headless Commerce selection, multi-site architecture design, cartridge dependency management at scale, Business Manager configuration governance, and how to structure a large Commerce implementation across regions and brands.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration architecture</strong> — OC API (Open Commerce API) vs. SCAPI (Salesforce Commerce API) selection, integration with ERP (SAP, Oracle) for order fulfilment, payment gateway integration patterns, and Marketing Cloud integration for personalised commerce experiences.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance and security</strong> — CDN strategy for static assets, caching layers (page-level, partial-page, fragment), PCI DSS compliance for payment data, and how to design high-traffic peak performance (Black Friday scale).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Architecture and design</strong>: SFRA vs. Headless Commerce selection, multi-site architecture design, cartridge dependency management at scale, Business Manager configuration governance, and how to structure a large Commerce implementation across regions and brands.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration architecture</strong>: OC API (Open Commerce API) vs. SCAPI (Salesforce Commerce API) selection, integration with ERP (SAP, Oracle) for order fulfilment, payment gateway integration patterns, and Marketing Cloud integration for personalised commerce experiences.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance and security</strong>: CDN strategy for static assets, caching layers (page-level, partial-page, fragment), PCI DSS compliance for payment data, and how to design high-traffic peak performance (Black Friday scale).</li>
         </ul>
       </section>
 
@@ -137,13 +137,13 @@ export default function B2CCommerceArchitectExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach B2C Commerce Architect Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions present a commerce architecture requirement and ask which design decision, API approach,
-          or integration pattern is correct. Think about long-term maintainability and upgrade compatibility —
+          or integration pattern is correct. Think about long-term maintainability and upgrade compatibility,
           architect decisions have multi-year implications.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SFRA vs. headless questions: SFRA = managed front-end, faster implementation, less flexibility. Headless = custom front-end, maximum flexibility, more complex to build and maintain. Choose headless when: aggressive front-end customisation is required, PWA or native mobile is needed, or the team has strong React/Vue skills. Choose SFRA when: time-to-market is critical, front-end flexibility is not the priority.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API questions: OCAPI is the legacy REST API for B2C Commerce — still used for many integrations. SCAPI (Salesforce Commerce API) is the newer API with better performance and easier authentication. For new integrations, prefer SCAPI. When a question says ’modern integration’ or ’headless storefront’, SCAPI is the answer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For performance questions: page-level caching (full page HTML cache) is the most impactful for anonymous users. Partial page caching for components that change per session. Avoid caching personalised content at the page level — use client-side rendering for personalised sections. CDN placement for static assets (images, CSS, JS) reduces origin server load.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API questions: OCAPI is the legacy REST API for B2C Commerce, still used for many integrations. SCAPI (Salesforce Commerce API) is the newer API with better performance and easier authentication. For new integrations, prefer SCAPI. When a question says ’modern integration’ or ’headless storefront’, SCAPI is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For performance questions: page-level caching (full page HTML cache) is the most impactful for anonymous users. Partial page caching for components that change per session. Avoid caching personalised content at the page level, use client-side rendering for personalised sections. CDN placement for static assets (images, CSS, JS) reduces origin server load.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function B2CCommerceArchitectExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2C Commerce Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Site Architecture — One Site vs Multiple Sites for Multi-Region</p>
-            <p className="text-sm text-gray-700">B2C Commerce supports multiple storefronts within one realm. A single site can serve multiple locales using site preferences and localisation. Candidates recommend one site per region — the exam expects multi-locale configuration on a single site unless business processes are completely separate (separate catalogs, pricing, and fulfilment), in which case separate sites are justified.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Site Architecture: One Site vs Multiple Sites for Multi-Region</p>
+            <p className="text-sm text-gray-700">B2C Commerce supports multiple storefronts within one realm. A single site can serve multiple locales using site preferences and localisation. Candidates recommend one site per region, the exam expects multi-locale configuration on a single site unless business processes are completely separate (separate catalogs, pricing, and fulfilment), in which case separate sites are justified.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. OCAPI vs SCAPI — Legacy vs Modern API Layer</p>
-            <p className="text-sm text-gray-700">Open Commerce API (OCAPI) is the legacy REST API for B2C Commerce. Salesforce Commerce API (SCAPI) is the modern replacement, built on headless architecture. Exam scenarios about new integrations expect SCAPI recommendations. Candidates default to OCAPI because it is more familiar from study materials — know that Headless Reference Architecture (SFRA) uses SCAPI for new implementations.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. OCAPI vs SCAPI: Legacy vs Modern API Layer</p>
+            <p className="text-sm text-gray-700">Open Commerce API (OCAPI) is the legacy REST API for B2C Commerce. Salesforce Commerce API (SCAPI) is the modern replacement, built on headless architecture. Exam scenarios about new integrations expect SCAPI recommendations. Candidates default to OCAPI because it is more familiar from study materials. Know that Headless Reference Architecture (SFRA) uses SCAPI for new implementations.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Quota Limits — Why Performance Degrades Under Load</p>
-            <p className="text-sm text-gray-700">B2C Commerce enforces pipeline/controller quota limits (CPU time, memory, custom objects per request). Exceeding these causes degraded performance or errors. Candidates diagnose performance issues by looking at code logic — the exam expects checking quota consumption first. Know the key quotas: custom object record limit per session, pipeline dictionary size, and API call rate limits.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Quota Limits: Why Performance Degrades Under Load</p>
+            <p className="text-sm text-gray-700">B2C Commerce enforces pipeline/controller quota limits (CPU time, memory, custom objects per request). Exceeding these causes degraded performance or errors. Candidates diagnose performance issues by looking at code logic, the exam expects checking quota consumption first. Know the key quotas: custom object record limit per session, pipeline dictionary size, and API call rate limits.</p>
           </div>
         </div>
       </section>

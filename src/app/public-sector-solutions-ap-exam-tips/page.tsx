@@ -59,11 +59,11 @@ const faqItems = [
   },
   {
     question: 'How does OmniStudio relate to Public Sector Solutions?',
-    answer: 'OmniStudio is the technology foundation for PSS digital services. OmniScripts power citizen-facing application and intake forms. FlexCards display case information and status to government workers. DataRaptors read and write data during application processes. The PSS AP exam tests how OmniStudio components are configured and customised for government use cases — knowing OmniStudio fundamentals is a prerequisite.',
+    answer: 'OmniStudio is the technology foundation for PSS digital services. OmniScripts power citizen-facing application and intake forms. FlexCards display case information and status to government workers. DataRaptors read and write data during application processes. The PSS AP exam tests how OmniStudio components are configured and customised for government use cases, knowing OmniStudio fundamentals is a prerequisite.',
   },
   {
     question: 'What concepts do most Public Sector Solutions candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Public Sector Solutions exam are: (1) Licences vs Permits vs Inspections — The PSS Object Hierarchy; (2) OmniStudio in PSS — Portal Interactions Use OmniScripts; (3) Business Rules Engine (BRE) — Eligibility and Decision Automation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Public Sector Solutions exam are: (1) Licences vs Permits vs Inspections: The PSS Object Hierarchy; (2) OmniStudio in PSS: Portal Interactions Use OmniScripts; (3) Business Rules Engine (BRE): Eligibility and Decision Automation. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('public-sector-solutions-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function PublicSectorSolutionsApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Public Sector Solutions AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Licences and permits management</strong> — The PSS Licence and Permit data model (Application, Business Licence, Inspection objects), configuring application intake using OmniScripts, routing applications for review, scheduling inspections, issuing licences with conditions, and managing renewal workflows for recurring licences.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Grants management</strong> — The PSS Grants Management data model (Funding Programme, Grant Application, Award objects), configuring grant application intake and review workflows, managing grant disbursements and milestones, compliance monitoring, and reporting requirements for federal and state grant programmes.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniStudio and citizen experience</strong> — Configuring OmniScripts for citizen-facing application forms, FlexCards for case worker desktop views, DataRaptors for reading/writing PSS data, Integration Procedures for orchestrating complex data operations, and Experience Cloud for the public-facing citizen portal.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Licences and permits management</strong>: The PSS Licence and Permit data model (Application, Business Licence, Inspection objects), configuring application intake using OmniScripts, routing applications for review, scheduling inspections, issuing licences with conditions, and managing renewal workflows for recurring licences.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Grants management</strong>: The PSS Grants Management data model (Funding Programme, Grant Application, Award objects), configuring grant application intake and review workflows, managing grant disbursements and milestones, compliance monitoring, and reporting requirements for federal and state grant programmes.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniStudio and citizen experience</strong>: Configuring OmniScripts for citizen-facing application forms, FlexCards for case worker desktop views, DataRaptors for reading/writing PSS data, Integration Procedures for orchestrating complex data operations, and Experience Cloud for the public-facing citizen portal.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function PublicSectorSolutionsApExamTipsPage() {
             <span className="font-medium text-gray-900">Inspections and Enforcement</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OmniStudio knowledge is a prerequisite — PSS is built on OmniStudio components.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OmniStudio knowledge is a prerequisite: PSS is built on OmniStudio components.</p>
         </div>
       </section>
 
@@ -134,13 +134,13 @@ export default function PublicSectorSolutionsApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach PSS AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a government agency scenario and ask which PSS feature, object, or
-          configuration addresses it. Use native PSS objects — not generic Salesforce objects
+          configuration addresses it. Use native PSS objects, not generic Salesforce objects
           like custom cases or custom applications.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For licence workflow questions: the PSS licence lifecycle is Application Intake (citizen submits) → Application Review (staff reviews) → Inspection Scheduled (if required) → Inspection Completed → Licence Issued (or Denied). Each stage uses OmniStudio components for the citizen and worker experience. When a scenario describes a business applying for a food service permit, map each step to the PSS Application and Business Licence objects.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For licence workflow questions: the PSS licence lifecycle is Application Intake (citizen submits) → Application Review (staff reviews) → Inspection Scheduled (if required) → Inspection Completed → Licence Issued (or Denied). Each stage uses OmniStudio components for the citizen and worker experience. When a scenario describes a business applying for a food service permit. Map each step to the PSS Application and Business Licence objects.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For grants questions: Funding Programmes define the grant opportunity (eligibility criteria, funding amount, deadline). Grant Applications are submitted by applicants. Awards record the approved funding. Milestones track progress against grant deliverables. When a question says ’track whether a grantee has met their programme deliverables’, the answer is Milestones on the Award record.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio questions in PSS context: OmniScripts = multi-step guided flows for application submission. FlexCards = embedded data displays on case worker console. DataRaptors = data read/write operations. Integration Procedures = server-side orchestration of multiple data operations. When a PSS scenario asks how a citizen ’walks through an application step by step’, the answer is an OmniScript — not a Flow or custom LWC.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio questions in PSS context: OmniScripts = multi-step guided flows for application submission. FlexCards = embedded data displays on case worker console. DataRaptors = data read/write operations. Integration Procedures = server-side orchestration of multiple data operations. When a PSS scenario asks how a citizen ’walks through an application step by step’, the answer is an OmniScript, not a Flow or custom LWC.</li>
         </ul>
       </section>
 
@@ -152,7 +152,7 @@ export default function PublicSectorSolutionsApExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Public Sector Solutions AP is for implementation consultants delivering government projects.
-          Complete the OmniStudio Consultant or Developer credential before pursuing PSS AP — OmniStudio
+          Complete the OmniStudio Consultant or Developer credential before pursuing PSS AP: OmniStudio
           is the core technology. The Salesforce Public Sector Solutions Trailmix and PSS implementation
           guide are the primary study resources.
         </p>
@@ -161,19 +161,19 @@ export default function PublicSectorSolutionsApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Public Sector Solutions Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Licences vs Permits vs Inspections — The PSS Object Hierarchy</p>
-            <p className="text-sm text-gray-700">Public Sector Solutions uses a structured hierarchy: Business Licence Application → Business Licence → Inspection. An Application is submitted by the constituent, reviewed, and either approved (creating a Licence) or rejected. Inspections are linked to Licences to verify ongoing compliance. Candidates model these as Cases and Tasks — the exam expects PSS-specific objects and the application-to-licence workflow.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Licences vs Permits vs Inspections: The PSS Object Hierarchy</p>
+            <p className="text-sm text-gray-700">Public Sector Solutions uses a structured hierarchy: Business Licence Application → Business Licence → Inspection. An Application is submitted by the constituent, reviewed, and either approved (creating a Licence) or rejected. Inspections are linked to Licences to verify ongoing compliance. Candidates model these as Cases and Tasks, the exam expects PSS-specific objects and the application-to-licence workflow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. OmniStudio in PSS — Portal Interactions Use OmniScripts</p>
-            <p className="text-sm text-gray-700">PSS relies heavily on OmniStudio: OmniScripts power the constituent-facing application and renewal flows on the Experience Cloud portal. FlexCards display permit status, case summaries, and inspection results. DataRaptors read and write application data. Candidates design custom LWC forms for PSS portal interactions — the exam expects OmniScript-based guided processes for constituent self-service.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. OmniStudio in PSS: Portal Interactions Use OmniScripts</p>
+            <p className="text-sm text-gray-700">PSS relies heavily on OmniStudio: OmniScripts power the constituent-facing application and renewal flows on the Experience Cloud portal. FlexCards display permit status, case summaries, and inspection results. DataRaptors read and write application data. Candidates design custom LWC forms for PSS portal interactions, the exam expects OmniScript-based guided processes for constituent self-service.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Business Rules Engine (BRE) — Eligibility and Decision Automation</p>
-            <p className="text-sm text-gray-700">The Business Rules Engine evaluates eligibility criteria for licences, benefits, and permits using a rules-based decision table — no code required. Candidates write Apex or Flow decision logic for eligibility checks — the exam expects BRE configuration for complex multi-condition eligibility scenarios, keeping logic maintainable by non-developers.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Business Rules Engine (BRE): Eligibility and Decision Automation</p>
+            <p className="text-sm text-gray-700">The Business Rules Engine evaluates eligibility criteria for licences, benefits, and permits using a rules-based decision table, no code required. Candidates write Apex or Flow decision logic for eligibility checks, the exam expects BRE configuration for complex multi-condition eligibility scenarios, keeping logic maintainable by non-developers.</p>
           </div>
         </div>
       </section>

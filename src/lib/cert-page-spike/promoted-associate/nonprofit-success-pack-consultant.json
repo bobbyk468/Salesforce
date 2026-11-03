@@ -1,6 +1,6 @@
 {
   "template": "associate",
-  "expertInsight": "Salesforce is transitioning nonprofits from the legacy Nonprofit Success Pack (NPSP) managed package to the new Nonprofit Cloud, built natively on Data Cloud and Flow. NPSP implementations are still widely deployed and this exam remains active, but if you're starting a new nonprofit project or credential in 2026, check the Nonprofit Cloud certification page first — new engagements increasingly default to that architecture.",
+  "expertInsight": "Salesforce is transitioning nonprofits from the legacy Nonprofit Success Pack (NPSP) managed package to the new Nonprofit Cloud, built natively on Data Cloud and Flow. NPSP implementations are still widely deployed and this exam remains active, but if you're starting a new nonprofit project or credential in 2026, check the Nonprofit Cloud certification page first, new engagements increasingly default to that architecture.",
   "whoIsThisFor": {
     "heading": "Who is the Nonprofit Success Pack Consultant exam for?",
     "personas": [
@@ -23,11 +23,11 @@
     "summary": "The Nonprofit Success Pack Consultant exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use NPSP, Donations, or Households.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Nonprofit Cloud and NPSP in a real org are better prepared than candidates who only memorize notes."
+      "<strong>~65% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong>: expect questions that test when to use NPSP, Donations, or Households.",
+      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Nonprofit Cloud and NPSP in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
   },
   "examFormat": {
     "heading": "Nonprofit Success Pack Consultant Exam Format Explained",
@@ -67,7 +67,7 @@
     "blocks": [
       {
         "heading": "NPSP Installation and Configuration",
-        "body": "NPSP is a managed package installed from **AppExchange**. The NPSP Settings page (in Setup or via the NPSP tile) controls all key configurations: Account model (Household vs Individual vs Organisation), relationship settings, payment behaviour, and rollup configuration. The Household Account model creates one Account per person (their household) — not the same as a standard person account. The 1-to-1 Account model creates one Account per Contact. The consultant selects and documents the correct model before implementation and understands that switching models after data entry is complex."
+        "body": "NPSP is a managed package installed from **AppExchange**. The NPSP Settings page (in Setup or via the NPSP tile) controls all key configurations: Account model (Household vs Individual vs Organisation), relationship settings, payment behaviour, and rollup configuration. The Household Account model creates one Account per person (their household), not the same as a standard person account. The 1-to-1 Account model creates one Account per Contact. The consultant selects and documents the correct model before implementation and understands that switching models after data entry is complex."
       },
       {
         "heading": "Donation Processing and Gift Entry",
@@ -79,11 +79,11 @@
       },
       {
         "heading": "Engagement Plans and Levels",
-        "body": "Engagement Plans create task-based workflows for stewardship and donor cultivation. An Engagement Plan Template defines a sequence of tasks assigned to roles over time — e.g., 3 days after a major gift: send thank you note (task 1); 30 days: handwritten letter from ED (task 2); 60 days: phone call from program staff (task 3). Levels assign donors to stewardship tiers based on giving amounts — Bronze, Silver, Gold, Platinum. Level **Assignment rules** automatically categorise donors and can trigger Engagement Plans. The consultant configures Levels and Plans to match the organisation's major donor stewardship strategy."
+        "body": "Engagement Plans create task-based workflows for stewardship and donor cultivation. An Engagement Plan Template defines a sequence of tasks assigned to roles over time, e.g., 3 days after a major gift: send thank you note (task 1); 30 days: handwritten letter from ED (task 2); 60 days: phone call from program staff (task 3). Levels assign donors to stewardship tiers based on giving amounts: Bronze, Silver, Gold, Platinum. Level **Assignment rules** automatically categorise donors and can trigger Engagement Plans. The consultant configures Levels and Plans to match the organisation's major donor stewardship strategy."
       },
       {
         "heading": "Data Quality and Migration",
-        "body": "NPSP Data Importer is a tool specifically designed for importing constituent and donation data into NPSP — handling the household model logic, matching existing records, and creating correct relationships. It is preferred over Data Loader for initial NPSP data migration. Deduplication: NPSP includes merge tools for duplicate Contact and Account records. Data quality validation: using NPSP's built-in validation plus custom **Validation Rules** to enforce data completeness. The consultant designs the data migration strategy — mapping source system fields to NPSP objects, testing in sandbox, and validating results before production migration."
+        "body": "NPSP Data Importer is a tool specifically designed for importing constituent and donation data into NPSP, handling the household model logic, matching existing records, and creating correct relationships. It is preferred over Data Loader for initial NPSP data migration. Deduplication: NPSP includes merge tools for duplicate Contact and Account records. Data quality validation: using NPSP's built-in validation plus custom **Validation Rules** to enforce data completeness. The consultant designs the data migration strategy, mapping source system fields to NPSP objects, testing in sandbox, and validating results before production migration."
       }
     ]
   },

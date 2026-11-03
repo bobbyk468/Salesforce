@@ -257,7 +257,7 @@ export default function HtmlSitemapPage() {
           while exam-tip pages focus on common traps and last-week revision.
         </p>
         <p>
-          For the fastest route, start with a role hub if you know your career direction. Use the individual study
+          For the fastest route. Start with a role hub if you know your career direction. Use the individual study
           guides when you have chosen an exam and need section weightage, source references, and practice questions.
         </p>
       </section>

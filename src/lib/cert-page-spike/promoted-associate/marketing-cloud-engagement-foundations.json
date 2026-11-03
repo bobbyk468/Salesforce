@@ -26,7 +26,7 @@
       "<strong>Breadth, not depth.</strong> You need to know what each studio is for rather than how to build anything complicated in it.",
       "<strong>$75,</strong> which is a quarter of what the role-based exams cost. The cheapest way to find out whether Marketing Cloud suits you."
     ],
-    "passRateGuidance": "You are ready when you can log into a Marketing Cloud org and, without clicking around hunting for things, build a data extension, create an email in Content Builder, send it to a segment and then find the open and click numbers afterwards. If any of those four still takes you a while, spend another week in the tool."
+    "passRateGuidance": "You are ready when you can log into a Marketing Cloud org and, without clicking around hunting for things. Build a data extension, create an email in Content Builder, send it to a segment and then find the open and click numbers afterwards. If any of those four still takes you a while, spend another week in the tool."
   },
   "examFormat": {
     "heading": "Marketing Cloud Engagement Foundations Exam Format Explained",
@@ -35,7 +35,7 @@
     "bestWayToPass": [
       "<strong>Spend the time in the tool, not in notes.</strong> Marketing Cloud has an unusual interface and the exam assumes you have used it. A free trial or a work org beats any amount of reading.",
       "<strong>Get lists versus data extensions straight.</strong> This single distinction sits behind more questions than any other topic. Lists are the old subscriber model; data extensions are tables you define, and almost everything modern uses them.",
-      "<strong>Send a real email end to end.</strong> Build it in Content Builder, pick an audience, set a send classification, do a test send, then go and read the tracking. Doing it once teaches you more than five pages about it.",
+      "<strong>Send a real email end to end.</strong> Build it in Content Builder. Pick an audience, set a send classification. Do a test send, then go and read the tracking. Doing it once teaches you more than five pages about it.",
       "<strong>Learn what the bounce types mean.</strong> Hard versus soft bounce, and what each one does to the subscriber record, comes up reliably."
     ]
   },
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "question": "A nightly process must import a file from the FTP folder, build a segment from it with SQL, then email that segment. Which tool is designed for this?",
+      "question": "A nightly process must import a file from the FTP folder. Build a segment from it with SQL, then email that segment. Which tool is designed for this?",
       "options": [
         "The Journey Builder tool",
         "Contact Builder",

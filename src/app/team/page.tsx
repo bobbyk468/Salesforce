@@ -140,7 +140,7 @@ export default function TeamPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm text-salesforce-blue font-medium hover:underline"
-                aria-label="Krishna Mohan Trailblazer profile — verified Salesforce credentials"
+                aria-label="Krishna Mohan Trailblazer profile, verified Salesforce credentials"
               >
                 Trailblazer.me <ExternalLink className="h-3.5 w-3.5" />
               </a>
@@ -180,10 +180,10 @@ export default function TeamPage() {
         <ul className="space-y-2.5 text-gray-700">
           {[
             'Each certification page is mapped directly to the official Salesforce exam outline before writing begins.',
-            'Practice questions are written to test real exam concepts — not surface-level recall.',
+            'Practice questions are written to test real exam concepts, not surface-level recall.',
             'Section weightage percentages are sourced from official Salesforce certification guides.',
             'Pages are reviewed at each Salesforce release to align with updated exam objectives and terminology.',
-            'No braindumps, leaked questions, or copied exam content — ever.',
+            'No braindumps, leaked questions, or copied exam content, ever.',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
               <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
@@ -198,7 +198,7 @@ export default function TeamPage() {
         <h2 className="text-xl font-semibold text-gray-900">What we cover</h2>
         <p className="text-gray-700 text-sm">
           We cover all 90+ Salesforce certifications across Administrator, Developer, Consultant, Architect,
-          Marketing, Accredited Professional, Tableau, and MuleSoft tracks — each with section-wise exam weightage,
+          Marketing, Accredited Professional, Tableau, and MuleSoft tracks, each with section-wise exam weightage,
           prerequisite guidance, exam-day tips, and free practice questions with full explanations.
         </p>
       </section>

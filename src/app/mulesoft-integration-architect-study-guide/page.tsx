@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'What are the prerequisites for the MuleSoft Integration Architect exam?',
-    answer: 'Salesforce recommends holding the MuleSoft Certified Developer I certification before attempting Integration Architect. The exam assumes solid hands-on experience building integration flows, designing APIs, and working with Anypoint Platform — typically 3–5 years of MuleSoft development experience. The Integration Architect exam tests design decisions and tradeoffs, not basic implementation, so practical architecture experience is essential.',
+    answer: 'Salesforce recommends holding the MuleSoft Certified Developer I certification before attempting Integration Architect. The exam assumes solid hands-on experience building integration flows, designing APIs, and working with Anypoint Platform, typically 3–5 years of MuleSoft development experience. The Integration Architect exam tests design decisions and tradeoffs, not basic implementation, so practical architecture experience is essential.',
   },
   {
     question: 'What is the MuleSoft Integration Architect exam format?',
@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'How is Integration Architect different from MuleSoft Developer certifications?',
-    answer: 'MuleSoft Developer I and II test hands-on implementation skills — building flows, writing DataWeave, configuring connectors. MuleSoft Integration Architect tests architecture and design skills — which patterns to choose, how to design for scale and security, governance strategy, and how to present architectural decisions to stakeholders. The Architect exam requires less code knowledge and more strategic design thinking.',
+    answer: 'MuleSoft Developer I and II test hands-on implementation skills, building flows, writing DataWeave, configuring connectors. MuleSoft Integration Architect tests architecture and design skills, which patterns to choose, how to design for scale and security, governance strategy, and how to present architectural decisions to stakeholders. The Architect exam requires less code knowledge and more strategic design thinking.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function MulesoftIntegrationArchitectStudyGuidePage() {
           MuleSoft Integration Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the MuleSoft Certified Integration Architect exam — API-led connectivity, integration patterns, security architecture, and governance strategy.
+          A complete study guide for the MuleSoft Certified Integration Architect exam: API-led connectivity, integration patterns, security architecture, and governance strategy.
         </p>
       </div>
 

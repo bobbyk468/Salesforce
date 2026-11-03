@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Experience Cloud Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Experience Cloud Consultant exam are: (1) Experience Cloud Licence Types — Community vs Partner vs Customer Plus; (2) Data Categories vs Topics — Visibility Control vs Navigation; (3) Sharing Rules in Experience Cloud — External User OWD Is Separate from Internal. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Experience Cloud Consultant exam are: (1) Experience Cloud Licence Types: Community vs Partner vs Customer Plus; (2) Data Categories vs Topics: Visibility Control vs Navigation; (3) Sharing Rules in Experience Cloud: External User OWD Is Separate from Internal. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('experience-cloud-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function ExperienceCloudExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Experience Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Licence types and access</strong> — Customer Community vs Customer Community Plus vs Partner Community licences, what each permits, and when to recommend each based on client requirements.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing and visibility</strong> — How external user sharing works with OWDs, sharing sets, sharing rules, and the impact of portal role hierarchy on data access.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Experience Builder configuration</strong> — Building pages, applying themes, configuring components, setting up navigation, and enabling Salesforce CMS content for communities.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Licence types and access</strong>: Customer Community vs Customer Community Plus vs Partner Community licences, what each permits, and when to recommend each based on client requirements.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing and visibility</strong>: How external user sharing works with OWDs, sharing sets, sharing rules, and the impact of portal role hierarchy on data access.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Experience Builder configuration</strong>: Building pages, applying themes, configuring components, setting up navigation, and enabling Salesforce CMS content for communities.</li>
         </ul>
       </section>
 
@@ -141,8 +141,8 @@ export default function ExperienceCloudExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For licence questions: Customer Community = read-only on standard objects; Customer Community Plus = reports/dashboards, sharing rules access; Partner Community = opportunity and lead access. Know these boundaries cold.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For sharing questions: Sharing Sets grant access based on a lookup relationship — know when to use a Sharing Set vs a Sharing Rule for external users.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For configuration questions: Experience Builder is always preferred over Salesforce Tabs + Visualforce — the exam rewards modern template-based configuration.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For sharing questions: Sharing Sets grant access based on a lookup relationship. Know when to use a Sharing Set vs a Sharing Rule for external users.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For configuration questions: Experience Builder is always preferred over Salesforce Tabs + Visualforce, the exam rewards modern template-based configuration.</li>
         </ul>
       </section>
 
@@ -162,19 +162,19 @@ export default function ExperienceCloudExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Experience Cloud Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Experience Cloud Licence Types — Community vs Partner vs Customer Plus</p>
-            <p className="text-sm text-gray-700">Customer Community licence: read/create/edit their own records only. Customer Community Plus licence: read/edit all records with role-based visibility and reports. Partner Community licence: full CRM access including Leads, Opportunities, and campaigns. Candidates assign Customer Community licences to partners who need Opportunity access — that requires Partner Community licences. Know what each licence type permits.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Experience Cloud Licence Types: Community vs Partner vs Customer Plus</p>
+            <p className="text-sm text-gray-700">Customer Community licence: read/create/edit their own records only. Customer Community Plus licence: read/edit all records with role-based visibility and reports. Partner Community licence: full CRM access including Leads, Opportunities, and campaigns. Candidates assign Customer Community licences to partners who need Opportunity access; that requires Partner Community licences. Know what each licence type permits.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Data Categories vs Topics — Visibility Control vs Navigation</p>
-            <p className="text-sm text-gray-700">Data Categories on Knowledge Articles control which article types are visible to which audiences (internal, partner, customer, public). Topics are flexible tags for navigation and search — they do not control visibility. Candidates use Topics to restrict article visibility — the exam expects Data Category assignments for visibility control.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Data Categories vs Topics: Visibility Control vs Navigation</p>
+            <p className="text-sm text-gray-700">Data Categories on Knowledge Articles control which article types are visible to which audiences (internal, partner, customer, public). Topics are flexible tags for navigation and search; they do not control visibility. Candidates use Topics to restrict article visibility, the exam expects Data Category assignments for visibility control.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Sharing Rules in Experience Cloud — External User OWD Is Separate from Internal</p>
-            <p className="text-sm text-gray-700">Experience Cloud has a separate OWD setting for external users (the "External Access" column). A record set to Private internally might still be accessible to external users if External Access is set to Public Read Only. Candidates apply internal sharing rules to fix external user visibility — the exam expects checking and adjusting External Access OWD before creating sharing rules.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Sharing Rules in Experience Cloud: External User OWD Is Separate from Internal</p>
+            <p className="text-sm text-gray-700">Experience Cloud has a separate OWD setting for external users (the "External Access" column). A record set to Private internally might still be accessible to external users if External Access is set to Public Read Only. Candidates apply internal sharing rules to fix external user visibility, the exam expects checking and adjusting External Access OWD before creating sharing rules.</p>
           </div>
         </div>
       </section>

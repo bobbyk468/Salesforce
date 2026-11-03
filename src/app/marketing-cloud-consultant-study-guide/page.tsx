@@ -55,15 +55,15 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Marketing Cloud Consultant exam sections?',
-    answer: 'Discovery and Architecture (28%) is the largest section — it tests your ability to gather requirements, design solutions, and make architectural decisions for Marketing Cloud implementations. Integration (24%) is the second-largest, covering Salesforce CRM integration (Marketing Cloud Connect), APIs, and third-party system connections. Together they account for 52% of the exam.',
+    answer: 'Discovery and Architecture (28%) is the largest section, it tests your ability to gather requirements, design solutions, and make architectural decisions for Marketing Cloud implementations. Integration (24%) is the second-largest, covering Salesforce CRM integration (Marketing Cloud Connect), APIs, and third-party system connections. Together they account for 52% of the exam.',
   },
   {
     question: 'What is Marketing Cloud Connect and why is it important for this exam?',
-    answer: 'Marketing Cloud Connect (MC Connect) is the native integration between Salesforce Marketing Cloud and Salesforce CRM. It enables synchronisation of Leads, Contacts, Campaigns, and custom objects between the two systems. The exam tests: sync configuration, the Connected App setup, which objects sync (Leads, Contacts, Users, Campaigns — not Accounts directly), how to send to CRM reports and campaigns from Marketing Cloud, and how to use Synchronized Data Extensions (SDEs) for audience building based on CRM data.',
+    answer: 'Marketing Cloud Connect (MC Connect) is the native integration between Salesforce Marketing Cloud and Salesforce CRM. It enables synchronisation of Leads, Contacts, Campaigns, and custom objects between the two systems. The exam tests: sync configuration, the Connected App setup, which objects sync (Leads, Contacts, Users, Campaigns, not Accounts directly), how to send to CRM reports and campaigns from Marketing Cloud, and how to use Synchronized Data Extensions (SDEs) for audience building based on CRM data.',
   },
   {
     question: 'How does Journey Builder differ from Automation Studio for this exam?',
-    answer: 'Journey Builder is the multi-channel lifecycle management tool — it manages individual customer journeys based on events and decisions (e.g., welcome series, nurture paths, re-engagement flows). Automation Studio is the operational data processing tool — it runs scheduled or triggered automations (SQL queries, file imports, data extracts). Journey Builder is triggered by individual contact events; Automation Studio processes data in bulk batches. The exam tests when to use each tool, and how they work together (Automation Studio often feeds audiences that Journey Builder consumes).',
+    answer: 'Journey Builder is the multi-channel lifecycle management tool, it manages individual customer journeys based on events and decisions (e.g., welcome series, nurture paths, re-engagement flows). Automation Studio is the operational data processing tool, it runs scheduled or triggered automations (SQL queries, file imports, data extracts). Journey Builder is triggered by individual contact events; Automation Studio processes data in bulk batches. The exam tests when to use each tool, and how they work together (Automation Studio often feeds audiences that Journey Builder consumes).',
   },
 ]
 
@@ -95,7 +95,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
         </h1>
         <p className="text-lg text-gray-600">
           The Marketing Cloud Consultant certification validates your ability to design and architect
-          full Marketing Cloud implementations — from discovery and solution design through Salesforce
+          full Marketing Cloud implementations, from discovery and solution design through Salesforce
           CRM integration, data architecture, and multi-channel journey orchestration. This guide covers
           every section with the depth needed to pass.
         </p>
@@ -159,28 +159,28 @@ export default function MarketingCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Discovery and Architecture (28%)
             </p>
-            <p>This is the most consultant-oriented section — it tests your ability to gather requirements and make architectural decisions. Key areas: <strong>Account architecture:</strong> when to use a single business unit vs multiple business units (BUs) — multiple BUs isolate subscriber data, permissions, and sending domains per brand or region. <strong>Sender authentication:</strong> Private domain (SAP) vs Shared IP — private domain needed for high-volume, brand-sensitive senders; shared IP is fine for low-volume senders. <strong>Scalability design:</strong> understand how to design for millions of subscribers (data extension strategy, contact model planning, data retention). Estimate scope and effort for an MC implementation — the exam tests whether you can identify what is in scope, what is custom, and what is out-of-the-box.</p>
+            <p>This is the most consultant-oriented section, it tests your ability to gather requirements and make architectural decisions. Key areas: <strong>Account architecture:</strong> when to use a single business unit vs multiple business units (BUs), multiple BUs isolate subscriber data, permissions, and sending domains per brand or region. <strong>Sender authentication:</strong> Private domain (SAP) vs Shared IP, private domain needed for high-volume, brand-sensitive senders; shared IP is fine for low-volume senders. <strong>Scalability design:</strong> understand how to design for millions of subscribers (data extension strategy, contact model planning, data retention). Estimate scope and effort for an MC implementation, the exam tests whether you can identify what is in scope, what is custom, and what is out-of-the-box.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Integration (24%)
             </p>
-            <p><strong>Marketing Cloud Connect:</strong> the native Salesforce CRM integration. Setup requires a Connected App in Salesforce, the MC Connect permission set, and an API user. Objects that sync: Leads, Contacts, Users, and Campaigns. <strong>Synchronized Data Extensions (SDEs):</strong> pre-built data extensions that receive CRM data via MC Connect — they update on the MC Connect sync schedule. SDEs are used in Automation Studio and Journey Builder entry sources to target CRM-based audiences without manual imports. <strong>API integration:</strong> REST API for new integrations (JSON, OAuth 2.0 authentication), SOAP API for legacy systems (XML, user credentials authentication). Know the REST endpoints for subscriber management, data extension operations, and triggered sends.</p>
+            <p><strong>Marketing Cloud Connect:</strong> the native Salesforce CRM integration. Setup requires a Connected App in Salesforce, the MC Connect permission set, and an API user. Objects that sync: Leads, Contacts, Users, and Campaigns. <strong>Synchronized Data Extensions (SDEs):</strong> pre-built data extensions that receive CRM data via MC Connect, they update on the MC Connect sync schedule. SDEs are used in Automation Studio and Journey Builder entry sources to target CRM-based audiences without manual imports. <strong>API integration:</strong> REST API for new integrations (JSON, OAuth 2.0 authentication), SOAP API for legacy systems (XML, user credentials authentication). Know the REST endpoints for subscriber management, data extension operations, and triggered sends.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Data Management (20%)
             </p>
-            <p>Data architecture decisions drive everything else in a Marketing Cloud implementation. <strong>Data extensions vs lists:</strong> lists are legacy and simpler; data extensions support multi-field subscriber attributes, SQL queries, and complex data models — the answer is almost always data extensions for any new implementation. <strong>Contact Builder:</strong> the data model layer — Contact objects, attribute groups, and population configuration. Know how to set up the Contact model so that data extensions link to the right Contact. <strong>Data retention:</strong> set retention periods per data extension (on send, fixed date, after X days). <strong>Subscriber management at scale:</strong> subscriber key strategy — using CRM Contact ID as the subscriber key enables seamless MC Connect data joining.</p>
+            <p>Data architecture decisions drive everything else in a Marketing Cloud implementation. <strong>Data extensions vs lists:</strong> lists are legacy and simpler; data extensions support multi-field subscriber attributes, SQL queries, and complex data models, the answer is almost always data extensions for any new implementation. <strong>Contact Builder:</strong> the data model layer: Contact objects, attribute groups, and population configuration. Know how to set up the Contact model so that data extensions link to the right Contact. <strong>Data retention:</strong> set retention periods per data extension (on send, fixed date, after X days). <strong>Subscriber management at scale:</strong> subscriber key strategy, using CRM Contact ID as the subscriber key enables seamless MC Connect data joining.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Account Management (16%)
             </p>
-            <p><strong>Business units:</strong> child accounts within an MC organisation that have their own subscriber lists, permissions, and sending. Parent business unit admins can access child BUs; child BU users cannot access other BUs by default. <strong>Sender profiles:</strong> store the From name, From email, and Reply-To email used for sends. <strong>Send classifications:</strong> commercial (must honour unsubscribes) vs transactional (bypass unsubscribes — for legally required communications). <strong>Reply mail management (RMM):</strong> how Marketing Cloud handles replies to sends — unsubscribe replies, auto-replies, and manually managed replies. <strong>User roles:</strong> know the hierarchy — Account Administrator, Marketing Cloud Administrator, Marketing Cloud Viewer — and what each can do.</p>
+            <p><strong>Business units:</strong> child accounts within an MC organisation that have their own subscriber lists, permissions, and sending. Parent business unit admins can access child BUs; child BU users cannot access other BUs by default. <strong>Sender profiles:</strong> store the From name, From email, and Reply-To email used for sends. <strong>Send classifications:</strong> commercial (must honour unsubscribes) vs transactional (bypass unsubscribes, for legally required communications). <strong>Reply mail management (RMM):</strong> how Marketing Cloud handles replies to sends, unsubscribe replies, auto-replies, and manually managed replies. <strong>User roles:</strong> know the hierarchy: Account Administrator, Marketing Cloud Administrator, Marketing Cloud Viewer, and what each can do.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -195,12 +195,12 @@ export default function MarketingCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Marketing Cloud Consultant Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Discovery &amp; Architecture (28%):</strong> Study business unit strategy (single vs multi-BU), sender authentication (private domain vs shared IP), and implementation scoping. Practice: design an MC account architecture for a multi-brand company with separate marketing teams per region.</p>
-          <p><strong>Week 2 — Integration: MC Connect (part of 24%):</strong> Configure Marketing Cloud Connect in a sandbox (requires both MC and CRM access). Set up a Connected App, configure the MC connector user, and verify that SDEs populate with CRM data. Practice sending to a CRM report from Marketing Cloud.</p>
-          <p><strong>Week 3 — Integration: APIs &amp; Third-Party (part of 24%):</strong> Study REST API authentication (OAuth 2.0 Client Credentials), key REST endpoints (subscriber, data extension row operations, triggered send), and when to use REST vs SOAP. Study external system integration patterns.</p>
-          <p><strong>Week 4 — Data Management (20%):</strong> Design a Contact Builder data model. Configure data extension retention policies. Design a subscriber key strategy (CRM Contact ID). Practice: design a data model for a retail company with purchase history, preferences, and CRM sync.</p>
-          <p><strong>Week 5 — Account Management &amp; Journeys (16% + 12%):</strong> Configure sender profiles, send classifications, and reply mail management. Build a multi-step Journey Builder journey with entry via API event, email and SMS channels, decision splits based on engagement, and a goal condition.</p>
-          <p><strong>Week 6:</strong> Full timed mock exams. Score 75%+ before booking (above the 67% threshold). Architecture and integration scenario questions are the hardest — focus revision there.</p>
+          <p><strong>Week 1: Discovery &amp; Architecture (28%):</strong> Study business unit strategy (single vs multi-BU), sender authentication (private domain vs shared IP), and implementation scoping. Practice: design an MC account architecture for a multi-brand company with separate marketing teams per region.</p>
+          <p><strong>Week 2: Integration: MC Connect (part of 24%):</strong> Configure Marketing Cloud Connect in a sandbox (requires both MC and CRM access). Set up a Connected App, configure the MC connector user, and verify that SDEs populate with CRM data. Practice sending to a CRM report from Marketing Cloud.</p>
+          <p><strong>Week 3: Integration: APIs &amp; Third-Party (part of 24%):</strong> Study REST API authentication (OAuth 2.0 Client Credentials), key REST endpoints (subscriber, data extension row operations, triggered send), and when to use REST vs SOAP. Study external system integration patterns.</p>
+          <p><strong>Week 4: Data Management (20%):</strong> Design a Contact Builder data model. Configure data extension retention policies. Design a subscriber key strategy (CRM Contact ID). Practice: design a data model for a retail company with purchase history, preferences, and CRM sync.</p>
+          <p><strong>Week 5: Account Management &amp; Journeys (16% + 12%):</strong> Configure sender profiles, send classifications, and reply mail management. Build a multi-step Journey Builder journey with entry via API event, email and SMS channels, decision splits based on engagement, and a goal condition.</p>
+          <p><strong>Week 6:</strong> Full timed mock exams. Score 75%+ before booking (above the 67% threshold). Architecture and integration scenario questions are the hardest, focus revision there.</p>
         </div>
       </section>
 
@@ -209,7 +209,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Business unit questions:</strong> If a scenario has multiple brands needing separate subscriber lists, compliance domains, or independent admin teams, the answer is multiple business units. If it is one brand with regional personalisation only, a single BU with dynamic content is sufficient. Multiple BUs add configuration overhead — only recommend them when genuine data isolation or administrative separation is required.</span>
+            <span><strong>Business unit questions:</strong> If a scenario has multiple brands needing separate subscriber lists, compliance domains, or independent admin teams, the answer is multiple business units. If it is one brand with regional personalisation only, a single BU with dynamic content is sufficient. Multiple BUs add configuration overhead, only recommend them when genuine data isolation or administrative separation is required.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -217,7 +217,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>MC Connect sync questions:</strong> SDEs populate from CRM on the MC Connect sync schedule (every 15 minutes). They are read-only in Marketing Cloud — you cannot write back to SDEs directly. To update CRM records from MC, use a Journey Builder Update step or Automation Studio Script Activity via the API. When a scenario requires near-real-time CRM data in Marketing Cloud, SDEs are the answer — not manual imports.</span>
+            <span><strong>MC Connect sync questions:</strong> SDEs populate from CRM on the MC Connect sync schedule (every 15 minutes). They are read-only in Marketing Cloud, you cannot write back to SDEs directly. To update CRM records from MC, use a Journey Builder Update step or Automation Studio Script Activity via the API. When a scenario requires near-real-time CRM data in Marketing Cloud, SDEs are the answer, not manual imports.</span>
           </li>
         </ul>
       </section>
@@ -232,7 +232,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           The most common failure mode for Marketing Cloud Consultant is underestimating the architecture
           section. Candidates who come from an operational Marketing Cloud background (running campaigns,
           building emails) often know the tools well but lack the solution design and scoping skills the
-          consultant exam demands. Practise designing solutions from scratch — not just using features you
+          consultant exam demands. Practise designing solutions from scratch, not just using features you
           already know.
         </p>
       </section>
@@ -242,7 +242,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
           <li>Business units: when to use multi-BU (brand isolation, admin separation) vs single BU</li>
           <li>Private domain (SAP) vs shared IP: high-volume brand senders need private domain</li>
-          <li>MC Connect: syncs Leads, Contacts, Users, Campaigns — not Accounts directly</li>
+          <li>MC Connect: syncs Leads, Contacts, Users, Campaigns, not Accounts directly</li>
           <li>Synchronized Data Extensions: read-only CRM mirror, updates on MC Connect schedule</li>
           <li>Subscriber key strategy: use CRM Contact ID to enable seamless MC Connect joins</li>
           <li>Send classifications: commercial (unsubscribe-respected) vs transactional (bypass)</li>
@@ -271,7 +271,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
         </div>
         <p className="text-xs text-gray-600 mt-4">
           <Link href="/data-cloud-vs-marketing-cloud" className="text-salesforce-blue underline">
-            Data Cloud vs Marketing Cloud — which certification to pursue? →
+            Data Cloud vs Marketing Cloud, which certification to pursue? →
           </Link>
         </p>
       </section>
@@ -288,7 +288,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Marketing Cloud Consultant free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Marketing Cloud Consultant free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/marketing-cloud-consultant"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

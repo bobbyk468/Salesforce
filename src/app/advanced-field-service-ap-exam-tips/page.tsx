@@ -55,7 +55,7 @@ const faqItems = [
   },
   {
     question: 'What is the FSL Optimization Engine and how does the exam test it?',
-    answer: 'The FSL Optimization Engine uses AI to automatically schedule and dispatch service appointments, optimising for travel time, skills matching, and work order urgency. The exam tests how to configure Scheduling Policies (the rules the optimiser follows), Objectives (what to optimise for — minimise travel vs. maximise utilisation), and Work Rule constraints (time windows, required skills, territory boundaries).',
+    answer: 'The FSL Optimization Engine uses AI to automatically schedule and dispatch service appointments, optimising for travel time, skills matching, and work order urgency. The exam tests how to configure Scheduling Policies (the rules the optimiser follows), Objectives (what to optimise for, minimise travel vs. maximise utilisation), and Work Rule constraints (time windows, required skills, territory boundaries).',
   },
   {
     question: 'How does Advanced Field Service AP differ from the Field Service Consultant exam?',
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Advanced Field Service candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Advanced Field Service exam are: (1) Work Order Line Items vs Service Appointments — Not the Same Object; (2) Operating Hours vs Scheduling Policy — Why the Right Technician Is Not Getting Assigned; (3) Permission Sets for Field Service Mobile — Profiles Are Not Enough. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Advanced Field Service exam are: (1) Work Order Line Items vs Service Appointments: Not the Same Object; (2) Operating Hours vs Scheduling Policy: Why the Right Technician Is Not Getting Assigned; (3) Permission Sets for Field Service Mobile: Profiles Are Not Enough. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('advanced-field-service-ap-exam-tips'),
 ]
@@ -87,7 +87,7 @@ export default function AdvancedFieldServiceApExamTipsPage() {
           Salesforce Advanced Field Service AP Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Advanced Field Service AP exam tests expert-level FSL configuration — the Optimization Engine,
+          The Advanced Field Service AP exam tests expert-level FSL configuration, the Optimization Engine,
           complex scheduling policies, asset management, and predictive maintenance. These tips focus
           on the advanced topics that go beyond the standard Field Service Consultant exam.
         </p>
@@ -101,9 +101,9 @@ export default function AdvancedFieldServiceApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What Advanced Field Service AP Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced scheduling and optimisation</strong> — Configuring the FSL Optimization Engine with Scheduling Policies, Objectives (travel minimisation, utilisation maximisation), and Work Rules (time window constraints, skill matching, preferred technician). Understanding Global Optimisation (re-optimise all unstarted appointments) vs. In-Day Optimisation (optimise today’s schedule in real time).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Asset and inventory management</strong> — Asset service history tracking, warranty management (active/expired warranties affecting service charges), preventive maintenance plans (schedule recurring service based on time or usage), parts requests and transfers between stocking locations, and consumption recording after parts are used on a work order.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Einstein Vision and remote assistance</strong> — Visual Remote Assistant for video-based remote troubleshooting (technician connects via video to a remote expert), Einstein Vision for object detection in field photos (identifying equipment damage from photos without manual inspection), and how these AI features reduce truck rolls and improve first-time fix rates.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced scheduling and optimisation</strong>: Configuring the FSL Optimization Engine with Scheduling Policies, Objectives (travel minimisation, utilisation maximisation), and Work Rules (time window constraints, skill matching, preferred technician). Understanding Global Optimisation (re-optimise all unstarted appointments) vs. In-Day Optimisation (optimise today’s schedule in real time).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Asset and inventory management</strong>: Asset service history tracking, warranty management (active/expired warranties affecting service charges), preventive maintenance plans (schedule recurring service based on time or usage), parts requests and transfers between stocking locations, and consumption recording after parts are used on a work order.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Einstein Vision and remote assistance</strong>: Visual Remote Assistant for video-based remote troubleshooting (technician connects via video to a remote expert), Einstein Vision for object detection in field photos (identifying equipment damage from photos without manual inspection), and how these AI features reduce truck rolls and improve first-time fix rates.</li>
         </ul>
       </section>
 
@@ -135,12 +135,12 @@ export default function AdvancedFieldServiceApExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Questions describe an advanced field service scenario and ask which optimisation configuration,
           asset management approach, or Einstein feature addresses it. This exam assumes deep FSL
-          product knowledge — not just conceptual understanding.
+          product knowledge, not just conceptual understanding.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For optimisation questions: Scheduling Policy = the set of rules and objectives the optimiser uses. Each policy has Work Rules (hard constraints: must have skill, must be within time window) and Objectives (soft goals: minimise travel, maximise utilisation). The policy is assigned to a service territory or individual schedule run. When a scenario says ’technicians must have the Refrigeration skill for HVAC jobs’, configure a Skills Work Rule — not a custom filter or a scheduling recommendation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For preventive maintenance questions: maintenance plans define the schedule (every 6 months, every 1,000 operating hours). When the trigger is met, Salesforce automatically generates work orders for preventive maintenance. Asset counters track usage-based triggers (operating hours, cycles). When a scenario says ’create a service appointment every time this machine runs 500 hours’, configure an asset counter with a maintenance plan trigger — not a scheduled Flow.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Einstein Vision questions: Einstein Vision requires a trained model with labelled images of the objects to detect. The model is invoked via the FSL mobile app — the technician takes a photo and the AI identifies the asset type or damage condition without manual input. When a scenario says ’automatically identify the type of water heater without the technician entering a model number’, Einstein Vision with a trained equipment model is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For optimisation questions: Scheduling Policy = the set of rules and objectives the optimiser uses. Each policy has Work Rules (hard constraints: must have skill, must be within time window) and Objectives (soft goals: minimise travel, maximise utilisation). The policy is assigned to a service territory or individual schedule run. When a scenario says ’technicians must have the Refrigeration skill for HVAC jobs’, configure a Skills Work Rule, not a custom filter or a scheduling recommendation.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For preventive maintenance questions: maintenance plans define the schedule (every 6 months, every 1,000 operating hours). When the trigger is met, Salesforce automatically generates work orders for preventive maintenance. Asset counters track usage-based triggers (operating hours, cycles). When a scenario says ’create a service appointment every time this machine runs 500 hours’, configure an asset counter with a maintenance plan trigger, not a scheduled Flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Einstein Vision questions: Einstein Vision requires a trained model with labelled images of the objects to detect. The model is invoked via the FSL mobile app, the technician takes a photo and the AI identifies the asset type or damage condition without manual input. When a scenario says ’automatically identify the type of water heater without the technician entering a model number’, Einstein Vision with a trained equipment model is the answer.</li>
         </ul>
       </section>
 
@@ -153,7 +153,7 @@ export default function AdvancedFieldServiceApExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Advanced Field Service AP assumes you have completed the Field Service Consultant credential
           and have hands-on experience with the FSL Optimization Engine. Configuring Scheduling Policies
-          with multiple Work Rules and Objectives in a sandbox environment is essential preparation —
+          with multiple Work Rules and Objectives in a sandbox environment is essential preparation,
           these concepts are difficult to learn from documentation alone.
         </p>
       </section>
@@ -161,18 +161,18 @@ export default function AdvancedFieldServiceApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Advanced Field Service Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Work Order Line Items vs Service Appointments — Not the Same Object</p>
-            <p className="text-sm text-gray-700">Work Order Line Items define the scope of work (what tasks must be done). Service Appointments are scheduled visits linked to those tasks. One Work Order can have multiple Service Appointments. Candidates answer scheduling and capacity questions using Work Order logic — the exam expects Service Appointment logic. Scheduling rules, territories, and capacity caps are all properties of Service Appointments.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Work Order Line Items vs Service Appointments: Not the Same Object</p>
+            <p className="text-sm text-gray-700">Work Order Line Items define the scope of work (what tasks must be done). Service Appointments are scheduled visits linked to those tasks. One Work Order can have multiple Service Appointments. Candidates answer scheduling and capacity questions using Work Order logic, the exam expects Service Appointment logic. Scheduling rules, territories, and capacity caps are all properties of Service Appointments.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Operating Hours vs Scheduling Policy — Why the Right Technician Is Not Getting Assigned</p>
-            <p className="text-sm text-gray-700">Operating Hours define when a resource or territory is available to work. Scheduling Policies determine how the optimizer prioritises work (by skill, travel time, or SLA). When a qualified technician is not being scheduled, the most common exam answer is a missing or incorrect Operating Hours record — not a missing skill. Candidates default to checking skills first and miss the Operating Hours issue.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Operating Hours vs Scheduling Policy: Why the Right Technician Is Not Getting Assigned</p>
+            <p className="text-sm text-gray-700">Operating Hours define when a resource or territory is available to work. Scheduling Policies determine how the optimizer prioritises work (by skill, travel time, or SLA). When a qualified technician is not being scheduled, the most common exam answer is a missing or incorrect Operating Hours record, not a missing skill. Candidates default to checking skills first and miss the Operating Hours issue.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Permission Sets for Field Service Mobile — Profiles Are Not Enough</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Permission Sets for Field Service Mobile: Profiles Are Not Enough</p>
             <p className="text-sm text-gray-700">Field Service Lightning Mobile requires specific permission sets (Field Service Mobile License plus Field Service Standard or Dispatcher) in addition to a base profile. A standard Service Cloud profile alone does not grant mobile app access. Exam scenarios about why a field technician cannot see their schedule in the mobile app expect the answer "missing permission set," not "missing profile."</p>
           </div>
         </div>

@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'Do I need prerequisites to start Salesforce certifications?',
-    answer: 'Most Salesforce certifications have no hard prerequisites. The main exception is Platform Developer II (PD2), which requires PD1. However, practical experience is strongly recommended — many certification exams are scenario-based and reward hands-on platform knowledge over memorisation.',
+    answer: 'Most Salesforce certifications have no hard prerequisites. The main exception is Platform Developer II (PD2), which requires PD1. However, practical experience is strongly recommended, many certification exams are scenario-based and reward hands-on platform knowledge over memorisation.',
   },
   {
     question: 'What is the Salesforce CTA certification path?',
@@ -87,7 +87,7 @@ export default function CertificationPathPage() {
           Certification Paths
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          From foundational to advanced—see all possible paths and scenarios for every role. Choose a track and follow the steps. Use this page to plan your next exam.
+          From foundational to advanced, see all possible paths and scenarios for every role. Choose a track and follow the steps. Use this page to plan your next exam.
         </p>
       </div>
 
@@ -97,7 +97,7 @@ export default function CertificationPathPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Choose the Right Salesforce Certification Path</h2>
         <div className="space-y-3 text-sm leading-6 text-gray-700">
           <p>
-            The best Salesforce certification path depends on the work you want to do next, not only on exam difficulty.
+            The best Salesforce certification path depends on the work you want to do next; not only on exam difficulty.
             Administrators should build platform fundamentals first, developers should validate Apex and Lightning skills,
             consultants should specialize by cloud, and architects should sequence credentials around real enterprise project
             experience.
@@ -177,7 +177,7 @@ export default function CertificationPathPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8 mt-10">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it? — honest analysis</Link></li>
+          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it?, honest analysis</Link></li>
           <li><Link href="/salesforce-free-certification" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to get a free Salesforce certification</Link></li>
         </ul>
       </div>

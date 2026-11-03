@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce CPQ Administrator certification?',
-    answer: 'The Salesforce CPQ Administrator certification validates skills in configuring Salesforce CPQ (Configure, Price, Quote) — including product setup, bundle configuration, pricing rules, discount schedules, quote templates, and contract management. The exam has 60 questions, a 105-minute time limit, ~65% passing score, and a $200 fee. ADM-201 is a recommended prerequisite.',
+    answer: 'The Salesforce CPQ Administrator certification validates skills in configuring Salesforce CPQ (Configure, Price, Quote), including product setup, bundle configuration, pricing rules, discount schedules, quote templates, and contract management. The exam has 60 questions, a 105-minute time limit, ~65% passing score, and a $200 fee. ADM-201 is a recommended prerequisite.',
   },
   {
     question: 'Is ADM-201 required before the CPQ Administrator exam?',
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'How long should I study for the CPQ Administrator exam?',
-    answer: 'Plan for 8–10 weeks with 10–12 hours per week. Hands-on experience in a CPQ sandbox is essential — the exam tests practical configuration scenarios, not just theoretical knowledge. Setting up real product bundles, pricing rules, and discount schedules in a developer org is the most effective preparation.',
+    answer: 'Plan for 8–10 weeks with 10–12 hours per week. Hands-on experience in a CPQ sandbox is essential, the exam tests practical configuration scenarios, not just theoretical knowledge. Setting up real product bundles, pricing rules, and discount schedules in a developer org is the most effective preparation.',
   },
   {
     question: 'What is the hardest part of the CPQ Administrator exam?',
@@ -95,7 +95,7 @@ export default function CpqAdministratorStudyGuidePage() {
           Salesforce CPQ Administrator Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Salesforce CPQ Administrator exam — product hierarchies, pricing cascade, quote templates, and contract management.
+          Your complete guide to passing the Salesforce CPQ Administrator exam, product hierarchies, pricing cascade, quote templates, and contract management.
         </p>
       </div>
 
@@ -164,14 +164,14 @@ export default function CpqAdministratorStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'CPQ foundations — install CPQ in a dev org, navigate the CPQ package, understand the quote-to-order process flow end to end.' },
-            { week: 'Week 2', focus: 'Products & Pricebooks — create standard products, configure product options and features, set up product rules (validation, selection, alert, filter).' },
-            { week: 'Week 3', focus: 'Bundles & Configuration — build a configurable bundle with guided selling, configure dynamic options, test configuration attribute interactions.' },
-            { week: 'Week 4', focus: 'Pricing — implement block pricing, volume discount schedules, contracted pricing, and subscription pricing. Trace the full pricing cascade on a quote line.' },
-            { week: 'Week 5', focus: 'Price Rules — configure price rules with conditions and price actions. Test price rule interactions with discount schedules and contracted pricing.' },
-            { week: 'Week 6', focus: 'Quote Templates — build a quote template with dynamic sections, conditional content, and custom columns. Generate a PDF and configure an email template.' },
-            { week: 'Week 7', focus: 'Orders, Contracts & Renewals — convert a quote to an order, activate it, generate a contract, process an amendment, and configure renewal settings.' },
-            { week: 'Week 8', focus: 'Full mock exams. Focus on pricing cascade questions and product rule scenario questions — these are the most frequently tested and most commonly missed.' },
+            { week: 'Week 1', focus: 'CPQ foundations, install CPQ in a dev org, navigate the CPQ package, understand the quote-to-order process flow end to end.' },
+            { week: 'Week 2', focus: 'Products & Pricebooks, create standard products, configure product options and features, set up product rules (validation, selection, alert, filter).' },
+            { week: 'Week 3', focus: 'Bundles & Configuration. Build a configurable bundle with guided selling, configure dynamic options, test configuration attribute interactions.' },
+            { week: 'Week 4', focus: 'Pricing, implement block pricing, volume discount schedules, contracted pricing, and subscription pricing. Trace the full pricing cascade on a quote line.' },
+            { week: 'Week 5', focus: 'Price Rules, configure price rules with conditions and price actions. Test price rule interactions with discount schedules and contracted pricing.' },
+            { week: 'Week 6', focus: 'Quote Templates. Build a quote template with dynamic sections, conditional content, and custom columns. Generate a PDF and configure an email template.' },
+            { week: 'Week 7', focus: 'Orders, Contracts & Renewals, convert a quote to an order, activate it, generate a contract, process an amendment, and configure renewal settings.' },
+            { week: 'Week 8', focus: 'Full mock exams. Focus on pricing cascade questions and product rule scenario questions; these are the most frequently tested and most commonly missed.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -195,7 +195,7 @@ export default function CpqAdministratorStudyGuidePage() {
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. CPQ has many interconnected concepts — if you can correctly configure a bundle with pricing rules and a contract renewal in your sandbox, you are ready for the exam. Products &amp; Pricebooks (30%) alone is nearly a third of the exam, so master it first.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. CPQ has many interconnected concepts, if you can correctly configure a bundle with pricing rules and a contract renewal in your sandbox, you are ready for the exam. Products &amp; Pricebooks (30%) alone is nearly a third of the exam, so master it first.</p>
       </div>
 
       {/* Top 10 Review */}
@@ -211,7 +211,7 @@ export default function CpqAdministratorStudyGuidePage() {
           <li>Guided selling wizard configuration and usage</li>
           <li>Quote template: sections, conditional content, dynamic columns</li>
           <li>Order activation and contract generation from a CPQ quote</li>
-          <li>Amendment flow vs Renewal flow — when each is triggered and how they differ</li>
+          <li>Amendment flow vs Renewal flow, when each is triggered and how they differ</li>
         </ol>
       </div>
 
@@ -232,7 +232,7 @@ export default function CpqAdministratorStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant — comparison</Link></li>
+          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant, comparison</Link></li>
         </ul>
       </div>
 

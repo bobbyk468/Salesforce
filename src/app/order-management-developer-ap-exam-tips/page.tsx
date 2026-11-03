@@ -59,11 +59,11 @@ const faqItems = [
   },
   {
     question: 'How does OMS use Flow for customisation?',
-    answer: 'Salesforce Order Management uses an invocable action pattern — OMS processes call Flows via Flow Actions at key points in the order lifecycle. Developers create custom Flows that are invoked by OMS during order processing (for custom routing logic, custom tax calculation, custom notification triggers). The exam tests how to build and register custom Flow actions in the OMS processing pipeline.',
+    answer: 'Salesforce Order Management uses an invocable action pattern: OMS processes call Flows via Flow Actions at key points in the order lifecycle. Developers create custom Flows that are invoked by OMS during order processing (for custom routing logic, custom tax calculation, custom notification triggers). The exam tests how to build and register custom Flow actions in the OMS processing pipeline.',
   },
   {
     question: 'What concepts do most Order Management Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Order Management Developer exam are: (1) Order Management APIs — REST vs Connect API vs APEX; (2) Inventory Availability Check — Not a Default Order Creation Step; (3) Payment Integration — Capture vs Authorisation vs Void. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Order Management Developer exam are: (1) Order Management APIs: REST vs Connect API vs APEX; (2) Inventory Availability Check: Not a Default Order Creation Step; (3) Payment Integration: Capture vs Authorisation vs Void. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('order-management-developer-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function OrderManagementDeveloperApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What Order Management Developer AP Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OMS API integration</strong> — Using ConnectApi for programmatic order operations (create, update, cancel, return), REST API integration for headless commerce (submitting orders from external storefronts, WMS order fulfilment callbacks), authentication patterns for external system API access, and error handling for failed API operations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Flow and Apex customisation</strong> — Building invocable Flows for custom OMS processing logic, registering Flow actions in OMS orchestration steps, writing Apex to extend order lifecycle events, implementing the OMS platform event model for asynchronous processing, and customising OMS-generated emails and notifications.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Headless commerce integration</strong> — Integrating OMS with external commerce platforms (Shopify, Magento, custom) via REST APIs, implementing the headless order submission pattern (external cart → OMS order via API), configuring webhook endpoints for order status updates, and handling order data transformation between commerce platform schemas and OMS data model.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OMS API integration</strong>: Using ConnectApi for programmatic order operations (create, update, cancel, return), REST API integration for headless commerce (submitting orders from external storefronts, WMS order fulfilment callbacks), authentication patterns for external system API access, and error handling for failed API operations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Flow and Apex customisation</strong>: Building invocable Flows for custom OMS processing logic, registering Flow actions in OMS orchestration steps, writing Apex to extend order lifecycle events, implementing the OMS platform event model for asynchronous processing, and customising OMS-generated emails and notifications.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Headless commerce integration</strong>: Integrating OMS with external commerce platforms (Shopify, Magento, custom) via REST APIs, implementing the headless order submission pattern (external cart → OMS order via API), configuring webhook endpoints for order status updates, and handling order data transformation between commerce platform schemas and OMS data model.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function OrderManagementDeveloperApExamTipsPage() {
             <span className="font-medium text-gray-900">Testing and Deployment</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OMS API knowledge + Flow customisation = 60% — the developer-specific skills that distinguish this from the Admin AP.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OMS API knowledge + Flow customisation = 60%, the developer-specific skills that distinguish this from the Admin AP.</p>
         </div>
       </section>
 
@@ -134,13 +134,13 @@ export default function OrderManagementDeveloperApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach OMS Developer AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe an OMS customisation or integration requirement and ask which developer
-          approach achieves it. Use OMS-designed extension points — never use trigger-based approaches
+          approach achieves it. Use OMS-designed extension points, never use trigger-based approaches
           for OMS order lifecycle events.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API integration questions: external systems submit orders to OMS using the REST API (POST to the Order Summary endpoint). Order status updates flow back from OMS to the commerce platform via webhooks (Platform Events that external systems subscribe to). Authentication uses Connected App OAuth. When a scenario says ’orders from Shopify should appear in OMS in real time’, configure a Shopify webhook to call the OMS REST API — not a nightly batch sync.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Flow customisation questions: OMS uses the Invocable Method pattern for Flow extensions. Custom logic is packaged as an Apex @InvocableMethod and exposed as a Flow Action. The custom Flow is then registered as a step in the OMS orchestration (e.g., ’after order is received, run Custom Tax Calculation flow action’). When a scenario says ’calculate taxes using our external tax service during order processing’, build an Invocable Apex method that calls the tax API and register it in the OMS routing flow.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ConnectApi questions: ConnectApi.OrderSummary.cancelOrderSummary() programmatically cancels an order. ConnectApi.FulfillmentOrder.submitFulfillmentOrderToFulfillmentLocation() routes a fulfilment order. Using ConnectApi in Apex tests requires Test.startTest()/Test.stopTest() blocks and mock responses for HTTP callouts. When a scenario says ’build an Apex class to cancel orders older than 30 days that haven’t been fulfilled’, use ConnectApi.OrderSummary.cancelOrderSummary() — not a direct DML update on Order Summary records.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API integration questions: external systems submit orders to OMS using the REST API (POST to the Order Summary endpoint). Order status updates flow back from OMS to the commerce platform via webhooks (Platform Events that external systems subscribe to). Authentication uses Connected App OAuth. When a scenario says ’orders from Shopify should appear in OMS in real time’, configure a Shopify webhook to call the OMS REST API, not a nightly batch sync.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Flow customisation questions: OMS uses the Invocable Method pattern for Flow extensions. Custom logic is packaged as an Apex @InvocableMethod and exposed as a Flow Action. The custom Flow is then registered as a step in the OMS orchestration (e.g., ’after order is received, run Custom Tax Calculation flow action’). When a scenario says ’calculate taxes using our external tax service during order processing’. Build an Invocable Apex method that calls the tax API and register it in the OMS routing flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ConnectApi questions: ConnectApi.OrderSummary.cancelOrderSummary() programmatically cancels an order. ConnectApi.FulfillmentOrder.submitFulfillmentOrderToFulfillmentLocation() routes a fulfilment order. Using ConnectApi in Apex tests requires Test.startTest()/Test.stopTest() blocks and mock responses for HTTP callouts. When a scenario says ’build an Apex class to cancel orders older than 30 days that haven’t been fulfilled’, use ConnectApi.OrderSummary.cancelOrderSummary(), not a direct DML update on Order Summary records.</li>
         </ul>
       </section>
 
@@ -152,7 +152,7 @@ export default function OrderManagementDeveloperApExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           OMS Developer AP is for developers building OMS integrations and customisations. Understanding
-          the OMS data model (from the Admin AP) is a prerequisite — the Developer AP tests how to
+          the OMS data model (from the Admin AP) is a prerequisite, the Developer AP tests how to
           interact with that model programmatically. Build a test integration using the OMS REST API
           before booking. The OMS Developer documentation on the Salesforce Developer site is the
           primary reference.
@@ -162,19 +162,19 @@ export default function OrderManagementDeveloperApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Order Management Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Order Management APIs — REST vs Connect API vs APEX</p>
-            <p className="text-sm text-gray-700">Salesforce OMS exposes Connect API endpoints for storefront integrations (cart-to-order, checkout). REST API is for general programmatic access. Apex classes (OrderManagement namespace) are available for server-side custom logic. Candidates use general REST endpoints for checkout integrations — the exam expects Connect API (specifically the OMS Connect endpoints) for storefront-to-order creation workflows.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Order Management APIs: REST vs Connect API vs APEX</p>
+            <p className="text-sm text-gray-700">Salesforce OMS exposes Connect API endpoints for storefront integrations (cart-to-order, checkout). REST API is for general programmatic access. Apex classes (OrderManagement namespace) are available for server-side custom logic. Candidates use general REST endpoints for checkout integrations, the exam expects Connect API (specifically the OMS Connect endpoints) for storefront-to-order creation workflows.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Inventory Availability Check — Not a Default Order Creation Step</p>
-            <p className="text-sm text-gray-700">Inventory availability checks are NOT automatically performed when an Order is created in Salesforce OMS unless explicitly configured. Developers must implement the check via the Inventory Integration or a custom callout. Candidates assume OMS validates inventory automatically — the exam expects explicit inventory availability check configuration as part of the order capture workflow.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Inventory Availability Check: Not a Default Order Creation Step</p>
+            <p className="text-sm text-gray-700">Inventory availability checks are NOT automatically performed when an Order is created in Salesforce OMS unless explicitly configured. Developers must implement the check via the Inventory Integration or a custom callout. Candidates assume OMS validates inventory automatically, the exam expects explicit inventory availability check configuration as part of the order capture workflow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Payment Integration — Capture vs Authorisation vs Void</p>
-            <p className="text-sm text-gray-700">Authorisation reserves funds on a payment method without charging. Capture charges the authorised amount (typically after shipment). Void cancels an authorisation before capture. In OMS, these correspond to separate Payment Gateway API calls. Candidates design a single payment operation — the exam expects separate Auth and Capture calls in the correct fulfilment sequence.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Payment Integration: Capture vs Authorisation vs Void</p>
+            <p className="text-sm text-gray-700">Authorisation reserves funds on a payment method without charging. Capture charges the authorised amount (typically after shipment). Void cancels an authorisation before capture. In OMS, these correspond to separate Payment Gateway API calls. Candidates design a single payment operation, the exam expects separate Auth and Capture calls in the correct fulfilment sequence.</p>
           </div>
         </div>
       </section>

@@ -54,7 +54,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce Platform Foundations certification?',
-    answer: 'The Salesforce Platform Foundations certification is an associate-level credential ($75) that validates foundational knowledge of the Salesforce platform — how it works, its data model, basic automation, security, and app development concepts. It is designed for professionals new to Salesforce who want a formal credential demonstrating platform fundamentals. It does not require prior Salesforce experience and serves as an entry point before pursuing the Administrator or Platform Developer I certification.',
+    answer: 'The Salesforce Platform Foundations certification is an associate-level credential ($75) that validates foundational knowledge of the Salesforce platform, how it works, its data model, basic automation, security, and app development concepts. It is designed for professionals new to Salesforce who want a formal credential demonstrating platform fundamentals. It does not require prior Salesforce experience and serves as an entry point before pursuing the Administrator or Platform Developer I certification.',
   },
   {
     question: 'What is the Platform Foundations exam format?',
@@ -62,7 +62,7 @@ const faqItems = [
   },
   {
     question: 'How does Platform Foundations compare to AI Associate?',
-    answer: 'Both are $75 associate-level certifications requiring no experience. AI Associate focuses specifically on AI and Salesforce Einstein AI features — AI concepts, responsible AI, and Salesforce AI products. Platform Foundations focuses on the broader Salesforce platform — data model, automation, security, and app development. Platform Foundations provides broader foundation for a Salesforce career; AI Associate is more specialised. Many candidates pursue both as entry-level credentials.',
+    answer: 'Both are $75 associate-level certifications requiring no experience. AI Associate focuses specifically on AI and Salesforce Einstein AI features: AI concepts, responsible AI, and Salesforce AI products. Platform Foundations focuses on the broader Salesforce platform, data model, automation, security, and app development. Platform Foundations provides broader foundation for a Salesforce career; AI Associate is more specialised. Many candidates pursue both as entry-level credentials.',
   },
   {
     question: 'Who should take Platform Foundations?',
@@ -93,7 +93,7 @@ export default function PlatformFoundationsStudyGuidePage() {
           Salesforce Platform Foundations Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Platform Foundations exam — the $75 entry-level certification covering platform architecture, data modelling, automation, and security fundamentals.
+          A complete study guide for the Salesforce Platform Foundations exam, the $75 entry-level certification covering platform architecture, data modelling, automation, and security fundamentals.
         </p>
       </div>
 
@@ -176,7 +176,7 @@ export default function PlatformFoundationsStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare the Alternatives</h2>
         <ul className="space-y-2">
-          <li><Link href="/platform-foundations-vs-ai-associate" className="text-sm text-salesforce-dark hover:underline font-medium">→ Platform Foundations vs AI Associate — comparison guide</Link></li>
+          <li><Link href="/platform-foundations-vs-ai-associate" className="text-sm text-salesforce-dark hover:underline font-medium">→ Platform Foundations vs AI Associate, comparison guide</Link></li>
         </ul>
       </div>
 
@@ -191,7 +191,7 @@ export default function PlatformFoundationsStudyGuidePage() {
       <DifficultyHeatmap slug="platform-foundations" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Platform Foundations Questions</h2>
-        <p className="text-white mb-6">Free practice questions for the Salesforce Platform Foundations exam — start studying now.</p>
+        <p className="text-white mb-6">Free practice questions for the Salesforce Platform Foundations exam, start studying now.</p>
         <Link href="/certifications/app-builder" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

@@ -22,9 +22,9 @@
     "summary": "The Manufacturing Cloud AP exam is moderately difficult. It tests manufacturing-specific workflows including sales agreements, account-based forecasting, rebate programs, and ERP integration patterns. Candidates without exposure to manufacturing sales operations and demand planning will find the domain concepts challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>Sales agreement complexity</strong> — you must understand agreement terms, attainment calculations, and how actuals from orders feed into agreement tracking.",
-      "<strong>Forecasting and demand planning</strong> — questions test account-based forecasting, run rate business, forecast adjustments, and how Manufacturing Cloud bridges sales planning with operations."
+      "<strong>~65% passing score</strong>: roughly 39 correct answers needed.",
+      "<strong>Sales agreement complexity</strong>: you must understand agreement terms, attainment calculations, and how actuals from orders feed into agreement tracking.",
+      "<strong>Forecasting and demand planning</strong>: questions test account-based forecasting, run rate business, forecast adjustments, and how Manufacturing Cloud bridges sales planning with operations."
     ],
     "passRateGuidance": "Score 75%+ on practice exams and ensure you can explain how sales agreements drive account-based forecasts before booking. Hands-on experience with Manufacturing Cloud or familiarity with manufacturing demand planning and dealer/distributor management is strongly recommended."
   },
@@ -61,7 +61,7 @@
     "blocks": [
       {
         "heading": "Account-Based Forecasting & Sales Agreements",
-        "body": "Manufacturing Cloud centers on the **Sales Agreement** object — a negotiated contract between a manufacturer and a distributor/dealer defining expected purchase volumes and prices over a period. Sales **Agreement Terms** define the monthly or quarterly expected volumes and net price for each product. Actuals (from Orders or Opportunities) are compared against agreement terms to show attainment. Account Forecasts roll up agreement actuals, open opportunities, and planned volumes into a single account-level demand forecast. Forecast Adjustments allow sales managers to manually override system-generated forecasts. The AP exam tests how Sales Agreements feed Account Forecasts, how actuals are calculated from order data, and how to configure forecast windows and adjustment permissions."
+        "body": "Manufacturing Cloud centers on the **Sales Agreement** object, a negotiated contract between a manufacturer and a distributor/dealer defining expected purchase volumes and prices over a period. Sales **Agreement Terms** define the monthly or quarterly expected volumes and net price for each product. Actuals (from Orders or Opportunities) are compared against agreement terms to show attainment. Account Forecasts roll up agreement actuals, open opportunities, and planned volumes into a single account-level demand forecast. Forecast Adjustments allow sales managers to manually override system-generated forecasts. The AP exam tests how Sales Agreements feed Account Forecasts, how actuals are calculated from order data, and how to configure forecast windows and adjustment permissions."
       },
       {
         "heading": "Run Rate Business & Demand Planning",
@@ -77,7 +77,7 @@
       },
       {
         "heading": "Integration with ERP & Supply Chain",
-        "body": "Manufacturing Cloud integrates with ERP systems (SAP, Oracle, Infor) to exchange order data, inventory levels, and financial actuals. MuleSoft is commonly used as the integration middleware for real-time or batch data exchange. Order data from ERP feeds the Sales Agreement attainment calculation. Inventory levels from ERP support demand planning accuracy. Product pricing maintained in ERP is synced to Salesforce Price Books. The AP exam tests the integration architecture for a Manufacturing Cloud + SAP scenario — which data flows in each direction, how to handle data transformation differences, and how to design for resiliency when the ERP is temporarily unavailable."
+        "body": "Manufacturing Cloud integrates with ERP systems (SAP, Oracle, Infor) to exchange order data, inventory levels, and financial actuals. MuleSoft is commonly used as the integration middleware for real-time or batch data exchange. Order data from ERP feeds the Sales Agreement attainment calculation. Inventory levels from ERP support demand planning accuracy. Product pricing maintained in ERP is synced to Salesforce Price Books. The AP exam tests the integration architecture for a Manufacturing Cloud + SAP scenario, which data flows in each direction, how to handle data transformation differences, and how to design for resiliency when the ERP is temporarily unavailable."
       }
     ]
   },

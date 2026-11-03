@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between agent topics and agent actions?',
-    answer: 'Topics define the scope and context of an agent conversation — what subjects the agent can discuss and how it should behave. Each topic has a name, description, and instructions (the natural language guidance that shapes the agent’s reasoning). Actions are the specific capabilities available within a topic — these are Flows, Apex methods, or Prompt Templates that the agent invokes to retrieve data, run logic, or generate responses. Topics frame the conversation; actions execute specific tasks.',
+    answer: 'Topics define the scope and context of an agent conversation, what subjects the agent can discuss and how it should behave. Each topic has a name, description, and instructions (the natural language guidance that shapes the agent’s reasoning). Actions are the specific capabilities available within a topic; these are Flows, Apex methods, or Prompt Templates that the agent invokes to retrieve data, run logic, or generate responses. Topics frame the conversation; actions execute specific tasks.',
   },
 ]
 
@@ -97,7 +97,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
         <p className="text-lg text-gray-600">
           The Agentforce Specialist credential validates knowledge of Agentforce configuration and related published objectives.
           It validates your ability to design, build, test, and deploy autonomous AI agents using Salesforce
-          Agentforce — including agent configuration, actions, testing, and the published objectives.
+          Agentforce, including agent configuration, actions, testing, and the published objectives.
           This guide organizes study around the published exam objectives.
         </p>
       </header>
@@ -164,10 +164,10 @@ export default function AgentforceSpecialistStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Agentforce Specialist Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Prompt Engineering and Data 360:</strong> Review the corresponding published objectives and Salesforce documentation. Complete Trailhead’s &ldquo;Agentforce Basics&rdquo; and &ldquo;Einstein Trust Layer&rdquo; modules. Practice: enable Agentforce in a Developer Edition org and explore the Agent Builder interface.</p>
-          <p><strong>Week 2 — AI Agents:</strong> Study the agent types (Service Agent, SDR Agent, custom), use case selection, topic scope planning, and action selection (Flow vs Apex vs Prompt Template). Practice: design on paper a multi-topic agent for a customer service scenario before building it.</p>
-          <p><strong>Week 3 &amp; 4 — AI Agents (35%):</strong> Build at least 2 complete agents with multiple topics and multiple action types. For each agent: write topic instructions, add a Flow action and a Prompt Template action, configure input/output variables, and set guardrails. Use the issuer objectives to select relevant practice tasks.</p>
-          <p><strong>Week 5 — Testing, Deployment, Maintenance, Governance, and Observability:</strong> Practice the Conversation Preview workflow — deliberately break an agent (wrong action inputs, vague instructions) and then diagnose and fix the issue. Study channel deployment options and escalation configuration.</p>
+          <p><strong>Week 1: Prompt Engineering and Data 360:</strong> Review the corresponding published objectives and Salesforce documentation. Complete Trailhead’s &ldquo;Agentforce Basics&rdquo; and &ldquo;Einstein Trust Layer&rdquo; modules. Practice: enable Agentforce in a Developer Edition org and explore the Agent Builder interface.</p>
+          <p><strong>Week 2: AI Agents:</strong> Study the agent types (Service Agent, SDR Agent, custom), use case selection, topic scope planning, and action selection (Flow vs Apex vs Prompt Template). Practice: design on paper a multi-topic agent for a customer service scenario before building it.</p>
+          <p><strong>Week 3 &amp; 4: AI Agents (35%):</strong> Build at least 2 complete agents with multiple topics and multiple action types. For each agent: write topic instructions, add a Flow action and a Prompt Template action, configure input/output variables, and set guardrails. Use the issuer objectives to select relevant practice tasks.</p>
+          <p><strong>Week 5: Testing, Deployment, Maintenance, Governance, and Observability:</strong> Practice the Conversation Preview workflow, deliberately break an agent (wrong action inputs, vague instructions) and then diagnose and fix the issue. Study channel deployment options and escalation configuration.</p>
           <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min). Review missed questions against the issuer objectives and practice under timed conditions.</p>
         </div>
       </section>
@@ -181,7 +181,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Topic instruction design questions:</strong> Good instructions are specific and bounded. An instruction like &ldquo;Help customers with billing questions only — do not discuss product features&rdquo; is better than &ldquo;Help customers.&rdquo; When a scenario describes an agent responding inappropriately, the fix is almost always to revise the topic instructions to add explicit constraints, not to create a new agent or action.</span>
+            <span><strong>Topic instruction design questions:</strong> Good instructions are specific and bounded. An instruction like &ldquo;Help customers with billing questions only, do not discuss product features&rdquo; is better than &ldquo;Help customers.&rdquo; When a scenario describes an agent responding inappropriately, the fix is almost always to revise the topic instructions to add explicit constraints, not to create a new agent or action.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -204,7 +204,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
           Timed practice (105-minute exam window) before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Use timed practice to identify areas for further review; no issuer-endorsed mock-score threshold is specified. Practice configuring and testing agents where your environment permits —
+          Use timed practice to identify areas for further review; no issuer-endorsed mock-score threshold is specified. Practice configuring and testing agents where your environment permits,
           hands-on practice is a study option, not a formal exam prerequisite.
         </p>
       </section>
@@ -216,8 +216,8 @@ export default function AgentforceSpecialistStudyGuidePage() {
           <li>Trust Layer features and their documented configuration, including agent data-masking considerations</li>
           <li>Topics vs Actions: topics define scope; actions execute specific tasks</li>
           <li>Three action types: Flow (declarative), Apex (programmatic), Prompt Template (AI-generated text)</li>
-          <li>Topic instructions: specificity matters — vague instructions = off-topic responses</li>
-          <li>Agent types: Service Agent, SDR Agent, custom — when to use each</li>
+          <li>Topic instructions: specificity matters, vague instructions = off-topic responses</li>
+          <li>Agent types: Service Agent, SDR Agent, custom, when to use each</li>
           <li>Guardrails: how to prevent agents from taking unauthorised actions</li>
           <li>Conversation Preview: how to test and debug agent conversations in Agent Builder</li>
           <li>Review the deployment and maintenance objectives listed by Salesforce.</li>
@@ -243,7 +243,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
         </div>
         <p className="text-xs text-gray-600 mt-4">
           <Link href="/agentforce-specialist-vs-ai-associate" className="text-salesforce-blue underline">
-            Agentforce Specialist vs AI Associate — which to take first? →
+            Agentforce Specialist vs AI Associate, which to take first? →
           </Link>
         </p>
       </section>
@@ -260,7 +260,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Agentforce Specialist free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Agentforce Specialist free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/agentforce-specialist"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

@@ -54,7 +54,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Marketing Cloud Engagement Foundations certification?',
-    answer: 'The Marketing Cloud Engagement Foundations (also called MC Engagement Foundations) is an associate-level Salesforce certification ($75) that validates foundational knowledge of Marketing Cloud Engagement — email marketing concepts, platform navigation, subscriber management, and basic automation. It is an entry-level credential designed for professionals new to Marketing Cloud who want to demonstrate foundational email marketing and platform knowledge.',
+    answer: 'The Marketing Cloud Engagement Foundations (also called MC Engagement Foundations) is an associate-level Salesforce certification ($75) that validates foundational knowledge of Marketing Cloud Engagement, email marketing concepts, platform navigation, subscriber management, and basic automation. It is an entry-level credential designed for professionals new to Marketing Cloud who want to demonstrate foundational email marketing and platform knowledge.',
   },
   {
     question: 'What is the MC Engagement Foundations exam format?',
@@ -70,7 +70,7 @@ const faqItems = [
   },
   {
     question: 'Should I start with MC Engagement Foundations or go directly to MC Engagement Admin?',
-    answer: 'If you are new to both email marketing and Marketing Cloud, start with Foundations as a knowledge confirmation checkpoint. If you have prior email marketing or Marketing Cloud experience, skip Foundations and pursue MC Engagement Admin directly — it is a more valuable credential for career positioning. The Foundations cert is best as an entry point or confidence-builder, not a career-defining credential on its own.',
+    answer: 'If you are new to both email marketing and Marketing Cloud. Start with Foundations as a knowledge confirmation checkpoint. If you have prior email marketing or Marketing Cloud experience, skip Foundations and pursue MC Engagement Admin directly; it is a more valuable credential for career positioning. The Foundations cert is best as an entry point or confidence-builder, not a career-defining credential on its own.',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
           Marketing Cloud Engagement Foundations Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Marketing Cloud Engagement Foundations exam — the $75 entry-level certification covering email marketing concepts, subscriber management, and Marketing Cloud platform basics.
+          A complete study guide for the Marketing Cloud Engagement Foundations exam, the $75 entry-level certification covering email marketing concepts, subscriber management, and Marketing Cloud platform basics.
         </p>
       </div>
 

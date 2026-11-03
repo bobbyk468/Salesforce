@@ -59,7 +59,7 @@
     "options": [
       "Sharing Rules set the baseline; profiles expand access above that",
       "Profiles set the ceiling; OWD cannot exceed profile permissions",
-      "OWD sets the baseline record access, which is then expanded by role hierarchy, sharing rules, and manual sharing — never restricted below OWD",
+      "OWD sets the baseline record access, which is then expanded by role hierarchy, sharing rules, and manual sharing, never restricted below OWD",
       "OWD and profiles are evaluated simultaneously and the most restrictive setting wins"
     ],
     "correctAnswer": 2,
@@ -74,7 +74,7 @@
       "There is no practical difference between the two"
     ],
     "correctAnswer": 1,
-    "explanation": "Custom Metadata Types are metadata — their records deploy with Change Sets and packages. Custom Settings data records must be recreated manually in each target org, making Custom Metadata the preferred choice for deployable, org-portable configuration."
+    "explanation": "Custom Metadata Types are metadata, their records deploy with Change Sets and packages. Custom Settings data records must be recreated manually in each target org, making Custom Metadata the preferred choice for deployable, org-portable configuration."
   },
   {
     "question": "An admin wants to allow an HR manager to create and deactivate users without granting full System Administrator access. What should the admin configure?",
@@ -85,7 +85,7 @@
       "Add the HR manager to a Public Group with user management access"
     ],
     "correctAnswer": 0,
-    "explanation": "Delegated Administration allows non-admin users to perform limited admin tasks — such as creating and deactivating users within defined profiles and roles — without requiring full System Administrator access."
+    "explanation": "Delegated Administration allows non-admin users to perform limited admin tasks, such as creating and deactivating users within defined profiles and roles, without requiring full System Administrator access."
   },
   {
     "question": "What is the purpose of Territory Management in Salesforce?",
@@ -96,7 +96,7 @@
       "To restrict lead assignment to specific regions using assignment rules"
     ],
     "correctAnswer": 2,
-    "explanation": "Enterprise Territory Management lets admins define territory types, build territory hierarchies, and assign accounts/opportunities to multiple territories simultaneously — enabling complex, matrix-style sales coverage models."
+    "explanation": "Enterprise Territory Management lets admins define territory types, build territory hierarchies, and assign accounts/opportunities to multiple territories simultaneously, enabling complex, matrix-style sales coverage models."
   },
   {
     "question": "Which report type allows combining data from unrelated report types in a single view with up to 5 report blocks?",
@@ -107,7 +107,7 @@
       "Joined"
     ],
     "correctAnswer": 3,
-    "explanation": "Joined Reports combine up to 5 report blocks — each from a different report type — in a single view. This is useful for presenting side-by-side comparisons such as Opportunities vs. Cases for the same accounts."
+    "explanation": "Joined Reports combine up to 5 report blocks, each from a different report type, in a single view. This is useful for presenting side-by-side comparisons such as Opportunities vs. Cases for the same accounts."
   },
   {
     "question": "A company requires that any Opportunity discount greater than 30% must be approved by two different managers in sequence. Which feature handles this?",
@@ -129,7 +129,7 @@
       "To suppress specific permissions within a Permission Set Group without removing the entire permission set"
     ],
     "correctAnswer": 3,
-    "explanation": "Muting Permission Sets allow admins to selectively suppress specific permissions included in one of the permission sets within a group — without removing the entire permission set. This provides fine-grained control over bundled permissions."
+    "explanation": "Muting Permission Sets allow admins to selectively suppress specific permissions included in one of the permission sets within a group, without removing the entire permission set. This provides fine-grained control over bundled permissions."
   },
   {
     "question": "Data imported via Data Loader is creating duplicate Account records. Which combination of features prevents this going forward?",
@@ -140,7 +140,7 @@
       "Process Builder set to check for existing records before inserting"
     ],
     "correctAnswer": 2,
-    "explanation": "Matching Rules define how Salesforce identifies potential duplicates (by comparing fields like name, email, phone). Duplicate Rules then control what happens when a match is found — blocking the save, alerting the user, or logging the duplicate."
+    "explanation": "Matching Rules define how Salesforce identifies potential duplicates (by comparing fields like name, email, phone). Duplicate Rules then control what happens when a match is found, blocking the save, alerting the user, or logging the duplicate."
   },
   {
     "question": "An admin needs to import 200,000 records and later update them using an external system's unique identifier. Which field type should be added before the initial import?",
@@ -151,7 +151,7 @@
       "Formula field returning the record ID"
     ],
     "correctAnswer": 1,
-    "explanation": "External ID fields store a unique identifier from an external system. Data Loader and the API can use External IDs to upsert records — matching on the external ID to update existing records or insert new ones without knowing the Salesforce record ID."
+    "explanation": "External ID fields store a unique identifier from an external system. Data Loader and the API can use External IDs to upsert records, matching on the external ID to update existing records or insert new ones without knowing the Salesforce record ID."
   },
   {
     "question": "Which feature allows an admin to grant additional permissions without modifying a user's profile?",

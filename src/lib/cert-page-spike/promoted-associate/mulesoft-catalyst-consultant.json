@@ -19,12 +19,12 @@
   },
   "examDifficulty": {
     "heading": "Is the MuleSoft Catalyst Consultant Exam Hard?",
-    "summary": "MuleSoft Catalyst Consultant is moderately difficult. Unlike the developer or architect exams, this certification focuses on methodology, business outcomes, and organizational change — topics that require consulting experience rather than purely technical knowledge.",
+    "summary": "MuleSoft Catalyst Consultant is moderately difficult. Unlike the developer or architect exams, this certification focuses on methodology, business outcomes, and organizational change, topics that require consulting experience rather than purely technical knowledge.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~63% passing score</strong> — roughly 41 correct answers needed.",
-      "<strong>Methodology focus</strong> — the exam tests the four Catalyst pillars (Organization, Technology, Delivery, Engagement) and the Land-Expand-Engage maturity model rather than deep technical implementation.",
-      "<strong>Business context</strong> — candidates must know how to measure integration ROI, present value to executives, and design C4E operating models."
+      "<strong>~63% passing score</strong>: roughly 41 correct answers needed.",
+      "<strong>Methodology focus</strong>: the exam tests the four Catalyst pillars (Organization, Technology, Delivery, Engagement) and the Land-Expand-Engage maturity model rather than deep technical implementation.",
+      "<strong>Business context</strong>: candidates must know how to measure integration ROI, present value to executives, and design C4E operating models."
     ],
     "passRateGuidance": "Complete MuleSoft’s Catalyst methodology training and gain experience on at least one Catalyst-style engagement before booking. Score 80%+ on practice exams to account for methodology-specific nuances."
   },
@@ -35,8 +35,8 @@
     "bestWayToPass": [
       "<strong>Learn the four Catalyst pillars:</strong> Know Organization (C4E, governance), Technology (platform architecture, reuse), Delivery (agile sprints, definition of done), and Engagement (stakeholder alignment, value communication) in detail.",
       "<strong>Master the Land-Expand-Engage model:</strong> Understand what success looks like in each phase and how to guide an organization from pilot to self-sustaining API economy.",
-      "<strong>Study C4E design:</strong> Know how to establish a Center for Enablement — team structure, funding model, success metrics (reuse rate, time-to-first-API, developer NPS).",
-      "<strong>Quantify business value:</strong> Practice measuring integration ROI — time saved through reuse, reduced integration costs, and faster time-to-market — and presenting these metrics to executive stakeholders."
+      "<strong>Study C4E design:</strong> Know how to establish a Center for Enablement, team structure, funding model, success metrics (reuse rate, time-to-first-API, developer NPS).",
+      "<strong>Quantify business value:</strong> Practice measuring integration ROI, time saved through reuse, reduced integration costs, and faster time-to-market, and presenting these metrics to executive stakeholders."
     ]
   },
   "certificationCard": {
@@ -61,19 +61,19 @@
     "blocks": [
       {
         "heading": "Catalyst Methodology: Land, Expand, Engage",
-        "body": "Catalyst is MuleSoft's customer success methodology for driving API-led adoption. Land phase: establish the platform, deliver a pilot integration, demonstrate value. Expand phase: increase the number of teams using the platform, publish reusable assets to Exchange, grow the API portfolio. Engage phase: measure adoption metrics, demonstrate ROI, build a self-sustaining API economy. The Catalyst Consultant guides customers through this maturity model — assessing where they are and what the next expansion step looks like."
+        "body": "Catalyst is MuleSoft's customer success methodology for driving API-led adoption. Land phase: establish the platform, deliver a pilot integration, demonstrate value. Expand phase: increase the number of teams using the platform, publish reusable assets to Exchange, grow the API portfolio. Engage phase: measure adoption metrics, demonstrate ROI, build a self-sustaining API economy. The Catalyst Consultant guides customers through this maturity model, assessing where they are and what the next expansion step looks like."
       },
       {
         "heading": "Enterprise Architecture Assessment",
-        "body": "The Catalyst Consultant conducts a current-state assessment of the customer's integration landscape — existing tools (ESB, custom code, point-to-point), API maturity, team structure. The target architecture defines the future state — which integration patterns, which deployment model, which governance model. Gap analysis identifies the roadmap: what to retire, migrate, or build. The consultant aligns the technical architecture with the customer's business strategy — not just solving integration problems but enabling new digital products and business models."
+        "body": "The Catalyst Consultant conducts a current-state assessment of the customer's integration landscape, existing tools (ESB, custom code, point-to-point), API maturity, team structure. The target architecture defines the future state, which integration patterns, which deployment model, which governance model. Gap analysis identifies the roadmap: what to retire, migrate, or build. The consultant aligns the technical architecture with the customer's business strategy, not just solving integration problems but enabling new digital products and business models."
       },
       {
         "heading": "API Programme Strategy",
-        "body": "API product management treats APIs as products — with versioning strategy, lifecycle management, deprecation policies, and consumer engagement. The consultant helps the customer define: who the API consumers are (internal teams, partners, developers), how APIs are discovered (developer portal), and how they are monetised or governed. Versioning strategy: URI versioning (/v1/, /v2/) vs header versioning. Breaking vs non-breaking changes — the consultant defines the breaking change policy and communication plan."
+        "body": "API product management treats APIs as products, with versioning strategy, lifecycle management, deprecation policies, and consumer engagement. The consultant helps the customer define: who the API consumers are (internal teams, partners, developers), how APIs are discovered (developer portal), and how they are monetised or governed. Versioning strategy: URI versioning (/v1/, /v2/) vs header versioning. Breaking vs non-breaking changes, the consultant defines the breaking change policy and communication plan."
       },
       {
         "heading": "Centre for Enablement Operating Model",
-        "body": "The Centre for Enablement (C4E) is the internal team that drives platform adoption. C4E responsibilities: create and publish reusable API templates and connector patterns, provide training and office hours, measure adoption, and enforce governance. The Catalyst Consultant helps establish the C4E — defining the team structure, funding model (platform team budget vs project team allocation), success metrics (asset reuse rate, time-to-first-API, developer NPS). The exam tests C4E design principles and adoption success metrics."
+        "body": "The Centre for Enablement (C4E) is the internal team that drives platform adoption. C4E responsibilities: create and publish reusable API templates and connector patterns, provide training and office hours, measure adoption, and enforce governance. The Catalyst Consultant helps establish the C4E, defining the team structure, funding model (platform team budget vs project team allocation), success metrics (asset reuse rate, time-to-first-API, developer NPS). The exam tests C4E design principles and adoption success metrics."
       },
       {
         "heading": "Delivery Playbook and Success Metrics",

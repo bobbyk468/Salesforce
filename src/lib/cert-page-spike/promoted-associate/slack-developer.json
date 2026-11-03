@@ -3,7 +3,7 @@
   "introLead": [
     {
       "type": "text",
-      "text": "If you are managing Slack workspaces rather than building apps, start with"
+      "text": "If you are managing Slack workspaces rather than building apps. Start with"
     },
     {
       "type": "link",
@@ -52,12 +52,12 @@
   },
   "examDifficulty": {
     "heading": "Is the Slack Developer Exam Hard?",
-    "summary": "The Slack Developer exam is moderately hard. It tests hands-on coding knowledge — Bolt framework patterns, Block Kit payloads, OAuth flows, and event handling — so reading documentation without actually building Slack apps leaves significant gaps.",
+    "summary": "The Slack Developer exam is moderately hard. It tests hands-on coding knowledge: Bolt framework patterns, Block Kit payloads, OAuth flows, and event handling, so reading documentation without actually building Slack apps leaves significant gaps.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 minutes — just under two minutes per question, which requires familiarity with API methods and framework patterns.",
-      "<strong>~68% passing score</strong> — you need approximately 41 correct answers out of 60 to pass, a slightly higher bar than the Slack Admin or Consultant exams.",
-      "<strong>Coding knowledge is required</strong> — questions test Bolt framework architecture, Block Kit JSON structure, OAuth scopes, and event subscription configuration.",
-      "<strong>Build before you book</strong> — candidates who have built at least one Slack app with Block Kit interactions, slash commands, and event listeners are best prepared."
+      "<strong>60 questions</strong> in 105 minutes, just under two minutes per question, which requires familiarity with API methods and framework patterns.",
+      "<strong>~68% passing score</strong>: you need approximately 41 correct answers out of 60 to pass, a slightly higher bar than the Slack Admin or Consultant exams.",
+      "<strong>Coding knowledge is required</strong>: questions test Bolt framework architecture, Block Kit JSON structure, OAuth scopes, and event subscription configuration.",
+      "<strong>Build before you book</strong>: candidates who have built at least one Slack app with Block Kit interactions, slash commands, and event listeners are best prepared."
     ],
     "passRateGuidance": "Book when you have built a working Slack app using the Bolt framework with Block Kit interactions, slash commands, event subscriptions, and OAuth installation flow."
   },
@@ -99,11 +99,11 @@
     "blocks": [
       {
         "heading": "Slack API: Bolt Framework and Authentication",
-        "body": "The Bolt framework (available for Node.js, Python, Java) simplifies Slack app development by handling **OAuth**, event dispatching, and middleware. App authentication: Bot token (scoped to workspace, long-lived) vs User token (acts on behalf of a specific user). OAuth 2.0 installation flow for distributing apps to other workspaces. Socket Mode enables the app to receive events without a public HTTP endpoint — useful for development and firewalled environments. HTTP mode requires a public URL and event subscription verification."
+        "body": "The Bolt framework (available for Node.js, Python, Java) simplifies Slack app development by handling **OAuth**, event dispatching, and middleware. App authentication: Bot token (scoped to workspace, long-lived) vs User token (acts on behalf of a specific user). OAuth 2.0 installation flow for distributing apps to other workspaces. Socket Mode enables the app to receive events without a public HTTP endpoint, useful for development and firewalled environments. HTTP mode requires a public URL and event subscription verification."
       },
       {
         "heading": "Slack Surfaces: Home Tab, Messages, and Modals",
-        "body": "Home Tab: a persistent, personalised app canvas shown when the user clicks the app in the sidebar — updated via views.publish API. Messages: posted in channels or DMs — can include Block Kit UI elements (buttons, select menus, input fields) for interactivity. Modals: triggered by button clicks or slash commands — multi-step forms with view.push/update/open. Each surface has different use cases: Home Tab for dashboards, Messages for notifications with actions, Modals for data entry. The exam tests which surface to use for a given app interaction pattern."
+        "body": "Home Tab: a persistent, personalised app canvas shown when the user clicks the app in the sidebar, updated via views.publish API. Messages: posted in channels or DMs, can include Block Kit UI elements (buttons, select menus, input fields) for interactivity. Modals: triggered by button clicks or slash commands, multi-step forms with view.push/update/open. Each surface has different use cases: Home Tab for dashboards, Messages for notifications with actions, Modals for data entry. The exam tests which surface to use for a given app interaction pattern."
       },
       {
         "heading": "Block Kit: Interactive UI Components",
@@ -111,11 +111,11 @@
       },
       {
         "heading": "Events API and Slash Commands",
-        "body": "Events API delivers workspace events (messages posted, users joining, reactions added) to the app's endpoint. Subscribe to specific event types to minimise payload volume. 3-second response requirement: acknowledge the event with HTTP 200 immediately, process asynchronously if the task takes longer. Slash Commands provide custom commands (/myapp action) — configured in app settings, delivered as HTTP POST to the command endpoint. The exam tests how to subscribe to the correct events and how to handle slash command payloads."
+        "body": "Events API delivers workspace events (messages posted, users joining, reactions added) to the app's endpoint. Subscribe to specific event types to minimise payload volume. 3-second response requirement: acknowledge the event with HTTP 200 immediately, process asynchronously if the task takes longer. Slash Commands provide custom commands (/myapp action), configured in app settings, delivered as HTTP POST to the command endpoint. The exam tests how to subscribe to the correct events and how to handle slash command payloads."
       },
       {
         "heading": "Security: Token Management and Signature Verification",
-        "body": "Never expose bot tokens in client-side code or version control. Store tokens in environment variables or secrets management systems. Slack signs all inbound payloads with a signing secret — verify the X-Slack-Signature header using HMAC-SHA256 to prevent spoofed requests. Token rotation: **OAuth** tokens can be rotated programmatically. App scopes should follow least privilege — request only the OAuth scopes the app actually needs. The exam tests signature verification implementation and token security best practices."
+        "body": "Never expose bot tokens in client-side code or version control. Store tokens in environment variables or secrets management systems. Slack signs all inbound payloads with a signing secret, verify the X-Slack-Signature header using HMAC-SHA256 to prevent spoofed requests. Token rotation: **OAuth** tokens can be rotated programmatically. App scopes should follow least privilege; request only the OAuth scopes the app actually needs. The exam tests signature verification implementation and token security best practices."
       }
     ]
   },
@@ -262,8 +262,8 @@
       "explanation": "chat.postMessage sends a message to a channel, user DM, or other conversation.",
       "whyWrong": [
         "Creating a channel uses a different method (conversations.create).",
-        "Listing users uses a different method (users.list) — chat.postMessage only posts messages.",
-        "chat.postMessage doesn't delete messages — chat.delete handles that."
+        "Listing users uses a different method (users.list), chat.postMessage only posts messages.",
+        "chat.postMessage doesn't delete messages, chat.delete handles that."
       ]
     },
     {
@@ -294,8 +294,8 @@
       "explanation": "Bolt abstracts Slack API complexity, providing a framework with built-in handling for events, actions, shortcuts, and commands.",
       "whyWrong": [
         "Bolt is a code framework, not a visual UI design kit.",
-        "Bolt doesn't manage Slack data storage — that's outside its scope.",
-        "Bolt isn't a deployment pipeline — it's an application framework."
+        "Bolt doesn't manage Slack data storage, that's outside its scope.",
+        "Bolt isn't a deployment pipeline, it's an application framework."
       ]
     },
     {
@@ -309,7 +309,7 @@
       "correctAnswer": 2,
       "explanation": "Slash commands are registered in App Settings (or App Manifest), and your server must respond to the incoming POST payload within 3 seconds.",
       "whyWrong": [
-        "Slash commands aren't defined inside Block Kit messages — they're a separate app configuration.",
+        "Slash commands aren't defined inside Block Kit messages, they're a separate app configuration.",
         "chat.postMessage sends messages; it doesn't register a slash command.",
         "package.json configures npm dependencies, not Slack slash command registration."
       ]
@@ -327,7 +327,7 @@
       "whyWrong": [
         "conversations.open opens a DM/group conversation, not a modal dialog.",
         "chat.postMessage posts a message, not a modal.",
-        "users.info retrieves user profile data — it doesn't open UI surfaces."
+        "users.info retrieves user profile data, it doesn't open UI surfaces."
       ]
     },
     {
@@ -339,9 +339,9 @@
         "A Block Kit interactive element type"
       ],
       "correctAnswer": 0,
-      "explanation": "Socket Mode is ideal for development or firewalled environments — it eliminates the need for a publicly accessible HTTPS endpoint to receive events.",
+      "explanation": "Socket Mode is ideal for development or firewalled environments, it eliminates the need for a publicly accessible HTTPS endpoint to receive events.",
       "whyWrong": [
-        "Socket Mode isn't a token type — it's a connection method.",
+        "Socket Mode isn't a token type, it's a connection method.",
         "Socket Mode is unrelated to database synchronization.",
         "Socket Mode is a connection mechanism, not a Block Kit UI element."
       ]
@@ -355,9 +355,9 @@
         "An event fired when a webhook URL is triggered from outside Slack"
       ],
       "correctAnswer": 0,
-      "explanation": "Incoming Webhooks provide a pre-configured URL that accepts HTTP POST requests to post messages to a channel — useful for notifications from external systems.",
+      "explanation": "Incoming Webhooks provide a pre-configured URL that accepts HTTP POST requests to post messages to a channel, useful for notifications from external systems.",
       "whyWrong": [
-        "Incoming Webhooks aren't a Block Kit element — they're a separate posting mechanism.",
+        "Incoming Webhooks aren't a Block Kit element, they're a separate posting mechanism.",
         "Incoming Webhooks send messages out, they don't receive messages from users.",
         "This describes an outbound trigger you configure, not an event fired externally."
       ]
@@ -374,23 +374,23 @@
       "explanation": "Global Shortcuts launch from the lightning bolt icon anywhere in Slack; Message Shortcuts appear when right-clicking a specific message.",
       "whyWrong": [
         "There's no admin-approval distinction between the two shortcut types by default.",
-        "Global Shortcuts aren't restricted to DMs only — they're accessible more broadly.",
-        "They differ meaningfully — Global and Message Shortcuts have different access points."
+        "Global Shortcuts aren't restricted to DMs only, they're accessible more broadly.",
+        "They differ meaningfully: Global and Message Shortcuts have different access points."
       ]
     },
     {
       "question": "How does Slack enforce API rate limits and what happens when they are exceeded?",
       "options": [
         "All methods share a single fixed limit of 100 requests per hour",
-        "There are no rate limits — all methods are unlimited",
+        "There are no rate limits, all methods are unlimited",
         "Tiered per-minute limits; a 429 carries Retry-After",
         "Rate limits only apply to Incoming Webhooks, not Web API methods"
       ],
       "correctAnswer": 2,
-      "explanation": "Slack Web API methods have tiered rate limits (Tier 1–4). The 429 response includes a Retry-After header — apps must back off and retry after the specified delay.",
+      "explanation": "Slack Web API methods have tiered rate limits (Tier 1–4). The 429 response includes a Retry-After header, apps must back off and retry after the specified delay.",
       "whyWrong": [
         "Rate limits vary by tier (1–4), not a single fixed number.",
-        "Slack does enforce rate limits — 'unlimited' is incorrect.",
+        "Slack does enforce rate limits; 'unlimited' is incorrect.",
         "Rate limits apply broadly across Web API methods, not just Incoming Webhooks."
       ]
     },
@@ -406,7 +406,7 @@
       "explanation": "The App Home tab provides each user a private, personalised space. Your app controls the content by calling views.publish with the user ID and Block Kit layout.",
       "whyWrong": [
         "App Home isn't specifically about channel membership management.",
-        "App Home isn't an auto-created notification channel — it's a dedicated per-user view.",
+        "App Home isn't an auto-created notification channel, it's a dedicated per-user view.",
         "App Home is a feature within the app experience, not the App Directory settings page."
       ]
     },
@@ -435,7 +435,7 @@
         "Web API"
       ],
       "correctAnswer": 2,
-      "explanation": "The Events API sends event payloads to your app's endpoint (or Socket Mode connection) whenever a subscribed event fires — message posted, reaction added, member joined, etc.",
+      "explanation": "The Events API sends event payloads to your app's endpoint (or Socket Mode connection) whenever a subscribed event fires, message posted, reaction added, member joined, etc.",
       "whyWrong": [
         "Block Kit defines UI layout, not event delivery.",
         "SCIM Provisioning API manages user provisioning, unrelated to event notifications.",

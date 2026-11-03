@@ -82,7 +82,7 @@ const pathSteps = [
     passingScore: '65%',
     prereq: 'None (takes well alongside PD1)',
     timeEstimate: '4–6 weeks',
-    why: 'The JavaScript Developer I cert validates modern JS skills: ES6+, async patterns, testing with Jest, and debugging. It is most valuable if you are building LWC-heavy applications or targeting senior UI developer roles. Take this alongside or after PD1 — JavaScript knowledge reinforces LWC study.',
+    why: 'The JavaScript Developer I cert validates modern JS skills: ES6+, async patterns, testing with Jest, and debugging. It is most valuable if you are building LWC-heavy applications or targeting senior UI developer roles. Take this alongside or after PD1: JavaScript knowledge reinforces LWC study.',
     topics: ['ES6+ features (const/let, arrow functions, destructuring)', 'Promises and async/await', 'DOM manipulation', 'Jest unit testing', 'Module patterns'],
   },
   {
@@ -95,7 +95,7 @@ const pathSteps = [
     passingScore: '65%',
     prereq: 'PD1 certification required',
     timeEstimate: '3–6 months real experience + 4 weeks study',
-    why: 'PD2 is the most respected developer credential and a prerequisite for the architect track. It tests advanced Apex patterns, complex REST/SOAP integrations, performance optimisation, and enterprise design patterns (trigger frameworks, selector/domain/service layer). Most candidates need real project experience before this exam — not just study.',
+    why: 'PD2 is the most respected developer credential and a prerequisite for the architect track. It tests advanced Apex patterns, complex REST/SOAP integrations, performance optimisation, and enterprise design patterns (trigger frameworks, selector/domain/service layer). Most candidates need real project experience before this exam, not just study.',
     topics: ['Advanced Apex design patterns', 'REST and SOAP callouts', 'Platform Events and streaming', 'Named Credentials', 'HttpCalloutMock and WebServiceMock testing'],
   },
   {
@@ -142,9 +142,9 @@ export default function DeveloperCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Here: Which Cert Based on Your Experience</h2>
         <div className="space-y-2 text-sm text-gray-700">
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>New to Salesforce development:</strong> Start with PD1. Build a basic Apex class and trigger first on a free Developer org — hands-on experience makes PD1 significantly easier.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>New to Salesforce development:</strong> Start with PD1. Build a basic Apex class and trigger first on a free Developer org, hands-on experience makes PD1 significantly easier.</span></div>
           <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1, building LWC apps:</strong> Take JavaScript Developer I alongside or just before PD2 prep. The JS cert reinforces modern front-end patterns.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1, targeting senior dev roles:</strong> Move to PD2 after 6–12 months of real Apex project experience. Do not rush PD2 — it requires applied design pattern knowledge, not just study.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1, targeting senior dev roles:</strong> Move to PD2 after 6–12 months of real Apex project experience. Do not rush PD2; it requires applied design pattern knowledge, not just study.</span></div>
           <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Targeting architect track:</strong> PD1 + PD2 + Integration Architecture Designer is the standard developer-to-architect progression. Each cert also earns domain credit toward the CTA panel review.</span></div>
         </div>
       </section>

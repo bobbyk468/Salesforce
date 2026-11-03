@@ -41,8 +41,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'Which should I take first — JavaScript Developer I or Platform Developer I?',
-    answer: 'Take Platform Developer I (PD1) first. PD1 is the foundational Salesforce developer certification and is required or recommended before most other developer credentials. It establishes your Apex, SOQL, LWC, and deployment knowledge — the core Salesforce development stack. JavaScript Developer I validates JavaScript language skills specifically and is a complementary credential rather than a prerequisite for other Salesforce paths.',
+    question: 'Which should I take first: JavaScript Developer I or Platform Developer I?',
+    answer: 'Take Platform Developer I (PD1) first. PD1 is the foundational Salesforce developer certification and is required or recommended before most other developer credentials. It establishes your Apex, SOQL, LWC, and deployment knowledge, the core Salesforce development stack. JavaScript Developer I validates JavaScript language skills specifically and is a complementary credential rather than a prerequisite for other Salesforce paths.',
   },
   {
     question: 'What is the main difference between JavaScript Developer I and Platform Developer I?',
@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'Can I take both certifications?',
-    answer: 'Yes, and many Salesforce developers hold both. PD1 + JavaScript Developer I is a strong combination for full-stack Salesforce developers — PD1 validates your Apex/platform skills, JS Dev I validates your JavaScript/LWC skills. Together they demonstrate both back-end (Apex) and front-end (JavaScript/LWC) Salesforce development competency.',
+    answer: 'Yes, and many Salesforce developers hold both. PD1 + JavaScript Developer I is a strong combination for full-stack Salesforce developers: PD1 validates your Apex/platform skills, JS Dev I validates your JavaScript/LWC skills. Together they demonstrate both back-end (Apex) and front-end (JavaScript/LWC) Salesforce development competency.',
   },
   {
     question: 'Which certification has more job market demand?',
@@ -75,7 +75,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           JavaScript Developer I vs Platform Developer I ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Two Salesforce developer certifications — one focused on JavaScript language skills, one on Salesforce platform development. Here’s how to choose.
+          Two Salesforce developer certifications, one focused on JavaScript language skills, one on Salesforce platform development. Here’s how to choose.
         </p>
       </div>
 
@@ -107,7 +107,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           certName: "Platform Developer I",
           certSlug: "developer-1",
           examTipsSlug: "pd1-exam-tips",
-          reason: "Platform Developer I has broader employer recognition and is the standard entry point for Salesforce developer careers. JavaScript Developer I is a strong complement — take PD1 first to establish your core credentials, then add JavaScript Developer I to demonstrate frontend depth.",
+          reason: "Platform Developer I has broader employer recognition and is the standard entry point for Salesforce developer careers. JavaScript Developer I is a strong complement, take PD1 first to establish your core credentials, then add JavaScript Developer I to demonstrate frontend depth.",
           careerPathSlug: "developer-certification-path",
           careerPathLabel: "Developer Certification Path",
         }}
@@ -175,7 +175,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
             <tbody className="divide-y divide-gray-50">
               {[
                 { aspect: 'Primary Language', js: 'JavaScript (vanilla)', pd1: 'Apex (+ JavaScript for LWC)' },
-                { aspect: 'Salesforce-specific?', js: 'No — pure JS language', pd1: 'Yes — Salesforce platform' },
+                { aspect: 'Salesforce-specific?', js: 'No, pure JS language', pd1: 'Yes: Salesforce platform' },
                 { aspect: 'Main skills', js: 'ES6+, async, OOP, DOM, testing', pd1: 'Apex, SOQL, LWC, governor limits' },
                 { aspect: 'Prerequisite for?', js: 'Nothing formally', pd1: 'PD2, Architect track' },
                 { aspect: 'Job market demand', js: 'Moderate (secondary cert)', pd1: 'Very high (primary cert)' },
@@ -239,11 +239,11 @@ export default function JavascriptDeveloperIVsPd1Page() {
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr><td className="py-2.5 pr-4">Building LWC components and front-end Lightning experience</td><td className="py-2.5 font-semibold text-salesforce-blue">JavaScript Developer I</td></tr>
-              <tr><td className="py-2.5 pr-4">Writing Apex triggers, SOQL, DML, or backend business logic</td><td className="py-2.5 font-semibold text-purple-700">PD1 — the core Salesforce developer credential</td></tr>
-              <tr><td className="py-2.5 pr-4">Front-end or web developer transitioning into Salesforce</td><td className="py-2.5 font-semibold text-salesforce-blue">JSD1 — your JavaScript skills transfer directly</td></tr>
-              <tr><td className="py-2.5 pr-4">Java, C#, or backend developer entering Salesforce</td><td className="py-2.5 font-semibold text-purple-700">PD1 — Apex is closer to Java than JavaScript</td></tr>
-              <tr><td className="py-2.5 pr-4">Targeting senior developer or architect track roles</td><td className="py-2.5 font-semibold text-purple-700">PD1 — more widely required for architect pathway</td></tr>
-              <tr><td className="py-2.5 pr-4">Both — which first?</td><td className="py-2.5 font-semibold text-gray-700">PD1 first, then JSD1 to round out the developer profile</td></tr>
+              <tr><td className="py-2.5 pr-4">Writing Apex triggers, SOQL, DML, or backend business logic</td><td className="py-2.5 font-semibold text-purple-700">PD1, the core Salesforce developer credential</td></tr>
+              <tr><td className="py-2.5 pr-4">Front-end or web developer transitioning into Salesforce</td><td className="py-2.5 font-semibold text-salesforce-blue">JSD1, your JavaScript skills transfer directly</td></tr>
+              <tr><td className="py-2.5 pr-4">Java, C#, or backend developer entering Salesforce</td><td className="py-2.5 font-semibold text-purple-700">PD1; Apex is closer to Java than JavaScript</td></tr>
+              <tr><td className="py-2.5 pr-4">Targeting senior developer or architect track roles</td><td className="py-2.5 font-semibold text-purple-700">PD1, more widely required for architect pathway</td></tr>
+              <tr><td className="py-2.5 pr-4">Both, which first?</td><td className="py-2.5 font-semibold text-gray-700">PD1 first, then JSD1 to round out the developer profile</td></tr>
             </tbody>
           </table>
         </div>

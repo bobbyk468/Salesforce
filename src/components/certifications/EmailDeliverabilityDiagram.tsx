@@ -6,7 +6,7 @@ export default function EmailDeliverabilityDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Email send &amp; deliverability flow (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         Before an inbox provider accepts a message, it checks <strong>SPF</strong> (authorized senders),{' '}
-        <strong>DKIM</strong> (signature integrity), and <strong>DMARC</strong> (policy on failure) — the Sender
+        <strong>DKIM</strong> (signature integrity), and <strong>DMARC</strong> (policy on failure), the Sender
         Authentication Package bundles all three plus a dedicated IP and domain.
       </p>
       <svg role="img" aria-labelledby="edd-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 720 160" xmlns="http://www.w3.org/2000/svg">

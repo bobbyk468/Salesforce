@@ -22,9 +22,9 @@
     "summary": "The Engagement Developer exam is one of the harder Marketing Cloud certifications. It requires you to write and interpret AMPscript and SSJS code, understand REST and SOAP API patterns, and know how to build custom Journey Builder activities. Candidates without coding experience will struggle significantly.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~67% passing score</strong> — standard for developer-level exams, but the technical depth makes it challenging.",
-      "<strong>Code interpretation required</strong> — expect questions that show AMPscript or SSJS snippets and ask you to predict the output or identify errors.",
-      "<strong>API knowledge tested</strong> — you must know REST and SOAP endpoint patterns, OAuth authentication, and when to use each API."
+      "<strong>~67% passing score</strong>: standard for developer-level exams, but the technical depth makes it challenging.",
+      "<strong>Code interpretation required</strong>: expect questions that show AMPscript or SSJS snippets and ask you to predict the output or identify errors.",
+      "<strong>API knowledge tested</strong>: you must know REST and SOAP endpoint patterns, OAuth authentication, and when to use each API."
     ],
     "passRateGuidance": "Build at least 3-5 AMPscript-powered emails and 2-3 CloudPages before booking. Write SSJS Script Activities in Automation Studio and make at least a few REST API calls to feel confident."
   },
@@ -70,19 +70,19 @@
       },
       {
         "heading": "Server-Side JavaScript (SSJS) in Marketing Cloud",
-        "body": "SSJS runs on Marketing Cloud servers (not in the browser) using JavaScript 1.6 syntax. Platform functions (Marketing Cloud-specific) are available alongside standard JS. Common uses: HTTP POST to external systems, manipulating Data Extensions, complex data processing. SSJS runs in Email, Landing Pages, and Automation Studio Script activities. Key objects: Platform.Load(), HTTP.Post(), Retrieve(), DataExtension.Add(). The developer exam tests when to use SSJS vs AMPscript — SSJS for complex logic and API integration, AMPscript for personalisation within emails."
+        "body": "SSJS runs on Marketing Cloud servers (not in the browser) using JavaScript 1.6 syntax. Platform functions (Marketing Cloud-specific) are available alongside standard JS. Common uses: HTTP POST to external systems, manipulating Data Extensions, complex data processing. SSJS runs in Email, Landing Pages, and Automation Studio Script activities. Key objects: Platform.Load(), HTTP.Post(), Retrieve(), DataExtension.Add(). The developer exam tests when to use SSJS vs AMPscript: SSJS for complex logic and API integration, AMPscript for personalisation within emails."
       },
       {
         "heading": "CloudPages and Dynamic Content",
-        "body": "CloudPages host landing pages, microsites, and smart capture forms. AMPscript-powered CloudPages can capture form data to Data Extensions (SmartCapture). Personalised URLs (PURLs) embed subscriber tokens in CloudPage URLs for pre-filled forms. Dynamic content blocks in emails show different content to different audiences based on rules — configured in Content Builder. The developer builds reusable content blocks with AMPscript logic for personalisation across campaigns."
+        "body": "CloudPages host landing pages, microsites, and smart capture forms. AMPscript-powered CloudPages can capture form data to Data Extensions (SmartCapture). Personalised URLs (PURLs) embed subscriber tokens in CloudPage URLs for pre-filled forms. Dynamic content blocks in emails show different content to different audiences based on rules, configured in Content Builder. The developer builds reusable content blocks with AMPscript logic for personalisation across campaigns."
       },
       {
         "heading": "Marketing Cloud REST and SOAP APIs",
-        "body": "**REST API**: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). **SOAP API**: Subscriber, List, TriggeredSend objects — legacy but still tested. Authentication: obtain access token via **OAuth** 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body."
+        "body": "**REST API**: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). **SOAP API**: Subscriber, List, TriggeredSend objects, legacy but still tested. Authentication: obtain access token via **OAuth** 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body."
       },
       {
         "heading": "Automation Studio Script Activities",
-        "body": "Script Activities run SSJS code within Automation Studio workflows. Common use cases: data manipulation between DE extracts, calling external APIs, complex data quality checks before sends. Script Activities run synchronously — keep them under 30 minutes to avoid timeout. Error handling: use try/catch in SSJS; log errors to a dedicated error DE. The developer designs automation sequences combining Script Activities, SQL Query Activities, Data Extract Activities, and File Transfer Activities for complex data processing pipelines."
+        "body": "Script Activities run SSJS code within Automation Studio workflows. Common use cases: data manipulation between DE extracts, calling external APIs, complex data quality checks before sends. Script Activities run synchronously. Keep them under 30 minutes to avoid timeout. Error handling: use try/catch in SSJS; log errors to a dedicated error DE. The developer designs automation sequences combining Script Activities, SQL Query Activities, Data Extract Activities, and File Transfer Activities for complex data processing pipelines."
       }
     ]
   },

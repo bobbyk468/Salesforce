@@ -143,7 +143,7 @@ export default function ChatBot() {
                 })
               }
             } catch {
-              // partial JSON — ignore
+              // partial JSON, ignore
             }
           }
         }
@@ -177,7 +177,7 @@ export default function ChatBot() {
 
   return (
     <>
-      {/* Floating toggle button — held back on mobile until the hero has scrolled
+      {/* Floating toggle button, held back on mobile until the hero has scrolled
           out of view so it doesn't cover the hero CTA and stats. */}
       <div
         className={`fixed bottom-6 right-6 z-50 group transition-opacity duration-200 ${pastHero || open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
@@ -268,7 +268,7 @@ export default function ChatBot() {
                   )}
                 </div>
 
-                {/* Follow-up chips — shown once streaming is done */}
+                {/* Follow-up chips, shown once streaming is done */}
                 {msg.role === 'assistant' && msg.followUps && msg.followUps.length > 0 && (
                   <div className="mt-2 flex flex-col gap-1.5 max-w-[90%]">
                     {msg.followUps.map(q => (
@@ -289,7 +289,7 @@ export default function ChatBot() {
             <div ref={endRef} />
           </div>
 
-          {/* Suggested questions — visible only before first user message */}
+          {/* Suggested questions; visible only before first user message */}
           {messages.length <= 1 && (
             <div className="flex flex-wrap gap-2 px-4 pb-2">
               {SUGGESTED.map(q => (

@@ -48,11 +48,11 @@ const faqItems = [
   },
   {
     question: 'Is Salesforce administration a good career in 2026?',
-    answer: 'Yes — Salesforce Administrator remains one of the strongest entry-level tech careers in 2026. Salesforce has over 150,000 customers globally and consistently reports more job demand than supply for certified professionals. Entry-level Salesforce admins typically earn $60,000–$80,000 USD, and experienced admins with multiple certifications earn $90,000–$130,000. The role also provides a natural path into Salesforce consulting, architecture, or development.',
+    answer: 'Yes: Salesforce Administrator remains one of the strongest entry-level tech careers in 2026. Salesforce has over 150,000 customers globally and consistently reports more job demand than supply for certified professionals. Entry-level Salesforce admins typically earn $60,000–$80,000 USD, and experienced admins with multiple certifications earn $90,000–$130,000. The role also provides a natural path into Salesforce consulting, architecture, or development.',
   },
   {
     question: 'Can I learn Salesforce for free?',
-    answer: 'Yes — the core Salesforce training resources are free. Trailhead (trailhead.salesforce.com) is Salesforce’s official free learning platform with hundreds of modules and guided projects. A Salesforce Developer Edition org is also free and gives you a full Salesforce environment to practice in. The only cost is the $200 ADM-201 exam fee (retakes are $100).',
+    answer: 'Yes, the core Salesforce training resources are free. Trailhead (trailhead.salesforce.com) is Salesforce’s official free learning platform with hundreds of modules and guided projects. A Salesforce Developer Edition org is also free and gives you a full Salesforce environment to practice in. The only cost is the $200 ADM-201 exam fee (retakes are $100).',
   },
   {
     question: 'What comes after Salesforce Administrator?',
@@ -77,7 +77,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
         <p className="text-lg text-gray-600">
           Salesforce Administrator is one of the most accessible tech career paths available in {new Date().getFullYear()}. You do not
           need a technical degree, prior coding experience, or expensive bootcamps. This guide walks you from zero
-          to ADM-201 certified — and then into your first role.
+          to ADM-201 certified, and then into your first role.
         </p>
       </header>
 
@@ -112,35 +112,35 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">1</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Create a Free Salesforce Developer Edition Org</p>
-              <p>Go to developer.salesforce.com/signup and create a free Developer Edition org. This is a full Salesforce environment that never expires — you will use it to practice every topic in the ADM-201 exam. Having hands-on access is the single most important factor in passing. Candidates who only study theory and do not practice in a real org fail at a much higher rate.</p>
+              <p>Go to developer.salesforce.com/signup and create a free Developer Edition org. This is a full Salesforce environment that never expires; you will use it to practice every topic in the ADM-201 exam. Having hands-on access is the single most important factor in passing. Candidates who only study theory and do not practice in a real org fail at a much higher rate.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">2</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Complete Salesforce Trailhead Admin Trails (Free)</p>
-              <p>Trailhead (trailhead.salesforce.com) is Salesforce’s official learning platform — free, gamified, and comprehensive. Start with the &ldquo;Admin Beginner&rdquo; trail, then &ldquo;Admin Intermediate.&rdquo; Complete the &ldquo;Prepare for Your Salesforce Administrator Credential&rdquo; trail. These modules are directly aligned to the ADM-201 exam and include hands-on challenges in a Trailhead Playground org.</p>
+              <p>Trailhead (trailhead.salesforce.com) is Salesforce’s official learning platform, free, gamified, and comprehensive. Start with the &ldquo;Admin Beginner&rdquo; trail, then &ldquo;Admin Intermediate.&rdquo; Complete the &ldquo;Prepare for Your Salesforce Administrator Credential&rdquo; trail. These modules are directly aligned to the ADM-201 exam and include hands-on challenges in a Trailhead Playground org.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">3</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Study the 7 ADM-201 Exam Sections by Weight</p>
-              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%) — together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/adm-201-study-guide" className="text-salesforce-blue underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
+              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%), together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/adm-201-study-guide" className="text-salesforce-blue underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">4</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Practice With Scenario-Based Mock Questions</p>
-              <p>ADM-201 is a scenario-based exam — it asks &ldquo;a company needs X, what should the administrator do?&rdquo; rather than pure knowledge questions. Reading documentation is not enough — you need to practise answering scenario questions under time pressure. Use free practice tests to identify your weak areas, then return to Trailhead or hands-on practice to fill gaps. Score 75%+ on 3 full mock exams before booking. Use our <Link href="/certifications/administrator" className="text-salesforce-blue underline">free ADM-201 practice test</Link> to benchmark your readiness.</p>
+              <p>ADM-201 is a scenario-based exam, it asks &ldquo;a company needs X, what should the administrator do?&rdquo; rather than pure knowledge questions. Reading documentation is not enough; you need to practise answering scenario questions under time pressure. Use free practice tests to identify your weak areas, then return to Trailhead or hands-on practice to fill gaps. Score 75%+ on 3 full mock exams before booking. Use our <Link href="/certifications/administrator" className="text-salesforce-blue underline">free ADM-201 practice test</Link> to benchmark your readiness.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">5</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Book and Pass the ADM-201 Exam</p>
-              <p>Register through Webassessor (webassessor.com). You can take the exam online proctored from home (requires a webcam, quiet room, and verified ID) or at a physical test centre. The exam is 65 questions, 105 minutes, 68% passing score. The result is shown immediately after you submit. If you do not pass, you can retake after 1 day — the retake costs $100.</p>
+              <p>Register through Webassessor (webassessor.com). You can take the exam online proctored from home (requires a webcam, quiet room, and verified ID) or at a physical test centre. The exam is 65 questions, 105 minutes, 68% passing score. The result is shown immediately after you submit. If you do not pass, you can retake after 1 day, the retake costs $100.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -156,31 +156,31 @@ export default function HowToBecomeSalesforceAdministratorPage() {
       {/* Who it is for */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Who Becomes a Salesforce Administrator?</h2>
-        <p className="text-sm text-gray-700 mb-3">Salesforce Administration is a career transition path for professionals from many backgrounds — not just IT. Common backgrounds of successful Salesforce Admins:</p>
+        <p className="text-sm text-gray-700 mb-3">Salesforce Administration is a career transition path for professionals from many backgrounds, not just IT. Common backgrounds of successful Salesforce Admins:</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
           <div className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Sales / Account Management</strong> — understands CRM from the user side, transition into admin is natural</span>
+            <span><strong>Sales / Account Management</strong>: understands CRM from the user side, transition into admin is natural</span>
           </div>
           <div className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Marketing / Marketing Operations</strong> — campaign management, lead tracking, data hygiene — all Salesforce admin territory</span>
+            <span><strong>Marketing / Marketing Operations</strong>: campaign management, lead tracking, data hygiene, all Salesforce admin territory</span>
           </div>
           <div className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Business Analyst / Operations</strong> — process documentation and requirements gathering translate directly to admin skills</span>
+            <span><strong>Business Analyst / Operations</strong>: process documentation and requirements gathering translate directly to admin skills</span>
           </div>
           <div className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Customer Service / Support</strong> — case management, queues, and service processes are core ADM-201 topics</span>
+            <span><strong>Customer Service / Support</strong>: case management, queues, and service processes are core ADM-201 topics</span>
           </div>
           <div className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Project Management</strong> — workflow, approvals, and team coordination map directly to Salesforce process automation</span>
+            <span><strong>Project Management</strong>: workflow, approvals, and team coordination map directly to Salesforce process automation</span>
           </div>
           <div className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Non-technical roles</strong> — no coding is required; logical thinking and attention to detail are the primary skill requirements</span>
+            <span><strong>Non-technical roles</strong>: no coding is required; logical thinking and attention to detail are the primary skill requirements</span>
           </div>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <BookOpen className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
             <div>
               <p className="font-semibold text-gray-900">Developer Edition Org</p>
-              <p>Free full Salesforce environment. Sign up at developer.salesforce.com/signup. Use it to practise everything you learn — do not just read, configure it yourself. Muscle memory from hands-on practice is the fastest path to passing.</p>
+              <p>Free full Salesforce environment. Sign up at developer.salesforce.com/signup. Use it to practise everything you learn, do not just read, configure it yourself. Muscle memory from hands-on practice is the fastest path to passing.</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -214,7 +214,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <BookOpen className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
             <div>
               <p className="font-semibold text-gray-900">Free Practice Questions</p>
-              <p>Scenario-based practice tests expose your weak areas before the real exam. Use our free <Link href="/certifications/administrator" className="text-salesforce-blue underline">Salesforce Administrator practice questions</Link> — aligned to {RELEASE_CURRENT} exam weightage.</p>
+              <p>Scenario-based practice tests expose your weak areas before the real exam. Use our free <Link href="/certifications/administrator" className="text-salesforce-blue underline">Salesforce Administrator practice questions</Link>, aligned to {RELEASE_CURRENT} exam weightage.</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -270,7 +270,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />
-            <span><strong>Studying theory without hands-on practice.</strong> Reading about OWD settings is not the same as configuring them and testing access with a second user. Hands-on practice is mandatory — not optional.</span>
+            <span><strong>Studying theory without hands-on practice.</strong> Reading about OWD settings is not the same as configuring them and testing access with a second user. Hands-on practice is mandatory, not optional.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />
@@ -278,11 +278,11 @@ export default function HowToBecomeSalesforceAdministratorPage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />
-            <span><strong>Booking too early.</strong> Score 75%+ on 3 full mock exams consistently before booking. The 68% passing score feels comfortable until you experience the actual scenario complexity. Many first-time failures score 65–67% — just below passing — due to premature booking.</span>
+            <span><strong>Booking too early.</strong> Score 75%+ on 3 full mock exams consistently before booking. The 68% passing score feels comfortable until you experience the actual scenario complexity. Many first-time failures score 65–67%, just below passing, due to premature booking.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />
-            <span><strong>Ignoring lower-weight sections.</strong> Productivity and Collaboration is only 7% — but that is still 4 questions. Do not skip any section entirely. Use the final week for a broad review pass.</span>
+            <span><strong>Ignoring lower-weight sections.</strong> Productivity and Collaboration is only 7%, but that is still 4 questions. Do not skip any section entirely. Use the final week for a broad review pass.</span>
           </li>
         </ul>
       </section>
@@ -295,7 +295,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
           75%+ on 3 timed full mocks (65 Q / 105 min) on separate days
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          When you hit this benchmark consistently, book the exam for 3–5 days later — not weeks away.
+          When you hit this benchmark consistently, book the exam for 3–5 days later, not weeks away.
           A short gap keeps the material fresh. If you miss the benchmark, identify the specific weak sections
           from your mock results and spend another week on those topics only.
         </p>
@@ -341,7 +341,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Your Admin Journey Today</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Free ADM-201 practice questions, study guide, and exam tips — everything you need to pass first time:
+          Free ADM-201 practice questions, study guide, and exam tips, everything you need to pass first time:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

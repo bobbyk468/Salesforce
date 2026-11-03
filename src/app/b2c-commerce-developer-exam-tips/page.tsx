@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most B2C Commerce Developer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the B2C Commerce Developer exam are: (1) Controllers vs Pipelines — SFRA Uses Controllers, Not Pipelines; (2) Hooks vs Cartridge Overrides — Extension Without Modification; (3) Business Manager Site Preferences vs Custom Objects — Where to Store Config. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the B2C Commerce Developer exam are: (1) Controllers vs Pipelines: SFRA Uses Controllers, Not Pipelines; (2) Hooks vs Cartridge Overrides: Extension Without Modification; (3) Business Manager Site Preferences vs Custom Objects: Where to Store Config. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('b2c-commerce-developer-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function B2CCommerceDeveloperExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What B2C Commerce Developer Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SFRA cartridge development</strong> — Cartridge chaining and precedence, extending controllers using server.extend() and server.replace(), customising ISML templates, and the module system (require()). Knowing the SFRA cartridge structure (controllers, models, scripts, templates, static) is fundamental.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Commerce business logic</strong> — Product and catalogue management, promotions and pricing logic, checkout flow customisation, payment integration patterns, and how to work with B2C Commerce APIs (Product, Basket, Order, Customer).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Manager and platform</strong> — Site configuration, content management (Content Slots, Page Designer), A/B testing, job scheduling for automation, and integration with external systems via OCAPI (Open Commerce API).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SFRA cartridge development</strong>: Cartridge chaining and precedence, extending controllers using server.extend() and server.replace(), customising ISML templates, and the module system (require()). Knowing the SFRA cartridge structure (controllers, models, scripts, templates, static) is fundamental.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Commerce business logic</strong>: Product and catalogue management, promotions and pricing logic, checkout flow customisation, payment integration patterns, and how to work with B2C Commerce APIs (Product, Basket, Order, Customer).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Manager and platform</strong>: Site configuration, content management (Content Slots, Page Designer), A/B testing, job scheduling for automation, and integration with external systems via OCAPI (Open Commerce API).</li>
         </ul>
       </section>
 
@@ -129,7 +129,7 @@ export default function B2CCommerceDeveloperExamTipsPage() {
             <span className="font-medium text-gray-900">Integration and OCAPI</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">SFRA + Business Logic + Business Manager = 75%. SFRA cartridge architecture is the foundation — master it first.</p>
+          <p className="text-xs text-gray-600 pt-1">SFRA + Business Logic + Business Manager = 75%. SFRA cartridge architecture is the foundation, master it first.</p>
         </div>
       </section>
 
@@ -137,13 +137,13 @@ export default function B2CCommerceDeveloperExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach B2C Commerce Developer Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a storefront customisation requirement and ask which SFRA pattern, controller
-          method, or Business Manager configuration achieves it. Always prefer extending over replacing —
+          method, or Business Manager configuration achieves it. Always prefer extending over replacing,
           the exam rewards the SFRA best practice of extending core functionality without modifying base files.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For cartridge questions: cartridge path order determines which cartridge version of a file is used. Custom cartridges should appear first in the cartridge path. Use server.extend() to add new middleware steps to an existing route; use server.replace() to completely override a route. Prefer extend over replace to maintain upgrade compatibility.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ISML template questions: templates use &lt;isinclude&gt; to include other templates, &lt;isloop&gt; for iteration, and &lt;isif&gt; for conditionals. ISML expressions use ${'{'}expression{'}'} syntax. Custom templates in your cartridge override base SFRA templates with the same path — know which file path takes precedence.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion questions: B2C Commerce promotions are configured in Business Manager with promotion types (product, order, shipping), qualifiers (basket amount, product quantity), and discounts (percent off, fixed price, free shipping). Promotion ordering and exclusivity settings determine which promotions stack — know the exclusivity rules.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ISML template questions: templates use &lt;isinclude&gt; to include other templates, &lt;isloop&gt; for iteration, and &lt;isif&gt; for conditionals. ISML expressions use ${'{'}expression{'}'} syntax. Custom templates in your cartridge override base SFRA templates with the same path. Know which file path takes precedence.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion questions: B2C Commerce promotions are configured in Business Manager with promotion types (product, order, shipping), qualifiers (basket amount, product quantity), and discounts (percent off, fixed price, free shipping). Promotion ordering and exclusivity settings determine which promotions stack. Know the exclusivity rules.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function B2CCommerceDeveloperExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2C Commerce Developer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Controllers vs Pipelines — SFRA Uses Controllers, Not Pipelines</p>
-            <p className="text-sm text-gray-700">Salesforce Reference Architecture (SFRA) uses MVC-style Controllers (JavaScript/Node.js). Pipelines are the legacy SiteGenesis architecture. Exam scenarios about new development expect Controller-based answers. Candidates who studied older materials still default to Pipeline answers. Never recommend Pipelines for new SFRA features — use Controllers and middleware.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Controllers vs Pipelines: SFRA Uses Controllers, Not Pipelines</p>
+            <p className="text-sm text-gray-700">Salesforce Reference Architecture (SFRA) uses MVC-style Controllers (JavaScript/Node.js). Pipelines are the legacy SiteGenesis architecture. Exam scenarios about new development expect Controller-based answers. Candidates who studied older materials still default to Pipeline answers. Never recommend Pipelines for new SFRA features, use Controllers and middleware.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Hooks vs Cartridge Overrides — Extension Without Modification</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Hooks vs Cartridge Overrides: Extension Without Modification</p>
             <p className="text-sm text-gray-700">SFRA extension points include Hooks (event-driven, registered in hooks.json) and Cartridge Overrides (placing a custom cartridge higher in the cartridge path). Hooks allow extending behaviour at defined integration points without modifying base cartridge code. Overrides replace entire files. The exam prefers Hooks for targeted customisation and overrides only when the entire file needs replacement.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Business Manager Site Preferences vs Custom Objects — Where to Store Config</p>
-            <p className="text-sm text-gray-700">Site Preferences store merchant-configurable settings (feature toggles, API keys, display rules) that non-developers can update via Business Manager. Custom Objects store structured data with specific schemas. Candidates use Custom Objects to store configuration data — the exam expects Site Preferences for settings that merchants need to manage without code deployments.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Business Manager Site Preferences vs Custom Objects: Where to Store Config</p>
+            <p className="text-sm text-gray-700">Site Preferences store merchant-configurable settings (feature toggles, API keys, display rules) that non-developers can update via Business Manager. Custom Objects store structured data with specific schemas. Candidates use Custom Objects to store configuration data, the exam expects Site Preferences for settings that merchants need to manage without code deployments.</p>
           </div>
         </div>
       </section>

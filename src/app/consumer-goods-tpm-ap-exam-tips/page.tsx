@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Consumer Goods TPM candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Consumer Goods TPM exam are: (1) Trade Promotion vs Fund vs Tactic — Three Levels, One Plan; (2) Settlement vs Deduction vs Claim — Post-Promotion Financial Flow; (3) Account Planning Integration — Trade Plans Are Linked to Account Plans. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Consumer Goods TPM exam are: (1) Trade Promotion vs Fund vs Tactic: Three Levels, One Plan; (2) Settlement vs Deduction vs Claim: Post-Promotion Financial Flow; (3) Account Planning Integration: Trade Plans Are Linked to Account Plans. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('consumer-goods-tpm-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function ConsumerGoodsTpmApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Consumer Goods TPM AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Trade promotion planning</strong> — Creating trade promotions with promotional tactics (temporary price reductions, display fees, feature ads, off-invoice discounts), planning volumes and expected ROI, applying promotion templates for common scenarios, managing the promotion approval workflow, and linking promotions to trade fund budgets.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Fund and budget management</strong> — Configuring trade fund pools (annual budgets allocated by account or product group), fund disbursement rules (how much of the fund can be committed to promotions), tracking committed vs. remaining fund balances, and preventing over-commitment of trade spend beyond the available budget.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deduction and settlement management</strong> — Managing retailer deduction claims linked to approved promotions, validating deduction amounts against promotional agreements, processing settlements (approve, partial approve, dispute), writing off invalid deductions, and reconciling actual trade spend against planned budgets for period-end reporting.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Trade promotion planning</strong>: Creating trade promotions with promotional tactics (temporary price reductions, display fees, feature ads, off-invoice discounts), planning volumes and expected ROI, applying promotion templates for common scenarios, managing the promotion approval workflow, and linking promotions to trade fund budgets.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Fund and budget management</strong>: Configuring trade fund pools (annual budgets allocated by account or product group), fund disbursement rules (how much of the fund can be committed to promotions), tracking committed vs. remaining fund balances, and preventing over-commitment of trade spend beyond the available budget.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deduction and settlement management</strong>: Managing retailer deduction claims linked to approved promotions, validating deduction amounts against promotional agreements, processing settlements (approve, partial approve, dispute), writing off invalid deductions, and reconciling actual trade spend against planned budgets for period-end reporting.</li>
         </ul>
       </section>
 
@@ -138,9 +138,9 @@ export default function ConsumerGoodsTpmApExamTipsPage() {
           important as product knowledge for this exam.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion planning questions: each promotion tactic has a type (temporary price reduction, display, feature, BOGO) and financial parameters (cost per case, scan-down rate, or fixed fee). Linking the tactic to an approved trade fund commits that amount from the fund balance. When a scenario says ’plan a $50,000 display promotion at Walmart for Q4’, create a Promotion with a Display Tactic, link it to the Walmart account fund, and commit the $50,000 — verify the fund has sufficient balance first.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For deduction questions: when a retailer deducts from an invoice, a Deduction record is created in Salesforce. The deduction is matched to an approved Promotion to validate it. Valid deductions are settled (approved) and close out the promotion obligation. Invalid deductions are disputed (no matching approved promotion) or written off (small amounts not worth pursuing). When a scenario says ’the retailer deducted $5,000 for a promotion we never approved’, the answer is to dispute the deduction — not write it off immediately.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ROI questions: Promotion ROI = (Incremental Revenue from Promotion - Total Promotion Cost) / Total Promotion Cost. Salesforce TPM calculates this using actual scan-down data from point-of-sale systems. When a scenario says ’calculate whether the Q4 holiday promotion was profitable’, the answer involves comparing actual promoted sales uplift against the total trade spend — using the Promotion analytics dashboard in CGC TPM.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion planning questions: each promotion tactic has a type (temporary price reduction, display, feature, BOGO) and financial parameters (cost per case, scan-down rate, or fixed fee). Linking the tactic to an approved trade fund commits that amount from the fund balance. When a scenario says ’plan a $50,000 display promotion at Walmart for Q4’, create a Promotion with a Display Tactic, link it to the Walmart account fund, and commit the $50,000, verify the fund has sufficient balance first.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For deduction questions: when a retailer deducts from an invoice, a Deduction record is created in Salesforce. The deduction is matched to an approved Promotion to validate it. Valid deductions are settled (approved) and close out the promotion obligation. Invalid deductions are disputed (no matching approved promotion) or written off (small amounts not worth pursuing). When a scenario says ’the retailer deducted $5,000 for a promotion we never approved’, the answer is to dispute the deduction, not write it off immediately.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ROI questions: Promotion ROI = (Incremental Revenue from Promotion - Total Promotion Cost) / Total Promotion Cost. Salesforce TPM calculates this using actual scan-down data from point-of-sale systems. When a scenario says ’calculate whether the Q4 holiday promotion was profitable’, the answer involves comparing actual promoted sales uplift against the total trade spend, using the Promotion analytics dashboard in CGC TPM.</li>
         </ul>
       </section>
 
@@ -153,7 +153,7 @@ export default function ConsumerGoodsTpmApExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Consumer Goods TPM AP is for implementation teams and in-house users at CPG companies.
           Domain expertise in trade promotion management (how CPG companies manage promotional spend
-          with retailers) is essential — the exam tests business process understanding as much as
+          with retailers) is essential, the exam tests business process understanding as much as
           Salesforce configuration. The CGC TPM Trailmix is the primary study resource.
         </p>
       </section>
@@ -161,19 +161,19 @@ export default function ConsumerGoodsTpmApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Consumer Goods TPM Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Trade Promotion vs Fund vs Tactic — Three Levels, One Plan</p>
-            <p className="text-sm text-gray-700">A Trade Promotion is the top-level campaign container. Funds (promotional budgets) are allocated to the promotion. Tactics are the specific promotional activities within it (display, feature ad, price discount). Candidates answer fund questions at the promotion level and vice versa. The hierarchy is Promotion → Fund → Tactic — know which object stores which attribute.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Trade Promotion vs Fund vs Tactic: Three Levels, One Plan</p>
+            <p className="text-sm text-gray-700">A Trade Promotion is the top-level campaign container. Funds (promotional budgets) are allocated to the promotion. Tactics are the specific promotional activities within it (display, feature ad, price discount). Candidates answer fund questions at the promotion level and vice versa. The hierarchy is Promotion → Fund → Tactic. Know which object stores which attribute.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Settlement vs Deduction vs Claim — Post-Promotion Financial Flow</p>
-            <p className="text-sm text-gray-700">After a promotion runs, retailers submit Claims or Deductions (short payments). Settlements are the reconciled financial outcomes. Candidates use "claim" and "deduction" interchangeably — the exam distinguishes them: a Deduction is a short payment on an invoice; a Claim is a request for reimbursement. Settlement closes the loop by matching claims against accruals.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Settlement vs Deduction vs Claim: Post-Promotion Financial Flow</p>
+            <p className="text-sm text-gray-700">After a promotion runs, retailers submit Claims or Deductions (short payments). Settlements are the reconciled financial outcomes. Candidates use "claim" and "deduction" interchangeably, the exam distinguishes them: a Deduction is a short payment on an invoice; a Claim is a request for reimbursement. Settlement closes the loop by matching claims against accruals.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Account Planning Integration — Trade Plans Are Linked to Account Plans</p>
-            <p className="text-sm text-gray-700">Consumer Goods TPM integrates Trade Promotion Management with Account Planning. Trade promotions must be linked to an Account Plan (the strategic plan for a retail account). Candidates design promotions without Account Plan linkage — the exam expects you to show how promotional spending rolls up to the account-level plan for P&amp;L visibility.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Account Planning Integration: Trade Plans Are Linked to Account Plans</p>
+            <p className="text-sm text-gray-700">Consumer Goods TPM integrates Trade Promotion Management with Account Planning. Trade promotions must be linked to an Account Plan (the strategic plan for a retail account). Candidates design promotions without Account Plan linkage, the exam expects you to show how promotional spending rolls up to the account-level plan for P&amp;L visibility.</p>
           </div>
         </div>
       </section>

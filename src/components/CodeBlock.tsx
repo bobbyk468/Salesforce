@@ -2,7 +2,7 @@
 
 import { useState, Fragment } from 'react'
 
-/** Small, dependency-free Apex/Java-style keyword set — enough to make exam code snippets scannable
+/** Small, dependency-free Apex/Java-style keyword set, enough to make exam code snippets scannable
  *  without pulling in a full syntax-highlighting library for a handful of code blocks. */
 const KEYWORDS = new Set([
   'public', 'private', 'global', 'protected', 'static', 'final', 'void', 'class', 'interface',
@@ -67,7 +67,7 @@ export default function CodeBlock({ code }: { code: string }) {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      // Clipboard API unavailable (e.g. insecure context) — button simply won't confirm.
+      // Clipboard API unavailable (e.g. insecure context), button simply won't confirm.
     }
   }
 

@@ -44,23 +44,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Is the Technical Architect Review Board worth pursuing?',
-    answer: 'The Technical Architect Review Board is the most prestigious credential in the Salesforce ecosystem — held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
+    answer: 'The Technical Architect Review Board is the most prestigious credential in the Salesforce ecosystem, held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
   },
   {
     question: 'What scenario topics does the CTA Review Board typically cover?',
-    answer: 'CTA Review Board scenarios are deliberately broad and ambiguous. They typically involve a large enterprise with multiple Salesforce clouds, integration requirements, identity and access management challenges, large data volumes, complex security and sharing requirements, and a release management question. You are expected to address all architectural domains — not just your strongest area. Scenarios often include deliberate constraints that force trade-off decisions.',
+    answer: 'CTA Review Board scenarios are deliberately broad and ambiguous. They typically involve a large enterprise with multiple Salesforce clouds, integration requirements, identity and access management challenges, large data volumes, complex security and sharing requirements, and a release management question. You are expected to address all architectural domains, not just your strongest area. Scenarios often include deliberate constraints that force trade-off decisions.',
   },
   {
     question: 'How should I structure my CTA Review Board presentation?',
-    answer: 'A strong Review Board presentation typically follows: (1) Restate the scenario requirements and constraints in your own words to confirm understanding; (2) Present your solution architecture with a whiteboard diagram covering all domains; (3) Justify each key decision with explicit trade-offs (why this approach vs the alternative); (4) Call out risks and mitigation strategies proactively; (5) Summarise governance and deployment approach. The panel rewards candidates who demonstrate architectural thinking — the "why" behind decisions — not just correct answers.',
+    answer: 'A strong Review Board presentation typically follows: (1) Restate the scenario requirements and constraints in your own words to confirm understanding; (2) Present your solution architecture with a whiteboard diagram covering all domains; (3) Justify each key decision with explicit trade-offs (why this approach vs the alternative); (4) Call out risks and mitigation strategies proactively; (5) Summarise governance and deployment approach. The panel rewards candidates who demonstrate architectural thinking, the "why" behind decisions, not just correct answers.',
   },
   {
     question: 'What are the most common reasons candidates fail the CTA Review Board?',
-    answer: 'Common failure reasons: (1) Insufficient breadth — solving only the primary requirement and missing data architecture, identity, or deployment concerns; (2) Inability to defend decisions under panel questioning — changing the answer when challenged rather than holding a justified position; (3) Overlooking scalability — designing for current state without considering large data volumes or future growth; (4) Not addressing trade-offs — presenting one solution as if there are no alternatives or downsides; (5) Weak security architecture — not addressing field-level security, sharing rules, or external identity at scale.',
+    answer: 'Common failure reasons: (1) Insufficient breadth; solving only the primary requirement and missing data architecture, identity, or deployment concerns; (2) Inability to defend decisions under panel questioning, changing the answer when challenged rather than holding a justified position; (3) Overlooking scalability, designing for current state without considering large data volumes or future growth; (4) Not addressing trade-offs, presenting one solution as if there are no alternatives or downsides; (5) Weak security architecture, not addressing field-level security, sharing rules, or external identity at scale.',
   },
   {
     question: 'What concepts do most Technical Architect Review Board candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Technical Architect Review Board exam are: (1) The Scenario Is Deliberately Ambiguous — You Must Ask Clarifying Questions; (2) Defence Matters as Much as the Solution; (3) End-to-End Solution — Security, Deployment, and Governance Are Scored. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Technical Architect Review Board exam are: (1) The Scenario Is Deliberately Ambiguous: You Must Ask Clarifying Questions; (2) Defence Matters as Much as the Solution; (3) End-to-End Solution: Security, Deployment, and Governance Are Scored. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('technical-architect-review-board-exam-tips'),
 ]
@@ -79,7 +79,7 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
         </h1>
         <p className="text-lg text-gray-600">
           The CTA Review Board is the live presentation component of the Salesforce Certified Technical
-          Architect credential — a half-day session where you present your solution to a panel of sitting
+          Architect credential, a half-day session where you present your solution to a panel of sitting
           CTAs. These tips focus on presentation structure, whiteboarding technique, and Q&amp;A defence
           strategy for this expert-level assessment.
         </p>
@@ -93,9 +93,9 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What the CTA Review Board Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Architectural breadth under pressure</strong> — The Review Board tests whether you can design a complete enterprise Salesforce architecture covering all domains simultaneously: data architecture (LDV, Big Objects), integration (API-led, CDC, MuleSoft), identity (SAML SSO, OAuth, Experience Cloud), security (OWD, sharing rules, FLS at scale), and deployment (release management, scratch orgs, CI/CD) — all in response to a single complex scenario.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Decision justification and trade-off reasoning</strong> — The panel of CTAs deliberately challenges your decisions. They want to see you justify choices with explicit trade-offs (single-org vs multi-org: simpler governance but harder to achieve separate release cycles), hold your position under pressure when your reasoning is sound, and pivot gracefully when challenged with a valid constraint you had not considered.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Risk identification and mitigation</strong> — Strong candidates proactively identify architectural risks in their own solution (large data volumes triggering sharing recalculation, Apex governor limits in complex automation, integration failure cascades) and describe mitigation strategies. Candidates who only present the ’happy path’ without acknowledging risks are seen as less architecturally mature.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Architectural breadth under pressure</strong>: The Review Board tests whether you can design a complete enterprise Salesforce architecture covering all domains simultaneously: data architecture (LDV, Big Objects), integration (API-led, CDC, MuleSoft), identity (SAML SSO, OAuth, Experience Cloud), security (OWD, sharing rules, FLS at scale), and deployment (release management, scratch orgs, CI/CD), all in response to a single complex scenario.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Decision justification and trade-off reasoning</strong>: The panel of CTAs deliberately challenges your decisions. They want to see you justify choices with explicit trade-offs (single-org vs multi-org: simpler governance but harder to achieve separate release cycles), hold your position under pressure when your reasoning is sound, and pivot gracefully when challenged with a valid constraint you had not considered.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Risk identification and mitigation</strong>: Strong candidates proactively identify architectural risks in their own solution (large data volumes triggering sharing recalculation, Apex governor limits in complex automation, integration failure cascades) and describe mitigation strategies. Candidates who only present the ’happy path’ without acknowledging risks are seen as less architecturally mature.</li>
         </ul>
       </section>
 
@@ -122,21 +122,21 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
             <span className="font-medium text-gray-900">Solution Architecture (Org Strategy, Clouds)</span>
             <span className="font-bold text-salesforce-blue ml-4">Always address</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">All domains must be addressed in your presentation — not just the primary scenario focus. Missing a domain entirely (e.g., not discussing deployment strategy) is a common failure pattern.</p>
+          <p className="text-xs text-gray-600 pt-1">All domains must be addressed in your presentation, not just the primary scenario focus. Missing a domain entirely (e.g., not discussing deployment strategy) is a common failure pattern.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach the Review Board</h2>
         <p className="text-sm text-gray-700 mb-3">
-          The Review Board scenario is deliberately ambiguous — it will have constraints that conflict and
+          The Review Board scenario is deliberately ambiguous; it will have constraints that conflict and
           requirements that could be solved multiple ways. The panel does not want the ’right answer’;
           they want to see architectural thinking, trade-off analysis, and the ability to defend a justified
           position under interrogation.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For whiteboarding: draw a high-level architecture diagram first (org structure, system landscape, integration flows, identity boundaries). Use swim lanes or zones to separate concerns (internal users vs external users vs systems). Label every arrow with the integration pattern (REST, CDC, MuleSoft, Platform Events). The panel evaluates your diagram independently — it must stand alone as a clear architectural artefact, not just a prop for your verbal explanation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For panel Q&amp;A: when the panel challenges a decision (’why not multi-org?’, ’what if the integration fails?’), respond with ’That’s a valid consideration — in this scenario I chose [approach] because [specific constraint from the scenario] makes [alternative] less suitable, though if [different constraint] were present, I would reconsider.’ This structure shows you understand alternatives without abandoning your justified position. Do not simply agree with every challenge.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For whiteboarding: draw a high-level architecture diagram first (org structure, system landscape, integration flows, identity boundaries). Use swim lanes or zones to separate concerns (internal users vs external users vs systems). Label every arrow with the integration pattern (REST, CDC, MuleSoft, Platform Events). The panel evaluates your diagram independently; it must stand alone as a clear architectural artefact, not just a prop for your verbal explanation.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For panel Q&amp;A: when the panel challenges a decision (’why not multi-org?’, ’what if the integration fails?’), respond with ’That’s a valid consideration, in this scenario I chose [approach] because [specific constraint from the scenario] makes [alternative] less suitable, though if [different constraint] were present, I would reconsider.’ This structure shows you understand alternatives without abandoning your justified position. Do not simply agree with every challenge.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LDV scenarios (very common in Review Board): if the scenario mentions millions of records or high-volume data, explicitly address skinny tables for reporting performance, custom indexes for selective queries, data archiving strategy with Big Objects, and the impact of sharing recalculation on large data volumes. If you wait for the panel to ask about LDV rather than addressing it proactively, it signals insufficient architectural foresight.</li>
         </ul>
       </section>
@@ -145,7 +145,7 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Preparation Approach for the CTA Review Board</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Mock Review Board sessions with a CTA mentor are essential — written study alone is insufficient
+          Mock Review Board sessions with a CTA mentor are essential, written study alone is insufficient
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The most effective preparation is live mock Review Board sessions with a sitting CTA acting as
@@ -161,19 +161,19 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Technical Architect Review Board Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. The Scenario Is Deliberately Ambiguous — You Must Ask Clarifying Questions</p>
+            <p className="font-semibold text-gray-900 mb-1">1. The Scenario Is Deliberately Ambiguous: You Must Ask Clarifying Questions</p>
             <p className="text-sm text-gray-700">The Review Board scenario intentionally omits details to see if candidates proactively identify and resolve ambiguity. Candidates who proceed on assumptions without questioning constraints will design solutions that do not fit the actual requirements. The first 10 minutes of the board should include explicit clarifying questions: "What is the data volume?" "Is multi-org on the table?" "What are the timeline constraints?"</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Defence Matters as Much as the Solution</p>
-            <p className="text-sm text-gray-700">Board members will challenge your design choices. A technically correct architecture that you cannot defend is scored lower than a pragmatic architecture you can explain under pressure. Candidates over-engineer their architecture to impress — the board expects a defensible, constraint-aware design with clear rationale for every major decision.</p>
+            <p className="text-sm text-gray-700">Board members will challenge your design choices. A technically correct architecture that you cannot defend is scored lower than a pragmatic architecture you can explain under pressure. Candidates over-engineer their architecture to impress, the board expects a defensible, constraint-aware design with clear rationale for every major decision.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. End-to-End Solution — Security, Deployment, and Governance Are Scored</p>
-            <p className="text-sm text-gray-700">The Review Board scores the full solution, not just the technical architecture. Missing sections include: data security and sharing model, deployment and release strategy, integration governance, and post-launch support model. Candidates present only the data model and integration diagrams — the board expects a complete solution narrative covering all scored dimensions.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. End-to-End Solution: Security, Deployment, and Governance Are Scored</p>
+            <p className="text-sm text-gray-700">The Review Board scores the full solution, not just the technical architecture. Missing sections include: data security and sharing model, deployment and release strategy, integration governance, and post-launch support model. Candidates present only the data model and integration diagrams, the board expects a complete solution narrative covering all scored dimensions.</p>
           </div>
         </div>
       </section>

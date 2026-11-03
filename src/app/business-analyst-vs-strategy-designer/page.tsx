@@ -48,15 +48,15 @@ const faqItems = [
   },
   {
     question: 'Which should I take first: Business Analyst or Strategy Designer?',
-    answer: 'Both are standalone certifications with no prerequisites, but Business Analyst is more widely requested by employers for typical consultant and BA roles. Strategy Designer is a more specialised credential — it is highly valued at design-led consultancies and for roles that blend product design with Salesforce delivery. If you work primarily on requirement gathering and Agile delivery, take Business Analyst first. If your role involves CX strategy, design thinking workshops, and experience design, Strategy Designer is the right credential.',
+    answer: 'Both are standalone certifications with no prerequisites, but Business Analyst is more widely requested by employers for typical consultant and BA roles. Strategy Designer is a more specialised credential; it is highly valued at design-led consultancies and for roles that blend product design with Salesforce delivery. If you work primarily on requirement gathering and Agile delivery, take Business Analyst first. If your role involves CX strategy, design thinking workshops, and experience design, Strategy Designer is the right credential.',
   },
   {
     question: 'Is the Strategy Designer exam harder than Business Analyst?',
-    answer: 'Strategy Designer is generally considered harder due to its focus on design methodology — a topic area that is more abstract and less familiar to typical Salesforce professionals. Business Analyst tests more familiar territory (requirements gathering, user stories, process flows) and aligns closely with what most consultants already do in practice. Strategy Designer requires understanding of design research methods, facilitation techniques, and design sprint frameworks that many candidates need to study from scratch.',
+    answer: 'Strategy Designer is generally considered harder due to its focus on design methodology, a topic area that is more abstract and less familiar to typical Salesforce professionals. Business Analyst tests more familiar territory (requirements gathering, user stories, process flows) and aligns closely with what most consultants already do in practice. Strategy Designer requires understanding of design research methods, facilitation techniques, and design sprint frameworks that many candidates need to study from scratch.',
   },
   {
     question: 'Can you take both Business Analyst and Strategy Designer?',
-    answer: 'Yes — both certifications are complementary and often pursued together. A professional who holds both credentials demonstrates a full spectrum of skills: from stakeholder engagement and requirements analysis (BA) through to experience design and CX strategy (Strategy Designer). This combination is increasingly valued on large transformation programmes where user experience is as important as technical delivery.',
+    answer: 'Yes, both certifications are complementary and often pursued together. A professional who holds both credentials demonstrates a full spectrum of skills: from stakeholder engagement and requirements analysis (BA) through to experience design and CX strategy (Strategy Designer). This combination is increasingly valued on large transformation programmes where user experience is as important as technical delivery.',
   },
 ]
 
@@ -106,7 +106,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
           certName: "Business Analyst",
           certSlug: "business-analyst",
           examTipsSlug: "business-analyst-exam-tips",
-          reason: "Business Analyst has broader employer recognition and pairs naturally with any functional consultant cert. Strategy Designer is a strong differentiator but is best taken after BA — it extends the skillset rather than replacing it.",
+          reason: "Business Analyst has broader employer recognition and pairs naturally with any functional consultant cert. Strategy Designer is a strong differentiator but is best taken after BA, it extends the skillset rather than replacing it.",
           
         }}
       />
@@ -140,8 +140,8 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Demand Level</td>
-                <td className="py-2.5 pr-4">High — standard on most large Salesforce programmes</td>
-                <td className="py-2.5">Growing — especially at design-led consultancies and product teams</td>
+                <td className="py-2.5 pr-4">High, standard on most large Salesforce programmes</td>
+                <td className="py-2.5">Growing, especially at design-led consultancies and product teams</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Best For</td>
@@ -163,7 +163,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>Business Analyst</strong> if you spend most of your time gathering requirements, writing user stories, facilitating workshops to elicit business needs, or managing UAT on Salesforce projects.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>Strategy Designer</strong> if your work involves defining the experience strategy, running design thinking workshops, creating journey maps, or shaping what a Salesforce solution should achieve for end users.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Note: Business Analyst has a <strong>higher passing score (72%)</strong> than most Salesforce certs — budget extra study time for scenario-based questions on requirements management and stakeholder communication.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Note: Business Analyst has a <strong>higher passing score (72%)</strong> than most Salesforce certs, budget extra study time for scenario-based questions on requirements management and stakeholder communication.</li>
         </ul>
       </section>
 
@@ -200,7 +200,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Working as a Salesforce BA or functional analyst on implementation projects</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">Business Analyst — directly maps to your role</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Business Analyst, directly maps to your role</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Consultant focused on transformational CX or service design outcomes</td>
@@ -208,11 +208,11 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Want to move from BA into UX or design thinking roles</td>
-                <td className="py-2.5 font-semibold text-purple-700">Strategy Designer — bridges BA skills into design thinking</td>
+                <td className="py-2.5 font-semibold text-purple-700">Strategy Designer, bridges BA skills into design thinking</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Both — which is more in demand?</td>
-                <td className="py-2.5 font-semibold text-gray-700">Business Analyst — more role-to-cert alignment in current job market</td>
+                <td className="py-2.5 pr-4">Both; which is more in demand?</td>
+                <td className="py-2.5 font-semibold text-gray-700">Business Analyst, more role-to-cert alignment in current job market</td>
               </tr>
             </tbody>
           </table>

@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce Strategy Designer certification?',
-    answer: 'The Salesforce Certified Strategy Designer validates expertise in human-centred design strategy — understanding business context, empathising with customers, defining product vision, and measuring design impact. It sits in the Designer track alongside UX Designer and focuses on the upstream, strategic phase of design work rather than the tactical execution layer. It is suited for design strategists, consultants, business analysts, and product managers working in the Salesforce ecosystem.',
+    answer: 'The Salesforce Certified Strategy Designer validates expertise in human-centred design strategy, understanding business context, empathising with customers, defining product vision, and measuring design impact. It sits in the Designer track alongside UX Designer and focuses on the upstream, strategic phase of design work rather than the tactical execution layer. It is suited for design strategists, consultants, business analysts, and product managers working in the Salesforce ecosystem.',
   },
   {
     question: 'What is the Strategy Designer exam format?',
@@ -71,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'Do I need a design background to pass Strategy Designer?',
-    answer: 'Not necessarily — the exam tests strategic thinking and methodology rather than visual design skills. Professionals with business analysis, product management, consulting, or UX strategy backgrounds often perform well. The exam does assume familiarity with human-centred design thinking principles and design research methods. Candidates from purely technical backgrounds (developers, admins) without design exposure typically need more preparation time to learn the design methodology vocabulary.',
+    answer: 'Not necessarily, the exam tests strategic thinking and methodology rather than visual design skills. Professionals with business analysis, product management, consulting, or UX strategy backgrounds often perform well. The exam does assume familiarity with human-centred design thinking principles and design research methods. Candidates from purely technical backgrounds (developers, admins) without design exposure typically need more preparation time to learn the design methodology vocabulary.',
   },
 ]
 
@@ -94,7 +94,7 @@ export default function StrategyDesignerStudyGuidePage() {
           Salesforce Strategy Designer Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Strategy Designer exam — human-centred design frameworks, exam sections, a focused study plan, and tips for passing the scenario-heavy questions.
+          A complete study guide for the Salesforce Certified Strategy Designer exam, human-centred design frameworks, exam sections, a focused study plan, and tips for passing the scenario-heavy questions.
         </p>
       </div>
 
@@ -167,7 +167,7 @@ export default function StrategyDesignerStudyGuidePage() {
             { week: 'Week 3', focus: 'Human context & research methods', tasks: 'Study empathy research methods: interviews, observation, journey mapping. Practice synthesising qualitative research findings.' },
             { week: 'Week 4', focus: 'Product direction & prioritisation', tasks: 'Study opportunity mapping, vision definition, and design sprint frameworks. Practice prioritisation methods (impact vs effort matrices).' },
             { week: 'Week 5', focus: 'Evaluation & outcome measurement', tasks: 'Study KPI frameworks, outcome-based measurement, and design critique methods. Practice scenario-based questions.' },
-            { week: 'Week 6', focus: 'Full mock exams', tasks: 'Take timed full mock exams. Target 75%+ before booking. The exam is scenario-heavy — focus on applying frameworks, not memorising definitions.' },
+            { week: 'Week 6', focus: 'Full mock exams', tasks: 'Take timed full mock exams. Target 75%+ before booking. The exam is scenario-heavy. Focus on applying frameworks, not memorising definitions.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-4">
               <div className="flex-shrink-0 w-16 text-xs font-bold text-salesforce-blue pt-0.5">{item.week}</div>
@@ -194,7 +194,7 @@ export default function StrategyDesignerStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/ux-designer-vs-strategy-designer" className="text-sm text-salesforce-dark hover:underline font-medium">→ UX Designer vs Strategy Designer — full certification comparison</Link></li>
+          <li><Link href="/ux-designer-vs-strategy-designer" className="text-sm text-salesforce-dark hover:underline font-medium">→ UX Designer vs Strategy Designer, full certification comparison</Link></li>
         </ul>
       </div>
 
@@ -209,7 +209,7 @@ export default function StrategyDesignerStudyGuidePage() {
       <DifficultyHeatmap slug="strategy-designer" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Strategy Designer Questions</h2>
-        <p className="text-white mb-6">Free practice questions for the Salesforce Strategy Designer exam — apply design frameworks to exam scenarios.</p>
+        <p className="text-white mb-6">Free practice questions for the Salesforce Strategy Designer exam, apply design frameworks to exam scenarios.</p>
         <Link href="/certifications/strategy-designer" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

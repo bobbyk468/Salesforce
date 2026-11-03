@@ -10,7 +10,7 @@ export default function MCStudioDecisionDiagram() {
     <figure id="mc-studio-decision-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Which Marketing Cloud Studio to use when (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Consultant exam scenarios almost always reduce to matching a business need to the correct Studio — this is
+        Consultant exam scenarios almost always reduce to matching a business need to the correct Studio; this is
         the single highest-frequency question pattern.
       </p>
       <svg role="img" aria-labelledby="mcs-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 620 190" xmlns="http://www.w3.org/2000/svg">

@@ -85,9 +85,9 @@ export default function AboutPage() {
         </h2>
         <p className="text-gray-700">We focus on three things:</p>
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
-          <li><strong>Section-wise exam weightage</strong> — So you know where to spend your study time.</li>
-          <li><strong>Exam prep content</strong> — Tips, prerequisites, focus areas, and a study strategy for each certification.</li>
-          <li><strong>Sample practice questions with explanations</strong> — Aligned with official exam outlines.</li>
+          <li><strong>Section-wise exam weightage</strong>: So you know where to spend your study time.</li>
+          <li><strong>Exam prep content</strong>: Tips, prerequisites, focus areas, and a study strategy for each certification.</li>
+          <li><strong>Sample practice questions with explanations</strong>: Aligned with official exam outlines.</li>
         </ul>
         <p className="text-gray-700">
           We do not offer braindumps or real exam questions. Our materials help you learn and check your knowledge.
@@ -102,10 +102,10 @@ export default function AboutPage() {
           All content on this site is <strong>original and unique</strong>, written for Trailblaze Prep. We do not copy or scrape from other sites or study guides. Each certification page includes:
         </p>
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
-          <li><strong>Unique practice questions</strong> — Written to test concepts for that exam.</li>
-          <li><strong>Original exam tips and strategies</strong> — Based on official outlines and experience.</li>
-          <li><strong>Unique descriptions and explanations</strong> — Written fresh for this site.</li>
-          <li><strong>Original analysis</strong> — Weightage comes from official outlines; our presentation and recommendations are our own.</li>
+          <li><strong>Unique practice questions</strong>: Written to test concepts for that exam.</li>
+          <li><strong>Original exam tips and strategies</strong>: Based on official outlines and experience.</li>
+          <li><strong>Unique descriptions and explanations</strong>: Written fresh for this site.</li>
+          <li><strong>Original analysis</strong>: Weightage comes from official outlines; our presentation and recommendations are our own.</li>
         </ul>
         <p className="text-gray-700 mt-4">
           Original content helps search engines index and rank our pages. Each page gives unique value for your exam prep.

@@ -74,7 +74,7 @@
       },
       {
         "heading": "Availability and Resilience",
-        "body": "Uptime comes from having more than one of everything. On CloudHub, run **several replicas** of an application so one failure does not stop the service. On Runtime Fabric and customer-hosted runtimes, **clustering** shares work and state across nodes, and some components, such as schedulers, run only on the primary node so a job does not fire twice. For messages that must not be lost, use **persistent queues** or Anypoint MQ rather than in-memory handling. Plan for a region failing as well as a node: that means a second deployment and a way to move traffic. Know your recovery targets and design to them rather than to a general wish for high availability."
+        "body": "Uptime comes from having more than one of everything. On CloudHub, run **several replicas** of an application so one failure does not stop the service. On Runtime Fabric and customer-hosted runtimes, **clustering** shares work and state across nodes, and some components, such as schedulers; run only on the primary node so a job does not fire twice. For messages that must not be lost, use **persistent queues** or Anypoint MQ rather than in-memory handling. Plan for a region failing as well as a node: that means a second deployment and a way to move traffic. Know your recovery targets and design to them rather than to a general wish for high availability."
       },
       {
         "heading": "Governance, Environments and Monitoring",
@@ -166,7 +166,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A bank must keep all customer data inside its own data centre, but still wants to manage APIs centrally through Anypoint Platform. Which deployment model fits?",
+      "question": "A bank must keep all customer data inside its own data centre; but still wants to manage APIs centrally through Anypoint Platform. Which deployment model fits?",
       "options": [
         "A shared load balancer",
         "Design Center",

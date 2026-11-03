@@ -179,9 +179,9 @@
       "correctAnswer": 3,
       "explanation": "The Associate certification is designed for individuals who may have up to 6 months of user experience.",
       "whyWrong": [
-        "'Developers only' is too narrow — this associate-level credential targets general users, not developers specifically.",
-        "'Architects only' is too narrow — this is an entry-level credential, not an architect-level one.",
-        "'Marketers only' is too narrow — this credential targets general platform users, not a specific role."
+        "'Developers only' is too narrow, this associate-level credential targets general users, not developers specifically.",
+        "'Architects only' is too narrow; this is an entry-level credential, not an architect-level one.",
+        "'Marketers only' is too narrow, this credential targets general platform users, not a specific role."
       ]
     },
     {
@@ -211,7 +211,7 @@
       "correctAnswer": 0,
       "explanation": "Account is a core object representing companies or people you do business with.",
       "whyWrong": [
-        "Dashboard visualizes data — it isn't the central CRM data model object.",
+        "Dashboard visualizes data, it isn't the central CRM data model object.",
         "Report is a data display tool, not the central data model object.",
         "Email Template is a content asset, unrelated to the core data model."
       ]
@@ -227,8 +227,8 @@
       "correctAnswer": 2,
       "explanation": "A record is a single row of data in an object.",
       "whyWrong": [
-        "A dashboard visualizes data — it isn't itself a single row of data.",
-        "A permission set controls access — it isn't a data row.",
+        "A dashboard visualizes data, it isn't itself a single row of data.",
+        "A permission set controls access, it isn't a data row.",
         "A report type defines report structure, not an individual data row."
       ]
     },
@@ -259,9 +259,9 @@
       "correctAnswer": 1,
       "explanation": "Dashboards display multiple report charts and metrics in a single view.",
       "whyWrong": [
-        "A single report shows one dataset — a Dashboard combines multiple report components together.",
+        "A single report shows one dataset, a Dashboard combines multiple report components together.",
         "An email template is a content asset, unrelated to Dashboards.",
-        "A list view shows a filtered record list — it isn't the multi-component visual summary a Dashboard provides."
+        "A list view shows a filtered record list, it isn't the multi-component visual summary a Dashboard provides."
       ]
     },
     {
@@ -275,8 +275,8 @@
       "correctAnswer": 2,
       "explanation": "Chatter and Activity enable comments, mentions, and collaboration on records.",
       "whyWrong": [
-        "Validation rules enforce data entry rules — they aren't a collaboration feature.",
-        "Workflow rules automate backend logic — they aren't a real-time collaboration feature.",
+        "Validation rules enforce data entry rules, they aren't a collaboration feature.",
+        "Workflow rules automate backend logic, they aren't a real-time collaboration feature.",
         "'Reports only' misattributes real-time collaboration to a display feature, not a collaboration tool."
       ]
     },
@@ -291,8 +291,8 @@
       "correctAnswer": 3,
       "explanation": "Lightning Experience is the modern, responsive Salesforce UI.",
       "whyWrong": [
-        "'Classic only' is the opposite of what Lightning Experience refers to — Classic is the older interface.",
-        "Lightning Experience isn't limited to mobile — it's the full desktop and mobile modern interface.",
+        "'Classic only' is the opposite of what Lightning Experience refers to; Classic is the older interface.",
+        "Lightning Experience isn't limited to mobile, it's the full desktop and mobile modern interface.",
         "An API is a technical integration mechanism, not a user interface."
       ]
     },
@@ -323,9 +323,9 @@
       "correctAnswer": 0,
       "explanation": "List views show filtered records in a tabular layout for quick access.",
       "whyWrong": [
-        "A report type defines report structure — it isn't itself the filtered record list being described.",
-        "A permission set controls access — it isn't a filtered list of records.",
-        "A dashboard visualizes data — it isn't the filtered table view being described."
+        "A report type defines report structure, it isn't itself the filtered record list being described.",
+        "A permission set controls access, it isn't a filtered list of records.",
+        "A dashboard visualizes data, it isn't the filtered table view being described."
       ]
     },
     {
@@ -339,8 +339,8 @@
       "correctAnswer": 1,
       "explanation": "App Launcher and global search help users navigate and find content.",
       "whyWrong": [
-        "Workflow automates backend logic — it's unrelated to navigation and search.",
-        "Validation rules enforce data quality — they're unrelated to navigation.",
+        "Workflow automates backend logic, it's unrelated to navigation and search.",
+        "Validation rules enforce data quality, they're unrelated to navigation.",
         "'Report Builder only' misattributes navigation/search to a different, unrelated reporting tool."
       ]
     },

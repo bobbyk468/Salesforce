@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Order Management Admin candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Order Management Admin exam are: (1) Fulfillment Orders vs Order Summaries — Operational vs Commercial; (2) Order Routing Rules — Not Configured in Flow by Default; (3) Return Merchandise Authorisation (RMA) — Separate Process from Cancellation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Order Management Admin exam are: (1) Fulfillment Orders vs Order Summaries: Operational vs Commercial; (2) Order Routing Rules: Not Configured in Flow by Default; (3) Return Merchandise Authorisation (RMA): Separate Process from Cancellation. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('order-management-admin-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function OrderManagementAdminApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Order Management Admin AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Order lifecycle and fulfilment configuration</strong> — Order status configuration and state transitions, fulfilment order creation and routing (which fulfilment location handles which products), split order handling (different products fulfilled from different locations), shipment tracking integration, and order summary vs. fulfilment order data model distinctions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Return and exchange management</strong> — Configuring the RMA workflow (customer requests return → return authorised → item received → inventory updated → refund issued), handling partial returns, exchange order creation for size/colour swaps, damaged goods processing, and refund automation via payment gateway integration.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Inventory and commerce integration</strong> — Managing inventory availability by location, configuring fulfilment location priority rules, integrating with B2C Commerce or external commerce platforms for order ingestion, webhook configuration for order status updates to downstream systems, and the Salesforce OMS data model (Order Summary, Fulfilment Order, Order Delivery Group).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Order lifecycle and fulfilment configuration</strong>: Order status configuration and state transitions, fulfilment order creation and routing (which fulfilment location handles which products), split order handling (different products fulfilled from different locations), shipment tracking integration, and order summary vs. fulfilment order data model distinctions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Return and exchange management</strong>: Configuring the RMA workflow (customer requests return → return authorised → item received → inventory updated → refund issued), handling partial returns, exchange order creation for size/colour swaps, damaged goods processing, and refund automation via payment gateway integration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Inventory and commerce integration</strong>: Managing inventory availability by location, configuring fulfilment location priority rules, integrating with B2C Commerce or external commerce platforms for order ingestion, webhook configuration for order status updates to downstream systems, and the Salesforce OMS data model (Order Summary, Fulfilment Order, Order Delivery Group).</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function OrderManagementAdminApExamTipsPage() {
             <span className="font-medium text-gray-900">Reporting and Customer Service</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The OMS data model (Order Summary → Fulfilment Order → Order Delivery Group) is the foundation — know these objects and their relationships.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The OMS data model (Order Summary → Fulfilment Order → Order Delivery Group) is the foundation. Know these objects and their relationships.</p>
         </div>
       </section>
 
@@ -135,12 +135,12 @@ export default function OrderManagementAdminApExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Questions describe an order management scenario and ask which OMS feature, object, or
           workflow configuration addresses it. The OMS data model is distinct from standard
-          Salesforce order objects — use OMS-specific objects, not standard Order and OrderItem.
+          Salesforce order objects, use OMS-specific objects, not standard Order and OrderItem.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: Order Summary = the customer-facing record of what was ordered (the full order). Fulfilment Order = the subset of items being fulfilled from one location. Order Delivery Group = the shipment method and address for a set of items. One Order Summary can have multiple Fulfilment Orders (split shipments) and multiple Order Delivery Groups. When a scenario says ’a customer ordered 3 items and they ship from 2 different warehouses’, the answer is one Order Summary with two Fulfilment Orders.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For fulfilment routing questions: Routing Rules determine which fulfilment location handles which product based on: inventory availability, location proximity to the customer, fulfilment priority (ship-from-store vs. warehouse), and product-location restrictions. When a scenario says ’always fulfil from the nearest store with available stock’, configure a proximity-based routing rule with inventory availability as a prerequisite check.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For return questions: the return flow is: Customer requests return → Return Order created → RMA authorisation generated → Customer ships item back → Fulfilment Location receives return → Inventory updated → Refund Change Order created → Refund processed. When a scenario says ’process a refund for a customer who returned 2 of 5 items from their order’, create a partial Return Order linked to the original Order Summary — not a new order or a credit note.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For return questions: the return flow is: Customer requests return → Return Order created → RMA authorisation generated → Customer ships item back → Fulfilment Location receives return → Inventory updated → Refund Change Order created → Refund processed. When a scenario says ’process a refund for a customer who returned 2 of 5 items from their order’, create a partial Return Order linked to the original Order Summary, not a new order or a credit note.</li>
         </ul>
       </section>
 
@@ -152,8 +152,7 @@ export default function OrderManagementAdminApExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Order Management Admin AP is for OMS implementation teams and commerce platform administrators.
-          The OMS data model is significantly different from standard Salesforce order objects —
-          study the Salesforce Order Management documentation carefully. The OMS Trailmix and
+          The OMS data model is significantly different from standard Salesforce order objects. Study the Salesforce Order Management documentation carefully. The OMS Trailmix and
           implementation guide are the primary study resources.
         </p>
       </section>
@@ -161,19 +160,19 @@ export default function OrderManagementAdminApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Order Management Admin Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Fulfillment Orders vs Order Summaries — Operational vs Commercial</p>
-            <p className="text-sm text-gray-700">Order Summaries represent the customer-facing order (what was ordered, total price, status). Fulfillment Orders represent the operational fulfilment split (sent from warehouse A vs warehouse B). One Order Summary can generate multiple Fulfillment Orders based on routing rules. Candidates update Order Summaries for operational status changes — the exam expects Fulfillment Order updates for warehouse and shipping status.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Fulfillment Orders vs Order Summaries: Operational vs Commercial</p>
+            <p className="text-sm text-gray-700">Order Summaries represent the customer-facing order (what was ordered, total price, status). Fulfillment Orders represent the operational fulfilment split (sent from warehouse A vs warehouse B). One Order Summary can generate multiple Fulfillment Orders based on routing rules. Candidates update Order Summaries for operational status changes, the exam expects Fulfillment Order updates for warehouse and shipping status.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Order Routing Rules — Not Configured in Flow by Default</p>
-            <p className="text-sm text-gray-700">Order routing assigns line items to fulfilment locations based on inventory availability, location proximity, or business rules. In Salesforce OMS, routing rules are configured in the Routing Engine (not via standard Flow). Candidates build custom Flow routing logic — the exam expects Routing Rule configuration within Order Management’s built-in routing framework.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Order Routing Rules: Not Configured in Flow by Default</p>
+            <p className="text-sm text-gray-700">Order routing assigns line items to fulfilment locations based on inventory availability, location proximity, or business rules. In Salesforce OMS, routing rules are configured in the Routing Engine (not via standard Flow). Candidates build custom Flow routing logic, the exam expects Routing Rule configuration within Order Management’s built-in routing framework.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Return Merchandise Authorisation (RMA) — Separate Process from Cancellation</p>
-            <p className="text-sm text-gray-700">A Cancellation stops an order before it ships (no physical return required). An RMA processes a post-shipment return: the customer ships back the goods, inventory is restocked, and a refund is issued. These are separate workflows in Salesforce OMS. Candidates use Cancellation logic for post-shipment returns — the exam expects the RMA workflow with return order, return line items, and refund processing.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Return Merchandise Authorisation (RMA): Separate Process from Cancellation</p>
+            <p className="text-sm text-gray-700">A Cancellation stops an order before it ships (no physical return required). An RMA processes a post-shipment return: the customer ships back the goods, inventory is restocked, and a refund is issued. These are separate workflows in Salesforce OMS. Candidates use Cancellation logic for post-shipment returns, the exam expects the RMA workflow with return order, return line items, and refund processing.</p>
           </div>
         </div>
       </section>

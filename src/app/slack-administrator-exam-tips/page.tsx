@@ -61,11 +61,11 @@ const faqItems = [
   },
   {
     question: 'What is Slack Connect and why is it tested heavily?',
-    answer: 'Slack Connect allows communication between separate Slack workspaces — used for external collaboration with clients or partners. The exam tests Slack Connect governance: who can send invitations, how admins control external channel creation, DLP policies for Connect channels, and the difference between Connect DMs and Connect channels.',
+    answer: 'Slack Connect allows communication between separate Slack workspaces, used for external collaboration with clients or partners. The exam tests Slack Connect governance: who can send invitations, how admins control external channel creation, DLP policies for Connect channels, and the difference between Connect DMs and Connect channels.',
   },
   {
     question: 'What concepts do most Slack Administrator candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Slack Administrator exam are: (1) Workspace vs Organisation vs Enterprise Grid — Three Admin Scopes; (2) Public vs Private vs Shared Channels — Visibility and External Access; (3) User Groups vs Channels — @mention Broadcast vs Conversation Space. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Slack Administrator exam are: (1) Workspace vs Organisation vs Enterprise Grid: Three Admin Scopes; (2) Public vs Private vs Shared Channels: Visibility and External Access; (3) User Groups vs Channels: @mention Broadcast vs Conversation Space. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('slack-administrator-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function SlackAdministratorExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Slack Administrator Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Workspace management</strong> — Channel types (public, private, shared), message retention policies, workspace settings, admin and owner roles, and how to manage members across workspaces or an Enterprise Grid.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security and compliance</strong> — Data Loss Prevention (DLP), message retention, eDiscovery, two-factor authentication requirements, approved app lists, and workspace-level security settings for regulated industries.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Slack Connect and guests</strong> — External channel governance, guest type limitations (single vs. multi-channel), Slack Connect invitation controls, and how admins restrict external collaboration for compliance.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Workspace management</strong>: Channel types (public, private, shared), message retention policies, workspace settings, admin and owner roles, and how to manage members across workspaces or an Enterprise Grid.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security and compliance</strong>: Data Loss Prevention (DLP), message retention, eDiscovery, two-factor authentication requirements, approved app lists, and workspace-level security settings for regulated industries.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Slack Connect and guests</strong>: External channel governance, guest type limitations (single vs. multi-channel), Slack Connect invitation controls, and how admins restrict external collaboration for compliance.</li>
         </ul>
       </section>
 
@@ -137,13 +137,13 @@ export default function SlackAdministratorExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Slack Administrator Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe an administrative or governance scenario and ask which setting, role, or feature
-          addresses it. Read for the constraint — compliance, guest access, external collaboration, or app
-          management — and eliminate answers that grant more access than needed.
+          addresses it. Read for the constraint, compliance, guest access, external collaboration, or app
+          management, and eliminate answers that grant more access than needed.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For guest access questions: Single-Channel Guests are the most restrictive option — they only see the channels they are explicitly invited to. Multi-Channel Guests see multiple specific channels. Members see everything. Prefer the most restrictive option for external users.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For retention policy questions: workspace-level retention applies to all channels unless overridden by channel-level settings. Longer retention = more storage, higher compliance overhead. eDiscovery exports require a paid compliance plan — know which features require which plan tier.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Enterprise Grid questions: Grid allows multiple workspaces under one organisation. Org-level admins can manage all workspaces; workspace admins manage individual workspaces. Channel types (org-wide channels) only exist in Enterprise Grid — this distinction is tested.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For guest access questions: Single-Channel Guests are the most restrictive option; they only see the channels they are explicitly invited to. Multi-Channel Guests see multiple specific channels. Members see everything. Prefer the most restrictive option for external users.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For retention policy questions: workspace-level retention applies to all channels unless overridden by channel-level settings. Longer retention = more storage, higher compliance overhead. eDiscovery exports require a paid compliance plan. Know which features require which plan tier.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Enterprise Grid questions: Grid allows multiple workspaces under one organisation. Org-level admins can manage all workspaces; workspace admins manage individual workspaces. Channel types (org-wide channels) only exist in Enterprise Grid, this distinction is tested.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function SlackAdministratorExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Slack Administrator Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Workspace vs Organisation vs Enterprise Grid — Three Admin Scopes</p>
-            <p className="text-sm text-gray-700">A Workspace is a single Slack instance (company.slack.com). An Organisation groups multiple Workspaces under shared admin controls. Enterprise Grid connects many Organisations under one enterprise umbrella with centralised security. Candidates apply Workspace-level settings to Enterprise Grid problems — the exam distinguishes admin scope: Workspace Admin (one workspace), Org Admin (multiple workspaces), Enterprise Grid Admin (enterprise-wide).</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Workspace vs Organisation vs Enterprise Grid: Three Admin Scopes</p>
+            <p className="text-sm text-gray-700">A Workspace is a single Slack instance (company.slack.com). An Organisation groups multiple Workspaces under shared admin controls. Enterprise Grid connects many Organisations under one enterprise umbrella with centralised security. Candidates apply Workspace-level settings to Enterprise Grid problems, the exam distinguishes admin scope: Workspace Admin (one workspace), Org Admin (multiple workspaces), Enterprise Grid Admin (enterprise-wide).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Public vs Private vs Shared Channels — Visibility and External Access</p>
-            <p className="text-sm text-gray-700">Public channels are visible and joinable by all workspace members. Private channels require an invitation — members cannot search or join uninvited. Shared channels (Slack Connect) connect internal channels with external organisations. Candidates recommend Private channels for External Partner collaboration — the exam expects Shared Channels (Slack Connect) for cross-organisation communication.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Public vs Private vs Shared Channels: Visibility and External Access</p>
+            <p className="text-sm text-gray-700">Public channels are visible and joinable by all workspace members. Private channels require an invitation, members cannot search or join uninvited. Shared channels (Slack Connect) connect internal channels with external organisations. Candidates recommend Private channels for External Partner collaboration, the exam expects Shared Channels (Slack Connect) for cross-organisation communication.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. User Groups vs Channels — @mention Broadcast vs Conversation Space</p>
-            <p className="text-sm text-gray-700">User Groups are @mentionable sets of users (e.g., @engineering-team) — mentioning the group notifies all members but does not create a conversation space. Channels are conversation spaces where messages are posted and archived. Candidates create new channels when a scenario just needs a way to notify a team — the exam expects User Groups for broadcast notifications without needing a new channel.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. User Groups vs Channels: @mention Broadcast vs Conversation Space</p>
+            <p className="text-sm text-gray-700">User Groups are @mentionable sets of users (e.g., @engineering-team), mentioning the group notifies all members but does not create a conversation space. Channels are conversation spaces where messages are posted and archived. Candidates create new channels when a scenario just needs a way to notify a team, the exam expects User Groups for broadcast notifications without needing a new channel.</p>
           </div>
         </div>
       </section>

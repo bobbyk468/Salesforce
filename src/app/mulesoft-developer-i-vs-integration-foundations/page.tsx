@@ -38,7 +38,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between MuleSoft Integration Foundations and MuleSoft Developer I?',
-    answer: 'MuleSoft Integration Foundations (MCIA Associate) is an entry-level conceptual certification — it tests understanding of API-led connectivity, Anypoint Platform components, and integration concepts without requiring hands-on Anypoint Studio experience. MuleSoft Developer I (MCIA-Level-1) is a professional-level practical certification that tests building real Mule 4 flows in Anypoint Studio, writing DataWeave transformations, configuring connectors, and deploying to CloudHub.',
+    answer: 'MuleSoft Integration Foundations (MCIA Associate) is an entry-level conceptual certification, it tests understanding of API-led connectivity, Anypoint Platform components, and integration concepts without requiring hands-on Anypoint Studio experience. MuleSoft Developer I (MCIA-Level-1) is a professional-level practical certification that tests building real Mule 4 flows in Anypoint Studio, writing DataWeave transformations, configuring connectors, and deploying to CloudHub.',
   },
   {
     question: 'Should I take MuleSoft Integration Foundations before Developer I?',
@@ -50,11 +50,11 @@ const faqItems = [
   },
   {
     question: 'Is the MuleSoft Integration Foundations exam easier than Developer I?',
-    answer: 'Yes — Integration Foundations is significantly easier. Integration Foundations is 40 questions, 70 minutes, and tests conceptual knowledge only (no coding required). Developer I is 60 questions, 120 minutes, requires understanding DataWeave expressions, Mule 4 flow design, and connector configuration. Both require 70% passing score, but the depth of knowledge tested is vastly different.',
+    answer: 'Yes: Integration Foundations is significantly easier. Integration Foundations is 40 questions, 70 minutes, and tests conceptual knowledge only (no coding required). Developer I is 60 questions, 120 minutes, requires understanding DataWeave expressions, Mule 4 flow design, and connector configuration. Both require 70% passing score, but the depth of knowledge tested is vastly different.',
   },
   {
     question: 'Does Integration Foundations count towards the Developer I exam?',
-    answer: 'Integration Foundations is a standalone credential — it does not reduce the scope of the Developer I exam or waive any sections. Developer I is a separate, broader exam that builds on Integration Foundations concepts and adds hands-on Mule 4 development skills. Holding Integration Foundations does, however, demonstrate foundational knowledge that can help in Developer I preparation.',
+    answer: 'Integration Foundations is a standalone credential; it does not reduce the scope of the Developer I exam or waive any sections. Developer I is a separate, broader exam that builds on Integration Foundations concepts and adds hands-on Mule 4 development skills. Holding Integration Foundations does, however, demonstrate foundational knowledge that can help in Developer I preparation.',
   },
 ]
 
@@ -85,7 +85,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
             badge: 'Entry Level',
             badgeColor: 'bg-green-100 text-green-800',
             fee: '$75', questions: '40', time: '70 min', passing: '70%',
-            level: 'Conceptual — no coding required',
+            level: 'Conceptual, no coding required',
             best: 'Business analysts, architects, Salesforce admins new to MuleSoft',
             skills: ['API-led connectivity concepts', 'Anypoint Platform overview', 'Integration patterns (conceptual)', 'No Anypoint Studio required'],
           },
@@ -95,7 +95,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
             badge: 'Professional',
             badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
             fee: '$200', questions: '60', time: '120 min', passing: '70%',
-            level: 'Hands-on — Anypoint Studio required',
+            level: 'Hands-on: Anypoint Studio required',
             best: 'Integration developers, Salesforce architects, API developers',
             skills: ['Building Mule 4 flows', 'DataWeave transformations', 'Anypoint Connectors', 'Error handling & deployment'],
           },
@@ -147,8 +147,8 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
                 { aspect: 'Questions', f: '40', d: '60' },
                 { aspect: 'Time', f: '70 min', d: '120 min' },
                 { aspect: 'Passing score', f: '70%', d: '70%' },
-                { aspect: 'Anypoint Studio needed?', f: 'No', d: 'Yes — essential' },
-                { aspect: 'DataWeave tested?', f: 'Conceptually only', d: 'Yes — reading & writing' },
+                { aspect: 'Anypoint Studio needed?', f: 'No', d: 'Yes, essential' },
+                { aspect: 'DataWeave tested?', f: 'Conceptually only', d: 'Yes, reading & writing' },
                 { aspect: 'Coding required?', f: 'No', d: 'Yes (Mule 4 flows)' },
                 { aspect: 'Job market demand', f: 'Low (entry credential)', d: 'High (primary credential)' },
                 { aspect: 'Avg Salary', f: '$55–80k (US)', d: '$95–130k (US)' },
@@ -185,10 +185,10 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Non-technical stakeholder or project manager on a MuleSoft project</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations — awareness level, no coding</td></tr>
-              <tr><td className="py-2.5 pr-4">Building Mule flows, DataWeave transformations, or connector configs</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I — hands-on technical credential</td></tr>
+              <tr><td className="py-2.5 pr-4">Non-technical stakeholder or project manager on a MuleSoft project</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations, awareness level, no coding</td></tr>
+              <tr><td className="py-2.5 pr-4">Building Mule flows, DataWeave transformations, or connector configs</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I, hands-on technical credential</td></tr>
               <tr><td className="py-2.5 pr-4">Want to validate integration knowledge without Anypoint Studio experience</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations ($75, 40 questions, 70 min)</td></tr>
-              <tr><td className="py-2.5 pr-4">Integration developer or API developer role</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I — the industry-recognised dev cert</td></tr>
+              <tr><td className="py-2.5 pr-4">Integration developer or API developer role</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I, the industry-recognised dev cert</td></tr>
               <tr><td className="py-2.5 pr-4">Starting MuleSoft with zero integration background</td><td className="py-2.5 font-semibold text-gray-700">Foundations first to grasp API-led concepts, then Dev I</td></tr>
             </tbody>
           </table>

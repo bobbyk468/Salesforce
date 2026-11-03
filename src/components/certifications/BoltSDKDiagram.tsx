@@ -7,7 +7,7 @@ export default function BoltSDKDiagram() {
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         A Bolt app (Node, Python, or Java) registers <strong>listeners</strong> for events, actions, and slash
         commands defined in the app manifest. On a matching event, Bolt runs your handler, which calls the{' '}
-        <strong>Slack Web API</strong> to respond — all acknowledged within Slack's 3-second window.
+        <strong>Slack Web API</strong> to respond, all acknowledged within Slack's 3-second window.
       </p>
       <svg role="img" aria-labelledby="bolt-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg">
         <title id="bolt-title">App manifest configures event subscriptions; Slack sends events to a Bolt app; the app's listener handles the event and calls the Slack Web API to respond</title>

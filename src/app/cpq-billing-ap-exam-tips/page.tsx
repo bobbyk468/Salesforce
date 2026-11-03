@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most CPQ Billing candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the CPQ Billing exam are: (1) Billing Schedule vs Invoice Schedule — When Each Is Created; (2) Proration — It Applies to Activations and Cancellations, Not Renewals; (3) Payment Gateway vs Payment Method — Architecture vs Data. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the CPQ Billing exam are: (1) Billing Schedule vs Invoice Schedule: When Each Is Created; (2) Proration: It Applies to Activations and Cancellations, Not Renewals; (3) Payment Gateway vs Payment Method: Architecture vs Data. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('cpq-billing-ap-exam-tips'),
 ]
@@ -101,9 +101,9 @@ export default function CpqBillingApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What CPQ &amp; Billing AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product and pricing configuration</strong> — Product features, options, and bundles in CPQ; option constraints (Required, Optional, Exclusive); product rules (validation, selection, filter, alert); discount schedules (slab vs. range, volume discounts); the CPQ pricing waterfall (List → Customer → Partner → Regular → Special → Net price); and price rules for custom pricing logic.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Quoting and contracting</strong> — Creating and sending CPQ quotes, quote templates for branded PDF output, DocuSign integration for e-signatures, contracting (converting approved quotes to contracts), subscription products and contracted prices, and amendment and renewal flows for changing or extending existing contracts.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Billing and invoicing</strong> — Salesforce Billing invoice generation from activated orders, billing frequency (one-time, monthly, annual), invoice scheduling, payment processing and payment methods, credit notes and refunds, and how billing amendments sync with subscription contract changes from CPQ.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product and pricing configuration</strong>: Product features, options, and bundles in CPQ; option constraints (Required, Optional, Exclusive); product rules (validation, selection, filter, alert); discount schedules (slab vs. range, volume discounts); the CPQ pricing waterfall (List → Customer → Partner → Regular → Special → Net price); and price rules for custom pricing logic.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Quoting and contracting</strong>: Creating and sending CPQ quotes, quote templates for branded PDF output, DocuSign integration for e-signatures, contracting (converting approved quotes to contracts), subscription products and contracted prices, and amendment and renewal flows for changing or extending existing contracts.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Billing and invoicing</strong>: Salesforce Billing invoice generation from activated orders, billing frequency (one-time, monthly, annual), invoice scheduling, payment processing and payment methods, credit notes and refunds, and how billing amendments sync with subscription contract changes from CPQ.</li>
         </ul>
       </section>
 
@@ -126,7 +126,7 @@ export default function CpqBillingApExamTipsPage() {
             <span className="font-medium text-gray-900">Amendments and Renewals</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The pricing waterfall is the most consistently tested concept — know every price field and what affects it.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The pricing waterfall is the most consistently tested concept. Know every price field and what affects it.</p>
         </div>
       </section>
 
@@ -134,11 +134,11 @@ export default function CpqBillingApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach CPQ &amp; Billing AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a quoting or billing scenario and ask which CPQ feature, object,
-          or configuration achieves it. Know the pricing waterfall cold — most pricing questions
+          or configuration achieves it. Know the pricing waterfall cold, most pricing questions
           test which field is set by which action.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pricing questions: List Price is the base price from the price book. Discount Schedules reduce List Price to Regular Price (volume-based). Special Price is a manual override by the sales rep. Additional Discount is a further % off the Special Price. Net Price is the final price the customer pays. When a scenario says ’apply a 10% volume discount automatically at 10 units’, configure a Discount Schedule — not a product rule or manual discount.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pricing questions: List Price is the base price from the price book. Discount Schedules reduce List Price to Regular Price (volume-based). Special Price is a manual override by the sales rep. Additional Discount is a further % off the Special Price. Net Price is the final price the customer pays. When a scenario says ’apply a 10% volume discount automatically at 10 units’, configure a Discount Schedule, not a product rule or manual discount.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product bundle questions: bundles have a parent product (the bundle) and optional/required features with options. Option constraints control which options can or cannot be selected together (Required: one option must be chosen; Exclusive: selecting one deselects others). When a scenario says ’the customer must choose exactly one of these three support tiers’, configure a Required option constraint with Min/Max of 1.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For contract/amendment questions: when a customer wants to add seats mid-term, create an Amendment Quote from the existing contract. The amendment calculates prorated charges for the remaining contract period. When a customer’s subscription expires, create a Renewal Quote. Amendments change an active contract; renewals extend it. When a question asks ’how to add 5 users to a customer’s existing annual contract’, the answer is an Amendment.</li>
         </ul>
@@ -161,18 +161,18 @@ export default function CpqBillingApExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most CPQ Billing Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Billing Schedule vs Invoice Schedule — When Each Is Created</p>
-            <p className="text-sm text-gray-700">A Billing Schedule is created when a Salesforce CPQ Subscription order is activated — it defines the future billing dates and amounts for recurring revenue. Invoice Schedules are the individual line-item billing events within that schedule. Candidates conflate these: the Billing Schedule is the container; Invoice Schedules are the individual charge events. Knowing this hierarchy is essential for troubleshooting why a customer was billed incorrectly.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Billing Schedule vs Invoice Schedule: When Each Is Created</p>
+            <p className="text-sm text-gray-700">A Billing Schedule is created when a Salesforce CPQ Subscription order is activated, it defines the future billing dates and amounts for recurring revenue. Invoice Schedules are the individual line-item billing events within that schedule. Candidates conflate these: the Billing Schedule is the container; Invoice Schedules are the individual charge events. Knowing this hierarchy is essential for troubleshooting why a customer was billed incorrectly.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Proration — It Applies to Activations and Cancellations, Not Renewals</p>
-            <p className="text-sm text-gray-700">Proration calculates the partial-period charge when a subscription starts or ends mid-period. It does NOT apply to renewals (which start on a clean period boundary). Candidates answer "the customer was charged a prorated amount on renewal" scenarios by checking proration settings — the exam expects them to check the renewal date alignment instead.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Proration: It Applies to Activations and Cancellations, Not Renewals</p>
+            <p className="text-sm text-gray-700">Proration calculates the partial-period charge when a subscription starts or ends mid-period. It does NOT apply to renewals (which start on a clean period boundary). Candidates answer "the customer was charged a prorated amount on renewal" scenarios by checking proration settings, the exam expects them to check the renewal date alignment instead.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Payment Gateway vs Payment Method — Architecture vs Data</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Payment Gateway vs Payment Method: Architecture vs Data</p>
             <p className="text-sm text-gray-700">A Payment Gateway is the Salesforce Billing integration with an external payment processor (Stripe, Adyen). A Payment Method is a specific payment instrument on file for a customer (credit card, ACH). Candidates conflate these: configuring a gateway is a one-time org setup; adding a Payment Method is a per-customer action. Exam scenarios about why a customer’s payment failed expect Payment Method troubleshooting, not gateway reconfiguration.</p>
           </div>
         </div>

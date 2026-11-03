@@ -51,11 +51,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Platform Developer II exam format?',
-    answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, a 120-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It is one of the most technically demanding Salesforce certifications — it requires PD1 as a prerequisite and tests advanced Apex design patterns, async processing, integration patterns, performance optimisation, and complex trigger logic.',
+    answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, a 120-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It is one of the most technically demanding Salesforce certifications; it requires PD1 as a prerequisite and tests advanced Apex design patterns, async processing, integration patterns, performance optimisation, and complex trigger logic.',
   },
   {
     question: 'How hard is the PD2 exam compared to PD1?',
-    answer: 'PD2 is significantly harder than PD1. While PD1 tests whether you can write correct Apex code, PD2 tests whether you can architect scalable, performant, and well-designed Apex solutions. PD2 candidates need to understand design patterns (Apex Enterprise Patterns — Selector, Service, Domain layers), complex async processing chains, REST/SOAP integration, and performance analysis using debug logs and query plans.',
+    answer: 'PD2 is significantly harder than PD1. While PD1 tests whether you can write correct Apex code, PD2 tests whether you can architect scalable, performant, and well-designed Apex solutions. PD2 candidates need to understand design patterns (Apex Enterprise Patterns: Selector, Service, Domain layers), complex async processing chains, REST/SOAP integration, and performance analysis using debug logs and query plans.',
   },
   {
     question: 'What are the highest-weight PD2 exam sections?',
@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is the Apex Enterprise Patterns (AEP) framework?',
-    answer: 'Apex Enterprise Patterns (also called Force.com Enterprise Architecture patterns) is a layered Apex architecture: the Selector layer handles all SOQL queries (centralises query logic, enforces FLS), the Domain layer contains business logic on SObject types (similar to an Active Record pattern), the Service layer orchestrates cross-object business processes, and the Unit of Work layer manages DML operations in bulk. PD2 expects you to recognise when and how to apply each layer — not necessarily implement the full framework from scratch.',
+    answer: 'Apex Enterprise Patterns (also called Force.com Enterprise Architecture patterns) is a layered Apex architecture: the Selector layer handles all SOQL queries (centralises query logic, enforces FLS), the Domain layer contains business logic on SObject types (similar to an Active Record pattern), the Service layer orchestrates cross-object business processes, and the Unit of Work layer manages DML operations in bulk. PD2 expects you to recognise when and how to apply each layer, not necessarily implement the full framework from scratch.',
   },
 ]
 
@@ -101,7 +101,7 @@ export default function Pd2StudyGuidePage() {
         </h1>
         <p className="text-lg text-gray-600">
           Platform Developer II is one of the most challenging Salesforce certifications. It goes beyond
-          writing correct Apex — it tests your ability to architect scalable, performant solutions
+          writing correct Apex, it tests your ability to architect scalable, performant solutions
           using design patterns, advanced async processing, integration patterns, and developer tooling.
           This guide covers every section with the depth needed to pass.
         </p>
@@ -132,14 +132,14 @@ export default function Pd2StudyGuidePage() {
           ))}
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          PD1 certification required. 120-minute time limit (longer than most Salesforce exams — code-reading questions take more time). Retake fee: $100.
+          PD1 certification required. 120-minute time limit (longer than most Salesforce exams, code-reading questions take more time). Retake fee: $100.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">PD2 Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Design Patterns (25%) + Testing &amp; Debugging (25%) = 50% of the exam. These two sections are where PD2 candidates most often fail — they are purely advanced technical topics not covered in PD1.
+          Design Patterns (25%) + Testing &amp; Debugging (25%) = 50% of the exam. These two sections are where PD2 candidates most often fail; they are purely advanced technical topics not covered in PD1.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -165,35 +165,35 @@ export default function Pd2StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Design Patterns (25%)
             </p>
-            <p>The foundation of PD2. <strong>Apex Enterprise Patterns (AEP):</strong> Selector layer (all SOQL queries — centralises data access, enforces field-level security checks), Domain layer (business logic tied to an SObject type — validates, defaults, and enriches records), Service layer (orchestrates business processes across multiple objects), Unit of Work (manages all DML in bulk at the end of a transaction to prevent partial commits and governor limit issues). <strong>Other patterns:</strong> Singleton (prevent duplicate initialisation of expensive objects — e.g., a configuration class loaded once per transaction), Strategy (interchangeable algorithm implementations behind a common interface), Decorator (wrap an existing class to add behaviour). Know how to identify which pattern solves a given architectural problem — the exam presents a scenario and asks which pattern is most appropriate.</p>
+            <p>The foundation of PD2. <strong>Apex Enterprise Patterns (AEP):</strong> Selector layer (all SOQL queries, centralises data access, enforces field-level security checks), Domain layer (business logic tied to an SObject type, validates, defaults, and enriches records), Service layer (orchestrates business processes across multiple objects), Unit of Work (manages all DML in bulk at the end of a transaction to prevent partial commits and governor limit issues). <strong>Other patterns:</strong> Singleton (prevent duplicate initialisation of expensive objects, e.g., a configuration class loaded once per transaction), Strategy (interchangeable algorithm implementations behind a common interface), Decorator (wrap an existing class to add behaviour). Know how to identify which pattern solves a given architectural problem, the exam presents a scenario and asks which pattern is most appropriate.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Testing and Debugging (25%)
             </p>
-            <p><strong>Advanced testing:</strong> Test isolation with <code>@TestSetup</code> (runs once, shares data across all test methods), <code>Test.loadData()</code> for CSV-based test data. <strong>HTTP callout mocking:</strong> <code>HttpCalloutMock</code> interface — implement <code>respond()</code> and register with <code>Test.setMock(HttpCalloutMock.class, mock)</code>. <strong>Testing async Apex:</strong> wrap the enqueue call between <code>Test.startTest()</code> and <code>Test.stopTest()</code> — <code>stopTest()</code> forces async execution to run synchronously so you can assert results. <strong>Mixed DML errors:</strong> cannot insert setup objects (User, Group) and non-setup objects (Account, Contact) in the same transaction — wrap setup DML in a <code>System.runAs()</code> block. <strong>Debug log analysis:</strong> read EXECUTION_STARTED → SOQL queries (with row counts) → DML statements → EXCEPTION events to diagnose runtime issues.</p>
+            <p><strong>Advanced testing:</strong> Test isolation with <code>@TestSetup</code> (runs once, shares data across all test methods), <code>Test.loadData()</code> for CSV-based test data. <strong>HTTP callout mocking:</strong> <code>HttpCalloutMock</code> interface, implement <code>respond()</code> and register with <code>Test.setMock(HttpCalloutMock.class, mock)</code>. <strong>Testing async Apex:</strong> wrap the enqueue call between <code>Test.startTest()</code> and <code>Test.stopTest()</code>: <code>stopTest()</code> forces async execution to run synchronously so you can assert results. <strong>Mixed DML errors:</strong> cannot insert setup objects (User, Group) and non-setup objects (Account, Contact) in the same transaction, wrap setup DML in a <code>System.runAs()</code> block. <strong>Debug log analysis:</strong> read EXECUTION_STARTED → SOQL queries (with row counts) → DML statements → EXCEPTION events to diagnose runtime issues.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Integration (23%)
             </p>
-            <p><strong>Apex callouts:</strong> <code>Http</code>, <code>HttpRequest</code>, <code>HttpResponse</code> for REST; <code>WebServiceCallout.invoke()</code> for SOAP. Cannot make callouts from triggers (they are synchronous DML context) — use a future method or queueable. <strong>Named Credentials:</strong> store endpoint URL and authentication credentials securely — use <code>callout:NamedCredentialName/path</code> in the endpoint URL. <strong>Platform Events:</strong> define fields on a Platform Event object, publish with <code>EventBus.publish()</code>, subscribe with triggers or flows. High-volume platform events have at-least-once delivery. <strong>Apex REST:</strong> expose Apex as a REST API using <code>@RestResource(urlMapping=’/v1/myEndpoint/*’)</code> and <code>@HttpGet</code>, <code>@HttpPost</code>, etc. annotations.</p>
+            <p><strong>Apex callouts:</strong> <code>Http</code>, <code>HttpRequest</code>, <code>HttpResponse</code> for REST; <code>WebServiceCallout.invoke()</code> for SOAP. Cannot make callouts from triggers (they are synchronous DML context). Use a future method or queueable. <strong>Named Credentials:</strong> store endpoint URL and authentication credentials securely, use <code>callout:NamedCredentialName/path</code> in the endpoint URL. <strong>Platform Events:</strong> define fields on a Platform Event object, publish with <code>EventBus.publish()</code>, subscribe with triggers or flows. High-volume platform events have at-least-once delivery. <strong>Apex REST:</strong> expose Apex as a REST API using <code>@RestResource(urlMapping=’/v1/myEndpoint/*’)</code> and <code>@HttpGet</code>, <code>@HttpPost</code>, etc. annotations.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Performance (17%)
             </p>
-            <p><strong>SOQL selectivity:</strong> queries are selective when the WHERE clause uses indexed fields (Id, Name, ExternalId, unique fields, or custom indexed fields) and filters enough records (generally &lt;10% of the object’s records or &lt;200k records). Non-selective queries on large objects cause timeouts. <strong>Query Plan tool:</strong> shows whether Salesforce will use an index (low cost) or a full table scan (high cost) for a query. <strong>Heap size:</strong> 6 MB synchronous / 12 MB async — avoid storing large collections in static variables across transaction boundaries. <strong>CPU limit:</strong> 10,000 ms synchronous — avoid nested loops over large collections; prefer Maps over repeated list iteration. <strong>Async for long-running work:</strong> Queueable (chaining, passing complex state), Batch Apex (process millions of records), Scheduled Apex (time-based execution).</p>
+            <p><strong>SOQL selectivity:</strong> queries are selective when the WHERE clause uses indexed fields (Id, Name, ExternalId, unique fields, or custom indexed fields) and filters enough records (generally &lt;10% of the object’s records or &lt;200k records). Non-selective queries on large objects cause timeouts. <strong>Query Plan tool:</strong> shows whether Salesforce will use an index (low cost) or a full table scan (high cost) for a query. <strong>Heap size:</strong> 6 MB synchronous / 12 MB async, avoid storing large collections in static variables across transaction boundaries. <strong>CPU limit:</strong> 10,000 ms synchronous, avoid nested loops over large collections; prefer Maps over repeated list iteration. <strong>Async for long-running work:</strong> Queueable (chaining, passing complex state), Batch Apex (process millions of records), Scheduled Apex (time-based execution).</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Developer Experience (10%)
             </p>
-            <p><strong>SFDX / Salesforce CLI:</strong> source-driven development using <code>sf project retrieve</code> and <code>sf project deploy</code>. <strong>Scratch orgs:</strong> temporary, configurable orgs for development and testing — created from a project definition file, last 1–30 days. <strong>Unlocked Packages:</strong> 2nd-generation packages that are modular, versionable, and source-tracked. Unlike managed packages (ISV), unlocked packages are for org-specific development. Know the difference between 1GP (first-generation, subscriber-opaque), 2GP unlocked (org-internal, source-trackable), and 2GP managed (ISV distribution with namespace). <strong>CI/CD:</strong> understand the concept of automated pipeline: pull request → scratch org → run tests → deploy to sandbox → promote to production.</p>
+            <p><strong>SFDX / Salesforce CLI:</strong> source-driven development using <code>sf project retrieve</code> and <code>sf project deploy</code>. <strong>Scratch orgs:</strong> temporary, configurable orgs for development and testing, created from a project definition file, last 1–30 days. <strong>Unlocked Packages:</strong> 2nd-generation packages that are modular, versionable, and source-tracked. Unlike managed packages (ISV), unlocked packages are for org-specific development. Know the difference between 1GP (first-generation, subscriber-opaque), 2GP unlocked (org-internal, source-trackable), and 2GP managed (ISV distribution with namespace). <strong>CI/CD:</strong> understand the concept of automated pipeline: pull request → scratch org → run tests → deploy to sandbox → promote to production.</p>
           </div>
         </div>
       </section>
@@ -201,12 +201,12 @@ export default function Pd2StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">8-Week PD2 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1–2 — Design Patterns (25%):</strong> Study the Apex Enterprise Patterns framework. Read the Force.com Enterprise Architecture book chapters on Selector, Domain, Service, and Unit of Work. Implement the full AEP stack for one object (Opportunity) in a Developer Edition org. Study Singleton, Strategy, and Decorator patterns with Apex code examples.</p>
-          <p><strong>Week 3–4 — Testing &amp; Debugging (25%):</strong> Write tests for HTTP callouts using <code>HttpCalloutMock</code>. Write tests for async Apex (Queueable, Batch) using <code>Test.startTest/stopTest</code>. Practice resolving mixed DML errors. Analyse 3 different debug logs to identify performance bottlenecks and exceptions.</p>
-          <p><strong>Week 5 — Integration (23%):</strong> Build a REST callout to an external API using Named Credentials. Create a Platform Event and subscribe to it with a trigger. Expose an Apex REST endpoint and test it with Workbench. Study streaming API concepts.</p>
-          <p><strong>Week 6 — Performance (17%):</strong> Use the Query Plan tool to analyse 5 different SOQL queries. Refactor a nested loop pattern to use Maps. Write a Batch Apex class that processes 1M records. Profile a Queueable chain using debug logs.</p>
-          <p><strong>Week 7 — Developer Experience (10%):</strong> Create a scratch org from a project definition file. Deploy metadata using SFDX CLI commands. Study unlocked package versioning concepts. Review CI/CD pipeline concepts.</p>
-          <p><strong>Week 8:</strong> Full timed mock exams (60 Q / 120 min). Score 75%+ consistently. PD2 questions often present code snippets — practice reading Apex code quickly and identifying the specific issue.</p>
+          <p><strong>Week 1–2: Design Patterns (25%):</strong> Study the Apex Enterprise Patterns framework. Read the Force.com Enterprise Architecture book chapters on Selector, Domain, Service, and Unit of Work. Implement the full AEP stack for one object (Opportunity) in a Developer Edition org. Study Singleton, Strategy, and Decorator patterns with Apex code examples.</p>
+          <p><strong>Week 3–4: Testing &amp; Debugging (25%):</strong> Write tests for HTTP callouts using <code>HttpCalloutMock</code>. Write tests for async Apex (Queueable, Batch) using <code>Test.startTest/stopTest</code>. Practice resolving mixed DML errors. Analyse 3 different debug logs to identify performance bottlenecks and exceptions.</p>
+          <p><strong>Week 5: Integration (23%):</strong> Build a REST callout to an external API using Named Credentials. Create a Platform Event and subscribe to it with a trigger. Expose an Apex REST endpoint and test it with Workbench. Study streaming API concepts.</p>
+          <p><strong>Week 6: Performance (17%):</strong> Use the Query Plan tool to analyse 5 different SOQL queries. Refactor a nested loop pattern to use Maps. Write a Batch Apex class that processes 1M records. Profile a Queueable chain using debug logs.</p>
+          <p><strong>Week 7: Developer Experience (10%):</strong> Create a scratch org from a project definition file. Deploy metadata using SFDX CLI commands. Study unlocked package versioning concepts. Review CI/CD pipeline concepts.</p>
+          <p><strong>Week 8:</strong> Full timed mock exams (60 Q / 120 min). Score 75%+ consistently. PD2 questions often present code snippets, practice reading Apex code quickly and identifying the specific issue.</p>
         </div>
       </section>
 
@@ -223,7 +223,7 @@ export default function Pd2StudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Performance questions:</strong> When a query is timing out on a large object, the first diagnostic step is the Query Plan tool — check if the query is selective. If not selective: add an index to the filter field, or restructure the query to use indexed fields. CPU limit violations: look for nested loops over large collections — refactor to Maps. Heap limit: avoid storing large SObject lists in static variables or Queueable instance variables that persist between chain links.</span>
+            <span><strong>Performance questions:</strong> When a query is timing out on a large object, the first diagnostic step is the Query Plan tool, check if the query is selective. If not selective: add an index to the filter field, or restructure the query to use indexed fields. CPU limit violations: look for nested loops over large collections, refactor to Maps. Heap limit: avoid storing large SObject lists in static variables or Queueable instance variables that persist between chain links.</span>
           </li>
         </ul>
       </section>
@@ -236,10 +236,10 @@ export default function Pd2StudyGuidePage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           PD2 has a higher failure rate than most Salesforce certifications. The most common failure modes
-          are: (1) insufficient hands-on design pattern implementation — studying AEP conceptually is
-          not enough, you must implement it; (2) underestimating the integration section — callout
+          are: (1) insufficient hands-on design pattern implementation, studying AEP conceptually is
+          not enough, you must implement it; (2) underestimating the integration section, callout
           mocking, Named Credentials, and Platform Events require practical experience; (3) skipping
-          the Query Plan tool — performance questions are consistently missed by candidates who
+          the Query Plan tool, performance questions are consistently missed by candidates who
           have never used it.
         </p>
       </section>
@@ -278,7 +278,7 @@ export default function Pd2StudyGuidePage() {
         </div>
         <p className="text-xs text-gray-600 mt-4">
           <Link href="/pd1-vs-pd2" className="text-salesforce-blue underline">
-            PD1 vs PD2 — how they differ and which to take next →
+            PD1 vs PD2, how they differ and which to take next →
           </Link>
         </p>
       </section>
@@ -295,7 +295,7 @@ export default function Pd2StudyGuidePage() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Platform Developer II (PD2) free practice exam — scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Platform Developer II (PD2) free practice exam, scored with full explanations.</p>
         <Link
           href="/certifications/developer-2"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

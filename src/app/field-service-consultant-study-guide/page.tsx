@@ -204,9 +204,9 @@ export default function FieldServiceConsultantStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10 Must-Know Concepts</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>FSL object model: Work Order, Work Order Line Item, Service Appointment, Service Resource, Service Territory</li>
-          <li>Service resource types: Agent, Technician, Crew — how they differ and when to use each</li>
+          <li>Service resource types: Agent, Technician, Crew, how they differ and when to use each</li>
           <li>Scheduling policies: combining required vs preferred rules, rule weights and priorities</li>
-          <li>Optimization types: Global, Single Resource, In-Day — when to use each</li>
+          <li>Optimization types: Global, Single Resource, In-Day, when to use each</li>
           <li>Required skills on Work Orders vs preferred resources on accounts</li>
           <li>Service territory structure: multi-level territories and member types</li>
           <li>Work Order Line Items and their relationship to products and inventory</li>
@@ -233,7 +233,7 @@ export default function FieldServiceConsultantStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Field Service vs Service Cloud Consultant — full comparison</Link></li>
+          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Field Service vs Service Cloud Consultant, full comparison</Link></li>
         </ul>
       </div>
 

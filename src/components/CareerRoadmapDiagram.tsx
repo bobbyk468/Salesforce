@@ -20,7 +20,7 @@ export default function CareerRoadmapDiagram({ roleName, path }: CareerRoadmapDi
         {roleName} career roadmap (visual)
       </figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Each step below is a real credential or role milestone — most candidates spend 6–18 months at each stage
+        Each step below is a real credential or role milestone, most candidates spend 6–18 months at each stage
         before advancing to the next.
       </p>
       <div className="overflow-x-auto">

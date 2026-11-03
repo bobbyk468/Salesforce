@@ -36,9 +36,9 @@ const sampleQuestions = [
     correctAnswer: 0,
     explanation: "The 'after insert' and 'after update' trigger events fire after the record is saved to the database, which is required when you need to access the record Id or related records.",
     whyWrong: [
-      "'before insert, before update' fires prior to save, when the record doesn't yet have an Id — insufficient for logic needing the saved record or related records.",
+      "'before insert, before update' fires prior to save, when the record doesn't yet have an Id, insufficient for logic needing the saved record or related records.",
       "'after insert, before update' mixes timing incorrectly for this scenario's need to run after both operations.",
-      "'isInsert, isUpdate' are trigger context variables, not trigger event names — this option misidentifies the concept being asked about."
+      "'isInsert, isUpdate' are trigger context variables, not trigger event names, this option misidentifies the concept being asked about."
     ]
   },
   {
@@ -86,7 +86,7 @@ const sampleQuestions = [
     whyWrong: [
       "'starts with' would require the pattern 'tech%' (no leading wildcard), not '%tech%'.",
       "'ends with' would require the pattern '%tech' (no trailing wildcard), not '%tech%'.",
-      "'equals' would require no wildcards at all — LIKE with wildcards never means exact equality."
+      "'equals' would require no wildcards at all: LIKE with wildcards never means exact equality."
     ]
   },
   {
@@ -100,9 +100,9 @@ const sampleQuestions = [
     correctAnswer: 2,
     explanation: "To avoid hitting governor limits, you should always collect records in a list during the loop and perform DML operations outside the loop (bulk processing).",
     whyWrong: [
-      "Database.insert() alone doesn't address the loop-placement issue — DML inside a loop is the problem regardless of which insert method is used.",
+      "Database.insert() alone doesn't address the loop-placement issue: DML inside a loop is the problem regardless of which insert method is used.",
       "A plain insert statement inside a loop has the same governor-limit risk as any DML call inside a loop.",
-      "@future methods don't solve bulkification — they move work asynchronously but don't fix DML-in-a-loop patterns."
+      "@future methods don't solve bulkification, they move work asynchronously but don't fix DML-in-a-loop patterns."
     ]
   },
   {
@@ -149,7 +149,7 @@ const sampleQuestions = [
     explanation: "Best practice is to collect records in a list during iteration and process them in bulk outside the loop to avoid hitting governor limits.",
     whyWrong: [
       "Processing one record at a time in a loop is the anti-pattern that causes governor limit issues, not the best practice.",
-      "@future methods don't solve bulkification — they simply defer execution asynchronously.",
+      "@future methods don't solve bulkification, they simply defer execution asynchronously.",
       "'Synchronous methods only' doesn't address the bulk-processing requirement at all."
     ]
   },
@@ -166,7 +166,7 @@ const sampleQuestions = [
     whyWrong: [
       "100 DML statements understates the actual synchronous limit of 150.",
       "200 DML statements overstates the actual synchronous limit of 150.",
-      "The DML statement limit is not unlimited — Salesforce enforces a specific cap to protect the multi-tenant platform."
+      "The DML statement limit is not unlimited: Salesforce enforces a specific cap to protect the multi-tenant platform."
     ]
   },
   {
@@ -180,7 +180,7 @@ const sampleQuestions = [
     correctAnswer: 0,
     explanation: "Database.insert() returns a Database.SaveResult array, allowing you to handle partial success. The insert statement throws an exception if any record fails.",
     whyWrong: [
-      "A plain insert statement throws an exception on any failure — it doesn't support partial success handling.",
+      "A plain insert statement throws an exception on any failure, it doesn't support partial success handling.",
       "'Database.insert() with allOrNone parameter' set to true behaves like the plain insert statement (all-or-nothing); it's the default false setting on Database.insert() that enables partial success.",
       "'All of the above' is incorrect since the plain insert statement specifically does NOT support partial success."
     ]
@@ -196,9 +196,9 @@ const sampleQuestions = [
     correctAnswer: 0,
     explanation: "Test.runAs() allows you to execute test code in the context of a specific user, enabling you to test with different user permissions and sharing rules.",
     whyWrong: [
-      "Test.runAs() doesn't test asynchronous code — that's unrelated to its purpose of switching user context.",
-      "Test.runAs() isn't specific to batch class testing — it applies to any Apex test scenario needing a different user context.",
-      "Test.runAs() isn't specific to trigger testing — it's a general user-context testing mechanism usable anywhere."
+      "Test.runAs() doesn't test asynchronous code, that's unrelated to its purpose of switching user context.",
+      "Test.runAs() isn't specific to batch class testing, it applies to any Apex test scenario needing a different user context.",
+      "Test.runAs() isn't specific to trigger testing, it's a general user-context testing mechanism usable anywhere."
     ]
   },
   {
@@ -228,8 +228,8 @@ const sampleQuestions = [
     correctAnswer: 2,
     explanation: "SOQL uses relationship queries (dot notation) to query related records, such as 'SELECT Id, Account.Name FROM Contact' to get the Account name for each Contact.",
     whyWrong: [
-      "JOIN is not valid SOQL syntax — SOQL uses relationship dot-notation instead of SQL-style joins.",
-      "INNER JOIN is SQL syntax, not valid SOQL — Salesforce's query language doesn't support this keyword.",
+      "JOIN is not valid SOQL syntax: SOQL uses relationship dot-notation instead of SQL-style joins.",
+      "INNER JOIN is SQL syntax, not valid SOQL: Salesforce's query language doesn't support this keyword.",
       "A subquery (parent-to-child) is a different SOQL technique for retrieving child records, not the dot-notation syntax used for the parent-to-child scenario described here."
     ]
   },
@@ -244,9 +244,9 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "@TestVisible allows test classes to access private methods and variables, enabling better test coverage without making them public.",
     whyWrong: [
-      "'To make a method available to test classes' is too broad — @TestVisible specifically exposes private members, not general method availability.",
-      "@TestVisible doesn't mark a class as a test class — that's unrelated to its actual purpose.",
-      "@TestVisible doesn't enable test coverage tracking — that's a platform-level, automatic measurement, not something this annotation controls."
+      "'To make a method available to test classes' is too broad; @TestVisible specifically exposes private members, not general method availability.",
+      "@TestVisible doesn't mark a class as a test class, that's unrelated to its actual purpose.",
+      "@TestVisible doesn't enable test coverage tracking, that's a platform-level, automatic measurement, not something this annotation controls."
     ]
   },
   {
@@ -280,7 +280,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           }}
         />
         <CertIntroParagraph slug={slug} />
-        {/* Quick Knowledge Check — above fold to signal interactive content to Google */}
+        {/* Quick Knowledge Check, above fold to signal interactive content to Google */}
         <div className="mt-4 mb-2 rounded-xl border border-blue-100 bg-blue-50/50 p-4 sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-widest text-salesforce-blue mb-2">Quick Knowledge Check</p>
           <p className="text-sm font-medium text-gray-900 mb-3">A developer writes a trigger that runs a SOQL query inside a <code className="bg-white px-1 rounded border border-gray-200">for</code> loop. What governor limit risk does this create?</p>
@@ -359,17 +359,17 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
                 Suggested study timeline for PD1 (6–10 weeks)
               </h2>
               <p className="text-sm text-gray-600 mb-3">
-                PD1 requires hands-on coding practice — not just reading. Budget time for Apex exercises in a Developer Edition org alongside study.
+                PD1 requires hands-on coding practice, not just reading. Budget time for Apex exercises in a Developer Edition org alongside study.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
-                <li><strong>Weeks 1–2:</strong> Salesforce Fundamentals &amp; Data Modelling (20%) — objects, relationships, schema design, SOQL basics</li>
-                <li><strong>Weeks 2–3:</strong> Logic &amp; Process Automation (23%) — Apex basics, governor limits, bulkification patterns</li>
-                <li><strong>Weeks 3–5:</strong> Apex Triggers &amp; Classes (24%) — before/after triggers, handler pattern, async Apex (future, batch, queueable)</li>
-                <li><strong>Weeks 5–6:</strong> Testing &amp; Debugging (22%) — test class structure, mock callouts, code coverage, debug logs</li>
-                <li><strong>Weeks 6–7:</strong> UI &amp; Deployment (11%) — LWC basics, Aura, Visualforce, change sets, sandboxes</li>
+                <li><strong>Weeks 1–2:</strong> Salesforce Fundamentals &amp; Data Modelling (20%), objects, relationships, schema design, SOQL basics</li>
+                <li><strong>Weeks 2–3:</strong> Logic &amp; Process Automation (23%): Apex basics, governor limits, bulkification patterns</li>
+                <li><strong>Weeks 3–5:</strong> Apex Triggers &amp; Classes (24%), before/after triggers, handler pattern, async Apex (future, batch, queueable)</li>
+                <li><strong>Weeks 5–6:</strong> Testing &amp; Debugging (22%), test class structure, mock callouts, code coverage, debug logs</li>
+                <li><strong>Weeks 6–7:</strong> UI &amp; Deployment (11%): LWC basics, Aura, Visualforce, change sets, sandboxes</li>
                 <li><strong>Weeks 7–8:</strong> Full mock exams and targeted weak-area review</li>
               </ul>
-              <p className="text-xs text-gray-600 mt-3">Already an admin? Reduce Weeks 1–2 to 3–4 days — you already know the data model and platform fundamentals.</p>
+              <p className="text-xs text-gray-600 mt-3">Already an admin? Reduce Weeks 1–2 to 3–4 days, you already know the data model and platform fundamentals.</p>
             </div>
           </details>
 
@@ -383,19 +383,19 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
                 Is the PD1 Exam Hard?
               </h2>
               <p className="text-sm text-gray-700 mb-3">
-                The Salesforce Platform Developer I exam is considered <strong className="text-gray-900">moderately difficult</strong> — harder than ADM-201, but accessible to candidates with 3–6 months of real Apex development experience. The challenge is that most questions present actual code and require you to reason about governor limits, async patterns, and trigger behaviour under realistic conditions.
+                The Salesforce Platform Developer I exam is considered <strong className="text-gray-900">moderately difficult</strong>: harder than ADM-201, but accessible to candidates with 3–6 months of real Apex development experience. The challenge is that most questions present actual code and require you to reason about governor limits, async patterns, and trigger behaviour under realistic conditions.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
-                <li><strong>60 scored questions</strong> in 110 minutes — roughly 1.8 minutes per question.</li>
-                <li><strong>68% passing score</strong> — you can miss up to 19 questions and still pass.</li>
-                <li><strong>Code-heavy</strong> — expect 30–40% of questions to include Apex code snippets.</li>
-                <li><strong>Scenario-based</strong> — most questions describe a business or technical requirement and ask for the right approach.</li>
-                <li><strong>No multiple-select trick</strong> — PD1 uses single-best-answer format (unlike ADM-201 which has some multiple-select).</li>
+                <li><strong>60 scored questions</strong> in 110 minutes, roughly 1.8 minutes per question.</li>
+                <li><strong>68% passing score</strong>: you can miss up to 19 questions and still pass.</li>
+                <li><strong>Code-heavy</strong>: expect 30–40% of questions to include Apex code snippets.</li>
+                <li><strong>Scenario-based</strong>: most questions describe a business or technical requirement and ask for the right approach.</li>
+                <li><strong>No multiple-select trick</strong>: PD1 uses single-best-answer format (unlike ADM-201 which has some multiple-select).</li>
               </ul>
               <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                 <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
                 <p className="text-sm text-emerald-700">
-                  Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you’re scoring below 70% on mocks, focus on governor limits and bulkification — those two topics cover over 30% of the exam combined.
+                  Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you’re scoring below 70% on mocks. Focus on governor limits and bulkification, those two topics cover over 30% of the exam combined.
                 </p>
               </div>
             </div>
@@ -432,27 +432,27 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Bulkification: Never Put SOQL or DML Inside a Loop</h3>
-                <p>The core Apex pattern: query records <em>before</em> loops using a single SOQL with <code className="bg-gray-100 px-1 rounded">IN :triggerIdSet</code>, collect changes in a <strong>List</strong> or <strong>Map</strong> <em>inside</em> loops, then perform DML <em>after</em> loops. Map&lt;Id, SObject&gt; is the workhorse — used to relate trigger records to queried related records by Id. Use <code className="bg-gray-100 px-1 rounded">Database.insert(records, false)</code> for partial success (returns SaveResult array). The exam presents code with SOQL/DML in a loop and asks you to identify the issue or fix it.</p>
+                <p>The core Apex pattern: query records <em>before</em> loops using a single SOQL with <code className="bg-gray-100 px-1 rounded">IN:triggerIdSet</code>, collect changes in a <strong>List</strong> or <strong>Map</strong> <em>inside</em> loops, then perform DML <em>after</em> loops. Map&lt;Id, SObject&gt; is the workhorse, used to relate trigger records to queried related records by Id. Use <code className="bg-gray-100 px-1 rounded">Database.insert(records, false)</code> for partial success (returns SaveResult array). The exam presents code with SOQL/DML in a loop and asks you to identify the issue or fix it.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Apex Triggers: Order of Execution &amp; Handler Pattern</h3>
-                <p><strong>Before triggers</strong> fire before the record is saved — use them to validate or modify field values before save (changes to <code className="bg-gray-100 px-1 rounded">Trigger.new</code> persist without extra DML). <strong>After triggers</strong> fire after the record is committed — use them when you need the record Id or to update related records. Key context variables: <code className="bg-gray-100 px-1 rounded">Trigger.new</code>, <code className="bg-gray-100 px-1 rounded">Trigger.old</code> (not available on insert), <code className="bg-gray-100 px-1 rounded">Trigger.isInsert</code>, <code className="bg-gray-100 px-1 rounded">Trigger.isUpdate</code>. Best practice: one trigger per object, all logic delegated to a handler class. The <strong>Order of Execution</strong> for a save: validation rules → before triggers → system validation → after triggers → workflow rules → DML commit → flows (record-triggered).</p>
+                <p><strong>Before triggers</strong> fire before the record is saved. Use them to validate or modify field values before save (changes to <code className="bg-gray-100 px-1 rounded">Trigger.new</code> persist without extra DML). <strong>After triggers</strong> fire after the record is committed. Use them when you need the record Id or to update related records. Key context variables: <code className="bg-gray-100 px-1 rounded">Trigger.new</code>, <code className="bg-gray-100 px-1 rounded">Trigger.old</code> (not available on insert), <code className="bg-gray-100 px-1 rounded">Trigger.isInsert</code>, <code className="bg-gray-100 px-1 rounded">Trigger.isUpdate</code>. Best practice: one trigger per object, all logic delegated to a handler class. The <strong>Order of Execution</strong> for a save: validation rules → before triggers → system validation → after triggers → workflow rules → DML commit → flows (record-triggered).</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">SOQL: Relationships, Aggregates &amp; SOSL</h3>
-                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG() — require GROUP BY. SOSL searches multiple objects simultaneously: <code className="bg-gray-100 px-1 rounded">FIND ’term’ IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL for cross-object searches; use SOQL when you know the object.</p>
+                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG(), require GROUP BY. SOSL searches multiple objects simultaneously: <code className="bg-gray-100 px-1 rounded">FIND ’term’ IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL for cross-object searches; use SOQL when you know the object.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Process Automation: Flow vs. Apex Triggers</h3>
-                <p>The exam tests when to use declarative automation (Flow) vs. programmatic automation (Apex Triggers). Use <strong>Flow</strong> for standard CRUD operations, approval automation, and complex UI flows without code. Use <strong>Apex Triggers</strong> when you need cross-object logic beyond Flow’s capabilities, governor limit control, or callout scheduling. Both can fire on the same record — the Order of Execution determines which runs first (Flow runs before After Triggers in record-triggered contexts). Key PD1 topic: if Flow can do it declaratively, prefer Flow; if it needs Apex Classes, Limits, or Database class methods, use Apex.</p>
+                <p>The exam tests when to use declarative automation (Flow) vs. programmatic automation (Apex Triggers). Use <strong>Flow</strong> for standard CRUD operations, approval automation, and complex UI flows without code. Use <strong>Apex Triggers</strong> when you need cross-object logic beyond Flow’s capabilities, governor limit control, or callout scheduling. Both can fire on the same record, the Order of Execution determines which runs first (Flow runs before After Triggers in record-triggered contexts). Key PD1 topic: if Flow can do it declaratively, prefer Flow; if it needs Apex Classes, Limits, or Database class methods, use Apex.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Testing Framework: SeeAllData, Test.startTest &amp; HttpCalloutMock</h3>
-                <p>Minimum <strong>75% code coverage</strong> required across all Apex to deploy to production. Test classes use <code className="bg-gray-100 px-1 rounded">@isTest</code>. Test data is isolated by default (<code className="bg-gray-100 px-1 rounded">SeeAllData=false</code>) — create all test data explicitly using <code className="bg-gray-100 px-1 rounded">@TestSetup</code> or within each test method. <code className="bg-gray-100 px-1 rounded">Test.startTest()</code> resets governor limits and marks the start of the tested code; <code className="bg-gray-100 px-1 rounded">Test.stopTest()</code> forces async operations (future methods, batch jobs) to complete synchronously. Mock HTTP callouts with <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. <code className="bg-gray-100 px-1 rounded">@TestVisible</code> exposes private members to test classes without making them public.</p>
+                <p>Minimum <strong>75% code coverage</strong> required across all Apex to deploy to production. Test classes use <code className="bg-gray-100 px-1 rounded">@isTest</code>. Test data is isolated by default (<code className="bg-gray-100 px-1 rounded">SeeAllData=false</code>), create all test data explicitly using <code className="bg-gray-100 px-1 rounded">@TestSetup</code> or within each test method. <code className="bg-gray-100 px-1 rounded">Test.startTest()</code> resets governor limits and marks the start of the tested code; <code className="bg-gray-100 px-1 rounded">Test.stopTest()</code> forces async operations (future methods, batch jobs) to complete synchronously. Mock HTTP callouts with <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. <code className="bg-gray-100 px-1 rounded">@TestVisible</code> exposes private members to test classes without making them public.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Lightning Web Components (LWC): Wire Service &amp; @AuraEnabled</h3>
-                <p>LWC is the modern Salesforce UI framework. Key decorators: <code className="bg-gray-100 px-1 rounded">@track</code> (reactive private properties), <code className="bg-gray-100 px-1 rounded">@api</code> (public properties exposed to parent), <code className="bg-gray-100 px-1 rounded">@wire</code> (reactive Apex method calls). The <code className="bg-gray-100 px-1 rounded">@wire</code> decorator connects an LWC to an Apex method marked <code className="bg-gray-100 px-1 rounded">@AuraEnabled(cacheable=true)</code> — the <code className="bg-gray-100 px-1 rounded">cacheable</code> flag is required for @wire. Use <code className="bg-gray-100 px-1 rounded">lightning-record-form</code> for standard record CRUD without writing Apex. Communication between components uses <code className="bg-gray-100 px-1 rounded">CustomEvent</code> (child to parent) and <code className="bg-gray-100 px-1 rounded">LightningMessageService</code> (unrelated components).</p>
+                <p>LWC is the modern Salesforce UI framework. Key decorators: <code className="bg-gray-100 px-1 rounded">@track</code> (reactive private properties), <code className="bg-gray-100 px-1 rounded">@api</code> (public properties exposed to parent), <code className="bg-gray-100 px-1 rounded">@wire</code> (reactive Apex method calls). The <code className="bg-gray-100 px-1 rounded">@wire</code> decorator connects an LWC to an Apex method marked <code className="bg-gray-100 px-1 rounded">@AuraEnabled(cacheable=true)</code>, the <code className="bg-gray-100 px-1 rounded">cacheable</code> flag is required for @wire. Use <code className="bg-gray-100 px-1 rounded">lightning-record-form</code> for standard record CRUD without writing Apex. Communication between components uses <code className="bg-gray-100 px-1 rounded">CustomEvent</code> (child to parent) and <code className="bg-gray-100 px-1 rounded">LightningMessageService</code> (unrelated components).</p>
               </div>
             </div>
           </div>
@@ -461,7 +461,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           <div id="apex-code-patterns" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Core Apex Code Patterns for PD1</h2>
             <p className="text-sm text-gray-600 mb-5">
-              The PD1 exam presents real Apex code in 30–40% of questions. These three patterns appear most frequently — understand them at a read-and-reason level, not just from a definition.
+              The PD1 exam presents real Apex code in 30–40% of questions. These three patterns appear most frequently, understand them at a read-and-reason level, not just from a definition.
             </p>
             <div className="space-y-6">
               <div>
@@ -481,7 +481,7 @@ trigger AccountTrigger on Account (before insert, after insert) {
 // AccountTriggerHandler.cls
 public class AccountTriggerHandler {
     public void onBeforeInsert(List<Account> newAccounts) {
-        // Validate or set field values — no DML needed, changes persist
+        // Validate or set field values, no DML needed, changes persist
         for (Account acc : newAccounts) {
             if (acc.Industry == null) {
                 acc.Industry = 'Technology';
@@ -499,7 +499,7 @@ public class AccountTriggerHandler {
             c.Description = 'Processed';
             toUpdate.add(c);
         }
-        update toUpdate; // Single DML — not inside loop
+        update toUpdate; // Single DML, not inside loop
     }
 }`} />
               </div>
@@ -508,7 +508,7 @@ public class AccountTriggerHandler {
                 <p className="text-sm text-gray-600 mb-2">Use <code className="bg-gray-100 px-1 rounded text-xs">Database.insert(records, false)</code> to allow partial success; inspect the SaveResult array for errors.</p>
                 <CodeBlock code={`List<Account> accountsToInsert = new List<Account>();
 accountsToInsert.add(new Account(Name = 'Valid Account'));
-accountsToInsert.add(new Account()); // Missing required field — will fail
+accountsToInsert.add(new Account()); // Missing required field, will fail
 
 // allOrNone = false → partial success allowed
 Database.SaveResult[] results = Database.insert(accountsToInsert, false);
@@ -526,7 +526,7 @@ for (Database.SaveResult sr : results) {
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 mb-2">3. Test Class with HttpCalloutMock</h3>
-                <p className="text-sm text-gray-600 mb-2">HTTP callouts cannot run in tests — implement <code className="bg-gray-100 px-1 rounded text-xs">HttpCalloutMock</code> and register it with <code className="bg-gray-100 px-1 rounded text-xs">Test.setMock()</code>.</p>
+                <p className="text-sm text-gray-600 mb-2">HTTP callouts cannot run in tests, implement <code className="bg-gray-100 px-1 rounded text-xs">HttpCalloutMock</code> and register it with <code className="bg-gray-100 px-1 rounded text-xs">Test.setMock()</code>.</p>
                 <CodeBlock code={`// Mock implementation
 @isTest
 global class MockHttpCallout implements HttpCalloutMock {
@@ -565,24 +565,24 @@ private class CalloutServiceTest {
             </p>
             <div className="space-y-4 text-sm text-gray-700">
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Governor Limit Questions — the Pattern to Recognise</p>
-                <p>The exam will show you Apex code and ask &ldquo;what is wrong with this code?&rdquo; The answer is almost always SOQL or DML inside a for loop. Look for <code className="bg-gray-100 px-1 rounded">for (Account a : accounts) &#123; insert contact; &#125;</code> — that’s DML in a loop, and it will hit the 150 DML statement limit. The fix: collect records in a List inside the loop, then call <code className="bg-gray-100 px-1 rounded">insert contactList;</code> after the loop. For SOQL: use Maps populated with a single query before the loop, not a query inside the loop.</p>
+                <p className="font-semibold text-gray-900 mb-1">Governor Limit Questions, the Pattern to Recognise</p>
+                <p>The exam will show you Apex code and ask &ldquo;what is wrong with this code?&rdquo; The answer is almost always SOQL or DML inside a for loop. Look for <code className="bg-gray-100 px-1 rounded">for (Account a: accounts) &#123; insert contact; &#125;</code>, that’s DML in a loop, and it will hit the 150 DML statement limit. The fix: collect records in a List inside the loop, then call <code className="bg-gray-100 px-1 rounded">insert contactList;</code> after the loop. For SOQL: use Maps populated with a single query before the loop, not a query inside the loop.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Testing Questions — the Three Rules to Memorise</p>
-                <p>(1) Minimum 75% code coverage across the entire org (not per class) to deploy. (2) Test data must be created in the test method — do not rely on org data (<code className="bg-gray-100 px-1 rounded">@isTest(SeeAllData=false)</code> is the default). (3) HTTP callout tests require a mock implementation — use <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. Questions often say &ldquo;a developer’s test class fails when calling an external API&rdquo; — the answer is always to implement <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>.</p>
+                <p className="font-semibold text-gray-900 mb-1">Testing Questions, the Three Rules to Memorise</p>
+                <p>(1) Minimum 75% code coverage across the entire org (not per class) to deploy. (2) Test data must be created in the test method, do not rely on org data (<code className="bg-gray-100 px-1 rounded">@isTest(SeeAllData=false)</code> is the default). (3) HTTP callout tests require a mock implementation, use <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. Questions often say &ldquo;a developer’s test class fails when calling an external API&rdquo; the answer is always to implement <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Async Apex Selection — Which Method for Which Scenario</p>
-                <p>Use <strong>Future methods</strong> for simple one-off async operations (HTTP callouts from triggers, mixed DML). Use <strong>Batch Apex</strong> when processing more than 10,000 records (up to 50 million). Use <strong>Queueable Apex</strong> when you need chaining (one job triggers another) or need to pass complex objects between async contexts. Use <strong>Scheduled Apex</strong> for time-based execution. Exam tip: if the question says &ldquo;millions of records&rdquo; or &ldquo;process in chunks&rdquo; — the answer is Batch Apex. If it says &ldquo;chain jobs&rdquo; — Queueable.</p>
+                <p className="font-semibold text-gray-900 mb-1">Async Apex Selection: Which Method for Which Scenario</p>
+                <p>Use <strong>Future methods</strong> for simple one-off async operations (HTTP callouts from triggers, mixed DML). Use <strong>Batch Apex</strong> when processing more than 10,000 records (up to 50 million). Use <strong>Queueable Apex</strong> when you need chaining (one job triggers another) or need to pass complex objects between async contexts. Use <strong>Scheduled Apex</strong> for time-based execution. Exam tip: if the question says &ldquo;millions of records&rdquo; or &ldquo;process in chunks&rdquo; the answer is Batch Apex. If it says &ldquo;chain jobs&rdquo;: Queueable.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Trigger Scenarios — Before vs After</p>
-                <p>When the question says &ldquo;set a field value before the record is saved&rdquo; — use a before trigger (changes to <code className="bg-gray-100 px-1 rounded">Trigger.new</code> persist without a DML call). When the question says &ldquo;create a related record after an account is created&rdquo; — use an after trigger (the account Id exists after save). When the question says &ldquo;prevent a record from being saved if a condition is not met&rdquo; — use <code className="bg-gray-100 px-1 rounded">addError()</code> in a before trigger. Never call a SOQL query in a trigger without first checking bulkification patterns.</p>
+                <p className="font-semibold text-gray-900 mb-1">Trigger Scenarios: Before vs After</p>
+                <p>When the question says &ldquo;set a field value before the record is saved&rdquo; use a before trigger (changes to <code className="bg-gray-100 px-1 rounded">Trigger.new</code> persist without a DML call). When the question says &ldquo;create a related record after an account is created&rdquo; use an after trigger (the account Id exists after save). When the question says &ldquo;prevent a record from being saved if a condition is not met&rdquo; use <code className="bg-gray-100 px-1 rounded">addError()</code> in a before trigger. Never call a SOQL query in a trigger without first checking bulkification patterns.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Exam Strategy</p>
-                <p>PD1 questions often include realistic-looking Apex code snippets. Read code carefully — the &ldquo;wrong answer&rdquo; in the options often uses the right method name but in the wrong context (e.g., using a future method where a queueable is needed, or using DML before a callout). Passing score is 68% (41/60 questions). Aim for 78%+ on full mock exams — the additional buffer accounts for exam-day stress and unfamiliar question phrasing. Complete the official Trailhead PD1 Trailmix before booking.</p>
+                <p>PD1 questions often include realistic-looking Apex code snippets. Read code carefully, the &ldquo;wrong answer&rdquo; in the options often uses the right method name but in the wrong context (e.g., using a future method where a queueable is needed, or using DML before a callout). Passing score is 68% (41/60 questions). Aim for 78%+ on full mock exams, the additional buffer accounts for exam-day stress and unfamiliar question phrasing. Complete the official Trailhead PD1 Trailmix before booking.</p>
               </div>
             </div>
           </div>

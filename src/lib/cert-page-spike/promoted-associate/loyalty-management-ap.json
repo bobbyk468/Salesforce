@@ -26,7 +26,7 @@
       "<strong>Programme design.</strong> Currencies, tiers, benefits, promotions and vouchers.",
       "<strong>Rules engine.</strong> How transaction journals and program processes award and redeem points."
     ],
-    "passRateGuidance": "Build a small programme in a trial org with two tiers and a promotion, then post a few transactions. Before you book, aim for 75% or more on practice tests."
+    "passRateGuidance": "Build a small programme in a trial org with two tiers and a promotion, then post a few transactions. Before you book. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Loyalty Management Accredited Professional Exam Format Explained",
@@ -238,7 +238,7 @@
         "Deleting the members who are inactive"
       ],
       "correctAnswer": 0,
-      "explanation": "Expiry rules remove points after a set time, which also helps control points liability.",
+      "explanation": "Expiry rules remove points after a set time; which also helps control points liability.",
       "whyWrong": [
         "Partner agreements cover partners.",
         "Tier groups don't control expiry.",

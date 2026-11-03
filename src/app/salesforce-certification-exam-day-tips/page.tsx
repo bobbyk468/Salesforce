@@ -37,7 +37,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What ID do I need for the Salesforce certification exam?',
-    answer: 'You must present a valid, government-issued photo ID that exactly matches the name on your Webassessor account. Accepted IDs include: passport, national ID card, and driving licence. The name must match character-for-character — even a middle name difference can cause issues. For online proctored exams, you will hold your ID up to the webcam during the identity verification step.',
+    answer: 'You must present a valid, government-issued photo ID that exactly matches the name on your Webassessor account. Accepted IDs include: passport, national ID card, and driving licence. The name must match character-for-character, even a middle name difference can cause issues. For online proctored exams, you will hold your ID up to the webcam during the identity verification step.',
   },
   {
     question: 'How early should I arrive for a testing centre exam?',
@@ -45,7 +45,7 @@ const faqItems = [
   },
   {
     question: 'Can I take notes during the Salesforce exam?',
-    answer: 'For testing centre exams: you are provided with a whiteboard or scratch paper and a pen/marker at the testing station — no personal notes or paper allowed in the exam room. For online proctored exams: you may use a single blank piece of paper and pen that must be shown to the proctor before the exam starts. You cannot use pre-prepared notes in either format.',
+    answer: 'For testing centre exams: you are provided with a whiteboard or scratch paper and a pen/marker at the testing station, no personal notes or paper allowed in the exam room. For online proctored exams: you may use a single blank piece of paper and pen that must be shown to the proctor before the exam starts. You cannot use pre-prepared notes in either format.',
   },
   {
     question: 'What happens if my internet disconnects during an online proctored exam?',
@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'Should I answer all questions or skip and return to hard ones?',
-    answer: 'Yes — use the "flag and return" strategy. When you encounter a difficult question, flag it and move on rather than spending too much time on it. Answer all questions you are confident about first, then return to flagged questions with your remaining time. This ensures you maximise points on questions you know and give yourself perspective on difficult questions after completing the rest of the exam. Never leave questions unanswered — there is no penalty for guessing.',
+    answer: 'Yes. Use the "flag and return" strategy. When you encounter a difficult question, flag it and move on rather than spending too much time on it. Answer all questions you are confident about first, then return to flagged questions with your remaining time. This ensures you maximise points on questions you know and give yourself perspective on difficult questions after completing the rest of the exam. Never leave questions unanswered; there is no penalty for guessing.',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
           Salesforce Certification Exam Day Tips ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Everything you need to know for exam day — online proctored and testing centre checklists, time management strategy, ID requirements, and what to do if something goes wrong.
+          Everything you need to know for exam day, online proctored and testing centre checklists, time management strategy, ID requirements, and what to do if something goes wrong.
         </p>
       </div>
 
@@ -87,7 +87,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
             {[
               { done: true, text: '24h before: Run Kryterion system check tool' },
               { done: true, text: '24h before: Test webcam, microphone, internet speed' },
-              { done: true, text: 'Day of: Clear your desk — remove all papers, phones, and extra monitors' },
+              { done: true, text: 'Day of: Clear your desk, remove all papers, phones, and extra monitors' },
               { done: true, text: 'Day of: Have government-issued photo ID ready' },
               { done: true, text: 'Day of: Ensure the room is private and quiet' },
               { done: true, text: 'Day of: Close all apps and browser tabs except the exam' },
@@ -108,11 +108,11 @@ export default function SalesforceCertificationExamDayTipsPage() {
             {[
               { text: 'Bring government-issued photo ID (matches Webassessor name exactly)' },
               { text: 'Bring a second form of ID (credit card, health card)' },
-              { text: 'Arrive 15 minutes early — not exactly on time' },
+              { text: 'Arrive 15 minutes early, not exactly on time' },
               { text: 'Leave all personal items at home or in car (bags, phones, notes)' },
               { text: 'Verify centre address and parking in advance' },
               { text: 'Wear comfortable layers (testing centres vary in temperature)' },
-              { text: 'Eat a meal before — do not arrive hungry' },
+              { text: 'Eat a meal before, do not arrive hungry' },
               { text: 'Confirm your Webassessor booking confirmation email' },
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
@@ -129,15 +129,15 @@ export default function SalesforceCertificationExamDayTipsPage() {
         <div className="space-y-4 text-sm text-gray-700">
           <div className="bg-gray-50 rounded-xl p-4">
             <p className="font-semibold text-gray-900 mb-2">Standard Professional Exam: 60 questions, 105 minutes</p>
-            <p>That is approximately <strong>1 minute 45 seconds per question</strong>. For most questions, this is comfortable. Flag questions that require more than 2 minutes of thinking — move on and return. In the final 15 minutes, review all flagged questions.</p>
+            <p>That is approximately <strong>1 minute 45 seconds per question</strong>. For most questions, this is comfortable. Flag questions that require more than 2 minutes of thinking, move on and return. In the final 15 minutes, review all flagged questions.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-4">
             <p className="font-semibold text-gray-900 mb-2">The Flag-and-Return Strategy</p>
             <ol className="space-y-1 list-decimal list-inside text-gray-600">
               <li>Read every question fully before looking at answers.</li>
-              <li>If confident — answer and move on.</li>
-              <li>If uncertain — make a best guess, flag it, and move on.</li>
-              <li>Never leave a question blank — there is no penalty for guessing.</li>
+              <li>If confident, answer and move on.</li>
+              <li>If uncertain, make a best guess, flag it, and move on.</li>
+              <li>Never leave a question blank; there is no penalty for guessing.</li>
               <li>Return to flagged questions with remaining time.</li>
             </ol>
           </div>
@@ -152,8 +152,8 @@ export default function SalesforceCertificationExamDayTipsPage() {
         <h2 className="text-base font-bold text-amber-900 mb-3">What to Do If Something Goes Wrong</h2>
         <ul className="space-y-2 text-sm text-amber-800">
           <li>⚠ <strong>Internet disconnects (online):</strong> Reconnect immediately. Contact Kryterion support if it persists.</li>
-          <li>⚠ <strong>Proctor flags a room issue:</strong> Address it immediately — remove the flagged item or enter a different room if needed.</li>
-          <li>⚠ <strong>Computer crashes at testing centre:</strong> Raise your hand and alert centre staff — they will assist.</li>
+          <li>⚠ <strong>Proctor flags a room issue:</strong> Address it immediately, remove the flagged item or enter a different room if needed.</li>
+          <li>⚠ <strong>Computer crashes at testing centre:</strong> Raise your hand and alert centre staff; they will assist.</li>
           <li>⚠ <strong>ID mismatch at testing centre:</strong> You may be turned away. Contact Salesforce certification support and Kryterion to discuss next steps.</li>
           <li>⚠ <strong>Emergency on exam day:</strong> Contact Kryterion before missing the exam to discuss rescheduling options.</li>
         </ul>

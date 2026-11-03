@@ -65,7 +65,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Strategy Designer candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Strategy Designer exam are: (1) Futures Thinking vs Current-State Analysis — Speculative vs Descriptive; (2) Jobs To Be Done vs User Stories — Motivation vs Task; (3) Hypothesis vs Assumption vs Insight — Research Rigour Distinctions. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Strategy Designer exam are: (1) Futures Thinking vs Current-State Analysis: Speculative vs Descriptive; (2) Jobs To Be Done vs User Stories: Motivation vs Task; (3) Hypothesis vs Assumption vs Insight: Research Rigour Distinctions. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('strategy-designer-exam-tips'),
 ]
@@ -104,9 +104,9 @@ export default function StrategyDesignerExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Strategy Designer Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Strategy and vision</strong> — Aligning Salesforce implementations to business outcomes, identifying key stakeholders and their goals, creating a shared vision for digital transformation, and translating business strategy into technology decisions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Design thinking methods</strong> — Applying the design thinking process (Empathise, Define, Ideate, Prototype, Test) to CRM and digital transformation projects. User research methods, journey mapping, value proposition design, and co-creation facilitation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Stakeholder management and change</strong> — Facilitating discovery workshops, creating shared language between business and technology teams, managing executive alignment, and linking design decisions to measurable business outcomes.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Strategy and vision</strong>: Aligning Salesforce implementations to business outcomes, identifying key stakeholders and their goals, creating a shared vision for digital transformation, and translating business strategy into technology decisions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Design thinking methods</strong>: Applying the design thinking process (Empathise, Define, Ideate, Prototype, Test) to CRM and digital transformation projects. User research methods, journey mapping, value proposition design, and co-creation facilitation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Stakeholder management and change</strong>: Facilitating discovery workshops, creating shared language between business and technology teams, managing executive alignment, and linking design decisions to measurable business outcomes.</li>
         </ul>
       </section>
 
@@ -138,12 +138,12 @@ export default function StrategyDesignerExamTipsPage() {
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a client engagement scenario and ask which design thinking method, facilitation
           approach, or strategic framework is most appropriate. The correct answer is always the most
-          structured, validated approach — not ad-hoc or purely technical solutions.
+          structured, validated approach, not ad-hoc or purely technical solutions.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For design phase questions: Empathise = research before designing. Define = frame the problem correctly (How Might We statements). Ideate = generate many solutions without judging. Prototype = build low-fidelity mockups quickly. Test = validate with real users. When asked which phase to apply to a scenario, identify what is needed: understanding, problem definition, generation, or validation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For value mapping questions: a Value Map connects customer jobs (what customers are trying to do), pains (negative outcomes), and gains (positive outcomes) to the product’s pain relievers and gain creators. When a scenario asks how to demonstrate business value, the answer is a value proposition canvas or value map — not a business case document.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For facilitation questions: design workshops should include diverse stakeholders (business, technology, users). Affinity mapping groups insights from research. Dot voting prioritises ideas democratically. When a workshop has conflicting stakeholder views, the correct next step is co-creation — not making a unilateral recommendation.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For value mapping questions: a Value Map connects customer jobs (what customers are trying to do), pains (negative outcomes), and gains (positive outcomes) to the product’s pain relievers and gain creators. When a scenario asks how to demonstrate business value, the answer is a value proposition canvas or value map, not a business case document.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For facilitation questions: design workshops should include diverse stakeholders (business, technology, users). Affinity mapping groups insights from research. Dot voting prioritises ideas democratically. When a workshop has conflicting stakeholder views, the correct next step is co-creation, not making a unilateral recommendation.</li>
         </ul>
       </section>
 
@@ -164,19 +164,19 @@ export default function StrategyDesignerExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Strategy Designer Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Futures Thinking vs Current-State Analysis — Speculative vs Descriptive</p>
-            <p className="text-sm text-gray-700">Futures Thinking projects potential future scenarios based on emerging trends and signals — it is speculative and explores "what could be." Current-state analysis (journey mapping, user research) documents what exists today. Strategy Design work starts with current state but must include futures framing to avoid solving only today’s problems. Candidates present only current-state research as their strategy answer — the exam expects futures framing alongside research.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Futures Thinking vs Current-State Analysis: Speculative vs Descriptive</p>
+            <p className="text-sm text-gray-700">Futures Thinking projects potential future scenarios based on emerging trends and signals; it is speculative and explores "what could be." Current-state analysis (journey mapping, user research) documents what exists today. Strategy Design work starts with current state but must include futures framing to avoid solving only today’s problems. Candidates present only current-state research as their strategy answer, the exam expects futures framing alongside research.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Jobs To Be Done vs User Stories — Motivation vs Task</p>
-            <p className="text-sm text-gray-700">Jobs To Be Done (JTBD) captures the fundamental motivation behind a user’s behaviour: "When I [situation], I want to [motivation], so I can [outcome]." User Stories capture task-level requirements: "As a [role], I want [feature], so that [benefit]." JTBD is broader and more durable — features change but motivations stay constant. Candidates use User Stories for strategy framing — the exam expects JTBD for understanding root motivations before defining solutions.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Jobs To Be Done vs User Stories: Motivation vs Task</p>
+            <p className="text-sm text-gray-700">Jobs To Be Done (JTBD) captures the fundamental motivation behind a user’s behaviour: "When I [situation], I want to [motivation], so I can [outcome]." User Stories capture task-level requirements: "As a [role], I want [feature], so that [benefit]." JTBD is broader and more durable, features change but motivations stay constant. Candidates use User Stories for strategy framing, the exam expects JTBD for understanding root motivations before defining solutions.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Hypothesis vs Assumption vs Insight — Research Rigour Distinctions</p>
-            <p className="text-sm text-gray-700">An Assumption is an unvalidated belief you are acting on. A Hypothesis is a testable prediction derived from an assumption. An Insight is a validated, evidence-backed finding from research. Candidates present assumptions as insights in design reviews — the exam tests research rigour: insights require evidence, hypotheses require testing, and assumptions must be explicitly flagged as risks.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Hypothesis vs Assumption vs Insight: Research Rigour Distinctions</p>
+            <p className="text-sm text-gray-700">An Assumption is an unvalidated belief you are acting on. A Hypothesis is a testable prediction derived from an assumption. An Insight is a validated, evidence-backed finding from research. Candidates present assumptions as insights in design reviews, the exam tests research rigour: insights require evidence, hypotheses require testing, and assumptions must be explicitly flagged as risks.</p>
           </div>
         </div>
       </section>

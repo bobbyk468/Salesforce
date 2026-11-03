@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the CTA Evaluation Exam and how does it differ from the Review Board?',
-    answer: 'The Technical Architect Evaluation is the most prestigious credential in the Salesforce ecosystem — held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
+    answer: 'The Technical Architect Evaluation is the most prestigious credential in the Salesforce ecosystem, held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
   },
   {
     question: 'What topics are covered in the CTA Evaluation Exam?',
@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'Is the Technical Architect Evaluation worth pursuing?',
-    answer: 'The CTA Evaluation Exam has approximately 60 multiple-choice questions and a 120-minute time limit. The exact passing score is not publicly disclosed by Salesforce. The exam is notably more difficult than any other Salesforce written exam — it tests breadth across all architecture domains at an expert level, requiring you to hold and apply knowledge from the Application Architect and System Architect credential tracks simultaneously.',
+    answer: 'The CTA Evaluation Exam has approximately 60 multiple-choice questions and a 120-minute time limit. The exact passing score is not publicly disclosed by Salesforce. The exam is notably more difficult than any other Salesforce written exam, it tests breadth across all architecture domains at an expert level, requiring you to hold and apply knowledge from the Application Architect and System Architect credential tracks simultaneously.',
   },
   {
     question: 'Which credentials are recommended before attempting the CTA Evaluation Exam?',
@@ -60,7 +60,7 @@ const faqItems = [
   },
   {
     question: 'What concepts do most Technical Architect Evaluation candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Technical Architect Evaluation exam are: (1) Evaluation Format — Two Proctored Exams Before the Review Board; (2) Covering All Salesforce Architecture Domains in Evaluation; (3) Scenario-Based Reasoning Over Feature Recall. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'The most commonly misunderstood topics for the Technical Architect Evaluation exam are: (1) Evaluation Format: Two Proctored Exams Before the Review Board; (2) Covering All Salesforce Architecture Domains in Evaluation; (3) Scenario-Based Reasoning Over Feature Recall. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
   ...getConceptFaqs('technical-architect-evaluation-exam-tips'),
 ]
@@ -92,9 +92,9 @@ export default function TechnicalArchitectEvaluationExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: the CTA Evaluation Exam Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Large data volumes and performance</strong> — Skinny tables for selective field queries on large objects, custom indexes for non-selective fields, data archiving with Big Objects, SOQL query optimisation, Apex batch processing at scale (chunking strategies, governor limit management), and platform cache usage for read-heavy workloads exceeding standard query limits.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Enterprise integration architecture</strong> — Choosing between synchronous REST, asynchronous Platform Events, Change Data Capture (CDC), Streaming API, and MuleSoft for different integration scenarios. Designing idempotent integrations, handling API limits (concurrent API calls, daily API call limits), and designing for high-availability integration that tolerates downstream system failures.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Multi-cloud and identity architecture</strong> — Designing multi-org Salesforce landscapes (single org vs. multi-org), external identity integration (SAML SSO, OAuth, delegated authentication), Experience Cloud authentication patterns, Salesforce Identity for external app authentication, and managing security across cloud boundaries.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Large data volumes and performance</strong>: Skinny tables for selective field queries on large objects, custom indexes for non-selective fields, data archiving with Big Objects, SOQL query optimisation, Apex batch processing at scale (chunking strategies, governor limit management), and platform cache usage for read-heavy workloads exceeding standard query limits.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Enterprise integration architecture</strong>: Choosing between synchronous REST, asynchronous Platform Events, Change Data Capture (CDC), Streaming API, and MuleSoft for different integration scenarios. Designing idempotent integrations, handling API limits (concurrent API calls, daily API call limits), and designing for high-availability integration that tolerates downstream system failures.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Multi-cloud and identity architecture</strong>: Designing multi-org Salesforce landscapes (single org vs. multi-org), external identity integration (SAML SSO, OAuth, delegated authentication), Experience Cloud authentication patterns, Salesforce Identity for external app authentication, and managing security across cloud boundaries.</li>
         </ul>
       </section>
 
@@ -121,7 +121,7 @@ export default function TechnicalArchitectEvaluationExamTipsPage() {
             <span className="font-medium text-gray-900">Solution Architecture and Design</span>
             <span className="font-bold text-salesforce-blue ml-4">~20%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Domain weights are approximate. The exam draws from all architect-level credentials. Breadth across all domains is tested — not depth in one area.</p>
+          <p className="text-xs text-gray-600 pt-1">Domain weights are approximate. The exam draws from all architect-level credentials. Breadth across all domains is tested, not depth in one area.</p>
         </div>
       </section>
 
@@ -129,12 +129,12 @@ export default function TechnicalArchitectEvaluationExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach CTA Evaluation Exam Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           The CTA Evaluation Exam presents complex scenarios with multiple correct-seeming answers.
-          The correct answer is the architecturally best solution — not just a working solution.
+          The correct answer is the architecturally best solution, not just a working solution.
           Always consider scale, maintainability, and Salesforce best practices.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LDV questions: when an object exceeds 10 million records, standard SOQL queries without custom indexes can cause performance issues. Skinny tables (a stripped-down copy of frequently queried fields) dramatically speed up reporting queries. Defer sharing rules calculation for bulk data loads. Divide and conquer with batch sizes of 2,000 records max for Batch Apex. When a scenario describes reports timing out on a 50-million-record object, skinny tables are the first recommendation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For integration pattern questions: real-time synchronous integration (REST callout) is appropriate for user-facing transactions requiring immediate confirmation. Asynchronous (Platform Events, Queues) is better for high volume or when response latency is acceptable. Change Data Capture captures all record changes for downstream consumption without polling. When a scenario describes ’10,000 records updated per hour needing to sync to an external system’, use CDC — not synchronous REST callouts or scheduled Batch Apex.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For integration pattern questions: real-time synchronous integration (REST callout) is appropriate for user-facing transactions requiring immediate confirmation. Asynchronous (Platform Events, Queues) is better for high volume or when response latency is acceptable. Change Data Capture captures all record changes for downstream consumption without polling. When a scenario describes ’10,000 records updated per hour needing to sync to an external system’, use CDC, not synchronous REST callouts or scheduled Batch Apex.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For multi-org questions: single-org is simpler but has limits (data, users, complexity). Multi-org provides isolation (separate release cycles, security boundaries) but requires integration. The CTA exam typically rewards single-org solutions when technically feasible. When a scenario describes different business units wanting separate release cycles, consider hub-and-spoke with Salesforce-to-Salesforce integration before recommending full multi-org architecture.</li>
         </ul>
       </section>
@@ -157,19 +157,19 @@ export default function TechnicalArchitectEvaluationExamTipsPage() {
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Technical Architect Evaluation Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Evaluation Format — Two Proctored Exams Before the Review Board</p>
-            <p className="text-sm text-gray-700">The Salesforce Technical Architect path includes two proctored multiple-choice assessments (Technical Architect Evaluation exams) before candidates are eligible for the Review Board. These exams test architecture knowledge across all domain areas. Candidates underestimate these proctored exams — they are rigorous and assess whether a candidate has the breadth of knowledge required to enter the Review Board process.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Evaluation Format: Two Proctored Exams Before the Review Board</p>
+            <p className="text-sm text-gray-700">The Salesforce Technical Architect path includes two proctored multiple-choice assessments (Technical Architect Evaluation exams) before candidates are eligible for the Review Board. These exams test architecture knowledge across all domain areas. Candidates underestimate these proctored exams; they are rigorous and assess whether a candidate has the breadth of knowledge required to enter the Review Board process.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Covering All Salesforce Architecture Domains in Evaluation</p>
-            <p className="text-sm text-gray-700">The Technical Architect evaluation covers all architecture domains: Data Architecture, Integration, Sharing &amp; Visibility, Development Lifecycle, Security, Identity, and Solution Design. Candidates focus on their strongest domain — the exam requires breadth across all domains, with especially high expectations on Integration Patterns, Deployment Strategy, and Data Architecture.</p>
+            <p className="text-sm text-gray-700">The Technical Architect evaluation covers all architecture domains: Data Architecture, Integration, Sharing &amp; Visibility, Development Lifecycle, Security, Identity, and Solution Design. Candidates focus on their strongest domain, the exam requires breadth across all domains, with especially high expectations on Integration Patterns, Deployment Strategy, and Data Architecture.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Scenario-Based Reasoning Over Feature Recall</p>
-            <p className="text-sm text-gray-700">The TA Evaluation exams are scenario-based: given a complex business requirement with constraints, choose the best architecture. Correct answers require justifying the approach based on the full context, not just identifying the "best practice." Candidates choose the textbook answer ignoring constraints — the exam penalises technically correct answers that do not fit the scenario constraints.</p>
+            <p className="text-sm text-gray-700">The TA Evaluation exams are scenario-based: given a complex business requirement with constraints, choose the best architecture. Correct answers require justifying the approach based on the full context, not just identifying the "best practice." Candidates choose the textbook answer ignoring constraints, the exam penalises technically correct answers that do not fit the scenario constraints.</p>
           </div>
         </div>
       </section>

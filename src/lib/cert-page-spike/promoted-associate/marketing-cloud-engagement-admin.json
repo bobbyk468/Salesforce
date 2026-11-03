@@ -22,9 +22,9 @@
     "summary": "The Engagement Administrator exam is moderately difficult. It tests platform setup, security configuration, subscriber data management, and deliverability best practices. You need hands-on experience with Business Unit architecture, role-based permissions, and Sender Authentication Packages.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong> — slightly lower than some consultant exams, but the content is operationally deep.",
-      "<strong>Admin-specific focus</strong> — expect questions on Business Unit setup, IP warming, SAP configuration, and API security that pure marketers may not encounter.",
-      "<strong>Deliverability knowledge required</strong> — SPF, DKIM, DMARC, Reply Mail Management, and IP reputation monitoring are all tested."
+      "<strong>~65% passing score</strong>: slightly lower than some consultant exams, but the content is operationally deep.",
+      "<strong>Admin-specific focus</strong>: expect questions on Business Unit setup, IP warming, SAP configuration, and API security that pure marketers may not encounter.",
+      "<strong>Deliverability knowledge required</strong>: SPF, DKIM, DMARC, Reply Mail Management, and IP reputation monitoring are all tested."
     ],
     "passRateGuidance": "Spend at least 6 months managing a Marketing Cloud account before booking. Practice configuring Business Units, user roles, and Sender Authentication Packages in a sandbox."
   },
@@ -66,19 +66,19 @@
     "blocks": [
       {
         "heading": "Account Architecture and Business Units",
-        "body": "Marketing Cloud Engagement supports multi-Business Unit (BU) architectures. Business Units enable separate sending domains, user management, subscriber data, and reporting per BU — useful for regional or brand separation. The parent BU manages shared assets and enforces enterprise-level settings. User roles hierarchy: Administrator, Marketing Cloud Administrator, Marketing, Content Editor/Publisher, Viewer. Sender Authentication Package (SAP) provides the private IP, custom FROM domain, and branded link tracking for each BU. The admin exam tests BU design decisions and how permissions cascade."
+        "body": "Marketing Cloud Engagement supports multi-Business Unit (BU) architectures. Business Units enable separate sending domains, user management, subscriber data, and reporting per BU, useful for regional or brand separation. The parent BU manages shared assets and enforces enterprise-level settings. User roles hierarchy: Administrator, Marketing Cloud Administrator, Marketing, Content Editor/Publisher, Viewer. Sender Authentication Package (SAP) provides the private IP, custom FROM domain, and branded link tracking for each BU. The admin exam tests BU design decisions and how permissions cascade."
       },
       {
         "heading": "Subscriber Management at the Account Level",
-        "body": "The All Subscribers list is the master subscriber list — global unsubscribes are recorded here and override all other settings. Publication Lists enable opt-in preferences per content type. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends globally. Data Extensions store relational subscriber and event data. The Subscriber Key strategy (email address vs CRM ID) affects deduplication and cross-channel identity. The admin configures the subscriber data model and retention policies."
+        "body": "The All Subscribers list is the master subscriber list, global unsubscribes are recorded here and override all other settings. Publication Lists enable opt-in preferences per content type. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends globally. Data Extensions store relational subscriber and event data. The Subscriber Key strategy (email address vs CRM ID) affects deduplication and cross-channel identity. The admin configures the subscriber data model and retention policies."
       },
       {
         "heading": "IP Warming and Sender Reputation",
-        "body": "New dedicated IPs require IP warming — gradually increasing send volume over 4-8 weeks to establish sender reputation with ISPs. Send to the most engaged subscribers first. Monitor bounce rates, spam complaints, and inbox placement. SPF, DKIM, and DMARC configuration is required via the Sender Authentication Package. Reply Mail Management (RMM) handles inbound replies — route auto-replies, out-of-office, and unsubscribes automatically. The admin exam tests the warming schedule design and what metrics indicate reputation health."
+        "body": "New dedicated IPs require IP warming, gradually increasing send volume over 4-8 weeks to establish sender reputation with ISPs. Send to the most engaged subscribers first. Monitor bounce rates, spam complaints, and inbox placement. SPF, DKIM, and DMARC configuration is required via the Sender Authentication Package. Reply Mail Management (RMM) handles inbound replies, route auto-replies, out-of-office, and unsubscribes automatically. The admin exam tests the warming schedule design and what metrics indicate reputation health."
       },
       {
         "heading": "Roles, Permissions, and Security",
-        "body": "Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive — a user can have roles in multiple BUs. Marketing Cloud **SSO** connects to corporate identity systems (**SAML**/**OAuth**). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations."
+        "body": "Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive, a user can have roles in multiple BUs. Marketing Cloud **SSO** connects to corporate identity systems (**SAML**/**OAuth**). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations."
       },
       {
         "heading": "Salesforce CRM Integration (MC Connect)",

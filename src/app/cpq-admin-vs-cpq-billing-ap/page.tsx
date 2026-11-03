@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between CPQ Administrator and CPQ & Billing AP?',
-    answer: 'Salesforce CPQ Administrator is a full certification ($200, 60 questions, 105 min, 65%) validating expert-level CPQ configuration: complex product rules, pricing waterfall mastery, quote templates, and advanced contracting. CPQ &amp; Billing AP is an Accredited Professional credential ($150, 40 questions, 60 min, Pass/Fail) with a broader but shallower scope that also includes Salesforce Billing — invoice generation, payment processing, and billing amendments. The AP is faster to achieve; the Administrator credential signals deeper CPQ expertise.',
+    answer: 'Salesforce CPQ Administrator is a full certification ($200, 60 questions, 105 min, 65%) validating expert-level CPQ configuration: complex product rules, pricing waterfall mastery, quote templates, and advanced contracting. CPQ &amp; Billing AP is an Accredited Professional credential ($150, 40 questions, 60 min, Pass/Fail) with a broader but shallower scope that also includes Salesforce Billing, invoice generation, payment processing, and billing amendments. The AP is faster to achieve; the Administrator credential signals deeper CPQ expertise.',
   },
   {
     question: 'Should I take CPQ Administrator or CPQ & Billing AP first?',
@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'Which CPQ certification is better for a Revenue Cloud consultant?',
-    answer: 'For a Revenue Cloud consultant, CPQ &amp; Billing AP is more aligned to the full Revenue Cloud scope (which includes both CPQ and Billing). CPQ Administrator focuses exclusively on the CPQ product. As Salesforce migrates to Revenue Cloud Advanced (RCA) in 2025–2026, both certifications have some exposure to this transition — but for practitioners working on end-to-end quote-to-cash implementations, CPQ &amp; Billing AP better reflects the full scope of the role.',
+    answer: 'For a Revenue Cloud consultant, CPQ &amp; Billing AP is more aligned to the full Revenue Cloud scope (which includes both CPQ and Billing). CPQ Administrator focuses exclusively on the CPQ product. As Salesforce migrates to Revenue Cloud Advanced (RCA) in 2025–2026, both certifications have some exposure to this transition, but for practitioners working on end-to-end quote-to-cash implementations, CPQ &amp; Billing AP better reflects the full scope of the role.',
   },
 ]
 
@@ -85,7 +85,7 @@ export default function CpqAdminVsCpqBillingApPage() {
           certSlug: "cpq-administrator",
           examTipsSlug: "cpq-administrator-exam-tips",
           conditions: [
-          "You configure Salesforce CPQ — products, pricing rules, quote templates",
+          "You configure Salesforce CPQ, products, pricing rules, quote templates",
           "You implement quote-to-cash processes for clients",
           "You are earlier in your CPQ journey and need the foundational credential",
           "You want the more widely recognised CPQ certification",
@@ -106,7 +106,7 @@ export default function CpqAdminVsCpqBillingApPage() {
           certName: "CPQ Administrator",
           certSlug: "cpq-administrator",
           examTipsSlug: "cpq-administrator-exam-tips",
-          reason: "CPQ Administrator is the essential foundation. Billing AP builds directly on CPQ knowledge — attempting it without CPQ Administrator experience is one of the most common reasons candidates struggle. Take CPQ Admin first, then specialise into Billing AP once you have real CPQ project experience.",
+          reason: "CPQ Administrator is the essential foundation. Billing AP builds directly on CPQ knowledge, attempting it without CPQ Administrator experience is one of the most common reasons candidates struggle. Take CPQ Admin first, then specialise into Billing AP once you have real CPQ project experience.",
           
         }}
       />
@@ -135,13 +135,13 @@ export default function CpqAdminVsCpqBillingApPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">CPQ Depth</td>
-                <td className="py-2.5 pr-4">Deep — advanced product rules, pricing architecture, SBQQ customisations</td>
-                <td className="py-2.5">Moderate — core CPQ + billing integration</td>
+                <td className="py-2.5 pr-4">Deep, advanced product rules, pricing architecture, SBQQ customisations</td>
+                <td className="py-2.5">Moderate, core CPQ + billing integration</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Billing Coverage</td>
                 <td className="py-2.5 pr-4">None (CPQ only)</td>
-                <td className="py-2.5">Yes — invoices, payments, billing amendments</td>
+                <td className="py-2.5">Yes, invoices, payments, billing amendments</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Time to Prepare</td>
@@ -207,7 +207,7 @@ export default function CpqAdminVsCpqBillingApPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Implementing quote-to-cash but not yet touching Billing</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin first — Billing builds on CPQ fundamentals</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin first: Billing builds on CPQ fundamentals</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Project requires subscription billing, usage-based pricing, or revenue recognition</td>
@@ -215,7 +215,7 @@ export default function CpqAdminVsCpqBillingApPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Want the Salesforce-certified credential (vs AP only)</td>
-                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin — full Salesforce certification; AP is an add-on</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin, full Salesforce certification; AP is an add-on</td>
               </tr>
             </tbody>
           </table>

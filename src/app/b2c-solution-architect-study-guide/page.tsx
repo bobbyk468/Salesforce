@@ -55,11 +55,11 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2C Solution Architect certification?',
-    answer: 'The B2C Solution Architect certification validates expertise in designing multi-cloud solutions for direct-to-consumer (B2C) scenarios — connecting B2C Commerce Cloud, Marketing Cloud, Service Cloud, Personalisation, and Loyalty Management into a seamless consumer experience. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
+    answer: 'The B2C Solution Architect certification validates expertise in designing multi-cloud solutions for direct-to-consumer (B2C) scenarios, connecting B2C Commerce Cloud, Marketing Cloud, Service Cloud, Personalisation, and Loyalty Management into a seamless consumer experience. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
   },
   {
     question: 'What is the difference between B2B and B2C Solution Architect exams?',
-    answer: 'B2B Solution Architect focuses on enterprise sales: B2B Commerce, CPQ, Revenue Cloud, partner portals, and complex sales cycles. B2C Solution Architect focuses on consumer commerce: Salesforce B2C Commerce Cloud (SFCC), Marketing Cloud journeys, personalisation, loyalty, and omnichannel consumer engagement. Both exams are $400, 60 questions, and ~68% passing score — but they test completely different product ecosystems.',
+    answer: 'B2B Solution Architect focuses on enterprise sales: B2B Commerce, CPQ, Revenue Cloud, partner portals, and complex sales cycles. B2C Solution Architect focuses on consumer commerce: Salesforce B2C Commerce Cloud (SFCC), Marketing Cloud journeys, personalisation, loyalty, and omnichannel consumer engagement. Both exams are $400, 60 questions, and ~68% passing score, but they test completely different product ecosystems.',
   },
   {
     question: 'What is Salesforce B2C Commerce Cloud (SFCC)?',
@@ -94,7 +94,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
           Salesforce B2C Solution Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the B2C Solution Architect exam — Commerce Cloud, Marketing Cloud, personalisation, loyalty, and omnichannel consumer experience design.
+          Your complete guide to passing the B2C Solution Architect exam: Commerce Cloud, Marketing Cloud, personalisation, loyalty, and omnichannel consumer experience design.
         </p>
       </div>
 
@@ -159,14 +159,14 @@ export default function B2cSolutionArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">10-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1–2', focus: 'B2C Commerce Cloud fundamentals — SFRA architecture, cartridge model, Business Manager, PDP/PLP, checkout, order management. Complete the B2C Commerce Trailhead trails.' },
-            { week: 'Week 3', focus: 'Marketing Cloud for B2C — Journey Builder, email sending, transactional messaging, triggered sends from order events. Marketing Cloud Connect integration with Salesforce CRM.' },
-            { week: 'Week 4', focus: 'Consumer identity design — single sign-on across B2C Commerce and Service Cloud, customer registration, progressive profiling, social login patterns for consumer apps.' },
-            { week: 'Week 5', focus: 'Service Cloud for B2C — case management from commerce events, order issue handling, WISMO (Where Is My Order) integration, chat and messaging in storefronts.' },
-            { week: 'Week 6', focus: 'Marketing Cloud Personalisation — real-time behavioural data capture, Einstein recommendations, segment-based personalisation, integration with B2C Commerce and email.' },
-            { week: 'Week 7', focus: 'Loyalty Management — loyalty programme design, points/tiers/benefits, loyalty API, integration with B2C Commerce checkout for points redemption.' },
-            { week: 'Week 8', focus: 'Data Cloud for B2C — unified consumer profile, identity resolution, data streams from Commerce and Marketing Cloud, activation for personalisation.' },
-            { week: 'Week 9', focus: 'Architecture scenarios — design a full B2C consumer journey across Commerce, Marketing Cloud, Service Cloud, and Personalisation for a given retail scenario.' },
+            { week: 'Week 1–2', focus: 'B2C Commerce Cloud fundamentals: SFRA architecture, cartridge model, Business Manager, PDP/PLP, checkout, order management. Complete the B2C Commerce Trailhead trails.' },
+            { week: 'Week 3', focus: 'Marketing Cloud for B2C: Journey Builder, email sending, transactional messaging, triggered sends from order events. Marketing Cloud Connect integration with Salesforce CRM.' },
+            { week: 'Week 4', focus: 'Consumer identity design, single sign-on across B2C Commerce and Service Cloud, customer registration, progressive profiling, social login patterns for consumer apps.' },
+            { week: 'Week 5', focus: 'Service Cloud for B2C, case management from commerce events, order issue handling, WISMO (Where Is My Order) integration, chat and messaging in storefronts.' },
+            { week: 'Week 6', focus: 'Marketing Cloud Personalisation, real-time behavioural data capture, Einstein recommendations, segment-based personalisation, integration with B2C Commerce and email.' },
+            { week: 'Week 7', focus: 'Loyalty Management, loyalty programme design, points/tiers/benefits, loyalty API, integration with B2C Commerce checkout for points redemption.' },
+            { week: 'Week 8', focus: 'Data Cloud for B2C, unified consumer profile, identity resolution, data streams from Commerce and Marketing Cloud, activation for personalisation.' },
+            { week: 'Week 9', focus: 'Architecture scenarios, design a full B2C consumer journey across Commerce, Marketing Cloud, Service Cloud, and Personalisation for a given retail scenario.' },
             { week: 'Week 10', focus: 'Full mock exams. Commerce Cloud Architecture (25%) + Marketing Cloud Integration (25%) = 50% of the exam. Aim for 75%+ before booking.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -181,7 +181,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Map the consumer journey:</strong> Browse (SFCC) → Personalise (MC Personalisation) → Purchase (SFCC) → Confirm (Marketing Cloud email) → Support (Service Cloud) → Re-engage (Marketing Cloud journey). Every exam scenario will describe a stage in this journey.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Data Cloud for identity resolution:</strong> When a scenario involves unifying consumer data across touchpoints (web, mobile, in-store, email), the answer involves Data Cloud as the unified profile layer — not just Marketing Cloud or SFCC alone.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Data Cloud for identity resolution:</strong> When a scenario involves unifying consumer data across touchpoints (web, mobile, in-store, email), the answer involves Data Cloud as the unified profile layer, not just Marketing Cloud or SFCC alone.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Personalisation vs Marketing Cloud:</strong> Marketing Cloud handles batch and journey-based email and messaging. Personalisation (Interaction Studio) handles real-time, in-session, on-site personalisation. When a scenario requires reacting to a consumer’s current browse behaviour instantly, Personalisation is the answer.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>OCAPI for headless commerce:</strong> If the scenario describes a custom front-end (React, Vue, mobile app) powered by SFCC, the integration approach is OCAPI (or the newer SCAPI). The cartridge architecture applies to traditional SFRA storefronts, not headless.</span></li>
         </ul>
@@ -222,7 +222,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare the Alternatives</h2>
         <ul className="space-y-2">
-          <li><Link href="/b2b-vs-b2c-solution-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ B2B vs B2C Solution Architect — which path fits your role?</Link></li>
+          <li><Link href="/b2b-vs-b2c-solution-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ B2B vs B2C Solution Architect, which path fits your role?</Link></li>
         </ul>
       </div>
 

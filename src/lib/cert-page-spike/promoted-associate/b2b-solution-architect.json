@@ -26,7 +26,7 @@
       "<strong>Cross-cloud scenarios.</strong> Expect questions that mix Sales Cloud, Service Cloud, CPQ, Order Management, B2B Commerce and Experience Cloud.",
       "<strong>Project delivery counts.</strong> Some questions are about discovery, governance and change management, not just technology."
     ],
-    "passRateGuidance": "People with several years of solution design work on B2B projects tend to do best. Before you book, aim for 75% or more on practice tests and make sure you can explain how a quote turns into an order and an invoice across your systems."
+    "passRateGuidance": "People with several years of solution design work on B2B projects tend to do best. Before you book. Aim for 75% or more on practice tests and make sure you can explain how a quote turns into an order and an invoice across your systems."
   },
   "examFormat": {
     "heading": "B2B Solution Architect Exam Format Explained",
@@ -62,7 +62,7 @@
     "blocks": [
       {
         "heading": "Solution Architecture Fundamentals",
-        "body": "A B2B solution architect starts with the business process, not the product list. Map the steps from first contact to renewal, find the pain points, and only then decide which cloud handles each step. A common B2B flow is: Sales Cloud for leads and opportunities, CPQ or Revenue Cloud for quotes, Order Management or the ERP for orders, the ERP for invoicing, and Service Cloud for support. Experience Cloud or B2B Commerce lets customers and partners serve themselves. Prefer standard features and configuration over custom code, because they are cheaper to run and upgrade."
+        "body": "A B2B solution architect starts with the business process, not the product list. Map the steps from first contact to renewal, find the pain points; and only then decide which cloud handles each step. A common B2B flow is: Sales Cloud for leads and opportunities, CPQ or Revenue Cloud for quotes, Order Management or the ERP for orders, the ERP for invoicing, and Service Cloud for support. Experience Cloud or B2B Commerce lets customers and partners serve themselves. Prefer standard features and configuration over custom code, because they are cheaper to run and upgrade."
       },
       {
         "heading": "Multi-Cloud Data Architecture",

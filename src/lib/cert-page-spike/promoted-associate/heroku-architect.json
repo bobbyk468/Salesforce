@@ -26,7 +26,7 @@
       "<strong>Design choices.</strong> Common Runtime or Private Spaces, which data service to use, and how to scale.",
       "<strong>Salesforce links.</strong> Heroku Connect, events and APIs between Heroku and Salesforce show up often."
     ],
-    "passRateGuidance": "People who have run production apps on Heroku do best. Before you book, aim for 75% or more on practice tests and be able to explain how you would make a Heroku app survive a dyno or database failure."
+    "passRateGuidance": "People who have run production apps on Heroku do best. Before you book. Aim for 75% or more on practice tests and be able to explain how you would make a Heroku app survive a dyno or database failure."
   },
   "examFormat": {
     "heading": "Heroku Architect Exam Format Explained",

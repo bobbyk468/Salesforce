@@ -19,12 +19,12 @@
   },
   "examDifficulty": {
     "heading": "Is the MuleSoft Hyperautomation Developer Exam Hard?",
-    "summary": "MuleSoft Hyperautomation Developer is moderately challenging. The exam spans multiple automation technologies — MuleSoft APIs, RPA bots, Composer, and Salesforce Flow — requiring breadth across tools rather than deep expertise in any single one.",
+    "summary": "MuleSoft Hyperautomation Developer is moderately challenging. The exam spans multiple automation technologies: MuleSoft APIs, RPA bots, Composer, and Salesforce Flow, requiring breadth across tools rather than deep expertise in any single one.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~68% passing score</strong> — roughly 41 correct answers needed.",
-      "<strong>Multi-tool breadth</strong> — candidates must understand when to use APIs, RPA, Composer, or Salesforce Flow for each step of an automation.",
-      "<strong>RPA-specific knowledge</strong> — MuleSoft RPA Builder and Manager concepts are less commonly encountered, making this the area where most candidates need the most study."
+      "<strong>~68% passing score</strong>: roughly 41 correct answers needed.",
+      "<strong>Multi-tool breadth</strong>: candidates must understand when to use APIs, RPA, Composer, or Salesforce Flow for each step of an automation.",
+      "<strong>RPA-specific knowledge</strong>: MuleSoft RPA Builder and Manager concepts are less commonly encountered, making this the area where most candidates need the most study."
     ],
     "passRateGuidance": "Build at least one end-to-end automation that combines a Mule API with an RPA bot and Salesforce Flow before booking. Score 80%+ on practice exams to cover the breadth of automation tools tested."
   },
@@ -66,23 +66,23 @@
     "blocks": [
       {
         "heading": "Hyperautomation Architecture",
-        "body": "Hyperautomation combines multiple automation technologies to automate complex, end-to-end business processes. Key components: MuleSoft (API integration), MuleSoft RPA (robotic process automation for UI-based tasks), MuleSoft Composer (no-code point-click integration), and Salesforce Flow (business process automation). The Hyperautomation Developer designs orchestrated workflows that span these tools — using APIs where possible (preferred) and RPA for legacy UI-only systems where APIs are unavailable."
+        "body": "Hyperautomation combines multiple automation technologies to automate complex, end-to-end business processes. Key components: MuleSoft (API integration), MuleSoft RPA (robotic process automation for UI-based tasks), MuleSoft Composer (no-code point-click integration), and Salesforce Flow (business process automation). The Hyperautomation Developer designs orchestrated workflows that span these tools, using APIs where possible (preferred) and RPA for legacy UI-only systems where APIs are unavailable."
       },
       {
         "heading": "MuleSoft RPA: Builder and Manager",
-        "body": "RPA Builder creates automation bots by recording and editing UI interactions — it captures mouse clicks, keystrokes, and screen regions from Windows desktop applications or web browsers. Bots run as attended (requires user presence) or unattended (runs autonomously on a schedule or trigger). RPA Manager orchestrates bot deployment — managing which bots run where, monitoring execution, handling errors, and managing credentials (secure storage). The exam tests bot design principles and when RPA is appropriate vs API integration."
+        "body": "RPA Builder creates automation bots by recording and editing UI interactions, it captures mouse clicks, keystrokes, and screen regions from Windows desktop applications or web browsers. Bots run as attended (requires user presence) or unattended (runs autonomously on a schedule or trigger). RPA Manager orchestrates bot deployment, managing which bots run where, monitoring execution, handling errors, and managing credentials (secure storage). The exam tests bot design principles and when RPA is appropriate vs API integration."
       },
       {
         "heading": "MuleSoft Composer",
-        "body": "Composer provides no-code, point-and-click integration between cloud applications — Salesforce, Slack, NetSuite, Stripe, Google Sheets. Composer Flows are triggered by events (record created, webhook, schedule) and execute actions (create/update records, send messages). Composer is designed for business users, not developers — it requires no Anypoint Studio. The developer exam tests when to recommend Composer vs Anypoint Studio for a given integration scenario (Composer for simple cloud-to-cloud; Studio for complex transformations or on-premise systems)."
+        "body": "Composer provides no-code, point-and-click integration between cloud applications: Salesforce, Slack, NetSuite, Stripe, Google Sheets. Composer Flows are triggered by events (record created, webhook, schedule) and execute actions (create/update records, send messages). Composer is designed for business users, not developers; it requires no Anypoint Studio. The developer exam tests when to recommend Composer vs Anypoint Studio for a given integration scenario (Composer for simple cloud-to-cloud; Studio for complex transformations or on-premise systems)."
       },
       {
         "heading": "Orchestrating Automation with Salesforce Flow",
-        "body": "Salesforce Flow orchestrates the human-facing process steps — approvals, guided data entry, notifications. MuleSoft handles the system integration behind the Flow. In Hyperautomation scenarios: a Flow captures user input, triggers a MuleSoft API via an **Apex** callout or Platform Event, MuleSoft calls external systems, and returns results to update Salesforce records. RPA handles legacy system interaction that cannot be API-ified. The developer designs the orchestration layer — deciding which tool owns each step of the process."
+        "body": "Salesforce Flow orchestrates the human-facing process steps, approvals, guided data entry, notifications. MuleSoft handles the system integration behind the Flow. In Hyperautomation scenarios: a Flow captures user input, triggers a MuleSoft API via an **Apex** callout or Platform Event, MuleSoft calls external systems, and returns results to update Salesforce records. RPA handles legacy system interaction that cannot be API-ified. The developer designs the orchestration layer, deciding which tool owns each step of the process."
       },
       {
         "heading": "Governance and Security for Bots",
-        "body": "Bot credentials must be stored securely — RPA Manager's credential vault stores usernames, passwords, and API keys encrypted. Bot activity is audited in RPA Manager — execution logs, error reports, and performance metrics. Access control: which users can trigger attended bots, which processes can run unattended. In regulated industries, bot activity must be auditable for compliance. The exam tests credential management best practices and how to design bots that maintain auditability and security without storing credentials in the automation script."
+        "body": "Bot credentials must be stored securely: RPA Manager's credential vault stores usernames, passwords, and API keys encrypted. Bot activity is audited in RPA Manager, execution logs, error reports, and performance metrics. Access control: which users can trigger attended bots, which processes can run unattended. In regulated industries, bot activity must be auditable for compliance. The exam tests credential management best practices and how to design bots that maintain auditability and security without storing credentials in the automation script."
       }
     ]
   },
