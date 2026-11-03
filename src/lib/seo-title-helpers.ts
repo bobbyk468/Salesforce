@@ -28,12 +28,26 @@ function compactStudyGuideLabel(label: string): string {
     .trim()
 }
 
+/**
+ * Tableau, Slack and Claude run their own certification programmes, so the
+ * "Salesforce" qualifier would be wrong on those guides.
+ */
+function acceptsSalesforceQualifier(label: string): boolean {
+  return !/^(?:Salesforce|Tableau|Slack|Claude)\b/i.test(label)
+}
+
 function boundedStudyGuideTitle(label: string, code?: string): string {
   const prefix = code ? `${code} ` : ''
   const labels = [...new Set([label, compactStudyGuideLabel(label)])]
+  // These titles ran well short of the 60-character limit because the shortest
+  // fitting variant won. Spend the space on the "Salesforce" qualifier first,
+  // which is how people search, then fall back to the previous behaviour. The
+  // code prefix has to stay first where there is one.
+  const qualified =
+    !code && acceptsSalesforceQualifier(label) ? [`Salesforce ${label}`, ...labels] : labels
   const candidates = [
-    ...labels.map((value) => `${prefix}${value} Study Guide [${TITLE_YEAR}]`),
-    ...labels.map((value) => `${prefix}${value} Study Guide`),
+    ...qualified.map((value) => `${prefix}${value} Study Guide [${TITLE_YEAR}]`),
+    ...qualified.map((value) => `${prefix}${value} Study Guide`),
   ]
   const title = candidates.find((candidate) => candidate.length <= MAX_TITLE_LENGTH)
   if (title) return title

@@ -11,7 +11,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Field Service vs Service Cloud Consultant (${RELEASE_YEAR})`
-const pageDescription = `Compare Service Cloud and Field Service workflows, product components, and current certification guide scope.`
+const pageDescription = `Compare Service Cloud and Field Service: workflows, product components, certification scope, and which credential to take first for your role.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

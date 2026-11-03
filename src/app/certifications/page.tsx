@@ -9,7 +9,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const indexTitle = `All Salesforce Certifications (${RELEASE_CURRENT}) | Free Practice`
 const indexDescription =
-  `Browse 90+ Salesforce certifications by role: ${RELEASE_CURRENT} weightage, free practice, study guides. Find your cert path.`
+  `Browse 90+ Salesforce certifications by role: ${RELEASE_CURRENT} exam weightage, free practice questions, and study guides. Find your certification path.`
 const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(indexTitle)}`
 
 export const metadata: Metadata = {

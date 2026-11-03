@@ -18,7 +18,7 @@ const slug = 'agentforce-specialist'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Agentforce Specialist exam tips: issuer objectives, agent configuration, and study strategies.`
+  `Agentforce Specialist exam tips: issuer objectives, agent configuration, topics and actions, testing, and a study plan with free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

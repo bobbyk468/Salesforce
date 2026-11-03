@@ -58,11 +58,13 @@ export default function WhichFirstBlock({ certA, certB, recommendation }: Props)
         ))}
       </div>
 
-      {/* Our Recommendation, h3 for Featured Snippet eligibility */}
+      {/* Our Recommendation. h2 rather than h3: this block sits above the first
+          h2 on every comparison page, so an h3 here skipped a heading level on
+          all 16 of them. h2 is equally eligible for a featured snippet. */}
       <div className="px-5 py-5 border-t border-gray-100 bg-blue-50/50">
-        <h3 className="text-sm font-bold text-gray-900 mb-2">
+        <h2 className="text-sm font-bold text-gray-900 mb-2">
           Our Recommendation: Start with {recommendation.certName}
-        </h3>
+        </h2>
         <p className="text-sm text-gray-700 mb-4">{recommendation.reason}</p>
 
         <div className="flex flex-wrap gap-3">
