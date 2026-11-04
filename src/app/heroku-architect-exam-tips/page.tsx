@@ -45,7 +45,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Heroku Architect exam format?',
-    answer: 'The Salesforce Heroku Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee ($100 retake). It tests the ability to architect Heroku applications integrated with Salesforce: platform services, security, performance, scalability, and the Salesforce-Heroku integration patterns.',
+    answer: 'The Salesforce Heroku Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 72% passing score, and a $200 fee ($100 retake). It tests the ability to architect Heroku applications integrated with Salesforce: platform services, security, performance, scalability, and the Salesforce-Heroku integration patterns.',
   },
   {
     question: 'What are the highest-weight Heroku Architect exam sections?',

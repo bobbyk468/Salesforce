@@ -56,7 +56,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2B Solution Architect certification?',
-    answer: 'The B2B Solution Architect certification validates ability to design multi-cloud solutions for B2B (business-to-business) scenarios, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and Experience Cloud for complex enterprise sales and channel partner environments. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
+    answer: 'The B2B Solution Architect certification validates ability to design multi-cloud solutions for B2B (business-to-business) scenarios, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and Experience Cloud for complex enterprise sales and channel partner environments. The exam has 60 questions, 120-minute time limit, ~58% passing score, and a $400 fee.',
   },
   {
     question: 'What certifications should I hold before B2B Solution Architect?',

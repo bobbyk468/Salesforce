@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Financial Services Cloud Accredited Professional exam?',
-    answer: 'Financial Services Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on FSC implementation experience. It tests FSC’s specialised data model: household and individual accounts, financial accounts, financial goals, action plans, and referrals. Candidates with real FSC project experience typically pass in 3–4 weeks of focused study. Those without FSC hands-on experience find the financial services data model and referral management workflows the hardest sections.',
+    answer: 'Financial Services Cloud AP is a Pass/Fail accredited professional exam (50 questions, 75 minutes, $150) designed for practitioners with hands-on FSC implementation experience. It tests FSC’s specialised data model: household and individual accounts, financial accounts, financial goals, action plans, and referrals. Candidates with real FSC project experience typically pass in 3–4 weeks of focused study. Those without FSC hands-on experience find the financial services data model and referral management workflows the hardest sections.',
   },
   {
     question: 'What are the highest-weight FSC AP exam sections?',
@@ -128,7 +128,7 @@ export default function FinancialServicesCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Compliance and Security</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The FSC data model (person accounts, households, financial accounts) is the foundation, understand it deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 50 questions, 75 minutes, Pass/Fail, $150. The FSC data model (person accounts, households, financial accounts) is the foundation, understand it deeply.</p>
         </div>
       </section>
 

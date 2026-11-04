@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Sharing & Visibility Architect exam format?',
-    answer: 'The Salesforce Sharing & Visibility Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee. It is a component exam for the Application Architect role-based credential and tests the full Salesforce sharing and security model.',
+    answer: 'The Salesforce Sharing & Visibility Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 58% passing score, and a $200 fee. It is a component exam for the Application Architect role-based credential and tests the full Salesforce sharing and security model.',
   },
   {
     question: 'What are the highest-weight Sharing & Visibility Architect exam sections?',

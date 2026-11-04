@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Heroku Developer ap exam?',
-    answer: 'The Heroku Developer ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Heroku Developer ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
+    answer: 'The Heroku Developer ap is a Pass/Fail accredited professional exam (60 questions, 90 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Heroku Developer ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Heroku Developer AP exam sections?',
@@ -128,7 +128,7 @@ export default function HerokuDeveloperApExamTipsPage() {
             <span className="font-medium text-gray-900">Add-ons and Monitoring</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Dyno types and Heroku Connect are the most distinctively Heroku topics, prioritise these over general web development knowledge.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 90 minutes, Pass/Fail, $150. Dyno types and Heroku Connect are the most distinctively Heroku topics, prioritise these over general web development knowledge.</p>
         </div>
       </section>
 

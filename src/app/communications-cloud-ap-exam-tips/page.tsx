@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Communications Cloud ap exam?',
-    answer: 'The Communications Cloud ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Communications Cloud ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
+    answer: 'The Communications Cloud ap is a Pass/Fail accredited professional exam (55 questions, 90 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Communications Cloud ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What is the TMF data model and why does the exam test it?',
@@ -128,7 +128,7 @@ export default function CommunicationsCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">OmniStudio and Digital Commerce</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The TMF data model (Products, Offers, Orders, Subscriptions, Assets) is the foundation. Know it deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 55 questions, 90 minutes, Pass/Fail, $150. The TMF data model (Products, Offers, Orders, Subscriptions, Assets) is the foundation. Know it deeply.</p>
         </div>
       </section>
 

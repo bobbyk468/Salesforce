@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the PD2 exam format?',
-    answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, a 120-minute time limit, a 65% passing score, and a $200 fee. It requires PD1 certification as a prerequisite.',
+    answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, a 120-minute time limit, a 70% passing score, and a $200 fee. It requires PD1 certification as a prerequisite.',
   },
   {
     question: 'What are the highest-weight PD2 exam sections?',

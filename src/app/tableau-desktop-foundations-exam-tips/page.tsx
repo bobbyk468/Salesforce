@@ -139,7 +139,7 @@ export default function TableauDesktopFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          76%+ on 3 timed full mocks before booking (70% passing score)
+          76%+ on 3 timed full mocks before booking (48% passing score)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Tableau Desktop Foundations is the most accessible Tableau certification. Most candidates with

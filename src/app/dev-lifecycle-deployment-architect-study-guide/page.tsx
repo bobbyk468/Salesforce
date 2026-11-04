@@ -56,7 +56,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce Dev Lifecycle & Deployment Architect certification?',
-    answer: 'The Dev Lifecycle & Deployment Architect (DLDA) certification validates expertise in designing and implementing Salesforce development processes, including org strategy, environment management, CI/CD pipelines, release management, and team-based development practices. The exam has 60 questions, ~110-minute time limit, ~68% passing score, and a $400 fee. It is part of the System Architect credential path.',
+    answer: 'The Dev Lifecycle & Deployment Architect (DLDA) certification validates expertise in designing and implementing Salesforce development processes, including org strategy, environment management, CI/CD pipelines, release management, and team-based development practices. The exam has 60 questions, ~110-minute time limit, ~65% passing score, and a $400 fee. It is part of the System Architect credential path.',
   },
   {
     question: 'What is the difference between change sets and Salesforce CLI/SFDX?',
@@ -112,7 +112,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '110 min' },
+          { label: 'Time Limit', value: '105 min' },
           { label: 'Passing Score', value: '~68%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (

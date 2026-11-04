@@ -128,7 +128,7 @@ export default function ContactCenterApExamTipsPage() {
             <span className="font-medium text-gray-900">Analytics and Reporting</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Omni-Channel + Voice + Digital Channels = 80%, know the routing model differences thoroughly.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 75 minutes, Pass/Fail, $150. Omni-Channel + Voice + Digital Channels = 80%, know the routing model differences thoroughly.</p>
         </div>
       </section>
 

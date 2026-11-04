@@ -56,7 +56,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce IAM Architect certification?',
-    answer: 'The Identity & Access Management Architect certification validates expertise in designing identity solutions for Salesforce, including SSO (SAML, OAuth, OIDC), connected apps, external identity for Experience Cloud, MFA enforcement, and session security. The exam has 60 questions, ~110-minute time limit, ~68% passing score, and a $400 fee. It is part of the System Architect credential path.',
+    answer: 'The Identity & Access Management Architect certification validates expertise in designing identity solutions for Salesforce, including SSO (SAML, OAuth, OIDC), connected apps, external identity for Experience Cloud, MFA enforcement, and session security. The exam has 60 questions, ~110-minute time limit, ~65% passing score, and a $400 fee. It is part of the System Architect credential path.',
   },
   {
     question: 'What is the difference between SAML and OAuth?',
@@ -112,7 +112,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '110 min' },
+          { label: 'Time Limit', value: '120 min' },
           { label: 'Passing Score', value: '~68%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (

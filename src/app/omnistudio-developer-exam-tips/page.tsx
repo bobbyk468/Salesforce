@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce OmniStudio Developer exam format?',
-    answer: 'The Salesforce OmniStudio Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests configuration and development using OmniStudio tools: FlexCards, OmniScripts, DataRaptors, and Integration Procedures.',
+    answer: 'The Salesforce OmniStudio Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 72% passing score, and a $200 fee ($100 retake). It tests configuration and development using OmniStudio tools: FlexCards, OmniScripts, DataRaptors, and Integration Procedures.',
   },
   {
     question: 'What are the highest-weight OmniStudio Developer exam sections?',

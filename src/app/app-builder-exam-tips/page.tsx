@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the App Builder (DEV-402) exam format?',
-    answer: 'The Salesforce Platform App Builder exam (DEV-402) has 60 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 fee.',
+    answer: 'The Salesforce Platform App Builder exam (DEV-402) has 60 multiple-choice questions, a 105-minute time limit, a 73% passing score, and a $200 fee.',
   },
   {
     question: 'What are the highest-weight App Builder topics?',
@@ -169,7 +169,7 @@ export default function AppBuilderExamTipsPage() {
           76%+ on 3 timed full mocks (60 questions / 105 minutes each)
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The official passing score is 63% (38/60 questions), but scoring at 76%+ on mocks significantly reduces retake risk
+          The official passing score is 73% (44/60 questions), but scoring at 80%+ on mocks significantly reduces retake risk
           and accounts for exam-day variance in question difficulty.
         </p>
       </section>

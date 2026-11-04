@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is the OmniStudio Consultant exam format?',
-    answer: 'The exam has 60 questions, a 105-minute time limit, approximately 65% passing score, and a $200 fee. Questions are scenario-based, given a business requirement, choose the correct OmniStudio component or design decision. No formal prerequisites exist, but hands-on OmniStudio experience and completion of OmniStudio Developer (or equivalent knowledge) is strongly recommended.',
+    answer: 'The exam has 60 questions, a 105-minute time limit, approximately 67% passing score, and a $200 fee. Questions are scenario-based, given a business requirement, choose the correct OmniStudio component or design decision. No formal prerequisites exist, but hands-on OmniStudio experience and completion of OmniStudio Developer (or equivalent knowledge) is strongly recommended.',
   },
   {
     question: 'What is the key difference between OmniScript and Integration Procedure in solution design?',

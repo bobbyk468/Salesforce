@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Integration Architect exam format?',
-    answer: 'The Salesforce Integration Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 63% passing score, and a $200 fee. It is a component exam for the System Architect role-based credential and tests integration strategy, API patterns, and middleware architecture.',
+    answer: 'The Salesforce Integration Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 67% passing score, and a $200 fee. It is a component exam for the System Architect role-based credential and tests integration strategy, API patterns, and middleware architecture.',
   },
   {
     question: 'What are the highest-weight Integration Architect exam sections?',

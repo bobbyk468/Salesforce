@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'What is the passing score for the App Builder exam?',
-    answer: 'The App Builder passing score is 63%. The exam has 60 multiple-choice questions, a 105-minute time limit, and a $200 fee. The retake fee is $100. You do not need ADM-201 first, but most candidates find ADM-201 knowledge very helpful for the Salesforce Fundamentals section.',
+    answer: 'The App Builder passing score is 73%. The exam has 60 multiple-choice questions, a 105-minute time limit, and a $200 fee. The retake fee is $100. You do not need ADM-201 first, but most candidates find ADM-201 knowledge very helpful for the Salesforce Fundamentals section.',
   },
   {
     question: 'Is App Builder harder than ADM-201?',
@@ -228,7 +228,7 @@ export default function AppBuilderStudyGuidePage() {
           <p><strong>Week 1: Business Logic and Process Automation (28%):</strong> Flow Builder in depth, record-triggered (before/after), screen flows, scheduled flows, approval processes, validation rules, and order of execution. Practice: build a record-triggered flow that creates a follow-up task on Opportunity close, and a screen flow for new case intake.</p>
           <p><strong>Week 2: Fundamentals + Data Modeling (43%):</strong> Sharing model (OWD, roles, sharing rules), profiles vs permission sets, MVC, custom objects, field types (formula, roll-up summary, lookup, master-detail), schema design patterns, Import Wizard vs Data Loader. Practice: design a data model for a custom app (e.g., event management) with proper relationship types.</p>
           <p><strong>Week 3: UI + Deployment (29%):</strong> Lightning App Builder (page types, dynamic components, component visibility), compact layouts, record types, App Manager. Change sets, sandbox types, package types, deployment order. Practice: create a custom Lightning app with a custom record page using dynamic components.</p>
-          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Score 73%+ consistently before booking (App Builder passing is 63%, aim 10 points above).</p>
+          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Score 83%+ consistently before booking (App Builder passing is 73%, aim 10 points above).</p>
         </div>
       </section>
 
@@ -260,7 +260,7 @@ export default function AppBuilderStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          73%+ on 3 timed full mocks (60 Q / 105 min) before booking
+          83%+ on 3 timed full mocks (60 Q / 105 min) before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
           App Builder has the lowest passing score (63%) of the three admin-track exams, but do not be

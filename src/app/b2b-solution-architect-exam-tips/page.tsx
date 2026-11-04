@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2B Solution Architect exam format?',
-    answer: 'The Salesforce B2B Solution Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee ($100 retake). It tests the ability to design multi-cloud B2B solutions spanning Sales Cloud, Service Cloud, CPQ, Revenue Cloud, Pardot/Account Engagement, and Experience Cloud.',
+    answer: 'The Salesforce B2B Solution Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 58% passing score, and a $200 fee ($100 retake). It tests the ability to design multi-cloud B2B solutions spanning Sales Cloud, Service Cloud, CPQ, Revenue Cloud, Pardot/Account Engagement, and Experience Cloud.',
   },
   {
     question: 'What are the highest-weight B2B Solution Architect exam sections?',

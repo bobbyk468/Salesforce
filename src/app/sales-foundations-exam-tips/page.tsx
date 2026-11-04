@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Sales Foundations exam format?',
-    answer: 'The Salesforce Sales Foundations exam has 40 multiple-choice questions, a 65-minute time limit, a 65% passing score, and a $150 fee. It is an entry-level certification testing fundamental Sales Cloud knowledge: the sales process in Salesforce, leads, opportunities, accounts and contacts, activities, and basic reporting for sales teams.',
+    answer: 'The Salesforce Sales Foundations exam has 40 multiple-choice questions, a 65-minute time limit, a 70% passing score, and a $150 fee. It is an entry-level certification testing fundamental Sales Cloud knowledge: the sales process in Salesforce, leads, opportunities, accounts and contacts, activities, and basic reporting for sales teams.',
   },
   {
     question: 'What are the highest-weight Sales Foundations exam sections?',

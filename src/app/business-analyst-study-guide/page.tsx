@@ -60,7 +60,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce Business Analyst certification?',
-    answer: 'The Salesforce Business Analyst (SBA) certification validates skills in gathering requirements, facilitating stakeholder workshops, writing user stories, and translating business needs into Salesforce solutions. It targets professionals who bridge the gap between business stakeholders and Salesforce implementation teams. The exam has 60 questions, a 105-minute time limit, ~65% passing score, and a $200 fee.',
+    answer: 'The Salesforce Business Analyst (SBA) certification validates skills in gathering requirements, facilitating stakeholder workshops, writing user stories, and translating business needs into Salesforce solutions. It targets professionals who bridge the gap between business stakeholders and Salesforce implementation teams. The exam has 60 questions, a 105-minute time limit, ~72% passing score, and a $200 fee.',
   },
   {
     question: 'Is ADM-201 required before the Business Analyst exam?',

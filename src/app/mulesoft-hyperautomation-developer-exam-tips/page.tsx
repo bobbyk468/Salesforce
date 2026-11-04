@@ -45,7 +45,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the MuleSoft Hyperautomation Developer exam format?',
-    answer: 'The MuleSoft Hyperautomation Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests automation solutions combining MuleSoft with RPA (Robotic Process Automation), AI Document understanding, and process orchestration.',
+    answer: 'The MuleSoft Hyperautomation Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests automation solutions combining MuleSoft with RPA (Robotic Process Automation), AI Document understanding, and process orchestration.',
   },
   {
     question: 'What are the highest-weight MuleSoft Hyperautomation Developer exam sections?',

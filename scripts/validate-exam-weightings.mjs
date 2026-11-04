@@ -204,6 +204,108 @@ for (const dir of SEARCH_DIRS) {
 }
 
 // ---------------------------------------------------------------------------
+// 3. Exam format facts hardcoded in prose: duration, pass mark, question count.
+//
+// These drift the same way the percentages did. "110 min" was hardcoded on a
+// dozen pages and was wrong against the guide on every one of them, while the
+// central data said 105. The verified facts come from the comment above each
+// weightage entry, the same place scripts/sync-cert-card-facts.mjs reads.
+// ---------------------------------------------------------------------------
+
+/** slug -> { minutes, passingScore, questions } from the entry's comment. */
+const facts = new Map()
+for (const [, comments, slug] of source.matchAll(
+  /((?:^[ \t]*\/\/.*\n)*)^ {2}'([a-z0-9-]+)': \[/gm,
+)) {
+  if (!/Verified\s+\d{1,2}\s+\w+\s+\d{4}[\s\S]*?articleView\?id=\d+/i.test(comments)) continue
+  const pass = comments.match(/(\d{2})% to pass/)
+  const minutes = comments.match(/(\d{2,3}) minutes/)
+  const questions = comments.match(/(?:~)?(\d{2,3})\s+(?:scored\s+|multiple-choice\s+)?(?:questions|items)/)
+  facts.set(slug, {
+    minutes: minutes ? Number(minutes[1]) : null,
+    passingScore: pass ? Number(pass[1]) : null,
+    questions: questions ? Number(questions[1]) : null,
+  })
+}
+
+const FACT_PATTERNS = [
+  { key: 'minutes', re: /\b(\d{2,3}) min(?:utes)?\b/g, label: 'duration', unit: ' min' },
+  {
+    key: 'passingScore',
+    // All the ways these pages phrase the pass mark. The earlier sweep missed
+    // "App Builder passing is 63%" because it only looked for "passing score".
+    re: /\b(\d{2})% (?:passing score|pass mark|to pass)\b|\bpass(?:ing)?(?: score| mark)? (?:is|of) (\d{2})%|\brequires (\d{2})%/g,
+    label: 'passing score',
+    unit: '%',
+  },
+  {
+    key: 'questions',
+    // The lookbehind keeps exam codes out: "ADM-211 questions and answers" is
+    // not a claim that the exam has 211 questions.
+    re: /(?<![-\w])(\d{2,3}) (?:scored )?questions\b/g,
+    label: 'question count',
+    unit: '',
+  },
+]
+
+/** A page naming two credentials cannot be checked against one slug's facts. */
+function comparesTwoCredentials(file) {
+  return /-vs-|certification-path|certifications-list|salesforce-certification-cost/.test(file)
+}
+
+for (const dir of SEARCH_DIRS) {
+  const base = join(ROOT, dir)
+  try {
+    statSync(base)
+  } catch {
+    continue
+  }
+
+  for (const file of walk(base)) {
+    if (comparesTwoCredentials(file)) continue
+    const slug = slugForFile(file)
+    if (!slug) continue
+    const want = facts.get(slug)
+    if (!want) continue
+
+    const lines = readFileSync(file, 'utf8').split('\n')
+    lines.forEach((line, index) => {
+      // Skip our own source comments, which quote the guide deliberately.
+      if (/^\s*(\/\/|\*)/.test(line)) return
+
+      // Derived claim: "the passing score is 73% (44/60 questions)". The
+      // fraction has to agree with the pass mark, or correcting one leaves the
+      // other stating a different exam. App Builder read "73% (38/60)", which
+      // is 63% — the figure that had just been corrected.
+      if (want.passingScore !== null && want.questions !== null) {
+        for (const match of line.matchAll(/\((\d{2,3})\/(\d{2,3}) questions\)/g)) {
+          const [, needed, total] = match
+          if (Number(total) !== want.questions) continue
+          const expected = Math.ceil((want.passingScore / 100) * want.questions)
+          if (Number(needed) === expected) continue
+          failures.push(
+            `${relative(ROOT, file)}:${index + 1}: "${match[0]}" does not match a ` +
+              `${want.passingScore}% pass mark on ${want.questions} questions (expected ${expected}/${want.questions})`,
+          )
+        }
+      }
+
+      for (const { key, re, label, unit } of FACT_PATTERNS) {
+        if (want[key] === null) continue
+        for (const match of line.matchAll(re)) {
+          const found = Number(match.slice(1).find((g) => g !== undefined))
+          if (found === want[key]) continue
+          failures.push(
+            `${relative(ROOT, file)}:${index + 1}: ${label} "${match[0].trim()}" but the ` +
+              `${slug} guide says ${want[key]}${unit}`,
+          )
+        }
+      }
+    })
+  }
+}
+
+// ---------------------------------------------------------------------------
 
 const verifiedCount = [...table.values()].filter((e) => e.verified).length
 console.log(

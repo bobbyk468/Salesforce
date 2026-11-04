@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce NPSP Consultant exam format?',
-    answer: 'The Nonprofit Success Pack (NPSP) Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce NPSP (Nonprofit Success Pack), the legacy managed package for nonprofits, including the household account model, donations, grants, and engagement plans.',
+    answer: 'The Nonprofit Success Pack (NPSP) Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce NPSP (Nonprofit Success Pack), the legacy managed package for nonprofits, including the household account model, donations, grants, and engagement plans.',
   },
   {
     question: 'What are the highest-weight NPSP Consultant exam sections?',

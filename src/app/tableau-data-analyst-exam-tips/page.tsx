@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Tableau Data Analyst exam format?',
-    answer: 'The Salesforce Certified Tableau Data Analyst exam has 45 questions, a 75-minute time limit, a 62% passing score, and a $250 fee.',
+    answer: 'The Salesforce Certified Tableau Data Analyst exam has 60 questions, a 75-minute time limit, a 65% passing score, and a $250 fee.',
   },
   {
     question: 'What are the highest-weight Tableau Data Analyst exam topics?',
@@ -104,7 +104,7 @@ export default function TableauDataAnalystExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Tableau Data Analyst</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 45 questions in 90 minutes. Passing score is approximately 70%. Aim for 80%+ on full mocks before booking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 60 questions in 105 minutes. Passing score is approximately 70%. Aim for 80%+ on full mocks before booking.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />LOD expressions (FIXED, INCLUDE, EXCLUDE) and table calculations appear frequently, understand the difference between them clearly.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Build real dashboards in Tableau Desktop (free trial or Tableau Public). The exam rewards practical familiarity with the UI.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Context filters and filter order are a common trap. Know when a Top N filter needs a context filter and why.</li>
@@ -143,7 +143,7 @@ export default function TableauDataAnalystExamTipsPage() {
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          80%+ on 3 timed full mocks (45 questions / 90 minutes each)
+          80%+ on 3 timed full mocks (60 questions / 105 minutes each)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The official passing score is approximately 70%. Targeting 80%+ on mocks gives you a 10-point buffer

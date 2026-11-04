@@ -114,7 +114,7 @@ export default function Pd1StudyGuidePage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             { label: 'Questions', value: '60' },
-            { label: 'Time Limit', value: '110 min' },
+            { label: 'Time Limit', value: '105 min' },
             { label: 'Passing Score', value: '68%' },
             { label: 'Exam Fee', value: '$200' },
           ].map(({ label, value }) => (
@@ -241,7 +241,7 @@ export default function Pd1StudyGuidePage() {
           <p><strong>Week 3: Testing and Deployment (25%):</strong> Test class structure, @isTest annotations, Test.startTest/stopTest, code coverage, mock callouts (HttpCalloutMock), and static resources for test data. Practice: write a test class for your batch Apex that achieves 100% coverage.</p>
           <p><strong>Week 4: LWC and User Interface (23%):</strong> LWC component anatomy (HTML/JS/CSS/XML), @api, @wire, @track, component communication (events, pubsub), lightning-record-form, lightning-datatable. Practice: build a simple LWC that displays accounts using @wire(getRecord).</p>
           <p><strong>Week 5: Integration and Fundamentals (22%):</strong> REST/SOAP callouts, HttpRequest, Named Credentials, inbound REST API, Bulk API overview. Review MVC, sharing model (with sharing / without sharing). Study integration patterns: outbound (Apex callouts) and inbound (custom REST endpoints with @RestResource).</p>
-          <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 110 min), weak-area targeted revision. Score 78%+ consistently (PD1 passing is 68%, aim 10 points above) before booking.</p>
+          <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min), weak-area targeted revision. Score 78%+ consistently (PD1 passing is 68%, aim 10 points above) before booking.</p>
         </div>
       </section>
 
@@ -273,7 +273,7 @@ export default function Pd1StudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          78%+ on 3 timed full mocks (60 Q / 110 min) before booking
+          78%+ on 3 timed full mocks (60 Q / 105 min) before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
           PD1 passing score is 68%. The code-reading questions are designed to look ambiguous, a candidate who understands

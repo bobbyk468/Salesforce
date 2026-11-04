@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2C Commerce Architect exam format?',
-    answer: 'The Salesforce B2C Commerce Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee ($100 retake). It tests expert-level B2C Commerce architecture: SFRA design patterns, performance architecture, security, scalability, and integration with external systems.',
+    answer: 'The Salesforce B2C Commerce Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests expert-level B2C Commerce architecture: SFRA design patterns, performance architecture, security, scalability, and integration with external systems.',
   },
   {
     question: 'What are the highest-weight B2C Commerce Architect exam sections?',

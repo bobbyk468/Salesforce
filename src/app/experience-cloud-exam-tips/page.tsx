@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Experience Cloud Consultant exam format?',
-    answer: 'The Salesforce Experience Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It tests the ability to design and configure Salesforce Experience Cloud portals, partner sites, and customer communities.',
+    answer: 'The Salesforce Experience Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 62% passing score, and a $200 fee. It tests the ability to design and configure Salesforce Experience Cloud portals, partner sites, and customer communities.',
   },
   {
     question: 'What are the highest-weight Experience Cloud Consultant exam sections?',

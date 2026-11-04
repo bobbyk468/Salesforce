@@ -112,7 +112,7 @@ export default function B2cCommerceArchitectStudyGuidePage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '120 min' },
+          { label: 'Time Limit', value: '105 min' },
           { label: 'Passing Score', value: '~67%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (

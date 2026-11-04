@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Marketing Cloud Consultant exam format?',
-    answer: 'The Salesforce Marketing Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It tests applied knowledge of Marketing Cloud implementation and solution design, not just product features.',
+    answer: 'The Salesforce Marketing Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee. It tests applied knowledge of Marketing Cloud implementation and solution design, not just product features.',
   },
   {
     question: 'What are the highest-weight Marketing Cloud Consultant exam sections?',

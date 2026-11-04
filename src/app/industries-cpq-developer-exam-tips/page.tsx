@@ -45,7 +45,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Industries CPQ Developer exam format?',
-    answer: 'The Salesforce Industries CPQ Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests configuration and development of Industries CPQ (formerly Vlocity CPQ) for telecommunications, media, and energy industries.',
+    answer: 'The Salesforce Industries CPQ Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee ($100 retake). It tests configuration and development of Industries CPQ (formerly Vlocity CPQ) for telecommunications, media, and energy industries.',
   },
   {
     question: 'What are the highest-weight Industries CPQ Developer exam sections?',

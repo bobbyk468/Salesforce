@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce OmniStudio Consultant exam format?',
-    answer: 'The Salesforce OmniStudio Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests the ability to design and implement OmniStudio solutions: requirements analysis, tool selection, FlexCards, OmniScripts, and Integration Procedures.',
+    answer: 'The Salesforce OmniStudio Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee ($100 retake). It tests the ability to design and implement OmniStudio solutions: requirements analysis, tool selection, FlexCards, OmniScripts, and Integration Procedures.',
   },
   {
     question: 'What is the difference between the OmniStudio Consultant and Developer exams?',

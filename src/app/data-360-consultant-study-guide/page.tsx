@@ -52,7 +52,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Data Cloud Consultant exam format?',
-    answer: 'The Data Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 62% passing score, and a $200 fee ($100 retake). Despite the lower passing score, the exam is considered harder than most Salesforce certifications because it tests a complex technical domain: data ingestion, data modelling, identity resolution, SQL-based calculated insights, and activation configuration.',
+    answer: 'The Data Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 70% passing score, and a $200 fee ($100 retake). Despite the lower passing score, the exam is considered harder than most Salesforce certifications because it tests a complex technical domain: data ingestion, data modelling, identity resolution, SQL-based calculated insights, and activation configuration.',
   },
   {
     question: 'What are the highest-weight Data Cloud Consultant exam sections?',
@@ -128,7 +128,7 @@ export default function DataCloudConsultantStudyGuidePage() {
           ))}
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          62% passing score, lower than most Salesforce exams, reflecting the exam’s technical depth. Retake fee: $100. SQL and data modelling experience strongly recommended.
+          70% passing score, lower than most Salesforce exams, reflecting the exam’s technical depth. Retake fee: $100. SQL and data modelling experience strongly recommended.
         </p>
       </section>
 
@@ -224,7 +224,7 @@ export default function DataCloudConsultantStudyGuidePage() {
           70%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Set the mock benchmark higher than the 62% passing score because the real exam’s scenario
+          Set the mock benchmark higher than the 70% passing score because the real exam’s scenario
           questions are harder than most practice banks. Candidates who pass mocks at exactly 62%
           frequently fail the real exam. The most common failure point is data modelling, candidates
           who have not configured DLO-to-DMO mappings hands-on consistently misidentify the correct

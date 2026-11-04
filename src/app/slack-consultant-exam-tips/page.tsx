@@ -45,7 +45,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Slack Consultant exam format?',
-    answer: 'The Slack Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests the ability to implement Slack for clients: solution design, workflow automation, Salesforce integration, governance, and change management.',
+    answer: 'The Slack Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee ($100 retake). It tests the ability to implement Slack for clients: solution design, workflow automation, Salesforce integration, governance, and change management.',
   },
   {
     question: 'What are the highest-weight Slack Consultant exam sections?',

@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Loyalty Management ap exam?',
-    answer: 'The Loyalty Management ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Loyalty Management ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
+    answer: 'The Loyalty Management ap is a Pass/Fail accredited professional exam (50 questions, 75 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Loyalty Management ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Loyalty Management AP exam sections?',
@@ -128,7 +128,7 @@ export default function LoyaltyManagementApExamTipsPage() {
             <span className="font-medium text-gray-900">Partner Integration and Analytics</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Tier configuration and point accrual/redemption rules are the defining mechanics, understand them thoroughly.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 50 questions, 75 minutes, Pass/Fail, $150. Tier configuration and point accrual/redemption rules are the defining mechanics, understand them thoroughly.</p>
         </div>
       </section>
 

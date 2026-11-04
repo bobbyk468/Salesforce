@@ -58,7 +58,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Tableau Certified Data Analyst certification?',
-    answer: 'The Tableau Certified Data Analyst certification validates skills in connecting to data, building interactive visualisations and dashboards, applying calculated fields and LOD expressions, and publishing content to Tableau Cloud/Server. The exam has 55 questions, 120 minutes, a 75% passing score (higher than most Salesforce exams), and a $250 fee. A Tableau Desktop Foundations or Desktop Specialist certification is a recommended (not required) prerequisite.',
+    answer: 'The Tableau Certified Data Analyst certification validates skills in connecting to data, building interactive visualisations and dashboards, applying calculated fields and LOD expressions, and publishing content to Tableau Cloud/Server. The exam has 60 questions, 105 minutes, a 65% passing score (higher than most Salesforce exams), and a $250 fee. A Tableau Desktop Foundations or Desktop Specialist certification is a recommended (not required) prerequisite.',
   },
   {
     question: 'What are LOD expressions in Tableau and why are they important?',
@@ -66,7 +66,7 @@ const faqItems = [
   },
   {
     question: 'What is the passing score for the Tableau Data Analyst exam?',
-    answer: 'The Tableau Certified Data Analyst requires a 75% passing score, significantly higher than the ~65% required for most Salesforce certifications. With 55 questions, this means you need to answer approximately 41+ questions correctly. Plan for a more demanding exam than typical Salesforce credentials and aim for 85%+ on practice exams before scheduling.',
+    answer: 'The Tableau Certified Data Analyst requires a 65% passing score, significantly higher than the ~65% required for most Salesforce certifications. With 60 questions, this means you need to answer approximately 41+ questions correctly. Plan for a more demanding exam than typical Salesforce credentials and aim for 85%+ on practice exams before scheduling.',
   },
   {
     question: 'What is the difference between joins, unions, and relationships in Tableau?',
@@ -114,7 +114,7 @@ export default function TableauDataAnalystStudyGuidePage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '55' },
-          { label: 'Time Limit', value: '120 min' },
+          { label: 'Time Limit', value: '105 min' },
           { label: 'Passing Score', value: '75%' },
           { label: 'Exam Fee', value: '$250' },
         ].map((stat) => (
@@ -196,7 +196,7 @@ export default function TableauDataAnalystStudyGuidePage() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>85%+ on practice exams</strong> given the 75% passing score. Explore &amp; Analyze Data (28%) and Create Charts &amp; Dashboards (25%) together account for 53% of the exam. Master LOD expressions before test day, they appear in multiple questions and cannot be guessed confidently without genuine understanding.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>85%+ on practice exams</strong> given the 65% passing score. Explore &amp; Analyze Data (28%) and Create Charts &amp; Dashboards (25%) together account for 53% of the exam. Master LOD expressions before test day, they appear in multiple questions and cannot be guessed confidently without genuine understanding.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

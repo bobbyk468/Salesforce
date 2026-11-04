@@ -219,7 +219,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>MC Connect sync questions:</strong> SDEs populate from CRM on the MC Connect sync schedule (every 15 minutes). They are read-only in Marketing Cloud, you cannot write back to SDEs directly. To update CRM records from MC, use a Journey Builder Update step or Automation Studio Script Activity via the API. When a scenario requires near-real-time CRM data in Marketing Cloud, SDEs are the answer, not manual imports.</span>
+            <span><strong>MC Connect sync questions:</strong> SDEs populate from CRM on the MC Connect sync schedule (every 105 minutes). They are read-only in Marketing Cloud, you cannot write back to SDEs directly. To update CRM records from MC, use a Journey Builder Update step or Automation Studio Script Activity via the API. When a scenario requires near-real-time CRM data in Marketing Cloud, SDEs are the answer, not manual imports.</span>
           </li>
         </ul>
       </section>

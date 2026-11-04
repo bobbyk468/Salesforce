@@ -45,7 +45,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Tableau Architect exam format?',
-    answer: 'The Tableau Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 75% passing score, and a $600 fee. It is Tableau’s expert-level certification testing enterprise Tableau Server and Tableau Cloud architecture, deployment design, security, performance tuning, and governance at scale.',
+    answer: 'The Tableau Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 63% passing score, and a $600 fee. It is Tableau’s expert-level certification testing enterprise Tableau Server and Tableau Cloud architecture, deployment design, security, performance tuning, and governance at scale.',
   },
   {
     question: 'What are the highest-weight Tableau Architect exam sections?',
@@ -141,7 +141,7 @@ export default function TableauArchitectExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Check Before You Book</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          80%+ on 3 timed full mocks before booking (75% passing score)
+          80%+ on 3 timed full mocks before booking (63% passing score)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The Tableau Architect has the highest passing score (75%) and fee ($600) of any Tableau certification.

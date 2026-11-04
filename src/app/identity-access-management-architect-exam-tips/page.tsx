@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce IAM Architect exam format?',
-    answer: 'The Salesforce Identity & Access Management Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee. It is a component exam for the System Architect role-based credential and tests SSO, OAuth, SAML, and identity federation architecture.',
+    answer: 'The Salesforce Identity & Access Management Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It is a component exam for the System Architect role-based credential and tests SSO, OAuth, SAML, and identity federation architecture.',
   },
   {
     question: 'What are the highest-weight IAM Architect exam sections?',

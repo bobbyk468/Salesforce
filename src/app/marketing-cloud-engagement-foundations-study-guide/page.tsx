@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'What is the MC Engagement Foundations exam format?',
-    answer: 'The exam consists of 40 multiple-choice questions with a 70-minute time limit. The passing score is 70%. The exam costs $75 for the first attempt, with a ~50% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
+    answer: 'The exam consists of 40 multiple-choice questions with a 70-minute time limit. The passing score is 65%. The exam costs $75 for the first attempt, with a ~50% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
   },
   {
     question: 'What is the difference between MC Engagement Foundations and MC Engagement Admin?',
@@ -109,7 +109,7 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
       />
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-8">
-        <p className="text-sm text-green-800"><strong>Entry-level certification:</strong> No prior Marketing Cloud experience required. 40 questions, 70-minute limit, 70% passing score. Most candidates pass with 3–4 weeks of study combining Trailhead modules and email marketing fundamentals reading.</p>
+        <p className="text-sm text-green-800"><strong>Entry-level certification:</strong> No prior Marketing Cloud experience required. 40 questions, 70-minute limit, 65% passing score. Most candidates pass with 3–4 weeks of study combining Trailhead modules and email marketing fundamentals reading.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Sales Cloud Consultant exam format?',
-    answer: 'The Salesforce Sales Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It is scenario-based and tests applied knowledge of sales processes, not just feature configuration.',
+    answer: 'The Salesforce Sales Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 73% passing score, and a $200 fee. It is scenario-based and tests applied knowledge of sales processes, not just feature configuration.',
   },
   {
     question: 'What are the highest-weight Sales Cloud Consultant exam sections?',
@@ -157,7 +157,7 @@ export default function SalesCloudExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The 65% passing score is lower than it appears, the scenario-based format means one wrong assumption
+          The 73% passing score is lower than it appears, the scenario-based format means one wrong assumption
           can cascade. Aim for 75%+ consistently in practice before booking.
         </p>
       </section>

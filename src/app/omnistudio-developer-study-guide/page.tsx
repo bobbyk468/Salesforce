@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce OmniStudio Developer certification?',
-    answer: 'The Salesforce OmniStudio Developer certification validates skills in building guided UI experiences (OmniScript), data components (DataRaptors), cards (FlexCards), and server-side orchestration (Integration Procedures) using Salesforce OmniStudio, the low-code framework used primarily in Salesforce Industries clouds. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee.',
+    answer: 'The Salesforce OmniStudio Developer certification validates skills in building guided UI experiences (OmniScript), data components (DataRaptors), cards (FlexCards), and server-side orchestration (Integration Procedures) using Salesforce OmniStudio, the low-code framework used primarily in Salesforce Industries clouds. The exam has 60 questions, 105 minutes, ~72% passing score, and a $200 fee.',
   },
   {
     question: 'Who should take the OmniStudio Developer exam?',

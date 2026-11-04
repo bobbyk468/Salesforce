@@ -111,7 +111,7 @@ export default function NonprofitSuccessPackConsultantStudyGuidePage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '90 min' },
+          { label: 'Time Limit', value: '105 min' },
           { label: 'Passing Score', value: '~65%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (

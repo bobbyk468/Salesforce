@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'How does the Salesforce-Pardot sync work for the exam?',
-    answer: 'Pardot syncs with Salesforce through the Connector. Prospects in Pardot map to Leads and Contacts in Salesforce. The sync runs every 2-10 minutes. Key exam rules: Pardot only syncs with Leads and Contacts, not Accounts or Opportunities directly. When a CRM value conflicts with a Pardot value, the CRM wins by default (unless overridden). Deleted CRM records do not delete Pardot prospects. Understanding sync direction and conflict resolution is frequently tested.',
+    answer: 'Pardot syncs with Salesforce through the Connector. Prospects in Pardot map to Leads and Contacts in Salesforce. The sync runs every 2-105 minutes. Key exam rules: Pardot only syncs with Leads and Contacts, not Accounts or Opportunities directly. When a CRM value conflicts with a Pardot value, the CRM wins by default (unless overridden). Deleted CRM records do not delete Pardot prospects. Understanding sync direction and conflict resolution is frequently tested.',
   },
   {
     question: 'What is the difference between automation rules and completion actions in Pardot?',

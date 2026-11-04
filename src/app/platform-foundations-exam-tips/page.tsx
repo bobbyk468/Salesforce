@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Platform Foundations exam format?',
-    answer: 'The Salesforce Platform Foundations exam has 45 multiple-choice questions, a 70-minute time limit, a 65% passing score, and a $150 fee. It is an entry-level certification testing fundamental Salesforce platform concepts: navigation, objects, fields, automation basics, security model, and reports, positioned as a stepping stone before the full Administrator exam.',
+    answer: 'The Salesforce Platform Foundations exam has 45 multiple-choice questions, a 70-minute time limit, a 62% passing score, and a $150 fee. It is an entry-level certification testing fundamental Salesforce platform concepts: navigation, objects, fields, automation basics, security model, and reports, positioned as a stepping stone before the full Administrator exam.',
   },
   {
     question: 'What are the highest-weight Platform Foundations exam sections?',

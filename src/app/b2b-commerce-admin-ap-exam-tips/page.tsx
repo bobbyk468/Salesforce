@@ -128,7 +128,7 @@ export default function B2bCommerceAdminApExamTipsPage() {
             <span className="font-medium text-gray-900">Search, Tax, and Shipping</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Buyer Groups are the defining B2B Commerce concept, understand how they control catalogue and pricing access.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 90 minutes, Pass/Fail, $150. Buyer Groups are the defining B2B Commerce concept, understand how they control catalogue and pricing access.</p>
         </div>
       </section>
 

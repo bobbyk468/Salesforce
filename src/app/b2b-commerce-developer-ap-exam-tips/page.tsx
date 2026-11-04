@@ -128,7 +128,7 @@ export default function B2bCommerceDeveloperApExamTipsPage() {
             <span className="font-medium text-gray-900">Testing and Deployment</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. LWC component override patterns are the most distinctive developer skill for B2B Commerce. Know them deeply.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 75 minutes, Pass/Fail, $150. LWC component override patterns are the most distinctive developer skill for B2B Commerce. Know them deeply.</p>
         </div>
       </section>
 

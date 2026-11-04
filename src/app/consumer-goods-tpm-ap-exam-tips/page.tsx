@@ -128,7 +128,7 @@ export default function ConsumerGoodsTpmApExamTipsPage() {
             <span className="font-medium text-gray-900">ROI Measurement and Analytics</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Trade promotion domain knowledge (how CPG companies manage retail promotional spend) is as valuable as Salesforce product knowledge for this exam.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 62 questions, 75 minutes, Pass/Fail, $150. Trade promotion domain knowledge (how CPG companies manage retail promotional spend) is as valuable as Salesforce product knowledge for this exam.</p>
         </div>
       </section>
 

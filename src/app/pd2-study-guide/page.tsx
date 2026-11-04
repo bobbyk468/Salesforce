@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Platform Developer II exam format?',
-    answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, a 120-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It is one of the most technically demanding Salesforce certifications; it requires PD1 as a prerequisite and tests advanced Apex design patterns, async processing, integration patterns, performance optimisation, and complex trigger logic.',
+    answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, a 120-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It is one of the most technically demanding Salesforce certifications; it requires PD1 as a prerequisite and tests advanced Apex design patterns, async processing, integration patterns, performance optimisation, and complex trigger logic.',
   },
   {
     question: 'How hard is the PD2 exam compared to PD1?',

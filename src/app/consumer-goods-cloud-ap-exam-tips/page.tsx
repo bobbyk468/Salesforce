@@ -128,7 +128,7 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Mobile and Platform Configuration</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Retail Execution + KPI = 60%, understanding the field rep’s in-store workflow is essential.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 33 questions, 60 minutes, Pass/Fail, $150. Retail Execution + KPI = 60%, understanding the field rep’s in-store workflow is essential.</p>
         </div>
       </section>
 

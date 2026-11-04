@@ -104,7 +104,7 @@ export default function Pd1ExamTipsPage() {
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Logic and Process Automation is 28% of the exam, master Apex triggers, governor limits, and async patterns first.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Write real Apex code every day. PD1 scenarios require you to identify bugs and select correct patterns, not just recall facts.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take timed mocks (60 questions / 110 minutes). You are ready when you consistently score 78%+, the passing score is 68%.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take timed mocks (60 questions / 105 minutes). You are ready when you consistently score 78%+, the passing score is 68%.</li>
         </ul>
       </section>
 
@@ -169,7 +169,7 @@ export default function Pd1ExamTipsPage() {
           <p><strong>Week 1: Salesforce Fundamentals &amp; Data Modeling (45%):</strong> Platform data model, object relationships (lookup vs master-detail), field types, schema builder, SOQL (relationship queries, aggregate functions, dynamic SOQL), SOSL, and DML operations.</p>
           <p><strong>Week 2: Logic and Process Automation (28%):</strong> Apex fundamentals, trigger events (before/after, isNew, isUpdate, isDelete), bulkification patterns, governor limits, async Apex (Future, Batch, Queueable, Scheduled), and error handling.</p>
           <p><strong>Week 3: Testing, Deployment &amp; UI (27%):</strong> Writing @isTest classes, Test.startTest()/stopTest(), Test.runAs(), mock data, 75% coverage requirement, debugging logs, changeset/metadata deployment, and LWC fundamentals (@api, @wire, @AuraEnabled).</p>
-          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 110 min), weak-area targeted revision, and final review of governor limit scenarios before booking.</p>
+          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min), weak-area targeted revision, and final review of governor limit scenarios before booking.</p>
         </div>
       </section>
 
@@ -202,7 +202,7 @@ export default function Pd1ExamTipsPage() {
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          78%+ on 3 timed full mocks (60 Q / 110 min), one week apart
+          78%+ on 3 timed full mocks (60 Q / 105 min), one week apart
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The 10-point buffer above the passing score accounts for first-attempt nerves and unfamiliar question phrasing.

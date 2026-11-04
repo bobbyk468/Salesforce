@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the B2C Solution Architect exam?',
-    answer: 'B2C Solution Architect requires 65% to pass and tests multi-cloud consumer experience architecture, typically combining B2C Commerce, Marketing Cloud, Service Cloud, and Experience Cloud. Like its B2B counterpart, it rewards candidates who can design across cloud boundaries and reason about identity (single customer view, Marketing Cloud Connect, Commerce Cloud/Service Cloud integration). Most candidates need 10–12 weeks of preparation with multi-cloud implementation experience. Identity resolution and cross-cloud data consistency are the hardest topics.',
+    answer: 'B2C Solution Architect requires 63% to pass and tests multi-cloud consumer experience architecture, typically combining B2C Commerce, Marketing Cloud, Service Cloud, and Experience Cloud. Like its B2B counterpart, it rewards candidates who can design across cloud boundaries and reason about identity (single customer view, Marketing Cloud Connect, Commerce Cloud/Service Cloud integration). Most candidates need 10–12 weeks of preparation with multi-cloud implementation experience. Identity resolution and cross-cloud data consistency are the hardest topics.',
   },
   {
     question: 'What are the highest-weight B2C Solution Architect exam sections?',

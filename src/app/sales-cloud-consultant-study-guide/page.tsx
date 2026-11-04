@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Sales Cloud Consultant exam format?',
-    answer: 'The Sales Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It requires Salesforce Administrator certification (ADM-201) as a prerequisite and tests your ability to design and implement Sales Cloud solutions for business requirements.',
+    answer: 'The Sales Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 73% passing score, and a $200 fee ($100 retake). It requires Salesforce Administrator certification (ADM-201) as a prerequisite and tests your ability to design and implement Sales Cloud solutions for business requirements.',
   },
   {
     question: 'What are the highest-weight Sales Cloud Consultant exam sections?',

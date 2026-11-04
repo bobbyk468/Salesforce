@@ -45,7 +45,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Slack Developer exam format?',
-    answer: 'The Salesforce Certified Slack Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 fee.',
+    answer: 'The Salesforce Certified Slack Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee.',
   },
   {
     question: 'What are the most important Slack Developer exam topics?',
@@ -94,7 +94,7 @@ export default function SlackDeveloperExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Slack Developer</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 60 questions in 105 minutes. Passing score is approximately 68%. Aim for 78%+ on full mocks before booking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 60 questions in 90 minutes. Passing score is approximately 68%. Aim for 78%+ on full mocks before booking.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam fee is $200 USD ($100 for retake). Hands-on Slack app development experience is strongly recommended, the exam tests practical API knowledge.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Know the 3-second acknowledgement rule cold, it applies to slash commands, button clicks, modal submissions, and shortcut payloads.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Block Kit, the Events API, and the Web API (especially <code className="bg-gray-100 px-1 rounded text-xs">chat.postMessage</code> and <code className="bg-gray-100 px-1 rounded text-xs">views.open</code>) are the highest-tested areas.</li>
@@ -133,7 +133,7 @@ export default function SlackDeveloperExamTipsPage() {
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          78%+ on 3 timed full mocks (60 questions / 105 minutes each)
+          78%+ on 3 timed full mocks (60 questions / 90 minutes each)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The official passing score is approximately 68% (~41/60 questions). Targeting 78%+ on mocks provides a 10-point

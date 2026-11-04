@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Data Cloud Consultant exam format?',
-    answer: 'The Salesforce Data Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce Data Cloud (formerly Customer Data Platform / CDP): data ingestion, data model mapping, identity resolution, segmentation, and activation.',
+    answer: 'The Salesforce Data Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce Data Cloud (formerly Customer Data Platform / CDP): data ingestion, data model mapping, identity resolution, segmentation, and activation.',
   },
   {
     question: 'What are the highest-weight Data Cloud Consultant exam sections?',

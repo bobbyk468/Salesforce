@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Strategy Designer exam format?',
-    answer: 'The Salesforce Strategy Designer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests design thinking methodologies, business strategy alignment, value mapping, and how to facilitate discovery and design sessions for Salesforce implementations.',
+    answer: 'The Salesforce Strategy Designer exam has 60 multiple-choice questions, a 105-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests design thinking methodologies, business strategy alignment, value mapping, and how to facilitate discovery and design sessions for Salesforce implementations.',
   },
   {
     question: 'What are the highest-weight Strategy Designer exam sections?',

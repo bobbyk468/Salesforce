@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Marketing Cloud Developer exam format?',
-    answer: 'The Salesforce Marketing Cloud Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests AMPscript, Server-Side JavaScript (SSJS), SQL for data extensions, Marketing Cloud APIs, and Cloud Pages development.',
+    answer: 'The Salesforce Marketing Cloud Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee ($100 retake). It tests AMPscript, Server-Side JavaScript (SSJS), SQL for data extensions, Marketing Cloud APIs, and Cloud Pages development.',
   },
   {
     question: 'What are the highest-weight Marketing Cloud Developer exam sections?',

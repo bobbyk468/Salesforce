@@ -50,7 +50,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Revenue Cloud Consultant exam format?',
-    answer: 'The Salesforce Revenue Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce Revenue Cloud: CPQ configuration, Salesforce Billing, subscription management, and the quote-to-cash process.',
+    answer: 'The Salesforce Revenue Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce Revenue Cloud: CPQ configuration, Salesforce Billing, subscription management, and the quote-to-cash process.',
   },
   {
     question: 'What are the highest-weight Revenue Cloud Consultant exam sections?',
