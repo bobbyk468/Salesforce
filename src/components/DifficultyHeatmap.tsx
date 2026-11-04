@@ -22,14 +22,13 @@ export default function DifficultyHeatmap({ slug }: DifficultyHeatmapProps) {
         These topics are our own groupings for revision planning, not the
         official exam outline. They were previously headed "Exam Section", which
         read as a claim about the published outline and did not match it for any
-        credential. The official section names and their weightings are in the
-        exam weightage table on the same page, which is sourced per credential
-        from the Salesforce exam guide.
+        credential. It does not say "the table above" because 16 of the 50
+        pages that render this heatmap have no weightage table of their own.
       */}
       <p className="text-sm text-gray-600 mb-5">
         Which topics are a gimme vs which ones trap confident candidates. Use this to prioritise your
-        final-week revision. These are our own topic groupings, not the official exam sections, see the
-        exam weightage table above for those and their weightings.
+        final-week revision. These are our own topic groupings for study planning, not the official
+        exam sections, those and their weightings are in the credential&apos;s exam guide.
       </p>
       <div className="overflow-x-auto">
         <table className="min-w-[500px] w-full text-sm text-left border-collapse">
