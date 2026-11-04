@@ -8,6 +8,7 @@ import { join } from 'node:path'
 
 const require = createRequire(import.meta.url)
 const ts = require('typescript')
+const pageDates = require('../../public/page-dates.json')
 const root = fileURLToPath(new URL('../../', import.meta.url))
 const read = (path) => readFileSync(join(root, path), 'utf8')
 
@@ -188,7 +189,16 @@ test('quiz JSON-LD includes every correct option and excludes them from distract
   const source = read('src/lib/schema-data.ts')
   const compiled = compile(source, 'schema-data.ts', ts.JsxEmit.Preserve)
   const schemaModule = { exports: {} }
-  vm.runInNewContext(compiled, { module: schemaModule, exports: schemaModule.exports, process })
+  vm.runInNewContext(compiled, {
+    module: schemaModule,
+    exports: schemaModule.exports,
+    process,
+    // schema-data reads the generated page-dates map for Article dates.
+    require: (specifier) => {
+      if (specifier.endsWith('page-dates.json')) return pageDates
+      throw new Error(`Unexpected import: ${specifier}`)
+    },
+  })
   const questions = [
     { question: 'Single', options: ['wrong', 'right'], correctAnswer: 1 },
     { question: 'Multiple', options: ['one', 'two', 'three', 'four'], correctAnswers: [1, 3] },
