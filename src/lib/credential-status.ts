@@ -32,6 +32,28 @@ const CLAUDE_ARCHITECT_FOUNDATIONS_STATUS: CredentialStatusInfo = {
   sourceUrl: 'https://www.anthropic.com/news/claude-partner-network',
 }
 
+/**
+ * The 24 credentials Salesforce listed as retiring on 1 February 2027.
+ * Registration closed on 24 July 2026 and the last day to sit any of them was
+ * 31 August 2026, both of which have passed, so none can be booked now. The
+ * credential itself is not retired yet, and people who hold it still hold it.
+ *
+ * Source: Salesforce Certification Retirements,
+ * help.salesforce.com/s/articleView?id=005388958 (read 4 November 2026).
+ *
+ * Education Cloud Consultant is on the same list but keeps its own longer
+ * entry below, written before this helper existed.
+ */
+function examClosedAugust2026(name: string): CredentialStatusInfo {
+  return {
+    kind: 'exam-closed',
+    label: 'Exam closed; credential retires February 1, 2027',
+    message: `Salesforce closed ${name} registration on July 24, 2026 and exam delivery after August 31, 2026, so the exam can no longer be booked. The credential retires February 1, 2027; it is not already retired, and existing holders keep it. These notes preserve the published exam objectives for learning, not new exam bookings.`,
+    sourceLabel: 'Salesforce Certification Retirements',
+    sourceUrl: 'https://help.salesforce.com/s/articleView?id=005388958&language=en_US&type=1',
+  }
+}
+
 const CREDENTIAL_STATUS: Record<string, CredentialStatusInfo> = {
   'education-cloud-consultant': {
     kind: 'exam-closed',
@@ -40,6 +62,29 @@ const CREDENTIAL_STATUS: Record<string, CredentialStatusInfo> = {
     sourceLabel: 'Salesforce Education Cloud Consultant exam and retirement notice',
     sourceUrl: 'https://help.salesforce.com/s/articleView?id=005298934&language=en_US&type=1',
   },
+  'advanced-field-service-ap': examClosedAugust2026('Advanced Field Service Accredited Professional'),
+  'b2b-solution-architect': examClosedAugust2026('B2B Solution Architect'),
+  'b2c-commerce-architect': examClosedAugust2026('B2C Commerce Architect'),
+  'consumer-goods-tpm-ap': examClosedAugust2026('Consumer Goods Cloud: Trade Promotion Management Accredited Professional'),
+  'contact-center-ap': examClosedAugust2026('Contact Center Accredited Professional'),
+  'cpq-administrator': examClosedAugust2026('CPQ Administrator'),
+  'cpq-billing-ap': examClosedAugust2026('CPQ and Billing Consultant Accredited Professional'),
+  'industries-cpq-developer': examClosedAugust2026('Industries CPQ Developer'),
+  'energy-utilities-ap': examClosedAugust2026('Energy and Utilities Cloud Accredited Professional'),
+  'heroku-developer-ap': examClosedAugust2026('Heroku Developer Accredited Professional'),
+  'loyalty-management-ap': examClosedAugust2026('Loyalty Management Accredited Professional'),
+  'pardot-consultant': examClosedAugust2026('Marketing Cloud Account Engagement Consultant'),
+  'marketing-cloud-advanced-cross-channel-ap': examClosedAugust2026('Marketing Cloud Advanced Cross Channel Accredited Professional'),
+  'marketing-cloud-intelligence-ap': examClosedAugust2026('Marketing Cloud Intelligence Accredited Professional'),
+  'marketing-cloud-personalization-ap': examClosedAugust2026('Marketing Cloud Personalization Accredited Professional'),
+  'media-cloud-ap': examClosedAugust2026('Media Cloud Accredited Professional'),
+  'mulesoft-catalyst-consultant': examClosedAugust2026('MuleSoft Catalyst Consultant'),
+  'mulesoft-hyperautomation-developer': examClosedAugust2026('MuleSoft Hyperautomation Developer'),
+  'net-zero-cloud-ap': examClosedAugust2026('Net Zero Cloud Accredited Professional'),
+  'order-management-admin-ap': examClosedAugust2026('Order Management Administrator Accredited Professional'),
+  'order-management-developer-ap': examClosedAugust2026('Order Management Developer Accredited Professional'),
+  'process-automation-ap': examClosedAugust2026('Process Automation Accredited Professional'),
+  'nonprofit-success-pack-consultant': examClosedAugust2026('Nonprofit Success Pack Consultant'),
   'ai-associate': AI_ASSOCIATE_STATUS,
   'claude-certified-associate': CLAUDE_STATUS,
   'claude-certified-developer': CLAUDE_STATUS,
