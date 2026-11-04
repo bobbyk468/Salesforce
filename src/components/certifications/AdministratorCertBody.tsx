@@ -210,9 +210,9 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass ADM-201 on Your First Attempt</h3>
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
-                  <li><strong>Start with high-weight sections:</strong> Configuration &amp; Setup (20%) and Object Manager &amp; Lightning App Builder (20%) together cover 40% of the exam.</li>
+                  <li><strong>Start with high-weight sections:</strong> Data and Analytics Management (17%), Configuration and Setup (15%), Object Manager and Lightning App Builder (15%) and Automation (15%) together cover 62% of the exam. Agentforce is now its own section at 8%.</li>
                   <li><strong>Use a hands-on org:</strong> Set up a free Salesforce Developer Edition org and practice every feature you study.</li>
-                  <li><strong>Take timed mock exams:</strong> Simulate real conditions: 65 questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
+                  <li><strong>Take timed mock exams:</strong> Simulate real conditions: 60 scored questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
                   <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
                   <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
                 </ul>

@@ -35,13 +35,18 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Service and Support Applications', percentage: 10 },
     { name: 'Automation', percentage: 17 },
   ],
+  // Verified 4 November 2026 against the official exam guide:
+  // help.salesforce.com/s/articleView?id=005298966 — eight sections.
+  // The previous five summed to 90 and did not match the outline.
   'administrator-practice-test': [
-    { name: 'Configuration and Setup', percentage: 20 },
-    { name: 'Security and Objects', percentage: 19 },
-    { name: 'Automation', percentage: 14 },
-    { name: 'Data and Analytics', percentage: 17 },
-    { name: 'Sales and Service', percentage: 20 },
-    { name: "Agentforce (Summer '26)", percentage: 10 },
+    { name: 'Configuration and Setup', percentage: 15 },
+    { name: 'Object Manager and Lightning App Builder', percentage: 15 },
+    { name: 'Sales and Marketing Applications', percentage: 10 },
+    { name: 'Service and Support Applications', percentage: 10 },
+    { name: 'Productivity and Collaboration', percentage: 10 },
+    { name: 'Data and Analytics Management', percentage: 17 },
+    { name: 'Automation', percentage: 15 },
+    { name: 'Agentforce', percentage: 8 },
   ],
   'app-builder': [
     { name: 'Data Modeling and Management', percentage: 20 },
