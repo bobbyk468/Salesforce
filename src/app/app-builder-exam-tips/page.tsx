@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -83,6 +84,7 @@ export default function AppBuilderExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Platform App Builder Exam Tips ({RELEASE_CURRENT}): How to Pass DEV-402 First Attempt
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The DEV-402 exam is scenario-driven and tests declarative app building across data modelling, automation,
           security, and app design. These tips show you how to focus your study time and tackle each scenario type.

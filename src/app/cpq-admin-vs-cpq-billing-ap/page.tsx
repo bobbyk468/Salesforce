@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -72,6 +73,7 @@ export default function CpqAdminVsCpqBillingApPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce CPQ Administrator vs CPQ &amp; Billing AP: Which to Take for Revenue Cloud?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both CPQ certifications validate Revenue Cloud skills, but they differ in scope, depth, exam format, and cost.
           Here’s how to choose the right credential for your role and timeline.

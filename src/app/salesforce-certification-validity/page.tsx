@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Do Salesforce Certifications Expire? (${RELEASE_CURRENT})`
@@ -71,6 +72,7 @@ export default function SalesforceCertificationValidityPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Certification Validity &amp; Expiry ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Salesforce certifications do not expire, but they require maintenance. Here’s exactly how certification validity works and how to keep yours Active.
         </p>

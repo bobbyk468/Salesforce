@@ -9,6 +9,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -95,6 +96,7 @@ export default function PardotConsultantStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Pardot Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           A complete study guide for the Salesforce Certified Marketing Cloud Account Engagement Consultant (Pardot Consultant) exam, exam sections, B2B marketing automation concepts, a study plan, and passing tips.
         </p>

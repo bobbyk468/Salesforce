@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -97,6 +98,7 @@ export default function Pd2StudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Platform Developer II Study Guide ({RELEASE_CURRENT}): Complete PD2 Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Platform Developer II is one of the most challenging Salesforce certifications. It goes beyond
           writing correct Apex, it tests your ability to architect scalable, performant solutions

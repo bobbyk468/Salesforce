@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -72,6 +73,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Administrator vs Advanced Administrator: When to Upgrade Your Cert
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           ADM-201 gets you into Salesforce admin roles. Advanced Administrator (ADM-211) signals senior-level mastery.
           This guide explains the difference, the right timing to upgrade, and what extra depth the Advanced exam requires.

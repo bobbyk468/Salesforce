@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, ArrowRight, BookOpen, Target } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +75,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           How to Become a Salesforce Administrator ({RELEASE_CURRENT}): Complete Step-by-Step Guide
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Salesforce Administrator is one of the most accessible tech career paths available in {new Date().getFullYear()}. You do not
           need a technical degree, prior coding experience, or expensive bootcamps. This guide walks you from zero

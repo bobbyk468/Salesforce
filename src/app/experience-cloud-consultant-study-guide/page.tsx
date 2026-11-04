@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -95,6 +96,7 @@ export default function ExperienceCloudConsultantStudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Experience Cloud Consultant Study Guide ({RELEASE_CURRENT}): Complete Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Experience Cloud Consultant certification validates your ability to design and implement
           Salesforce digital experience portals, customer self-service sites, partner portals, and

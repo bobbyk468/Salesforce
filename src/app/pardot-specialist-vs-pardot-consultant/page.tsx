@@ -7,6 +7,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -73,6 +74,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Pardot Specialist vs Pardot Consultant ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both Pardot certifications test the same platform, but at very different levels. Here’s which to take first and when to go for the Consultant credential.
         </p>

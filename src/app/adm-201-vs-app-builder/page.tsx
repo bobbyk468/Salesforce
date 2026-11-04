@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -73,6 +74,7 @@ export default function Adm201VsAppBuilderPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           ADM-201 vs App Builder (DEV-402): Which Salesforce Cert Should You Take First?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both certifications are declarative and popular for Salesforce careers, but they test different strengths.
           This guide helps you choose the right starting point based on your role and goals.

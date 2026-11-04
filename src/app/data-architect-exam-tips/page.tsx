@@ -8,6 +8,7 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -83,6 +84,7 @@ export default function DataArchitectExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Data Architect Exam Tips ({RELEASE_YEAR}): Study Strategy
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce Data Architect exam tests your ability to design scalable, high-performance Salesforce data
           models. These tips focus on large data volume strategy, master data management, and the architectural

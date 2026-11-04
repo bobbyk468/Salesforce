@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -83,6 +84,7 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Marketing Cloud Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Marketing Cloud Engagement Foundations exam is Salesforce’s entry-level Marketing Cloud
           certification. It tests basic Email Studio skills, subscriber management, and how Marketing

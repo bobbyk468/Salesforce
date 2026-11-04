@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -93,6 +94,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Marketing Cloud Consultant Study Guide ({RELEASE_CURRENT}): Complete Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Marketing Cloud Consultant certification validates your ability to design and architect
           full Marketing Cloud implementations, from discovery and solution design through Salesforce

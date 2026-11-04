@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -94,6 +95,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Agentforce Specialist Study Guide ({RELEASE_YEAR}): Complete Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Agentforce Specialist credential validates knowledge of Agentforce configuration and related published objectives.
           It validates your ability to design, build, test, and deploy autonomous AI agents using Salesforce

@@ -4,6 +4,7 @@ import { DollarSign, RefreshCw, Info, CheckCircle2, ArrowRight } from 'lucide-re
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -153,6 +154,7 @@ export default function SalesforceCertificationCostPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Certification Cost ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Salesforce exam fees range from $75 to $6,000 depending on the credential tier.
           Most admin, developer, and consultant certs cost $200. Here is the full breakdown with retake prices and savings tips.

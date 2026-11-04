@@ -8,6 +8,7 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -90,6 +91,7 @@ export default function SystemArchitectStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce System Architect Study Guide ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           There is no single System Architect exam. You earn the credential by holding four certifications. Here is what each one covers, a sensible order to take them, and how to plan your study.
         </p>

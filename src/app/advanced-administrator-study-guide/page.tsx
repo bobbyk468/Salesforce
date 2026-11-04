@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -94,6 +95,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Advanced Administrator Study Guide ({RELEASE_CURRENT}): Complete Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce Advanced Administrator certification validates deep platform expertise, complex
           security models, advanced automation, auditing, Territory Management, and data governance.

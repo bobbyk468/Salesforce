@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -88,6 +89,7 @@ export default function Pd2ExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           PD2 Exam Tips ({RELEASE_CURRENT}): How to Pass Platform Developer II
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Platform Developer II (PD2) is the most challenging Salesforce developer credential.
           These tips help you focus on advanced Apex patterns, integration architecture, and the

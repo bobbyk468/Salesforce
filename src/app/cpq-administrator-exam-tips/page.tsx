@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -83,6 +84,7 @@ export default function CPQAdministratorExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce CPQ Specialist Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The CPQ Specialist exam tests your ability to configure Salesforce CPQ for complex product catalogues,
           dynamic pricing, and quote generation. These tips focus on the pricing waterfall, bundle configuration,

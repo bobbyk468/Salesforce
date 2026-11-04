@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import CredentialStatusNotice from '@/components/CredentialStatusNotice'
+import LastUpdated from '@/components/LastUpdated'
 
 const title = 'Agentforce Specialist vs AI Associate (Retired)'
 const metadataTitle = 'Agentforce Specialist vs AI Associate (Retired) Guide'
@@ -21,7 +22,8 @@ export default function ComparisonPage() {
     <article className="max-w-4xl mx-auto px-4 py-12 text-gray-700 leading-relaxed">
       <ContentPageSchemas headline={title} description={description} path={path} faqItems={faqItems}
         breadcrumbItems={[{ name: 'Home', url: '/' }, { name: title, url: path }]} />
-      <header data-lcp-header className="mb-8"><h1 className="text-3xl font-bold text-gray-900">{title}</h1></header>
+      <header data-lcp-header className="mb-8"><h1 className="text-3xl font-bold text-gray-900">{title}</h1>
+        <LastUpdated /></header>
       <CredentialStatusNotice slug="ai-associate" />
       <section className="mt-8 space-y-5">
         <h2 className="text-2xl font-bold">Compare learning goals</h2>

@@ -7,6 +7,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -96,6 +97,7 @@ export default function FieldServiceConsultantStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Certified Agentforce Field Service and Operations Consultant Study Guide
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Review the published exam objectives and practice applying Field Service configuration choices to realistic operations scenarios.
         </p>

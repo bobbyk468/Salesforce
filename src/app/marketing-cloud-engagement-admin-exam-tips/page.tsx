@@ -8,6 +8,7 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -81,6 +82,7 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Marketing Cloud Engagement Admin Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Marketing Cloud Engagement Administrator exam tests your ability to configure and manage
           Email Studio, Automation Studio, Contact Builder, Mobile Studio, and account settings.

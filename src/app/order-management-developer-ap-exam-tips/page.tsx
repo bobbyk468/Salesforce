@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import ApOccupationSchema from '@/components/ApOccupationSchema'
 import CredentialSchema from '@/components/CredentialSchema'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -84,6 +85,7 @@ export default function OrderManagementDeveloperApExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Order Management Developer AP Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Order Management Developer AP validates developer expertise in customising and
           integrating Salesforce OMS. These tips focus on OMS APIs, Flow customisation,

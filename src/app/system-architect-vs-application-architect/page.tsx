@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `System vs Application Architect: Differences (${RELEASE_CURRENT})`
@@ -70,6 +71,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           System Architect vs Application Architect ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both are multi-exam Salesforce architect credentials required for CTA, but they cover different domains and have different entry points. Here is how they compare and which to pursue first.
         </p>

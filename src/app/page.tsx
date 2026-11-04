@@ -25,6 +25,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE } from '@/lib/constants'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -330,6 +331,7 @@ export default async function Home() {
                 <span className="hero-gradient-text">Salesforce certification</span>
                 {' '}with confidence.
               </h1>
+        <LastUpdated />
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl mb-8">
                 Explore sample practice questions, exam topics, and study guides across Admin, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, and Tableau tracks.
               </p>

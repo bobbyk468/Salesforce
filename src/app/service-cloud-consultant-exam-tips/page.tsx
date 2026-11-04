@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -81,6 +82,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Service Cloud Consultant Exam Tips ({RELEASE_CURRENT}): How to Pass First Attempt
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce Service Cloud Consultant certification tests your ability to design and implement
           customer service solutions. Unlike the ADM-201, this exam requires you to make <em>design decisions</em>,

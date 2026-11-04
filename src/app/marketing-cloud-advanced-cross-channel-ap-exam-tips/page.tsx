@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import ApOccupationSchema from '@/components/ApOccupationSchema'
 import CredentialSchema from '@/components/CredentialSchema'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -86,6 +87,7 @@ export default function MarketingCloudAdvancedCrossChannelApExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Marketing Cloud Advanced Cross-Channel AP Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The MC Advanced Cross-Channel AP validates expertise in complex Journey Builder automation,
           mobile messaging, and advertising audience management. These tips focus on the multi-channel

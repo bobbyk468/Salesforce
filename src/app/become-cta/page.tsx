@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { Award, Target, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react'
 import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount } from '@/lib/cta-journey-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const metadataTitle = 'Become a Salesforce CTA: Career Path | Trailblaze Prep'
@@ -87,6 +88,7 @@ export default function BecomeCtaPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Become a Certified Technical Architect
         </h1>
+        <LastUpdated />
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
           Flow from zero experience to CTA. Follow the path below, each box is a certification you can study.
         </p>

@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Exam Retake Policy: Cost & Wait Time (${RELEASE_CURRENT})`
@@ -70,6 +71,7 @@ export default function SalesforceExamRetakePolicyPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Exam Retake Policy ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Everything you need to know if you did not pass your Salesforce certification; retake costs, waiting periods, score reports, and how to prepare for your next attempt.
         </p>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import CredentialStatusNotice from '@/components/CredentialStatusNotice'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import LastUpdated from '@/components/LastUpdated'
 
 const title = 'AI Associate Retirement: What to Study Next'
 const metadataTitle = 'AI Associate Retirement: Salesforce Study Options Guide'
@@ -21,7 +22,8 @@ export default function HistoricalAiResource() {
     <article className="max-w-4xl mx-auto px-4 py-12 text-gray-700 leading-relaxed">
       <ContentPageSchemas headline={title} description={description} path={path}
         breadcrumbItems={[{ name: 'Home', url: '/' }, { name: 'AI Associate (retired)', url: '/certifications/ai-associate' }, { name: title, url: path }]} />
-      <header data-lcp-header className="mb-8"><h1 className="text-3xl font-bold text-gray-900">{title}</h1></header>
+      <header data-lcp-header className="mb-8"><h1 className="text-3xl font-bold text-gray-900">{title}</h1>
+        <LastUpdated /></header>
       <CredentialStatusNotice slug="ai-associate" />
       <p className="mt-6">This resource is retained for readers following older AI Associate links. Salesforce retired the credential in February 2026; it is not an active exam preparation or booking page.</p>
       <section className="mt-8 space-y-5">

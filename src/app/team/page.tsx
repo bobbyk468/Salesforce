@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ExternalLink, Award, CheckCircle } from 'lucide-react'
 import { CONTACT_EMAIL, SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Editorial Team | ${SITE_NAME}`
@@ -97,6 +98,7 @@ export default function TeamPage() {
 
       <div data-lcp-header>
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Trailblaze Prep Editorial Team</h1>
+        <LastUpdated />
       </div>
       <p className="text-gray-600 mb-8">
         Content is written and reviewed by Salesforce-certified practitioners with real implementation and exam experience.

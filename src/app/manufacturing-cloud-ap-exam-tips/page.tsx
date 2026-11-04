@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import ApOccupationSchema from '@/components/ApOccupationSchema'
 import CredentialSchema from '@/components/CredentialSchema'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -86,6 +87,7 @@ export default function ManufacturingCloudApExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Manufacturing Cloud AP Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Manufacturing Cloud AP exam validates your ability to implement Salesforce Manufacturing
           Cloud for discrete and process manufacturers. These tips focus on sales agreements,

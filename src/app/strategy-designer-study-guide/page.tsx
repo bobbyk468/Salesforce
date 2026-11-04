@@ -9,6 +9,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -92,6 +93,7 @@ export default function StrategyDesignerStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Strategy Designer Study Guide ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           A complete study guide for the Salesforce Certified Strategy Designer exam, human-centred design frameworks, exam sections, a focused study plan, and tips for passing the scenario-heavy questions.
         </p>

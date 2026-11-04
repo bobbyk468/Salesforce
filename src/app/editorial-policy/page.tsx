@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { CONTACT_EMAIL } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Editorial Policy & Exam Data Review | Trailblaze Prep`
@@ -77,6 +78,7 @@ export default function EditorialPolicyPage() {
           Updated for {RELEASE_CURRENT}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Editorial Policy &amp; Exam Data Review</h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Trailblaze Prep is built as an independent Salesforce certification preparation resource. This page explains how we review exam data, write practice questions, cite official sources, and correct mistakes.
         </p>

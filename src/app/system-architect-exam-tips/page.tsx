@@ -8,6 +8,7 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -80,6 +81,7 @@ export default function SystemArchitectExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           System Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce System Architect credential is an architect-track exam testing identity,
           integrations, environment management, and governance. These tips help you focus on the

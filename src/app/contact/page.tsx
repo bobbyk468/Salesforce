@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from 'lucide-react'
 import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+import LastUpdated from '@/components/LastUpdated'
 
 // Get all unique certification names for autocomplete
 const getAllCertificationNames = (): string[] => {
@@ -269,6 +270,7 @@ function ContactPageContent() {
       <section className="gradient-bg text-white py-10 md:py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">Contact Us</h1>
+        <LastUpdated />
           <p className="text-base md:text-xl text-white">
             Have questions about our study materials? We'd love to hear from you.
           </p>

@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -72,6 +73,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Business Analyst vs Strategy Designer: Which Cert Fits Your Role?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both certifications sit between business and technology, but they test fundamentally different skills.
           Business Analyst is about requirements and delivery; Strategy Designer is about human-centred design and experience strategy.

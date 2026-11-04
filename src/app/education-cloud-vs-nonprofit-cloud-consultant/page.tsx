@@ -6,6 +6,7 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -73,6 +74,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Education Cloud Consultant (exam closed) vs Nonprofit Cloud Consultant ({RELEASE_YEAR})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Education Cloud Consultant registration has closed; Salesforce schedules formal retirement for February 1, 2027. Verify eligibility with the issuer and compare product scope before choosing study material.
         </p>

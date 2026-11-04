@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -83,6 +84,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           MuleSoft Integration Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass First Attempt
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The MuleSoft Integration Foundations certification targets project team members who need working knowledge
           of API-led connectivity and the Anypoint Platform, not developers writing Mule code. These tips help you

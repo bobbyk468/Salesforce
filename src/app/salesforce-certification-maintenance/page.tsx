@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Maintenance Guide (${RELEASE_CURRENT})`
@@ -87,6 +88,7 @@ export default function SalesforceCertificationMaintenancePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Certification Maintenance Guide ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Everything you need to know about keeping your Salesforce certifications active, maintenance schedule, where to find modules, and what happens if you miss a deadline. See also <Link href="/salesforce-certification-validity" className="text-salesforce-dark hover:underline font-medium">certification validity and expiry</Link>.
         </p>

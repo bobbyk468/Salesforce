@@ -8,6 +8,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -74,6 +75,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Marketing Cloud Engagement Admin vs Developer: Which Certification to Take?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both Marketing Cloud certifications validate SFMC expertise, but Admin focuses on platform configuration
           and operations while Developer tests custom code and API skills. Here’s how to choose.

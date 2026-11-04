@@ -7,6 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -77,6 +78,7 @@ export default function MuleSoftCatalystConsultantExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           MuleSoft Catalyst Consultant Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The MuleSoft Catalyst Consultant exam tests your knowledge of the MuleSoft Catalyst methodology
           for delivering enterprise integration programmes. These tips focus on IT operating model design,

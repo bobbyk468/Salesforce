@@ -6,6 +6,7 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -74,6 +75,7 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Field Service Consultant vs Service Cloud Consultant ({RELEASE_YEAR})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Compare the customer-support and in-person service workflows in each current official guide; there is no universal certification order.
         </p>

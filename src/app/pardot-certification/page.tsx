@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Pardot Certification Guide and Exams (${RELEASE_CURRENT})`
@@ -66,6 +67,7 @@ export default function PardotCertificationPage() {
       <header data-lcp-header className="mb-10">
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Account Engagement / Pardot</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pardot Certification Guide</h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">Pardot is now Marketing Cloud Account Engagement, but the search intent is still clear: candidates want to know which Pardot certification to take and how to prepare.</p>
       </header>
       <ContentPageAuthor />

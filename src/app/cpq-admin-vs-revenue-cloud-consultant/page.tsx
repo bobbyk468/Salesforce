@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `CPQ Admin vs Revenue Cloud Consultant (${RELEASE_CURRENT})`
@@ -70,6 +71,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           CPQ Administrator vs Revenue Cloud Consultant ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both certifications cover the quote-to-cash process, but at different stages. CPQ owns the quoting layer; Revenue Cloud extends it through billing and revenue recognition.
         </p>

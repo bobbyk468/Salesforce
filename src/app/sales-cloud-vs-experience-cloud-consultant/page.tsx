@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -66,6 +67,7 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Sales Cloud vs Experience Cloud Consultant: Which to Take First?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Sales Cloud Consultant and Experience Cloud Consultant are both mid-level Salesforce specialist
           certifications. Sales Cloud focuses on sales process implementation and CRM optimisation.

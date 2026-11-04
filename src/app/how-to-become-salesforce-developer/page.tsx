@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, ArrowRight, BookOpen, Target } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Become a Salesforce Developer (${RELEASE_CURRENT} Guide)`
@@ -110,6 +111,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           How to Become a Salesforce Developer ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           From zero to Salesforce Developer, the step-by-step path to PD1 certification, LWC skills, and your first Salesforce development role.
         </p>

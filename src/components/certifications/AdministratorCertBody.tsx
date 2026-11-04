@@ -30,6 +30,7 @@ import {
   ADMINISTRATOR_SLUG,
   administratorSampleQuestions,
 } from '@/lib/cert-page-spike/administrator-data'
+import LastUpdated from '@/components/LastUpdated'
 
 export default function AdministratorCertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
@@ -56,6 +57,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions ({RELEASE_CURRENT})
           </h1>
+        <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             Prepare for the Salesforce Certified Platform Administrator exam with practice questions, a study plan, and section weightage. No sign-up required.
           </p>

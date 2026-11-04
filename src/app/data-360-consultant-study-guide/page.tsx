@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -93,6 +94,7 @@ export default function DataCloudConsultantStudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Data Cloud Consultant Study Guide ({RELEASE_CURRENT}): Complete Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Data Cloud Consultant certification validates your ability to implement Salesforce’s customer data
           platform (CDP), ingesting data from multiple sources, resolving customer identities, building

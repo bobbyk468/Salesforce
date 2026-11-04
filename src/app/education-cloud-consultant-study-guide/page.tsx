@@ -8,6 +8,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -93,6 +94,7 @@ export default function EducationCloudConsultantStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Certified Education Cloud Consultant Study Guide
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Historical study notes on the published Salesforce Certified Education Cloud Consultant guide, plus solution-design concepts for education implementations.
         </p>

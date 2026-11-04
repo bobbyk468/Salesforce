@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -72,6 +73,7 @@ export default function MulesoftDeveloperIVsIIPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           MuleSoft Developer I vs Developer II: Progression, Difficulty &amp; What to Expect
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           MuleSoft certification follows a structured progression: Developer I is the entry point and
           Developer II validates advanced integration architecture skills. Here’s exactly what separates

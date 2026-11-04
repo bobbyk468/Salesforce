@@ -9,6 +9,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -101,6 +102,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           MuleSoft Developer I Study Guide ({RELEASE_YEAR})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           A study reference for the Salesforce Certified MuleSoft Developer exam objectives, including APIs, DataWeave, connectors, and error handling.
         </p>

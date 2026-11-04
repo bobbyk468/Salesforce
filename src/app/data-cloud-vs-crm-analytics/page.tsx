@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -72,6 +73,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Data Cloud Consultant vs CRM Analytics Consultant: Which to Take?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Both certifications involve data, but they serve very different purposes. Data Cloud unifies customer data
           for AI and activation. CRM Analytics builds BI dashboards and predictions. Here’s how to choose.

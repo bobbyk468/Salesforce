@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import ApOccupationSchema from '@/components/ApOccupationSchema'
 import CredentialSchema from '@/components/CredentialSchema'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -86,6 +87,7 @@ export default function ContactCenterApExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Contact Center AP Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Contact Center AP exam validates your ability to implement Salesforce omni-channel contact
           center solutions. These tips focus on Omni-Channel routing, Service Cloud Voice, and Einstein

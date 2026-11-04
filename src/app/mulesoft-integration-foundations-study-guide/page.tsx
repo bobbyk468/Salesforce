@@ -11,6 +11,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -94,6 +95,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           MuleSoft Integration Foundations Study Guide ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Your complete guide to passing the MuleSoft Integration Foundations exam: API-led connectivity, Anypoint Platform components, and integration concepts. No coding required.
         </p>

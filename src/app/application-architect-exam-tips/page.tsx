@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -83,6 +84,7 @@ export default function ApplicationArchitectExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Application Architect Exam Tips ({RELEASE_CURRENT}): How to Pass All 4 Components
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce Application Architect credential is earned by passing four component certifications:
           App Builder, Platform Developer I, Data Architect, and Sharing &amp; Visibility Architect.

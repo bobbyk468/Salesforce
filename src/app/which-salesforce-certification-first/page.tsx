@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Which Salesforce Cert to Get First? (${RELEASE_CURRENT})`
@@ -70,6 +71,7 @@ export default function WhichSalesforceCertificationFirstPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Which Salesforce Certification Should I Get First? ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The right first certification depends on your background and career goal. Here is a clear, practical guide to choosing the best starting point, no fluff.
         </p>

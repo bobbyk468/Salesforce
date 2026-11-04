@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -93,6 +94,7 @@ export default function AppBuilderStudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           App Builder Study Guide ({RELEASE_CURRENT}): Complete Platform App Builder Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce Platform App Builder certification validates your ability to design, build, and deploy custom
           applications using Salesforce’s declarative tools. This study guide covers every exam section with the

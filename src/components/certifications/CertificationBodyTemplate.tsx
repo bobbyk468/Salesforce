@@ -3,6 +3,7 @@ import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
+import LastUpdated from '@/components/LastUpdated'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
@@ -308,6 +309,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           componentExams={card.componentExams}
         />
 
+        <LastUpdated />
+
         {!hideExamDetails && !retired && <div id="exam-prep"><ExamPrepContent slug={slug} /></div>}
 
         {!hideExamDetails && body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
@@ -445,6 +448,9 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         }}
       />
       <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
+      <div className="max-w-7xl mx-auto px-4">
+        <LastUpdated />
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <CertTrustBar slug={slug} />
       </div>

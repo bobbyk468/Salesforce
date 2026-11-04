@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -70,6 +71,7 @@ export default function SalesCloudVsServiceCloudPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Sales Cloud vs Service Cloud Consultant: Which to Take First?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Sales Cloud and Service Cloud Consultant are the two most commonly held Salesforce consultant certifications.
           Both test implementation expertise, but for different business functions. Here is how they compare

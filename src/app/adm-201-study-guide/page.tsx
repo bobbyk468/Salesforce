@@ -10,6 +10,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -94,6 +95,7 @@ export default function Adm201StudyGuidePage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           ADM-201 Study Guide ({RELEASE_CURRENT}): Complete Salesforce Administrator Exam Prep
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce Administrator (ADM-201) certification is the most widely held Salesforce credential and the
           recommended starting point for most Salesforce careers. This study guide covers every exam section with

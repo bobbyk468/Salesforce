@@ -7,6 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -75,6 +76,7 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           CTA Review Board Exam Tips ({RELEASE_CURRENT}): How to Pass the Live Architecture Presentation
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The CTA Review Board is the live presentation component of the Salesforce Certified Technical
           Architect credential, a half-day session where you present your solution to a panel of sitting

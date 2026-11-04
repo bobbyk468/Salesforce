@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Associate Certification Cost (${RELEASE_CURRENT})`
@@ -85,6 +86,7 @@ export default function SalesforceAssociateCertificationCostPage() {
       <header data-lcp-header className="mb-10">
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Updated for {RELEASE_CURRENT}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Associate Certification Cost</h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">Associate-level Salesforce credentials are the lowest-cost way to start, but the right first choice depends on whether you want broad CRM fundamentals, AI literacy, or a path toward ADM-201.</p>
       </header>
 

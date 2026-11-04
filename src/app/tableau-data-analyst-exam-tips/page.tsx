@@ -9,6 +9,7 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -81,6 +82,7 @@ export default function TableauDataAnalystExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Certified Tableau Data Analyst Exam Tips ({RELEASE_CURRENT}): How to Pass First Attempt
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Tableau Data Analyst exam tests data connection, LOD expressions, context filters, parameters, dashboard
           actions, and visualization best practices. These tips show you where to focus and how to handle the

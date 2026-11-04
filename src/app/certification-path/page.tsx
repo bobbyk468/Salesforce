@@ -4,6 +4,7 @@ import { MapPin, Layers, ChevronRight } from 'lucide-react'
 import type { PathStage } from '@/lib/certification-path-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: string }> = {
   foundational: { bg: 'bg-emerald-50', border: 'border-emerald-200', label: 'Foundational' },
@@ -87,6 +88,7 @@ export default function CertificationPathPage() {
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           Certification Paths
         </h1>
+        <LastUpdated />
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
           From foundational to advanced, see all possible paths and scenarios for every role. Choose a track and follow the steps. Use this page to plan your next exam.
         </p>

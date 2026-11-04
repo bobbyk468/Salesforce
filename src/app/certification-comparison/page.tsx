@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import { getComparisonHubJsonLd } from '@/lib/schema-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -124,6 +125,7 @@ export default function CertificationComparisonPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Certification Comparisons
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Every &ldquo;A vs B&rdquo; question answered in one place, difficulty, salary, exam scope, and which to take first.
           Each guide includes a structured decision block so you leave with a clear answer.

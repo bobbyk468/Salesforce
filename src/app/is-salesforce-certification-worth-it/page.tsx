@@ -6,6 +6,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Is Salesforce Certification Worth It? (${RELEASE_CURRENT})`
@@ -72,6 +73,7 @@ export default function IsSalesforceCertificationWorthItPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Is Salesforce Certification Worth It? ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           An honest answer, salary data, job market demand, real costs, and who should (and shouldn’t) invest in Salesforce certification.
         </p>

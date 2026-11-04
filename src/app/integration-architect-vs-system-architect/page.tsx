@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -72,6 +73,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Integration Architect vs System Architect: The Architect Track Explained
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Integration Architect is a specialist credential in the CTA pathway. System Architect is the credential
           that completes the System Architect track. Here’s how they relate and what each exam covers.

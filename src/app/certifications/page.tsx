@@ -5,6 +5,7 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const indexTitle = `All Salesforce Certifications (${RELEASE_CURRENT}) | Free Practice`
@@ -109,6 +110,7 @@ export default function CertificationsIndexPage() {
           Updated for {RELEASE_CURRENT}
         </p>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">All Salesforce Certifications ({RELEASE_CURRENT})</h1>
+        <LastUpdated />
         <p className="text-xl text-gray-600 mb-3 max-w-3xl mx-auto">
           Browse independent study resources across Administrator, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and Designer tracks. Confirm current exam details with the issuer; retired credentials are historical references.
         </p>

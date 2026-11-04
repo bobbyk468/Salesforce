@@ -7,6 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -77,6 +78,7 @@ export default function TechnicalArchitectEvaluationExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           CTA Evaluation Exam Tips ({RELEASE_CURRENT}): How to Pass the Written Architecture Exam
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The CTA Evaluation Exam is the written gate to the Salesforce Certified Technical Architect
           credential. These tips focus on the advanced architecture topics, governor limits at scale,

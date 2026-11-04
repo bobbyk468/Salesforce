@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Study for a Salesforce Certification (${RELEASE_CURRENT})`
@@ -70,6 +71,7 @@ export default function HowToStudyForSalesforceCertificationPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           How to Study for a Salesforce Certification ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           A practical, proven study approach for Salesforce certification exams, what methods work, how to structure your study time, and the mistakes that cause most first-attempt failures.
         </p>

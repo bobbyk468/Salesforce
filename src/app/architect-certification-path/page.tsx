@@ -7,6 +7,7 @@ import { ArchitectCertRoadmap } from '@/components/CertRoadmapSvg'
 import RoadmapWithDownload from '@/components/RoadmapWithDownload'
 import type { Metadata } from 'next'
 import { buildPathTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -70,6 +71,7 @@ export default function ArchitectCertificationPathPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Architect Certification Path ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce architect track has two role-based credentials: Application Architect and System Architect,
           each earned by passing a set of component exams. Both lead to the Certified Technical Architect (CTA),

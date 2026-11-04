@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -68,6 +69,7 @@ export default function DataCloudVsMarketingCloudPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Data Cloud vs Marketing Cloud: Which Certification to Pursue?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Data Cloud and Marketing Cloud are frequently confused because they both deal with customer data
           and marketing. But they serve very different purposes: Data Cloud is the data unification layer;

@@ -7,6 +7,7 @@ import { AdminCertRoadmap } from '@/components/CertRoadmapSvg'
 import RoadmapWithDownload from '@/components/RoadmapWithDownload'
 import type { Metadata } from 'next'
 import { buildPathTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -126,6 +127,7 @@ export default function AdminCertificationPathPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Admin Certification Path ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Salesforce administrator certification path starts with ADM-201 and branches into App Builder,
           Advanced Admin, and Consultant specialisations. This guide maps the optimal sequence based on your

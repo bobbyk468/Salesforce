@@ -6,6 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { ConsultantCertRoadmap } from '@/components/CertRoadmapSvg'
 import RoadmapWithDownload from '@/components/RoadmapWithDownload'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -69,6 +70,7 @@ export default function ConsultantCertificationPathPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Consultant Certification Path ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Salesforce consultant certifications validate your ability to implement specific Salesforce products for clients.
           Unlike administrator certifications (which are platform-wide), consultant certifications are product-specific.

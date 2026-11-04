@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -67,6 +68,7 @@ export default function SalesforceCertificationSalaryPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Certification Salary ({RELEASE_CURRENT}): How Much Do Certified Professionals Earn?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Salesforce certifications are among the highest-ROI professional credentials in enterprise technology.
           Here is what certified Salesforce professionals earn across roles, experience levels, and certification tracks,

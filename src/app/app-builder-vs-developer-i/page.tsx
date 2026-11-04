@@ -8,6 +8,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -75,6 +76,7 @@ export default function AppBuilderVsDeveloperIPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce App Builder vs Platform Developer I: Which to Take?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           App Builder and Platform Developer I are the two most common second certifications after ADM-201.
           App Builder tests declarative (no-code) development; PD1 tests programmatic (Apex, LWC) development.

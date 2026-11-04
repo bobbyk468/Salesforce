@@ -7,6 +7,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -74,6 +75,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           JavaScript Developer I vs Platform Developer I ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Two Salesforce developer certifications, one focused on JavaScript language skills, one on Salesforce platform development. Here’s how to choose.
         </p>

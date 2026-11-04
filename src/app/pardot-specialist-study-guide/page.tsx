@@ -9,6 +9,7 @@ import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -93,6 +94,7 @@ export default function PardotSpecialistStudyGuidePage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Marketing Cloud Account Engagement Specialist Study Guide ({RELEASE_YEAR})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Your complete guide to passing the Pardot Specialist exam, lead scoring and grading, email marketing, Engagement Studio, forms, landing pages, and Salesforce integration.
         </p>

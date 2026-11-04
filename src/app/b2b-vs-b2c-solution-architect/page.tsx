@@ -7,6 +7,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -74,6 +75,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           B2B vs B2C Solution Architect ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Two Salesforce architect-level credentials covering fundamentally different commerce ecosystems. Here’s how to choose the right one for your career.
         </p>

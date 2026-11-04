@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const metadataTitle = 'Salesforce Certification Guides Sitemap | Trailblaze Prep'
@@ -251,6 +252,7 @@ export default function HtmlSitemapPage() {
 
       <div data-lcp-header>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">HTML Sitemap</h1>
+        <LastUpdated />
       </div>
       <p className="text-gray-600 mb-8">
         Use this page to navigate all key site URLs and certification guides.

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ogImageUrl = `${baseUrl}/og?t=Certification%20Prep%20Privacy%20Policy%20%7C%20Trailblaze%20Prep`
@@ -44,6 +45,7 @@ export default function PrivacyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div data-lcp-header>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
+        <LastUpdated />
       </div>
       <p className="text-gray-600 mb-6">
         Last updated: {new Date().toLocaleDateString('en-US')}

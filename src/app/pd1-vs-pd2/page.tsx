@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { buildVsTitle } from '@/lib/seo-title-helpers'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -71,6 +72,7 @@ export default function Pd1VsPd2Page() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce PD1 vs PD2: Which Developer Certification Should You Take First?
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Platform Developer I and Platform Developer II are sequential Salesforce developer credentials.
           PD1 is required before PD2, and the jump in difficulty is significant. Here is what separates them.

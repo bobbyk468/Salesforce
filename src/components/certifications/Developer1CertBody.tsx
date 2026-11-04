@@ -3,6 +3,7 @@ import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
 import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
+import LastUpdated from '@/components/LastUpdated'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
@@ -344,6 +345,8 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}
           />
+
+        <LastUpdated />
 
           <div id="exam-prep">
             <ExamPrepContent slug={slug} />

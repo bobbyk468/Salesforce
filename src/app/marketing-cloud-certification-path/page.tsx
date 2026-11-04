@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Marketing Cloud Certification Path (${RELEASE_CURRENT})`
@@ -76,6 +77,7 @@ export default function MarketingCloudCertificationPathPage() {
       <header data-lcp-header className="mb-10">
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Marketing Cloud Path</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Marketing Cloud Certification Path</h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">Marketing Cloud has multiple tracks. Pick your path based on whether you work in Email Studio/Journey Builder, Account Engagement, or technical SFMC implementation.</p>
       </header>
       <ContentPageAuthor />

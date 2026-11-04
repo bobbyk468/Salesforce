@@ -8,6 +8,7 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -81,6 +82,7 @@ export default function MuleSoftDeveloperIExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           MuleSoft Developer I Exam Tips ({RELEASE_YEAR})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The MuleSoft Developer I exam tests your ability to build Mule 4 integration applications using Anypoint
           Studio. These tips focus on DataWeave transformation, flow design, error handling, and API consumption

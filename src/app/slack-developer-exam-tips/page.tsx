@@ -7,6 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -77,6 +78,7 @@ export default function SlackDeveloperExamTipsPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Salesforce Certified Slack Developer Exam Tips ({RELEASE_CURRENT}): How to Pass First Attempt
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           The Slack Developer certification tests deep knowledge of the Slack platform APIs, Block Kit, Bolt Framework,
           OAuth, and event-driven app architecture. These tips show you how to tackle the API decision questions and

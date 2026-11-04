@@ -5,6 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
+import LastUpdated from '@/components/LastUpdated'
 
 
 
@@ -71,6 +72,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
           Salesforce Admin vs Developer Career Paths ({RELEASE_CURRENT})
         </h1>
+        <LastUpdated />
         <p className="text-lg text-gray-600">
           Admin and Developer are two of the most common Salesforce career paths. Here is how they differ in day-to-day work, salary, progression, and who each path suits.
         </p>
