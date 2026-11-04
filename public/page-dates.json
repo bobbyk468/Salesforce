@@ -1,0 +1,1230 @@
+{
+  "/": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/about": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/adm-201-exam-tips": {
+    "published": "2026-02-12T08:31:55+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/adm-201-study-guide": {
+    "published": "2026-02-26T19:36:56+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/adm-201-vs-app-builder": {
+    "published": "2026-02-12T08:31:55+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/admin-certification-path": {
+    "published": "2026-02-26T19:36:56+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/administrator-vs-advanced-administrator": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/advanced-administrator-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/advanced-administrator-study-guide": {
+    "published": "2026-03-01T09:09:09+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/advanced-field-service-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/agentforce-specialist-exam-tips": {
+    "published": "2026-02-26T19:17:24+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/agentforce-specialist-study-guide": {
+    "published": "2026-03-01T09:09:09+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/agentforce-specialist-vs-ai-associate": {
+    "published": "2026-02-28T19:21:39+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/ai-associate-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/ai-associate-study-guide": {
+    "published": "2026-03-01T09:09:09+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/app-builder-exam-tips": {
+    "published": "2026-02-27T04:59:49+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/app-builder-study-guide": {
+    "published": "2026-02-28T15:19:46+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/app-builder-vs-developer-i": {
+    "published": "2026-02-28T19:21:39+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/application-architect-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/application-architect-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/architect-certification-path": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/b2b-commerce-admin-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T08:05:00+05:30"
+  },
+  "/b2b-commerce-developer-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/b2b-solution-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T08:05:00+05:30"
+  },
+  "/b2b-solution-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/b2b-vs-b2c-solution-architect": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/b2c-commerce-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/b2c-commerce-architect-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/b2c-commerce-developer-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/b2c-commerce-developer-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/b2c-solution-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/b2c-solution-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/become-cta": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/business-analyst-exam-tips": {
+    "published": "2026-02-27T22:40:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/business-analyst-study-guide": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/business-analyst-vs-strategy-designer": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-03T08:05:00+05:30"
+  },
+  "/certification-comparison": {
+    "published": "2026-04-25T13:28:50+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/certification-path": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/certifications": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/certifications/administrator": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/advanced-administrator": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/advanced-field-service-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/agentforce-specialist": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/ai-associate": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/app-builder": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/application-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/b2b-commerce-admin-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/b2b-commerce-developer-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/b2b-solution-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/b2c-commerce-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/b2c-commerce-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/b2c-solution-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/business-analyst": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/claude-certified-architect-foundations": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/claude-certified-architect-professional": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/claude-certified-associate": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/claude-certified-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/communications-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/consumer-goods-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/consumer-goods-tpm-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/contact-center-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/cpq-administrator": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/cpq-billing-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/crm-analytics-einstein-discovery-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/data-360-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/data-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/dev-lifecycle-deployment-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/developer-1": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/developer-2": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/education-cloud-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/email-specialist": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/energy-utilities-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/experience-cloud": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/field-service": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/financial-services-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/health-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/heroku-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/heroku-developer-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/identity-access-management-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/industries-cpq-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/integration-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/javascript-developer-i": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/loyalty-management-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/manufacturing-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-advanced-cross-channel-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-engagement-admin": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-engagement-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-engagement-foundations": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-intelligence-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/marketing-cloud-personalization-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/media-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-catalyst-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-developer-i": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-developer-ii": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-hyperautomation-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-integration-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-integration-foundations": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/mulesoft-platform-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/net-zero-cloud-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/nonprofit-cloud": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/nonprofit-success-pack-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/omnistudio-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/omnistudio-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/order-management-admin-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/order-management-developer-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/pardot-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/pardot-specialist": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/platform-foundations": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/process-automation-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/public-sector-solutions-ap": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/revenue-cloud-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/accredited-professional": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/administrator": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/associate": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/claude": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/designer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/marketing": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/sales": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/role/tableau": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/sales-cloud": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/sales-foundations": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/service-cloud": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/sharing-visibility-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/slack-administrator": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/slack-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/slack-developer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/strategy-designer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/system-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/tableau-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/tableau-consultant": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/tableau-data-analyst": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/tableau-desktop-foundations": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/tableau-server-administrator": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/technical-architect": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/technical-architect-evaluation": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/technical-architect-review-board": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/certifications/ux-designer": {
+    "published": "2026-04-15T13:20:58+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/communications-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/consultant-certification-path": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/consumer-goods-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/consumer-goods-tpm-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T08:05:00+05:30"
+  },
+  "/contact": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:20:25+05:30"
+  },
+  "/contact-center-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/cpq-admin-vs-cpq-billing-ap": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/cpq-admin-vs-revenue-cloud-consultant": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/cpq-administrator-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/cpq-administrator-study-guide": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/cpq-billing-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/crm-analytics-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/crm-analytics-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/data-360-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/data-360-consultant-study-guide": {
+    "published": "2026-03-01T09:09:09+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/data-architect-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/data-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/data-cloud-vs-crm-analytics": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/data-cloud-vs-marketing-cloud": {
+    "published": "2026-02-28T19:21:39+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/dev-lifecycle-deployment-architect-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/dev-lifecycle-deployment-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/developer-certification-path": {
+    "published": "2026-02-26T19:36:56+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/editorial-policy": {
+    "published": "2026-08-27T15:25:44+05:30",
+    "modified": "2026-08-27T15:25:44+05:30"
+  },
+  "/education-cloud-consultant-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/education-cloud-consultant-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/education-cloud-vs-nonprofit-cloud-consultant": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/email-specialist-exam-tips": {
+    "published": "2026-02-27T04:59:49+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/email-specialist-study-guide": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/energy-utilities-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/experience-cloud-consultant-study-guide": {
+    "published": "2026-03-01T09:09:09+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/experience-cloud-exam-tips": {
+    "published": "2026-02-27T22:40:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/field-service-consultant-study-guide": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/field-service-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/field-service-vs-service-cloud-consultant": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/financial-services-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/health-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/heroku-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/heroku-developer-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/how-to-become-salesforce-administrator": {
+    "published": "2026-02-28T15:19:46+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/how-to-become-salesforce-architect": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/how-to-become-salesforce-consultant": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/how-to-become-salesforce-developer": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/how-to-register-salesforce-exam": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/how-to-study-for-salesforce-certification": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/html-sitemap": {
+    "published": "2026-02-16T07:39:13+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/identity-access-management-architect-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/identity-access-management-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/industries-cpq-developer-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/integration-architect-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/integration-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/integration-architect-vs-system-architect": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/is-salesforce-certification-worth-it": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/javascript-developer-i-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/javascript-developer-i-study-guide": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/javascript-developer-i-vs-pd1": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/loyalty-management-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/manufacturing-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-admin-vs-developer": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-advanced-cross-channel-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-certification-path": {
+    "published": "2026-08-27T11:19:43+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-consultant-exam-tips": {
+    "published": "2026-02-27T22:40:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-consultant-study-guide": {
+    "published": "2026-03-01T09:21:09+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/marketing-cloud-engagement-admin-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-engagement-admin-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-engagement-developer-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-engagement-developer-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-engagement-foundations-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-engagement-foundations-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/marketing-cloud-intelligence-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/marketing-cloud-personalization-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/media-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/mulesoft-catalyst-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-developer-i-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-developer-i-study-guide": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-developer-i-vs-ii": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-developer-i-vs-integration-foundations": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-developer-ii-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-developer-ii-study-guide": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-hyperautomation-developer-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-integration-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-integration-architect-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/mulesoft-integration-foundations-exam-tips": {
+    "published": "2026-02-27T05:07:08+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-integration-foundations-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-platform-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/mulesoft-platform-architect-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/net-zero-cloud-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/nonprofit-cloud-consultant-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/nonprofit-cloud-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/nonprofit-success-pack-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/nonprofit-success-pack-consultant-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/omnistudio-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/omnistudio-consultant-study-guide": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/omnistudio-developer-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/omnistudio-developer-study-guide": {
+    "published": "2026-03-01T09:39:20+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/omnistudio-developer-vs-consultant": {
+    "published": "2026-02-28T08:21:06+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/order-management-admin-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/order-management-developer-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pardot-certification": {
+    "published": "2026-08-27T11:19:43+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pardot-consultant-exam-tips": {
+    "published": "2026-02-28T19:21:39+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pardot-consultant-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:41:40+05:30"
+  },
+  "/pardot-consultant-vs-marketing-cloud-consultant": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/pardot-specialist-exam-tips": {
+    "published": "2026-02-27T22:40:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/pardot-specialist-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pardot-specialist-vs-pardot-consultant": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pd1-exam-tips": {
+    "published": "2026-02-26T18:52:28+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pd1-study-guide": {
+    "published": "2026-02-28T15:19:46+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pd1-vs-pd2": {
+    "published": "2026-02-26T18:52:28+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pd2-exam-tips": {
+    "published": "2026-02-27T21:56:48+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/pd2-study-guide": {
+    "published": "2026-03-01T09:21:09+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/platform-foundations-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/platform-foundations-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/platform-foundations-vs-ai-associate": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/privacy": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/process-automation-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/public-sector-solutions-ap-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/revenue-cloud-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/revenue-cloud-consultant-study-guide": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/sales-cloud-consultant-study-guide": {
+    "published": "2026-03-01T09:09:09+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/sales-cloud-exam-tips": {
+    "published": "2026-02-27T22:40:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/sales-cloud-vs-experience-cloud-consultant": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/sales-cloud-vs-service-cloud": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/sales-foundations-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-admin-certification-201": {
+    "published": "2026-08-27T11:19:43+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-admin-vs-developer-career": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-associate-certification-cost": {
+    "published": "2026-08-27T11:19:43+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-cost": {
+    "published": "2026-02-26T18:52:28+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-difficulty": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-exam-day-tips": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/salesforce-certification-maintenance": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-passing-score": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-roi-calculator": {
+    "published": "2026-08-27T15:25:44+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-salary": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-validity": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-certification-voucher": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/salesforce-certifications-list": {
+    "published": "2026-02-26T19:01:01+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-exam-retake-policy": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/salesforce-free-certification": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/service-cloud-consultant-exam-tips": {
+    "published": "2026-02-26T19:36:56+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/service-cloud-consultant-study-guide": {
+    "published": "2026-03-01T09:21:09+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/sharing-visibility-architect-exam-tips": {
+    "published": "2026-02-28T03:24:33+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/sharing-visibility-architect-study-guide": {
+    "published": "2026-03-01T13:39:22+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/slack-administrator-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/slack-administrator-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/slack-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/slack-developer-exam-tips": {
+    "published": "2026-02-27T05:07:08+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/strategy-designer-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/strategy-designer-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/system-architect-exam-tips": {
+    "published": "2026-02-27T21:56:48+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/system-architect-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/system-architect-vs-application-architect": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/tableau-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/tableau-consultant-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/tableau-data-analyst-exam-tips": {
+    "published": "2026-02-27T04:59:49+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/tableau-data-analyst-study-guide": {
+    "published": "2026-03-01T10:03:57+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/tableau-desktop-foundations-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/tableau-server-administrator-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/team": {
+    "published": "2026-02-16T07:39:13+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/technical-architect-evaluation-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-03T07:11:09+05:30"
+  },
+  "/technical-architect-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/technical-architect-review-board-exam-tips": {
+    "published": "2026-02-28T08:00:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/technical-architect-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/terms": {
+    "published": "2026-01-30T15:18:36+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/ux-designer-exam-tips": {
+    "published": "2026-02-27T22:40:12+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/ux-designer-study-guide": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/ux-designer-vs-strategy-designer": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  },
+  "/which-salesforce-certification-first": {
+    "published": "2026-03-01T14:17:00+05:30",
+    "modified": "2026-11-04T04:07:00+05:30"
+  }
+}

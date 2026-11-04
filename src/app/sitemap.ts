@@ -4,11 +4,11 @@ import sitemapSource from '../../public/urls.json'
 // Regenerate with `npm run sitemap:lastmod`. Without <lastmod> Google has no
 // signal that a page changed and falls back to guessing: a certification page
 // rewritten this week was still shown in search carrying an August date.
-import lastModifiedSource from '../../public/sitemap-lastmod.json'
+import pageDatesSource from '../../public/page-dates.json'
 
 type SitemapSource = { urls: string[] }
 
-const lastModified = lastModifiedSource as Record<string, string>
+const pageDates = pageDatesSource as Record<string, { published: string; modified: string }>
 
 // Build this metadata route from the checked-in canonical URL index instead of
 // reading src/app at request time. Workers do not expose a project filesystem.
@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (noindexPracticeTestPaths.has(pathname) || uniquePaths.has(pathname)) return []
     uniquePaths.add(pathname)
 
-    const modified = lastModified[pathname]
+    const modified = pageDates[pathname]?.modified
 
     return [{
       url: `${baseUrl}${pathname}`,

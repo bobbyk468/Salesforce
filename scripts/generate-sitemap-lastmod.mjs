@@ -27,7 +27,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
 const ROOT = process.cwd()
-const OUT = join(ROOT, 'public/sitemap-lastmod.json')
+const OUT = join(ROOT, 'public/page-dates.json')
 const CERT_DATA = 'src/lib/cert-page-spike/promoted-associate'
 
 function gitDate(relPath) {
@@ -36,6 +36,20 @@ function gitDate(relPath) {
       cwd: ROOT,
       encoding: 'utf8',
     }).trim()
+    return out || null
+  } catch {
+    return null
+  }
+}
+
+/** First commit that added the file: the page's genuine publication date. */
+function gitCreated(relPath) {
+  try {
+    const out = execFileSync(
+      'git',
+      ['log', '--diff-filter=A', '--follow', '-1', '--format=%cI', '--', relPath],
+      { cwd: ROOT, encoding: 'utf8' },
+    ).trim()
     return out || null
   } catch {
     return null
@@ -70,13 +84,19 @@ let fallback = 0
 for (const url of urls) {
   const pathname = new URL(url).pathname
   if (map[pathname]) continue
-  const dates = sourcesFor(pathname)
-    .map((f) => gitDate(f))
+  const sources = sourcesFor(pathname)
+  const modifiedDates = sources.map((f) => gitDate(f)).filter(Boolean).sort()
+  // Published is the oldest creation date among the page's own sources, so a
+  // shared library added later cannot make an old page look new.
+  const createdDates = sources
+    .filter((f) => f !== 'src/lib/cert-seo-data.ts')
+    .map((f) => gitCreated(f))
     .filter(Boolean)
     .sort()
-  const date = dates.length ? dates[dates.length - 1] : null
-  if (date) {
-    map[pathname] = date
+  const modified = modifiedDates.length ? modifiedDates[modifiedDates.length - 1] : null
+  const published = createdDates.length ? createdDates[0] : modified
+  if (modified) {
+    map[pathname] = { published, modified }
     resolved += 1
   } else {
     fallback += 1
@@ -86,7 +106,7 @@ for (const url of urls) {
 writeFileSync(OUT, `${JSON.stringify(map, null, 2)}\n`)
 
 const dates = Object.values(map)
-  .map((d) => d.slice(0, 10))
+  .map((d) => d.modified.slice(0, 10))
   .sort()
 console.log(`Wrote ${OUT}`)
 console.log(`  routes dated from git: ${resolved}`)

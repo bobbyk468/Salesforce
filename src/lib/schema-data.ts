@@ -3,7 +3,26 @@
  * schema markup (WebPage, BreadcrumbList) for SEO audits.
  */
 
+import pageDatesSource from '../../public/page-dates.json'
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+/**
+ * Route -> the dates git says the page's own content was created and last
+ * changed. Regenerate with `npm run sitemap:lastmod`.
+ *
+ * Every Article block on the site was being emitted without datePublished,
+ * which Google documents as required for Article, and without dateModified, so
+ * nothing on the page said when it had last changed. A certification page
+ * rewritten this week was still shown in search carrying an August date.
+ */
+const pageDates = pageDatesSource as Record<string, { published: string; modified: string }>
+
+function datesForPath(path: string): { published?: string; modified?: string } {
+  const pathname = path.startsWith('http') ? new URL(path).pathname : path
+  const entry = pageDates[pathname] ?? pageDates[pathname.replace(/\/$/, '')]
+  return entry ? { published: entry.published, modified: entry.modified } : {}
+}
 
 export interface BreadcrumbItem {
   name: string
@@ -44,6 +63,12 @@ export function getArticleJsonLd({
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
   const imageUrl = `${baseUrl}/og?t=${encodeURIComponent(headline)}`
+  // An explicit date from the caller wins; otherwise fall back to what git
+  // records for this route, so no Article ships without a publication date.
+  const gitDates = datesForPath(path)
+  const published = datePublished ?? gitDates.published
+  const modified = dateModified ?? gitDates.modified ?? published
+
   const article: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -51,6 +76,8 @@ export function getArticleJsonLd({
     headline,
     description,
     url,
+    ...(published ? { datePublished: published } : {}),
+    ...(modified ? { dateModified: modified } : {}),
     image: [
       { '@type': 'ImageObject', url: imageUrl, width: 1200, height: 630 },
       imageUrl,
@@ -78,8 +105,7 @@ export function getArticleJsonLd({
     },
   }
 
-  if (datePublished) article.datePublished = datePublished
-  if (dateModified) article.dateModified = dateModified
+  // Dates are set above, where an explicit value falls back to git.
 
   article.mainEntityOfPage = {
     '@type': 'WebPage',
