@@ -195,12 +195,13 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Salesforce Integration', percentage: 25 },
     { name: 'Governance and Best Practices', percentage: 25 },
   ],
+  // Verified 4 November 2026 against the official exam guide:
+  // help.salesforce.com/s/articleView?id=005298965 — four sections, not five.
   'developer-1': [
-    { name: 'Data Modeling and Management', percentage: 15 },
-    { name: 'Logic and Process Automation', percentage: 25 },
+    { name: 'Developer Fundamentals', percentage: 27 },
+    { name: 'Process Automation and Logic', percentage: 28 },
     { name: 'User Interface', percentage: 25 },
     { name: 'Testing, Debugging, and Deployment', percentage: 20 },
-    { name: 'Integration and APIs', percentage: 15 },
   ],
   'developer-2': [
     { name: 'Data Modeling', percentage: 12 },

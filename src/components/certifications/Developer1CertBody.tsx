@@ -365,11 +365,11 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
                 PD1 requires hands-on coding practice, not just reading. Budget time for Apex exercises in a Developer Edition org alongside study.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
-                <li><strong>Weeks 1–2:</strong> Salesforce Fundamentals &amp; Data Modelling (20%), objects, relationships, schema design, SOQL basics</li>
-                <li><strong>Weeks 2–3:</strong> Logic &amp; Process Automation (23%): Apex basics, governor limits, bulkification patterns</li>
-                <li><strong>Weeks 3–5:</strong> Apex Triggers &amp; Classes (24%), before/after triggers, handler pattern, async Apex (future, batch, queueable)</li>
-                <li><strong>Weeks 5–6:</strong> Testing &amp; Debugging (22%), test class structure, mock callouts, code coverage, debug logs</li>
-                <li><strong>Weeks 6–7:</strong> UI &amp; Deployment (11%): LWC basics, Aura, Visualforce, change sets, sandboxes</li>
+                <li><strong>Weeks 1–2:</strong> Developer Fundamentals (27%), objects, relationships, schema design, SOQL basics</li>
+                <li><strong>Weeks 2–3:</strong> Process Automation and Logic (28%): Apex basics, governor limits, bulkification patterns</li>
+                <li><strong>Weeks 3–5:</strong> Apex triggers and classes, before/after triggers, handler pattern, async Apex (future, batch, queueable)</li>
+                <li><strong>Weeks 5–6:</strong> Testing, Debugging, and Deployment (20%), test class structure, mock callouts, code coverage, debug logs</li>
+                <li><strong>Weeks 6–7:</strong> User Interface (25%): LWC basics, Aura, Visualforce, change sets, sandboxes</li>
                 <li><strong>Weeks 7–8:</strong> Full mock exams and targeted weak-area review</li>
               </ul>
               <p className="text-xs text-gray-600 mt-3">Already an admin? Reduce Weeks 1–2 to 3–4 days, you already know the data model and platform fundamentals.</p>
