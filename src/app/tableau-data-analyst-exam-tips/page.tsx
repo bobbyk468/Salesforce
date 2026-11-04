@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Tableau Data Analyst exam topics?',
-    answer: 'Connect to and transform data (27%) and Create calculated fields and LOD expressions (15%) are the top sections. Hands-on Tableau Desktop skills are tested throughout.',
+    answer: 'Explore and Analyze Data (41%) is by far the largest section, followed by Create Content (26%) and Connect To and Transform Data (24%). Publish and Manage Content is only 9%. Hands-on Tableau Desktop skills are tested throughout.',
   },
   {
     question: 'How hard is the Tableau Data Analyst exam?',

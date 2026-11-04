@@ -58,7 +58,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight PD2 exam sections?',
-    answer: 'Design Patterns (25%) and Testing &amp; Debugging (25%) together account for 50% of the exam. Mastering Apex Enterprise Patterns (Selector, Service, Domain, Unit of Work) and the full Salesforce testing framework (test isolation, mocking HTTP callouts, testing async Apex) is the foundation for passing PD2.',
+    answer: 'Process Automation, Logic, and Integration (27%) and Testing, Debugging, and Deployment (20%) together account for 47% of the exam, with Performance (18%) close behind. Mastering Apex Enterprise Patterns (Selector, Service, Domain, Unit of Work) and the full Salesforce testing framework (test isolation, mocking HTTP callouts, testing async Apex) is the foundation for passing PD2.',
   },
   {
     question: 'What is the Apex Enterprise Patterns (AEP) framework?',
@@ -184,7 +184,7 @@ export default function Pd2StudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Performance (17%)
+              Performance (18%)
             </p>
             <p><strong>SOQL selectivity:</strong> queries are selective when the WHERE clause uses indexed fields (Id, Name, ExternalId, unique fields, or custom indexed fields) and filters enough records (generally &lt;10% of the object’s records or &lt;200k records). Non-selective queries on large objects cause timeouts. <strong>Query Plan tool:</strong> shows whether Salesforce will use an index (low cost) or a full table scan (high cost) for a query. <strong>Heap size:</strong> 6 MB synchronous / 12 MB async, avoid storing large collections in static variables across transaction boundaries. <strong>CPU limit:</strong> 10,000 ms synchronous, avoid nested loops over large collections; prefer Maps over repeated list iteration. <strong>Async for long-running work:</strong> Queueable (chaining, passing complex state), Batch Apex (process millions of records), Scheduled Apex (time-based execution).</p>
           </div>

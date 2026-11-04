@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Marketing Cloud Consultant exam sections?',
-    answer: 'Discovery and Architecture (28%) is the largest section, it tests your ability to gather requirements, design solutions, and make architectural decisions for Marketing Cloud implementations. Integration (24%) is the second-largest, covering Salesforce CRM integration (Marketing Cloud Connect), APIs, and third-party system connections. Together they account for 52% of the exam.',
+    answer: 'Data Modeling and Management (21%) is the largest section, covering data extensions, the subscriber model and relational data design. Integration (20%) and Automation (20%) are joint second, covering Marketing Cloud Connect, APIs and Automation Studio. Together those three account for 61% of the exam. Discovery and Architecture, often assumed to be the biggest section, is 16%.',
   },
   {
     question: 'What is Marketing Cloud Connect and why is it important for this exam?',
@@ -135,7 +135,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Marketing Cloud Consultant Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Discovery &amp; Architecture (28%) + Integration (24%) = 52% of the exam. Mastering solution design decisions and MC Connect integration is the foundation for passing.
+          Data Modeling and Management (21%) + Integration (20%) + Automation (20%) = 61% of the exam. Mastering the data model, MC Connect integration and Automation Studio is the foundation for passing.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -159,21 +159,21 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Discovery and Architecture (28%)
+              Discovery and Architecture (16%)
             </p>
             <p>This is the most consultant-oriented section, it tests your ability to gather requirements and make architectural decisions. Key areas: <strong>Account architecture:</strong> when to use a single business unit vs multiple business units (BUs), multiple BUs isolate subscriber data, permissions, and sending domains per brand or region. <strong>Sender authentication:</strong> Private domain (SAP) vs Shared IP, private domain needed for high-volume, brand-sensitive senders; shared IP is fine for low-volume senders. <strong>Scalability design:</strong> understand how to design for millions of subscribers (data extension strategy, contact model planning, data retention). Estimate scope and effort for an MC implementation, the exam tests whether you can identify what is in scope, what is custom, and what is out-of-the-box.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Integration (24%)
+              Integration (20%)
             </p>
             <p><strong>Marketing Cloud Connect:</strong> the native Salesforce CRM integration. Setup requires a Connected App in Salesforce, the MC Connect permission set, and an API user. Objects that sync: Leads, Contacts, Users, and Campaigns. <strong>Synchronized Data Extensions (SDEs):</strong> pre-built data extensions that receive CRM data via MC Connect, they update on the MC Connect sync schedule. SDEs are used in Automation Studio and Journey Builder entry sources to target CRM-based audiences without manual imports. <strong>API integration:</strong> REST API for new integrations (JSON, OAuth 2.0 authentication), SOAP API for legacy systems (XML, user credentials authentication). Know the REST endpoints for subscriber management, data extension operations, and triggered sends.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Data Management (20%)
+              Data Modeling and Management (21%)
             </p>
             <p>Data architecture decisions drive everything else in a Marketing Cloud implementation. <strong>Data extensions vs lists:</strong> lists are legacy and simpler; data extensions support multi-field subscriber attributes, SQL queries, and complex data models, the answer is almost always data extensions for any new implementation. <strong>Contact Builder:</strong> the data model layer: Contact objects, attribute groups, and population configuration. Know how to set up the Contact model so that data extensions link to the right Contact. <strong>Data retention:</strong> set retention periods per data extension (on send, fixed date, after X days). <strong>Subscriber management at scale:</strong> subscriber key strategy, using CRM Contact ID as the subscriber key is what lets MC Connect join the data.</p>
           </div>

@@ -72,7 +72,7 @@ const faqItems = [
   },
   {
     question: 'What is the hardest section of the Business Analyst exam?',
-    answer: 'Collaboration with Stakeholders (21%) and Business Analysis Planning (18%) are typically the hardest sections. They test nuanced facilitation skills, choosing the right elicitation technique for a given scenario (interview vs workshop vs survey) and planning BA activities across project types (agile, waterfall, hybrid).',
+    answer: 'Collaboration with Stakeholders (23%) and Business Analysis Planning (18%) are typically the hardest sections. They test nuanced facilitation skills, choosing the right elicitation technique for a given scenario (interview vs workshop vs survey) and planning BA activities across project types (agile, waterfall, hybrid).',
   },
   {
     question: 'What resources are best for the Business Analyst exam?',

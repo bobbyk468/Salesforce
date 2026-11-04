@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Marketing Cloud Consultant exam sections?',
-    answer: 'Discovery and Architecture (28%) is the highest-weight section, followed by Account Configuration (22%). Together these account for 50% of the exam. Understanding subscriber data management and the Marketing Cloud data model is critical.',
+    answer: 'Discovery and Architecture (16%) is the highest-weight section, followed by Account Configuration (12%). Together these account for 50% of the exam. Understanding subscriber data management and the Marketing Cloud data model is critical.',
   },
   {
     question: 'What is the difference between Marketing Cloud Consultant and Email Specialist?',

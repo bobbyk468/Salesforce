@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Service Cloud Consultant exam sections?',
-    answer: 'Service Cloud Solution Design (22%) is the largest section, it tests your ability to design service architectures for complex requirements. Case Management (15%) and Knowledge Management (18%) are the next two highest. Together the top three sections account for 55% of the exam.',
+    answer: 'Agentforce Service Solution Design (15%) is the largest section, it tests your ability to design service architectures for complex requirements. Intake and Interaction Channels (13%), Case Management (13%) and Contact Center Analytics (13%) follow close behind. The weightings are unusually flat: no section is worth less than 10%, so you cannot safely skip one.',
   },
   {
     question: 'What is Omni-Channel in Service Cloud and why is it tested heavily?',
@@ -67,13 +67,17 @@ const faqItems = [
 ]
 
 const examSections = [
-  { name: 'Service Cloud Solution Design', weight: 22, note: 'Designing service architectures, channel strategy (phone, chat, email, social), contact centre design, Salesforce for Service deployment patterns' },
-  { name: 'Knowledge Management', weight: 18, note: 'Knowledge base setup, article types and fields, data categories, article lifecycle (draft, review, publish, archive), Knowledge search, Lightning Knowledge migration' },
-  { name: 'Omni-Channel', weight: 15, note: 'Queue-based vs skills-based vs external routing, agent capacity (size vs tab), presence statuses, Omni-Channel Supervisor, routing configuration' },
-  { name: 'Case Management', weight: 15, note: 'Case assignment rules, queues, escalation rules, auto-response rules, case teams, case merge, email-to-case, web-to-case setup' },
-  { name: 'Integration and Data Management', weight: 12, note: 'CTI integration, telephony, third-party chat integration, data migration for service orgs, contact centre data architecture' },
-  { name: 'Service Console', weight: 10, note: 'Console navigation, utility bar, split view, keyboard shortcuts, macros, console components, Highlights Panel configuration' },
-  { name: 'Entitlement Management', weight: 8, note: 'Entitlement processes, milestones, milestone actions, entitlement templates, SLA tracking, breach escalation' },
+  // Verified 4 November 2026 against the official exam guide:
+  // help.salesforce.com/s/articleView?id=005298989 — the credential was renamed
+  // Agentforce Service Consultant on 24 July 2026 and has eight sections.
+  { name: 'Agentforce Service Solution Design', weight: 15, note: 'Designing service architectures, channel strategy (phone, chat, email, social), contact centre design and deployment patterns' },
+  { name: 'Intake and Interaction Channels', weight: 13, note: 'Email-to-Case, web-to-case, messaging and chat channels, Omni-Channel routing models, agent capacity and presence statuses' },
+  { name: 'Case Management', weight: 13, note: 'Case assignment rules, queues, escalation rules, auto-response rules, case teams, case merge, entitlements and milestones' },
+  { name: 'Contact Center Analytics', weight: 13, note: 'Service reports and dashboards, Omni-Channel Supervisor, KPIs for contact centre performance' },
+  { name: 'Industry Knowledge', weight: 12, note: 'Contact centre terminology, service KPIs, and the business context a consultant is expected to recognise' },
+  { name: 'Implementation Strategies', weight: 12, note: 'Project phasing, discovery, stakeholder management and rollout approach for a service implementation' },
+  { name: 'Knowledge Management', weight: 12, note: 'Lightning Knowledge setup, data categories, article lifecycle (draft, review, publish, archive), Knowledge search' },
+  { name: 'Integrations', weight: 10, note: 'CTI and telephony integration, third-party chat, data migration for service orgs, contact centre data architecture' },
 ]
 
 export default function ServiceCloudConsultantStudyGuidePage() {
@@ -135,7 +139,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Service Cloud Consultant Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Solution Design (22%) + Knowledge Management (18%) + Omni-Channel (15%) + Case Management (15%) = 70% of the exam.
+          Solution Design (15%) + Intake and Interaction Channels (13%) + Case Management (13%) + Contact Center Analytics (13%) = 54% of the exam.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -166,28 +170,28 @@ export default function ServiceCloudConsultantStudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Knowledge Management (18%)
+              Knowledge Management (12%)
             </p>
             <p>Salesforce Knowledge is the built-in knowledge base for agent and customer self-service. Key topics: <strong>Lightning Knowledge</strong> (the current standard, single Knowledge object, custom fields per record type; replaces Classic Knowledge’s article types). <strong>Data Categories</strong>: hierarchical categories that control article visibility (which customer communities see which articles, which agents see which internal articles). <strong>Article lifecycle:</strong> draft → In Review → Published → Archived. <strong>Knowledge search:</strong> how articles surface in the Service Console search, in Experience Cloud portals, and in Einstein Search. Know the difference between Lightning Knowledge (record types replace article types) and Classic Knowledge (deprecated but still tested for migrations).</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Omni-Channel (15%)
+              Intake and Interaction Channels (13%)
             </p>
             <p>Omni-Channel routes work items to agents. Know the three routing models: <strong>Queue-based routing</strong>: work items go into a queue, agents pull from the queue or work is pushed based on capacity; <strong>Skills-based routing</strong>: work is matched to agents who have the required skill (routing configurations specify which skill is needed); <strong>External routing</strong>: integration with third-party routing systems (e.g., telephony ACD). <strong>Agent capacity:</strong> Size-based (each work item has a weight; agent receives work until capacity is full) vs Tab-based (each open work item tab counts as 1, regardless of type). <strong>Presence statuses:</strong> define what types of work an agent can receive while in each status. Know that agents can decline work if it is not the right type for their current status.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Case Management (15%)
+              Case Management (13%)
             </p>
             <p>Case routing: Assignment Rules evaluate conditions top-down and assign to a user or queue when criteria match, if no rule matches, the case goes to the default case owner. Escalation Rules: trigger time-based escalations (e.g., if a case is open for 4 hours without a response, escalate to manager). Auto-response rules: send automated email replies to contacts when cases are created via web-to-case or email-to-case. <strong>Email-to-Case:</strong> inbound emails create cases. Know how threading (Reply-To address format) keeps replies associated to the correct case. <strong>Web-to-Case:</strong> HTML form submissions create cases, know field mapping and spam filtering.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Entitlement Management (8%)
+              Entitlement Management (tested within Case Management)
             </p>
             <p>Entitlements link to Accounts (or Contacts, Assets) and define the SLA terms. An <strong>Entitlement Process</strong> defines the milestone sequence, each milestone has a time trigger, completion criteria, and optional actions (warning email at 75% elapsed time, escalation email on breach). <strong>Entitlement Templates</strong> auto-apply an entitlement to a case when the contact, account, or asset has an active entitlement. Know that milestones can be paused (e.g., waiting for customer response) using milestone completion criteria on the case.</p>
           </div>

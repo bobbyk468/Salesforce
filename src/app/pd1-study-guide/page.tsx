@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How many sections does the PD1 exam have?',
-    answer: 'The Platform Developer I exam covers 5 sections: Process Automation and Logic (30%), Testing, Debugging, and Deployment (25%), User Interface (23%), Integration (15%), and Salesforce Fundamentals (7%). Process Automation and Testing together account for 55%, focus here first.',
+    answer: 'The Platform Developer I exam covers 4 sections: Process Automation and Logic (28%), Developer Fundamentals (27%), User Interface (25%), and Testing, Debugging, and Deployment (20%). Process Automation and Logic and Developer Fundamentals together account for 55%, so start there.',
   },
   {
     question: 'What is the passing score for the PD1 exam?',
@@ -133,7 +133,7 @@ export default function Pd1StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">PD1 Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Process Automation and Testing together account for 55% of the exam. Master Apex and test classes first.
+          Process Automation and Logic and Developer Fundamentals together account for 55% of the exam. Master Apex and the platform data model first.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -158,7 +158,7 @@ export default function Pd1StudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Process Automation and Logic (30%)
+              Process Automation and Logic (28%)
             </p>
             <p>The heart of the PD1 exam. <strong>Apex governor limits</strong> are per transaction: SOQL is limited to 100 queries synchronously and 200 asynchronously; DML statements to 150; and records retrieved by SOQL queries to 50,000. CPU time is limited to 10,000ms synchronously and 60,000ms asynchronously. The callout limit is 100 per transaction. <strong>Bulkification</strong> is a specific governor limit scenario; you must know why SOQL or DML inside a for-loop violates limits and how to fix it using List/Map patterns. These are general per-transaction limits; the applicable context and documented exceptions matter, and exceeding a governor limit can cause an unhandled runtime exception. <strong>Async Apex</strong>: Future methods (simple callouts, @future(callout=true), cannot be monitored); Batch Apex (Database.Batchable interface, 3 methods: start/execute/finish, up to 50M records in batches of 200 default); Queueable (can be chained, accepts non-primitive types); Scheduled (Schedulable interface, cron expression). <strong>Most common mistake:</strong> confusing when to use Future vs Queueable; Queueable is preferred when you need chaining or non-primitive parameters.</p>
             <p className="mt-2 text-xs text-gray-600">Verify current values and context-specific exceptions in Salesforce&apos;s <a className="underline text-salesforce-blue" href="https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-apexgov.html" target="_blank" rel="noreferrer">Apex Governor Limits quick reference</a> and <a className="underline text-salesforce-blue" href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_gov_limits.htm" target="_blank" rel="noreferrer">Execution Governors and Limits</a>.</p>
@@ -166,28 +166,28 @@ export default function Pd1StudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Testing, Debugging, and Deployment (25%)
+              Testing, Debugging, and Deployment (20%)
             </p>
             <p><strong>Test class rules the exam enforces:</strong> 75% code coverage minimum for deployment (not per-class, across the org), @isTest annotation on class and methods, Test.startTest() / Test.stopTest() resets governor limits and forces async execution, System.assert/assertEquals/assertNotEquals for assertions. <strong>Test data isolation:</strong> @isTest(SeeAllData=false) is the default, test classes cannot see real org data unless SeeAllData=true (avoid this). Use Test.getStandardPricebookId() for price book in tests. <strong>Deployment:</strong> sandbox → production via change sets or metadata API. SFDX/SF CLI: sfdx force:source:push (scratch org), force:source:retrieve, force:mdapi:deploy. <strong>Debugging:</strong> Developer Console, Debug Logs, SOQL Query Plan, anonymous Apex for testing.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              User Interface (23%)
+              User Interface (25%)
             </p>
             <p><strong>Lightning Web Components (LWC)</strong> dominate this section. Key concepts: @api (public property, passed from parent), @track (reactive private property, deprecated in newer versions, all properties reactive now), @wire (calls Apex or standard library functions declaratively). Component lifecycle hooks: constructor(), connectedCallback(), renderedCallback(), disconnectedCallback(). <strong>LWC to Apex:</strong> @AuraEnabled on Apex methods, cacheable=true for wire, without cacheable for imperative calls. <strong>LWC events:</strong> custom events bubble with composed+bubbles options. <strong>Aura:</strong> still tested at lower depth, know component lifecycle, Aura events vs LWC custom events, and that Aura can contain LWC but not vice versa.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Integration (15%)
+              Integration (tested within Process Automation and Logic)
             </p>
             <p><strong>REST vs SOAP:</strong> REST uses JSON, lightweight, stateless, simpler to implement; SOAP uses WSDL/XML, stricter contract, legacy systems. <strong>Callouts:</strong> HttpRequest object, HttpRequest.setEndpoint(), HttpRequest.setMethod('GET'), Http.send(). Named Credentials store endpoint + authentication. Use them for credentials security. Callouts cannot be made from Apex triggers without @future(callout=true) or Queueable. <strong>Inbound:</strong> REST API (standard /services/data/vXX.0/ endpoints), SOAP API (WSDL import), Bulk API (CSV-based, high-volume). Apex allows 100 callouts per transaction.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Salesforce Fundamentals (7%)
+              Developer Fundamentals (27%)
             </p>
             <p>MVC pattern (Model = objects/fields, View = Visualforce/LWC, Controller = Apex), declarative vs programmatic development, when to choose each. Object relationships (master-detail, lookup, many-to-many via junction object), sharing model basics (OWD, role hierarchy, sharing rules, with sharing / without sharing in Apex). Know that <code>with sharing</code> enforces the running user’s sharing rules; <code>without sharing</code> ignores them (admin context).</p>
           </div>

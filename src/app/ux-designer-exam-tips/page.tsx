@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight UX Designer exam sections?',
-    answer: 'Human-Centred Design (27%) and Discovery (17%) together account for 44% of the exam. Prototyping (14%) and Testing (13%) are the next highest. Understanding the full design thinking process end-to-end is essential.',
+    answer: 'Declarative Design (27%) and the Salesforce Lightning Design System (21%) together account for 48% of the exam. UX Fundamentals (16%) and Discovery (13%) come next. Knowing how to design within the platform&apos;s own building blocks matters more here than design theory.',
   },
   {
     question: 'Do I need to know how to code for the UX Designer exam?',

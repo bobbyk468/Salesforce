@@ -52,7 +52,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How many sections does the App Builder exam have?',
-    answer: 'The Salesforce Platform App Builder exam covers 5 sections: Business Logic and Process Automation (28%), Salesforce Fundamentals (23%), Data Modeling and Management (20%), User Interface (17%), and App Deployment (12%). Business Logic and Process Automation is the single largest section: Flow Builder mastery is essential.',
+    answer: 'The Salesforce Platform App Builder exam covers 5 sections: Business Logic and Process Automation (32%), Data Modeling and Management (20%), Salesforce Fundamentals (18%), User Interface (17%), and App Deployment (13%). Business Logic and Process Automation is the single largest section by a wide margin: Flow Builder mastery is essential.',
   },
   {
     question: 'What is the passing score for the App Builder exam?',
@@ -161,14 +161,14 @@ export default function AppBuilderStudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Business Logic and Process Automation (28%)
+              Business Logic and Process Automation (32%)
             </p>
             <p>Flow Builder is the dominant topic here. <strong>Record-triggered flows:</strong> before-save triggers update fields on the triggering record without DML (faster, more efficient); after-save triggers are needed when you must query or update related records after insert. <strong>Screen flows:</strong> collect user input through screens, use input components (text, picklist, lookup), and can launch from a button on a record page. <strong>Approval processes:</strong> entry criteria, initial submission actions, one or multiple approval steps, final approval/rejection actions. <strong>Validation rules:</strong> evaluate before triggers fire, return an error message when a specific formula is TRUE. <strong>Order of execution</strong> (simplified): system validation → before triggers → custom validation rules → after triggers → assignment rules → workflow rules → flows → process builder → escalation rules.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Salesforce Fundamentals (23%)
+              Salesforce Fundamentals (18%)
             </p>
             <p>Platform basics, MVC architecture, and sharing model. <strong>Declarative vs programmatic:</strong> always prefer declarative (Flow, validation rules, formula fields) unless the requirement cannot be met declaratively, the exam rewards the least-code answer. <strong>Sharing model:</strong> org-wide defaults (OWD) control the baseline access; roles grant upward visibility; sharing rules open access horizontally; manual sharing allows one-off exceptions. <strong>User management:</strong> profiles control object access (CRUD) and app access; permission sets grant additional permissions without changing the profile; permission set groups bundle multiple permission sets.</p>
           </div>
@@ -189,7 +189,7 @@ export default function AppBuilderStudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              App Deployment (12%)
+              App Deployment (13%)
             </p>
             <p><strong>Change sets:</strong> outbound change sets (source org, add components), inbound change sets (target org, validate and deploy). Change sets cannot delete components; use metadata API or CLI for destructive changes. <strong>Sandbox types:</strong> Developer (5 MB data, 1/day refresh), Developer Pro (1 GB data), Partial Copy (5 GB data, sampled), Full (full copy of prod, 29-day refresh). <strong>Packages:</strong> unmanaged packages = full source; upgradeable only by customer; managed packages = locked code, upgradeable by publisher (AppExchange). <strong>Order of deployment:</strong> validate (dry run) → check for errors → deploy → activate flows, rules, permission sets.</p>
           </div>

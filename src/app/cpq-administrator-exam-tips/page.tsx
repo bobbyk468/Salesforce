@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight CPQ Specialist exam sections?',
-    answer: 'Products and Bundles (28%) and Pricing (26%) together account for 54% of the exam. Understanding product options, feature categories, configuration attributes, and how pricing rules (list price, discount schedules, block pricing) apply in sequence is the core of this exam.',
+    answer: 'CPQ Platform (23%), Bundle Configurations (17%) and Pricing (16%) together account for 56% of the exam. Understanding product options, feature categories, configuration attributes, and how pricing rules (list price, discount schedules, block pricing) apply in sequence is the core of this exam.',
   },
   {
     question: 'What is the hardest part of the CPQ Specialist exam?',

@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Experience Cloud Consultant exam sections?',
-    answer: 'Sharing, Visibility, and Licensing (28%) is the highest-weight section, followed by Branding, Personalisation and Content (23%). Together these account for 51% of the exam. Security model, license types, and Experience Builder configuration are the most heavily tested topics.',
+    answer: 'Administration, Setup, and Configuration (25%) is the highest-weight section, followed by Sharing, Visibility, and Licensing (17%) and Branding, Personalization, and Content (15%). Together these account for 57% of the exam. Security model, license types, and Experience Builder configuration are the most heavily tested topics.',
   },
   {
     question: 'What prerequisites do I need for Experience Cloud Consultant?',

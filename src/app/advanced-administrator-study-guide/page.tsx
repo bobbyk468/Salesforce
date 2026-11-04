@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Advanced Administrator exam sections?',
-    answer: 'Security and Access (20%) is the largest section, testing advanced permission configurations and Salesforce Shield features. Extending Custom Objects and Applications (15%) and Auditing and Monitoring (15%) are tied for second. Together these three sections account for 50% of the exam.',
+    answer: 'Security and Access (20%) and Process Automation (20%) are the joint-largest sections, followed by Objects and Applications (19%). Together those three account for 59% of the exam, so advanced permission configuration, Flow and the object model deserve most of your study time.',
   },
   {
     question: 'Do I need to know Apex or code for the Advanced Administrator exam?',
@@ -174,7 +174,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Auditing and Monitoring (15%)
+              Auditing and Monitoring (10%)
             </p>
             <p><strong>Setup Audit Trail:</strong> tracks the last 180 days of setup changes, who changed what, when. Essential for compliance and troubleshooting. <strong>Field History Tracking:</strong> tracks changes to up to 20 fields per object, retained for 18 months (Field Audit Trail extends this). <strong>Event Monitoring (Shield):</strong> detailed logs of user activity: API calls, login events, report exports, field access. Know the difference between Setup Audit Trail (setup changes) and Event Monitoring (user activity). <strong>Health Check:</strong> Salesforce’s built-in security review tool, scores your org against security best practices. Know what makes a high vs low Health Check score.</p>
           </div>

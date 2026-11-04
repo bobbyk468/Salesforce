@@ -48,11 +48,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Service Cloud Consultant exam format?',
-    answer: 'The Salesforce Service Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee.',
+    answer: 'The exam (renamed Agentforce Service Consultant in July 2026) has 60 multiple-choice questions, a 105-minute time limit, a 78% passing score, and a $200 fee. That pass mark is one of the highest of any Salesforce certification.',
   },
   {
     question: 'What are the highest-weight Service Cloud Consultant topics?',
-    answer: 'Case Management (15%), Service Console Productivity (15%), and Omni-Channel Routing (13%) are the top-weighted sections. Together they account for over 40% of the exam.',
+    answer: 'Agentforce Service Solution Design (15%) is the top-weighted section, with Intake and Interaction Channels, Case Management and Contact Center Analytics tied on 13% each. Together those four account for 54% of the exam, and no section is worth less than 10%.',
   },
   {
     question: 'Do I need ADM-201 for the Service Cloud Consultant exam?',
@@ -106,9 +106,9 @@ export default function ServiceCloudConsultantExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Service Cloud Consultant</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Prerequisite: ADM-201 certification is required before sitting this exam.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Solution Design (25%) is the highest-weight section, every question here requires knowing which Service Cloud feature best solves the described business problem.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Agentforce Service Solution Design (15%) is the highest-weight section, every question here requires knowing which Service Cloud feature best solves the described business problem.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Know Omni-Channel routing in detail: routing models (queue-based, skill-based), capacity, and Service Channel setup are consistently tested.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Exam: 60 questions, 105 minutes, 67% passing score. Target 77%+ on mocks before booking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Exam: 60 questions, 105 minutes, 78% passing score, one of the highest of any Salesforce exam. Target 85%+ on mocks before booking.</li>
         </ul>
       </section>
 
@@ -205,7 +205,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="text-sm text-gray-700 mb-2">
-          Service Cloud Consultant passing score is 67% (40/60 questions). Use this benchmark before scheduling:
+          The passing score is 78% (47/60 questions). Use this benchmark before scheduling:
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />

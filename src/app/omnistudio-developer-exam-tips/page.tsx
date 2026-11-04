@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight OmniStudio Developer exam sections?',
-    answer: 'OmniScripts (28%) and DataRaptors (25%) together account for 53% of the exam. Building guided interaction flows, configuring data transformation with DataRaptors, and chaining Integration Procedures are the core skills tested.',
+    answer: 'OmniScripts (20%), Omnistudio Fundamentals (18%) and Data Mappers (17%) together account for 55% of the exam. Building guided interaction flows, configuring data transformation with Data Mappers (formerly DataRaptors), and chaining Integration Procedures are the core skills tested.',
   },
   {
     question: 'What is the difference between a DataRaptor and an Integration Procedure?',

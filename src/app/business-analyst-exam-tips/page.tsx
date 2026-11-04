@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Business Analyst exam sections?',
-    answer: 'Collaboration with Stakeholders (23%) and Customer Discovery (18%) together account for 41% of the Salesforce Business Analyst exam. User Stories (16%) is the next highest. Mastering these three sections is essential.',
+    answer: 'Collaboration with Stakeholders (23%) and Customer Discovery (17%) together account for 40% of the Salesforce Business Analyst exam. Requirements (18%) and User Stories (18%) come next. Mastering those four sections covers 76% of the exam.',
   },
   {
     question: 'Is the Salesforce Business Analyst certification hard?',
