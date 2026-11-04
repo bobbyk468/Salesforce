@@ -52,7 +52,8 @@
     "test:questions": "node --test scripts/fetch-git-question-source.test.mjs scripts/import-git-questions.test.mjs src/tests/imported-question-ui.test.mjs src/tests/git-practice-integration.test.mjs && node scripts/validate-practice-questions.mjs",
     "questions:verify": "node scripts/verify-git-question-import.mjs",
     "audit:questions": "node scripts/audit-imported-question-pages.mjs",
-    "validate:questions": "node scripts/validate-practice-questions.mjs"
+    "validate:questions": "node scripts/validate-practice-questions.mjs",
+    "sitemap:lastmod": "node scripts/generate-sitemap-lastmod.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.4",
