@@ -12,7 +12,11 @@ export { SLUG_TO_EXAM_CODE } from './certification-exam-codes'
 const gitQuestionCounts: Record<string, number> = importedQuestionCounts
 const importedAnswerNotice = 'Answers are supplied by the source repository and have not been independently verified. Check current official documentation; this practice set does not predict an exam result.'
 
+import pageDatesSource from '../../public/page-dates.json'
+
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageDates = pageDatesSource as Record<string, { published: string; modified: string }>
 
 /** Calendar year for generic title/H1 freshness labels; release names remain guide-specific. */
 const TITLE_YEAR = RELEASE_YEAR
@@ -2650,12 +2654,17 @@ export function getCertWebPageJsonLd(
   const title = getCertMetaTitle(slug)
   const description = getCertMetaDescription(slug)
   const url = `${baseUrl}/certifications/${slug}`
+  // Certification pages show a visible "Last updated" line, and Google's byline
+  // guidance wants a structured date that matches it. These pages emit WebPage
+  // rather than Article, so the dates belong here.
+  const dates = pageDates[`/certifications/${slug}`]
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: title,
     description,
     url,
+    ...(dates ? { datePublished: dates.published, dateModified: dates.modified } : {}),
     reviewedBy: {
       '@type': 'Person',
       name: 'Krishna Mohan',

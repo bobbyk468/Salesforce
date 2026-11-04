@@ -154,6 +154,10 @@ export function getWebPageJsonLd({
   breadcrumbItems?: BreadcrumbItem[]
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  // Certification pages emit WebPage rather than Article, so without this they
+  // showed the visible "Last updated" line with no structured date to match it.
+  // Google's byline guidance wants the two to agree.
+  const { published, modified } = datesForPath(path)
   const page: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -161,6 +165,8 @@ export function getWebPageJsonLd({
     name,
     description,
     url,
+    ...(published ? { datePublished: published } : {}),
+    ...(modified ? { dateModified: modified } : {}),
     publisher: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
   }
   return page

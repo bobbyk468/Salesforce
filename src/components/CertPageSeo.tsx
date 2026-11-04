@@ -4,6 +4,7 @@ import {
   getCertBreadcrumbJsonLd,
   getCertFaq,
   getCertFaqHeading,
+  getCertWebPageJsonLd,
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
 import { getFaqPageJsonLd } from '@/lib/schema-data'
@@ -25,6 +26,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const breadcrumb = getCertBreadcrumb(slug, certTitle, roleSlug, roleName)
   const breadcrumbJsonLd = getCertBreadcrumbJsonLd(slug, certTitle, roleSlug, roleName)
   const faqJsonLd = getFaqPageJsonLd(getCertFaq(slug, certTitle).slice(0, VISIBLE_FAQ_COUNT))
+  // Certification pages had no page-level entity, so the visible "Last updated"
+  // line had no structured date to agree with. getCertWebPageJsonLd existed but
+  // was never called; it now supplies WebPage with datePublished/dateModified.
+  const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
 
   return (
     <>
@@ -35,6 +40,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       {/* Visible breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-6">
