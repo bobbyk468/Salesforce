@@ -44,8 +44,8 @@
     "description": "This exam covers the Energy &amp; Utilities Cloud data model, including service points, premises, and meter-to-cash processes. You’ll need to understand OmniStudio-powered customer journeys, outage management, and billing system integration.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "60%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [

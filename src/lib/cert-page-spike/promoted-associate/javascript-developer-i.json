@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "JS Developer I",
-    "description": "Core JavaScript and the Lightning Web Components model: ES6 syntax, scope and closures, prototypes, promises and async/await, the event loop, the web component standards LWC is built on, calling Apex, and Lightning Web Security.",
+    "description": "Core JavaScript and the Lightning Web Components model: ES6 syntax, scope and closures, prototypes, promises and async/await, the event loop, the web component standards LWC is built on, calling Apex, and Lightning Web Security. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Objects, Functions, and Classes (25%) and Variables, Types, and Collections (23%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",

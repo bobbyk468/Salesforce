@@ -42,7 +42,7 @@
   },
   "certificationCard": {
     "code": "Data 360",
-    "description": "This exam tests how you bring customer data into Salesforce Data 360, model it, resolve it into one profile per person, then segment and activate it. Expect scenarios about matching records, mapping data and sending audiences to other systems.",
+    "description": "This exam tests how you bring customer data into Salesforce Data 360, model it, resolve it into one profile per person, then segment and activate it. Expect scenarios about matching records, mapping data and sending audiences to other systems. The exam is 60 scored questions in 105 minutes, with a 70% pass mark, weighted towards Data Activations and Utilization (20%) and Data Source Connection and Ingestion (18%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",

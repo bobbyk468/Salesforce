@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Agentforce Field Service and Operations Consultant",
-    "description": "The Salesforce Certified Agentforce Field Service and Operations Consultant credential validates the ability to design and deploy Field Service and Operations solutions for customer business processes.",
+    "description": "The Salesforce Certified Agentforce Field Service and Operations Consultant credential validates the ability to design and deploy Field Service and Operations solutions for customer business processes. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Managing Scheduling and Optimization (28%) and Managing Work Orders (23%).",
     "examDetails": {
       "questions": "60 scored + up to 5 unscored",
       "passingScore": "63%",

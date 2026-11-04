@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Financial Services Cloud: the client and household data model, financial accounts and rollups, referrals, action plans and compliance features.",
+    "description": "This exam tests how you set up Financial Services Cloud: the client and household data model, financial accounts and rollups, referrals, action plans and compliance features. The exam is 50 scored questions in 75 minutes, with a 56% pass mark, weighted towards Delivery (46%) and Define/Design (42%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "56%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [

@@ -11,7 +11,7 @@
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "audit:search": "node scripts/audit-search-readiness.mjs",
-    "test:search": "node --test scripts/audit-search-readiness.test.mjs scripts/validate-seo-lengths.test.mjs scripts/worker-security.test.mjs scripts/audit-transport.test.mjs src/tests/cert-sync.test.mjs src/tests/request-canonical.test.mjs src/tests/chat-route.test.mjs scripts/train-bot-http.test.mjs src/tests/credential-facts.test.mjs src/tests/editorial-callout.test.mjs src/tests/marketing-facts.test.mjs src/tests/agentforce-mulesoft-facts.test.mjs && python3 scripts/test_analyze_gsc_baseline.py && python3 scripts/test_gsc_index_status.py",
+    "test:search": "node --test scripts/audit-search-readiness.test.mjs scripts/validate-seo-lengths.test.mjs scripts/worker-security.test.mjs scripts/audit-transport.test.mjs src/tests/cert-sync.test.mjs src/tests/request-canonical.test.mjs src/tests/chat-route.test.mjs scripts/train-bot-http.test.mjs src/tests/credential-facts.test.mjs src/tests/editorial-callout.test.mjs src/tests/marketing-facts.test.mjs src/tests/agentforce-mulesoft-facts.test.mjs && python3 scripts/test_analyze_gsc_baseline.py && python3 scripts/test_gsc_index_status.py && python3 scripts/test_gsc_cert_keyword_tracker.py",
     "audit:gsc": "python3 scripts/analyze-gsc-baseline.py",
     "perf:check": "python3 scripts/page_speed_monitor.py",
     "validate:seo": "node scripts/validate-technical-seo.mjs",
@@ -49,12 +49,13 @@
     "bot:train:http": "node scripts/train-bot-http.mjs",
     "questions:fetch": "node scripts/fetch-git-question-source.mjs",
     "questions:import": "node scripts/import-git-questions.mjs",
-    "test:questions": "node --test scripts/fetch-git-question-source.test.mjs scripts/import-git-questions.test.mjs src/tests/imported-question-ui.test.mjs src/tests/git-practice-integration.test.mjs && node scripts/validate-practice-questions.mjs && node scripts/validate-exam-weightings.mjs",
+    "test:questions": "node --test scripts/fetch-git-question-source.test.mjs scripts/import-git-questions.test.mjs src/tests/imported-question-ui.test.mjs src/tests/git-practice-integration.test.mjs && node scripts/validate-practice-questions.mjs && node scripts/validate-exam-weightings.mjs && node scripts/sync-cert-card-facts.mjs --check",
     "questions:verify": "node scripts/verify-git-question-import.mjs",
     "audit:questions": "node scripts/audit-imported-question-pages.mjs",
     "validate:questions": "node scripts/validate-practice-questions.mjs",
     "sitemap:lastmod": "node scripts/generate-sitemap-lastmod.mjs",
-    "validate:weightings": "node scripts/validate-exam-weightings.mjs"
+    "validate:weightings": "node scripts/validate-exam-weightings.mjs",
+    "sync:cert-cards": "node scripts/sync-cert-card-facts.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.4",

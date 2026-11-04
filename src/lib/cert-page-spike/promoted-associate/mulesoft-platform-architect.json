@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "MuleSoft Architect",
-    "description": "This exam tests how you design and run Anypoint Platform for an organisation: where applications are deployed, how the network is arranged, how uptime is achieved, and how teams are governed.",
+    "description": "This exam tests how you design and run Anypoint Platform for an organisation: where applications are deployed, how the network is arranged, how uptime is achieved, and how teams are governed. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Governing web APIs on Anypoint Platform (17%) and Designing APIs using System, Process, and Experience Layers (12%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~67%",
+      "passingScore": "70%",
       "duration": "120 min",
       "cost": "$400"
     },

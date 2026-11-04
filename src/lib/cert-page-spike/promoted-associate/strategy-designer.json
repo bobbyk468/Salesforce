@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Strategy Designer",
-    "description": "This exam tests how you shape the direction of a Salesforce solution through research, problem framing, facilitation and business value, before and during design.",
+    "description": "This exam tests how you shape the direction of a Salesforce solution through research, problem framing, facilitation and business value, before and during design. The exam is 60 scored questions in 105 minutes, with a 70% pass mark, weighted towards Value Design (32%) and Intangible Deliverables (26%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",

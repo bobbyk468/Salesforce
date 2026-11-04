@@ -43,7 +43,7 @@
   },
   "certificationCard": {
     "code": "SVC",
-    "description": "This exam tests how you design Service Cloud solutions: case handling, routing, service levels, knowledge, the agent console and customer self-service.",
+    "description": "This exam tests how you design Service Cloud solutions: case handling, routing, service levels, knowledge, the agent console and customer self-service. The exam is 60 scored questions in 105 minutes, with a 78% pass mark, weighted towards Agentforce Service Solution Design (15%) and Intake and Interaction Channels (13%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "78%",

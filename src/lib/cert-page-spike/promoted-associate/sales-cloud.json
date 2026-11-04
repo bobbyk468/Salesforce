@@ -43,10 +43,10 @@
   },
   "certificationCard": {
     "code": "SCC",
-    "description": "This exam tests how you design and configure Sales Cloud: leads and conversion, accounts and contacts, opportunities, products and quotes, forecasting, territories and sales reporting.",
+    "description": "This exam tests how you design and configure Sales Cloud: leads and conversion, accounts and contacts, opportunities, products and quotes, forecasting, territories and sales reporting. The exam is 60 scored questions in 105 minutes, with a 73% pass mark, weighted towards Consulting and Implementation Strategies (25%) and Practical Application of Agentforce Sales Expertise (24%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "68%",
+      "passingScore": "73%",
       "duration": "105 min",
       "cost": "$200"
     },

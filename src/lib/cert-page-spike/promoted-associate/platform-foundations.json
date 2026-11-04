@@ -42,7 +42,7 @@
   "expertInsight": "This exam is entry level, but the 62% pass mark still catches people out, because the questions are about vocabulary as much as understanding. Several options in each question will sound right. Spend your time learning which standard object holds what, and which cloud does which job, and you will recognise most answers on sight.",
   "certificationCard": {
     "code": "Associate",
-    "description": "An entry-level exam for people with a few months of Salesforce experience. It covers the basics: moving around the platform, the standard objects, reports and dashboards, security and where each Salesforce product fits.",
+    "description": "An entry-level exam for people with a few months of Salesforce experience. It covers the basics: moving around the platform, the standard objects, reports and dashboards, security and where each Salesforce product fits. The exam is 40 scored questions in 70 minutes, with a 62% pass mark, weighted towards Salesforce Ecosystem (32%) and Navigation (28%).",
     "examDetails": {
       "questions": 40,
       "passingScore": "62%",

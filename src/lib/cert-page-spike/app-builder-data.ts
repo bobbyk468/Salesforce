@@ -65,10 +65,10 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   certificationCard: {
     code: 'DEV-402',
     description:
-      'The Platform App Builder certification validates your skills in designing, building, and deploying custom applications on the Salesforce platform.',
+      'Platform App Builder tests whether you can design, build and deploy custom Salesforce applications with declarative tools: the data model, Flow and business logic, Lightning App Builder, and deployment. The exam is 60 scored questions in 105 minutes, with a 73% pass mark, weighted towards Business Logic and Process Automation (32%) and Data Modeling and Management (20%).',
     examDetails: {
       questions: 60,
-      passingScore: '66%',
+      passingScore: '73%',
       duration: '105 min',
       cost: '$200',
     },

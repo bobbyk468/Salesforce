@@ -40,7 +40,7 @@
   },
   "certificationCard": {
     "code": "Agentforce",
-    "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data Cloud grounding, and multi-channel deployment.",
+    "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data Cloud grounding, and multi-channel deployment. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards AI Agents (35%) and Prompt Engineering (20%).",
     "examDetails": {
       "questions": "60 multiple-choice + up to 5 unscored",
       "passingScore": "72%",

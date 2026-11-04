@@ -44,7 +44,7 @@
     "description": "Covers configuring Salesforce CPQ end to end: bundles and product options, product and price rules, the pricing waterfall, discount schedules and approvals, quote documents, and the contract lifecycle through renewals and amendments.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "65%",
       "duration": "105 min",
       "cost": "$200"
     },

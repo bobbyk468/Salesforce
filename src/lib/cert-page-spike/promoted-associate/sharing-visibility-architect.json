@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "Sharing & Visibility",
-    "description": "This exam tests how you design who can see and edit which data in Salesforce. You choose org-wide defaults, roles, sharing rules and permission sets, and you plan for external users and large data volumes.",
+    "description": "This exam tests how you design who can see and edit which data in Salesforce. You choose org-wide defaults, roles, sharing rules and permission sets, and you plan for external users and large data volumes. The exam is 60 scored questions in 120 minutes, with a 58% pass mark, weighted towards Access to Records (39%) and Permissions to Standard Objects, Custom Objects, and Fields (27%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "67%",
+      "passingScore": "58%",
       "duration": "120 min",
       "cost": "$400"
     },

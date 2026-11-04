@@ -106,6 +106,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298976
   // Agentforce Sales Consultant (renamed from Sales Cloud Consultant on 24 July 2026): 73% to pass, 105 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'sales-cloud': [
     { name: 'Sales Lifecycle', percentage: 20 },
     { name: 'Consulting and Implementation Strategies', percentage: 25 },
@@ -115,6 +116,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298989
   // Agentforce Service Consultant (renamed from Service Cloud Consultant on 24 July 2026): 78% to pass, 105 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'service-cloud': [
     { name: 'Industry Knowledge', percentage: 12 },
     { name: 'Implementation Strategies', percentage: 12 },
@@ -139,6 +141,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298947
   // Agentforce Field Service and Operations Consultant (renamed 24 July 2026). Already matched the guide; 63% to pass, 105 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'field-service': [
     { name: 'Managing Resources', percentage: 16 },
     { name: 'Managing Work Orders', percentage: 23 },
@@ -182,6 +185,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298951
   // Eight sections, 68% to pass, 105 minutes. Retires 1 February 2027.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'pardot-consultant': [
     { name: 'Evaluation', percentage: 17 },
     { name: 'Account Configuration', percentage: 20 },
@@ -194,6 +198,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298953
   // Marketing Cloud Account Engagement Specialist. Already matched the guide; 72% to pass, 90 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'pardot-specialist': [
     { name: 'Visitors and Prospects', percentage: 8 },
     { name: 'Administration', percentage: 11 },
@@ -214,6 +219,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298958
   // Agentforce Nonprofit Consultant: four sections, 65% to pass, 105 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'nonprofit-cloud': [
     { name: 'Nonprofit Implementation Strategy', percentage: 11 },
     { name: 'Solution Design', percentage: 32 },
@@ -252,6 +258,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298978
   // Agentforce Revenue Management Consultant. Already matched the guide; 63% to pass, 105 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'revenue-cloud-consultant': [
     { name: 'Agentforce Revenue Management Platform Concepts', percentage: 18 },
     { name: 'Implementation Readiness', percentage: 14 },
@@ -274,6 +281,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026 against the official exam guide:
   // help.salesforce.com/s/articleView?id=005298965 — four sections, not five.
+  // 60 scored questions, 68% to pass, 105 minutes.
   'developer-1': [
     { name: 'Developer Fundamentals', percentage: 27 },
     { name: 'Process Automation and Logic', percentage: 28 },
@@ -301,6 +309,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Testing', percentage: 7 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298941
+  // 60 scored questions, 65% to pass, 105 minutes.
   // Four sections.
   'b2c-commerce-developer': [
     { name: 'B2C Commerce Setup', percentage: 11 },
@@ -330,6 +339,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298959
   // MuleSoft Developer. Already matched the guide; 70% to pass, 120 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'mulesoft-developer-i': [
     { name: 'Creating Application Networks', percentage: 7 },
     { name: 'Designing APIs', percentage: 8 },
@@ -380,6 +390,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298950
   // Marketing Cloud Engagement Specialist. Already matched the guide; 67% to pass, 90 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'email-specialist': [
     { name: 'Email Marketing Best Practices', percentage: 10 },
     { name: 'Content Creation and Delivery', percentage: 24 },
@@ -407,6 +418,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298972
   // Platform Data Architect. Already matched the guide; 58% to pass, 105 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'data-architect': [
     { name: 'Data Modeling/Database Design', percentage: 25 },
     { name: 'Master Data Management', percentage: 5 },
@@ -518,6 +530,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298957
   // MuleSoft Platform Integration Architect: ten sections, 70% to pass, 120 minutes.
+  // 60 scored questions (plus up to five unscored), per the guide above.
   'mulesoft-integration-architect': [
     { name: 'Initiating integration solutions on the Anypoint Platform', percentage: 8 },
     { name: 'Designing for the runtime plane technology architecture', percentage: 15 },
@@ -651,7 +664,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Implement', percentage: 20 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298982
-  // Agentforce Sales Foundations: six sections, 40 scored questions, 70% to pass.
+  // Agentforce Sales Foundations: six sections, 40 scored questions, 70% to pass, 105 minutes.
   'sales-foundations': [
     { name: 'Planning', percentage: 21 },
     { name: 'Customer Engagement', percentage: 15 },

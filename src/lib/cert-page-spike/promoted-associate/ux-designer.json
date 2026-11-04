@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "UX Designer",
-    "description": "This exam covers user research, wireframing and prototyping, accessibility to WCAG 2.1 AA, and the Salesforce tools you use to apply them: the Lightning Design System, Lightning App Builder, Dynamic Forms and Experience Cloud.",
+    "description": "This exam covers user research, wireframing and prototyping, accessibility to WCAG 2.1 AA, and the Salesforce tools you use to apply them: the Lightning Design System, Lightning App Builder, Dynamic Forms and Experience Cloud. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Declarative Design (27%) and Salesforce Lightning Design System (SLDS) (21%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "65%",
       "duration": "105 min",
       "cost": "$200"
     },

@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Tableau Architect",
-    "description": "This exam covers designing and governing Tableau for an enterprise: deployment topology and sizing, published data sources, security including row-level access, performance at scale, and content governance.",
+    "description": "This exam covers designing and governing Tableau for an enterprise: deployment topology and sizing, published data sources, security including row-level access, performance at scale, and content governance. The exam is 54 scored questions in 105 minutes, with a 63% pass mark, weighted towards Monitor and Maintain a Tableau Deployment (41%) and Deploy Tableau Server (37%).",
     "examDetails": {
       "questions": 59,
       "passingScore": "63%",

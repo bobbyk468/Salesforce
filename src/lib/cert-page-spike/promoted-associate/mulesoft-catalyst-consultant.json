@@ -44,8 +44,8 @@
     "description": "This exam tests the MuleSoft Catalyst methodology: standing up a Center for Enablement, driving API reuse across teams, measuring integration ROI, and guiding organizations through the Land-Expand-Engage maturity model.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~63%",
-      "duration": "105 min",
+      "passingScore": "70%",
+      "duration": "90 min",
       "cost": "$400"
     },
     "topics": [

@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "Sales Foundations",
-    "description": "An entry-level exam covering the day-to-day of selling in Salesforce: leads and opportunities, the pipeline, forecasting, activity tracking, and the reports that show how the team is doing.",
+    "description": "An entry-level exam covering the day-to-day of selling in Salesforce: leads and opportunities, the pipeline, forecasting, activity tracking, and the reports that show how the team is doing. The exam is 40 scored questions in 105 minutes, with a 70% pass mark, weighted towards Deal Management (37%) and Planning (21%).",
     "examDetails": {
       "questions": 40,
-      "passingScore": "62%",
-      "duration": "70 min",
+      "passingScore": "70%",
+      "duration": "105 min",
       "cost": "$200"
     },
     "topics": [

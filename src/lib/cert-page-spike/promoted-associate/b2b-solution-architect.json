@@ -44,8 +44,8 @@
     "description": "This exam tests how you design B2B solutions that span several Salesforce clouds and outside systems. You decide where data lives, how systems connect, and how the project is run.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~63%",
-      "duration": "105 min",
+      "passingScore": "58%",
+      "duration": "120 min",
       "cost": "$400"
     },
     "topics": [

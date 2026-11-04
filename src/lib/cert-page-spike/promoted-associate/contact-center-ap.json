@@ -44,8 +44,8 @@
     "description": "This exam tests how you set up a contact centre in Service Cloud: routing work to agents, voice and digital channels, bots, knowledge and reporting.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "66%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [

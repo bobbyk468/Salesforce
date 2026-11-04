@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "MuleSoft Developer II",
-    "description": "The advanced MuleSoft developer exam. Expect deep questions on DataWeave modules, batch processing, API security policies, CI/CD pipelines with Maven, and production deployment strategies.",
+    "description": "The advanced MuleSoft developer exam. Expect deep questions on DataWeave modules, batch processing, API security policies, CI/CD pipelines with Maven, and production deployment strategies. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Implement performant and reliable Mule applications (27%) and Implement maintainable and modular Mule applications and Maven builds (25%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",

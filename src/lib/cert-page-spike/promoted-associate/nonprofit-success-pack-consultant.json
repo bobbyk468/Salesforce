@@ -45,7 +45,7 @@
     "description": "This exam focuses on configuring the NPSP managed package for nonprofits, covering household accounts, donation processing, recurring giving, customisable rollups, engagement plans, and data migration.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "67%",
       "duration": "105 min",
       "cost": "$200"
     },

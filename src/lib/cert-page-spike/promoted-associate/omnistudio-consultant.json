@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "OmniStudio Consultant",
-    "description": "This exam covers solution design with OmniStudio tools -- selecting the right mix of FlexCards, OmniScripts, DataRaptors, and Integration Procedures to build scalable guided experiences for Industry Cloud implementations.",
+    "description": "This exam covers solution design with OmniStudio tools -- selecting the right mix of FlexCards, OmniScripts, DataRaptors, and Integration Procedures to build scalable guided experiences for Industry Cloud implementations. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Flexcards (18%) and Omniscripts (17%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "67%",
       "duration": "105 min",
       "cost": "$200"
     },

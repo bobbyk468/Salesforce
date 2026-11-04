@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "B2C Commerce Developer",
-    "description": "This exam covers full-stack SFCC development: SFRA cartridge architecture, ISML templates, controller scripting, OCAPI/SCAPI integration, and Business Manager configuration.",
+    "description": "This exam covers full-stack SFCC development: SFRA cartridge architecture, ISML templates, controller scripting, OCAPI/SCAPI integration, and Business Manager configuration. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Application Development (53%) and Data Management Using Business Manager Usage (24%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "65%",
       "duration": "105 min",
       "cost": "$200"
     },

@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers Consumer Goods Cloud implementation, visit planning, retail execution, in-store audits, direct store delivery, and field team performance management for CPG companies.",
+    "description": "This exam covers Consumer Goods Cloud implementation, visit planning, retail execution, in-store audits, direct store delivery, and field team performance management for CPG companies. The exam is 33 scored questions in 60 minutes, with a 64% pass mark, weighted towards Data Setup and Visit Execution (36% each).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "64%",
+      "duration": "60 min",
       "cost": "$150"
     },
     "topics": [

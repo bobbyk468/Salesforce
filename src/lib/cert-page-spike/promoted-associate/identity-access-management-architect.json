@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "Identity & Access Mgmt",
-    "description": "This exam tests how you design login and access for Salesforce: single sign-on with SAML, the OAuth flows, Connected Apps, multi-factor authentication, and how user accounts are created and kept in step.",
+    "description": "This exam tests how you design login and access for Salesforce: single sign-on with SAML, the OAuth flows, Connected Apps, multi-factor authentication, and how user accounts are created and kept in step. The exam is 60 scored questions in 120 minutes, with a 65% pass mark, weighted towards Accepting Third-Party Identity in Salesforce (21%) and Community (Partner and Customer) (18%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~58%",
-      "duration": "105 min",
+      "passingScore": "65%",
+      "duration": "120 min",
       "cost": "$400"
     },
     "topics": [

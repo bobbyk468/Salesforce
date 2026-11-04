@@ -42,7 +42,7 @@
   "expertInsight": "Use Salesforce's published exam objectives as the study scope. For large-data-volume and migration topics, compare design options against the stated access patterns, operational needs, and data-management requirements; do not assume one technique fits every scenario.",
   "certificationCard": {
     "code": "Data Architect",
-    "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You’ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs.",
+    "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You’ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs. The exam is 60 scored questions in 105 minutes, with a 58% pass mark, weighted towards Data Modeling/Database Design and Salesforce Data Management (25% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "58%",

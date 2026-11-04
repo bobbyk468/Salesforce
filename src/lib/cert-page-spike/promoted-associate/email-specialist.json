@@ -111,7 +111,7 @@
   },
   "certificationCard": {
     "code": "Marketing Cloud Engagement Specialist",
-    "description": "The Marketing Cloud Email Specialist certification validates your skills in email marketing, including content creation, data management, and email deliverability.",
+    "description": "The Marketing Cloud Email Specialist certification validates your skills in email marketing, including content creation, data management, and email deliverability. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Marketing Automation and Subscriber and Data Management (26% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",

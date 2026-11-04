@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "MC Consultant",
-    "description": "This exam tests solution design for Marketing Cloud: gathering requirements, architecting data models, configuring Journey Builder and Automation Studio, and integrating with Salesforce CRM.",
+    "description": "This exam tests solution design for Marketing Cloud: gathering requirements, architecting data models, configuring Journey Builder and Automation Studio, and integrating with Salesforce CRM. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Data Modeling and Management (21%) and Integration (20%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",

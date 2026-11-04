@@ -44,8 +44,8 @@
     "description": "This exam tests how you set up Salesforce Loyalty Management: programmes, points and tiers, accrual and redemption rules, promotions, vouchers, partners and reporting.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "69%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [

@@ -40,7 +40,7 @@
   },
   "certificationCard": {
     "code": "Agentforce Revenue Management Consultant",
-    "description": "The Salesforce Certified Agentforce Revenue Management Consultant exam validates the ability to scope, design, build, and deploy the Agentforce Revenue Management product on core across the Product-to-Cash lifecycle.",
+    "description": "The Salesforce Certified Agentforce Revenue Management Consultant exam validates the ability to scope, design, build, and deploy the Agentforce Revenue Management product on core across the Product-to-Cash lifecycle. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Agentforce Revenue Management Platform Concepts and Configure, Price, Quote (18% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",

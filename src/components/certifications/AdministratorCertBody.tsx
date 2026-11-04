@@ -117,7 +117,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               slug={slug}
               title={slugToDisplayName(slug)}
               code="ADM-201"
-              description="The Salesforce Administrator Certification (ADM-201) validates your knowledge of Salesforce CRM administration, including data management, security, automation, and analytics. Prepare for the Salesforce Certified Administrator exam with this study guide."
+              description="The Salesforce Administrator exam (ADM-201) tests whether you can run an org day to day: users and security, the object model and Lightning App Builder, automation with Flow, reports and dashboards, and the Agentforce features added to the outline. The exam is 60 scored questions in 105 minutes, with a 68% pass mark. Data and Analytics Management is the heaviest section at 17%, with Configuration and Setup, Object Manager and Lightning App Builder, and Automation at 15% each."
               examDetails={{
                 questions: 60,
                 passingScore: "68%",

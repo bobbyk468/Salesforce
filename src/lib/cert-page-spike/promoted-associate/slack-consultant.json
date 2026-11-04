@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "Slack Consultant",
-    "description": "This exam tests how you plan and run a Slack rollout: workspace and channel design, workflows, Salesforce integration, security and governance, and getting people to use it.",
+    "description": "This exam tests how you plan and run a Slack rollout: workspace and channel design, workflows, Salesforce integration, security and governance, and getting people to use it. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Policies and Settings (22%) and Learning and Enablement (18%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "105 min",
+      "passingScore": "67%",
+      "duration": "90 min",
       "cost": "$200"
     },
     "topics": [

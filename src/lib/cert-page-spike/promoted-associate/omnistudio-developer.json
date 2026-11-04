@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "OmniStudio Developer",
-    "description": "This exam tests hands-on building with OmniStudio: OmniScripts, FlexCards, Data Mappers and Integration Procedures, plus how they fit together and how to extend them with custom components.",
+    "description": "This exam tests hands-on building with OmniStudio: OmniScripts, FlexCards, Data Mappers and Integration Procedures, plus how they fit together and how to extend them with custom components. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Omniscripts (20%) and Omnistudio Fundamentals (18%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "72%",
       "duration": "105 min",
       "cost": "$200"
     },

@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "MC Engagement Admin",
-    "description": "This exam focuses on the admin side of Marketing Cloud Engagement: Business Unit setup, user roles and permissions, subscriber data management, deliverability configuration, and CRM integration.",
+    "description": "This exam focuses on the admin side of Marketing Cloud Engagement: Business Unit setup, user roles and permissions, subscriber data management, deliverability configuration, and CRM integration. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Setup (38%) and Subscriber Data Management (18%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "67%",
       "duration": "105 min",
       "cost": "$200"
     },

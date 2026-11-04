@@ -52,7 +52,7 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
   certificationCard: {
     code: 'ADM-211',
     description:
-      'The Advanced Administrator certification validates your advanced knowledge of Salesforce administration, including complex security models, advanced automation, and performance optimization.',
+      'Platform Administrator II (ADM-211) tests the harder half of running an org: complex sharing and security, delegated administration, multi-layer automation, auditing, and deployment between environments. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Security and Access and Process Automation (20% each).',
     examDetails: {
       questions: 60,
       passingScore: '65%',

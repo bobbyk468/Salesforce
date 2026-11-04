@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "Heroku Architect",
-    "description": "This exam tests how you design apps on Heroku that scale, stay secure and work with Salesforce. You choose runtimes, data services, deployment flows and integration options.",
+    "description": "This exam tests how you design apps on Heroku that scale, stay secure and work with Salesforce. You choose runtimes, data services, deployment flows and integration options. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Heroku Enterprise (28%) and Data (17%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~63%",
+      "passingScore": "72%",
       "duration": "105 min",
       "cost": "$400"
     },

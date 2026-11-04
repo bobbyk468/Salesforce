@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Dev Lifecycle & Deployment",
-    "description": "This exam tests how you plan environments, manage releases and move changes safely from development to production using sandboxes, source control, packages and the Salesforce CLI.",
+    "description": "This exam tests how you plan environments, manage releases and move changes safely from development to production using sandboxes, source control, packages and the Salesforce CLI. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards System Design (15%) and Building (14%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",

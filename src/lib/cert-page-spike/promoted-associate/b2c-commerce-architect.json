@@ -44,7 +44,7 @@
     "description": "This exam tests how you design and run Salesforce B2C Commerce sites: choosing a storefront approach, setting up sites and catalogs, planning integrations, and keeping sites fast and secure.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~63%",
+      "passingScore": "65%",
       "duration": "105 min",
       "cost": "$400"
     },

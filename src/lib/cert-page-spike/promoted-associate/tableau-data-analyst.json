@@ -56,7 +56,7 @@
   },
   "certificationCard": {
     "code": "Tableau Data Analyst",
-    "description": "This exam tests practical analysis in Tableau: connecting and preparing data, writing calculations including level of detail expressions, choosing the right chart, and building dashboards that answer a business question.",
+    "description": "This exam tests practical analysis in Tableau: connecting and preparing data, writing calculations including level of detail expressions, choosing the right chart, and building dashboards that answer a business question. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Explore and Analyze Data (41%) and Create Content (26%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",

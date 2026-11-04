@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "B2C Solution Architect",
-    "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management into one customer journey.",
+    "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management into one customer journey. The exam is 60 scored questions in 120 minutes, with a 63% pass mark, weighted towards Discovery and Customer Success (27%) and Data Models and Management (25%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~63%",
-      "duration": "105 min",
+      "passingScore": "63%",
+      "duration": "120 min",
       "cost": "$400"
     },
     "topics": [

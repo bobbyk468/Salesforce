@@ -66,7 +66,7 @@
   ],
   "certificationCard": {
     "code": "Business Analyst",
-    "description": "This exam covers the business analyst's work on Salesforce projects: discovering and documenting requirements, writing user stories, mapping processes, managing stakeholders and supporting testing and adoption.",
+    "description": "This exam covers the business analyst's work on Salesforce projects: discovering and documenting requirements, writing user stories, mapping processes, managing stakeholders and supporting testing and adoption. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Collaboration with Stakeholders (23%) and Requirements (18%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "72%",

@@ -86,7 +86,7 @@
   },
   "certificationCard": {
     "code": "Marketing Cloud Account Engagement Specialist",
-    "description": "This exam tests hands-on configuration of Account Engagement (Pardot) -- automation rules, scoring and grading, forms, Engagement Studio programs, email sends, and Salesforce connector sync.",
+    "description": "This exam tests hands-on configuration of Account Engagement (Pardot) -- automation rules, scoring and grading, forms, Engagement Studio programs, email sends, and Salesforce connector sync. The exam is 60 scored questions in 90 minutes, with a 72% pass mark, weighted towards Lead Management (24%) and Account Engagement Forms, Form Handlers and Landing Pages (20%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "72%",

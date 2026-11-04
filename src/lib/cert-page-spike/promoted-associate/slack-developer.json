@@ -74,11 +74,11 @@
   },
   "certificationCard": {
     "code": "Slack Developer",
-    "description": "This exam tests building custom Slack apps using the Bolt framework, Block Kit UI components, Events API, slash commands, and OAuth-based app distribution across workspaces.",
+    "description": "This exam tests building custom Slack apps using the Bolt framework, Block Kit UI components, Events API, slash commands, and OAuth-based app distribution across workspaces. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Design the Interactive Flow of Your App (20%) and Design for Security (19%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "105 min",
+      "passingScore": "67%",
+      "duration": "90 min",
       "cost": "$200"
     },
     "topics": [

@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "Marketing Associate",
-    "description": "The entry-level Marketing Cloud Engagement exam. It covers finding your way around the studios, building and sending email from Content Builder, the difference between subscriber lists and data extensions, simple journeys, and reading tracking reports.",
+    "description": "The entry-level Marketing Cloud Engagement exam. It covers finding your way around the studios, building and sending email from Content Builder, the difference between subscriber lists and data extensions, simple journeys, and reading tracking reports. The exam is 40 scored questions in 70 minutes, with a 65% pass mark, weighted towards Marketing Concepts (28%) and Marketing Cloud Engagement Basics (22%).",
     "examDetails": {
       "questions": 40,
-      "passingScore": "~62%",
+      "passingScore": "65%",
       "duration": "70 min",
       "cost": "$75"
     },

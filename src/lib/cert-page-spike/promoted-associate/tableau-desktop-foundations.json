@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Tableau Desktop Foundations",
-    "description": "This entry-level exam covers the basics of Tableau Desktop: connecting to data, building charts, filtering and sorting, writing simple calculations, and putting sheets together into a dashboard.",
+    "description": "This entry-level exam covers the basics of Tableau Desktop: connecting to data, building charts, filtering and sorting, writing simple calculations, and putting sheets together into a dashboard. The exam is 40 scored questions in 70 minutes, with a 48% pass mark, weighted towards Exploring and Analyzing Data (37%) and Sharing Insights (25%).",
     "examDetails": {
       "questions": 40,
       "passingScore": "48%",

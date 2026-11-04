@@ -43,7 +43,7 @@
   },
   "certificationCard": {
     "code": "PD2",
-    "description": "This exam tests advanced Apex: designing code that works in bulk, choosing the right asynchronous approach, integrating with outside systems, writing real tests, and keeping data secure.",
+    "description": "This exam tests advanced Apex: designing code that works in bulk, choosing the right asynchronous approach, integrating with outside systems, writing real tests, and keeping data secure. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Process Automation, Logic, and Integration (27%) and User Interface (20%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",

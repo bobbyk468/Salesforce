@@ -322,11 +322,11 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               slug={slug}
             title={slugToDisplayName(slug)}
             code="PD1"
-            description="The Platform Developer I certification validates your skills in developing custom applications on the Salesforce platform using Apex and Visualforce."
+            description="Platform Developer I (PD1) tests whether you can build custom applications on the Salesforce platform with Apex and Lightning Web Components: triggers and governor limits, asynchronous patterns, the data model, and test classes. The exam is 60 scored questions in 105 minutes, with a 68% pass mark, weighted towards Process Automation and Logic (28%) and Developer Fundamentals (27%)."
             examDetails={{
               questions: 60,
               passingScore: "68%",
-              duration: "110 min",
+              duration: "105 min",
               cost: "$200",
             }}
             topics={[
@@ -389,7 +389,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
                 The Salesforce Platform Developer I exam is considered <strong className="text-gray-900">moderately difficult</strong>: harder than ADM-201, but accessible to candidates with 3–6 months of real Apex development experience. The challenge is that most questions present actual code and require you to reason about governor limits, async patterns, and trigger behaviour under realistic conditions.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
-                <li><strong>60 scored questions</strong> in 110 minutes, roughly 1.8 minutes per question.</li>
+                <li><strong>60 scored questions</strong> in 105 minutes, roughly 1.75 minutes per question.</li>
                 <li><strong>68% passing score</strong>: you can miss up to 19 questions and still pass.</li>
                 <li><strong>Code-heavy</strong>: expect 30–40% of questions to include Apex code snippets.</li>
                 <li><strong>Scenario-based</strong>: most questions describe a business or technical requirement and ask for the right approach.</li>

@@ -39,7 +39,7 @@
   },
   "certificationCard": {
     "code": "Salesforce Certified MuleSoft Developer",
-    "description": "This credential validates skills to design, build, test, debug, deploy, and manage basic APIs and integrations using Mule 4 and Anypoint Platform.",
+    "description": "This credential validates skills to design, build, test, debug, deploy, and manage basic APIs and integrations using Mule 4 and Anypoint Platform. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Accessing and Modifying Mule Events and Structuring Mule Applications (10% each).",
     "examDetails": {
       "questions": "60 multiple-choice + up to 5 unscored",
       "passingScore": "70%",

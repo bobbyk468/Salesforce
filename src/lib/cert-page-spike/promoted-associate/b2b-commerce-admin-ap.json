@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up and run a B2B Commerce store in Salesforce: stores, buyers, catalogs, prices, search and checkout.",
+    "description": "This exam tests how you set up and run a B2B Commerce store in Salesforce: stores, buyers, catalogs, prices, search and checkout. The exam is 60 scored questions in 90 minutes, with a 75% pass mark, weighted towards Salesforce B2B Commerce App and Storefront Deployment (20% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "75%",

@@ -42,10 +42,10 @@
   },
   "certificationCard": {
     "code": "Experience Cloud",
-    "description": "The Experience Cloud Consultant certification validates your expertise in designing and implementing Experience Cloud sites for customers, partners, and employees.",
+    "description": "The Experience Cloud Consultant certification validates your expertise in designing and implementing Experience Cloud sites for customers, partners, and employees. The exam is 60 scored questions in 105 minutes, with a 62% pass mark, weighted towards Administration, Setup, and Configuration (25%) and Sharing, Visibility, and Licensing (17%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "62%",
       "duration": "105 min",
       "cost": "$200"
     },

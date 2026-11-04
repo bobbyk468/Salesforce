@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you extend B2B Commerce with code: custom storefront components, Apex integrations for pricing, stock, shipping and tax, and the Commerce APIs.",
+    "description": "This exam tests how you extend B2B Commerce with code: custom storefront components, Apex integrations for pricing, stock, shipping and tax, and the Commerce APIs. The exam is 60 scored questions in 75 minutes, with a 68% pass mark, weighted towards Advanced Lightning Web Component Development (30%) and Basic Lightning Web Component Development (20%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "68%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [

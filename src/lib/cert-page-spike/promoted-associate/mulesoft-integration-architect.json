@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "MuleSoft Integration Architect",
-    "description": "This exam tests how you design MuleSoft integration solutions that meet real business and technical needs: choosing deployment models, making integrations reliable and fast, and keeping them secure and governed.",
+    "description": "This exam tests how you design MuleSoft integration solutions that meet real business and technical needs: choosing deployment models, making integrations reliable and fast, and keeping them secure and governed. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Designing for the runtime plane technology architecture and Designing and developing Mule applications (15% each).",
     "examDetails": {
       "questions": "About 60",
       "passingScore": "70%",

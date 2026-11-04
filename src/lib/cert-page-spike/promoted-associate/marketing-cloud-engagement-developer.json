@@ -41,10 +41,10 @@
   },
   "certificationCard": {
     "code": "MC Engagement Developer",
-    "description": "This exam tests hands-on coding in Marketing Cloud: writing AMPscript and SSJS, building CloudPages, calling REST and SOAP APIs, and creating custom Journey Builder activities.",
+    "description": "This exam tests hands-on coding in Marketing Cloud: writing AMPscript and SSJS, building CloudPages, calling REST and SOAP APIs, and creating custom Journey Builder activities. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Programmatic Languages (35%) and API (22%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~67%",
+      "passingScore": "63%",
       "duration": "105 min",
       "cost": "$200"
     },

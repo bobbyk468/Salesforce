@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Communications Cloud for telecom and media providers: the product catalog, quoting, ordering and fulfilment, contracts and assets, and the OmniStudio tools.",
+    "description": "This exam tests how you set up Communications Cloud for telecom and media providers: the product catalog, quoting, ordering and fulfilment, contracts and assets, and the OmniStudio tools. The exam is 55 scored questions in 90 minutes, with a 56% pass mark, weighted towards Planning and Design (60%) and Discovery (24%).",
     "examDetails": {
       "questions": 55,
       "passingScore": "56%",

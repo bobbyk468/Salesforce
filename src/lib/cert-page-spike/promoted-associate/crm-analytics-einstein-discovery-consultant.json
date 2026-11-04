@@ -41,11 +41,11 @@
   },
   "certificationCard": {
     "code": "Analytics & Discovery",
-    "description": "Covers the full CRM Analytics build: getting data in with dataflows and recipes, designing lenses and dashboards, row-level security, and using Einstein Discovery to create stories, evaluate models and write predictions back onto Salesforce records.",
+    "description": "Covers the full CRM Analytics build: getting data in with dataflows and recipes, designing lenses and dashboards, row-level security, and using Einstein Discovery to create stories, evaluate models and write predictions back onto Salesforce records. The exam is 60 scored questions in 90 minutes, with a 65% pass mark, weighted towards Data Layer (23%) and Analytics Dashboard Implementation (19%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "105 min",
+      "passingScore": "65%",
+      "duration": "90 min",
       "cost": "$200"
     },
     "topics": [
