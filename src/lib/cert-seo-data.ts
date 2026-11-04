@@ -2571,7 +2571,7 @@ export function getCertH1Text(slug: string): string {
   }
   // PD1: align H1 with title tag intent, "Free Practice Exam" is the highest-CTR signal
   if (slug === 'developer-1') {
-    return `Salesforce PD1 Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
+    return `Salesforce Certified Platform Developer I (PD1): Free Practice Exam & Study Guide (${TITLE_YEAR})`
   }
   // Custom H1s for top pages by GSC impressions, matches title intent for higher CTR
   if (slug === 'email-specialist') {
