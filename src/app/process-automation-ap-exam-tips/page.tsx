@@ -50,7 +50,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Process Automation AP exam sections?',
-    answer: 'Advanced Flow Builder (35%) and Automation Strategy and Design (25%) together account for 60% of the exam. Building complex flows with subflows, collections, loops, and custom error handling, as well as choosing the right automation tool for each scenario, are the most heavily tested areas.',
+    answer: 'Advanced Flow Builder and Automation Strategy and Design are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Building complex flows with subflows, collections, loops, and custom error handling, as well as choosing the right automation tool for each scenario, are the most heavily tested areas.',
   },
   {
     question: 'What Flow types does the Process Automation AP exam test?',

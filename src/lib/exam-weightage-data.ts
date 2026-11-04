@@ -59,6 +59,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'User Interface', percentage: 17 },
     { name: 'App Deployment', percentage: 13 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298924
+  // Already matched the guide; 60 scored questions, 72% to pass, 105 minutes.
   'agentforce-specialist': [
     { name: 'Prompt Engineering', percentage: 20 },
     { name: 'Data 360 Fundamentals', percentage: 20 },
@@ -102,11 +104,6 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Data Management', percentage: 18 },
     { name: 'Reporting and Analytics', percentage: 10 },
   ],
-  'mulesoft-integration-foundations': [
-    { name: 'Integration Concepts', percentage: 35 },
-    { name: 'Anypoint Platform Basics', percentage: 35 },
-    { name: 'APIs and Design', percentage: 30 },
-  ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298976
   // Agentforce Sales Consultant (renamed from Sales Cloud Consultant on 24 July 2026): 73% to pass, 105 minutes.
   'sales-cloud': [
@@ -140,6 +137,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Administration, Setup, and Configuration', percentage: 25 },
     { name: 'Customization Considerations and Limitations', percentage: 7 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298947
+  // Agentforce Field Service and Operations Consultant (renamed 24 July 2026). Already matched the guide; 63% to pass, 105 minutes.
   'field-service': [
     { name: 'Managing Resources', percentage: 16 },
     { name: 'Managing Work Orders', percentage: 23 },
@@ -193,6 +192,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Reporting, Metrics and Analytics', percentage: 11 },
     { name: 'Sales Emails and Alerts', percentage: 3 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298953
+  // Marketing Cloud Account Engagement Specialist. Already matched the guide; 72% to pass, 90 minutes.
   'pardot-specialist': [
     { name: 'Visitors and Prospects', percentage: 8 },
     { name: 'Administration', percentage: 11 },
@@ -219,11 +220,15 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Agentforce Nonprofit Setup', percentage: 22 },
     { name: 'Agentforce Nonprofit Feature Configuration', percentage: 35 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298973
+  // Six sections, ~60 questions, 67% to pass, 105 minutes. Retires 1 February 2027.
   'nonprofit-success-pack-consultant': [
-    { name: 'NPSP Data Model', percentage: 25 },
-    { name: 'Donations and Households', percentage: 25 },
-    { name: 'Configuration and Automation', percentage: 25 },
-    { name: 'Reporting and Integration', percentage: 25 },
+    { name: 'Domain Expertise', percentage: 20 },
+    { name: 'Nonprofit Cloud Product Configuration', percentage: 22 },
+    { name: 'Implementation Strategies and Best Practices', percentage: 18 },
+    { name: 'Solution Design', percentage: 20 },
+    { name: 'Integration and Data Management', percentage: 15 },
+    { name: 'Analytics', percentage: 5 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298970
   // Six sections, 60 scored questions, 67% to pass, 105 minutes.
@@ -245,6 +250,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Data Mappers', percentage: 17 },
     { name: 'Troubleshooting and Debugging', percentage: 15 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298978
+  // Agentforce Revenue Management Consultant. Already matched the guide; 63% to pass, 105 minutes.
   'revenue-cloud-consultant': [
     { name: 'Agentforce Revenue Management Platform Concepts', percentage: 18 },
     { name: 'Implementation Readiness', percentage: 14 },
@@ -321,6 +328,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Data Management', percentage: 22 },
     { name: 'Security', percentage: 7 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298959
+  // MuleSoft Developer. Already matched the guide; 70% to pass, 120 minutes.
   'mulesoft-developer-i': [
     { name: 'Creating Application Networks', percentage: 7 },
     { name: 'Designing APIs', percentage: 8 },
@@ -335,11 +344,14 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Debugging and Troubleshooting Mule Applications', percentage: 5 },
     { name: 'Deploying and Managing APIs and Integrations', percentage: 7 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298955
+  // Five sections, 60 questions, 70% to pass, 120 minutes.
   'mulesoft-developer-ii': [
-    { name: 'Advanced Mule Development', percentage: 30 },
-    { name: 'API Design and Security', percentage: 25 },
-    { name: 'Error Handling and Performance', percentage: 25 },
-    { name: 'Deployment and Operations', percentage: 20 },
+    { name: 'Expose production-ready Anypoint Platform-managed APIs', percentage: 13 },
+    { name: 'Implement maintainable and modular Mule applications and Maven builds', percentage: 25 },
+    { name: 'Implement monitorable Mule applications', percentage: 15 },
+    { name: 'Implement performant and reliable Mule applications', percentage: 27 },
+    { name: 'Secure data at rest and in transit', percentage: 20 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298960
   // 60 scored questions, 70% to pass, 90 minutes. Retires 1 February 2027.
@@ -366,6 +378,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'APIs for Managing Your Slack', percentage: 12 },
     { name: 'Distribute Your App', percentage: 7 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298950
+  // Marketing Cloud Engagement Specialist. Already matched the guide; 67% to pass, 90 minutes.
   'email-specialist': [
     { name: 'Email Marketing Best Practices', percentage: 10 },
     { name: 'Content Creation and Delivery', percentage: 24 },
@@ -373,11 +387,14 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Subscriber and Data Management', percentage: 26 },
     { name: 'Insights and Analytics', percentage: 14 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298950
+  // Mirrors the Marketing Cloud Engagement Specialist outline, the exam this practice test is for.
   'email-specialist-practice-test': [
-    { name: 'Subscriber Management', percentage: 20 },
-    { name: 'Content and Sends', percentage: 35 },
-    { name: 'Tracking and Data', percentage: 25 },
-    { name: 'Best Practices', percentage: 20 },
+    { name: 'Email Marketing Best Practices', percentage: 10 },
+    { name: 'Content Creation and Delivery', percentage: 24 },
+    { name: 'Marketing Automation', percentage: 26 },
+    { name: 'Subscriber and Data Management', percentage: 26 },
+    { name: 'Insights and Analytics', percentage: 14 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298952
   // Five sections, 60 scored questions, 67% to pass, 105 minutes.
@@ -388,6 +405,8 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Channel Management', percentage: 16 },
     { name: 'Maintenance', percentage: 15 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298972
+  // Platform Data Architect. Already matched the guide; 58% to pass, 105 minutes.
   'data-architect': [
     { name: 'Data Modeling/Database Design', percentage: 25 },
     { name: 'Master Data Management', percentage: 5 },
@@ -436,27 +455,14 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Releasing', percentage: 13 },
     { name: 'Operating', percentage: 10 },
   ],
-  'technical-architect': [
-    { name: 'Solution Design', percentage: 30 },
-    { name: 'Security and Integration', percentage: 25 },
-    { name: 'Data and Performance', percentage: 25 },
-    { name: 'Governance and Presentation', percentage: 20 },
-  ],
-  'technical-architect-evaluation': [
-    { name: 'Scenario Analysis', percentage: 40 },
-    { name: 'Solution Design', percentage: 35 },
-    { name: 'Technical Knowledge', percentage: 25 },
-  ],
-  'technical-architect-review-board': [
-    { name: 'Presentation', percentage: 35 },
-    { name: 'Design Defense', percentage: 35 },
-    { name: 'Board Q&A', percentage: 30 },
-  ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005299472
+  // 60 questions, 58% to pass, 120 minutes. Retires 1 February 2027.
   'b2b-solution-architect': [
-    { name: 'B2B Commerce Architecture', percentage: 30 },
-    { name: 'Catalog and Pricing', percentage: 25 },
-    { name: 'Checkout and Integration', percentage: 25 },
-    { name: 'Best Practices', percentage: 20 },
+    { name: 'Discovery and Customer Success', percentage: 25 },
+    { name: 'Data Governance and Integration', percentage: 26 },
+    { name: 'Design', percentage: 29 },
+    { name: 'Delivery', percentage: 12 },
+    { name: 'Operationalize the Solution', percentage: 8 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298936
   // 60 scored questions, 65% to pass, 105 minutes. Retires 1 February 2027.
@@ -510,49 +516,72 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Meeting API quality goals', percentage: 10 },
     { name: 'Monitoring and analyzing application networks', percentage: 12 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298957
+  // MuleSoft Platform Integration Architect: ten sections, 70% to pass, 120 minutes.
   'mulesoft-integration-architect': [
-    { name: 'Integration Architecture', percentage: 30 },
-    { name: 'API Design', percentage: 25 },
-    { name: 'Security and Patterns', percentage: 25 },
-    { name: 'Lifecycle', percentage: 20 },
+    { name: 'Initiating integration solutions on the Anypoint Platform', percentage: 8 },
+    { name: 'Designing for the runtime plane technology architecture', percentage: 15 },
+    { name: 'Designing architecture using integration paradigms', percentage: 10 },
+    { name: 'Designing and developing Mule applications', percentage: 15 },
+    { name: 'Designing automated tests for Mule applications', percentage: 5 },
+    { name: 'Designing integration solutions to meet persistence requirements', percentage: 10 },
+    { name: 'Designing integration solutions to meet reliability requirements', percentage: 8 },
+    { name: 'Designing integration solutions to meet performance requirements', percentage: 7 },
+    { name: 'Designing integration solutions to meet security requirements', percentage: 8 },
+    { name: 'Applying DevOps practices and operating integration solutions', percentage: 14 },
   ],
-  'advanced-field-service-ap': [
-    { name: 'Field Service Configuration', percentage: 25 },
-    { name: 'Scheduling and Dispatch', percentage: 25 },
-    { name: 'Mobile and Execution', percentage: 25 },
-    { name: 'Assets and Best Practices', percentage: 25 },
-  ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298778
+  // Salesforce Accredited B2B Commerce Administrator Professional: 60 questions, 75% to pass, 90 minutes.
   'b2b-commerce-admin-ap': [
-    { name: 'B2B Commerce Setup', percentage: 30 },
-    { name: 'Catalog and Pricing', percentage: 25 },
-    { name: 'Orders and Integration', percentage: 25 },
-    { name: 'Administration', percentage: 20 },
+    { name: 'Salesforce B2B Commerce Basics', percentage: 15 },
+    { name: 'Salesforce B2B Commerce App', percentage: 20 },
+    { name: 'Storefront Deployment', percentage: 20 },
+    { name: 'Product Organization and Administration', percentage: 15 },
+    { name: 'Content Integration', percentage: 7 },
+    { name: 'Storefront Management', percentage: 17 },
+    { name: 'Advanced Topics', percentage: 6 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298777
+  // Salesforce Accredited B2B Commerce Developer Professional: 60 questions, 68% to pass, 75 minutes.
   'b2b-commerce-developer-ap': [
-    { name: 'B2B Development', percentage: 30 },
-    { name: 'Cart and Checkout', percentage: 25 },
-    { name: 'Integration', percentage: 25 },
-    { name: 'Testing', percentage: 20 },
+    { name: 'Checkout Flow Development', percentage: 10 },
+    { name: 'Reference Implementations', percentage: 15 },
+    { name: 'Basic Lightning Web Component Development', percentage: 20 },
+    { name: 'Advanced Lightning Web Component Development', percentage: 30 },
+    { name: 'Data Management', percentage: 15 },
+    { name: 'Error Handling and Diagnostics', percentage: 10 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298788
+  // Salesforce Accredited Agentforce Communications Professional: 55 questions, 56% to pass, 90 minutes.
   'communications-cloud-ap': [
-    { name: 'Communications Cloud Setup', percentage: 30 },
-    { name: 'Channels and Flows', percentage: 35 },
-    { name: 'Analytics and Best Practices', percentage: 35 },
+    { name: 'Discovery', percentage: 24 },
+    { name: 'Planning and Design', percentage: 60 },
+    { name: 'Delivery', percentage: 16 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298797
+  // Salesforce Accredited Agentforce Consumer Goods Professional: 33 questions, 64% to pass, 60 minutes.
   'consumer-goods-cloud-ap': [
-    { name: 'Consumer Goods Cloud', percentage: 35 },
-    { name: 'Retail Execution', percentage: 35 },
-    { name: 'Integration and Analytics', percentage: 30 },
+    { name: 'Data Setup', percentage: 36 },
+    { name: 'Visit Execution', percentage: 36 },
+    { name: 'Platform', percentage: 10 },
+    { name: 'Visit Planning', percentage: 6 },
+    { name: 'Integrations', percentage: 6 },
+    { name: 'Analytics', percentage: 6 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298798
+  // 62 questions, 66% to pass, 75 minutes. Retires 1 February 2027.
   'consumer-goods-tpm-ap': [
-    { name: 'Trade Promotion Management', percentage: 40 },
-    { name: 'Planning and Execution', percentage: 35 },
-    { name: 'Analytics', percentage: 25 },
+    { name: 'Discovery', percentage: 32 },
+    { name: 'Design', percentage: 36 },
+    { name: 'Implement', percentage: 32 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298802
+  // 60 questions, 66% to pass, 75 minutes. Retires 1 February 2027.
   'contact-center-ap': [
-    { name: 'Contact Center Setup', percentage: 30 },
-    { name: 'Omnichannel and Flows', percentage: 35 },
-    { name: 'Analytics and Best Practices', percentage: 35 },
+    { name: 'Discovery', percentage: 20 },
+    { name: 'Design', percentage: 29 },
+    { name: 'Implement', percentage: 41 },
+    { name: 'Deploy', percentage: 10 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298937
   // 60 scored questions, 65% to pass, 105 minutes. Retires 1 February 2027.
@@ -566,82 +595,60 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Products', percentage: 11 },
     { name: 'Approvals', percentage: 4 },
   ],
-  'cpq-billing-ap': [
-    { name: 'CPQ and Billing', percentage: 35 },
-    { name: 'Quoting and Contracts', percentage: 35 },
-    { name: 'Billing and Revenue', percentage: 30 },
-  ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298810
+  // 50 questions, 60% to pass, 75 minutes. Retires 1 February 2027.
   'energy-utilities-ap': [
-    { name: 'Energy and Utilities Cloud', percentage: 40 },
-    { name: 'Configuration', percentage: 30 },
-    { name: 'Best Practices', percentage: 30 },
+    { name: 'Discovery', percentage: 13 },
+    { name: 'Solution Design', percentage: 36 },
+    { name: 'Implementation', percentage: 38 },
+    { name: 'Test and Deploy Energy and Utilities Cloud Solutions', percentage: 13 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298804
+  // Salesforce Accredited Agentforce Financial Services Professional: 50 questions, 56% to pass, 75 minutes.
   'financial-services-cloud-ap': [
-    { name: 'Financial Services Cloud', percentage: 40 },
-    { name: 'Configuration and Data', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
+    { name: 'Discovery', percentage: 12 },
+    { name: 'Define/Design', percentage: 42 },
+    { name: 'Delivery', percentage: 46 },
   ],
-  'health-cloud-ap': [
-    { name: 'Health Cloud', percentage: 40 },
-    { name: 'Care Plans and Configuration', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
-  ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298822
+  // Ten sections, 60 questions, 68% to pass, 90 minutes. Retires 1 February 2027.
   'heroku-developer-ap': [
-    { name: 'Heroku Development', percentage: 35 },
-    { name: 'Apps and Add-ons', percentage: 35 },
-    { name: 'Deployment and Best Practices', percentage: 30 },
+    { name: 'Heroku Platform: Apps and Runtime', percentage: 12 },
+    { name: 'Heroku Platform: Building and Deployment', percentage: 8 },
+    { name: 'Heroku Platform: Operations', percentage: 12 },
+    { name: 'Heroku Platform: Elements', percentage: 3 },
+    { name: 'Continuous Delivery: Pipelines, Review Apps and CI', percentage: 10 },
+    { name: 'Data: Key-Value Store, Postgres and Data Clips', percentage: 8 },
+    { name: 'Data: Kafka and Add-ons', percentage: 8 },
+    { name: 'Security: SSL, Certs and ACM', percentage: 13 },
+    { name: 'Integrations: Heroku Connect, API and Webhooks', percentage: 13 },
+    { name: 'Architecting Apps: Twelve-Factor Methodology', percentage: 13 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298842
+  // 50 questions, 69% to pass, 75 minutes. Retires 1 February 2027.
   'loyalty-management-ap': [
-    { name: 'Loyalty Management', percentage: 40 },
-    { name: 'Program Configuration', percentage: 35 },
-    { name: 'Integration', percentage: 25 },
+    { name: 'Strategies and Design', percentage: 16 },
+    { name: 'Loyalty Program and Process Configuration', percentage: 52 },
+    { name: 'Integration', percentage: 22 },
+    { name: 'On-Going Loyalty Management', percentage: 10 },
   ],
-  'manufacturing-cloud-ap': [
-    { name: 'Manufacturing Cloud', percentage: 40 },
-    { name: 'Configuration', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
-  ],
-  'marketing-cloud-advanced-cross-channel-ap': [
-    { name: 'Cross-Channel Strategy', percentage: 35 },
-    { name: 'Journey Builder and Email', percentage: 35 },
-    { name: 'Analytics and Best Practices', percentage: 30 },
-  ],
-  'marketing-cloud-intelligence-ap': [
-    { name: 'Marketing Cloud Intelligence', percentage: 40 },
-    { name: 'Ad Studio and Analytics', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
-  ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298852
+  // 50 questions, 70% to pass, 75 minutes. Retires 1 February 2027.
   'marketing-cloud-personalization-ap': [
-    { name: 'Personalization Strategy', percentage: 35 },
-    { name: 'Web and Mobile Personalization', percentage: 35 },
-    { name: 'Analytics and Best Practices', percentage: 30 },
+    { name: 'Solution Overview', percentage: 16 },
+    { name: 'Setup &amp; Administration', percentage: 6 },
+    { name: 'Data Integration', percentage: 14 },
+    { name: 'Sitemap', percentage: 18 },
+    { name: 'Segmentation', percentage: 18 },
+    { name: 'Einstein Capabilities', percentage: 10 },
+    { name: 'Activation', percentage: 18 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298844
+  // 60 questions, 66% to pass, 75 minutes. Retires 1 February 2027.
   'media-cloud-ap': [
-    { name: 'Media Cloud', percentage: 45 },
-    { name: 'Configuration and Best Practices', percentage: 55 },
-  ],
-  'net-zero-cloud-ap': [
-    { name: 'Net Zero Cloud', percentage: 45 },
-    { name: 'Sustainability and Reporting', percentage: 55 },
-  ],
-  'order-management-admin-ap': [
-    { name: 'Order Management', percentage: 40 },
-    { name: 'Configuration', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
-  ],
-  'order-management-developer-ap': [
-    { name: 'Order Management Development', percentage: 40 },
-    { name: 'Integration and APIs', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
-  ],
-  'process-automation-ap': [
-    { name: 'Process Automation', percentage: 40 },
-    { name: 'Flow and Automation', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
-  ],
-  'public-sector-solutions-ap': [
-    { name: 'Public Sector Solutions', percentage: 45 },
-    { name: 'Configuration and Best Practices', percentage: 55 },
+    { name: 'Discovery', percentage: 27 },
+    { name: 'Design', percentage: 53 },
+    { name: 'Implement', percentage: 20 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298982
   // Agentforce Sales Foundations: six sections, 40 scored questions, 70% to pass.
@@ -678,11 +685,6 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Deploy Tableau Server', percentage: 37 },
     { name: 'Monitor and Maintain a Tableau Deployment', percentage: 41 },
   ],
-  'tableau-consultant': [
-    { name: 'Requirements and Design', percentage: 30 },
-    { name: 'Data and Visualization', percentage: 35 },
-    { name: 'Stakeholder and Best Practices', percentage: 35 },
-  ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298984
   // Four sections, 60 scored questions, 65% to pass, 105 minutes.
   'tableau-data-analyst': [
@@ -699,6 +701,41 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Sharing Insights', percentage: 25 },
     { name: 'Understanding Tableau Concepts', percentage: 15 },
   ],
+  // Removed 4 November 2026 because no official outline could be found.
+  //
+  // The weightings here were invented — round numbers summing to 100 that
+  // matched no published guide. Unlike the entries above, these are ordinary
+  // exams that should have an outline; their guides simply are not reachable.
+  // help.salesforce.com renders through a JavaScript app that its own search
+  // does not index usefully, and web search returns only third-party prep
+  // sites, which disagree with each other. Rather than pick one of those, or
+  // keep the invented numbers, the entries are gone and the pages omit the
+  // weightage table. Add each one back when its guide turns up, with the
+  // article ID in a comment as everywhere else here.
+  //
+  //   Eleven Accredited Professional credentials, all of which retire on
+  //   1 February 2027 and whose exams closed on 31 August 2026:
+  //     advanced-field-service-ap, cpq-billing-ap, health-cloud-ap,
+  //     manufacturing-cloud-ap, marketing-cloud-advanced-cross-channel-ap,
+  //     marketing-cloud-intelligence-ap, net-zero-cloud-ap,
+  //     order-management-admin-ap, order-management-developer-ap,
+  //     process-automation-ap, public-sector-solutions-ap
+  //
+  //   Two exams that are still live, so these are worth chasing:
+  //     mulesoft-integration-foundations, tableau-consultant
+  //
+  // Also removed 4 November 2026, same reason:
+  //
+  //   technical-architect, technical-architect-evaluation,
+  //   technical-architect-review-board
+  //     The Certified Technical Architect is assessed by a review board, not a
+  //     weighted multiple-choice exam: a scenario, a presentation and judges'
+  //     questions across 135 minutes. The guide
+  //     (help.salesforce.com/s/articleView?id=005299002) names the domains the
+  //     judges cover — System Architecture, Security, Data, Solution
+  //     Architecture, Integration — and publishes no percentage for any of
+  //     them, so there is nothing here to be right about.
+  //
   // Removed 4 November 2026. The weightings that stood here were invented: a
   // flat 25/25/25/25 that matched no published outline.
   //

@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight MC Advanced Cross-Channel AP exam sections?',
-    answer: 'Advanced Journey Builder (35%) and Mobile and Advertising Channels (25%) together account for 60% of the exam. Building complex multi-branch journeys with decision splits, entry sources, exit criteria, and goal measurement, as well as configuring mobile push and Advertising Studio for social retargeting, are the most heavily tested areas.',
+    answer: 'Advanced Journey Builder and Mobile and Advertising Channels are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Building complex multi-branch journeys with decision splits, entry sources, exit criteria, and goal measurement, as well as configuring mobile push and Advertising Studio for social retargeting, are the most heavily tested areas.',
   },
   {
     question: 'How does Journey Builder differ from basic automation for this exam?',

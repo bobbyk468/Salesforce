@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight CPQ & Billing AP exam sections?',
-    answer: 'Product and Pricing Configuration (30%) and Quoting and Contracting (25%) together account for 55% of the exam. Understanding product rules, option constraints, discount schedules, the CPQ pricing waterfall, and how quotes convert to contracts and then to invoices are the most heavily tested areas.',
+    answer: 'Product and Pricing Configuration and Quoting and Contracting are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Understanding product rules, option constraints, discount schedules, the CPQ pricing waterfall, and how quotes convert to contracts and then to invoices are the most heavily tested areas.',
   },
   {
     question: 'What is the CPQ pricing waterfall and why does the exam test it?',

@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Order Management Admin AP exam sections?',
-    answer: 'Order Lifecycle and Fulfilment Configuration (35%) and Return and Exchange Management (25%) together account for 60% of the exam. Configuring order statuses, fulfilment order routing, split shipment handling, and the returns management (RMA) process are the most heavily tested areas.',
+    answer: 'Order Lifecycle and Fulfilment Configuration and Return and Exchange Management are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Configuring order statuses, fulfilment order routing, split shipment handling, and the returns management (RMA) process are the most heavily tested areas.',
   },
   {
     question: 'What is the Salesforce Order Management order lifecycle?',

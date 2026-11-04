@@ -50,7 +50,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Order Management Developer AP exam sections?',
-    answer: 'OMS API Integration (35%) and Flow and Apex Customisation (25%) together account for 60% of the exam. Using the OMS Connect API for programmatic order operations, building custom Flow actions for order processing, and writing Apex to extend OMS behaviour are the most tested areas.',
+    answer: 'OMS API Integration and Flow and Apex Customisation are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Using the OMS Connect API for programmatic order operations, building custom Flow actions for order processing, and writing Apex to extend OMS behaviour are the most tested areas.',
   },
   {
     question: 'What OMS APIs does the Developer AP exam test?',

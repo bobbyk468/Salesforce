@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Advanced Field Service AP exam sections?',
-    answer: 'Advanced Scheduling and Optimisation (35%) and Asset and Inventory Management (25%) together account for 60% of the exam. Configuring the FSL Optimization Engine for automated route optimisation, complex scheduling policy constraints, and managing asset service history, warranties, and parts inventory are the most tested areas.',
+    answer: 'Advanced Scheduling and Optimisation and Asset and Inventory Management are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Configuring the FSL Optimization Engine for automated route optimisation, complex scheduling policy constraints, and managing asset service history, warranties, and parts inventory are the most tested areas.',
   },
   {
     question: 'What is the FSL Optimization Engine and how does the exam test it?',

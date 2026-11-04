@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight PSS AP exam sections?',
-    answer: 'Licences and Permits Management (30%) and Grants Management (25%) together account for 55% of the exam. Configuring the PSS Licence and Permit data model, application intake workflows using OmniStudio, inspection scheduling, and grants lifecycle management are the most heavily tested areas.',
+    answer: 'Licences and Permits Management and Grants Management are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Configuring the PSS Licence and Permit data model, application intake workflows using OmniStudio, inspection scheduling, and grants lifecycle management are the most heavily tested areas.',
   },
   {
     question: 'How does OmniStudio relate to Public Sector Solutions?',

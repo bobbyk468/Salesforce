@@ -49,7 +49,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Tableau BI Analyst exam sections?',
-    answer: 'Connect and Prepare Data (25%) and Explore and Analyse Data (30%) together account for 55% of the exam. Connecting to data sources, creating joins and blends, building calculated fields, using LOD expressions, and creating interactive dashboards are the most heavily tested skills.',
+    answer: 'Connect and Prepare Data and Explore and Analyse Data are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Connecting to data sources, creating joins and blends, building calculated fields, using LOD expressions, and creating interactive dashboards are the most heavily tested skills.',
   },
   {
     question: 'What are LOD expressions and why are they important for this exam?',

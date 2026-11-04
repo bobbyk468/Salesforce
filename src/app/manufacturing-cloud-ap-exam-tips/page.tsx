@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Manufacturing Cloud AP exam sections?',
-    answer: 'Sales Agreements (30%) and Account-Based Forecasting (25%) together account for 55% of the exam. Sales agreements replace traditional opportunities for long-term manufacturing contracts with volume commitments and planned revenue schedules. Account-based forecasting provides bottom-up visibility into demand across the customer base.',
+    answer: 'Sales Agreements and Account-Based Forecasting are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Sales agreements replace traditional opportunities for long-term manufacturing contracts with volume commitments and planned revenue schedules. Account-based forecasting provides bottom-up visibility into demand across the customer base.',
   },
   {
     question: 'What is a Sales Agreement in Manufacturing Cloud?',

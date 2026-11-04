@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Health Cloud AP exam sections?',
-    answer: 'Patient and Member Management (30%) and Care Plan Configuration (25%) together account for 55% of the exam. Understanding Health Cloud’s person account model, care team setup, care plan templates, and how to configure clinical data management for healthcare organisations are the most tested areas.',
+    answer: 'Patient and Member Management and Care Plan Configuration are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Understanding Health Cloud’s person account model, care team setup, care plan templates, and how to configure clinical data management for healthcare organisations are the most tested areas.',
   },
   {
     question: 'What is a care plan in Health Cloud and how does the exam test it?',

@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight MuleSoft Foundations topics?',
-    answer: 'API-led connectivity (26%) and MuleSoft Anypoint Platform fundamentals (24%) are the core focus areas. Understanding the System, Process, and Experience API layers is essential.',
+    answer: 'API-led connectivity and MuleSoft Anypoint Platform fundamentals are the core focus areas. Understanding the System, Process, and Experience API layers is essential.',
   },
   {
     question: 'Is MuleSoft Foundations a prerequisite for other MuleSoft certs?',

@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight MCI AP exam sections?',
-    answer: 'Data Streams and Connections (30%) and Data Harmonisation and Modelling (25%) together account for 55% of the exam. Connecting data sources (Google Ads, Facebook, SFMC, Salesforce CRM) via TotalConnect, mapping fields to the MCI data model, creating custom dimensions and metrics, and building the unified marketing data model are the most tested areas.',
+    answer: 'Data Streams and Connections and Data Harmonisation and Modelling are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Connecting data sources (Google Ads, Facebook, SFMC, Salesforce CRM) via TotalConnect, mapping fields to the MCI data model, creating custom dimensions and metrics, and building the unified marketing data model are the most tested areas.',
   },
   {
     question: 'What is TotalConnect and why is it important for the MCI AP exam?',

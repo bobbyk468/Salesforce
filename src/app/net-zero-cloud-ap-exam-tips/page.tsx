@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Net Zero Cloud AP exam sections?',
-    answer: 'Carbon Accounting and Emissions Data (30%) and Sustainability Reporting (25%) together account for 55% of the exam. Setting up emission factors, configuring data ingestion for energy and activity data, calculating carbon footprints, and generating reports compliant with GHG Protocol or TCFD frameworks are the most tested areas.',
+    answer: 'Carbon Accounting and Emissions Data and Sustainability Reporting are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Setting up emission factors, configuring data ingestion for energy and activity data, calculating carbon footprints, and generating reports compliant with GHG Protocol or TCFD frameworks are the most tested areas.',
   },
   {
     question: 'What sustainability reporting standards does Net Zero Cloud support?',
