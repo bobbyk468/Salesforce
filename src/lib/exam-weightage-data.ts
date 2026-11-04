@@ -71,10 +71,13 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Analytics and Success Metrics', percentage: 15 },
     { name: 'Salesforce Capabilities', percentage: 15 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298930
+  // Four sections. NOTE: this credential retired on 2 February 2026.
   'ai-associate': [
-    { name: 'AI Concepts and Salesforce AI', percentage: 35 },
-    { name: 'Einstein Capabilities', percentage: 35 },
-    { name: 'Responsible AI', percentage: 30 },
+    { name: 'AI Fundamentals', percentage: 17 },
+    { name: 'AI Capabilities in CRM', percentage: 8 },
+    { name: 'Ethical Considerations of AI', percentage: 39 },
+    { name: 'Data for AI', percentage: 36 },
   ],
   'platform-foundations': [
     { name: 'Customer 360 Platform Basics', percentage: 35 },
@@ -105,12 +108,17 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Service Cloud Analytics', percentage: 15 },
     { name: 'Service Cloud Configuration', percentage: 20 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298944
+  // Eight sections, 60 scored questions, 62% to pass, 105 minutes.
   'experience-cloud': [
-    { name: 'Solution Design and Strategy', percentage: 25 },
-    { name: 'Site Setup and Configuration', percentage: 25 },
-    { name: 'Sharing and Security', percentage: 20 },
-    { name: 'Content and Personalization', percentage: 15 },
-    { name: 'Analytics and Optimization', percentage: 15 },
+    { name: 'Experience Cloud Basics', percentage: 8 },
+    { name: 'Sharing, Visibility, and Licensing', percentage: 17 },
+    { name: 'Branding, Personalization, and Content', percentage: 15 },
+    { name: 'Templates and Themes', percentage: 10 },
+    { name: 'User Creation and Authentication', percentage: 13 },
+    { name: 'Adoption and Analytics', percentage: 5 },
+    { name: 'Administration, Setup, and Configuration', percentage: 25 },
+    { name: 'Customization Considerations and Limitations', percentage: 7 },
   ],
   'field-service': [
     { name: 'Managing Resources', percentage: 16 },
@@ -122,30 +130,48 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Configuring Maintenance Plans', percentage: 5 },
     { name: 'Permissions and Sharing', percentage: 5 },
   ],
+  // Verified 4 November 2026 against the official exam guide:
+  // help.salesforce.com/s/articleView?id=005298940 — six sections, not four.
+  // 60 scored questions plus up to 5 unscored, 70% to pass, 105 minutes.
   'data-360-consultant': [
-    { name: 'Data Cloud Architecture', percentage: 25 },
-    { name: 'Data Model and Identity', percentage: 25 },
-    { name: 'Activation and Insights', percentage: 25 },
-    { name: 'Governance and Best Practices', percentage: 25 },
+    { name: 'Solution Positioning', percentage: 14 },
+    { name: 'Data 360 Setup and Administration', percentage: 13 },
+    { name: 'Data Source Connection and Ingestion', percentage: 18 },
+    { name: 'Harmonization and Unification', percentage: 17 },
+    { name: 'Data Enhancements, Sharing, and Analysis', percentage: 18 },
+    { name: 'Data Activations and Utilization', percentage: 20 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298935
+  // Six sections, 60 scored questions, 65% to pass, 90 minutes.
   'crm-analytics-einstein-discovery-consultant': [
-    { name: 'CRM Analytics Setup', percentage: 25 },
-    { name: 'Data Preparation and Datasets', percentage: 25 },
-    { name: 'Lens, Dashboards, and Stories', percentage: 25 },
-    { name: 'Einstein Discovery', percentage: 25 },
+    { name: 'Admin/Configuration', percentage: 17 },
+    { name: 'Data Layer', percentage: 23 },
+    { name: 'Security', percentage: 16 },
+    { name: 'Analytics Dashboard Design', percentage: 13 },
+    { name: 'Analytics Dashboard Implementation', percentage: 19 },
+    { name: 'Einstein Discovery', percentage: 12 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298934
+  // Six sections, 60 scored questions, 67% to pass, 105 minutes.
   'education-cloud-consultant': [
-    { name: 'Education Cloud Data Model', percentage: 25 },
-    { name: 'Admissions and Student Lifecycle', percentage: 25 },
-    { name: 'Configuration and Automation', percentage: 25 },
-    { name: 'Reporting and Integration', percentage: 25 },
+    { name: 'Domain Expertise', percentage: 18 },
+    { name: 'Education Cloud Configuration', percentage: 22 },
+    { name: 'Implementation Strategies and Best Practices', percentage: 18 },
+    { name: 'Solution Design', percentage: 19 },
+    { name: 'Integration and Data Management', percentage: 16 },
+    { name: 'Analytics', percentage: 7 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298951
+  // Eight sections, 68% to pass, 105 minutes. Retires 1 February 2027.
   'pardot-consultant': [
-    { name: 'Account Engagement Setup', percentage: 20 },
-    { name: 'Lead Management', percentage: 25 },
-    { name: 'Email and Engagement', percentage: 25 },
-    { name: 'Analytics and ROI', percentage: 15 },
-    { name: 'Integration with Salesforce', percentage: 15 },
+    { name: 'Evaluation', percentage: 17 },
+    { name: 'Account Configuration', percentage: 20 },
+    { name: 'Automating Business Processes', percentage: 17 },
+    { name: 'Email Marketing', percentage: 10 },
+    { name: 'Lead Management', percentage: 14 },
+    { name: 'Personalizing the Prospect Experience', percentage: 8 },
+    { name: 'Reporting, Metrics and Analytics', percentage: 11 },
+    { name: 'Sales Emails and Alerts', percentage: 3 },
   ],
   'pardot-specialist': [
     { name: 'Visitors and Prospects', percentage: 8 },
@@ -161,11 +187,13 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Email and Journey Builder', percentage: 25 },
     { name: 'Analytics and Integration', percentage: 25 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298958
+  // Agentforce Nonprofit Consultant: four sections, 65% to pass, 105 minutes.
   'nonprofit-cloud': [
-    { name: 'Nonprofit Cloud Data Model', percentage: 25 },
-    { name: 'Program and Case Management', percentage: 25 },
-    { name: 'Donations and Engagement', percentage: 25 },
-    { name: 'Reporting and Best Practices', percentage: 25 },
+    { name: 'Nonprofit Implementation Strategy', percentage: 11 },
+    { name: 'Solution Design', percentage: 32 },
+    { name: 'Agentforce Nonprofit Setup', percentage: 22 },
+    { name: 'Agentforce Nonprofit Feature Configuration', percentage: 35 },
   ],
   'nonprofit-success-pack-consultant': [
     { name: 'NPSP Data Model', percentage: 25 },
@@ -173,11 +201,15 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Configuration and Automation', percentage: 25 },
     { name: 'Reporting and Integration', percentage: 25 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298970
+  // Six sections, 60 scored questions, 67% to pass, 105 minutes.
   'omnistudio-consultant': [
-    { name: 'OmniStudio Overview', percentage: 25 },
-    { name: 'Digital Flows and FlexCards', percentage: 30 },
-    { name: 'Integration and DataRaptors', percentage: 25 },
-    { name: 'Best Practices', percentage: 20 },
+    { name: 'Omnistudio Fundamentals', percentage: 16 },
+    { name: 'Flexcards', percentage: 18 },
+    { name: 'Omniscripts', percentage: 17 },
+    { name: 'Integration Procedures', percentage: 17 },
+    { name: 'Data Mappers', percentage: 17 },
+    { name: 'Best Fit Solutions', percentage: 15 },
   ],
   'omnistudio-developer': [
     { name: 'OmniStudio Development', percentage: 30 },
@@ -194,11 +226,16 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Asset Management', percentage: 16 },
     { name: 'Invoice Management', percentage: 7 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298991
+  // Seven sections, 60 scored questions, 67% to pass, 90 minutes.
   'slack-consultant': [
-    { name: 'Slack Strategy and Design', percentage: 25 },
-    { name: 'Channels and Workflows', percentage: 25 },
-    { name: 'Salesforce Integration', percentage: 25 },
-    { name: 'Governance and Best Practices', percentage: 25 },
+    { name: 'Delivery and Migration', percentage: 17 },
+    { name: 'Discovery', percentage: 10 },
+    { name: 'Grid Design', percentage: 15 },
+    { name: 'Policies and Settings', percentage: 22 },
+    { name: 'Channel Strategy', percentage: 10 },
+    { name: 'Governance Structure', percentage: 8 },
+    { name: 'Learning and Enablement', percentage: 18 },
   ],
   // Verified 4 November 2026 against the official exam guide:
   // help.salesforce.com/s/articleView?id=005298965 — four sections, not five.
@@ -222,11 +259,13 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Debugging and Testing', percentage: 25 },
     { name: 'Performance and Security', percentage: 20 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298941
+  // Four sections.
   'b2c-commerce-developer': [
-    { name: 'B2C Commerce Architecture', percentage: 25 },
-    { name: 'Storefront and Scripts', percentage: 30 },
-    { name: 'Data and APIs', percentage: 25 },
-    { name: 'Testing and Deployment', percentage: 20 },
+    { name: 'B2C Commerce Setup', percentage: 11 },
+    { name: 'Work With a B2C Site', percentage: 12 },
+    { name: 'Data Management Using Business Manager Usage', percentage: 24 },
+    { name: 'Application Development', percentage: 53 },
   ],
   'industries-cpq-developer': [
     { name: 'CPQ Data Model', percentage: 25 },
@@ -234,11 +273,14 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Configuration and Scripting', percentage: 30 },
     { name: 'Integration', percentage: 20 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298954
+  // Five sections, 60 scored questions, 63% to pass, 105 minutes.
   'marketing-cloud-engagement-developer': [
-    { name: 'Marketing Cloud Development', percentage: 25 },
-    { name: 'AMPscript and SSJS', percentage: 30 },
-    { name: 'API and Integration', percentage: 25 },
-    { name: 'Testing and Deployment', percentage: 20 },
+    { name: 'Data Modeling', percentage: 14 },
+    { name: 'Programmatic Languages', percentage: 35 },
+    { name: 'API', percentage: 22 },
+    { name: 'Data Management', percentage: 22 },
+    { name: 'Security', percentage: 7 },
   ],
   'mulesoft-developer-i': [
     { name: 'Creating Application Networks', percentage: 7 },
@@ -266,11 +308,18 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Automation Design', percentage: 25 },
     { name: 'Best Practices', percentage: 20 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298987
+  // Nine sections, 60 scored questions, 67% to pass, 90 minutes.
   'slack-developer': [
-    { name: 'Slack API and Events', percentage: 30 },
-    { name: 'Apps and Workflows', percentage: 30 },
-    { name: 'Integration with Salesforce', percentage: 25 },
-    { name: 'Security and Deployment', percentage: 15 },
+    { name: 'Apps in the Slack Platform', percentage: 7 },
+    { name: 'Design the Interactive Flow of Your App', percentage: 20 },
+    { name: 'Design Your Workflows: Spotlight on Slack’s APIs', percentage: 13 },
+    { name: 'Design a Great User Experience', percentage: 8 },
+    { name: 'Design for Security', percentage: 19 },
+    { name: 'Design for Scale', percentage: 9 },
+    { name: 'Tools', percentage: 5 },
+    { name: 'APIs for Managing Your Slack', percentage: 12 },
+    { name: 'Distribute Your App', percentage: 7 },
   ],
   'email-specialist': [
     { name: 'Email Marketing Best Practices', percentage: 10 },
@@ -285,11 +334,14 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Tracking and Data', percentage: 25 },
     { name: 'Best Practices', percentage: 20 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298952
+  // Five sections, 60 scored questions, 67% to pass, 105 minutes.
   'marketing-cloud-engagement-admin': [
-    { name: 'Marketing Cloud Setup', percentage: 25 },
-    { name: 'Subscriber and Data', percentage: 25 },
-    { name: 'Content and Journey Builder', percentage: 25 },
-    { name: 'Analytics and Administration', percentage: 25 },
+    { name: 'Digital Marketing Proficiency', percentage: 13 },
+    { name: 'Subscriber Data Management', percentage: 18 },
+    { name: 'Setup', percentage: 38 },
+    { name: 'Channel Management', percentage: 16 },
+    { name: 'Maintenance', percentage: 15 },
   ],
   'application-architect': [
     { name: 'Data Architecture', percentage: 25 },
@@ -381,11 +433,18 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'API Design', percentage: 25 },
     { name: 'Best Practices', percentage: 25 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298956
+  // Nine sections, 60 scored questions, 70% to pass, 120 minutes.
   'mulesoft-platform-architect': [
-    { name: 'Integration Architecture', percentage: 30 },
-    { name: 'Anypoint Platform', percentage: 25 },
-    { name: 'API and Security', percentage: 25 },
-    { name: 'Governance', percentage: 20 },
+    { name: 'Explaining application network basics', percentage: 7 },
+    { name: 'Establishing organizational and platform foundations', percentage: 10 },
+    { name: 'Designing and sharing APIs', percentage: 10 },
+    { name: 'Designing APIs using System, Process, and Experience Layers', percentage: 12 },
+    { name: 'Governing web APIs on Anypoint Platform', percentage: 17 },
+    { name: 'Architecting and deploying API implementations', percentage: 11 },
+    { name: 'Deploying API implementations to CloudHub', percentage: 11 },
+    { name: 'Meeting API quality goals', percentage: 10 },
+    { name: 'Monitoring and analyzing application networks', percentage: 12 },
   ],
   'mulesoft-integration-architect': [
     { name: 'Integration Architecture', percentage: 30 },
@@ -514,10 +573,15 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Public Sector Solutions', percentage: 45 },
     { name: 'Configuration and Best Practices', percentage: 55 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298982
+  // Agentforce Sales Foundations: six sections, 40 scored questions, 70% to pass.
   'sales-foundations': [
-    { name: 'Sales Fundamentals', percentage: 40 },
-    { name: 'Salesforce CRM Basics', percentage: 35 },
-    { name: 'Best Practices', percentage: 25 },
+    { name: 'Planning', percentage: 21 },
+    { name: 'Customer Engagement', percentage: 15 },
+    { name: 'Deal Management', percentage: 37 },
+    { name: 'Pipeline Management', percentage: 12 },
+    { name: 'Forecasting', percentage: 6 },
+    { name: 'Customer Success', percentage: 9 },
   ],
   'strategy-designer': [
     { name: 'Strategy and Discovery', percentage: 30 },
@@ -529,28 +593,33 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Research and Prototyping', percentage: 35 },
     { name: 'Design and Delivery', percentage: 35 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298985
+  // Three sections, 54 questions, 63% to pass, 105 minutes.
   'tableau-architect': [
-    { name: 'Tableau Architecture', percentage: 30 },
-    { name: 'Governance and Security', percentage: 25 },
-    { name: 'Scalability and Performance', percentage: 25 },
-    { name: 'Best Practices', percentage: 20 },
+    { name: 'Design a Tableau Infrastructure', percentage: 22 },
+    { name: 'Deploy Tableau Server', percentage: 37 },
+    { name: 'Monitor and Maintain a Tableau Deployment', percentage: 41 },
   ],
   'tableau-consultant': [
     { name: 'Requirements and Design', percentage: 30 },
     { name: 'Data and Visualization', percentage: 35 },
     { name: 'Stakeholder and Best Practices', percentage: 35 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298984
+  // Four sections, 60 scored questions, 65% to pass, 105 minutes.
   'tableau-data-analyst': [
-    { name: 'Data Connection and Prep', percentage: 25 },
-    { name: 'Calculations and LOD', percentage: 25 },
-    { name: 'Visualization and Dashboards', percentage: 35 },
-    { name: 'Analysis and Insights', percentage: 15 },
+    { name: 'Connect To and Transform Data', percentage: 24 },
+    { name: 'Explore and Analyze Data', percentage: 41 },
+    { name: 'Create Content', percentage: 26 },
+    { name: 'Publish and Manage Content on Tableau Server and Tableau Cloud', percentage: 9 },
   ],
+  // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298988
+  // Four sections, 40 items, 48% to pass (English), 70 minutes.
   'tableau-desktop-foundations': [
-    { name: 'Connecting to Data', percentage: 25 },
-    { name: 'Dimensions and Measures', percentage: 25 },
-    { name: 'Views and Dashboards', percentage: 35 },
-    { name: 'Filters and Sorting', percentage: 15 },
+    { name: 'Connecting to and Preparing Data', percentage: 23 },
+    { name: 'Exploring and Analyzing Data', percentage: 37 },
+    { name: 'Sharing Insights', percentage: 25 },
+    { name: 'Understanding Tableau Concepts', percentage: 15 },
   ],
   'tableau-server-administrator': [
     { name: 'Installation and Deployment', percentage: 25 },
