@@ -1,6 +1,6 @@
 import { serializeJsonLd } from '@/lib/serialize-json-ld'
 import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import LastUpdated from '@/components/LastUpdated'

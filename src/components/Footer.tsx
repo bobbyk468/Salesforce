@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { Award, Mail, ExternalLink, MessageCircle } from 'lucide-react'
 import { ACTIVE_SOCIAL_PROFILES, AUTHOR_NAME, CONTACT_EMAIL, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
 import type { SocialProfile } from '@/lib/constants'
@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand + inbound link to home (fixes "Too Few Inbound Internal Links") */}
           <div className="col-span-1 md:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4 group inline-flex">
+            <Link prefetch={false} href="/" className="flex items-center space-x-2 mb-4 group inline-flex">
               <Award className="h-8 w-8 text-salesforce-light group-hover:text-white transition-colors" />
               <span className="text-xl font-bold">
                 Trailblaze<span className="text-salesforce-light"> Prep</span>
@@ -56,52 +56,52 @@ export default function Footer() {
             <p className="text-lg font-semibold mb-4">Quick Links</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/about" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/team" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Editorial Team
                 </Link>
               </li>
               <li>
-                <Link href="/editorial-policy" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/editorial-policy" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Editorial Policy
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Administrator practice questions
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/developer-1" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/developer-1" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Developer study guide
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/application-architect" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/application-architect" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Architect certification
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/ux-designer" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/ux-designer" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Designer certification
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/contact" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/html-sitemap" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/html-sitemap" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   HTML Sitemap
                 </Link>
               </li>
@@ -113,42 +113,42 @@ export default function Footer() {
             <p className="text-lg font-semibold mb-4">Popular Certifications</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/adm-201-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/adm-201-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Admin (ADM-201) study guide
                 </Link>
               </li>
               <li>
-                <Link href="/pd1-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/pd1-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   PD1 study guide
                 </Link>
               </li>
               <li>
-                <Link href="/app-builder-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/app-builder-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   App Builder study guide
                 </Link>
               </li>
               <li>
-                <Link href="/service-cloud-consultant-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/service-cloud-consultant-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Service Cloud study guide
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/agentforce-specialist" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/agentforce-specialist" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Agentforce Specialist practice questions
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/ai-associate" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/ai-associate" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   AI Associate practice questions
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/sales-cloud" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/sales-cloud" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Sales Cloud Consultant practice questions
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/data-360-consultant" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/data-360-consultant" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Data Cloud Consultant practice questions
                 </Link>
               </li>
@@ -160,47 +160,47 @@ export default function Footer() {
             <p className="text-lg font-semibold mb-4">Cert Paths &amp; Resources</p>
             <ul className="space-y-2">
               <li>
-                <Link href="/how-to-become-salesforce-administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/how-to-become-salesforce-administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   How to become a Salesforce Admin
                 </Link>
               </li>
               <li>
-                <Link href="/admin-certification-path" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/admin-certification-path" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Admin certification path
                 </Link>
               </li>
               <li>
-                <Link href="/developer-certification-path" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/developer-certification-path" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Developer certification path
                 </Link>
               </li>
               <li>
-                <Link href="/architect-certification-path" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/architect-certification-path" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Architect certification path
                 </Link>
               </li>
               <li>
-                <Link href="/salesforce-certification-cost" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/salesforce-certification-cost" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Exam fees &amp; costs
                 </Link>
               </li>
               <li>
-                <Link href="/salesforce-certification-salary" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/salesforce-certification-salary" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Certification salary guide
                 </Link>
               </li>
               <li>
-                <Link href="/salesforce-certification-roi-calculator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/salesforce-certification-roi-calculator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Certification ROI calculator
                 </Link>
               </li>
               <li>
-                <Link href="/become-cta" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/become-cta" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   How to become a CTA
                 </Link>
               </li>
               <li>
-                <Link href="/adm-201-exam-tips" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/adm-201-exam-tips" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   ADM-201 exam tips
                 </Link>
               </li>
@@ -214,13 +214,13 @@ export default function Footer() {
             <strong className="text-gray-300">Disclaimer:</strong> This site is an independent preparation resource and is not affiliated with, endorsed by, or sponsored by Salesforce, Inc. Salesforce, Trailblazer, Trailhead, and all other Salesforce marks are trademarks of salesforce.com, inc. "Trailblaze Prep" is not affiliated with or endorsed by Salesforce's Trailblazer program. We provide exam-style practice questions and study materials aligned with official exam outlines to help you prepare; we do not offer braindumps or real exam questions.
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <Link href="/terms" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors">
+            <Link prefetch={false} href="/terms" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors">
               Terms of Use
             </Link>
-            <Link href="/privacy" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors">
+            <Link prefetch={false} href="/privacy" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/editorial-policy" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors">
+            <Link prefetch={false} href="/editorial-policy" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors">
               Editorial Policy
             </Link>
           </div>

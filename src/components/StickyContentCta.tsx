@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { usePathname } from 'next/navigation'
 
 /** Paths that should show the sticky content CTA (study guides, content pages without practice questions) */

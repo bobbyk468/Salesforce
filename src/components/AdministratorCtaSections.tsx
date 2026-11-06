@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 
 /**
  * Client-only CTA and trust sections to keep administrator page HTML under 200 KB.

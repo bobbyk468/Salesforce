@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { DollarSign, RefreshCw, Calendar, ExternalLink } from 'lucide-react'
 import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 import { SLUG_TO_EXAM_GUIDE_URL } from '@/lib/cert-seo-data'

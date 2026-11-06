@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import type { CertDifferentiation } from '@/lib/cert-page-spike/types'
 
 export default function CertDifferentiationSection({ data }: { data: CertDifferentiation }) {

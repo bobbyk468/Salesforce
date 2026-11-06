@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import CredentialStatusNotice from '@/components/CredentialStatusNotice'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import LastUpdated from '@/components/LastUpdated'

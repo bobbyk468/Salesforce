@@ -1,5 +1,5 @@
 import { PlayCircle } from 'lucide-react'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { SLUG_TO_EXAM_CODE, getExamLogistics } from '@/lib/cert-seo-data'
 import { isUnavailableCredentialExam } from '@/lib/credential-status'
 

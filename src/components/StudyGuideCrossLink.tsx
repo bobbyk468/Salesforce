@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 
 interface Props {
   studyGuideSlug: string // e.g. "adm-201-study-guide"

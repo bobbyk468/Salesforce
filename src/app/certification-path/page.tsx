@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { Metadata } from 'next'
 import { MapPin, Layers, ChevronRight } from 'lucide-react'
 import type { PathStage } from '@/lib/certification-path-data'

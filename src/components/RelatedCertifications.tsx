@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { getRelatedCerts, getStrategicInternalLinks } from '@/lib/certifications-data'
 import { SLUG_TO_EXAM_TIPS, SLUG_TO_STUDY_GUIDE, slugToDisplayName } from '@/lib/cert-seo-data'
 

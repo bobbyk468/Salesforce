@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { Award, ChevronRight } from 'lucide-react'
 import type { PathStage, CertificationPath } from '@/lib/certification-path-data'
 

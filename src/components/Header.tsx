@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { Award, ChevronDown, Menu, X } from 'lucide-react'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import type { Metadata } from 'next'
 import HeroSampleQuestionCard from '@/components/HeroSampleQuestionCard'
 import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'

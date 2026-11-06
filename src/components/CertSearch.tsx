@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { useRouter } from 'next/navigation'
 import { Search, TrendingUp, Hash } from 'lucide-react'
 import { searchCerts, POPULAR_SEARCHES, EXAM_CODE_SUGGESTIONS } from '@/lib/search-data'

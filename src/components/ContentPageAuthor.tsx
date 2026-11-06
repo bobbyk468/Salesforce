@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 export default function ContentPageAuthor() {
   return (
     <div className="rounded-xl border border-gray-100 bg-white px-5 py-4 mb-8">

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import type { ExamSection } from '@/lib/exam-weightage-data'
 import DifficultyBadge from '@/components/DifficultyBadge'
 import PrerequisiteAlert from '@/components/PrerequisiteAlert'

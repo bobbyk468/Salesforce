@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { getRequiredPrerequisite, getRequiredPrerequisites, getRecommendedPrerequisite } from '@/lib/cert-prerequisites'
 import { slugToDisplayName, SLUG_TO_EXAM_TIPS, SLUG_TO_STUDY_GUIDE } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'

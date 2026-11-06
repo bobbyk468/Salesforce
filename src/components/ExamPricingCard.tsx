@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { tierFromFeeString, getIndiaGstNote } from '@/lib/exam-pricing-data'
 import { getExamCost, getRetakeCost } from '@/lib/cert-seo-data'
 import IndiaGstNote from '@/components/IndiaGstNote'

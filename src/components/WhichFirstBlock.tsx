@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 
 interface CertOption {
   name: string          // e.g. "Platform App Builder"

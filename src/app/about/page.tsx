@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { Award, Mail, ExternalLink } from 'lucide-react'
 import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import ContentPageSchemas from '@/components/ContentPageSchemas'

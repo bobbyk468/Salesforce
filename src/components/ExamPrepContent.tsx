@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { Lightbulb, Target, BookOpen, Zap, Award } from 'lucide-react'
 import { getExamPrepContent } from '@/lib/exam-prep-content-data'
 import { slugToDisplayName, getExamLogistics } from '@/lib/cert-seo-data'

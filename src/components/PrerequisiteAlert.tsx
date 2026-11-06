@@ -1,5 +1,5 @@
 import { AlertCircle, CheckCircle2 } from 'lucide-react'
-import Link from 'next/link'
+import Link from '@/components/AppLink'
 import { getCertPrerequisites } from '@/lib/cert-prerequisites'
 import { slugToDisplayName, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 
