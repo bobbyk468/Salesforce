@@ -246,7 +246,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
           Start Free Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">
-          Compare paths: <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="underline hover:text-white font-medium">CPQ Admin vs Revenue Cloud Consultant</Link>
+          Compare paths: <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="inline-block py-1 underline hover:text-white font-medium">CPQ Admin vs Revenue Cloud Consultant</Link>
         </p>
       </div>
     </div>

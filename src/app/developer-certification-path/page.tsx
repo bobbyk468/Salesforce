@@ -195,7 +195,7 @@ export default function DeveloperCertificationPathPage() {
             <div className="mt-4">
               <Link
                 href={`/certifications/${item.slug}`}
-                className="inline-flex items-center gap-1 text-xs text-salesforce-blue font-medium hover:underline"
+                className="inline-flex items-center gap-1 py-1 text-xs text-salesforce-blue font-medium hover:underline"
               >
                 View study guide + practice questions
                 <ArrowRight className="h-3 w-3" />

@@ -196,7 +196,7 @@ export default function AdminCertificationPathPage() {
             <div className="mt-4 flex flex-wrap gap-4">
               <Link
                 href={`/certifications/${item.slug}`}
-                className="inline-flex items-center gap-1 text-xs text-salesforce-blue font-medium hover:underline"
+                className="inline-flex items-center gap-1 py-1 text-xs text-salesforce-blue font-medium hover:underline"
               >
                 View study guide + practice questions
                 <ArrowRight className="h-3 w-3" />
@@ -204,7 +204,7 @@ export default function AdminCertificationPathPage() {
               {idx === 0 && (
                 <Link
                   href="/adm-201-study-guide"
-                  className="inline-flex items-center gap-1 text-xs text-salesforce-blue font-medium hover:underline"
+                  className="inline-flex items-center gap-1 py-1 text-xs text-salesforce-blue font-medium hover:underline"
                 >
                   ADM-201 complete study guide →
                 </Link>
@@ -212,7 +212,7 @@ export default function AdminCertificationPathPage() {
               {idx === 0 && (
                 <Link
                   href="/adm-201-vs-app-builder"
-                  className="inline-flex items-center gap-1 text-xs text-salesforce-blue font-medium hover:underline"
+                  className="inline-flex items-center gap-1 py-1 text-xs text-salesforce-blue font-medium hover:underline"
                 >
                   ADM-201 vs App Builder comparison →
                 </Link>

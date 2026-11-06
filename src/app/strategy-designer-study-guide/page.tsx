@@ -218,9 +218,9 @@ export default function StrategyDesignerStudyGuidePage() {
           Start Free Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">
-          Related: <Link href="/business-analyst-study-guide" className="underline hover:text-white font-medium">Business Analyst study guide</Link>
+          Related: <Link href="/business-analyst-study-guide" className="inline-block py-1 underline hover:text-white font-medium">Business Analyst study guide</Link>
           {' · '}
-          <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-white font-medium">UX vs Strategy Designer</Link>
+          <Link href="/ux-designer-vs-strategy-designer" className="inline-block py-1 underline hover:text-white font-medium">UX vs Strategy Designer</Link>
         </p>
       </div>
     </div>

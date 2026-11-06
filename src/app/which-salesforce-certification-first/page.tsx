@@ -150,7 +150,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             </div>
             <div className="flex items-center justify-between gap-3">
               <p className="text-xs text-gray-600"><strong>Then:</strong> {path.next}</p>
-              <Link href={path.href} className="text-xs font-semibold text-salesforce-blue hover:underline flex-shrink-0">Study Guide →</Link>
+              <Link href={path.href} className="py-1 text-xs font-semibold text-salesforce-blue hover:underline flex-shrink-0">Study Guide →</Link>
             </div>
           </div>
         ))}

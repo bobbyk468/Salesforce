@@ -151,7 +151,7 @@ export default function SalesforceListPage() {
                 </span>
                 <Link
                   href={`/certifications/role/${category.slug}`}
-                  className="ml-auto text-xs text-salesforce-blue hover:underline flex-shrink-0"
+                  className="ml-auto py-1 text-xs text-salesforce-blue hover:underline flex-shrink-0"
                 >
                   Browse {category.name} path →
                 </Link>
@@ -163,7 +163,7 @@ export default function SalesforceListPage() {
                   const fee = getExamCost(slug)
                   return (
                     <li key={item.href} className="flex items-center gap-3 px-4 py-3 text-sm">
-                      <Link href={item.href} className="font-medium text-gray-800 hover:text-salesforce-blue">
+                      <Link href={item.href} className="inline-block py-1 font-medium text-gray-800 hover:text-salesforce-blue">
                         {item.name}
                       </Link>
                       <span className={`ml-auto text-xs font-semibold px-2 py-0.5 rounded-full ${feeBadgeClass(fee)}`}>

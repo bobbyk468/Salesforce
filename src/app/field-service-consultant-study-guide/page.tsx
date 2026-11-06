@@ -260,7 +260,7 @@ export default function FieldServiceConsultantStudyGuidePage() {
           Start Free Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">
-          Compare certifications: <Link href="/field-service-vs-service-cloud-consultant" className="underline hover:text-white font-medium">Field Service vs Service Cloud Consultant</Link>
+          Compare certifications: <Link href="/field-service-vs-service-cloud-consultant" className="inline-block py-1 underline hover:text-white font-medium">Field Service vs Service Cloud Consultant</Link>
         </p>
       </div>
     </div>

@@ -212,7 +212,7 @@ export default function EducationCloudConsultantStudyGuidePage() {
           View Historical Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">
-          Compare: <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-white font-medium">Education Cloud vs Nonprofit Cloud Consultant</Link>
+          Compare: <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="inline-block py-1 underline hover:text-white font-medium">Education Cloud vs Nonprofit Cloud Consultant</Link>
         </p>
       </div>
     </div>

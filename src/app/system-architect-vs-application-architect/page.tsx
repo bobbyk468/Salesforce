@@ -101,7 +101,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <p>Data Architect ($400)</p>
             <p>Sharing &amp; Visibility Architect ($400)</p>
           </div>
-          <Link href="/application-architect-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/application-architect-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -122,7 +122,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <p>IAM Architect ($400)</p>
             <p>Dev Lifecycle &amp; Deployment Architect ($400)</p>
           </div>
-          <Link href="/system-architect-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/system-architect-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
       </div>
 

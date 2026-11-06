@@ -129,7 +129,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~65%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Execution</span></div>
           </div>
-          <Link href="/ux-designer-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/ux-designer-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -144,7 +144,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~62%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Strategy</span></div>
           </div>
-          <Link href="/strategy-designer-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/strategy-designer-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
       </div>
 

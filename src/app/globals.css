@@ -283,3 +283,34 @@ body {
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }
+
+/*
+ * Touch target sizing.
+ *
+ * Most links here sit inside flowing sentences, where forcing a height
+ * makes the hit box bleed into the lines above and below and fails the
+ * overlapping tap-target check instead. So this targets structure, not
+ * class, and only where a link is the entire content of a list item or
+ * table cell: that cannot happen mid-sentence, and inline-block is safe
+ * there because the link is the only thing in the box.
+ *
+ * Deliberately NOT applied to flex/grid children: those already carry
+ * their own sizing (the header nav links are 44px tall) and a blanket
+ * rule there overrides it and makes good targets smaller.
+ *
+ * Discrete links elsewhere are padded at their component instead.
+ * Scoped to coarse pointers so mouse layouts are untouched.
+ */
+@media (pointer: coarse) {
+  li > a:only-child,
+  td > a:only-child,
+  dd > a:only-child,
+  p > a:only-child,
+  h2 > a:only-child,
+  h3 > a:only-child,
+  h4 > a:only-child {
+    display: inline-block;
+    min-height: 24px;
+    padding-block: 0.2rem;
+  }
+}

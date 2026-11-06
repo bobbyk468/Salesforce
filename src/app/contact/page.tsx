@@ -472,7 +472,7 @@ function ContactPageContent() {
                   </div>
                   <div className="ml-4 min-w-0">
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <a href={`mailto:${CONTACT_EMAIL}`} className="break-all text-blue-800 underline hover:no-underline">
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="inline-block py-1 break-all text-blue-800 underline hover:no-underline">
                       {CONTACT_EMAIL}
                     </a>
                   </div>
@@ -488,7 +488,7 @@ function ContactPageContent() {
                       href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-green-700 underline hover:no-underline font-medium"
+                      className="inline-block py-1 text-green-700 underline hover:no-underline font-medium"
                     >
                       Chat with us directly
                     </a>

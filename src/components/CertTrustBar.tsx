@@ -13,11 +13,11 @@ export default function CertTrustBar({ slug }: CertTrustBarProps) {
     <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 py-3 text-xs text-gray-500">
       <span>Free sample questions</span>
       <span>Independent exam-prep resource</span>
-      <Link href="/editorial-policy" className="text-salesforce-blue hover:underline">
+      <Link href="/editorial-policy" className="inline-block py-1 text-salesforce-blue hover:underline">
         Editorial policy
       </Link>
       {examGuideUrl ? (
-        <a href={examGuideUrl} target="_blank" rel="noopener noreferrer" className="text-salesforce-blue hover:underline">
+        <a href={examGuideUrl} target="_blank" rel="noopener noreferrer" className="inline-block py-1 text-salesforce-blue hover:underline">
           Confirm current details in the official guide
         </a>
       ) : (
