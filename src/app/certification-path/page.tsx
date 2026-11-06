@@ -25,7 +25,10 @@ const pathDescription =
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },
   description: pathDescription,
-  alternates: { canonical: `${baseUrl}/certification-path` },
+  alternates: {
+    canonical: `${baseUrl}/certification-path`,
+    languages: { 'en-US': `${baseUrl}/certification-path`, 'x-default': `${baseUrl}/certification-path` },
+  },
   openGraph: {
     title: metadataTitle,
     description: pathDescription,

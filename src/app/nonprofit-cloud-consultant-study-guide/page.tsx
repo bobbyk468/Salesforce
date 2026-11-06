@@ -23,7 +23,10 @@ const pageDescription = `Nonprofit Cloud Consultant study guide: exam sections, 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/nonprofit-cloud-consultant-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/nonprofit-cloud-consultant-study-guide`,
+    languages: { 'en-US': `${siteUrl}/nonprofit-cloud-consultant-study-guide`, 'x-default': `${siteUrl}/nonprofit-cloud-consultant-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

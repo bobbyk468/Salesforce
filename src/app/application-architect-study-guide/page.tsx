@@ -23,7 +23,10 @@ const pageDescription = `Application Architect study guide: 4 required domain ex
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/application-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/application-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/application-architect-study-guide`, 'x-default': `${siteUrl}/application-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

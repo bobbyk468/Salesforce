@@ -12,7 +12,10 @@ const url = `https://www.trailblazeprep.com${path}`
 const faqItems = [{'question': 'Can I still take AI Associate?', 'answer': 'Salesforce retired AI Associate in February 2026. Check the issuer retirement notice and current learning catalog.'}, {'question': 'Is AI Associate a current prerequisite?', 'answer': 'Do not plan to earn a retired credential as a prerequisite. Check the current guide for the credential you intend to take.'}]
 
 export const metadata: Metadata = {
-  title: { absolute: metadataTitle }, description, alternates: { canonical: url },
+  title: { absolute: metadataTitle }, description, alternates: {
+    canonical: url,
+    languages: { 'en-US': url, 'x-default': url },
+  },
   openGraph: { title: metadataTitle, description, url, type: 'article' },
   twitter: { card: 'summary_large_image', title: metadataTitle, description },
 }

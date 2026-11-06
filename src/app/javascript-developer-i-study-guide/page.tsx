@@ -23,7 +23,10 @@ const pageDescription = 'Study JavaScript Developer I topics across six exam sec
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/javascript-developer-i-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/javascript-developer-i-study-guide`,
+    languages: { 'en-US': `${siteUrl}/javascript-developer-i-study-guide`, 'x-default': `${siteUrl}/javascript-developer-i-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

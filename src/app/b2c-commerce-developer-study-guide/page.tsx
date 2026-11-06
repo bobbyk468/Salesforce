@@ -23,7 +23,10 @@ const pageDescription = 'Study B2C Commerce Developer topics including SFRA, car
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/b2c-commerce-developer-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/b2c-commerce-developer-study-guide`,
+    languages: { 'en-US': `${siteUrl}/b2c-commerce-developer-study-guide`, 'x-default': `${siteUrl}/b2c-commerce-developer-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

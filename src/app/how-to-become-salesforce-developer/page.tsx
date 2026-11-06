@@ -13,7 +13,10 @@ const pageDescription = 'Plan a Salesforce Developer path from fundamentals to P
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/how-to-become-salesforce-developer` },
+  alternates: {
+    canonical: `${siteUrl}/how-to-become-salesforce-developer`,
+    languages: { 'en-US': `${siteUrl}/how-to-become-salesforce-developer`, 'x-default': `${siteUrl}/how-to-become-salesforce-developer` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

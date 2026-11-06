@@ -15,7 +15,10 @@ const pageDescription = `Is Salesforce certification worth it? ROI, salary, job 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/is-salesforce-certification-worth-it` },
+  alternates: {
+    canonical: `${siteUrl}/is-salesforce-certification-worth-it`,
+    languages: { 'en-US': `${siteUrl}/is-salesforce-certification-worth-it`, 'x-default': `${siteUrl}/is-salesforce-certification-worth-it` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

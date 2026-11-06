@@ -22,7 +22,10 @@ const pageDescription = `System Architect exam tips for ${RELEASE_CURRENT}: revi
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/system-architect-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/system-architect-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/system-architect-exam-tips`, 'x-default': `${siteUrl}/system-architect-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

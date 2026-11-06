@@ -14,7 +14,10 @@ const pageDescription = `Compare Sales Cloud and Experience Cloud Consultant exa
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/sales-cloud-vs-experience-cloud-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/sales-cloud-vs-experience-cloud-consultant`,
+    languages: { 'en-US': `${siteUrl}/sales-cloud-vs-experience-cloud-consultant`, 'x-default': `${siteUrl}/sales-cloud-vs-experience-cloud-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

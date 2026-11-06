@@ -12,7 +12,10 @@ const pageDescription = 'Build a Salesforce exam study plan using effective meth
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/how-to-study-for-salesforce-certification` },
+  alternates: {
+    canonical: `${siteUrl}/how-to-study-for-salesforce-certification`,
+    languages: { 'en-US': `${siteUrl}/how-to-study-for-salesforce-certification`, 'x-default': `${siteUrl}/how-to-study-for-salesforce-certification` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

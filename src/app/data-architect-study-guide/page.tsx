@@ -22,7 +22,10 @@ const pageDescription = 'Study the six Platform Data Architect exam domains, inc
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/data-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/data-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/data-architect-study-guide`, 'x-default': `${siteUrl}/data-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

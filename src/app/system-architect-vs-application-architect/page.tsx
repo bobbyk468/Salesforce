@@ -14,7 +14,10 @@ const pageDescription = `System vs Application Architect: required exams, domain
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/system-architect-vs-application-architect` },
+  alternates: {
+    canonical: `${siteUrl}/system-architect-vs-application-architect`,
+    languages: { 'en-US': `${siteUrl}/system-architect-vs-application-architect`, 'x-default': `${siteUrl}/system-architect-vs-application-architect` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

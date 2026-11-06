@@ -22,7 +22,10 @@ const pageDescription = `Slack Administrator study guide: review workspace setup
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/slack-administrator-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/slack-administrator-study-guide`,
+    languages: { 'en-US': `${siteUrl}/slack-administrator-study-guide`, 'x-default': `${siteUrl}/slack-administrator-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

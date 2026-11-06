@@ -22,7 +22,10 @@ const pageDescription = 'Explore the historical Education Cloud Consultant guide
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/education-cloud-consultant-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/education-cloud-consultant-study-guide`,
+    languages: { 'en-US': `${siteUrl}/education-cloud-consultant-study-guide`, 'x-default': `${siteUrl}/education-cloud-consultant-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

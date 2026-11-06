@@ -17,7 +17,10 @@ const pageDescription = `Compare UX Designer and Strategy Designer by difficulty
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/ux-designer-vs-strategy-designer` },
+  alternates: {
+    canonical: `${siteUrl}/ux-designer-vs-strategy-designer`,
+    languages: { 'en-US': `${siteUrl}/ux-designer-vs-strategy-designer`, 'x-default': `${siteUrl}/ux-designer-vs-strategy-designer` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

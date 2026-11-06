@@ -23,7 +23,10 @@ const pageDescription = 'Study CPQ Administrator exam sections, pricing cascades
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/cpq-administrator-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/cpq-administrator-study-guide`,
+    languages: { 'en-US': `${siteUrl}/cpq-administrator-study-guide`, 'x-default': `${siteUrl}/cpq-administrator-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

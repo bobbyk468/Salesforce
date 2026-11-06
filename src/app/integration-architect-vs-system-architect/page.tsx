@@ -20,7 +20,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/integration-architect-vs-system-architect` },
+  alternates: {
+    canonical: `${siteUrl}/integration-architect-vs-system-architect`,
+    languages: { 'en-US': `${siteUrl}/integration-architect-vs-system-architect`, 'x-default': `${siteUrl}/integration-architect-vs-system-architect` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

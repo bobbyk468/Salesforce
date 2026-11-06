@@ -22,7 +22,10 @@ const pageDescription = `Public Sector Solutions AP exam tips for ${RELEASE_CURR
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/public-sector-solutions-ap-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/public-sector-solutions-ap-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/public-sector-solutions-ap-exam-tips`, 'x-default': `${siteUrl}/public-sector-solutions-ap-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

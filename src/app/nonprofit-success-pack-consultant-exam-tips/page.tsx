@@ -24,7 +24,10 @@ const pageDescription = `Prepare for the Salesforce NPSP Consultant exam with ho
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/nonprofit-success-pack-consultant-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/nonprofit-success-pack-consultant-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/nonprofit-success-pack-consultant-exam-tips`, 'x-default': `${siteUrl}/nonprofit-success-pack-consultant-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

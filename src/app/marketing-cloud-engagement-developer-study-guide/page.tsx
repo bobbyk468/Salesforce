@@ -23,7 +23,10 @@ const pageDescription = `Marketing Cloud Engagement Developer study guide: AMPsc
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/marketing-cloud-engagement-developer-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/marketing-cloud-engagement-developer-study-guide`,
+    languages: { 'en-US': `${siteUrl}/marketing-cloud-engagement-developer-study-guide`, 'x-default': `${siteUrl}/marketing-cloud-engagement-developer-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

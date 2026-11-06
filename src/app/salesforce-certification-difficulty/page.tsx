@@ -13,7 +13,10 @@ const pageDescription = `Compare Salesforce cert difficulty from beginner to CTA
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-difficulty` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-difficulty`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-difficulty`, 'x-default': `${siteUrl}/salesforce-certification-difficulty` },
+  },
   openGraph: {
     title: metadataTitle,
     description: pageDescription,

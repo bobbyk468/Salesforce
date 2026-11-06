@@ -23,7 +23,10 @@ const pageDescription = 'Review MuleSoft Developer I objectives, Mule 4 applicat
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-developer-i-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-developer-i-study-guide`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-developer-i-study-guide`, 'x-default': `${siteUrl}/mulesoft-developer-i-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

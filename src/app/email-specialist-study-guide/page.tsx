@@ -23,7 +23,10 @@ const pageDescription = 'Review Marketing Cloud Engagement Specialist objectives
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/email-specialist-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/email-specialist-study-guide`,
+    languages: { 'en-US': `${siteUrl}/email-specialist-study-guide`, 'x-default': `${siteUrl}/email-specialist-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

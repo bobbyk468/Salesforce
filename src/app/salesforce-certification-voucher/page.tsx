@@ -12,7 +12,10 @@ const pageDescription = `Salesforce cert discounts and vouchers: Dreamforce, Tra
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-voucher` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-voucher`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-voucher`, 'x-default': `${siteUrl}/salesforce-certification-voucher` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

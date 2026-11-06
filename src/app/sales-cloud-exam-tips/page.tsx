@@ -23,7 +23,10 @@ const pageDescription = `Sales Cloud Consultant exam tips for ${RELEASE_CURRENT}
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/sales-cloud-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/sales-cloud-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/sales-cloud-exam-tips`, 'x-default': `${siteUrl}/sales-cloud-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

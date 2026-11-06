@@ -19,7 +19,10 @@ const pageDescription = `CTA Review Board tips cover scenario presentations, whi
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/technical-architect-review-board-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/technical-architect-review-board-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/technical-architect-review-board-exam-tips`, 'x-default': `${siteUrl}/technical-architect-review-board-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

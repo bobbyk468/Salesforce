@@ -25,7 +25,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/omnistudio-consultant-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/omnistudio-consultant-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/omnistudio-consultant-exam-tips`, 'x-default': `${siteUrl}/omnistudio-consultant-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

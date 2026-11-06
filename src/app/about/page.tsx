@@ -12,7 +12,10 @@ const aboutDescription =
 export const metadata = {
   title: { absolute: `About Trailblaze Prep | Salesforce Certification Prep` },
   description: aboutDescription,
-  alternates: { canonical: `${baseUrl}/about` },
+  alternates: {
+    canonical: `${baseUrl}/about`,
+    languages: { 'en-US': `${baseUrl}/about`, 'x-default': `${baseUrl}/about` },
+  },
   openGraph: {
     title: 'About Trailblaze Prep | Salesforce Certification Prep',
     description: aboutDescription,

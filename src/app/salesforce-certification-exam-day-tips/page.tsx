@@ -13,7 +13,10 @@ const pageDescription = `Salesforce exam day tips: what to bring, online vs cent
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-exam-day-tips` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-exam-day-tips`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-exam-day-tips`, 'x-default': `${siteUrl}/salesforce-certification-exam-day-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

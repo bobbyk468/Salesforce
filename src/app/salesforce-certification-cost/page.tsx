@@ -15,7 +15,10 @@ const pageDescription = `Salesforce exam fees for ${RELEASE_CURRENT}: compare ty
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-cost` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-cost`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-cost`, 'x-default': `${siteUrl}/salesforce-certification-cost` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

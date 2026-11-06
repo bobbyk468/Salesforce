@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   title: { absolute: 'Certification Prep Privacy Policy | Trailblaze Prep' },
   description:
     'Learn how Trailblaze Prep handles contact details, cookies, and site analytics for this Salesforce exam preparation resource.',
-  alternates: { canonical: `${baseUrl}/privacy` },
+  alternates: {
+    canonical: `${baseUrl}/privacy`,
+    languages: { 'en-US': `${baseUrl}/privacy`, 'x-default': `${baseUrl}/privacy` },
+  },
   openGraph: {
     title: 'Certification Prep Privacy Policy | Trailblaze Prep',
     description:

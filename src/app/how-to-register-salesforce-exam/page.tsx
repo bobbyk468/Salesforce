@@ -12,7 +12,10 @@ const pageDescription = `How to register for a Salesforce cert exam: Webassessor
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/how-to-register-salesforce-exam` },
+  alternates: {
+    canonical: `${siteUrl}/how-to-register-salesforce-exam`,
+    languages: { 'en-US': `${siteUrl}/how-to-register-salesforce-exam`, 'x-default': `${siteUrl}/how-to-register-salesforce-exam` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

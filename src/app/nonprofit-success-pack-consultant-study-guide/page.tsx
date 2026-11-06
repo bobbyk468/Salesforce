@@ -22,7 +22,10 @@ const pageDescription = `NPSP Consultant study guide: review household data, fun
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/nonprofit-success-pack-consultant-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/nonprofit-success-pack-consultant-study-guide`,
+    languages: { 'en-US': `${siteUrl}/nonprofit-success-pack-consultant-study-guide`, 'x-default': `${siteUrl}/nonprofit-success-pack-consultant-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

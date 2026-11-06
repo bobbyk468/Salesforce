@@ -12,7 +12,10 @@ const pageDescription = `Choose your first Salesforce certification by backgroun
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/which-salesforce-certification-first` },
+  alternates: {
+    canonical: `${siteUrl}/which-salesforce-certification-first`,
+    languages: { 'en-US': `${siteUrl}/which-salesforce-certification-first`, 'x-default': `${siteUrl}/which-salesforce-certification-first` },
+  },
   openGraph: {
     title: metadataTitle,
     description: pageDescription,

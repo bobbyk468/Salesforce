@@ -23,7 +23,10 @@ const pageDescription = `Revenue Cloud Consultant study guide: 5 sections, billi
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/revenue-cloud-consultant-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/revenue-cloud-consultant-study-guide`,
+    languages: { 'en-US': `${siteUrl}/revenue-cloud-consultant-study-guide`, 'x-default': `${siteUrl}/revenue-cloud-consultant-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

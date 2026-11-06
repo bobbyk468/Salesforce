@@ -23,7 +23,10 @@ const pageDescription = `MuleSoft Integration Architect study guide: API-led con
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-integration-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-integration-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-integration-architect-study-guide`, 'x-default': `${siteUrl}/mulesoft-integration-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

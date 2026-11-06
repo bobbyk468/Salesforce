@@ -12,7 +12,10 @@ const url = `https://www.trailblazeprep.com${path}`
 
 export const metadata: Metadata = {
   title: { absolute: metadataTitle }, description,
-  alternates: { canonical: url },
+  alternates: {
+    canonical: url,
+    languages: { 'en-US': url, 'x-default': url },
+  },
   openGraph: { title: metadataTitle, description, url, type: 'article' },
   twitter: { card: 'summary_large_image', title: metadataTitle, description },
 }

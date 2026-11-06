@@ -13,7 +13,10 @@ const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-roi-calculator` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-roi-calculator`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-roi-calculator`, 'x-default': `${siteUrl}/salesforce-certification-roi-calculator` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

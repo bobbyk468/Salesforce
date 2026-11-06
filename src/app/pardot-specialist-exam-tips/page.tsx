@@ -25,7 +25,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pardot-specialist-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/pardot-specialist-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/pardot-specialist-exam-tips`, 'x-default': `${siteUrl}/pardot-specialist-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

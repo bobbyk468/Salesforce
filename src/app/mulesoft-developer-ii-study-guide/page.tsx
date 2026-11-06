@@ -23,7 +23,10 @@ const pageDescription = 'Study MuleSoft Developer II topics across five exam sec
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-developer-ii-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-developer-ii-study-guide`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-developer-ii-study-guide`, 'x-default': `${siteUrl}/mulesoft-developer-ii-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

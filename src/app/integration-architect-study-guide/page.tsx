@@ -23,7 +23,10 @@ const pageDescription = `Integration Architect study guide: 5 sections, 10-week 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/integration-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/integration-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/integration-architect-study-guide`, 'x-default': `${siteUrl}/integration-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

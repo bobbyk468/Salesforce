@@ -25,7 +25,10 @@ const pageDescription = `Tableau Data Analyst study guide: 5 sections, LOD, dash
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/tableau-data-analyst-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/tableau-data-analyst-study-guide`,
+    languages: { 'en-US': `${siteUrl}/tableau-data-analyst-study-guide`, 'x-default': `${siteUrl}/tableau-data-analyst-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

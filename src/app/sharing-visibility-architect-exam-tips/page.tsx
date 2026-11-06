@@ -23,7 +23,10 @@ const pageDescription = `Sharing and Visibility Architect exam tips for ${RELEAS
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/sharing-visibility-architect-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/sharing-visibility-architect-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/sharing-visibility-architect-exam-tips`, 'x-default': `${siteUrl}/sharing-visibility-architect-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

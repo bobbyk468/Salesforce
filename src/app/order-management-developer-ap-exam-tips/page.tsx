@@ -22,7 +22,10 @@ const pageDescription = `Salesforce Order Management Developer AP exam tips for 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/order-management-developer-ap-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/order-management-developer-ap-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/order-management-developer-ap-exam-tips`, 'x-default': `${siteUrl}/order-management-developer-ap-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

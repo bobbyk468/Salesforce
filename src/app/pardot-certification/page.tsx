@@ -13,7 +13,10 @@ const pageDescription = `Compare Pardot Specialist and Consultant exam formats, 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pardot-certification` },
+  alternates: {
+    canonical: `${siteUrl}/pardot-certification`,
+    languages: { 'en-US': `${siteUrl}/pardot-certification`, 'x-default': `${siteUrl}/pardot-certification` },
+  },
   openGraph: { title: pageTitle, description: pageDescription, type: 'article', url: `${siteUrl}/pardot-certification`, images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }] },
   twitter: {
     card: 'summary_large_image',

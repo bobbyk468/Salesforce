@@ -25,7 +25,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/data-360-consultant-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/data-360-consultant-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/data-360-consultant-exam-tips`, 'x-default': `${siteUrl}/data-360-consultant-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

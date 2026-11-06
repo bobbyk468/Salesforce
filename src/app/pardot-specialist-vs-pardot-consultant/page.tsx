@@ -17,7 +17,10 @@ const pageDescription = `Compare Pardot Specialist and Consultant by fees, diffi
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pardot-specialist-vs-pardot-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/pardot-specialist-vs-pardot-consultant`,
+    languages: { 'en-US': `${siteUrl}/pardot-specialist-vs-pardot-consultant`, 'x-default': `${siteUrl}/pardot-specialist-vs-pardot-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -23,7 +23,10 @@ const pageDescription = `Service Cloud Consultant exam tips for ${RELEASE_CURREN
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/service-cloud-consultant-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/service-cloud-consultant-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/service-cloud-consultant-exam-tips`, 'x-default': `${siteUrl}/service-cloud-consultant-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -21,7 +21,10 @@ const pageDescription = `Study the four exams required for Salesforce System Arc
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/system-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/system-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/system-architect-study-guide`, 'x-default': `${siteUrl}/system-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

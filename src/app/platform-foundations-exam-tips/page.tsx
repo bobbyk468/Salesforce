@@ -23,7 +23,10 @@ const pageDescription = `Salesforce Platform Foundations exam tips for ${RELEASE
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/platform-foundations-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/platform-foundations-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/platform-foundations-exam-tips`, 'x-default': `${siteUrl}/platform-foundations-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

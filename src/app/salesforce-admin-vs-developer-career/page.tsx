@@ -15,7 +15,10 @@ const pageDescription = `Compare Salesforce Administrator and Developer careers 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-admin-vs-developer-career` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-admin-vs-developer-career`,
+    languages: { 'en-US': `${siteUrl}/salesforce-admin-vs-developer-career`, 'x-default': `${siteUrl}/salesforce-admin-vs-developer-career` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

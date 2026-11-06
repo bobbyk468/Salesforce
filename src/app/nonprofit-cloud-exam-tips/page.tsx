@@ -23,7 +23,10 @@ const pageDescription = `Salesforce Nonprofit Cloud Consultant exam tips for ${R
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/nonprofit-cloud-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/nonprofit-cloud-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/nonprofit-cloud-exam-tips`, 'x-default': `${siteUrl}/nonprofit-cloud-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

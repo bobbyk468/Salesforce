@@ -14,7 +14,10 @@ const pageDescription = 'Salesforce Admin Certification 201 guide: ADM-201 exam 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-admin-certification-201` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-admin-certification-201`,
+    languages: { 'en-US': `${siteUrl}/salesforce-admin-certification-201`, 'x-default': `${siteUrl}/salesforce-admin-certification-201` },
+  },
   openGraph: { title: pageTitle, description: pageDescription, type: 'article', url: `${siteUrl}/salesforce-admin-certification-201`, images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }] },
   twitter: {
     card: 'summary_large_image',

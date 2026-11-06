@@ -14,7 +14,10 @@ const pageDescription = `Compare Salesforce salaries for Administrator, Develope
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-salary` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-salary`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-salary`, 'x-default': `${siteUrl}/salesforce-certification-salary` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

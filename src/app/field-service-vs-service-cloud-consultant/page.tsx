@@ -18,7 +18,10 @@ const pageDescription = 'Compare Service Cloud and Field Service workflows, prod
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/field-service-vs-service-cloud-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/field-service-vs-service-cloud-consultant`,
+    languages: { 'en-US': `${siteUrl}/field-service-vs-service-cloud-consultant`, 'x-default': `${siteUrl}/field-service-vs-service-cloud-consultant` },
+  },
   openGraph: {
     title: metadataTitle,
     description: pageDescription,

@@ -25,7 +25,10 @@ const pageDescription = `MuleSoft Integration Foundations study guide: API-led c
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-integration-foundations-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-integration-foundations-study-guide`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-integration-foundations-study-guide`, 'x-default': `${siteUrl}/mulesoft-integration-foundations-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

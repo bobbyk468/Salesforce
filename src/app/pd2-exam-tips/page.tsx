@@ -24,7 +24,10 @@ const pageDescription = `Prepare for Platform Developer II with advanced Apex, i
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pd2-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/pd2-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/pd2-exam-tips`, 'x-default': `${siteUrl}/pd2-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

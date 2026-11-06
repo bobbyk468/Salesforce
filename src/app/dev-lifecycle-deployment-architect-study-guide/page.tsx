@@ -23,7 +23,10 @@ const pageDescription = 'Review Dev Lifecycle and Deployment Architect topics co
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/dev-lifecycle-deployment-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/dev-lifecycle-deployment-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/dev-lifecycle-deployment-architect-study-guide`, 'x-default': `${siteUrl}/dev-lifecycle-deployment-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

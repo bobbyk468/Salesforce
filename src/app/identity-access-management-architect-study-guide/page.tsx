@@ -23,7 +23,10 @@ const pageDescription = 'Study IAM Architect topics including SAML, OAuth 2.0, S
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/identity-access-management-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/identity-access-management-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/identity-access-management-architect-study-guide`, 'x-default': `${siteUrl}/identity-access-management-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

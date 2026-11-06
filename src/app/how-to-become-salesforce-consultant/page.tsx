@@ -13,7 +13,10 @@ const pageDescription = 'Learn the consultant path, Administrator preparation, s
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/how-to-become-salesforce-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/how-to-become-salesforce-consultant`,
+    languages: { 'en-US': `${siteUrl}/how-to-become-salesforce-consultant`, 'x-default': `${siteUrl}/how-to-become-salesforce-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

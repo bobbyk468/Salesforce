@@ -25,7 +25,10 @@ const pageDescription = `Sales Cloud Consultant study guide: review territory ma
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/sales-cloud-consultant-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/sales-cloud-consultant-study-guide`,
+    languages: { 'en-US': `${siteUrl}/sales-cloud-consultant-study-guide`, 'x-default': `${siteUrl}/sales-cloud-consultant-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

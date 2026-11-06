@@ -14,7 +14,10 @@ const pageDescription = `Compare OmniStudio Developer and Consultant exams by fo
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/omnistudio-developer-vs-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/omnistudio-developer-vs-consultant`,
+    languages: { 'en-US': `${siteUrl}/omnistudio-developer-vs-consultant`, 'x-default': `${siteUrl}/omnistudio-developer-vs-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

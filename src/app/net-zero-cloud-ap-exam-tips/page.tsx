@@ -22,7 +22,10 @@ const pageDescription = `Net Zero Cloud AP exam tips for ${RELEASE_CURRENT}: rev
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/net-zero-cloud-ap-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/net-zero-cloud-ap-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/net-zero-cloud-ap-exam-tips`, 'x-default': `${siteUrl}/net-zero-cloud-ap-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

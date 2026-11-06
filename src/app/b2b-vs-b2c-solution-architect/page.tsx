@@ -18,7 +18,10 @@ const pageDescription = `B2B vs B2C Solution Architect: exam format, skills, ind
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/b2b-vs-b2c-solution-architect` },
+  alternates: {
+    canonical: `${siteUrl}/b2b-vs-b2c-solution-architect`,
+    languages: { 'en-US': `${siteUrl}/b2b-vs-b2c-solution-architect`, 'x-default': `${siteUrl}/b2b-vs-b2c-solution-architect` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

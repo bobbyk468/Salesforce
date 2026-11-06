@@ -15,7 +15,7 @@ export default function ContentPageAuthor() {
               href="https://trailblazer.me/id/krishnamohan"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-salesforce-blue underline hover:no-underline"
+              className="inline-block py-1 text-salesforce-blue underline hover:no-underline"
             >
               Krishna Mohan
             </a>
@@ -26,16 +26,16 @@ export default function ContentPageAuthor() {
               href="https://trailblazer.me/id/krishnamohan"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-salesforce-blue underline hover:no-underline"
+              className="inline-block py-1 text-salesforce-blue underline hover:no-underline"
             >
               Author profile
             </a>
             {' '}&middot;{' '}
-            <Link href="/editorial-policy" className="text-salesforce-blue underline hover:no-underline">
+            <Link href="/editorial-policy" className="inline-block py-1 text-salesforce-blue underline hover:no-underline">
               Editorial policy
             </Link>
             {' '}&middot;{' '}
-            <Link href="/contact" className="text-salesforce-blue underline hover:no-underline">
+            <Link href="/contact" className="inline-block py-1 text-salesforce-blue underline hover:no-underline">
               Contact
             </Link>
           </p>

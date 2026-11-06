@@ -13,13 +13,35 @@ export const SITE_DEFAULT_DESCRIPTION =
 export const CONTENT_LAST_UPDATED = RELEASE_DATE_DISPLAY
 
 /**
- * Social profile URLs for Organization schema (sameAs) and footer.
- * Add your Facebook, Twitter/X, LinkedIn, YouTube, Instagram when created.
+ * Social profiles for the footer and Organization `sameAs`.
+ *
+ * To light one up sitewide, set its `url` to the live profile and leave the
+ * rest alone: an entry with an empty `url` is skipped everywhere, so there are
+ * never dead links in the footer or bogus URLs in structured data.
  */
-export const SOCIAL_LINKS: string[] = [
-  'https://x.com/trailblazeprep',
-  // 'https://www.linkedin.com/company/yourpage',
-  // 'https://www.facebook.com/yourpage',
-  // 'https://www.youtube.com/@yourchannel',
-  // 'https://www.instagram.com/yourhandle',
+export type SocialProfile = {
+  /** Stable key used to pick the icon in the footer. */
+  key: 'x' | 'linkedin' | 'youtube' | 'instagram' | 'facebook'
+  /** Display label, also used for the accessible name. */
+  label: string
+  /** Live profile URL, or '' while the profile does not exist yet. */
+  url: string
+}
+
+export const SOCIAL_PROFILES: SocialProfile[] = [
+  { key: 'x', label: '@trailblazeprep', url: 'https://x.com/trailblazeprep' },
+  // Paste the company page URL here once it is live, e.g.
+  // 'https://www.linkedin.com/company/trailblazeprep'
+  { key: 'linkedin', label: 'LinkedIn', url: '' },
+  { key: 'youtube', label: 'YouTube', url: '' },
+  { key: 'instagram', label: 'Instagram', url: '' },
+  { key: 'facebook', label: 'Facebook', url: '' },
 ]
+
+/** Only the profiles that actually exist, in config order. */
+export const ACTIVE_SOCIAL_PROFILES: SocialProfile[] = SOCIAL_PROFILES.filter(
+  (profile) => profile.url.trim().length > 0
+)
+
+/** Social profile URLs for Organization schema (`sameAs`). */
+export const SOCIAL_LINKS: string[] = ACTIVE_SOCIAL_PROFILES.map((p) => p.url)

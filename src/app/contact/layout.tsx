@@ -10,7 +10,10 @@ const contactDescription =
 export const metadata: Metadata = {
   title: { absolute: contactTitle },
   description: contactDescription,
-  alternates: { canonical: `${baseUrl}/contact` },
+  alternates: {
+    canonical: `${baseUrl}/contact`,
+    languages: { 'en-US': `${baseUrl}/contact`, 'x-default': `${baseUrl}/contact` },
+  },
   openGraph: {
     title: contactTitle,
     description: contactDescription,

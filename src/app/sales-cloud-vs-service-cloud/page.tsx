@@ -18,7 +18,10 @@ const pageDescription = `Compare Sales Cloud and Service Cloud Consultant exams 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/sales-cloud-vs-service-cloud` },
+  alternates: {
+    canonical: `${siteUrl}/sales-cloud-vs-service-cloud`,
+    languages: { 'en-US': `${siteUrl}/sales-cloud-vs-service-cloud`, 'x-default': `${siteUrl}/sales-cloud-vs-service-cloud` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -938,7 +938,10 @@ export function getCertMetadata(slug: string): Metadata {
   return {
     title: { absolute: titleForMeta },
     description: descForMeta,
-    alternates: { canonical: canonicalUrl },
+    alternates: {
+    canonical: canonicalUrl,
+    languages: { 'en-US': canonicalUrl, 'x-default': canonicalUrl },
+  },
     openGraph: {
       title: titleForMeta,
       description: descForMeta,

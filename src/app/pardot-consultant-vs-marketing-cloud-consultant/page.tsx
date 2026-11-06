@@ -14,7 +14,10 @@ const pageDescription = `Pardot vs Marketing Cloud Consultant: B2B vs B2C, exam 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pardot-consultant-vs-marketing-cloud-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/pardot-consultant-vs-marketing-cloud-consultant`,
+    languages: { 'en-US': `${siteUrl}/pardot-consultant-vs-marketing-cloud-consultant`, 'x-default': `${siteUrl}/pardot-consultant-vs-marketing-cloud-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -17,7 +17,10 @@ const pageDescription = 'Compare Education Cloud and Nonprofit Cloud by use case
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/education-cloud-vs-nonprofit-cloud-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/education-cloud-vs-nonprofit-cloud-consultant`,
+    languages: { 'en-US': `${siteUrl}/education-cloud-vs-nonprofit-cloud-consultant`, 'x-default': `${siteUrl}/education-cloud-vs-nonprofit-cloud-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

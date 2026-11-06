@@ -23,7 +23,10 @@ const pageDescription = `OmniStudio Developer study guide: 4 sections, DataRapto
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/omnistudio-developer-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/omnistudio-developer-study-guide`,
+    languages: { 'en-US': `${siteUrl}/omnistudio-developer-study-guide`, 'x-default': `${siteUrl}/omnistudio-developer-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

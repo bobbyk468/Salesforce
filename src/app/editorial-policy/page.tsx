@@ -16,7 +16,10 @@ const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/editorial-policy` },
+  alternates: {
+    canonical: `${siteUrl}/editorial-policy`,
+    languages: { 'en-US': `${siteUrl}/editorial-policy`, 'x-default': `${siteUrl}/editorial-policy` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

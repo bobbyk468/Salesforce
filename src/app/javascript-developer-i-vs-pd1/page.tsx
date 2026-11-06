@@ -18,7 +18,10 @@ const pageDescription = 'Compare JavaScript Developer I and Platform Developer I
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/javascript-developer-i-vs-pd1` },
+  alternates: {
+    canonical: `${siteUrl}/javascript-developer-i-vs-pd1`,
+    languages: { 'en-US': `${siteUrl}/javascript-developer-i-vs-pd1`, 'x-default': `${siteUrl}/javascript-developer-i-vs-pd1` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

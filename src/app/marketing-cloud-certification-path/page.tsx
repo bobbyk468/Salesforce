@@ -14,7 +14,10 @@ const pageDescription = 'Plan a Marketing Cloud certification path across Email 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/marketing-cloud-certification-path` },
+  alternates: {
+    canonical: `${siteUrl}/marketing-cloud-certification-path`,
+    languages: { 'en-US': `${siteUrl}/marketing-cloud-certification-path`, 'x-default': `${siteUrl}/marketing-cloud-certification-path` },
+  },
   openGraph: { title: pageTitle, description: pageDescription, type: 'article', url: `${siteUrl}/marketing-cloud-certification-path`, images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }] },
   twitter: {
     card: 'summary_large_image',

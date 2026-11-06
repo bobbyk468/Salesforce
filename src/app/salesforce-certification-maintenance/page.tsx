@@ -12,7 +12,10 @@ const pageDescription = `Learn when Salesforce certification maintenance is due,
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-maintenance` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-maintenance`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-maintenance`, 'x-default': `${siteUrl}/salesforce-certification-maintenance` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

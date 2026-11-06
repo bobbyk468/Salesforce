@@ -23,7 +23,10 @@ const pageDescription = 'Review CRM Analytics study topics including dataflows, 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/crm-analytics-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/crm-analytics-study-guide`,
+    languages: { 'en-US': `${siteUrl}/crm-analytics-study-guide`, 'x-default': `${siteUrl}/crm-analytics-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

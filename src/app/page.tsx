@@ -32,7 +32,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 export const metadata: Metadata = {
   title: { absolute: SITE_DEFAULT_TITLE },
   description: SITE_DEFAULT_DESCRIPTION,
-  alternates: { canonical: siteUrl },
+  alternates: {
+    canonical: siteUrl,
+    languages: { 'en-US': siteUrl, 'x-default': siteUrl },
+  },
 }
 
 /** Role slug for "View all" link: /certifications/role/[slug] */
@@ -375,39 +378,39 @@ export default async function Home() {
           </div>
 
           {/* Popular reads: SEO internal links */}
-          <p className="text-sm text-gray-500 mt-10">
+          <p className="text-sm text-gray-500 mt-10 leading-relaxed">
             Popular:{' '}
-            <Link href="/adm-201-exam-tips" className="underline hover:text-salesforce-dark font-medium">ADM-201 exam tips</Link>
+            <Link href="/adm-201-exam-tips" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">ADM-201 exam tips</Link>
             {' · '}
-            <Link href="/adm-201-vs-app-builder" className="underline hover:text-salesforce-dark font-medium">ADM-201 vs App Builder</Link>
+            <Link href="/adm-201-vs-app-builder" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">ADM-201 vs App Builder</Link>
             {' · '}
-            <Link href="/which-salesforce-certification-first" className="underline hover:text-salesforce-dark font-medium">Which cert first?</Link>
+            <Link href="/which-salesforce-certification-first" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Which cert first?</Link>
             {' · '}
-            <Link href="/how-to-study-for-salesforce-certification" className="underline hover:text-salesforce-dark font-medium">How to study</Link>
+            <Link href="/how-to-study-for-salesforce-certification" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">How to study</Link>
             {' · '}
-            <Link href="/how-to-become-salesforce-consultant" className="underline hover:text-salesforce-dark font-medium">Become a Consultant</Link>
+            <Link href="/how-to-become-salesforce-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Become a Consultant</Link>
             {' · '}
-            <Link href="/how-to-become-salesforce-developer" className="underline hover:text-salesforce-dark font-medium">Become a Developer</Link>
+            <Link href="/how-to-become-salesforce-developer" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Become a Developer</Link>
             {' · '}
-            <Link href="/salesforce-admin-vs-developer-career" className="underline hover:text-salesforce-dark font-medium">Admin vs Developer</Link>
+            <Link href="/salesforce-admin-vs-developer-career" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Admin vs Developer</Link>
             {' · '}
-            <Link href="/salesforce-certification-difficulty" className="underline hover:text-salesforce-dark font-medium">Difficulty ranking</Link>
+            <Link href="/salesforce-certification-difficulty" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Difficulty ranking</Link>
             {' · '}
-            <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-salesforce-dark font-medium">UX vs Strategy Designer</Link>
+            <Link href="/ux-designer-vs-strategy-designer" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">UX vs Strategy Designer</Link>
             {' · '}
-            <Link href="/app-builder-vs-developer-i" className="underline hover:text-salesforce-dark font-medium">App Builder vs PD1</Link>
+            <Link href="/app-builder-vs-developer-i" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">App Builder vs PD1</Link>
             {' · '}
-            <Link href="/business-analyst-study-guide" className="underline hover:text-salesforce-dark font-medium">Business Analyst guide</Link>
+            <Link href="/business-analyst-study-guide" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Business Analyst guide</Link>
             {' · '}
-            <Link href="/tableau-data-analyst-study-guide" className="underline hover:text-salesforce-dark font-medium">Tableau Data Analyst</Link>
+            <Link href="/tableau-data-analyst-study-guide" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Tableau Data Analyst</Link>
             {' · '}
-            <Link href="/salesforce-certification-validity" className="underline hover:text-salesforce-dark font-medium">Cert validity</Link>
+            <Link href="/salesforce-certification-validity" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Cert validity</Link>
             {' · '}
-            <Link href="/field-service-vs-service-cloud-consultant" className="underline hover:text-salesforce-dark font-medium">Field vs Service Cloud</Link>
+            <Link href="/field-service-vs-service-cloud-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Field vs Service Cloud</Link>
             {' · '}
-            <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-salesforce-dark font-medium">Education vs Nonprofit Cloud</Link>
+            <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Education vs Nonprofit Cloud</Link>
             {' · '}
-            <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="underline hover:text-salesforce-dark font-medium">CPQ vs Revenue Cloud</Link>
+            <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">CPQ vs Revenue Cloud</Link>
           </p>
         </div>
       </section>
@@ -516,7 +519,7 @@ export default async function Home() {
             ))}
           </ul>
           <p className="mt-6">
-            <Link href="/certifications" className="font-semibold text-salesforce-blue hover:text-salesforce-dark">
+            <Link href="/certifications" className="inline-block py-1 font-semibold text-salesforce-blue hover:text-salesforce-dark">
               View all certifications
             </Link>
           </p>

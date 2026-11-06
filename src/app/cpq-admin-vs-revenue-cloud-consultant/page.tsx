@@ -14,7 +14,10 @@ const pageDescription = 'Compare CPQ Administrator and Revenue Cloud Consultant 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant` },
+  alternates: {
+    canonical: `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant`,
+    languages: { 'en-US': `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant`, 'x-default': `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

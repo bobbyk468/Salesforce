@@ -24,7 +24,10 @@ const pageDescription = `Salesforce UX Designer exam tips for ${RELEASE_CURRENT}
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/ux-designer-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/ux-designer-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/ux-designer-exam-tips`, 'x-default': `${siteUrl}/ux-designer-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

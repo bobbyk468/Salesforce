@@ -25,7 +25,10 @@ const pageDescription = `Platform Developer II study guide for ${RELEASE_CURRENT
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pd2-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/pd2-study-guide`,
+    languages: { 'en-US': `${siteUrl}/pd2-study-guide`, 'x-default': `${siteUrl}/pd2-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

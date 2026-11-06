@@ -21,7 +21,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-catalyst-consultant-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-catalyst-consultant-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-catalyst-consultant-exam-tips`, 'x-default': `${siteUrl}/mulesoft-catalyst-consultant-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

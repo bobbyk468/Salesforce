@@ -13,7 +13,10 @@ const pageDescription = `Find ways to earn Salesforce certification exams for fr
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-free-certification` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-free-certification`,
+    languages: { 'en-US': `${siteUrl}/salesforce-free-certification`, 'x-default': `${siteUrl}/salesforce-free-certification` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

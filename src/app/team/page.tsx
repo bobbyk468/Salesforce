@@ -11,7 +11,10 @@ const pageDescription = `Meet Krishna Mohan, a multi-certified Salesforce profes
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${baseUrl}/team` },
+  alternates: {
+    canonical: `${baseUrl}/team`,
+    languages: { 'en-US': `${baseUrl}/team`, 'x-default': `${baseUrl}/team` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -14,7 +14,10 @@ const pageDescription = `Learn Salesforce certification validity, what Inactive 
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-validity` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-validity`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-validity`, 'x-default': `${siteUrl}/salesforce-certification-validity` },
+  },
   openGraph: {
     title: metadataTitle,
     description: pageDescription,

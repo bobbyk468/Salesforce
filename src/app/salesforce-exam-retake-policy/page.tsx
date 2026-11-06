@@ -13,7 +13,10 @@ const pageDescription = `Review Salesforce exam retake costs, wait times, attemp
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-exam-retake-policy` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-exam-retake-policy`,
+    languages: { 'en-US': `${siteUrl}/salesforce-exam-retake-policy`, 'x-default': `${siteUrl}/salesforce-exam-retake-policy` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

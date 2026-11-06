@@ -22,7 +22,10 @@ const pageDescription = `Salesforce CTA study guide: review prerequisites, board
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/technical-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/technical-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/technical-architect-study-guide`, 'x-default': `${siteUrl}/technical-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -23,7 +23,10 @@ const pageDescription = `OmniStudio Consultant study guide: 4 sections, solution
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/omnistudio-consultant-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/omnistudio-consultant-study-guide`,
+    languages: { 'en-US': `${siteUrl}/omnistudio-consultant-study-guide`, 'x-default': `${siteUrl}/omnistudio-consultant-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

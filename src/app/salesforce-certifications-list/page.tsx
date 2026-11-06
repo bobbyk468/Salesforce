@@ -16,7 +16,10 @@ const pageDescription = `Complete Salesforce certification list for ${RELEASE_CU
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certifications-list` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certifications-list`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certifications-list`, 'x-default': `${siteUrl}/salesforce-certifications-list` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -22,7 +22,10 @@ const pageDescription = `Sharing and Visibility Architect study guide: review OW
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/sharing-visibility-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/sharing-visibility-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/sharing-visibility-architect-study-guide`, 'x-default': `${siteUrl}/sharing-visibility-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

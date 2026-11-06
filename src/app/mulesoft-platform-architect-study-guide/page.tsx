@@ -23,7 +23,10 @@ const pageDescription = `MuleSoft Platform Architect study guide: Anypoint Platf
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-platform-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-platform-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-platform-architect-study-guide`, 'x-default': `${siteUrl}/mulesoft-platform-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

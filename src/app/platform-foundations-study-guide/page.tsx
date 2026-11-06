@@ -22,7 +22,10 @@ const pageDescription = `Platform Foundations study guide: review exam sections,
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/platform-foundations-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/platform-foundations-study-guide`,
+    languages: { 'en-US': `${siteUrl}/platform-foundations-study-guide`, 'x-default': `${siteUrl}/platform-foundations-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

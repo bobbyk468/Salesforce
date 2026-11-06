@@ -25,7 +25,10 @@ const pageDescription = `Business Analyst study guide: 7 exam sections, 8-week p
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/business-analyst-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/business-analyst-study-guide`,
+    languages: { 'en-US': `${siteUrl}/business-analyst-study-guide`, 'x-default': `${siteUrl}/business-analyst-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -22,7 +22,10 @@ const pageDescription = `Platform Developer I exam tips for ${RELEASE_CURRENT}: 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pd1-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/pd1-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/pd1-exam-tips`, 'x-default': `${siteUrl}/pd1-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

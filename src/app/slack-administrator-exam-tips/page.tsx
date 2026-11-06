@@ -23,7 +23,10 @@ const pageDescription = `Salesforce Slack Administrator exam tips for ${RELEASE_
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/slack-administrator-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/slack-administrator-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/slack-administrator-exam-tips`, 'x-default': `${siteUrl}/slack-administrator-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

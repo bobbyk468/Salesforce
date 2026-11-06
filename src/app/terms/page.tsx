@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   title: { absolute: 'Salesforce Certification Prep Terms | Trailblaze Prep' },
   description:
     'Terms for using Trailblaze Prep study guides and practice questions, an independent Salesforce certification preparation resource.',
-  alternates: { canonical: `${baseUrl}/terms` },
+  alternates: {
+    canonical: `${baseUrl}/terms`,
+    languages: { 'en-US': `${baseUrl}/terms`, 'x-default': `${baseUrl}/terms` },
+  },
   openGraph: {
     title: 'Salesforce Certification Prep Terms | Trailblaze Prep',
     description:

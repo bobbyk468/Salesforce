@@ -24,7 +24,10 @@ const pageDescription = `Salesforce Strategy Designer exam tips for ${RELEASE_CU
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/strategy-designer-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/strategy-designer-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/strategy-designer-exam-tips`, 'x-default': `${siteUrl}/strategy-designer-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -19,7 +19,10 @@ const pageDescription = `Tableau Desktop Foundations exam tips for ${RELEASE_CUR
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/tableau-desktop-foundations-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/tableau-desktop-foundations-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/tableau-desktop-foundations-exam-tips`, 'x-default': `${siteUrl}/tableau-desktop-foundations-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

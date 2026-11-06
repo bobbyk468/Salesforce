@@ -13,7 +13,10 @@ const pageDescription = `Review Salesforce passing scores from Associate and Spe
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-certification-passing-score` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-certification-passing-score`,
+    languages: { 'en-US': `${siteUrl}/salesforce-certification-passing-score`, 'x-default': `${siteUrl}/salesforce-certification-passing-score` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

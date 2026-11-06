@@ -23,7 +23,10 @@ const pageDescription = `B2C Commerce Architect study guide: exam sections, solu
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/b2c-commerce-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/b2c-commerce-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/b2c-commerce-architect-study-guide`, 'x-default': `${siteUrl}/b2c-commerce-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

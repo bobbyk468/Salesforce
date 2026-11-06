@@ -22,7 +22,10 @@ const pageDescription = `Salesforce Process Automation AP exam tips for ${RELEAS
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/process-automation-ap-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/process-automation-ap-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/process-automation-ap-exam-tips`, 'x-default': `${siteUrl}/process-automation-ap-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

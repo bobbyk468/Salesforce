@@ -56,7 +56,7 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
                   {item.name}
                 </span>
               ) : (
-                <Link href={item.url.replace(siteBaseUrl, '') || '/'} className="hover:text-salesforce-blue">
+                <Link href={item.url.replace(siteBaseUrl, '') || '/'} className="inline-block py-1 hover:text-salesforce-blue">
                   {item.name}
                 </Link>
               )}

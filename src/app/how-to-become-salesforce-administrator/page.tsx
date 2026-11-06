@@ -16,7 +16,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/how-to-become-salesforce-administrator` },
+  alternates: {
+    canonical: `${siteUrl}/how-to-become-salesforce-administrator`,
+    languages: { 'en-US': `${siteUrl}/how-to-become-salesforce-administrator`, 'x-default': `${siteUrl}/how-to-become-salesforce-administrator` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -13,7 +13,10 @@ const pageDescription = `Compare Salesforce associate exam costs, formats, first
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/salesforce-associate-certification-cost` },
+  alternates: {
+    canonical: `${siteUrl}/salesforce-associate-certification-cost`,
+    languages: { 'en-US': `${siteUrl}/salesforce-associate-certification-cost`, 'x-default': `${siteUrl}/salesforce-associate-certification-cost` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

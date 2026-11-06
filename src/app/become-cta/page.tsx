@@ -15,7 +15,10 @@ const ctaDescription =
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },
   description: ctaDescription,
-  alternates: { canonical: `${baseUrl}/become-cta` },
+  alternates: {
+    canonical: `${baseUrl}/become-cta`,
+    languages: { 'en-US': `${baseUrl}/become-cta`, 'x-default': `${baseUrl}/become-cta` },
+  },
   openGraph: {
     title: metadataTitle,
     description: ctaDescription,

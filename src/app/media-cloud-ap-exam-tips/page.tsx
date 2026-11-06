@@ -24,7 +24,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/media-cloud-ap-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/media-cloud-ap-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/media-cloud-ap-exam-tips`, 'x-default': `${siteUrl}/media-cloud-ap-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

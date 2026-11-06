@@ -19,7 +19,10 @@ const pageDescription = `Compare Platform Developer I and II by difficulty, cont
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/pd1-vs-pd2` },
+  alternates: {
+    canonical: `${siteUrl}/pd1-vs-pd2`,
+    languages: { 'en-US': `${siteUrl}/pd1-vs-pd2`, 'x-default': `${siteUrl}/pd1-vs-pd2` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

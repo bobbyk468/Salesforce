@@ -23,7 +23,10 @@ const pageDescription = `B2B Solution Architect study guide: cross-cloud B2B des
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/b2b-solution-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/b2b-solution-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/b2b-solution-architect-study-guide`, 'x-default': `${siteUrl}/b2b-solution-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

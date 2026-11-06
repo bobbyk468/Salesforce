@@ -21,7 +21,10 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/heroku-architect-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/heroku-architect-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/heroku-architect-exam-tips`, 'x-default': `${siteUrl}/heroku-architect-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

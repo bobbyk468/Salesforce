@@ -22,7 +22,10 @@ const pageDescription = `Strategy Designer study guide: review human-centred des
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/strategy-designer-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/strategy-designer-study-guide`,
+    languages: { 'en-US': `${siteUrl}/strategy-designer-study-guide`, 'x-default': `${siteUrl}/strategy-designer-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

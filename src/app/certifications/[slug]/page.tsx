@@ -39,6 +39,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       openGraph: base.openGraph ? { ...base.openGraph, title: testTitle } : base.openGraph,
       twitter: base.twitter ? { ...base.twitter, title: testTitle } : base.twitter,
       robots: { index: false, follow: true },
+      // No hreflang here: these aliases are noindex and canonicalize to the
+      // parent cert page, so a self-referencing annotation would be wrong.
+      alternates: { canonical: base.alternates?.canonical },
     }
   }
   if (slug === ADMINISTRATOR_SLUG) {

@@ -15,7 +15,10 @@ const pageDescription = `How to become a Salesforce Architect: path from ADM-201
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/how-to-become-salesforce-architect` },
+  alternates: {
+    canonical: `${siteUrl}/how-to-become-salesforce-architect`,
+    languages: { 'en-US': `${siteUrl}/how-to-become-salesforce-architect`, 'x-default': `${siteUrl}/how-to-become-salesforce-architect` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

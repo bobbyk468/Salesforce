@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   description: indexDescription,
   alternates: {
     canonical: `${baseUrl}/certifications`,
+    languages: { 'en-US': `${baseUrl}/certifications`, 'x-default': `${baseUrl}/certifications` },
   },
   openGraph: {
     title: indexTitle,

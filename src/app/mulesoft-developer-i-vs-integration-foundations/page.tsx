@@ -14,7 +14,10 @@ const pageDescription = 'Compare MuleSoft Developer I and Integration Foundation
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/mulesoft-developer-i-vs-integration-foundations` },
+  alternates: {
+    canonical: `${siteUrl}/mulesoft-developer-i-vs-integration-foundations`,
+    languages: { 'en-US': `${siteUrl}/mulesoft-developer-i-vs-integration-foundations`, 'x-default': `${siteUrl}/mulesoft-developer-i-vs-integration-foundations` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

@@ -23,7 +23,10 @@ const pageDescription = `Salesforce OmniStudio Developer exam tips for ${RELEASE
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/omnistudio-developer-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/omnistudio-developer-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/omnistudio-developer-exam-tips`, 'x-default': `${siteUrl}/omnistudio-developer-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

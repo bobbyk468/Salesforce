@@ -23,7 +23,10 @@ const pageDescription = `Technical Architect tips for ${RELEASE_CURRENT}: review
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/technical-architect-exam-tips` },
+  alternates: {
+    canonical: `${siteUrl}/technical-architect-exam-tips`,
+    languages: { 'en-US': `${siteUrl}/technical-architect-exam-tips`, 'x-default': `${siteUrl}/technical-architect-exam-tips` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

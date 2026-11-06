@@ -23,7 +23,10 @@ const pageDescription = `B2C Solution Architect study guide: Commerce Cloud, Mar
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/b2c-solution-architect-study-guide` },
+  alternates: {
+    canonical: `${siteUrl}/b2c-solution-architect-study-guide`,
+    languages: { 'en-US': `${siteUrl}/b2c-solution-architect-study-guide`, 'x-default': `${siteUrl}/b2c-solution-architect-study-guide` },
+  },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
