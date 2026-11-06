@@ -139,7 +139,7 @@ export default function TeamPage() {
                 href="https://www.linkedin.com/in/krishna-mohan-879b94100/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-salesforce-blue font-medium hover:underline"
+                className="inline-flex items-center gap-1 py-1 text-sm text-salesforce-blue font-medium hover:underline"
                 aria-label="Krishna Mohan LinkedIn profile"
               >
                 LinkedIn <ExternalLink className="h-3.5 w-3.5" />
@@ -148,7 +148,7 @@ export default function TeamPage() {
                 href="https://www.salesforce.com/trailblazer/krishnamohan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-sm text-salesforce-blue font-medium hover:underline"
+                className="inline-flex items-center gap-1 py-1 text-sm text-salesforce-blue font-medium hover:underline"
                 aria-label="Krishna Mohan Trailblazer profile, verified Salesforce credentials"
               >
                 Trailblazer.me <ExternalLink className="h-3.5 w-3.5" />
