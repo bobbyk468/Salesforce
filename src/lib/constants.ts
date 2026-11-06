@@ -9,6 +9,9 @@ export const SITE_DEFAULT_TITLE = `Free Salesforce Exam Practice Tests | ${SITE_
 export const SITE_DEFAULT_DESCRIPTION =
   'Free Salesforce practice exams and study guides for Admin, Developer, Consultant, Architect, MuleSoft and Tableau certifications.'
 
+/** Site author/reviewer, used for Person-scoped social labels. */
+export const AUTHOR_NAME = 'Krishna Mohan'
+
 /** Shown on cert pages and About for E-E-A-T; update when content is refreshed. */
 export const CONTENT_LAST_UPDATED = RELEASE_DATE_DISPLAY
 
@@ -26,16 +29,30 @@ export type SocialProfile = {
   label: string
   /** Live profile URL, or '' while the profile does not exist yet. */
   url: string
+  /**
+   * Which entity the profile belongs to. Every active profile is linked
+   * from the footer, but only `organization` profiles go into the
+   * Organization `sameAs`: a founder's personal account identifies a
+   * Person, and listing it as the company would conflate two entities.
+   * Personal profiles belong in the Person `sameAs` in schema-data.ts.
+   */
+  scope: 'organization' | 'person'
 }
 
 export const SOCIAL_PROFILES: SocialProfile[] = [
-  { key: 'x', label: '@trailblazeprep', url: 'https://x.com/trailblazeprep' },
-  // Paste the company page URL here once it is live, e.g.
-  // 'https://www.linkedin.com/company/trailblazeprep'
-  { key: 'linkedin', label: 'LinkedIn', url: '' },
-  { key: 'youtube', label: 'YouTube', url: '' },
-  { key: 'instagram', label: 'Instagram', url: '' },
-  { key: 'facebook', label: 'Facebook', url: '' },
+  { key: 'x', label: '@trailblazeprep', url: 'https://x.com/trailblazeprep', scope: 'organization' },
+  // Krishna Mohan's personal profile: already the Person `sameAs` in
+  // schema-data.ts. Swap in a /company/ page here, as scope
+  // 'organization', if Trailblaze Prep ever gets one of its own.
+  {
+    key: 'linkedin',
+    label: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+    scope: 'person',
+  },
+  { key: 'youtube', label: 'YouTube', url: '', scope: 'organization' },
+  { key: 'instagram', label: 'Instagram', url: '', scope: 'organization' },
+  { key: 'facebook', label: 'Facebook', url: '', scope: 'organization' },
 ]
 
 /** Only the profiles that actually exist, in config order. */
@@ -43,5 +60,10 @@ export const ACTIVE_SOCIAL_PROFILES: SocialProfile[] = SOCIAL_PROFILES.filter(
   (profile) => profile.url.trim().length > 0
 )
 
-/** Social profile URLs for Organization schema (`sameAs`). */
-export const SOCIAL_LINKS: string[] = ACTIVE_SOCIAL_PROFILES.map((p) => p.url)
+/**
+ * Organization `sameAs` URLs only. Personal profiles are excluded on
+ * purpose; they identify a Person, not the company.
+ */
+export const SOCIAL_LINKS: string[] = ACTIVE_SOCIAL_PROFILES.filter(
+  (profile) => profile.scope === 'organization'
+).map((profile) => profile.url)

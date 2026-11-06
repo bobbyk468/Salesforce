@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Award, Mail, ExternalLink, MessageCircle } from 'lucide-react'
-import { ACTIVE_SOCIAL_PROFILES, CONTACT_EMAIL, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
+import { ACTIVE_SOCIAL_PROFILES, AUTHOR_NAME, CONTACT_EMAIL, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
 import type { SocialProfile } from '@/lib/constants'
 
 /** Brand glyphs, keyed to match SOCIAL_PROFILES. */
@@ -238,7 +238,9 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-1 py-1 text-gray-300 hover:text-salesforce-light"
-                aria-label={`${SITE_NAME} on ${profile.key === 'x' ? 'X (Twitter)' : profile.label}`}
+                aria-label={`${profile.scope === 'person' ? AUTHOR_NAME : SITE_NAME} on ${
+                  profile.key === 'x' ? 'X (Twitter)' : profile.label
+                }`}
               >
                 <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d={SOCIAL_ICON_PATHS[profile.key]} />
