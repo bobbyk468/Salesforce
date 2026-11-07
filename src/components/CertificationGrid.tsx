@@ -34,6 +34,35 @@ export default function CertificationGrid({
           </p>
         </div>
 
+        {/*
+          Jump bar. Plain anchors to the role sections below, server-rendered,
+          so they work without JavaScript and give crawlers a visible table of
+          contents for the page. They target the existing
+          `certification-track-<slug>` ids rather than bare `#associate` ones:
+          the prefix keeps them from colliding with any other id on a page
+          this long, and nothing else links to the bare form.
+        */}
+        <nav aria-label="Jump to a certification track" className="mb-10">
+          <p className="mb-3 text-center text-sm font-semibold uppercase tracking-wider text-gray-500">
+            Jump to role track
+          </p>
+          <ul className="flex flex-wrap justify-center gap-2">
+            {categories.map((category) => (
+              <li key={category.slug}>
+                <a
+                  href={`#certification-track-${category.slug}`}
+                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 transition-colors hover:border-salesforce-blue hover:text-salesforce-blue"
+                >
+                  {category.name}
+                  <span className="rounded-full bg-gray-100 px-1.5 py-0.5 text-xs text-gray-600">
+                    {category.certs.length}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         {categories.map((category) => (
           <section key={category.slug} id={`certification-track-${category.slug}`} className="mb-12 last:mb-0" aria-labelledby={`certification-track-${category.slug}-heading`}>
             <h2 id={`certification-track-${category.slug}-heading`} className="mb-5 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900">

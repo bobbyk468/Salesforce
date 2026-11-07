@@ -4,6 +4,7 @@ import { ExternalLink, Award, CheckCircle } from 'lucide-react'
 import { SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import LastUpdated from '@/components/LastUpdated'
+import { EDITORIAL_CREDENTIALS } from '@/lib/editorial-credentials'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Editorial Team | ${SITE_NAME}`
@@ -36,22 +37,8 @@ const breadcrumbItems = [
   { name: 'Team', url: '/team' },
 ]
 
-const CERTIFICATIONS = [
-  { label: 'Salesforce Certified Administrator (ADM-201)', abbr: 'ADM-201' },
-  { label: 'Salesforce Certified Platform Administrator II', abbr: 'Advanced Admin' },
-  { label: 'Salesforce Certified Platform Developer', abbr: 'PD1' },
-  { label: 'Salesforce Certified Platform Developer II', abbr: 'PD2' },
-  { label: 'Salesforce Certified Platform App Builder', abbr: 'App Builder' },
-  { label: 'Salesforce Certified Agentforce Sales Consultant', abbr: 'Sales Cloud' },
-  { label: 'Salesforce Certified Agentforce Service Consultant', abbr: 'Service Cloud' },
-  { label: 'Salesforce Certified Experience Cloud Consultant', abbr: 'Experience Cloud' },
-  { label: 'Salesforce Certified Marketing Cloud Engagement Specialist', abbr: 'MC Email' },
-  { label: 'Salesforce Certified Business Analyst', abbr: 'Business Analyst' },
-  { label: 'Salesforce Certified JavaScript Developer', abbr: 'JS Dev I' },
-  { label: 'Salesforce Certified Data Cloud Consultant', abbr: 'Data Cloud' },
-  { label: 'Salesforce Certified Agentforce Specialist', abbr: 'Agentforce' },
-  { label: 'Salesforce Certified MuleSoft Integration Foundations', abbr: 'MuleSoft' },
-]
+/** Shared with the homepage credentials block so the two cannot drift. */
+const CERTIFICATIONS = EDITORIAL_CREDENTIALS
 
 export default function TeamPage() {
   const webPageJsonLd = getWebPageJsonLd({

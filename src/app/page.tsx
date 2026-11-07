@@ -8,12 +8,14 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import LastUpdated from '@/components/LastUpdated'
+import EditorialCredentials from '@/components/EditorialCredentials'
+import { REVIEWER, getCredentialJsonLd } from '@/lib/editorial-credentials'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Salesforce Certifications List: Free Practice Tests & Guides' },
-  description: 'Browse the complete 2026 Salesforce certification list with free practice questions, study guides, pass marks, exam fees, and prerequisite details by role.',
+  title: { absolute: 'Salesforce Certifications: Free Practice Questions & Guides' },
+  description: '2026 Salesforce certification list with free practice questions, study guides, pass mark, exam fee, and prerequisites for all 91 Salesforce certifications.',
   alternates: {
     canonical: siteUrl,
     languages: { 'en-US': siteUrl, 'x-default': siteUrl },
@@ -222,11 +224,31 @@ const faqItems = [
 export default async function Home() {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'EducationalOrganization',
     name: 'Trailblaze Prep',
     url: siteUrl,
     description:
       'Independent Salesforce certification preparation resource: practice questions, section-wise exam weightage, and study guides for Admin, Developer, Consultant, Architect, and more.',
+    knowsAbout: [
+      'Salesforce certification',
+      'Salesforce Administration',
+      'Salesforce Development',
+      'Salesforce Architecture',
+      'Marketing Cloud',
+      'MuleSoft',
+      'Tableau',
+      'Agentforce',
+    ],
+    // The reviewer's credentials, from the same source the visible block and
+    // /team render, so the structured and visible claims always match.
+    founder: {
+      '@type': 'Person',
+      name: REVIEWER.name,
+      jobTitle: REVIEWER.jobTitle,
+      url: `${siteUrl}/team`,
+      sameAs: [REVIEWER.profileUrl, REVIEWER.linkedInUrl],
+      hasCredential: getCredentialJsonLd(),
+    },
   }
 
   const webSiteJsonLd = {
@@ -283,6 +305,80 @@ export default async function Home() {
       <div className="bg-gray-50">
         <CertificationGrid categories={certificationGrid} headingLevel="h1" />
       </div>
+
+      {/*
+        Explains the four figures on every card. Written because readers ask
+        what they mean, and it happens to carry the keyword set the audit
+        wanted aligned between title, description and headings.
+      */}
+      <section className="bg-white px-4 py-16" aria-labelledby="reading-the-data-heading">
+        <div className="mx-auto max-w-3xl">
+          <h2 id="reading-the-data-heading" className="text-2xl font-bold text-gray-900 md:text-3xl">
+            Salesforce Certification Pass Mark, Exam Fee &amp; Prerequisites Guide
+          </h2>
+          <p className="mt-4 text-gray-700">
+            Every card above shows the same four figures, taken from the official exam
+            pages. Here is what each one means when you are choosing a Salesforce
+            certification to sit.
+          </p>
+          <dl className="mt-6 space-y-4 text-gray-700">
+            <div>
+              <dt className="font-semibold text-gray-900">Pass mark</dt>
+              <dd>
+                The percentage you must score to pass. It is set per exam and is not
+                curved, so a 65% pass mark means 65% of the scored questions. Pass marks
+                are published in each credential&apos;s official exam guide rather than on
+                the certification pages, so confirm yours there before booking.
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Exam fee and retake fee</dt>
+              <dd>
+                The exam fee is the first-attempt registration cost in USD, before local
+                taxes. The retake fee is normally half the exam fee; the $75 entry-level
+                exams retake free. Fees change, so treat ours as a guide and check the
+                official page linked on each card.
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Prerequisites</dt>
+              <dd>
+                Most Salesforce certifications have no formal prerequisites, only
+                recommended experience. A handful genuinely require another credential
+                first, and two more are awarded for passing a set of component exams
+                rather than one of their own. The cards distinguish all three cases.
+              </dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Questions and time</dt>
+              <dd>
+                The scored question count and the time allowed. Most exams also include
+                up to five unscored trial questions that do not count towards your result
+                but do consume your time.
+              </dd>
+            </div>
+          </dl>
+
+          <h2 className="mt-12 text-2xl font-bold text-gray-900 md:text-3xl">
+            How to Use Our Salesforce Free Practice Questions &amp; Study Guides
+          </h2>
+          <p className="mt-4 text-gray-700">
+            Each certification above links to free practice questions with explanations,
+            and many also link to a study guide. There is no sign-up and no paywall. The
+            practice questions are exam-style material aligned to the published exam
+            outline, not real exam content, so use them to find the topics you are weak
+            on rather than as a predictor of your score.
+          </p>
+          <p className="mt-3 text-gray-700">
+            A workable order for most people: read the study guide for the Salesforce
+            certification you are targeting, work the practice questions until the
+            explanations stop surprising you, then confirm the current exam objectives
+            and fees on the official page before you book.
+          </p>
+        </div>
+      </section>
+
+      <EditorialCredentials />
 
       <div className="bg-gray-50 px-4 pb-12">
         <div className="mx-auto max-w-3xl">
