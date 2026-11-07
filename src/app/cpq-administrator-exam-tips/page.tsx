@@ -20,7 +20,7 @@ const slug = 'cpq-administrator'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Prepare for Salesforce CPQ Specialist with product catalog, pricing rules, quote configuration, and focused exam guidance.'
+  'Prepare for Salesforce CPQ Administrator (formerly CPQ Specialist) with product catalog, pricing rules, and focused exam guidance.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

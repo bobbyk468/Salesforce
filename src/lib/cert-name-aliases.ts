@@ -19,6 +19,10 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     primaryName: 'Salesforce Certified Platform Administrator',
     formerName: 'Salesforce Certified Administrator',
   },
+  'cpq-administrator': {
+    primaryName: 'Salesforce Certified CPQ Administrator',
+    formerName: 'Salesforce Certified CPQ Specialist',
+  },
   'advanced-administrator': {
     primaryName: 'Salesforce Certified Platform Administrator II',
     formerName: 'Salesforce Certified Advanced Administrator',

@@ -228,7 +228,7 @@ export default function RevenueCloudConsultantExamTipsPage() {
             Revenue Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/cpq-administrator-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            CPQ Specialist Tips
+            CPQ Administrator Tips
           </Link>
           <Link href="/consultant-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Consultant Certification Path
