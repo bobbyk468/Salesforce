@@ -304,20 +304,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">
-            {/* Who Is This Cert For */}
-            <section className="mb-8 rounded-xl border border-gray-100 bg-gray-50/50 p-5 sm:p-6">
-              <h2 className="text-lg font-bold text-gray-900 mb-3">Who is the Platform Developer I exam for?</h2>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li><strong className="text-gray-900">Developers new to Salesforce:</strong> You have programming experience in Java, JavaScript, or another language and want to build on the Salesforce platform using Apex and LWC.</li>
-                <li><strong className="text-gray-900">Admins transitioning to development:</strong> You passed ADM-201 and want to move beyond declarative tools into custom code, triggers, and integrations.</li>
-                <li><strong className="text-gray-900">Full-stack developers at SI partners:</strong> Your firm requires PD1 certification for project staffing, and you need to validate Salesforce-specific development skills.</li>
-              </ul>
-            </section>
-
-            {/* Exam Fees & Registration section */}
-            <ExamFeesSection slug={slug} />
-            <OfficialSourceRef slug={slug} />
-
+            {/* CertificationCard carries the H1, so it leads the main content. */}
             <CertificationCard
               slug={slug}
             title={slugToDisplayName(slug)}
@@ -347,6 +334,20 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           />
 
         <LastUpdated />
+
+            {/* Who Is This Cert For */}
+            <section className="mb-8 rounded-xl border border-gray-100 bg-gray-50/50 p-5 sm:p-6">
+              <h2 className="text-lg font-bold text-gray-900 mb-3">Who is the Platform Developer I exam for?</h2>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li><strong className="text-gray-900">Developers new to Salesforce:</strong> You have programming experience in Java, JavaScript, or another language and want to build on the Salesforce platform using Apex and LWC.</li>
+                <li><strong className="text-gray-900">Admins transitioning to development:</strong> You passed ADM-201 and want to move beyond declarative tools into custom code, triggers, and integrations.</li>
+                <li><strong className="text-gray-900">Full-stack developers at SI partners:</strong> Your firm requires PD1 certification for project staffing, and you need to validate Salesforce-specific development skills.</li>
+              </ul>
+            </section>
+
+            {/* Exam Fees & Registration section */}
+            <ExamFeesSection slug={slug} />
+            <OfficialSourceRef slug={slug} />
 
           <div id="exam-prep">
             <ExamPrepContent slug={slug} />

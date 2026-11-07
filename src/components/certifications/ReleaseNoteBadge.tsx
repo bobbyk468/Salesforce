@@ -12,7 +12,12 @@ export default function ReleaseNoteBadge() {
       <div className="flex items-start gap-3">
         <Sparkles className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-gray-900">Independent study resource</h3>
+          {/*
+            Deliberately a <p>, not a heading. This is a trust badge that sits
+            above the page H1; as an <h3> it made the document outline start at
+            level 3, which SEO crawlers flag as a broken heading structure.
+          */}
+          <p className="text-lg font-bold text-gray-900">Independent study resource</p>
           <p className="mt-1 text-sm text-gray-600">Exam objectives and policies can change. Confirm current details with the certification issuer.</p>
         </div>
       </div>

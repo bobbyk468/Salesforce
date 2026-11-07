@@ -291,11 +291,12 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
       </div>
 
       <CertificationPageShell tocSections={tocSections}>
-        {body.whoIsThisFor && <WhoIsThisForSection data={hideExamDetails || retired ? { ...body.whoIsThisFor, heading: retired ? 'Who may use this historical learning reference?' : 'Who may find these learning topics useful?' } : body.whoIsThisFor} />}
-
-        <ExamFeesSection slug={slug} />
-        <OfficialSourceRef slug={slug} />
-
+        {/*
+          CertificationCard carries the page H1, so it leads the main content.
+          It used to sit below "Who is this for" and the fees table, which put
+          the H1 roughly three screens down and left the document outline
+          starting at H2.
+        */}
         <CertificationCard
           slug={slug}
           title={title}
@@ -310,6 +311,11 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         />
 
         <LastUpdated />
+
+        {body.whoIsThisFor && <WhoIsThisForSection data={hideExamDetails || retired ? { ...body.whoIsThisFor, heading: retired ? 'Who may use this historical learning reference?' : 'Who may find these learning topics useful?' } : body.whoIsThisFor} />}
+
+        <ExamFeesSection slug={slug} />
+        <OfficialSourceRef slug={slug} />
 
         {!hideExamDetails && !retired && <div id="exam-prep"><ExamPrepContent slug={slug} /></div>}
 
@@ -467,11 +473,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
       </div>
 
       <CertificationPageShell tocSections={body.tocSections.filter((section) => section.id !== 'difficulty-heatmap')}>
-        {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
-
-        <ExamFeesSection slug={slug} />
-        <OfficialSourceRef slug={slug} />
-
+        {/* H1 first — see the note on the other shell above. */}
         <CertificationCard
           slug={slug}
           title={title}
@@ -484,6 +486,11 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
           examWeightageHeading={getCertExamWeightageHeading(slug)}
           componentExams={card.componentExams}
         />
+
+        {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
+
+        <ExamFeesSection slug={slug} />
+        <OfficialSourceRef slug={slug} />
 
         <div id="exam-prep">
           <ExamPrepContent slug={slug} />
