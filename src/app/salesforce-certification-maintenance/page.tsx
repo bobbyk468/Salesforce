@@ -74,7 +74,7 @@ export default function SalesforceCertificationMaintenancePage() {
           </p>
           <p className="text-sm text-red-700 mt-0.5">
             Deadline to complete: <strong>April 16, 2027.</strong> Log in to{' '}
-            <a href="https://trailhead.salesforce.com" target="_blank" rel="noopener noreferrer" className="underline">
+            <a href="https://trailhead.salesforce.com" target="_blank" rel="noopener noreferrer nofollow" className="underline">
               Trailhead
             </a>
             {' '}and check your Credentials tab to see which modules are pending for your certifications.

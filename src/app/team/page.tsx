@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import { ExternalLink, Award, CheckCircle } from 'lucide-react'
-import { CONTACT_EMAIL, SITE_NAME } from '@/lib/constants'
+import { SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -138,7 +138,7 @@ export default function TeamPage() {
               <a
                 href="https://www.linkedin.com/in/krishna-mohan-879b94100/"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center gap-1 py-1 text-sm text-salesforce-blue font-medium hover:underline"
                 aria-label="Krishna Mohan LinkedIn profile"
               >
@@ -147,7 +147,7 @@ export default function TeamPage() {
               <a
                 href="https://www.salesforce.com/trailblazer/krishnamohan"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener noreferrer nofollow"
                 className="inline-flex items-center gap-1 py-1 text-sm text-salesforce-blue font-medium hover:underline"
                 aria-label="Krishna Mohan Trailblazer profile, verified Salesforce credentials"
               >
@@ -216,10 +216,10 @@ export default function TeamPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-semibold text-gray-900">Contact the editorial team</h2>
         <p className="text-gray-700 text-sm">
-          Found an error, have a question, or want to suggest a topic? Reach us at{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue font-medium hover:underline">
-            {CONTACT_EMAIL}
-          </a>
+          Found an error, have a question, or want to suggest a topic? Use the{' '}
+          <Link href="/contact#contact-form" className="text-salesforce-blue font-medium hover:underline">
+            contact form
+          </Link>
           .
         </p>
         <p className="text-gray-700 text-sm">

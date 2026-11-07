@@ -39,7 +39,7 @@ export default function FloatingContactButtons() {
         <a
           href={WHATSAPP_LINK}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow noopener noreferrer"
           aria-label="Chat on WhatsApp"
           className="w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95"
           style={{ backgroundColor: '#25D366' }}

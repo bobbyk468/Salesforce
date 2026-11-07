@@ -1,6 +1,6 @@
 import Link from '@/components/AppLink'
 import { Award, Mail, ExternalLink } from 'lucide-react'
-import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
+import { CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -46,7 +46,7 @@ export default function AboutPage() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      email: CONTACT_EMAIL,
+      url: `${baseUrl}/contact`,
     },
     ...(SOCIAL_LINKS.length > 0 ? { sameAs: SOCIAL_LINKS.filter(Boolean) } : {}),
   }
@@ -154,15 +154,15 @@ export default function AboutPage() {
           Contact and identity
         </h2>
         <p className="text-gray-700">
-          Reach us at{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue font-medium hover:underline">
-            {CONTACT_EMAIL}
-          </a>
+          Reach us through the{' '}
+          <Link href="/contact#contact-form" className="text-salesforce-blue font-medium hover:underline">
+            contact form
+          </Link>
           . We welcome feedback and questions. For official certification info and Trailhead, see{' '}
           <a
             href="https://www.salesforce.com/trailblazer/certification"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             className="text-salesforce-blue font-medium hover:underline inline-flex items-center gap-1"
           >
             Salesforce Trailblazer Certification

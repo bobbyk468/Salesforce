@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from 'lucide-react'
-import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
+import { WHATSAPP_LINK } from '@/lib/constants'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -471,9 +471,9 @@ function ContactPageContent() {
                     <Mail className="h-6 w-6 text-salesforce-blue" />
                   </div>
                   <div className="ml-4 min-w-0">
-                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <a href={`mailto:${CONTACT_EMAIL}`} className="inline-block py-1 break-all text-blue-800 underline hover:no-underline">
-                      {CONTACT_EMAIL}
+                    <h3 className="text-lg font-semibold text-gray-900">Send a message</h3>
+                    <a href="#contact-form" className="inline-block py-1 text-blue-800 underline hover:no-underline">
+                      Use the contact form
                     </a>
                   </div>
                 </div>
@@ -487,7 +487,7 @@ function ContactPageContent() {
                     <a
                       href={WHATSAPP_LINK}
                       target="_blank"
-                      rel="noopener noreferrer"
+                      rel="nofollow noopener noreferrer"
                       className="inline-block py-1 text-green-700 underline hover:no-underline font-medium"
                     >
                       Chat with us directly

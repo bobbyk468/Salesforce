@@ -154,12 +154,12 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
         segments: [
           {
             type: 'text',
-            text: 'Want to ensure you pass on your first try? Contact us for more information on our full 60-question mock exams and a personalized study plan. You can also reach out to ',
+            text: 'Contact us for more information on our full 60-question mock exams and a personalized study plan. Use the ',
           },
           {
             type: 'link',
-            href: 'mailto:km.krishnamohan25@gmail.com',
-            label: 'km.krishnamohan25@gmail.com',
+            href: '/contact#contact-form',
+            label: 'contact form',
           },
           { type: 'text', text: ' and mention DEV-402.' },
         ],

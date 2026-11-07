@@ -3,7 +3,14 @@ export interface FaqItem {
   answer: string
 }
 
-export default function FaqAccordion({ items }: { items: FaqItem[] }) {
+export default function FaqAccordion({
+  items,
+  questionHeadingLevel = 'div',
+}: {
+  items: FaqItem[]
+  questionHeadingLevel?: 'h3' | 'div'
+}) {
+  const QuestionHeading = questionHeadingLevel
   return (
     <div className="space-y-3">
       {items.map((item, index) => (
@@ -13,7 +20,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
             aria-controls={`faq-answer-${index}`}
             id={`faq-question-${index}`}
           >
-            <span>{item.question}</span>
+            <QuestionHeading className="m-0 text-base font-semibold text-gray-900">{item.question}</QuestionHeading>
             <span
               className="h-5 w-5 flex-shrink-0 text-gray-600 transition-transform group-open:rotate-180"
               aria-hidden="true"

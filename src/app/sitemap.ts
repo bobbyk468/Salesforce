@@ -17,11 +17,7 @@ const noindexPracticeTestPaths = new Set([
   '/certifications/administrator-practice-test',
   '/certifications/email-specialist-practice-test',
 ])
-const rawBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const baseUrl = rawBaseUrl.replace(
-  /^(https?:\/\/)(?!www\.)trailblazeprep\.com/,
-  '$1www.trailblazeprep.com',
-)
+const baseUrl = 'https://www.trailblazeprep.com'
 
 export const dynamic = 'force-static'
 

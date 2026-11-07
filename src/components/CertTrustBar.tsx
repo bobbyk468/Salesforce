@@ -17,7 +17,7 @@ export default function CertTrustBar({ slug }: CertTrustBarProps) {
         Editorial policy
       </Link>
       {examGuideUrl ? (
-        <a href={examGuideUrl} target="_blank" rel="noopener noreferrer" className="inline-block py-1 text-salesforce-blue hover:underline">
+        <a href={examGuideUrl} target="_blank" rel="nofollow noopener noreferrer" className="inline-block py-1 text-salesforce-blue hover:underline">
           Confirm current details in the official guide
         </a>
       ) : (

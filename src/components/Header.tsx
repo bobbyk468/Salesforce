@@ -74,8 +74,10 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav aria-label="Primary" className="hidden lg:flex items-center gap-1">
-            <details ref={certsRef} className="relative">
+          <nav aria-label="Primary" className="hidden lg:block">
+            <ul className="flex items-center gap-1">
+            <li>
+              <details ref={certsRef} className="relative">
               <summary className="nav-link inline-flex items-center gap-1 px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm cursor-pointer list-none select-none">
                 <span>Certifications</span>
                 <ChevronDown className="h-4 w-4 opacity-70" aria-hidden="true" />
@@ -97,27 +99,37 @@ export default function Header() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-2 border-t border-gray-100 pt-2">
-                  <Link
-                    href="/certifications"
-                    onClick={closeAll}
-                    className="block rounded-lg px-3 py-2 text-sm font-semibold text-salesforce-blue hover:bg-salesforce-blue/10"
-                  >
-                    All certifications &rarr;
-                  </Link>
-                </div>
+                <ul className="mt-2 border-t border-gray-100 pt-2">
+                  <li>
+                    <Link
+                      href="/certifications"
+                      onClick={closeAll}
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold text-salesforce-blue hover:bg-salesforce-blue/10"
+                    >
+                      All certifications &rarr;
+                    </Link>
+                  </li>
+                </ul>
               </div>
-            </details>
+              </details>
+            </li>
 
-            <Link href="/certification-path" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
-              Cert Path
-            </Link>
-            <Link href="/become-cta" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
-              Become a CTA
-            </Link>
-            <Link href="/contact" className="ml-2 px-4 py-2.5 bg-salesforce-blue text-white rounded-lg font-semibold text-sm hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">
-              Contact Us
-            </Link>
+              <li>
+                <Link href="/certification-path" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
+                  Cert Path
+                </Link>
+              </li>
+              <li>
+                <Link href="/become-cta" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
+                  Become a CTA
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="ml-2 px-4 py-2.5 bg-salesforce-blue text-white rounded-lg font-semibold text-sm hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
           </nav>
 
           {/* Mobile hamburger; the panel is only mounted after the first tap */}
@@ -134,18 +146,23 @@ export default function Header() {
             </button>
 
             {mobileOpen && (
-              <div className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 z-50">
+              <nav aria-label="Mobile navigation" className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 z-50">
                 <div className="space-y-2">
-                  {primaryLinks.map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={closeAll}
-                      className="flex min-h-11 items-center rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue"
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+                  <ul className="space-y-2">
+                    {primaryLinks.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          onClick={closeAll}
+                          className="flex min-h-11 items-center rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                  <ul>
+                    <li>
                   <Link
                     href="/contact"
                     onClick={closeAll}
@@ -153,16 +170,21 @@ export default function Header() {
                   >
                     Contact Us
                   </Link>
+                    </li>
+                  </ul>
                 </div>
 
                 <p className="mt-4 mb-2 text-xs font-semibold text-gray-600 uppercase tracking-wider">Choose your role</p>
+                <ul>
                 {CERTIFICATION_CATEGORIES.map((category) => (
-                  <details key={category.slug} className="py-1">
+                  <li key={category.slug}>
+                  <details className="py-1">
                     <summary className="flex min-h-11 items-center justify-between w-full py-2 text-left font-medium text-gray-700 cursor-pointer list-none">
                       <span>{category.name}</span>
                       <ChevronDown className="h-4 w-4 opacity-70" aria-hidden="true" />
                     </summary>
-                    <div className="pl-3 space-y-0.5 max-h-60 overflow-y-auto">
+                    <ul className="pl-3 space-y-0.5 max-h-60 overflow-y-auto">
+                      <li>
                       <Link
                         href={`/certifications/role/${category.slug}`}
                         onClick={closeAll}
@@ -170,20 +192,24 @@ export default function Header() {
                       >
                         All {category.name} certifications
                       </Link>
+                      </li>
                       {category.items.map((item) => (
-                        <Link
-                          key={item.href}
-                          href={item.href}
-                          onClick={closeAll}
-                          className="flex min-h-11 items-center text-sm text-gray-600 hover:text-salesforce-blue"
-                        >
-                          {item.name}
-                        </Link>
+                        <li key={item.href}>
+                          <Link
+                            href={item.href}
+                            onClick={closeAll}
+                            className="flex min-h-11 items-center text-sm text-gray-600 hover:text-salesforce-blue"
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </details>
+                  </li>
                 ))}
-              </div>
+                </ul>
+              </nav>
             )}
           </div>
         </div>

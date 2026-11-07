@@ -1,7 +1,7 @@
 import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
 
 /** Keep the server-rendered sample and Quiz structured data in sync. */
-export const INITIAL_PRACTICE_QUESTION_COUNT = 5
+export const INITIAL_PRACTICE_QUESTION_COUNT = 10
 
 /** Counts for question sets loaded only after the reader asks for the full set. */
 export const DEFERRED_PRACTICE_QUESTION_COUNTS = {

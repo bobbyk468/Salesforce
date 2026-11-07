@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { Mail, Send, CheckCircle, MessageCircle } from 'lucide-react'
-import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
+import { WHATSAPP_LINK } from '@/lib/constants'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
 // Get all unique certification names for autocomplete
@@ -239,7 +239,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
             <h2 className="font-bold text-lg">Contact Us</h2>
           </div>
           <p className="text-white text-sm mt-1">
-            Questions? We’ll reply to <span className="font-medium">{CONTACT_EMAIL}</span>
+            Questions? Send a message with the form below.
           </p>
         </div>
         <div className="p-4">
@@ -394,18 +394,13 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
             <a
               href={WHATSAPP_LINK}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0D7B4A] text-white rounded-lg font-semibold text-sm hover:bg-[#0A6940] transition-colors"
             >
               <MessageCircle className="h-4 w-4" />
               Chat on WhatsApp
             </a>
-            <p className="text-xs text-gray-600 text-center">
-              Or email directly:{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue font-medium hover:underline">
-                {CONTACT_EMAIL}
-              </a>
-            </p>
+            <p className="text-xs text-gray-600 text-center">Use the form above for a reply.</p>
           </div>
         </div>
       </div>

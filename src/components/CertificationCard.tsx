@@ -3,6 +3,9 @@ import type { ExamSection } from '@/lib/exam-weightage-data'
 import DifficultyBadge from '@/components/DifficultyBadge'
 import PrerequisiteAlert from '@/components/PrerequisiteAlert'
 import { hasUnverifiedClaudeExamDetails, isUnavailableCredentialExam } from '@/lib/credential-status'
+import { CERT_PREREQUISITES } from '@/lib/cert-prerequisites'
+import { getExamLogistics, slugToDisplayName } from '@/lib/cert-seo-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 export interface ComponentExam {
   name: string
@@ -54,6 +57,14 @@ export default function CertificationCard({
 }: CertificationCardProps) {
   const hideExamDetails = hasUnverifiedClaudeExamDetails(slug)
   const retired = isUnavailableCredentialExam(slug)
+  const logistics = getExamLogistics(slug)
+  const prerequisites = CERT_PREREQUISITES[slug]
+  const required = prerequisites?.requiredPrerequisites ?? (prerequisites?.requiredPrerequisite ? [prerequisites.requiredPrerequisite] : [])
+  const prerequisiteText = required.length
+    ? required.map(slugToDisplayName).join(', ')
+    : prerequisites?.recommendedPrerequisite
+      ? `Recommended preparation: ${slugToDisplayName(prerequisites.recommendedPrerequisite)}`
+      : 'No prerequisite listed in this guide'
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-blue-100 cert-card [content-visibility:auto] [contain-intrinsic-size:auto_400px]">
       {/* Header: heading with exam name and primary keyword for SEO */}
@@ -100,23 +111,27 @@ export default function CertificationCard({
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-            <div className="bg-blue-50 rounded-lg p-4 text-center border border-blue-100">
-              <div className="text-2xl font-bold text-gray-900">{examDetails.questions}</div>
-              <div className="text-sm text-gray-600 mt-1 font-medium">Questions</div>
-            </div>
-            <div className="bg-emerald-50 rounded-lg p-4 text-center border border-emerald-100">
-              <div className="text-2xl font-bold text-gray-900">{examDetails.passingScore}</div>
-              <div className="text-sm text-gray-600 mt-1 font-medium">Passing Score</div>
-            </div>
-            <div className="bg-amber-50 rounded-lg p-4 text-center border border-amber-100">
-              <div className="text-2xl font-bold text-gray-900">{examDetails.duration}</div>
-              <div className="text-sm text-gray-600 mt-1 font-medium">Duration</div>
-            </div>
-            <div className="bg-violet-50 rounded-lg p-4 text-center border border-violet-100">
-              <div className="text-2xl font-bold text-gray-900">{examDetails.cost}</div>
-              <div className="text-sm text-gray-600 mt-1 font-medium">Exam Fee</div>
-            </div>
+          <div className="mb-6 overflow-x-auto rounded-lg border border-blue-100">
+            <table className="w-full border-collapse text-left text-sm">
+              <caption className="bg-blue-50 px-4 py-3 text-left font-semibold text-gray-900">{title} exam quick facts</caption>
+              <tbody className="divide-y divide-blue-100">
+                {[
+                  ['Official exam name and code', code ? `${title} (${code})` : title],
+                  ['Questions', String(examDetails.questions)],
+                  ['Time allotted', examDetails.duration],
+                  ['Passing score', examDetails.passingScore],
+                  ['Exam fee', examDetails.cost],
+                  ...(logistics?.retake ? [['Retake fee', logistics.retake]] : []),
+                  ['Prerequisite certifications', prerequisiteText],
+                  ['Study guide release', RELEASE_CURRENT],
+                ].map(([label, value]) => (
+                  <tr key={label}>
+                    <th scope="row" className="w-2/5 bg-gray-50 px-4 py-2 font-medium text-gray-700">{label}</th>
+                    <td className="px-4 py-2 text-gray-900">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         )}
 
@@ -129,7 +144,7 @@ export default function CertificationCard({
                 <div key={i} className="flex items-center gap-3">
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-center text-sm mb-1.5">
-                      <span className="text-gray-700 font-medium truncate pr-2">{section.name}</span>
+                      <h3 className="text-gray-700 font-medium pr-2">{i + 1}. {section.name} ({section.percentage}%)</h3>
                       <span className="text-salesforce-dark font-bold bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
                         {section.percentage}%
                       </span>

@@ -1,6 +1,6 @@
 import Link from '@/components/AppLink'
 import { Award, Mail, ExternalLink, MessageCircle } from 'lucide-react'
-import { ACTIVE_SOCIAL_PROFILES, AUTHOR_NAME, CONTACT_EMAIL, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
+import { ACTIVE_SOCIAL_PROFILES, AUTHOR_NAME, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
 import type { SocialProfile } from '@/lib/constants'
 
 /** Brand glyphs, keyed to match SOCIAL_PROFILES. */
@@ -32,16 +32,16 @@ export default function Footer() {
             <div className="flex flex-col space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <Mail className="h-5 w-5" />
-                <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-salesforce-light">
-                  {CONTACT_EMAIL}
-                </a>
+                <Link href="/contact#contact-form" className="hover:text-salesforce-light">
+                  Contact form
+                </Link>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <MessageCircle className="h-5 w-5 text-[#25D366]" />
                 <a
                   href={WHATSAPP_LINK}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="hover:text-salesforce-light flex items-center gap-1"
                 >
                   <span>Chat on WhatsApp</span>
@@ -236,7 +236,7 @@ export default function Footer() {
                 key={profile.key}
                 href={profile.url}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="inline-flex items-center space-x-1 py-1 text-gray-300 hover:text-salesforce-light"
                 aria-label={`${profile.scope === 'person' ? AUTHOR_NAME : SITE_NAME} on ${
                   profile.key === 'x' ? 'X (Twitter)' : profile.label
@@ -251,7 +251,7 @@ export default function Footer() {
             <a
               href="https://trailhead.salesforce.com"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="inline-flex items-center space-x-1 py-1 text-gray-300 hover:text-salesforce-light"
             >
               <span>Trailhead</span>
@@ -260,7 +260,7 @@ export default function Footer() {
             <a
               href="https://www.salesforce.com/trailblazer/certification"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="inline-flex items-center space-x-1 py-1 text-gray-300 hover:text-salesforce-light"
             >
               <span>Official Certs</span>

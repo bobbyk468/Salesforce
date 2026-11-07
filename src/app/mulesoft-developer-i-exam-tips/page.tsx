@@ -102,7 +102,7 @@ export default function MuleSoftDeveloperIExamTipsPage() {
         certName="MuleSoft Developer I"
         certPageSlug="mulesoft-developer-i"
       />
-      <p className="text-sm text-gray-600 mb-8">Primary source (Spring 24 alignment stated): <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer">Salesforce Certified MuleSoft Developer Exam Guide</a>.</p>
+      <p className="text-sm text-gray-600 mb-8">Primary source (Spring 24 alignment stated): <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer nofollow noopener">Salesforce Certified MuleSoft Developer Exam Guide</a>.</p>
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -130,7 +130,7 @@ export default function MuleSoftDeveloperIExamTipsPage() {
 <div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Debugging and Troubleshooting Mule Applications</span><span className="font-bold text-salesforce-blue ml-4">5%</span></div>
 <div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Deploying and Managing APIs and Integrations</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
           <p className="text-xs text-gray-600 pt-1">The available Salesforce guide states Spring 24 alignment. Confirm current requirements with Salesforce before scheduling.</p>
-          <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">Official exam guide</a>
+          <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer nofollow noopener">Official exam guide</a>
         </div>
       </section>
 

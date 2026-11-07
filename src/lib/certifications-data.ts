@@ -202,7 +202,7 @@ export function getRoleSlugForCert(certSlug: string): string | undefined {
   return category?.slug
 }
 
-/** Related certifications from the same role (2–3) for contextual internal linking. */
+/** Related certifications from the same role (up to 5) for contextual internal linking. */
 export function getRelatedCerts(certSlug: string): { name: string; href: string; anchorText: string }[] {
   const relatedOverrides: Record<string, string[]> = {
     // Hub-and-spoke internal linking for top pages.
@@ -240,31 +240,33 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
   )
 
   const overrideSlugs = relatedOverrides[certSlug] || []
-  if (overrideSlugs.length > 0) {
-    return overrideSlugs
+  const preferred = overrideSlugs
       .map((slug) => {
         const item = slugToItem.get(slug)
         if (!item) return null
         return {
           name: item.name,
           href: item.href,
-          anchorText: `${item.name} Summer '26 prep guide`,
+          anchorText: `${item.name} practice questions and study guide`,
         }
       })
       .filter((item): item is { name: string; href: string; anchorText: string } => item !== null)
-  }
 
   const certHref = `/certifications/${certSlug}`
   const category = CERTIFICATION_CATEGORIES.find((cat) =>
     cat.items.some((item) => item.href === certHref || item.href === certHref + '/')
   )
-  if (!category) return []
-  const others = category.items.filter((item) => item.href !== certHref && item.href !== certHref + '/')
-  return others.slice(0, 3).map((item) => ({
+  if (!category) return preferred.slice(0, 5)
+  const preferredHrefs = new Set(preferred.map((item) => item.href))
+  const others = category.items.filter((item) =>
+    item.href !== certHref && item.href !== certHref + '/' && !preferredHrefs.has(item.href)
+  )
+  const sameTrack = others.slice(0, 5 - preferred.length).map((item) => ({
     name: item.name,
     href: item.href,
     anchorText: `${item.name} practice questions and study guide`,
   }))
+  return [...preferred, ...sameTrack].slice(0, 5)
 }
 
 export interface StrategicInternalLink {

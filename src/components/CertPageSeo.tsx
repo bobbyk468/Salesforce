@@ -7,12 +7,12 @@ import {
   getCertWebPageJsonLd,
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
-import { getFaqPageJsonLd } from '@/lib/schema-data'
+import { getFaqPageJsonLd, getLearningResourceJsonLd } from '@/lib/schema-data'
 
-/** Same 2-question slice CertPageFaq renders; schema must match visible content. */
-const VISIBLE_FAQ_COUNT = 2
+/** Schema and visible FAQ use the same slice. */
+const VISIBLE_FAQ_COUNT = 5
 
-const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const siteBaseUrl = 'https://www.trailblazeprep.com'
 
 interface CertPageSeoProps {
   slug: string
@@ -30,6 +30,11 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   // line had no structured date to agree with. getCertWebPageJsonLd existed but
   // was never called; it now supplies WebPage with datePublished/dateModified.
   const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
+  const learningResourceJsonLd = getLearningResourceJsonLd({
+    name: `${certTitle} practice questions and study guide`,
+    description: `Free practice questions, exam topics, and study notes for ${certTitle}.`,
+    path: `/certifications/${slug}`,
+  })
 
   return (
     <>
@@ -44,6 +49,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
       />
       {/* Visible breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-6">

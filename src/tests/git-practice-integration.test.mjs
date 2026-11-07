@@ -24,14 +24,12 @@ function load(path, imports = {}) {
   return module.exports
 }
 
-test('matched exams resolve to imported banks; unmatched exams preserve existing questions', () => {
-  const { getPracticeQuestionsForExam, hasImportedPracticeQuestions } = load('src/lib/git-practice-questions.ts', {
-    '@/lib/question-banks/imported/banks.json': banks,
-  })
+test('all exams use authored fallback questions while imported-bank rights are unconfirmed', () => {
+  const { getPracticeQuestionsForExam, hasImportedPracticeQuestions } = load('src/lib/git-practice-questions.ts')
   const fallback = [{ question: 'Legacy fallback', options: ['A', 'B'], correctAnswer: 0 }]
   for (const [slug, questions] of Object.entries(banks)) {
-    assert.equal(getPracticeQuestionsForExam(slug, fallback), questions)
-    assert.equal(hasImportedPracticeQuestions(slug), true)
+    assert.equal(getPracticeQuestionsForExam(slug, fallback), fallback)
+    assert.equal(hasImportedPracticeQuestions(slug), false)
     assert.equal(counts[slug], questions.length)
   }
   assert.equal(getPracticeQuestionsForExam('unmatched-exam', fallback), fallback)

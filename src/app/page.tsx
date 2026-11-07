@@ -1,22 +1,19 @@
 import Link from '@/components/AppLink'
 import type { Metadata } from 'next'
-import HeroSampleQuestionCard from '@/components/HeroSampleQuestionCard'
 import CertificationGrid from '@/components/CertificationGrid'
 import { getCertificationGrid } from '@/lib/certification-grid-data'
-import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
 import { Shield, Code, Mail, Briefcase, ArrowRight, TrendingUp, Layout, Target, Palette, GraduationCap, BadgeCheck } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE } from '@/lib/constants'
 import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
-  title: { absolute: SITE_DEFAULT_TITLE },
-  description: SITE_DEFAULT_DESCRIPTION,
+  title: { absolute: 'Salesforce Certifications List: Free Practice Tests & Guides' },
+  description: 'Browse the complete 2026 Salesforce certification list with free practice questions, study guides, pass marks, exam fees, and prerequisite details by role.',
   alternates: {
     canonical: siteUrl,
     languages: { 'en-US': siteUrl, 'x-default': siteUrl },
@@ -267,35 +264,6 @@ export default async function Home() {
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(homeBreadcrumb)
   const certificationGrid = getCertificationGrid()
-  const homepageQuestionExams = [
-    { slug: 'administrator', label: 'Platform Administrator' },
-    { slug: 'developer-1', label: 'Platform Developer I' },
-    { slug: 'app-builder', label: 'Platform App Builder' },
-    { slug: 'sales-cloud', label: 'Sales Cloud Consultant' },
-    { slug: 'tableau-data-analyst', label: 'Tableau Data Analyst' },
-  ]
-  const homepageQuestions = homepageQuestionExams.flatMap(({ slug, label }) => {
-    const sample = getPracticeQuestionsForExam(slug, []).find((question) => {
-      const answerIndex = question.correctAnswers === undefined
-        ? question.correctAnswer
-        : question.correctAnswers.length === 1
-          ? question.correctAnswers[0]
-          : undefined
-      return Number.isInteger(answerIndex) &&
-        question.options.length > 0 &&
-        answerIndex! >= 0 &&
-        answerIndex! < question.options.length
-    })
-    const correctAnswer = sample?.correctAnswers === undefined
-      ? sample?.correctAnswer
-      : sample.correctAnswers.length === 1
-        ? sample.correctAnswers[0]
-        : undefined
-    return sample
-      ? [{ examLabel: label, question: sample.question, options: sample.options, correctAnswer: correctAnswer! }]
-      : []
-  })
-
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
@@ -364,13 +332,39 @@ export default async function Home() {
         </div>
       </section>
 
+      <section className="bg-white px-4 py-16" aria-labelledby="preparation-guide-heading">
+        <article className="mx-auto max-w-4xl space-y-5 text-gray-700 leading-relaxed">
+          <h2 id="preparation-guide-heading" className="text-3xl font-bold text-gray-900">
+            Salesforce Certification Preparation Guide &amp; Exam Overview
+          </h2>
+          <p>
+            A Salesforce certification is most useful when it matches the work you want to do. Start by comparing the role categories above with your current experience and the tasks you want to perform: administration, application development, consulting, architecture, marketing, analytics, or another listed specialty. A role label is a starting point, not a prerequisite rule. Check the individual credential page and the current issuer exam guide for required prerequisites, recommended experience, exam format, fees, and whether the credential is currently available.
+          </p>
+          <h3 className="text-xl font-semibold text-gray-900">Build a study plan from the exam objectives</h3>
+          <p>
+            Before studying, find the current official exam guide and use its objective areas as your checklist. Mark each topic as familiar, partly familiar, or new, then give more practice time to topics you have not used in a real Salesforce environment. The study resources and Salesforce certification practice questions linked from this directory can help you review terminology and check understanding. Treat practice scores as feedback about what to revisit; they cannot guarantee an exam result and should not replace hands-on work or the official guide.
+          </p>
+          <h3 className="text-xl font-semibold text-gray-900">Use hands-on practice and verify changing details</h3>
+          <p>
+            Where possible, recreate the relevant tasks in a Salesforce Developer Edition, Trailhead Playground, or other environment appropriate to the product. For an administrator topic, that might mean configuring a feature and checking its effect on records and users. For a developer topic, it might mean building and testing a small component or automation. For a consultant or architect topic, practise explaining the trade-offs behind a solution and how it fits the stated requirements. Keep notes on mistakes, the reason an answer is correct, and the documentation you used to confirm it.
+          </p>
+          <h3 className="text-xl font-semibold text-gray-900">Choose the next step with care</h3>
+          <p>
+            Certification catalogs, exam names, fees, passing requirements, and objectives can change. Some credentials shown here may be retired, unavailable, or have incomplete public exam details; their pages identify those cases where known. Confirm the current status and booking terms with the issuer before paying for an exam. If you are deciding between tracks, use the role pages and certification paths to compare the sequence of topics and prerequisites. Then choose one exam, map its objectives to a weekly study routine, and revisit the plan after practice reveals gaps. This approach keeps your Salesforce study guide focused on skills you can demonstrate, while using questions as one part of preparation rather than as a substitute for learning.
+          </p>
+          <p>
+            When a practice question conflicts with an exam guide or product documentation, pause and check the source material. Record the objective, product area, and release context alongside your notes so that later changes are easier to spot. This simple review habit helps separate what you understand from what you still need to verify, and it makes each study session more useful than repeating questions from memory.
+          </p>
+        </article>
+      </section>
+
       {/* FAQ Section (accordion for scanability) */}
       <section className="py-20 px-4 bg-gray-50 cv-auto" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
           <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Frequently Asked Questions About Salesforce Certification Study Materials
           </h2>
-          <FaqAccordion items={faqItems} />
+          <FaqAccordion items={faqItems} questionHeadingLevel="h3" />
         </div>
       </section>
 

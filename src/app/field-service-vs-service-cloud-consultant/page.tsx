@@ -191,7 +191,7 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Learning example: choose by workflow</h2>
-        <p className="text-sm text-gray-700">A customer reports a product issue. If the team must classify and resolve the support case. Study the Service Cloud workflow. If a technician must visit the site, schedule an appointment, and record completed work. Study the Field Service workflow. This example distinguishes product tasks; it is not a claim about exam frequency. See Salesforce’s <a className="text-salesforce-blue hover:underline" href="https://trailhead.salesforce.com/content/learn/modules/field_service_basics/field_service_basics_intro" target="_blank" rel="noreferrer">Field Service overview</a>.</p>
+        <p className="text-sm text-gray-700">A customer reports a product issue. If the team must classify and resolve the support case. Study the Service Cloud workflow. If a technician must visit the site, schedule an appointment, and record completed work. Study the Field Service workflow. This example distinguishes product tasks; it is not a claim about exam frequency. See Salesforce’s <a className="text-salesforce-blue hover:underline" href="https://trailhead.salesforce.com/content/learn/modules/field_service_basics/field_service_basics_intro" target="_blank" rel="noreferrer nofollow noopener">Field Service overview</a>.</p>
       </section>
 
       <RelatedGuides links={getRelatedGuides('field-service-vs-service-cloud-consultant')} />

@@ -115,7 +115,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
         certName="Agentforce Specialist"
         certPageSlug="agentforce-specialist"
       />
-      <p className="text-sm text-gray-600 mb-8">Primary sources: <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1" target="_blank" rel="noreferrer">official exam guide</a> · <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US" target="_blank" rel="noreferrer">Agentforce data-masking documentation</a></p>
+      <p className="text-sm text-gray-600 mb-8">Primary sources: <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1" target="_blank" rel="noreferrer nofollow noopener">official exam guide</a> · <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US" target="_blank" rel="noreferrer nofollow noopener">Agentforce data-masking documentation</a></p>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Agentforce Specialist Exam at a Glance</h2>

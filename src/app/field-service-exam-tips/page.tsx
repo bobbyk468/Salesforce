@@ -113,7 +113,7 @@ export default function FieldServiceExamTipsPage() {
         certName="Field Service Consultant"
         certPageSlug="field-service"
       />
-      <p className="text-sm text-gray-600 mb-6">Source of exam logistics, prerequisites, and objective weights: <a className="text-salesforce-blue underline" href={issuerGuideUrl}>Salesforce’s published exam guide</a>. Objective names and weights below follow that guide.</p>
+      <p className="text-sm text-gray-600 mb-6">Source of exam logistics, prerequisites, and objective weights: <a className="text-salesforce-blue underline" href={issuerGuideUrl} target="_blank" rel="nofollow noopener noreferrer">Salesforce’s published exam guide</a>. Objective names and weights below follow that guide.</p>
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

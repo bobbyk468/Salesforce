@@ -114,7 +114,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
             <p className="text-xs text-blue-800">
               Review the{' '}
               {examGuideUrl ? (
-                <a href={examGuideUrl} target="_blank" rel="noopener noreferrer" className="underline hover:no-underline font-medium">
+                <a href={examGuideUrl} target="_blank" rel="nofollow noopener noreferrer" className="underline hover:no-underline font-medium">
                   official {primaryName}{examCode ? ` (${examCode})` : ''} exam guide
                 </a>
               ) : (
@@ -125,7 +125,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
                 Meet the team
               </Link>
               {' '}&middot;{' '}
-              <a href="https://www.salesforce.com/trailblazer/krishnamohan" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
+              <a href="https://www.salesforce.com/trailblazer/krishnamohan" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:no-underline">
                 Trailblazer profile
               </a>
               {' '}&middot;{' '}

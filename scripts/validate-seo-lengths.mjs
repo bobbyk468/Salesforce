@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Validate the site's chosen title (50–60) and description (100–130) ranges. */
+/** Validate 50–60 character titles and route-specific description ranges. */
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { parseDocument } from 'htmlparser2'
@@ -10,6 +10,8 @@ const TITLE_MIN = 50
 const TITLE_MAX = 60
 const DESC_MIN = 100
 const DESC_MAX = 130
+const HUB_DESC_MIN = 135
+const HUB_DESC_MAX = 158
 const reportPath = process.argv.find((arg) => arg.startsWith('--report='))?.slice('--report='.length)
 
 function* walkHtml(dir) {
@@ -43,10 +45,13 @@ for (const file of walkHtml(BUILD_DIR)) {
   const description = selectOne('meta[name="description"]', doc)?.attribs.content?.trim() ?? ''
   const titleLength = Array.from(title).length
   const descriptionLength = Array.from(description).length
+  const hub = route === '/' || route === '/certifications'
+  const descMin = hub ? HUB_DESC_MIN : DESC_MIN
+  const descMax = hub ? HUB_DESC_MAX : DESC_MAX
   const issues = []
   for (const [label, value, length, min, max] of [
     ['TITLE', title, titleLength, TITLE_MIN, TITLE_MAX],
-    ['DESC', description, descriptionLength, DESC_MIN, DESC_MAX],
+    ['DESC', description, descriptionLength, descMin, descMax],
   ]) {
     if (!value) issues.push(`MISSING ${label}`)
     else if (length < min) issues.push(`${label} TOO SHORT (${length} chars)`)
@@ -62,7 +67,7 @@ if (pages.length === 0) {
   process.exit(1)
 }
 const report = {
-  ranges: { title: [TITLE_MIN, TITLE_MAX], description: [DESC_MIN, DESC_MAX] },
+  ranges: { title: [TITLE_MIN, TITLE_MAX], description: [DESC_MIN, DESC_MAX], hubDescription: [HUB_DESC_MIN, HUB_DESC_MAX] },
   checked: pages.length,
   violations,
   pages,
@@ -70,4 +75,4 @@ const report = {
 if (reportPath) writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`)
 console.log(`\nChecked ${pages.length} pages. Violations: ${violations}`)
 if (violations > 0) process.exitCode = 1
-else console.log('All titles 50–60 chars and descriptions 100–130 chars. ✓')
+else console.log('All titles 50–60 chars and descriptions match route-specific ranges. ✓')

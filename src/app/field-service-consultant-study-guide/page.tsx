@@ -114,7 +114,7 @@ export default function FieldServiceConsultantStudyGuidePage() {
         certName="Field Service Consultant"
         certPageSlug="field-service"
       />
-      <p className="text-sm text-gray-600 mb-6">Official source: <a className="text-salesforce-blue underline" href={issuerGuideUrl}>Salesforce Agentforce Field Service and Operations Consultant Exam Guide</a>. Salesforce lists Platform Administrator and Agentforce Service Consultant as prerequisites.</p>
+      <p className="text-sm text-gray-600 mb-6">Official source: <a className="text-salesforce-blue underline" href={issuerGuideUrl} target="_blank" rel="nofollow noopener noreferrer">Salesforce Agentforce Field Service and Operations Consultant Exam Guide</a>. Salesforce lists Platform Administrator and Agentforce Service Consultant as prerequisites.</p>
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

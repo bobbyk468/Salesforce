@@ -86,7 +86,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
       <ContentPageAuthor />
       <section className="my-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Choosing current study material</h2>
-        <p className="text-sm text-gray-700">Education Cloud Consultant registration has closed, and Salesforce schedules formal retirement for February 1, 2027. Do not treat it as currently bookable; verify eligibility and lifecycle details with the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">Salesforce issuer notice</a>. For current certification planning. Review the Nonprofit Cloud Consultant guide and confirm its objectives match your target product and data model.</p>
+        <p className="text-sm text-gray-700">Education Cloud Consultant registration has closed, and Salesforce schedules formal retirement for February 1, 2027. Do not treat it as currently bookable; verify eligibility and lifecycle details with the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer nofollow noopener">Salesforce issuer notice</a>. For current certification planning. Review the Nonprofit Cloud Consultant guide and confirm its objectives match your target product and data model.</p>
       </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
@@ -96,7 +96,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
             <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Higher Ed / K-12</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <p className="text-sm text-gray-700 mb-4">Exam registration is closed; formal credential retirement is scheduled for February 1, 2027. Check the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">issuer lifecycle notice</a>. For product study, review learning, student, and fundraising scope and confirm whether the target organization uses Education Cloud, EDA, or another configuration. <a className="text-salesforce-blue hover:underline" href="https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/edu_cloud_dev_guide.pdf" target="_blank" rel="noreferrer">Salesforce Education Cloud developer guide</a></p>
+            <p className="text-sm text-gray-700 mb-4">Exam registration is closed; formal credential retirement is scheduled for February 1, 2027. Check the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer nofollow noopener">issuer lifecycle notice</a>. For product study, review learning, student, and fundraising scope and confirm whether the target organization uses Education Cloud, EDA, or another configuration. <a className="text-salesforce-blue hover:underline" href="https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/edu_cloud_dev_guide.pdf" target="_blank" rel="noreferrer nofollow noopener">Salesforce Education Cloud developer guide</a></p>
           </div>
           <Link href="/education-cloud-consultant-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -165,7 +165,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr><td className="py-2.5 pr-4">Project focuses on education product workflows</td><td className="py-2.5 font-semibold text-salesforce-blue">Review Education Cloud guide and verify org configuration</td></tr>
               <tr><td className="py-2.5 pr-4">Project focuses on nonprofit product workflows</td><td className="py-2.5 font-semibold text-purple-700">Review Nonprofit Cloud guide and verify org configuration</td></tr>
-              <tr><td className="py-2.5 pr-4">Requirement specifically involves EDA or NPSP</td><td className="py-2.5 font-semibold text-gray-700">Check <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=sfdo.EDA_Prereqs_Compatibility.htm&amp;language=en_US&amp;type=5" target="_blank" rel="noreferrer">Salesforce compatibility guidance</a>; they are not supported together in one org</td></tr>
+              <tr><td className="py-2.5 pr-4">Requirement specifically involves EDA or NPSP</td><td className="py-2.5 font-semibold text-gray-700">Check <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=sfdo.EDA_Prereqs_Compatibility.htm&amp;language=en_US&amp;type=5" target="_blank" rel="noreferrer nofollow noopener">Salesforce compatibility guidance</a>; they are not supported together in one org</td></tr>
             </tbody>
           </table>
         </div>

@@ -25,13 +25,10 @@ export default function FullQuestionBankCta({ slug, certTitle }: FullQuestionBan
         If you’re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
       </p>
       <p className="text-gray-600 text-xs max-w-md mx-auto mb-6">
-        Want to ensure you pass on your first try? Contact us for more information on our full 60-question mock exams and a personalized study plan. You can also reach out to{' '}
-        <a
-          href="mailto:km.krishnamohan25@gmail.com"
-          className="text-salesforce-dark font-medium underline underline-offset-2 hover:text-salesforce-blue"
-        >
-          km.krishnamohan25@gmail.com
-        </a>
+        Contact us for more information on our full 60-question mock exams and a personalized study plan. Use the{' '}
+        <Link href="/contact#contact-form" className="text-salesforce-dark font-medium underline underline-offset-2 hover:text-salesforce-blue">
+          contact form
+        </Link>
         .
       </p>
       <Link

@@ -1,44 +1,32 @@
-'use client'
-
-import { useState } from 'react'
 import Link from '@/components/AppLink'
-import { ArrowRight, BookOpen, ExternalLink } from 'lucide-react'
+import { ArrowRight, BookOpen } from 'lucide-react'
 import type { GridCategory } from '@/lib/certification-grid-data'
 
 /**
- * The full certification list, grouped by role behind a tab strip.
- *
- * Every card for every tab is rendered into the HTML and the inactive ones
- * are hidden with CSS, rather than mounted when their tab is picked. That
- * costs a larger homepage document, and buys two things worth more: all 90-odd
- * certification links are crawlable from the homepage, and switching tabs is
- * instant with no layout thrash.
+ * The full certification list, grouped by role. All category headings and
+ * cards are visible in the initial server render, with no client filter state.
  */
 export default function CertificationGrid({
   categories,
-  headingLevel = 'h2',
+  headingLevel = 'h1',
 }: {
   categories: GridCategory[]
   /**
-   * 'h1' when this section opens the page, which it does on the homepage now
-   * that the hero is gone. A page with no H1 is a real SEO defect, so the
-   * heading has to move with the section rather than be dropped.
+   * The hub's main title is an H1; the secondary /certifications directory
+   * can request H2 if it embeds this component beneath its own page title.
    */
   headingLevel?: 'h1' | 'h2'
 }) {
-  const [active, setActive] = useState(categories[0]?.slug ?? '')
   const total = categories.reduce((sum, category) => sum + category.certs.length, 0)
   const Heading = headingLevel
-  // Card titles sit one level under the section heading. Hard-coding them to
-  // h3 left an h1 -> h3 skip on the homepage once this section took the H1.
-  const CardHeading = headingLevel === 'h1' ? 'h2' : 'h3'
+  const CardHeading = 'h3'
 
   return (
     <section className="py-16 px-4 sm:py-20" aria-labelledby="all-certs-heading">
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 text-center">
           <Heading id="all-certs-heading" className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
-            Complete List of Salesforce Certifications
+            Complete List of Salesforce Certifications: Free Practice Questions &amp; Study Guides
           </Heading>
           <p className="mt-3 text-lg text-gray-600">
             All {total} certifications with exam length, pass mark, cost and prerequisites.
@@ -46,42 +34,11 @@ export default function CertificationGrid({
           </p>
         </div>
 
-        {/* Tab strip */}
-        <div className="mb-8 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Certification categories">
-          {categories.map((category) => {
-            const selected = category.slug === active
-            return (
-              <button
-                key={category.slug}
-                role="tab"
-                type="button"
-                aria-selected={selected}
-                aria-controls={`certs-panel-${category.slug}`}
-                id={`certs-tab-${category.slug}`}
-                onClick={() => setActive(category.slug)}
-                className={`inline-flex min-h-11 items-center gap-2 rounded-lg border px-4 text-sm font-medium transition-colors ${
-                  selected
-                    ? 'border-salesforce-blue bg-salesforce-blue text-white shadow-sm'
-                    : 'border-gray-200 bg-white text-gray-700 hover:border-salesforce-blue/50 hover:text-salesforce-blue'
-                }`}
-              >
-                {category.name}
-                <span className={`rounded-full px-1.5 py-0.5 text-xs ${selected ? 'bg-white/20' : 'bg-gray-100 text-gray-600'}`}>
-                  {category.certs.length}
-                </span>
-              </button>
-            )
-          })}
-        </div>
-
         {categories.map((category) => (
-          <div
-            key={category.slug}
-            id={`certs-panel-${category.slug}`}
-            role="tabpanel"
-            aria-labelledby={`certs-tab-${category.slug}`}
-            hidden={category.slug !== active}
-          >
+          <section key={category.slug} id={`certification-track-${category.slug}`} className="mb-12 last:mb-0" aria-labelledby={`certification-track-${category.slug}-heading`}>
+            <h2 id={`certification-track-${category.slug}-heading`} className="mb-5 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900">
+              Salesforce {category.name} Certifications
+            </h2>
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {category.certs.map((cert) => (
                 <li key={cert.slug} className="h-full">
@@ -98,6 +55,10 @@ export default function CertificationGrid({
                         </span>
                       )}
                     </div>
+
+                    <p className="mb-4 text-sm leading-relaxed text-gray-600">
+                      {cert.description}
+                    </p>
 
                     <dl className="mb-4 space-y-1.5 text-sm">
                       {cert.questions && (
@@ -152,6 +113,7 @@ export default function CertificationGrid({
                       */}
                       <Link
                         href={`${cert.href}#practice-questions`}
+                        aria-label={`${cert.name} practice questions and study guide`}
                         className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-salesforce-blue hover:text-salesforce-dark"
                       >
                         Practice questions
@@ -166,23 +128,12 @@ export default function CertificationGrid({
                           Study guide
                         </Link>
                       )}
-                      {cert.officialUrl && (
-                        <a
-                          href={cert.officialUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex min-h-11 items-center gap-1 text-sm text-gray-600 hover:text-salesforce-blue"
-                        >
-                          <ExternalLink className="h-4 w-4" aria-hidden="true" />
-                          Official page
-                        </a>
-                      )}
                     </div>
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         ))}
 
         <p className="mt-8 text-center text-sm text-gray-600">

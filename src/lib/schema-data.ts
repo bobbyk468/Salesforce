@@ -5,7 +5,7 @@
 
 import pageDatesSource from '../../public/page-dates.json'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const baseUrl = 'https://www.trailblazeprep.com'
 
 /**
  * Route -> the dates git says the page's own content was created and last

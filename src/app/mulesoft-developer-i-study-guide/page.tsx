@@ -119,7 +119,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
         certName="MuleSoft Developer I"
         certPageSlug="mulesoft-developer-i"
       />
-      <p className="text-sm text-gray-600 mb-8">The available exam guide states Spring 24 alignment; confirm current requirements with Salesforce. <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer">Official exam guide and objectives</a>.</p>
+      <p className="text-sm text-gray-600 mb-8">The available exam guide states Spring 24 alignment; confirm current requirements with Salesforce. <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer nofollow noopener">Official exam guide and objectives</a>.</p>
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

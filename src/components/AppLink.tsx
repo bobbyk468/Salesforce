@@ -22,5 +22,8 @@ type AppLinkProps = ComponentProps<typeof NextLink>
  * Pass `prefetch` explicitly to opt an individual link back in.
  */
 export default function AppLink({ prefetch = false, ...props }: AppLinkProps) {
-  return <NextLink prefetch={prefetch} {...props} />
+  const external = typeof props.href === 'string' &&
+    /^https?:\/\//i.test(props.href) &&
+    !/^https?:\/\/(?:www\.)?trailblazeprep\.com(?:[/:?#]|$)/i.test(props.href)
+  return <NextLink prefetch={prefetch} {...props} {...(external ? { target: '_blank', rel: 'nofollow noopener noreferrer' } : {})} />
 }

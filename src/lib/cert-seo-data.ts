@@ -4,17 +4,14 @@ import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
 import { RELEASE_YEAR } from './release-data'
 import { getExamWeightage } from './exam-weightage-data'
 import { hasUnverifiedClaudeExamDetails, isRetiredCredential, isUnavailableCredentialExam } from './credential-status'
-import importedQuestionCounts from './question-banks/imported/counts.json'
 import { getExamCodeTitleLabel, getRecognizedExamCode, SLUG_TO_EXAM_CODE } from './certification-exam-codes'
 import { completeSeoTitle } from './seo-title-helpers'
 export { SLUG_TO_EXAM_CODE } from './certification-exam-codes'
 
-const gitQuestionCounts: Record<string, number> = importedQuestionCounts
-const importedAnswerNotice = 'Answers are supplied by the source repository and have not been independently verified. Check current official documentation; this practice set does not predict an exam result.'
 
 import pageDatesSource from '../../public/page-dates.json'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const baseUrl = 'https://www.trailblazeprep.com'
 
 const pageDates = pageDatesSource as Record<string, { published: string; modified: string }>
 
@@ -397,7 +394,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'heroku-architect': { questions: 60, passingScore: '72%', duration: '105 min' },
   'mulesoft-platform-architect': { questions: 60, passingScore: '70%', duration: '120 min' },
   'mulesoft-integration-architect': { questions: 60, passingScore: '70%', duration: '120 min' },
-  'tableau-architect': { questions: 59, passingScore: '63%', duration: '105 min' },
+  'tableau-architect': { questions: 54, passingScore: '63%', duration: '105 min' },
   // Tableau ($200 tier)
   'tableau-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
   'tableau-data-analyst': { questions: 60, passingScore: '65%', duration: '105 min' },
@@ -2454,9 +2451,7 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   }
   const baseFree: FaqItem = {
     question: `Are there free practice questions for the ${faqName} exam?`,
-    answer: gitQuestionCounts[slug]
-      ? `Yes. This page includes ${gitQuestionCounts[slug]} free sample questions imported from the SF-Questions repository. ${importedAnswerNotice}`
-      : `Yes. This page includes free sample practice questions with explanations. Use them alongside the current official documentation.`,
+    answer: `Yes. This page includes free sample practice questions with explanations. Use them alongside the current official documentation.`,
   }
   const basePrepare: FaqItem = {
     question: `How do I prepare for the ${faqName} certification?`,
@@ -2471,7 +2466,7 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
 
   const baseFaqs: FaqItem[] = [
     { ...baseCoverage, ...baseOverrides?.coverage },
-    gitQuestionCounts[slug] ? baseFree : { ...baseFree, ...baseOverrides?.freeQuestions },
+    { ...baseFree, ...baseOverrides?.freeQuestions },
     { ...basePrepare, ...baseOverrides?.prepare },
     { ...baseOfficial, ...baseOverrides?.officialOutline },
   ]
@@ -2480,9 +2475,7 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   // Insert cert-specific FAQs after the first base FAQ for better SEO
   return [
     baseFaqs[0],
-    ...certSpecificFaqs.map((faq) => gitQuestionCounts[slug] && /free.*practice questions/i.test(faq.question)
-      ? { ...faq, answer: baseFree.answer }
-      : faq),
+    ...certSpecificFaqs,
     baseFaqs[1],
     baseFaqs[2],
     baseFaqs[3],
@@ -2631,7 +2624,7 @@ export function getCertExamWeightageHeading(slug: string): string {
 /** H2 for practice questions section: [Cert Name] Practice Questions (With Explanations) */
 export function getCertPracticeQuestionsHeading(slug: string): string {
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
-  return `${primaryName} Practice Questions (${gitQuestionCounts[slug] ? 'With Source Answers' : 'With Explanations'})`
+  return `${primaryName} Practice Questions (With Explanations)`
 }
 
 /** Practice intro text with dynamic question count. Use for consistent, accurate messaging. */

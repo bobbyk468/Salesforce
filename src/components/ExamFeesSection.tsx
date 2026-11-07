@@ -18,7 +18,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
       <section className="mt-8 mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
         <h2 className="text-xl font-bold text-gray-900">Credential details</h2>
         <p className="mt-2 text-sm text-gray-700">Fees, retake rules, format, and availability have not been verified from Anthropic. Check the issuer announcement for current program information.</p>
-        <a className="mt-3 inline-flex items-center gap-2 text-salesforce-blue underline" href={credentialStatus?.sourceUrl} target="_blank" rel="noopener noreferrer">
+        <a className="mt-3 inline-flex items-center gap-2 text-salesforce-blue underline" href={credentialStatus?.sourceUrl} target="_blank" rel="nofollow noopener noreferrer">
           Anthropic Claude Partner Network announcement <ExternalLink className="h-4 w-4" aria-hidden="true" />
         </a>
       </section>
@@ -96,7 +96,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
             <a
               href={SLUG_TO_EXAM_GUIDE_URL[slug] || 'https://trailhead.salesforce.com/credentials'}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2 py-1 text-salesforce-blue hover:text-salesforce-dark font-medium text-sm sm:text-base transition-colors"
             >
               View official credential details

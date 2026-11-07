@@ -50,7 +50,19 @@ test('passes valid title and description metadata', () => {
     const result = runValidator(cwd)
     assert.equal(result.status, 0, result.stderr)
     assert.match(result.stdout, /Checked 1 pages\. Violations: 0/)
-    assert.match(result.stdout, /All titles 50–60 chars and descriptions 100–130 chars/)
+    assert.match(result.stdout, /All titles 50–60 chars and descriptions match route-specific ranges/)
+  })
+})
+
+test('allows the longer planned description on the homepage only', () => {
+  withFixture((cwd) => {
+    const appDir = join(cwd, '.next', 'server', 'app')
+    mkdirSync(appDir, { recursive: true })
+    const html = `<html><head><title>${'T'.repeat(50)}</title><meta name="description" content="${'D'.repeat(155)}"></head></html>`
+    writeFileSync(join(appDir, 'index.html'), html)
+    assert.equal(runValidator(cwd).status, 0)
+    writeFileSync(join(appDir, 'page.html'), html)
+    assert.match(runValidator(cwd).stderr, /DESC TOO LONG \(155 chars\) on \/page/)
   })
 })
 

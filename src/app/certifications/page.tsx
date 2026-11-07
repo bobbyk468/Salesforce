@@ -8,8 +8,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const indexTitle = `All Salesforce Certifications (${RELEASE_CURRENT}) | Free Practice`
-const indexDescription = `Browse Salesforce certifications by role for ${RELEASE_CURRENT}, with exam weightage, free practice questions, and study guides.`
+const indexTitle = 'Salesforce Certifications: Free Practice Questions & Guides'
+const indexDescription = `Browse Salesforce certifications by role for ${RELEASE_CURRENT}, with free practice questions, study guides, pass marks, exam fees, and prerequisites.`
 const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(indexTitle)}`
 export const metadata: Metadata = {
   title: { absolute: indexTitle },
@@ -110,7 +110,7 @@ export default function CertificationsIndexPage() {
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
           Updated for {RELEASE_CURRENT}
         </p>
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">All Salesforce Certifications ({RELEASE_CURRENT})</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Salesforce Certifications: Free Practice Questions &amp; Study Guides</h1>
         <LastUpdated />
         <p className="text-xl text-gray-600 mb-3 max-w-3xl mx-auto">
           Browse independent study resources across Administrator, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and Designer tracks. Confirm current exam details with the issuer; retired credentials are historical references.

@@ -102,7 +102,7 @@ export default function AgentforceSpecialistExamTipsPage() {
         certName="Agentforce Specialist"
         certPageSlug="agentforce-specialist"
       />
-      <p className="text-sm text-gray-600 mb-8">Primary source: <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1" target="_blank" rel="noreferrer">Salesforce Agentforce Specialist Exam Guide</a> · <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US" target="_blank" rel="noreferrer">Agentforce data-masking documentation</a></p>
+      <p className="text-sm text-gray-600 mb-8">Primary source: <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1" target="_blank" rel="noreferrer nofollow noopener">Salesforce Agentforce Specialist Exam Guide</a> · <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US" target="_blank" rel="noreferrer nofollow noopener">Agentforce data-masking documentation</a></p>
 
 
       {/* Quick answer */}

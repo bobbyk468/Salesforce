@@ -17,8 +17,8 @@ export default function AdministratorCtaSections() {
           If you’re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
         </p>
         <p className="text-gray-600 text-xs max-w-md mx-auto mb-4">
-          Want to ensure you pass on your first try? Contact us for more information on our full 60-question mock exams and a personalized study plan. You can also reach out to{' '}
-          <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a> and mention ADM-201.
+          Contact us for more information on our full 60-question mock exams and a personalized study plan. Use the{' '}
+          <Link href="/contact#contact-form" className="text-salesforce-blue font-medium hover:underline">contact form</Link> and mention ADM-201.
         </p>
         <Link
           href="/contact#exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"

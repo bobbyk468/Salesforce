@@ -61,18 +61,17 @@ function QuestionCard({
   return (
     <div className="bg-gradient-to-br from-white via-blue-50/20 to-white rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg overflow-hidden border border-blue-100/50 hover:shadow-xl hover:border-blue-200 transition-all duration-300 backdrop-blur-sm">
       <div className="bg-gradient-to-r from-salesforce-blue/10 to-salesforce-light/10 px-4 sm:px-6 py-3 sm:py-4 border-b border-salesforce-blue/20">
-        <span className="text-salesforce-blue font-semibold text-sm sm:text-base">Question {questionNumber}</span>
+        <h3 className="text-salesforce-blue font-semibold text-sm sm:text-base">Question {questionNumber}: {question}</h3>
       </div>
       
       <div className="p-4 sm:p-6 lg:p-8">
-        <p className="whitespace-pre-wrap [overflow-wrap:anywhere] text-gray-800 font-medium mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">{question}</p>
         {explanationSummary && (
           <p className="whitespace-pre-wrap [overflow-wrap:anywhere] text-gray-600 text-xs sm:text-sm mb-4 leading-relaxed border-l-2 border-salesforce-blue/30 pl-3">
             <strong className="text-gray-700">Key takeaway:</strong> {explanationSummary}
           </p>
         )}
         {isMultiSelect && <p aria-live="polite" className="mb-2 text-sm text-gray-600">Select {answerKey.length} answers. {selectedAnswers.length} selected.</p>}
-        <div role="group" aria-label={isMultiSelect ? `Select ${answerKey.length} answers` : 'Select one answer'} className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
+        <ol type="A" role="group" aria-label={isMultiSelect ? `Select ${answerKey.length} answers` : 'Select one answer'} className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
           {options.map((option, index) => {
             let bgColor = 'bg-gray-50 hover:bg-gray-100'
             let borderColor = 'border-gray-200'
@@ -94,8 +93,8 @@ function QuestionCard({
             }
 
             return (
+              <li key={index}>
               <button
-                key={index}
                 type="button"
                 aria-pressed={selectedAnswers.includes(index)}
                 onClick={() => handleSelectAnswer(index)}
@@ -110,9 +109,10 @@ function QuestionCard({
                 </span>
                 {icon}
               </button>
+              </li>
             )
           })}
-        </div>
+        </ol>
 
         {/* Actions */}
         <div className="flex gap-3 sm:gap-4">
@@ -133,6 +133,13 @@ function QuestionCard({
             </button>
           )}
         </div>
+
+        <details className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50/60 p-4 text-sm text-gray-700">
+          <summary className="cursor-pointer font-semibold text-gray-900">Show correct answer and explanation</summary>
+          <p className="mt-3 font-semibold">Correct {isMultiSelect ? 'answers' : 'answer'}: {answerKey.map((index) => `${String.fromCharCode(65 + index)}. ${options[index]}`).join('; ')}</p>
+          {explanation && <p className="mt-2 whitespace-pre-wrap">{explanation}</p>}
+          {whyWrong?.length ? <ul className="mt-2 list-disc pl-5">{whyWrong.map((line, index) => <li key={index}>{line}</li>)}</ul> : null}
+        </details>
 
         {/* Answer and explanation, visible after "Check Answer" */}
         {showAnswer && (

@@ -17,7 +17,7 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
             <a
               href={guideUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-0.5 text-salesforce-dark hover:underline"
             >
               Exam guide
@@ -29,7 +29,7 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
           <a
             href={EXAM_PRICING_URL}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="nofollow noopener noreferrer"
             className="inline-flex items-center gap-0.5 text-salesforce-dark hover:underline"
           >
             Salesforce exam pricing

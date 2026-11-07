@@ -11,13 +11,13 @@ import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE, SITE_NAME, SOCIAL_LINKS }
 const inter = Inter({
   subsets: ['latin'],
   // Keep the adjusted fallback on slow connections instead of shifting content late.
-  display: 'optional',
+  display: 'swap',
   adjustFontFallback: true,
 })
 
 import { GoogleAnalytics } from '@next/third-parties/google'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const siteUrl = 'https://www.trailblazeprep.com'
 
 export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
@@ -112,7 +112,7 @@ export default function RootLayout({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
-      email: 'km.krishnamohan25@gmail.com',
+      url: `${siteUrl}/contact`,
     },
   }
 

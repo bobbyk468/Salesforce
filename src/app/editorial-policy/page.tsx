@@ -3,7 +3,6 @@ import Link from '@/components/AppLink'
 import { CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
-import { CONTACT_EMAIL } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -53,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'How can I report incorrect exam data?',
-    answer: `Email ${CONTACT_EMAIL} with the page URL, the field that looks wrong, and the official Salesforce source you are comparing against.`,
+    answer: 'Use the contact form with the page URL, the field that looks wrong, and the official Salesforce source you are comparing against.',
   },
 ]
 
@@ -116,10 +115,10 @@ export default function EditorialPolicyPage() {
           Certification data can change when Salesforce refreshes exam guides, retires credentials, renames exams, or changes pricing. When a mismatch is found, we prioritize the official Salesforce source and update the affected metadata, page copy, FAQ, schema, and internal cards together.
         </p>
         <p className="text-sm text-gray-700">
-          To report an issue, email{' '}
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue font-medium hover:underline">
-            {CONTACT_EMAIL}
-          </a>{' '}
+          To report an issue, use the{' '}
+          <Link href="/contact#contact-form" className="text-salesforce-blue font-medium hover:underline">
+            contact form
+          </Link>{' '}
           with the Trailblaze Prep URL and the official source you used.
         </p>
       </section>

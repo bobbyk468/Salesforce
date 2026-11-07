@@ -58,7 +58,7 @@ export default function CertInsightBlock({ certSlug }: Props) {
             <p className="text-lg font-bold text-emerald-700">{salaryRange} <span className="text-sm font-normal text-gray-500">/ year</span></p>
             <p className="text-xs text-gray-400 mt-0.5">
               US average for certified professionals &bull; Updated {RELEASE_CURRENT} &bull;{' '}
-              <a href="https://www.salesforce.com/blog/salesforce-talent-ecosystem/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-600">
+              <a href="https://www.salesforce.com/blog/salesforce-talent-ecosystem/" target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-gray-600">
                 Source: Salesforce Talent Ecosystem
               </a>
             </p>

@@ -1,13 +1,11 @@
 import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
-import importedBanks from '@/lib/question-banks/imported/banks.json'
-
-const banks = importedBanks as Record<string, SampleQuestion[]>
-
-/** Resolve on the server so each client quiz receives only its own exam bank. */
-export function getPracticeQuestionsForExam(slug: string, fallback: SampleQuestion[]): SampleQuestion[] {
-  return banks[slug]?.length ? banks[slug] : fallback
+/** The imported SF-Questions bank has no confirmed publication rights.
+ * Keep the site's authored samples in the rendered pages until clearance is recorded.
+ */
+export function getPracticeQuestionsForExam(_slug: string, fallback: SampleQuestion[]): SampleQuestion[] {
+  return fallback
 }
 
-export function hasImportedPracticeQuestions(slug: string): boolean {
-  return Boolean(banks[slug]?.length)
+export function hasImportedPracticeQuestions(_slug: string): boolean {
+  return false
 }

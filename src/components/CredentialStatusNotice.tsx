@@ -21,7 +21,7 @@ export default function CredentialStatusNotice({ slug }: { slug: string }) {
         {slug === 'ai-associate' && retired && (
           <>
             For current Salesforce AI learning, visit{' '}
-            <a href="https://trailhead.salesforce.com/agentblazer" target="_blank" rel="noopener noreferrer" className="font-medium underline">
+            <a href="https://trailhead.salesforce.com/agentblazer" target="_blank" rel="noopener noreferrer nofollow" className="font-medium underline">
               Agentblazer on Trailhead
             </a>
             {' '}or explore the current{' '}
@@ -35,7 +35,7 @@ export default function CredentialStatusNotice({ slug }: { slug: string }) {
       <a
         href={status.sourceUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="nofollow noopener noreferrer"
         className={`mt-2 inline-block text-sm font-medium underline ${retired ? 'text-amber-950' : 'text-blue-950'}`}
       >
         {status.sourceLabel}

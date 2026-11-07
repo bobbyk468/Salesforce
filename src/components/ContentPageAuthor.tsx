@@ -36,7 +36,7 @@ export default function ContentPageAuthor() {
             <a
               href="https://trailblazer.me/id/krishnamohan"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="inline-block py-1 text-salesforce-blue underline hover:no-underline"
             >
               Krishna Mohan
@@ -47,7 +47,7 @@ export default function ContentPageAuthor() {
             <a
               href="https://trailblazer.me/id/krishnamohan"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               className="inline-block py-1 text-salesforce-blue underline hover:no-underline"
             >
               Author profile
