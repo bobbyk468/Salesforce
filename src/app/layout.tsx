@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { DeferredStickyContentCta, DeferredDesktopSidebarSlot, DeferredChatBot, DeferredFloatingContactButtons } from '@/components/DeferredSiteChrome'
+import ClientOnly from '@/components/ClientOnly'
 
 import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 
@@ -164,8 +165,16 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
-        <DeferredFloatingContactButtons />
-        <DeferredChatBot />
+        {/*
+          Wrapped so their first client render matches the server's empty
+          output. Without this the lazy chunks could resolve during hydration
+          and add three tooltip text nodes the server never emitted, which
+          threw React #418 three times on every page of the site.
+        */}
+        <ClientOnly>
+          <DeferredFloatingContactButtons />
+          <DeferredChatBot />
+        </ClientOnly>
       </body>
     </html>
   )
