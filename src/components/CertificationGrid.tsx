@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from '@/components/AppLink'
-import { ArrowRight, BookOpen } from 'lucide-react'
+import { ArrowRight, BookOpen, ExternalLink } from 'lucide-react'
 import type { GridCategory } from '@/lib/certification-grid-data'
 
 /**
@@ -14,17 +14,32 @@ import type { GridCategory } from '@/lib/certification-grid-data'
  * certification links are crawlable from the homepage, and switching tabs is
  * instant with no layout thrash.
  */
-export default function CertificationGrid({ categories }: { categories: GridCategory[] }) {
+export default function CertificationGrid({
+  categories,
+  headingLevel = 'h2',
+}: {
+  categories: GridCategory[]
+  /**
+   * 'h1' when this section opens the page, which it does on the homepage now
+   * that the hero is gone. A page with no H1 is a real SEO defect, so the
+   * heading has to move with the section rather than be dropped.
+   */
+  headingLevel?: 'h1' | 'h2'
+}) {
   const [active, setActive] = useState(categories[0]?.slug ?? '')
   const total = categories.reduce((sum, category) => sum + category.certs.length, 0)
+  const Heading = headingLevel
+  // Card titles sit one level under the section heading. Hard-coding them to
+  // h3 left an h1 -> h3 skip on the homepage once this section took the H1.
+  const CardHeading = headingLevel === 'h1' ? 'h2' : 'h3'
 
   return (
     <section className="py-16 px-4 sm:py-20" aria-labelledby="all-certs-heading">
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 text-center">
-          <h2 id="all-certs-heading" className="text-3xl font-bold text-gray-900 md:text-4xl">
+          <Heading id="all-certs-heading" className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
             Complete List of Salesforce Certifications
-          </h2>
+          </Heading>
           <p className="mt-3 text-lg text-gray-600">
             All {total} certifications with exam length, pass mark, cost and prerequisites.
             Every one links to free practice questions &mdash; no sign-up.
@@ -72,11 +87,11 @@ export default function CertificationGrid({ categories }: { categories: GridCate
                 <li key={cert.slug} className="h-full">
                   <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-lg">
                     <div className="mb-3 flex items-start justify-between gap-3">
-                      <h3 className="text-base font-bold leading-snug text-gray-900">
+                      <CardHeading className="text-base font-bold leading-snug text-gray-900">
                         <Link href={cert.href} className="hover:text-salesforce-blue">
                           {cert.name}
                         </Link>
-                      </h3>
+                      </CardHeading>
                       {cert.level && (
                         <span className="flex-shrink-0 rounded-full bg-salesforce-blue/10 px-2.5 py-1 text-xs font-semibold text-salesforce-dark">
                           {cert.level}
@@ -142,6 +157,17 @@ export default function CertificationGrid({ categories }: { categories: GridCate
                           <BookOpen className="h-4 w-4" aria-hidden="true" />
                           Study guide
                         </Link>
+                      )}
+                      {cert.officialUrl && (
+                        <a
+                          href={cert.officialUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex min-h-11 items-center gap-1 text-sm text-gray-600 hover:text-salesforce-blue"
+                        >
+                          <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                          Official page
+                        </a>
                       )}
                     </div>
                   </div>

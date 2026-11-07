@@ -4,7 +4,7 @@ import HeroSampleQuestionCard from '@/components/HeroSampleQuestionCard'
 import CertificationGrid from '@/components/CertificationGrid'
 import { getCertificationGrid } from '@/lib/certification-grid-data'
 import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
-import { Shield, Code, Mail, Briefcase, ArrowRight, BookOpen, TrendingUp, Layout, Target, Palette, GraduationCap, BadgeCheck, Sparkles } from 'lucide-react'
+import { Shield, Code, Mail, Briefcase, ArrowRight, TrendingUp, Layout, Target, Palette, GraduationCap, BadgeCheck } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
@@ -304,118 +304,23 @@ export default async function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      {/* Hero Section */}
-      <section data-lcp-hero className="py-16 sm:py-24 px-4" aria-label="Primary content">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-12 lg:gap-16 items-center">
-
-            {/* Left: heading, lead, CTAs, stats */}
-            <div>
-              <span className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark font-semibold text-sm px-4 py-1.5 rounded-full border border-salesforce-blue/20 mb-5">
-                <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-                Independent study resources
-              </span>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-5">
-                Prepare for your{' '}
-                <span className="hero-gradient-text">Salesforce certification</span>
-                {' '}with confidence.
-              </h1>
-        <LastUpdated />
-              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl mb-8">
-                Explore sample practice questions, exam topics, and study guides across Admin, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, and Tableau tracks.
-              </p>
-              <div className="flex flex-wrap gap-3 mb-9">
-                <Link
-                  href="/certifications/administrator"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold text-base hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
-                >
-                  Start Free ADM-201 Practice Test
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
-                <Link
-                  href="/certifications"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-salesforce-blue rounded-lg font-semibold text-base border border-salesforce-blue/25 hover:bg-salesforce-blue/5 hover:border-salesforce-blue/50 transition-all duration-200 shadow-sm"
-                >
-                  <BookOpen className="h-4 w-4" aria-hidden="true" />
-                  Browse Certifications
-                </Link>
-              </div>
-              <div className="flex flex-wrap gap-x-6 gap-y-4">
-                <div>
-                  <div className="text-2xl font-bold text-salesforce-dark leading-none">Role-based</div>
-                  <div className="text-sm text-gray-500 mt-1">Certifications</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-salesforce-dark leading-none">Original</div>
-                  <div className="text-sm text-gray-500 mt-1">Practice Questions</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-salesforce-dark leading-none">100%</div>
-                  <div className="text-sm text-gray-500 mt-1">Free</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right: sample practice question card (desktop only), rotates across cert tracks */}
-            <div className="hidden lg:block">
-              <HeroSampleQuestionCard questions={homepageQuestions} />
-            </div>
-
-          </div>
-
-          {/* Popular reads: SEO internal links */}
-          <p className="text-sm text-gray-500 mt-10 leading-relaxed">
-            Popular:{' '}
-            <Link href="/adm-201-exam-tips" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">ADM-201 exam tips</Link>
-            {' · '}
-            <Link href="/adm-201-vs-app-builder" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">ADM-201 vs App Builder</Link>
-            {' · '}
-            <Link href="/which-salesforce-certification-first" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Which cert first?</Link>
-            {' · '}
-            <Link href="/how-to-study-for-salesforce-certification" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">How to study</Link>
-            {' · '}
-            <Link href="/how-to-become-salesforce-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Become a Consultant</Link>
-            {' · '}
-            <Link href="/how-to-become-salesforce-developer" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Become a Developer</Link>
-            {' · '}
-            <Link href="/salesforce-admin-vs-developer-career" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Admin vs Developer</Link>
-            {' · '}
-            <Link href="/salesforce-certification-difficulty" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Difficulty ranking</Link>
-            {' · '}
-            <Link href="/ux-designer-vs-strategy-designer" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">UX vs Strategy Designer</Link>
-            {' · '}
-            <Link href="/app-builder-vs-developer-i" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">App Builder vs PD1</Link>
-            {' · '}
-            <Link href="/business-analyst-study-guide" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Business Analyst guide</Link>
-            {' · '}
-            <Link href="/tableau-data-analyst-study-guide" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Tableau Data Analyst</Link>
-            {' · '}
-            <Link href="/salesforce-certification-validity" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Cert validity</Link>
-            {' · '}
-            <Link href="/field-service-vs-service-cloud-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Field vs Service Cloud</Link>
-            {' · '}
-            <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">Education vs Nonprofit Cloud</Link>
-            {' · '}
-            <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="inline-block py-1 underline hover:text-salesforce-dark font-medium">CPQ vs Revenue Cloud</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Author byline, kept from the features block this section replaced. */}
-      <div className="bg-gray-50 px-4 pt-16">
-        <div className="max-w-3xl mx-auto">
-          <ContentPageAuthor />
-        </div>
-      </div>
-
       {/*
-        The certification grid replaces six generic "why us" blurbs. Those
-        named no certification and carried no data; this names every one and
-        puts ~90 crawlable certification links on the homepage, which had 35
-        links and 274 words in total.
+        The hero is gone: badge, H1, lead, CTAs, stat row, the sample-question
+        card, the "Popular:" link run and the byline. The page now opens on
+        the certification list itself, which is what visitors arrive for, so
+        CertificationGrid carries the H1. The byline and "Last updated" move
+        below the grid — they are trust signals worth keeping, just not the
+        first thing on the page.
       */}
       <div className="bg-gray-50">
-        <CertificationGrid categories={certificationGrid} />
+        <CertificationGrid categories={certificationGrid} headingLevel="h1" />
+      </div>
+
+      <div className="bg-gray-50 px-4 pb-12">
+        <div className="mx-auto max-w-3xl">
+          <LastUpdated />
+          <ContentPageAuthor />
+        </div>
       </div>
 
       {/* Browse by role (compact for smaller HTML; full grid on /certifications) */}

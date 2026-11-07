@@ -28,11 +28,18 @@ export default function LastUpdated() {
   const date = new Date(entry.modified)
   if (Number.isNaN(date.getTime())) return null
 
-  // en-GB so the rendered text matches the rest of the site's spelling.
+  // en-GB so the rendered text matches the rest of the site's spelling, and
+  // an explicit timeZone because without one this formats in the *viewer's*
+  // zone while the server formats in its own. The stored dates carry a +05:30
+  // offset, so "2026-11-04T04:07:00+05:30" renders as 4 November in India and
+  // 3 November in UTC — a text mismatch that made React discard the hydrated
+  // tree (minified error #418) and take unrelated markup down with it. Pinning
+  // the zone makes the output identical everywhere.
   const label = date.toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
+    timeZone: 'Asia/Kolkata',
   })
 
   return (
