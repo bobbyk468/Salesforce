@@ -355,7 +355,7 @@ export default function AppBuilderStudyGuidePage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Practice With Real Exam-Style Questions</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Apply this study guide with free App Builder practice questions, exam weightage breakdown, and prep tips:
+          Apply this study guide with free App Builder practice questions, exam weightage breakdown, and prep tips. ADM-201 runs parallel to App Builder rather than before it, so take it in whichever order suits you:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
@@ -375,7 +375,7 @@ export default function AppBuilderStudyGuidePage() {
             href="/adm-201-study-guide"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
-            ADM-201 Study Guide
+            ADM-201 Study Guide (parallel track)
           </Link>
         </div>
       </section>

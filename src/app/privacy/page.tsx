@@ -50,9 +50,6 @@ export default function PrivacyPage() {
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
         <LastUpdated />
       </div>
-      <p className="text-gray-600 mb-6">
-        Last updated: {new Date().toLocaleDateString('en-US')}
-      </p>
       <div className="prose prose-gray max-w-none space-y-4 text-gray-700">
         <p>
           We respect your privacy. When you contact us, we use your details only to respond.

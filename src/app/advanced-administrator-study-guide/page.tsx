@@ -272,7 +272,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
             Advanced Admin Exam Tips
           </Link>
           <Link href="/adm-201-study-guide" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            ADM-201 Study Guide
+            ADM-201 Study Guide (required first)
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">

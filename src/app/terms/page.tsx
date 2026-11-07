@@ -54,9 +54,6 @@ export default function TermsPage() {
         <h1 className="text-3xl font-bold text-gray-900 mb-6">Terms of Use</h1>
         <LastUpdated />
       </div>
-      <p className="text-gray-600 mb-6">
-        Last updated: {new Date().toLocaleDateString('en-US')}
-      </p>
       <div className="prose prose-gray max-w-none space-y-4 text-gray-700">
         <p>
           By using this site, you agree to use it only for lawful purposes and in line with these terms.
