@@ -1,25 +1,10 @@
 import Link from '@/components/AppLink'
 import type { Metadata } from 'next'
 import HeroSampleQuestionCard from '@/components/HeroSampleQuestionCard'
+import CertificationGrid from '@/components/CertificationGrid'
+import { getCertificationGrid } from '@/lib/certification-grid-data'
 import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
-import {
-  Shield,
-  Code,
-  Mail,
-  Briefcase,
-  Award,
-  ArrowRight,
-  BookOpen,
-  CheckCircle,
-  TrendingUp,
-  Layout,
-  Target,
-  Palette,
-  GraduationCap,
-  BadgeCheck,
-  BarChart3,
-  Sparkles,
-} from 'lucide-react'
+import { Shield, Code, Mail, Briefcase, ArrowRight, BookOpen, TrendingUp, Layout, Target, Palette, GraduationCap, BadgeCheck, Sparkles } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
@@ -281,6 +266,7 @@ export default async function Home() {
     breadcrumbItems: homeBreadcrumb,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(homeBreadcrumb)
+  const certificationGrid = getCertificationGrid()
   const homepageQuestionExams = [
     { slug: 'administrator', label: 'Platform Administrator' },
     { slug: 'developer-1', label: 'Platform Developer I' },
@@ -415,75 +401,22 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Features: Why Trailblaze Prep */}
-      <section className="py-20 px-4 bg-gray-50 cv-auto" aria-labelledby="features-heading">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl mx-auto mb-4">
-            <ContentPageAuthor />
-          </div>
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="inline-block text-xs font-semibold text-salesforce-dark uppercase tracking-widest bg-salesforce-blue/10 px-3 py-1.5 rounded-full mb-4">
-              Why Trailblaze Prep
-            </span>
-            <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Build your study plan in one place.
-            </h2>
-            <p className="text-lg text-gray-600">
-              Explore study topics and practice questions, then use the linked issuer resources to confirm current exam requirements.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-salesforce-blue flex items-center justify-center text-white mb-5 flex-shrink-0">
-                <Target className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Section weightage</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Use the topic breakdown to plan your study time. Confirm the current objective weights in the linked official exam guide.</p>
-            </div>
-
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center text-white mb-5 flex-shrink-0">
-                <BookOpen className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Practice questions</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Sample practice questions with answer keys and source information. Check current official documentation as you study.</p>
-            </div>
-
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-white mb-5 flex-shrink-0">
-                <BadgeCheck className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Study guides</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Crisp, exam-focused notes, no fluff. Skim the night before or read top-to-bottom over a weekend.</p>
-            </div>
-
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white mb-5 flex-shrink-0">
-                <BarChart3 className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Exam reference details</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Find exam details and issuer references. Availability and fees can change; check the official guide before booking.</p>
-            </div>
-
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-salesforce-dark flex items-center justify-center text-white mb-5 flex-shrink-0">
-                <TrendingUp className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Issuer references</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Follow links to official learning resources and exam guides. Retired and unverified credentials are labelled separately.</p>
-            </div>
-
-            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
-              <div className="w-12 h-12 rounded-xl bg-salesforce-blue flex items-center justify-center text-white mb-5 flex-shrink-0">
-                <CheckCircle className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">100% free, no login</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Access the study materials and practice questions without a subscription or account.</p>
-            </div>
-          </div>
+      {/* Author byline, kept from the features block this section replaced. */}
+      <div className="bg-gray-50 px-4 pt-16">
+        <div className="max-w-3xl mx-auto">
+          <ContentPageAuthor />
         </div>
-      </section>
+      </div>
+
+      {/*
+        The certification grid replaces six generic "why us" blurbs. Those
+        named no certification and carried no data; this names every one and
+        puts ~90 crawlable certification links on the homepage, which had 35
+        links and 274 words in total.
+      */}
+      <div className="bg-gray-50">
+        <CertificationGrid categories={certificationGrid} />
+      </div>
 
       {/* Browse by role (compact for smaller HTML; full grid on /certifications) */}
       <section className="py-20 px-4 cv-auto" aria-labelledby="browse-heading">
