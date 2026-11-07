@@ -1,74 +1,69 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from '@/components/AppLink'
 import { Award, ChevronDown, Menu, X } from 'lucide-react'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
+/**
+ * One 64px bar at every breakpoint.
+ *
+ * This used to be two stacked bars: the logo row, then a "Choose your role"
+ * strip of eleven dropdown pills that wrapped onto two lines. Sticky, that
+ * cost 198px of every desktop viewport (and 174px on mobile, via a 2x2 grid
+ * of the same four links already in the desktop row) before any content.
+ *
+ * The role strip also carried no SEO weight: its sub-items were mounted
+ * client-side on first open, so the served HTML held eleven labels and not a
+ * single certification href. Collapsing it into one "Certifications" menu
+ * loses no crawlable link and gains eleven — the role hubs are now real
+ * anchors in the HTML rather than lazily rendered ones.
+ */
 export default function Header() {
-  const desktopDetailsRefs = useRef<(HTMLDetailsElement | null)[]>([])
-  const desktopMenuRefs = useRef<(HTMLDivElement | null)[]>([])
-  // Mobile menu: only mounts full DOM when opened, eliminates ~200 nodes on initial load
   const [mobileOpen, setMobileOpen] = useState(false)
-  // Desktop dropdowns: only render sub-items after a category is first opened
-  const [renderedDesktopCats, setRenderedDesktopCats] = useState<Set<string>>(new Set())
+  const certsRef = useRef<HTMLDetailsElement | null>(null)
 
-  const handleLinkClick = (index: number) => {
-    const detailsElement = desktopDetailsRefs.current[index]
-    if (detailsElement?.open) detailsElement.open = false
+  // Native <details> has no light-dismiss; close it on an outside click or Escape.
+  useEffect(() => {
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      const details = certsRef.current
+      if (details?.open && !details.contains(event.target as Node)) details.open = false
+    }
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return
+      if (certsRef.current?.open) {
+        certsRef.current.open = false
+        certsRef.current.querySelector('summary')?.focus()
+      }
+      setMobileOpen(false)
+    }
+    document.addEventListener('click', closeOnOutsideClick)
+    document.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.removeEventListener('click', closeOnOutsideClick)
+      document.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [])
+
+  const closeAll = () => {
+    if (certsRef.current) certsRef.current.open = false
     setMobileOpen(false)
   }
 
-  const handleDesktopToggle = (slug: string, open: boolean) => {
-    if (open) {
-      setRenderedDesktopCats(prev => {
-        if (prev.has(slug)) return prev
-        const next = new Set(prev)
-        next.add(slug)
-        return next
-      })
-    }
-  }
-
-  const fitDesktopMenu = useCallback((index: number) => {
-    const menu = desktopMenuRefs.current[index]
-    const trigger = desktopDetailsRefs.current[index]
-    if (!menu || !trigger?.open) return
-
-    const gutter = 16
-    const triggerRect = trigger.getBoundingClientRect()
-    const menuWidth = menu.getBoundingClientRect().width
-    const left = Math.min(
-      Math.max(triggerRect.left, gutter),
-      window.innerWidth - gutter - menuWidth,
-    )
-    menu.style.left = `${left - triggerRect.left}px`
-    menu.style.right = 'auto'
-  }, [])
-
-  const setDesktopMenuRef = useCallback((index: number, element: HTMLDivElement | null) => {
-    desktopMenuRefs.current[index] = element
-    if (element) requestAnimationFrame(() => fitDesktopMenu(index))
-  }, [fitDesktopMenu])
-
-  useEffect(() => {
-    const repositionOpenMenus = () => {
-      desktopDetailsRefs.current.forEach((details, index) => {
-        if (details?.open) fitDesktopMenu(index)
-      })
-    }
-    window.addEventListener('resize', repositionOpenMenus)
-    return () => window.removeEventListener('resize', repositionOpenMenus)
-  }, [fitDesktopMenu])
+  const primaryLinks = [
+    { href: '/certifications', label: 'All Certifications' },
+    { href: '/certification-path', label: 'Cert Path' },
+    { href: '/become-cta', label: 'Become a CTA' },
+  ]
 
   return (
-    <header data-critical-header className="no-print bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm min-h-16">
+    <header data-critical-header className="no-print bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-[100] focus:rounded-lg focus:bg-white focus:p-3 focus:text-salesforce-dark">
         Skip to main content
       </a>
-      {/* Top bar: Logo + primary links */}
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center min-h-16 h-16">
+        <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-salesforce-dark to-salesforce-blue text-white shadow-md group-hover:shadow-lg transition-shadow">
               <Award className="h-6 w-6" aria-hidden="true" />
@@ -79,10 +74,41 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-1">
-            <Link href="/certifications" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
-              All Certifications
-            </Link>
+          <nav aria-label="Primary" className="hidden lg:flex items-center gap-1">
+            <details ref={certsRef} className="relative">
+              <summary className="nav-link inline-flex items-center gap-1 px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm cursor-pointer list-none select-none">
+                <span>Certifications</span>
+                <ChevronDown className="h-4 w-4 opacity-70" aria-hidden="true" />
+              </summary>
+              <div className="absolute left-0 top-full mt-2 w-[30rem] rounded-xl border border-gray-200 bg-white p-3 shadow-2xl z-[60]">
+                <p className="px-2 pb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
+                  Browse by role
+                </p>
+                <ul className="grid grid-cols-2 gap-x-2">
+                  {CERTIFICATION_CATEGORIES.map((category) => (
+                    <li key={category.slug}>
+                      <Link
+                        href={`/certifications/role/${category.slug}`}
+                        onClick={closeAll}
+                        className="block rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors hover:bg-salesforce-blue/10 hover:text-salesforce-blue"
+                      >
+                        {category.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-2 border-t border-gray-100 pt-2">
+                  <Link
+                    href="/certifications"
+                    onClick={closeAll}
+                    className="block rounded-lg px-3 py-2 text-sm font-semibold text-salesforce-blue hover:bg-salesforce-blue/10"
+                  >
+                    All certifications &rarr;
+                  </Link>
+                </div>
+              </div>
+            </details>
+
             <Link href="/certification-path" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
               Cert Path
             </Link>
@@ -92,9 +118,9 @@ export default function Header() {
             <Link href="/contact" className="ml-2 px-4 py-2.5 bg-salesforce-blue text-white rounded-lg font-semibold text-sm hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">
               Contact Us
             </Link>
-          </div>
+          </nav>
 
-          {/* Mobile hamburger; content is only mounted after the first tap */}
+          {/* Mobile hamburger; the panel is only mounted after the first tap */}
           <div className="lg:hidden relative">
             <button
               onClick={() => setMobileOpen(o => !o)}
@@ -108,101 +134,57 @@ export default function Header() {
             </button>
 
             {mobileOpen && (
-              <div className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 space-y-2 z-50" onKeyDown={(event) => {
-                if (event.key === 'Escape') {
-                  setMobileOpen(false)
-                  event.currentTarget.parentElement?.querySelector('button')?.focus()
-                }
-              }}>
-                <div>
-                  <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Choose your role</p>
-                  {CERTIFICATION_CATEGORIES.map((category) => (
-                    <details key={category.slug} className="py-1">
-                      <summary className="flex items-center justify-between w-full py-2 text-left font-medium text-gray-700 cursor-pointer list-none">
-                        <span>{category.name}</span>
-                        <ChevronDown className="h-4 w-4 opacity-70" aria-hidden="true" />
-                      </summary>
-                      <div className="pl-3 space-y-0.5 max-h-60 overflow-y-auto">
-                        {category.items.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="block py-1.5 text-sm text-gray-600 hover:text-salesforce-blue"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </details>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Keep the four primary actions visible without expanding the role directory. */}
-      <nav aria-label="Primary mobile navigation" className="lg:hidden grid grid-cols-2 gap-2 border-t border-gray-100 bg-gray-50 px-4 py-2.5">
-        <Link href="/certifications" className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-2 text-center text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue">
-          All Certifications
-        </Link>
-        <Link href="/certification-path" className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-2 text-center text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue">
-          Cert Path
-        </Link>
-        <Link href="/become-cta" className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-2 text-center text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue">
-          Become a CTA
-        </Link>
-        <Link href="/contact" className="flex min-h-11 items-center justify-center rounded-lg bg-salesforce-blue px-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-salesforce-dark">
-          Contact Us
-        </Link>
-      </nav>
-
-      {/* Choose your role, desktop dropdowns with lazy sub-item rendering */}
-      <div className="hidden lg:block bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2 hidden lg:block">
-            Choose your role
-          </p>
-          <div className="flex flex-wrap items-center gap-2">
-            {CERTIFICATION_CATEGORIES.map((category, index) => (
-              <details
-                key={category.slug}
-                className="relative group"
-                ref={(el) => { if (el) desktopDetailsRefs.current[index] = el }}
-                onToggle={(e) => {
-                  const open = (e.currentTarget as HTMLDetailsElement).open
-                  handleDesktopToggle(category.slug, open)
-                  if (open) requestAnimationFrame(() => fitDesktopMenu(index))
-                }}
-                onKeyDown={(event) => {
-                  if (event.key === 'Escape') {
-                    event.currentTarget.open = false
-                    event.currentTarget.querySelector('summary')?.focus()
-                  }
-                }}
-              >
-                <summary className="inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-salesforce-blue hover:text-salesforce-blue hover:bg-salesforce-blue/5 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer list-none">
-                  <span>{category.name}</span>
-                  <ChevronDown className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-200" aria-hidden="true" />
-                </summary>
-                {/* Sub-items only mounted after the dropdown is opened for the first time */}
-                <div ref={(element) => setDesktopMenuRef(index, element)} className="absolute left-0 top-full mt-2 w-64 max-h-[70vh] overflow-y-auto py-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-[60]">
-                  {renderedDesktopCats.has(category.slug) && category.items.map((item) => (
+              <div className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 z-50">
+                <div className="space-y-2">
+                  {primaryLinks.map((link) => (
                     <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => handleLinkClick(index)}
-                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-salesforce-blue/10 hover:text-salesforce-blue transition-colors duration-150 truncate"
-                      aria-label={`View ${item.name} certification page`}
+                      key={link.href}
+                      href={link.href}
+                      onClick={closeAll}
+                      className="flex min-h-11 items-center rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue"
                     >
-                      {item.name}
+                      {link.label}
                     </Link>
                   ))}
+                  <Link
+                    href="/contact"
+                    onClick={closeAll}
+                    className="flex min-h-11 items-center justify-center rounded-lg bg-salesforce-blue px-3 text-sm font-semibold text-white shadow-sm hover:bg-salesforce-dark"
+                  >
+                    Contact Us
+                  </Link>
                 </div>
-              </details>
-            ))}
+
+                <p className="mt-4 mb-2 text-xs font-semibold text-gray-600 uppercase tracking-wider">Choose your role</p>
+                {CERTIFICATION_CATEGORIES.map((category) => (
+                  <details key={category.slug} className="py-1">
+                    <summary className="flex min-h-11 items-center justify-between w-full py-2 text-left font-medium text-gray-700 cursor-pointer list-none">
+                      <span>{category.name}</span>
+                      <ChevronDown className="h-4 w-4 opacity-70" aria-hidden="true" />
+                    </summary>
+                    <div className="pl-3 space-y-0.5 max-h-60 overflow-y-auto">
+                      <Link
+                        href={`/certifications/role/${category.slug}`}
+                        onClick={closeAll}
+                        className="flex min-h-11 items-center text-sm font-semibold text-salesforce-blue"
+                      >
+                        All {category.name} certifications
+                      </Link>
+                      {category.items.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={closeAll}
+                          className="flex min-h-11 items-center text-sm text-gray-600 hover:text-salesforce-blue"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
