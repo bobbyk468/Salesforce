@@ -238,7 +238,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Free IAM Architect practice questions covering SAML, OAuth, SSO design, and connected apps.</p>
         <Link
-          href="/certifications/identity-access-management-architect"
+          href="/certifications/identity-access-management-architect#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

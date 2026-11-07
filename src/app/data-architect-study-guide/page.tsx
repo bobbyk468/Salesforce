@@ -238,7 +238,7 @@ export default function DataArchitectStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Try It Yourself</h2>
         <p className="text-white mb-6">Test yourself with free Data Architect practice questions covering the six official exam domains.</p>
         <Link
-          href="/certifications/data-architect"
+          href="/certifications/data-architect#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

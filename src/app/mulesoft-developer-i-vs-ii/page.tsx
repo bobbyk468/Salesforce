@@ -230,10 +230,10 @@ export default function MulesoftDeveloperIVsIIPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/mulesoft-developer-i" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/mulesoft-developer-i#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             MuleSoft Developer I Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/certifications/mulesoft-developer-ii" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/mulesoft-developer-ii#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             MuleSoft Developer II Practice Questions
           </Link>
           <Link href="/mulesoft-integration-foundations-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

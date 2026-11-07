@@ -76,7 +76,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/administrator#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Administrator practice questions
                 </Link>
               </li>
@@ -133,22 +133,22 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/certifications/agentforce-specialist" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/agentforce-specialist#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Agentforce Specialist practice questions
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/certifications/ai-associate" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/ai-associate#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   AI Associate practice questions
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/certifications/sales-cloud" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/sales-cloud#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Sales Cloud Consultant practice questions
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/certifications/data-360-consultant" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/data-360-consultant#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Data Cloud Consultant practice questions
                 </Link>
               </li>

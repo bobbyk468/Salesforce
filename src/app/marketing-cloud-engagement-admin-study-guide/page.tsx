@@ -243,7 +243,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Test Yourself</h2>
         <p className="text-white mb-6">Free Marketing Cloud Engagement Admin practice questions covering all 5 exam sections.</p>
         <Link
-          href="/certifications/marketing-cloud-engagement-admin"
+          href="/certifications/marketing-cloud-engagement-admin#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

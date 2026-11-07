@@ -257,7 +257,7 @@ export default function DataCloudConsultantStudyGuidePage() {
           Apply this study guide with free Data Cloud Consultant practice questions:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/data-360-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/data-360-consultant#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Data Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/data-360-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

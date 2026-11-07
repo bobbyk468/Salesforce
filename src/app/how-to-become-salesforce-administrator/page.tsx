@@ -219,7 +219,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <BookOpen className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
             <div>
               <p className="font-semibold text-gray-900">Free Practice Questions</p>
-              <p>Scenario-based practice tests expose your weak areas before the real exam. Use our free <Link href="/certifications/administrator" className="text-salesforce-blue underline">Salesforce Administrator practice questions</Link>, aligned to {RELEASE_CURRENT} exam weightage.</p>
+              <p>Scenario-based practice tests expose your weak areas before the real exam. Use our free <Link href="/certifications/administrator#practice-questions" className="text-salesforce-blue underline">Salesforce Administrator practice questions</Link>, aligned to {RELEASE_CURRENT} exam weightage.</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -350,7 +350,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            href="/certifications/administrator"
+            href="/certifications/administrator#practice-questions"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
           >
             Free ADM-201 Practice Questions

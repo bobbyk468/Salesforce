@@ -142,8 +142,16 @@ export default function CertificationGrid({
                     </dl>
 
                     <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-gray-100 pt-3">
+                      {/*
+                        Deep-link to the questions themselves. This used to
+                        point at cert.href, the same URL as the card title
+                        directly above it, so two links with different labels
+                        went to the identical place and "Practice questions"
+                        landed the reader at the top of the page instead of
+                        the questions. Every cert page carries this anchor.
+                      */}
                       <Link
-                        href={cert.href}
+                        href={`${cert.href}#practice-questions`}
                         className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-salesforce-blue hover:text-salesforce-dark"
                       >
                         Practice questions

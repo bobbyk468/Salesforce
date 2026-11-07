@@ -254,7 +254,7 @@ export default function FieldServiceConsultantStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Test yourself with free Field Service Consultant practice questions covering all 8 exam sections.</p>
         <Link
-          href="/certifications/field-service"
+          href="/certifications/field-service#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

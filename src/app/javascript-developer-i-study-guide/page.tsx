@@ -252,7 +252,7 @@ export default function JavascriptDeveloperIStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
         <p className="text-white mb-6">Test yourself with free JavaScript Developer I practice questions covering all 6 exam sections.</p>
         <Link
-          href="/certifications/javascript-developer-i"
+          href="/certifications/javascript-developer-i#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

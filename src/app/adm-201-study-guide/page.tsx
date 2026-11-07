@@ -345,7 +345,7 @@ export default function Adm201StudyGuidePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            href="/certifications/administrator"
+            href="/certifications/administrator#practice-questions"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
           >
             ADM-201 Practice Questions

@@ -243,7 +243,7 @@ export default function OmnistudioDeveloperStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Test yourself with free OmniStudio Developer practice questions covering all 4 exam sections.</p>
         <Link
-          href="/certifications/omnistudio-developer"
+          href="/certifications/omnistudio-developer#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

@@ -208,7 +208,7 @@ export default function EducationCloudConsultantStudyGuidePage() {
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Education Cloud Questions</h2>
         <p className="text-white mb-6">Historical practice questions for the Salesforce Certified Education Cloud Consultant study topics.</p>
-        <Link href="/certifications/education-cloud-consultant" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        <Link href="/certifications/education-cloud-consultant#practice-questions" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           View Historical Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">

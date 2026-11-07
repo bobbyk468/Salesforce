@@ -282,7 +282,7 @@ export default function AgentforceSpecialistExamTipsPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            href="/certifications/agentforce-specialist"
+            href="/certifications/agentforce-specialist#practice-questions"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
           >
             Agentforce Specialist Practice Questions

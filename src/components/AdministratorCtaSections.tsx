@@ -94,7 +94,7 @@ export default function AdministratorCtaSections() {
           <li>
             <strong className="text-gray-900">Platform Administrator vs Advanced Administrator (ADM-211):</strong>{' '}
             ADM-201 is the entry-level admin cert; Advanced Administrator builds on it with deeper configuration, integration, and solution design. Take ADM-201 first, then consider the{' '}
-            <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
+            <Link href="/certifications/advanced-administrator#practice-questions" className="text-salesforce-blue font-medium hover:underline">
               ADM-211 Advanced Administrator study guide &amp; practice questions
             </Link>.
           </li>

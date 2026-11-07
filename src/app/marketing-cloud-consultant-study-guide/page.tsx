@@ -264,7 +264,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           Apply this study guide with free Marketing Cloud Consultant practice questions:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/marketing-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/marketing-cloud-consultant#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             MC Consultant Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/marketing-cloud-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

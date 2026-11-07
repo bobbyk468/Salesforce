@@ -242,7 +242,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Test yourself with free Revenue Cloud Consultant practice questions covering all 5 exam sections.</p>
-        <Link href="/certifications/revenue-cloud-consultant" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        <Link href="/certifications/revenue-cloud-consultant#practice-questions" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">

@@ -221,7 +221,7 @@ export default function MarketingCloudEngagementDeveloperStudyGuidePage() {
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice MC Engagement Developer Questions</h2>
         <p className="text-white mb-6">Free practice questions for the Marketing Cloud Engagement Developer exam.</p>
-        <Link href="/certifications/marketing-cloud-engagement-developer" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        <Link href="/certifications/marketing-cloud-engagement-developer#practice-questions" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>
       </div>

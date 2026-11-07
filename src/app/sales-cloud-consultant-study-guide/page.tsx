@@ -262,7 +262,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
           Apply this study guide with free Sales Cloud Consultant practice questions:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/sales-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/sales-cloud#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Sales Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/sales-cloud-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

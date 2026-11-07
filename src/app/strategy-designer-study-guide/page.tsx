@@ -214,7 +214,7 @@ export default function StrategyDesignerStudyGuidePage() {
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Strategy Designer Questions</h2>
         <p className="text-white mb-6">Free practice questions for the Salesforce Strategy Designer exam, apply design frameworks to exam scenarios.</p>
-        <Link href="/certifications/strategy-designer" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        <Link href="/certifications/strategy-designer#practice-questions" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">

@@ -112,7 +112,7 @@ export default function ConsultantCertificationPathPage() {
             <p className="font-semibold text-gray-900 mb-1">Sales Cloud Consultant</p>
             <p className="text-sm text-gray-600 mb-2">Opportunity management, forecasting, territory management, CPQ basics. Most common consultant cert.</p>
             <div className="flex gap-2 flex-wrap">
-              <Link href="/certifications/sales-cloud" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
+              <Link href="/certifications/sales-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
               <Link href="/sales-cloud-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
@@ -121,7 +121,7 @@ export default function ConsultantCertificationPathPage() {
             <p className="font-semibold text-gray-900 mb-1">Service Cloud Consultant</p>
             <p className="text-sm text-gray-600 mb-2">Cases, entitlements, omnichannel routing, knowledge base, service contracts.</p>
             <div className="flex gap-2 flex-wrap">
-              <Link href="/certifications/service-cloud" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
+              <Link href="/certifications/service-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
               <Link href="/service-cloud-consultant-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
@@ -130,7 +130,7 @@ export default function ConsultantCertificationPathPage() {
             <p className="font-semibold text-gray-900 mb-1">Experience Cloud Consultant</p>
             <p className="text-sm text-gray-600 mb-2">Customer/partner portals, licence types, sharing model for external users, Experience Builder.</p>
             <div className="flex gap-2 flex-wrap">
-              <Link href="/certifications/nonprofit-cloud" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
+              <Link href="/certifications/nonprofit-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
               <Link href="/experience-cloud-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
@@ -139,7 +139,7 @@ export default function ConsultantCertificationPathPage() {
             <p className="font-semibold text-gray-900 mb-1">Field Service Consultant</p>
             <p className="text-sm text-gray-600 mb-2">Work orders, service territories, scheduling optimisation, mobile workforce management.</p>
             <div className="flex gap-2 flex-wrap">
-              <Link href="/certifications/field-service" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
+              <Link href="/certifications/field-service#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
               <Link href="/field-service-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
@@ -148,7 +148,7 @@ export default function ConsultantCertificationPathPage() {
             <p className="font-semibold text-gray-900 mb-1">Marketing Cloud Consultant</p>
             <p className="text-sm text-gray-600 mb-2">Discovery and architecture, account configuration, business unit strategy, data design.</p>
             <div className="flex gap-2 flex-wrap">
-              <Link href="/certifications/marketing-cloud-engagement-admin" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
+              <Link href="/certifications/marketing-cloud-engagement-admin#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
               <Link href="/marketing-cloud-consultant-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
@@ -157,7 +157,7 @@ export default function ConsultantCertificationPathPage() {
             <p className="font-semibold text-gray-900 mb-1">Education Cloud Consultant</p>
             <p className="text-sm text-gray-600 mb-2">EDA data model, student lifecycle, higher education industry knowledge, FERPA.</p>
             <div className="flex gap-2 flex-wrap">
-              <Link href="/certifications/education-cloud-consultant" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
+              <Link href="/certifications/education-cloud-consultant#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
               <Link href="/education-cloud-consultant-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>

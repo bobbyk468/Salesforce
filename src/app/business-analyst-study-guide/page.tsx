@@ -252,7 +252,7 @@ export default function BusinessAnalystStudyGuidePage() {
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
         <p className="text-white mb-6">Test yourself with free Business Analyst practice questions covering all 7 exam sections.</p>
         <Link
-          href="/certifications/business-analyst"
+          href="/certifications/business-analyst#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Start Free Practice Questions

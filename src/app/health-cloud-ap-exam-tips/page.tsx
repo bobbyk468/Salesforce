@@ -221,7 +221,7 @@ export default function HealthCloudApExamTipsPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Health Cloud AP Prep</h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/health-cloud-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/health-cloud-ap#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Health Cloud AP Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/certifications/financial-services-cloud-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
