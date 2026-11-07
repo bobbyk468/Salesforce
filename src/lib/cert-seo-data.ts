@@ -397,11 +397,11 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'heroku-architect': { questions: 60, passingScore: '72%', duration: '105 min' },
   'mulesoft-platform-architect': { questions: 60, passingScore: '70%', duration: '120 min' },
   'mulesoft-integration-architect': { questions: 60, passingScore: '70%', duration: '120 min' },
-  'tableau-architect': { questions: 54, passingScore: '63%', duration: '105 min' },
+  'tableau-architect': { questions: 59, passingScore: '63%', duration: '105 min' },
   // Tableau ($200 tier)
   'tableau-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
   'tableau-data-analyst': { questions: 60, passingScore: '65%', duration: '105 min' },
-  'tableau-server-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'tableau-server-administrator': { questions: 55, passingScore: '~65%', duration: '90 min' },
   // Tableau Foundations ($75 tier)
   'tableau-desktop-foundations': { questions: 40, passingScore: '48%', duration: '70 min' },
   // Consultant ($200 tier)

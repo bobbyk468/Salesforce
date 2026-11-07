@@ -14,6 +14,17 @@
  * Verified 66 of 90 certifications on 2026-11-07.
  */
 export const OFFICIAL_CREDENTIAL_URLS: Record<string, string> = {
+  'administrator': 'https://trailhead.salesforce.com/credentials/platformadministrator',
+  'communications-cloud-ap': 'https://trailhead.salesforce.com/credentials/communicationscloudaccreditedprofessional',
+  'consumer-goods-cloud-ap': 'https://trailhead.salesforce.com/credentials/consumergoodscloudaccreditedprofessional',
+  'dev-lifecycle-deployment-architect': 'https://trailhead.salesforce.com/credentials/platformdevelopmentlifecycledeploymentarchitect',
+  'field-service': 'https://trailhead.salesforce.com/credentials/agffieldserviceandoperationsconsultant',
+  'financial-services-cloud-ap': 'https://trailhead.salesforce.com/credentials/financialservicescloudaccreditedprofessional',
+  'health-cloud-ap': 'https://trailhead.salesforce.com/credentials/healthcloudaccreditedprofessional',
+  'manufacturing-cloud-ap': 'https://trailhead.salesforce.com/credentials/manufacturingcloudaccreditedprofessional',
+  'public-sector-solutions-ap': 'https://trailhead.salesforce.com/credentials/publicsectorsolutionsaccreditedprofessional',
+  'sales-cloud': 'https://trailhead.salesforce.com/credentials/agfsalesconsultant',
+  'service-cloud': 'https://trailhead.salesforce.com/credentials/agfserviceconsultant',
   'advanced-administrator': 'https://trailhead.salesforce.com/credentials/advancedadministrator',
   'agentforce-specialist': 'https://trailhead.salesforce.com/credentials/agentforcespecialist',
   'ai-associate': 'https://trailhead.salesforce.com/credentials/aiassociate',
@@ -54,7 +65,10 @@ export const OFFICIAL_CREDENTIAL_URLS: Record<string, string> = {
   'mulesoft-developer-i': 'https://trailhead.salesforce.com/credentials/mulesoftdeveloperi',
   'mulesoft-developer-ii': 'https://trailhead.salesforce.com/credentials/mulesoftdeveloperii',
   'mulesoft-hyperautomation-developer': 'https://trailhead.salesforce.com/credentials/hyperautomationdeveloper',
-  'mulesoft-integration-architect': 'https://trailhead.salesforce.com/credentials/platformintegrationarchitect',
+  // 'mulesoft-integration-architect' intentionally absent: the only candidate that
+  // resolved was platformintegrationarchitect, which is the Salesforce Platform
+  // Integration Architect (exam Plat-Arch-204) — the same page integration-architect
+  // already uses. Linking it here would send readers to a different credential.
   'mulesoft-integration-foundations': 'https://trailhead.salesforce.com/credentials/integrationfoundations',
   'net-zero-cloud-ap': 'https://trailhead.salesforce.com/credentials/netzerocloudaccreditedprofessional',
   'nonprofit-success-pack-consultant': 'https://trailhead.salesforce.com/credentials/nonprofitsuccesspackconsultant',
