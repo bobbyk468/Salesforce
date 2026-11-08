@@ -12,7 +12,7 @@ The strategy is one asset and three ways of putting it in front of people:
 | --- | --- | --- |
 | `github-pages-repo/` | A standalone repo publishing the CC BY 4.0 dataset **and** a full 87-certification directory with section weightings, as a GitHub Pages site. | Anyone reusing the data must attribute it; data lists and awesome-lists accept licensed datasets. |
 | `articles/` | Five finished articles, each built on real exam data from our own codebase. | Dev.to, Medium, Hashnode, LinkedIn and Salesforce community forums, each with a canonical link back. |
-| `awesome-salesforce-prs.md` | Targets, checklist and PR copy for curated lists. | Editorially reviewed list entries. |
+| `awesome-salesforce-prs.md` | Verified target audit, plus two ready-to-paste PR drafts. | Editorially reviewed list entries &mdash; but see the warning below. |
 
 ## Every asset links to the www root
 
@@ -44,8 +44,13 @@ is exactly what gets an outreach asset ignored.
 1. **Publish the dataset repo first.** The articles and the list entries all
    point at it, and a list PR that links to a repo with no commits reads as
    a placeholder.
-2. **Then the awesome-list PRs.** They are slow to review, so start them
-   early and leave them.
+2. **Then the awesome-list PRs** &mdash; but expect little. Checked on
+   2026-11-08, every candidate list is dead to outside contributions: the one
+   real Salesforce list has not been pushed since July 2023, the big dataset
+   lists have merged nothing from outside since 2021 or are archived, and no
+   active alternative above 150 stars exists. The drafts are written and cost
+   nothing more to open, so open them; just do not plan around them. The
+   evidence table is in `awesome-salesforce-prs.md`.
 3. **Then syndicate, one article a week.** Four articles published on the
    same day to the same four platforms looks like exactly what it is.
 
