@@ -1,8 +1,13 @@
 /_next/static/*
   Cache-Control: public, max-age=31536000, immutable
 
-# HTML is statically generated at build time, so it can sit in Cloudflare's
-# edge cache and be revalidated in the background. Without this the worker
-# runs on every request and cold TTFB measured 0.9-1.8s.
+# Applies to static assets served from Workers Assets that are not hashed:
+# favicons, og images, robots.txt, llms.txt, sitemap.xml.
+#
+# It does NOT reach the HTML. Pages are rendered by the OpenNext worker
+# (x-opennext: 1), which sets its own Cache-Control, and Cloudflare does not
+# put worker responses in its edge cache unless a Cache Rule says to. Cold
+# TTFB on / measured 0.9-1.8s and is unchanged by anything in this file;
+# fixing it needs a Cache Rule in the dashboard, not a header here.
 /*
   Cache-Control: public, max-age=0, s-maxage=86400, stale-while-revalidate=604800
