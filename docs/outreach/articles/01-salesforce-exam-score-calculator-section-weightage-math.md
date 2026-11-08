@@ -1,26 +1,20 @@
 ---
-title: "The math Salesforce leaves out of your exam score report"
+title: "Salesforce doesn't give you your exam score. Here's how to work it out."
 canonical_url: "https://www.trailblazeprep.com/tools/score-calculator"
 tags: salesforce, certification, career, math
 ---
 
-Salesforce's exam result report has an unusual gap in it. It gives you a
-percentage for every section. It tells you whether you passed. It never gives
-you your overall score.
+Salesforce tells you a percentage for each section of the exam. It tells you pass or fail. It never tells you your actual score.
 
-If you passed, that is a curiosity. If you failed, it is the difference
-between rebooking next week and rebooking next quarter — and you cannot get at
-it from the report, because the sections are not equally weighted.
+Pass, and you don't care. Fail, and it's the only thing you want to know. Were you one question short, or twenty? Because that decides whether you rebook next week or spend a month studying first.
 
-*By [Trailblaze Prep — Free Salesforce Certification Practice Questions](https://www.trailblazeprep.com/),
-which publishes section weightings and free practice questions for every
-current Salesforce certification.*
+You can work it out. Most people get it wrong, because they average the sections.
 
-## Why averaging the sections gives the wrong answer
+*From [Trailblaze Prep](https://www.trailblazeprep.com/), free practice questions and study guides for every Salesforce certification.*
 
-The real section weightings for the Salesforce Certified Platform
-Administrator exam (ADM-201) as of Summer '26 — 60 scored questions, 105
-minutes, 68% to pass:
+## The sections aren't equal
+
+Here's what ADM-201 is actually made of in Summer '26. Sixty scored questions, 105 minutes, 68% to pass.
 
 | Section | Share of exam |
 | --- | --- |
@@ -30,61 +24,57 @@ minutes, 68% to pass:
 | Workflow and Process Automation | 14% |
 | Sales and Marketing Applications | 11% |
 | Service and Support Applications | 9% |
-| Agentforce (new in Summer '26) | 8% |
+| Agentforce (new this release) | 8% |
 | Productivity and Collaboration | 4% |
 
-Those are not close to equal. Configuration and Setup is worth five times
-Productivity and Collaboration. So suppose a report comes back like this:
+Configuration and Setup is worth five times what Productivity and Collaboration is worth. So averaging the eight numbers treats a 20% section and a 4% section as the same thing. They aren't.
+
+## What that does to a real result
+
+Say your report comes back like this.
 
 | Section | Your score | Weight |
 | --- | --- | --- |
-| Configuration and Setup | 60% | 20% |
-| Object Manager and Lightning App Builder | 75% | 17% |
-| Data and Analytics Management | 70% | 17% |
-| Workflow and Process Automation | 65% | 14% |
-| Sales and Marketing Applications | 80% | 11% |
-| Service and Support Applications | 85% | 9% |
-| Agentforce | 50% | 8% |
+| Configuration and Setup | 45% | 20% |
+| Object Manager and Lightning App Builder | 50% | 17% |
+| Data and Analytics Management | 55% | 17% |
+| Workflow and Process Automation | 60% | 14% |
+| Sales and Marketing Applications | 90% | 11% |
+| Service and Support Applications | 95% | 9% |
+| Agentforce | 100% | 8% |
 | Productivity and Collaboration | 100% | 4% |
 
-The plain average of those eight numbers is **73.1%**, comfortably over the
-68% pass mark. The weighted score is:
+Average those eight numbers and you get **74.4%**. Six points clear of the pass mark. Looks fine.
+
+Now weight them:
 
 ```
-(60×20 + 75×17 + 70×17 + 65×14 + 80×11 + 85×9 + 50×8 + 100×4) / 100
-= (1200 + 1275 + 1190 + 910 + 880 + 765 + 400 + 400) / 100
-= 7020 / 100
-= 70.2%
+(45×20 + 50×17 + 55×17 + 60×14 + 90×11 + 95×9 + 100×8 + 100×4) / 100
+= (900 + 850 + 935 + 840 + 990 + 855 + 800 + 400) / 100
+= 6570 / 100
+= 65.7%
 ```
 
-Still a pass, but three points lower — and the gap opens up precisely when
-your weak sections are your heavy ones. Swap the Configuration and Setup score
-with the Productivity and Collaboration score and the plain average does not
-move at all, while the weighted score falls to **66.8%**: a fail. The average
-cannot see the difference. That is the whole problem with it.
+**65.7%.** That's a fail, and it isn't close. The average was out by nearly nine points, in the wrong direction, because every strong score landed on a small section and every weak one landed on a big one.
 
-## The retake implication
+That's the whole problem with averaging. It can't see where your marks fell.
 
-The section to fix before a retake is not your lowest percentage. It is the
-one where *points gained × weight* is largest.
+## This changes what you study for the retake
 
-In the table above, Agentforce at 50% looks like the disaster. It is worth 8%.
-Dragging it from 50% to 80% — thirty points, a lot of study — buys you
-`30 × 0.08 = 2.4` points of overall score. Dragging Configuration and Setup
-from 60% to 75% — fifteen points, half the work — buys `15 × 0.20 = 3.0`.
+The obvious move after a fail is to attack your worst section. In the table above that's Configuration and Setup at 45%, so that one happens to be right. It usually isn't.
 
-Weight your revision by the weightings. It is the highest-leverage thing you
-can do between a fail and a retake, and almost nobody does it, because the
-result report does not show you the weightings either.
+What you want is the section where *points gained × weight* is biggest.
 
-## Doing it in code
+Take Agentforce at 50% on some other attempt. It's worth 8%. Drag it from 50 to 80, which is thirty points and a lot of reading, and you buy yourself 2.4 points of overall score. Drag Configuration and Setup from 60 to 75 instead. Half the work, and it's worth 3.0.
+
+Study the heavy sections. Almost nobody does, because the result report doesn't show you the weights either.
+
+## If you want to code it
 
 ```js
-/**
- * Weighted overall score from per-section percentages.
- * Normalises by the weight supplied, so a partially filled
- * report still returns a meaningful number.
- */
+// Weighted score from per-section percentages.
+// Divides by the weight you actually filled in, so a
+// partial report still gives a usable number.
 function weightedScore(sections, entered) {
   let weighted = 0
   let usedWeight = 0
@@ -98,47 +88,26 @@ function weightedScore(sections, entered) {
 }
 ```
 
-The normalisation on the last line is the part people get wrong by hand. If
-you only have five of the eight sections, divide by the weight you actually
-supplied — not by 100 — or every missing section silently counts as a zero and
-the result comes out catastrophically low.
+That last line is where people trip up by hand. If you've only got five of the eight sections, divide by the weight you entered, not by 100. Divide by 100 and the three missing sections silently count as zeros, and your score comes out terrifying for no reason.
 
-## Or don't do it by hand
+## Or just use the calculator
 
-The [Salesforce exam score calculator](https://www.trailblazeprep.com/tools/score-calculator)
-holds the published section weightings and pass mark for **50 exams**, does
-the arithmetic, shows how far you were from the pass mark, and names your
-weakest section. Free, no sign-up, and embeddable if you want it inside your
-own study guide.
+The [Salesforce exam score calculator](https://www.trailblazeprep.com/tools/score-calculator) holds the published weightings and pass mark for **50 exams**. Type in your sections, it does the arithmetic and tells you how far off you were. Free, no sign-up, and you can embed it if you want it in your own study notes.
 
-It covers 50 and not all 87 because an exam is included only when both the
-official section weightings and a published pass mark exist. The rest are left
-out rather than estimated — people use this to decide whether to rebook, and a
-confidently wrong number is worse than no number.
+Fifty, not all 87, because an exam only goes in when both the official weightings and a published pass mark exist. The rest are left out rather than guessed. People use this to decide whether to rebook. A made-up number would be worse than no number.
 
-## Two honest caveats
+## Two things I'd rather say up front
 
-**It is close, not exact.** Salesforce does not publish how it rounds section
-percentages, nor how the unscored trial questions — up to five on most exams,
-which consume your time but not your marks — are handled.
+It's close, not exact. Salesforce doesn't publish how it rounds the section percentages, or what it does with the unscored trial questions that sit in most exams and eat your time without earning marks.
 
-**The pass mark is the weakest figure in the calculation.** Salesforce no
-longer publishes pass marks on its certification pages: across all 87 current
-credentials the figure appears on none of them. Ours come from exam guides and
-should be treated as secondary. That finding, with the full data, is in the
-[2026 Salesforce Certification Benchmark Report](https://www.trailblazeprep.com/salesforce-certification-report-2026).
+And the pass mark is the shakiest number in the whole calculation. Salesforce has stopped publishing pass marks on its certification pages. I checked all 87 and found it on none of them. The ones we hold come from exam guides, so treat them as a guide and not gospel. I wrote that up with the full data in the [2026 Certification Benchmark Report](https://www.trailblazeprep.com/salesforce-certification-report-2026).
 
-## Where to go next
+## Practice questions
 
-- [Platform Administrator (ADM-201) practice questions](https://www.trailblazeprep.com/certifications/administrator)
-- [Platform App Builder practice questions](https://www.trailblazeprep.com/certifications/app-builder)
-- [Business Analyst practice questions](https://www.trailblazeprep.com/certifications/business-analyst)
-- [Agentforce Specialist practice questions](https://www.trailblazeprep.com/certifications/agentforce-specialist)
-- [Data 360 Consultant practice questions](https://www.trailblazeprep.com/certifications/data-360-consultant)
+- [Platform Administrator (ADM-201)](https://www.trailblazeprep.com/certifications/administrator)
+- [Platform App Builder](https://www.trailblazeprep.com/certifications/app-builder)
+- [Business Analyst](https://www.trailblazeprep.com/certifications/business-analyst)
+- [Agentforce Specialist](https://www.trailblazeprep.com/certifications/agentforce-specialist)
+- [Data 360 Consultant](https://www.trailblazeprep.com/certifications/data-360-consultant)
 
----
-
-*[Trailblaze Prep](https://www.trailblazeprep.com/) is a free, independent
-Salesforce certification prep resource — practice questions and study guides
-for every current credential, no sign-up and no paywall. Not affiliated with
-Salesforce.*
+*[Trailblaze Prep](https://www.trailblazeprep.com/) is free and independent. No sign-up, no paywall. Not affiliated with Salesforce.*

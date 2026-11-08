@@ -1,51 +1,35 @@
 ---
-title: "We checked all 87 Salesforce certifications. Salesforce has stopped publishing pass marks."
+title: "I checked all 87 Salesforce certifications. The pass marks are gone."
 canonical_url: "https://www.trailblazeprep.com/salesforce-certification-report-2026"
 tags: salesforce, certification, opendata, data
 ---
 
-I went looking for the pass mark for a Salesforce certification, the way
-anyone does a week before an exam. I did not find it. Then I checked another.
-Then I checked all 87.
+I went looking for the pass mark on a certification page, the way anyone does the week before an exam. It wasn't there. So I checked another one. Then I checked all 87.
 
-Across every current Salesforce certification, the pass mark is published on
-**none** of the certification pages. Not in a footnote, not behind a sign-in —
-simply not there. The pages carry the fee, usually the question count, usually
-the duration. The one number that tells you whether you passed is gone.
+It's on none of them. Not in a footnote, not behind a login. Gone. The pages still carry the fee, usually the question count, usually the duration. The one number that tells you whether you passed isn't published any more.
 
-*By [Trailblaze Prep — Free Salesforce Certification Practice Questions](https://www.trailblazeprep.com/).
-All figures below are computed from our
-[open dataset](https://www.trailblazeprep.com/salesforce-certification-report-2026),
-free to reuse under CC BY 4.0.*
+*From [Trailblaze Prep](https://www.trailblazeprep.com/). Every figure below comes from the [open dataset](https://www.trailblazeprep.com/salesforce-certification-report-2026), free to reuse under CC BY 4.0.*
 
-## What is actually published
+## What is still published
 
 87 credentials, 10 role tracks:
 
-- **87 of 87** have a published exam fee.
-- **60 of 87** have a complete published format — question count, pass mark
-  and duration.
-- **67** have published section weightings.
-- **77** have an official Salesforce page we could fetch and confirm.
+- 87 of 87 have a published exam fee.
+- 60 of 87 have a complete format, meaning question count, pass mark and duration.
+- 67 have published section weightings.
+- 77 have an official page I could fetch and confirm.
 
-This is not a site in disrepair. Fees are maintained carefully, because fees
-are a transaction. The pass mark has drifted out of the public pages and into
-per-exam guide PDFs that are not linked from every credential.
+This isn't a neglected website. The fees are maintained carefully, because fees are a transaction. The pass mark has drifted off the public pages and into exam guide PDFs that aren't linked from every credential.
 
 ## Why that matters more than it sounds
 
-Salesforce reports your result as a percentage *per section* and then, overall,
-as the word "pass" or "fail" — never an overall percentage. So after a fail you
-have eight section percentages and no way to know whether you were two points
-short or twenty. Whether you rebook next week or next quarter depends entirely
-on which, and the number you need is the pass mark.
+Salesforce reports your result as a percentage per section, then pass or fail. No overall number, ever. So after a fail you have eight section percentages and no idea whether you missed by two points or twenty. That decides whether you rebook next week or next quarter, and the figure you need to work it out is the pass mark.
 
-Combine the two and the situation is genuinely odd: Salesforce does not tell
-you your score, and increasingly does not tell you the score you needed.
+Put the two together and it's a strange place to end up. They don't tell you your score, and now they mostly don't tell you the score you needed.
 
 ## What a whole track costs
 
-| Role track | Certs | Exam fees | Scored questions |
+| Role track | Certs | Fees | Questions |
 | --- | --- | --- | --- |
 | [Architect](https://www.trailblazeprep.com/certifications/role/architect) | 17 | $12,900 | 540 |
 | [Accredited Professional](https://www.trailblazeprep.com/certifications/role/accredited-professional) | 23 | $3,450 | 438 |
@@ -59,58 +43,37 @@ you your score, and increasingly does not tell you the score you needed.
 | [Sales](https://www.trailblazeprep.com/certifications/role/sales) | 1 | $75 | 40 |
 | **All 10** | **87** | **$25,200** | **3,267** |
 
-Plus about **95 hours** of exam time — 5,695 minutes across the 57 credentials
-whose duration is published. The fee column is complete; the duration and
-question columns are sums over what exists, not estimates of what does not.
-Fees range from $75 to $4,500.
+Plus about 95 hours of exam time, 5,695 minutes across the 57 credentials that publish a duration. The fee column is complete. The question and duration columns are sums of what exists, not estimates of what doesn't. Fees run from $75 to $4,500.
 
-**The Architect number is one credential, not a track.** Three of those
-seventeen are the Certified Technical Architect components: $1,500 + $1,500 +
-$4,500 = $7,500, well over half the track. Strip the CTA out and Architect is
-$5,400 for fourteen credentials, which is ordinary.
+**The Architect number is one credential, not a track.** Three of those seventeen are the Certified Technical Architect stages: $1,500, $1,500 and $4,500. That's $7,500, more than half the track. Take the CTA out and Architect is $5,400 for fourteen credentials, which is ordinary.
 
-**The Accredited Professional track looks like the bargain of the catalogue** —
-23 credentials at $150 each — until you look at status. The large majority of
-the 25 credentials with a closed or retired exam are Accredited Professionals.
-A track that is mostly closed is cheap for the same reason a closing-down sale
-is cheap.
+**Accredited Professional looks like the bargain of the catalogue.** 23 credentials at $150 each. Then you look at status, and most of the 25 closed or retired exams are in that track. It's cheap the way a closing-down sale is cheap.
 
 ## Renames and retirements
 
-**34 credentials have been renamed** and **25 have a changed exam status**.
-Nothing was taken from anyone — your credential is still yours — but the name
-on your CV, the name in the job advert and the name on the Salesforce page are
-now three different strings.
+34 credentials have been renamed. 25 have a changed exam status.
 
-The patterns that catch people out:
+Nobody lost anything. Your credential is still yours. But the name on your CV, the name in the job ad and the name on the Salesforce page are now three different strings, and search engines treat them as three different things.
 
-- **Administrator → Platform Administrator**; Advanced Administrator →
-  Platform Administrator II.
-- **Consultants → Agentforce Consultants.** Sales Cloud Consultant →
-  Agentforce Sales Consultant; Service Cloud Consultant → Agentforce Service
-  Consultant; Field Service Consultant → Agentforce Field Service *and
-  Operations* Consultant; Nonprofit Cloud Consultant → Agentforce Nonprofit
-  Consultant. Two of those gained words in the middle, so a find-and-replace
-  over your records will miss them.
-- **Architect credentials gained a "Platform" prefix** — Data, Integration,
-  Sharing and Visibility, Identity and Access Management, Dev Lifecycle and
-  Deployment. Platform Developer I lost its numeral.
-- **Pardot → Marketing Cloud Account Engagement**, years old and still
-  catching people.
-- **Data Cloud → Data 360.** Recent, and confusing because job adverts still
-  say Data Cloud.
-- **[AI Associate](https://www.trailblazeprep.com/certifications/ai-associate) is
-  retired**; **CPQ Specialist → [CPQ Administrator](https://www.trailblazeprep.com/certifications/cpq-administrator)**,
-  and that exam is now closed; **[Nonprofit Success Pack (NPSP) Consultant](https://www.trailblazeprep.com/certifications/nonprofit-cloud)**
-  is closed to new registrations.
+The ones that catch people:
 
-"Closed to new registrations" and "retired" are not the same thing and the
-dataset distinguishes them. Before planning a track around a credential, check
-its status, not just its fee.
+Administrator became Platform Administrator. Advanced Administrator became Platform Administrator II.
+
+The consultants became Agentforce consultants. Sales Cloud Consultant, Service Cloud Consultant, Field Service Consultant, Nonprofit Cloud Consultant. Two of those gained words in the middle rather than just a prefix, so a find-and-replace over your records will miss them.
+
+The architect credentials picked up a "Platform" prefix. Data, Integration, Sharing and Visibility, Identity and Access Management, Dev Lifecycle and Deployment. Platform Developer I quietly lost its numeral.
+
+Pardot became Marketing Cloud Account Engagement, years ago, and it's still catching people.
+
+Data Cloud became Data 360. Recent, and confusing, because job ads still say Data Cloud.
+
+[AI Associate](https://www.trailblazeprep.com/certifications/ai-associate) is retired. CPQ Specialist became [CPQ Administrator](https://www.trailblazeprep.com/certifications/cpq-administrator), and that exam is now closed. [NPSP Consultant](https://www.trailblazeprep.com/certifications/nonprofit-cloud) is closed to new registrations.
+
+Closed and retired aren't the same thing, and the dataset keeps them apart. Before you build a plan around a credential, check its status, not just its fee.
 
 ## Take the data
 
-Both endpoints are CC BY 4.0, CORS-open, no key:
+Both endpoints are CC BY 4.0, CORS open, no key:
 
 - `https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.json`
 - `https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.csv`
@@ -127,25 +90,12 @@ df = pd.read_csv("https://www.trailblazeprep.com/datasets/salesforce-certificati
 df["passing_score"].isna().sum()   # how many gaps are left
 ```
 
-One rule, stated plainly: **an empty cell means Salesforce does not publish
-that figure. It is not a zero and it is not an estimate.** It would have been
-easy to fill the gaps with plausible numbers — 65% is a safe guess for most
-exams — and the dataset would have looked more complete and been worth much
-less.
+One rule, and it's the point of the whole thing: **an empty cell means Salesforce doesn't publish that figure.** It isn't a zero and it isn't an estimate. Filling the gaps with plausible numbers would have been easy, 65% is a safe guess for most exams, and the dataset would have looked better and been worth much less.
 
-## Method
+## How it was built
 
-Figures come from each credential's own Salesforce page, with every URL
-fetched and confirmed rather than derived from the credential name. That
-mattered: name-derived URLs were wrong often enough to mis-map credentials,
-and the check also turned up two of our own figures that were incorrect
-(Tableau Architect's question count; Tableau Server Administrator's question
-count and duration). Both are fixed. Corrections with a source are welcome.
+Every figure comes from the credential's own Salesforce page, with each URL fetched and confirmed rather than guessed from the name. That mattered. Guessing URLs from names got them wrong often enough to mis-map credentials, and the check also turned up two of our own figures that were simply incorrect: Tableau Architect's question count, and Tableau Server Administrator's question count and duration. Both fixed.
 
----
+If you find a third, open an issue with the slug and the Salesforce URL showing the right value. Corrections with a source get merged. Ones without don't.
 
-*Full report, per-track medians and the rename tracker:
-[2026 Salesforce Certification Benchmark Report](https://www.trailblazeprep.com/salesforce-certification-report-2026).
-[Trailblaze Prep](https://www.trailblazeprep.com/) is a free, independent
-Salesforce certification prep resource — no sign-up, no paywall. Not
-affiliated with Salesforce.*
+*Full report, per-track medians and the rename tracker: [2026 Salesforce Certification Benchmark Report](https://www.trailblazeprep.com/salesforce-certification-report-2026). [Trailblaze Prep](https://www.trailblazeprep.com/) is free and independent. Not affiliated with Salesforce.*

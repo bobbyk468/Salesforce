@@ -37,6 +37,31 @@ both when editing.
 One article a week. Publishing four at once, to the same platforms, in the
 same voice, is the pattern that gets accounts flagged.
 
+## Voice
+
+These are written to read like a person wrote them, not a content tool. The
+project's anti-AI rules live in `docs/X-CONTENT-STYLE-RULES.md`. Those rules
+were written for tweets, so the mechanical parts (lowercase only, no bullets,
+280 characters) do not carry over to long-form. What does carry over:
+
+- Plain English. Short sentences. Contractions. Fragments where they land.
+- No em-dashes. They are the clearest tell, and a full stop or a comma almost
+  always does the job.
+- Banned throughout: comprehensive, delve, unlock, transformative, in today's
+  world, remember, it's important to note, navigate, leverage, crucial,
+  essential, robust, seamless, landscape, realm, dive in, it's worth noting,
+  when it comes to.
+- Every section takes a side. No "on the one hand".
+- Specifics over abstractions. A pass mark, a fee, a section weight, a thing
+  that actually catches people out.
+- Don't let every section resolve neatly. Real writing trails off sometimes.
+
+Check a draft before publishing:
+
+```bash
+grep -c '—' docs/outreach/articles/0*.md          # should be 0
+```
+
 ## Before publishing any of them
 
 Re-check the figures against the live report. They are computed, so they
