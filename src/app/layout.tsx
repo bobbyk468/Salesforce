@@ -10,8 +10,23 @@ import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE, SITE_NAME, SOCIAL_LINKS }
 
 const inter = Inter({
   subsets: ['latin'],
-  // Keep the adjusted fallback on slow connections instead of shifting content late.
-  display: 'swap',
+  /*
+    'optional', not 'swap'. Measured on the live PageSpeed Insights API:
+    with 'swap' the web font arrives after first paint and reflows the H1
+    and the jump bar, which re-wraps and pushes the first certification
+    track down — PSI attributed the whole of CLS 0.203 on mobile and 0.069
+    on desktop to that one section moving.
+
+    'optional' gives the font a ~100ms block period and then declines to
+    swap it in for that page view, so a late font can never move anything.
+    adjustFontFallback keeps the fallback metrically close, so the page a
+    slow visitor sees is near-identical rather than obviously unstyled.
+
+    Local Lighthouse with --throttling-method=simulate does NOT reproduce
+    this; it loads the font before first paint and reports CLS 0. Verify
+    font-related CLS against the real PSI API only.
+  */
+  display: 'optional',
   adjustFontFallback: true,
 })
 

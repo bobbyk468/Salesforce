@@ -48,12 +48,19 @@ export default function CertificationGrid({
           <p className="mb-3 text-center text-sm font-semibold uppercase tracking-wider text-gray-500">
             Jump to role track
           </p>
-          <ul className="flex flex-wrap justify-center gap-2">
+          {/*
+            A fixed-column grid, not flex-wrap. With wrapping, the number of
+            rows depends on how wide the labels render, so a font swap or a
+            different fallback metric changes the bar's height and pushes
+            every certification track below it down. A grid has the same row
+            count whatever the text measures.
+          */}
+          <ul className="mx-auto grid max-w-4xl grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
             {categories.map((category) => (
               <li key={category.slug}>
                 <a
                   href={`#certification-track-${category.slug}`}
-                  className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 transition-colors hover:border-salesforce-blue hover:text-salesforce-blue"
+                  className="flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-center text-sm font-medium text-gray-700 transition-colors hover:border-salesforce-blue hover:text-salesforce-blue"
                 >
                   {category.name}
                   {/*
