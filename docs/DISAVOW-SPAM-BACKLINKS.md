@@ -1,77 +1,68 @@
-# Spam backlink profile — what the SEOptimer report found, and what to do
+# Spam backlinks: do not disavow
 
-Date: 2026-11-07
-Source: SEOptimer audit of trailblazeprep.com (homepage report, "Links" section)
+**Checked in Google Search Console on 2026-11-08. Conclusion: take no action.**
 
-## What the report shows
+## What Search Console actually shows
 
-| Metric | Value |
+| | |
 | --- | --- |
-| Referring domains | 221 |
-| Backlinks to `trailblazeprep.com/` | 218 |
-| Top anchor text | "Premium SEO Authority Links for trailblazeprep.com Websites and Businesses" — **280 backlinks** |
-| Top referring TLDs | `.space` (44), `.website` (37), `.site` (32), `.shop` (31), other (77) |
-| Domain Strength | 10 |
+| Total external links | **12** |
+| Linking domains | **6** |
+| Manual actions | **No issues detected** |
 
-Almost every link lands on the same URL pattern across dozens of throwaway
-domains:
+The complete list of domains Google knows link to this site:
 
-```
-http://<domain>/dir/domain-authority-backlinks-216628
-```
+| Domain | Links |
+| --- | --- |
+| x.com | 6 |
+| github.com | 2 |
+| atacglobalcx.com | 1 |
+| certificationplanner.com | 1 |
+| mattfrancis.me | 1 |
+| scamadviser.com | 1 |
 
-Examples from the report: `highdrlinks.space`, `trafficforseo.com`,
-`seocheckertool.online`, `freerankchecker.store`, `tokoseo.com`,
-`largeseotools.com`, `instantlinkgenerator.website`.
+**Not one link-farm domain appears.** None of `highdrlinks.space`,
+`trafficforseo.com`, `seocheckertool.online`, `freerankchecker.store`,
+`tokoseo.com`, `largeseotools.com` or `instantlinkgenerator.website` is in
+Google's index for this site.
 
-That shared path, the commercial anchor text, and the disposable TLD mix are
-the signature of an automated link-farm blast — not organic links. It is either
-leftover from a paid "domain authority backlinks" package or unsolicited spam
-aimed at the domain.
+## Why the earlier advice here was wrong
 
-## Why it matters
+An earlier version of this document recommended exporting 221 referring
+domains from SEOptimer and uploading a disavow file. That was based entirely
+on SEOptimer's own crawl: 221 referring domains, 280 backlinks anchored
+"Premium SEO Authority Links for trailblazeprep.com Websites and Businesses",
+Domain Strength 10, Links grade D+.
 
-The site's genuine backlink count is close to zero. The 280 farm links are
-therefore the entire visible profile, which is why Domain Strength sits at 10
-and the Links grade is D+. Google generally ignores links like these rather
-than penalising for them, but an auditing tool cannot tell the difference, and
-a profile that is ~97% link-farm is a bad look to any human reviewer too.
+Those are SEOptimer's numbers from SEOptimer's index. Google's index — the only
+one that affects rankings — contains 12 links from 6 domains. Either Google
+never crawled the farm links, or it discarded them. Either way they are not
+counted, so there is nothing for a disavow file to remove.
 
-## What to do
+## Why uploading one anyway would be a mistake
 
-1. **Do not buy more links.** If a package was purchased, cancel it. More of
-   the same makes the ratio worse, not better.
-2. **Export the full referring-domain list** from the SEOptimer dashboard
-   (Links → Referring Domains → export). The audit PDF only prints the top 10
-   of 221.
-3. **Disavow.** Add every farm domain to the file below and upload it at
-   <https://search.google.com/search-console/disavow-links> for the
-   `trailblazeprep.com` property.
-4. **Keep the real links.** Two referring pages in the report look genuine and
-   must *not* be disavowed:
-   - `certificationplanner.com`
-   - `mentaraglobal.com`
+Google's guidance is to disavow only when **both** of these hold:
 
-## Starter disavow file
+1. the site has a considerable number of spammy or artificial inbound links, **and**
+2. those links have caused, or are likely to cause, a manual action.
 
-Save as `disavow.txt` (plain text, one directive per line) and extend it with
-the full export before uploading.
+Neither holds. Manual actions reports "No issues detected", and Google sees no
+spam links at all. Uploading a disavow file would achieve nothing against links
+Google already ignores, while carrying real downside: disavowal is applied by
+domain, and a mistake throws away a genuine link permanently until the file is
+corrected. Google's own documentation warns the tool "can potentially harm your
+site's performance in Google Search results" if used incorrectly.
 
-```text
-# Automated link-farm blast, anchor "Premium SEO Authority Links ..."
-# All on the shared path /dir/domain-authority-backlinks-216628
-domain:highdrlinks.space
-domain:trafficforseo.com
-domain:seocheckertool.online
-domain:freerankchecker.store
-domain:tokoseo.com
-domain:largeseotools.com
-domain:instantlinkgenerator.website
+## What the D+ Links grade actually means
 
-# Scraped-directory listing, no editorial value
-domain:xploredomains.com
-```
+It is SEOptimer scoring a link profile Google does not see. The underlying fact
+it reflects is true and worth acting on: **this site has almost no real inbound
+links** — six domains, two of which are its own X account and a GitHub
+reference. That is an off-page problem solved by earning links, not by filing
+paperwork about spam. See the link-building notes in the project memory.
 
-Disavowing is slow to show up — expect weeks before a tool re-crawls and the
-numbers move. It does not create authority; it only stops the profile being
-dominated by junk. Earning real links is the separate, longer job.
+## If this changes
+
+Re-check before acting. The trigger for revisiting is a **manual action
+appearing in Search Console**, or spam domains showing up in the Links report —
+not a third-party tool's score.
