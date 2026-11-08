@@ -13,7 +13,20 @@ import { computeWeightedScore, type CalculatorExam } from '@/lib/score-calculato
  * so the weightage dataset stays out of the shared client bundle and is only
  * paid for on this route.
  */
-export default function ScoreCalculator({ exams }: { exams: CalculatorExam[] }) {
+export default function ScoreCalculator({
+  exams,
+  linkBase = '',
+  onExamChange,
+}: {
+  exams: CalculatorExam[]
+  /**
+   * Absolute origin to prefix internal links with. Set on the embeddable
+   * build, where a relative href would resolve against the host site inside
+   * the iframe and 404.
+   */
+  linkBase?: string
+  onExamChange?: (exam: CalculatorExam) => void
+}) {
   const [slug, setSlug] = useState(exams[0]?.slug ?? '')
   const [entered, setEntered] = useState<Record<string, number | null>>({})
 
@@ -51,7 +64,12 @@ export default function ScoreCalculator({ exams }: { exams: CalculatorExam[] }) 
       <select
         id="exam-select"
         value={slug}
-        onChange={(e) => { setSlug(e.target.value); setEntered({}) }}
+        onChange={(e) => {
+          setSlug(e.target.value)
+          setEntered({})
+          const next = exams.find((x) => x.slug === e.target.value)
+          if (next) onExamChange?.(next)
+        }}
         className="mt-2 h-12 w-full rounded-lg border border-gray-300 bg-white px-3 text-base text-gray-900 focus:border-salesforce-blue focus:outline-none focus:ring-2 focus:ring-salesforce-blue/20"
       >
         {exams.map((e) => (
@@ -139,13 +157,25 @@ export default function ScoreCalculator({ exams }: { exams: CalculatorExam[] }) 
                   <TrendingDown className="h-4 w-4 flex-shrink-0 text-amber-600" aria-hidden="true" />
                   Weakest section: {weakest.name} ({weakest.value}%)
                 </p>
-                <Link
-                  href={`/certifications/${exam.slug}#practice-questions`}
-                  className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-lg bg-salesforce-blue px-4 text-sm font-semibold text-white shadow-sm hover:bg-salesforce-dark"
-                >
-                  Boost your {weakest.name} score with free {exam.name} practice questions
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </Link>
+                {linkBase ? (
+                  <a
+                    href={`${linkBase}/certifications/${exam.slug}#practice-questions`}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-lg bg-salesforce-blue px-4 text-sm font-semibold text-white shadow-sm hover:bg-salesforce-dark"
+                  >
+                    Boost your {weakest.name} score with free {exam.name} practice questions
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <Link
+                    href={`/certifications/${exam.slug}#practice-questions`}
+                    className="mt-3 inline-flex min-h-11 items-center gap-2 rounded-lg bg-salesforce-blue px-4 text-sm font-semibold text-white shadow-sm hover:bg-salesforce-dark"
+                  >
+                    Boost your {weakest.name} score with free {exam.name} practice questions
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                )}
               </div>
             )}
           </>

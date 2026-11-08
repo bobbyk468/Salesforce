@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salesforce Certification Dataset 2026</title>
+<meta name="description" content="Exam fee, question count, duration and prerequisites for all 87 Salesforce certifications, as JSON and CSV under CC BY 4.0.">
+<link rel="canonical" href="https://www.trailblazeprep.com/salesforce-certification-report-2026">
+<style>
+  :root { --ink:#111827; --muted:#4b5563; --line:#e5e7eb; --accent:#0176d3; --bg:#fff; --card:#f9fafb; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink:#f3f4f6; --muted:#9ca3af; --line:#374151; --accent:#5aa9e6; --bg:#0b1220; --card:#111a2b; }
+  }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:46rem; margin:0 auto; padding:3rem 16px; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .5rem; }
+  h2 { font-size:1.2rem; margin:2.5rem 0 .5rem; }
+  p { color:var(--muted); }
+  a { color:var(--accent); }
+  .row { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.5rem 0; }
+  .btn { display:inline-block; padding:.7rem 1.1rem; border-radius:.6rem; background:var(--accent); color:#fff; text-decoration:none; font-weight:600; }
+  .btn.alt { background:transparent; color:var(--accent); border:1px solid var(--line); }
+  pre { background:var(--card); border:1px solid var(--line); border-radius:.6rem; padding:1rem; overflow-x:auto; font-size:.85rem; }
+  table { border-collapse:collapse; width:100%; font-size:.9rem; }
+  th,td { text-align:left; padding:.5rem .75rem .5rem 0; border-bottom:1px solid var(--line); }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--line); font-size:.85rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Salesforce Certification Dataset 2026</h1>
+  <p>Exam fee, scored question count, duration, pass mark, prerequisites and official page for
+  <strong>87 Salesforce certifications across 10 role tracks</strong>. CC BY 4.0, CORS open, no key.</p>
+
+  <div class="row">
+    <a class="btn" href="https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.json">JSON</a>
+    <a class="btn alt" href="https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.csv">CSV</a>
+    <a class="btn alt" href="https://www.trailblazeprep.com/salesforce-certification-report-2026">Method &amp; report</a>
+  </div>
+
+  <h2>Totals, by role track</h2>
+  <table>
+    <thead><tr><th>Track</th><th>Certs</th><th>Fees</th></tr></thead>
+    <tbody>
+      <tr><td>Accredited Professional</td><td>23</td><td>$3,450</td></tr>
+      <tr><td>Architect</td><td>17</td><td>$12,900</td></tr>
+      <tr><td>Consultant</td><td>14</td><td>$2,800</td></tr>
+      <tr><td>Developer</td><td>11</td><td>$2,200</td></tr>
+      <tr><td>Administrator</td><td>8</td><td>$1,600</td></tr>
+      <tr><td>Tableau</td><td>5</td><td>$1,075</td></tr>
+      <tr><td>Associate</td><td>4</td><td>$300</td></tr>
+      <tr><td>Designer</td><td>2</td><td>$400</td></tr>
+      <tr><td>Marketing</td><td>2</td><td>$400</td></tr>
+      <tr><td>Sales</td><td>1</td><td>$75</td></tr>
+    </tbody>
+  </table>
+  <p>$25,200 in all. The Architect figure is dominated by the three Certified Technical Architect
+  components &mdash; $1,500 + $1,500 + $4,500 &mdash; which are $7,500 of its $12,900.</p>
+
+  <h2>Use it</h2>
+<pre>curl -s https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.json \
+  | jq '.data[] | select(.role_track == "Architect") | {name, exam_fee_usd}'</pre>
+
+  <h2>Empty means unpublished</h2>
+  <p>An empty cell is a figure Salesforce does not publish, not a zero. All 87 credentials have a
+  published fee; 60 have a complete published format; the pass mark appears on none of the
+  certification pages, so those come from exam guides and are secondary.</p>
+
+  <footer>
+    <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+    <a href="https://www.trailblazeprep.com/salesforce-certification-report-2026">2026 Salesforce Certification Benchmark Report</a>
+    by <a href="https://www.trailblazeprep.com">Trailblaze Prep</a>.
+    Independent; not affiliated with Salesforce.
+  </footer>
+</div>
+</body>
+</html>

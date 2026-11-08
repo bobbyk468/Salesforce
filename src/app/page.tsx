@@ -372,6 +372,16 @@ export default async function Home() {
             the pass mark.
           </p>
 
+          <p className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-4 text-gray-800">
+            <strong className="font-semibold">Want the figures as data?</strong> The{' '}
+            <Link href="/salesforce-certification-report-2026" className="font-semibold text-salesforce-blue hover:underline">
+              2026 Salesforce Certification Benchmark Report
+            </Link>{' '}
+            totals the exam fees, questions and exam hours for every role track, tracks
+            the renames, and publishes the whole table as JSON and CSV under CC BY 4.0 for
+            anyone to reuse.
+          </p>
+
           <h2 className="mt-12 text-2xl font-bold text-gray-900 md:text-3xl">
             How to Use Our Salesforce Free Practice Questions &amp; Study Guides
           </h2>

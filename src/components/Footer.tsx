@@ -186,6 +186,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link prefetch={false} href="/salesforce-certification-report-2026" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  2026 Certification Benchmark Report
+                </Link>
+              </li>
+              <li>
                 <Link prefetch={false} href="/salesforce-certification-salary" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Certification salary guide
                 </Link>

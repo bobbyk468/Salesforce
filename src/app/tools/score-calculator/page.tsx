@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import ScoreCalculator from '@/components/ScoreCalculator'
+import EmbedCalculatorSnippet from '@/components/EmbedCalculatorSnippet'
 import LastUpdated from '@/components/LastUpdated'
 import { getCalculatorExams } from '@/lib/score-calculator-data'
 import { getBreadcrumbListJsonLd, getFaqPageJsonLd, getWebPageJsonLd } from '@/lib/schema-data'
@@ -75,6 +76,8 @@ export default function ScoreCalculatorPage() {
       <div className="mt-10">
         <ScoreCalculator exams={exams} />
       </div>
+
+      <EmbedCalculatorSnippet />
 
       <section className="mx-auto mt-16 max-w-3xl" aria-labelledby="calc-faq">
         <h2 id="calc-faq" className="text-2xl font-bold text-gray-900">

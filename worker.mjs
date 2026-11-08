@@ -93,6 +93,31 @@ function inlineStylesheets(response, env) {
     .transform(response)
 }
 
+/**
+ * The one route that is allowed to be framed by other sites.
+ *
+ * Every page carries X-Frame-Options: DENY from next.config.js, which is
+ * right for all of them but the embeddable calculator. It cannot be relaxed
+ * there in next.config.js: Next appends rather than replaces a repeated
+ * header key, so a per-route override would emit "DENY, ALLOWALL" and
+ * browsers treat a malformed X-Frame-Options as a refusal.
+ *
+ * X-Frame-Options has no allow-list form anyway, so the header is dropped and
+ * CSP frame-ancestors takes over as the modern equivalent.
+ */
+const framableRoutePattern = /^\/tools\/score-calculator\/embed\/?$/
+
+function allowFramingIfEmbed(response, url) {
+  if (!framableRoutePattern.test(url.pathname)) return response
+  const framable = new Response(response.body, response)
+  framable.headers.delete('X-Frame-Options')
+  const csp = framable.headers.get('Content-Security-Policy')
+  if (csp && !/frame-ancestors/i.test(csp)) {
+    framable.headers.set('Content-Security-Policy', `${csp.replace(/;\s*$/, '')}; frame-ancestors *`)
+  }
+  return framable
+}
+
 function isHtmlResponse(response) {
   return response.status === 200
     && !!response.headers.get('content-type')?.toLowerCase().includes('text/html')
@@ -128,7 +153,7 @@ export default {
       const cacheKey = htmlCacheKey(url, versionId)
       const cached = await cache.match(cacheKey)
       if (cached) {
-        const hit = secureProductionResponse(cached, 'HIT')
+        const hit = allowFramingIfEmbed(secureProductionResponse(cached, 'HIT'), url)
         return request.method === 'HEAD' ? new Response(null, hit) : hit
       }
 
@@ -152,16 +177,17 @@ export default {
         }
       }
 
-      return request.method === 'HEAD' ? new Response(null, secured) : secured
+      const out = allowFramingIfEmbed(secured, url)
+      return request.method === 'HEAD' ? new Response(null, out) : out
     }
 
     const upstream = await openNextWorker.fetch(request, env, ctx)
     // Inline here too, so previews and any uncacheable HTML get the same
     // treatment as the cached production path rather than a blocking <link>.
     const response = isHtmlResponse(upstream) ? inlineStylesheets(upstream, env) : upstream
-    if (!isProduction || url.protocol !== 'https:') return response
+    if (!isProduction || url.protocol !== 'https:') return allowFramingIfEmbed(response, url)
 
     // Static assets bypass Next headers; secure their responses at the entrypoint too.
-    return secureProductionResponse(response)
+    return allowFramingIfEmbed(secureProductionResponse(response), url)
   },
 }
