@@ -23,6 +23,24 @@ df = pd.read_csv("https://www.trailblazeprep.com/datasets/salesforce-certificati
 df.groupby("role_track")["exam_fee_usd"].sum().sort_values(ascending=False)
 ```
 
+## Snapshots in this repo
+
+`salesforce-certifications-2026.json` and `.csv` at the repo root are dated
+snapshots, so the data still works if the site is down and so you can diff two
+points in time. The URLs above are the live versions and are the ones to cite.
+Snapshots are refreshed by re-running the two `curl` commands below and
+committing the result with the date in the message:
+
+```bash
+curl -so salesforce-certifications-2026.json \
+  https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.json
+curl -so salesforce-certifications-2026.csv \
+  https://www.trailblazeprep.com/datasets/salesforce-certifications-2026.csv
+```
+
+`index.html` is generated from the live certification grid — never edit it by
+hand.
+
 ## Fields
 
 | Field | Meaning |
