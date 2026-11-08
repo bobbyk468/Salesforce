@@ -401,7 +401,7 @@ export default async function Home() {
       </div>
 
       {/* Browse by role (compact for smaller HTML; full grid on /certifications) */}
-      <section className="py-20 px-4 cv-auto" aria-labelledby="browse-heading">
+      <section className="py-20 px-4" aria-labelledby="browse-heading">
         <div className="max-w-3xl mx-auto text-center">
           <h2 id="browse-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Explore Salesforce Certifications by Role
@@ -468,7 +468,7 @@ export default async function Home() {
       </section>
 
       {/* FAQ Section (accordion for scanability) */}
-      <section className="py-20 px-4 bg-gray-50 cv-auto" aria-labelledby="faq-heading">
+      <section className="py-20 px-4 bg-gray-50" aria-labelledby="faq-heading">
         <div className="max-w-3xl mx-auto">
           <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Frequently Asked Questions About Salesforce Certification Study Materials
@@ -478,7 +478,7 @@ export default async function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-salesforce-dark text-white py-16 px-4 cv-auto">
+      <section className="bg-salesforce-dark text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Get Certified?
