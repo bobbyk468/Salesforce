@@ -67,18 +67,28 @@ class StylesheetInliner {
     const css = await readCssOnce(href, this.env)
     if (!css) return
     /*
-      data-precedence AND data-href, both required.
+      data-href alongside data-precedence, so the inlined copy is at least
+      labelled with the URL it stands in for.
 
-      React tracks stylesheet resources in a map it builds by scanning the
-      document for link[rel=stylesheet][data-precedence] and for
-      style[data-href][data-precedence]. With only data-precedence, the
-      inlined <style> is not keyed to the href React is looking for, so during
-      hydration React concluded the stylesheet was missing and inserted the
-      original <link> — measured on the live page as a second request for the
-      same file, which is the "2 CSS resources" the audit reported.
+      Tried, and it does NOT stop React re-requesting the stylesheet. Measured
+      on the live page after deploying it: still two resource entries for the
+      same .css, and still one <link rel="stylesheet"> in the DOM. The reason
+      is that neither reference comes from the HTML this rewriter can see.
+      Both are inside the RSC flight payload:
 
-      data-href makes the inlined copy the registered resource for that URL,
-      so React finds it and inserts nothing.
+        :HL["/_next/static/chunks/<hash>.css","style"]        <- preload hint
+        ["$","link","0",{"rel":"stylesheet","href":"..."}]    <- React inserts
+
+      HTMLRewriter rewrites tags, not serialized React state, and editing that
+      payload by hand would risk breaking hydration for one cacheable request.
+
+      So this is a deliberate, measured trade. Inlining still does its job:
+      first paint is not blocked on a stylesheet round trip. The cost is that
+      the file is still fetched afterwards, off the critical path and
+      cacheable. Next's own experimental.inlineCss removes both references but
+      writes the stylesheet into the page three times — measured at 730KB ->
+      1009KB raw on the homepage — which is the worse end of the trade. See
+      the note in next.config.js.
     */
     const precedence = element.getAttribute('data-precedence') ?? 'next'
     element.replace(
