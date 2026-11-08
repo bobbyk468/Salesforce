@@ -112,7 +112,36 @@ class StylesheetInliner {
  * up on the cache-miss path that a cold visitor or a remote auditor hits.
  * HTMLRewriter rewrites the tag as the body streams through.
  */
+/*
+  Inlining is OFF while the CLS cause is being tested.
+
+  Evidence that pointed here: on a live PSI mobile run, CLS 0.203 is a single
+  shift of the jump bar, and a pixel diff of the trace screenshots shows EVERY
+  text line in the viewport re-rendering between 1875ms and 2250ms with no
+  block translation. That is a font swap. The deployed CSS carries
+  font-display:optional on all seven faces, which should make a late swap
+  impossible — the browser commits to the fallback for the page view.
+
+  What can undo that commitment is a fresh style resolution after the font has
+  arrived. React performs one: because the inlined <style> is not the resource
+  it is looking for, it inserts the original <link rel="stylesheet"> during
+  hydration (confirmed live: one link in the DOM though the served HTML has
+  none, and two requests for the same .css). Timing fits — hydration lands in
+  that window — and so does the intermittency, since it depends on whether the
+  font beats hydration.
+
+  So the duplicate request and the CLS are plausibly the same bug. Turning
+  inlining off removes both: the HTML keeps its original <link>, React finds
+  what it expects and inserts nothing, and no second style resolution happens.
+  The cost is that the stylesheet is render-blocking again.
+
+  If PSI shows CLS unchanged, this is wrong — set INLINE_STYLESHEETS back to
+  true, because the inlining is worth keeping on its own merits.
+*/
+const INLINE_STYLESHEETS = false
+
 function inlineStylesheets(response, env) {
+  if (!INLINE_STYLESHEETS) return response
   return new HTMLRewriter()
     .on('link[rel="stylesheet"]', new StylesheetInliner(env))
     .transform(response)
