@@ -56,8 +56,22 @@ async function readCssOnce(path, env) {
   return pending
 }
 
-const stylesheetLinkPattern =
-  /<link[^>]+rel="stylesheet"[^>]*href="(\/_next\/static\/[^"]+\.css)"[^>]*>/g
+class StylesheetInliner {
+  constructor(env) {
+    this.env = env
+  }
+
+  async element(element) {
+    const href = element.getAttribute('href')
+    if (!href?.startsWith('/_next/static/') || !href.endsWith('.css')) return
+    const css = await readCssOnce(href, this.env)
+    if (!css) return
+    // React uses data-precedence to order and de-duplicate stylesheets. Drop it
+    // and React re-inserts the original <link> on the first client navigation.
+    const precedence = element.getAttribute('data-precedence') ?? 'next'
+    element.replace(`<style data-precedence="${precedence}">${css}</style>`, { html: true })
+  }
+}
 
 /**
  * Replaces the blocking <link rel="stylesheet"> with the stylesheet inline.
@@ -68,29 +82,15 @@ const stylesheetLinkPattern =
  * Doing it here, after Next has produced the HTML, leaves the RSC payload
  * untouched and costs exactly one copy.
  *
- * `data-precedence` is carried over to the <style> tag: React uses it to order
- * and de-duplicate stylesheets, and dropping it makes React re-insert the
- * original <link> during a client-side navigation.
+ * HTMLRewriter rather than a regex over `await response.text()`: the latter
+ * buffers the whole 825KB document before a single byte goes out, which shows
+ * up on the cache-miss path that a cold visitor or a remote auditor hits.
+ * HTMLRewriter rewrites the tag as the body streams through.
  */
-async function inlineStylesheets(response, env) {
-  const html = await response.text()
-  const links = [...html.matchAll(stylesheetLinkPattern)]
-  if (links.length === 0) return new Response(html, response)
-
-  let inlined = html
-  for (const link of links) {
-    const css = await readCssOnce(link[1], env)
-    if (!css) continue
-    const precedence = /data-precedence="([^"]*)"/.exec(link[0])?.[1] ?? 'next'
-    inlined = inlined.replace(
-      link[0],
-      `<style data-precedence="${precedence}">${css}</style>`,
-    )
-  }
-
-  const rewritten = new Response(inlined, response)
-  rewritten.headers.delete('content-length')
-  return rewritten
+function inlineStylesheets(response, env) {
+  return new HTMLRewriter()
+    .on('link[rel="stylesheet"]', new StylesheetInliner(env))
+    .transform(response)
 }
 
 function isHtmlResponse(response) {
@@ -141,7 +141,7 @@ export default {
       const storable = canStoreHtmlResponse(upstream)
       // Inline before caching, so the work is done once per cache entry
       // rather than on every request.
-      const response = storable ? await inlineStylesheets(upstream, env) : upstream
+      const response = storable ? inlineStylesheets(upstream, env) : upstream
       const secured = secureProductionResponse(response, storable ? 'MISS' : 'BYPASS')
 
       if (storable) {
@@ -158,7 +158,7 @@ export default {
     const upstream = await openNextWorker.fetch(request, env, ctx)
     // Inline here too, so previews and any uncacheable HTML get the same
     // treatment as the cached production path rather than a blocking <link>.
-    const response = isHtmlResponse(upstream) ? await inlineStylesheets(upstream, env) : upstream
+    const response = isHtmlResponse(upstream) ? inlineStylesheets(upstream, env) : upstream
     if (!isProduction || url.protocol !== 'https:') return response
 
     // Static assets bypass Next headers; secure their responses at the entrypoint too.
