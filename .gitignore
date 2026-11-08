@@ -86,3 +86,6 @@ src/lib/question-banks/local/
 reports/
 docs/SEO-GSC-AUDIT-*.md
 docs/Gemini GSC *
+
+# Scratch output from extracting audit PDFs (page images, text dumps).
+tmp/
