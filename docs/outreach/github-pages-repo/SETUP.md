@@ -3,8 +3,10 @@
 1. Create a public repo named `salesforce-certification-dataset` under the
    Trailblaze Prep account (not a personal one — a company-looking repo is
    what list maintainers check).
-2. Copy `README.md`, `LICENSE` and `index.html` to its root. Do **not** copy
-   this file.
+2. Run `npm run outreach:directory` so `index.html` is current, then copy
+   `README.md`, `LICENSE` and `index.html` to its root. Do **not** copy this
+   file. `index.html` is generated from the live certification grid — never
+   edit it by hand, or the next regeneration silently discards your changes.
 3. Commit the two data files as snapshots, so the repo still works if the
    site is down:
    ```bash

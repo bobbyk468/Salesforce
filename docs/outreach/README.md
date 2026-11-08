@@ -10,9 +10,34 @@ The strategy is one asset and three ways of putting it in front of people:
 
 | Folder / file | What it is | Where the link comes from |
 | --- | --- | --- |
-| `github-dataset-repo/` | A standalone repo publishing the certification dataset under CC BY 4.0, with a GitHub Pages `index.html`. | Anyone reusing the data has to attribute it; data lists and awesome-lists accept licensed datasets. |
-| `syndication-articles/` | Four finished articles, each built on a finding from our own data. | Dev.to, Medium, Hashnode, LinkedIn and Salesforce community forums, each with a canonical link back. |
+| `github-pages-repo/` | A standalone repo publishing the CC BY 4.0 dataset **and** a full 87-certification directory with section weightings, as a GitHub Pages site. | Anyone reusing the data must attribute it; data lists and awesome-lists accept licensed datasets. |
+| `articles/` | Five finished articles, each built on real exam data from our own codebase. | Dev.to, Medium, Hashnode, LinkedIn and Salesforce community forums, each with a canonical link back. |
 | `awesome-salesforce-prs.md` | Targets, checklist and PR copy for curated lists. | Editorially reviewed list entries. |
+
+## Every asset links to the www root
+
+SEOptimer report 7 showed 308 directory links pointing at `trailblazeprep.com`
+(non-www) and **zero** at `https://www.trailblazeprep.com/`, which is the
+canonical home page. The apex 308-redirects to www, so that equity is not
+lost — but the report grades the canonical root on its own direct links, and
+on that measure the home page has none.
+
+So every asset here links to `https://www.trailblazeprep.com/` **with the
+www and the trailing slash**, in the intro or outro, alongside four to eight
+deep `/certifications/<slug>` links. Not one or the other: both. If you write
+a new asset for this folder, keep that rule.
+
+## Regenerating the directory
+
+`github-pages-repo/index.html` is generated, not hand-written:
+
+```bash
+npm run outreach:directory
+```
+
+Re-run it after any change to the certification grid. Hand-maintaining 87
+links is how a directory ends up pointing at slugs that no longer exist, which
+is exactly what gets an outreach asset ignored.
 
 ## Order of work
 

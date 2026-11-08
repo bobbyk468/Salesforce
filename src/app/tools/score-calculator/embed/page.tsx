@@ -18,6 +18,23 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 }
 
-export default function ScoreCalculatorEmbedPage() {
-  return <ScoreCalculatorEmbedBody exams={getCalculatorExams()} />
+/**
+ * ?cert=<slug> pre-selects an exam, so a blog post about one certification
+ * can embed the calculator already set to it.
+ *
+ * Resolved on the server rather than from window.location on the client:
+ * the selection is then in the first HTML the iframe paints, with no flash
+ * of the wrong exam and no hydration mismatch. Reading searchParams makes
+ * the route render on demand, which is fine — worker.mjs keys its edge cache
+ * on the full URL, so each ?cert= value caches as its own object.
+ */
+export default async function ScoreCalculatorEmbedPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ cert?: string }>
+}) {
+  const { cert } = await searchParams
+  const exams = getCalculatorExams()
+  const initialSlug = exams.some((e) => e.slug === cert) ? cert : undefined
+  return <ScoreCalculatorEmbedBody exams={exams} initialSlug={initialSlug} />
 }

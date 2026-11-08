@@ -7,16 +7,30 @@ import type { CalculatorExam } from '@/lib/score-calculator-data'
 const SITE = 'https://www.trailblazeprep.com'
 
 /**
- * The calculator as it appears inside someone else&apos;s page.
+ * The calculator as it appears inside someone else's page.
  *
- * The attribution bar is the whole point of offering the embed: it carries a
- * followed link back to the calculator and to the certification the reader
- * has selected, so the embed credits its source wherever it travels. Links
- * are absolute and open in a new tab, because a relative href inside an
- * iframe resolves against the host site.
+ * The attribution footer is the whole point of offering the embed: it carries
+ * followed links back to the home page and to the certification the reader has
+ * selected, so the widget credits its source wherever it travels. Links are
+ * absolute and open in a new tab, because a relative href inside an iframe
+ * resolves against the host site.
+ *
+ * Worth being honest about in code as well as in the docs: links inside an
+ * iframe are not attributed to the host page by search engines. This footer
+ * earns referral traffic and goodwill. The backlink comes from the credit
+ * paragraph *outside* the iframe, which is why it is part of the copyable
+ * snippet on /tools/score-calculator.
  */
-export default function ScoreCalculatorEmbedBody({ exams }: { exams: CalculatorExam[] }) {
-  const [exam, setExam] = useState<CalculatorExam | undefined>(exams[0])
+export default function ScoreCalculatorEmbedBody({
+  exams,
+  initialSlug,
+}: {
+  exams: CalculatorExam[]
+  initialSlug?: string
+}) {
+  const [exam, setExam] = useState<CalculatorExam | undefined>(
+    () => exams.find((e) => e.slug === initialSlug) ?? exams[0],
+  )
 
   return (
     <div className="bg-white px-4 py-6">
@@ -31,38 +45,36 @@ export default function ScoreCalculatorEmbedBody({ exams }: { exams: CalculatorE
       </div>
 
       <div className="mt-6">
-        <ScoreCalculator exams={exams} linkBase={SITE} onExamChange={setExam} />
+        <ScoreCalculator
+          exams={exams}
+          linkBase={SITE}
+          initialSlug={initialSlug}
+          onExamChange={setExam}
+        />
       </div>
 
       <div className="mx-auto mt-6 max-w-3xl border-t border-gray-200 pt-4">
-        <p className="text-xs text-gray-600">
+        <p className="text-xs leading-relaxed text-gray-600">
+          Powered by{' '}
           <a
-            href={`${SITE}/tools/score-calculator`}
-            target="_blank"
-            rel="noopener"
-            className="font-semibold text-salesforce-blue hover:underline"
-          >
-            Salesforce Exam Score Calculator
-          </a>{' '}
-          by{' '}
-          <a
-            href={SITE}
+            href={`${SITE}/`}
             target="_blank"
             rel="noopener"
             className="font-semibold text-salesforce-blue hover:underline"
           >
             Trailblaze Prep
-          </a>
+          </a>{' '}
+          &mdash; Free Salesforce Practice Questions &amp; Study Guides
           {exam && (
             <>
               {' '}&middot;{' '}
               <a
-                href={`${SITE}/certifications/${exam.slug}`}
+                href={`${SITE}/certifications/${exam.slug}#practice-questions`}
                 target="_blank"
                 rel="noopener"
-                className="hover:underline"
+                className="text-salesforce-blue hover:underline"
               >
-                {exam.name} exam details and free practice questions
+                {exam.name} Practice Questions
               </a>
             </>
           )}

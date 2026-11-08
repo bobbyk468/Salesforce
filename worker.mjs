@@ -66,10 +66,25 @@ class StylesheetInliner {
     if (!href?.startsWith('/_next/static/') || !href.endsWith('.css')) return
     const css = await readCssOnce(href, this.env)
     if (!css) return
-    // React uses data-precedence to order and de-duplicate stylesheets. Drop it
-    // and React re-inserts the original <link> on the first client navigation.
+    /*
+      data-precedence AND data-href, both required.
+
+      React tracks stylesheet resources in a map it builds by scanning the
+      document for link[rel=stylesheet][data-precedence] and for
+      style[data-href][data-precedence]. With only data-precedence, the
+      inlined <style> is not keyed to the href React is looking for, so during
+      hydration React concluded the stylesheet was missing and inserted the
+      original <link> — measured on the live page as a second request for the
+      same file, which is the "2 CSS resources" the audit reported.
+
+      data-href makes the inlined copy the registered resource for that URL,
+      so React finds it and inserts nothing.
+    */
     const precedence = element.getAttribute('data-precedence') ?? 'next'
-    element.replace(`<style data-precedence="${precedence}">${css}</style>`, { html: true })
+    element.replace(
+      `<style data-href="${href}" data-precedence="${precedence}">${css}</style>`,
+      { html: true },
+    )
   }
 }
 

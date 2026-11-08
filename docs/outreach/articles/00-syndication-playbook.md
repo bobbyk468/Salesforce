@@ -6,10 +6,15 @@ competing with ourselves for our own content.
 
 | Article | Canonical target | Best platforms |
 | --- | --- | --- |
-| `01-salesforce-stopped-publishing-pass-marks.md` | `/salesforce-certification-report-2026` | Dev.to, Hashnode, Salesforce Stack Exchange meta, Reddit r/salesforce (as a text post, excerpt only) |
-| `02-what-a-whole-salesforce-track-really-costs.md` | `/salesforce-certification-cost` | Medium, LinkedIn article, Dev.to |
-| `03-every-salesforce-certification-renamed-in-2026.md` | `/salesforce-certifications-list` | Dev.to, Hashnode, Trailblazer Community |
-| `04-how-to-read-a-salesforce-exam-score-report.md` | `/tools/score-calculator` | LinkedIn, Reddit r/salesforce, Medium |
+| `01-salesforce-exam-score-calculator-section-weightage-math.md` | `/tools/score-calculator` | Dev.to, Hashnode |
+| `02-complete-salesforce-architect-certification-roadmap-2026.md` | `/architect-certification-path` | Medium, LinkedIn |
+| `03-salesforce-adm-201-vs-platform-app-builder-vs-business-analyst.md` | `/adm-201-vs-app-builder` | Guest posts (PlanetCert, CertificationPlanner) |
+| `04-salesforce-agentforce-specialist-and-data-cloud-study-guide-2026.md` | `/certifications/agentforce-specialist` | AI and data engineering blogs, Dev.to |
+| `05-2026-salesforce-certification-benchmark-costs-retirements.md` | `/salesforce-certification-report-2026` | Data-journalism outlets, Hacker News, r/salesforce (excerpt) |
+
+Every one also links to `https://www.trailblazeprep.com/` in the intro or
+outro, and to four or more `/certifications/<slug>` pages in the body. Keep
+both when editing.
 
 ## Per platform
 

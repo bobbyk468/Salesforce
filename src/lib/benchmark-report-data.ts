@@ -162,3 +162,70 @@ export function datasetToCsv(rows: ReturnType<typeof getDatasetRows>): string {
   }
   return [headers.join(','), ...rows.map((row) => headers.map((h) => escape(row[h])).join(','))].join('\n')
 }
+
+/** Min / median / max over a list, or nulls when the list is empty. */
+function spread(values: number[]): { min: number | null; median: number | null; max: number | null; count: number } {
+  if (!values.length) return { min: null, median: null, max: null, count: 0 }
+  const sorted = [...values].sort((a, b) => a - b)
+  const mid = Math.floor(sorted.length / 2)
+  const median = sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2
+  return { min: sorted[0], median, max: sorted[sorted.length - 1], count: sorted.length }
+}
+
+export type TrackSpread = {
+  slug: string
+  name: string
+  certifications: number
+  /** Credentials whose exam is retired or closed to new registrations. */
+  retired: number
+  active: number
+  fee: ReturnType<typeof spread>
+  duration: ReturnType<typeof spread>
+  questions: ReturnType<typeof spread>
+}
+
+/**
+ * Per-track distribution, not just totals.
+ *
+ * A track total answers "what would all of it cost"; the spread answers the
+ * question people actually have, which is what a typical exam in this track
+ * costs and how long it runs. Median rather than mean, because the Technical
+ * Architect Review Board at $4,500 drags an Architect mean into fiction.
+ */
+export function getTrackSpreads(): TrackSpread[] {
+  return getSalesforceGrid().map((category) => {
+    const fees: number[] = []
+    const durations: number[] = []
+    const questions: number[] = []
+    let retired = 0
+
+    for (const cert of category.certs) {
+      const status = getCredentialStatus(cert.slug)
+      if (status && (String(status.kind) === 'retired' || String(status.kind) === 'exam-closed')) retired += 1
+      const fee = feeToNumber(cert.cost)
+      if (fee !== null) fees.push(fee)
+      const minutes = minutesToNumber(cert.duration)
+      if (minutes !== null) durations.push(minutes)
+      const q = cert.questions ? Number.parseInt(cert.questions, 10) : NaN
+      if (Number.isFinite(q)) questions.push(q)
+    }
+
+    return {
+      slug: category.slug,
+      name: category.name,
+      certifications: category.certs.length,
+      retired,
+      active: category.certs.length - retired,
+      fee: spread(fees),
+      duration: spread(durations),
+      questions: spread(questions),
+    }
+  })
+}
+
+/** Credentials the site covers that are not Salesforce credentials. */
+export function getNonSalesforceCount(): number {
+  return getCertificationGrid()
+    .filter((category) => NON_SALESFORCE_TRACKS.has(category.slug))
+    .reduce((n, category) => n + category.certs.length, 0)
+}

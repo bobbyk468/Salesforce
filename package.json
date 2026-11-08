@@ -55,7 +55,8 @@
     "validate:questions": "node scripts/validate-practice-questions.mjs",
     "sitemap:lastmod": "node scripts/generate-sitemap-lastmod.mjs",
     "validate:weightings": "node scripts/validate-exam-weightings.mjs",
-    "sync:cert-cards": "node scripts/sync-cert-card-facts.mjs"
+    "sync:cert-cards": "node scripts/sync-cert-card-facts.mjs",
+    "outreach:directory": "npx tsx scripts/generate-outreach-directory.mts"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.4",

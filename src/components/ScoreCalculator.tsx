@@ -16,9 +16,12 @@ import { computeWeightedScore, type CalculatorExam } from '@/lib/score-calculato
 export default function ScoreCalculator({
   exams,
   linkBase = '',
+  initialSlug,
   onExamChange,
 }: {
   exams: CalculatorExam[]
+  /** Pre-selected exam, from ?cert= on the embed route. */
+  initialSlug?: string
   /**
    * Absolute origin to prefix internal links with. Set on the embeddable
    * build, where a relative href would resolve against the host site inside
@@ -27,7 +30,9 @@ export default function ScoreCalculator({
   linkBase?: string
   onExamChange?: (exam: CalculatorExam) => void
 }) {
-  const [slug, setSlug] = useState(exams[0]?.slug ?? '')
+  const [slug, setSlug] = useState(
+    () => (initialSlug && exams.some((e) => e.slug === initialSlug) ? initialSlug : exams[0]?.slug) ?? '',
+  )
   const [entered, setEntered] = useState<Record<string, number | null>>({})
 
   const exam = useMemo(() => exams.find((e) => e.slug === slug) ?? exams[0], [exams, slug])

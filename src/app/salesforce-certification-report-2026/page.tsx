@@ -3,9 +3,11 @@ import Link from '@/components/AppLink'
 import LastUpdated from '@/components/LastUpdated'
 import CiteReport from '@/components/CiteReport'
 import {
+  getNonSalesforceCount,
   getRenamedCertifications,
   getReportSummary,
   getStatusChanges,
+  getTrackSpreads,
   getTrackTotals,
 } from '@/lib/benchmark-report-data'
 import { getBreadcrumbListJsonLd, getWebPageJsonLd } from '@/lib/schema-data'
@@ -47,6 +49,12 @@ export const metadata: Metadata = {
 const money = (n: number) => `$${n.toLocaleString('en-US')}`
 const hours = (minutes: number) => `${Math.floor(minutes / 60)}h ${minutes % 60}m`
 
+/** "min / median / max", or an em dash when the figure is unpublished. */
+const range = (
+  s: { min: number | null; median: number | null; max: number | null },
+  fmt: (n: number) => string = (n) => String(n),
+) => (s.min === null ? '—' : [s.min, s.median as number, s.max as number].map(fmt).join(' / '))
+
 export default function BenchmarkReportPage() {
   const summary = getReportSummary()
   const tracks = getTrackTotals().sort((a, b) => b.certifications - a.certifications)
@@ -55,6 +63,9 @@ export default function BenchmarkReportPage() {
   const generated = new Date().toISOString().slice(0, 10)
   const withFee = tracks.reduce((n, t) => n + t.withFee, 0)
   const withDuration = tracks.reduce((n, t) => n + t.withDuration, 0)
+  const spreads = getTrackSpreads().sort((a, b) => b.certifications - a.certifications)
+  const nonSalesforce = getNonSalesforceCount()
+  const totalRetired = spreads.reduce((n, t) => n + t.retired, 0)
 
   const breadcrumb = [
     { name: 'Home', url: '/' },
@@ -92,6 +103,12 @@ export default function BenchmarkReportPage() {
           track in 2026 — compiled from the published exam details for{' '}
           {summary.totalCertifications} certifications across {summary.trackCount} role
           tracks, and free to reuse.
+        </p>
+        <p className="mt-3 text-sm text-gray-600">
+          Salesforce credentials only. Trailblaze Prep also covers{' '}
+          {nonSalesforce} non-Salesforce certifications; counting them here would
+          put the wrong number in a figure people are invited to cite, so they are
+          excluded from every total on this page and from the dataset.
         </p>
 
         {/* Headline figures */}
@@ -149,6 +166,52 @@ export default function BenchmarkReportPage() {
                     {t.totalQuestions.toLocaleString('en-US')}
                     <span className="block text-xs text-gray-500">of {t.withQuestions}</span>
                   </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 className="mt-12 text-2xl font-bold text-gray-900">
+          What a typical exam in each track costs and runs
+        </h2>
+        <p className="mt-2 text-gray-700">
+          Totals answer &ldquo;what would all of it cost&rdquo;. This answers the
+          question people actually have. Median rather than mean throughout,
+          because the $4,500 Technical Architect Review Board drags an Architect
+          mean into fiction. {totalRetired} of the {summary.totalCertifications}{' '}
+          credentials have a retired or closed exam, so the active count is the one
+          to plan against.
+        </p>
+        <div className="mt-5 overflow-x-auto">
+          <table className="w-full min-w-[720px] border-collapse text-sm">
+            <caption className="sr-only">
+              Active and retired counts, and the minimum, median and maximum exam fee,
+              duration and question count for each Salesforce role track
+            </caption>
+            <thead>
+              <tr className="border-b-2 border-gray-200 text-left">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Role track</th>
+                <th scope="col" className="py-2.5 pr-4 text-right font-semibold text-gray-900">Active</th>
+                <th scope="col" className="py-2.5 pr-4 text-right font-semibold text-gray-900">Retired</th>
+                <th scope="col" className="py-2.5 pr-4 text-right font-semibold text-gray-900">Fee min / median / max</th>
+                <th scope="col" className="py-2.5 pr-4 text-right font-semibold text-gray-900">Minutes min / median / max</th>
+                <th scope="col" className="py-2.5 text-right font-semibold text-gray-900">Questions min / median / max</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {spreads.map((t) => (
+                <tr key={t.slug}>
+                  <td className="py-2.5 pr-4 font-medium text-gray-900">
+                    <Link href={`/certifications/role/${t.slug}`} className="text-salesforce-blue hover:underline">
+                      {t.name}
+                    </Link>
+                  </td>
+                  <td className="py-2.5 pr-4 text-right text-gray-800">{t.active}</td>
+                  <td className="py-2.5 pr-4 text-right text-gray-800">{t.retired || '—'}</td>
+                  <td className="py-2.5 pr-4 text-right tabular-nums text-gray-800">{range(t.fee, money)}</td>
+                  <td className="py-2.5 pr-4 text-right tabular-nums text-gray-800">{range(t.duration)}</td>
+                  <td className="py-2.5 text-right tabular-nums text-gray-800">{range(t.questions)}</td>
                 </tr>
               ))}
             </tbody>

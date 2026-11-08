@@ -3,8 +3,10 @@
 import { useState } from 'react'
 import { Check, Copy } from 'lucide-react'
 
-const URL = 'https://www.trailblazeprep.com/salesforce-certification-report-2026'
+const SITE = 'https://www.trailblazeprep.com'
+const URL = `${SITE}/salesforce-certification-report-2026`
 const TITLE = '2026 Salesforce Certification Benchmark Report'
+const PUBLISHER = 'Trailblaze Prep'
 
 /**
  * Attribution snippets for the benchmark report.
@@ -16,10 +18,27 @@ const TITLE = '2026 Salesforce Certification Benchmark Report'
 export default function CiteReport({ generated }: { generated: string }) {
   const [copied, setCopied] = useState<string | null>(null)
 
+  /*
+    Every snippet credits the report *and* the publisher home page, as two
+    separate links. One link to a deep page leaves the site's own root
+    uncredited, which is the thing the backlink profile is actually short of.
+  */
   const snippets = [
-    { key: 'md', label: 'Markdown', value: `[${TITLE}](${URL}) — Trailblaze Prep, ${generated}. CC BY 4.0.` },
-    { key: 'html', label: 'HTML', value: `<a href="${URL}">${TITLE}</a> — Trailblaze Prep, ${generated}. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.` },
-    { key: 'apa', label: 'APA', value: `Trailblaze Prep. (2026). ${TITLE}. Retrieved from ${URL}` },
+    {
+      key: 'md',
+      label: 'Markdown',
+      value: `[${TITLE}](${URL}) — [${PUBLISHER}](${SITE}/), ${generated}. CC BY 4.0.`,
+    },
+    {
+      key: 'html',
+      label: 'HTML',
+      value: `<a href="${URL}">${TITLE}</a> &mdash; <a href="${SITE}/">${PUBLISHER}</a>, ${generated}. <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.`,
+    },
+    {
+      key: 'apa',
+      label: 'APA',
+      value: `${PUBLISHER}. (2026). ${TITLE}. ${PUBLISHER}. ${URL}`,
+    },
   ]
 
   const copy = async (text: string, key: string) => {

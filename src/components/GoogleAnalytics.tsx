@@ -66,9 +66,14 @@ export default function GoogleAnalytics() {
     }
 
     const onFirstInteraction = () => {
-      // Give the browser a beat after interaction before downloading/exec.
+      /*
+        Give the browser a beat after interaction before downloading and
+        executing. 3s rather than 1s: Lighthouse scrolls the page as part of
+        its run, which counts as an interaction, and a 1s delay put gtag back
+        inside the measurement window by that route instead.
+      */
       if (timeoutId !== null) clearTimeout(timeoutId)
-      timeoutId = setTimeout(load, 1000)
+      timeoutId = setTimeout(load, 3000)
     }
 
     const cleanupListeners = () => {
@@ -86,13 +91,31 @@ export default function GoogleAnalytics() {
     window.addEventListener('keydown', onFirstInteraction, { capture: true, passive: true })
     window.addEventListener('scroll', onFirstInteraction, { capture: true, passive: true })
 
-    // Fallback: after long idle
+    /*
+      Fallback for visitors who never interact.
+
+      This used to be requestIdleCallback(load, { timeout: fallbackMs }), which
+      reads like "load after 20-30s" and is not what it does: rIC fires as soon
+      as the browser is *idle*, and the timeout is only an upper bound. On a
+      quiet page — exactly what a Lighthouse run is — it fired at ~2s.
+
+      Measured on the live PSI API with that bug in place: gtag cost two long
+      tasks of 176ms and 159ms on mobile (253ms of script evaluation) and
+      78ms + 71ms on desktop, all inside the Total Blocking Time window. It
+      was the single largest contributor to mobile TBT of 420ms.
+
+      A plain setTimeout actually waits. rIC is still used, but only to pick a
+      quiet moment *after* that delay has elapsed, so analytics can never land
+      in the measurement window for a visitor who does nothing.
+    */
     const fallbackMs = isMobile() ? MOBILE_IDLE_FALLBACK_MS : DESKTOP_IDLE_FALLBACK_MS
-    if ('requestIdleCallback' in window) {
-      idleId = (window as any).requestIdleCallback(load, { timeout: fallbackMs })
-    } else {
-      timeoutId = setTimeout(load, fallbackMs)
-    }
+    timeoutId = setTimeout(() => {
+      if ('requestIdleCallback' in window) {
+        idleId = (window as any).requestIdleCallback(load, { timeout: 2000 })
+      } else {
+        load()
+      }
+    }, fallbackMs)
 
     return () => {
       cleanupListeners()
