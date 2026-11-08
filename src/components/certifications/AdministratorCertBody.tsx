@@ -31,6 +31,8 @@ import {
   administratorSampleQuestions,
 } from '@/lib/cert-page-spike/administrator-data'
 import LastUpdated from '@/components/LastUpdated'
+import CiteThisPage from '@/components/CiteThisPage'
+import { RELEASE_YEAR } from '@/lib/release-data'
 
 export default function AdministratorCertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
@@ -432,6 +434,9 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             />
           </aside>
         </div>
+      </div>
+      <div className="max-w-7xl mx-auto px-4">
+        <CiteThisPage certName={slugToDisplayName(slug)} slug={slug} year={RELEASE_YEAR} />
       </div>
     </div>
   )

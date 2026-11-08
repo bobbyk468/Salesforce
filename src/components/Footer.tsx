@@ -1,6 +1,7 @@
 import Link from '@/components/AppLink'
 import { Award, Mail, ExternalLink, MessageCircle } from 'lucide-react'
 import { ACTIVE_SOCIAL_PROFILES, AUTHOR_NAME, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
+import TopCertifications from '@/components/TopCertifications'
 import type { SocialProfile } from '@/lib/constants'
 
 /** Brand glyphs, keyed to match SOCIAL_PROFILES. */
@@ -16,7 +17,7 @@ export default function Footer() {
   return (
     <footer className="no-print bg-salesforce-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
           {/* Brand + inbound link to home (fixes "Too Few Inbound Internal Links") */}
           <div className="col-span-1 md:col-span-2">
             <Link prefetch={false} href="/" className="flex items-center space-x-2 mb-4 group inline-flex">
@@ -206,6 +207,14 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/*
+            The twelve certifications we most want ranking, linked from the
+            footer of every page so internal link equity flows into them from
+            the whole site. Shared with the homepage block via
+            TOP_CERTIFICATIONS so the two cannot drift.
+          */}
+          <TopCertifications variant="footer" />
         </div>
 
         {/* Disclaimer */}

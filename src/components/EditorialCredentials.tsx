@@ -59,7 +59,7 @@ export default function EditorialCredentials() {
             <a
               href={REVIEWER.profileUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow noopener noreferrer"
               className="font-medium text-salesforce-blue hover:underline"
             >
               Trailblazer profile

@@ -1,8 +1,10 @@
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { OFFICIAL_CERT_NAMES } from '@/lib/cert-official-names'
+import { OFFICIAL_CREDENTIAL_URLS } from '@/lib/official-credential-urls'
 import {
   SLUG_TO_DIFFICULTY,
   SLUG_TO_EXAM_COST,
+  SLUG_TO_EXAM_GUIDE_URL,
   SLUG_TO_STUDY_GUIDE,
   getExamLogistics,
   getCertMetaDescription,
@@ -29,6 +31,8 @@ export type GridCert = {
   /** "None required", or the prerequisite cert names. */
   prerequisites: string
   studyGuideHref: string | null
+  /** Salesforce's own page for this credential, where we have a verified one. */
+  officialUrl: string | null
 }
 
 export type GridCategory = {
@@ -103,6 +107,7 @@ export function getCertificationGrid(): GridCategory[] {
         duration: logistics?.duration ?? null,
         prerequisites: prerequisiteLabel(slug),
         studyGuideHref: SLUG_TO_STUDY_GUIDE[slug] ?? null,
+        officialUrl: OFFICIAL_CREDENTIAL_URLS[slug] ?? SLUG_TO_EXAM_GUIDE_URL[slug] ?? null,
       })
     }
     if (certs.length) categories.push({ slug: category.slug, name: category.name, certs })

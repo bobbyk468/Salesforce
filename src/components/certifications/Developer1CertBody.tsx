@@ -25,6 +25,8 @@ import OfficialSourceRef from '@/components/OfficialSourceRef'
 import ExecutionContextDiagram from '@/components/certifications/ExecutionContextDiagram'
 import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/practice-question-lite'
 import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
+import CiteThisPage from '@/components/CiteThisPage'
+import { RELEASE_YEAR } from '@/lib/release-data'
 const sampleQuestions = [
   {
     question: "A developer needs to create a trigger that fires after a record is inserted and updated. Which trigger events should be used?",
@@ -664,6 +666,9 @@ private class CalloutServiceTest {
             ]}
           />
         </aside>
+      </div>
+      <div className="max-w-7xl mx-auto px-4">
+        <CiteThisPage certName={slugToDisplayName(slug)} slug={slug} year={RELEASE_YEAR} />
       </div>
     </div>
   )

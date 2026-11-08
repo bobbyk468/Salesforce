@@ -11,6 +11,8 @@ import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
+import CiteThisPage from '@/components/CiteThisPage'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import CertificationPageShell from '@/components/certifications/CertificationPageShell'
@@ -433,6 +435,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         ) : null}
 
         {!hideExamDetails && <div id="related-certs"><RelatedCertifications currentSlug={slug} /></div>}
+        <CiteThisPage certName={title} slug={slug} year={RELEASE_YEAR} />
       </CertificationPageShell>
     </>
   )
@@ -564,6 +567,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
             ))}
           </ul>
         </section>
+        <CiteThisPage certName={title} slug={slug} year={RELEASE_YEAR} />
       </CertificationPageShell>
     </>
   )

@@ -9,6 +9,7 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import LastUpdated from '@/components/LastUpdated'
 import EditorialCredentials from '@/components/EditorialCredentials'
+import TopCertifications from '@/components/TopCertifications'
 import { REVIEWER, getCredentialJsonLd } from '@/lib/editorial-credentials'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -306,6 +307,8 @@ export default async function Home() {
         <CertificationGrid categories={certificationGrid} headingLevel="h1" />
       </div>
 
+      <TopCertifications />
+
       {/*
         Explains the four figures on every card. Written because readers ask
         what they mean, and it happens to carry the keyword set the audit
@@ -358,6 +361,16 @@ export default async function Home() {
               </dd>
             </div>
           </dl>
+
+          <p className="mt-6 rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-4 text-gray-800">
+            <strong className="font-semibold">Just sat an exam?</strong> Salesforce emails
+            you a percentage per section but never your overall score. Our{' '}
+            <Link href="/tools/score-calculator" className="font-semibold text-salesforce-blue hover:underline">
+              Salesforce exam score calculator
+            </Link>{' '}
+            works it out from your section percentages and shows how far you were from
+            the pass mark.
+          </p>
 
           <h2 className="mt-12 text-2xl font-bold text-gray-900 md:text-3xl">
             How to Use Our Salesforce Free Practice Questions &amp; Study Guides

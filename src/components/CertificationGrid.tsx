@@ -1,5 +1,5 @@
 import Link from '@/components/AppLink'
-import { ArrowRight, BookOpen } from 'lucide-react'
+import { ArrowRight, BookOpen, ExternalLink } from 'lucide-react'
 import type { GridCategory } from '@/lib/certification-grid-data'
 
 /**
@@ -145,7 +145,7 @@ export default function CertificationGrid({
                         aria-label={`${cert.name} practice questions and study guide`}
                         className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-salesforce-blue hover:text-salesforce-dark"
                       >
-                        Practice questions
+                        {cert.name} practice questions
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />
                       </Link>
                       {cert.studyGuideHref && (
@@ -154,8 +154,25 @@ export default function CertificationGrid({
                           className="inline-flex min-h-11 items-center gap-1 text-sm text-gray-600 hover:text-salesforce-blue"
                         >
                           <BookOpen className="h-4 w-4" aria-hidden="true" />
-                          Study guide
+                          {cert.name} study guide
                         </Link>
+                      )}
+                      {/*
+                        Salesforce's own page for the credential, so a reader
+                        can verify the figures at source. nofollow because it
+                        is a reference on a page that carries 91 of them, not
+                        an editorial endorsement of each one.
+                      */}
+                      {cert.officialUrl && (
+                        <a
+                          href={cert.officialUrl}
+                          target="_blank"
+                          rel="nofollow noopener noreferrer"
+                          className="inline-flex min-h-11 items-center gap-1 text-sm text-gray-600 hover:text-salesforce-blue"
+                        >
+                          <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                          Official page
+                        </a>
                       )}
                     </div>
                   </div>

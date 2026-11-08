@@ -53,6 +53,7 @@ export default function HeaderClient({ categories }: { categories: HeaderCategor
   const primaryLinks = [
     { href: '/certifications', label: 'All Certifications' },
     { href: '/certification-path', label: 'Cert Path' },
+    { href: '/tools/score-calculator', label: 'Exam Score Calculator' },
     { href: '/become-cta', label: 'Become a CTA' },
   ]
 
@@ -117,6 +118,9 @@ export default function HeaderClient({ categories }: { categories: HeaderCategor
               <li>
                 <Link href="/certification-path" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
                   Cert Path
+                </Link>
+                <Link href="/tools/score-calculator" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
+                  Score Calculator
                 </Link>
               </li>
               <li>
