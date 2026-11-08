@@ -33,7 +33,7 @@ duration is published.
 
 Two caveats that matter, and that I would rather state than bury. The fee
 column is complete: all 87 credentials have a published fee. The question and
-duration columns are not — only 56 credentials have a published duration —
+duration columns are not — only 57 credentials have a published duration —
 so those totals are sums over what exists, not estimates of what doesn't. The
 report page shows the coverage count beside every total for exactly this
 reason.
