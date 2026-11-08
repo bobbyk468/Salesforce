@@ -1,5 +1,13 @@
 # Publishing this repo
 
+> **Published on 2026-11-08** to
+> https://github.com/bobbyk468/salesforce-certification-dataset, with Pages at
+> https://bobbyk468.github.io/salesforce-certification-dataset/. These
+> instructions remain for republishing or for moving it to an organisation.
+>
+> Note the quoting on the topics call: `names[]=...` must be quoted or zsh
+> treats the brackets as a glob and the call fails with "no matches found".
+
 Everything in this folder is the repo, ready to push: `README.md`, `LICENSE`,
 `index.html`, and dated snapshots of the two datasets. `SETUP.md` is the only
 file that does **not** get copied.
@@ -17,7 +25,7 @@ From the repository root. Creates a public repo under the authenticated
 GitHub account, pushes, sets the topics, and turns on GitHub Pages:
 
 ```bash
-cd docs/outreach/github-pages-repo && rm -f SETUP.md && git init -b main && git add -A && git commit -m "2026 Salesforce certification dataset and directory (CC BY 4.0)" && gh repo create salesforce-certification-dataset --public --source=. --remote=origin --push --description "Exam fee, question count, duration and prerequisites for all 87 Salesforce certifications. JSON + CSV, CC BY 4.0." && gh api -X PUT "repos/{owner}/salesforce-certification-dataset/topics" -f names[]=salesforce -f names[]=certification -f names[]=dataset -f names[]=open-data -f names[]=csv -f names[]=json -f names[]=cc-by && gh api -X POST "repos/{owner}/salesforce-certification-dataset/pages" -f "source[branch]=main" -f "source[path]=/" && git checkout SETUP.md
+cd docs/outreach/github-pages-repo && rm -f SETUP.md && git init -b main && git add -A && git commit -m "2026 Salesforce certification dataset and directory (CC BY 4.0)" && gh repo create salesforce-certification-dataset --public --source=. --remote=origin --push --description "Exam fee, question count, duration and prerequisites for all 87 Salesforce certifications. JSON + CSV, CC BY 4.0." && gh api -X PUT "repos/{owner}/salesforce-certification-dataset/topics" -f 'names[]=salesforce' -f 'names[]=certification' -f 'names[]=dataset' -f 'names[]=open-data' -f 'names[]=csv' -f 'names[]=json' -f 'names[]=cc-by' && gh api -X POST "repos/{owner}/salesforce-certification-dataset/pages" -f "source[branch]=main" -f "source[path]=/" && git checkout SETUP.md
 ```
 
 That `rm -f SETUP.md` / `git checkout SETUP.md` pair keeps this file out of the
