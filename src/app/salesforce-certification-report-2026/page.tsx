@@ -12,14 +12,35 @@ import { getBreadcrumbListJsonLd, getWebPageJsonLd } from '@/lib/schema-data'
 
 const siteUrl = 'https://www.trailblazeprep.com'
 const path = '/salesforce-certification-report-2026'
+const shareTitle = '2026 Salesforce Certification Benchmark Report'
+const shareDescription =
+  'Exam costs, question counts, durations and prerequisites across all Salesforce certification tracks, with a free CC BY 4.0 dataset and the 2026 rename and retirement tracker.'
+const shareImage = `${siteUrl}/og?t=${encodeURIComponent(shareTitle)}`
 
 export const metadata: Metadata = {
-  title: { absolute: '2026 Salesforce Certification Benchmark Report' },
-  description:
-    'Exam costs, question counts, durations and prerequisites across all Salesforce certification tracks, with a free CC BY 4.0 dataset and the 2026 rename and retirement tracker.',
+  title: { absolute: shareTitle },
+  description: shareDescription,
   alternates: {
     canonical: `${siteUrl}${path}`,
     languages: { 'en-US': `${siteUrl}${path}`, 'x-default': `${siteUrl}${path}` },
+  },
+  /*
+    Its own cards, not the site defaults. This is the one page on the site
+    built to be shared and cited, so inheriting the homepage's og:title and
+    og:url — which is what it did on first deploy — defeated the point of it.
+  */
+  openGraph: {
+    type: 'article',
+    title: shareTitle,
+    description: shareDescription,
+    url: `${siteUrl}${path}`,
+    images: [{ url: shareImage, width: 1200, height: 630, alt: shareTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: shareTitle,
+    description: shareDescription,
+    images: [shareImage],
   },
 }
 
@@ -44,7 +65,7 @@ export default function BenchmarkReportPage() {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: 'Salesforce Certification Dataset 2026',
-    description: metadata.description as string,
+    description: shareDescription,
     url: `${siteUrl}${path}`,
     license: 'https://creativecommons.org/licenses/by/4.0/',
     isAccessibleForFree: true,
@@ -57,7 +78,7 @@ export default function BenchmarkReportPage() {
 
   return (
     <div className="px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebPageJsonLd({ name: '2026 Salesforce Certification Benchmark Report', description: metadata.description as string, path, breadcrumbItems: breadcrumb })) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getWebPageJsonLd({ name: '2026 Salesforce Certification Benchmark Report', description: shareDescription, path, breadcrumbItems: breadcrumb })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(getBreadcrumbListJsonLd(breadcrumb)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }} />
 

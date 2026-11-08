@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 /**
@@ -15,10 +16,24 @@ const DESKTOP_IDLE_FALLBACK_MS = 20000
 const MOBILE_IDLE_FALLBACK_MS = 30000
 
 /**
+ * Routes that must never load analytics.
+ *
+ * /tools/score-calculator/embed is iframed into other people's pages. Loading
+ * our gtag there would run our analytics on their site without their visitors'
+ * consent — their compliance problem, caused by us — and would fill our own
+ * property with sessions from sites we do not control.
+ */
+const NO_ANALYTICS_ROUTES = ['/tools/score-calculator/embed']
+
+/**
  * Loads gtag.js well after LCP/hydration to avoid main-thread contention.
  */
 export default function GoogleAnalytics() {
+  const pathname = usePathname()
+  const analyticsBlocked = NO_ANALYTICS_ROUTES.includes(pathname ?? '')
+
   useEffect(() => {
+    if (analyticsBlocked) return
     if (!GA_MEASUREMENT_ID || typeof window === 'undefined') return
 
     let timeoutId: ReturnType<typeof setTimeout> | null = null
@@ -83,7 +98,7 @@ export default function GoogleAnalytics() {
       cleanupListeners()
       if (timeoutId !== null) clearTimeout(timeoutId)
     }
-  }, [])
+  }, [analyticsBlocked])
 
   if (!GA_MEASUREMENT_ID) return null
   return null
