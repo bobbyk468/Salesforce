@@ -9,14 +9,28 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,
-    // inlineCss deliberately left off. Measured on Next 16.4.4: it removes
-    // the blocking <link> but writes the stylesheet into the page three
-    // times — once in <style> and twice more inside the RSC flight payload
-    // — taking the homepage from 730KB to 1009KB raw and 48.7KB to 93.7KB
-    // gzipped, and the RSC payload from 438KB to 624KB. The sheet is 15KB
-    // gzipped and cached across every page; inlining it costs 45KB gzipped
-    // on every page instead. That trades a measured regression in HTML size
-    // and parse work for one audit flag.
+    /*
+      inlineCss stays OFF. Re-measured on 2026-11-08 after worker-side
+      inlining turned out to cause CLS 0.203, which closed that route and
+      left only a blocking <link> or this.
+
+      Built both. inlineCss removes the blocking <link> (0 stylesheet links,
+      1 inline <style>) but the homepage goes 752,172 -> 1,039,436 bytes raw
+      and 51,467 -> 98,258 gzipped. That is +46.8KB gzipped on EVERY page.
+
+      The separate sheet is 14.8KB gzipped and cached across the whole site,
+      so the comparison is:
+        now:       66.3KB on the first page, 51.5KB on every page after
+        inlineCss: 98.3KB on every page, always
+
+      It is worse on the first page and far worse on the rest, and bigger
+      HTML also slows the cold-colo renders that the Performance grade is
+      most sensitive to. It buys one audit checkbox by making the thing that
+      checkbox exists to measure worse.
+
+      Google's own measurement with the blocking link: PSI mobile 95,
+      desktop 99, CLS 0. Leave it.
+    */
     // Include bot-data JSON in the serverless bundle for /api/chat on Vercel.
   },
   outputFileTracingIncludes: {
