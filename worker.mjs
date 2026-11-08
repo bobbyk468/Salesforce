@@ -32,10 +32,75 @@ function htmlCacheKey(url, versionId) {
   return new Request(cacheUrl, { method: 'GET' })
 }
 
+/**
+ * Stylesheet text by asset path, for the lifetime of the isolate.
+ *
+ * There is one stylesheet and it is immutable per build, so each isolate
+ * reads it at most once however many pages it serves.
+ */
+const cssTextByPath = new Map()
+
+async function readCssOnce(path, env) {
+  if (cssTextByPath.has(path)) return cssTextByPath.get(path)
+  const pending = (async () => {
+    try {
+      const assetResponse = await env.ASSETS.fetch(new URL(path, 'https://assets.local'))
+      if (!assetResponse.ok) return null
+      return await assetResponse.text()
+    } catch (error) {
+      console.error('Unable to read the stylesheet for inlining', error)
+      return null
+    }
+  })()
+  cssTextByPath.set(path, pending)
+  return pending
+}
+
+const stylesheetLinkPattern =
+  /<link[^>]+rel="stylesheet"[^>]*href="(\/_next\/static\/[^"]+\.css)"[^>]*>/g
+
+/**
+ * Replaces the blocking <link rel="stylesheet"> with the stylesheet inline.
+ *
+ * `experimental.inlineCss` does this in Next itself, but on 16.4.4 it writes
+ * the stylesheet into the page three times — once in <style> and twice more
+ * inside the RSC payload — which took the homepage from 730KB to 1009KB raw.
+ * Doing it here, after Next has produced the HTML, leaves the RSC payload
+ * untouched and costs exactly one copy.
+ *
+ * `data-precedence` is carried over to the <style> tag: React uses it to order
+ * and de-duplicate stylesheets, and dropping it makes React re-insert the
+ * original <link> during a client-side navigation.
+ */
+async function inlineStylesheets(response, env) {
+  const html = await response.text()
+  const links = [...html.matchAll(stylesheetLinkPattern)]
+  if (links.length === 0) return new Response(html, response)
+
+  let inlined = html
+  for (const link of links) {
+    const css = await readCssOnce(link[1], env)
+    if (!css) continue
+    const precedence = /data-precedence="([^"]*)"/.exec(link[0])?.[1] ?? 'next'
+    inlined = inlined.replace(
+      link[0],
+      `<style data-precedence="${precedence}">${css}</style>`,
+    )
+  }
+
+  const rewritten = new Response(inlined, response)
+  rewritten.headers.delete('content-length')
+  return rewritten
+}
+
+function isHtmlResponse(response) {
+  return response.status === 200
+    && !!response.headers.get('content-type')?.toLowerCase().includes('text/html')
+}
+
 function canStoreHtmlResponse(response) {
   const cacheControl = response.headers.get('cache-control') || ''
-  return response.status === 200
-    && response.headers.get('content-type')?.toLowerCase().includes('text/html')
+  return isHtmlResponse(response)
     && !response.headers.has('set-cookie')
     && !/(?:^|,)\s*(?:private|no-store|no-cache)\b/i.test(cacheControl)
     && response.headers.get('vary') !== '*'
@@ -72,8 +137,11 @@ export default {
       const upstreamRequest = request.method === 'HEAD'
         ? new Request(request, { method: 'GET' })
         : request
-      const response = await openNextWorker.fetch(upstreamRequest, env, ctx)
-      const storable = canStoreHtmlResponse(response)
+      const upstream = await openNextWorker.fetch(upstreamRequest, env, ctx)
+      const storable = canStoreHtmlResponse(upstream)
+      // Inline before caching, so the work is done once per cache entry
+      // rather than on every request.
+      const response = storable ? await inlineStylesheets(upstream, env) : upstream
       const secured = secureProductionResponse(response, storable ? 'MISS' : 'BYPASS')
 
       if (storable) {
@@ -87,7 +155,10 @@ export default {
       return request.method === 'HEAD' ? new Response(null, secured) : secured
     }
 
-    const response = await openNextWorker.fetch(request, env, ctx)
+    const upstream = await openNextWorker.fetch(request, env, ctx)
+    // Inline here too, so previews and any uncacheable HTML get the same
+    // treatment as the cached production path rather than a blocking <link>.
+    const response = isHtmlResponse(upstream) ? await inlineStylesheets(upstream, env) : upstream
     if (!isProduction || url.protocol !== 'https:') return response
 
     // Static assets bypass Next headers; secure their responses at the entrypoint too.
