@@ -103,4 +103,103 @@ test('production 404 is preserved and receives HSTS', async () => {
 test('Wrangler routes asset requests through worker.mjs', () => {
   assert.equal(wrangler.main, 'worker.mjs')
   assert.equal(wrangler.assets.run_worker_first, true)
+  assert.equal(wrangler.version_metadata.binding, 'WORKER_VERSION')
+})
+
+test('canonical production HTML is cached by Worker version and served with an explicit hit header', async () => {
+  const entries = new Map()
+  globalThis.caches = {
+    default: {
+      async match(request) {
+        return entries.get(request.url)?.clone()
+      },
+      async put(request, response) {
+        entries.set(request.url, response.clone())
+      },
+    },
+  }
+
+  const origin = new Response('<!doctype html><title>Trailblaze Prep</title>', {
+    headers: {
+      'Cache-Control': 'public, s-maxage=31536000',
+      'Content-Type': 'text/html; charset=utf-8',
+    },
+  })
+  const { worker, cleanup, callCount } = await loadWorker(origin)
+  const env = { WORKER_VERSION: { id: 'deploy-a' } }
+
+  try {
+    const first = await worker.fetch(new Request('https://www.trailblazeprep.com/'), env)
+    assert.equal(first.headers.get('X-Trailblaze-Edge-Cache'), 'MISS')
+    assert.equal(await first.text(), '<!doctype html><title>Trailblaze Prep</title>')
+
+    const second = await worker.fetch(new Request('https://www.trailblazeprep.com/'), env)
+    assert.equal(second.headers.get('X-Trailblaze-Edge-Cache'), 'HIT')
+    assert.equal(second.headers.get('Strict-Transport-Security'), 'max-age=31536000')
+    assert.equal(await second.text(), '<!doctype html><title>Trailblaze Prep</title>')
+    assert.equal(callCount(), 1)
+  } finally {
+    cleanup()
+    delete globalThis.caches
+  }
+})
+
+test('HEAD warms the GET HTML object and a new Worker version cannot reuse it', async () => {
+  const entries = new Map()
+  globalThis.caches = {
+    default: {
+      async match(request) {
+        return entries.get(request.url)?.clone()
+      },
+      async put(request, response) {
+        entries.set(request.url, response.clone())
+      },
+    },
+  }
+
+  const origin = new Response('<!doctype html><title>Trailblaze Prep</title>', {
+    headers: { 'Content-Type': 'text/html; charset=utf-8' },
+  })
+  const { worker, cleanup, callCount } = await loadWorker(origin)
+  const request = () => new Request('https://www.trailblazeprep.com/', { method: 'HEAD' })
+
+  try {
+    const first = await worker.fetch(request(), { WORKER_VERSION: { id: 'deploy-a' } })
+    assert.equal(first.headers.get('X-Trailblaze-Edge-Cache'), 'MISS')
+    assert.equal(await first.text(), '')
+
+    const second = await worker.fetch(request(), { WORKER_VERSION: { id: 'deploy-a' } })
+    assert.equal(second.headers.get('X-Trailblaze-Edge-Cache'), 'HIT')
+    assert.equal(callCount(), 1)
+
+    globalThis.__fakeResponse = new Response('<!doctype html><title>Next deploy</title>', {
+      headers: { 'Content-Type': 'text/html; charset=utf-8' },
+    })
+    const nextDeploy = await worker.fetch(request(), { WORKER_VERSION: { id: 'deploy-b' } })
+    assert.equal(nextDeploy.headers.get('X-Trailblaze-Edge-Cache'), 'MISS')
+    assert.equal(callCount(), 2)
+  } finally {
+    cleanup()
+    delete globalThis.caches
+  }
+})
+
+test('API, OG and RSC requests bypass the HTML edge cache', async (t) => {
+  for (const request of [
+    new Request('https://www.trailblazeprep.com/api/chat'),
+    new Request('https://www.trailblazeprep.com/og/certification'),
+    new Request('https://www.trailblazeprep.com/', { headers: { RSC: '1' } }),
+  ]) {
+    await t.test(request.url, async () => {
+      const response = new Response('uncached', { headers: { 'Content-Type': 'text/html' } })
+      const { worker, cleanup, callCount } = await loadWorker(response)
+      try {
+        const returned = await worker.fetch(request, { WORKER_VERSION: { id: 'deploy-a' } })
+        assert.equal(returned.headers.has('X-Trailblaze-Edge-Cache'), false)
+        assert.equal(callCount(), 1)
+      } finally {
+        cleanup()
+      }
+    })
+  }
 })

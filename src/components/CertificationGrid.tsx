@@ -1,6 +1,7 @@
 import Link from '@/components/AppLink'
 import { CardIcon, CardIconSprite } from '@/components/CardIconSprite'
 import type { GridCategory } from '@/lib/certification-grid-data'
+import { EDITORIAL_CREDENTIALS, REVIEWER } from '@/lib/editorial-credentials'
 
 /**
  * The full certification list, grouped by role. All category headings and
@@ -69,20 +70,29 @@ export default function CertificationGrid({
           </ul>
         </nav>
 
-        {categories.map((category, index) => (
+        <p className="mb-10 text-center text-sm font-medium text-gray-700">
+          Reviewed by {EDITORIAL_CREDENTIALS.length}x Salesforce Certified practitioner {REVIEWER.name}
+          {' — '}
+          <a
+            href={REVIEWER.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="font-semibold text-salesforce-blue underline decoration-salesforce-blue/30 underline-offset-4 hover:text-salesforce-dark"
+          >
+            verify credentials
+          </a>
+        </p>
+
+        {categories.map((category) => (
           /*
             Every track stays in the SSR DOM so crawlers see all 91 cards.
-            Tracks below the first get content-visibility: auto, which lets
-            the browser skip layout and paint for the ones off screen while
-            leaving them in the DOM and in the find-in-page index. The
-            intrinsic size keeps the scrollbar honest so skipping does not
-            cause a shift. The first track is above the fold, so it renders
-            normally.
+            Keep every track normally rendered as well: headless audit tools
+            use rendered text extraction and skip content-visibility subtrees.
           */
           <section
             key={category.slug}
             id={`certification-track-${category.slug}`}
-            className={`mb-12 last:mb-0${index === 0 ? '' : ' cert-track-deferred'}`}
+            className="mb-12 last:mb-0"
             aria-labelledby={`certification-track-${category.slug}-heading`}
           >
             <h2 id={`certification-track-${category.slug}-heading`} className="mb-5 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900">
