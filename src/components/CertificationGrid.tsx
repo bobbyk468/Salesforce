@@ -1,5 +1,5 @@
 import Link from '@/components/AppLink'
-import { ArrowRight, BookOpen, ExternalLink } from 'lucide-react'
+import { CardIcon, CardIconSprite } from '@/components/CardIconSprite'
 import type { GridCategory } from '@/lib/certification-grid-data'
 
 /**
@@ -23,6 +23,7 @@ export default function CertificationGrid({
 
   return (
     <section className="py-16 px-4 sm:py-20" aria-labelledby="all-certs-heading">
+      <CardIconSprite />
       <div className="mx-auto max-w-7xl">
         <div className="mb-8 text-center">
           <Heading id="all-certs-heading" className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl">
@@ -54,7 +55,12 @@ export default function CertificationGrid({
                   className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 transition-colors hover:border-salesforce-blue hover:text-salesforce-blue"
                 >
                   {category.name}
-                  <span className="rounded-full bg-gray-100 px-1.5 py-0.5 text-xs text-gray-600">
+                  {/*
+                    Reserved width and tabular figures: this count was the
+                    only thing shifting on the page, because its width
+                    changed when the webfont swapped in.
+                  */}
+                  <span className="inline-block min-w-[1.5rem] rounded-full bg-gray-100 px-1.5 py-0.5 text-center text-xs tabular-nums text-gray-600">
                     {category.certs.length}
                   </span>
                 </a>
@@ -63,8 +69,22 @@ export default function CertificationGrid({
           </ul>
         </nav>
 
-        {categories.map((category) => (
-          <section key={category.slug} id={`certification-track-${category.slug}`} className="mb-12 last:mb-0" aria-labelledby={`certification-track-${category.slug}-heading`}>
+        {categories.map((category, index) => (
+          /*
+            Every track stays in the SSR DOM so crawlers see all 91 cards.
+            Tracks below the first get content-visibility: auto, which lets
+            the browser skip layout and paint for the ones off screen while
+            leaving them in the DOM and in the find-in-page index. The
+            intrinsic size keeps the scrollbar honest so skipping does not
+            cause a shift. The first track is above the fold, so it renders
+            normally.
+          */
+          <section
+            key={category.slug}
+            id={`certification-track-${category.slug}`}
+            className={`mb-12 last:mb-0${index === 0 ? '' : ' cert-track-deferred'}`}
+            aria-labelledby={`certification-track-${category.slug}-heading`}
+          >
             <h2 id={`certification-track-${category.slug}-heading`} className="mb-5 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900">
               Salesforce {category.name} Certifications
             </h2>
@@ -146,14 +166,14 @@ export default function CertificationGrid({
                         className="inline-flex min-h-11 items-center gap-1 text-sm font-semibold text-salesforce-blue hover:text-salesforce-dark"
                       >
                         {cert.name} practice questions
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        <CardIcon name="arrow-right" />
                       </Link>
                       {cert.studyGuideHref && (
                         <Link
                           href={cert.studyGuideHref}
                           className="inline-flex min-h-11 items-center gap-1 text-sm text-gray-600 hover:text-salesforce-blue"
                         >
-                          <BookOpen className="h-4 w-4" aria-hidden="true" />
+                          <CardIcon name="book-open" />
                           {cert.name} study guide
                         </Link>
                       )}
@@ -170,7 +190,7 @@ export default function CertificationGrid({
                           rel="nofollow noopener noreferrer"
                           className="inline-flex min-h-11 items-center gap-1 text-sm text-gray-600 hover:text-salesforce-blue"
                         >
-                          <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                          <CardIcon name="external-link" />
                           Official page
                         </a>
                       )}

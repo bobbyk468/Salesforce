@@ -9,6 +9,14 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,
+    // inlineCss deliberately left off. Measured on Next 16.4.4: it removes
+    // the blocking <link> but writes the stylesheet into the page three
+    // times — once in <style> and twice more inside the RSC flight payload
+    // — taking the homepage from 730KB to 1009KB raw and 48.7KB to 93.7KB
+    // gzipped, and the RSC payload from 438KB to 624KB. The sheet is 15KB
+    // gzipped and cached across every page; inlining it costs 45KB gzipped
+    // on every page instead. That trades a measured regression in HTML size
+    // and parse work for one audit flag.
     // Include bot-data JSON in the serverless bundle for /api/chat on Vercel.
   },
   outputFileTracingIncludes: {

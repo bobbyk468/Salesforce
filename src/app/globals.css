@@ -314,3 +314,14 @@ body {
     padding-block: 0.2rem;
   }
 }
+
+/*
+  Certification tracks below the first on the homepage. All 91 cards stay in
+  the server-rendered DOM for crawlers; this only tells the browser it may
+  skip layout and paint for the tracks that are off screen. contain-intrinsic-size
+  reserves a plausible height so the scrollbar does not jump as they render.
+*/
+.cert-track-deferred {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}

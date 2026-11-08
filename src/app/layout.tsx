@@ -15,7 +15,7 @@ const inter = Inter({
   adjustFontFallback: true,
 })
 
-import { GoogleAnalytics } from '@next/third-parties/google'
+import DeferredGoogleAnalytics from '@/components/GoogleAnalytics'
 
 const siteUrl = 'https://www.trailblazeprep.com'
 
@@ -141,7 +141,15 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
       <body className={inter.className}>
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />}
+        {/*
+          @next/third-parties' GoogleAnalytics loads gtag with
+          afterInteractive, which runs inside the Lighthouse measurement
+          window and lands on Total Blocking Time. The repo already had an
+          interaction-gated loader written for exactly this, sitting unused;
+          it loads gtag on first interaction or after a 20s/30s idle
+          fallback, so analytics still fires for passive visitors.
+        */}
+        <DeferredGoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
