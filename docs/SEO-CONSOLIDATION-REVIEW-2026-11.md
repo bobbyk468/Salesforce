@@ -2,10 +2,10 @@
 
 **Site:** https://www.trailblazeprep.com
 **Prepared:** 9 November 2026
-**Branch:** `Summer26` (commits `af2cf212`, `10f6915e`, `c8385e69`, `4ab492a2`)
-**Status:** commits `af2cf212` through `4ab492a2` are live in production (verified: the
-production sitemap serves 171 URLs and the merged routes 301 correctly). The
-readiness-target fix in 3.5 is committed but not yet deployed.
+**Branch:** `Summer26`
+**Status:** all work described here is committed to `Summer26`, deployed, and
+verified in production (Workers version `d4498f31`). Commits `af2cf212`,
+`10f6915e`, `c8385e69`, `4ab492a2`, `7bb53f3e`, `3498724d`, `627ce3fe`.
 
 This document is written for an external SEO reviewer. Part 1 describes what the
 site is and how it is built. Part 2 describes what it looked like before this
@@ -242,26 +242,6 @@ that would have pointed at the page they sat on became on-page anchors or plain
 text. 50 duplicate rows removed from the HTML sitemap. `urls.json` and
 `page-dates.json` trimmed to the surviving 171.
 
-### 3.5 Readiness targets, finished properly
-
-The pass described in 3.3 only rewrote the *ported* components. Checking the
-deployed site afterwards showed `/certifications/app-builder` still displaying
-75%+, 76%, 80%+ and 85%+ at once, because three hub-side sources had their own
-figures: `CertReadinessSummary` set the target from a difficulty band rather
-than the exam, the shared `FullQuestionBankCta` hardcoded 75%+ on every
-credential page, and `exam-prep-content-data.ts` used 80%+ as the fallback for
-any credential without bespoke copy. Per-credential data files and six FAQ
-answers carried their own numbers as well.
-
-The figure is now computed in one place, `getMockExamTarget(slug)` in
-`cert-seo-data.ts`, from the credential's own passing score. Components call it
-rather than stating a number, generic copy that applies to every credential no
-longer names a figure at all, and where an issuer publishes no numeric passing
-score the copy describes readiness without inventing one.
-
-Verified by crawling all 171 pages of a production build: **0 pages display
-more than one readiness target.** Before this pass, 29 did.
-
 ### 3.4 `4ab492a2` — de-duplication
 
 Merging left overlapping sections adjacent on the same page. Detection ran
@@ -290,6 +270,52 @@ against a related-certification card listing the same topic names.
 
 ---
 
+### 3.5 `7bb53f3e` — readiness targets, finished properly
+
+The pass described in 3.3 only rewrote the *ported* components. Checking the
+deployed site afterwards showed `/certifications/app-builder` still displaying
+75%+, 76%, 80%+ and 85%+ at once, because three hub-side sources had their own
+figures: `CertReadinessSummary` set the target from a difficulty band rather
+than the exam, the shared `FullQuestionBankCta` hardcoded 75%+ on every
+credential page, and `exam-prep-content-data.ts` used 80%+ as the fallback for
+any credential without bespoke copy. Per-credential data files and six FAQ
+answers carried their own numbers as well.
+
+The figure is now computed in one place, `getMockExamTarget(slug)` in
+`cert-seo-data.ts`, from the credential's own passing score. Components call it
+rather than stating a number, generic copy that applies to every credential no
+longer names a figure at all, and where an issuer publishes no numeric passing
+score the copy describes readiness without inventing one.
+
+Verified by crawling all 171 pages of a production build: **0 pages display
+more than one readiness target.** Before this pass, 29 did.
+
+### 3.6 `3498724d`, `627ce3fe` — the two trust problems
+
+Both were listed as open in the first draft of this document. One of them was
+not the problem we had described.
+
+**The originality contradiction was real.** `/about` claimed nothing on the site
+is copied or scraped while a homepage FAQ answer said some question sets are
+imported from the SF-Questions repository with unverified answers. Both
+rendered. Since that bank is gated off and never served, the homepage FAQ was
+the inaccurate half, and it now describes what is actually served. The `/about`
+wording is specific rather than absolute.
+
+**The Claude pages were not publishing what we said they were.** See 5.7 for the
+correction and for what we did instead, which was to state the eligibility
+restriction Pearson publishes. `627ce3fe` is a follow-up: the Architect
+Foundations page carries its own status object, so the first commit reached
+three of the four pages and not the fourth. We found that by checking all four
+rendered pages rather than trusting the edit.
+
+A pattern worth naming, because it bit us twice: this codebase has per-slug
+override objects, and a change applied to the obvious data source does not
+necessarily reach every credential. The readiness-target fix in 3.5 had the
+same shape — the ported components were corrected while three hub-side sources
+were not. In both cases the miss was found by crawling rendered output across
+every affected page, not by reading the diff.
+
 ## Part 4 — Verification
 
 Everything below was run against a production build, not the dev server.
@@ -312,9 +338,22 @@ exists (an H1 and a schema prop) and were rewritten, with comments stating why.
 
 ---
 
-## Part 5 — Open problems we have not fixed
+## Part 5 — What is resolved, and what is still open
 
 We would rather list these than have you discover them.
+
+**Resolved since the first draft of this document:** 5.1 (the `/about`
+originality claim) and 5.7 (the Claude credential pages). Both are kept below
+rather than deleted, because 5.7 also records a factual error this document
+made, and a reviewer should see it.
+
+**Still open, in the order we would tackle them:** 5.2 publication rights for
+the imported question bank, 5.9 the remaining thin pages, 5.8 externally
+verifying the passing scores, 5.3 page weight, 5.4 the FAQ structured data
+reduction, 5.5 the table of contents, 5.6 the footer self-links.
+
+Nothing in the still-open list is a regression from this work except 5.3 and
+5.4, which are the direct cost of consolidation.
 
 ### 5.1 The `/about` originality claim — resolved
 
