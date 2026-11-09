@@ -316,16 +316,19 @@ exists (an H1 and a schema prop) and were rewritten, with comments stating why.
 
 We would rather list these than have you discover them.
 
-### 5.1 The `/about` originality claim is false as written
+### 5.1 The `/about` originality claim — resolved
 
-`/about` states: "All content on this site is **original and unique**, written
+`/about` stated: "All content on this site is **original and unique**, written
 for Trailblaze Prep. We do not copy or scrape from other sites or study guides."
-A homepage FAQ answer simultaneously states that some question sets are imported
-from the SF-Questions repository with unverified answers.
+A homepage FAQ answer simultaneously stated that some question sets are imported
+from the SF-Questions repository with unverified answers. Both rendered live.
 
-The imported bank is not served (see 2.4), so the accurate resolution is to
-correct the homepage FAQ rather than to delete a disclosure. We have not done it
-because it is a public claim about the business and the owner should word it.
+Because the imported bank is not served (see 2.4), the homepage FAQ was the
+inaccurate one: it told readers the site serves imported, unverified questions
+when it does not. That answer now describes what is actually served. The
+`/about` wording was also made specific rather than absolute — it now says
+nothing is republished or scraped, and that factual exam details come from the
+issuer's own published guide and are cited as such.
 
 ### 5.2 The imported bank has no publication rights
 
@@ -363,18 +366,39 @@ entries in it.
 self-links in them. Mostly pre-existing. Fixing it properly needs `usePathname`,
 which would push a client component into the global footer on every page.
 
-### 5.7 The Claude credential pages
+### 5.7 The Claude credential pages — resolved, and a correction to this document
 
-Four pages under `/certifications/claude-certified-*` plus a role hub, all
-reachable from the global navigation. They publish a $175 fee, 65 questions, a
-720/1000 passing score and a $200k median salary for a credential whose own
-on-page banner states that issuer details are unverified. We consider this a
-live trust problem and have not touched it.
+An earlier draft of this document stated that these pages publish a $175 fee,
+65 questions, a 720/1000 passing score and a $200k median salary under a banner
+admitting the details are unverified. **That was wrong, and the error is worth
+recording because it is the same error we criticised in an earlier external
+review.** Those values existed in `cert-seo-data.ts`, but
+`hasUnverifiedClaudeExamDetails()` gated every one of them out of the rendered
+page. We checked that the data existed and did not check that it rendered.
+Fetching the live page shows no fee, no question count, no passing score, no
+duration and no salary — only the line "Fees, retake rules, format, and
+availability have not been verified."
 
-For the record: an earlier review attributed specific domain weightings to these
-pages (Enterprise Architecture 25%, and so on). Those strings do not exist in
-the codebase and `getExamWeightage` returns null for Claude slugs. The fee,
-question count, passing score and salary figures, however, are real.
+What we did instead, having verified the facts:
+
+The credentials are real. Pearson, Anthropic's delivery partner, publishes a
+Claude Certification Program page listing four exams — CCAO-F, CCDV-F, CCAR-F,
+CCAR-P — and states that **"Certification is open to organizations in the Claude
+Partner Network."** Pearson does not publish fees, question counts, durations or
+passing scores, and exam guides are being revised for exams taken on or after
+7 December 2026.
+
+So the page now states the eligibility restriction, which is the single most
+useful thing a reader can be told: most individuals cannot register for these
+exams at all. The dormant fee, logistics and salary entries were deleted rather
+than left in the data files where un-gating them would publish unsourced
+figures. The FAQ line claiming "this page aligns with that guide" was removed,
+because we have not read those guides.
+
+For the record on the earlier external review: it attributed specific domain
+weightings to these pages (Enterprise Architecture 25%, and so on). Those
+strings do not exist in the codebase and `getExamWeightage` returns null for
+Claude slugs.
 
 ### 5.8 Passing scores are internally consistent but not all externally verified
 

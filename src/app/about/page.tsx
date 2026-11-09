@@ -104,7 +104,7 @@ export default function AboutPage() {
           Original content for SEO and learning
         </h2>
         <p className="text-gray-700">
-          All content on this site is <strong>original and unique</strong>, written for Trailblaze Prep. We do not copy or scrape from other sites or study guides. Each certification page includes:
+          Everything published on this site is <strong>written for Trailblaze Prep</strong>. We do not republish other sites&apos; study guides or exam dumps, and we do not serve scraped question banks. Factual exam details, section weightings, fees and passing scores are taken from the issuer&apos;s own published exam guide and cited as such. Each certification page includes:
         </p>
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
           <li><strong>Unique practice questions</strong>: Written to test concepts for that exam.</li>

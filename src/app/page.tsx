@@ -198,7 +198,7 @@ const faqItems = [
   {
     question: 'How accurate are these practice questions?',
     answer:
-      'Some question sets are imported from the SF-Questions repository with source-provided answers that have not been independently verified. These resources do not guarantee a passing score. Check current official documentation and the source notice on each exam page.',
+      'The practice questions served on this site are written for Trailblaze Prep and reviewed against the current official exam outlines. They are study aids, not exam dumps, and they do not guarantee a passing score. Always confirm current objectives, format and fees with the issuer before booking.',
   },
   {
     question: 'How often are the questions and study materials updated?',

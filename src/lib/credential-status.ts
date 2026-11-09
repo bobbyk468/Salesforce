@@ -16,12 +16,18 @@ const AI_ASSOCIATE_STATUS: CredentialStatusInfo = {
   sourceUrl: 'https://trailhead.salesforce.com/en/credentials/aiassociate',
 }
 
+// Verified 9 November 2026 against Pearson's Claude Certification Program page,
+// which is the issuer's own delivery partner. It confirms the four exams and
+// their codes, and states that "Certification is open to organizations in the
+// Claude Partner Network" — so most individual readers cannot register. Pearson
+// does not publish fees, question counts, durations or passing scores, which is
+// why this site shows none of them for these credentials.
 const CLAUDE_STATUS: CredentialStatusInfo = {
   kind: 'details-unverified',
-  label: 'Issuer details not verified',
-  message: 'We have not confirmed this credential’s current availability or exam details from a public Anthropic source. Confirm status, format, and fees with Anthropic before relying on them.',
-  sourceLabel: 'Anthropic Claude Partner Network announcement',
-  sourceUrl: 'https://www.anthropic.com/news/claude-partner-network',
+  label: 'Open to Claude Partner Network organizations',
+  message: 'Pearson, which delivers this exam for Anthropic, states that certification is open to organizations in the Claude Partner Network, so it is generally not available to individual candidates. Fees, question counts, durations and passing scores are not published by the issuer and are not listed here. Exam guides are being updated for exams taken on or after 7 December 2026.',
+  sourceLabel: 'Pearson: Claude Certification Program by Anthropic',
+  sourceUrl: 'https://www.pearsonvue.com/us/en/anthropic.html',
 }
 
 const CLAUDE_ARCHITECT_FOUNDATIONS_STATUS: CredentialStatusInfo = {

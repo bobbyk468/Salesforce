@@ -166,10 +166,6 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   // UX Designer
   'ux-designer': '$200',
   // Claude (Anthropic)
-  'claude-certified-associate': '$99',
-  'claude-certified-developer': '$125',
-  'claude-certified-architect-foundations': '$125',
-  'claude-certified-architect-professional': '$175',
 }
 
 /** Get exam cost for a certification slug. Defaults to $200 if not specified. */
@@ -191,6 +187,9 @@ export function getRetakeCost(slug: string): string {
 /** Exam logistics (questions, passing score, duration) for the Exam logistics section. Overrides only; defaults by cost tier when missing. */
 export type ExamLogisticsDetail = { questions: number | string; passingScore: string; duration: string }
 
+// Claude credentials deliberately have no entry here. Pearson, the issuer's
+// delivery partner, publishes no fee, question count, duration or passing
+// score for them, so the site states none. See credential-status.ts.
 const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   administrator: { questions: 60, passingScore: '68%', duration: '105 min' },
   'advanced-administrator': { questions: 60, passingScore: '65%', duration: '105 min' },
@@ -286,10 +285,6 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'technical-architect-evaluation': { questions: 'Scenario + MC', passingScore: 'Per exam', duration: 'Timed' },
   'technical-architect-review-board': { questions: 'Board scenario', passingScore: 'Board decision', duration: 'Board session' },
   // Claude (Anthropic)
-  'claude-certified-associate': { questions: 60, passingScore: '720/1000', duration: '120 min' },
-  'claude-certified-developer': { questions: 53, passingScore: '720/1000', duration: '120 min' },
-  'claude-certified-architect-foundations': { questions: 60, passingScore: '720/1000', duration: '120 min' },
-  'claude-certified-architect-professional': { questions: 65, passingScore: '720/1000', duration: '120 min' },
 }
 
 /** Returns exam logistics for the Exam logistics section; null if slug not in map (e.g. role page). */
@@ -388,10 +383,6 @@ export const SLUG_TO_OCCUPATION_DATA: Record<string, { jobTitle: string; medianS
   'data-architect': { jobTitle: 'Salesforce Data Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
   'technical-architect': { jobTitle: 'Certified Technical Architect', medianSalary: 215000, salaryRange: { minSalary: 180000, maxSalary: 250000 } },
   // Claude (Anthropic)
-  'claude-certified-associate': { jobTitle: 'AI Business Analyst', medianSalary: 95000, salaryRange: { minSalary: 80000, maxSalary: 110000 } },
-  'claude-certified-developer': { jobTitle: 'AI Engineer', medianSalary: 145000, salaryRange: { minSalary: 125000, maxSalary: 165000 } },
-  'claude-certified-architect-foundations': { jobTitle: 'AI Solutions Architect', medianSalary: 170000, salaryRange: { minSalary: 150000, maxSalary: 190000 } },
-  'claude-certified-architect-professional': { jobTitle: 'Senior AI Solutions Architect', medianSalary: 200000, salaryRange: { minSalary: 175000, maxSalary: 225000 } },
 }
 
 /** Get occupation role-proxy data for a cert slug; returns undefined if not available. */
@@ -2310,7 +2301,7 @@ const CERT_BASE_FAQ_OVERRIDES: Partial<
     },
     officialOutline: {
       question: 'Where can I find the official CCAO-F exam guide?',
-      answer: 'Anthropic publishes the official Claude Certified Associate: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+      answer: 'Anthropic publishes the official Claude Certified Associate: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. We have not read those guides; this page does not reproduce their objectives.',
     },
   },
   'claude-certified-developer': {
@@ -2320,7 +2311,7 @@ const CERT_BASE_FAQ_OVERRIDES: Partial<
     },
     officialOutline: {
       question: 'Where can I find the official CCDV-F exam guide?',
-      answer: 'Anthropic publishes the official Claude Certified Developer: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+      answer: 'Anthropic publishes the official Claude Certified Developer: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. We have not read those guides; this page does not reproduce their objectives.',
     },
   },
   'claude-certified-architect-foundations': {
@@ -2330,7 +2321,7 @@ const CERT_BASE_FAQ_OVERRIDES: Partial<
     },
     officialOutline: {
       question: 'Where can I find the official CCAR-F exam guide?',
-      answer: 'Anthropic publishes the official Claude Certified Architect: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+      answer: 'Anthropic publishes the official Claude Certified Architect: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. We have not read those guides; this page does not reproduce their objectives.',
     },
   },
   'claude-certified-architect-professional': {
@@ -2340,7 +2331,7 @@ const CERT_BASE_FAQ_OVERRIDES: Partial<
     },
     officialOutline: {
       question: 'Where can I find the official CCAR-P exam guide?',
-      answer: 'Anthropic publishes the official Claude Certified Architect: Professional Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+      answer: 'Anthropic publishes the official Claude Certified Architect: Professional Exam Guide on the Claude Partner Network portal and Pearson VUE. We have not read those guides; this page does not reproduce their objectives.',
     },
   },
 }
