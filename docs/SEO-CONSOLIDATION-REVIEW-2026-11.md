@@ -4,8 +4,8 @@
 **Prepared:** 9 November 2026
 **Branch:** `Summer26`
 **Status:** all work described here is committed to `Summer26`, deployed, and
-verified in production (Workers version `d4498f31`). Commits `af2cf212`,
-`10f6915e`, `c8385e69`, `4ab492a2`, `7bb53f3e`, `3498724d`, `627ce3fe`.
+verified in production (Workers version `f5c53144`). Commits `af2cf212` through
+`bd2a3d8d`.
 
 This document is written for an external SEO reviewer. Part 1 describes what the
 site is and how it is built. Part 2 describes what it looked like before this
@@ -315,6 +315,48 @@ necessarily reach every credential. The readiness-target fix in 3.5 had the
 same shape — the ported components were corrected while three hub-side sources
 were not. In both cases the miss was found by crawling rendered output across
 every affected page, not by reading the diff.
+
+### 3.7 `bd2a3d8d` — acting on the external review
+
+The review of this document returned five page-level claims. Four held up
+against production and are fixed; one did not exist.
+
+**The title gap was the real find.** 48 of the 50 hubs that absorbed a
+`/<name>-study-guide` page had no "Study Guide" in their `<title>`. We had
+301'd pages titled "X Study Guide" into pages titled "X Practice Exam" and
+never checked. `makePracticeExamTitle` now takes a `dualIntent` flag driven by
+`SLUGS_WITH_MERGED_STUDY_GUIDE` and picks the richest title carrying both
+intents inside the existing 50-60 character budget; five hubs that bypassed the
+builder through hardcoded overrides were rewritten by hand. All 50 now carry
+it. We declined the review's advice to exceed 60 characters, because
+`validate:seo:lengths` enforces that budget and it is the project's own
+standard.
+
+**Three factual errors.** `/certifications/developer-1` claimed "roughly 1.105
+minutes per question" (105/60 is 1.75) and "you can miss up to 60 questions and
+still pass" (68% of 60 means 41 correct, so 19); the administrator page gave
+1.75 in one block and ~1.6 in another. `ExamPrepContent` told readers to book
+once mocks were "steady above {passingScore}" — the pass mark, with no
+headroom, contradicting the derived target on the same page. The readiness
+sweep in 3.5 missed it because it matched `NN%+` and this template interpolated
+a bare `68%`.
+
+**The Claude figures did render, and 5.7 was wrong about it twice over.** The
+domain weightings and exam logistics live in `certificationCard.topics` and
+`examDifficulty.bullets` in the spike JSON, not in `exam-weightage-data.ts`,
+which is the only file 5.7 checked. Percentages are stripped from the topic
+pills and the bullets asserting question counts and durations are gone.
+
+**One claim did not survive checking.** The review reported "5x Salesforce
+certified" and "4.2K+ passed this month" on `/certifications/app-builder`.
+Neither string appears on that page. Its quoted figures were also unreliable
+where the underlying bug was real: it reported app-builder reading "steady
+above 63%" when the text said 73%.
+
+**The pattern, stated plainly.** Three times in this work we reported on
+rendered output after checking only a data file, and were wrong each time. The
+verification table below is what the claims in this document rest on; anything
+not in it should be read as unverified.
 
 ## Part 4 — Verification
 
