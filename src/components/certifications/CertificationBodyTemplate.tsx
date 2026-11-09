@@ -111,22 +111,54 @@ import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/
 import type { ReactNode } from 'react'
 
 import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
+/** Visible text of a segment, used only to decide spacing between segments. */
+function introSegmentText(s: IntroSegment): string {
+  if (s.type === 'link') return s.label
+  return 'text' in s && typeof s.text === 'string' ? s.text : ''
+}
+
+/**
+ * True when a space belongs between two adjacent intro segments.
+ *
+ * The segment arrays in cert-page-spike carry no trailing or leading spaces of
+ * their own, so rendering them back to back produced run-on text such as
+ * "See ourcertification pathto understand". Punctuation that legitimately hugs
+ * the neighbouring word is excluded.
+ */
+function needsSpaceBetween(left: string, right: string): boolean {
+  if (!left || !right) return false
+  const a = left[left.length - 1]
+  const b = right[0]
+  if (/\s/.test(a) || /\s/.test(b)) return false
+  if (/[([{\u2018\u201c\u2013\u2014/$]/.test(a)) return false
+  if (/[.,;:!?)\]}\u2019\u201d%\u2013\u2014/]/.test(b)) return false
+  return true
+}
+
 function renderIntroSegments(segments: IntroSegment[]): ReactNode {
   return segments.map((s, i) => {
-    if (s.type === 'text') return <span key={i}>{s.text}</span>
-    if (s.type === 'strong') return <strong key={i}>{s.text}</strong>
+    const gap =
+      i > 0 && needsSpaceBetween(introSegmentText(segments[i - 1]), introSegmentText(s)) ? ' ' : ''
+    if (s.type === 'text') return <span key={i}>{gap}{s.text}</span>
+    if (s.type === 'strong') return <span key={i}>{gap}<strong>{s.text}</strong></span>
     if (s.type === 'link') {
       if (s.href.startsWith('mailto:')) {
         return (
-          <a key={i} href={s.href} className="text-salesforce-blue font-medium hover:underline">
-            {s.label}
-          </a>
+          <span key={i}>
+            {gap}
+            <a href={s.href} className="text-salesforce-blue font-medium hover:underline">
+              {s.label}
+            </a>
+          </span>
         )
       }
       return (
-        <Link key={i} href={s.href} className="text-salesforce-blue font-medium hover:underline">
-          {s.label}
-        </Link>
+        <span key={i}>
+          {gap}
+          <Link href={s.href} className="text-salesforce-blue font-medium hover:underline">
+            {s.label}
+          </Link>
+        </span>
       )
     }
     return null
