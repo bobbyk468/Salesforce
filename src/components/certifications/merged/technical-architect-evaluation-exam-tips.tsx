@@ -40,7 +40,7 @@ export const faqItems = [
   },
   {
     question: 'Which credentials are recommended before attempting the CTA Evaluation Exam?',
-    answer: 'Salesforce strongly recommends completing both the Application Architect credential (Data Architect + Sharing &amp; Visibility Architect + Platform App Builder + System Architect) and System Architect credential (Integration Architect + Identity &amp; Access Management Architect + Dev Lifecycle &amp; Deployment Architect + System Architect) before the Evaluation Exam. Most successful candidates also have 5+ years of Salesforce architecture experience.',
+    answer: 'Salesforce strongly recommends completing both the Application Architect credential (Data Architect + Sharing & Visibility Architect + Platform App Builder + System Architect) and System Architect credential (Integration Architect + Identity & Access Management Architect + Dev Lifecycle & Deployment Architect + System Architect) before the Evaluation Exam. Most successful candidates also have 5+ years of Salesforce architecture experience.',
   },
   {
     question: 'What concepts do most Technical Architect Evaluation candidates get wrong?',

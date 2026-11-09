@@ -36,7 +36,7 @@ export const faqItems = [
   },
   {
     question: 'What are the highest-weight UX Designer exam sections?',
-    answer: 'Declarative Design (27%) and the Salesforce Lightning Design System (21%) together account for 48% of the exam. UX Fundamentals (16%) and Discovery (13%) come next. Knowing how to design within the platform&apos;s own building blocks matters more here than design theory.',
+    answer: 'Declarative Design (27%) and the Salesforce Lightning Design System (21%) together account for 48% of the exam. UX Fundamentals (16%) and Discovery (13%) come next. Knowing how to design within the platform’s own building blocks matters more here than design theory.',
   },
   {
     question: 'Do I need to know how to code for the UX Designer exam?',

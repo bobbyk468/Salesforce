@@ -38,7 +38,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce Sharing & Visibility Architect certification?',
-    answer: 'The Sharing & Visibility Architect certification validates expertise in designing record-level security models for complex Salesforce orgs. It covers OWD settings, role hierarchy, sharing rules, manual sharing, Apex Managed Sharing, territory management, and performance implications of each design choice. The exam has 60 questions, ~110-minute time limit, ~58% passing score, and a $400 fee.',
+    answer: 'The Sharing & Visibility Architect certification validates expertise in designing record-level security models for complex Salesforce orgs. It covers OWD settings, role hierarchy, sharing rules, manual sharing, Apex Managed Sharing, territory management, and performance implications of each design choice. The exam has 60 questions, ~110-minute time limit, 58% passing score, and a $400 fee.',
   },
   {
     question: 'What is the difference between OWD, role hierarchy, and sharing rules?',
@@ -69,7 +69,7 @@ export default function SharingVisibilityArchitectStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '120 min' },
-          { label: 'Passing Score', value: '~58%' },
+          { label: 'Passing Score', value: '58%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

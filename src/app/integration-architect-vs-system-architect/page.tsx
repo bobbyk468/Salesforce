@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Integration Architect and System Architect?',
-    answer: 'Salesforce Integration Architect focuses specifically on enterprise integration patterns: designing synchronous and asynchronous integrations, API management with MuleSoft, middleware selection, data migration architecture, and Salesforce governor limits in integration contexts. System Architect is the credential that consolidates the full System Architect track, it validates that you have passed Integration Architect, Identity &amp; Access Management Architect, and Dev Lifecycle &amp; Deployment Architect, completing the System Architect level of the CTA pathway.',
+    answer: 'Salesforce Integration Architect focuses specifically on enterprise integration patterns: designing synchronous and asynchronous integrations, API management with MuleSoft, middleware selection, data migration architecture, and Salesforce governor limits in integration contexts. System Architect is the credential that consolidates the full System Architect track, it validates that you have passed Integration Architect, Identity & Access Management Architect, and Dev Lifecycle & Deployment Architect, completing the System Architect level of the CTA pathway.',
   },
   {
     question: 'Do I need Integration Architect before System Architect?',
-    answer: 'Integration Architect is one of three prerequisites for the System Architect credential (alongside Identity &amp; Access Management Architect and Dev Lifecycle &amp; Deployment Architect). You must pass all three component architect exams before Salesforce recognises you as a System Architect. Integration Architect is typically taken as a standalone exam and counts towards both the System Architect credential and the CTA evaluation.',
+    answer: 'Integration Architect is one of three prerequisites for the System Architect credential (alongside Identity & Access Management Architect and Dev Lifecycle & Deployment Architect). You must pass all three component architect exams before Salesforce recognises you as a System Architect. Integration Architect is typically taken as a standalone exam and counts towards both the System Architect credential and the CTA evaluation.',
   },
   {
     question: 'Which is harder: Integration Architect or the other System Architect track exams?',
-    answer: 'Integration Architect is widely considered the hardest of the three System Architect track exams. It requires deep knowledge of enterprise integration patterns, API design principles, middleware and ESB selection criteria, MuleSoft Anypoint Platform capabilities, and Salesforce-specific integration limits (concurrent API calls, streaming API limits, batch size constraints). Identity &amp; Access Management Architect is next in difficulty; Dev Lifecycle &amp; Deployment Architect is generally considered the most approachable of the three.',
+    answer: 'Integration Architect is widely considered the hardest of the three System Architect track exams. It requires deep knowledge of enterprise integration patterns, API design principles, middleware and ESB selection criteria, MuleSoft Anypoint Platform capabilities, and Salesforce-specific integration limits (concurrent API calls, streaming API limits, batch size constraints). Identity & Access Management Architect is next in difficulty; Dev Lifecycle & Deployment Architect is generally considered the most approachable of the three.',
   },
   {
     question: 'How many architect exams are in the full CTA path?',
-    answer: 'The CTA pathway includes 6 architect-level exams across two tracks. Application Architect track (4 exams): Data Architect, Sharing &amp; Visibility Architect, Platform App Builder, and the Application Architect credential exam. System Architect track (4 exams): Integration Architect, Identity &amp; Access Management Architect, Dev Lifecycle &amp; Deployment Architect, and the System Architect credential exam. After both tracks, you sit the CTA Evaluation Exam ($400) and, if successful, the CTA Review Board ($3,000).',
+    answer: 'The CTA pathway includes 6 architect-level exams across two tracks. Application Architect track (4 exams): Data Architect, Sharing & Visibility Architect, Platform App Builder, and the Application Architect credential exam. System Architect track (4 exams): Integration Architect, Identity & Access Management Architect, Dev Lifecycle & Deployment Architect, and the System Architect credential exam. After both tracks, you sit the CTA Evaluation Exam ($400) and, if successful, the CTA Review Board ($3,000).',
   },
 ]
 

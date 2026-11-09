@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the easiest Salesforce certification?',
-    answer: 'The Salesforce AI Associate is widely considered the easiest Salesforce certification. It requires no prior Salesforce experience, tests conceptual knowledge of AI (not technical implementation), has only 40 questions, a 70-minute time limit, and a $75 exam fee. The passing score is 65%. It is the ideal first certification for anyone new to the Salesforce ecosystem, particularly non-technical professionals (marketers, sales reps, business analysts).',
+    answer: 'Platform Foundations is the easiest Salesforce certification you can currently sit. It requires no prior Salesforce experience, covers a broad conceptual overview of the platform, has 40 questions, a 62% passing score and a $75 fee. AI Associate was the usual answer to this question until it retired in February 2026; it can no longer be booked, and the page for it on this site is kept as a historical reference.',
   },
   {
     question: 'What is the hardest Salesforce certification?',
@@ -67,7 +67,7 @@ const tiers = [
     borderColor: 'border-green-200',
     description: 'Conceptual, minimal Salesforce experience required. Ideal starting points.',
     certs: [
-      { name: 'AI Associate', fee: '$75', questions: '40', passing: '65%', note: 'No experience needed. Conceptual AI & Einstein knowledge.' },
+      { name: 'AI Associate (retired Feb 2026)', fee: '$75', questions: '40', passing: '65%', note: 'Retired; no longer bookable. Listed for historical reference.' },
       { name: 'Platform Foundations', fee: '$75', questions: '40', passing: '62%', note: 'Broad Salesforce overview. Good for non-technical users.' },
       { name: 'MuleSoft Integration Foundations', fee: '$75', questions: '40', passing: '70%', note: 'Conceptual integration. No Anypoint Studio required.' },
     ],
@@ -80,7 +80,7 @@ const tiers = [
     certs: [
       { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '68%', note: 'Broad but not deep. Most common first cert.' },
       { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '73%', note: 'Declarative Salesforce. Assumes ADM-201 knowledge.' },
-      { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '~73%', note: 'Higher passing score. AI/agent concepts are new for most.' },
+      { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '72%', note: 'Higher passing score. AI/agent concepts are new for most.' },
       { name: 'Tableau Data Analyst', fee: '$250', questions: '55', passing: '75%', note: 'Highest passing score. Hands-on Tableau required.' },
     ],
   },
@@ -107,7 +107,7 @@ const tiers = [
       { name: 'Platform Developer II (PD2)', fee: '$200', questions: '60', passing: '70%', note: 'Advanced Apex patterns, integration, performance. Requires PD1.' },
       { name: 'Field Service Consultant', fee: '$200', questions: '60', passing: '63%', note: 'FSL managed package is complex. Requires Service Cloud foundation.' },
       { name: 'Integration Architect', fee: '$400', questions: '60', passing: '67%', note: 'API design, middleware, async patterns. Deep technical knowledge.' },
-      { name: 'Data Architect', fee: '$400', questions: '60', passing: '~68%', note: 'MDM, data modelling, large data volumes, ETL strategy.' },
+      { name: 'Data Architect', fee: '$400', questions: '60', passing: '58%', note: 'MDM, data modelling, large data volumes, ETL strategy.' },
       { name: 'MuleSoft Developer II', fee: '$200', questions: '60', passing: '70%', note: 'Custom policies, advanced DataWeave, batch. Requires Dev I.' },
       { name: 'Revenue Cloud Consultant', fee: '$200', questions: '60', passing: '63%', note: 'Billing + CPQ overlap. Complex quote-to-cash knowledge needed.' },
     ],
@@ -172,7 +172,7 @@ export default function SalesforceCertificationDifficultyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">What Makes a Salesforce Exam Difficult?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
           {[
-            { factor: 'Passing score required', detail: 'Most certs: 65%. MuleSoft Developer: 70%. Tableau Data Analyst: 75%. Agentforce Specialist: ~73%. Higher = harder.' },
+            { factor: 'Passing score required', detail: 'Pass marks range from 58% to 78%. Administrator: 68%. MuleSoft Developer I: 70%. Tableau Data Analyst: 65%. Agentforce Specialist: 72%. Service Cloud Consultant: 78%. Higher = harder.' },
             { factor: 'Question type', detail: 'Factual recall (easier) vs scenario-based application (harder). Consultant and architect exams are almost entirely scenario-based.' },
             { factor: 'Breadth of topics', detail: 'ADM-201 covers many topics shallowly. Architect certs go deep into specific domains. Breadth requires more study time.' },
             { factor: 'Experience required', detail: 'Associate certs: no experience needed. Architect certs: 5–10 years expected. Exams assume real project knowledge for senior credentials.' },
@@ -200,10 +200,10 @@ export default function SalesforceCertificationDifficultyPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with the Right Cert</h2>
-        <p className="text-white mb-6">Free practice questions for every certification, from AI Associate to CTA prep.</p>
+        <p className="text-white mb-6">Free practice questions for every certification, from Platform Foundations to CTA prep.</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/certifications/ai-associate" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
-            Start: AI Associate (Easiest)
+          <Link href="/certifications/platform-foundations" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+            Start: Platform Foundations (Easiest)
           </Link>
           <Link href="/certifications" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
             Browse All Certs

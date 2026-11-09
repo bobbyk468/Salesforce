@@ -42,7 +42,7 @@ export const faqItems = [
   },
   {
     question: 'What is the Strategy Designer exam format?',
-    answer: 'The Strategy Designer exam consists of 60 multiple-choice and multiple-select questions with a 105-minute time limit. The passing score is approximately 70%. The exam costs $200 (first attempt) with a ~50% discount retake voucher after a failed attempt. It can be taken online or at a Kryterion testing centre.',
+    answer: 'The Strategy Designer exam consists of 60 multiple-choice and multiple-select questions with a 105-minute time limit. The passing score is approximately 70%. The exam costs $200 (first attempt) with a 70% discount retake voucher after a failed attempt. It can be taken online or at a Kryterion testing centre.',
   },
   {
     question: 'What frameworks should I know for the Strategy Designer exam?',
@@ -69,7 +69,7 @@ export default function StrategyDesignerStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~70%' },
+          { label: 'Passing Score', value: '70%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

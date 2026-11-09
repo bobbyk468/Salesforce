@@ -39,7 +39,7 @@ export const faqItems = [
   },
   {
     question: 'What is the EUC data model and how does it differ from standard Salesforce?',
-    answer: 'Energy &amp; Utilities Cloud adds utility-specific objects to the Salesforce data model: Premises (the physical location where service is delivered), Service Points (meter locations), Service Agreements (the contract between the utility and customer), and Billing Accounts (financial relationship). The exam tests how these industry-specific objects relate to each other and to standard Salesforce objects like Accounts and Contacts.',
+    answer: 'Energy & Utilities Cloud adds utility-specific objects to the Salesforce data model: Premises (the physical location where service is delivered), Service Points (meter locations), Service Agreements (the contract between the utility and customer), and Billing Accounts (financial relationship). The exam tests how these industry-specific objects relate to each other and to standard Salesforce objects like Accounts and Contacts.',
   },
   {
     question: 'How does OmniStudio integrate with Energy & Utilities Cloud?',

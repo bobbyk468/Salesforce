@@ -22,7 +22,7 @@
     "summary": "It is harder than it looks. Most questions describe a user who can or can't see a record, and you have to work out which layer is causing it: org-wide defaults, the role hierarchy, sharing rules, teams, or something in code.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>67% to pass</strong>, which is about 41 correct answers. Many questions have two answers that look right and differ by one sharing setting.",
+      "<strong>58% to pass</strong>, which is about 41 correct answers. Many questions have two answers that look right and differ by one sharing setting.",
       "<strong>External users trip people up.</strong> Experience Cloud sharing sets, external org-wide defaults and guest user rules come up often.",
       "<strong>Performance is tested too.</strong> Know what makes sharing recalculation slow, such as data skew and very deep role hierarchies."
     ],

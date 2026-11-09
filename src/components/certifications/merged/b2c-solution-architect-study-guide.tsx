@@ -20,7 +20,7 @@ import LastUpdated from '@/components/LastUpdated'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'b2c-solution-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `B2C Solution Architect study guide: Commerce Cloud, Marketing Cloud, personalisation, omnichannel. $400, ~68% pass.`
+const pageDescription = `B2C Solution Architect study guide: Commerce Cloud, Marketing Cloud, personalisation, omnichannel. $400, 63% pass.`
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
@@ -39,11 +39,11 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce B2C Solution Architect certification?',
-    answer: 'The B2C Solution Architect certification validates expertise in designing multi-cloud solutions for direct-to-consumer (B2C) scenarios, connecting B2C Commerce Cloud, Marketing Cloud, Service Cloud, Personalisation, and Loyalty Management into one consumer experience. The exam has 60 questions, 120-minute time limit, ~63% passing score, and a $400 fee.',
+    answer: 'The B2C Solution Architect certification validates expertise in designing multi-cloud solutions for direct-to-consumer (B2C) scenarios, connecting B2C Commerce Cloud, Marketing Cloud, Service Cloud, Personalisation, and Loyalty Management into one consumer experience. The exam has 60 questions, 120-minute time limit, 63% passing score, and a $400 fee.',
   },
   {
     question: 'What is the difference between B2B and B2C Solution Architect exams?',
-    answer: 'B2B Solution Architect focuses on enterprise sales: B2B Commerce, CPQ, Revenue Cloud, partner portals, and complex sales cycles. B2C Solution Architect focuses on consumer commerce: Salesforce B2C Commerce Cloud (SFCC), Marketing Cloud journeys, personalisation, loyalty, and omnichannel consumer engagement. Both exams are $400, 60 questions, and ~63% passing score, but they test completely different product ecosystems.',
+    answer: 'B2B Solution Architect focuses on enterprise sales: B2B Commerce, CPQ, Revenue Cloud, partner portals, and complex sales cycles. B2C Solution Architect focuses on consumer commerce: Salesforce B2C Commerce Cloud (SFCC), Marketing Cloud journeys, personalisation, loyalty, and omnichannel consumer engagement. Both exams are $400, 60 questions, and 63% passing score, but they test completely different product ecosystems.',
   },
   {
     question: 'What is Salesforce B2C Commerce Cloud (SFCC)?',
@@ -70,7 +70,7 @@ export default function B2cSolutionArchitectStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '120 min' },
-          { label: 'Passing Score', value: '~63%' },
+          { label: 'Passing Score', value: '63%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

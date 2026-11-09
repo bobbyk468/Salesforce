@@ -125,7 +125,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
             href: '/certifications/b2b-solution-architect',
             focus: 'Enterprise sales, commerce & revenue',
             industries: 'Manufacturing, distribution, wholesale, technology',
-            fee: '$400', questions: '60', time: '120 min', passing: '~68%',
+            fee: '$400', questions: '60', time: '120 min', passing: '58%',
             clouds: ['B2B Commerce', 'Sales Cloud + CPQ', 'Revenue Cloud', 'Experience Cloud (partner)', 'Service Cloud'],
           },
           {
@@ -133,7 +133,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
             href: '/certifications/b2c-solution-architect',
             focus: 'Consumer commerce & marketing',
             industries: 'Retail, consumer goods, fashion, hospitality',
-            fee: '$400', questions: '60', time: '120 min', passing: '~68%',
+            fee: '$400', questions: '60', time: '120 min', passing: '63%',
             clouds: ['B2C Commerce (Commerce Cloud)', 'Marketing Cloud Engagement', 'Marketing Cloud Personalisation', 'Service Cloud', 'Loyalty Management'],
           },
         ].map((cert) => (
@@ -184,7 +184,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
                 { aspect: 'Marketing focus', b2b: 'Account-based, partner channels', b2c: 'Personalisation, loyalty, email' },
                 { aspect: 'Typical project', b2b: 'Partner portal + CPQ + Revenue Cloud', b2c: 'Storefront + Marketing Cloud + Loyalty' },
                 { aspect: 'Fee', b2b: '$400', b2c: '$400' },
-                { aspect: 'Format', b2b: '60 Q, 120 min, ~68%', b2c: '60 Q, 120 min, ~68%' },
+                { aspect: 'Format', b2b: '60 Q, 120 min, 58%', b2c: '60 Q, 120 min, 63%' },
                 { aspect: 'Avg Salary', b2b: '$130–165k (US)', b2c: '$125–160k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>

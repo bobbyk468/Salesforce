@@ -87,7 +87,7 @@ const steps = [
     step: '4',
     title: 'Study Platform Developer I (PD1) Exam',
     time: '3–4 weeks',
-    description: 'With solid Apex and LWC knowledge, focus PD1 exam preparation on the specific exam sections: Salesforce Fundamentals (23%), Process Automation &amp; Logic (38%), User Interface (25%), and Testing, Debugging &amp; Deployment (14%). Practice questions, review weak areas, and target 75%+ on mocks before scheduling.',
+    description: 'With solid Apex and LWC knowledge, focus PD1 exam preparation on the specific exam sections: Developer Fundamentals (27%), Process Automation and Logic (28%), User Interface (25%), and Testing, Debugging, and Deployment (20%). Practice questions, review weak areas, and target 75%+ on mocks before scheduling.',
     resources: ['Trailblaze Prep PD1 practice questions (free)', 'PD1 Study Guide', 'PD1 Exam Tips 2026'],
   },
   {

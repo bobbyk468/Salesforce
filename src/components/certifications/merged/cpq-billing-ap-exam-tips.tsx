@@ -31,7 +31,7 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Salesforce CPQ & Billing Accredited Professional exam format?',
-    answer: 'The CPQ &amp; Billing AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce CPQ (Configure, Price, Quote) and Billing: product configuration, pricing waterfall, quote templates, contracts, amendments, renewals, invoicing, and payment processing.',
+    answer: 'The CPQ & Billing AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce CPQ (Configure, Price, Quote) and Billing: product configuration, pricing waterfall, quote templates, contracts, amendments, renewals, invoicing, and payment processing.',
   },
   {
     question: 'What are the highest-weight CPQ & Billing AP exam sections?',

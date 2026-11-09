@@ -22,7 +22,7 @@
     "summary": "This is one of the harder MuleSoft exams. It is less about building integrations and more about where they run: deployment models, networking, availability and the rules teams follow. You need some infrastructure knowledge, not just Mule development.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>About 67% to pass</strong>, roughly 41 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>About 70% to pass</strong>, roughly 41 correct answers out of 60. Confirm it in the official exam guide before you book.",
       "<strong>Infrastructure depth.</strong> Expect detailed questions on VPCs, load balancers, clustering and failover.",
       "<strong>Several disciplines at once.</strong> Networking, security, operations and governance all appear."
     ],

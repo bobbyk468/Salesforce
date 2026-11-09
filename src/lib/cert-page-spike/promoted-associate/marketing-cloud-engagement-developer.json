@@ -22,7 +22,7 @@
     "summary": "The Engagement Developer exam is one of the harder Marketing Cloud certifications. It requires you to write and interpret AMPscript and SSJS code, understand REST and SOAP API patterns, and know how to build custom Journey Builder activities. Candidates without coding experience will struggle significantly.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~67% passing score</strong>: standard for developer-level exams, but the technical depth makes it challenging.",
+      "<strong>63% passing score</strong>: standard for developer-level exams, but the technical depth makes it challenging.",
       "<strong>Code interpretation required</strong>: expect questions that show AMPscript or SSJS snippets and ask you to predict the output or identify errors.",
       "<strong>API knowledge tested</strong>: you must know REST and SOAP endpoint patterns, OAuth authentication, and when to use each API."
     ],

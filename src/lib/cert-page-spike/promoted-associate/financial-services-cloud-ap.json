@@ -22,7 +22,7 @@
     "summary": "It is a moderate exam, but FSC's data model is quite different from standard Salesforce. Once you understand how people, households and financial accounts link together, most questions get easier.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>About 56% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
       "<strong>Data model focus.</strong> Person accounts, households, financial accounts, roles and relationships.",
       "<strong>Industry features.</strong> Rollups, referrals, action plans, interaction summaries and compliant data sharing."
     ],

@@ -17,7 +17,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     summary: 'App Builder is considered moderately difficult. It builds on ADM-201 knowledge but goes deeper into data modelling, business logic, and Lightning app configuration.',
     bullets: [
       '<strong>60 multiple-choice questions</strong> in 105 minutes.',
-      '<strong>63% passing score</strong>: slightly lower than ADM-201, but the questions are harder.',
+      '<strong>73% passing score</strong>: slightly lower than ADM-201, but the questions are harder.',
       '<strong>Scenario-heavy</strong>: most questions describe a business requirement and ask which declarative tool solves it.',
       '<strong>No coding required</strong>: entirely declarative, but you need to know where declarative ends and code begins.',
     ],
@@ -102,7 +102,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       },
       {
         heading: 'Exam Strategy',
-        body: 'Read every scenario for the constraint: “without code” means declarative only; “most efficient” usually means the native feature over a custom-built solution. Watch for “administrators only” (profile-based) vs “certain users” (permission sets or sharing rules). Passing score is 66% (40/60 questions). Aim for 85%+ on full mocks before booking.',
+        body: 'Read every scenario for the constraint: “without code” means declarative only; “most efficient” usually means the native feature over a custom-built solution. Watch for “administrators only” (profile-based) vs “certain users” (permission sets or sharing rules). Passing score is 73% (40/60 questions). Aim for 85%+ on full mocks before booking.',
       },
     ],
   },

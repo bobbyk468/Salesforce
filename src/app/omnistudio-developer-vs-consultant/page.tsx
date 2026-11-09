@@ -54,7 +54,7 @@ const faqItems = [
   },
   {
     question: 'Which industries use OmniStudio certifications most?',
-    answer: 'OmniStudio is used across all Salesforce Industry Cloud implementations: Communications Cloud, Energy &amp; Utilities Cloud, Health Cloud, Financial Services Cloud, Public Sector Solutions, Manufacturing Cloud, and Media Cloud. Professionals working on any Industry Cloud project benefit from OmniStudio certification, as OmniStudio is the underlying technology layer for guided processes and complex integrations in all these clouds.',
+    answer: 'OmniStudio is used across all Salesforce Industry Cloud implementations: Communications Cloud, Energy & Utilities Cloud, Health Cloud, Financial Services Cloud, Public Sector Solutions, Manufacturing Cloud, and Media Cloud. Professionals working on any Industry Cloud project benefit from OmniStudio certification, as OmniStudio is the underlying technology layer for guided processes and complex integrations in all these clouds.',
   },
 ]
 

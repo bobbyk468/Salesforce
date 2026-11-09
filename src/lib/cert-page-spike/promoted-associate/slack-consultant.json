@@ -22,7 +22,7 @@
     "summary": "It is a moderate exam, but it covers more than features. You need to know how to plan a Slack rollout, set it up securely, connect it to Salesforce, and get people to actually use it.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>About 65% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
+      "<strong>About 67% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
       "<strong>Wide scope.</strong> Workspace and channel design, Slack Connect, Workflow Builder, Salesforce integration and security.",
       "<strong>People topics.</strong> Adoption planning, champions and success measures come up often."
     ],

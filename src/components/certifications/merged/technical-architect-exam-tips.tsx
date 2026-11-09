@@ -35,7 +35,7 @@ export const faqItems = [
   },
   {
     question: 'What prerequisites are needed before attempting the CTA?',
-    answer: 'Salesforce recommends: Application Architect credential (Data Architect + Sharing &amp; Visibility Architect + App Builder + System Architect) and/or System Architect credential (Integration Architect + Identity &amp; Access Management Architect + Dev Lifecycle &amp; Deployment Architect + System Architect). Candidates typically have 5–10 years of Salesforce experience before attempting the CTA.',
+    answer: 'Salesforce recommends: Application Architect credential (Data Architect + Sharing & Visibility Architect + App Builder + System Architect) and/or System Architect credential (Integration Architect + Identity & Access Management Architect + Dev Lifecycle & Deployment Architect + System Architect). Candidates typically have 5–10 years of Salesforce experience before attempting the CTA.',
   },
   {
     question: 'What is the CTA Review Board and how should I prepare for it?',

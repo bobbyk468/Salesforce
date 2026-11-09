@@ -315,7 +315,7 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
     { question: 'Is the Marketing Cloud Email Specialist hard?', answer: 'The Email Specialist exam (60 questions, 105 minutes, 65% passing) is considered moderately difficult. The highest-weight sections are Email Sending and Delivery (24%) and Journey Building (20%). Candidates without hands-on Marketing Cloud Engagement experience find it significantly harder, lab practice in a sandbox is essential.' },
   ],
   associate: [
-    { question: 'Which Salesforce associate certification should I take first?', answer: 'The AI Associate ($75, 40 questions, 65%) is the easiest Salesforce certification available, no Salesforce experience required. For those who want a broader platform foundation, the Salesforce Platform Foundations associate cert covers core CRM, flow, and app-building concepts at an introductory level.' },
+    { question: 'Which Salesforce associate certification should I take first?', answer: 'Platform Foundations ($75, 40 questions, 62%) is the easiest Salesforce certification available, no Salesforce experience required. For those who want a broader platform foundation, the Salesforce Platform Foundations associate cert covers core CRM, flow, and app-building concepts at an introductory level.' },
     { question: 'Is the AI Associate a good first Salesforce certification?', answer: 'Yes, the AI Associate is Salesforce\'s most accessible entry-level certification. It tests conceptual knowledge of AI (machine learning types, Einstein features, responsible AI principles) with no coding required. It is an ideal first certification for business analysts, marketers, and non-technical users who want to validate Salesforce AI knowledge.' },
   ],
   tableau: [

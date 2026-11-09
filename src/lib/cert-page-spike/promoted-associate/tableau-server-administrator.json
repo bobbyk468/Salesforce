@@ -22,7 +22,7 @@
     "summary": "The Tableau Server Administrator exam is moderately difficult. It requires fluency with TSM commands, server process architecture, and real troubleshooting scenarios, studying documentation without hands-on server management experience leaves significant gaps.",
     "bullets": [
       "<strong>45 questions</strong> in 90 minutes, roughly two minutes per question, which is manageable for candidates familiar with the admin interface.",
-      "<strong>~70% passing score</strong>: you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>no published pass mark</strong>: you need approximately 32 correct answers out of 45 to pass.",
       "<strong>TSM command-line fluency is essential</strong>: the exam tests specific TSM operations for configuration, backup, restore, and maintenance.",
       "<strong>Hands-on server administration helps most</strong>: candidates who have managed extract refreshes, configured authentication, and used Admin Views pass at higher rates."
     ],
@@ -44,7 +44,7 @@
     "description": "Tableau Server Administrators deploy, configure, and manage Tableau Server and Tableau Cloud. They handle installation, security, user management, sites, and performance.",
     "examDetails": {
       "questions": 45,
-      "passingScore": "~70%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$250"
     },

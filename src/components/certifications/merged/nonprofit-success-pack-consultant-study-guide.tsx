@@ -50,7 +50,7 @@ export const faqItems = [
   },
   {
     question: 'What is the NPSP Consultant exam format?',
-    answer: 'The exam consists of 60 multiple-choice and multiple-select questions with a 90-minute time limit. The passing score is approximately 67%. The exam costs $200 for the first attempt, with a ~50% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
+    answer: 'The exam consists of 60 multiple-choice and multiple-select questions with a 90-minute time limit. The passing score is approximately 67%. The exam costs $200 for the first attempt, with a 67% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
   },
   {
     question: 'Do I need the Salesforce Administrator certification first?',
@@ -69,7 +69,7 @@ export default function NonprofitSuccessPackConsultantStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~67%' },
+          { label: 'Passing Score', value: '67%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

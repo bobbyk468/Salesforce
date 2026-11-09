@@ -131,7 +131,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">3</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Study the 7 ADM-201 Exam Sections by Weight</p>
-              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%), together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/certifications/administrator" className="text-salesforce-blue underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
+              <p>The ADM-201 exam has 8 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Data and Analytics Management (17%), then Configuration and Setup, Object Manager and Lightning App Builder, and Automation at 15% each: those four are 62% of the exam. Sales and Marketing, Service and Support, and Productivity and Collaboration are 10% each, and Agentforce is 8%.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -145,7 +145,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">5</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Book and Pass the ADM-201 Exam</p>
-              <p>Register through Webassessor (webassessor.com). You can take the exam online proctored from home (requires a webcam, quiet room, and verified ID) or at a physical test centre. The exam is 65 questions, 105 minutes, 68% passing score. The result is shown immediately after you submit. If you do not pass, you can retake after 1 day, the retake costs $100.</p>
+              <p>Register through Webassessor (webassessor.com). You can take the exam online proctored from home (requires a webcam, quiet room, and verified ID) or at a physical test centre. The exam is 60 scored questions plus up to five unscored, 105 minutes, 68% passing score. The result is shown immediately after you submit. If you do not pass, you can retake after 1 day, the retake costs $100.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -287,7 +287,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />
-            <span><strong>Ignoring lower-weight sections.</strong> Productivity and Collaboration is only 7%, but that is still 4 questions. Do not skip any section entirely. Use the final week for a broad review pass.</span>
+            <span><strong>Ignoring lower-weight sections.</strong> Productivity and Collaboration is 10%, which is about six questions. Do not skip any section entirely. Use the final week for a broad review pass.</span>
           </li>
         </ul>
       </section>
@@ -297,7 +297,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">When Are You Ready to Book?</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          75%+ on 3 timed full mocks (65 Q / 105 min) on separate days
+          80%+ on 3 timed full mocks (60 scored questions / 105 min) on separate days
         </p>
         <p className="text-sm text-gray-700 mt-3">
           When you hit this benchmark consistently, book the exam for 3–5 days later, not weeks away.

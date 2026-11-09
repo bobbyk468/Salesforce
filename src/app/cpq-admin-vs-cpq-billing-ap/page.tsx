@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between CPQ Administrator and CPQ & Billing AP?',
-    answer: 'Salesforce CPQ Administrator is a full certification ($200, 60 questions, 105 min, 65%) validating expert-level CPQ configuration: complex product rules, pricing waterfall mastery, quote templates, and advanced contracting. CPQ &amp; Billing AP is an Accredited Professional credential ($150, 40 questions, 60 min, Pass/Fail) with a broader but shallower scope that also includes Salesforce Billing, invoice generation, payment processing, and billing amendments. The AP is faster to achieve; the Administrator credential signals deeper CPQ expertise.',
+    answer: 'Salesforce CPQ Administrator is a full certification ($200, 60 questions, 105 min, 65%) validating expert-level CPQ configuration: complex product rules, pricing waterfall mastery, quote templates, and advanced contracting. CPQ & Billing AP is an Accredited Professional credential ($150, 40 questions, 60 min, Pass/Fail) with a broader but shallower scope that also includes Salesforce Billing, invoice generation, payment processing, and billing amendments. The AP is faster to achieve; the Administrator credential signals deeper CPQ expertise.',
   },
   {
     question: 'Should I take CPQ Administrator or CPQ & Billing AP first?',
-    answer: 'CPQ &amp; Billing AP is faster to prepare for (40 questions, 60 min, lower investment) and is a good entry point if you are new to CPQ or if your role requires billing knowledge alongside CPQ. CPQ Administrator validates deeper, CPQ-only expertise and is more valuable if you are a specialist CPQ consultant. Many professionals take the AP first to get a credential quickly, then study for the full Administrator exam for career advancement.',
+    answer: 'CPQ & Billing AP is faster to prepare for (40 questions, 60 min, lower investment) and is a good entry point if you are new to CPQ or if your role requires billing knowledge alongside CPQ. CPQ Administrator validates deeper, CPQ-only expertise and is more valuable if you are a specialist CPQ consultant. Many professionals take the AP first to get a credential quickly, then study for the full Administrator exam for career advancement.',
   },
   {
     question: 'Does CPQ & Billing AP cover the same material as CPQ Administrator?',
-    answer: 'There is significant overlap in CPQ content (pricing waterfall, product bundles, quoting, contracting) but CPQ Administrator goes much deeper on advanced topics: complex product rules with multiple conditions, advanced discount schedule logic, SBQQ custom actions, and quote template styling. CPQ &amp; Billing AP adds Billing content (invoice generation, payment processing) that CPQ Administrator does not cover at all.',
+    answer: 'There is significant overlap in CPQ content (pricing waterfall, product bundles, quoting, contracting) but CPQ Administrator goes much deeper on advanced topics: complex product rules with multiple conditions, advanced discount schedule logic, SBQQ custom actions, and quote template styling. CPQ & Billing AP adds Billing content (invoice generation, payment processing) that CPQ Administrator does not cover at all.',
   },
   {
     question: 'Which CPQ certification is better for a Revenue Cloud consultant?',
-    answer: 'For a Revenue Cloud consultant, CPQ &amp; Billing AP is more aligned to the full Revenue Cloud scope (which includes both CPQ and Billing). CPQ Administrator focuses exclusively on the CPQ product. As Salesforce migrates to Revenue Cloud Advanced (RCA) in 2025–2026, both certifications have some exposure to this transition, but for practitioners working on end-to-end quote-to-cash implementations, CPQ &amp; Billing AP better reflects the full scope of the role.',
+    answer: 'For a Revenue Cloud consultant, CPQ & Billing AP is more aligned to the full Revenue Cloud scope (which includes both CPQ and Billing). CPQ Administrator focuses exclusively on the CPQ product. As Salesforce migrates to Revenue Cloud Advanced (RCA) in 2025–2026, both certifications have some exposure to this transition, but for practitioners working on end-to-end quote-to-cash implementations, CPQ & Billing AP better reflects the full scope of the role.',
   },
 ]
 

@@ -35,7 +35,7 @@ export const faqItems = [
   },
   {
     question: 'What are the highest-weight Pardot Consultant exam sections?',
-    answer: 'Engagement Studio &amp; Automation (30%) and Lead Scoring, Grading &amp; Qualification (18%) together account for 48% of the exam. Mastering engagement programs, branching logic, triggers, and actions, is the single most important skill. Understanding how scores and grades work separately (score = interest level, grade = fit to ideal customer) is the second priority.',
+    answer: 'Engagement Studio & Automation (30%) and Lead Scoring, Grading & Qualification (18%) together account for 48% of the exam. Mastering engagement programs, branching logic, triggers, and actions, is the single most important skill. Understanding how scores and grades work separately (score = interest level, grade = fit to ideal customer) is the second priority.',
   },
   {
     question: 'How does the Salesforce-Pardot sync work for the exam?',

@@ -22,7 +22,7 @@
     "summary": "It is a technical exam. You need to know where B2B Commerce lets you plug in your own code, how storefront components work, and how the APIs are used. The pass mark is moderate, but the questions go deep.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>About 68% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
       "<strong>Extension points.</strong> Expect questions on custom pricing, inventory, shipping and tax integrations, and how to plug them into checkout.",
       "<strong>LWC and APIs.</strong> Building and customising store components and calling the Commerce APIs come up often."
     ],

@@ -42,7 +42,7 @@ export const faqItems = [
   },
   {
     question: 'What is the UX Designer exam format?',
-    answer: 'The Salesforce Certified UX Designer exam consists of 60 multiple-choice and multiple-select questions with a 105-minute time limit. The passing score is approximately 65%. The exam can be taken online (proctored) or at a Kryterion testing centre. It costs $200 for the first attempt, with a ~50% discount retake voucher available after a failed attempt.',
+    answer: 'The Salesforce Certified UX Designer exam consists of 60 multiple-choice and multiple-select questions with a 105-minute time limit. The passing score is approximately 65%. The exam can be taken online (proctored) or at a Kryterion testing centre. It costs $200 for the first attempt, with a 65% discount retake voucher available after a failed attempt.',
   },
   {
     question: 'What is the Salesforce Lightning Design System (SLDS) and why does it matter for this exam?',

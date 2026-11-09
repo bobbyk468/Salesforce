@@ -120,12 +120,12 @@ export default function IntegrationArchitectStudyGuideContent() {
           {[
             { week: 'Week 1', focus: 'Integration fundamentals, review all Salesforce API types (REST, SOAP, Bulk, Streaming, Metadata, Tooling, Connect). Understand when to use each.' },
             { week: 'Week 2', focus: 'Integration Patterns, study all 5 Salesforce integration patterns. Map each pattern to the Salesforce features that implement it.' },
-            { week: 'Week 3', focus: 'Platform Events &amp; CDC, set up Platform Events in a dev org, publish and subscribe. Configure Change Data Capture for a custom object.' },
+            { week: 'Week 3', focus: 'Platform Events & CDC, set up Platform Events in a dev org, publish and subscribe. Configure Change Data Capture for a custom object.' },
             { week: 'Week 4', focus: 'Apex Callouts, build REST and SOAP callouts in Apex. Configure named credentials and remote site settings. Understand callout governor limits.' },
             { week: 'Week 5', focus: 'Async Apex for integration: Queueable Apex with callouts, Batch Apex for data sync, Future methods. When to use each pattern.' },
             { week: 'Week 6', focus: 'OAuth flows and authentication: Web Server, User-Agent, JWT Bearer, Username-Password, Device flows. Connected Apps and named credentials.' },
             { week: 'Week 7', focus: 'Error handling and idempotency, dead-letter queues, retry patterns, Platform Event replay, idempotency keys in REST APIs.' },
-            { week: 'Week 8', focus: 'MuleSoft &amp; middleware: API-led connectivity concepts (system, process, experience APIs), Anypoint Platform role in enterprise integration.' },
+            { week: 'Week 8', focus: 'MuleSoft & middleware: API-led connectivity concepts (system, process, experience APIs), Anypoint Platform role in enterprise integration.' },
             { week: 'Week 9', focus: 'Performance and scalability, governor limits per transaction, how async patterns bypass callout limits, monitoring and alerting.' },
             { week: 'Week 10', focus: 'Full mock exams. Focus heavily on scenario questions: which integration pattern, which API, which async mechanism. Aim for 80%+.' },
           ].map((item) => (

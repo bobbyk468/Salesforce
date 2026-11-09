@@ -20,7 +20,7 @@ import LastUpdated from '@/components/LastUpdated'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'b2b-solution-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `B2B Solution Architect study guide: cross-cloud B2B design, CPQ, Revenue Cloud, partner portals. $400, ~68% pass.`
+const pageDescription = `B2B Solution Architect study guide: cross-cloud B2B design, CPQ, Revenue Cloud, partner portals. $400, 58% pass.`
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
@@ -39,7 +39,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce B2B Solution Architect certification?',
-    answer: 'The B2B Solution Architect certification validates ability to design multi-cloud solutions for B2B (business-to-business) scenarios, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and Experience Cloud for complex enterprise sales and channel partner environments. The exam has 60 questions, 120-minute time limit, ~58% passing score, and a $400 fee.',
+    answer: 'The B2B Solution Architect certification validates ability to design multi-cloud solutions for B2B (business-to-business) scenarios, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and Experience Cloud for complex enterprise sales and channel partner environments. The exam has 60 questions, 120-minute time limit, 58% passing score, and a $400 fee.',
   },
   {
     question: 'What certifications should I hold before B2B Solution Architect?',
@@ -70,7 +70,7 @@ export default function B2bSolutionArchitectStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '120 min' },
-          { label: 'Passing Score', value: '~58%' },
+          { label: 'Passing Score', value: '58%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

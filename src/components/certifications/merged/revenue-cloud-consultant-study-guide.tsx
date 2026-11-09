@@ -39,7 +39,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce Revenue Cloud Consultant certification?',
-    answer: 'The Salesforce Revenue Cloud Consultant certification validates skills in implementing Salesforce Revenue Cloud, the end-to-end quote-to-cash solution covering CPQ, contracting, billing, and revenue recognition. The exam has 60 questions, 105 minutes, ~63% passing score, and a $200 fee. Sales Cloud Consultant and CPQ Administrator experience are strongly recommended before sitting this exam.',
+    answer: 'The Salesforce Revenue Cloud Consultant certification validates skills in implementing Salesforce Revenue Cloud, the end-to-end quote-to-cash solution covering CPQ, contracting, billing, and revenue recognition. The exam has 60 questions, 105 minutes, 63% passing score, and a $200 fee. Sales Cloud Consultant and CPQ Administrator experience are strongly recommended before sitting this exam.',
   },
   {
     question: 'What is the difference between Revenue Cloud and CPQ?',
@@ -70,7 +70,7 @@ export default function RevenueCloudConsultantStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~63%' },
+          { label: 'Passing Score', value: '63%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

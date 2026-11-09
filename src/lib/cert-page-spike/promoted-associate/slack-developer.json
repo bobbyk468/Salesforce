@@ -55,7 +55,7 @@
     "summary": "The Slack Developer exam is moderately hard. It tests hands-on coding knowledge: Bolt framework patterns, Block Kit payloads, OAuth flows, and event handling, so reading documentation without actually building Slack apps leaves significant gaps.",
     "bullets": [
       "<strong>60 questions</strong> in 105 minutes, just under two minutes per question, which requires familiarity with API methods and framework patterns.",
-      "<strong>~68% passing score</strong>: you need approximately 41 correct answers out of 60 to pass, a slightly higher bar than the Slack Admin or Consultant exams.",
+      "<strong>67% passing score</strong>: you need approximately 41 correct answers out of 60 to pass, a slightly higher bar than the Slack Admin or Consultant exams.",
       "<strong>Coding knowledge is required</strong>: questions test Bolt framework architecture, Block Kit JSON structure, OAuth scopes, and event subscription configuration.",
       "<strong>Build before you book</strong>: candidates who have built at least one Slack app with Block Kit interactions, slash commands, and event listeners are best prepared."
     ],

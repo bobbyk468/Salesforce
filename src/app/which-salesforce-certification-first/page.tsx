@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the most popular first Salesforce certification?',
-    answer: 'The Salesforce Administrator (ADM-201) is the most popular first Salesforce certification. It is the foundational professional credential that opens the most career paths, admin roles, consultant roles, and BA roles all commonly require or prefer it. For complete beginners who want the lowest-cost entry point, the AI Associate ($75) has become a popular starting credential before committing to the full Administrator study programme.',
+    answer: 'The Salesforce Administrator (ADM-201) is the most popular first Salesforce certification. It is the foundational professional credential that opens the most career paths, admin roles, consultant roles, and BA roles all commonly require or prefer it. For complete beginners who want the lowest-cost entry point, Platform Foundations ($75) is the lowest-cost starting credential before committing to the full Administrator study programme.',
   },
   {
     question: 'Can I get a Salesforce certification with no experience?',
@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'Is the Salesforce Administrator certification the best first cert?',
-    answer: 'Administrator is the best first certification for most people pursuing a full Salesforce career. It is the most recognised entry-level professional credential, required or preferred for admin, junior consultant, BA, and CRM analyst roles. The only scenario where Administrator is not the best first cert: if you are unsure about committing to Salesforce and want a low-cost preview, in which case AI Associate ($75) is a better starting point.',
+    answer: 'Administrator is the best first certification for most people pursuing a full Salesforce career. It is the most recognised entry-level professional credential, required or preferred for admin, junior consultant, BA, and CRM analyst roles. The only scenario where Administrator is not the best first cert: if you are unsure about committing to Salesforce and want a low-cost preview, in which case Platform Foundations ($75) is a better starting point.',
   },
   {
     question: 'Should a developer start with Administrator or Platform Developer I?',
@@ -82,7 +82,7 @@ export default function WhichSalesforceCertificationFirstPage() {
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-1">The short answer</h2>
-        <p className="text-sm text-gray-700">For most people: <strong>Start with AI Associate ($75)</strong> to confirm Salesforce is right for you, then pursue <strong>Administrator ($200)</strong> as your primary professional credential. If you are already certain about Salesforce, skip AI Associate and go straight to Administrator.</p>
+        <p className="text-sm text-gray-700">For most people: <strong>Start with Platform Foundations ($75)</strong> to confirm Salesforce is right for you, then pursue <strong>Administrator ($200)</strong> as your primary professional credential. If you are already certain about Salesforce, skip AI Associate and go straight to Administrator.</p>
       </div>
 
       <div className="space-y-5 mb-10">

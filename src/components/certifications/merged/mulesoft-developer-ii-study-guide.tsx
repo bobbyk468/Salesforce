@@ -39,7 +39,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the MuleSoft Developer II certification?',
-    answer: 'The MuleSoft Developer II (MCIA-Level-2) certification validates advanced MuleSoft Anypoint Platform skills beyond Developer I. It covers advanced DataWeave, custom API policy development, batch processing, reliable messaging, security, and API governance. The exam has 60 questions, 120 minutes, ~70% passing score, and a $200 fee. MuleSoft Developer I is a required prerequisite.',
+    answer: 'The MuleSoft Developer II (MCIA-Level-2) certification validates advanced MuleSoft Anypoint Platform skills beyond Developer I. It covers advanced DataWeave, custom API policy development, batch processing, reliable messaging, security, and API governance. The exam has 60 questions, 120 minutes, 70% passing score, and a $200 fee. MuleSoft Developer I is a required prerequisite.',
   },
   {
     question: 'What prerequisites are required for MuleSoft Developer II?',
@@ -70,7 +70,7 @@ export default function MulesoftDeveloperIiStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '120 min' },
-          { label: 'Passing Score', value: '~70%' },
+          { label: 'Passing Score', value: '70%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

@@ -22,7 +22,7 @@
     "summary": "It is a demanding exam because the answers turn on small differences between protocols. You need to know SAML and the OAuth flows well enough to match one to a specific situation, not just describe them. It is one of the four exams that earn the System Architect credential.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>About 58% to pass</strong>, roughly 35 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>About 65% to pass</strong>, roughly 35 correct answers out of 60. Confirm it in the official exam guide before you book.",
       "<strong>Protocol detail matters.</strong> Expect questions where two OAuth flows both look workable and only one fits.",
       "<strong>Single sign-on design.</strong> Know which side starts the login, how users are provisioned, and what Salesforce can do as an identity provider."
     ],

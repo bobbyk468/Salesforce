@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'What is the cheapest Salesforce certification?',
-    answer: 'The three associate-level certifications cost $75 each, the lowest standard fee in the Salesforce portfolio: AI Associate, Salesforce Platform Foundations, and MuleSoft Integration Foundations. These are also the easiest certifications, making them the lowest-risk entry point for beginners. Of these, AI Associate is the most widely recognised and the most recommended first certification.',
+    answer: 'The three associate-level certifications cost $75 each, the lowest standard fee in the Salesforce portfolio: AI Associate, Salesforce Platform Foundations, and MuleSoft Integration Foundations. These are also the easiest certifications, making them the lowest-risk entry point for beginners. Of these, Platform Foundations is the most widely recognised and the most recommended first certification.',
   },
   {
     question: 'Can my employer pay for my Salesforce certification?',
@@ -109,7 +109,7 @@ export default function SalesforceFreeCertificationPage() {
             title: 'Route 4: $75 Associate Certifications (Lowest Cost Entry)',
             badge: 'Lowest paid cost',
             badgeColor: 'bg-purple-100 text-purple-800',
-            content: 'If a free exam is not currently available, the three associate-level certifications are the lowest-cost entry into the Salesforce ecosystem at $75 each: Salesforce AI Associate (most widely recommended, no experience required), Salesforce Platform Foundations (broad Salesforce overview), and MuleSoft Integration Foundations (API and integration concepts). Of these, AI Associate is the most marketable first certification for professionals new to Salesforce. At $75, the ROI is extremely high, passing opens doors to Salesforce-related roles and demonstrates initiative.',
+            content: 'If a free exam is not currently available, the three associate-level certifications are the lowest-cost entry into the Salesforce ecosystem at $75 each: Salesforce AI Associate (most widely recommended, no experience required), Salesforce Platform Foundations (broad Salesforce overview), and MuleSoft Integration Foundations (API and integration concepts). Of these, Platform Foundations is the most marketable first certification for professionals new to Salesforce. At $75, the ROI is extremely high, passing opens doors to Salesforce-related roles and demonstrates initiative.',
           },
         ].map((section) => (
           <div key={section.title} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -168,7 +168,7 @@ export default function SalesforceFreeCertificationPage() {
       <RelatedGuides links={getRelatedGuides('salesforce-free-certification')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Start with AI Associate: $75</h2>
+        <h2 className="text-2xl font-bold mb-2">Start with Platform Foundations: $75</h2>
         <p className="text-white mb-6">The most accessible entry point: no experience required, lowest fee, free practice questions available now.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/ai-associate#practice-questions" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">

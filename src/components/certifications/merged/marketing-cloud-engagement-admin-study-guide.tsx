@@ -20,7 +20,7 @@ import LastUpdated from '@/components/LastUpdated'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'marketing-cloud-engagement-admin'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Marketing Cloud Engagement Admin study guide: account setup, business units, data, compliance. $200, ~67% pass..`
+const pageDescription = `Marketing Cloud Engagement Admin study guide: account setup, business units, data, compliance. $200, 67% pass..`
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
@@ -39,7 +39,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Marketing Cloud Engagement Administrator certification?',
-    answer: 'The Marketing Cloud Engagement Administrator certification validates expertise in configuring and managing Salesforce Marketing Cloud, including account setup, business unit management, user permissions, data management, subscriber management, compliance, and deliverability. The exam has 60 questions, 90-minute time limit, ~67% passing score, and a $200 fee.',
+    answer: 'The Marketing Cloud Engagement Administrator certification validates expertise in configuring and managing Salesforce Marketing Cloud, including account setup, business unit management, user permissions, data management, subscriber management, compliance, and deliverability. The exam has 60 questions, 90-minute time limit, 67% passing score, and a $200 fee.',
   },
   {
     question: 'What is the difference between Marketing Cloud Admin and Email Specialist?',
@@ -70,7 +70,7 @@ export default function MarketingCloudEngagementAdminStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~67%' },
+          { label: 'Passing Score', value: '67%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
