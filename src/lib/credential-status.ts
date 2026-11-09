@@ -30,12 +30,14 @@ const CLAUDE_STATUS: CredentialStatusInfo = {
   sourceUrl: 'https://www.pearsonvue.com/us/en/anthropic.html',
 }
 
+// Same Pearson verification as CLAUDE_STATUS: the eligibility restriction
+// applies to all four exams, this one included.
 const CLAUDE_ARCHITECT_FOUNDATIONS_STATUS: CredentialStatusInfo = {
   kind: 'announced-details-unverified',
-  label: 'Announced; exam details not verified',
-  message: 'Anthropic announced Claude Certified Architect, Foundations as its first technical certification, available to partners. We have not verified this page’s format, fee, or current access requirements.',
-  sourceLabel: 'Anthropic announcement',
-  sourceUrl: 'https://www.anthropic.com/news/claude-partner-network',
+  label: 'Open to Claude Partner Network organizations',
+  message: 'Anthropic announced Claude Certified Architect, Foundations as its first technical certification. Pearson, which delivers it, states that certification is open to organizations in the Claude Partner Network, so it is generally not available to individual candidates. Fees, question counts, durations and passing scores are not published by the issuer and are not listed here. Exam guides are being updated for exams taken on or after 7 December 2026.',
+  sourceLabel: 'Pearson: Claude Certification Program by Anthropic',
+  sourceUrl: 'https://www.pearsonvue.com/us/en/anthropic.html',
 }
 
 /**
