@@ -86,22 +86,6 @@ export default function FieldServiceConsultantStudyGuideContent() {
       </div>
 
       {/* Exam Sections */}
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Section Breakdown</h2>
-        <div className="space-y-4">
-          {examSections.map((section) => (
-            <div key={section.name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{section.name}</span>
-                <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 5.2}%` }} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* What Each Section Tests */}
       <div className="mb-8">
@@ -196,12 +180,6 @@ export default function FieldServiceConsultantStudyGuideContent() {
         </ul>
       </div>
 
-            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
-        <p className="text-sm text-gray-700">
-          After this certification, consider: <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>, <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
-        </p>
-      </section>
 
       <DifficultyHeatmap slug="field-service" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

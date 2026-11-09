@@ -82,18 +82,6 @@ export default function FieldServiceExamTipsContent() {
         </ul>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Official Objective Weights</h2>
-        <div className="space-y-3 text-sm text-gray-700">
-          {examDomains.map(([name, weight]) => (
-            <div key={name} className="flex justify-between items-start border-b border-gray-100 pb-2 last:border-0">
-              <span className="font-medium text-gray-900">{name}</span>
-              <span className="font-bold text-salesforce-blue ml-4">{weight}</span>
-            </div>
-          ))}
-          <p className="text-xs text-gray-600 pt-1">Weights reproduce the published Salesforce exam outline.</p>
-        </div>
-      </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Field Service Questions</h2>

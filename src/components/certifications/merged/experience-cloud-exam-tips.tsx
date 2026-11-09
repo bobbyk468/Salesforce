@@ -174,23 +174,6 @@ export default function ExperienceCloudExamTipsContent() {
         </div>
       </section>
 
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Experience Cloud Prep</h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Experience Cloud Practice Test <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link href="/certifications/role/consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            All Consultant Certifications
-          </Link>
-          <Link href="/certifications/administrator" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            ADM-201 Exam Tips
-          </Link>
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
-        </p>
-      </section>
     </div>
   )
 }

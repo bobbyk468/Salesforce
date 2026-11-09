@@ -71,30 +71,6 @@ export default function EducationCloudConsultantExamTipsContent() {
         </ul>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Published Winter ’24 Guide Weights</h2>
-        <div className="space-y-3 text-sm text-gray-700">
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Domain Expertise</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Education Cloud Configuration</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Implementation Strategies and Best Practices</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Solution Design</span>
-            <span className="font-bold text-salesforce-blue ml-4">19%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Integration and Data Management</span><span className="font-bold text-salesforce-blue ml-4">16%</span></div>
-          <div className="flex justify-between items-start"><span className="font-medium text-gray-900">Analytics</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
-          <p className="text-xs text-gray-600 pt-1">These weights are from Salesforce’s published Winter ’24 exam guide; they do not establish a current exam syllabus.</p>
-        </div>
-      </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: Education Solution Design</h2>

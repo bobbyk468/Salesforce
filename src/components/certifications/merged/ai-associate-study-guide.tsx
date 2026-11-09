@@ -25,12 +25,6 @@ export default function AiAssociateStudyGuideContent() {
         <h2 className="text-2xl font-bold">A practical learning exercise</h2>
         <p>Choose a support workflow. Identify the records needed, who can access them, the response the model should produce, and a safe escalation path. Test missing data and contradictory customer requests before considering automation.</p>
       </section>
-      <section className="mt-8 space-y-4">
-        <h2 className="text-2xl font-bold">Current resources</h2>
-        <p><a className="text-salesforce-dark underline" href="https://trailhead.salesforce.com/en/credentials/aiassociate" target="_blank" rel="nofollow noopener noreferrer">Salesforce retirement notice and current learning guidance</a></p>
-        <p><Link className="text-salesforce-dark underline" href="/certifications/agentforce-specialist">Explore Agentforce Specialist learning resources</Link></p>
-        <p><Link className="text-salesforce-dark underline" href="/certifications/ai-associate">Historical AI Associate learning reference</Link></p>
-      </section>
     </article>
   )
 }

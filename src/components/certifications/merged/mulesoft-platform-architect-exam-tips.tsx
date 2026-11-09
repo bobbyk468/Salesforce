@@ -154,27 +154,6 @@ export default function MulesoftPlatformArchitectExamTipsContent() {
         </dl>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Study Resources</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/certifications/mulesoft-integration-architect" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
-            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">MuleSoft Integration Architect Exam Tips</span>
-          </Link>
-          <Link href="/certifications/mulesoft-catalyst-consultant" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
-            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">MuleSoft Catalyst Consultant Exam Tips</span>
-          </Link>
-          <Link href="/certifications/system-architect" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
-            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">System Architect Exam Tips</span>
-          </Link>
-          <Link href="/architect-certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
-            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Architect Certification Path</span>
-          </Link>
-        </div>
-      </section>
 
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">

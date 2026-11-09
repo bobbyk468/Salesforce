@@ -91,22 +91,6 @@ export default function MulesoftDeveloperIStudyGuideContent() {
       </div>
 
       {/* Exam Sections */}
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Published Exam Objective Weights</h2>
-        <div className="space-y-4">
-          {examSections.map((section) => (
-            <div key={section.name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{section.name}</span>
-                <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight}%` }} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* What Each Section Tests */}
       <div className="mb-8">
@@ -160,10 +144,6 @@ export default function MulesoftDeveloperIStudyGuideContent() {
       </div>
 
       {/* Mock Benchmark */}
-      <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
-        <p className="text-sm text-gray-700">Use timed practice to identify objectives for further review. The available Salesforce exam guide lists 70% passing, no prerequisite, and Spring 24 alignment; verify current details with the issuer.</p>
-      </div>
 
       {/* Top 10 Review */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

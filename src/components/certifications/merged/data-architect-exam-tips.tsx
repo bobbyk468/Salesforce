@@ -71,30 +71,6 @@ export default function DataArchitectExamTipsContent() {
         </ul>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
-        <div className="space-y-3 text-sm text-gray-700">
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data Modeling/Database Design</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Salesforce Data Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Master Data Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">5%</span>
-          </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Data Governance</span>
-            <span className="font-bold text-salesforce-blue ml-4">10%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Large Data Volume Considerations</span><span className="font-bold text-salesforce-blue ml-4">20%</span></div>
-          <div className="flex justify-between items-start"><span className="font-medium text-gray-900">Data Migration</span><span className="font-bold text-salesforce-blue ml-4">15%</span></div>
-          <p className="text-xs text-gray-600 pt-1">The six weights follow Salesforce's published exam outline.</p>
-        </div>
-      </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Data Architect Questions</h2>

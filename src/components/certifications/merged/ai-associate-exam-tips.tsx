@@ -25,12 +25,6 @@ export default function AiAssociateExamTipsContent() {
         <p>Start with the official objectives for the credential you select. Map each objective to a hands-on exercise, record what you cannot yet explain, and revisit those gaps using the issuer documentation.</p>
         <p>Use independent practice questions to assess reasoning, not to memorize supposed live exam answers. No score on this site guarantees a pass on a different exam.</p>
       </section>
-      <section className="mt-8 space-y-4">
-        <h2 className="text-2xl font-bold">Current resources</h2>
-        <p><a className="text-salesforce-dark underline" href="https://trailhead.salesforce.com/en/credentials/aiassociate" target="_blank" rel="nofollow noopener noreferrer">Salesforce retirement notice and current learning guidance</a></p>
-        <p><Link className="text-salesforce-dark underline" href="/certifications/agentforce-specialist">Explore Agentforce Specialist learning resources</Link></p>
-        <p><Link className="text-salesforce-dark underline" href="/certifications/ai-associate">Historical AI Associate learning reference</Link></p>
-      </section>
     </article>
   )
 }

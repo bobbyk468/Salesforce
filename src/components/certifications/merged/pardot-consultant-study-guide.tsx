@@ -182,12 +182,6 @@ export default function PardotConsultantStudyGuideContent() {
       </div>
 
       
-            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
-        <p className="text-sm text-gray-700">
-          After this certification, consider: <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Engagement Consultant</Link>, <span className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Account Engagement Consultant</span>, or <Link href="/certifications/email-specialist" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Email Specialist</Link>.
-        </p>
-      </section>
 
       <DifficultyHeatmap slug="pardot-consultant" />
       {/* Hub CTA */}

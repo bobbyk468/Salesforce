@@ -80,22 +80,6 @@ export default function PardotSpecialistStudyGuideContent() {
         ))}
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Exam Is Weighted</h2>
-        <div className="space-y-4">
-          {examSections.map((section) => (
-            <div key={section.name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{section.name}</span>
-                <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.3}%` }} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Inside Each Exam Section</h2>
@@ -186,12 +170,6 @@ export default function PardotSpecialistStudyGuideContent() {
       </div>
 
 
-            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
-        <p className="text-sm text-gray-700">
-          After this certification, consider: <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Engagement Consultant</Link>, <Link href="/certifications/pardot-consultant" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Account Engagement Consultant</Link>, or <Link href="/certifications/email-specialist" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Email Specialist</Link>.
-        </p>
-      </section>
 
       <DifficultyHeatmap slug="pardot-specialist" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

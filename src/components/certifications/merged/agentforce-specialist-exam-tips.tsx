@@ -73,33 +73,6 @@ export default function AgentforceSpecialistExamTipsContent() {
       </section>
 
       {/* Exam weightage */}
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Agentforce Specialist Exam Weightage</h2>
-        <p className="text-sm text-gray-600 mb-4">
-          The objective names and weights below follow the current Salesforce exam guide.
-        </p>
-        <div className="space-y-3">
-          {[
-            { section: 'Prompt Engineering', weight: 20, note: 'Published objective' },
-            { section: 'Data 360 Fundamentals', weight: 20, note: 'Published objective' },
-            { section: 'AI Agents', weight: 35, note: 'Published objective' },
-            { section: 'Testing, Deployment, and Maintenance', weight: 10, note: 'Published objective' },
-            { section: 'Governance and Observability', weight: 10, note: 'Published objective' },
-            { section: 'Multi-Agent Orchestration', weight: 5, note: 'Published objective' },
-          ].map(({ section, weight, note }) => (
-            <div key={section}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{section}</span>
-                <span className="text-salesforce-blue font-semibold">{weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
-              </div>
-              <p className="text-xs text-gray-600">{note}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Core concepts */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

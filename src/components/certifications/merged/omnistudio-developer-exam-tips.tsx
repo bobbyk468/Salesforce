@@ -175,23 +175,6 @@ export default function OmnistudioDeveloperExamTipsContent() {
       </section>
 
 
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start OmniStudio Developer Prep</h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            OmniStudio Developer Practice Questions <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link href="/certifications/omnistudio-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            OmniStudio Consultant Questions
-          </Link>
-          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Developer Certification Path
-          </Link>
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/developer-2" className="text-salesforce-blue underline">Platform Developer II</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
-        </p>
-      </section>
     </div>
   )
 }

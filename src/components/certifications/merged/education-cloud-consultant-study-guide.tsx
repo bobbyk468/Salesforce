@@ -83,23 +83,6 @@ export default function EducationCloudConsultantStudyGuideContent() {
         ))}
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Published Winter ’24 Guide Weights</h2>
-        <div className="space-y-4">
-          {examSections.map((section) => (
-            <div key={section.name}>
-              <div className="flex items-center justify-between mb-1">
-                <span className="text-sm font-semibold text-gray-900">{section.name}</span>
-                <span className="text-sm font-bold text-salesforce-blue">{section.weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.6}%` }} />
-              </div>
-              <p className="text-xs text-gray-600">{section.note}</p>
-            </div>
-          ))}
-        </div>
-      </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Illustrative EDA Package Data Objects</h2>
@@ -150,12 +133,6 @@ export default function EducationCloudConsultantStudyGuideContent() {
       </div>
 
 
-            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
-        <p className="text-sm text-gray-700">
-          After this certification, consider: <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>, <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
-        </p>
-      </section>
 
       <DifficultyHeatmap slug="education-cloud-consultant" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

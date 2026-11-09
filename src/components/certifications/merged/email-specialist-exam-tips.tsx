@@ -142,23 +142,6 @@ export default function EmailSpecialistExamTipsContent() {
         </dl>
       </section>
 
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Next Step</h2>
-        <p className="text-sm text-gray-700 mb-4">
-          Apply these tips with real Email Specialist practice questions:
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions"
-            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
-          >
-            Start Email Specialist Practice Test
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue underline">Marketing Cloud Engagement Consultant</Link> or <Link href="/certifications/pardot-consultant" className="text-salesforce-blue underline">Marketing Cloud Account Engagement Consultant</Link> next.
-        </p>
-      </section>
     </div>
   )
 }

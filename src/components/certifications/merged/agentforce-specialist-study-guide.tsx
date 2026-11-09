@@ -88,26 +88,6 @@ export default function AgentforceSpecialistStudyGuideContent() {
         </p>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Agentforce Specialist Exam Sections and Weightage</h2>
-        <p className="text-sm text-gray-600 mb-4">
-          Objective weights below follow the Salesforce exam guide. Use them to organize study; consult the linked guide for the complete objectives.
-        </p>
-        <div className="space-y-3">
-          {examSections.map(({ name, weight, note }) => (
-            <div key={name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{name}</span>
-                <span className="text-salesforce-blue font-semibold">{weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
-              </div>
-              <p className="text-xs text-gray-600">{note}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Actually Tests</h2>

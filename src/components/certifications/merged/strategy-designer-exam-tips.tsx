@@ -176,23 +176,6 @@ export default function StrategyDesignerExamTipsContent() {
       </section>
 
 
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Strategy Designer Prep</h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Strategy Designer Practice Questions <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link href="/certifications/ux-designer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            UX Designer Exam Tips
-          </Link>
-          <Link href="/certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            All Certification Paths
-          </Link>
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <span className="text-salesforce-blue underline">Platform Strategy Designer</span> or <Link href="/certifications/ux-designer" className="text-salesforce-blue underline">User Experience Designer</Link> next.
-        </p>
-      </section>
     </div>
   )
 }

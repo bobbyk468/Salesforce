@@ -80,22 +80,6 @@ export default function DataArchitectStudyGuideContent() {
         ))}
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Weightings by Section</h2>
-        <div className="space-y-4">
-          {examSections.map((section) => (
-            <div key={section.name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{section.name}</span>
-                <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.3}%` }} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
 
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Domain Covers</h2>

@@ -70,25 +70,6 @@ export default function MulesoftDeveloperIExamTipsContent() {
         </ul>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Published Objective Weights</h2>
-        <div className="space-y-3 text-sm text-gray-700">
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Creating Application Networks</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Designing APIs</span><span className="font-bold text-salesforce-blue ml-4">8%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Accessing and Modifying Mule Events</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Structuring Mule Applications</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Building API Implementation Interfaces</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Using Connectors</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Processing Records</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Transforming Data</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Routing Events</span><span className="font-bold text-salesforce-blue ml-4">8%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Handling Errors</span><span className="font-bold text-salesforce-blue ml-4">8%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Debugging and Troubleshooting Mule Applications</span><span className="font-bold text-salesforce-blue ml-4">5%</span></div>
-<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Deploying and Managing APIs and Integrations</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
-          <p className="text-xs text-gray-600 pt-1">The available Salesforce guide states Spring 24 alignment. Confirm current requirements with Salesforce before scheduling.</p>
-          <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer nofollow noopener">Official exam guide</a>
-        </div>
-      </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>

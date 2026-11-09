@@ -162,12 +162,6 @@ export default function UxDesignerStudyGuideContent() {
       </div>
 
 
-            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
-        <p className="text-sm text-gray-700">
-          After this certification, consider: <Link href="/certifications/strategy-designer" className="text-salesforce-blue font-medium hover:underline">Platform Strategy Designer</Link>, <span className="text-salesforce-blue font-medium hover:underline">User Experience Designer</span>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
-        </p>
-      </section>
 
       <DifficultyHeatmap slug="ux-designer" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

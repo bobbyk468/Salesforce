@@ -177,23 +177,6 @@ export default function MarketingCloudEngagementDeveloperExamTipsContent() {
       </section>
 
 
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Marketing Cloud Developer Prep</h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Marketing Cloud Developer Practice Questions <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link href="/certifications/email-specialist" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Email Specialist Tips
-          </Link>
-          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Developer Certification Path
-          </Link>
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue underline">Marketing Cloud Engagement Consultant</Link> or <Link href="/certifications/pardot-consultant" className="text-salesforce-blue underline">Marketing Cloud Account Engagement Consultant</Link> next.
-        </p>
-      </section>
     </div>
   )
 }
