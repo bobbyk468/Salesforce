@@ -47,7 +47,7 @@ const faqItems = [
   },
   {
     question: 'Is Agentforce Specialist harder than AI Associate?',
-    answer: 'AI Associate is significantly easier; it is a conceptual exam with no hands-on requirements and takes most candidates two weeks to prepare. Agentforce Specialist requires configuration experience with Einstein agents and Agentforce tools. Take AI Associate first as a foundation, then Agentforce Specialist.',
+    answer: 'AI Associate retired in February 2026 and can no longer be booked; when it was available it was significantly easier, it is a conceptual exam with no hands-on requirements and takes most candidates two weeks to prepare. Agentforce Specialist requires configuration experience with Einstein agents and Agentforce tools. Take AI Associate first as a foundation, then Agentforce Specialist.',
   },
   {
     question: 'Should I take Platform Developer I or JavaScript Developer I first?',

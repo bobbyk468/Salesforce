@@ -178,7 +178,7 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
       'Collaborating with admin and developer teams on Salesforce projects',
       'Documenting processes and supporting end-user adoption',
     ],
-    careerPath: 'AI Associate or Platform Foundations → ADM-201 → App Builder → Specialist track of choice',
+    careerPath: 'Platform Foundations (AI Associate retired February 2026) → ADM-201 → App Builder → Specialist track of choice',
     topSkills: ['Salesforce CRM navigation', 'AI literacy', 'Process documentation', 'Business analysis basics'],
   },
   'accredited-professional': {
@@ -316,7 +316,7 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
   ],
   associate: [
     { question: 'Which Salesforce associate certification should I take first?', answer: 'Platform Foundations ($75, 40 questions, 62%) is the easiest Salesforce certification available, no Salesforce experience required. For those who want a broader platform foundation, the Salesforce Platform Foundations associate cert covers core CRM, flow, and app-building concepts at an introductory level.' },
-    { question: 'Is the AI Associate a good first Salesforce certification?', answer: 'Yes, the AI Associate is Salesforce\'s most accessible entry-level certification. It tests conceptual knowledge of AI (machine learning types, Einstein features, responsible AI principles) with no coding required. It is an ideal first certification for business analysts, marketers, and non-technical users who want to validate Salesforce AI knowledge.' },
+    { question: 'Is the AI Associate a good first Salesforce certification?', answer: 'No, not any more: AI Associate retired in February 2026 and can no longer be booked. It was Salesforce\'s most accessible entry-level certification, testing conceptual AI knowledge with no coding. Platform Foundations is the current equivalent starting point, and this site keeps the AI Associate material as a historical reference.' },
   ],
   tableau: [
     { question: 'Which Tableau certification should I take first?', answer: 'Tableau Desktop Specialist (now Desktop Foundations) is the entry-level Tableau certification. It tests core Tableau Desktop skills: connecting to data, building charts (bar, line, scatter, maps), calculated fields, and basic dashboard design. The Tableau Certified Data Analyst is the next step, testing more advanced analysis and Prep Builder.' },

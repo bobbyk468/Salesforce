@@ -117,23 +117,21 @@ test('HTML entities are not written inside string literals', () => {
   assert.deepEqual(offenders, [], `HTML entities inside string literals:\n${offenders.join('\n')}`)
 })
 
-test('retired credentials are not recommended as a starting point', () => {
-  // AI Associate retired in February 2026. It may be referenced as history; it
-  // may not be pitched as somewhere to start.
+test('a page that mentions a retired credential says somewhere that it is retired', () => {
+  // AI Associate retired in February 2026. Four earlier versions of this test
+  // tried to classify individual sentences as recommendations, and each time a
+  // page used phrasing the list did not have. The requirement that actually
+  // matters to a reader is simpler and has no false positives: if a page talks
+  // about the credential at all, that page must say it is retired.
+  const RETIRED = ['AI Associate']
+  const MARKER = /retired|no longer (?:be )?(?:booked|available)|historical reference/i
   const offenders = []
   for (const file of walk('src/app')) {
+    if (file.includes('ai-associate')) continue
     const src = read(file)
-    for (const m of src.matchAll(/.{0,70}AI Associate.{0,70}/g)) {
-      const t = m[0].replace(/\s+/g, ' ')
-      if (/retired|historical|archiv|no longer/i.test(t)) continue
-      if (
-        /easiest|start(?:ing)?\b|first cert|begin with|ideal first|entry point|lowest-(?:cost|risk)|recommended first|take first/i.test(
-          t,
-        )
-      ) {
-        offenders.push(`${file}: ${t.trim()}`)
-      }
+    for (const name of RETIRED) {
+      if (src.includes(name) && !MARKER.test(src)) offenders.push(`${file} mentions ${name}`)
     }
   }
-  assert.deepEqual(offenders, [], `retired credential pitched as a starting point:\n${offenders.join('\n')}`)
+  assert.deepEqual(offenders, [], `pages mention a retired credential without saying so:\n${offenders.join('\n')}`)
 })

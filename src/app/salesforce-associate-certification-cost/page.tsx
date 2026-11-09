@@ -9,7 +9,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Associate Certification Cost (${RELEASE_CURRENT})`
-const pageDescription = `Compare Salesforce associate exam costs, formats, first credentials, and next steps after Platform Foundations or AI Associate.`
+const pageDescription = `Compare Salesforce associate exam costs, formats, first credentials, and next steps after Platform Foundations, plus what changed when AI Associate retired.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
@@ -45,7 +45,7 @@ const faqItems = [
   },
   {
     question: 'Which Salesforce associate certification should I take first?',
-    answer: 'Platform Foundations is the best broad starting point for most beginners because it covers CRM, platform basics, flow, security, and app-building concepts. AI-focused learners can compare AI Associate or Agentforce options depending on current Salesforce availability.',
+    answer: 'Platform Foundations is the best broad starting point for most beginners because it covers CRM, platform basics, flow, security, and app-building concepts. AI-focused learners should look at Agentforce options, since AI Associate retired in February 2026, depending on current Salesforce availability.',
   },
   {
     question: 'What should I take after an associate certification?',

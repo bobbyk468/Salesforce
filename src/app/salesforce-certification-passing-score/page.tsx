@@ -61,7 +61,7 @@ const faqItems = [
 ]
 
 const passingScores = [
-  { tier: 'Associate', fee: '$75', typicalScore: '62-70%', examples: 'AI Associate, Platform Foundations, MuleSoft Integration Foundations' },
+  { tier: 'Associate', fee: '$75', typicalScore: '62-70%', examples: 'Platform Foundations, MuleSoft Integration Foundations, AI Associate (retired Feb 2026s' },
   { tier: 'Specialist', fee: '$200', typicalScore: '~62–65%', examples: 'Email Specialist, Pardot Specialist, Platform Developer I' },
   { tier: 'Professional / Consultant', fee: '$200', typicalScore: '~63–68%', examples: 'Administrator, Sales Cloud Consultant, Service Cloud Consultant' },
   { tier: 'Architect', fee: '$400', typicalScore: '58-70%', examples: 'Integration Architect, Data Architect, Sharing & Visibility Architect' },

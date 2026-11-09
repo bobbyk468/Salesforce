@@ -47,7 +47,7 @@ const faqItems = [
   },
   {
     question: 'Can I get a free Salesforce certification at Dreamforce?',
-    answer: 'Salesforce has historically offered free or heavily discounted associate-level certification opportunities at Dreamforce. These typically include the AI Associate, Platform Foundations, or MuleSoft Integration Foundations exams, all $75 standard fee. Availability varies by year and is announced close to the event. Dreamforce registration (which itself has fees for in-person attendance) is typically required. Check the official Salesforce Trailhead blog as Dreamforce approaches for current offers.',
+    answer: 'Salesforce has historically offered free or heavily discounted associate-level certification opportunities at Dreamforce. These typically include Platform Foundations or MuleSoft Integration Foundations (AI Associate retired in February 2026 and is no longer bookable)ions exams, all $75 standard fee. Availability varies by year and is announced close to the event. Dreamforce registration (which itself has fees for in-person attendance) is typically required. Check the official Salesforce Trailhead blog as Dreamforce approaches for current offers.',
   },
   {
     question: 'Do Salesforce partner employees get exam discounts?',
@@ -101,7 +101,7 @@ export default function SalesforceCertificationVoucherPage() {
             titleColor: 'text-green-900',
             bodyColor: 'text-green-800',
             content: [
-              { label: 'Dreamforce (San Francisco, September)', detail: 'Salesforce\'s flagship annual conference. Historically includes free associate-level exam vouchers (AI Associate, Platform Foundations) for registered attendees. In-person attendance is required for exam voucher access.' },
+              { label: 'Dreamforce (San Francisco, September)', detail: 'Salesforce\'s flagship annual conference. Historically includes free associate-level exam vouchers (Platform Foundations; AI Associate before it retired) for registered attendees. In-person attendance is required for exam voucher access.' },
               { label: 'World Tour Events (Global, throughout year)', detail: 'Salesforce World Tour events in major cities (London, Sydney, New York, etc.) sometimes include discounted or free exam opportunities for attendees. Check the specific event agenda as announced.' },
               { label: 'TrailblazerDX (San Francisco, March)', detail: 'Developer-focused Salesforce conference. Has offered certification promotions for developer-track certifications (PD1, PD2, JavaScript Developer I) to registered attendees.' },
             ],

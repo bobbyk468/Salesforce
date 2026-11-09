@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: 'Can I get a Salesforce certification with no experience?',
-    answer: 'Yes, the three associate-level certifications ($75 each) are designed for beginners with no prior experience: Salesforce Platform Foundations, and MuleSoft Integration Foundations. The AI Associate is the most widely recommended beginner certification. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
+    answer: 'Yes, the three associate-level certifications ($75 each) are designed for beginners with no prior experience: Salesforce Platform Foundations, and MuleSoft Integration Foundations. Platform Foundations is the most widely recommended beginner certification; AI Associate retired in February 2026 and can no longer be booked. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
   },
   {
     question: 'Is the Salesforce Administrator certification the best first cert?',
@@ -82,7 +82,7 @@ export default function WhichSalesforceCertificationFirstPage() {
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-1">The short answer</h2>
-        <p className="text-sm text-gray-700">For most people: <strong>Start with Platform Foundations ($75)</strong> to confirm Salesforce is right for you, then pursue <strong>Administrator ($200)</strong> as your primary professional credential. If you are already certain about Salesforce, skip AI Associate and go straight to Administrator.</p>
+        <p className="text-sm text-gray-700">For most people: <strong>Start with Platform Foundations ($75)</strong> to confirm Salesforce is right for you, then pursue <strong>Administrator ($200)</strong> as your primary professional credential. If you are already certain about Salesforce, skip the associate tier and go straight to Administrator.</p>
       </div>
 
       <div className="space-y-5 mb-10">

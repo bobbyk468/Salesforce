@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Can I get a Salesforce certification for free?',
-    answer: 'Yes, in certain circumstances. Salesforce has historically offered free exam vouchers at annual events like Dreamforce (September) and World Tour events globally. These typically cover associate-level certifications ($75 standard fee): AI Associate, Platform Foundations, or MuleSoft Integration Foundations. Additionally, employees of Salesforce consulting partners often receive fully subsidised exam fees as a company benefit.',
+    answer: 'Yes, in certain circumstances. Salesforce has historically offered free exam vouchers at annual events like Dreamforce (September) and World Tour events globally. These typically cover associate-level certifications ($75 standard fee): Platform Foundations or MuleSoft Integration Foundations (AI Associate retired in February 2026). Additionally, employees of Salesforce consulting partners often receive fully subsidised exam fees as a company benefit.',
   },
   {
     question: 'Does Salesforce offer free certifications through Trailhead?',
@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'What is the cheapest Salesforce certification?',
-    answer: 'The three associate-level certifications cost $75 each, the lowest standard fee in the Salesforce portfolio: AI Associate, Salesforce Platform Foundations, and MuleSoft Integration Foundations. These are also the easiest certifications, making them the lowest-risk entry point for beginners. Of these, Platform Foundations is the most widely recognised and the most recommended first certification.',
+    answer: 'The three associate-level certifications cost $75 each, the lowest standard fee in the Salesforce portfolio: Salesforce Platform Foundations and MuleSoft Integration Foundations. These are also the easiest certifications, making them the lowest-risk entry point for beginners. Of these, Platform Foundations is the most widely recognised and the most recommended first certification.',
   },
   {
     question: 'Can my employer pay for my Salesforce certification?',
@@ -91,7 +91,7 @@ export default function SalesforceFreeCertificationPage() {
             title: 'Route 1: Salesforce Events (Most Reliable Free Opportunity)',
             badge: 'Free, periodic',
             badgeColor: 'bg-green-100 text-green-800',
-            content: 'Salesforce\'s major annual events have historically included free associate-level exam vouchers for attendees. Dreamforce (San Francisco, September) is the primary opportunity: Salesforce often offers free AI Associate or Platform Foundations exams to registered attendees as part of the Trailblazer experience. World Tour events globally have also offered similar promotions for local attendees. These promotions are announced 4–8 weeks before each event on the Salesforce blog and Trailhead social channels. Follow @Trailhead and @Salesforce to catch announcements.',
+            content: 'Salesforce\'s major annual events have historically included free associate-level exam vouchers for attendees. Dreamforce (San Francisco, September) is the primary opportunity: Salesforce often offers free Platform Foundations exams to registered attendees as part of the Trailblazer experience. World Tour events globally have also offered similar promotions for local attendees. These promotions are announced 4–8 weeks before each event on the Salesforce blog and Trailhead social channels. Follow @Trailhead and @Salesforce to catch announcements.',
           },
           {
             title: 'Route 2: Employer Sponsorship (Most Common Free Route)',

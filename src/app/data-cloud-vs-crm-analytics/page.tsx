@@ -238,7 +238,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         links={[
           { slug: "sales-cloud-vs-service-cloud", label: "Sales Cloud vs Service Cloud" },
           { slug: "field-service-vs-service-cloud-consultant", label: "Field Service vs Service Cloud" },
-          { slug: "agentforce-specialist-vs-ai-associate", label: "Agentforce Specialist vs AI Associate" },
+          { slug: "agentforce-specialist-vs-ai-associate", label: "Agentforce Specialist vs AI Associate (retired)" },
         ]}
       />
     </div>

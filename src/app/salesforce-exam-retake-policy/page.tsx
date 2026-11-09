@@ -109,7 +109,7 @@ export default function SalesforceExamRetakePolicyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Retake Costs by Exam Type</h2>
         <div className="space-y-3">
           {[
-            { type: 'Associate exams (AI Associate, Platform Foundations, MuleSoft Integration Foundations)', original: '$75', retake: '~$38' },
+            { type: 'Associate exams (Platform Foundations, MuleSoft Integration Foundations; AI Associate retired Feb 2026s)', original: '$75', retake: '~$38' },
             { type: 'Standard professional/specialist exams (ADM-201, PD1, Sales Cloud, Service Cloud, etc.)', original: '$200', retake: '~$100' },
             { type: 'Architect exams (Integration Architect, Data Architect, IAM Architect, etc.)', original: '$400', retake: '~$200' },
           ].map((row) => (

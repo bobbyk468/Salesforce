@@ -57,7 +57,7 @@ const corePages = [
   { name: 'Service Cloud Study Guide', href: '/certifications/service-cloud' },
   { name: 'Sales Cloud Consultant Study Guide', href: '/certifications/sales-cloud' },
   { name: 'Data Cloud Consultant Study Guide', href: '/certifications/data-360-consultant' },
-  { name: 'AI Associate Study Guide', href: '/certifications/ai-associate' },
+  { name: 'AI Associate Study Guide (retired)', href: '/certifications/ai-associate' },
   { name: 'Experience Cloud Consultant Study Guide', href: '/certifications/experience-cloud' },
   { name: 'Advanced Administrator Study Guide', href: '/certifications/advanced-administrator' },
   { name: 'Platform Developer II Study Guide', href: '/certifications/developer-2' },
