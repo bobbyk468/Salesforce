@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the passing score for Salesforce Administrator exam?',
-    answer: 'Salesforce does not publish official passing scores, but industry consensus and candidate feedback indicate the Administrator (ADM-201) exam requires approximately 65–68% to pass. This varies slightly by exam version. Aim for 75%+ on practice exams before sitting the real exam to build a safety margin.',
+    answer: 'The Platform Administrator (ADM-201) exam requires 68%, which is 41 of the 60 scored questions. That figure comes from the official Salesforce exam guide, not from candidate reports.',
   },
   {
     question: 'Do all Salesforce exams have the same passing score?',
@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'How is the Salesforce exam score calculated?',
-    answer: 'Salesforce uses a scaled scoring model. Your raw score (correct answers) is converted to a scaled score, typically reported as a percentage. Some questions may be weighted differently. You receive a pass/fail result; exact numerical scores are not shown for failed attempts. For passed exams, you may see a score on your certification transcript.',
+    answer: 'Salesforce reports an unweighted percentage: your correct answers out of the scored questions, compared against the passing score in that exam’s official guide. Unscored pilot questions do not count. You receive a pass or fail result plus a section-by-section breakdown showing where you were strong and weak.',
   },
   {
     question: 'What score should I aim for on practice exams?',
@@ -84,12 +84,12 @@ export default function SalesforceCertificationPassingScorePage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Salesforce does not publish official passing scores. This page summarises the typical thresholds by certification tier, based on candidate reports and industry consensus, and what to aim for on practice exams.
+          Salesforce publishes an exact passing score in each official exam guide, and this page lists the verified figure for every credential we hold a guide for. They range from 48% to 78%, so the tier generalisations you will find elsewhere are not much use. Accredited Professional and board-reviewed exams are the exception: those cut scores are not published publicly.
         </p>
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
-        <p className="text-sm text-amber-800"><strong>Note:</strong> Salesforce uses scaled scoring and does not disclose exact passing percentages. The figures below are estimates. Always aim for 75%+ on practice exams to build a safety margin.</p>
+        <p className="text-sm text-amber-800"><strong>Note:</strong> the figures below come from each credential&apos;s official Salesforce exam guide, not from estimates. Accredited Professional and board-reviewed exams are the exception: Salesforce does not publish a numeric cut score for those. Aim roughly ten points above your own exam&apos;s mark on practice tests to leave a margin.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

@@ -88,7 +88,7 @@ const stages = [
   {
     stage: 'Sys Architect',
     time: '1–2 years',
-    title: 'System Architect (4 Certs + Final Exam)',
+    title: 'System Architect (4 Component Certs, No Exam of Its Own)',
     description: 'System Architect tests infrastructure and integration knowledge: API design, identity and access management (SSO, OAuth, SAML), and release management. Platform Developer I is the only exam shared with Application Architect, so Integration Architect, IAM Architect, and Dev Lifecycle Architect are new. There is no extra System Architect exam. The credential is granted once you hold all four.',
     certs: ['Platform Developer I (already completed)', 'Integration Architect', 'Identity and Access Management Architect', 'Dev Lifecycle and Deployment Architect'],
   },

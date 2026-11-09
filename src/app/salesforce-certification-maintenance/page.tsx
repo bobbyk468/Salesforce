@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How often do Salesforce certifications need to be maintained?',
-    answer: 'Salesforce releases three major platform releases per year (Spring, Summer, Winter). Each release brings a maintenance module requirement. For most certifications, you must complete the corresponding release maintenance module within approximately 30 days of its publication on Trailhead. If you hold multiple certifications in the same role category, they typically share a single maintenance module; you do not need to complete one per certification.',
+    answer: 'Salesforce releases three major platform releases per year (Spring, Summer, Winter). Maintenance itself is annual: each credential has one badge per year, released with whichever cycle Salesforce assigns to it. For most certifications, you must complete the corresponding release maintenance module within approximately 30 days of its publication on Trailhead. If you hold multiple certifications in the same role category, they typically share a single maintenance module; you do not need to complete one per certification.',
   },
   {
     question: 'What happens if I miss the Salesforce certification maintenance deadline?',

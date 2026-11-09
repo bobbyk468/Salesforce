@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { RETAKE_POLICY } from '@/lib/exam-policy-facts'
 import Link from '@/components/AppLink'
 import { DollarSign, RefreshCw, Info, CheckCircle2, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
@@ -51,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'How many times can you retake a Salesforce certification?',
-    answer: 'Salesforce allows up to 6 exam attempts per year for the same credential. After the first failed attempt, you must wait 1 day before retaking. Subsequent retakes require a 14-day waiting period each.',
+    answer: 'Salesforce allows 3 attempts at the same exam per release cycle. After a first failure you wait 24 hours, after a second you wait 14 days, and after a third you wait until the next release cycle begins, when your attempts reset. Retakes cost 50% of the original price, and Foundations exams have no retake fee.',
   },
   {
     question: 'Is there a free Salesforce certification option?',
@@ -302,9 +303,9 @@ export default function SalesforceCertificationCostPage() {
           Retake Policy
         </h2>
         <ul className="space-y-2.5 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can retake after a <strong>1-day waiting period</strong> for the first retake.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Subsequent retakes require a <strong>14-day waiting period</strong> each.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You may attempt the same exam a maximum of <strong>6 times per year</strong>.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can retake after a <strong>{RETAKE_POLICY.waitAfterFirstFail}</strong> wait for the first retake.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />A second retake requires a <strong>{RETAKE_POLICY.waitAfterSecondFail}</strong> wait.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You get <strong>{RETAKE_POLICY.attemptsPerCycle} attempts per release cycle</strong>; after a third failure you wait for {RETAKE_POLICY.afterThirdFail}.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Retake fees are roughly <strong>50% of the exam fee</strong> for most tiers.</li>
         </ul>
       </section>

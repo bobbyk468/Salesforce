@@ -39,7 +39,7 @@ const becomeCtaBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Become a CTA',
 const faqItems = [
   {
     question: 'What certifications do you need to become a Salesforce CTA?',
-    answer: 'The CTA path requires completing the Application Architect credential (which includes Sharing and Visibility Architect, Data Architect, Development Lifecycle and Deployment Architect, and Integration Architect) and the System Architect credential (which includes Identity and Access Management Architect, Heroku Architect, and others). Together these are the domain architect prerequisites before the CTA review board.',
+    answer: 'The CTA path requires completing the Application Architect credential (granted on holding Platform App Builder, Platform Developer I, Data Architect and Sharing and Visibility Architect) and the System Architect credential (granted on holding Platform Developer I, Integration Architect, Identity and Access Management Architect and Development Lifecycle and Deployment Architect). Neither composite has an exam of its own.',
   },
   {
     question: 'How long does it take to become a Salesforce CTA?',

@@ -118,8 +118,8 @@ const tiers = [
     borderColor: 'border-purple-200',
     description: 'The most demanding Salesforce credentials. Reserved for deeply experienced professionals.',
     certs: [
-      { name: 'Application Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, pass all 4 arch certs: Data, Sharing, Integration, Dev Lifecycle.' },
-      { name: 'System Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, pass IAM, Heroku + 2 shared architect certs.' },
+      { name: 'Application Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, granted on holding Platform App Builder, Platform Developer I, Data Architect and Sharing and Visibility Architect. No exam of its own.' },
+      { name: 'System Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, granted on holding Platform Developer I, Integration Architect, Identity and Access Management Architect and Development Lifecycle and Deployment Architect. No exam of its own.' },
       { name: 'CTA Board Review', fee: '$6,000+', questions: 'Live', passing: 'Panel', note: 'Live 2-hour architecture presentation. Fewer than 1,000 CTAs worldwide.' },
     ],
   },

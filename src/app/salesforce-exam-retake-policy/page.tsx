@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { RETAKE_POLICY } from '@/lib/exam-policy-facts'
 import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
@@ -97,9 +98,9 @@ export default function SalesforceExamRetakePolicyPage() {
       <div className="bg-green-50 border border-green-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-green-900 mb-2">The key facts</h2>
         <ul className="space-y-1 text-sm text-green-800">
-          <li>✓ No mandatory waiting period between attempts</li>
-          <li>✓ Retake voucher (~50% off) automatically appears in Webassessor after a failed attempt</li>
-          <li>✓ No published limit on number of attempts for standard certs</li>
+          <li>✓ {RETAKE_POLICY.attemptsPerCycle} attempts at the same exam per release cycle; attempts reset when the next cycle starts</li>
+          <li>✓ Wait {RETAKE_POLICY.waitAfterFirstFail} after a first failure, {RETAKE_POLICY.waitAfterSecondFail} after a second, then {RETAKE_POLICY.afterThirdFail}</li>
+          <li>✓ Retakes cost {RETAKE_POLICY.retakeFeeShare}; Foundations exams have {RETAKE_POLICY.foundationsRetakeFee}</li>
           <li>✓ Failed attempts do not appear on your public Trailhead profile</li>
           <li>✓ Score report by section helps you target your weak areas</li>
         </ul>

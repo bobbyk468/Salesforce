@@ -140,7 +140,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
               <p className="font-semibold text-gray-900">Platform App Builder (DEV-402): Component 1</p>
-              <p className="text-sm text-gray-600 mt-0.5">Data modelling, Flow automation, Lightning App Builder, and security model. 68% passing score. Most candidates take 4-6 weeks to prepare.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Data modelling, Flow automation, Lightning App Builder, and security model. 73% passing score. Most candidates take 4-6 weeks to prepare.</p>
               <Link href="/certifications/app-builder" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">App Builder exam tips →</Link>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">4</span>
             <div>
               <p className="font-semibold text-gray-900">Data Architect: Component 3</p>
-              <p className="text-sm text-gray-600 mt-0.5">Data modelling at scale, large data volumes, master data management, and migration strategy. 63% passing score. Requires real LDV project experience.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Data modelling at scale, large data volumes, master data management, and migration strategy. 58% passing score. Requires real LDV project experience.</p>
               <Link href="/certifications/data-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Data Architect exam tips →</Link>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">5</span>
             <div>
               <p className="font-semibold text-gray-900">Sharing &amp; Visibility Architect: Component 4</p>
-              <p className="text-sm text-gray-600 mt-0.5">OWD design, sharing rule strategy, performance implications, and Apex managed sharing. 63% passing score. Highest retry rate of the four components.</p>
+              <p className="text-sm text-gray-600 mt-0.5">OWD design, sharing rule strategy, performance implications, and Apex managed sharing. 58% passing score. Highest retry rate of the four components.</p>
               <Link href="/certifications/sharing-visibility-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Sharing &amp; Visibility exam tips →</Link>
             </div>
           </div>
@@ -187,7 +187,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
               <p className="font-semibold text-gray-900">Integration Architect</p>
-              <p className="text-sm text-gray-600 mt-0.5">API selection, integration patterns, middleware architecture, OAuth flows, and Platform Events. 63% passing score.</p>
+              <p className="text-sm text-gray-600 mt-0.5">API selection, integration patterns, middleware architecture, OAuth flows, and Platform Events. 67% passing score.</p>
               <Link href="/certifications/integration-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Integration Architect exam tips →</Link>
             </div>
           </div>
@@ -195,7 +195,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">3</span>
             <div>
               <p className="font-semibold text-gray-900">Identity &amp; Access Management (IAM) Architect</p>
-              <p className="text-sm text-gray-600 mt-0.5">SSO, OAuth, SAML, Connected Apps, and identity federation. 63% passing score. Requires real SSO/OAuth implementation experience.</p>
+              <p className="text-sm text-gray-600 mt-0.5">SSO, OAuth, SAML, Connected Apps, and identity federation. 65% passing score. Requires real SSO/OAuth implementation experience.</p>
               <Link href="/certifications/identity-access-management-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">IAM Architect exam tips →</Link>
             </div>
           </div>

@@ -83,7 +83,7 @@ export default function SalesforceCertificationValidityPage() {
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-10">
         <h2 className="text-lg font-bold text-green-900 mb-2">Short answer: Certifications never permanently expire</h2>
-        <p className="text-sm text-green-800">Salesforce certifications have no fixed expiry date. They stay Active as long as you complete three short maintenance modules per year (one per Salesforce release). Miss a maintenance deadline and the cert becomes Inactive, but it is never permanently revoked. Completing the overdue modules restores Active status immediately, for free.</p>
+        <p className="text-sm text-green-800">Salesforce certifications have no fixed expiry date. They stay Active as long as you complete one short maintenance badge per year. The badge is released with a Spring, Summer or Winter cycle depending on the credential, and is due one year from the date it becomes available.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -149,7 +149,7 @@ export default function SalesforceCertificationValidityPage() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                { cert: 'Salesforce', expiry: 'No fixed expiry', renewal: '3 short Trailhead modules/year (free, 20–60 min each)' },
+                { cert: 'Salesforce', expiry: 'No fixed expiry', renewal: '1 short Trailhead badge/year (free, 20–60 min)' },
                 { cert: 'AWS', expiry: '3 years', renewal: 'Retake exam or earn higher-level cert' },
                 { cert: 'PMP (PMI)', expiry: '3 years', renewal: '60 PDUs of continuing education' },
                 { cert: 'Microsoft Azure', expiry: '1 year (role-based)', renewal: 'Free renewal assessment on Microsoft Learn' },

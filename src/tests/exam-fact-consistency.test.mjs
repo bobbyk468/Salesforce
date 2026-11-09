@@ -135,3 +135,45 @@ test('a page that mentions a retired credential says somewhere that it is retire
   }
   assert.deepEqual(offenders, [], `pages mention a retired credential without saying so:\n${offenders.join('\n')}`)
 })
+
+test('program-wide policy facts are stated from one place', () => {
+  // /salesforce-exam-retake-policy said "no mandatory waiting period, no
+  // published limit" while /salesforce-certification-cost said "1-day wait,
+  // then 14 days, maximum 6 attempts per year". Salesforce says 3 attempts per
+  // release cycle, 24 hours then 14 days. Prose must not restate these.
+  const BANNED = [
+    /\b6 (?:times|exam attempts) per year\b/i,
+    /no (?:mandatory )?waiting period between attempts/i,
+    /no published limit on number of attempts/i,
+    /three short maintenance modules per year/i,
+    /3 short Trailhead modules\/year/i,
+    /uses? (?:a )?scaled scoring/i,
+    /does not publish official passing scores/i,
+  ]
+  const offenders = []
+  for (const file of walk('src/app')) {
+    const src = read(file)
+    for (const re of BANNED) {
+      const m = src.match(re)
+      if (m) offenders.push(`${file}: ${m[0]}`)
+    }
+  }
+  assert.deepEqual(offenders, [], `page restates a program policy that is wrong or owned elsewhere:\n${offenders.join('\n')}`)
+})
+
+test('the composite architect credentials are described consistently', () => {
+  // Three pages gave three different component lists, and one claimed System
+  // Architect needs a final proctored exam. Neither composite has an exam.
+  const offenders = []
+  for (const file of walk('src/app')) {
+    const src = read(file)
+    if (/System Architect[^.]{0,60}(?:final|additional) (?:proctored )?exam/i.test(src)) {
+      offenders.push(`${file}: claims System Architect has its own exam`)
+    }
+    if (/pass IAM, Heroku/i.test(src)) offenders.push(`${file}: wrong System Architect components`)
+    if (/pass all 4 arch certs: Data, Sharing, Integration, Dev Lifecycle/i.test(src)) {
+      offenders.push(`${file}: wrong Application Architect components`)
+    }
+  }
+  assert.deepEqual(offenders, [], `composite architect credentials described wrongly:\n${offenders.join('\n')}`)
+})
