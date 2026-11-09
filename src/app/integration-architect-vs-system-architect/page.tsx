@@ -88,7 +88,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
         certA={{
           name: "Integration Architect",
           certSlug: "integration-architect",
-          examTipsSlug: "integration-architect-exam-tips",
+          examTipsSlug: "certifications/integration-architect",
           conditions: [
           "You work on API design, middleware, or enterprise integration projects",
           "You are not yet pursuing the full CTA path",
@@ -99,7 +99,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
         certB={{
           name: "System Architect",
           certSlug: "system-architect",
-          examTipsSlug: "system-architect-exam-tips",
+          examTipsSlug: "certifications/system-architect",
           conditions: [
           "You are committed to the full Certified Technical Architect path",
           "You already hold two or more domain architect credentials",
@@ -110,7 +110,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
         recommendation={{
           certName: "Integration Architect",
           certSlug: "integration-architect",
-          examTipsSlug: "integration-architect-exam-tips",
+          examTipsSlug: "certifications/integration-architect",
           reason: "Integration Architect is a strong standalone credential with real salary impact, worth pursuing on its own merits. System Architect is a milestone on the CTA path, not a target in isolation. Only pursue System Architect if you are genuinely committed to reaching CTA.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",

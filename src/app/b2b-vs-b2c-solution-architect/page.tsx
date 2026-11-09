@@ -89,7 +89,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
         certA={{
           name: "B2B Solution Architect",
           certSlug: "b2b-solution-architect",
-          examTipsSlug: "b2b-solution-architect-exam-tips",
+          examTipsSlug: "certifications/b2b-solution-architect",
           conditions: [
           "Your clients are enterprise B2B organisations using Sales, Service, and Revenue Cloud",
           "You architect multi-cloud solutions for business-to-business use cases",
@@ -100,7 +100,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
         certB={{
           name: "B2C Solution Architect",
           certSlug: "b2c-solution-architect",
-          examTipsSlug: "b2c-solution-architect-exam-tips",
+          examTipsSlug: "certifications/b2c-solution-architect",
           conditions: [
           "Your clients are consumer-facing businesses using Commerce, Marketing, and Service Cloud",
           "You design solutions for B2C e-commerce, loyalty, or marketing automation",
@@ -111,7 +111,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
         recommendation={{
           certName: "B2B Solution Architect",
           certSlug: "b2b-solution-architect",
-          examTipsSlug: "b2b-solution-architect-exam-tips",
+          examTipsSlug: "certifications/b2b-solution-architect",
           reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud; otherwise B2B gives you wider applicability.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",

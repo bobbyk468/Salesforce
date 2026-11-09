@@ -114,7 +114,7 @@ export default function ConsultantCertificationPathPage() {
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/sales-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
-              <Link href="/sales-cloud-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
+              <Link href="/certifications/sales-cloud" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
@@ -123,7 +123,7 @@ export default function ConsultantCertificationPathPage() {
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/service-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
-              <Link href="/service-cloud-consultant-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
+              <Link href="/certifications/service-cloud" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
@@ -132,7 +132,7 @@ export default function ConsultantCertificationPathPage() {
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/nonprofit-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
-              <Link href="/experience-cloud-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
+              <Link href="/certifications/experience-cloud" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
@@ -141,7 +141,7 @@ export default function ConsultantCertificationPathPage() {
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/field-service#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
-              <Link href="/field-service-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
+              <Link href="/certifications/field-service" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
@@ -150,7 +150,7 @@ export default function ConsultantCertificationPathPage() {
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/marketing-cloud-engagement-admin#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
-              <Link href="/marketing-cloud-consultant-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
+              <Link href="/certifications/marketing-cloud-consultant" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
@@ -159,7 +159,7 @@ export default function ConsultantCertificationPathPage() {
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/education-cloud-consultant#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
-              <Link href="/education-cloud-consultant-exam-tips" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
+              <Link href="/certifications/education-cloud-consultant" className="text-xs text-salesforce-blue hover:underline">Exam tips</Link>
             </div>
           </div>
         </div>
@@ -169,9 +169,9 @@ export default function ConsultantCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Additional Consultant Specialisations</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pardot Specialist / Pardot Consultant</strong>: Marketing automation with Account Engagement. Specialist before Consultant. <Link href="/pardot-specialist-exam-tips" className="text-salesforce-blue underline">Pardot exam tips</Link></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pardot Specialist / Pardot Consultant</strong>: Marketing automation with Account Engagement. Specialist before Consultant. <Link href="/certifications/pardot-specialist" className="text-salesforce-blue underline">Pardot exam tips</Link></li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Revenue Cloud Consultant</strong>: CPQ, billing, revenue recognition. Requires CPQ knowledge before attempting.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Analyst</strong>: Discovery, user stories, stakeholder management. 72% passing score, higher than standard certs. <Link href="/business-analyst-exam-tips" className="text-salesforce-blue underline">BA exam tips</Link></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Analyst</strong>: Discovery, user stories, stakeholder management. 72% passing score, higher than standard certs. <Link href="/certifications/business-analyst" className="text-salesforce-blue underline">BA exam tips</Link></li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Nonprofit Cloud Consultant</strong>: NPSP data model, donor management, grant tracking for nonprofit organisations.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Health Cloud Consultant</strong>: Patient/member management, care coordination, healthcare compliance (HIPAA).</li>
         </ul>
@@ -200,10 +200,10 @@ export default function ConsultantCertificationPathPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Consultant Prep</h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/service-cloud-consultant-study-guide" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/service-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Service Cloud Study Guide <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/sales-cloud-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/sales-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Sales Cloud Exam Tips
           </Link>
           <Link href="/certifications/role/consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

@@ -88,7 +88,7 @@ export default function CpqAdminVsCpqBillingApPage() {
         certA={{
           name: "CPQ Administrator",
           certSlug: "cpq-administrator",
-          examTipsSlug: "cpq-administrator-exam-tips",
+          examTipsSlug: "certifications/cpq-administrator",
           conditions: [
           "You configure Salesforce CPQ, products, pricing rules, quote templates",
           "You implement quote-to-cash processes for clients",
@@ -99,7 +99,7 @@ export default function CpqAdminVsCpqBillingApPage() {
         certB={{
           name: "CPQ Billing Accredited Professional",
           certSlug: "cpq-administrator",
-          examTipsSlug: "cpq-billing-ap-exam-tips",
+          examTipsSlug: "certifications/cpq-billing-ap",
           conditions: [
           "You already hold CPQ Administrator and want a specialist extension",
           "Your clients use Salesforce Billing for invoicing and revenue recognition",
@@ -110,7 +110,7 @@ export default function CpqAdminVsCpqBillingApPage() {
         recommendation={{
           certName: "CPQ Administrator",
           certSlug: "cpq-administrator",
-          examTipsSlug: "cpq-administrator-exam-tips",
+          examTipsSlug: "certifications/cpq-administrator",
           reason: "CPQ Administrator is the essential foundation. Billing AP builds directly on CPQ knowledge, attempting it without CPQ Administrator experience is one of the most common reasons candidates struggle. Take CPQ Admin first, then specialise into Billing AP once you have real CPQ project experience.",
           
         }}
@@ -236,7 +236,7 @@ export default function CpqAdminVsCpqBillingApPage() {
           <Link href="/certifications/cpq-billing-ap#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             CPQ &amp; Billing AP Practice Questions
           </Link>
-          <Link href="/revenue-cloud-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/revenue-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Revenue Cloud Tips {RELEASE_CURRENT}
           </Link>
         </div>

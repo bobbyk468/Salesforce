@@ -87,7 +87,7 @@ export default function SalesCloudVsServiceCloudPage() {
         certA={{
           name: "Sales Cloud Consultant",
           certSlug: "sales-cloud",
-          examTipsSlug: "sales-cloud-exam-tips",
+          examTipsSlug: "certifications/sales-cloud",
           conditions: [
           "Your clients use Salesforce primarily for pipeline, forecasting, or CRM",
           "You come from a sales operations or CRM admin background",
@@ -98,7 +98,7 @@ export default function SalesCloudVsServiceCloudPage() {
         certB={{
           name: "Service Cloud Consultant",
           certSlug: "service-cloud",
-          examTipsSlug: "service-cloud-consultant-exam-tips",
+          examTipsSlug: "certifications/service-cloud",
           conditions: [
           "Your clients run call centres, field service, or customer support operations",
           "You work with cases, entitlements, Omni-Channel, or Knowledge",
@@ -109,7 +109,7 @@ export default function SalesCloudVsServiceCloudPage() {
         recommendation={{
           certName: "Sales Cloud Consultant",
           certSlug: "sales-cloud",
-          examTipsSlug: "sales-cloud-exam-tips",
+          examTipsSlug: "certifications/sales-cloud",
           reason: "Sales Cloud Consultant has the broadest demand, almost every Salesforce implementation involves Sales Cloud at some level. Take it first to maximise consulting opportunities, then add Service Cloud to double your client-facing credential coverage.",
           careerPathSlug: "certification-path",
           careerPathLabel: "Salesforce Certification Path",
@@ -285,10 +285,10 @@ export default function SalesCloudVsServiceCloudPage() {
           <Link href="/certifications/service-cloud#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Service Cloud Practice Questions
           </Link>
-          <Link href="/sales-cloud-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/sales-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Sales Cloud Exam Tips
           </Link>
-          <Link href="/service-cloud-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/service-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Service Cloud Exam Tips
           </Link>
         </div>

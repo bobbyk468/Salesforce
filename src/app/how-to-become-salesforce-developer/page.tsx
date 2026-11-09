@@ -229,7 +229,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
           <Link href="/certifications/developer-1#practice-questions" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
             PD1 Practice Questions <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
-          <Link href="/pd1-study-guide" className="inline-flex items-center px-6 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
+          <Link href="/certifications/developer-1" className="inline-flex items-center px-6 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
             <BookOpen className="mr-2 h-4 w-4" /> PD1 Study Guide
           </Link>
         </div>

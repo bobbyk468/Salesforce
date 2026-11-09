@@ -88,7 +88,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         certA={{
           name: "Data Cloud Consultant",
           certSlug: "data-360-consultant",
-          examTipsSlug: "data-360-consultant-exam-tips",
+          examTipsSlug: "certifications/data-360-consultant",
           conditions: [
           "Your clients are unifying customer data across channels",
           "You work with Salesforce CDP, Data Cloud, or real-time data activation",
@@ -99,7 +99,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         certB={{
           name: "CRM Analytics Consultant",
           certSlug: "crm-analytics-einstein-discovery-consultant",
-          examTipsSlug: "crm-analytics-exam-tips",
+          examTipsSlug: "certifications/crm-analytics-einstein-discovery-consultant",
           conditions: [
           "You build dashboards, SAQL queries, and Einstein Discovery models",
           "Your work is analytics and reporting within Salesforce CRM",
@@ -110,7 +110,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         recommendation={{
           certName: "Data Cloud Consultant",
           certSlug: "data-360-consultant",
-          examTipsSlug: "data-360-consultant-exam-tips",
+          examTipsSlug: "certifications/data-360-consultant",
           reason: "Data Cloud Consultant is the higher-growth investment; demand is accelerating and certified talent is genuinely scarce. CRM Analytics is a strong credential for analytics-focused roles, but Data Cloud commands a higher salary premium and broader client demand in 2026.",
           
         }}

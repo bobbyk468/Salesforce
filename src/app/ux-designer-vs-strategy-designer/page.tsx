@@ -88,7 +88,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
         certA={{
           name: "UX Designer",
           certSlug: "ux-designer",
-          examTipsSlug: "ux-designer-exam-tips",
+          examTipsSlug: "certifications/ux-designer",
           conditions: [
           "You design interfaces, flows, or Lightning page layouts in Salesforce",
           "You want to demonstrate UX fundamentals and accessibility knowledge",
@@ -99,7 +99,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
         certB={{
           name: "Strategy Designer",
           certSlug: "strategy-designer",
-          examTipsSlug: "strategy-designer-exam-tips",
+          examTipsSlug: "certifications/strategy-designer",
           conditions: [
           "You lead discovery workshops, journey mapping, or design sprints",
           "You translate ambiguous business problems into Salesforce solutions",
@@ -110,7 +110,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
         recommendation={{
           certName: "UX Designer",
           certSlug: "ux-designer",
-          examTipsSlug: "ux-designer-exam-tips",
+          examTipsSlug: "certifications/ux-designer",
           reason: "UX Designer covers the foundational design principles that underpin Strategy Designer content. Take it first to build the vocabulary and frameworks, then Strategy Designer becomes a natural, well-supported progression.",
           
         }}
@@ -129,7 +129,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~65%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Execution</span></div>
           </div>
-          <Link href="/ux-designer-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/ux-designer" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -144,7 +144,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~62%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Strategy</span></div>
           </div>
-          <Link href="/strategy-designer-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/strategy-designer" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
       </div>
 

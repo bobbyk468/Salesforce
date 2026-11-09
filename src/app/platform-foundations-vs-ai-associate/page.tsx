@@ -41,7 +41,7 @@ export default function ComparisonPage() {
         {faqItems.map(item => <div key={item.question}><h3 className="font-semibold">{item.question}</h3><p>{item.answer}</p></div>)}
         <p><a className="text-salesforce-dark underline" href="https://trailhead.salesforce.com/en/credentials/aiassociate" target="_blank" rel="nofollow noopener noreferrer">Salesforce AI Associate retirement notice</a></p>
         <p><Link className="text-salesforce-dark underline" href="/certifications/platform-foundations">Explore Platform Foundations resources</Link></p>
-        <p><Link className="text-salesforce-dark underline" href="/ai-associate-study-guide">Historical AI fundamentals guide</Link></p>
+        <p><Link className="text-salesforce-dark underline" href="/certifications/ai-associate">Historical AI fundamentals guide</Link></p>
       </section>
     </article>
   )

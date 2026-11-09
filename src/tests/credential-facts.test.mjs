@@ -55,11 +55,13 @@ test('shared Data Architect logistics, exam weightage, and prerequisite FAQ matc
 })
 
 test('related study and tips pages avoid unverified current-release exam alignment', () => {
-  const study = read('src/app/data-architect-study-guide/page.tsx')
-  const tips = read('src/app/data-architect-exam-tips/page.tsx')
-  assert.match(study, /const pageTitle = `ARC-801 Platform Data Architect Study Guide \[\$\{RELEASE_YEAR\}\]`/)
-  assert.match(study, /Salesforce Platform Data Architect Study Guide \(\{RELEASE_YEAR\}\)/)
-  assert.match(tips, /const pageTitle = `Salesforce Data Architect Exam Tips \(\$\{RELEASE_YEAR\}\)`/)
+  const study = read('src/components/certifications/merged/data-architect-study-guide.tsx')
+  const tips = read('src/components/certifications/merged/data-architect-exam-tips.tsx')
+  // These were standalone pages until November 2026. Their H1 and <title> now
+  // come from the /certifications/data-architect hub, so the release-label
+  // assertions that guarded them moved to the hub's own title helper. What
+  // still matters here is that the ported copy names no unverified release.
+  assert.match(study, /RELEASE_YEAR/)
   assert.doesNotMatch(tips, /RELEASE_CURRENT|Summer ['’]?26/)
   assert.doesNotMatch(study, /RELEASE_CURRENT|Summer ['’]?26/)
 })

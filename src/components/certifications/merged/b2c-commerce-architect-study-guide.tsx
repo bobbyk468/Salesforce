@@ -1,0 +1,147 @@
+/* Ported from /b2c-commerce-architect-study-guide, merged into /certifications/b2c-commerce-architect in November 2026.
+ * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
+ * header) was dropped because the hub page already provides it. */
+import Link from '@/components/AppLink'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
+
+
+
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'b2c-commerce-architect'
+const pageTitle = buildStudyGuideTitle(slug)
+const pageDescription = `B2C Commerce Architect study guide: exam sections, solution architecture, integrations, performance, security. Pass in 2026.`
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'B2C Commerce Architect', url: '/certifications/b2c-commerce-architect' },
+  { name: 'B2C Commerce Architect Study Guide', url: '/b2c-commerce-architect-study-guide' },
+]
+
+const examSections = [
+  { name: 'Solution Architecture & Design', weight: 30, note: 'Designing B2C Commerce solutions for enterprise retailers: multi-site architecture, instance topology, and site design patterns.' },
+  { name: 'Technical Architecture & Integrations', weight: 25, note: 'OMS integration, payment gateway architecture, ERP integration patterns, headless commerce architecture, and API-first design.' },
+  { name: 'Storefront Design & Experience', weight: 20, note: 'SFRA architecture decisions, storefront performance strategies, PWA Kit considerations, and mobile commerce design.' },
+  { name: 'Performance & Scalability', weight: 15, note: 'CDN configuration, page caching strategies, pipeline performance, load testing, and high-traffic event architecture.' },
+  { name: 'Security & Compliance', weight: 10, note: 'PCI DSS compliance architecture, shopper data protection, GDPR considerations, and B2C Commerce security settings.' },
+]
+
+export const faqItems = [
+  {
+    question: 'What is the Salesforce B2C Commerce Architect certification?',
+    answer: 'The Salesforce Certified B2C Commerce Architect validates expertise in designing enterprise-scale B2C Commerce (Salesforce Commerce Cloud) solutions. It covers multi-site architecture, integration design, headless commerce patterns, performance optimisation, and security compliance. It is the architect-level credential in the B2C Commerce track, building on the B2C Commerce Developer certification.',
+  },
+  {
+    question: 'What is the B2C Commerce Architect exam format?',
+    answer: 'The exam consists of 60 multiple-choice and multiple-select questions with a 120-minute time limit. The passing score is approximately 65%. The exam costs $400 for the first attempt, with a ~50% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
+  },
+  {
+    question: 'What prerequisites are recommended for B2C Commerce Architect?',
+    answer: 'Salesforce recommends holding the B2C Commerce Developer certification before attempting the Architect exam. The exam assumes deep hands-on experience implementing B2C Commerce solutions, typically 3–5+ years of development and architecture experience on the platform. Knowledge of SFRA, Commerce APIs, integration patterns, and headless commerce architecture is essential.',
+  },
+  {
+    question: 'What is headless commerce and how does it relate to this exam?',
+    answer: 'Headless commerce decouples the frontend (storefront UI) from the backend (commerce engine), communicating via APIs. Salesforce supports headless B2C Commerce via the Commerce APIs and PWA Kit (Progressive Web App Kit). The Architect exam tests when to recommend headless vs SFRA-based architectures, the tradeoffs of each approach, and how to design API-first commerce solutions for enterprise retailers.',
+  },
+  {
+    question: 'What integration patterns are covered in the B2C Commerce Architect exam?',
+    answer: 'The exam covers integration patterns for: OMS (Order Management System), real-time vs asynchronous order sync; ERP, product, price, and inventory synchronisation; PIM (Product Information Management), catalogue data feeds and product import; payment gateways: PCI compliant tokenisation and checkout flow design; and Customer Service Cloud, case creation from commerce events. Understanding which pattern is appropriate for each integration type is key.',
+  },
+]
+
+export default function B2cCommerceArchitectStudyGuideContent() {
+  return (
+    <div className="mt-12">
+
+
+      <CertInsightBlock certSlug="b2c-commerce-architect" />
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+        {[
+          { label: 'Questions', value: '60' },
+          { label: 'Time Limit', value: '105 min' },
+          { label: 'Passing Score', value: '~65%' },
+          { label: 'Exam Fee', value: '$400' },
+        ].map((stat) => (
+          <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
+            <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Weightings by Section</h2>
+        <div className="space-y-4">
+          {examSections.map((section) => (
+            <div key={section.name}>
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-sm font-semibold text-gray-900">{section.name}</span>
+                <span className="text-sm font-bold text-salesforce-blue">{section.weight}%</span>
+              </div>
+              <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
+                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.3}%` }} />
+              </div>
+              <p className="text-xs text-gray-600">{section.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item) => (
+            <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
+        <h2 className="text-2xl font-bold mb-2">Practice B2C Commerce Architect Questions</h2>
+        <p className="text-white mb-6">Free practice questions for the Salesforce B2C Commerce Architect exam.</p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link href="#practice-questions" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+            B2C Commerce Architect Practice
+          </Link>
+          <Link href="/certifications/b2c-commerce-developer" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+            Developer Study Guide
+          </Link>
+        </div>
+      </div>
+
+      
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
+        <p className="text-sm text-gray-700">
+          After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
+        </p>
+      </section>
+
+      <DifficultyHeatmap slug="b2c-commerce-architect" />
+      {/* Hub CTA */}
+      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
+        <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
+        <p className="text-white mb-6">Try the B2C Commerce Architect free practice exam, scored with full explanations.</p>
+        <Link href="#practice-questions"
+          className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+        >
+          B2C Commerce Architect Free Practice Exam &rarr;
+        </Link>
+      </div>
+    </div>
+  )
+}

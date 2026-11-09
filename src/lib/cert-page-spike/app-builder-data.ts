@@ -50,14 +50,8 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     },
     {
       type: 'text',
-      text: ' to choose the right certification order. Ready to book? Read our ',
+      text: ' to choose the right certification order. Ready to book? The exam tips and study plan are further down this page.',
     },
-    {
-      type: 'link',
-      href: '/app-builder-exam-tips',
-      label: 'DEV-402 exam tips and study plan',
-    },
-    { type: 'text', text: '.' },
   ],
   ctaExamCode: 'DEV-402',
   practiceIntroSuffix:

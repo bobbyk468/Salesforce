@@ -125,7 +125,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             time: '2–4 weeks',
             why: 'AI Associate is the lowest-cost, lowest-risk entry point. It validates that Salesforce interests you and gives you a credential while deciding your path. No platform experience required.',
             next: 'Administrator (ADM-201) after confirming Salesforce is your direction',
-            href: '/ai-associate-study-guide',
+            href: '/certifications/ai-associate',
           },
           {
             role: 'I work in marketing (Salesforce context)',
@@ -135,7 +135,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             time: '4–8 weeks (with MC experience)',
             why: 'For professionals already working in Marketing Cloud Engagement, Email Specialist is the most accessible marketing-track cert. For B2B marketers using Pardot/Account Engagement, Pardot Specialist is the equivalent entry point.',
             next: 'Marketing Cloud Consultant or Pardot Consultant',
-            href: '/email-specialist-study-guide',
+            href: '/certifications/email-specialist',
           },
         ].map((path) => (
           <div key={path.role} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">

@@ -1,0 +1,226 @@
+/* Ported from /mulesoft-developer-i-study-guide, merged into /certifications/mulesoft-developer-i in November 2026.
+ * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
+ * header) was dropped because the hub page already provides it. */
+import Link from '@/components/AppLink'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { RELEASE_YEAR } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
+
+
+
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'mulesoft-developer-i'
+const pageTitle = buildStudyGuideTitle(slug)
+const pageDescription = 'Review MuleSoft Developer I objectives, Mule 4 application development, DataWeave, connectors, and error handling.'
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'MuleSoft Developer I', url: '/certifications/mulesoft-developer-i' },
+  { name: 'MuleSoft Developer I Study Guide', url: '/mulesoft-developer-i-study-guide' },
+]
+
+const examSections = [
+  { name: 'Creating Application Networks', weight: 7, note: 'Network and application-network objectives in the published guide.' },
+  { name: 'Designing APIs', weight: 8, note: 'API design objectives in the published guide.' },
+  { name: 'Accessing and Modifying Mule Events', weight: 10, note: 'Mule event access and modification objectives.' },
+  { name: 'Structuring Mule Applications', weight: 10, note: 'Mule application structure objectives.' },
+  { name: 'Building API Implementation Interfaces', weight: 7, note: 'API implementation interface objectives.' },
+  { name: 'Using Connectors', weight: 10, note: 'Connector objectives.' },
+  { name: 'Processing Records', weight: 10, note: 'Record processing objectives.' },
+  { name: 'Transforming Data', weight: 10, note: 'Data transformation objectives.' },
+  { name: 'Routing Events', weight: 8, note: 'Event routing objectives.' },
+  { name: 'Handling Errors', weight: 8, note: 'Error handling objectives.' },
+  { name: 'Debugging and Troubleshooting Mule Applications', weight: 5, note: 'Debugging and troubleshooting objectives.' },
+  { name: 'Deploying and Managing APIs and Integrations', weight: 7, note: 'Deployment and management objectives.' },
+]
+
+export const faqItems = [
+  {
+    question: 'What is the MuleSoft Developer I certification?',
+    answer: 'The Salesforce Certified MuleSoft Developer exam guide lists 60 multiple-choice questions plus up to five unscored questions, 120 minutes, 70% passing, US$200 registration and US$100 retake fees (taxes may apply), and no prerequisite. The guide says its questions align to Spring 24; check the linked guide for the published objective version.',
+  },
+  {
+    question: 'Do I need Salesforce experience before MuleSoft Developer I?',
+    answer: 'The exam guide lists no prerequisite. It describes the target audience as people with guided experience on basic Mule 4 projects; this is audience guidance, not a formal prerequisite.',
+  },
+  {
+    question: 'What is DataWeave and why is it important for this exam?',
+    answer: 'DataWeave is MuleSoft\'s native data transformation language used to map, transform, and process data between systems in Mule flows. The published Transforming Data objective is weighted 10%; the exam guide lists its objectives and version alignment. DataWeave 2.0 uses functional programming patterns (map, filter, reduce) and supports JSON, XML, CSV, and Java formats natively.',
+  },
+  {
+    question: 'What is API-led connectivity in MuleSoft?',
+    answer: 'API-led connectivity is MuleSoft\'s recommended architecture pattern using three layers: System APIs (connect to backend systems like Salesforce, SAP, databases), Process APIs (orchestrate business logic using System API data), and Experience APIs (deliver data formatted for specific consumers, mobile, web, Salesforce). This layered approach improves reusability and reduces point-to-point integrations.',
+  },
+  {
+    question: 'How long should I study for the MuleSoft Developer I exam?',
+    answer: 'Plan for 8–10 weeks with 10–15 hours per week. The issuer recommends combining work experience and self-study. Hands-on practice with DataWeave, flows, and connectors can support study. Download Anypoint Studio for free, follow the MuleSoft Developer Fundamentals course on Trailhead/MuleSoft training, and build several integrations from scratch before sitting the exam.',
+  },
+]
+
+export default function MulesoftDeveloperIStudyGuideContent() {
+  return (
+    <div className="mt-12">
+
+      {/* Header */}
+
+      <CertInsightBlock certSlug="mulesoft-developer-i" />
+      <p className="text-sm text-gray-600 mb-8">The available exam guide states Spring 24 alignment; confirm current requirements with Salesforce. <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer nofollow noopener">Official exam guide and objectives</a>.</p>
+
+      {/* Exam At a Glance */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+        {[
+          { label: 'Questions', value: '60' },
+          { label: 'Time Limit', value: '120 min' },
+          { label: 'Passing Score', value: '70%' },
+          { label: 'Exam Fee', value: '$200' },
+        ].map((stat) => (
+          <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
+            <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Exam Sections */}
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Published Exam Objective Weights</h2>
+        <div className="space-y-4">
+          {examSections.map((section) => (
+            <div key={section.name}>
+              <div className="flex justify-between text-sm mb-1">
+                <span className="font-medium text-gray-800">{section.name}</span>
+                <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
+              </div>
+              <div className="w-full bg-gray-100 rounded-full h-2">
+                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight}%` }} />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* What Each Section Tests */}
+      <div className="mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Inside Each Exam Section</h2>
+        <div className="space-y-4">
+          {examSections.map((section) => (
+            <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
+              <div className="flex items-start gap-3">
+                <span className="flex-shrink-0 mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-xs font-bold">{section.weight}%</span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 mb-1">{section.name}</h3>
+                  <p className="text-sm text-gray-600">{section.note}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 8-Week Study Plan */}
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
+        <div className="space-y-3 text-sm">
+          {[
+            { week: 'Week 1', focus: 'Anypoint Platform overview: API-led connectivity, platform components (Studio, Design Center, Exchange, Runtime Manager). Install Anypoint Studio.' },
+            { week: 'Week 2', focus: 'RAML & API Design, design a RAML 1.0 API spec in Design Center. Define resources, methods, data types, examples, and traits.' },
+            { week: 'Week 3', focus: 'Building Mule 4 flows: HTTP Listener, Logger, Set Variable, Scatter-Gather, Choice router. Build your first REST API with Mule 4.' },
+            { week: 'Week 4', focus: 'DataWeave 2.0, transform JSON to XML and back, use map, filter, reduce, groupBy, pluck. Practice in the DataWeave Playground before moving to Studio.' },
+            { week: 'Week 5', focus: 'Connectors, configure Database connector (SELECT/INSERT), Salesforce connector, Anypoint MQ. Build a flow that reads from a DB and publishes to a queue.' },
+            { week: 'Week 6', focus: 'Error handling: On Error Propagate vs On Error Continue, error type hierarchy, global vs local error handling. Test error scenarios in Studio.' },
+            { week: 'Week 7', focus: 'Sub-flows, private flows, and flow references. Deployment to CloudHub via Studio and Runtime Manager. MUnit basics for testing a simple flow.' },
+            { week: 'Week 8', focus: 'Full mock exams under 120-minute time pressure. Review DataWeave questions carefully. Read the data payload closely before choosing the output format.' },
+          ].map((item) => (
+            <div key={item.week} className="flex gap-3">
+              <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
+              <span className="text-gray-700">{item.focus}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Scenario Tips */}
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
+        <ul className="space-y-3 text-sm text-gray-700">
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>API layer selection:</strong> System API → connects to a backend (database, Salesforce, ERP). Process API → orchestrates business logic using multiple System APIs. Experience API → formats data for a specific consumer (mobile app, portal). The exam presents a requirement and asks which API layer to implement.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Error handling: Propagate vs Continue:</strong> On Error Propagate rethrows the error (transaction is rolled back, calling flow receives the error). On Error Continue swallows the error (flow continues to the next message processor). Use Propagate when failures must surface; use Continue when errors are expected and should be handled gracefully.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>DataWeave output format:</strong> Always read the question carefully for the required output type (JSON vs XML vs CSV). The syntax for map, filter, and reduce is the same regardless of format, the output directive changes the serialisation.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Scatter-Gather vs Choice:</strong> Scatter-Gather runs routes in parallel and aggregates all results. Choice router is a conditional branch, only one route runs. Use Scatter-Gather when you need data from multiple sources simultaneously; use Choice when you need one path based on a condition.</span></li>
+        </ul>
+      </div>
+
+      {/* Mock Benchmark */}
+      <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
+        <p className="text-sm text-gray-700">Use timed practice to identify objectives for further review. The available Salesforce exam guide lists 70% passing, no prerequisite, and Spring 24 alignment; verify current details with the issuer.</p>
+      </div>
+
+      {/* Top 10 Review */}
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Key Concepts Checklist</h2>
+        <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
+          <li>API-led connectivity: System, Process, and Experience layers and what each contains</li>
+          <li>Mule 4 flow components: sources (Listener), processors (Transform, Logger), and targets</li>
+          <li>DataWeave map, filter, reduce, groupBy, pluck, and flatten functions</li>
+          <li>Scatter-Gather (parallel) vs Choice (conditional) routers</li>
+          <li>Sub-flows vs private flows, differences and use cases</li>
+          <li>On Error Propagate vs On Error Continue and when to use each</li>
+          <li>Mule error type hierarchy: MULE, HTTP, CONNECTIVITY, TRANSFORMATION</li>
+          <li>Database connector: SELECT, INSERT, UPDATE, DELETE operations and result streaming</li>
+          <li>CloudHub deployment: workers, vCore sizes, environment management</li>
+          <li>RAML 1.0: resource types, traits, data types, and examples</li>
+        </ol>
+      </div>
+
+      {/* FAQ */}
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item) => (
+            <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      {/* CTA */}
+      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
+        <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
+        <ul className="space-y-2">
+          <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations comparison</Link></li>
+        </ul>
+      </div>
+
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
+        <p className="text-sm text-gray-700">
+          After this certification, consider: <Link href="/certifications/developer-2" className="text-salesforce-blue font-medium hover:underline">Platform Developer II</Link>, <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link>, or <Link href="/certifications/javascript-developer-i" className="text-salesforce-blue font-medium hover:underline">JavaScript Developer I</Link>.
+        </p>
+      </section>
+
+      <DifficultyHeatmap slug="mulesoft-developer-i" />
+      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
+        <h2 className="text-2xl font-bold mb-2">Test Yourself</h2>
+        <p className="text-white mb-6">Test yourself with free MuleSoft Developer I practice questions covering all exam sections.</p>
+        <Link
+          href="#practice-questions"
+          className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+        >
+          Start Free Practice Questions
+        </Link>
+      </div>
+    </div>
+  )
+}

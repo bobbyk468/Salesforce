@@ -8,17 +8,17 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
     ],
     'mulesoft-integration-foundations-study-guide': [
       { href: '/mulesoft-developer-i-vs-integration-foundations', anchorText: 'MuleSoft Developer I vs Integration Foundations' },
-      { href: '/mulesoft-developer-i-study-guide', anchorText: 'MuleSoft Developer I study guide' },
+      { href: '/certifications/mulesoft-developer-i', anchorText: 'MuleSoft Developer I study guide' },
       { href: '/how-to-study-for-salesforce-certification', anchorText: 'How to study for certification' },
     ],
     'pardot-consultant-vs-marketing-cloud-consultant': [
       { href: '/pardot-specialist-vs-pardot-consultant', anchorText: 'Pardot Specialist vs Consultant' },
       { href: '/marketing-cloud-admin-vs-developer', anchorText: 'Marketing Cloud Admin vs Developer' },
-      { href: '/pardot-consultant-study-guide', anchorText: 'Pardot Consultant study guide' },
+      { href: '/certifications/pardot-consultant', anchorText: 'Pardot Consultant study guide' },
     ],
     'system-architect-vs-application-architect': [
       { href: '/how-to-become-salesforce-architect', anchorText: 'How to become a Salesforce Architect' },
-      { href: '/application-architect-study-guide', anchorText: 'Application Architect study guide' },
+      { href: '/certifications/application-architect', anchorText: 'Application Architect study guide' },
       { href: '/b2b-vs-b2c-solution-architect', anchorText: 'B2B vs B2C Solution Architect' },
     ],
     'business-analyst-study-guide': [
@@ -37,37 +37,37 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
       { href: '/salesforce-free-certification', anchorText: 'Free certification options' },
     ],
     'education-cloud-vs-nonprofit-cloud-consultant': [
-      { href: '/nonprofit-cloud-consultant-study-guide', anchorText: 'Nonprofit Cloud study guide' },
-      { href: '/education-cloud-consultant-study-guide', anchorText: 'Education Cloud study guide' },
+      { href: '/certifications/nonprofit-cloud', anchorText: 'Nonprofit Cloud study guide' },
+      { href: '/certifications/education-cloud-consultant', anchorText: 'Education Cloud study guide' },
       { href: '/which-salesforce-certification-first', anchorText: 'Which cert first?' },
     ],
     'salesforce-free-certification': [
       { href: '/is-salesforce-certification-worth-it', anchorText: 'Is certification worth it?' },
       { href: '/salesforce-certification-voucher', anchorText: 'Vouchers & discounts' },
-      { href: '/platform-foundations-study-guide', anchorText: 'Platform Foundations study guide' },
+      { href: '/certifications/platform-foundations', anchorText: 'Platform Foundations study guide' },
     ],
     'how-to-become-salesforce-architect': [
       { href: '/system-architect-vs-application-architect', anchorText: 'System vs Application Architect' },
-      { href: '/technical-architect-study-guide', anchorText: 'Technical Architect study guide' },
+      { href: '/certifications/technical-architect', anchorText: 'Technical Architect study guide' },
       { href: '/salesforce-certification-difficulty', anchorText: 'Certification difficulty ranking' },
     ],
     'field-service-vs-service-cloud-consultant': [
-      { href: '/service-cloud-consultant-study-guide', anchorText: 'Service Cloud study guide' },
+      { href: '/certifications/service-cloud', anchorText: 'Service Cloud study guide' },
       { href: '/which-salesforce-certification-first', anchorText: 'Which cert first?' },
       { href: '/how-to-become-salesforce-consultant', anchorText: 'Become a Consultant' },
     ],
     'pardot-specialist-vs-pardot-consultant': [
       { href: '/pardot-consultant-vs-marketing-cloud-consultant', anchorText: 'Pardot vs Marketing Cloud Consultant' },
-      { href: '/pardot-specialist-study-guide', anchorText: 'Pardot Specialist study guide' },
+      { href: '/certifications/pardot-specialist', anchorText: 'Pardot Specialist study guide' },
       { href: '/marketing-cloud-admin-vs-developer', anchorText: 'Marketing Cloud Admin vs Developer' },
     ],
     'cpq-admin-vs-revenue-cloud-consultant': [
-      { href: '/revenue-cloud-consultant-study-guide', anchorText: 'Revenue Cloud study guide' },
-      { href: '/b2b-solution-architect-study-guide', anchorText: 'B2B Solution Architect study guide' },
+      { href: '/certifications/revenue-cloud-consultant', anchorText: 'Revenue Cloud study guide' },
+      { href: '/certifications/b2b-solution-architect', anchorText: 'B2B Solution Architect study guide' },
       { href: '/which-salesforce-certification-first', anchorText: 'Which cert first?' },
     ],
     'tableau-data-analyst-study-guide': [
-      { href: '/crm-analytics-study-guide', anchorText: 'CRM Analytics study guide' },
+      { href: '/certifications/crm-analytics-einstein-discovery-consultant', anchorText: 'CRM Analytics study guide' },
       { href: '/which-salesforce-certification-first', anchorText: 'Which cert first?' },
       { href: '/salesforce-certification-difficulty', anchorText: 'Certification difficulty ranking' },
     ],
@@ -93,7 +93,7 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
     ],
     'pardot-certification': [
       { href: '/certifications/pardot-specialist', anchorText: 'Pardot Specialist practice exam' },
-      { href: '/pardot-specialist-study-guide', anchorText: 'Pardot Specialist study guide' },
+      { href: '/certifications/pardot-specialist', anchorText: 'Pardot Specialist study guide' },
       { href: '/pardot-specialist-vs-pardot-consultant', anchorText: 'Pardot Specialist vs Consultant' },
     ],
     'marketing-cloud-certification-path': [
@@ -104,11 +104,11 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
     'marketing-cloud-admin-vs-developer': [
       { href: '/pardot-consultant-vs-marketing-cloud-consultant', anchorText: 'Pardot vs Marketing Cloud Consultant' },
       { href: '/pardot-specialist-vs-pardot-consultant', anchorText: 'Pardot Specialist vs Consultant' },
-      { href: '/marketing-cloud-engagement-developer-study-guide', anchorText: 'Marketing Cloud Developer study guide' },
+      { href: '/certifications/marketing-cloud-engagement-developer', anchorText: 'Marketing Cloud Developer study guide' },
     ],
     'mulesoft-developer-i-vs-integration-foundations': [
-      { href: '/mulesoft-integration-foundations-study-guide', anchorText: 'MuleSoft Integration Foundations study guide' },
-      { href: '/mulesoft-developer-i-study-guide', anchorText: 'MuleSoft Developer I study guide' },
+      { href: '/certifications/mulesoft-integration-foundations', anchorText: 'MuleSoft Integration Foundations study guide' },
+      { href: '/certifications/mulesoft-developer-i', anchorText: 'MuleSoft Developer I study guide' },
       { href: '/app-builder-vs-developer-i', anchorText: 'App Builder vs Developer I' },
     ],
     'salesforce-certification-validity': [
@@ -123,7 +123,7 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
     ],
     'b2b-vs-b2c-solution-architect': [
       { href: '/system-architect-vs-application-architect', anchorText: 'System vs Application Architect' },
-      { href: '/b2b-solution-architect-study-guide', anchorText: 'B2B Solution Architect study guide' },
+      { href: '/certifications/b2b-solution-architect', anchorText: 'B2B Solution Architect study guide' },
       { href: '/how-to-become-salesforce-architect', anchorText: 'How to become an Architect' },
     ],
     'javascript-developer-i-vs-pd1': [

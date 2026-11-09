@@ -1,0 +1,197 @@
+/* Ported from /b2b-commerce-developer-ap-exam-tips, merged into /certifications/b2b-commerce-developer-ap in November 2026.
+ * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
+ * header) was dropped because the hub page already provides it. */
+import Link from '@/components/AppLink'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import ExamTipsCertLink from '@/components/ExamTipsCertLink'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import ApOccupationSchema from '@/components/ApOccupationSchema'
+import CredentialSchema from '@/components/CredentialSchema'
+import LastUpdated from '@/components/LastUpdated'
+
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'b2b-commerce-developer-ap'
+
+const pageTitle = buildExamTipsTitle(slug)
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce B2B Commerce Developer AP exam tips for ${RELEASE_CURRENT}: LWC customisation, headless commerce, cart and checkout APIs.`
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'B2B Commerce Developer AP Exam Tips', url: '/b2b-commerce-developer-ap-exam-tips' },
+]
+
+export const faqItems = [
+  {
+    question: 'What is the B2B Commerce Developer AP exam format?',
+    answer: 'The B2B Commerce Developer AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates developer-level knowledge of Salesforce B2B Commerce: customising the storefront using Lightning Web Components (LWC), extending cart and checkout behaviour, working with B2B Commerce APIs, and headless commerce integration patterns.',
+  },
+  {
+    question: 'What are the highest-weight B2B Commerce Developer AP exam sections?',
+    answer: 'LWC Storefront Customisation (35%) and Cart and Checkout Extension (25%) together account for 60% of the exam. Overriding default B2B Commerce LWC components, extending checkout flows with custom Apex and LWC, and using the ConnectApi namespace for cart and order operations are the most tested areas.',
+  },
+  {
+    question: 'How does LWC customisation work in Salesforce B2B Commerce?',
+    answer: 'B2B Commerce storefront pages are built from standard LWC components provided by Salesforce. Developers customise the storefront by overriding these standard components with custom LWC implementations. Custom components use the same component name and folder structure to override the default. The exam tests how to correctly override standard components. Use the B2B Commerce LWC component library, and handle data communication between components.',
+  },
+  {
+    question: 'What B2B Commerce APIs does the Developer AP exam test?',
+    answer: 'The exam tests the ConnectApi namespace for B2B Commerce operations: ConnectApi.CommerceCartApi for cart operations (add/update/remove items), ConnectApi.CommerceOrderApi for order placement and management, and the REST Connect API for headless commerce scenarios. The exam also tests how to extend the checkout flow using custom Apex classes that implement the CheckoutExtension interface.',
+  },
+  {
+    question: 'What concepts do most B2B Commerce Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2B Commerce Developer exam are: (1) LWC Commerce Components vs Base Components: Extension vs Replacement; (2) Integration Framework: Commerce APIs vs Apex vs Platform Events; (3) Guest Browsing vs Authenticated Checkout: Session Context Matters. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
+  ...getConceptFaqs('b2b-commerce-developer-ap-exam-tips'),
+]
+
+export default function B2bCommerceDeveloperApExamTipsContent() {
+  return (
+    <div className="mt-12">
+
+
+
+
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What B2B Commerce Developer AP Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>LWC storefront customisation</strong>: Overriding standard B2B Commerce LWC components (product detail page, cart, search results), using the B2B Commerce LWC component library and communication patterns, implementing custom product tiles and detail page extensions, and extending Experience Builder pages with custom B2B Commerce components.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Cart and checkout extension</strong>: Using ConnectApi.CommerceCartApi for programmatic cart operations (Apex), implementing custom checkout integrations using the CheckoutExtension interface (for custom tax calculation, custom shipping providers, custom payment gateways), and handling checkout flow stages with custom Apex that plugs into the B2B checkout orchestration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Headless commerce and APIs</strong>: Using the Salesforce B2B Commerce REST API for headless storefront implementations, API authentication for external storefront clients, webhook and event integration patterns, and how headless B2B Commerce differs from the standard Experience Cloud storefront approach.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">LWC Storefront Customisation</span>
+            <span className="font-bold text-salesforce-blue ml-4">35%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Cart and Checkout Extension</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Headless Commerce and APIs</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Testing and Deployment</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 75 minutes, Pass/Fail, $150. LWC component override patterns are the most distinctive developer skill for B2B Commerce. Know them deeply.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach B2B Commerce Developer AP Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a B2B Commerce customisation requirement and ask which developer
+          approach achieves it. Prefer standard B2B Commerce extension points over custom code
+, the exam rewards using the platform’s designed extension mechanisms.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For component customisation questions: to customise the product detail page, override the standard c/productDetailPage component with a custom component of the same name. Custom components should be placed in the correct namespace to take precedence. When a scenario says ’add custom content to the product detail page without modifying Salesforce code’, override the standard PDP component, never modify the managed package code directly.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For checkout extension questions: custom checkout integrations implement the CheckoutExtension interface. Each checkout stage (shipping, tax, payment) can have a custom Apex handler. The custom handler receives the CartId and must update the cart with the calculated result (shipping cost, tax amount). When a scenario says ’calculate custom shipping rates from our internal shipping API during checkout’, implement a custom Shipping CheckoutExtension, not a Flow or Process Builder action.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ConnectApi questions: use ConnectApi.CommerceCartApi in Apex to programmatically interact with carts. Key methods: addItemToCart, deleteCartItem, getCartItems, createCart. These require a WebStore ID and an effective account ID. When a scenario describes adding products to a customer’s cart programmatically from an external system, use ConnectApi.CommerceCartApi, not direct DML on CartItem objects.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">AP Readiness Check</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          B2B Commerce Developer AP requires hands-on LWC development experience. Set up a B2B Commerce
+          scratch org using SFDX and build a custom component override before the exam, the override
+          pattern is only intuitive after doing it hands-on. The Salesforce B2B Commerce Developer
+          Trailmix is the primary study resource.
+        </p>
+      </section>
+
+
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2B Commerce Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. LWC Commerce Components vs Base Components: Extension vs Replacement</p>
+            <p className="text-sm text-gray-700">B2B Commerce on Lightning uses base LWC commerce components (product detail, cart, checkout) that can be extended or replaced. Extending a base component inherits its functionality and adds custom logic. Replacing it means writing the entire component from scratch. Candidates choose "replace" for simple customisations, the exam expects "extend." Only replace when the base component cannot be modified to meet requirements.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Integration Framework: Commerce APIs vs Apex vs Platform Events</p>
+            <p className="text-sm text-gray-700">The B2B Commerce Integration Framework uses Apex extension points (CartExtension, ShippingProvider, TaxProvider) to plug in external logic. Candidates use ad-hoc Platform Events or custom REST APIs instead. Know the specific Apex extension point for each commerce integration: tax calculation = TaxProvider, shipping rates = ShippingProvider, cart validation = CartValidationOutput.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Guest Browsing vs Authenticated Checkout: Session Context Matters</p>
+            <p className="text-sm text-gray-700">Guest users can browse a B2B Commerce storefront but cannot add to cart or check out without authenticating. The guest user context has a different Experience Cloud licence type than the authenticated buyer. Candidates design features that work in guest context and forget that adding to cart requires authentication. Exam scenarios about "users cannot add items to cart" expect the answer "buyer is not authenticated."</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item, i) => (
+            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Study Resources</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/certifications/b2b-commerce-admin-ap" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">B2B Commerce Admin AP Exam Tips</span>
+          </Link>
+          <Link href="/certifications/developer-1" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">PD1 Exam Tips</span>
+          </Link>
+          <Link href="/certifications/omnistudio-developer" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">OmniStudio Developer Exam Tips</span>
+          </Link>
+          <Link href="/developer-certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Developer Certification Path</span>
+          </Link>
+        </div>
+      </section>
+
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start B2B Commerce Developer AP Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            B2B Commerce Developer AP Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/certifications/b2b-commerce-admin-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            B2B Commerce Admin AP
+          </Link>
+          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Developer Certification Path
+          </Link>
+        </div>
+        <p className="text-xs text-gray-600 mt-4">
+          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+        </p>
+      </section>
+    </div>
+  )
+}

@@ -1,3 +1,9 @@
+// 301s for the standalone study guide and exam tips pages that were merged
+// into their /certifications/<slug> hub in November 2026. Each source was
+// mapped from the `const slug` the page itself declared, not inferred from
+// the URL, because many slugs differ (/pd1-study-guide -> developer-1).
+const mergedCertPageRedirects = require('./redirects/merged-cert-pages.json')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -49,6 +55,7 @@ const nextConfig = {
       // Removing it here prevents OpenNext/Workers from outputting ":path*" literally.
       // 301 redirects for old cert slugs that were renamed
       // Old slug → current slug (prevents 404s from external links / Ahrefs)
+      ...mergedCertPageRedirects,
       // ADM-201 consolidation (November 2026): the standalone study guide and
       // exam tips pages targeted the same intent as the credential hub and were
       // merged into it. Their unique content now lives in Adm201MergedGuide.
@@ -115,50 +122,50 @@ const nextConfig = {
       },
       {
         source: '/data-cloud-consultant-study-guide',
-        destination: '/data-360-consultant-study-guide',
+        destination: '/certifications/data-360-consultant',
         permanent: true,
       },
       {
         source: '/data-cloud-consultant-exam-tips',
-        destination: '/data-360-consultant-exam-tips',
+        destination: '/certifications/data-360-consultant',
         permanent: true,
       },
       // Generic exam-tips slugs (year-specific → permanent URLs)
       {
         source: '/adm-201-exam-tips-2026',
-        destination: '/adm-201-exam-tips',
+        destination: '/certifications/administrator',
         permanent: true,
       },
       {
         source: '/pd1-exam-tips-2026',
-        destination: '/pd1-exam-tips',
+        destination: '/certifications/developer-1',
         permanent: true,
       },
       {
         source: '/pd2-exam-tips-2026',
-        destination: '/pd2-exam-tips',
+        destination: '/certifications/developer-2',
         permanent: true,
       },
       // Consolidate duplicate Service Cloud study-guide intent into one canonical URL.
       {
         source: '/service-cloud-study-guide',
-        destination: '/service-cloud-consultant-study-guide',
+        destination: '/certifications/service-cloud',
         permanent: true,
       },
       // Consolidate likely legacy short slugs into the canonical long-tail URLs.
       {
         source: '/experience-cloud-study-guide',
-        destination: '/experience-cloud-consultant-study-guide',
+        destination: '/certifications/experience-cloud',
         permanent: true,
       },
       {
         source: '/marketing-cloud-admin-study-guide',
-        destination: '/marketing-cloud-engagement-admin-study-guide',
+        destination: '/certifications/marketing-cloud-engagement-admin',
         permanent: true,
       },
       {
         source: '/marketing-cloud-administrator-study-guide',
-        destination: '/marketing-cloud-engagement-admin-study-guide',
+        destination: '/certifications/marketing-cloud-engagement-admin',
         permanent: true,
       },
       {

@@ -101,7 +101,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <p>Data Architect ($400)</p>
             <p>Sharing &amp; Visibility Architect ($400)</p>
           </div>
-          <Link href="/application-architect-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/application-architect" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -122,7 +122,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <p>IAM Architect ($400)</p>
             <p>Dev Lifecycle &amp; Deployment Architect ($400)</p>
           </div>
-          <Link href="/system-architect-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/system-architect" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
       </div>
 
@@ -196,10 +196,10 @@ export default function SystemArchitectVsApplicationArchitectPage() {
         <h2 className="text-2xl font-bold mb-2">Start the Architect Path</h2>
         <p className="text-white mb-6">Free practice questions for every domain exam in both architect credentials.</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/application-architect-study-guide" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+          <Link href="/certifications/application-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Application Architect Guide
           </Link>
-          <Link href="/system-architect-study-guide" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+          <Link href="/certifications/system-architect" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
             System Architect Guide
           </Link>
         </div>

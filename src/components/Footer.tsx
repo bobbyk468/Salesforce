@@ -119,17 +119,17 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/pd1-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/developer-1" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   PD1 study guide
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/app-builder-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/app-builder" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   App Builder study guide
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/service-cloud-consultant-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/service-cloud" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Service Cloud study guide
                 </Link>
               </li>

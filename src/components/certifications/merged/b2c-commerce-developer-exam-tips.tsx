@@ -1,0 +1,199 @@
+/* Ported from /b2c-commerce-developer-exam-tips, merged into /certifications/b2c-commerce-developer in November 2026.
+ * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
+ * header) was dropped because the hub page already provides it. */
+import Link from '@/components/AppLink'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import ExamTipsCertLink from '@/components/ExamTipsCertLink'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
+
+
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'b2c-commerce-developer'
+
+const pageTitle = buildExamTipsTitle(slug)
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  'Prepare for Salesforce B2C Commerce Developer with SFRA, cartridges, controllers, and ISML template exam topics.'
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'B2C Commerce Developer', url: '/certifications/b2c-commerce-developer' },
+  { name: 'B2C Commerce Developer Exam Tips', url: '/b2c-commerce-developer-exam-tips' },
+]
+
+export const faqItems = [
+  {
+    question: 'What is the Salesforce B2C Commerce Developer exam format?',
+    answer: 'The Salesforce B2C Commerce Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests development on Salesforce B2C Commerce (formerly Demandware) using SFRA (Storefront Reference Architecture), cartridges, controllers, ISML templates, and Business Manager configuration.',
+  },
+  {
+    question: 'What are the highest-weight B2C Commerce Developer exam sections?',
+    answer: 'Storefront Development (30%) and Business Logic (25%) together account for 55% of the exam. Understanding SFRA cartridge architecture, extending controllers, customising ISML templates, and implementing product, catalog, and checkout logic are the most heavily tested areas.',
+  },
+  {
+    question: 'What is SFRA and why is it important for this exam?',
+    answer: 'SFRA (Storefront Reference Architecture) is the current Salesforce B2C Commerce development framework, replacing the older SiteGenesis architecture. The exam primarily tests SFRA development: cartridge chaining, controller extension patterns, the require() module system, and how to extend base SFRA functionality without modifying core files.',
+  },
+  {
+    question: 'What Business Manager knowledge is needed for the B2C Commerce Developer exam?',
+    answer: 'Business Manager is the administration UI for B2C Commerce. You need to understand site configuration, catalog management, pricing rules, promotions, content slots, A/B testing setup, and how Business Manager configurations affect storefront behaviour. Configuration decisions in Business Manager often have direct development implications tested in the exam.',
+  },
+  {
+    question: 'What concepts do most B2C Commerce Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2C Commerce Developer exam are: (1) Controllers vs Pipelines: SFRA Uses Controllers, Not Pipelines; (2) Hooks vs Cartridge Overrides: Extension Without Modification; (3) Business Manager Site Preferences vs Custom Objects: Where to Store Config. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
+  ...getConceptFaqs('b2c-commerce-developer-exam-tips'),
+]
+
+export default function B2cCommerceDeveloperExamTipsContent() {
+  return (
+    <div className="mt-12">
+
+
+
+
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What B2C Commerce Developer Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SFRA cartridge development</strong>: Cartridge chaining and precedence, extending controllers using server.extend() and server.replace(), customising ISML templates, and the module system (require()). Knowing the SFRA cartridge structure (controllers, models, scripts, templates, static) is fundamental.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Commerce business logic</strong>: Product and catalogue management, promotions and pricing logic, checkout flow customisation, payment integration patterns, and how to work with B2C Commerce APIs (Product, Basket, Order, Customer).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Manager and platform</strong>: Site configuration, content management (Content Slots, Page Designer), A/B testing, job scheduling for automation, and integration with external systems via OCAPI (Open Commerce API).</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Storefront Development (SFRA)</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Business Logic and Commerce APIs</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Business Manager Configuration</span>
+            <span className="font-bold text-salesforce-blue ml-4">20%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Integration and OCAPI</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">SFRA + Business Logic + Business Manager = 75%. SFRA cartridge architecture is the foundation, master it first.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach B2C Commerce Developer Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a storefront customisation requirement and ask which SFRA pattern, controller
+          method, or Business Manager configuration achieves it. Always prefer extending over replacing,
+          the exam rewards the SFRA best practice of extending core functionality without modifying base files.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For cartridge questions: cartridge path order determines which cartridge version of a file is used. Custom cartridges should appear first in the cartridge path. Use server.extend() to add new middleware steps to an existing route; use server.replace() to completely override a route. Prefer extend over replace to maintain upgrade compatibility.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ISML template questions: templates use &lt;isinclude&gt; to include other templates, &lt;isloop&gt; for iteration, and &lt;isif&gt; for conditionals. ISML expressions use ${'{'}expression{'}'} syntax. Custom templates in your cartridge override base SFRA templates with the same path. Know which file path takes precedence.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion questions: B2C Commerce promotions are configured in Business Manager with promotion types (product, order, shipping), qualifiers (basket amount, product quantity), and discounts (percent off, fixed price, free shipping). Promotion ordering and exclusivity settings determine which promotions stack. Know the exclusivity rules.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          B2C Commerce Developer is a specialist certification for developers working on Commerce Cloud
+          implementations. Without real SFRA development experience in a B2C Commerce sandbox,
+          the cartridge architecture and controller extension questions are very difficult.
+          Set up a B2C Commerce sandbox and build a custom cartridge before booking.
+        </p>
+      </section>
+
+
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2C Commerce Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Controllers vs Pipelines: SFRA Uses Controllers, Not Pipelines</p>
+            <p className="text-sm text-gray-700">Salesforce Reference Architecture (SFRA) uses MVC-style Controllers (JavaScript/Node.js). Pipelines are the legacy SiteGenesis architecture. Exam scenarios about new development expect Controller-based answers. Candidates who studied older materials still default to Pipeline answers. Never recommend Pipelines for new SFRA features, use Controllers and middleware.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Hooks vs Cartridge Overrides: Extension Without Modification</p>
+            <p className="text-sm text-gray-700">SFRA extension points include Hooks (event-driven, registered in hooks.json) and Cartridge Overrides (placing a custom cartridge higher in the cartridge path). Hooks allow extending behaviour at defined integration points without modifying base cartridge code. Overrides replace entire files. The exam prefers Hooks for targeted customisation and overrides only when the entire file needs replacement.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Business Manager Site Preferences vs Custom Objects: Where to Store Config</p>
+            <p className="text-sm text-gray-700">Site Preferences store merchant-configurable settings (feature toggles, API keys, display rules) that non-developers can update via Business Manager. Custom Objects store structured data with specific schemas. Candidates use Custom Objects to store configuration data, the exam expects Site Preferences for settings that merchants need to manage without code deployments.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item, i) => (
+            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Study Resources</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/certifications/developer-1" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">PD1 Exam Tips</span>
+          </Link>
+          <Link href="/certifications/b2c-commerce-architect" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">B2C Commerce Architect Exam Tips</span>
+          </Link>
+          <Link href="/certifications/omnistudio-developer" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">OmniStudio Developer Exam Tips</span>
+          </Link>
+          <Link href="/developer-certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Developer Certification Path</span>
+          </Link>
+        </div>
+      </section>
+
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start B2C Commerce Developer Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            B2C Commerce Developer Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/certifications/b2c-commerce-architect" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            B2C Commerce Architect Questions
+          </Link>
+          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Developer Certification Path
+          </Link>
+        </div>
+        <p className="text-xs text-gray-600 mt-4">
+          After this exam, consider <Link href="/certifications/developer-2" className="text-salesforce-blue underline">Platform Developer II</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
+        </p>
+      </section>
+    </div>
+  )
+}

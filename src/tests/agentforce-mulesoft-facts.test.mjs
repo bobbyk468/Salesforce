@@ -6,10 +6,10 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf
 const agentGuide = 'https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1'
 const muleGuide = 'https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1'
 const pages = [
-  'app/agentforce-specialist-study-guide/page.tsx',
-  'app/agentforce-specialist-exam-tips/page.tsx',
-  'app/mulesoft-developer-i-study-guide/page.tsx',
-  'app/mulesoft-developer-i-exam-tips/page.tsx',
+  'components/certifications/merged/agentforce-specialist-study-guide.tsx',
+  'components/certifications/merged/agentforce-specialist-exam-tips.tsx',
+  'components/certifications/merged/mulesoft-developer-i-study-guide.tsx',
+  'components/certifications/merged/mulesoft-developer-i-exam-tips.tsx',
 ]
 const sources = Object.fromEntries(pages.map((path) => [path, read(path)]))
 

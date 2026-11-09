@@ -88,7 +88,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
         certA={{
           name: "Business Analyst",
           certSlug: "business-analyst",
-          examTipsSlug: "business-analyst-exam-tips",
+          examTipsSlug: "certifications/business-analyst",
           conditions: [
           "You gather requirements, write user stories, or manage stakeholders",
           "You work in a non-technical Salesforce role and want a credential to match",
@@ -99,7 +99,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
         certB={{
           name: "Strategy Designer",
           certSlug: "strategy-designer",
-          examTipsSlug: "strategy-designer-exam-tips",
+          examTipsSlug: "certifications/strategy-designer",
           conditions: [
           "You lead design thinking workshops or UX research sessions",
           "You translate business needs into Salesforce solutions visually",
@@ -110,7 +110,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
         recommendation={{
           certName: "Business Analyst",
           certSlug: "business-analyst",
-          examTipsSlug: "business-analyst-exam-tips",
+          examTipsSlug: "certifications/business-analyst",
           reason: "Business Analyst has broader employer recognition and pairs naturally with any functional consultant cert. Strategy Designer is a strong differentiator but is best taken after BA, it extends the skillset rather than replacing it.",
           
         }}
@@ -230,13 +230,13 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
           <Link href="/certifications/business-analyst#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Business Analyst Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/business-analyst-study-guide" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/business-analyst" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Business Analyst Study Guide
           </Link>
           <Link href="/certifications/strategy-designer#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Strategy Designer Practice Questions
           </Link>
-          <Link href="/ux-designer-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/ux-designer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             UX Designer Exam Tips {RELEASE_CURRENT}
           </Link>
         </div>

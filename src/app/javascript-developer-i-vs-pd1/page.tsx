@@ -89,7 +89,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
         certA={{
           name: "JavaScript Developer I",
           certSlug: "javascript-developer-i",
-          examTipsSlug: "javascript-developer-i-exam-tips",
+          examTipsSlug: "certifications/javascript-developer-i",
           conditions: [
           "You are a frontend developer moving into Salesforce",
           "You are already strong in JavaScript ES6+ and web components",
@@ -100,7 +100,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
         certB={{
           name: "Platform Developer I",
           certSlug: "developer-1",
-          examTipsSlug: "pd1-exam-tips",
+          examTipsSlug: "certifications/developer-1",
           conditions: [
           "You write Apex code, triggers, or Salesforce automation",
           "You come from a Java or backend development background",
@@ -111,7 +111,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
         recommendation={{
           certName: "Platform Developer I",
           certSlug: "developer-1",
-          examTipsSlug: "pd1-exam-tips",
+          examTipsSlug: "certifications/developer-1",
           reason: "Platform Developer I has broader employer recognition and is the standard entry point for Salesforce developer careers. JavaScript Developer I is a strong complement, take PD1 first to establish your core credentials, then add JavaScript Developer I to demonstrate frontend depth.",
           careerPathSlug: "developer-certification-path",
           careerPathLabel: "Developer Certification Path",

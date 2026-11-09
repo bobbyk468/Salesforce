@@ -92,7 +92,7 @@ export default function AppBuilderVsDeveloperIPage() {
         certA={{
           name: "Platform App Builder",
           certSlug: "app-builder",
-          examTipsSlug: "app-builder-exam-tips",
+          examTipsSlug: "certifications/app-builder",
           conditions: [
           "You work in a non-developer, admin, or BA role",
           "You have no Apex or LWC coding experience",
@@ -103,7 +103,7 @@ export default function AppBuilderVsDeveloperIPage() {
         certB={{
           name: "Platform Developer I",
           certSlug: "developer-1",
-          examTipsSlug: "pd1-exam-tips",
+          examTipsSlug: "certifications/developer-1",
           conditions: [
           "You write, or plan to write: Apex code",
           "You work in a developer role and need the credential to match",
@@ -114,7 +114,7 @@ export default function AppBuilderVsDeveloperIPage() {
         recommendation={{
           certName: "Platform App Builder",
           certSlug: "app-builder",
-          examTipsSlug: "app-builder-exam-tips",
+          examTipsSlug: "certifications/app-builder",
           reason: "App Builder is the natural next step after Admin for most Salesforce professionals, no coding required, strong salary bump, and it opens the architect path. Only pivot to Platform Developer I first if you are actively writing Apex code in your current role.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin & Builder Certification Path",
@@ -292,10 +292,10 @@ export default function AppBuilderVsDeveloperIPage() {
           <Link href="/certifications/developer-1#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             PD1 Practice Questions
           </Link>
-          <Link href="/app-builder-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/app-builder" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             App Builder Exam Tips
           </Link>
-          <Link href="/pd1-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/developer-1" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             PD1 Exam Tips
           </Link>
         </div>

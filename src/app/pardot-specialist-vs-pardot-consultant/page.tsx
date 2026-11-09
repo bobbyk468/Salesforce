@@ -88,7 +88,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         certA={{
           name: "Pardot Specialist",
           certSlug: "pardot-specialist",
-          examTipsSlug: "pardot-specialist-exam-tips",
+          examTipsSlug: "certifications/pardot-specialist",
           conditions: [
           "You are new to Account Engagement (formerly Pardot)",
           "You work in a B2B marketing role and want a foundational credential",
@@ -99,7 +99,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         certB={{
           name: "Pardot Consultant",
           certSlug: "pardot-consultant",
-          examTipsSlug: "pardot-consultant-exam-tips",
+          examTipsSlug: "certifications/pardot-consultant",
           conditions: [
           "You already hold Pardot Specialist",
           "You design and implement full Account Engagement solutions for clients",
@@ -110,7 +110,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         recommendation={{
           certName: "Pardot Specialist",
           certSlug: "pardot-specialist",
-          examTipsSlug: "pardot-specialist-exam-tips",
+          examTipsSlug: "certifications/pardot-specialist",
           reason: "Pardot Specialist is the required foundation. Consultant content assumes Specialist-level mastery plus additional implementation strategy depth. Take Specialist first, then progress to Consultant after 12+ months of platform experience.",
           
         }}

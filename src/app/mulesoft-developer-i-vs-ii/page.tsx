@@ -89,7 +89,7 @@ export default function MulesoftDeveloperIVsIIPage() {
         certA={{
           name: "MuleSoft Developer I",
           certSlug: "mulesoft-developer-i",
-          examTipsSlug: "mulesoft-developer-i-exam-tips",
+          examTipsSlug: "certifications/mulesoft-developer-i",
           conditions: [
           "You are new to MuleSoft or Anypoint Platform",
           "You want the foundational developer credential first",
@@ -100,7 +100,7 @@ export default function MulesoftDeveloperIVsIIPage() {
         certB={{
           name: "MuleSoft Developer II",
           certSlug: "mulesoft-developer-ii",
-          examTipsSlug: "mulesoft-developer-ii-exam-tips",
+          examTipsSlug: "certifications/mulesoft-developer-ii",
           conditions: [
           "You already hold MuleSoft Developer I",
           "You work with advanced DataWeave, performance tuning, or complex flows daily",
@@ -111,7 +111,7 @@ export default function MulesoftDeveloperIVsIIPage() {
         recommendation={{
           certName: "MuleSoft Developer I",
           certSlug: "mulesoft-developer-i",
-          examTipsSlug: "mulesoft-developer-i-exam-tips",
+          examTipsSlug: "certifications/mulesoft-developer-i",
           reason: "MuleSoft Developer I is the required foundation, both in terms of knowledge and employer expectations. Developer II content assumes full mastery of Developer I concepts. Most candidates take 6–12 months between the two.",
           
         }}
@@ -236,7 +236,7 @@ export default function MulesoftDeveloperIVsIIPage() {
           <Link href="/certifications/mulesoft-developer-ii#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             MuleSoft Developer II Practice Questions
           </Link>
-          <Link href="/mulesoft-integration-foundations-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/mulesoft-integration-foundations" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             MuleSoft Foundations Tips {RELEASE_CURRENT}
           </Link>
         </div>

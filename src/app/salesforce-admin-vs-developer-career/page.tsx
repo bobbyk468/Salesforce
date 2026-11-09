@@ -97,7 +97,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         certB={{
           name: "Platform Developer I",
           certSlug: "developer-1",
-          examTipsSlug: "pd1-exam-tips",
+          examTipsSlug: "certifications/developer-1",
           conditions: [
           "You enjoy writing code and want to build Apex classes and LWC components",
           "You come from a software development or computer science background",
@@ -140,7 +140,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
             <li><strong>Progression:</strong> Junior Dev → Developer → Senior Dev → Tech Lead or Architect</li>
             <li><strong>Best for:</strong> People with programming interest who enjoy solving technical challenges</li>
           </ul>
-          <Link href="/pd2-study-guide" className="inline-block mt-4 text-sm font-semibold text-salesforce-blue hover:underline">Developer Study Guide →</Link>
+          <Link href="/certifications/developer-2" className="inline-block mt-4 text-sm font-semibold text-salesforce-blue hover:underline">Developer Study Guide →</Link>
         </div>
       </div>
 

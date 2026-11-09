@@ -100,7 +100,7 @@ export default function Adm201VsAppBuilderPage() {
         certB={{
           name: "Platform App Builder",
           certSlug: "app-builder",
-          examTipsSlug: "app-builder-exam-tips",
+          examTipsSlug: "certifications/app-builder",
           conditions: [
           "You already hold the Admin certification",
           "You build Lightning pages, flows, or custom apps regularly",

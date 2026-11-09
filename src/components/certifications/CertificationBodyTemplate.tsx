@@ -111,6 +111,7 @@ import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/
 import type { ReactNode } from 'react'
 
 import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
+import MergedCertContent from '@/components/certifications/MergedCertContent'
 /** Visible text of a segment, used only to decide spacing between segments. */
 function introSegmentText(s: IntroSegment): string {
   if (s.type === 'link') return s.label
@@ -467,6 +468,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         ) : null}
 
         {!hideExamDetails && <div id="related-certs"><RelatedCertifications currentSlug={slug} /></div>}
+        <MergedCertContent slug={slug} />
         <CiteThisPage certName={title} slug={slug} year={RELEASE_YEAR} />
       </CertificationPageShell>
     </>
@@ -599,6 +601,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
             ))}
           </ul>
         </section>
+        <MergedCertContent slug={slug} />
         <CiteThisPage certName={title} slug={slug} year={RELEASE_YEAR} />
       </CertificationPageShell>
     </>

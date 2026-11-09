@@ -141,7 +141,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Platform App Builder (DEV-402): Component 1</p>
               <p className="text-sm text-gray-600 mt-0.5">Data modelling, Flow automation, Lightning App Builder, and security model. 68% passing score. Most candidates take 4-6 weeks to prepare.</p>
-              <Link href="/app-builder-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">App Builder exam tips →</Link>
+              <Link href="/certifications/app-builder" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">App Builder exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -149,7 +149,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Platform Developer I (PD1): Component 2</p>
               <p className="text-sm text-gray-600 mt-0.5">Apex fundamentals, SOQL/DML, governor limits, triggers, and LWC. 68% passing score. Requires hands-on Apex coding practice.</p>
-              <Link href="/pd1-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
+              <Link href="/certifications/developer-1" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -157,7 +157,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Data Architect: Component 3</p>
               <p className="text-sm text-gray-600 mt-0.5">Data modelling at scale, large data volumes, master data management, and migration strategy. 63% passing score. Requires real LDV project experience.</p>
-              <Link href="/data-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Data Architect exam tips →</Link>
+              <Link href="/certifications/data-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Data Architect exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -165,7 +165,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Sharing &amp; Visibility Architect: Component 4</p>
               <p className="text-sm text-gray-600 mt-0.5">OWD design, sharing rule strategy, performance implications, and Apex managed sharing. 63% passing score. Highest retry rate of the four components.</p>
-              <Link href="/sharing-visibility-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Sharing &amp; Visibility exam tips →</Link>
+              <Link href="/certifications/sharing-visibility-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Sharing &amp; Visibility exam tips →</Link>
             </div>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Platform Developer I (PD1)</p>
               <p className="text-sm text-gray-600 mt-0.5">The only exam shared with Application Architect, if you've already earned Application Architect, this is already done. Apex, triggers, LWC, and governor limits.</p>
-              <Link href="/pd1-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
+              <Link href="/certifications/developer-1" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -188,7 +188,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Integration Architect</p>
               <p className="text-sm text-gray-600 mt-0.5">API selection, integration patterns, middleware architecture, OAuth flows, and Platform Events. 63% passing score.</p>
-              <Link href="/integration-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Integration Architect exam tips →</Link>
+              <Link href="/certifications/integration-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Integration Architect exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -196,7 +196,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Identity &amp; Access Management (IAM) Architect</p>
               <p className="text-sm text-gray-600 mt-0.5">SSO, OAuth, SAML, Connected Apps, and identity federation. 63% passing score. Requires real SSO/OAuth implementation experience.</p>
-              <Link href="/identity-access-management-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">IAM Architect exam tips →</Link>
+              <Link href="/certifications/identity-access-management-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">IAM Architect exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -204,7 +204,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Dev Lifecycle &amp; Deployment Architect</p>
               <p className="text-sm text-gray-600 mt-0.5">Environment strategy, sandbox hierarchy, release management, SFDX, CI/CD pipelines. 65% passing score.</p>
-              <Link href="/dev-lifecycle-deployment-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Dev Lifecycle Architect exam tips →</Link>
+              <Link href="/certifications/dev-lifecycle-deployment-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Dev Lifecycle Architect exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -212,7 +212,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">System Architect credential granted</p>
               <p className="text-sm text-gray-600 mt-0.5">There is no extra exam. Like Application Architect, System Architect is added to your profile once you hold the four credentials above.</p>
-              <Link href="/system-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">System Architect exam tips →</Link>
+              <Link href="/certifications/system-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">System Architect exam tips →</Link>
             </div>
           </div>
         </div>

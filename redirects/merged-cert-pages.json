@@ -1,0 +1,682 @@
+[
+  {
+    "source": "/advanced-administrator-exam-tips",
+    "destination": "/certifications/advanced-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/advanced-administrator-study-guide",
+    "destination": "/certifications/advanced-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/advanced-field-service-ap-exam-tips",
+    "destination": "/certifications/advanced-field-service-ap",
+    "permanent": true
+  },
+  {
+    "source": "/agentforce-specialist-exam-tips",
+    "destination": "/certifications/agentforce-specialist",
+    "permanent": true
+  },
+  {
+    "source": "/agentforce-specialist-study-guide",
+    "destination": "/certifications/agentforce-specialist",
+    "permanent": true
+  },
+  {
+    "source": "/ai-associate-exam-tips",
+    "destination": "/certifications/ai-associate",
+    "permanent": true
+  },
+  {
+    "source": "/ai-associate-study-guide",
+    "destination": "/certifications/ai-associate",
+    "permanent": true
+  },
+  {
+    "source": "/app-builder-exam-tips",
+    "destination": "/certifications/app-builder",
+    "permanent": true
+  },
+  {
+    "source": "/app-builder-study-guide",
+    "destination": "/certifications/app-builder",
+    "permanent": true
+  },
+  {
+    "source": "/application-architect-exam-tips",
+    "destination": "/certifications/application-architect",
+    "permanent": true
+  },
+  {
+    "source": "/application-architect-study-guide",
+    "destination": "/certifications/application-architect",
+    "permanent": true
+  },
+  {
+    "source": "/b2b-commerce-admin-ap-exam-tips",
+    "destination": "/certifications/b2b-commerce-admin-ap",
+    "permanent": true
+  },
+  {
+    "source": "/b2b-commerce-developer-ap-exam-tips",
+    "destination": "/certifications/b2b-commerce-developer-ap",
+    "permanent": true
+  },
+  {
+    "source": "/b2b-solution-architect-exam-tips",
+    "destination": "/certifications/b2b-solution-architect",
+    "permanent": true
+  },
+  {
+    "source": "/b2b-solution-architect-study-guide",
+    "destination": "/certifications/b2b-solution-architect",
+    "permanent": true
+  },
+  {
+    "source": "/b2c-commerce-architect-exam-tips",
+    "destination": "/certifications/b2c-commerce-architect",
+    "permanent": true
+  },
+  {
+    "source": "/b2c-commerce-architect-study-guide",
+    "destination": "/certifications/b2c-commerce-architect",
+    "permanent": true
+  },
+  {
+    "source": "/b2c-commerce-developer-exam-tips",
+    "destination": "/certifications/b2c-commerce-developer",
+    "permanent": true
+  },
+  {
+    "source": "/b2c-commerce-developer-study-guide",
+    "destination": "/certifications/b2c-commerce-developer",
+    "permanent": true
+  },
+  {
+    "source": "/b2c-solution-architect-exam-tips",
+    "destination": "/certifications/b2c-solution-architect",
+    "permanent": true
+  },
+  {
+    "source": "/b2c-solution-architect-study-guide",
+    "destination": "/certifications/b2c-solution-architect",
+    "permanent": true
+  },
+  {
+    "source": "/business-analyst-exam-tips",
+    "destination": "/certifications/business-analyst",
+    "permanent": true
+  },
+  {
+    "source": "/business-analyst-study-guide",
+    "destination": "/certifications/business-analyst",
+    "permanent": true
+  },
+  {
+    "source": "/communications-cloud-ap-exam-tips",
+    "destination": "/certifications/communications-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/consumer-goods-cloud-ap-exam-tips",
+    "destination": "/certifications/consumer-goods-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/consumer-goods-tpm-ap-exam-tips",
+    "destination": "/certifications/consumer-goods-tpm-ap",
+    "permanent": true
+  },
+  {
+    "source": "/contact-center-ap-exam-tips",
+    "destination": "/certifications/contact-center-ap",
+    "permanent": true
+  },
+  {
+    "source": "/cpq-administrator-exam-tips",
+    "destination": "/certifications/cpq-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/cpq-administrator-study-guide",
+    "destination": "/certifications/cpq-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/cpq-billing-ap-exam-tips",
+    "destination": "/certifications/cpq-billing-ap",
+    "permanent": true
+  },
+  {
+    "source": "/crm-analytics-exam-tips",
+    "destination": "/certifications/crm-analytics-einstein-discovery-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/crm-analytics-study-guide",
+    "destination": "/certifications/crm-analytics-einstein-discovery-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/data-360-consultant-exam-tips",
+    "destination": "/certifications/data-360-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/data-360-consultant-study-guide",
+    "destination": "/certifications/data-360-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/data-architect-exam-tips",
+    "destination": "/certifications/data-architect",
+    "permanent": true
+  },
+  {
+    "source": "/data-architect-study-guide",
+    "destination": "/certifications/data-architect",
+    "permanent": true
+  },
+  {
+    "source": "/dev-lifecycle-deployment-architect-exam-tips",
+    "destination": "/certifications/dev-lifecycle-deployment-architect",
+    "permanent": true
+  },
+  {
+    "source": "/dev-lifecycle-deployment-architect-study-guide",
+    "destination": "/certifications/dev-lifecycle-deployment-architect",
+    "permanent": true
+  },
+  {
+    "source": "/education-cloud-consultant-exam-tips",
+    "destination": "/certifications/education-cloud-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/education-cloud-consultant-study-guide",
+    "destination": "/certifications/education-cloud-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/email-specialist-exam-tips",
+    "destination": "/certifications/email-specialist",
+    "permanent": true
+  },
+  {
+    "source": "/email-specialist-study-guide",
+    "destination": "/certifications/email-specialist",
+    "permanent": true
+  },
+  {
+    "source": "/energy-utilities-ap-exam-tips",
+    "destination": "/certifications/energy-utilities-ap",
+    "permanent": true
+  },
+  {
+    "source": "/experience-cloud-consultant-study-guide",
+    "destination": "/certifications/experience-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/experience-cloud-exam-tips",
+    "destination": "/certifications/experience-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/field-service-consultant-study-guide",
+    "destination": "/certifications/field-service",
+    "permanent": true
+  },
+  {
+    "source": "/field-service-exam-tips",
+    "destination": "/certifications/field-service",
+    "permanent": true
+  },
+  {
+    "source": "/financial-services-cloud-ap-exam-tips",
+    "destination": "/certifications/financial-services-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/health-cloud-ap-exam-tips",
+    "destination": "/certifications/health-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/heroku-architect-exam-tips",
+    "destination": "/certifications/heroku-architect",
+    "permanent": true
+  },
+  {
+    "source": "/heroku-developer-ap-exam-tips",
+    "destination": "/certifications/heroku-developer-ap",
+    "permanent": true
+  },
+  {
+    "source": "/identity-access-management-architect-exam-tips",
+    "destination": "/certifications/identity-access-management-architect",
+    "permanent": true
+  },
+  {
+    "source": "/identity-access-management-architect-study-guide",
+    "destination": "/certifications/identity-access-management-architect",
+    "permanent": true
+  },
+  {
+    "source": "/industries-cpq-developer-exam-tips",
+    "destination": "/certifications/industries-cpq-developer",
+    "permanent": true
+  },
+  {
+    "source": "/integration-architect-exam-tips",
+    "destination": "/certifications/integration-architect",
+    "permanent": true
+  },
+  {
+    "source": "/integration-architect-study-guide",
+    "destination": "/certifications/integration-architect",
+    "permanent": true
+  },
+  {
+    "source": "/javascript-developer-i-exam-tips",
+    "destination": "/certifications/javascript-developer-i",
+    "permanent": true
+  },
+  {
+    "source": "/javascript-developer-i-study-guide",
+    "destination": "/certifications/javascript-developer-i",
+    "permanent": true
+  },
+  {
+    "source": "/loyalty-management-ap-exam-tips",
+    "destination": "/certifications/loyalty-management-ap",
+    "permanent": true
+  },
+  {
+    "source": "/manufacturing-cloud-ap-exam-tips",
+    "destination": "/certifications/manufacturing-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-advanced-cross-channel-ap-exam-tips",
+    "destination": "/certifications/marketing-cloud-advanced-cross-channel-ap",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-consultant-exam-tips",
+    "destination": "/certifications/marketing-cloud-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-consultant-study-guide",
+    "destination": "/certifications/marketing-cloud-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-engagement-admin-exam-tips",
+    "destination": "/certifications/marketing-cloud-engagement-admin",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-engagement-admin-study-guide",
+    "destination": "/certifications/marketing-cloud-engagement-admin",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-engagement-developer-exam-tips",
+    "destination": "/certifications/marketing-cloud-engagement-developer",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-engagement-developer-study-guide",
+    "destination": "/certifications/marketing-cloud-engagement-developer",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-engagement-foundations-exam-tips",
+    "destination": "/certifications/marketing-cloud-engagement-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-engagement-foundations-study-guide",
+    "destination": "/certifications/marketing-cloud-engagement-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-intelligence-ap-exam-tips",
+    "destination": "/certifications/marketing-cloud-intelligence-ap",
+    "permanent": true
+  },
+  {
+    "source": "/marketing-cloud-personalization-ap-exam-tips",
+    "destination": "/certifications/marketing-cloud-personalization-ap",
+    "permanent": true
+  },
+  {
+    "source": "/media-cloud-ap-exam-tips",
+    "destination": "/certifications/media-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-catalyst-consultant-exam-tips",
+    "destination": "/certifications/mulesoft-catalyst-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-developer-i-exam-tips",
+    "destination": "/certifications/mulesoft-developer-i",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-developer-i-study-guide",
+    "destination": "/certifications/mulesoft-developer-i",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-developer-ii-exam-tips",
+    "destination": "/certifications/mulesoft-developer-ii",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-developer-ii-study-guide",
+    "destination": "/certifications/mulesoft-developer-ii",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-hyperautomation-developer-exam-tips",
+    "destination": "/certifications/mulesoft-hyperautomation-developer",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-integration-architect-exam-tips",
+    "destination": "/certifications/mulesoft-integration-architect",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-integration-architect-study-guide",
+    "destination": "/certifications/mulesoft-integration-architect",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-integration-foundations-exam-tips",
+    "destination": "/certifications/mulesoft-integration-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-integration-foundations-study-guide",
+    "destination": "/certifications/mulesoft-integration-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-platform-architect-exam-tips",
+    "destination": "/certifications/mulesoft-platform-architect",
+    "permanent": true
+  },
+  {
+    "source": "/mulesoft-platform-architect-study-guide",
+    "destination": "/certifications/mulesoft-platform-architect",
+    "permanent": true
+  },
+  {
+    "source": "/net-zero-cloud-ap-exam-tips",
+    "destination": "/certifications/net-zero-cloud-ap",
+    "permanent": true
+  },
+  {
+    "source": "/nonprofit-cloud-consultant-study-guide",
+    "destination": "/certifications/nonprofit-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/nonprofit-cloud-exam-tips",
+    "destination": "/certifications/nonprofit-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/nonprofit-success-pack-consultant-exam-tips",
+    "destination": "/certifications/nonprofit-success-pack-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/nonprofit-success-pack-consultant-study-guide",
+    "destination": "/certifications/nonprofit-success-pack-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/omnistudio-consultant-exam-tips",
+    "destination": "/certifications/omnistudio-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/omnistudio-consultant-study-guide",
+    "destination": "/certifications/omnistudio-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/omnistudio-developer-exam-tips",
+    "destination": "/certifications/omnistudio-developer",
+    "permanent": true
+  },
+  {
+    "source": "/omnistudio-developer-study-guide",
+    "destination": "/certifications/omnistudio-developer",
+    "permanent": true
+  },
+  {
+    "source": "/order-management-admin-ap-exam-tips",
+    "destination": "/certifications/order-management-admin-ap",
+    "permanent": true
+  },
+  {
+    "source": "/order-management-developer-ap-exam-tips",
+    "destination": "/certifications/order-management-developer-ap",
+    "permanent": true
+  },
+  {
+    "source": "/pardot-consultant-exam-tips",
+    "destination": "/certifications/pardot-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/pardot-consultant-study-guide",
+    "destination": "/certifications/pardot-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/pardot-specialist-exam-tips",
+    "destination": "/certifications/pardot-specialist",
+    "permanent": true
+  },
+  {
+    "source": "/pardot-specialist-study-guide",
+    "destination": "/certifications/pardot-specialist",
+    "permanent": true
+  },
+  {
+    "source": "/pd1-exam-tips",
+    "destination": "/certifications/developer-1",
+    "permanent": true
+  },
+  {
+    "source": "/pd1-study-guide",
+    "destination": "/certifications/developer-1",
+    "permanent": true
+  },
+  {
+    "source": "/pd2-exam-tips",
+    "destination": "/certifications/developer-2",
+    "permanent": true
+  },
+  {
+    "source": "/pd2-study-guide",
+    "destination": "/certifications/developer-2",
+    "permanent": true
+  },
+  {
+    "source": "/platform-foundations-exam-tips",
+    "destination": "/certifications/platform-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/platform-foundations-study-guide",
+    "destination": "/certifications/platform-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/process-automation-ap-exam-tips",
+    "destination": "/certifications/process-automation-ap",
+    "permanent": true
+  },
+  {
+    "source": "/public-sector-solutions-ap-exam-tips",
+    "destination": "/certifications/public-sector-solutions-ap",
+    "permanent": true
+  },
+  {
+    "source": "/revenue-cloud-consultant-exam-tips",
+    "destination": "/certifications/revenue-cloud-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/revenue-cloud-consultant-study-guide",
+    "destination": "/certifications/revenue-cloud-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/sales-cloud-consultant-study-guide",
+    "destination": "/certifications/sales-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/sales-cloud-exam-tips",
+    "destination": "/certifications/sales-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/sales-foundations-exam-tips",
+    "destination": "/certifications/sales-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/service-cloud-consultant-exam-tips",
+    "destination": "/certifications/service-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/service-cloud-consultant-study-guide",
+    "destination": "/certifications/service-cloud",
+    "permanent": true
+  },
+  {
+    "source": "/sharing-visibility-architect-exam-tips",
+    "destination": "/certifications/sharing-visibility-architect",
+    "permanent": true
+  },
+  {
+    "source": "/sharing-visibility-architect-study-guide",
+    "destination": "/certifications/sharing-visibility-architect",
+    "permanent": true
+  },
+  {
+    "source": "/slack-administrator-exam-tips",
+    "destination": "/certifications/slack-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/slack-administrator-study-guide",
+    "destination": "/certifications/slack-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/slack-consultant-exam-tips",
+    "destination": "/certifications/slack-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/slack-developer-exam-tips",
+    "destination": "/certifications/slack-developer",
+    "permanent": true
+  },
+  {
+    "source": "/strategy-designer-exam-tips",
+    "destination": "/certifications/strategy-designer",
+    "permanent": true
+  },
+  {
+    "source": "/strategy-designer-study-guide",
+    "destination": "/certifications/strategy-designer",
+    "permanent": true
+  },
+  {
+    "source": "/system-architect-exam-tips",
+    "destination": "/certifications/system-architect",
+    "permanent": true
+  },
+  {
+    "source": "/system-architect-study-guide",
+    "destination": "/certifications/system-architect",
+    "permanent": true
+  },
+  {
+    "source": "/tableau-architect-exam-tips",
+    "destination": "/certifications/tableau-architect",
+    "permanent": true
+  },
+  {
+    "source": "/tableau-consultant-exam-tips",
+    "destination": "/certifications/tableau-consultant",
+    "permanent": true
+  },
+  {
+    "source": "/tableau-data-analyst-exam-tips",
+    "destination": "/certifications/tableau-data-analyst",
+    "permanent": true
+  },
+  {
+    "source": "/tableau-data-analyst-study-guide",
+    "destination": "/certifications/tableau-data-analyst",
+    "permanent": true
+  },
+  {
+    "source": "/tableau-desktop-foundations-exam-tips",
+    "destination": "/certifications/tableau-desktop-foundations",
+    "permanent": true
+  },
+  {
+    "source": "/tableau-server-administrator-exam-tips",
+    "destination": "/certifications/tableau-server-administrator",
+    "permanent": true
+  },
+  {
+    "source": "/technical-architect-evaluation-exam-tips",
+    "destination": "/certifications/technical-architect-evaluation",
+    "permanent": true
+  },
+  {
+    "source": "/technical-architect-exam-tips",
+    "destination": "/certifications/technical-architect",
+    "permanent": true
+  },
+  {
+    "source": "/technical-architect-review-board-exam-tips",
+    "destination": "/certifications/technical-architect-review-board",
+    "permanent": true
+  },
+  {
+    "source": "/technical-architect-study-guide",
+    "destination": "/certifications/technical-architect",
+    "permanent": true
+  },
+  {
+    "source": "/ux-designer-exam-tips",
+    "destination": "/certifications/ux-designer",
+    "permanent": true
+  },
+  {
+    "source": "/ux-designer-study-guide",
+    "destination": "/certifications/ux-designer",
+    "permanent": true
+  }
+]

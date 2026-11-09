@@ -1,0 +1,192 @@
+/* Ported from /tableau-desktop-foundations-exam-tips, merged into /certifications/tableau-desktop-foundations in November 2026.
+ * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
+ * header) was dropped because the hub page already provides it. */
+import Link from '@/components/AppLink'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import ExamTipsCertLink from '@/components/ExamTipsCertLink'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import LastUpdated from '@/components/LastUpdated'
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'tableau-desktop-foundations'
+
+const pageTitle = buildExamTipsTitle(slug)
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription = `Tableau Desktop Foundations exam tips for ${RELEASE_CURRENT}: review data connections, charts, filters, and scenario-based questions.`
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Tableau Desktop Foundations Exam Tips', url: '/tableau-desktop-foundations-exam-tips' },
+]
+
+export const faqItems = [
+  {
+    question: 'How hard is the Tableau Desktop Foundations exam?',
+    answer: 'The Tableau Desktop Foundations requires a 75%+ passing score and tests hands-on Tableau platform skills that cannot be mastered through reading alone. Daily practice in Tableau Desktop or Tableau Cloud is essential; this is a skills-based exam. Most candidates need 6–8 weeks of consistent hands-on practice. Calculated fields, LOD expressions, and dashboard interactivity actions are the most commonly missed topics.',
+  },
+  {
+    question: 'What are the highest-weight Tableau Desktop Foundations exam sections?',
+    answer: 'Connect to and Transform Data (25%) and Build Basic Charts and Visualisations (30%) together account for 55% of the exam. Basic data connections, dimensions vs. measures, standard chart types (bar, line, scatter, map), filters, and simple calculations are the most heavily tested areas.',
+  },
+  {
+    question: 'What is the difference between Tableau Desktop Foundations and the BI Analyst exam?',
+    answer: 'Tableau Desktop Foundations is the entry-level Tableau certification, testing basic skills like connecting to data and building standard charts. The Business Intelligence Analyst exam is the intermediate-level certification testing more advanced skills like LOD expressions, table calculations, and complex dashboard actions. Foundations is the recommended starting point for Tableau beginners.',
+  },
+  {
+    question: 'What are dimensions and measures in Tableau and why do they matter?',
+    answer: 'Dimensions are categorical fields (text, dates) that define the granularity of a view; they go on Rows and Columns shelves. Measures are numeric fields that are aggregated, they appear as pills in the view. Understanding the dimension vs. measure distinction is fundamental to Tableau and is tested across multiple questions on every Tableau exam.',
+  },
+  {
+    question: 'What concepts do most Tableau Desktop Foundations candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Tableau Desktop Foundations exam are: (1) Connecting to Data: Live vs Extract in Desktop; (2) Show Me vs Drag-and-Drop: When Tableau Automatically Selects Chart Types; (3) Groups vs Sets: Static vs Dynamic Membership. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
+  ...getConceptFaqs('tableau-desktop-foundations-exam-tips'),
+]
+
+export default function TableauDesktopFoundationsExamTipsContent() {
+  return (
+    <div className="mt-12">
+
+
+
+
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Tableau Desktop Foundations Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data connection basics</strong>: Connecting to Excel, CSV, and simple database sources; understanding dimensions vs. measures; using data pane filters; and basic data types (string, number, date, boolean).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Standard chart types</strong>: Building bar charts, line charts, scatter plots, maps (with geographic dimensions), pie charts, and text tables. Understanding which chart type best suits which type of data comparison (comparison, trend, distribution, relationship).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Filters, groups, and sets</strong>: Applying dimension filters, measure filters, and context filters. Creating groups to combine dimension values. Using basic calculated fields for simple IF/THEN logic and string/date manipulations. Basic dashboard creation with layout containers.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Build Basic Charts and Visualisations</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Connect to and Transform Data</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Apply Filters and Groupings</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Share and Publish</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">Charts + Data + Filters = 77%. Master the fundamentals: dimensions, measures, and choosing the right chart type.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Desktop Foundations Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a data visualisation requirement and ask which chart type, filter, or Tableau
+          feature achieves it. Focus on matching the requirement to the simplest correct Tableau approach,
+          this is a foundations exam, not an advanced one.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For chart type questions: bar chart = compare categories. Line chart = show trends over time. Scatter plot = show relationship between two measures. Map = show geographic data. Pie chart = show part-to-whole (use sparingly). When a question says ’compare sales across regions’, bar chart is the standard answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For filter type questions: dimension filters filter by category value (show only USA). Measure filters filter by aggregated value (show only where SUM(Sales) &gt; $1,000). Context filters make a dimension filter a ’top filter’ for downstream filters, they run first. The order of filter application matters.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For calculation questions: IF/THEN calculated fields create category labels from numeric or text fields. String functions (LEFT, RIGHT, CONTAINS, MID) manipulate text. Date functions (DATETRUNC, DATEDIFF, DATEPART) work with date fields. When a question says ’classify sales as High/Medium/Low based on amount’, the answer is an IF/THEN calculated field.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking (48% passing score)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Tableau Desktop Foundations is the most accessible Tableau certification. Most candidates with
+          1–2 months of hands-on Tableau Desktop practice can pass. Download Tableau Public (free) and
+          build 5–10 basic dashboards using Tableau’s sample datasets. Hands-on practice is essential:
+          Tableau skills cannot be learned purely from reading.
+        </p>
+      </section>
+
+
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Tableau Desktop Foundations Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Connecting to Data: Live vs Extract in Desktop</p>
+            <p className="text-sm text-gray-700">In Tableau Desktop, connecting Live keeps data in the original source and queries it each time the view is opened. Creating an Extract saves data to a local .hyper file for faster performance. Candidates use Live for all connections assuming it is always "better", the exam expects Extracts for offline use, performance improvement, and reducing database load.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Show Me vs Drag-and-Drop: When Tableau Automatically Selects Chart Types</p>
+            <p className="text-sm text-gray-700">"Show Me" recommends chart types based on the current fields on the canvas. Drag-and-drop lets you manually control marks and shelves for custom visualisations. Candidates use Show Me for all visualisations then struggle to modify the result, the exam expects you to understand which shelves (Rows, Columns, Marks card) drive which visual encoding so you can manually build views Show Me cannot create.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Groups vs Sets: Static vs Dynamic Membership</p>
+            <p className="text-sm text-gray-700">Groups manually combine members of a dimension into named categories (North + South = "Southern Region"), static, created by the user. Sets are saved subsets of dimension members based on conditions or manual selection; they can be dynamic (update when data changes) or fixed. Candidates use Groups when they need a condition-based dynamic category, the exam expects Dynamic Sets for criteria-driven grouping.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item, i) => (
+            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Exam Tips</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/certifications/tableau-data-analyst" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Tableau Data Analyst Exam Tips</span>
+          </Link>
+          <Link href="/certifications/tableau-consultant" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Tableau Consultant Exam Tips</span>
+          </Link>
+          <Link href="/certifications/administrator" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">ADM-201 Exam Tips</span>
+          </Link>
+          <Link href="/certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Certification Path</span>
+          </Link>
+        </div>
+      </section>
+
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Tableau Desktop Foundations Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Tableau Foundations Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/certifications/tableau-data-analyst" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Tableau Data Analyst Tips
+          </Link>
+          <Link href="/certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            All Certification Paths
+          </Link>
+        </div>
+        <p className="text-xs text-gray-600 mt-4">
+          After this exam, consider <Link href="/certifications/tableau-consultant" className="text-salesforce-blue underline">Tableau Consultant</Link> or <Link href="/certifications/tableau-data-analyst" className="text-salesforce-blue underline">Tableau Data Analyst</Link> next.
+        </p>
+      </section>
+    </div>
+  )
+}

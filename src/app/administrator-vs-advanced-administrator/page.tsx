@@ -99,7 +99,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         certB={{
           name: "Advanced Administrator",
           certSlug: "advanced-administrator",
-          examTipsSlug: "advanced-administrator-exam-tips",
+          examTipsSlug: "certifications/advanced-administrator",
           conditions: [
           "You already hold the Administrator certification",
           "You have 2+ years of hands-on Salesforce admin experience",

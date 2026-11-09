@@ -95,7 +95,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
             <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~65%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">Account Engagement</span></div>
           </div>
-          <Link href="/pardot-consultant-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/pardot-consultant" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -110,7 +110,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
             <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~67%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">MC Engagement</span></div>
           </div>
-          <Link href="/marketing-cloud-consultant-study-guide" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/marketing-cloud-consultant" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
       </div>
 

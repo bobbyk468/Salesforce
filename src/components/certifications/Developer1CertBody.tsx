@@ -26,6 +26,7 @@ import ExecutionContextDiagram from '@/components/certifications/ExecutionContex
 import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/practice-question-lite'
 import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
 import CiteThisPage from '@/components/CiteThisPage'
+import MergedCertContent from '@/components/certifications/MergedCertContent'
 import { RELEASE_YEAR } from '@/lib/release-data'
 const sampleQuestions = [
   {
@@ -614,8 +615,8 @@ private class CalloutServiceTest {
             <h2 id="pd1-guides-heading" className="text-base font-semibold text-gray-900 mb-3">PD1 Study Resources</h2>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/pd1-exam-tips" className="text-salesforce-blue font-medium hover:underline">
-                  PD1 Exam Tips ({RELEASE_CURRENT}) →
+                <Link href="#practice-questions" className="text-salesforce-blue font-medium hover:underline">
+                  PD1 Practice Questions →
                 </Link>
                 <span className="text-gray-600 ml-2">Governor limits, bulkification, 75% coverage rule, and a mock-test benchmark to pass first attempt.</span>
               </li>
@@ -668,6 +669,7 @@ private class CalloutServiceTest {
         </aside>
       </div>
       <div className="max-w-7xl mx-auto px-4">
+        <MergedCertContent slug={slug} />
         <CiteThisPage certName={slugToDisplayName(slug)} slug={slug} year={RELEASE_YEAR} />
       </div>
     </div>

@@ -97,12 +97,12 @@ test('first five Account Engagement questions avoid scheduled-rule implication',
 test('the four marketing guide and tips pages expose current logistics in visible and FAQ content', () => {
   const pageFiles = {
     'email-specialist': [
-      'src/app/email-specialist-study-guide/page.tsx',
-      'src/app/email-specialist-exam-tips/page.tsx',
+      'src/components/certifications/merged/email-specialist-study-guide.tsx',
+      'src/components/certifications/merged/email-specialist-exam-tips.tsx',
     ],
     'pardot-specialist': [
-      'src/app/pardot-specialist-study-guide/page.tsx',
-      'src/app/pardot-specialist-exam-tips/page.tsx',
+      'src/components/certifications/merged/pardot-specialist-study-guide.tsx',
+      'src/components/certifications/merged/pardot-specialist-exam-tips.tsx',
     ],
   }
   for (const slug of slugs) {
@@ -115,16 +115,20 @@ test('the four marketing guide and tips pages expose current logistics in visibl
     assert.match(joined, /No (?:formal )?prerequisite is required|no prerequisite/i)
     assert.match(joined, /RELEASE_YEAR/)
     assert.doesNotMatch(joined, /RELEASE_CURRENT|Summer ['’]26|105 min|105 minutes|65%|~65%|77%\+|75%\+/)
-    assert.match(sources[0], /faqItems=\{faqItems\}/, 'study guide FAQ is used by structured data')
-    assert.match(sources[1], /faqItems=\{faqItems\}/, 'tips FAQ is used by structured data')
+    // Since the November 2026 merge these pages render inside their hub, which
+    // emits the single FAQPage for the credential. The ported FAQ copy is still
+    // exported so the hub can pick it up, and is asserted here; the hub's own
+    // FAQPage coverage is asserted in the technical SEO validator.
+    assert.match(sources[0], /export const faqItems = \[/, 'study guide FAQ copy is still exported')
+    assert.match(sources[1], /export const faqItems = \[/, 'tips FAQ copy is still exported')
   }
 })
 
 test('guide and tips pages present official domain weights and no fabricated readiness benchmark', () => {
   for (const slug of slugs) {
     const [guide, tips] = (slug === 'email-specialist'
-      ? ['src/app/email-specialist-study-guide/page.tsx', 'src/app/email-specialist-exam-tips/page.tsx']
-      : ['src/app/pardot-specialist-study-guide/page.tsx', 'src/app/pardot-specialist-exam-tips/page.tsx']
+      ? ['src/components/certifications/merged/email-specialist-study-guide.tsx', 'src/components/certifications/merged/email-specialist-exam-tips.tsx']
+      : ['src/components/certifications/merged/pardot-specialist-study-guide.tsx', 'src/components/certifications/merged/pardot-specialist-exam-tips.tsx']
     ).map(read)
     for (const [domain, weight] of officialDomains[slug]) {
       assert.ok(guide.includes(`name: '${domain}', weight: ${weight}`), `${slug} study guide missing ${domain} ${weight}%`)

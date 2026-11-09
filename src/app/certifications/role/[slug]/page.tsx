@@ -273,13 +273,13 @@ const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
     { label: 'Which Salesforce Certification First?', href: '/which-salesforce-certification-first', note: 'Decision guide for beginners choosing a first credential.' },
   ],
   developer: [
-    { label: 'PD1 Study Guide', href: '/pd1-study-guide', note: 'Core guide for Platform Developer I.' },
+    { label: 'PD1 Study Guide', href: '/certifications/developer-1', note: 'Core guide for Platform Developer I.' },
     { label: 'PD1 vs PD2', href: '/pd1-vs-pd2', note: 'Clarifies progression and readiness.' },
     { label: 'JavaScript Developer I vs PD1', href: '/javascript-developer-i-vs-pd1', note: 'Helps developers choose the right first technical credential.' },
   ],
   consultant: [
     { label: 'Sales Cloud vs Service Cloud', href: '/sales-cloud-vs-service-cloud', note: 'Compares the two highest-demand consultant certs.' },
-    { label: 'Service Cloud Consultant Study Guide', href: '/service-cloud-consultant-study-guide', note: 'Canonical guide for Service Cloud Consultant prep.' },
+    { label: 'Service Cloud Consultant Study Guide', href: '/certifications/service-cloud', note: 'Canonical guide for Service Cloud Consultant prep.' },
     { label: 'How to Become a Salesforce Consultant', href: '/how-to-become-salesforce-consultant', note: 'Career path and certification sequencing.' },
   ],
   architect: [

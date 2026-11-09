@@ -90,7 +90,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
         certA={{
           name: "Marketing Cloud Engagement Admin",
           certSlug: "marketing-cloud-engagement-admin",
-          examTipsSlug: "marketing-cloud-engagement-admin-exam-tips",
+          examTipsSlug: "certifications/marketing-cloud-engagement-admin",
           conditions: [
           "You configure Marketing Cloud: Business Units, users, and deliverability",
           "You work in a platform admin or operations role within Marketing Cloud",
@@ -101,7 +101,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
         certB={{
           name: "Marketing Cloud Engagement Developer",
           certSlug: "marketing-cloud-engagement-developer",
-          examTipsSlug: "marketing-cloud-engagement-developer-exam-tips",
+          examTipsSlug: "certifications/marketing-cloud-engagement-developer",
           conditions: [
           "You write AMPscript, SSJS, or custom content blocks",
           "You build API integrations with Marketing Cloud",
@@ -112,7 +112,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
         recommendation={{
           certName: "Marketing Cloud Engagement Admin",
           certSlug: "marketing-cloud-engagement-admin",
-          examTipsSlug: "marketing-cloud-engagement-admin-exam-tips",
+          examTipsSlug: "certifications/marketing-cloud-engagement-admin",
           reason: "Admin is the foundational credential. Take it first to understand the platform architecture before adding Developer-level complexity. The exception: if you are already a developer with AMPscript experience, Developer is a better direct investment.",
           
         }}
@@ -232,7 +232,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
           <Link href="/certifications/marketing-cloud-engagement-developer#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             MC Developer Practice Questions
           </Link>
-          <Link href="/email-specialist-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/email-specialist" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Email Specialist Tips {RELEASE_CURRENT}
           </Link>
         </div>

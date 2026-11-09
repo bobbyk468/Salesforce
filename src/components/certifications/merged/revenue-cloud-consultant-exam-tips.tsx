@@ -1,0 +1,199 @@
+/* Ported from /revenue-cloud-consultant-exam-tips, merged into /certifications/revenue-cloud-consultant in November 2026.
+ * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
+ * header) was dropped because the hub page already provides it. */
+import Link from '@/components/AppLink'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import ExamTipsCertLink from '@/components/ExamTipsCertLink'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+import LastUpdated from '@/components/LastUpdated'
+
+
+
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'revenue-cloud-consultant'
+
+const pageTitle = buildExamTipsTitle(slug)
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Revenue Cloud Consultant exam tips for ${RELEASE_CURRENT}: CPQ, billing, subscription management, revenue recognition.`
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Revenue Cloud Consultant', url: '/certifications/revenue-cloud-consultant' },
+  { name: 'Revenue Cloud Consultant Exam Tips', url: '/revenue-cloud-consultant-exam-tips' },
+]
+
+export const faqItems = [
+  {
+    question: 'What is the Salesforce Revenue Cloud Consultant exam format?',
+    answer: 'The Salesforce Revenue Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee ($100 retake). It tests implementation of Salesforce Revenue Cloud: CPQ configuration, Salesforce Billing, subscription management, and the quote-to-cash process.',
+  },
+  {
+    question: 'What are the highest-weight Revenue Cloud Consultant exam sections?',
+    answer: 'CPQ Configuration (28%) and Billing and Invoicing (25%) together account for 53% of the exam. Understanding the full quote-to-cash lifecycle, from product catalogue and pricing through quoting, ordering, billing, and revenue recognition, is the core competency tested.',
+  },
+  {
+    question: 'Do I need CPQ Specialist certification before Revenue Cloud Consultant?',
+    answer: 'CPQ Specialist is not a formal prerequisite but is strongly recommended as a foundation. Revenue Cloud Consultant builds on CPQ knowledge (product rules, pricing, quote templates) and extends it with Salesforce Billing concepts (invoicing, payments, revenue recognition). Without CPQ experience, the Revenue Cloud exam is significantly harder.',
+  },
+  {
+    question: 'What is the difference between Revenue Cloud Consultant and CPQ Specialist?',
+    answer: 'CPQ Specialist focuses on the configure-price-quote functionality: product catalogue, pricing rules, discounting, and quote templates. Revenue Cloud Consultant covers the full quote-to-cash lifecycle including Salesforce Billing: invoice generation, payment processing, credit notes, amendment and renewal billing, and revenue recognition schedules.',
+  },
+  {
+    question: 'What concepts do most Revenue Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Revenue Cloud Consultant exam are: (1) CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles; (2) Asset-Based Ordering: Assets Drive Renewal and Amendment Logic; (3) Order vs Contract vs Subscription: Sequence Matters. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
+  ...getConceptFaqs('revenue-cloud-consultant-exam-tips'),
+]
+
+export default function RevenueCloudConsultantExamTipsContent() {
+  return (
+    <div className="mt-12">
+
+
+
+
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Revenue Cloud Consultant Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>CPQ configuration</strong>: Product catalogue, bundles, pricing rules, discounting, and quote templates. Revenue Cloud builds on CPQ as the quoting foundation, strong CPQ knowledge is assumed and tested.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Billing</strong>: Invoice generation triggers, payment processing, credit memos, billing rules, bill runs, and how billing integrates with the order management process. Understanding how quotes become orders and orders trigger invoices is critical.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriptions and revenue recognition</strong>: Subscription products, amendment billing (mid-term changes), renewal billing, proration rules, and revenue recognition schedules for deferred revenue compliance (ASC 606).</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">CPQ Configuration</span>
+            <span className="font-bold text-salesforce-blue ml-4">28%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Billing and Invoicing</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Subscriptions and Amendments</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Revenue Recognition</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">CPQ + Billing + Subscriptions = 75%. The quote-to-cash lifecycle is the entire exam. Know each stage deeply.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Revenue Cloud Consultant Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a billing or revenue scenario and ask which Revenue Cloud configuration, billing rule,
+          or revenue recognition approach addresses it. Trace the question through the full quote-to-cash lifecycle
+          to identify where the issue occurs.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For billing trigger questions: invoices are generated from Orders, not Quotes. A bill run triggers invoice creation based on billing rules set on the order products. The billing date type (order activation, specific date, or anniversary) determines when the invoice generates. Know the three billing date types.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For amendment questions: mid-term changes to subscriptions generate prorated charges or credits. An amendment quote is created from the existing contract; it does not restart the subscription term. Credit notes offset existing invoices; they do not cancel the order. Know the amendment billing flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For revenue recognition questions: revenue recognition rules define when revenue is recognised (immediately, over time, or on delivery). Revenue schedules spread recognised revenue across accounting periods. Deferred revenue sits on the balance sheet until recognition conditions are met, understand this accounting concept at a conceptual level.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Revenue Cloud Consultant is one of the most complex Salesforce consultant certifications.
+          Without both CPQ and Billing hands-on experience, the exam is very challenging. Earn
+          the CPQ Specialist certification first, then gain Salesforce Billing configuration
+          experience before attempting Revenue Cloud Consultant.
+        </p>
+      </section>
+
+
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Revenue Cloud Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles</p>
+            <p className="text-sm text-gray-700">CPQ Product Rules govern what a sales rep can configure during quoting (compatibility, validation, selection). Contract Amendments in Revenue Cloud handle post-signature changes to active contracts (add products, change quantities, update pricing). Candidates apply CPQ quoting rules to amendment scenarios, the exam expects the Amendment workflow on the Contract record, not the quoting flow.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Asset-Based Ordering: Assets Drive Renewal and Amendment Logic</p>
+            <p className="text-sm text-gray-700">Revenue Cloud creates Assets when a CPQ Quote Line is ordered. Renewals and amendments are driven by the Asset record (current entitlement), not the original Opportunity or Quote. Candidates trace amendments back to the original Opportunity, the exam expects Asset-Based Ordering logic where the Asset is the authoritative record of what a customer currently owns.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Order vs Contract vs Subscription: Sequence Matters</p>
+            <p className="text-sm text-gray-700">The Revenue Cloud lifecycle: Quote → Order → Contract → Asset/Subscription. An Order activates the agreement. A Contract is created from the Order and represents the legally binding term. Subscriptions and Assets represent the ongoing entitlements. Candidates create Contracts directly from Opportunities, the exam expects the Quote → Order → Contract sequence with Subscriptions auto-created from Order Lines.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item, i) => (
+            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Study Resources</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/certifications/cpq-administrator" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">CPQ Administrator Exam Tips</span>
+          </Link>
+          <Link href="/certifications/sales-cloud" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Sales Cloud Exam Tips</span>
+          </Link>
+          <Link href="/certifications/cpq-billing-ap" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">CPQ Billing AP Exam Tips</span>
+          </Link>
+          <Link href="/consultant-certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Consultant Certification Path</span>
+          </Link>
+        </div>
+      </section>
+
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Revenue Cloud Consultant Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Revenue Cloud Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/certifications/cpq-administrator" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            CPQ Administrator Tips
+          </Link>
+          <Link href="/consultant-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Consultant Certification Path
+          </Link>
+        </div>
+        <p className="text-xs text-gray-600 mt-4">
+          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+        </p>
+      </section>
+    </div>
+  )
+}

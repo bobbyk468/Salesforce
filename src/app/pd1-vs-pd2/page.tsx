@@ -87,7 +87,7 @@ export default function Pd1VsPd2Page() {
         certA={{
           name: "Platform Developer I",
           certSlug: "developer-1",
-          examTipsSlug: "pd1-exam-tips",
+          examTipsSlug: "certifications/developer-1",
           conditions: [
           "You do not yet hold the PD1 certification",
           "You are building foundational Apex and LWC skills",
@@ -98,7 +98,7 @@ export default function Pd1VsPd2Page() {
         certB={{
           name: "Platform Developer II",
           certSlug: "developer-2",
-          examTipsSlug: "pd2-exam-tips",
+          examTipsSlug: "certifications/developer-2",
           conditions: [
           "You already hold Platform Developer I",
           "You work with Apex design patterns, async jobs, or performance tuning daily",
@@ -109,7 +109,7 @@ export default function Pd1VsPd2Page() {
         recommendation={{
           certName: "Platform Developer I",
           certSlug: "developer-1",
-          examTipsSlug: "pd1-exam-tips",
+          examTipsSlug: "certifications/developer-1",
           reason: "PD1 is the prerequisite, not just logically but in employer expectations. You cannot attempt PD2 credibly without having mastered PD1 content. Most developers spend 6–12 months between PD1 and PD2.",
           careerPathSlug: "developer-certification-path",
           careerPathLabel: "Developer Certification Path",
@@ -316,13 +316,13 @@ export default function Pd1VsPd2Page() {
             PD2 Study Guide
           </Link>
           <Link
-            href="/pd1-exam-tips"
+            href="/certifications/developer-1"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             PD1 Exam Tips {RELEASE_CURRENT}
           </Link>
           <Link
-            href="/pd2-exam-tips"
+            href="/certifications/developer-2"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             PD2 Exam Tips {RELEASE_CURRENT}
