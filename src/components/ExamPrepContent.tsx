@@ -1,7 +1,7 @@
 import Link from '@/components/AppLink'
 import { Lightbulb, Target, BookOpen, Zap, Award } from 'lucide-react'
 import { getExamPrepContent } from '@/lib/exam-prep-content-data'
-import { slugToDisplayName, getExamLogistics } from '@/lib/cert-seo-data'
+import { slugToDisplayName, getExamLogistics, getMockExamTargetLabel } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 interface ExamPrepContentProps {
@@ -14,6 +14,10 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
   const showSharedFormatSection = slug !== 'administrator'
 
   const logistics = getExamLogistics(slug)
+  // The readiness target, not the pass mark: telling a reader to book at the pass
+  // mark leaves no headroom, and it contradicted the target stated elsewhere on
+  // the same page.
+  const mockTarget = getMockExamTargetLabel(slug)
   const weightage = getExamWeightage(slug)
   const topSections = weightage ? [...weightage].sort((a, b) => b.percentage - a.percentage).slice(0, 2) : []
   const topSectionShare = topSections.reduce((sum, s) => sum + s.percentage, 0)
@@ -141,7 +145,7 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
               <li>Do timed question sets. Build pacing and confidence.</li>
               <li>Review why wrong answers are wrong. It improves scenario reasoning.</li>
               <li>
-                Book the exam once your mock scores are steady{logistics?.passingScore ? ` above ${logistics.passingScore}` : ''}.
+                Book the exam once your mock scores are steady{mockTarget ? ` at ${mockTarget}` : ''}.
               </li>
             </ul>
             <div className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3">

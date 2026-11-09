@@ -443,8 +443,8 @@ function getLegacyCertMetaTitle(slug: string): string {
     'business-analyst': `Business Analyst Certification: Free Practice (${TITLE_YEAR})`,
     'sales-cloud': `Free Sales Cloud (CRT-251) Practice Exam ${RELEASE_YEAR}`,
     'developer-2': `Free Platform Developer II (PD2) Practice Exam ${RELEASE_YEAR}`,
-    'cpq-administrator': `CPQ Admin Certification: Free Practice (${TITLE_YEAR})`,
-    'pardot-consultant': `Free Pardot Consultant (CRT-302) Practice Exam ${RELEASE_YEAR}`,
+    'cpq-administrator': `CPQ Admin Certification Study Guide & Practice`,
+    'pardot-consultant': `Pardot Consultant (CRT-302) Study Guide & Practice`,
     'pardot-specialist': `Free Pardot Specialist Certification Practice ${RELEASE_YEAR}`,
     'experience-cloud': `Free Experience Cloud (CRT-271) Practice Exam ${RELEASE_YEAR}`,
     'mulesoft-integration-foundations': `Free MuleSoft Foundations Practice Exam ${RELEASE_YEAR}`,
@@ -464,8 +464,8 @@ function getLegacyCertMetaTitle(slug: string): string {
     'ai-associate': `Salesforce AI Associate Certification Guide ${RELEASE_YEAR}`,
     'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP Practice Exam ${RELEASE_YEAR}`,
     'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP Practice Exam ${RELEASE_YEAR}`,
-    'b2b-solution-architect': `Free B2B Solution Architect Practice Exam ${RELEASE_YEAR}`,
-    'b2c-commerce-architect': `Free B2C Commerce Architect Practice Exam ${RELEASE_YEAR}`,
+    'b2b-solution-architect': `B2B Solution Architect Study Guide & Practice Exam`,
+    'b2c-commerce-architect': `B2C Commerce Architect Study Guide & Practice Exam`,
     'b2c-commerce-developer': `Free B2C Commerce Dev (CRT-500) Practice Exam ${RELEASE_YEAR}`,
     'b2c-solution-architect': `Free B2C Solution Architect Practice Exam ${RELEASE_YEAR}`,
     'communications-cloud-ap': `Free Agentforce Communications AP Practice Exam ${RELEASE_YEAR}`,
@@ -503,7 +503,7 @@ function getLegacyCertMetaTitle(slug: string): string {
     'mulesoft-platform-architect': `Free MuleSoft Platform Arch Practice Exam ${RELEASE_YEAR}`,
     'net-zero-cloud-ap': `Free Net Zero Cloud AP Practice Exam ${RELEASE_YEAR}`,
     'nonprofit-cloud': `Free Nonprofit Cloud Consult Practice Exam ${RELEASE_YEAR}`,
-    'nonprofit-success-pack-consultant': `Free NPSP Consultant Practice Exam ${RELEASE_YEAR}`,
+    'nonprofit-success-pack-consultant': `NPSP Consultant Study Guide & Practice Exam ${RELEASE_YEAR}`,
     'omnistudio-consultant': `Free OmniStudio Consultant Practice Exam ${RELEASE_YEAR}`,
     'omnistudio-developer': `Free OmniStudio Developer Practice Exam ${RELEASE_YEAR}`,
     'order-management-admin-ap': `Free Order Mgmt Admin AP Practice Exam ${RELEASE_YEAR}`,
@@ -711,7 +711,66 @@ function expandTitleAbbreviations(label: string): string {
     .trim()
 }
 
-function makePracticeExamTitle(label: string, code?: string): string {
+/**
+ * The 50 credentials whose standalone /<name>-study-guide page was merged into
+ * this hub in November 2026. Their titles must carry "Study Guide" as well as
+ * the practice-exam intent: we 301'd a page titled "X Study Guide" into this
+ * one, and a title that only says "Practice Exam" drops that intent.
+ */
+export const SLUGS_WITH_MERGED_STUDY_GUIDE = new Set<string>([
+  'advanced-administrator',
+  'agentforce-specialist',
+  'ai-associate',
+  'app-builder',
+  'application-architect',
+  'b2b-solution-architect',
+  'b2c-commerce-architect',
+  'b2c-commerce-developer',
+  'b2c-solution-architect',
+  'business-analyst',
+  'cpq-administrator',
+  'crm-analytics-einstein-discovery-consultant',
+  'data-360-consultant',
+  'data-architect',
+  'dev-lifecycle-deployment-architect',
+  'developer-1',
+  'developer-2',
+  'education-cloud-consultant',
+  'email-specialist',
+  'experience-cloud',
+  'field-service',
+  'identity-access-management-architect',
+  'integration-architect',
+  'javascript-developer-i',
+  'marketing-cloud-consultant',
+  'marketing-cloud-engagement-admin',
+  'marketing-cloud-engagement-developer',
+  'marketing-cloud-engagement-foundations',
+  'mulesoft-developer-i',
+  'mulesoft-developer-ii',
+  'mulesoft-integration-architect',
+  'mulesoft-integration-foundations',
+  'mulesoft-platform-architect',
+  'nonprofit-cloud',
+  'nonprofit-success-pack-consultant',
+  'omnistudio-consultant',
+  'omnistudio-developer',
+  'pardot-consultant',
+  'pardot-specialist',
+  'platform-foundations',
+  'revenue-cloud-consultant',
+  'sales-cloud',
+  'service-cloud',
+  'sharing-visibility-architect',
+  'slack-administrator',
+  'strategy-designer',
+  'system-architect',
+  'tableau-data-analyst',
+  'technical-architect',
+  'ux-designer'
+])
+
+function makePracticeExamTitle(label: string, code?: string, dualIntent = false): string {
   const prefix = code ? `${code} ` : ''
   const expanded = expandTitleAbbreviations(label)
   const variants = [...new Set([expanded, label, compactPracticeTitleLabel(label)])]
@@ -719,7 +778,30 @@ function makePracticeExamTitle(label: string, code?: string): string {
     !code && acceptsSalesforceQualifier(label)
       ? [...variants.map((name) => `Salesforce ${name}`), ...variants]
       : variants
-  const candidates = [...new Set(names)].flatMap((name) => [
+  const unique = [...new Set(names)]
+
+  if (dualIntent) {
+    // Richest form that still fits the project's 50-60 character budget, so a
+    // page that absorbed a study guide says so without being truncated in the
+    // SERP. Ordered longest to shortest; the first that fits wins.
+    const dual = unique.flatMap((name) => [
+      `${prefix}${name} Study Guide & Practice Exam ${TITLE_YEAR}`,
+      `${prefix}${name}: Study Guide & Practice Exam`,
+      `${prefix}${name} Study Guide & Practice Exam`,
+      `${prefix}${name} Study Guide & Practice Test`,
+      `${prefix}${name} Study Guide & Free Practice`,
+      `${prefix}${name}: Study Guide & Practice`,
+      `${prefix}${name} Study Guide & Practice`,
+      `${prefix}${name} Study Guide & Mock Exam`,
+      `${prefix}${name} Study Guide ${TITLE_YEAR}`,
+      `${prefix}${name}: Study Guide ${TITLE_YEAR}`,
+      `${prefix}${name} Certification Study Guide`,
+    ])
+    const dualTitle = dual.find((c) => c.length >= 50 && c.length <= 60)
+    if (dualTitle) return dualTitle
+  }
+
+  const candidates = unique.flatMap((name) => [
     `${prefix}${name} Practice Exam ${TITLE_YEAR}`,
     `${prefix}${name}: Free Practice Exam ${TITLE_YEAR}`,
     `${prefix}${name} Certification Practice Exam ${TITLE_YEAR}`,
@@ -738,20 +820,21 @@ function getCertMetaTitle(slug: string): string {
   // Administrator: /adm-201-study-guide and /adm-201-exam-tips were merged into
   // this page in November 2026, so the title carries both the current official
   // name and the legacy ADM-201 code that candidates still search for.
-  if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Study Guide'
+  if (slug === 'administrator') return 'Salesforce Platform Admin (ADM-201) Study Guide & Practice'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
     return completeSeoTitle(legacyTitle, ['Exam Guide', 'Study Notes'])
   }
 
+  const dualIntent = SLUGS_WITH_MERGED_STUDY_GUIDE.has(slug)
   const examCode = getRecognizedExamCode(slug)
   if (examCode) {
     const label = getExamCodeTitleLabel(slug)
-    if (label) return makePracticeExamTitle(label, examCode)
+    if (label) return makePracticeExamTitle(label, examCode, dualIntent)
   }
 
-  return makePracticeExamTitle(getReadablePracticeTitleLabel(legacyTitle))
+  return makePracticeExamTitle(getReadablePracticeTitleLabel(legacyTitle), undefined, dualIntent)
 }
 
 /** Complete descriptions that avoid unverified exam logistics and preserve status notices. */

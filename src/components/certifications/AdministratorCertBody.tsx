@@ -160,7 +160,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 </p>
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
                   <li><strong>60 multiple-choice questions</strong> in 105 minutes, roughly 1.75 minutes per question.</li>
-                  <li><strong>68% passing score</strong>: you can miss up to 19 questions and still pass.</li>
+                  <li><strong>68% passing score</strong>: you need 41 of 60 correct, so you can miss up to 19 and still pass.</li>
                   <li><strong>No coding required</strong>: the exam is entirely declarative (clicks, not code).</li>
                   <li><strong>Broad but not deep</strong>: expect questions across all 7 exam sections, weighted by the official outline.</li>
                 </ul>
@@ -193,7 +193,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Time Limit</p>
-                    <p className="text-sm text-gray-700">105 minutes (~1.6 minutes per question)</p>
+                    <p className="text-sm text-gray-700">105 minutes (~1.75 minutes per question)</p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Passing Score</p>

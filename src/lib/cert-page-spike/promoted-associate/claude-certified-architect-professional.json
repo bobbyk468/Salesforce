@@ -21,9 +21,7 @@
     "heading": "Is the Claude Certified Architect Professional Exam Hard?",
     "summary": "The CCAR-P is the hardest exam in Anthropic’s certification program. It is built for senior architects who have designed and operated enterprise-scale AI platforms, not prototypes or single-team deployments. Every question assumes you are balancing competing organizational constraints: compliance requirements that vary by geography, SLAs that differ by use case, six-figure monthly budgets, and multi-agent systems that must self-heal without human intervention. Candidates without genuine enterprise AI architecture experience will find this exam extremely challenging.",
     "bullets": [
-      "<strong>65 multiple-choice questions</strong> in 120 minutes, under two minutes per question, which is demanding given the complexity of enterprise architecture scenarios.",
       "<strong>720/1000 passing score</strong>: strong performance across all five domains is required, with no single section easy enough to carry a weak area.",
-      "<strong>Enterprise Architecture and Cost Governance together account for 45%</strong>: expect questions involving multi-region deployments, per-team cost attribution, intelligent model routing, and annual budget forecasting.",
       "<strong>Production-scale experience is non-negotiable</strong>: the exam tests decisions that only arise when AI systems serve thousands of users across multiple compliance jurisdictions with real financial consequences."
     ],
     "passRateGuidance": "If you can design a multi-region AI platform with per-team cost attribution. Build a defense-in-depth security architecture for regulated data, and explain when to use competitive evaluation vs. hierarchical agent teams, you are ready to book."
@@ -49,11 +47,11 @@
       "cost": "$175"
     },
     "topics": [
-      "Enterprise Architecture (25%)",
-      "Advanced Multi-Agent Systems (20%)",
-      "Security Architecture (18%)",
-      "Production Reliability (17%)",
-      "Cost Optimization and Governance (20%)"
+      "Enterprise Architecture",
+      "Advanced Multi-Agent Systems",
+      "Security Architecture",
+      "Production Reliability",
+      "Cost Optimization and Governance"
     ]
   },
   "keyConcepts": {

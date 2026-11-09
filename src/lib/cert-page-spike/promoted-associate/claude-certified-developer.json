@@ -21,9 +21,7 @@
     "heading": "Is the Claude Certified Developer Exam Hard?",
     "summary": "The CCDV-F is a hands-on developer exam, not a theory test. One-third of the questions live in the Applications and Integration domain, which means you need real experience calling the Claude API, parsing structured output, handling errors, and managing context windows. Candidates who have shipped a working Claude-powered feature, even a side project, generally find the exam straightforward; those who have only read the docs without building anything tend to struggle.",
     "bullets": [
-      "<strong>53 multiple-choice questions</strong> in 120 minutes, about 2 minutes 15 seconds per question, with enough time to reason through code-scenario questions.",
       "<strong>720/1000 passing score</strong>: consistent performance across all five domains matters more than acing a single section.",
-      "<strong>Applications and Integration dominates at 33%</strong>: expect code snippets where changing one API parameter alters the output, and scenarios testing streaming, rate limits, and structured JSON parsing.",
       "<strong>Hands-on building is the best preparation</strong>: candidates who have built and debugged a real Claude integration report the exam feels like a review of problems they already solved."
     ],
     "passRateGuidance": "If you can build a working tool-use loop, debug a 529 response, and write an eval suite for your prompts, you are ready to book."
@@ -49,11 +47,11 @@
       "cost": "$125"
     },
     "topics": [
-      "Applications and Integration (33%)",
-      "Prompt Engineering (20%)",
-      "API and SDK Usage (17%)",
-      "Tool Use and Agents (15%)",
-      "Evaluation and Testing (15%)"
+      "Applications and Integration",
+      "Prompt Engineering",
+      "API and SDK Usage",
+      "Tool Use and Agents",
+      "Evaluation and Testing"
     ]
   },
   "keyConcepts": {

@@ -21,9 +21,7 @@
     "heading": "Is the Claude Certified Architect Foundations Exam Hard?",
     "summary": "The CCAR-F is a significant step up from the Developer exam. It tests system-design judgment, decomposing problems into agent workflows, choosing MCP transport protocols, configuring Claude Code for team-wide consistency, and designing prompt architectures that stay reliable under production load. Candidates who have designed and operated a real multi-agent system find the exam manageable; those with only single-agent or prototype experience will find the orchestration and reliability domains challenging.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes, two minutes per question, which is tight for scenario-heavy architecture questions that require evaluating tradeoffs.",
       "<strong>720/1000 passing score</strong>: you must perform well across all five domains, especially the heavily weighted Agentic Architecture section.",
-      "<strong>Agentic Architecture carries the most weight at 27%</strong>: expect multi-step orchestration scenarios where you must choose between single-agent, hub-and-spoke, and pipeline patterns based on real constraints.",
       "<strong>Hands-on system design experience is essential</strong>: candidates who have built an MCP server, configured Claude Code at the team level, and debugged a multi-agent failure loop report the exam aligns closely with real-world problems."
     ],
     "passRateGuidance": "If you can design a multi-agent workflow, explain when to use stdio vs. SSE transport for MCP, and write a CLAUDE.md hierarchy that resolves cleanly, you are ready to book."
@@ -49,11 +47,11 @@
       "cost": "$125"
     },
     "topics": [
-      "Agentic Architecture (27%)",
-      "Claude Code Configuration (20%)",
-      "Tool Design and MCP (18%)",
-      "Prompt Architecture (20%)",
-      "Reliability and Context (15%)"
+      "Agentic Architecture",
+      "Claude Code Configuration",
+      "Tool Design and MCP",
+      "Prompt Architecture",
+      "Reliability and Context"
     ]
   },
   "keyConcepts": {

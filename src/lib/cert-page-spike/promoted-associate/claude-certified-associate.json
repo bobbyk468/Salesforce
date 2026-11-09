@@ -21,9 +21,7 @@
     "heading": "Is the Claude Certified Associate Exam Hard?",
     "summary": "The CCAO-F is Anthropic’s most accessible exam, but don’t mistake entry-level for easy. It tests practical judgment, spotting hallucinations, choosing the right Claude model for a task, and knowing when data sensitivity demands enterprise-grade controls; which means candidates who only skim the surface tend to stumble on the response-quality and governance sections.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes, roughly two minutes per question, which is comfortable for most candidates.",
       "<strong>720/1000 passing score</strong>: you need consistent accuracy across all seven domains, not just strength in one area.",
-      "<strong>Response Quality carries the most weight at 21%</strong>: identifying hallucinations, omissions, and fabricated citations is the single biggest differentiator between passing and failing.",
       "<strong>No coding required</strong>: the exam is designed for non-technical professionals, but two weeks of daily hands-on Claude usage is the minimum preparation most successful candidates report."
     ],
     "passRateGuidance": "If you can consistently spot errors in Claude’s output and explain why one prompting approach outperforms another, you are ready to book."
@@ -49,13 +47,13 @@
       "cost": "$99"
     },
     "topics": [
-      "Prompt Writing (14%)",
-      "Response Quality (21%)",
-      "Model & Product Fit (12%)",
-      "Workflow Design (16%)",
-      "Project Setup (12%)",
-      "Governance (15%)",
-      "Troubleshooting (10%)"
+      "Prompt Writing",
+      "Response Quality",
+      "Model & Product Fit",
+      "Workflow Design",
+      "Project Setup",
+      "Governance",
+      "Troubleshooting"
     ]
   },
   "keyConcepts": {

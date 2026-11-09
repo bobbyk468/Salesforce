@@ -393,8 +393,8 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
                 The Salesforce Platform Developer I exam is considered <strong className="text-gray-900">moderately difficult</strong>: harder than ADM-201, but accessible to candidates with 3–6 months of real Apex development experience. The challenge is that most questions present actual code and require you to reason about governor limits, async patterns, and trigger behaviour under realistic conditions.
               </p>
               <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
-                <li><strong>60 scored questions</strong> in 105 minutes, roughly 1.105 minutes per question.</li>
-                <li><strong>68% passing score</strong>: you can miss up to 60 questions and still pass.</li>
+                <li><strong>60 scored questions</strong> in 105 minutes, roughly 1.75 minutes per question.</li>
+                <li><strong>68% passing score</strong>: you need 41 of 60 correct, so you can miss up to 19 and still pass.</li>
                 <li><strong>Code-heavy</strong>: expect 30–40% of questions to include Apex code snippets.</li>
                 <li><strong>Scenario-based</strong>: most questions describe a business or technical requirement and ask for the right approach.</li>
                 <li><strong>No multiple-select trick</strong>: PD1 uses single-best-answer format (unlike ADM-201 which has some multiple-select).</li>
