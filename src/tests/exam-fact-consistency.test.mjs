@@ -126,7 +126,11 @@ test('retired credentials are not recommended as a starting point', () => {
     for (const m of src.matchAll(/.{0,70}AI Associate.{0,70}/g)) {
       const t = m[0].replace(/\s+/g, ' ')
       if (/retired|historical|archiv|no longer/i.test(t)) continue
-      if (/easiest|start(?:ing)?\b|first cert|begin with|ideal first/i.test(t)) {
+      if (
+        /easiest|start(?:ing)?\b|first cert|begin with|ideal first|entry point|lowest-(?:cost|risk)|recommended first|take first/i.test(
+          t,
+        )
+      ) {
         offenders.push(`${file}: ${t.trim()}`)
       }
     }

@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: 'Can I get a Salesforce certification with no experience?',
-    answer: 'Yes, the three associate-level certifications ($75 each) are designed for beginners with no prior experience: AI Associate, Salesforce Platform Foundations, and MuleSoft Integration Foundations. The AI Associate is the most widely recommended beginner certification. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
+    answer: 'Yes, the three associate-level certifications ($75 each) are designed for beginners with no prior experience: Salesforce Platform Foundations, and MuleSoft Integration Foundations. The AI Associate is the most widely recommended beginner certification. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
   },
   {
     question: 'Is the Salesforce Administrator certification the best first cert?',
@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'How long does it take to get the first Salesforce certification?',
-    answer: 'For AI Associate ($75): 2–4 weeks of part-time Trailhead study. For Administrator ($200): 2–4 months of part-time study (40–80 hours) with hands-on practice. For Platform Developer I ($200): 3–5 months for developers with programming experience. The timeline depends heavily on your starting knowledge. Complete beginners to Salesforce need more time than professionals who already use Salesforce daily at work.',
+    answer: 'For Platform Foundations ($75): 2–4 weeks of part-time Trailhead study. For Administrator ($200): 2–4 months of part-time study (40–80 hours) with hands-on practice. For Platform Developer I ($200): 3–5 months for developers with programming experience. The timeline depends heavily on your starting knowledge. Complete beginners to Salesforce need more time than professionals who already use Salesforce daily at work.',
   },
 ]
 
@@ -120,12 +120,12 @@ export default function WhichSalesforceCertificationFirstPage() {
           {
             role: 'I want to test the waters (not sure yet)',
             badge: 'bg-amber-100 text-amber-800',
-            first: 'AI Associate',
+            first: 'Platform Foundations',
             fee: '$75',
             time: '2–4 weeks',
-            why: 'AI Associate is the lowest-cost, lowest-risk entry point. It validates that Salesforce interests you and gives you a credential while deciding your path. No platform experience required.',
+            why: 'Platform Foundations is the lowest-cost, lowest-risk entry point. It validates that Salesforce interests you and gives you a credential while deciding your path. No platform experience required.',
             next: 'Administrator (ADM-201) after confirming Salesforce is your direction',
-            href: '/certifications/ai-associate',
+            href: '/certifications/platform-foundations',
           },
           {
             role: 'I work in marketing (Salesforce context)',
@@ -169,7 +169,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                { cert: 'AI Associate', fee: '$75', for: 'Anyone, universal entry point, no experience needed' },
+                { cert: 'AI Associate (retired Feb 2026)', fee: '$75', for: 'Retired; listed for historical reference only' },
                 { cert: 'Platform Foundations', fee: '$75', for: 'Beginners building toward Administrator credential' },
                 { cert: 'MuleSoft Integration Foundations', fee: '$75', for: 'Integration and API beginners' },
                 { cert: 'Salesforce Administrator (ADM-201)', fee: '$200', for: 'Admin, consultant, BA career paths' },
@@ -211,8 +211,8 @@ export default function WhichSalesforceCertificationFirstPage() {
         <h2 className="text-2xl font-bold mb-2">Start Free Practice Questions</h2>
         <p className="text-white mb-6">Free practice questions for every Salesforce certification, no signup required.</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/certifications/ai-associate" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
-            AI Associate Practice
+          <Link href="/certifications/platform-foundations" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+            Platform Foundations Practice
           </Link>
           <Link href="/certifications/administrator" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
             Administrator Practice
