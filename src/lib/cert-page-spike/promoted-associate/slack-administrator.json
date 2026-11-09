@@ -44,7 +44,7 @@
     "description": "This exam tests how you set up and run Slack: workspaces and channels, user accounts and roles, permissions, apps, security and compliance settings, Enterprise Grid and Workflow Builder.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "105 min",
       "cost": "$200"
     },

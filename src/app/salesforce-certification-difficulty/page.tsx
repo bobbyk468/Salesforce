@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the easiest Salesforce certification?',
-    answer: 'The Salesforce AI Associate is widely considered the easiest Salesforce certification. It requires no prior Salesforce experience, tests conceptual knowledge of AI (not technical implementation), has only 40 questions, a 70-minute time limit, and a $75 exam fee. The passing score is ~65%. It is the ideal first certification for anyone new to the Salesforce ecosystem, particularly non-technical professionals (marketers, sales reps, business analysts).',
+    answer: 'The Salesforce AI Associate is widely considered the easiest Salesforce certification. It requires no prior Salesforce experience, tests conceptual knowledge of AI (not technical implementation), has only 40 questions, a 70-minute time limit, and a $75 exam fee. The passing score is 65%. It is the ideal first certification for anyone new to the Salesforce ecosystem, particularly non-technical professionals (marketers, sales reps, business analysts).',
   },
   {
     question: 'What is the hardest Salesforce certification?',
@@ -67,8 +67,8 @@ const tiers = [
     borderColor: 'border-green-200',
     description: 'Conceptual, minimal Salesforce experience required. Ideal starting points.',
     certs: [
-      { name: 'AI Associate', fee: '$75', questions: '40', passing: '~65%', note: 'No experience needed. Conceptual AI & Einstein knowledge.' },
-      { name: 'Platform Foundations', fee: '$75', questions: '40', passing: '~65%', note: 'Broad Salesforce overview. Good for non-technical users.' },
+      { name: 'AI Associate', fee: '$75', questions: '40', passing: '65%', note: 'No experience needed. Conceptual AI & Einstein knowledge.' },
+      { name: 'Platform Foundations', fee: '$75', questions: '40', passing: '62%', note: 'Broad Salesforce overview. Good for non-technical users.' },
       { name: 'MuleSoft Integration Foundations', fee: '$75', questions: '40', passing: '70%', note: 'Conceptual integration. No Anypoint Studio required.' },
     ],
   },
@@ -79,7 +79,7 @@ const tiers = [
     description: 'Foundational certifications. Require 8–12 weeks of study with no prior experience.',
     certs: [
       { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '68%', note: 'Broad but not deep. Most common first cert.' },
-      { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '~65%', note: 'Declarative Salesforce. Assumes ADM-201 knowledge.' },
+      { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '73%', note: 'Declarative Salesforce. Assumes ADM-201 knowledge.' },
       { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '~73%', note: 'Higher passing score. AI/agent concepts are new for most.' },
       { name: 'Tableau Data Analyst', fee: '$250', questions: '55', passing: '75%', note: 'Highest passing score. Hands-on Tableau required.' },
     ],
@@ -90,11 +90,11 @@ const tiers = [
     borderColor: 'border-orange-200',
     description: 'Require foundational credentials + hands-on project experience.',
     certs: [
-      { name: 'Platform Developer I (PD1)', fee: '$200', questions: '60', passing: '~65%', note: 'Apex, LWC, governor limits. Steep for non-developers.' },
-      { name: 'Sales Cloud Consultant', fee: '$200', questions: '60', passing: '~65%', note: 'Scenario-heavy. Requires ADM-201 + Sales Cloud experience.' },
-      { name: 'Service Cloud Consultant', fee: '$200', questions: '60', passing: '~65%', note: 'Omni-Channel, Knowledge, entitlements. Project experience needed.' },
-      { name: 'Marketing Cloud Email Specialist', fee: '$200', questions: '60', passing: '~65%', note: 'MC sandbox experience essential. Deliverability is tricky.' },
-      { name: 'CPQ Administrator', fee: '$200', questions: '60', passing: '~65%', note: 'Pricing cascade complexity. Hands-on CPQ config needed.' },
+      { name: 'Platform Developer I (PD1)', fee: '$200', questions: '60', passing: '68%', note: 'Apex, LWC, governor limits. Steep for non-developers.' },
+      { name: 'Sales Cloud Consultant', fee: '$200', questions: '60', passing: '73%', note: 'Scenario-heavy. Requires ADM-201 + Sales Cloud experience.' },
+      { name: 'Service Cloud Consultant', fee: '$200', questions: '60', passing: '78%', note: 'Omni-Channel, Knowledge, entitlements. Project experience needed.' },
+      { name: 'Marketing Cloud Email Specialist', fee: '$200', questions: '60', passing: '67%', note: 'MC sandbox experience essential. Deliverability is tricky.' },
+      { name: 'CPQ Administrator', fee: '$200', questions: '60', passing: '65%', note: 'Pricing cascade complexity. Hands-on CPQ config needed.' },
       { name: 'MuleSoft Developer I', fee: '$200', questions: '60', passing: '70%', note: 'DataWeave + flow design. Anypoint Studio required.' },
     ],
   },
@@ -104,12 +104,12 @@ const tiers = [
     borderColor: 'border-red-200',
     description: 'Advanced credentials. Require multiple years of Salesforce experience.',
     certs: [
-      { name: 'Platform Developer II (PD2)', fee: '$200', questions: '60', passing: '~65%', note: 'Advanced Apex patterns, integration, performance. Requires PD1.' },
-      { name: 'Field Service Consultant', fee: '$200', questions: '60', passing: '~65%', note: 'FSL managed package is complex. Requires Service Cloud foundation.' },
+      { name: 'Platform Developer II (PD2)', fee: '$200', questions: '60', passing: '70%', note: 'Advanced Apex patterns, integration, performance. Requires PD1.' },
+      { name: 'Field Service Consultant', fee: '$200', questions: '60', passing: '63%', note: 'FSL managed package is complex. Requires Service Cloud foundation.' },
       { name: 'Integration Architect', fee: '$400', questions: '60', passing: '67%', note: 'API design, middleware, async patterns. Deep technical knowledge.' },
       { name: 'Data Architect', fee: '$400', questions: '60', passing: '~68%', note: 'MDM, data modelling, large data volumes, ETL strategy.' },
       { name: 'MuleSoft Developer II', fee: '$200', questions: '60', passing: '70%', note: 'Custom policies, advanced DataWeave, batch. Requires Dev I.' },
-      { name: 'Revenue Cloud Consultant', fee: '$200', questions: '60', passing: '~65%', note: 'Billing + CPQ overlap. Complex quote-to-cash knowledge needed.' },
+      { name: 'Revenue Cloud Consultant', fee: '$200', questions: '60', passing: '63%', note: 'Billing + CPQ overlap. Complex quote-to-cash knowledge needed.' },
     ],
   },
   {

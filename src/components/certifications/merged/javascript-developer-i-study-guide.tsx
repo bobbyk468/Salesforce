@@ -40,7 +40,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce JavaScript Developer I certification?',
-    answer: 'The Salesforce JavaScript Developer I certification validates JavaScript skills relevant to building Salesforce Lightning Web Components (LWC) and client-side solutions. It tests JavaScript fundamentals, ES6+ features, asynchronous programming, browser APIs, and testing, not Salesforce-specific APIs. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee.',
+    answer: 'The Salesforce JavaScript Developer I certification validates JavaScript skills relevant to building Salesforce Lightning Web Components (LWC) and client-side solutions. It tests JavaScript fundamentals, ES6+ features, asynchronous programming, browser APIs, and testing, not Salesforce-specific APIs. The exam has 60 questions, 105 minutes, 65% passing score, and a $200 fee.',
   },
   {
     question: 'Do I need Salesforce experience for the JavaScript Developer I exam?',
@@ -73,7 +73,7 @@ export default function JavascriptDeveloperIStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Passing Score', value: '65%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

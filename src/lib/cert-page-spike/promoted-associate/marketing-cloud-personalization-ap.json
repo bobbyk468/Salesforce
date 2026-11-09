@@ -22,7 +22,7 @@
     "summary": "The Marketing Cloud Personalization AP exam is moderately difficult. It tests real-time personalization concepts including web SDK implementation, catalog configuration, Einstein Recipes, and A/B testing. Candidates who have not implemented the Personalization (Interaction Studio) web beacon and configured campaigns will struggle.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong>: standard for AP-level exams.",
+      "<strong>70% passing score</strong>: standard for AP-level exams.",
       "<strong>Technical SDK knowledge</strong>: you need to understand how the web SDK (Evergage beacon) captures behavioral data and sends events to the Personalization platform.",
       "<strong>ML-driven recommendations</strong>: expect questions on Einstein Recipe types (Collaborative Filtering, Content Affinity, User Trending) and how to configure Strategies with boosters and exclusions."
     ],

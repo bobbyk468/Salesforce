@@ -22,7 +22,7 @@
     "summary": "The Engagement Administrator exam is moderately difficult. It tests platform setup, security configuration, subscriber data management, and deliverability best practices. You need hands-on experience with Business Unit architecture, role-based permissions, and Sender Authentication Packages.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong>: slightly lower than some consultant exams, but the content is operationally deep.",
+      "<strong>67% passing score</strong>: slightly lower than some consultant exams, but the content is operationally deep.",
       "<strong>Admin-specific focus</strong>: expect questions on Business Unit setup, IP warming, SAP configuration, and API security that pure marketers may not encounter.",
       "<strong>Deliverability knowledge required</strong>: SPF, DKIM, DMARC, Reply Mail Management, and IP reputation monitoring are all tested."
     ],

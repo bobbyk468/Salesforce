@@ -49,7 +49,7 @@ export const faqItems = [
   },
   {
     question: 'What is the passing score for the Tableau Data Analyst exam?',
-    answer: 'The Tableau Certified Data Analyst requires a 65% passing score, significantly higher than the ~65% required for most Salesforce certifications. With 60 questions, this means you need to answer approximately 41+ questions correctly. Plan for a more demanding exam than typical Salesforce credentials and aim for 75%+ on practice exams before scheduling.',
+    answer: 'The Tableau Certified Data Analyst requires a 65% passing score, significantly higher than the 65% required for most Salesforce certifications. With 60 questions, this means you need to answer approximately 41+ questions correctly. Plan for a more demanding exam than typical Salesforce credentials and aim for 75%+ on practice exams before scheduling.',
   },
   {
     question: 'What is the difference between joins, unions, and relationships in Tableau?',

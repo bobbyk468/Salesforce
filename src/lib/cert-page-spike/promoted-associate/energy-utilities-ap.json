@@ -22,7 +22,7 @@
     "summary": "The Energy &amp; Utilities AP exam is moderately difficult. It tests utility-specific concepts including the service point data model, OmniStudio-powered customer journeys, meter-to-cash workflows, and billing system integration. Candidates without exposure to utility industry operations will find the domain terminology and regulatory context challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong>: roughly 39 correct answers needed.",
+      "<strong>60% passing score</strong>: roughly 39 correct answers needed.",
       "<strong>Industry-specific data model</strong>: you must understand premises, service points, meters, and how customer billing accounts relate to physical service locations.",
       "<strong>OmniStudio and integration knowledge</strong>: questions cover OmniScripts for start/stop service, FlexCards for agent consoles, and integration patterns with external billing systems like SAP IS-U."
     ],

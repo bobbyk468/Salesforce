@@ -22,7 +22,7 @@
     "summary": "The Advanced Cross-Channel AP exam is moderately difficult. It goes well beyond single-channel email marketing and requires deep knowledge of Journey Builder’s advanced features, Mobile Studio, Advertising Studio, and Einstein engagement tools. Candidates who have only worked with Email Studio will find this exam challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong>: standard for AP-level exams.",
+      "<strong>no published passing score</strong>: standard for AP-level exams.",
       "<strong>Multi-channel depth</strong>: you need hands-on experience with MobileConnect (SMS), MobilePush, Advertising Studio audience sync, and cross-channel Journey Builder design.",
       "<strong>Einstein features tested</strong>: Engagement Scoring, Send Time Optimization, and Content Selection are all fair game."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam goes beyond single-channel sends. You will need to coordinate Journey Builder across email, SMS, push, and advertising while using Einstein for engagement scoring and send-time optimization.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$150"
     },

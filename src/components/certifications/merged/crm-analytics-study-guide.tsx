@@ -40,7 +40,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is Salesforce CRM Analytics?',
-    answer: 'CRM Analytics (formerly Tableau CRM, formerly Einstein Analytics) is Salesforce\'s native business intelligence and analytics platform. It allows users to connect Salesforce and external data, build interactive dashboards, and surface AI-powered insights within the Salesforce UI. The CRM Analytics and Einstein Discovery Consultant certification validates skills in designing, building, and securing analytics solutions. The exam has 60 questions, 105-minute time limit, ~65% passing score, and a $200 fee.',
+    answer: 'CRM Analytics (formerly Tableau CRM, formerly Einstein Analytics) is Salesforce\'s native business intelligence and analytics platform. It allows users to connect Salesforce and external data, build interactive dashboards, and surface AI-powered insights within the Salesforce UI. The CRM Analytics and Einstein Discovery Consultant certification validates skills in designing, building, and securing analytics solutions. The exam has 60 questions, 105-minute time limit, 65% passing score, and a $200 fee.',
   },
   {
     question: 'What is the difference between a dataflow and a recipe in CRM Analytics?',
@@ -71,7 +71,7 @@ export default function CrmAnalyticsStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '90 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Passing Score', value: '65%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

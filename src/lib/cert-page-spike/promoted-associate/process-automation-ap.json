@@ -44,7 +44,7 @@
     "description": "This exam tests how you design automation in Salesforce: choosing the right flow type, handling errors, staying within limits, approvals, and knowing when Apex is the better tool.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$150"
     },

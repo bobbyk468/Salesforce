@@ -124,7 +124,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           {
             name: 'JavaScript Developer I',
             href: '/certifications/javascript-developer-i',
-            fee: '$200', questions: '60', time: '105 min', passing: '~65%',
+            fee: '$200', questions: '60', time: '105 min', passing: '65%',
             focus: 'Pure JavaScript language skills',
             best: 'Front-end developers, LWC specialists, JS engineers',
             skills: ['ES6+ syntax, closures, classes', 'Promises & async/await', 'DOM events & browser APIs', 'Jest testing framework', 'Node.js basics'],
@@ -132,7 +132,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           {
             name: 'Platform Developer I (PD1)',
             href: '/certifications/developer-1',
-            fee: '$200', questions: '60', time: '105 min', passing: '~65%',
+            fee: '$200', questions: '60', time: '105 min', passing: '68%',
             focus: 'Salesforce platform development',
             best: 'Salesforce developers, Apex engineers, full-stack Salesforce devs',
             skills: ['Apex triggers & classes', 'SOQL & SOSL', 'Governor limits', 'Lightning Web Components (Salesforce)', 'Change sets & SFDX deployment'],

@@ -19,10 +19,10 @@
   },
   "examDifficulty": {
     "heading": "Is the B2C Commerce Developer Exam Hard?",
-    "summary": "The B2C Commerce Developer exam is considered one of the harder Salesforce developer certifications. The ~65% passing score is moderate, but the exam covers the full SFCC stack, from SFRA architecture and ISML templates to OCAPI/SCAPI integration and Business Manager configuration, demanding broad and deep hands-on experience.",
+    "summary": "The B2C Commerce Developer exam is considered one of the harder Salesforce developer certifications. The 65% passing score is moderate, but the exam covers the full SFCC stack, from SFRA architecture and ISML templates to OCAPI/SCAPI integration and Business Manager configuration, demanding broad and deep hands-on experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong>: moderate on paper, but the breadth of topics (SFRA, scripting, APIs, data model, deployment) makes it demanding.",
+      "<strong>65% passing score</strong>: moderate on paper, but the breadth of topics (SFRA, scripting, APIs, data model, deployment) makes it demanding.",
       "<strong>Full-stack depth</strong>: questions span server-side controllers, ISML templates, client-side JavaScript, and Business Manager operations, so you cannot skip any layer.",
       "<strong>Hands-on SFRA experience essential</strong>: real project experience with SFRA controller development and at least one OCAPI or SCAPI integration is the strongest preparation."
     ],

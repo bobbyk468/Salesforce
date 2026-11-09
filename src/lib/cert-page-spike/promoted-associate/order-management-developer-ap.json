@@ -19,10 +19,10 @@
   },
   "examDifficulty": {
     "heading": "Is the Order Management Developer AP Exam Hard?",
-    "summary": "The Order Management Developer AP is moderately difficult. The ~65% passing score is standard, but the exam tests deep technical skills including OMS Connect APIs, Flow orchestration, Platform Events, and custom fulfillment adapter development that require hands-on coding experience.",
+    "summary": "The Order Management Developer AP is moderately difficult. The no published passing score is standard, but the exam tests deep technical skills including OMS Connect APIs, Flow orchestration, Platform Events, and custom fulfillment adapter development that require hands-on coding experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong>: standard threshold, but the technical depth of OMS API and Apex integration questions makes it harder than the number suggests.",
+      "<strong>no published passing score</strong>: standard threshold, but the technical depth of OMS API and Apex integration questions makes it harder than the number suggests.",
       "<strong>API-level knowledge required</strong>: questions test specific ConnectApi methods, REST API endpoints, and Platform Event patterns rather than high-level concepts.",
       "<strong>Integration complexity</strong>: the exam expects you to design solutions for external fulfillment provider integration, idempotent retry logic, and asynchronous event processing."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam tests your ability to extend Salesforce Order Management with Apex, Flow, and APIs -- building custom fulfillment logic, external system integrations, and event-driven order processing.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$150"
     },

@@ -7,7 +7,7 @@ export type CalculatorExam = {
   name: string
   /** Pass mark as a number, e.g. 65 for "65%". */
   passMark: number
-  /** Raw pass-mark label as published, kept for display ("~65%" stays fuzzy). */
+  /** Raw pass-mark label as published, kept for display ("Not published" stays as-is). */
   passMarkLabel: string
   sections: ExamSection[]
 }

@@ -19,10 +19,10 @@
   },
   "examDifficulty": {
     "heading": "Is the CPQ and Billing AP Exam Hard?",
-    "summary": "The CPQ and Billing AP is moderately difficult. The ~65% passing score is standard, but the exam spans two products: Salesforce CPQ and Salesforce Billing, requiring knowledge of the full quote-to-cash lifecycle from product configuration through revenue recognition.",
+    "summary": "The CPQ and Billing AP is moderately difficult. The no published passing score is standard, but the exam spans two products: Salesforce CPQ and Salesforce Billing, requiring knowledge of the full quote-to-cash lifecycle from product configuration through revenue recognition.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong>: a standard threshold, but covering both CPQ and Billing doubles the surface area you need to study.",
+      "<strong>no published passing score</strong>: a standard threshold, but covering both CPQ and Billing doubles the surface area you need to study.",
       "<strong>Two-product breadth</strong>: the exam tests CPQ configuration (bundles, rules, discounts) alongside Billing concepts (invoicing, usage billing, revenue recognition) in a single sitting.",
       "<strong>Process knowledge critical</strong>: understanding the complete object chain from Quote through Invoice and Revenue Schedule is more important than memorizing individual features."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam covers the full Salesforce quote-to-cash process: CPQ product configuration, pricing rules, Billing invoice generation, subscription management, and revenue recognition.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$150"
     },

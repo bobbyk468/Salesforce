@@ -190,6 +190,11 @@ export type ExamLogisticsDetail = { questions: number | string; passingScore: st
 // Claude credentials deliberately have no entry here. Pearson, the issuer's
 // delivery partner, publishes no fee, question count, duration or passing
 // score for them, so the site states none. See credential-status.ts.
+// Several Accredited Professional and Slack/Tableau credentials carry
+// passingScore: 'Not published'. Salesforce does not publish a passing score
+// for them, and the site previously showed an unsourced "~65%" estimate.
+// getMockExamTarget returns null for these, so readiness copy omits a figure
+// rather than inventing one.
 const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   administrator: { questions: 60, passingScore: '68%', duration: '105 min' },
   'advanced-administrator': { questions: 60, passingScore: '65%', duration: '105 min' },
@@ -198,7 +203,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'business-analyst': { questions: 60, passingScore: '72%', duration: '105 min' },
   'cpq-administrator': { questions: 60, passingScore: '65%', duration: '105 min' },
   'marketing-cloud-engagement-admin': { questions: 60, passingScore: '67%', duration: '105 min' },
-  'slack-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'slack-administrator': { questions: 60, passingScore: 'Not published', duration: '105 min' },
   'developer-1': { questions: 60, passingScore: '68%', duration: '105 min' },
   'developer-2': { questions: 60, passingScore: '70%', duration: '120 min' },
   'javascript-developer-i': { questions: 60, passingScore: '65%', duration: '105 min' },
@@ -234,31 +239,31 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'platform-foundations': { questions: 40, passingScore: '62%', duration: '70 min' },
   'sales-foundations': { questions: 40, passingScore: '70%', duration: '105 min' },
   'administrator-practice-test': { questions: 60, passingScore: '68%', duration: '105 min' },
-  'email-specialist-practice-test': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'email-specialist-practice-test': { questions: 60, passingScore: 'Not published', duration: '105 min' },
   // $150 AP
-  'advanced-field-service-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'advanced-field-service-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
   'b2b-commerce-admin-ap': { questions: 60, passingScore: '75%', duration: '90 min' },
   'b2b-commerce-developer-ap': { questions: 60, passingScore: '68%', duration: '75 min' },
   'communications-cloud-ap': { questions: 55, passingScore: '56%', duration: '90 min' },
   'consumer-goods-cloud-ap': { questions: 33, passingScore: '64%', duration: '60 min' },
   'consumer-goods-tpm-ap': { questions: 62, passingScore: '66%', duration: '75 min' },
   'contact-center-ap': { questions: 60, passingScore: '66%', duration: '75 min' },
-  'cpq-billing-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'cpq-billing-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
   'energy-utilities-ap': { questions: 50, passingScore: '60%', duration: '75 min' },
   'financial-services-cloud-ap': { questions: 50, passingScore: '56%', duration: '75 min' },
-  'health-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'health-cloud-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
   'heroku-developer-ap': { questions: 60, passingScore: '68%', duration: '90 min' },
   'loyalty-management-ap': { questions: 50, passingScore: '69%', duration: '75 min' },
-  'manufacturing-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'marketing-cloud-advanced-cross-channel-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'marketing-cloud-intelligence-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'manufacturing-cloud-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'marketing-cloud-advanced-cross-channel-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'marketing-cloud-intelligence-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
   'marketing-cloud-personalization-ap': { questions: 50, passingScore: '70%', duration: '75 min' },
   'media-cloud-ap': { questions: 60, passingScore: '66%', duration: '75 min' },
-  'net-zero-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'order-management-admin-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'order-management-developer-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'process-automation-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'public-sector-solutions-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'net-zero-cloud-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'order-management-admin-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'order-management-developer-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'process-automation-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'public-sector-solutions-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
   // $400 Architects
   'data-architect': { questions: 60, passingScore: '58%', duration: '105 min' },
   'integration-architect': { questions: 60, passingScore: '67%', duration: '105 min' },
@@ -275,7 +280,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   // Tableau ($200 tier)
   'tableau-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
   'tableau-data-analyst': { questions: 60, passingScore: '65%', duration: '105 min' },
-  'tableau-server-administrator': { questions: 55, passingScore: '~65%', duration: '90 min' },
+  'tableau-server-administrator': { questions: 55, passingScore: 'Not published', duration: '90 min' },
   // Tableau Foundations ($75 tier)
   'tableau-desktop-foundations': { questions: 40, passingScore: '48%', duration: '70 min' },
   // Consultant ($200 tier)
@@ -869,11 +874,20 @@ export function getCertMetaDescription(slug: string): string {
   // source the page body uses, so the two cannot drift apart. Credentials with
   // no logistics row fall back to wording that still does not defer.
   const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  // Only numeric logistics read well in a description. The board exams and the
+  // credentials whose issuer publishes no score carry labels instead of
+  // numbers ('Board exam', 'Not published'), and stringing those together gave
+  // "Board exam questions, pass mark board review, Board".
+  const num = (v: unknown) => (v === undefined || v === null ? false : /^\d/.test(String(v)))
   const format = detail
     ? [
-        detail.questions ? `${detail.questions} questions` : null,
-        detail.passingScore ? `${detail.passingScore} to pass` : null,
-        detail.duration ?? null,
+        num(detail.questions) ? `${detail.questions} questions` : null,
+        num(detail.passingScore)
+          ? `${detail.passingScore} to pass`
+          : detail.passingScore
+            ? 'pass mark not published'
+            : null,
+        num(detail.duration) ? detail.duration : null,
       ]
         .filter(Boolean)
         .join(', ')

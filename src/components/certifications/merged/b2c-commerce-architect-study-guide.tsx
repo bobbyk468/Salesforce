@@ -70,7 +70,7 @@ export default function B2cCommerceArchitectStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Passing Score', value: '65%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

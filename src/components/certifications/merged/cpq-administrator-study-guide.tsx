@@ -39,7 +39,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce CPQ Administrator certification?',
-    answer: 'The Salesforce CPQ Administrator certification validates skills in configuring Salesforce CPQ (Configure, Price, Quote), including product setup, bundle configuration, pricing rules, discount schedules, quote templates, and contract management. The exam has 60 questions, a 105-minute time limit, ~65% passing score, and a $200 fee. ADM-201 is a recommended prerequisite.',
+    answer: 'The Salesforce CPQ Administrator certification validates skills in configuring Salesforce CPQ (Configure, Price, Quote), including product setup, bundle configuration, pricing rules, discount schedules, quote templates, and contract management. The exam has 60 questions, a 105-minute time limit, 65% passing score, and a $200 fee. ADM-201 is a recommended prerequisite.',
   },
   {
     question: 'Is ADM-201 required before the CPQ Administrator exam?',
@@ -72,7 +72,7 @@ export default function CpqAdministratorStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Passing Score', value: '65%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

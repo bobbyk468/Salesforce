@@ -39,7 +39,7 @@ const examSections = [
 export const faqItems = [
   {
     question: 'What is the Salesforce B2C Commerce Developer certification?',
-    answer: 'The B2C Commerce Developer (formerly Demandware Developer) certification validates skills in developing and customising Salesforce B2C Commerce Cloud (SFCC) storefronts, including SFRA architecture, cartridge development, ISML templates, controllers, Business Manager configuration, and OCAPI integrations. The exam has 60 questions, 90-minute time limit, ~65% passing score, and a $200 fee.',
+    answer: 'The B2C Commerce Developer (formerly Demandware Developer) certification validates skills in developing and customising Salesforce B2C Commerce Cloud (SFCC) storefronts, including SFRA architecture, cartridge development, ISML templates, controllers, Business Manager configuration, and OCAPI integrations. The exam has 60 questions, 90-minute time limit, 65% passing score, and a $200 fee.',
   },
   {
     question: 'What is SFRA in Salesforce Commerce Cloud?',
@@ -70,7 +70,7 @@ export default function B2cCommerceDeveloperStudyGuideContent() {
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Passing Score', value: '65%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">

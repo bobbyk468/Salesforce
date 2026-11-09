@@ -49,7 +49,7 @@ const faqItems = [
   },
   {
     question: 'What is the Salesforce Platform Developer I (PD1) certification?',
-    answer: 'PD1 (Platform Developer I, exam DEV-450) is the foundational Salesforce developer certification. It tests Apex triggers and classes, SOQL and SOSL, governor limits, Lightning Web Components (LWC), Visualforce basics, testing (Test.startTest/stopTest, assert methods), and deployment (change sets, SFDX). The exam is 60 questions, 105 minutes, ~65% passing score, $200 fee.',
+    answer: 'PD1 (Platform Developer I, exam DEV-450) is the foundational Salesforce developer certification. It tests Apex triggers and classes, SOQL and SOSL, governor limits, Lightning Web Components (LWC), Visualforce basics, testing (Test.startTest/stopTest, assert methods), and deployment (change sets, SFDX). The exam is 60 questions, 105 minutes, 68% passing score, $200 fee.',
   },
   {
     question: 'What is the Salesforce developer salary in 2026?',

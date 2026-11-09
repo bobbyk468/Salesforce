@@ -22,7 +22,7 @@
     "summary": "The Manufacturing Cloud AP exam is moderately difficult. It tests manufacturing-specific workflows including sales agreements, account-based forecasting, rebate programs, and ERP integration patterns. Candidates without exposure to manufacturing sales operations and demand planning will find the domain concepts challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong>: roughly 39 correct answers needed.",
+      "<strong>no published passing score</strong>: roughly 39 correct answers needed.",
       "<strong>Sales agreement complexity</strong>: you must understand agreement terms, attainment calculations, and how actuals from orders feed into agreement tracking.",
       "<strong>Forecasting and demand planning</strong>: questions test account-based forecasting, run rate business, forecast adjustments, and how Manufacturing Cloud bridges sales planning with operations."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam tests your ability to configure Sales Agreements, Account-Based Forecasting, rebate programs, and ERP integrations in Manufacturing Cloud.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$150"
     },

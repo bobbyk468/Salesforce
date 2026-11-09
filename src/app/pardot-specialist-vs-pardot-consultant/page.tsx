@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is the Pardot Consultant exam format?',
-    answer: 'The Pardot Consultant exam has 60 questions, 105-minute time limit, ~65% passing score, and a $200 fee. It is scenario-based, questions describe business requirements and client situations and ask which Pardot configuration, architecture, or approach best solves them. It covers Pardot across all features plus consulting topics: requirements gathering, solution design, data migration, and implementation strategy.',
+    answer: 'The Pardot Consultant exam has 60 questions, 105-minute time limit, 68% passing score, and a $200 fee. It is scenario-based, questions describe business requirements and client situations and ask which Pardot configuration, architecture, or approach best solves them. It covers Pardot across all features plus consulting topics: requirements gathering, solution design, data migration, and implementation strategy.',
   },
   {
     question: 'Do I need Salesforce Admin (ADM-201) before Pardot Consultant?',
@@ -123,7 +123,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             href: '/certifications/pardot-specialist',
             badge: 'Take First',
             badgeColor: 'bg-green-100 text-green-800',
-            fee: '$200', questions: '60', time: '90 min', passing: '~65%',
+            fee: '$200', questions: '60', time: '90 min', passing: '72%',
             level: 'Practitioner, hands-on execution',
             best: 'Marketing automation specialists, email marketers, marketing ops professionals',
             skills: ['Lead scoring and grading models', 'Engagement Studio programs', 'Forms, landing pages, and automation rules', 'Email marketing and deliverability', 'Pardot-Salesforce connector basics'],
@@ -133,7 +133,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             href: '/certifications/pardot-consultant',
             badge: 'Take Second',
             badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
-            fee: '$200', questions: '60', time: '105 min', passing: '~65%',
+            fee: '$200', questions: '60', time: '105 min', passing: '68%',
             level: 'Strategic, architecture and consulting',
             best: 'Salesforce consulting partners, senior marketing ops architects, solution architects',
             skills: ['Multi-business-unit Pardot architecture', 'Implementation strategy and requirements gathering', 'Complex connector sync troubleshooting', 'Data migration and cleansing strategy', 'Governance and change management'],

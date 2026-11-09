@@ -22,7 +22,7 @@
     "summary": "The Net Zero Cloud AP exam is moderately difficult because it tests carbon accounting concepts: Scope 1/2/3 emissions, data pipeline configuration, and reporting frameworks; that require domain knowledge beyond standard Salesforce admin skills.",
     "bullets": [
       "<strong>60 questions</strong> in 90 min.",
-      "<strong>~65% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>no published passing score</strong>: build a margin above the minimum before booking.",
       "<strong>Emissions accounting</strong>: expect questions on Scope 1/2/3 classification and how Net Zero Cloud's data pipelines aggregate emissions data for reporting.",
       "<strong>Hands-on context matters</strong>: candidates who have configured or supported Net Zero Cloud in a real org are better prepared than candidates who only memorize notes."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam tests your ability to configure Net Zero Cloud for carbon accounting, including emissions data collection, Scope 1/2/3 tracking, sustainability reporting, and goal management.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "Not published",
       "duration": "90 min",
       "cost": "$150"
     },

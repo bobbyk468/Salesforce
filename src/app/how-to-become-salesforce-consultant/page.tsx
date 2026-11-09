@@ -49,7 +49,7 @@ const faqItems = [
   },
   {
     question: 'Which consultant certification should I take first: Sales Cloud or Service Cloud?',
-    answer: 'Choose based on your professional background. Sales operations, CRM, or revenue operations experience → Sales Cloud Consultant. Customer support, contact centre, or service operations experience → Service Cloud Consultant. Both exams have the same format (60 questions, 105 minutes, ~65% passing, $200) and similar difficulty. Both require ADM-201 knowledge. Most consultants eventually hold both credentials.',
+    answer: 'Choose based on your professional background. Sales operations, CRM, or revenue operations experience → Sales Cloud Consultant. Customer support, contact centre, or service operations experience → Service Cloud Consultant. Both exams run 60 questions in 105 minutes for $200, with passing scores of 73% for Sales Cloud and 78% for Service Cloud. Both require ADM-201 knowledge. Most consultants eventually hold both credentials.',
   },
   {
     question: 'Do I need project experience before the consultant exam?',

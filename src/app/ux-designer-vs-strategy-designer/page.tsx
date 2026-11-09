@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'Which certification is harder: UX Designer or Strategy Designer?',
-    answer: 'Most candidates find Strategy Designer slightly harder than UX Designer, the passing score is lower (~62% vs ~65%) reflecting the difficulty. Strategy Designer requires applying abstract design thinking frameworks to complex business scenarios, which is less intuitive for candidates without strategic design exposure. UX Designer tests more concrete skills (research methods, wireframing, SLDS) that are easier to study from materials.',
+    answer: 'Most candidates find Strategy Designer slightly harder than UX Designer, the passing score is lower (70% vs 65%) reflecting the difficulty. Strategy Designer requires applying abstract design thinking frameworks to complex business scenarios, which is less intuitive for candidates without strategic design exposure. UX Designer tests more concrete skills (research methods, wireframing, SLDS) that are easier to study from materials.',
   },
   {
     question: 'What jobs require UX Designer vs Strategy Designer?',
@@ -126,7 +126,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~65%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">65%</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Execution</span></div>
           </div>
           <Link href="/certifications/ux-designer" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
