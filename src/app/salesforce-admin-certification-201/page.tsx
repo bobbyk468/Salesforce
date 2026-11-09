@@ -88,7 +88,7 @@ export default function SalesforceAdminCertification201Page() {
         <ol className="space-y-2 text-sm text-gray-700 list-decimal pl-5">
           <li>Read the official exam guide and map each objective to a study block.</li>
           <li>Study security, object relationships, data management, automation, and analytics first.</li>
-          <li>Use <Link href="/adm-201-study-guide" className="text-salesforce-blue hover:underline">the ADM-201 study guide</Link> for section-level preparation.</li>
+          <li>Use <Link href="/certifications/administrator" className="text-salesforce-blue hover:underline">the ADM-201 study guide</Link> for section-level preparation.</li>
           <li>Take the <Link href="/certifications/administrator" className="text-salesforce-blue hover:underline">free ADM-201 practice exam</Link> until you score 75% or higher consistently.</li>
         </ol>
       </section>

@@ -640,7 +640,7 @@ private class CalloutServiceTest {
             </ul>
             <p className="text-xs text-gray-600 mt-3">
               Coming from the admin track?{' '}
-              <Link href="/adm-201-exam-tips" className="text-salesforce-blue underline">
+              <Link href="/certifications/administrator" className="text-salesforce-blue underline">
                 ADM-201 exam tips ({RELEASE_CURRENT})
               </Link>
               {' '}covers the Salesforce fundamentals that overlap with PD1.

@@ -95,7 +95,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             time: '2–4 months',
             why: 'Administrator is the foundational credential for every admin role. It opens doors to junior admin, CRM analyst, and business analyst positions. Everything in Salesforce admin work connects back to this certification.',
             next: 'Advanced Administrator, then specialist certs (CPQ, Field Service, Experience Cloud)',
-            href: '/adm-201-study-guide',
+            href: '/certifications/administrator',
           },
           {
             role: 'I want to be a Salesforce Developer',
@@ -105,7 +105,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             time: '2–4 months',
             why: 'Even for developers, Administrator comes first. Understanding declarative platform capabilities makes you a much better Apex developer. Platform Developer I is significantly easier after building strong admin knowledge.',
             next: 'Platform Developer I, then Platform Developer II',
-            href: '/adm-201-study-guide',
+            href: '/certifications/administrator',
           },
           {
             role: 'I want to be a Salesforce Consultant',
@@ -115,7 +115,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             time: '2–4 months',
             why: 'Consultant roles require deep platform knowledge starting with administration. Administrator certification is the non-negotiable entry point. Specialist certs (Sales Cloud, Service Cloud, CPQ) follow after.',
             next: 'Sales Cloud Consultant or Service Cloud Consultant, based on specialisation',
-            href: '/adm-201-study-guide',
+            href: '/certifications/administrator',
           },
           {
             role: 'I want to test the waters (not sure yet)',

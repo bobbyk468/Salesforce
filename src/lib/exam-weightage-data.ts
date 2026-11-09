@@ -16,15 +16,21 @@ export interface ExamSection {
 }
 
 export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
+  // Verified 9 November 2026 against the official exam guide:
+  // help.salesforce.com/s/articleView?id=005298966 - eight sections, 60 scored
+  // questions, 105 minutes, 68% to pass (English). These weights took effect
+  // with the 15 December 2025 outline refresh; the previous set
+  // (Config 20 / Object Manager 17 / Workflow 14 / Sales 11 / Service 9 /
+  // Productivity 4) predates it and must not be reintroduced.
   administrator: [
-    { name: 'Configuration and Setup', percentage: 20 },
-    { name: 'Object Manager and Lightning App Builder', percentage: 17 },
-    { name: 'Workflow and Process Automation', percentage: 14 },
+    { name: 'Configuration and Setup', percentage: 15 },
+    { name: 'Object Manager and Lightning App Builder', percentage: 15 },
+    { name: 'Sales and Marketing Applications', percentage: 10 },
+    { name: 'Service and Support Applications', percentage: 10 },
+    { name: 'Productivity and Collaboration', percentage: 10 },
     { name: 'Data and Analytics Management', percentage: 17 },
-    { name: 'Sales and Marketing Applications', percentage: 11 },
-    { name: 'Service and Support Applications', percentage: 9 },
-    { name: 'Productivity and Collaboration', percentage: 4 },
-    { name: "Agentforce (Summer ‘26)", percentage: 8 },
+    { name: 'Automation', percentage: 15 },
+    { name: 'Agentforce', percentage: 8 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298969
   // Platform Administrator II: 60 scored questions, 65% to pass, 105 minutes.

@@ -114,7 +114,7 @@ export default function Footer() {
             <p className="text-lg font-semibold mb-4">Popular Certifications</p>
             <ul className="space-y-2">
               <li>
-                <Link prefetch={false} href="/adm-201-study-guide" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Admin (ADM-201) study guide
                 </Link>
               </li>
@@ -206,7 +206,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link prefetch={false} href="/adm-201-exam-tips" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   ADM-201 exam tips
                 </Link>
               </li>

@@ -133,7 +133,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Salesforce Administrator (ADM-201): Foundation</p>
               <p className="text-sm text-gray-600 mt-0.5">Not a component exam but required knowledge base. Platform security model, object relationships, and declarative automation are tested across all architect components.</p>
-              <Link href="/adm-201-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">ADM-201 exam tips →</Link>
+              <Link href="/certifications/administrator" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">ADM-201 exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">

@@ -95,7 +95,7 @@ export default function ConsultantCertificationPathPage() {
           consultant certification, ensure you are comfortable with objects, fields, automation, security model, and
           reports, the topics the consultant exams build on.
         </p>
-        <Link href="/adm-201-exam-tips" className="inline-flex items-center gap-2 text-sm text-salesforce-blue font-medium hover:underline">
+        <Link href="/certifications/administrator" className="inline-flex items-center gap-2 text-sm text-salesforce-blue font-medium hover:underline">
           ADM-201 exam tips <ArrowRight className="h-3 w-3" />
         </Link>
       </section>

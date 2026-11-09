@@ -86,7 +86,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         certA={{
           name: "Salesforce Administrator",
           certSlug: "administrator",
-          examTipsSlug: "adm-201-exam-tips",
+          examTipsSlug: "certifications/administrator",
           conditions: [
           "You prefer configuration, automation, and business process work over coding",
           "You want the broadest range of job opportunities from a single certification",
@@ -108,7 +108,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         recommendation={{
           certName: "Salesforce Administrator",
           certSlug: "administrator",
-          examTipsSlug: "adm-201-exam-tips",
+          examTipsSlug: "certifications/administrator",
           reason: "Administrator is the better starting point for most career switchers, higher job volume, faster time to employment, and it remains useful even if you pivot to developer later. Only start with Developer I if you have an existing coding background and are certain about the technical path.",
           careerPathSlug: "which-salesforce-certification-first",
           careerPathLabel: "Which Certification First Guide",
@@ -127,7 +127,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
             <li><strong>Progression:</strong> Junior Admin → Admin → Senior Admin → Admin Lead or Consultant</li>
             <li><strong>Best for:</strong> People who enjoy process design, business analysis, and working with stakeholders</li>
           </ul>
-          <Link href="/adm-201-study-guide" className="inline-block mt-4 text-sm font-semibold text-salesforce-blue hover:underline">Administrator Study Guide →</Link>
+          <Link href="/certifications/administrator" className="inline-block mt-4 text-sm font-semibold text-salesforce-blue hover:underline">Administrator Study Guide →</Link>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">

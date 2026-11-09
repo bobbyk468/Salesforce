@@ -131,7 +131,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">3</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Study the 7 ADM-201 Exam Sections by Weight</p>
-              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%), together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/adm-201-study-guide" className="text-salesforce-blue underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
+              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%), together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/certifications/administrator" className="text-salesforce-blue underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -323,11 +323,11 @@ export default function HowToBecomeSalesforceAdministratorPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Related Guides</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/adm-201-study-guide" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+          <Link href="/certifications/administrator" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
             <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">ADM-201 Study Guide</span>
           </Link>
-          <Link href="/adm-201-exam-tips" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+          <Link href="/certifications/administrator" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
             <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">ADM-201 Exam Tips {RELEASE_CURRENT}</span>
           </Link>
@@ -357,7 +357,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/adm-201-study-guide"
+            href="/certifications/administrator"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             ADM-201 Study Guide

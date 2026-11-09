@@ -333,7 +333,7 @@ export default function AppBuilderStudyGuidePage() {
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
             <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">ADM-201 vs App Builder</span>
           </Link>
-          <Link href="/adm-201-study-guide" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+          <Link href="/certifications/administrator" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
             <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">ADM-201 Study Guide</span>
           </Link>
@@ -372,7 +372,7 @@ export default function AppBuilderStudyGuidePage() {
             App Builder Exam Tips
           </Link>
           <Link
-            href="/adm-201-study-guide"
+            href="/certifications/administrator"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             ADM-201 Study Guide (parallel track)

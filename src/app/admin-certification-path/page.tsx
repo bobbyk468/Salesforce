@@ -203,7 +203,7 @@ export default function AdminCertificationPathPage() {
               </Link>
               {idx === 0 && (
                 <Link
-                  href="/adm-201-study-guide"
+                  href="/certifications/administrator"
                   className="inline-flex items-center gap-1 py-1 text-xs text-salesforce-blue font-medium hover:underline"
                 >
                   ADM-201 complete study guide →
@@ -268,7 +268,7 @@ export default function AdminCertificationPathPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            href="/adm-201-study-guide"
+            href="/certifications/administrator"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
           >
             ADM-201 Study Guide
@@ -287,7 +287,7 @@ export default function AdminCertificationPathPage() {
             Browse All Admin Certs
           </Link>
           <Link
-            href="/adm-201-exam-tips"
+            href="/certifications/administrator"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             ADM-201 Exam Tips {RELEASE_CURRENT}

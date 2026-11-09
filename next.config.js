@@ -49,6 +49,19 @@ const nextConfig = {
       // Removing it here prevents OpenNext/Workers from outputting ":path*" literally.
       // 301 redirects for old cert slugs that were renamed
       // Old slug → current slug (prevents 404s from external links / Ahrefs)
+      // ADM-201 consolidation (November 2026): the standalone study guide and
+      // exam tips pages targeted the same intent as the credential hub and were
+      // merged into it. Their unique content now lives in Adm201MergedGuide.
+      {
+        source: '/adm-201-study-guide',
+        destination: '/certifications/administrator',
+        permanent: true,
+      },
+      {
+        source: '/adm-201-exam-tips',
+        destination: '/certifications/administrator',
+        permanent: true,
+      },
       {
         source: '/certifications/platform-developer-i',
         destination: '/certifications/developer-1',

@@ -87,9 +87,9 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
       { href: '/salesforce-certification-cost', anchorText: 'Full Salesforce certification cost guide' },
     ],
     'salesforce-admin-certification-201': [
-      { href: '/certifications/administrator', anchorText: 'Free ADM-201 practice exam' },
-      { href: '/adm-201-study-guide', anchorText: 'ADM-201 study guide' },
-      { href: '/adm-201-exam-tips', anchorText: 'ADM-201 exam tips' },
+      { href: '/certifications/administrator', anchorText: 'Salesforce Certified Platform Administrator (ADM-201) study guide and practice exam' },
+      { href: '/admin-certification-path', anchorText: 'Salesforce admin certification path' },
+      { href: '/adm-201-vs-app-builder', anchorText: 'ADM-201 vs App Builder' },
     ],
     'pardot-certification': [
       { href: '/certifications/pardot-specialist', anchorText: 'Pardot Specialist practice exam' },

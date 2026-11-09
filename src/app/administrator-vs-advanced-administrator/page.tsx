@@ -88,7 +88,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         certA={{
           name: "Salesforce Administrator",
           certSlug: "administrator",
-          examTipsSlug: "adm-201-exam-tips",
+          examTipsSlug: "certifications/administrator",
           conditions: [
           "You do not yet hold any Salesforce certification",
           "You are new to the platform or have less than 1 year of hands-on experience",
@@ -110,7 +110,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         recommendation={{
           certName: "Salesforce Administrator",
           certSlug: "administrator",
-          examTipsSlug: "adm-201-exam-tips",
+          examTipsSlug: "certifications/administrator",
           reason: "Administrator is the mandatory first step: Advanced Administrator explicitly tests you on Admin concepts plus additional depth. You cannot reasonably attempt Advanced Admin without first having mastered the Admin credential.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin Certification Path",

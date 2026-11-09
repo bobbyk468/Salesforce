@@ -259,7 +259,7 @@ const ROLE_DECISION_DATA: Record<string, RoleDecisionItem[]> = {
 const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
   administrator: [
     { label: 'Salesforce Admin Certification 201 Guide', href: '/salesforce-admin-certification-201', note: 'Targets ADM-201 search intent, cost, format, and first-cert questions.' },
-    { label: 'ADM-201 Study Guide', href: '/adm-201-study-guide', note: 'Full study plan and section-by-section preparation.' },
+    { label: 'ADM-201 Study Guide', href: '/certifications/administrator', note: 'Full study plan and section-by-section preparation.' },
     { label: 'Admin vs App Builder', href: '/adm-201-vs-app-builder', note: 'Decision page for the most common second-cert question.' },
   ],
   marketing: [

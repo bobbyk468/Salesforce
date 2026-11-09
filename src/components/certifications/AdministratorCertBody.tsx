@@ -21,6 +21,9 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import OrderOfExecutionDiagram from '@/components/certifications/OrderOfExecutionDiagram'
+import Adm201MergedGuide from '@/components/certifications/Adm201MergedGuide'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import CertInsightBlock from '@/components/CertInsightBlock'
 import {
   getInitialPracticeQuestions,
   getPracticeQuestionsTotalCount,
@@ -214,7 +217,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
                   <li><strong>Start with high-weight sections:</strong> Data and Analytics Management (17%), Configuration and Setup (15%), Object Manager and Lightning App Builder (15%) and Automation (15%) together cover 62% of the exam. Agentforce is now its own section at 8%.</li>
                   <li><strong>Use a hands-on org:</strong> Set up a free Salesforce Developer Edition org and practice every feature you study.</li>
-                  <li><strong>Take timed mock exams:</strong> Simulate real conditions: 60 scored questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
+                  <li><strong>Take timed mock exams:</strong> Simulate real conditions: 60 scored questions, 105 minutes, no notes. Aim for 80%+ on mocks before booking, which gives you headroom above the 68% pass mark.</li>
                   <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
                   <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
                 </ul>
@@ -227,11 +230,15 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   </Link>.
                 </p>
                 <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
-                  Want a focused strategy? Read our{' '}
-                  <Link href="/adm-201-exam-tips" className="text-salesforce-blue font-medium hover:underline">
-                    ADM-201 exam tips ({RELEASE_CURRENT})
+                  Want a focused strategy? Jump to the{' '}
+                  <Link href="#scenario-rules" className="text-salesforce-blue font-medium hover:underline">
+                    scenario decision rules
                   </Link>{' '}
-                  and detailed{' '}
+                  and the{' '}
+                  <Link href="#study-plan" className="text-salesforce-blue font-medium hover:underline">
+                    6-week study plan
+                  </Link>{' '}
+                  below, or read the detailed{' '}
                   <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
                     ADM-201 vs App Builder comparison
                   </Link>{' '}
@@ -271,10 +278,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 <div className="rounded-lg border border-white bg-white/80 p-4">
                   <h3 className="text-base font-semibold text-gray-900 mb-3">Ready to book when...</h3>
                   <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
-                    <li>You score 75%+ on three timed mock exams without pausing to check notes.</li>
+                    <li>You score 80%+ on three timed mock exams without pausing to check notes.</li>
                     <li>You can explain why each wrong answer is wrong, especially in security and automation questions.</li>
                     <li>You have configured users, profiles, permission sets, sharing rules, reports, dashboards, and flows in a dev org.</li>
-                    <li>You can finish 65 practice questions inside 105 minutes with at least 10 minutes left to review flagged items.</li>
+                    <li>You can finish a 60-question timed mock inside 105 minutes with at least 10 minutes left to review flagged items.</li>
                   </ul>
                   <div className="mt-4 pt-4 border-t border-amber-100 text-sm text-gray-700">
                     <p className="font-semibold text-gray-900 mb-2">Compare before your next cert:</p>
@@ -331,6 +338,12 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
           <OrderOfExecutionDiagram />
 
+          <Adm201MergedGuide />
+
+          <DifficultyHeatmap slug={slug} />
+
+          <CertInsightBlock certSlug="adm-201" />
+
           {/* How to Pass Scenario Strategy */}
           <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Administrator Exam</h2>
@@ -382,16 +395,22 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               <h2 id="adm201-guides-heading" className="text-base font-semibold text-gray-900 mb-3">ADM-201 Study Resources</h2>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/adm-201-study-guide" className="text-salesforce-blue font-medium hover:underline">
-                    ADM-201 Complete Study Guide ({RELEASE_CURRENT}) →
+                  <Link href="#section-deep-dives" className="text-salesforce-blue font-medium hover:underline">
+                    All 8 Exam Sections in Detail ({RELEASE_CURRENT}) →
                   </Link>
-                  <span className="text-gray-600 ml-2">All 7 exam sections explained with scenario strategies, key topics, and a 6-week study plan.</span>
+                  <span className="text-gray-600 ml-2">What each section of the current official outline actually tests, with its weighting.</span>
                 </li>
                 <li>
-                  <Link href="/adm-201-exam-tips" className="text-salesforce-blue font-medium hover:underline">
-                    ADM-201 Exam Tips ({RELEASE_CURRENT}) →
+                  <Link href="#study-plan" className="text-salesforce-blue font-medium hover:underline">
+                    6-Week ADM-201 Study Plan →
                   </Link>
-                  <span className="text-gray-600 ml-2">Proven strategies, common mistakes, and a day-of checklist for the Platform Administrator exam.</span>
+                  <span className="text-gray-600 ml-2">Week-by-week reading and hands-on practice, ordered by section weighting.</span>
+                </li>
+                <li>
+                  <Link href="#day-before" className="text-salesforce-blue font-medium hover:underline">
+                    Day-Before Review Checklist →
+                  </Link>
+                  <span className="text-gray-600 ml-2">The ten topics worth re-reading the evening before your exam.</span>
                 </li>
                 <li>
                   <Link href="/certifications/administrator-practice-test" className="text-salesforce-blue font-medium hover:underline">
@@ -426,6 +445,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 { id: 'adm201-traps', title: 'Common Traps' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'key-concepts', title: 'Key Concepts' },
+                { id: 'section-deep-dives', title: 'Exam Sections in Detail' },
+                { id: 'study-plan', title: '6-Week Study Plan' },
+                { id: 'scenario-rules', title: 'Scenario Decision Rules' },
+                { id: 'day-before', title: 'Day-Before Review' },
                 { id: 'scenario-tips', title: 'How to Pass' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },

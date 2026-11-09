@@ -44,10 +44,12 @@ function slugToDisplayName(slug: string): string {
   return getCertPrimaryName(slug, fallback)
 }
 
-/** Slug -> exam tips page path. Used in CertIntroParagraph for internal linking. */
+/**
+ * Slug -> exam tips page path. Used in CertIntroParagraph for internal linking.
+ * `administrator` has no entry: /adm-201-exam-tips was merged into the cert page
+ * itself in November 2026, so a link here would point back at the same page.
+ */
 export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
-  administrator: '/adm-201-exam-tips',
-  'administrator-practice-test': '/adm-201-exam-tips',
   'email-specialist-practice-test': '/email-specialist-exam-tips',
   'developer-1': '/pd1-exam-tips',
   'developer-2': '/pd2-exam-tips',
@@ -139,7 +141,6 @@ export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
 
 /** Slug -> study guide page path. Used in CertIntroParagraph for internal linking. */
 export const SLUG_TO_STUDY_GUIDE: Record<string, string> = {
-  administrator: '/adm-201-study-guide',
   'developer-1': '/pd1-study-guide',
   'developer-2': '/pd2-study-guide',
   'app-builder': '/app-builder-study-guide',
@@ -836,6 +837,10 @@ function makePracticeExamTitle(label: string, code?: string): string {
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
+  // Administrator: /adm-201-study-guide and /adm-201-exam-tips were merged into
+  // this page in November 2026, so the title carries both the current official
+  // name and the legacy ADM-201 code that candidates still search for.
+  if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Study Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -1022,7 +1027,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How long should I study for the ADM-201 exam?',
-      answer: 'Most candidates study for 4–6 weeks with a structured plan. Focus on high-weight sections first (Configuration and Setup at 20%, Object Manager and Lightning App Builder at 20%). Use Trailhead modules, hands-on practice, and mock exams to gauge readiness.',
+      answer: 'Most candidates study for 4–6 weeks with a structured plan. Focus on high-weight sections first (Data and Analytics Management at 17%, then Configuration and Setup, Object Manager and Lightning App Builder, and Automation at 15% each). Use Trailhead modules, hands-on practice, and mock exams to gauge readiness.',
     },
     {
       question: 'Is there a prerequisite for the Salesforce Certified Platform Administrator exam?',
@@ -1034,15 +1039,27 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Is ADM-201 harder than Platform App Builder (DEV-402)?',
-      answer: 'ADM-201 is generally considered slightly easier than Platform App Builder because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is broader; you need to know a little about many topics across 7 exam sections.',
+      answer: 'ADM-201 is generally considered slightly easier than Platform App Builder because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is broader; you need to know a little about many topics across 8 exam sections.',
     },
     {
       question: 'What is the best way to pass the ADM-201 exam on the first attempt?',
-      answer: 'Focus on high-weight sections first (Configuration & Setup and Object Manager together are 40%). Practice in a free Developer Edition org. Take timed mock exams and aim for 75%+ before booking. Review wrong answers deeply, understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
+      answer: 'Focus on high-weight sections first: Data and Analytics Management (17%), then Configuration and Setup, Object Manager and Lightning App Builder, and Automation at 15% each. Practice in a free Developer Edition org. Take timed mock exams and aim for 80%+ before booking, which gives you headroom above the 68% pass mark. Review wrong answers deeply, understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
     },
     {
-      question: 'What are the 7 exam sections for ADM-201 and which have the highest weight?',
-      answer: 'The 7 sections are: (1) Configuration and Setup (20%), (2) Object Manager and Lightning App Builder (20%), (3) Workflow and Process Automation (15%), (4) Data and Analytics Management (10%), (5) Sales and Marketing Applications (10%), (6) Service and Support Applications (15%), and (7) Productivity and Collaboration (10%). Configuration and Object Manager together account for 40% of the exam.',
+      question: 'What are the 8 exam sections for ADM-201 and which have the highest weight?',
+      answer: 'Following the 15 December 2025 outline refresh the 8 sections are: (1) Configuration and Setup (15%), (2) Object Manager and Lightning App Builder (15%), (3) Sales and Marketing Applications (10%), (4) Service and Support Applications (10%), (5) Productivity and Collaboration (10%), (6) Data and Analytics Management (17%), (7) Automation (15%), and (8) Agentforce (8%). Data and Analytics Management is the heaviest single section, and the four sections at 15% or above are 62% of the exam.',
+    },
+    {
+      question: 'Why do most ADM-201 candidates fail questions about OWD vs profiles vs roles?',
+      answer: 'Org-wide defaults (OWD) set the baseline access floor for all records. Profiles control object and field permissions, meaning which objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from applying the right rule to the wrong layer: trying to restrict access with roles, which only ever open access upward, or forgetting that a profile grants object access while sharing decides which individual records are visible.',
+    },
+    {
+      question: 'Why do most ADM-201 candidates fail questions about Flow vs Process Builder?',
+      answer: 'Salesforce has retired Process Builder and Workflow Rules in favour of record-triggered Flows. Exam scenarios now expect Flow when the question describes record-based automation, so candidates who still default to Process Builder lose those marks. Know the four Flow types, record-triggered, scheduled, screen, and auto-launched, and when each is appropriate.',
+    },
+    {
+      question: 'Why do most ADM-201 candidates fail questions about reports vs dashboards?',
+      answer: 'Joined reports allow cross-object reporting across multiple report types in a single view, which candidates frequently forget exists. Dashboard filter limitations also trip people up: dashboard filters support field equality, not contains or starts-with. Remember too that the running user determines whose data a dashboard shows unless it is dynamic.',
     },
     {
       question: 'What is sharing in Salesforce and how is it different from permissions?',
