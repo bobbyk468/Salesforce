@@ -26,7 +26,7 @@
       "<strong>Platform details.</strong> Dyno types, the Procfile, buildpacks, config vars and add-ons all come up.",
       "<strong>Salesforce link.</strong> Expect questions on Heroku Connect and calling Salesforce from a Heroku app."
     ],
-    "passRateGuidance": "Deploy a small app with a database, a worker and Heroku Connect before the exam. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Deploy a small app with a database, a worker and Heroku Connect before the exam. Before you book. Aim for 80% or more on practice tests."
   },
   "examFormat": {
     "heading": "Heroku Developer Accredited Professional Exam Format Explained",

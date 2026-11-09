@@ -1,5 +1,5 @@
 import Link from '@/components/AppLink'
-import { SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { getMockExamTargetLabel, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 
 interface FullQuestionBankCtaProps {
   slug: string
@@ -12,6 +12,9 @@ interface FullQuestionBankCtaProps {
  */
 export default function FullQuestionBankCta({ slug, certTitle }: FullQuestionBankCtaProps) {
   const examCode = SLUG_TO_EXAM_CODE[slug]
+  // Derived per exam so this shared CTA cannot contradict the readiness target
+  // stated elsewhere on the same page.
+  const mockTarget = getMockExamTargetLabel(slug)
   const contactExamParam = examCode || certTitle
   const heading = examCode ? `Get the Full ${examCode} Question Bank` : 'Get the Full Question Bank'
 
@@ -19,7 +22,11 @@ export default function FullQuestionBankCta({ slug, certTitle }: FullQuestionBan
     <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-6 sm:p-8 text-center">
       <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{heading}</h3>
       <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
-        Most candidates book the exam after scoring <strong>75%+</strong> on full mocks.
+        {mockTarget ? (
+          <>Most candidates book the exam after scoring <strong>{mockTarget}</strong> on full mocks.</>
+        ) : (
+          <>Most candidates book once they can explain every wrong answer on a full mock.</>
+        )}
       </p>
       <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
         If you’re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.

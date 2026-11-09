@@ -26,7 +26,7 @@
       "<strong>Infrastructure depth.</strong> Expect detailed questions on VPCs, load balancers, clustering and failover.",
       "<strong>Several disciplines at once.</strong> Networking, security, operations and governance all appear."
     ],
-    "passRateGuidance": "You are ready when you can pick a deployment model from a set of constraints and justify it, and explain how traffic reaches a Mule app from the internet. Aim for 75% or more on practice tests."
+    "passRateGuidance": "You are ready when you can pick a deployment model from a set of constraints and justify it, and explain how traffic reaches a Mule app from the internet. Aim for 80% or more on practice tests."
   },
   "examFormat": {
     "heading": "MuleSoft Platform Architect Exam Format Explained",

@@ -11,7 +11,7 @@ export default function AdministratorCtaSections() {
       <div id="more-questions" className="mt-12 sm:mt-16 bg-gradient-to-br from-salesforce-blue/10 via-salesforce-light/5 to-salesforce-blue/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 text-center border border-salesforce-blue/20 shadow-lg">
         <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Get the Full ADM-201 Question Bank</h3>
         <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
-          Most candidates book the exam after scoring <strong>75%+</strong> on full mocks.
+          Most candidates book the exam after scoring <strong>80%+</strong> on full mocks.
         </p>
         <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
           If you’re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.

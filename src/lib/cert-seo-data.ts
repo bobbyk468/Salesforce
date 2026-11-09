@@ -302,6 +302,36 @@ export function getExamLogistics(slug: string): (ExamLogisticsDetail & { fee: st
   return { ...detail, fee: cost, retake }
 }
 
+/**
+ * Mock-exam readiness target for a credential, as a whole percentage.
+ *
+ * Derived from the exam's own passing score so a reader never sees two
+ * different targets for the same exam: ten points of headroom above the pass
+ * mark, rounded up to the nearest five, floored at 75 and capped at 90.
+ *
+ * Every "aim for N%+ before booking" figure on the site should come from here
+ * rather than being written into copy, which is how the site previously ended
+ * up advertising 75%, 76%, 80% and 83% for Platform App Builder at once.
+ *
+ * Returns null when the issuer publishes no numeric passing score (the CTA
+ * board exams, the unverified Claude credentials), in which case copy should
+ * describe readiness without naming a number.
+ */
+export function getMockExamTarget(slug: string): number | null {
+  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  const raw = detail?.passingScore?.match(/(\d{1,3})\s*%/)
+  if (!raw) return null
+  const pass = Number(raw[1])
+  if (!Number.isFinite(pass) || pass <= 0 || pass > 100) return null
+  return Math.min(90, Math.max(75, Math.ceil((pass + 10) / 5) * 5))
+}
+
+/** The same target as display text, e.g. "85%+". Null when there is no score to derive from. */
+export function getMockExamTargetLabel(slug: string): string | null {
+  const t = getMockExamTarget(slug)
+  return t === null ? null : `${t}%+`
+}
+
 export const EXAM_PRICING_URL = 'https://help.salesforce.com/s/articleView?id=005298916&type=1&language=en_US'
 
 export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
@@ -1002,7 +1032,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What are the best practices for DEV-402 exam preparation?',
-      answer: 'Practice in a real Salesforce org (use free Developer Edition). Build sample apps with custom objects, flows, and Lightning Pages. Study high-weight topics (Process Automation 25%, Security & Deployment 25%). Take practice exams to identify weak spots and aim for 75%+ before booking.',
+      answer: 'Practice in a real Salesforce org (use free Developer Edition). Build sample apps with custom objects, flows, and Lightning Pages. Study high-weight topics (Process Automation 25%, Security & Deployment 25%). Take practice exams to identify weak spots and aim for 85%+ before booking.',
     },
     {
       question: 'What is the Platform App Builder (DEV-402) exam passing score and how many questions are on it?',
@@ -1052,7 +1082,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What are the most common failure points for Sales Cloud Consultant candidates?',
-      answer: 'Common failure points: (1) Forecasting, confusing forecast categories, not understanding cumulative rollup, or not knowing the impact of opportunity stage on forecast category mapping; (2) Territory Management, confusing ETM with sharing rules or role hierarchy for record access; (3) Solution Design questions, choosing a feature that solves the problem technically but is not the recommended Salesforce best-practice approach; (4) Integration with Marketing Cloud, not knowing Campaign Influence and Pardot/Account Engagement sync behaviour. Aim for 75%+ on timed mocks consistently before booking.',
+      answer: 'Common failure points: (1) Forecasting, confusing forecast categories, not understanding cumulative rollup, or not knowing the impact of opportunity stage on forecast category mapping; (2) Territory Management, confusing ETM with sharing rules or role hierarchy for record access; (3) Solution Design questions, choosing a feature that solves the problem technically but is not the recommended Salesforce best-practice approach; (4) Integration with Marketing Cloud, not knowing Campaign Influence and Pardot/Account Engagement sync behaviour. Aim for 85%+ on timed mocks consistently before booking.',
     },
   ],
   'service-cloud': [
@@ -1090,7 +1120,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What are the most common reasons Service Cloud Consultant candidates fail?',
-      answer: 'Common failure points: (1) Omni-Channel configuration, confusing queue-based vs skills-based routing, or not knowing how presence statuses affect agent availability; (2) Entitlements, confusing Entitlement Processes with Case Escalation Rules; (3) Solution Design questions, choosing a feature that works technically but is not Salesforce\'s recommended best-practice approach (e.g., choosing a custom solution when Einstein Case Routing exists); (4) Contact Center analytics, not knowing which standard report types cover case volume, CSAT, or SLA compliance. Aim for 77%+ on timed mocks (67% real threshold, 10% buffer) before booking.',
+      answer: 'Common failure points: (1) Omni-Channel configuration, confusing queue-based vs skills-based routing, or not knowing how presence statuses affect agent availability; (2) Entitlements, confusing Entitlement Processes with Case Escalation Rules; (3) Solution Design questions, choosing a feature that works technically but is not Salesforce\'s recommended best-practice approach (e.g., choosing a custom solution when Einstein Case Routing exists); (4) Contact Center analytics, not knowing which standard report types cover case volume, CSAT, or SLA compliance. Aim for 90%+ on timed mocks (67% real threshold, 10% buffer) before booking.',
     },
     {
       question: 'What is CTI integration in Service Cloud and when does the exam test it?',
@@ -1116,7 +1146,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How long should I study for PD1 and what mock score means I am ready?',
-      answer: 'Most candidates with some object-oriented programming background need 4–6 weeks. Target benchmark: score 78%+ on three timed full mocks (60 Q / 110 min), taken one week apart. The actual passing threshold is 68%, but the extra buffer accounts for exam nerves and unfamiliar phrasing on the day.',
+      answer: 'Most candidates with some object-oriented programming background need 4–6 weeks. Target benchmark: score 80%+ on three timed full mocks (60 Q / 110 min), taken one week apart. The actual passing threshold is 68%, but the extra buffer accounts for exam nerves and unfamiliar phrasing on the day.',
     },
     {
       question: 'What is the bulkification pattern in Apex and why does PD1 test it heavily?',
@@ -1451,7 +1481,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How long should I study for the Marketing Cloud Email Specialist exam?',
-      answer: 'Most candidates with some Marketing Cloud experience study for 4–6 weeks. Hands-on practice in Email Studio, Content Builder, and Automation Studio is essential, reading alone is insufficient. Target 77%+ on timed full mocks (60 Q / 105 min) before booking.',
+      answer: 'Most candidates with some Marketing Cloud experience study for 4–6 weeks. Hands-on practice in Email Studio, Content Builder, and Automation Studio is essential, reading alone is insufficient. Target 80%+ on timed full mocks (60 Q / 105 min) before booking.',
     },
     {
       question: 'What is the difference between a hard bounce and a soft bounce in Marketing Cloud?',
@@ -1938,7 +1968,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How long should I study for the Tableau Data Analyst exam?',
-      answer: 'Most candidates need 4–6 weeks of preparation with hands-on Tableau Desktop practice as the core activity. Theory alone is not sufficient, build real dashboards, practise LOD expressions in a workbook, and experiment with context filters and table calculations. Target 80%+ on practice assessments before booking. The exam tests applied knowledge, not just definitions.',
+      answer: 'Most candidates need 4–6 weeks of preparation with hands-on Tableau Desktop practice as the core activity. Theory alone is not sufficient, build real dashboards, practise LOD expressions in a workbook, and experiment with context filters and table calculations. Target 75%+ on practice assessments before booking. The exam tests applied knowledge, not just definitions.',
     },
     {
       question: 'What is the difference between data blending and data joining in Tableau?',

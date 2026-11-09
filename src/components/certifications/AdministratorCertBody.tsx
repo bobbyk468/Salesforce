@@ -167,7 +167,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                   <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
                   <p className="text-sm text-emerald-700">
-                    Most candidates report passing after scoring <strong>75%+</strong> on at least 3 full-length mock exams. If you’re consistently scoring above 75% in practice, you’re likely ready to book your exam.
+                    Most candidates report passing after scoring <strong>80%+</strong> on at least 3 full-length mock exams. If you’re consistently scoring above 75% in practice, you’re likely ready to book your exam.
                   </p>
                 </div>
               </div>

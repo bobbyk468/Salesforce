@@ -23,7 +23,7 @@ const DEFAULT_PREP: ExamPrepContent = {
     'Use the official Trailhead trailmix; align your study with the exam outline.',
     'Take timed practice exams to build pacing (about 1.5–2 min per question).',
     'Review wrong answers and understand why the correct option is right.',
-    'Book the exam when you consistently score 80%+ on practice tests.',
+    'Book the exam once you consistently clear the readiness target shown above on timed practice tests.',
   ],
   prerequisites: ['Hands-on experience in a Salesforce org', 'Familiarity with the exam outline'],
   focusAreas: ['Highest-weighted sections', 'Scenario-based questions', 'Setup and configuration'],
@@ -1104,6 +1104,6 @@ export function getExamPrepContent(slug: string): ExamPrepContent {
   if (custom) return custom
   return {
     ...DEFAULT_PREP,
-    studyStrategy: `Prioritize the highest-weighted sections on the exam (see the weightage above). Use Trailhead, hands-on practice, and full-length practice tests. Schedule the exam when you consistently score 80%+ and can explain concepts clearly.`,
+    studyStrategy: `Prioritize the highest-weighted sections on the exam (see the weightage above). Use Trailhead, hands-on practice, and full-length practice tests. Schedule the exam once you consistently clear the readiness target shown above and can explain concepts clearly.`,
   }
 }

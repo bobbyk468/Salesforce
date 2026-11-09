@@ -26,7 +26,7 @@
       "<strong>Tool choice.</strong> Most questions come down to picking the right one of four tools for a job.",
       "<strong>Hands-on helps.</strong> If you have built and debugged an OmniScript that calls an Integration Procedure, much of this is familiar."
     ],
-    "passRateGuidance": "Build one OmniScript that reads data with a Data Mapper, calls an Integration Procedure and saves the result. Before you book. Aim for 75% or more on practice tests and be able to explain where each piece of data comes from."
+    "passRateGuidance": "Build one OmniScript that reads data with a Data Mapper, calls an Integration Procedure and saves the result. Before you book. Aim for 85% or more on practice tests and be able to explain where each piece of data comes from."
   },
   "examFormat": {
     "heading": "OmniStudio Developer Exam Format Explained",

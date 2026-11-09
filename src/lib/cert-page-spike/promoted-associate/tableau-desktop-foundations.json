@@ -26,7 +26,7 @@
       "<strong>Wide but shallow.</strong> Connecting to data, chart types, the Marks card, filters, simple calculations and dashboards.",
       "<strong>Practice beats reading.</strong> Two to four weeks of building in Tableau Desktop is usually enough."
     ],
-    "passRateGuidance": "You are ready when you can connect to a spreadsheet. Build a bar and a line chart, add a filter. Write a simple calculated field and put two sheets on a dashboard without looking anything up. Aim for 80% or more on practice tests."
+    "passRateGuidance": "You are ready when you can connect to a spreadsheet. Build a bar and a line chart, add a filter. Write a simple calculated field and put two sheets on a dashboard without looking anything up. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Tableau Desktop Foundations Exam Format Explained",

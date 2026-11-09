@@ -3,7 +3,9 @@
 **Site:** https://www.trailblazeprep.com
 **Prepared:** 9 November 2026
 **Branch:** `Summer26` (commits `af2cf212`, `10f6915e`, `c8385e69`, `4ab492a2`)
-**Status:** implemented and verified locally; not yet deployed to production.
+**Status:** commits `af2cf212` through `4ab492a2` are live in production (verified: the
+production sitemap serves 171 URLs and the merged routes 301 correctly). The
+readiness-target fix in 3.5 is committed but not yet deployed.
 
 This document is written for an external SEO reviewer. Part 1 describes what the
 site is and how it is built. Part 2 describes what it looked like before this
@@ -230,9 +232,8 @@ visible where it had been hidden. So:
 
 - 50 passing-score figures across 32 hubs were aligned to the value the site
   publishes in its own exam-logistics data and schema.
-- 126 readiness targets across 51 hubs are now derived from each exam's passing
+- 126 readiness targets across 51 hubs were derived from each exam's passing
   score (passing score + 10, rounded up to the nearest 5, floor 75, cap 90).
-  No file now names more than one readiness target.
 
 *Redirects and links.* 158 redirects, zero chains — nine pre-existing redirects
 pointed at pages that were themselves being merged and were collapsed to point
@@ -240,6 +241,26 @@ straight at the hub. 67 internal link groups rewired across 50 files. 65 links
 that would have pointed at the page they sat on became on-page anchors or plain
 text. 50 duplicate rows removed from the HTML sitemap. `urls.json` and
 `page-dates.json` trimmed to the surviving 171.
+
+### 3.5 Readiness targets, finished properly
+
+The pass described in 3.3 only rewrote the *ported* components. Checking the
+deployed site afterwards showed `/certifications/app-builder` still displaying
+75%+, 76%, 80%+ and 85%+ at once, because three hub-side sources had their own
+figures: `CertReadinessSummary` set the target from a difficulty band rather
+than the exam, the shared `FullQuestionBankCta` hardcoded 75%+ on every
+credential page, and `exam-prep-content-data.ts` used 80%+ as the fallback for
+any credential without bespoke copy. Per-credential data files and six FAQ
+answers carried their own numbers as well.
+
+The figure is now computed in one place, `getMockExamTarget(slug)` in
+`cert-seo-data.ts`, from the credential's own passing score. Components call it
+rather than stating a number, generic copy that applies to every credential no
+longer names a figure at all, and where an issuer publishes no numeric passing
+score the copy describes readiness without inventing one.
+
+Verified by crawling all 171 pages of a production build: **0 pages display
+more than one readiness target.** Before this pass, 29 did.
 
 ### 3.4 `4ab492a2` — de-duplication
 
@@ -283,6 +304,7 @@ Everything below was run against a production build, not the dev server.
 | Redirect chains | 0 |
 | H1 per hub | Exactly 1, sampled across 9 hubs |
 | `FAQPage` per hub | Exactly 1 |
+| Readiness target per page | Exactly 1, crawled across all 171 pages |
 
 Three tests referenced the moved pages. They were repointed at the new component
 paths rather than deleted. Two assertions covered page chrome that no longer

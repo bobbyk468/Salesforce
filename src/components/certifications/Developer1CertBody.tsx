@@ -402,7 +402,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                 <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
                 <p className="text-sm text-emerald-700">
-                  Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you’re scoring below 70% on mocks. Focus on governor limits and bulkification, those two topics cover over 30% of the exam combined.
+                  Candidates who pass PD1 typically score <strong>80%+</strong> on at least 3 full-length mock exams before booking. If you’re scoring below 70% on mocks. Focus on governor limits and bulkification, those two topics cover over 30% of the exam combined.
                 </p>
               </div>
             </div>
@@ -589,7 +589,7 @@ private class CalloutServiceTest {
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Exam Strategy</p>
-                <p>PD1 questions often include realistic-looking Apex code snippets. Read code carefully, the &ldquo;wrong answer&rdquo; in the options often uses the right method name but in the wrong context (e.g., using a future method where a queueable is needed, or using DML before a callout). Passing score is 68% (41/60 questions). Aim for 78%+ on full mock exams, the additional buffer accounts for exam-day stress and unfamiliar question phrasing. Complete the official Trailhead PD1 Trailmix before booking.</p>
+                <p>PD1 questions often include realistic-looking Apex code snippets. Read code carefully, the &ldquo;wrong answer&rdquo; in the options often uses the right method name but in the wrong context (e.g., using a future method where a queueable is needed, or using DML before a callout). Passing score is 68% (41/60 questions). Aim for 80%+ on full mock exams, the additional buffer accounts for exam-day stress and unfamiliar question phrasing. Complete the official Trailhead PD1 Trailmix before booking.</p>
               </div>
             </div>
           </div>

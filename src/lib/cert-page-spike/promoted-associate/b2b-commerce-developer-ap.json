@@ -26,7 +26,7 @@
       "<strong>Extension points.</strong> Expect questions on custom pricing, inventory, shipping and tax integrations, and how to plug them into checkout.",
       "<strong>LWC and APIs.</strong> Building and customising store components and calling the Commerce APIs come up often."
     ],
-    "passRateGuidance": "People who have built at least one custom component or integration for a B2B store do best. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "People who have built at least one custom component or integration for a B2B store do best. Before you book. Aim for 80% or more on practice tests."
   },
   "examFormat": {
     "heading": "B2B Commerce Developer AP Exam Format Explained",

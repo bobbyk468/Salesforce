@@ -1,9 +1,12 @@
-import { getCertDifficulty, getExamLogistics, slugToDisplayName, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { getCertDifficulty, getExamLogistics, getMockExamTargetLabel, slugToDisplayName, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 
+// The readiness target is no longer set by difficulty band: it is derived from
+// the exam's own passing score by getMockExamTarget, so this component cannot
+// contradict the copy further down the same page.
 const LABELS = {
-  easy: { label: 'Entry-level', prep: '2-4 weeks', target: '80%+' },
-  medium: { label: 'Moderate', prep: '4-8 weeks', target: '80%+' },
-  hard: { label: 'Challenging', prep: '8-16 weeks', target: '85%+' },
+  easy: { label: 'Entry-level', prep: '2-4 weeks' },
+  medium: { label: 'Moderate', prep: '4-8 weeks' },
+  hard: { label: 'Challenging', prep: '8-16 weeks' },
 } as const
 
 export default function CertReadinessSummary({ slug }: { slug: string }) {
@@ -11,6 +14,7 @@ export default function CertReadinessSummary({ slug }: { slug: string }) {
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const logistics = getExamLogistics(slug)
   const config = LABELS[getCertDifficulty(slug)]
+  const mockTarget = getMockExamTargetLabel(slug)
   const displayName = examCode ? `${certName} (${examCode})` : certName
 
   return (
@@ -23,7 +27,9 @@ export default function CertReadinessSummary({ slug }: { slug: string }) {
         </p>
         <p className="rounded-lg bg-blue-50 p-3 text-gray-700">
           <strong className="block text-gray-900">Book When Ready</strong>
-          Score {config.target} on three timed mocks before scheduling.
+          {mockTarget
+            ? `Score ${mockTarget} on three timed mocks before scheduling.`
+            : 'Work through timed mocks until you can explain every wrong answer before scheduling.'}
         </p>
         <p className="rounded-lg bg-emerald-50 p-3 text-gray-700">
           <strong className="block text-gray-900">Use Practice, Not Dumps</strong>

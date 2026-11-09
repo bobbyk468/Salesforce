@@ -21,7 +21,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       '<strong>Scenario-heavy</strong>: most questions describe a business requirement and ask which declarative tool solves it.',
       '<strong>No coding required</strong>: entirely declarative, but you need to know where declarative ends and code begins.',
     ],
-    passRateGuidance: 'Score 75%+ on 3 timed practice exams before booking. Candidates with hands-on ADM-201 experience and custom app-building practice perform best.',
+    passRateGuidance: 'Score 85%+ on 3 timed practice exams before booking. Candidates with hands-on ADM-201 experience and custom app-building practice perform best.',
   },
   examFormat: {
     heading: 'App Builder Exam Format Explained',
@@ -102,7 +102,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       },
       {
         heading: 'Exam Strategy',
-        body: 'Read every scenario for the constraint: “without code” means declarative only; “most efficient” usually means the native feature over a custom-built solution. Watch for “administrators only” (profile-based) vs “certain users” (permission sets or sharing rules). Passing score is 66% (40/60 questions). Aim for 76%+ on full mocks before booking.',
+        body: 'Read every scenario for the constraint: “without code” means declarative only; “most efficient” usually means the native feature over a custom-built solution. Watch for “administrators only” (profile-based) vs “certain users” (permission sets or sharing rules). Passing score is 66% (40/60 questions). Aim for 85%+ on full mocks before booking.',
       },
     ],
   },
@@ -136,7 +136,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     paragraphs: [
       { kind: 'segments', segments: [
         { type: 'text', text: 'Most candidates book the exam after scoring ' },
-        { type: 'strong', text: '75%+' },
+        { type: 'strong', text: '85%+' },
         { type: 'text', text: ' on full mocks.' },
       ]},
       {

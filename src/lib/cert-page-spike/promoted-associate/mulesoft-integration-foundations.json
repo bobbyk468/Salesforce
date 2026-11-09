@@ -41,7 +41,7 @@
       "<strong>Concepts, not code.</strong> You need to recognise what things do, not write DataWeave from scratch.",
       "<strong>No experience required.</strong> General IT background plus the Trailhead trail is enough for most people."
     ],
-    "passRateGuidance": "Work through the MuleSoft Integration Foundations trail on Trailhead and make sure you can explain API-led connectivity in your own words. Aim for 85% or more on practice tests, since the questions are short and the pass mark is 70%."
+    "passRateGuidance": "Work through the MuleSoft Integration Foundations trail on Trailhead and make sure you can explain API-led connectivity in your own words. Aim for 80% or more on practice tests, since the questions are short and the pass mark is 70%."
   },
   "examFormat": {
     "heading": "MuleSoft Integration Foundations Exam Format Explained",
