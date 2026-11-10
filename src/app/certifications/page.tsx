@@ -8,7 +8,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import LastUpdated from '@/components/LastUpdated'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const indexTitle = 'Salesforce Certifications: Free Practice Questions & Guides'
+const indexTitle = 'All Salesforce Certifications (2026): Free Practice Exams'
 const indexDescription = `Browse Salesforce certifications by role for ${RELEASE_CURRENT}, with free practice questions, study guides, pass marks, exam fees, and prerequisites.`
 const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(indexTitle)}`
 export const metadata: Metadata = {

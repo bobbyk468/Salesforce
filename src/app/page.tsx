@@ -15,7 +15,7 @@ import { REVIEWER, getCredentialJsonLd } from '@/lib/editorial-credentials'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Salesforce Certifications: Free Practice Questions & Guides' },
+  title: { absolute: 'Trailblaze Prep: Free Salesforce Practice Exams & Guides' },
   description: '2026 Salesforce certification list with free practice questions, study guides, pass mark, exam fee, and prerequisites for all 91 Salesforce certifications.',
   alternates: {
     canonical: siteUrl,
