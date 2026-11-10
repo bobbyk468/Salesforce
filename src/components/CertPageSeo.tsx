@@ -55,7 +55,7 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
       />
       {/* Visible breadcrumb */}
-      <nav aria-label="Breadcrumb" className="mb-6">
+      <nav data-nosnippet aria-label="Breadcrumb" className="mb-6">
         <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-600">
           {breadcrumb.map((item, i) => (
             <li key={item.url} className="flex items-center gap-1">

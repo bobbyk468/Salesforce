@@ -18,8 +18,11 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'pardot-consultant': 'CRT-302',
   'javascript-developer-i': 'CRT-600',
   'b2c-commerce-developer': 'CRT-500',
-  'data-architect': 'ARC-801',
+  'data-architect': 'Plat-Arch-201',
   'technical-architect': 'CTA',
+  'agentforce-life-sciences-consultant': 'Als-Con-201',
+  'marketing-cloud-next-consultant': 'MC-Con-201',
+  'tableau-next-consultant': 'Analytics-Con-202',
 }
 
 export const EXAM_CODE_TITLE_LABELS: Record<string, string> = {
@@ -39,6 +42,9 @@ export const EXAM_CODE_TITLE_LABELS: Record<string, string> = {
   'b2c-commerce-developer': 'B2C Commerce Developer',
   'data-architect': 'Data Architect',
   'technical-architect': 'Technical Architect',
+  'agentforce-life-sciences-consultant': 'Agentforce Life Sciences Consultant',
+  'marketing-cloud-next-consultant': 'Marketing Cloud Next Consultant',
+  'tableau-next-consultant': 'Tableau Next Consultant',
 }
 
 /** Return a code only when the catalog value is an exam alias, not prose. */

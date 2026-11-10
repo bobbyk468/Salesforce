@@ -88,7 +88,7 @@ export function getArticleJsonLd({
         '@type': 'Person',
         name: 'Krishna Mohan',
         url: `${baseUrl}/about`,
-        jobTitle: '5x Salesforce Certified Developer',
+        jobTitle: '14x Salesforce Certified Developer',
         sameAs: [
           'https://www.linkedin.com/in/krishna-mohan-879b94100/',
           'https://trailblazer.me/id/krishnamohan',
@@ -289,7 +289,7 @@ export function getComparisonHubJsonLd({
         '@type': 'Person',
         name: 'Krishna Mohan',
         url: `${baseUrl}/about`,
-        jobTitle: '5x Salesforce Certified Developer',
+        jobTitle: '14x Salesforce Certified Developer',
         sameAs: [
           'https://www.linkedin.com/in/krishna-mohan-879b94100/',
           'https://trailblazer.me/id/krishnamohan',

@@ -1,0 +1,388 @@
+{
+  "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Tableau Next Consultant exam for?",
+    "personas": [
+      {
+        "label": "Tableau Consultants moving to Next",
+        "description": "Consultants with classic Tableau Consultant experience who are implementing Tableau Next, the Data Cloud-native analytics platform."
+      },
+      {
+        "label": "Analytics practitioners",
+        "description": "Practitioners who implement and maintain scalable analytics solutions within the Salesforce ecosystem, built on a unified semantic data model."
+      },
+      {
+        "label": "CRM Analytics / Data 360 consultants",
+        "description": "Consultants who need to connect Tableau Next's AI-assisted analytics to a governed, unified Data Cloud foundation."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Tableau Next Consultant Exam Hard?",
+    "summary": "The exam tests whether you can implement and maintain scalable Tableau Next analytics solutions within the Salesforce ecosystem, built on a governed semantic data model, not just build a dashboard in the Tableau Desktop sense.",
+    "bullets": [
+      "<strong>60 scored questions</strong> plus up to five unscored questions that do not affect your result.",
+      "<strong>105 minutes</strong> and a <strong>65% passing score</strong>.",
+      "<strong>Exam fee</strong>: US$200; retake fee: US$100, plus applicable taxes.",
+      "<strong>No formal prerequisite</strong>, but prior Tableau Consultant or Data Cloud implementation experience is strongly recommended."
+    ],
+    "passRateGuidance": "Book the exam once you can explain how Tableau Next's semantic data model, AI-assisted analytics, and governance/embedding options differ from a classic Tableau Desktop or Tableau Server implementation."
+  },
+  "examFormat": {
+    "heading": "Tableau Next Consultant Exam Format Explained",
+    "intro": "The exam is a proctored, scenario-based multiple-choice and multiple-select test delivered online or at a test center.",
+    "scenarioPercent": "Expect scenario-based questions about building the semantic data model, configuring AI-assisted analytics, governing access, and embedding Tableau Next content into Salesforce experiences.",
+    "bestWayToPass": [
+      "<strong>Know the semantic data model:</strong> how Tableau Next organizes metrics and dimensions on top of Data Cloud so they're reusable and governed, rather than rebuilt per workbook.",
+      "<strong>Understand AI-assisted analytics:</strong> how natural-language and Agentforce-style assistance surfaces insights without bypassing governed definitions.",
+      "<strong>Master governance and access:</strong> row-level security and content permissions in a Data Cloud-native analytics platform.",
+      "<strong>Know embedding patterns:</strong> how Tableau Next content surfaces inside Salesforce pages and external experiences."
+    ]
+  },
+  "expertInsight": "Use Salesforce's official Tableau Next Consultant exam guide and Trailhead credential page as the study scope. The certification launched in August 2026 and is the first consultant exam written for the rebuilt Tableau/analytics stack, so older Tableau Desktop or Tableau Server study material (and even the classic Tableau Consultant guide) should not be assumed to carry over directly.",
+  "certificationCard": {
+    "code": "Tableau Next Consultant",
+    "description": "This exam tests your ability to implement and maintain scalable Tableau Next analytics solutions on a governed, Data Cloud-native semantic data model, including AI-assisted analytics and embedding. The exam is 60 scored questions in 105 minutes, with a 65% pass mark.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "65%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Semantic Data Model Design",
+      "AI-Assisted Analytics",
+      "Governance and Row-Level Security",
+      "Embedding and Distribution",
+      "Performance and Scalability"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Tableau Next Consultant: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Semantic Data Model Design",
+        "body": "Tableau Next defines metrics and dimensions once in a governed semantic layer on top of Data Cloud, so every workbook and AI-assisted query reads from the same consistent definitions instead of each author redefining a calculation independently."
+      },
+      {
+        "heading": "AI-Assisted Analytics",
+        "body": "Natural-language and AI-assisted exploration in Tableau Next still resolves against the governed semantic model. A consultant should know that AI-assisted answers are only as trustworthy as the underlying metric definitions they're built on."
+      },
+      {
+        "heading": "Governance and Row-Level Security",
+        "body": "Row-level security and content permissions determine who can see which rows and which assets. Because Tableau Next sits on Data Cloud, security design has to account for the unified data layer, not just workbook-level sharing settings."
+      },
+      {
+        "heading": "Embedding and Distribution",
+        "body": "Tableau Next content can be embedded into Salesforce pages and external experiences. Consultants need to know which embedding approach preserves governed security and performance versus one that bypasses it."
+      },
+      {
+        "heading": "Performance and Scalability",
+        "body": "Because the semantic model centralizes calculation logic, performance tuning decisions (such as how aggregations are defined) have a platform-wide effect rather than being isolated to one workbook."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Tableau Next Consultant Exam",
+    "intro": "Most questions describe an analytics scenario and ask you to pick the governed, semantic-model-first solution rather than a workbook-level workaround from classic Tableau.",
+    "blocks": [
+      {
+        "heading": "Default to the semantic model, not a one-off calculation",
+        "body": "If an option recreates a metric locally inside one workbook instead of referencing the shared semantic definition, that option is usually the trap, since it breaks consistency across other workbooks."
+      },
+      {
+        "heading": "Separate data access from content access",
+        "body": "Row-level security controls which data rows a user can see; content/workbook permissions control which assets they can open. A scenario about 'why can this user see rows they shouldn't' is a row-level security question, not a sharing-settings question."
+      },
+      {
+        "heading": "Question AI-assisted answers that skip governance",
+        "body": "If a scenario describes an AI-assisted insight that contradicts the governed metric definition, the fix is to correct the semantic model or query, not to trust the AI-generated number over the governed source."
+      },
+      {
+        "heading": "Know when embedding should inherit security",
+        "body": "An embedded view should generally inherit the same row-level security as the source, not grant broader access just because it's surfaced in a different Salesforce page."
+      },
+      {
+        "heading": "Don't assume classic Tableau Server admin knowledge transfers directly",
+        "body": "Tableau Next's governance and embedding model is Data Cloud-native; some concepts are analogous to Tableau Server, but the implementation mechanics differ."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Tableau and Analytics Certifications",
+    "intro": "After this credential, round out your Tableau and analytics track:",
+    "links": [
+      { "href": "/certifications/tableau-consultant", "label": "Tableau Consultant" },
+      { "href": "/certifications/tableau-data-analyst", "label": "Tableau Data Analyst" },
+      { "href": "/certifications/crm-analytics-einstein-discovery-consultant", "label": "CRM Analytics and Einstein Discovery" },
+      { "href": "/certifications/data-360-consultant", "label": "Data 360 Consultant" }
+    ]
+  },
+  "tocSections": [
+    { "id": "exam-prep", "title": "Exam Prep Content" },
+    { "id": "key-concepts", "title": "Key Concepts" },
+    { "id": "scenario-tips", "title": "How to Pass" },
+    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
+    { "id": "practice-questions", "title": "Practice Questions" },
+    { "id": "more-questions", "title": "Get More Questions" },
+    { "id": "related-certs", "title": "Related Certifications" },
+    { "id": "faq", "title": "Exam FAQs" }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "Two different workbooks show two different values for 'Total Revenue' from the same underlying data. What is the most likely root cause in Tableau Next?",
+      "options": [
+        "A network outage during the last refresh",
+        "Each workbook defined its own local calculation instead of referencing the shared semantic model definition",
+        "The workbooks use different fonts",
+        "The dashboards were published on different days"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Inconsistent metric values across workbooks most commonly happen when authors recreate a calculation locally instead of using the governed semantic model definition shared across workbooks.",
+      "whyWrong": [
+        "A network outage might cause stale data, but it wouldn't produce two different definitions of the same metric.",
+        "Font choice is cosmetic and has no effect on calculated metric values.",
+        "Publish date affects data freshness, not whether two workbooks agree on the metric's definition."
+      ]
+    },
+    {
+      "question": "A sales rep can open a regional dashboard but sees revenue figures for regions outside their own. What should the consultant check first?",
+      "options": [
+        "The dashboard's color palette",
+        "Row-level security rules governing which data rows the user can access",
+        "The workbook's file name",
+        "The dashboard's refresh schedule"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Seeing data rows outside one's intended scope is a row-level security configuration issue, not a cosmetic or scheduling one.",
+      "whyWrong": [
+        "Color palette is a display preference, unrelated to which data rows are returned.",
+        "File naming has no bearing on data access control.",
+        "Refresh schedule affects data currency, not which rows a given user is authorized to see."
+      ]
+    },
+    {
+      "question": "A business user asks the AI-assisted analytics feature a natural-language question and gets an answer that contradicts the official KPI definition used elsewhere. What should the consultant do?",
+      "options": [
+        "Tell the user to always trust the AI-generated number instead",
+        "Investigate and correct the underlying semantic model or query so the AI-assisted answer aligns with the governed definition",
+        "Disable AI-assisted analytics permanently for all users",
+        "Ignore the discrepancy since it's only a minor cosmetic issue"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AI-assisted answers are only as reliable as the governed semantic model they query, so a contradiction should be resolved by fixing that underlying definition or query, not by trusting the AI output over the governed source.",
+      "whyWrong": [
+        "Treating the AI-generated number as automatically authoritative ignores the governed definition it should be consistent with.",
+        "Disabling the feature entirely is an overreaction when the real fix is correcting the underlying model.",
+        "A metric discrepancy that could mislead business decisions is not a purely cosmetic issue."
+      ]
+    },
+    {
+      "question": "A client wants a Tableau Next view embedded on a Salesforce record page, and asks whether the embedded view should show broader data than the source dashboard. What is the correct guidance?",
+      "options": [
+        "Yes, embedding should always widen data access automatically",
+        "No, the embedded view should generally inherit the same row-level security as the source",
+        "Embedding removes the need for any security considerations",
+        "Embedded views can only ever show static images with no live data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An embedded view should inherit the governed row-level security of its source rather than implicitly granting the viewer broader access.",
+      "whyWrong": [
+        "Automatically widening access through embedding would undermine the governed security model.",
+        "Embedding does not eliminate the need to consider who can see what data; the same access rules still apply.",
+        "Tableau Next embedding supports live, governed data views, not only static images."
+      ]
+    },
+    {
+      "question": "A consultant needs to change how 'Net Revenue' is calculated across the entire organization's analytics. What is the best practice?",
+      "options": [
+        "Edit the calculation separately in every individual workbook",
+        "Update the shared semantic model definition so every workbook referencing it is automatically consistent",
+        "Rename the metric in one workbook and leave the rest unchanged",
+        "Ask every analyst to remember the new formula manually"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Updating the centralized semantic model definition propagates the change consistently to every workbook referencing it, which is the core benefit of a governed semantic layer.",
+      "whyWrong": [
+        "Editing each workbook separately reintroduces the inconsistency risk the semantic model is meant to prevent.",
+        "Renaming in only one workbook does nothing to fix the calculation everywhere else.",
+        "Relying on analysts' memory instead of a centralized definition is unreliable and doesn't scale."
+      ]
+    },
+    {
+      "question": "Dashboard performance has degraded significantly after a new, complex calculation was added to the semantic model. What is the most appropriate first step?",
+      "options": [
+        "Immediately purchase additional unrelated licenses",
+        "Review and optimize how the new calculation and its aggregations are defined in the semantic model",
+        "Delete all existing dashboards",
+        "Switch every user to a different time zone"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Since the semantic model centralizes calculation logic, a performance regression tied to a new calculation should be investigated and optimized at that layer first.",
+      "whyWrong": [
+        "Buying unrelated licenses does not address a calculation-driven performance problem.",
+        "Deleting dashboards is a destructive overreaction, not a performance diagnosis step.",
+        "Time zone has no bearing on calculation performance."
+      ]
+    },
+    {
+      "question": "A consultant is scoping a migration from classic Tableau Server to Tableau Next. Which statement is most accurate?",
+      "options": [
+        "No redesign is needed; workbooks move over unchanged",
+        "Migration typically requires rethinking the data model into the governed semantic layer and reassessing security and embedding patterns",
+        "Tableau Next cannot connect to Data Cloud at all",
+        "Migration is only possible by rebuilding every report from scratch in Excel"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Moving to Tableau Next's Data Cloud-native semantic model and governance approach generally requires real redesign work, not a direct lift-and-shift of classic workbooks.",
+      "whyWrong": [
+        "Classic workbooks generally cannot move over unchanged given the architectural differences in the data and governance model.",
+        "Tableau Next is built to connect to Data Cloud; that is central to its architecture, not something it lacks.",
+        "Migration does not require abandoning the platform and rebuilding everything in Excel."
+      ]
+    },
+    {
+      "question": "Two departments want different default aggregations for the same underlying metric when viewed in their own contexts. What is the best approach?",
+      "options": [
+        "Force both departments to use an identical default with no flexibility",
+        "Define department-appropriate views or parameters on top of the shared semantic model so the underlying definition stays consistent but presentation can vary",
+        "Create two completely separate, unrelated data sources with no shared definition",
+        "Let each department manually recalculate the metric by hand each month"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Layering department-specific views or parameters on top of a single governed semantic definition preserves consistency while still allowing presentation flexibility.",
+      "whyWrong": [
+        "Forcing one rigid default ignores the legitimate need for different presentation contexts.",
+        "Fully separate, disconnected data sources reintroduce the consistency problem the semantic model is meant to solve.",
+        "Manual recalculation is error-prone and doesn't scale, and defeats the purpose of a governed model."
+      ]
+    },
+    {
+      "question": "An executive wants a single number that's guaranteed to match whichever dashboard or AI-assisted query it appears in. What should the consultant point to as the source of truth?",
+      "options": [
+        "Whichever workbook was created most recently",
+        "The governed semantic model definition for that metric",
+        "An informal estimate from the executive's team",
+        "The first search result from a general web search"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The governed semantic model definition is the designed single source of truth that every workbook and AI-assisted query should resolve against.",
+      "whyWrong": [
+        "Recency of creation says nothing about which workbook's definition is authoritative.",
+        "An informal team estimate is not a governed, verifiable source of truth.",
+        "A general web search result has no connection to the organization's governed internal metric definition."
+      ]
+    },
+    {
+      "question": "A new analyst wants to add a calculated field that duplicates an existing semantic-model metric under a different name. What risk should the consultant flag?",
+      "options": [
+        "There is no risk; duplicate metrics are always fine",
+        "Future metric drift, since the duplicate may diverge from the governed definition over time",
+        "It will automatically delete the original metric",
+        "It will immediately crash the platform"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A duplicated, independently-maintained metric risks drifting from the governed definition over time, recreating the inconsistency problem the semantic model exists to prevent.",
+      "whyWrong": [
+        "Duplicate, independently-defined metrics are a real governance risk, not a non-issue.",
+        "Adding a duplicate calculated field doesn't delete the original metric.",
+        "This is a data-governance risk, not a platform stability/crash issue."
+      ]
+    },
+    {
+      "question": "A client asks whether Tableau Next can surface insights using natural language instead of manual chart building. What is the accurate answer?",
+      "options": [
+        "No, Tableau Next only supports manually built charts",
+        "Yes, AI-assisted analytics can surface insights via natural language, resolved against the governed semantic model",
+        "Yes, but only for users outside the organization",
+        "No, natural language features were removed from all Salesforce analytics products"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tableau Next's AI-assisted analytics supports natural-language exploration, which still resolves against the governed semantic model for consistency.",
+      "whyWrong": [
+        "Manual chart building isn't the only option; AI-assisted natural-language analysis is also supported.",
+        "There's no restriction limiting this capability to only external, non-organizational users.",
+        "Natural-language-assisted analytics is a current capability, not something removed from the platform."
+      ]
+    },
+    {
+      "question": "A finance team wants to restrict a specific workbook so only finance staff can open it, regardless of what data rows exist. What should the consultant configure?",
+      "options": [
+        "Row-level security rules only",
+        "Content/workbook-level permissions restricting who can open that asset",
+        "A cosmetic color change to the dashboard",
+        "A change to the semantic model's calculation logic"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Restricting who can open a specific asset at all is a content/workbook-level permissions concern, distinct from row-level data filtering.",
+      "whyWrong": [
+        "Row-level security filters which rows a user sees within content they can already open; it doesn't block opening the asset entirely.",
+        "A color change has no effect on who can access the workbook.",
+        "Calculation logic changes affect metric values, not who is authorized to open the asset."
+      ]
+    },
+    {
+      "question": "Which best describes why a consultant should avoid recreating a governed metric's logic inside a single workbook's local calculated field?",
+      "options": [
+        "Local calculated fields are always faster than the semantic model",
+        "It breaks the single source of truth, risking inconsistent values across workbooks",
+        "Local calculated fields are not supported by the platform at all",
+        "It automatically grants every user admin access"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Recreating governed logic locally undermines the single-source-of-truth benefit of the semantic model and risks inconsistency as the two definitions drift apart.",
+      "whyWrong": [
+        "Local recreation isn't inherently faster; the concern here is consistency, not raw performance.",
+        "Local calculated fields are a supported capability; the concern is appropriate use, not availability.",
+        "Adding a local calculation has no relationship to user access/admin privileges."
+      ]
+    },
+    {
+      "question": "A consultant is asked to justify using Tableau Next's semantic layer instead of letting each team build its own independent data model. What is the strongest justification?",
+      "options": [
+        "It guarantees every team gets a different answer, which is desirable",
+        "A shared semantic layer keeps metric definitions consistent and governed across the whole organization",
+        "It eliminates the need for any data governance",
+        "It prevents any team from building their own dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The core value of a shared semantic layer is organization-wide consistency and governance of metric definitions, avoiding the fragmentation of team-by-team independent models.",
+      "whyWrong": [
+        "Inconsistent answers across teams is the problem the semantic layer solves, not a desirable outcome.",
+        "A semantic layer is itself a governance mechanism; it doesn't eliminate the need for governance.",
+        "Teams can still build their own dashboards and views on top of the shared, governed definitions."
+      ]
+    },
+    {
+      "question": "An embedded Tableau Next view inside a Salesforce Experience Cloud site needs to show only data relevant to the logged-in external user's account. What governs this?",
+      "options": [
+        "The browser's cache settings",
+        "Row-level security configured to filter based on the logged-in user's account context",
+        "The site's page layout template",
+        "The user's device screen resolution"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Filtering embedded analytics content to the logged-in user's own account context is exactly what row-level security is designed to enforce.",
+      "whyWrong": [
+        "Browser cache settings have no bearing on which data rows a user is authorized to see.",
+        "Page layout controls visual arrangement, not data row filtering.",
+        "Screen resolution affects display rendering, not data access scope."
+      ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "Tableau Next Consultant covers semantic data model design on Data Cloud, AI-assisted analytics, governance and row-level security, and embedding. This is a newly launched 2026 credential, so use this sample practice set alongside Salesforce's own"
+    },
+    {
+      "type": "link",
+      "href": "https://trailhead.salesforce.com/credentials/tableaunextconsultant",
+      "label": "Tableau Next Consultant credential page"
+    },
+    {
+      "type": "text",
+      "text": "and official exam guide."
+    }
+  ]
+}

@@ -13,7 +13,7 @@ interface Props {
 export default function RelatedComparisons({ links }: Props) {
   if (!links.length) return null
   return (
-    <div className="mt-10 rounded-xl border border-gray-100 bg-gray-50 px-5 py-4">
+    <div data-nosnippet className="mt-10 rounded-xl border border-gray-100 bg-gray-50 px-5 py-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">
         Related Comparisons
       </p>

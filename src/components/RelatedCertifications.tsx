@@ -35,7 +35,7 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
   ].filter((x): x is { href: string; anchorText: string } => Boolean(x))
 
   return (
-    <section className="mt-12 rounded-xl border border-purple-100 bg-white p-6" aria-label="Related certifications and study resources">
+    <section data-nosnippet className="mt-12 rounded-xl border border-purple-100 bg-white p-6" aria-label="Related certifications and study resources">
       {(requiredPrerequisiteSlugs.length > 0 || recommendedPrerequisiteSlug) && (
         <div className="mb-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Prerequisite and recommended certification resources</h2>

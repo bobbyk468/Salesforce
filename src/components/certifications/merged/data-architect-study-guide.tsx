@@ -3,7 +3,6 @@
  * header) was dropped because the hub page already provides it. */
 import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
@@ -18,7 +17,6 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'data-architect'
-const pageTitle = `ARC-801 Platform Data Architect Study Guide [${RELEASE_YEAR}]`
 const pageDescription = 'Study the six Platform Data Architect exam domains, including large data volumes, master data patterns, and migration strategies.'
 
 const breadcrumbItems = [

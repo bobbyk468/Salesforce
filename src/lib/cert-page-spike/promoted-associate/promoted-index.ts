@@ -3,6 +3,7 @@ import type { AssociateSpikeBody } from '../types'
 import { validateAssociateSpikeBody } from '../validate-body'
 import administratorPracticeTestJson from './administrator-practice-test.json'
 import advancedFieldServiceApJson from './advanced-field-service-ap.json'
+import agentforceLifeSciencesConsultantJson from './agentforce-life-sciences-consultant.json'
 import agentforceSpecialistJson from './agentforce-specialist.json'
 import applicationArchitectJson from './application-architect.json'
 import b2bCommerceAdminApJson from './b2b-commerce-admin-ap.json'
@@ -45,6 +46,7 @@ import marketingCloudEngagementAdminJson from './marketing-cloud-engagement-admi
 import marketingCloudEngagementDeveloperJson from './marketing-cloud-engagement-developer.json'
 import marketingCloudEngagementFoundationsJson from './marketing-cloud-engagement-foundations.json'
 import marketingCloudIntelligenceApJson from './marketing-cloud-intelligence-ap.json'
+import marketingCloudNextConsultantJson from './marketing-cloud-next-consultant.json'
 import marketingCloudPersonalizationApJson from './marketing-cloud-personalization-ap.json'
 import mediaCloudApJson from './media-cloud-ap.json'
 import mulesoftCatalystConsultantJson from './mulesoft-catalyst-consultant.json'
@@ -80,6 +82,7 @@ import tableauArchitectJson from './tableau-architect.json'
 import tableauConsultantJson from './tableau-consultant.json'
 import tableauDataAnalystJson from './tableau-data-analyst.json'
 import tableauDesktopFoundationsJson from './tableau-desktop-foundations.json'
+import tableauNextConsultantJson from './tableau-next-consultant.json'
 import tableauServerAdministratorJson from './tableau-server-administrator.json'
 import technicalArchitectJson from './technical-architect.json'
 import technicalArchitectEvaluationJson from './technical-architect-evaluation.json'
@@ -96,6 +99,7 @@ import claudeCertifiedArchitectProfessionalJson from './claude-certified-archite
 export const PROMOTED_ASSOCIATE_SLUGS = [
   'administrator-practice-test',
   'advanced-field-service-ap',
+  'agentforce-life-sciences-consultant',
   'agentforce-specialist',
   'application-architect',
   'b2b-commerce-admin-ap',
@@ -138,6 +142,7 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'marketing-cloud-engagement-developer',
   'marketing-cloud-engagement-foundations',
   'marketing-cloud-intelligence-ap',
+  'marketing-cloud-next-consultant',
   'marketing-cloud-personalization-ap',
   'media-cloud-ap',
   'mulesoft-catalyst-consultant',
@@ -173,6 +178,7 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'tableau-consultant',
   'tableau-data-analyst',
   'tableau-desktop-foundations',
+  'tableau-next-consultant',
   'tableau-server-administrator',
   'technical-architect',
   'technical-architect-evaluation',
@@ -189,6 +195,7 @@ export type PromotedAssociateSlug = (typeof PROMOTED_ASSOCIATE_SLUGS)[number]
 export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, AssociateSpikeBody> = {
   'administrator-practice-test': validateAssociateSpikeBody(administratorPracticeTestJson, 'administrator-practice-test'),
   'advanced-field-service-ap': validateAssociateSpikeBody(advancedFieldServiceApJson, 'advanced-field-service-ap'),
+  'agentforce-life-sciences-consultant': validateAssociateSpikeBody(agentforceLifeSciencesConsultantJson, 'agentforce-life-sciences-consultant'),
   'agentforce-specialist': validateAssociateSpikeBody(agentforceSpecialistJson, 'agentforce-specialist'),
   'application-architect': validateAssociateSpikeBody(applicationArchitectJson, 'application-architect'),
   'b2b-commerce-admin-ap': validateAssociateSpikeBody(b2bCommerceAdminApJson, 'b2b-commerce-admin-ap'),
@@ -231,6 +238,7 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'marketing-cloud-engagement-developer': validateAssociateSpikeBody(marketingCloudEngagementDeveloperJson, 'marketing-cloud-engagement-developer'),
   'marketing-cloud-engagement-foundations': validateAssociateSpikeBody(marketingCloudEngagementFoundationsJson, 'marketing-cloud-engagement-foundations'),
   'marketing-cloud-intelligence-ap': validateAssociateSpikeBody(marketingCloudIntelligenceApJson, 'marketing-cloud-intelligence-ap'),
+  'marketing-cloud-next-consultant': validateAssociateSpikeBody(marketingCloudNextConsultantJson, 'marketing-cloud-next-consultant'),
   'marketing-cloud-personalization-ap': validateAssociateSpikeBody(marketingCloudPersonalizationApJson, 'marketing-cloud-personalization-ap'),
   'media-cloud-ap': validateAssociateSpikeBody(mediaCloudApJson, 'media-cloud-ap'),
   'mulesoft-catalyst-consultant': validateAssociateSpikeBody(mulesoftCatalystConsultantJson, 'mulesoft-catalyst-consultant'),
@@ -266,6 +274,7 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'tableau-consultant': validateAssociateSpikeBody(tableauConsultantJson, 'tableau-consultant'),
   'tableau-data-analyst': validateAssociateSpikeBody(tableauDataAnalystJson, 'tableau-data-analyst'),
   'tableau-desktop-foundations': validateAssociateSpikeBody(tableauDesktopFoundationsJson, 'tableau-desktop-foundations'),
+  'tableau-next-consultant': validateAssociateSpikeBody(tableauNextConsultantJson, 'tableau-next-consultant'),
   'tableau-server-administrator': validateAssociateSpikeBody(tableauServerAdministratorJson, 'tableau-server-administrator'),
   'technical-architect': validateAssociateSpikeBody(technicalArchitectJson, 'technical-architect'),
   'technical-architect-evaluation': validateAssociateSpikeBody(technicalArchitectEvaluationJson, 'technical-architect-evaluation'),

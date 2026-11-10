@@ -101,6 +101,8 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'field-service': '$200',
   'pardot-consultant': '$200',
   'marketing-cloud-consultant': '$200',
+  'marketing-cloud-next-consultant': '$200',
+  'agentforce-life-sciences-consultant': '$200',
   'nonprofit-cloud': '$200',
   'nonprofit-success-pack-consultant': '$200',
   'omnistudio-consultant': '$200',
@@ -111,6 +113,7 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'pardot-specialist': '$200',
   'strategy-designer': '$200',
   'tableau-consultant': '$200',
+  'tableau-next-consultant': '$200',
   'tableau-data-analyst': '$200',
   'tableau-server-administrator': '$200',
   'ai-associate': '$75',
@@ -224,6 +227,8 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'field-service': { questions: 60, passingScore: '63%', duration: '105 min' },
   'pardot-consultant': { questions: 60, passingScore: '68%', duration: '105 min' },
   'marketing-cloud-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
+  'marketing-cloud-next-consultant': { questions: 60, passingScore: '72%', duration: '105 min' },
+  'agentforce-life-sciences-consultant': { questions: 60, passingScore: '62%', duration: '105 min' },
   'nonprofit-cloud': { questions: 60, passingScore: '65%', duration: '105 min' },
   'nonprofit-success-pack-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
   'omnistudio-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
@@ -279,6 +284,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'tableau-architect': { questions: 54, passingScore: '63%', duration: '105 min' },
   // Tableau ($200 tier)
   'tableau-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
+  'tableau-next-consultant': { questions: 60, passingScore: '65%', duration: '105 min' },
   'tableau-data-analyst': { questions: 60, passingScore: '65%', duration: '105 min' },
   'tableau-server-administrator': { questions: 55, passingScore: 'Not published', duration: '90 min' },
   // Tableau Foundations ($75 tier)
@@ -461,7 +467,7 @@ function getLegacyCertMetaTitle(slug: string): string {
     'system-architect': `Salesforce System Architect: Free Practice (${TITLE_YEAR})`,
     'application-architect': `Free Application Architect Practice Exam ${RELEASE_YEAR}`,
     'integration-architect': `Integration Architect Cert: Free Practice (${TITLE_YEAR})`,
-    'data-architect': `Free Data Architect (ARC-801) Practice Exam ${RELEASE_YEAR}`,
+    'data-architect': `Free Data Architect (Plat-Arch-201) Practice Exam ${RELEASE_YEAR}`,
     // Extended coverage: All remaining certs for complete CTR optimization
     'administrator-practice-test': `Free ADM-201 Mock Practice Exam ${RELEASE_YEAR}`,
     'advanced-field-service-ap': `Free Advanced Field Service AP Practice Exam ${RELEASE_YEAR}`,
@@ -1088,11 +1094,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the DEV-402 exam fee and passing score in Summer \'26?',
-      answer: 'The Platform App Builder (DEV-402) exam fee is generally $200 USD with a typical retake fee of $100 USD, and the passing score is 63%. Always verify the latest fee and policy details in your Salesforce certification account before booking.',
+      answer: 'The Platform App Builder (DEV-402) exam fee is generally $200 USD with a typical retake fee of $100 USD, and the passing score is 73%. Always verify the latest fee and policy details in your Salesforce certification account before booking.',
     },
     {
       question: 'How many questions are on the DEV-402 App Builder exam?',
-      answer: 'The DEV-402 exam has 60 multiple-choice questions, with 5 unscored pilot questions. You have 105 minutes, and you need 63% to pass (approximately 38 correct answers out of 60).',
+      answer: 'The DEV-402 exam has 60 multiple-choice questions, with 5 unscored pilot questions. You have 105 minutes, and you need 73% to pass (approximately 44 correct answers out of 60).',
     },
     {
       question: 'What topics are covered in Platform App Builder (DEV-402)?',
@@ -1124,7 +1130,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the Platform App Builder (DEV-402) exam passing score and how many questions are on it?',
-      answer: 'The Platform App Builder (DEV-402) exam has 60 multiple-choice questions and 105 minutes. The passing score is 63% (approximately 38 correct answers). The exam fee is $200 USD (retake $100 USD). There is no formal prerequisite, but Salesforce strongly recommends holding the Platform Administrator certification first.',
+      answer: 'The Platform App Builder (DEV-402) exam has 60 multiple-choice questions and 105 minutes. The passing score is 73% (approximately 44 correct answers). The exam fee is $200 USD (retake $100 USD). There is no formal prerequisite, but Salesforce strongly recommends holding the Platform Administrator certification first.',
     },
     {
       question: 'What is the hardest section of the DEV-402 Platform App Builder exam?',

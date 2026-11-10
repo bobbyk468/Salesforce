@@ -1,0 +1,388 @@
+{
+  "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Agentforce Life Sciences Consultant exam for?",
+    "personas": [
+      {
+        "label": "Life Sciences Consultants",
+        "description": "Consultants who design and configure Agentforce Life Sciences for Customer Engagement solutions for pharma, biotech, and medtech clients."
+      },
+      {
+        "label": "Salesforce Admins moving into Life Sciences",
+        "description": "Platform Administrators who already hold ADM-201 and are moving into a life sciences-specific implementation specialty."
+      },
+      {
+        "label": "Business Analysts on Life Sciences projects",
+        "description": "Analysts who gather requirements for HCP/HCO engagement, account and territory management, and compliant field interactions."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Agentforce Life Sciences Consultant Exam Hard?",
+    "summary": "The exam tests whether you can configure Agentforce Life Sciences for Customer Engagement for compliant, data-driven interactions with healthcare organizations (HCOs), healthcare professionals (HCPs), and partners, not just recall feature names.",
+    "bullets": [
+      "<strong>60 scored questions</strong> plus up to five unscored questions that do not affect your result.",
+      "<strong>105 minutes</strong> and a <strong>62% passing score</strong>.",
+      "<strong>Exam fee</strong>: US$200; retake fee: US$100, plus applicable taxes.",
+      "<strong>Prerequisite</strong>: Salesforce Certified Platform Administrator."
+    ],
+    "passRateGuidance": "Book the exam once you can walk through account and territory setup, an engagement plan, and a compliant HCP interaction scenario in Life Sciences for Customer Engagement without hesitating."
+  },
+  "examFormat": {
+    "heading": "Agentforce Life Sciences Consultant Exam Format Explained",
+    "intro": "The exam is a proctored, scenario-based multiple-choice and multiple-select test delivered online or at a test center.",
+    "scenarioPercent": "Expect scenario-based questions built around a life sciences account team deciding how to configure territories, engagement plans, and Agentforce-driven interactions.",
+    "bestWayToPass": [
+      "<strong>Know accounts and territories:</strong> how account and territory management structures HCO/HCP relationships and field coverage.",
+      "<strong>Master engagement planning:</strong> how engagement plans and engagement plan templates drive repeatable interaction cadences.",
+      "<strong>Understand Data 360 for life sciences:</strong> how customer data is unified and made available to Agentforce for personalized, compliant engagement.",
+      "<strong>Respect compliance boundaries:</strong> know when a configuration choice supports (or breaks) HCP/HCO interaction compliance requirements."
+    ]
+  },
+  "expertInsight": "Use Salesforce's official Agentforce Life Sciences Consultant exam guide and the Trailhead prep trail as the study scope. The credential is new for 2026, so lean on the official Trailhead Academy courses (LSC001, LSC002) and the exam guide rather than older Life Sciences Cloud material, since the underlying product has changed.",
+  "certificationCard": {
+    "code": "Agentforce Life Sciences Consultant",
+    "description": "This exam tests your ability to design and implement Agentforce Life Sciences for Customer Engagement solutions: account and territory management, engagement planning and execution, and compliant, data-driven HCP/HCO interactions powered by Data 360 and Agentforce. The exam is 60 scored questions in 105 minutes, with a 62% pass mark.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "62%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Account and Territory Management",
+      "Engagement Planning and Execution",
+      "Data 360 for Life Sciences",
+      "Agentforce for Life Sciences",
+      "Compliance and HCP/HCO Interactions"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Agentforce Life Sciences Consultant: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Account and Territory Management",
+        "body": "Life Sciences for Customer Engagement structures HCO and HCP accounts under territories so field reps have a clear, compliant view of who they can engage and where. Territory assignment rules and account hierarchies should reflect the client's real sales and medical affairs structure, not a generic Salesforce territory model."
+      },
+      {
+        "heading": "Engagement Planning and Execution",
+        "body": "Engagement plans define a repeatable sequence of interactions, such as a product launch cadence or a call-and-sample cycle, built from engagement plan templates. Consultants configure these templates to match the client's approved interaction model, then track execution against the plan."
+      },
+      {
+        "heading": "Data 360 for Life Sciences",
+        "body": "Data 360 unifies HCP/HCO data, interaction history, and consent signals into a single customer profile that Agentforce can act on. A consultant needs to know how that unified profile feeds personalization without exposing data the field team isn't authorized to see."
+      },
+      {
+        "heading": "Agentforce for Life Sciences",
+        "body": "Agentforce agents can draft next-best-action suggestions or interaction summaries for field reps, but every suggestion still has to respect the same compliance and consent boundaries as a human-authored interaction."
+      },
+      {
+        "heading": "Compliance and HCP/HCO Interactions",
+        "body": "Life sciences engagement is bound by promotional-compliance rules (what can be said, to whom, and how it's documented). Configuration choices, such as what a field rep can edit on a completed interaction record, should reflect those compliance requirements, not just general Salesforce security best practice."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Agentforce Life Sciences Consultant Exam",
+    "intro": "Most questions describe a life sciences field team or medical affairs scenario and ask you to pick the configuration that is both operationally correct and compliant.",
+    "blocks": [
+      {
+        "heading": "Separate 'what the rep sees' from 'what the rep can do'",
+        "body": "A question that looks like a sharing/visibility problem is often really a compliance problem: the rep may be allowed to see an interaction but not allowed to alter the compliant record of what was said after the fact."
+      },
+      {
+        "heading": "Match the template to the interaction type",
+        "body": "Engagement plan templates differ by interaction type, for example a sample-drop visit versus a medical-information request. Pick the template structure that fits the described interaction, not just any available template."
+      },
+      {
+        "heading": "Trace data back to Data 360",
+        "body": "When a question asks how Agentforce 'knows' something about an HCP, trace it back to what's actually unified in Data 360; don't assume Agentforce has access to data that was never unified or consented to."
+      },
+      {
+        "heading": "Watch for territory and hierarchy traps",
+        "body": "A rep requesting access to an account outside their territory is a territory-model question, not a role-hierarchy question. Read carefully which structure the scenario is actually describing."
+      },
+      {
+        "heading": "Don't assume general Health Cloud knowledge transfers directly",
+        "body": "Life Sciences for Customer Engagement is purpose-built for pharma/biotech/medtech field engagement; some concepts overlap with general Health Cloud, but account/territory and engagement-plan mechanics are specific to this product."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Consultant Certifications",
+    "intro": "After this credential, round out your consultant track with adjacent industry and data certifications:",
+    "links": [
+      { "href": "/certifications/data-360-consultant", "label": "Data 360 Consultant" },
+      { "href": "/certifications/agentforce-specialist", "label": "Agentforce Specialist" },
+      { "href": "/certifications/administrator", "label": "Platform Administrator" },
+      { "href": "/consultant-certification-path", "label": "Consultant certification path" }
+    ]
+  },
+  "tocSections": [
+    { "id": "exam-prep", "title": "Exam Prep Content" },
+    { "id": "key-concepts", "title": "Key Concepts" },
+    { "id": "scenario-tips", "title": "How to Pass" },
+    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
+    { "id": "practice-questions", "title": "Practice Questions" },
+    { "id": "more-questions", "title": "Get More Questions" },
+    { "id": "related-certs", "title": "Related Certifications" },
+    { "id": "faq", "title": "Exam FAQs" }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "A pharmaceutical field rep needs to see which HCOs and HCPs they are authorized to visit this quarter. Which feature primarily determines this?",
+      "options": [
+        "Public Groups",
+        "Account and territory assignment",
+        "Chatter Groups",
+        "Report folders"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Account and territory assignment in Life Sciences for Customer Engagement defines which HCO/HCP accounts a given field rep covers.",
+      "whyWrong": [
+        "Public Groups organize sharing for general Salesforce records, not life sciences account/territory coverage specifically.",
+        "Chatter Groups are collaboration spaces, unrelated to territory-based account assignment.",
+        "Report folders control report visibility, not which accounts a rep is authorized to engage."
+      ]
+    },
+    {
+      "question": "A client wants every sample-drop visit to follow the same five-step sequence. What should the consultant configure?",
+      "options": [
+        "A validation rule on the Visit object",
+        "An engagement plan built from an engagement plan template",
+        "A Chatter approval process",
+        "A dashboard filter"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Engagement plan templates define repeatable interaction sequences, which is exactly what a standardized sample-drop visit flow calls for.",
+      "whyWrong": [
+        "A validation rule enforces data entry correctness, not a multi-step interaction sequence.",
+        "An approval process routes records for sign-off, it doesn't define a repeatable interaction sequence.",
+        "A dashboard filter changes what's displayed in a report, not how a visit sequence is executed."
+      ]
+    },
+    {
+      "question": "An Agentforce agent suggests a next-best-action for an HCP interaction. What must the consultant verify before enabling this in production?",
+      "options": [
+        "That the suggestion is grammatically correct",
+        "That the suggestion respects the same compliance and consent boundaries as a human-authored interaction",
+        "That the suggestion is generated within 2 seconds",
+        "That the suggestion uses the client's brand colors"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Agentforce-generated suggestions in a regulated life sciences context must respect the same promotional-compliance and consent rules as any other interaction.",
+      "whyWrong": [
+        "Grammar quality is a usability concern, not the compliance gate that matters for production use.",
+        "Response time is a performance concern, unrelated to whether the suggestion is compliant to act on.",
+        "Branding is a cosmetic concern, not a compliance requirement."
+      ]
+    },
+    {
+      "question": "A medical science liaison needs to log a medical information request that must NOT be edited once submitted, for audit purposes. What configuration best supports this?",
+      "options": [
+        "Give the user full edit access on all fields indefinitely",
+        "Lock the record (via a flow, approval process, or record-lock mechanism) once it reaches a 'Submitted' status",
+        "Delete the record after 30 days",
+        "Hide the record from the user's list view"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Locking a record once it reaches a finalized status preserves an auditable, unalterable history of what was captured, which is what compliance-sensitive medical information logging requires.",
+      "whyWrong": [
+        "Full ongoing edit access is the opposite of what an auditable, tamper-resistant record needs.",
+        "Deleting the record destroys the audit trail entirely, which defeats the compliance purpose.",
+        "Hiding a record from a list view doesn't prevent edits, it only affects visibility in that view."
+      ]
+    },
+    {
+      "question": "Which statement best describes the role of Data 360 in Agentforce Life Sciences for Customer Engagement?",
+      "options": [
+        "It replaces the need for account and territory management",
+        "It unifies HCP/HCO data, interaction history, and consent signals into a profile Agentforce can act on",
+        "It is only used for marketing email sends",
+        "It automatically approves all promotional claims"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data 360 unifies customer data so Agentforce has a consistent, consented profile to personalize interactions against.",
+      "whyWrong": [
+        "Data 360 complements, it doesn't replace, account and territory management, which still governs who can engage whom.",
+        "Data 360 unification is a platform-wide concern, not scoped only to marketing email.",
+        "Data 360 does not perform promotional-claims approval, that's a compliance/legal review function."
+      ]
+    },
+    {
+      "question": "A client's compliance team requires that any content shared with an HCP during a visit be pre-approved. Which design approach fits this requirement?",
+      "options": [
+        "Let reps upload any file at the point of the visit",
+        "Restrict shareable content to an approved content library tied to the interaction type",
+        "Disable all content sharing permanently",
+        "Allow sharing only through personal email"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tying shareable content to a pre-approved library enforces the compliance requirement while still letting reps do their job during the visit.",
+      "whyWrong": [
+        "Unrestricted uploads defeat the pre-approval requirement entirely.",
+        "Disabling sharing entirely isn't a workable design, since reps need to share approved materials.",
+        "Personal email bypasses Salesforce governance and auditability altogether, the opposite of what compliance needs."
+      ]
+    },
+    {
+      "question": "A field rep is reassigned from one territory to another mid-quarter. What is the most direct consequence inside Life Sciences for Customer Engagement?",
+      "options": [
+        "Their past activity history is deleted",
+        "Their account/HCP coverage changes to match the new territory assignment",
+        "Their user license is automatically downgraded",
+        "Nothing changes until the next fiscal year"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Territory reassignment directly changes which HCO/HCP accounts the rep is now responsible for covering.",
+      "whyWrong": [
+        "Reassigning a territory doesn't delete historical activity records.",
+        "License tier is a separate administrative decision, not an automatic side effect of a territory change.",
+        "Territory assignment changes typically take effect on reassignment, not deferred to a new fiscal year by default."
+      ]
+    },
+    {
+      "question": "Which best describes the difference between an engagement plan and an engagement plan template?",
+      "options": [
+        "There is no difference, they are the same object",
+        "The template is the reusable blueprint; the plan is an instance applied to a specific account or HCP",
+        "The plan is reusable; the template is a one-time record",
+        "Templates are only used for reporting"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The engagement plan template is the reusable definition of the interaction sequence; the engagement plan is the applied instance tracked against a real account or HCP.",
+      "whyWrong": [
+        "They are distinct objects with distinct purposes, not the same record type.",
+        "This reverses the actual relationship: the template is reusable, the plan is the specific instance.",
+        "Templates define the sequence used for execution, they are not primarily a reporting construct."
+      ]
+    },
+    {
+      "question": "An HCP withdraws consent for marketing communications. What should happen to Agentforce-driven engagement for that HCP?",
+      "options": [
+        "Nothing, Agentforce suggestions are exempt from consent rules",
+        "Agentforce must stop generating or acting on consent-dependent engagement for that HCP",
+        "The HCP record should be deleted immediately",
+        "Consent withdrawal only affects email, not other channels"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Consent withdrawal must propagate to every consent-dependent engagement channel, including Agentforce-driven suggestions, not just one channel.",
+      "whyWrong": [
+        "Agentforce is not exempt from consent requirements; it must honor the same consent state as any other engagement channel.",
+        "Deleting the record isn't the correct response to a consent withdrawal, and it would destroy needed compliance history.",
+        "Consent withdrawal should be honored across the relevant engagement channels it applies to, not narrowly scoped to email alone by default."
+      ]
+    },
+    {
+      "question": "A consultant is designing account hierarchy for a hospital system with multiple affiliated clinics. What is the main benefit of modeling this as a parent-child account hierarchy?",
+      "options": [
+        "It automatically generates sample compliance reports",
+        "It lets reps and reports roll up activity and relationships from clinics up to the parent hospital system",
+        "It removes the need for territory assignment",
+        "It changes the HCP's license type"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Parent-child account hierarchies let teams see and report on activity at both the clinic and parent-organization level.",
+      "whyWrong": [
+        "Account hierarchy modeling doesn't generate compliance reports on its own; that's a separate reporting/compliance function.",
+        "Hierarchy and territory assignment serve different purposes and work together, hierarchy doesn't eliminate the need for territories.",
+        "Account hierarchy has no bearing on an HCP's Salesforce license type."
+      ]
+    },
+    {
+      "question": "During UAT, a client reports that a field rep can see engagement plans for HCOs outside their assigned territory. What should the consultant check first?",
+      "options": [
+        "The org's storage limits",
+        "The rep's territory assignment and related sharing rules",
+        "The org's API version",
+        "The Lightning page layout"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Visibility into out-of-territory engagement plans points directly at a territory assignment or sharing-rule misconfiguration.",
+      "whyWrong": [
+        "Storage limits affect capacity, not record-level visibility.",
+        "API version affects integration behavior, not standard UI record visibility for a user.",
+        "Page layout controls which fields display on a record a user can already see, not whether they can see the record at all."
+      ]
+    },
+    {
+      "question": "Which scenario is the best fit for using Agentforce to draft an interaction summary after an HCP visit?",
+      "options": [
+        "Replacing the compliance review of promotional claims entirely",
+        "Giving the rep a starting draft they review, edit for accuracy, and finalize within compliance guidelines",
+        "Automatically submitting the summary with no human review",
+        "Generating the summary only after 90 days have passed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Agentforce-drafted summaries are meant to accelerate the rep's documentation while the rep still reviews and finalizes them within compliance guidelines.",
+      "whyWrong": [
+        "Agentforce drafting a summary does not substitute for required compliance review of promotional content.",
+        "Skipping human review of a compliance-sensitive interaction summary defeats the purpose of having a review step at all.",
+        "There's no reason interaction documentation should be delayed 90 days; timely, accurate logging is the goal."
+      ]
+    },
+    {
+      "question": "A client wants to measure how well reps are following the approved engagement plan sequence. What should the consultant recommend?",
+      "options": [
+        "Manually ask each rep at the end of the quarter",
+        "Build reports/dashboards against engagement plan and plan-item completion status",
+        "Disable engagement plans and track everything in spreadsheets",
+        "Rely only on anecdotal feedback from managers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Reporting on engagement plan and plan-item completion status gives a structured, auditable way to measure adherence to the approved sequence.",
+      "whyWrong": [
+        "Manual quarterly check-ins are unreliable and don't scale, and they defeat the purpose of structured engagement plans.",
+        "Moving tracking outside Salesforce into spreadsheets abandons the platform's auditability and reporting.",
+        "Anecdotal manager feedback isn't a measurable, auditable way to track plan adherence."
+      ]
+    },
+    {
+      "question": "Which best describes a core difference between general Health Cloud and Agentforce Life Sciences for Customer Engagement?",
+      "options": [
+        "There is no meaningful difference, they are identical products",
+        "Life Sciences for Customer Engagement adds purpose-built account/territory and engagement-plan mechanics for pharma/biotech/medtech field engagement",
+        "Health Cloud is only for payers, never for life sciences",
+        "Life Sciences for Customer Engagement removes all Health Cloud functionality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Life Sciences for Customer Engagement is purpose-built on top of the platform for pharma/biotech/medtech field engagement, with account/territory and engagement-plan mechanics not present in generic Health Cloud.",
+      "whyWrong": [
+        "The products share platform foundations but are not identical; the life sciences product adds specific, purpose-built mechanics.",
+        "Health Cloud's use cases are broader than payers only; this overstates the restriction.",
+        "Life Sciences for Customer Engagement builds on, rather than removes, Salesforce's broader healthcare capabilities."
+      ]
+    },
+    {
+      "question": "A consultant must recommend how long interaction records should be retained for a life sciences client. What should primarily drive this recommendation?",
+      "options": [
+        "Whatever reduces storage cost the most",
+        "The client's regulatory and audit retention requirements",
+        "A fixed 30-day retention for every org",
+        "The rep's personal preference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Retention of compliance-relevant interaction records should be driven by the client's actual regulatory and audit obligations, not by storage cost or convenience.",
+      "whyWrong": [
+        "Minimizing storage cost at the expense of regulatory retention requirements creates compliance risk.",
+        "A universal fixed 30-day period ignores that different clients have different regulatory retention obligations.",
+        "Retention policy is a compliance decision, not a matter of individual rep preference."
+      ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "Agentforce Life Sciences Consultant covers account and territory management, engagement planning, Data 360 for life sciences, and compliant HCP/HCO engagement. This is a newly launched 2026 credential, so use this sample practice set alongside Salesforce's own"
+    },
+    {
+      "type": "link",
+      "href": "https://trailhead.salesforce.com/credentials/agentforcelifesciences",
+      "label": "Agentforce Life Sciences Consultant credential page"
+    },
+    {
+      "type": "text",
+      "text": "and official exam guide."
+    }
+  ]
+}

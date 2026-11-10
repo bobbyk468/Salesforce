@@ -167,19 +167,19 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Platform Data Architect?",
+      "question": "An org is querying a custom object with 40 million records through a SOQL query that filters on a non-indexed custom field, and the query is timing out. What is the most appropriate fix?",
       "options": [
-        "Only UI",
-        "Designing sound, scalable, high-performing solutions for enterprise data management on the Salesforce Platform",
-        "Email only",
-        "Slack only"
+        "Add a custom index on the filtered field so the query optimizer can use selective filtering",
+        "Switch the object to a Big Object, since Big Objects remove all query timeout limits",
+        "Enable a skinny table on the object, since skinny tables accelerate filtered WHERE-clause lookups",
+        "Increase the org's API request limit to give the query more time to complete"
       ],
-      "correctAnswer": 1,
-      "explanation": "Platform Data Architects design scalable, high-performing data solutions on the Salesforce Platform.",
+      "correctAnswer": 0,
+      "explanation": "A custom index on the filtered field lets the query optimizer treat the filter as selective, avoiding a full table scan. Skinny tables help reporting/read-heavy joins by excluding soft-deleted rows and reducing columns, not WHERE-clause selectivity, and Big Objects don't eliminate timeouts, they trade standard query capability for scale. API limits are unrelated to query execution time.",
       "whyWrong": [
-        "'Only UI' undersells the Data Architect's actual focus, which is scalable enterprise data management, not interface design.",
-        "Email is unrelated to the Data Architect's core data management focus.",
-        "Slack is unrelated to the Data Architect's core data management focus."
+        "Big Objects support only indexed-field queries themselves and are a different storage tier, not a drop-in timeout fix for a standard custom object.",
+        "Skinny tables improve reporting and list-view style reads by denormalizing and excluding soft-deletes; they don't make an unindexed WHERE-clause filter selective.",
+        "API request limits govern call volume, not how long a single SOQL query is allowed to scan before timing out."
       ]
     },
     {
@@ -199,19 +199,19 @@
       ]
     },
     {
-      "question": "What is the purpose of skinny tables in Salesforce?",
+      "question": "A team needs to load 15 million new records into a custom object overnight using Bulk API 2.0, and batches are failing with lock contention on a shared parent account record. What should the data architect recommend?",
       "options": [
-        "To store images",
-        "To optimize reporting by reducing joins for large datasets",
-        "To send emails",
-        "To configure CPQ"
+        "Switch to PK Chunking so Salesforce splits the job into parallel batches by record ID ranges",
+        "Sort the load file by the parent lookup field so related child records are grouped into the same batch",
+        "Disable all validation rules on the object for the duration of the load",
+        "Reduce the batch size to 1 to avoid any possibility of row locking"
       ],
       "correctAnswer": 1,
-      "explanation": "Skinny tables are denormalized tables that can improve report performance.",
+      "explanation": "Lock contention during a bulk load typically comes from multiple parallel batches updating child records under the same parent at once. Grouping related child records so they land in the same batch (or serializing the load) avoids concurrent writes under one parent. PK Chunking is for extracting/querying large existing datasets, not for solving lock contention on inserts, and it doesn't control which records land in which batch by parent.",
       "whyWrong": [
-        "Skinny tables aren't for storing images, that's unrelated to their reporting-performance purpose.",
-        "Skinny tables aren't for sending emails, that's unrelated to their function.",
-        "Skinny tables aren't for CPQ configuration, that's unrelated to their function."
+        "PK Chunking splits large SOQL query jobs by record-ID range for extraction, it does not control batch composition on an insert job or resolve parent-record lock contention.",
+        "Disabling validation rules changes data quality enforcement, not the parallel-batch locking behavior causing the failures.",
+        "A batch size of 1 avoids locking at the cost of making the 15-million-record load far too slow to be practical; it isn't the recommended fix for this scenario."
       ]
     },
     {
@@ -279,19 +279,19 @@
       ]
     },
     {
-      "question": "What does data migration planning include?",
+      "question": "Two legacy systems are being consolidated into Salesforce, and the same customer record exists in both with conflicting phone numbers and different last-modified dates. Which MDM approach correctly resolves the golden record?",
       "options": [
-        "Only export",
-        "Extract, transform, load (ETL), validation, and rollback strategy",
-        "Only import",
-        "Only backup"
+        "Always keep the record from whichever system was migrated first",
+        "Apply a survivorship rule, such as most-recently-modified or source-system trust ranking, to pick the winning field value",
+        "Merge both records and leave both phone numbers populated on separate custom fields permanently",
+        "Discard both records and require the customer to re-enter their data"
       ],
       "correctAnswer": 1,
-      "explanation": "Migration includes ETL, validation, and rollback planning.",
+      "explanation": "MDM survivorship rules (most-recent-wins, source trust ranking, or field-level survivorship) are the standard mechanism for deterministically resolving conflicting attribute values into a single golden record.",
       "whyWrong": [
-        "'Only export' undersells migration planning, which includes transformation, validation, and rollback too.",
-        "'Only import' undersells migration planning, which includes the full ETL and validation process, not just import.",
-        "'Only backup' misrepresents migration planning, which is about moving and transforming data, not backing it up."
+        "Migration order has no bearing on which source system's data is more trustworthy or current; it isn't a survivorship strategy.",
+        "Permanently storing both conflicting values defeats the purpose of a golden record and pushes the conflict onto downstream consumers instead of resolving it.",
+        "Discarding verified data and re-collecting it from the customer is not a data migration or MDM technique."
       ]
     },
     {
