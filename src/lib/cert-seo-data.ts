@@ -868,10 +868,16 @@ export function getCertMetaDescription(slug: string): string {
     .replace(/^Salesforce Certified\s+/i, '')
     .replace(/\s+Certification\b/i, '')
     .trim()
-  // Prefer the full credential name. For long names, use the same distinct,
-  // readable label already chosen for the title; a recognized code is the last
-  // resort. Each sentence stays complete and avoids unverified exam claims.
+  // Prefer "name (code)" so Google can bold the exam code searchers actually
+  // type (ADM-201, Plat-Arch-201, Als-Con-201). Falls back to the bare name,
+  // then the shorter title label, then a recognized code alone, so a
+  // long name + code that doesn't fit the character budget still degrades
+  // to something that does. Each sentence stays complete and avoids
+  // unverified exam claims.
+  const examCode = SLUG_TO_EXAM_CODE[slug]
+  const codeAlreadyInName = examCode && shortName.toLowerCase().includes(`(${examCode.toLowerCase()})`)
   const labels = [...new Set([
+    examCode && !codeAlreadyInName ? `${shortName} (${examCode})` : undefined,
     shortName,
     getReadablePracticeTitleLabel(getLegacyCertMetaTitle(slug)),
     getRecognizedExamCode(slug),

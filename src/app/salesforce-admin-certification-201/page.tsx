@@ -77,7 +77,7 @@ export default function SalesforceAdminCertification201Page() {
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">ADM-201 Guide</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Admin Certification 201 (ADM-201)</h1>
         <LastUpdated />
-        <p className="text-lg text-gray-600">Use this page when you are searching for Salesforce Admin Certification 201 and need the exact ADM-201 exam format, cost, study path, and free practice exam.</p>
+        <p className="text-lg text-gray-600">Use this page when you are searching for Salesforce Admin Certification 201 and need the exact ADM-201 exam format, cost, and study path. When you are ready to test yourself, start the <Link href="/certifications/administrator" className="text-salesforce-blue hover:underline">ADM-201 Platform Administrator Free Practice Exam</Link>.</p>
       </header>
       <ContentPageAuthor />
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
