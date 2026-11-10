@@ -315,23 +315,23 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Salesforce Administrator: Key Concepts for the Exam</h2>
             <div className="space-y-4 text-sm text-gray-700">
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Objects, Fields & Data Model</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Objects, Fields & Data Model</h3>
                 <p>Standard Objects (Account, Contact, Lead, Opportunity, Case) are the backbone of Salesforce. Custom Objects extend the platform for business-specific data. Field types include Text, Number, Currency, Date, Picklist, Formula, Lookup, and Master-Detail. Roll-Up Summary fields aggregate child records (count, sum, min, max), only available on Master-Detail. Junction Objects implement many-to-many relationships using two Master-Detail fields. The ADM-201 exam frequently presents a scenario and asks which field type or relationship to use, know cascade delete rules, sharing implications, and when a Lookup is preferable to Master-Detail.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Security Model: Profiles, Permission Sets, Roles & Sharing</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Security Model: Profiles, Permission Sets, Roles & Sharing</h3>
                 <p>Org-wide defaults (OWDs) set the baseline visibility for every record. Role hierarchy opens up access upward, managers see what their subordinates own. Profiles control what users CAN do (CRUD, page layouts, app access). Permission Sets grant additional permissions without changing the profile. Sharing Rules extend access horizontally to peers. Manual Sharing lets record owners share individual records. The exam tests layered security scenarios: know that OWD + Role Hierarchy + Sharing Rules all combine additively, the most permissive rule wins for access.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Automation: Flows, Approval Processes & Email Alerts</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Automation: Flows, Approval Processes & Email Alerts</h3>
                 <p>Record-Triggered Flows are the primary automation tool for administrators, they replace Workflow Rules (retiring) and Process Builder (retiring). Before/After Save triggers fire at different points in the transaction; only After Save can create related records. Scheduled Flows process batches on a time basis. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario: Flows for complex logic, Approval Processes for structured human sign-off.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Reports, Dashboards & List Views</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Reports, Dashboards & List Views</h3>
                 <p>Report Types determine which objects and fields are available. Tabular: flat row lists. Summary: grouped with subtotals. Matrix: two-dimensional grouping. Joined: up to 5 report blocks side by side. Dashboards display visual components (charts, gauges, metrics, tables) driven by reports; each component points to a single source report. The Running User determines whose data is shown. Dynamic Dashboards let each viewer see their own data (up to 5 per org in Enterprise). List Views are quick filtered record sets, shareable with groups or all users. Schedule Reports to deliver via email automatically.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Sales & Service Cloud Fundamentals</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Sales & Service Cloud Fundamentals</h3>
                 <p>The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in one action. Opportunity Stages and Probability drive forecasting. Cases are the unit of customer support; they can be created via Web-to-Case, Email-to-Case, or manually. Queues hold Cases or Leads for team assignment. Escalation Rules auto-escalate cases based on age or criteria. Auto-Assignment Rules route incoming Cases or Leads to the right owner. Service Level Agreements (SLAs) are enforced via Entitlements and Milestones. The exam frequently asks about the correct feature for a given support or sales scenario.</p>
               </div>
             </div>
@@ -353,23 +353,23 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             </p>
             <div className="space-y-4 text-sm text-gray-700">
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Know Your Automation Toolkit</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Know Your Automation Toolkit</h3>
                 <p>Understand when to use Record-Triggered Flows (replacing Workflow Rules and Process Builder), Approval Processes for multi-step human approvals, and Scheduled Flows for time-based logic. The exam always tests the right tool for a given requirement.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Sharing &amp; Security Is the Highest-Weighted Topic</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Sharing &amp; Security Is the Highest-Weighted Topic</h3>
                 <p>Org-Wide Defaults, Role Hierarchies, Sharing Rules, Profiles, and Permission Sets. Know how each layer grants or restricts access and the order in which they are evaluated. Most security questions hinge on knowing the minimum-access principle.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Reports vs. Dashboards</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Reports vs. Dashboards</h3>
                 <p>Know the four report types (Tabular, Summary, Matrix, Joined) and when each applies. Dashboards refresh from source reports and require a running user whose access determines which data appears.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Data Management Fundamentals</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Data Management Fundamentals</h3>
                 <p>Understand import/export tools (Data Import Wizard vs. Data Loader), field-level security, validation rules, and duplicate management. The exam regularly tests which import tool is appropriate for a given scenario.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Read Every Question for the Key Constraint</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Read Every Question for the Key Constraint</h3>
                 <p>Watch for qualifiers like ’declarative only,’ ’minimum configuration,’ or ’without code.’ These constraints eliminate most distractors and point to the correct answer.</p>
               </div>
             </div>
