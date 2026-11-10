@@ -1,15 +1,15 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Energy &amp; Utilities Accredited Professional exam for?",
+    "heading": "Who is the Energy & Utilities Accredited Professional exam for?",
     "personas": [
       {
         "label": "Utility industry implementation consultants",
-        "description": "You deliver Salesforce projects for electric, gas, or water utilities and need the credential to validate your expertise in the Energy &amp; Utilities Cloud data model and customer engagement workflows."
+        "description": "You deliver Salesforce projects for electric, gas, or water utilities and need the credential to validate your expertise in the Energy & Utilities Cloud data model and customer engagement workflows."
       },
       {
         "label": "Salesforce admins at utility companies",
-        "description": "You manage an Energy &amp; Utilities Cloud org and want to prove your knowledge of service points, premises, meter-to-cash processes, and outage management."
+        "description": "You manage an Energy & Utilities Cloud org and want to prove your knowledge of service points, premises, meter-to-cash processes, and outage management."
       },
       {
         "label": "OmniStudio and integration partners",
@@ -18,8 +18,8 @@
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Energy &amp; Utilities Accredited Professional Exam Hard?",
-    "summary": "The Energy &amp; Utilities AP exam is moderately difficult. It tests utility-specific concepts including the service point data model, OmniStudio-powered customer journeys, meter-to-cash workflows, and billing system integration. Candidates without exposure to utility industry operations will find the domain terminology and regulatory context challenging.",
+    "heading": "Is the Energy & Utilities Accredited Professional Exam Hard?",
+    "summary": "The Energy & Utilities AP exam is moderately difficult. It tests utility-specific concepts including the service point data model, OmniStudio-powered customer journeys, meter-to-cash workflows, and billing system integration. Candidates without exposure to utility industry operations will find the domain terminology and regulatory context challenging.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
       "<strong>60% passing score</strong>: roughly 39 correct answers needed.",
@@ -29,7 +29,7 @@
     "passRateGuidance": "Score 75%+ on practice exams and ensure you can explain the relationship between accounts, premises, service points, and meters before booking. Experience with at least one utility industry Salesforce implementation or familiarity with meter-to-cash processes is strongly recommended."
   },
   "examFormat": {
-    "heading": "Energy &amp; Utilities Accredited Professional Exam Format Explained",
+    "heading": "Energy & Utilities Accredited Professional Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
     "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring the service point hierarchy for a multi-premise customer, designing OmniScript-powered start/stop service workflows, and selecting the right integration approach for billing data from external systems.",
     "bestWayToPass": [
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers the Energy &amp; Utilities Cloud data model, including service points, premises, and meter-to-cash processes. You’ll need to understand OmniStudio-powered customer journeys, outage management, and billing system integration.",
+    "description": "This exam covers the Energy & Utilities Cloud data model, including service points, premises, and meter-to-cash processes. You’ll need to understand OmniStudio-powered customer journeys, outage management, and billing system integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "60%",

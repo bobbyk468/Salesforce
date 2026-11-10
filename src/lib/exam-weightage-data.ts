@@ -99,7 +99,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Salesforce Ecosystem', percentage: 32 },
     { name: 'Navigation', percentage: 28 },
     { name: 'Data Model', percentage: 25 },
-    { name: 'Reports &amp; Dashboards', percentage: 15 },
+    { name: 'Reports & Dashboards', percentage: 15 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298962
   // 40 questions, 65% to pass, 70 minutes.
@@ -655,7 +655,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   // 50 questions, 70% to pass, 75 minutes. Retires 1 February 2027.
   'marketing-cloud-personalization-ap': [
     { name: 'Solution Overview', percentage: 16 },
-    { name: 'Setup &amp; Administration', percentage: 6 },
+    { name: 'Setup & Administration', percentage: 6 },
     { name: 'Data Integration', percentage: 14 },
     { name: 'Sitemap', percentage: 18 },
     { name: 'Segmentation', percentage: 18 },

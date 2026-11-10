@@ -11,7 +11,10 @@
  * fall back to SLUG_TO_EXAM_GUIDE_URL, and show no official link if that is
  * missing too.
  *
- * Verified 66 of 90 certifications on 2026-11-07.
+ * Verified 85 of 97 certifications on 2026-11-10. Still missing:
+ * advanced-field-service-ap, b2b-commerce-admin-ap, b2b-commerce-developer-ap,
+ * cpq-billing-ap, technical-architect-evaluation (no official Trailhead URL
+ * found that returns 200 as of this date).
  */
 export const OFFICIAL_CREDENTIAL_URLS: Record<string, string> = {
   'administrator': 'https://trailhead.salesforce.com/credentials/platformadministrator',
@@ -93,5 +96,14 @@ export const OFFICIAL_CREDENTIAL_URLS: Record<string, string> = {
   'tableau-desktop-foundations': 'https://trailhead.salesforce.com/credentials/tableaudesktopfoundations',
   'tableau-server-administrator': 'https://trailhead.salesforce.com/credentials/tableauserveradministrator',
   'technical-architect': 'https://trailhead.salesforce.com/credentials/technicalarchitect',
+  'technical-architect-review-board': 'https://trailhead.salesforce.com/credentials/architectreviewboard',
   'ux-designer': 'https://trailhead.salesforce.com/credentials/userexperiencedesigner',
+  'agentforce-life-sciences-consultant': 'https://trailhead.salesforce.com/credentials/agentforcelifesciences',
+  'marketing-cloud-next-consultant': 'https://trailhead.salesforce.com/credentials/marketingcloudnextconsultant',
+  'tableau-next-consultant': 'https://trailhead.salesforce.com/credentials/tableaunextconsultant',
+  'public-sector-solutions-consultant': 'https://trailhead.salesforce.com/credentials/publicsectorsolutionsconsultant',
+  'nonprofit-cloud': 'https://trailhead.salesforce.com/credentials/nonprofitcloudconsultant',
+  'mulesoft-integration-architect': 'https://trailhead.salesforce.com/credentials/mulesoftintegrationarchitecti',
+  'marketing-cloud-engagement-foundations': 'https://trailhead.salesforce.com/credentials/marketingassociate',
+  'sales-foundations': 'https://trailhead.salesforce.com/credentials/agfsalesfoundations',
 }
