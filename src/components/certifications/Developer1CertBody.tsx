@@ -285,6 +285,9 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           }}
         />
         <CertIntroParagraph slug={slug} />
+        <p className="text-sm text-gray-600 mb-6">
+          The certification was previously known as Platform Developer I (PD1). Many candidates still search for &ldquo;Platform Developer 1&rdquo;, while the current official name is Salesforce Certified Platform Developer.
+        </p>
         {/* Quick Knowledge Check, above fold to signal interactive content to Google */}
         <div className="mt-4 mb-2 rounded-xl border border-blue-100 bg-blue-50/50 p-4 sm:p-5">
           <p className="text-xs font-semibold uppercase tracking-widest text-salesforce-blue mb-2">Quick Knowledge Check</p>
