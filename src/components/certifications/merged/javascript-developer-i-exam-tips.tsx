@@ -127,15 +127,15 @@ export default function JavascriptDeveloperIExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Promises vs Async/Await: Same Mechanism, Different Syntax</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Promises vs Async/Await: Same Mechanism, Different Syntax</h3>
             <p className="text-sm text-gray-700">Promises and async/await both handle asynchronous operations, async/await is syntactic sugar over Promises. A function marked async always returns a Promise. await pauses execution until the Promise resolves. Candidates treat these as entirely different mechanisms and struggle with error handling: rejected Promises in async/await are caught with try/catch, not .catch(). Know both patterns and when the exam expects each.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. var vs let vs const: Scope and Reassignment Rules</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. var vs let vs const: Scope and Reassignment Rules</h3>
             <p className="text-sm text-gray-700">var is function-scoped and hoisted (available before its declaration line at runtime, with value undefined). let is block-scoped and not accessible before declaration (temporal dead zone). const is block-scoped and cannot be reassigned (but the object it references can be mutated). Candidates use var for all declarations, the exam expects let for mutable block-scoped variables and const for values that should not be reassigned.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Event Bubbling vs Capturing: Two Phases of DOM Event Propagation</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Event Bubbling vs Capturing: Two Phases of DOM Event Propagation</h3>
             <p className="text-sm text-gray-700">Events propagate in two phases: Capturing (top-down, from document to target) then Bubbling (bottom-up, from target back to document). addEventListener defaults to Bubbling phase. Passing true as the third argument to addEventListener uses Capturing phase. stopPropagation() halts propagation; preventDefault() prevents default browser behaviour (they are NOT the same). Candidates call stopPropagation() expecting it to prevent form submission; that requires preventDefault().</p>
           </div>
         </div>

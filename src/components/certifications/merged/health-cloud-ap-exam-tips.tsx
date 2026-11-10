@@ -122,15 +122,15 @@ export default function HealthCloudApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Patient vs Member vs Person Account: Health Cloud Data Model</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Patient vs Member vs Person Account: Health Cloud Data Model</h3>
             <p className="text-sm text-gray-700">Health Cloud uses Person Accounts for patients (an Account-Contact fusion). A Member is a Person Account enrolled in a health plan. These are not separate object types; they are the same Person Account with different record types. Candidates create separate Contact records for patients, the exam expects Person Accounts as the Patient/Member data model.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Care Plans vs Care Programs: Individual vs Population Health</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Care Plans vs Care Programs: Individual vs Population Health</h3>
             <p className="text-sm text-gray-700">A Care Plan is an individualised treatment plan for one patient with goals, problems, and tasks. A Care Program is a population-level health initiative (diabetes management programme) that patients can be enrolled in. Candidates recommend Care Programs for individual patient care management, the exam expects Care Plans for individual patient interactions and Care Programs for managing patient populations.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Utilisation Management vs Prior Authorisation: Two Different Processes</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Utilisation Management vs Prior Authorisation: Two Different Processes</h3>
             <p className="text-sm text-gray-700">Utilisation Management reviews whether proposed treatments meet medical necessity criteria. Prior Authorisation is the specific approval request submitted by a provider before a service is rendered. In Health Cloud, these are separate workflows. Candidates use a generic Case for both, the exam expects the UM Request record for prior authorisation workflows with member, provider, and clinical review fields.</p>
           </div>
         </div>

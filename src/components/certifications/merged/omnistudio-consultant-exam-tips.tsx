@@ -127,15 +127,15 @@ export default function OmnistudioConsultantExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. OmniScript vs FlexCard: Process vs Display</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. OmniScript vs FlexCard: Process vs Display</h3>
             <p className="text-sm text-gray-700">OmniScripts orchestrate guided, multi-step processes (wizards, intake forms, service interactions) with conditional branching and data operations. FlexCards display contextual summary information about a record in a compact card format; they are read-oriented, not process-oriented. Candidates use OmniScripts to display record summaries, the exam expects FlexCards for at-a-glance display and OmniScripts for interactive workflows.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. DataRaptor Load vs DataRaptor Transform vs DataRaptor Turbo Extract</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. DataRaptor Load vs DataRaptor Transform vs DataRaptor Turbo Extract</h3>
             <p className="text-sm text-gray-700">DataRaptor Load writes data to Salesforce objects (DML). DataRaptor Transform reshapes data between JSON structures without touching Salesforce records. DataRaptor Turbo Extract reads Salesforce data quickly using bulk SOQL. Candidates use DataRaptor Load for data transformations, the exam expects Transform for reshaping payloads and Load only when writing to Salesforce objects.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Integration Procedures: Server-Side, Invocable by OmniScript or API</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Integration Procedures: Server-Side, Invocable by OmniScript or API</h3>
             <p className="text-sm text-gray-700">Integration Procedures run server-side (no browser round-trip) and can call external APIs, DataRaptors, and Apex. OmniScripts can invoke them via Remote Action. They can also be called directly via REST API. Candidates design all external API calls inside OmniScript client steps, the exam expects Integration Procedures for server-side orchestration to reduce browser-to-server trips.</p>
           </div>
         </div>

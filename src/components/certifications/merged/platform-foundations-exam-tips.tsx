@@ -126,15 +126,15 @@ export default function PlatformFoundationsExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Standard Objects vs Custom Objects: What You Can and Cannot Modify</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Standard Objects vs Custom Objects: What You Can and Cannot Modify</h3>
             <p className="text-sm text-gray-700">Standard Objects (Account, Contact, Opportunity, Case) are provided by Salesforce and cannot be deleted; you can add fields, page layouts, and validation rules but cannot remove the core fields. Custom Objects are fully user-defined and can be deleted if no records exist. Candidates try to delete standard objects or standard fields, the exam expects knowledge of what is modifiable on standard vs custom objects.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Profiles vs Permission Sets: Baseline vs Extension</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Profiles vs Permission Sets: Baseline vs Extension</h3>
             <p className="text-sm text-gray-700">Profiles define the baseline permissions for a group of users: what objects they can access, what apps they see, login hours. Permission Sets add permissions ON TOP of a profile, they cannot restrict what a profile already grants. Candidates use Permission Sets to restrict access, the exam expects Profiles for restriction and Permission Sets for expansion.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. App Launcher vs Navigation Bar vs Home Page: Three Separate Customisation Areas</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. App Launcher vs Navigation Bar vs Home Page: Three Separate Customisation Areas</h3>
             <p className="text-sm text-gray-700">The App Launcher shows all apps available to a user (customised via profiles and permission sets). The Navigation Bar (within a Lightning App) defines the tabs visible in a specific app. The Home Page displays components relevant to the user’s role. Candidates customise the App Launcher when they mean the Navigation Bar, the exam distinguishes these as separate customisation surfaces.</p>
           </div>
         </div>

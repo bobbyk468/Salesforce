@@ -117,15 +117,15 @@ export default function MulesoftIntegrationFoundationsExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. API-Led Connectivity Layers: Which Layer Handles Which Scenario</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. API-Led Connectivity Layers: Which Layer Handles Which Scenario</h3>
             <p className="text-sm text-gray-700">System APIs connect directly to backend systems of record (SAP, Salesforce, databases). Process APIs orchestrate calls across multiple System APIs and apply business logic. Experience APIs expose tailored data to specific consumers (mobile app, partner portal, web). Exam scenarios describe an integration need and expect you to identify the correct layer. The most common mistake: placing business logic (order orchestration) in an Experience API instead of a Process API.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Anypoint Platform Components: Which Tool Does What</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Anypoint Platform Components: Which Tool Does What</h3>
             <p className="text-sm text-gray-700">Candidates confuse: Design Center (API design with RAML/OAS specifications), Anypoint Studio (IDE for building Mule apps locally), Exchange (asset marketplace for reusable APIs and connectors), Runtime Manager (deployment and monitoring), API Manager (applying policies and managing client access). Exam scenarios describe a task and expect the correct tool: &ldquo;apply a rate-limiting policy&rdquo; = API Manager; &ldquo;publish a reusable connector&rdquo; = Exchange.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. DataWeave: Output Directives and Basic Transformation Syntax</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. DataWeave: Output Directives and Basic Transformation Syntax</h3>
             <p className="text-sm text-gray-700">DataWeave scripts must begin with %dw 2.0 followed by an output directive (e.g., output application/json). payload accesses the incoming message body. map transforms arrays element-by-element. filter selects elements matching a condition. Candidates forget the output directive (causing a runtime error) or confuse map (which transforms each element) with pluck (which converts an object to an array of key-value pairs).</p>
           </div>
         </div>

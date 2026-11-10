@@ -123,15 +123,15 @@ export default function MulesoftCatalystConsultantExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Catalyst Methodology Phases: Discover, Design, Build, Deliver</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Catalyst Methodology Phases: Discover, Design, Build, Deliver</h3>
             <p className="text-sm text-gray-700">MuleSoft Catalyst is the implementation methodology with four phases: Discover (assess current state, define strategy), Design (architect the solution), Build (implement APIs), and Deliver (deploy and operate). Candidates apply generic agile terminology to Catalyst questions, the exam uses Catalyst-specific phase names and expects knowledge of the artefacts produced in each phase (API Catalog in Design, API-led blueprint in Discover).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. C4E (Center for Enablement): Not Just a Governance Committee</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. C4E (Center for Enablement): Not Just a Governance Committee</h3>
             <p className="text-sm text-gray-700">The Center for Enablement (C4E) is MuleSoft’s operating model for scaling integration across an organisation: it curates reusable APIs, enforces standards, and enables citizen integrators. It is not just an IT governance body, its primary goal is to increase the consumption of published APIs across business teams. Candidates describe the C4E as a review board, the exam expects enablement and API reuse promotion as the primary mandate.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. API Lifecycle Stages: Design → Build → Publish → Manage → Retire</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. API Lifecycle Stages: Design → Build → Publish → Manage → Retire</h3>
             <p className="text-sm text-gray-700">MuleSoft defines an API lifecycle: Design (RAML/OAS spec in Design Center), Build (Mule implementation in Anypoint Studio), Publish (to Exchange), Manage (apply policies in API Manager), Retire (deprecate and remove). Candidates skip the Design and Publish stages in their lifecycle descriptions, the exam expects all five stages and the specific Anypoint Platform tool used at each.</p>
           </div>
         </div>

@@ -156,7 +156,7 @@ export default function AppBuilderStudyGuideContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Decision Frameworks for Exam Questions</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Automation tool selection:</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Automation tool selection:</h3>
             <ul className="space-y-1">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Update a field when a record is saved, no user input → Before-save record-triggered Flow</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Create a related record or send email after insert → After-save record-triggered Flow</span></li>
@@ -166,7 +166,7 @@ export default function AppBuilderStudyGuideContent() {
             </ul>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Relationship type selection:</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Relationship type selection:</h3>
             <ul className="space-y-1">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Child cannot exist without parent + need roll-up → Master-Detail</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Child can exist independently → Lookup</span></li>

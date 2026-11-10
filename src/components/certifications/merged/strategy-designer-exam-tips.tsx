@@ -127,15 +127,15 @@ export default function StrategyDesignerExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Futures Thinking vs Current-State Analysis: Speculative vs Descriptive</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Futures Thinking vs Current-State Analysis: Speculative vs Descriptive</h3>
             <p className="text-sm text-gray-700">Futures Thinking projects potential future scenarios based on emerging trends and signals; it is speculative and explores "what could be." Current-state analysis (journey mapping, user research) documents what exists today. Strategy Design work starts with current state but must include futures framing to avoid solving only today’s problems. Candidates present only current-state research as their strategy answer, the exam expects futures framing alongside research.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Jobs To Be Done vs User Stories: Motivation vs Task</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Jobs To Be Done vs User Stories: Motivation vs Task</h3>
             <p className="text-sm text-gray-700">Jobs To Be Done (JTBD) captures the fundamental motivation behind a user’s behaviour: "When I [situation], I want to [motivation], so I can [outcome]." User Stories capture task-level requirements: "As a [role], I want [feature], so that [benefit]." JTBD is broader and more durable, features change but motivations stay constant. Candidates use User Stories for strategy framing, the exam expects JTBD for understanding root motivations before defining solutions.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Hypothesis vs Assumption vs Insight: Research Rigour Distinctions</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Hypothesis vs Assumption vs Insight: Research Rigour Distinctions</h3>
             <p className="text-sm text-gray-700">An Assumption is an unvalidated belief you are acting on. A Hypothesis is a testable prediction derived from an assumption. An Insight is a validated, evidence-backed finding from research. Candidates present assumptions as insights in design reviews, the exam tests research rigour: insights require evidence, hypotheses require testing, and assumptions must be explicitly flagged as risks.</p>
           </div>
         </div>

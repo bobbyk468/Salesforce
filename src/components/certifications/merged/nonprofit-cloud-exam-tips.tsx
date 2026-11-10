@@ -121,15 +121,15 @@ export default function NonprofitCloudExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. NPSP Household Account Model: Contacts Are Primary, Accounts Are Secondary</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. NPSP Household Account Model: Contacts Are Primary, Accounts Are Secondary</h3>
             <p className="text-sm text-gray-700">Salesforce Nonprofit Success Pack (NPSP) inverts the standard B2B model: the Contact (donor/constituent) is the primary record, and the Household Account is auto-created to hold household-level relationships and giving. Candidates answer relationship questions using standard B2B Account-Contact logic, the exam expects NPSP’s Household model where Contacts drive the relationship.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Soft Credits vs Hard Credits: Recognition vs Liability</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Soft Credits vs Hard Credits: Recognition vs Liability</h3>
             <p className="text-sm text-gray-700">Hard Credits are the actual donation amounts attributed to the donor who gave the money. Soft Credits recognise people who influenced the donation (a board member who introduced the donor) without financial liability. NPSP tracks both, candidates use a single Opportunity for all recognition. The exam expects Partial Soft Credits and Soft Credit Roles for recognising solicitors and influencers.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. NPSP Recurring Donations: Open-Ended vs Fixed-Length</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. NPSP Recurring Donations: Open-Ended vs Fixed-Length</h3>
             <p className="text-sm text-gray-700">NPSP Recurring Donations can be Open-Ended (run indefinitely until cancelled) or Fixed-Length (a set number of installments). Each Recurring Donation creates Opportunity installments on a schedule. Candidates model monthly pledges as individual Opportunities, the exam expects Recurring Donation records with the correct recurrence type and the auto-generated installment Opportunity schedule.</p>
           </div>
         </div>

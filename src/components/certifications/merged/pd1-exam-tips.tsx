@@ -176,15 +176,15 @@ export default function Pd1ExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. SOQL Inside For-Loops: The Governor Limit That Kills Your Score</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. SOQL Inside For-Loops: The Governor Limit That Kills Your Score</h3>
             <p className="text-sm text-gray-700">The 101-query governor limit means any SOQL statement inside a loop will fail at runtime when processing more than 100 records. Exam scenarios show code snippets and ask you to identify the bug. The wrong-answer trap is selecting &ldquo;reduce batch size&rdquo; the correct fix is always &ldquo;move the SOQL outside the loop and use a Map or List.&rdquo; Train yourself to scan every for-loop in a code snippet and ask: is there a SOQL or DML statement inside?</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer</h3>
             <p className="text-sm text-gray-700">LWC decorator questions are a guaranteed exam topic. <code className="bg-amber-100 px-1 rounded text-xs">@wire</code> connects a property to a Salesforce data service (Apex or UI API) reactively. <code className="bg-amber-100 px-1 rounded text-xs">@api</code> exposes a property or method to a parent component; it is public. <code className="bg-amber-100 px-1 rounded text-xs">@track</code> is largely deprecated in modern LWC; plain properties are now reactive by default. The trap: candidates use @track thinking it makes a property &ldquo;reactive&rdquo; when @wire is what actually connects to the server.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough: Assertions Are Required</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough: Assertions Are Required</h3>
             <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong; the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation, and calling a real endpoint in a test will throw an exception, not just fail silently.</p>
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function Pd1ExamTipsContent() {
         <div className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <p className="font-semibold text-gray-900 mb-1">{item.question}</p>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.question}</h3>
               <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
             </div>
           ))}

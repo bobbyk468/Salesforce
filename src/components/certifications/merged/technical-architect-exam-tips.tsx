@@ -126,15 +126,15 @@ export default function TechnicalArchitectExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. CTA Is a Review Board: Not a Written Exam</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. CTA Is a Review Board: Not a Written Exam</h3>
             <p className="text-sm text-gray-700">The Certified Technical Architect credential is awarded via a Review Board presentation: a panel of existing CTAs evaluates a candidate on a scenario they prepare and defend live. There is no multiple-choice exam. Candidates prepare for CTA like a standard exam, the Review Board requires deep scenario analysis, architecture defence, and communication skills, not just technical knowledge recall.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Holistic Architecture: Every Decision Involves Trade-Offs</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Holistic Architecture: Every Decision Involves Trade-Offs</h3>
             <p className="text-sm text-gray-700">The CTA Review Board evaluates whether candidates can make defensible architecture decisions under constraints (budget, timeline, org maturity, data volume). "Best practice" answers that ignore constraints are penalised. Candidates recommend ideal-state architectures, the exam expects pragmatic recommendations that explicitly acknowledge trade-offs and justify the chosen approach given the scenario constraints.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Governance and Delivery: Architecture Without Delivery Plan Is Incomplete</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Governance and Delivery: Architecture Without Delivery Plan Is Incomplete</h3>
             <p className="text-sm text-gray-700">A sound CTA proposal covers not just the technical architecture but also: governance model (who owns what), release/deployment strategy, testing approach, and post-go-live support model. Candidates present technology-only solutions, the board expects end-to-end delivery considerations including team structure, change management, and risk mitigation.</p>
           </div>
         </div>

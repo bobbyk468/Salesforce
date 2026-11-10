@@ -116,15 +116,15 @@ export default function EmailSpecialistExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">Use these distinctions as a focused review list alongside the official exam objectives.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Send Classification: Transactional vs Commercial and Suppression Bypasses</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Send Classification: Transactional vs Commercial and Suppression Bypasses</h3>
             <p className="text-sm text-gray-700">Transactional send classifications bypass the commercial Unsubscribe suppression list (because a password reset or order confirmation must reach the customer regardless of marketing opt-out). Commercial classifications respect all suppression lists. Candidates mark commercial sends as transactional to bypass unsubscribes, this violates CAN-SPAM and is explicitly tested. Know the three send classification components: Delivery Profile, Sender Profile, and CAN-SPAM classification.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. AMPscript: Block Syntax vs Inline Syntax and Lookup Functions</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. AMPscript: Block Syntax vs Inline Syntax and Lookup Functions</h3>
             <p className="text-sm text-gray-700">Block AMPscript uses %%[ code ]%% delimiters and is used for multi-line logic. Inline AMPscript uses %%=Function()=%% for single expressions within HTML. Lookup() retrieves a single field value from one row; LookupRows() retrieves multiple rows as a rowset. Candidates use Lookup() when they need multiple rows (returns only the first match) or mix up the delimiters, causing render failures.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Data Extensions vs Subscriber Lists: When to Use Each</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Data Extensions vs Subscriber Lists: When to Use Each</h3>
             <p className="text-sm text-gray-700">Subscriber Lists are simple, flat, all-or-nothing opt-in structures. Data Extensions support relational data, custom fields, and complex targeting but require more configuration. Triggered Sends require Data Extensions (not lists). The exam tests which data structure to recommend for a given scenario, when in doubt, complex or multi-send campaigns use Data Extensions; simple newsletter lists use Subscriber Lists.</p>
           </div>
         </div>

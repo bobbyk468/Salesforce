@@ -123,15 +123,15 @@ export default function MulesoftHyperautomationDeveloperExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. RPA vs API Integration: When Each Is the Right Tool</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. RPA vs API Integration: When Each Is the Right Tool</h3>
             <p className="text-sm text-gray-700">MuleSoft RPA automates tasks through UI interaction (screen scraping, form filling) for systems without APIs. API integration connects systems with published APIs; it is faster, more reliable, and should always be preferred over RPA when an API exists. Candidates recommend RPA for legacy system integration, the exam expects API integration first and RPA only when no API is available.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Composer vs Anypoint Studio: Low-Code vs Pro-Code</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Composer vs Anypoint Studio: Low-Code vs Pro-Code</h3>
             <p className="text-sm text-gray-700">MuleSoft Composer is a low-code integration tool for business users, drag-and-drop connectors for common SaaS apps (Salesforce, Slack, NetSuite). Anypoint Studio is the full-featured IDE for professional developers. Candidates recommend Anypoint Studio for all integrations, the exam expects Composer for business-user-managed, SaaS-to-SaaS integrations that do not require custom transformation logic.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Process Automation vs RPA: Orchestration vs Execution</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Process Automation vs RPA: Orchestration vs Execution</h3>
             <p className="text-sm text-gray-700">Salesforce Flow (Process Automation) orchestrates multi-step business processes across Salesforce records and connected systems via API calls. MuleSoft RPA executes specific UI-based tasks on legacy applications. In a Hyperautomation solution, Flow orchestrates the overall process and calls RPA for steps that require UI interaction. Candidates design RPA to handle the entire workflow, the exam expects Flow to orchestrate and RPA only for the UI-automation steps.</p>
           </div>
         </div>

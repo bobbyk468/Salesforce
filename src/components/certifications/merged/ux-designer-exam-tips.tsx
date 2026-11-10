@@ -124,15 +124,15 @@ export default function UxDesignerExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. User Research vs Usability Testing: Discovery vs Validation</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. User Research vs Usability Testing: Discovery vs Validation</h3>
             <p className="text-sm text-gray-700">User Research is done early to understand user needs, mental models, and pain points before designing (interviews, contextual inquiry, surveys). Usability Testing validates a specific design prototype or working product by observing users attempting tasks. Candidates use Usability Testing to discover user needs, the exam expects User Research for discovery and Usability Testing for design validation.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Wireframes vs Prototypes vs Mockups: Fidelity Levels</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Wireframes vs Prototypes vs Mockups: Fidelity Levels</h3>
             <p className="text-sm text-gray-700">Wireframes are low-fidelity structural layouts (boxes and lines) showing information architecture and layout without visual design. Mockups are high-fidelity static visuals showing exactly what the final product looks like. Prototypes are interactive (low or high fidelity) simulating user interactions. Candidates use "wireframe" and "prototype" interchangeably, the exam distinguishes these by fidelity and interactivity.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Accessibility: WCAG AA Is the Standard Minimum</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Accessibility: WCAG AA Is the Standard Minimum</h3>
             <p className="text-sm text-gray-700">WCAG (Web Content Accessibility Guidelines) Level AA is the standard minimum for enterprise web accessibility: 4.5:1 contrast ratio for normal text, keyboard navigability, screen reader support. Level AAA is aspirational but not required. Candidates design for visual aesthetics first and treat accessibility as optional, the exam expects WCAG AA compliance as a baseline design requirement, not a post-development add-on.</p>
           </div>
         </div>

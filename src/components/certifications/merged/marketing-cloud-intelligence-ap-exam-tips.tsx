@@ -126,15 +126,15 @@ export default function MarketingCloudIntelligenceApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Streams vs Workspaces: Data Ingestion vs Analysis</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Streams vs Workspaces: Data Ingestion vs Analysis</h3>
             <p className="text-sm text-gray-700">Streams are the data connectors that ingest raw marketing performance data from ad platforms, email tools, and CRMs into Marketing Cloud Intelligence. Workspaces are the analysis environments where data is combined, visualised, and reported. Candidates try to configure analytics in the Stream setup; Streams are only for ingestion; all analysis happens in Workspaces.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Harmonised vs Raw Data: Why Metrics Don’t Match Source Platforms</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Harmonised vs Raw Data: Why Metrics Don’t Match Source Platforms</h3>
             <p className="text-sm text-gray-700">Marketing Cloud Intelligence harmonises metrics from disparate platforms into a common schema (e.g., mapping "clicks" from Google Ads, Meta Ads, and Marketing Cloud into one unified "Clicks" metric). Raw data from each platform may use different field names and definitions. Candidates expect raw platform numbers to appear unchanged, the exam expects understanding of the harmonisation layer and why numbers may differ slightly from native platform reports.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Calculated Metrics vs Standard Metrics: Custom Formulas for Cross-Channel KPIs</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Calculated Metrics vs Standard Metrics: Custom Formulas for Cross-Channel KPIs</h3>
             <p className="text-sm text-gray-700">Standard metrics are ingested directly from source platforms (impressions, clicks, cost). Calculated metrics are custom formulas built in Intelligence (CPC = Cost / Clicks, ROAS = Revenue / Cost). Candidates try to pull ROAS and blended CPM directly from data streams, these cross-platform KPIs require Calculated Metric configuration in the workspace.</p>
           </div>
         </div>

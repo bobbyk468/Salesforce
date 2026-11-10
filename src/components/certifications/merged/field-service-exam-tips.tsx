@@ -114,15 +114,15 @@ export default function FieldServiceExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These original examples are study aids, not reported exam questions or claims about candidate performance.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Resource territory versus user territory</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Resource territory versus user territory</h3>
             <p className="text-sm text-gray-700">Scenario: a technician is assigned to the correct Salesforce user territory but is not eligible for jobs in a service area. Check the Service Resource’s Service Territory Member records and active dates; user territories govern a different sharing/assignment context.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Appointment lifecycle versus optimization objective</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Appointment lifecycle versus optimization objective</h3>
             <p className="text-sm text-gray-700">Scenario: an appointment cannot be scheduled because its status or required fields do not permit the requested operation. Resolve the lifecycle and eligibility issue first; changing a Schedule Policy objective will not repair an invalid appointment state.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Planned versus consumed inventory</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Planned versus consumed inventory</h3>
             <p className="text-sm text-gray-700">Scenario: a Work Order specifies parts expected before dispatch, while the technician records the parts actually used after service. Distinguish Products Required from Products Consumed, then consider the applicable inventory location and Return Order process.</p>
           </div>
         </div>

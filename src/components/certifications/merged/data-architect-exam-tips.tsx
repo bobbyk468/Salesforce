@@ -104,15 +104,15 @@ export default function DataArchitectExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">Compare these platform capabilities against the query and data requirements in a design scenario.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Skinny Tables vs Custom Indexes: Different Performance Tools, Different Use Cases</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Skinny Tables vs Custom Indexes: Different Performance Tools, Different Use Cases</h3>
             <p className="text-sm text-gray-700">Skinny tables can avoid joins for supported read-only operations and are maintained by Salesforce; contact Salesforce Support to request them. Custom indexes help the query optimizer when they suit the filter and data distribution. These are distinct options, not interchangeable fixes.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. External Objects vs Big Objects: Real-Time vs Archive</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. External Objects vs Big Objects: Real-Time vs Archive</h3>
             <p className="text-sm text-gray-700">External Objects surface data held in an external system through Salesforce Connect. Big Objects support high-volume data storage and access patterns on the Salesforce platform. Select an approach based on data location, access needs, and the applicable platform capabilities.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Data Masking vs Field Encryption vs Classic Encryption: Three Security Layers</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Data Masking vs Field Encryption vs Classic Encryption: Three Security Layers</h3>
             <p className="text-sm text-gray-700">Field-level encryption, Shield Platform Encryption, and sandbox data masking serve different protection goals. Compare them against the data sensitivity, access needs, environment, and compliance requirements; check current Salesforce documentation for supported fields and feature behavior.</p>
           </div>
         </div>

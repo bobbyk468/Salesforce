@@ -126,15 +126,15 @@ export default function PardotSpecialistExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">Use these distinctions as a focused review list alongside the official exam objectives.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Engagement Studio vs Automation Rules: Nurture vs Batch Processing</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Engagement Studio vs Automation Rules: Nurture vs Batch Processing</h3>
             <p className="text-sm text-gray-700">Engagement Studio (Engagement Programs) orchestrates time-based, multi-step nurture sequences triggered by prospect actions or timing. Automation Rules evaluate prospect criteria and apply actions. Compare the capabilities of each when choosing a tool for a workflow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Email Preference Centre vs Unsubscribe: Opt-Down vs Opt-Out</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Email Preference Centre vs Unsubscribe: Opt-Down vs Opt-Out</h3>
             <p className="text-sm text-gray-700">Unsubscribe behavior and preference management serve different purposes. Review how Account Engagement configuration affects opt-out status and communication preferences for a prospect.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Visitor vs Prospect: Anonymous vs Known</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Visitor vs Prospect: Anonymous vs Known</h3>
             <p className="text-sm text-gray-700">A Visitor is an anonymous person who has visited an Account Engagement-tracked page. A Prospect is an identified person with an email address. Review how identification affects the records and available engagement activities.</p>
           </div>
         </div>

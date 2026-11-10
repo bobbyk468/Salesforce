@@ -109,7 +109,7 @@ export default function StrategyDesignerStudyGuideContent() {
             { title: 'Outcome Measurement', body: 'Define KPIs and success metrics early. Distinguish leading indicators (activity) from lagging indicators (business results).' },
           ].map((item) => (
             <div key={item.title} className="bg-gray-50 rounded-xl p-4">
-              <p className="font-semibold text-gray-900 mb-1">{item.title}</p>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
               <p className="text-gray-600 text-xs">{item.body}</p>
             </div>
           ))}

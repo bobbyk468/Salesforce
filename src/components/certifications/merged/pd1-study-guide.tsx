@@ -162,7 +162,7 @@ export default function Pd1StudyGuideContent() {
 }`}</pre>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Async Apex Decision Tree:</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Async Apex Decision Tree:</h3>
             <ul className="space-y-1">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need a callout from a trigger? → @future(callout=true)</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need to chain jobs or pass non-primitive data? → Queueable</span></li>
@@ -171,7 +171,7 @@ export default function Pd1StudyGuideContent() {
             </ul>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Trigger context variables (must memorise):</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Trigger context variables (must memorise):</h3>
             <ul className="space-y-1">
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Trigger.new, new record values (insert, update, undelete)</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Trigger.old, old record values (update, delete)</span></li>

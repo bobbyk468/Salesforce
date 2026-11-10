@@ -124,15 +124,15 @@ export default function PublicSectorSolutionsApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Licences vs Permits vs Inspections: The PSS Object Hierarchy</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Licences vs Permits vs Inspections: The PSS Object Hierarchy</h3>
             <p className="text-sm text-gray-700">Public Sector Solutions uses a structured hierarchy: Business Licence Application → Business Licence → Inspection. An Application is submitted by the constituent, reviewed, and either approved (creating a Licence) or rejected. Inspections are linked to Licences to verify ongoing compliance. Candidates model these as Cases and Tasks, the exam expects PSS-specific objects and the application-to-licence workflow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. OmniStudio in PSS: Portal Interactions Use OmniScripts</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. OmniStudio in PSS: Portal Interactions Use OmniScripts</h3>
             <p className="text-sm text-gray-700">PSS relies heavily on OmniStudio: OmniScripts power the constituent-facing application and renewal flows on the Experience Cloud portal. FlexCards display permit status, case summaries, and inspection results. DataRaptors read and write application data. Candidates design custom LWC forms for PSS portal interactions, the exam expects OmniScript-based guided processes for constituent self-service.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Business Rules Engine (BRE): Eligibility and Decision Automation</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Business Rules Engine (BRE): Eligibility and Decision Automation</h3>
             <p className="text-sm text-gray-700">The Business Rules Engine evaluates eligibility criteria for licences, benefits, and permits using a rules-based decision table, no code required. Candidates write Apex or Flow decision logic for eligibility checks, the exam expects BRE configuration for complex multi-condition eligibility scenarios, keeping logic maintainable by non-developers.</p>
           </div>
         </div>

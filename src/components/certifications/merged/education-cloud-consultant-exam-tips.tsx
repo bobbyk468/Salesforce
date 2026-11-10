@@ -102,15 +102,15 @@ export default function EducationCloudConsultantExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">Use these prompts to structure practice against the published guide’s solution-design and implementation objectives.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA): Confirm the Model</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA): Confirm the Model</h3>
             <p className="text-sm text-gray-700">Start by identifying whether a scenario uses the EDA managed package or the Education Cloud platform solution. Verify the applicable account model and relationship semantics in documentation for that product before proposing a schema.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Recruitment and Admissions: Map the Workflow</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Recruitment and Admissions: Map the Workflow</h3>
             <p className="text-sm text-gray-700">For recruitment and admissions, trace a prospective learner from initial interest through application and enrollment. Determine which records, staff workflows, portal steps, and integration points the institution’s chosen product actually uses; avoid assuming every deployment shares identical stages or objects.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Student Success: Define Outcomes and Ownership</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Student Success: Define Outcomes and Ownership</h3>
             <p className="text-sm text-gray-700">For student-success design, clarify the intervention goal, responsible staff, signal source, access rules, and follow-up process. Select an available product feature only after checking the organization’s licensed capabilities and documented behavior.</p>
           </div>
         </div>

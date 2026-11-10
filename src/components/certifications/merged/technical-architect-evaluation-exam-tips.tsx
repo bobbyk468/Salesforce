@@ -128,15 +128,15 @@ export default function TechnicalArchitectEvaluationExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Evaluation Format: Two Proctored Exams Before the Review Board</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Evaluation Format: Two Proctored Exams Before the Review Board</h3>
             <p className="text-sm text-gray-700">The Salesforce Technical Architect path includes two proctored multiple-choice assessments (Technical Architect Evaluation exams) before candidates are eligible for the Review Board. These exams test architecture knowledge across all domain areas. Candidates underestimate these proctored exams; they are rigorous and assess whether a candidate has the breadth of knowledge required to enter the Review Board process.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Covering All Salesforce Architecture Domains in Evaluation</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Covering All Salesforce Architecture Domains in Evaluation</h3>
             <p className="text-sm text-gray-700">The Technical Architect evaluation covers all architecture domains: Data Architecture, Integration, Sharing &amp; Visibility, Development Lifecycle, Security, Identity, and Solution Design. Candidates focus on their strongest domain, the exam requires breadth across all domains, with especially high expectations on Integration Patterns, Deployment Strategy, and Data Architecture.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Scenario-Based Reasoning Over Feature Recall</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Scenario-Based Reasoning Over Feature Recall</h3>
             <p className="text-sm text-gray-700">The TA Evaluation exams are scenario-based: given a complex business requirement with constraints, choose the best architecture. Correct answers require justifying the approach based on the full context, not just identifying the "best practice." Candidates choose the textbook answer ignoring constraints, the exam penalises technically correct answers that do not fit the scenario constraints.</p>
           </div>
         </div>

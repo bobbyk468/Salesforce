@@ -128,7 +128,7 @@ export default function SystemArchitectStudyGuideContent() {
             { title: 'Career premium', body: 'System Architect holders typically qualify for senior architect and principal architect roles commanding significant salary premium over standard certification holders.' },
           ].map((item) => (
             <div key={item.title} className="bg-gray-50 rounded-xl p-4">
-              <p className="font-semibold text-gray-900 mb-1">{item.title}</p>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
               <p>{item.body}</p>
             </div>
           ))}

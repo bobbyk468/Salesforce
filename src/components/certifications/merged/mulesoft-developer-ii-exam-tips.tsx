@@ -127,15 +127,15 @@ export default function MulesoftDeveloperIiExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Batch Processing: Batch Job Phases and Error Handling</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Batch Processing: Batch Job Phases and Error Handling</h3>
             <p className="text-sm text-gray-700">Mule Batch Jobs have three phases: Input (record collection), Process (on-record parallel processing), and On Complete (summary handling after all records are processed). Errors in the Process phase are per-record, a failed record does not stop other records from processing. Candidates design Batch Jobs expecting a single error to halt processing, the exam expects per-record error handling and the acceptPolicy setting that controls how failures affect the batch.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Async vs Sync Flow Execution: When Flow Runs Are Detached</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Async vs Sync Flow Execution: When Flow Runs Are Detached</h3>
             <p className="text-sm text-gray-700">By default, flows called via Flow Reference execute synchronously (in the same thread as the caller). Async scopes run a sub-flow asynchronously in a new thread, and the caller does not wait for the result. Candidates use Async scope expecting the caller to receive the async response; Async is fire-and-forget. Know when to use each based on whether the caller needs the processing result.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Watermark in Polling: Tracking Processed Records Across Runs</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Watermark in Polling: Tracking Processed Records Across Runs</h3>
             <p className="text-sm text-gray-700">A Watermark in a Scheduler-triggered polling flow tracks the last-processed record (e.g., last timestamp) so subsequent runs only retrieve new or updated records. Without Watermark, every run re-processes all records. Candidates implement custom tracking variables for incremental polling, the exam expects the built-in Watermark feature with an Object Store for persistence across Mule runtime restarts.</p>
           </div>
         </div>

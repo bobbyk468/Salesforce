@@ -126,15 +126,15 @@ export default function ConsumerGoodsTpmApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Trade Promotion vs Fund vs Tactic: Three Levels, One Plan</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Trade Promotion vs Fund vs Tactic: Three Levels, One Plan</h3>
             <p className="text-sm text-gray-700">A Trade Promotion is the top-level campaign container. Funds (promotional budgets) are allocated to the promotion. Tactics are the specific promotional activities within it (display, feature ad, price discount). Candidates answer fund questions at the promotion level and vice versa. The hierarchy is Promotion → Fund → Tactic. Know which object stores which attribute.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Settlement vs Deduction vs Claim: Post-Promotion Financial Flow</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Settlement vs Deduction vs Claim: Post-Promotion Financial Flow</h3>
             <p className="text-sm text-gray-700">After a promotion runs, retailers submit Claims or Deductions (short payments). Settlements are the reconciled financial outcomes. Candidates use "claim" and "deduction" interchangeably, the exam distinguishes them: a Deduction is a short payment on an invoice; a Claim is a request for reimbursement. Settlement closes the loop by matching claims against accruals.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Account Planning Integration: Trade Plans Are Linked to Account Plans</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Account Planning Integration: Trade Plans Are Linked to Account Plans</h3>
             <p className="text-sm text-gray-700">Consumer Goods TPM integrates Trade Promotion Management with Account Planning. Trade promotions must be linked to an Account Plan (the strategic plan for a retail account). Candidates design promotions without Account Plan linkage, the exam expects you to show how promotional spending rolls up to the account-level plan for P&amp;L visibility.</p>
           </div>
         </div>

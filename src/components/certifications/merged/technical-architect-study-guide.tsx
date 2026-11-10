@@ -123,7 +123,7 @@ export default function TechnicalArchitectStudyGuideContent() {
             { title: 'Handling challenges', body: 'When the panel challenges your assumptions or proposes alternatives, can you defend your design confidently and update it appropriately?' },
           ].map((item) => (
             <div key={item.title} className="bg-gray-50 rounded-xl p-4">
-              <p className="font-semibold text-gray-900 mb-1">{item.title}</p>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.title}</h3>
               <p className="text-xs">{item.body}</p>
             </div>
           ))}

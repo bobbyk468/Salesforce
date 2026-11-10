@@ -126,15 +126,15 @@ export default function HerokuDeveloperApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Ephemeral Filesystem: Files Written to Dyno Are Lost on Restart</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Ephemeral Filesystem: Files Written to Dyno Are Lost on Restart</h3>
             <p className="text-sm text-gray-700">Heroku dynos have an ephemeral filesystem: any file written during a dyno session is lost when the dyno restarts (which happens at least daily). Candidates design apps that write user uploads or generated files to the local filesystem, the exam expects external storage (AWS S3, Heroku Postgres) for persistent files.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Config Vars vs .env: Environment Variables Are Not in Code</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Config Vars vs .env: Environment Variables Are Not in Code</h3>
             <p className="text-sm text-gray-700">Config Vars are Heroku’s secure environment variable store, set via the dashboard or CLI and injected at runtime. They should never be hardcoded in application code or checked into version control. Candidates put API keys in .env files and push them to Git, the exam expects Config Vars for all secrets and environment-specific settings.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Release Phase: Run Migrations Before New Code Goes Live</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Release Phase: Run Migrations Before New Code Goes Live</h3>
             <p className="text-sm text-gray-700">The Release Phase is a Heroku feature that runs a command (e.g., a database migration script) after a new slug is built but before it is deployed to dynos. If the release phase command fails, the deployment is rolled back automatically. Candidates run migrations manually after deployment, the exam expects Release Phase configuration for zero-downtime database migrations.</p>
           </div>
         </div>

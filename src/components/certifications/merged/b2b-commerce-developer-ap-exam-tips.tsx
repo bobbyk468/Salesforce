@@ -126,15 +126,15 @@ export default function B2bCommerceDeveloperApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. LWC Commerce Components vs Base Components: Extension vs Replacement</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. LWC Commerce Components vs Base Components: Extension vs Replacement</h3>
             <p className="text-sm text-gray-700">B2B Commerce on Lightning uses base LWC commerce components (product detail, cart, checkout) that can be extended or replaced. Extending a base component inherits its functionality and adds custom logic. Replacing it means writing the entire component from scratch. Candidates choose "replace" for simple customisations, the exam expects "extend." Only replace when the base component cannot be modified to meet requirements.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Integration Framework: Commerce APIs vs Apex vs Platform Events</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Integration Framework: Commerce APIs vs Apex vs Platform Events</h3>
             <p className="text-sm text-gray-700">The B2B Commerce Integration Framework uses Apex extension points (CartExtension, ShippingProvider, TaxProvider) to plug in external logic. Candidates use ad-hoc Platform Events or custom REST APIs instead. Know the specific Apex extension point for each commerce integration: tax calculation = TaxProvider, shipping rates = ShippingProvider, cart validation = CartValidationOutput.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Guest Browsing vs Authenticated Checkout: Session Context Matters</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Guest Browsing vs Authenticated Checkout: Session Context Matters</h3>
             <p className="text-sm text-gray-700">Guest users can browse a B2B Commerce storefront but cannot add to cart or check out without authenticating. The guest user context has a different Experience Cloud licence type than the authenticated buyer. Candidates design features that work in guest context and forget that adding to cart requires authentication. Exam scenarios about "users cannot add items to cart" expect the answer "buyer is not authenticated."</p>
           </div>
         </div>

@@ -125,15 +125,15 @@ export default function SharingVisibilityArchitectExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. OWD + Role Hierarchy + Sharing Rules: The Correct Evaluation Order</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. OWD + Role Hierarchy + Sharing Rules: The Correct Evaluation Order</h3>
             <p className="text-sm text-gray-700">Salesforce evaluates record access in this order: OWD (baseline) → Role Hierarchy (opens access upward) → Sharing Rules (open access horizontally) → Manual Sharing (record-by-record grants). Candidates apply sharing rules expecting them to restrict access below OWD, sharing rules can only OPEN access, never restrict below OWD. The only way to restrict below OWD is to change OWD itself.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. With Sharing vs Without Sharing vs Inherited Sharing in Apex</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. With Sharing vs Without Sharing vs Inherited Sharing in Apex</h3>
             <p className="text-sm text-gray-700">Apex classes declared "with sharing" enforce the running user’s sharing rules. "Without sharing" bypasses sharing (runs as admin). "Inherited sharing" passes the sharing context from the calling class. Candidates use "without sharing" for all utility classes to avoid access issues, the exam expects "with sharing" for user-facing operations and "without sharing" only for system-level operations with a documented security justification.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Territory Management vs Role Hierarchy: Two Separate Sharing Mechanisms</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Territory Management vs Role Hierarchy: Two Separate Sharing Mechanisms</h3>
             <p className="text-sm text-gray-700">The Role Hierarchy extends record access to managers above the record owner. Territory Management grants access to accounts and their related records based on geographic or segment-based territory assignment, independent of the Role Hierarchy. A user can gain access to an Account through Territory assignment even if they are not above the owner in the Role Hierarchy. Candidates assume territory access is role-based.</p>
           </div>
         </div>

@@ -123,15 +123,15 @@ export default function TableauArchitectExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Extracts vs Live Connections: Performance vs Currency Trade-Off</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Extracts vs Live Connections: Performance vs Currency Trade-Off</h3>
             <p className="text-sm text-gray-700">Extracts are snapshots of data stored in Tableau’s columnar format (.hyper files), fast query performance but data is only as fresh as the last refresh. Live connections query the source database directly, always current but performance depends on source database speed. Candidates use Live connections for all scenarios to ensure data freshness, the exam expects Extracts when performance is the priority and query load on the source must be minimised.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Row-Level Security: Data Source Filters vs User Attribute Functions</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Row-Level Security: Data Source Filters vs User Attribute Functions</h3>
             <p className="text-sm text-gray-700">Row-Level Security in Tableau can be implemented via Data Source Filters (a fixed filter applied to the published data source) or User Attribute Functions (ISMEMBEROF, USERNAME, dynamic filters based on logged-in user). Data Source Filters apply to all users of the data source. User Attribute Functions filter per user. Candidates apply Data Source Filters for multi-user security, the exam expects User Attribute Functions for individual user-based data access control.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Tableau Server Roles: Creator vs Explorer vs Viewer</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Tableau Server Roles: Creator vs Explorer vs Viewer</h3>
             <p className="text-sm text-gray-700">Creator can connect to new data, build and publish workbooks, and manage projects. Explorer can edit published workbooks and create new content from existing data sources. Viewer can only view published workbooks. Candidates assign Creator licences to all power users, the exam expects Explorer for users who need to edit dashboards but not connect to raw data, reducing licence cost.</p>
           </div>
         </div>

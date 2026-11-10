@@ -79,23 +79,23 @@ export default function AgentforceSpecialistExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Core Concepts You Must Know</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Agent Builder and Agent Types</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Agent Builder and Agent Types</h3>
             <p>Know the difference between Copilot (end-user-facing conversational assistant) and other agent types. Understand how to configure system prompts, add Topics, and assign Actions to Topics in Agent Builder.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Topics and Actions</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Topics and Actions</h3>
             <p>Topics define what an agent can do; Actions are the executable steps within a topic. Actions can be Flows, Apex, Prompt Templates, or API calls. The exam tests when to use each and how to chain them correctly.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Einstein Trust Layer</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Einstein Trust Layer</h3>
             <p>Capabilities depend on feature and configuration. Salesforce states that pattern-based and field-based data masking is disabled for agents; do not assume blanket PII masking.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Prompt Templates</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Prompt Templates</h3>
             <p>Prompt Templates let you standardize LLM instructions across the org. Know how to reference merge fields, ground prompts with data, and the difference between flex prompts and sales email prompts. Template versioning and testing in Prompt Builder is commonly tested.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Human Escalation and Handoff</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Human Escalation and Handoff</h3>
             <p>Agents must gracefully hand off to human agents when out of scope. Know the configurations for escalation conditions and how to route within Omni-Channel. The exam tests both the technical config and the UX best-practice reasoning.</p>
           </div>
         </div>
@@ -156,15 +156,15 @@ export default function AgentforceSpecialistExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">Use the current Salesforce guide and product documentation to check terminology and configuration details.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Topics vs Actions vs Instructions: What Goes Where</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Topics vs Actions vs Instructions: What Goes Where</h3>
             <p className="text-sm text-gray-700">Topics define an agent’s scope, instructions guide behavior, and actions are configured capabilities such as Flow or Apex actions. Data sources depend on configuration and access controls. Instructions provide behavior guidance; actions are configured capabilities. Consult the issuer objectives for exam scope.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Apex Actions vs Flow Actions: When to Use Each</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Apex Actions vs Flow Actions: When to Use Each</h3>
             <p className="text-sm text-gray-700">Apex @InvocableMethod actions are used when the agent needs complex data processing, callouts, or operations not possible in Flow. Auto-Launched Flows are used for standard business logic, data manipulation, and multi-step orchestration. The exam tests which to recommend given a scenario: if it requires external API calls or complex Apex logic, use Apex; if it is achievable declaratively. Use a Flow action.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Data Cloud Grounding vs Standard Object Data Access</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Data Cloud Grounding vs Standard Object Data Access</h3>
             <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup; it is not automatic. Agent data sources depend on configured capabilities and access controls; Data 360 is not a universal prerequisite. See Salesforce documentation for supported sources and permissions.</p>
           </div>
         </div>
@@ -175,7 +175,7 @@ export default function AgentforceSpecialistExamTipsContent() {
         <div className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <p className="font-semibold text-gray-900 mb-1">{item.question}</p>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.question}</h3>
               <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
             </div>
           ))}

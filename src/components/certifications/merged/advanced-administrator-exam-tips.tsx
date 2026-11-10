@@ -125,15 +125,15 @@ export default function AdvancedAdministratorExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Record-Triggered Flow: Before-Save vs After-Save vs Scheduled Paths</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Record-Triggered Flow: Before-Save vs After-Save vs Scheduled Paths</h3>
             <p className="text-sm text-gray-700">Before-Save flows run before the record is committed; they can modify the triggering record without DML and cannot create related records. After-Save flows run after commit and can create/update related records but cost DML governor limits. Scheduled Paths run at a future date/time on records that meet criteria at that point. Candidates choose wrong path types for scenarios: before-save for creating child records (impossible), after-save for modifying the trigger record without DML (inefficient).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Territory Management 2.0: Assignment Rules vs Sharing Rules</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Territory Management 2.0: Assignment Rules vs Sharing Rules</h3>
             <p className="text-sm text-gray-700">Territory Management 2.0 controls which accounts and their related objects a user can access based on geographic or segment-based territory models. Sharing rules extend access horizontally between peers. Candidates answer territory management questions using sharing rule logic. Key distinction: territory models have states (Planning, Active, Archived) and run assignment rules to associate accounts to territories; sharing rules have no concept of model states.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Change Data Capture vs Platform Events: Choosing the Right Tool</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Change Data Capture vs Platform Events: Choosing the Right Tool</h3>
             <p className="text-sm text-gray-700">Change Data Capture (CDC) streams granular record changes (create/update/delete/undelete) from Salesforce to external systems that subscribe via the API. Platform Events are custom event messages published and subscribed to within and outside Salesforce for event-driven architecture. Candidates answer &ldquo;stream Salesforce record changes to a data warehouse&rdquo; questions with Platform Events (wrong, that’s CDC) and &ldquo;trigger async workflows on new order events&rdquo; with CDC (wrong, that’s Platform Events).</p>
           </div>
         </div>

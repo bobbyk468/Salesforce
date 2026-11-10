@@ -126,15 +126,15 @@ export default function MediaCloudApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Media Cloud Data Model: Media Order vs Standard Salesforce Order</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Media Cloud Data Model: Media Order vs Standard Salesforce Order</h3>
             <p className="text-sm text-gray-700">Media Cloud uses a Media Plan → Insertion Order → Line Item hierarchy for advertising sales, which is separate from the standard Salesforce Order → Order Product structure. Candidates apply standard Order logic to Media Cloud advertising scenarios, the exam expects the Media Plan data model for ad campaign booking and trafficking.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Programmatic vs Direct Sales Workflows: Different Insertion Order Types</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Programmatic vs Direct Sales Workflows: Different Insertion Order Types</h3>
             <p className="text-sm text-gray-700">Direct sales involve a media salesperson negotiating and booking ad placements manually (Insertion Order created in Salesforce). Programmatic sales are automated auction-based ad purchases through DSPs/SSPs. Media Cloud primarily manages the direct sales workflow. Candidates design full programmatic automation inside Salesforce, the exam focuses on direct sales Order Management and the handoff interfaces with ad servers.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Rights Management: Content Rights Are Time-Boxed and Territory-Specific</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Rights Management: Content Rights Are Time-Boxed and Territory-Specific</h3>
             <p className="text-sm text-gray-700">Media Cloud tracks content rights (broadcast, streaming, digital) per territory and time window. A sports rights deal may grant a broadcaster rights only within a specific country and only for a specific season. Candidates use a single Rights record, the exam expects rights records with territory, channel, and date-range fields, and understands that rights violations occur when content is broadcast outside permitted windows.</p>
           </div>
         </div>

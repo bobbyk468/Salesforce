@@ -124,15 +124,15 @@ export default function ProcessAutomationApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Record-Triggered Flow: Before Save vs After Save: When Records Can Be Created</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Record-Triggered Flow: Before Save vs After Save: When Records Can Be Created</h3>
             <p className="text-sm text-gray-700">Before-Save Record-Triggered Flows can update fields on the triggering record without consuming DML limits, they cannot create or update other records. After-Save flows run post-commit and can create/update related records but consume DML. Candidates use Before-Save to create child records; that is only possible in After-Save. Getting this wrong causes "invalid cross-reference" errors in the exam scenarios.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Invocable Apex vs Flow: Declarative-First Unless Code Is Required</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Invocable Apex vs Flow: Declarative-First Unless Code Is Required</h3>
             <p className="text-sm text-gray-700">Invocable Apex (@InvocableMethod) is called from Flow when the required logic exceeds Flow’s declarative capabilities (HTTP callouts, complex data manipulation). Do not use Invocable Apex for logic Flow can handle natively. Candidates add Invocable Apex for simple field updates or assignments, the exam expects pure Flow for those and Apex only when a scenario explicitly cannot be solved declaratively.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Scheduled Flows vs Time-Based Workflows vs Scheduled Paths</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Scheduled Flows vs Time-Based Workflows vs Scheduled Paths</h3>
             <p className="text-sm text-gray-700">Scheduled Flows run on a defined schedule (daily, hourly) and process all records matching criteria at runtime. Time-Based Workflow actions fire relative to a date field on a specific record. Scheduled Paths (in Record-Triggered Flows) execute a path at a time relative to the trigger event for that specific record. Candidates confuse Scheduled Flows (batch) with Scheduled Paths (per-record, relative timing).</p>
           </div>
         </div>

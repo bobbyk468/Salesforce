@@ -104,23 +104,23 @@ export default function ServiceCloudConsultantExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Key Concepts You Must Know</h2>
         <div className="space-y-5 text-sm text-gray-700">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Case Management Lifecycle</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Case Management Lifecycle</h3>
             <p>Know the full case lifecycle: web-to-case / email-to-case capture → assignment rules (evaluated top to bottom, first match wins) → queue → escalation rules (time-based triggers) → auto-response rules (sent to customer, only one fires per case). The exam tests the order of evaluation and what happens when no rule matches.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Omni-Channel Routing</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Omni-Channel Routing</h3>
             <p>Omni-Channel routes work items to the most qualified available agent. Know: queue-based routing (items go to a queue, agents pull from it) vs skill-based routing (items route directly to an agent with matching skills). Understand capacity; agents have a work capacity limit and items have a capacity weight. Pending-status issues often come from capacity being maxed.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Salesforce Knowledge</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Salesforce Knowledge</h3>
             <p>Articles have record types, data categories (for visibility), and approval processes. Knowledge articles can be surfaced in the Service Console, in communities, or sent via email. Know the difference between draft, published, and archived states. Translations and versioning are also tested.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Entitlements and Milestones</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Entitlements and Milestones</h3>
             <p>Entitlements define what level of support a customer is entitled to (e.g., 24-hour response SLA). Milestones are time-dependent steps within an entitlement process (e.g., &ldquo;First Response within 4 hours&rdquo;). Know how to set up warning and violation actions on milestones, and what triggers them to start/stop.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">Service Console and CTI</p>
+            <h3 className="font-semibold text-gray-900 mb-1">Service Console and CTI</h3>
             <p>The Service Console is a multi-pane interface optimised for high-volume support. Know the components: utility bar (persistent tools), subtabs (related records), keyboard shortcuts, and macros (repeatable action sequences). CTI (Computer Telephony Integration) integrates phone systems: Open CTI vs Salesforce CTI Toolkit; and is commonly tested in the configuration section.</p>
           </div>
         </div>
@@ -184,15 +184,15 @@ export default function ServiceCloudConsultantExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Entitlement Processes vs Service Contracts vs Warranties</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Entitlement Processes vs Service Contracts vs Warranties</h3>
             <p className="text-sm text-gray-700">Entitlement Processes are SLA templates with milestones and time-based actions (e.g., auto-escalate if not resolved within 4 hours). Service Contracts are agreements with customers that entitlements are linked to. Warranties are product-based coverage records. Candidates mix these three up on scenario questions, an entitlement process is the workflow; a service contract is the commercial agreement; a warranty is the product coverage.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Omni-Channel Routing Models: Least Active vs Most Available</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Omni-Channel Routing Models: Least Active vs Most Available</h3>
             <p className="text-sm text-gray-700">Least Active routing assigns work to the agent with the fewest open work items (good for complex cases requiring focus). Most Available routing assigns to the agent with the most remaining capacity relative to their max (good for high-volume queues). Getting these backwards in routing design scenarios is a common failure point. Also know skills-based routing vs queue-based routing and when each applies.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Knowledge Visibility: Data Categories vs Topics vs Article Types</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Knowledge Visibility: Data Categories vs Topics vs Article Types</h3>
             <p className="text-sm text-gray-700">Data Categories control which articles are visible to which customer profiles and in which channels (public site, partner community, internal). Topics are a simpler tagging system for search and navigation but do not control visibility. Article Types define the structure/layout of articles. Candidates answer data category questions using topic logic and lose marks.</p>
           </div>
         </div>

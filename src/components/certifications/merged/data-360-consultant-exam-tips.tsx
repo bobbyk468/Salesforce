@@ -128,15 +128,15 @@ export default function Data360ConsultantExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Data Streams vs Data Model Objects vs Calculated Insights</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Data Streams vs Data Model Objects vs Calculated Insights</h3>
             <p className="text-sm text-gray-700">Data Streams are the ingestion pipelines that bring external data into Data Cloud (from Salesforce, S3, MuleSoft, etc.). Data Model Objects (DMOs) are the unified data entities in the canonical data model (Individual, Unified Individual, Sales Order, etc.). Calculated Insights are derived metrics computed on top of DMOs (e.g., total purchase value per customer). Candidates mix these three layers, ingestion (Stream) vs canonical model (DMO) vs analytics (Insight).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Identity Resolution: Matching Rules and Reconciliation Rules</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Identity Resolution: Matching Rules and Reconciliation Rules</h3>
             <p className="text-sm text-gray-700">Matching Rules define how Data Cloud identifies that two records from different sources refer to the same individual (e.g., match on email + phone). Reconciliation Rules define which source wins when the same field has conflicting values across matched records (e.g., Salesforce CRM field wins over Marketing Cloud field for first name). Candidates confuse what each rule type does, matching = who is the same person; reconciliation = which value is the truth.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Segments vs Activation Targets vs Data Actions</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Segments vs Activation Targets vs Data Actions</h3>
             <p className="text-sm text-gray-700">Segments are audience groups built from Data Cloud data using filter criteria. Activation Targets are the destinations where a segment is sent (e.g., Marketing Cloud, Advertising Studio). Data Actions trigger business events (e.g., create a Salesforce Case) based on segment membership changes. Candidates use &ldquo;activation&rdquo; when the correct answer is a &ldquo;data action&rdquo; (activations send to marketing channels; data actions trigger Salesforce-side events).</p>
           </div>
         </div>

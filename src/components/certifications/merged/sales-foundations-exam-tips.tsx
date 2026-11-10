@@ -122,15 +122,15 @@ export default function SalesFoundationsExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Opportunity Stages vs Forecast Categories: Two Different Picklists</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Opportunity Stages vs Forecast Categories: Two Different Picklists</h3>
             <p className="text-sm text-gray-700">Opportunity Stages are the user-defined steps in the sales process (Prospecting, Qualification, Proposal, Closed Won). Forecast Categories are the rollup buckets for forecasting (Pipeline, Best Case, Commit, Closed). Each Stage maps to a Forecast Category, but they are separate fields. Candidates report on Forecast Categories expecting Stage-level granularity, the exam tests that multiple Stages can map to the same Forecast Category.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Products vs Price Books: You Need Both</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Products vs Price Books: You Need Both</h3>
             <p className="text-sm text-gray-700">Products define what you are selling (name, description, product code). Price Books define the prices at which products are sold (standard and custom price books). A Product must be added to a Price Book before it appears on an Opportunity. Candidates create Products expecting them to appear automatically on quotes, the exam expects both Product and Price Book Entry configuration.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Activity Timeline vs Activity Reports: Different Views of the Same Data</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Activity Timeline vs Activity Reports: Different Views of the Same Data</h3>
             <p className="text-sm text-gray-700">The Activity Timeline on a record page shows past and upcoming activities in a chronological list. Activity Reports (Tasks and Events report type) query the same activity data across multiple records for analysis. Candidates use Activity Timeline to answer "how many calls did the team make this month?", the exam expects an Activity Report for cross-record activity analytics.</p>
           </div>
         </div>

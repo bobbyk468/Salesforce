@@ -123,15 +123,15 @@ export default function RevenueCloudConsultantExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles</h3>
             <p className="text-sm text-gray-700">CPQ Product Rules govern what a sales rep can configure during quoting (compatibility, validation, selection). Contract Amendments in Revenue Cloud handle post-signature changes to active contracts (add products, change quantities, update pricing). Candidates apply CPQ quoting rules to amendment scenarios, the exam expects the Amendment workflow on the Contract record, not the quoting flow.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Asset-Based Ordering: Assets Drive Renewal and Amendment Logic</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Asset-Based Ordering: Assets Drive Renewal and Amendment Logic</h3>
             <p className="text-sm text-gray-700">Revenue Cloud creates Assets when a CPQ Quote Line is ordered. Renewals and amendments are driven by the Asset record (current entitlement), not the original Opportunity or Quote. Candidates trace amendments back to the original Opportunity, the exam expects Asset-Based Ordering logic where the Asset is the authoritative record of what a customer currently owns.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Order vs Contract vs Subscription: Sequence Matters</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Order vs Contract vs Subscription: Sequence Matters</h3>
             <p className="text-sm text-gray-700">The Revenue Cloud lifecycle: Quote → Order → Contract → Asset/Subscription. An Order activates the agreement. A Contract is created from the Order and represents the legally binding term. Subscriptions and Assets represent the ongoing entitlements. Candidates create Contracts directly from Opportunities, the exam expects the Quote → Order → Contract sequence with Subscriptions auto-created from Order Lines.</p>
           </div>
         </div>

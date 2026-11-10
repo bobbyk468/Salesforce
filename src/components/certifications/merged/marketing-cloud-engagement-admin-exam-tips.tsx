@@ -128,15 +128,15 @@ export default function MarketingCloudEngagementAdminExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Role-Based Access in Marketing Cloud: Roles vs Permissions</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Role-Based Access in Marketing Cloud: Roles vs Permissions</h3>
             <p className="text-sm text-gray-700">Marketing Cloud uses Roles (Administrator, Analyst, Content Creator, Viewer) that bundle permissions. You can also apply individual permissions on top of or restricted from a role. Candidates assume roles are all-or-nothing, the exam expects nuanced role + individual permission configuration when a user needs most of a role’s access but not all.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. IP Warming: New Sending IPs Need Gradual Volume Ramp</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. IP Warming: New Sending IPs Need Gradual Volume Ramp</h3>
             <p className="text-sm text-gray-700">New dedicated IPs for Marketing Cloud sending start with no reputation. ISPs (Gmail, Yahoo, Outlook) filter mail from new IPs heavily until a positive sending history is established. IP warming gradually increases send volume over 4–8 weeks. Candidates launch full-volume campaigns immediately on new IPs, the exam expects an IP warming plan as a prerequisite for high-volume new IP deployments.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Sender Authentication: SPF, DKIM, and DMARC Are All Required</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Sender Authentication: SPF, DKIM, and DMARC Are All Required</h3>
             <p className="text-sm text-gray-700">SPF (Sender Policy Framework) authorises which mail servers can send on behalf of a domain. DKIM adds a cryptographic signature to emails. DMARC tells receiving servers what to do when SPF/DKIM checks fail (quarantine or reject). All three are required for enterprise deliverability. Candidates configure SPF and DKIM but skip DMARC, the exam expects DMARC as the critical policy layer that ties SPF and DKIM together.</p>
           </div>
         </div>

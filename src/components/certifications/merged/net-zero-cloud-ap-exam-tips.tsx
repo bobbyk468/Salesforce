@@ -124,15 +124,15 @@ export default function NetZeroCloudApExamTipsContent() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Scope 1 vs Scope 2 vs Scope 3 Emissions: Different Tracking Responsibilities</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Scope 1 vs Scope 2 vs Scope 3 Emissions: Different Tracking Responsibilities</h3>
             <p className="text-sm text-gray-700">Scope 1: direct emissions from owned/controlled sources (company vehicles, on-site combustion). Scope 2: indirect emissions from purchased electricity, heat, or steam. Scope 3: all other indirect emissions in the value chain (business travel, supply chain, customer product use). Candidates use a single Emission record for all scopes, the exam expects Scope-specific record types and understanding that Scope 3 data often comes from external suppliers via data ingestion.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Carbon Credits vs Carbon Offsets: Purchased vs Generated</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Carbon Credits vs Carbon Offsets: Purchased vs Generated</h3>
             <p className="text-sm text-gray-700">Carbon Credits are purchased instruments that represent the right to emit one tonne of CO2. Carbon Offsets are projects (reforestation, renewable energy) that reduce or remove emissions, generating credits. In Net Zero Cloud, purchased offsets are tracked as Sustainability Adjustments. Candidates conflate these, the exam distinguishes between emissions reduction (operational improvements) and offset purchases (compensating for remaining emissions).</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Emission Factors: Why Records Don’t Match Industry Benchmarks</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Emission Factors: Why Records Don’t Match Industry Benchmarks</h3>
             <p className="text-sm text-gray-700">Net Zero Cloud calculates emissions by multiplying activity data (litres of fuel, kWh of electricity) by Emission Factors (kg CO2e per unit). Emission Factor libraries are sourced from regulatory bodies (EPA, IPCC) and vary by region and time period. Candidates assume a single global emission factor for electricity, the exam expects region-specific grid emission factors (European electricity is cleaner than coal-heavy grids).</p>
           </div>
         </div>
