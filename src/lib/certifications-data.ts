@@ -72,6 +72,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
       { name: 'Agentforce Nonprofit Consultant', href: '/certifications/nonprofit-cloud' },
       { name: 'Nonprofit Success Pack (NPSP)', href: '/certifications/nonprofit-success-pack-consultant' },
       { name: 'OmniStudio Consultant', href: '/certifications/omnistudio-consultant' },
+      { name: 'Public Sector Solutions Consultant', href: '/certifications/public-sector-solutions-consultant' },
       { name: 'Revenue Management Consultant', href: '/certifications/revenue-cloud-consultant' },
       { name: 'Agentforce Sales Consultant', href: '/certifications/sales-cloud' },
       { name: 'Agentforce Service Consultant', href: '/certifications/service-cloud' },
@@ -625,6 +626,7 @@ export const CERT_DIFFICULTY_LEVELS: Record<string, DifficultyLevel> = {
   'order-management-developer-ap': 'intermediate',
   'process-automation-ap': 'intermediate',
   'public-sector-solutions-ap': 'intermediate',
+  'public-sector-solutions-consultant': 'intermediate',
 
   // ===== ADVANCED (Architect path / Complex topics) =====
   'application-architect': 'advanced',
