@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import QuestionCard from '@/components/QuestionCard'
-import { INITIAL_PRACTICE_QUESTION_COUNT } from '@/lib/practice-question-lite'
+import { DEFERRED_PRACTICE_QUESTION_COUNTS } from '@/lib/practice-question-lite'
 import type { ImportedQuestionSource } from '@/lib/cert-page-spike/types'
 
 export interface SampleQuestion {
@@ -29,17 +29,21 @@ export default function PracticeQuestionsSection({
   questions,
   extraQuestionsKey,
 }: PracticeQuestionsSectionProps) {
-  const initialCount = INITIAL_PRACTICE_QUESTION_COUNT
   const [showAll, setShowAll] = useState(false)
   const [isLoadingExtras, setIsLoadingExtras] = useState(false)
   const [extraQuestions, setExtraQuestions] = useState<SampleQuestion[]>([])
   const hasDeferredExtras = Boolean(extraQuestionsKey)
-  const allQuestions = useMemo(() => [...questions, ...extraQuestions], [questions, extraQuestions])
+  // The base `questions` set is always server-rendered in full: it's already
+  // shipped in the page payload, so slicing it only hid content from
+  // Googlebot (which doesn't click "show more" buttons) for no bundle-size
+  // benefit. Only the separate, dynamically-imported extra question bank
+  // (e.g. administrator's extra 9) stays gated behind a click, since that
+  // one is a genuine lazy-loaded import.
   const visibleQuestions = useMemo(
-    () => (showAll ? allQuestions : allQuestions.slice(0, initialCount)),
-    [allQuestions, showAll]
+    () => (showAll ? [...questions, ...extraQuestions] : questions),
+    [questions, extraQuestions, showAll]
   )
-  const hiddenCount = Math.max(allQuestions.length - initialCount, 0)
+  const hiddenCount = hasDeferredExtras && !showAll ? DEFERRED_PRACTICE_QUESTION_COUNTS[extraQuestionsKey!] : 0
   if (!questions?.length) return null
 
   async function handleShowMore() {

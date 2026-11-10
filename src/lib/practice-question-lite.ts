@@ -1,8 +1,5 @@
 import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
 
-/** Keep the server-rendered sample and Quiz structured data in sync. */
-export const INITIAL_PRACTICE_QUESTION_COUNT = 10
-
 /** Counts for question sets loaded only after the reader asks for the full set. */
 export const DEFERRED_PRACTICE_QUESTION_COUNTS = {
   administrator: 9,
@@ -25,6 +22,13 @@ export function getInitialPracticeQuestions(questions: SampleQuestion[]): Sample
   return questions
 }
 
+/**
+ * Used for the Quiz JSON-LD, which must mirror what PracticeQuestionsSection
+ * actually server-renders. The base question set is now rendered in full
+ * (see PracticeQuestionsSection), so this returns it unchanged; only the
+ * separately dynamic-imported "extra" bank (DEFERRED_PRACTICE_QUESTION_COUNTS)
+ * stays out of both the initial render and this schema.
+ */
 export function getVisiblePracticeQuestions(questions: SampleQuestion[]): SampleQuestion[] {
-  return questions.slice(0, INITIAL_PRACTICE_QUESTION_COUNT)
+  return questions
 }
