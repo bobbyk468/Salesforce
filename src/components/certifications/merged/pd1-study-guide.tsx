@@ -23,11 +23,6 @@ const slug = 'developer-1'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription = `Platform Developer I study guide for ${RELEASE_CURRENT}: review five exam sections on Apex limits, testing, async patterns, and scenarios.`
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Platform Developer I', url: '/certifications/developer-1' },
-  { name: 'PD1 Study Guide', url: '/pd1-study-guide' },
-]
 
 export const faqItems = [
   {

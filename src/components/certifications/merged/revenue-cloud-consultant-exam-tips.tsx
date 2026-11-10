@@ -24,11 +24,6 @@ const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce Revenue Cloud Consultant exam tips for ${RELEASE_CURRENT}: CPQ, billing, subscription management, revenue recognition.`
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Revenue Cloud Consultant', url: '/certifications/revenue-cloud-consultant' },
-  { name: 'Revenue Cloud Consultant Exam Tips', url: '/revenue-cloud-consultant-exam-tips' },
-]
 
 export const faqItems = [
   {

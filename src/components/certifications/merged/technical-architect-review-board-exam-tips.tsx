@@ -18,10 +18,6 @@ const slug = 'technical-architect-review-board'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription = `CTA Review Board tips cover scenario presentations, whiteboarding, and panel questions for the live architecture defence.`
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'CTA Review Board Exam Tips', url: '/technical-architect-review-board-exam-tips' },
-]
 
 export const faqItems = [
   {

@@ -22,11 +22,6 @@ const slug = 'mulesoft-developer-i'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = 'Review MuleSoft Developer I objectives, Mule 4 application development, DataWeave, connectors, and error handling.'
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'MuleSoft Developer I', url: '/certifications/mulesoft-developer-i' },
-  { name: 'MuleSoft Developer I Study Guide', url: '/mulesoft-developer-i-study-guide' },
-]
 
 const examSections = [
   { name: 'Creating Application Networks', weight: 7, note: 'Network and application-network objectives in the published guide.' },

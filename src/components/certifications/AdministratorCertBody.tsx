@@ -9,6 +9,7 @@ import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
 import AdministratorCtaSections from '@/components/AdministratorCtaSections'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import { getQuizJsonLd } from '@/lib/schema-data'
+import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -49,7 +50,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: serializeJsonLd(
-              getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, getVisiblePracticeQuestions(initialQuestions)),
+              getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, getVisiblePracticeQuestions(initialQuestions), SLUG_TO_EXAM_CODE[slug]),
             ),
           }}
         />

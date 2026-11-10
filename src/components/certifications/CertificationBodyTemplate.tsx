@@ -24,6 +24,7 @@ import {
   slugToDisplayName,
 } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
+import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import type {
   AppBuilderSpikeBody,
   AssociateSpikeBody,
@@ -287,7 +288,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions))),
+          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions), SLUG_TO_EXAM_CODE[slug])),
         }}
       />
       {hideExamDetails || retired ? (
@@ -487,7 +488,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions))),
+          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions), SLUG_TO_EXAM_CODE[slug])),
         }}
       />
       <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>

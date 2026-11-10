@@ -431,12 +431,13 @@ export interface QuizQuestionItem {
 }
 
 /** Quiz JSON-LD for a certification page's practice questions. Must mirror the questions actually rendered. */
-export function getQuizJsonLd(name: string, questions: QuizQuestionItem[]) {
+export function getQuizJsonLd(name: string, questions: QuizQuestionItem[], examCode?: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Quiz',
     name,
-    about: { '@type': 'Thing', name },
+    about: { '@type': 'Thing', name, ...(examCode ? { identifier: examCode } : {}) },
+    author: { '@type': 'Person', name: 'Krishna Mohan', url: `${baseUrl}/team` },
     hasPart: questions.map((q) => {
       const correctIndices = [...new Set(q.correctAnswers ?? (q.correctAnswer === undefined ? [] : [q.correctAnswer]))]
       const acceptedAnswers = correctIndices

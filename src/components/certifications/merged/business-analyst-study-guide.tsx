@@ -24,11 +24,6 @@ const slug = 'business-analyst'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Business Analyst study guide: 7 exam sections, 8-week plan, scenario tips, free practice. $200, 60 questions. Pass first attempt.`
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Business Analyst', url: '/certifications/business-analyst' },
-  { name: 'Business Analyst Study Guide', url: '/business-analyst-study-guide' },
-]
 
 const examSections = [
   { name: 'Collaboration with Stakeholders', weight: 21, note: 'Facilitation techniques, workshops, interviews, observation, surveys. Managing conflicting requirements, building consensus, and communicating with executives vs end users.' },

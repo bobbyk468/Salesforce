@@ -22,11 +22,6 @@ const slug = 'b2c-commerce-developer'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = 'Study B2C Commerce Developer topics including SFRA, cartridges, ISML, OCAPI, and Business Manager, with exam format details.'
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'B2C Commerce Developer', url: '/certifications/b2c-commerce-developer' },
-  { name: 'B2C Commerce Developer Study Guide', url: '/b2c-commerce-developer-study-guide' },
-]
 
 const examSections = [
   { name: 'SFRA Architecture & Cartridges', weight: 30, note: 'Storefront Reference Architecture (SFRA): MVC pattern in SFCC, cartridge types (storefront, plugin, link), cartridge path order and inheritance. Creating a custom cartridge, extending SFRA controller and template. Cartridge path priority: how SFCC resolves which cartridge\'s files to use when multiple cartridges override the same file. Base storefront cartridge (app_storefront_base).' },

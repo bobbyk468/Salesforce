@@ -22,11 +22,6 @@ const slug = 'nonprofit-cloud'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Nonprofit Cloud Consultant study guide: exam sections, NPSP data model, fundraising, volunteer management. Pass in 2026.`
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Nonprofit Cloud Consultant', url: '/certifications/nonprofit-cloud' },
-  { name: 'Nonprofit Cloud Consultant Study Guide', url: '/nonprofit-cloud-consultant-study-guide' },
-]
 
 const examSections = [
   { name: 'Solution Design & Architecture', weight: 27, note: 'Designing Salesforce solutions for nonprofit use cases, data model decisions, and implementation approach selection.' },

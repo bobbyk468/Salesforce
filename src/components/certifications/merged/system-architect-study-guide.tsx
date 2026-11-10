@@ -20,11 +20,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const slug = 'system-architect'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Study the four exams required for Salesforce System Architect, review each scope, and follow a suggested order with free practice.`
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'System Architect', url: '/certifications/system-architect' },
-  { name: 'System Architect Study Guide', url: '/system-architect-study-guide' },
-]
 
 const domainExams = [
   { step: '1', name: 'Platform Developer I', fee: '$200', time: 'Developer exam', summary: 'Apex, SOQL, triggers, testing and the data model. The base the three architect exams build on. It also counts toward Application Architect.', href: '/certifications/developer-1' },

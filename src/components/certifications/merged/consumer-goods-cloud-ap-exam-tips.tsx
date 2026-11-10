@@ -23,10 +23,6 @@ const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   'Prepare for the Consumer Goods Cloud AP exam with retail execution, visit management, and KPI tracking review topics.'
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Consumer Goods Cloud AP Exam Tips', url: '/consumer-goods-cloud-ap-exam-tips' },
-]
 
 export const faqItems = [
   {

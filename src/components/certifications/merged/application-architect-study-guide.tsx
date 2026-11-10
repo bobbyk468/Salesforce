@@ -22,11 +22,6 @@ const slug = 'application-architect'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Application Architect study guide: 4 required domain exams, key topics, study order, preparation strategy.`
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Application Architect', url: '/certifications/application-architect' },
-  { name: 'Application Architect Study Guide', url: '/application-architect-study-guide' },
-]
 
 const domainExams = [
   { step: '1', name: 'Advanced Administrator', fee: '$200', time: '90 min', summary: 'Advanced platform configuration, automation, reporting, data management, and Salesforce administration at scale.', href: '/certifications/advanced-administrator' },

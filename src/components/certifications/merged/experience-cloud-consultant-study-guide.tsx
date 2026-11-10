@@ -26,11 +26,6 @@ const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Experience Cloud Consultant study guide: sharing model, external users, site templates, CMS, branding. Pass first attempt.`
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Experience Cloud Consultant', url: '/certifications/experience-cloud' },
-  { name: 'Experience Cloud Consultant Study Guide', url: '/experience-cloud-consultant-study-guide' },
-]
 
 export const faqItems = [
   {

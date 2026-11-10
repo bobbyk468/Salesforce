@@ -21,11 +21,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const slug = 'nonprofit-success-pack-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `NPSP Consultant study guide: review household data, fundraising, gift management, and exam sections with free practice questions.`
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Nonprofit Success Pack Consultant', url: '/certifications/nonprofit-success-pack-consultant' },
-  { name: 'NPSP Consultant Study Guide', url: '/nonprofit-success-pack-consultant-study-guide' },
-]
 
 const examSections = [
   { name: 'NPSP Configuration & Customisation', weight: 30, note: 'Installing and configuring NPSP, household settings, account model selection, and customising NPSP for specific nonprofit needs.' },

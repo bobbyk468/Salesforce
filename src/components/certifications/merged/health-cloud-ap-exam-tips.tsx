@@ -23,10 +23,6 @@ const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce Health Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: patient management, care plans, provider network.`
 
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Health Cloud AP Exam Tips', url: '/health-cloud-ap-exam-tips' },
-]
 
 export const faqItems = [
   {

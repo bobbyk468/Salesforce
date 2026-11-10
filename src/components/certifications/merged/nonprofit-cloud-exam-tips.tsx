@@ -22,11 +22,6 @@ const slug = 'nonprofit-cloud'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription = `Salesforce Nonprofit Cloud Consultant exam tips for ${RELEASE_CURRENT}: review NPC data, fundraising, and programme management.`
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Nonprofit Cloud Consultant', url: '/certifications/nonprofit-cloud' },
-  { name: 'Nonprofit Cloud Consultant Exam Tips', url: '/nonprofit-cloud-exam-tips' },
-]
 
 export const faqItems = [
   {

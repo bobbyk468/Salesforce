@@ -24,11 +24,6 @@ const slug = 'service-cloud'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription = `Service Cloud Consultant study guide: review Omni-Channel, entitlements, cases, and knowledge topics for exam preparation.`
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Service Cloud Consultant', url: '/certifications/service-cloud' },
-  { name: 'Service Cloud Consultant Study Guide', url: '/service-cloud-consultant-study-guide' },
-]
 
 export const faqItems = [
   {

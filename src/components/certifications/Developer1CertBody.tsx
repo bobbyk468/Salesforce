@@ -8,6 +8,7 @@ import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import { getQuizJsonLd } from '@/lib/schema-data'
+import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import CodeBlock from '@/components/CodeBlock'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
@@ -280,7 +281,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: serializeJsonLd(getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, getVisiblePracticeQuestions(initialQuestions))),
+            __html: serializeJsonLd(getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, getVisiblePracticeQuestions(initialQuestions), SLUG_TO_EXAM_CODE[slug])),
           }}
         />
         <CertIntroParagraph slug={slug} />
