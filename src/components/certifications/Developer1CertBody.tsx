@@ -358,7 +358,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           </div>
 
           {/* Study Timeline */}
-          <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_380px]">
+          <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
             <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
               Suggested study timeline for PD1 (6–10 weeks)
             </summary>
@@ -382,7 +382,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           </details>
 
           {/* Is PD1 Hard? */}
-          <details id="is-pd1-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_460px]">
+          <details id="is-pd1-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
             <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
               Is the PD1 Exam Hard?
             </summary>
@@ -410,7 +410,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           </details>
 
           {/* Exam Format Explained */}
-          <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_680px]">
+          <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
             <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
               PD1 Exam Format Explained
             </summary>

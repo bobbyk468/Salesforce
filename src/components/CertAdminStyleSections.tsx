@@ -18,7 +18,7 @@ export function WhoIsThisForSection({ data }: { data: WhoIsThisFor }) {
 
 export function ExamDifficultySection({ data }: { data: ExamDifficulty }) {
   return (
-    <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_420px]">
+    <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
       <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
         {data.heading}
       </summary>
@@ -43,7 +43,7 @@ export function ExamFormatSection({ slug, data }: { slug: string; data: ExamForm
   const logistics = getExamLogistics(slug)
 
   return (
-    <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_680px]">
+    <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
       <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
         {data.heading}
       </summary>

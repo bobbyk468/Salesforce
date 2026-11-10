@@ -148,7 +148,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             />
 
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
-            <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_520px]">
+            <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
               <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
                 Is the ADM-201 Exam Hard?
               </summary>
@@ -175,7 +175,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             </details>
 
             {/* ADM-201 Exam Format Explained, targets "ADM-201 exam format" + "scenario-based questions" queries */}
-            <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_980px]">
+            <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
               <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
                 ADM-201 Exam Format Explained
               </summary>
