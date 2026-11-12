@@ -19,11 +19,12 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
   administrator: [
     { sectionName: 'Configuration and Setup', difficulty: 'Moderate', tip: 'Know OWD, profiles, and permission sets, the security model hierarchy trips up most candidates.' },
     { sectionName: 'Object Manager and Lightning App Builder', difficulty: 'Moderate', tip: 'Focus on relationship types (MD vs Lookup) and when to use each in a scenario.' },
-    { sectionName: 'Workflow and Process Automation', difficulty: 'Trap', tip: 'Salesforce now favours Record-Triggered Flows over Process Builder, default to Flow as the answer.' },
+    { sectionName: 'Automation', difficulty: 'Trap', tip: 'Choose the automation tool that fits the requirement: record-triggered, screen, or scheduled Flow, or an Approval Process for human sign-off.' },
     { sectionName: 'Data and Analytics Management', difficulty: 'Moderate', tip: 'Joined Reports and dashboard filter limitations (equality only) are high-frequency exam topics.' },
     { sectionName: 'Sales and Marketing Applications', difficulty: 'Easy', tip: 'Leads, Opportunities, and Campaigns are well-documented, practise scenario routing.' },
     { sectionName: 'Service and Support Applications', difficulty: 'Moderate', tip: 'Know Entitlements vs Service Contracts and Omni-Channel queue vs skills routing.' },
     { sectionName: 'Productivity and Collaboration', difficulty: 'Easy', tip: 'Lowest-weight section: Chatter, Files, and Calendar integration questions are straightforward.' },
+    { sectionName: 'Agentforce', difficulty: 'Moderate', tip: 'Review Agent Builder basics, topics, actions, and when an agent is suitable for a task.' },
   ],
   'advanced-administrator': [
     { sectionName: 'Organization Setup', difficulty: 'Moderate', tip: 'Multi-currency, locale, and fiscal year settings are often overlooked in study guides.' },

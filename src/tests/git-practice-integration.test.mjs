@@ -38,7 +38,7 @@ test('all exams use authored fallback questions while imported-bank rights are u
 })
 
 test('all page renderers use the same resolved bank for visible questions and Quiz schema', () => {
-  for (const name of ['AdministratorCertBody', 'Developer1CertBody', 'CertificationBodyTemplate']) {
+  for (const name of ['Developer1CertBody', 'CertificationBodyTemplate']) {
     const source = read(`src/components/certifications/${name}.tsx`)
     assert.match(source, /getInitialPracticeQuestions\(getPracticeQuestionsForExam\(slug,/)
     assert.match(source, /questions=\{initialQuestions\}/)
@@ -46,7 +46,11 @@ test('all page renderers use the same resolved bank for visible questions and Qu
     assert.match(source, /serializeJsonLd/)
   }
   const admin = read('src/components/certifications/AdministratorCertBody.tsx')
-  assert.match(admin, /extraQuestionsKey=\{hasImportedPracticeQuestions\(slug\) \? undefined : 'administrator'\}/)
+  assert.match(admin, /getPracticeQuestionsForExam\(slug, administratorSampleQuestions\)/)
+  assert.match(admin, /\[\.\.\.authoredQuestions, \.\.\.ADMINISTRATOR_EXTRA_QUESTIONS\]/)
+  assert.match(admin, /getVisiblePracticeQuestions\(initialQuestions\)/)
+  assert.match(admin, /questions=\{initialQuestions\}/)
+  assert.doesNotMatch(admin, /extraQuestionsKey/)
 })
 
 test('every published bank has exactly equal per-set counts and honors Read First exclusivity', () => {

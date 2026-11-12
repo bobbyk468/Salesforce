@@ -3,6 +3,7 @@ import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
 export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   {
     question: "An admin wants a component on a Lightning record page to appear only when the Opportunity record’s Stage is Closed Won. Which feature should they configure in Lightning App Builder?",
+    examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "Component visibility filters",
       "Dynamic Forms",
@@ -19,6 +20,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "A company wants to ensure that all Leads are automatically assigned to the correct sales rep based on geographic territory. What should be configured?",
+    examDomain: 'Sales and Marketing Applications',
     options: [
       "Lead Assignment Rules",
       "Workflow Rules",
@@ -35,6 +37,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "What is the purpose of a Validation Rule?",
+    examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "To automatically assign records to users",
       "To prevent invalid data from being saved",
@@ -51,6 +54,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "Which sharing setting allows users to see all records in an org regardless of ownership?",
+    examDomain: 'Configuration and Setup',
     options: [
       "Private",
       "Public Read Only",
@@ -67,6 +71,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "A user needs to create a custom field that calculates the number of days between two date fields. Which field type should be used?",
+    examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "Formula (Number)",
       "Formula (Date)",
@@ -83,6 +88,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "What is the maximum number of master-detail relationships allowed on a custom object?",
+    examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "1",
       "2",
@@ -99,6 +105,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "Which feature allows administrators to track changes to specific fields over time?",
+    examDomain: 'Data and Analytics Management',
     options: [
       "Field History Tracking",
       "Audit Trail",
@@ -115,6 +122,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "A company wants to automatically send an email when an Opportunity reaches the 'Closed Won' stage. Which automation tool should be used?",
+    examDomain: 'Automation',
     options: [
       "Workflow Rule",
       "Process Builder",
@@ -131,6 +139,7 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   },
   {
     question: "What is the purpose of a Roll-Up Summary Field?",
+    examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "To summarize data from child records",
       "To link two objects together",

@@ -6,7 +6,7 @@ import {
   certSpikeBodyBySlug,
   isSpikedCertSlug,
 } from '@/lib/cert-page-spike/registry'
-import { ADMINISTRATOR_SLUG } from '@/lib/cert-page-spike/administrator-data'
+import { ADMINISTRATOR_SLUG, administratorMetadataDescription } from '@/lib/cert-page-spike/administrator-data'
 import { RELEASE_YEAR } from '@/lib/release-data'
 import type { Metadata } from 'next'
 import type { CertSpikeBodyData } from '@/lib/cert-page-spike/types'
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
   if (slug === ADMINISTRATOR_SLUG) {
     const baseMetadata = getCertMetadata(slug)
-    const descriptionText = 'Prepare for ADM-201 with exam weightage, a study plan, and free practice questions with explanations. No sign-up required.'
+    const descriptionText = administratorMetadataDescription
     return {
       ...baseMetadata,
       description: descriptionText,

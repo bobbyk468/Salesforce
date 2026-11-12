@@ -830,10 +830,9 @@ function makePracticeExamTitle(label: string, code?: string, dualIntent = false)
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
-  // Administrator: /adm-201-study-guide and /adm-201-exam-tips were merged into
-  // this page in November 2026, so the title carries both the current official
-  // name and the legacy ADM-201 code that candidates still search for.
-  if (slug === 'administrator') return 'Salesforce Platform Admin (ADM-201) Study Guide & Practice'
+  // The concise title stays within the site's 50–60 character metadata target;
+  // the H1 and description carry both current and legacy exam codes.
+  if (slug === 'administrator') return 'Salesforce Certified Platform Administrator Exam Questions'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -1028,10 +1027,10 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How many questions are on the ADM-201 exam, and what is the passing score?',
-      answer: 'The ADM-201 exam has 60 multiple-choice questions. You have 105 minutes and need 68% (41 correct answers) to pass. There are also 5 unscored pilot questions, so your actual exam will have 65 questions.',
+      answer: 'The ADM-201 exam has 60 scored questions. You have 105 minutes and need 68% (about 41 correct answers) to pass. Salesforce may include up to 5 unscored questions.',
     },
     {
-      question: 'Can I use ADM-201 exam dumps to pass?',
+      question: 'Are Salesforce Platform Administrator Dumps Safe to Use for Plat-Admn-201?',
       answer: 'Exam dumps violate the Salesforce certification NDA and can result in your certification being revoked. More importantly, dumps are often outdated and don\'t help you learn the material. Original practice questions with detailed explanations are a safer and more effective way to prepare.',
     },
     {
@@ -1044,7 +1043,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How many ADM-201 questions are scenario-based?',
-      answer: 'Roughly 40–50% of ADM-201 questions are scenario-based. These present a business situation and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options. Practice with scenario-style questions to build this skill.',
+      answer: 'Salesforce does not publish a percentage of scenario-based questions. Some questions describe a business need and ask you to select the best feature or action; others check your knowledge of setup and platform features.',
     },
     {
       question: 'Is ADM-201 harder than Platform App Builder (DEV-402)?',
@@ -1052,7 +1051,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the best way to pass the ADM-201 exam on the first attempt?',
-      answer: 'Focus on high-weight sections first: Data and Analytics Management (17%), then Configuration and Setup, Object Manager and Lightning App Builder, and Automation at 15% each. Practice in a free Developer Edition org. Take timed mock exams and aim for 80%+ before booking, which gives you headroom above the 68% pass mark. Review wrong answers deeply, understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
+      answer: 'Focus on high-weight sections first: Data and Analytics Management (17%), then Configuration and Setup, Object Manager and Lightning App Builder, and Automation at 15% each. Practice in a free Developer Edition org. Use timed practice tests to find topics to review; an 80% practice target can provide a margin above the listed passing score but does not guarantee an exam result. Complete the official Trailhead preparation trail.',
     },
     {
       question: 'What are the 8 exam sections for ADM-201 and which have the highest weight?',

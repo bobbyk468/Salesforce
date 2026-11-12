@@ -1,12 +1,11 @@
 import type { AdminSpikeBody, SpikeSampleQuestion } from './types'
-import { RELEASE_CURRENT } from '@/lib/release-data'
 import administratorSampleQuestionsJson from './administrator-sample-questions.json'
 
 export const ADMINISTRATOR_SLUG = 'administrator' as const
 
-/** Matches legacy `administrator/page.tsx` metadata description (uses current release label). */
+/** Administrator page description includes the current and legacy exam codes. */
 export const administratorMetadataDescription =
-  `Pass Salesforce ADM-201 faster with ${RELEASE_CURRENT} exam weightage, a 4-6 week study plan, and free practice questions with explanations. No sign-up required.`
+  'Salesforce Certified Platform Administrator exam questions, study guide and weightage for Plat-Admn-201 / ADM-201.'
 
 /** ADM-201 section subtopics (compact for smaller HTML). */
 export const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {

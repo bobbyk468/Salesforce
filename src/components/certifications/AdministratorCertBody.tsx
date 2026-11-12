@@ -19,7 +19,6 @@ import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
-import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import OrderOfExecutionDiagram from '@/components/certifications/OrderOfExecutionDiagram'
 import Adm201MergedGuide from '@/components/certifications/Adm201MergedGuide'
@@ -27,20 +26,22 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import {
   getInitialPracticeQuestions,
-  getPracticeQuestionsTotalCount,
   getVisiblePracticeQuestions,
 } from '@/lib/practice-question-lite'
 import {
-  ADMINISTRATOR_SLUG,
   administratorSampleQuestions,
 } from '@/lib/cert-page-spike/administrator-data'
+import { ADMINISTRATOR_EXTRA_QUESTIONS } from '@/lib/question-banks/administrator-extra-questions'
 import LastUpdated from '@/components/LastUpdated'
 import CiteThisPage from '@/components/CiteThisPage'
 import { RELEASE_YEAR } from '@/lib/release-data'
 
 export default function AdministratorCertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
-  const initialQuestions = getInitialPracticeQuestions(getPracticeQuestionsForExam(slug, administratorSampleQuestions))
+  const authoredQuestions = getPracticeQuestionsForExam(slug, administratorSampleQuestions)
+  const initialQuestions = getInitialPracticeQuestions(
+    hasImportedPracticeQuestions(slug) ? authoredQuestions : [...authoredQuestions, ...ADMINISTRATOR_EXTRA_QUESTIONS],
+  )
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -61,11 +62,11 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             Independent study resource &bull; Check the current Salesforce exam guide before booking
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions ({RELEASE_CURRENT})
+            Salesforce Certified Platform Administrator (Plat-Admn-201 / ADM-201) Exam Questions &amp; Study Guide
           </h1>
         <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
-            Prepare for the Salesforce Certified Platform Administrator exam with practice questions, a study plan, and section weightage. No sign-up required.
+            Prepare with Salesforce Certified Platform Administrator exam questions for Plat-Admn-201 (ADM-201), plus a study plan and topic weightage. Free practice, no sign-up required.
           </p>
           <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
             The certification was previously known as ADM-201 (Salesforce Certified Administrator). Many candidates still search for &ldquo;ADM-201&rdquo;, while the current official name is Salesforce Certified Platform Administrator.
@@ -149,13 +150,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
             <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
-              <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
-                Is the ADM-201 Exam Hard?
+              <summary className="cursor-pointer list-none">
+                <h2 className="text-lg font-bold text-gray-900">Is the ADM-201 Exam Hard?</h2>
               </summary>
               <div className="hidden group-open:block lg:block">
-                <h2 id="difficulty-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
-                  Is the ADM-201 Exam Hard?
-                </h2>
                 <p className="text-sm text-gray-700 mb-3">
                   The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting, but it does <em>not</em> require coding.
                 </p>
@@ -163,7 +161,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   <li><strong>60 multiple-choice questions</strong> in 105 minutes, roughly 1.75 minutes per question.</li>
                   <li><strong>68% passing score</strong>: you need 41 of 60 correct, so you can miss up to 19 and still pass.</li>
                   <li><strong>No coding required</strong>: the exam is entirely declarative (clicks, not code).</li>
-                  <li><strong>Broad but not deep</strong>: expect questions across all 7 exam sections, weighted by the official outline.</li>
+                  <li><strong>Eight exam sections</strong>: use the official outline to see how much each topic counts.</li>
                 </ul>
                 <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                   <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
@@ -176,13 +174,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
             {/* ADM-201 Exam Format Explained, targets "ADM-201 exam format" + "scenario-based questions" queries */}
             <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
-              <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
-                ADM-201 Exam Format Explained
+              <summary className="cursor-pointer list-none">
+                <h2 className="text-lg font-bold text-gray-900">ADM-201 Exam Format Explained</h2>
               </summary>
               <div className="hidden group-open:block lg:block">
-                <h2 id="exam-format-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
-                  ADM-201 Exam Format Explained
-                </h2>
                 <p className="text-sm text-gray-700 mb-3">
                   Understanding the exam format helps you prepare smarter. The Salesforce Certified Platform Administrator (ADM-201) exam is a proctored, online or in-person exam delivered through Webassessor/Kryterion. Here is what to expect on exam day:
                 </p>
@@ -190,7 +185,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Total Questions</p>
-                    <p className="text-sm text-gray-700">60 scored + 5 unscored pilot questions = <strong>65 total</strong></p>
+                    <p className="text-sm text-gray-700">60 scored questions, plus up to 5 unscored questions</p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Time Limit</p>
@@ -208,20 +203,11 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">How Many Questions Are Scenario-Based?</h3>
                 <p className="text-sm text-gray-700 mb-3">
-                  Salesforce does not publish the exact breakdown, but based on candidate feedback, roughly <strong>40–50% of ADM-201 questions are scenario-based</strong>. These present a business situation, for example, &ldquo;A sales manager wants to restrict access to a set of records&rdquo; and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options.
+                  Some questions describe a business need and ask you to select a Salesforce feature or action. Others check your knowledge of setup and platform features. Salesforce does not publish an exact scenario-question percentage.
                 </p>
                 <p className="text-sm text-gray-700 mb-3">
-                  Scenario questions require you to <em>apply</em> knowledge, not just recall it. This is why hands-on practice in a Salesforce Developer Edition org (free from Salesforce) is critical. Simply memorizing content is not enough; you need to understand <strong>when and why</strong> to use each feature.
+                  Practise in a free Salesforce Developer Edition org. Setting up features yourself helps you explain when to use them and why they fit a requirement.
                 </p>
-
-                <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass ADM-201 on Your First Attempt</h3>
-                <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
-                  <li><strong>Start with high-weight sections:</strong> Data and Analytics Management (17%), Configuration and Setup (15%), Object Manager and Lightning App Builder (15%) and Automation (15%) together cover 62% of the exam. Agentforce is now its own section at 8%.</li>
-                  <li><strong>Use a hands-on org:</strong> Set up a free Salesforce Developer Edition org and practice every feature you study.</li>
-                  <li><strong>Take timed mock exams:</strong> Simulate real conditions: 60 scored questions, 105 minutes, no notes. Aim for 80%+ on mocks before booking, which gives you headroom above the 68% pass mark.</li>
-                  <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
-                  <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
-                </ul>
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
                 <p className="text-sm text-gray-700">
@@ -324,7 +310,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Automation: Flows, Approval Processes & Email Alerts</h3>
-                <p>Record-Triggered Flows are the primary automation tool for administrators, they replace Workflow Rules (retiring) and Process Builder (retiring). Before/After Save triggers fire at different points in the transaction; only After Save can create related records. Scheduled Flows process batches on a time basis. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario: Flows for complex logic, Approval Processes for structured human sign-off.</p>
+                <p>Record-triggered flows respond to record changes. A before-save flow can update the triggering record; an after-save flow can also work with related records. Scheduled flows run at specified times. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario: Flows for complex logic, Approval Processes for structured human sign-off.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Reports, Dashboards & List Views</h3>
@@ -349,7 +335,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
           <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Administrator Exam</h2>
             <p className="text-sm text-gray-600 mb-5">
-              The ADM-201 exam is entirely scenario-based: each question describes a business problem and asks you to pick the correct native Salesforce feature. Mastering the mental map of which tool solves which problem is the single most important skill.
+              Practise matching a business need to a Salesforce feature. Read each scenario carefully and identify any limits on the solution.
             </p>
             <div className="space-y-4 text-sm text-gray-700">
               <div>
@@ -377,12 +363,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
           
 
-          <CertReadinessSummary slug={slug} />
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
-              introText={getPracticeQuestionsIntro(getPracticeQuestionsTotalCount(initialQuestions.length, hasImportedPracticeQuestions(slug) ? undefined : 'administrator'), ". Select the requested number of answers, then check your selection.")}
+              introText={getPracticeQuestionsIntro(initialQuestions.length, ". Select the requested number of answers, then check your selection.")}
               questions={initialQuestions}
-              extraQuestionsKey={hasImportedPracticeQuestions(slug) ? undefined : 'administrator'}
             />
 
             <AdministratorCtaSections />
