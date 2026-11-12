@@ -151,7 +151,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
             <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
               <summary className="cursor-pointer list-none">
-                <h2 className="text-lg font-bold text-gray-900">Is the ADM-201 Exam Hard?</h2>
+                <h2 className="text-lg font-bold text-gray-900">Is the Salesforce Platform Administrator (Plat-Admn-201) Exam Hard?</h2>
               </summary>
               <div className="hidden group-open:block lg:block">
                 <p className="text-sm text-gray-700 mb-3">
@@ -175,7 +175,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             {/* ADM-201 Exam Format Explained, targets "ADM-201 exam format" + "scenario-based questions" queries */}
             <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
               <summary className="cursor-pointer list-none">
-                <h2 className="text-lg font-bold text-gray-900">ADM-201 Exam Format Explained</h2>
+                <h2 className="text-lg font-bold text-gray-900">Salesforce Platform Administrator Exam Format Explained</h2>
               </summary>
               <div className="hidden group-open:block lg:block">
                 <p className="text-sm text-gray-700 mb-3">
@@ -236,7 +236,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
             <section id="adm201-traps" className="mt-8 rounded-xl border border-amber-100 bg-amber-50/40 p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-wide text-amber-700 mb-2">Exam reviewer notes</p>
-              <h2 className="text-lg font-bold text-gray-900 mb-3">ADM-201 Common Traps &amp; Readiness Checklist</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-3">Platform Administrator Common Traps &amp; Readiness Checklist</h2>
               <p className="text-sm text-gray-700 mb-5">
                 ADM-201 is broad, so the highest-risk questions are not obscure facts. They are scenario questions where two Salesforce features sound plausible and only one matches the business constraint.
               </p>
@@ -298,7 +298,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
           {/* Key Concepts */}
           <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Salesforce Administrator: Key Concepts for the Exam</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Salesforce Platform Administrator: Key Concepts for the Exam</h2>
             <div className="space-y-4 text-sm text-gray-700">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Objects, Fields & Data Model</h3>
@@ -333,7 +333,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
           {/* How to Pass Scenario Strategy */}
           <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Administrator Exam</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Certified Platform Administrator Exam</h2>
             <p className="text-sm text-gray-600 mb-5">
               Practise matching a business need to a Salesforce feature. Read each scenario carefully and identify any limits on the solution.
             </p>

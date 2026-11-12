@@ -1017,16 +1017,16 @@ function getCertFaqName(slug: string, certTitle: string): string {
 const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     {
-      question: 'What is the Salesforce Administrator (ADM-201) passing score in Summer \'26?',
-      answer: 'The ADM-201 passing score is 68%, which means you need at least 41 correct answers out of 60 scored questions. You get 105 minutes, and Salesforce may include 5 unscored pilot questions in the exam session.',
+      question: 'What is the difference between Salesforce Certified Platform Administrator (Plat-Admn-201) and ADM-201?',
+      answer: 'Salesforce Certified Platform Administrator is the current credential name and Plat-Admn-201 is its current exam code; ADM-201 is the legacy exam code still used in older study materials. Check the current Salesforce exam guide when booking. The current outline includes Agentforce as an 8% exam section.',
     },
     {
-      question: 'What is the ADM-201 exam fee in Summer \'26?',
-      answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam fee is typically $200 USD, and the retake fee is usually $100 USD. Fees can vary by country taxes, so confirm the final amount in your Salesforce certification checkout page.',
+      question: 'How much does the Salesforce Platform Administrator exam cost?',
+      answer: 'The Salesforce Platform Administrator exam fee is typically $200 USD, and the retake fee is usually $100 USD. Fees can vary by country and taxes, so confirm the final amount during Salesforce certification checkout.',
     },
     {
-      question: 'How many questions are on the ADM-201 exam, and what is the passing score?',
-      answer: 'The ADM-201 exam has 60 scored questions. You have 105 minutes and need 68% (about 41 correct answers) to pass. Salesforce may include up to 5 unscored questions.',
+      question: 'How many questions are on the Platform Administrator exam, and what is the passing score?',
+      answer: 'The Platform Administrator exam has 60 scored questions. You have 105 minutes and need 68% (about 41 correct answers) to pass. Salesforce may include up to 5 unscored questions.',
     },
     {
       question: 'Are Salesforce Platform Administrator Dumps Safe to Use for Plat-Admn-201?',

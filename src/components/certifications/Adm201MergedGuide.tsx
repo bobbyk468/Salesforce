@@ -82,7 +82,7 @@ export default function Adm201MergedGuide() {
 
       {/* 6-week study plan */}
       <section id="study-plan" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">6-Week ADM-201 Study Plan</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">6-Week Salesforce Platform Administrator Study Plan (Plat-Admn-201)</h2>
         <p className="text-sm text-gray-600 mb-5">
           Most candidates with some Salesforce exposure need four to six weeks. With no prior exposure, allow eight to
           ten. Every week pairs reading with hands-on work in a free Developer Edition org, because the exam rewards
@@ -126,7 +126,7 @@ export default function Adm201MergedGuide() {
 
       {/* Scenario decision rules */}
       <section id="scenario-rules" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Decision Rules for ADM-201 Scenario Questions</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Decision Rules for Platform Administrator Scenario Questions</h2>
         <p className="text-sm text-gray-600 mb-5">
           Roughly 40&ndash;50% of questions describe a business situation where two features both sound plausible.
           These four rules resolve most of them.

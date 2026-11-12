@@ -78,7 +78,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/administrator#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Administrator practice questions
+                  Platform Administrator practice questions
                 </Link>
               </li>
               <li>
@@ -115,7 +115,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Admin (ADM-201) study guide
+                  Platform Administrator study guide
                 </Link>
               </li>
               <li>
@@ -207,7 +207,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  ADM-201 exam tips
+                  Platform Administrator exam tips
                 </Link>
               </li>
             </ul>
