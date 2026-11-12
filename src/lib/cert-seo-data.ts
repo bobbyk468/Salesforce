@@ -830,9 +830,8 @@ function makePracticeExamTitle(label: string, code?: string, dualIntent = false)
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
-  // The concise title stays within the site's 50–60 character metadata target;
-  // the H1 and description carry both current and legacy exam codes.
-  if (slug === 'administrator') return 'Salesforce Certified Platform Administrator Exam Questions'
+  // Include the current exam code in the Administrator search title.
+  if (slug === 'administrator') return 'Salesforce Certified Platform Administrator Exam Questions (Plat-Admn-201)'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
