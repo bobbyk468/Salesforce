@@ -146,6 +146,15 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Customization Considerations and Limitations', percentage: 7 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298947
+  // Verified 13 November 2026: help.salesforce.com/s/articleView?id=005305357
+  // 60 scored questions (plus up to 5 unscored), 62% to pass, 105 minutes.
+  // Prerequisite: Salesforce Certified Platform Administrator. No prior entry existed for this slug.
+  'agentforce-life-sciences-consultant': [
+    { name: 'Foundations and Administration', percentage: 36 },
+    { name: 'Engagement Execution', percentage: 28 },
+    { name: 'Engagement Planning', percentage: 21 },
+    { name: 'Sampling Inventory Management', percentage: 15 },
+  ],
   // Agentforce Field Service and Operations Consultant (renamed 24 July 2026). Already matched the guide; 63% to pass, 105 minutes.
   // 60 scored questions (plus up to five unscored), per the guide above.
   'field-service': [

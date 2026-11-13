@@ -15,6 +15,7 @@ export const OFFICIAL_CERT_NAMES: Record<string, string> = {
   'advanced-administrator': 'Salesforce Certified Platform Administrator II',
   'app-builder': 'Salesforce Certified Platform App Builder',
   'agentforce-specialist': 'Salesforce Certified Agentforce Specialist',
+  'agentforce-life-sciences-consultant': 'Salesforce Certified Agentforce Life Sciences Consultant',
   'business-analyst': 'Salesforce Certified Business Analyst',
   'cpq-administrator': 'Salesforce Certified CPQ Administrator',
   'marketing-cloud-engagement-admin': 'Salesforce Certified Marketing Cloud Engagement Administrator',
