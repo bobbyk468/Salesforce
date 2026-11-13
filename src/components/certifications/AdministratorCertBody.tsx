@@ -226,7 +226,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </summary>
               <div className="hidden group-open:block lg:block">
                 <p className="text-sm text-gray-700 mb-3">
-                  You can take the supervised Platform Administrator exam online or at a test centre. Review the current Salesforce guide for booking details. Here is the listed format:
+                  You can take the proctored Platform Administrator (Plat-Admn-201 / ADM-201) exam online via Pearson OnVUE or in-person at a Pearson VUE testing center, registered through Trailhead Academy. Here is the listed format:
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">

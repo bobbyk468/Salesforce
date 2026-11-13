@@ -135,12 +135,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/agentforce-specialist#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Agentforce Specialist practice questions
+                  Agentforce Specialist (AI-201) study guide &amp; practice test
                 </Link>
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/ai-associate#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  AI Associate practice questions
+                  AI Associate (retired) learning notes
                 </Link>
               </li>
               <li>

@@ -831,7 +831,7 @@ function makePracticeExamTitle(label: string, code?: string, dualIntent = false)
 function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
   // Include both the current and legacy exam codes in the Administrator search title.
-  if (slug === 'administrator') return 'Platform Administrator (Plat-Admn-201 / ADM-201) Study Guide'
+  if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Practice & Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
