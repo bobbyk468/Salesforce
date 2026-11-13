@@ -41,7 +41,7 @@ export const faqItems = [
   },
   {
     question: 'What are the highest-weight OmniStudio Consultant exam sections?',
-    answer: 'Solution Design (30%) and OmniScript Implementation (25%) together account for 55% of the exam. Mapping client requirements to the correct OmniStudio tool, designing guided interaction flows, and recommending the appropriate data retrieval approach are the most heavily tested skills.',
+    answer: 'Flexcards (18%) and Omniscripts (17%) together account for 35% of the exam, but all six official sections are weighted fairly evenly (15-18%). Mapping client requirements to the correct OmniStudio tool, designing guided interaction flows, and recommending the appropriate data retrieval approach are the most heavily tested skills.',
   },
   {
     question: 'What industry knowledge helps with OmniStudio Consultant?',
@@ -75,22 +75,30 @@ export default function OmnistudioConsultantExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Solution Design</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+            <span className="font-medium text-gray-900">Flexcards</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">OmniScript Implementation</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+            <span className="font-medium text-gray-900">Omniscripts</span>
+            <span className="font-bold text-salesforce-blue ml-4">17%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Integration and Data Design</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+            <span className="font-medium text-gray-900">Integration Procedures</span>
+            <span className="font-bold text-salesforce-blue ml-4">17%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Data Mappers</span>
+            <span className="font-bold text-salesforce-blue ml-4">17%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Omnistudio Fundamentals</span>
+            <span className="font-bold text-salesforce-blue ml-4">16%</span>
           </div>
           <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">FlexCards and Display Design</span>
+            <span className="font-medium text-gray-900">Best Fit Solutions</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Solution Design + OmniScript + Integration = 77%. Knowing when and why to use each tool is as important as knowing how.</p>
+          <p className="text-xs text-gray-600 pt-1">Flexcards + Omniscripts + Integration Procedures = 52%. Knowing when and why to use each tool is as important as knowing how.</p>
         </div>
       </section>
 

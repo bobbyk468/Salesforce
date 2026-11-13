@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with OmniStudio features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You use OmniStudio and want to demonstrate how you apply its tools to implementation requirements."
       },
       {
         "label": "Consultants and admins",
-        "description": "You support Salesforce projects where OmniScript, DataRaptor, and FlexCards decisions affect the final design."
+        "description": "You work on Salesforce projects where guided processes, data transformations, and cards shape the solution."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for consultant roles."
+        "description": "You advise on Industry Cloud builds and need to select the right OmniStudio component for each requirement."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the OmniStudio Consultant Exam Hard?",
-    "summary": "The OmniStudio Consultant exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "The exam asks you to translate Industry Cloud requirements into OmniStudio designs. Be ready to select between guided OmniScripts, contextual FlexCards, DataRaptors, and Integration Procedures, then reason about how the components exchange data.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>67% passing score</strong>: build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong>: expect questions that test when to use OmniScript, DataRaptor, or FlexCards.",
-      "<strong>Hands-on context matters</strong>: candidates who have configured or supported OmniStudio in a real org are better prepared than candidates who only memorize notes."
+      "<strong>67% passing score</strong>: use practice sets to build a margin above the minimum.",
+      "<strong>Scenario-based choices</strong>: practice choosing between OmniScript, DataRaptor, and FlexCards.",
+      "<strong>Hands-on practice helps</strong>: configure OmniStudio features and review how they work together."
     ],
-    "passRateGuidance": "Aim for 80%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Build one end-to-end solution and inspect the JSON at each stage. You should be able to explain when an OmniScript calls a Data Mapper, when it calls an Integration Procedure, and what the caller receives."
   },
   "examFormat": {
     "heading": "OmniStudio Consultant Exam Format Explained",
-    "intro": "The OmniStudio Consultant exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for OmniStudio.",
+    "intro": "This proctored exam checks how you design OmniStudio solutions for real business processes. Use the 105-minute limit to work through the requirement, identify the component responsibilities, and trace the data flow.",
+    "scenarioPercent": "Questions describe a user journey or data-processing task. Decide whether the solution needs a guided script, a data display, a data operation, or server-side orchestration.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on OmniScript, DataRaptor, and FlexCards because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Map the component roles:</strong> Match user input to OmniScript, a compact record view to FlexCard, data access to Data Mapper, and server-side orchestration to Integration Procedure.",
+      "<strong>Trace the JSON:</strong> Follow one value from an Extract through an OmniScript or procedure and into a Load or response.",
+      "<strong>Compare server-side choices:</strong> Know when a single Data Mapper is enough and when several calls belong in an Integration Procedure.",
+      "<strong>Debug a real build:</strong> Use preview output to find missing keys, incorrect mappings, and errors between components."
     ]
   },
   "certificationCard": {
     "code": "OmniStudio Consultant",
-    "description": "This exam covers solution design with OmniStudio tools -- selecting the right mix of FlexCards, OmniScripts, DataRaptors, and Integration Procedures to build scalable guided experiences for Industry Cloud implementations. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Flexcards (18%) and Omniscripts (17%).",
+    "description": "This exam covers solution design with OmniStudio: choosing FlexCards, OmniScripts, DataRaptors, and Integration Procedures for guided experiences and Industry Cloud implementations. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Flexcards (18%) and Omniscripts (17%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
@@ -66,55 +66,55 @@
     "blocks": [
       {
         "heading": "FlexCards: Displaying Data Contextually",
-        "body": "FlexCards display contextual information from Salesforce records or external data sources on a card-style UI. They can be embedded in Experience Cloud pages, Lightning record pages, or other OmniStudio components. Child FlexCards show related record data. Custom actions on FlexCards trigger OmniScripts, open Lightning components, or navigate to records. Data sources: Salesforce **SOQL** (DataRaptor Extract), Integration Procedures, or **Apex**. The consultant designs FlexCards to surface the right information in the right context, reducing the need for users to navigate away to find related data."
+        "body": "FlexCards show contextual data from Salesforce records or connected sources within Experience Cloud, Lightning pages, or other OmniStudio experiences. Child cards can surface related records. A custom action can launch an OmniScript, open a Lightning component, or navigate to a record. Data can come from a DataRaptor Extract, Integration Procedure, or Apex. Use a card to give users relevant details where they need them."
       },
       {
         "heading": "OmniScripts: Guided User Experiences",
-        "body": "OmniScripts create guided, multi-step processes for users, similar to a wizard. Steps and groups organise the experience. Elements: Text Input, Select (dropdown), Date Picker, Checkbox, Lookup, Navigation (radio buttons), Formula, and more. Conditional display rules show or hide elements based on prior responses. Data sources populate dropdown options and pre-fill fields. Custom **validation rules** enforce business rules before moving to the next step. The consultant designs OmniScripts for complex data entry processes like customer onboarding, service requests, or insurance claims."
+        "body": "OmniScripts guide a user through a multi-step process. Steps and groups organize inputs such as text, dates, selections, checkboxes, and lookups. Conditional display rules can reveal elements based on earlier responses; data sources can populate choices or prefill fields. Validation checks business rules before the user continues. Common uses include onboarding, service requests, and claims."
       },
       {
         "heading": "Integration Procedures: Backend Orchestration",
-        "body": "Integration Procedures (IPs) orchestrate backend calls without user interaction; they are called by OmniScripts, FlexCards, or other automated processes. Actions within an IP: DataRaptor Extract (query Salesforce), DataRaptor Load (write to Salesforce), HTTP Action (call external **REST API**), **Apex** Action (call custom Apex), Set Values (assign variables). IPs support conditional branching and looping. The consultant designs IPs to aggregate data from multiple sources, transform it, and return structured results, keeping business logic out of the UI layer."
+        "body": "Integration Procedures coordinate backend work without requiring user interaction. OmniScripts and FlexCards can call them, as can other processes. An IP can query or write Salesforce data through DataRaptor actions, call an external REST service through HTTP Action, invoke Apex, set values, and branch or loop. It can combine and transform results from multiple sources before returning them to the caller."
       },
       {
         "heading": "DataRaptors: Data Access and Transformation",
-        "body": "DataRaptors are data transformation tools with four types: Extract (read from Salesforce, returns a structured JSON), Load (write to Salesforce, creates or updates records), Transform (map and reshape data between structures without touching Salesforce), Turbo Extract (high-performance read for simple queries using **SOQL**). DataRaptor Extract replaces SOQL in OmniStudio components. Load handles parent-child record creation in a single operation. The consultant selects the appropriate DataRaptor type based on whether the operation reads, writes, or transforms data."
+        "body": "DataRaptors handle reading, writing, or reshaping data. Extract reads Salesforce data into structured JSON; Load creates or updates records; Transform maps between structures without writing to Salesforce; Turbo Extract performs a simpler, optimized read using SOQL. Choose the type to match the operation. A Load can create related parent and child records in one operation."
       },
       {
         "heading": "OmniStudio Architecture in Industry Clouds",
-        "body": "OmniStudio is the foundation for Salesforce Industry Clouds (Health Cloud, Financial Services Cloud, Communications Cloud, Energy & Utilities). Industry-specific FlexCards and OmniScripts come pre-built with the industry cloud packages, the consultant configures and extends them rather than building from scratch. OmniStudio components integrate with Salesforce standard objects and industry-specific data models. Business Rules Engine (BRE) provides declarative if-then rules that drive OmniScript branching without hard-coding logic. The consultant understands how OmniStudio connects to the broader industry cloud architecture."
+        "body": "Industry Clouds include Health, Financial Services, Communications, and Energy and Utilities. Their packages can provide industry-specific OmniScripts and FlexCards, which teams configure or extend. These components work with standard Salesforce objects and industry data models. Business Rules Engine offers declarative if-then logic that can guide OmniScript branches without hard-coding those decisions."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce OmniStudio Consultant Exam",
-    "intro": "The OmniStudio Consultant exam tests solution design and business requirements analysis for OmniStudio implementations. Focus on choosing the right OmniStudio tool for each business scenario and designing scalable configurations.",
+    "intro": "Start with the business requirement, then choose the OmniStudio components and data flow that fit it.",
     "blocks": [
       {
         "heading": "Tool Selection Framework",
-        "body": "Know when to use each OmniStudio tool: FlexCards for contextual data display, OmniScripts for guided user processes, DataRaptors for Salesforce data integration, and Integration Procedures for complex orchestration."
+        "body": "Match each task to its tool. FlexCards display contextual information, OmniScripts guide users through steps, DataRaptors handle Salesforce data, and Integration Procedures coordinate server-side work."
       },
       {
         "heading": "Business Process to OmniScript Mapping",
-        "body": "Know how to decompose a business process into OmniScript steps, identify reusable components, and design the data flow between steps. Understand when sub-OmniScripts improve reusability."
+        "body": "Break the business process into guided steps and map the data each step needs. Consider a sub-OmniScript when the same process can be reused."
       },
       {
         "heading": "Data Integration Architecture",
-        "body": "Know when to use DataRaptor Extract vs. Integration Procedure for data retrieval, how to handle complex data transformations, and when to call external APIs from Integration Procedures."
+        "body": "Compare DataRaptor Extract with an Integration Procedure when retrieving data. Review transformation needs and whether the procedure must call an external API."
       },
       {
         "heading": "FlexCard Use Cases",
-        "body": "Know common FlexCard use cases: account/contact dashboards, case summaries, 360-degree customer views. Understand how FlexCard states manage different data scenarios (loading, empty, error, data)."
+        "body": "Use FlexCards to present information such as account details or case summaries. Plan states for loading, empty, error, and populated results."
       },
       {
         "heading": "Performance & Scalability",
-        "body": "Know best practices for OmniStudio performance: minimizing DataRaptor steps, using Turbo Extract for simple reads, caching Integration Procedure results, and structuring OmniScripts to minimize server calls."
+        "body": "Review performance by reducing unnecessary DataRaptor steps and server calls. Consider Turbo Extract for simple reads and caching when Integration Procedure results can be reused."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Build on your OmniStudio knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -170,23 +170,23 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of an OmniStudio Consultant?",
+      "question": "What does an OmniStudio Consultant mainly do?",
       "options": [
-        "CPQ only",
-        "Slack only",
-        "Designing and implementing solutions using OmniStudio tools that are sustainable, scalable, and meet customer business requirements",
-        "Email only"
+        "Work only with CPQ",
+        "Work only with Slack",
+        "Design and build sustainable, scalable OmniStudio solutions that meet business needs",
+        "Work only with email"
       ],
       "correctAnswer": 2,
-      "explanation": "OmniStudio Consultants design and implement OmniStudio solutions that are sustainable, scalable, and meet business requirements.",
+      "explanation": "An OmniStudio Consultant designs and implements solutions with OmniStudio tools to meet business needs and support long-term success.",
       "whyWrong": [
-        "CPQ alone is too narrow: OmniStudio spans broader industry solution design, not just pricing/quoting.",
-        "Slack is unrelated to the consultant's core focus.",
-        "Email is unrelated to the consultant's core focus on sustainable OmniStudio solution design."
+        "CPQ is not the only focus of the role.",
+        "Slack is not the only focus of the role.",
+        "Email is not the only focus of the role."
       ]
     },
     {
-      "question": "Which OmniStudio tool is used for guided, step-by-step experiences?",
+      "question": "Which OmniStudio tool creates guided, step-by-step experiences?",
       "options": [
         "DataRaptor only",
         "OmniScript",
@@ -194,31 +194,31 @@
         "Integration Procedure only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript provides guided, step-by-step digital experiences.",
+      "explanation": "OmniScript guides users through a sequence of steps, fields, and actions.",
       "whyWrong": [
-        "DataRaptor moves/transforms data, it isn't the guided-experience UI tool.",
-        "FlexCard displays compact data views, it isn't the step-by-step guided experience tool.",
-        "Integration Procedure orchestrates backend logic, it isn't the front-end guided experience tool."
+        "DataRaptor handles data extraction and transformation.",
+        "FlexCards display record information in a card format.",
+        "Integration Procedures handle server-side data and service operations."
       ]
     },
     {
-      "question": "What should an OmniStudio Consultant ensure for long-term success?",
+      "question": "What should a consultant consider when designing for long-term success?",
       "options": [
         "Single use only",
-        "Sustainable and scalable design that contributes to long-term customer success",
+        "A sustainable and scalable design",
         "No documentation",
-        "Only speed"
+        "Speed only"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants ensure solutions are sustainable, scalable, and contribute to long-term success.",
+      "explanation": "A good design should meet current needs and be sustainable, scalable, and useful to the customer over time.",
       "whyWrong": [
-        "'Single use only' contradicts the sustainable, reusable design principle a consultant should ensure.",
-        "'No documentation' contradicts sound consulting practice, which requires proper documentation for maintainability.",
-        "'Only speed' undersells the consultant's responsibility, which includes long-term sustainability, not just fast delivery."
+        "A design that works only once may not meet future needs.",
+        "Documentation helps teams maintain the solution.",
+        "Speed alone does not guarantee a reliable solution."
       ]
     },
     {
-      "question": "Which industries commonly use OmniStudio?",
+      "question": "Which set of industries commonly uses OmniStudio solutions?",
       "options": [
         "Financial Services, Insurance, and other industries",
         "Manufacturing only",
@@ -226,47 +226,47 @@
         "Education only"
       ],
       "correctAnswer": 0,
-      "explanation": "OmniStudio is used in Financial Services, Insurance, and other industries for digital flows.",
+      "explanation": "Financial Services and Insurance are examples of the industries that use OmniStudio, whose configurable components support industry-specific workflows.",
       "whyWrong": [
-        "Manufacturing isn't the typical highlighted industry for OmniStudio.",
-        "Retail alone undersells OmniStudio's broader industry use across Financial Services, Insurance, and more.",
-        "Education isn't the typical highlighted industry for OmniStudio."
+        "OmniStudio is not limited to Manufacturing.",
+        "OmniStudio is not limited to Retail.",
+        "OmniStudio is not limited to Education."
       ]
     },
     {
-      "question": "What is a FlexCard used for?",
+      "question": "What kind of information does a FlexCard present to a user?",
       "options": [
         "Slack messages",
         "Email templates",
-        "Displaying compact, card-based views of record data",
-        "Only reports"
+        "A compact card view of record data",
+        "Reports only"
       ],
       "correctAnswer": 2,
-      "explanation": "FlexCards display compact, card-based views of data with declarative layout.",
+      "explanation": "FlexCards display data in a compact, card-based format.",
       "whyWrong": [
-        "Slack messages are unrelated to FlexCard's purpose.",
-        "Email templates are unrelated to FlexCard's data display function.",
-        "'Only reports' undersells FlexCard's purpose, which is displaying compact record views, not full reporting."
+        "Slack messages are not the purpose of FlexCards.",
+        "Email templates are not the purpose of FlexCards.",
+        "FlexCards are not limited to reports."
       ]
     },
     {
-      "question": "What is a DataRaptor used for in OmniStudio?",
+      "question": "What does a DataRaptor do in OmniStudio?",
       "options": [
-        "To extract, load, or transform data (DEXT, DMLT, etc.)",
-        "To create reports only",
-        "To send emails only",
-        "To manage users"
+        "Extracts, loads, or transforms data",
+        "Creates reports only",
+        "Sends emails only",
+        "Manages users"
       ],
       "correctAnswer": 0,
-      "explanation": "DataRaptors handle data extract, load, and transform operations.",
+      "explanation": "DataRaptors extract, load, and transform data for OmniStudio solutions.",
       "whyWrong": [
-        "'To create reports only' misrepresents DataRaptor's purpose, which is ETL-style data operations.",
-        "'To send emails only' misrepresents DataRaptor's purpose, which is data extraction/transformation, not email.",
-        "'To manage users' is unrelated to DataRaptor's data-transformation function."
+        "DataRaptors work with data; they are not limited to creating reports.",
+        "Sending email is not their main purpose.",
+        "Managing users is not their purpose."
       ]
     },
     {
-      "question": "Which OmniStudio component invokes Apex or external services?",
+      "question": "Which OmniStudio component can call Apex or external services?",
       "options": [
         "OmniScript only",
         "FlexCard only",
@@ -274,139 +274,216 @@
         "Integration Procedure"
       ],
       "correctAnswer": 3,
-      "explanation": "Integration Procedures call Apex and external systems.",
+      "explanation": "Integration Procedures can orchestrate calls to Apex, DataRaptors, and external services.",
       "whyWrong": [
-        "OmniScript orchestrates the guided flow but relies on Integration Procedures to invoke Apex/external services.",
-        "FlexCard displays data, it doesn't itself invoke Apex or external services.",
-        "DataRaptor moves/transforms data, it doesn't invoke Apex directly the way Integration Procedures can."
+        "OmniScripts guide users and can call other components, but they are not the component described.",
+        "FlexCards display data and actions, but they are not the component described.",
+        "DataRaptors handle data operations, but they are not the component described."
       ]
     },
     {
-      "question": "What does OmniScript validation support?",
+      "question": "What types of checks can OmniScript validation support?",
       "options": [
         "Required fields, custom validation, and conditional rules",
-        "Only required",
+        "Required fields only",
         "No validation",
-        "Only custom"
+        "Custom rules only"
       ],
       "correctAnswer": 0,
-      "explanation": "OmniScript supports required, custom, and conditional validation.",
+      "explanation": "OmniScript can check required fields, run custom validation, and apply conditional rules.",
       "whyWrong": [
-        "'Only required' undersells the validation options, which include custom and conditional rules too.",
-        "'No validation' contradicts OmniScript's actual support for validation rules.",
-        "'Only custom' undersells the validation options; which also include required-field and conditional rules."
+        "Validation supports more than required fields.",
+        "OmniScript supports validation.",
+        "Validation supports more than custom rules."
       ]
     },
     {
-      "question": "Which deployment method is used for OmniStudio artifacts?",
+      "question": "A team needs a repeatable release process for OmniStudio assets between environments. Which deployment path should it use?",
       "options": [
-        "Manual copy only",
-        "Change sets only",
-        "OmniStudio FlexDeploy or source-driven deployment",
-        "No deployment"
+        "Copy them by hand only",
+        "Use change sets only",
+        "Use OmniStudio FlexDeploy or source-driven deployment",
+        "No deployment method is available"
       ],
       "correctAnswer": 2,
-      "explanation": "FlexDeploy and source-driven deployment manage OmniStudio artifacts.",
+      "explanation": "FlexDeploy and source-driven deployment are supported ways to promote OmniStudio assets through a controlled release process.",
       "whyWrong": [
-        "Manual copying isn't a reliable, repeatable deployment method for OmniStudio artifacts.",
-        "Standard Change Sets aren't the OmniStudio-specific deployment approach: FlexDeploy or source-driven tooling is.",
-        "'No deployment' contradicts the fact that OmniStudio artifacts do have supported deployment methods."
+        "Manual copying is not the only deployment option.",
+        "Change sets are not the only deployment option.",
+        "OmniStudio components can be deployed."
       ]
     },
     {
-      "question": "What is the purpose of OmniScript elements?",
+      "question": "What do OmniScript elements define?",
       "options": [
-        "To create FlexCards only",
-        "To send emails",
-        "To replace DataRaptors",
-        "To define steps, fields, and actions in the OmniScript flow"
+        "FlexCards only",
+        "Emails",
+        "DataRaptors",
+        "Steps, fields, and actions in an OmniScript flow"
       ],
       "correctAnswer": 3,
-      "explanation": "Elements define the structure and behavior of OmniScript steps.",
+      "explanation": "OmniScript elements define the steps, fields, and actions users see in the flow.",
       "whyWrong": [
-        "'To create FlexCards only' undersells elements' purpose, which is defining the OmniScript flow itself.",
-        "'To send emails' is unrelated to what OmniScript elements structurally define.",
-        "OmniScript elements don't replace DataRaptors, they're a different, complementary structural concept."
+        "Elements do more than create FlexCards.",
+        "Elements do not only send email.",
+        "Elements do not replace DataRaptors."
       ]
     },
     {
-      "question": "Which OmniStudio feature supports conditional display?",
+      "question": "How can OmniStudio show content or choose a path based on data or user input?",
       "options": [
-        "Only visibility",
-        "Conditional visibility and branching based on data or user input",
-        "Only branching",
-        "No conditional logic"
+        "Visibility only",
+        "Conditional visibility and branching",
+        "Branching only",
+        "It cannot use conditional logic"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript supports conditional visibility and branching.",
+      "explanation": "OmniStudio supports conditional visibility and branching based on data or user input.",
       "whyWrong": [
-        "'Only visibility' undersells the feature; which also includes branching logic.",
-        "'Only branching' undersells the feature; which also includes visibility control based on conditions.",
-        "'No conditional logic' directly contradicts the feature being asked about, which is conditional display support."
+        "The available logic is not limited to visibility.",
+        "The available logic is not limited to branching.",
+        "OmniStudio supports conditional logic."
       ]
     },
     {
-      "question": "What does an OmniStudio Consultant ensure for scalability?",
+      "question": "What helps an OmniStudio solution scale?",
       "options": [
-        "Reusable elements, efficient DataRaptors, and governance",
+        "Reusable components, efficient DataRaptors, and good governance",
         "Ignore performance",
-        "No reuse",
-        "Single use only"
+        "Avoid reuse",
+        "Build each flow for one use only"
       ],
       "correctAnswer": 0,
-      "explanation": "Reusable design and efficient DataRaptors support scalability.",
+      "explanation": "Reusable components, efficient DataRaptors, and governance can improve performance and maintainability as a solution grows.",
       "whyWrong": [
-        "Ignoring performance contradicts a consultant's responsibility to design for scalability.",
-        "'No reuse' contradicts the scalability best practice of building reusable components.",
-        "'Single use only' contradicts the reusability best practice a consultant should ensure."
+        "Performance matters as usage grows.",
+        "Reuse helps teams maintain and extend solutions.",
+        "Designing only for one use can make future changes harder."
       ]
     },
     {
-      "question": "Which OmniStudio artifact can be embedded in Lightning pages?",
+      "question": "Which OmniStudio components can be placed on Lightning pages?",
       "options": [
         "None",
-        "OmniScript and FlexCards",
-        "DataRaptor only",
-        "Integration Procedure only"
+        "OmniScripts and FlexCards",
+        "DataRaptors only",
+        "Integration Procedures only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript and FlexCards can be embedded in Lightning pages.",
+      "explanation": "OmniScripts and FlexCards can be embedded in Lightning pages.",
       "whyWrong": [
-        "'None' is incorrect since OmniScript and FlexCards can in fact be embedded in Lightning pages.",
-        "DataRaptor alone isn't a UI artifact embeddable on a Lightning page: OmniScript and FlexCards are.",
-        "Integration Procedure alone runs server-side logic, it isn't itself embedded as a visual Lightning page component."
+        "Some OmniStudio components can be placed on Lightning pages.",
+        "DataRaptors are data tools, not page components.",
+        "Integration Procedures run server-side and are not page components."
       ]
     },
     {
-      "question": "What is the benefit of OmniScript over custom Apex UI?",
+      "question": "What is one benefit of OmniScript compared with building a custom Apex user interface?",
       "options": [
         "No benefit",
-        "More complex",
-        "Less flexible",
-        "Declarative, faster to build, and easier to maintain for guided flows"
+        "More complexity",
+        "Less flexibility",
+        "A guided flow can be quicker to build and easier to maintain declaratively"
       ],
       "correctAnswer": 3,
-      "explanation": "OmniScript is declarative and faster to build for guided flows.",
+      "explanation": "OmniScript offers a declarative way to build guided flows, which can take less effort to maintain than a custom Apex interface.",
       "whyWrong": [
-        "'No benefit' contradicts the documented advantages OmniScript provides over custom-coded UI.",
-        "'More complex' contradicts OmniScript's actual benefit of being declarative and simpler to build.",
-        "'Less flexible' contradicts one of OmniScript's real advantages for guided-flow use cases."
+        "OmniScript can offer benefits for guided flows.",
+        "A custom Apex interface can require more code and maintenance.",
+        "OmniScript is flexible for guided flows."
       ]
     },
     {
-      "question": "Which industry use case is common for OmniStudio?",
+      "question": "Which is a common OmniStudio use case in Financial Services?",
       "options": [
         "Manufacturing only",
         "Education only",
-        "Quote-to-cash, onboarding, and service workflows in Financial Services",
+        "Quote-to-cash, onboarding, and service workflows",
         "Retail only"
       ],
       "correctAnswer": 2,
-      "explanation": "Financial Services uses OmniStudio for quote-to-cash and onboarding.",
+      "explanation": "OmniStudio can support Financial Services workflows such as quote-to-cash, customer onboarding, and service.",
       "whyWrong": [
-        "Manufacturing isn't the typical industry example for this specific use case pattern.",
-        "Education isn't the typical industry example for this specific use case pattern: Financial Services is.",
-        "Retail isn't the typical industry example for this specific use case pattern."
+        "OmniStudio is used in more than Manufacturing.",
+        "OmniStudio is used in more than Education.",
+        "OmniStudio is used in more than Retail."
+      ]
+    },
+    {
+      "question": "A client needs to read a large volume of Salesforce records quickly for a read-only lookup, with no transformation required. Which DataRaptor type fits best?",
+      "options": [
+        "Turbo Extract", "Load", "Transform", "A custom Apex class instead"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Turbo Extract is optimized for fast, straightforward reads of Salesforce data, ideal for simple lookups without complex transformation.",
+      "whyWrong": [
+        "Load writes data into Salesforce, it doesn't read for a lookup.",
+        "Transform reshapes JSON data rather than extracting from Salesforce records directly.",
+        "A custom Apex class bypasses the declarative tool built for exactly this purpose."
+      ]
+    },
+    {
+      "question": "Two independent data lookups are needed before an OmniScript can proceed, and neither depends on the other's result. How should the Integration Procedure be designed to minimize wait time?",
+      "options": [
+        "Run the two actions in parallel within the Integration Procedure",
+        "Always run every action sequentially regardless of dependency",
+        "Split them into two separate OmniScripts",
+        "Avoid Integration Procedures entirely for this case"
+      ],
+      "correctAnswer": 0,
+      "explanation": "When actions don't depend on each other's output, running them in parallel inside the Integration Procedure reduces total wait time compared to sequential execution.",
+      "whyWrong": [
+        "Running everything sequentially by default wastes time when actions are independent.",
+        "Splitting into two OmniScripts adds unnecessary complexity for what one Integration Procedure can handle.",
+        "Integration Procedures are exactly the right tool for this kind of data orchestration."
+      ]
+    },
+    {
+      "question": "A consultant is deciding between building a new OmniStudio component from scratch and reusing an existing Integration Procedure that already does most of what's needed. What's the best-fit approach?",
+      "options": [
+        "Favor reuse of the existing component over duplicating the logic",
+        "Always build new regardless of existing components",
+        "Never reuse components across OmniScripts",
+        "Ignore existing components without reviewing them"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Reuse over rebuild is a core OmniStudio best-fit design principle: a shared Integration Procedure called by multiple OmniScripts reduces duplicated logic and maintenance overhead.",
+      "whyWrong": [
+        "Always building new ignores available reusable components and increases maintenance burden.",
+        "Avoiding reuse entirely contradicts a core OmniStudio design best practice.",
+        "Not reviewing what already exists risks duplicating logic unnecessarily."
+      ]
+    },
+    {
+      "question": "A client wants a self-service quoting tool that walks the customer through several screens, collecting information at each step before submitting. Which OmniStudio component is the best fit?",
+      "options": [
+        "OmniScript",
+        "A Flexcard alone",
+        "A DataRaptor alone",
+        "A single Apex trigger"
+      ],
+      "correctAnswer": 0,
+      "explanation": "OmniScript is purpose-built for multi-step, guided user experiences like a self-service quoting flow.",
+      "whyWrong": [
+        "A FlexCard displays contextual information, it isn't designed for a multi-step guided interaction on its own.",
+        "A DataRaptor reads/writes/transforms data, it doesn't provide the step-by-step UI.",
+        "An Apex trigger runs on record changes in the backend, it doesn't provide a guided front-end experience."
+      ]
+    },
+    {
+      "question": "A team updates an OmniScript already in production and wants to roll out the change without breaking the currently running version for users mid-process. What's the standard approach?",
+      "options": [
+        "Create and activate a new version, rather than overwriting the active version directly",
+        "Edit the active version in place",
+        "Delete the component and rebuild it",
+        "Make the change only in a sandbox and never promote it"
+      ],
+      "correctAnswer": 0,
+      "explanation": "OmniStudio components support versioning; the standard approach is to activate a new version rather than editing the currently active one directly.",
+      "whyWrong": [
+        "Editing the active version in place risks disrupting users currently in that flow.",
+        "Deleting and rebuilding loses configuration history unnecessarily.",
+        "A change that never gets promoted to production doesn't deliver the update to real users."
       ]
     }
   ]

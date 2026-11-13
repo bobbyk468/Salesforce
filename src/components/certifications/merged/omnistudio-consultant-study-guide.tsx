@@ -20,7 +20,7 @@ import LastUpdated from '@/components/LastUpdated'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'omnistudio-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `OmniStudio Consultant study guide: 4 sections, solution design, discovery, implementation. $200. Free practice questions.`
+const pageDescription = `OmniStudio Consultant study guide: 6 sections covering FlexCards, OmniScripts, Integration Procedures, and Data Mappers. $200. Free practice questions.`
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
@@ -29,10 +29,12 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Discovery & Analysis', weight: 30, note: 'Gathering business requirements for OmniStudio implementations, identifying which OmniStudio components address each requirement, mapping current-state processes to OmniStudio capabilities, and validating feasibility with stakeholders.' },
-  { name: 'Solution Design', weight: 28, note: 'Designing OmniStudio architectures: which component (OmniScript, FlexCard, Integration Procedure, DataRaptor) for each use case, component reuse strategy, data flow design, and UX considerations for guided processes.' },
-  { name: 'Implementation', weight: 22, note: 'Configuring OmniStudio solutions following best practices, managing deployment across environments (Dev, UAT, Prod), component versioning, activating and deactivating components, and troubleshooting implementations.' },
-  { name: 'Testing & Delivery', weight: 20, note: 'User acceptance testing for OmniStudio components, performance testing considerations, hyperlink testing for OmniScripts, Preview mode usage, go-live validation, and post-deployment monitoring.' },
+  { name: 'Flexcards', weight: 18, note: 'FlexCard states (default, active, error), datasource types, layout design, and choosing a FlexCard for contextual record display.' },
+  { name: 'Omniscripts', weight: 17, note: 'Guided multi-step user experiences, step groups, UX considerations, and OmniScript versioning and activation.' },
+  { name: 'Integration Procedures', weight: 17, note: 'Server-side data orchestration, parallel vs sequential execution, callouts, and when to use an Integration Procedure over a DataRaptor or Flow.' },
+  { name: 'Data Mappers', weight: 17, note: 'DataRaptor types (Extract, Load, Transform, Turbo Extract) and choosing the right one for a data operation.' },
+  { name: 'Best Fit Solutions', weight: 15, note: 'Mapping business requirements to the right OmniStudio component, component reuse strategy, and justifying a design decision.' },
+  { name: 'Omnistudio Fundamentals', weight: 16, note: 'Core platform concepts, DataPack deployment (export, version control, import, activate), and environment management (Dev, UAT, Prod).' },
 ]
 
 export const faqItems = [
@@ -89,7 +91,7 @@ export default function OmnistudioConsultantStudyGuideContent() {
                 <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.3}%` }} />
+                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 5.5}%` }} />
               </div>
             </div>
           ))}
@@ -117,11 +119,11 @@ export default function OmnistudioConsultantStudyGuideContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">6-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'OmniStudio component overview, understand what each of the four core components does (OmniScript, DataRaptor, FlexCard, Integration Procedure) and the primary use case for each.' },
-            { week: 'Week 2', focus: 'Requirements gathering, practice mapping business requirements to OmniStudio components. Given a scenario, identify whether it needs an OmniScript (guided UI), FlexCard (record display), or Integration Procedure (data logic).' },
-            { week: 'Week 3', focus: 'Solution design patterns, component reuse (shared DataRaptors, shared Integration Procedures), data flow design, UX considerations for OmniScript step groups and FlexCard layout.' },
-            { week: 'Week 4', focus: 'Implementation best practices, naming conventions, versioning, activation/deactivation, managing components across environments with DataPacks.' },
-            { week: 'Week 5', focus: 'Testing: Preview mode, hyperlink testing, UAT approaches for OmniStudio, performance considerations (large DataRaptor queries, Integration Procedure parallel execution).' },
+            { week: 'Week 1', focus: 'Omnistudio Fundamentals (16%): understand what each of the four core components does (OmniScript, DataRaptor, FlexCard, Integration Procedure), DataPack deployment, and environment management.' },
+            { week: 'Week 2', focus: 'Flexcards (18%, the heaviest section) and Omniscripts (17%): FlexCard states and datasource types; OmniScript step groups, versioning, and activation.' },
+            { week: 'Week 3', focus: 'Integration Procedures (17%): server-side data orchestration, parallel vs sequential execution, and callouts.' },
+            { week: 'Week 4', focus: 'Data Mappers (17%): DataRaptor types (Extract, Load, Transform, Turbo Extract) and choosing the right one for a data operation.' },
+            { week: 'Week 5', focus: 'Best Fit Solutions (15%): practice mapping business requirements to the right OmniStudio component and justifying the design decision, including reuse over rebuild.' },
             { week: 'Week 6', focus: 'Full mock exams. Focus on component selection scenarios, given a business requirement, choose the right OmniStudio component and justify the design decision.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
@@ -144,8 +146,15 @@ export default function OmnistudioConsultantStudyGuideContent() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong>. Discovery &amp; Analysis (30%) and Solution Design (28%) together are 58% of the exam, the consultant exam is more strategic than technical. If you can correctly map a business requirement to the right OmniStudio component and justify the design decision, you are ready.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong>. Flexcards (18%) and Omniscripts (17%) together are 35% of the exam, but all six sections are weighted fairly evenly (15-18%), so don't skip any domain. If you can correctly map a business requirement to the right OmniStudio component and justify the design decision, you are ready.</p>
       </div>
+      <p className="text-sm text-gray-700 mb-8">
+        Already have section-level scores from a practice test? Run them through the{' '}
+        <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+          Salesforce Exam Score Calculator
+        </Link>{' '}
+        to see where you stand against the 67% pass mark.
+      </p>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
