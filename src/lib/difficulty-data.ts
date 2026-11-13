@@ -23,8 +23,8 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
     { sectionName: 'Data and Analytics Management', difficulty: 'Moderate', tip: 'Joined Reports and dashboard filter limitations (equality only) are high-frequency exam topics.' },
     { sectionName: 'Sales and Marketing Applications', difficulty: 'Easy', tip: 'Leads, Opportunities, and Campaigns are well-documented, practise scenario routing.' },
     { sectionName: 'Service and Support Applications', difficulty: 'Moderate', tip: 'Know Entitlements vs Service Contracts and Omni-Channel queue vs skills routing.' },
-    { sectionName: 'Productivity and Collaboration', difficulty: 'Easy', tip: 'Lowest-weight section: Chatter, Files, and Calendar integration questions are straightforward.' },
-    { sectionName: 'Agentforce', difficulty: 'Moderate', tip: 'Review Agent Builder basics, topics, actions, and when an agent is suitable for a task.' },
+    { sectionName: 'Productivity and Collaboration', difficulty: 'Moderate', tip: '10% exam weight (tripled from 4% in the Dec 2025 refresh): review Shared Activities, Chatter private/unlisted groups, sandbox Email Deliverability settings, the mobile action bar, and AppExchange/AgentExchange packages.' },
+    { sectionName: 'Agentforce', difficulty: 'Moderate', tip: '8% exam weight (roughly 5 questions): review Agentforce Builder topics/subagents and actions, Conversation Preview testing, Prompt Builder templates, Agent User permissions, and the Einstein Trust Layer.' },
   ],
   'advanced-administrator': [
     { sectionName: 'Organization Setup', difficulty: 'Moderate', tip: 'Multi-currency, locale, and fiscal year settings are often overlooked in study guides.' },

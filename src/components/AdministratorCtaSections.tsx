@@ -30,7 +30,7 @@ export default function AdministratorCtaSections() {
 
       <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">
         <h2 id="dumps-comparison-heading" className="text-lg font-bold text-gray-900 mb-3">
-          Salesforce Certified Platform Administrator Dumps vs. Practice Questions (Plat-Admn-201)
+          Official Exam Code of Conduct: Practice Questions vs. Unofficial Exam Dumps (Plat-Admn-201)
         </h2>
         <p className="text-sm text-gray-700 mb-4">
           Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here’s why original practice questions are a better investment:

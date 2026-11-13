@@ -55,6 +55,45 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             ),
           }}
         />
+        {/* Multi-alias EducationalOccupationalCredential: current name, legacy ADM-201,
+            current Plat-Admn-201 exam code, and the CRT-101 prep course code all resolve
+            search intent to this one URL. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd({
+              '@context': 'https://schema.org',
+              '@type': 'EducationalOccupationalCredential',
+              '@id': 'https://www.trailblazeprep.com/certifications/administrator#credential',
+              name: 'Salesforce Certified Platform Administrator',
+              alternateName: [
+                'Platform Administrator',
+                'Salesforce Platform Administrator',
+                'Salesforce Certified Administrator',
+                'Salesforce Administrator Certification',
+                'Salesforce Admin Certification',
+                'ADM-201',
+                'ADM 201',
+                'Plat-Admn-201',
+                'CRT-101',
+              ],
+              identifier: [
+                { '@type': 'PropertyValue', propertyID: 'Exam Code', value: 'Plat-Admn-201' },
+                { '@type': 'PropertyValue', propertyID: 'Legacy Exam Code', value: 'ADM-201' },
+                { '@type': 'PropertyValue', propertyID: 'Official Prep Course Code', value: 'CRT-101' },
+              ],
+              description:
+                'The Salesforce Certified Platform Administrator (Plat-Admn-201 / ADM-201) credential validates skills in configuring, governing, automating, and managing data, security, reporting, and Agentforce AI across the Salesforce Platform.',
+              url: 'https://www.trailblazeprep.com/certifications/administrator',
+              credentialCategory: 'Certification',
+              recognizedBy: {
+                '@type': 'Organization',
+                name: 'Salesforce',
+                url: 'https://trailhead.salesforce.com/credentials/platformadministrator',
+              },
+            }),
+          }}
+        />
         <CertIntroParagraph slug={slug} />
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}
         <section data-lcp-hero className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-md sm:shadow-xl border border-salesforce-blue/20 sm:border-salesforce-blue/30" aria-label="Hero section">
@@ -69,7 +108,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             Prepare with Salesforce Certified Platform Administrator exam questions for Plat-Admn-201 (ADM-201), plus a study plan and topic weightage. Free practice, no sign-up required.
           </p>
           <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
-            The certification was previously known as ADM-201 (Salesforce Certified Administrator). Many candidates still search for &ldquo;ADM-201&rdquo;, while the current official name is Salesforce Certified Platform Administrator.
+            This credential was previously called Salesforce Certified Administrator and is often known by its exam code, ADM-201. Its current name is Salesforce Certified Platform Administrator.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-5">
             <Link
@@ -103,16 +142,16 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 Who is the ADM-201 for?
               </h2>
               <ul className="space-y-2 text-sm text-gray-700">
-                <li><strong className="text-gray-900">Beginners:</strong> First Salesforce cert; no coding required. Ideal if you’re new to CRM or Trailhead.</li>
-                <li><strong className="text-gray-900">Career switchers:</strong> Prove admin skills to move into Salesforce roles. Use section weightage to focus study time.</li>
-                <li><strong className="text-gray-900">Experienced admins:</strong> Validate and refresh your knowledge before Advanced Administrator or App Builder.</li>
+                <li><strong className="text-gray-900">Beginners:</strong> You are new to CRM or Trailhead and want to learn the basics of Salesforce administration.</li>
+                <li><strong className="text-gray-900">Career switchers:</strong> You want to move into a Salesforce role and show your administration knowledge.</li>
+                <li><strong className="text-gray-900">Experienced admins:</strong> You already manage Salesforce and want to refresh your skills before studying for another credential.</li>
               </ul>
               <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
-                Not sure which cert to take first? Browse the full{' '}
+                If you are choosing your first credential, explore the{' '}
                 <Link href="/certifications" className="text-salesforce-blue font-medium hover:underline">
                   Salesforce certification path
                 </Link>{' '}
-                to compare all credentials by role: Administrator, Developer, Consultant, Architect, and more.
+                to compare credentials for administrator, developer, consultant, and architect roles.
               </p>
             </section>
 
@@ -155,18 +194,18 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </summary>
               <div className="hidden group-open:block lg:block">
                 <p className="text-sm text-gray-700 mb-3">
-                  The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting, but it does <em>not</em> require coding.
+                  The Platform Administrator exam covers several areas, including setup, security, automation, data, and reports. You need to choose the right feature for a task; you do not need to write code.
                 </p>
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
-                  <li><strong>60 multiple-choice questions</strong> in 105 minutes, roughly 1.75 minutes per question.</li>
-                  <li><strong>68% passing score</strong>: you need 41 of 60 correct, so you can miss up to 19 and still pass.</li>
-                  <li><strong>No coding required</strong>: the exam is entirely declarative (clicks, not code).</li>
+                  <li><strong>60 multiple-choice questions</strong> in 105 minutes, or about one minute and 45 seconds per scored question.</li>
+                  <li><strong>68% passing score</strong>: this is about 41 correct answers out of 60 scored questions.</li>
+                  <li><strong>No coding required</strong>: focus on Salesforce configuration tools.</li>
                   <li><strong>Eight exam sections</strong>: use the official outline to see how much each topic counts.</li>
                 </ul>
                 <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                  <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
+                  <p className="text-sm font-semibold text-emerald-800 mb-1">Practice Readiness</p>
                   <p className="text-sm text-emerald-700">
-                    Most candidates report passing after scoring <strong>80%+</strong> on at least 3 full-length mock exams. If you’re consistently scoring above 75% in practice, you’re likely ready to book your exam.
+                    Use timed practice tests to find the topics you need to revisit. An <strong>80%+</strong> practice target can give you room above the listed passing score, but it does not guarantee an exam result.
                   </p>
                 </div>
               </div>
@@ -179,7 +218,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </summary>
               <div className="hidden group-open:block lg:block">
                 <p className="text-sm text-gray-700 mb-3">
-                  Understanding the exam format helps you prepare smarter. The Salesforce Certified Platform Administrator (ADM-201) exam is a proctored, online or in-person exam delivered through Webassessor/Kryterion. Here is what to expect on exam day:
+                  You can take the supervised Platform Administrator exam online or at a test centre. Review the current Salesforce guide for booking details. Here is the listed format:
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -189,7 +228,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Time Limit</p>
-                    <p className="text-sm text-gray-700">105 minutes (~1.75 minutes per question)</p>
+                    <p className="text-sm text-gray-700">105 minutes</p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Passing Score</p>
@@ -211,7 +250,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
                 <p className="text-sm text-gray-700">
-                  ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em>; you need to know a little about many topics. If you pass ADM-201 comfortably, you’re well-positioned for{' '}
+                  Administrator covers a broad range of setup and administration topics. Platform App Builder focuses more on designing custom apps, data models, and business logic. Your experience will affect which exam feels harder. You can compare these topics before choosing{' '}
                   <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
                     the Platform App Builder exam
                   </Link>.
@@ -236,9 +275,9 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
             <section id="adm201-traps" className="mt-8 rounded-xl border border-amber-100 bg-amber-50/40 p-5 sm:p-6">
               <p className="text-xs font-semibold uppercase tracking-wide text-amber-700 mb-2">Exam reviewer notes</p>
-              <h2 className="text-lg font-bold text-gray-900 mb-3">Platform Administrator Common Traps &amp; Readiness Checklist</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-3">Platform Administrator Exam Traps and Readiness Checklist</h2>
               <p className="text-sm text-gray-700 mb-5">
-                ADM-201 is broad, so the highest-risk questions are not obscure facts. They are scenario questions where two Salesforce features sound plausible and only one matches the business constraint.
+                On a scenario question, several features may look useful. Read the requirement carefully and choose the one that meets its specific conditions.
               </p>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
                 <div className="rounded-lg border border-white bg-white/80 p-4">
@@ -254,22 +293,30 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">Choosing old automation tools</p>
-                      <p className="text-gray-600">Flow is the modern default. Workflow Rules and Process Builder may appear as distractors when a record-triggered Flow is the better answer.</p>
+                      <p className="text-gray-600">For new automation, consider Flow. Review older Workflow Rules and Process Builder so you can recognize them in existing orgs.</p>
                     </div>
                     <div>
                       <p className="font-medium text-gray-900">Dashboard running user mistakes</p>
-                      <p className="text-gray-600">A dashboard shows data based on the running user unless it is dynamic. That detail changes the correct answer in reporting scenarios.</p>
+                      <p className="text-gray-600">Check the dashboard’s running user. A dynamic dashboard can show data based on the person viewing it.</p>
                     </div>
                   </div>
                 </div>
                 <div className="rounded-lg border border-white bg-white/80 p-4">
-                  <h3 className="text-base font-semibold text-gray-900 mb-3">Ready to book when...</h3>
+                  <h3 className="text-base font-semibold text-gray-900 mb-3">Signs you may be ready to book</h3>
                   <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
-                    <li>You score 80%+ on three timed mock exams without pausing to check notes.</li>
-                    <li>You can explain why each wrong answer is wrong, especially in security and automation questions.</li>
-                    <li>You have configured users, profiles, permission sets, sharing rules, reports, dashboards, and flows in a dev org.</li>
-                    <li>You can finish a 60-question timed mock inside 105 minutes with at least 10 minutes left to review flagged items.</li>
+                    <li>You can score at least 80% on three timed practice tests without using notes.</li>
+                    <li>You can explain why each answer fits or does not fit, especially for security and automation.</li>
+                    <li>You have practised setting up users, permissions, sharing, reports, dashboards, and flows in a development org.</li>
+                    <li>You can finish a 60-question practice test within 105 minutes and leave time to review.</li>
                   </ul>
+                  <div className="mt-4 pt-4 border-t border-amber-100 text-sm text-gray-700">
+                    <p className="font-semibold text-gray-900 mb-2">3 concepts that fail most ADM-201 candidates</p>
+                    <ul className="space-y-2 list-disc list-inside">
+                      <li><strong>OWD vs. profiles vs. roles (three layers, one wrong answer):</strong> Organization-wide defaults (OWD) set the baseline record-access floor. Profiles and permission sets control object and field permissions, what a user can see or edit at the object/field level. Role hierarchy opens record-level access upward above the OWD floor, roles can never restrict access below OWD, and profiles cannot override OWD unless View All / Modify All is granted.</li>
+                      <li><strong>Flow vs. legacy automation (end of support for Workflow Rules &amp; Process Builder):</strong> Workflow Rules and Process Builder reached end of support on December 31, 2025. For new declarative automation, choose a before-save record-triggered Flow for same-record field updates, an after-save record-triggered Flow for related records or email alerts, a screen Flow for guided input, an approval process for multi-step human sign-off with record locking, and the Migrate to Flow tool to convert legacy automation.</li>
+                      <li><strong>Reports vs. dashboards (cross filters, joined reports &amp; filter limits):</strong> Custom report types support up to 4 related objects. A cross filter filters a primary object by the presence or absence of related records (e.g. Accounts without Opportunities) without a custom report type. Bucket fields categorize values on the fly without a formula field. Reporting snapshots schedule report results into a custom object to track trends over time. Dashboard filters only support exact field equality, not contains or starts with.</li>
+                    </ul>
+                  </div>
                   <div className="mt-4 pt-4 border-t border-amber-100 text-sm text-gray-700">
                     <p className="font-semibold text-gray-900 mb-2">Compare before your next cert:</p>
                     <p>
@@ -302,23 +349,54 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             <div className="space-y-4 text-sm text-gray-700">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Objects, Fields & Data Model</h3>
-                <p>Standard Objects (Account, Contact, Lead, Opportunity, Case) are the backbone of Salesforce. Custom Objects extend the platform for business-specific data. Field types include Text, Number, Currency, Date, Picklist, Formula, Lookup, and Master-Detail. Roll-Up Summary fields aggregate child records (count, sum, min, max), only available on Master-Detail. Junction Objects implement many-to-many relationships using two Master-Detail fields. The ADM-201 exam frequently presents a scenario and asks which field type or relationship to use, know cascade delete rules, sharing implications, and when a Lookup is preferable to Master-Detail.</p>
+                <p>Standard objects such as Account, Contact, Lead, Opportunity, and Case store common business records. Custom objects store data specific to your organization. Review field types and relationships, including lookup and master-detail. A roll-up summary can count or summarize detail records, and a junction object connects two objects in a many-to-many relationship.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Security Model: Profiles, Permission Sets, Roles & Sharing</h3>
-                <p>Org-wide defaults (OWDs) set the baseline visibility for every record. Role hierarchy opens up access upward, managers see what their subordinates own. Profiles control what users CAN do (CRUD, page layouts, app access). Permission Sets grant additional permissions without changing the profile. Sharing Rules extend access horizontally to peers. Manual Sharing lets record owners share individual records. The exam tests layered security scenarios: know that OWD + Role Hierarchy + Sharing Rules all combine additively, the most permissive rule wins for access.</p>
+                <p>Org-wide defaults set the baseline for record access. Roles, sharing rules, and manual sharing can grant additional access where applicable. Profiles and permission sets control object and field permissions separately. Practise diagnosing whether a user needs permission to the object, field, or particular record.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Automation: Flows, Approval Processes & Email Alerts</h3>
-                <p>Record-triggered flows respond to record changes. A before-save flow can update the triggering record; an after-save flow can also work with related records. Scheduled flows run at specified times. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario: Flows for complex logic, Approval Processes for structured human sign-off.</p>
+                <p>Record-triggered flows respond to record changes. A before-save flow can update the triggering record; an after-save flow can also work with related records. Scheduled flows run at specified times. Approval processes route work to people for a decision, and email alerts send messages from templates. Practise selecting a tool for each requirement.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Reports, Dashboards & List Views</h3>
-                <p>Report Types determine which objects and fields are available. Tabular: flat row lists. Summary: grouped with subtotals. Matrix: two-dimensional grouping. Joined: up to 5 report blocks side by side. Dashboards display visual components (charts, gauges, metrics, tables) driven by reports; each component points to a single source report. The Running User determines whose data is shown. Dynamic Dashboards let each viewer see their own data (up to 5 per org in Enterprise). List Views are quick filtered record sets, shareable with groups or all users. Schedule Reports to deliver via email automatically.</p>
+                <p>A report type determines the records and fields available for a report. Tabular reports list rows; summary reports group them; matrix reports group rows and columns; and joined reports combine blocks. Dashboards display report data as charts or other components. Check the running user to understand which data a dashboard displays. List views provide filtered record lists, while report subscriptions can deliver results by email.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Sales & Service Cloud Fundamentals</h3>
-                <p>The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in one action. Opportunity Stages and Probability drive forecasting. Cases are the unit of customer support; they can be created via Web-to-Case, Email-to-Case, or manually. Queues hold Cases or Leads for team assignment. Escalation Rules auto-escalate cases based on age or criteria. Auto-Assignment Rules route incoming Cases or Leads to the right owner. Service Level Agreements (SLAs) are enforced via Entitlements and Milestones. The exam frequently asks about the correct feature for a given support or sales scenario.</p>
+                <p>Lead conversion creates or links an account and contact, and can also create an opportunity. Opportunity stages and probability support forecasting. Service teams track requests as cases, which can arrive through channels such as email or web forms. Review queues, assignment rules, escalation rules, entitlements, and milestones for routing and managing service work.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Official blueprint subtopics not otherwise covered: Dec 2025 outline refresh */}
+          <div id="blueprint-deep-dive" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Official Exam Objectives: Additional Coverage by Domain</h2>
+            <div className="space-y-5 text-sm text-gray-700">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">Configuration and Setup (15%)</h3>
+                <div className="space-y-2">
+                  <p><strong>Freezing vs. deactivating users:</strong> Users can never be deleted in Salesforce. Use Freeze to immediately block a departing employee from logging in while you reassign their records, queues, and dashboard running-user dependencies; use Deactivate once cleanup is complete to free up their user license.</p>
+                  <p><strong>Permission set groups &amp; muting permission sets:</strong> Salesforce recommends minimum-access profiles paired with reusable permission sets bundled into persona-based permission set groups. A muting permission set inside a group removes specific permissions for that group without modifying the underlying permission sets.</p>
+                  <p><strong>Troubleshooting record &amp; field access:</strong> Check in order: (1) login history / freeze / login hours / IP ranges, (2) object CRUD via User Access Summary on the user record, (3) record visibility via the Sharing Hierarchy button on the record, and (4) field visibility via field-level security, page layout, and Lightning App Builder Dynamic Forms visibility rules.</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">Productivity and Collaboration (10%)</h3>
+                <div className="space-y-2">
+                  <p><strong>Shared Activities:</strong> Enabling Shared Activities allows users to relate up to 50 contacts (alongside 1 primary contact and 1 Related To / WhatId record) to a single task or event.</p>
+                  <p><strong>Sandbox email deliverability:</strong> Newly refreshed sandboxes default to System email only, which blocks outbound Flow and workflow test emails. Set Setup &rarr; Deliverability &rarr; Access Level to All email when testing email notifications in a sandbox.</p>
+                  <p><strong>AppExchange &amp; AgentExchange:</strong> Managed packages are upgradable, IP-protected, namespace-prefixed, and count toward fewer org limits; unmanaged packages are editable templates that are not upgradable. AgentExchange offers pre-built prompts, flows, and agent actions you can install.</p>
+                </div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">Agentforce (8%)</h3>
+                <div className="space-y-2">
+                  <p><strong>Agentforce Builder architecture:</strong> An agent consists of a role/description, topics (also called subagents, defining the category of job to be done and classification instructions), and actions (Flows, Apex, Prompt Builder templates, or standard actions).</p>
+                  <p><strong>Testing &amp; maintenance:</strong> Admins refine topic instructions and action descriptions when an agent selects the wrong action, adjust tone or grounding in Prompt Builder, and validate changes using Conversation Preview in Agentforce Builder for interactive testing and the Testing Center for batch evaluation before activating.</p>
+                  <p><strong>Agent security &amp; the Einstein Trust Layer:</strong> Employee agents run in the context of the logged-in user&apos;s permissions, while service agents run under a dedicated Agent User whose permission sets govern object, field, and action access. The Einstein Trust Layer enforces data masking, toxicity detection, audit logging, and zero data retention with external LLMs.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -340,23 +418,23 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             <div className="space-y-4 text-sm text-gray-700">
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Know Your Automation Toolkit</h3>
-                <p>Understand when to use Record-Triggered Flows (replacing Workflow Rules and Process Builder), Approval Processes for multi-step human approvals, and Scheduled Flows for time-based logic. The exam always tests the right tool for a given requirement.</p>
+                <p>Compare record-triggered flows, approval processes, and scheduled flows. Practise choosing a tool for a record change, human approval, or scheduled task.</p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Sharing &amp; Security Is the Highest-Weighted Topic</h3>
-                <p>Org-Wide Defaults, Role Hierarchies, Sharing Rules, Profiles, and Permission Sets. Know how each layer grants or restricts access and the order in which they are evaluated. Most security questions hinge on knowing the minimum-access principle.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Data &amp; Analytics (17%) and Security/Automation (15% Each) Drive 62% of Your Score</h3>
+                <p>Review org-wide defaults, roles, sharing rules, profiles, and permission sets. For each scenario, decide whether the user needs access to an object, a field, or a specific record.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Reports vs. Dashboards</h3>
-                <p>Know the four report types (Tabular, Summary, Matrix, Joined) and when each applies. Dashboards refresh from source reports and require a running user whose access determines which data appears.</p>
+                <p>Compare tabular, summary, matrix, and joined reports. Review how source reports and the dashboard running user affect the data viewers see.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Data Management Fundamentals</h3>
-                <p>Understand import/export tools (Data Import Wizard vs. Data Loader), field-level security, validation rules, and duplicate management. The exam regularly tests which import tool is appropriate for a given scenario.</p>
+                <p>Practise choosing between Data Import Wizard and Data Loader. Review field permissions, validation rules, and duplicate management as separate controls.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Read Every Question for the Key Constraint</h3>
-                <p>Watch for qualifiers like ’declarative only,’ ’minimum configuration,’ or ’without code.’ These constraints eliminate most distractors and point to the correct answer.</p>
+                <p>Look for conditions such as “without code” or “minimum configuration.” Use those limits to rule out choices that do not meet the requirement.</p>
               </div>
             </div>
           </div>
@@ -383,37 +461,37 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   <Link href="#section-deep-dives" className="text-salesforce-blue font-medium hover:underline">
                     All 8 Exam Sections in Detail ({RELEASE_CURRENT}) →
                   </Link>
-                  <span className="text-gray-600 ml-2">What each section of the current official outline actually tests, with its weighting.</span>
+                  <span className="text-gray-600 ml-2">Review the topics and weighting for each section of the official outline.</span>
                 </li>
                 <li>
                   <Link href="#study-plan" className="text-salesforce-blue font-medium hover:underline">
                     6-Week ADM-201 Study Plan →
                   </Link>
-                  <span className="text-gray-600 ml-2">Week-by-week reading and hands-on practice, ordered by section weighting.</span>
+                  <span className="text-gray-600 ml-2">Plan your reading and hands-on practice over six weeks.</span>
                 </li>
                 <li>
                   <Link href="#day-before" className="text-salesforce-blue font-medium hover:underline">
                     Day-Before Review Checklist →
                   </Link>
-                  <span className="text-gray-600 ml-2">The ten topics worth re-reading the evening before your exam.</span>
+                  <span className="text-gray-600 ml-2">Review ten topics before exam day.</span>
                 </li>
                 <li>
                   <Link href="/certifications/administrator-practice-test" className="text-salesforce-blue font-medium hover:underline">
                     ADM-201 Timed Practice Test →
                   </Link>
-                  <span className="text-gray-600 ml-2">A standalone, exam-length practice run once you've worked through the study guide above.</span>
+                  <span className="text-gray-600 ml-2">Try a timed practice set after working through this guide.</span>
                 </li>
                 <li>
                   <Link href="/admin-certification-path" className="text-salesforce-blue font-medium hover:underline">
                     Salesforce Admin Certification Path →
                   </Link>
-                  <span className="text-gray-600 ml-2">What to take after ADM-201: App Builder, Advanced Admin, or Consultant track, with career context.</span>
+                  <span className="text-gray-600 ml-2">Compare possible next steps, including App Builder, Advanced Administrator, and consultant credentials.</span>
                 </li>
                 <li>
                   <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
                     ADM-201 vs App Builder: Which to Take First? →
                   </Link>
-                  <span className="text-gray-600 ml-2">Side-by-side comparison of difficulty, overlap, and career value to help you choose the right order.</span>
+                  <span className="text-gray-600 ml-2">Compare the two exams and decide which one fits your goals first.</span>
                 </li>
               </ul>
             </section>
@@ -430,6 +508,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 { id: 'adm201-traps', title: 'Common Traps' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'key-concepts', title: 'Key Concepts' },
+                { id: 'blueprint-deep-dive', title: 'Additional Blueprint Coverage' },
                 { id: 'section-deep-dives', title: 'Exam Sections in Detail' },
                 { id: 'study-plan', title: '6-Week Study Plan' },
                 { id: 'scenario-rules', title: 'Scenario Decision Rules' },

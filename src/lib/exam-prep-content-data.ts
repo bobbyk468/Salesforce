@@ -33,7 +33,7 @@ const DEFAULT_PREP: ExamPrepContent = {
 export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   administrator: {
     examTips: [
-      'Configuration and Setup + Object Manager together are ~40%. Master Lightning App Builder and Object Manager first.',
+      'Data and Analytics Management (17%), Configuration and Setup (15%), Object Manager and Lightning App Builder (15%), and Automation (15%) together account for 62% of the exam.',
       'Know the difference between Process Builder, Flow, and Workflow (and when to use each).',
       'Security is always tested: roles, profiles, permission sets, sharing rules, OWD.',
       'Practice building reports (summary, matrix, joined) and dashboards from scratch.',
@@ -41,7 +41,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     ],
     prerequisites: ['6+ months Salesforce Admin experience', 'Platform Fundamentals or equivalent knowledge'],
     focusAreas: ['Configuration and Setup', 'Object Manager and Lightning App Builder', 'Security and Access', 'Automation (Flow vs Workflow)'],
-    studyStrategy: 'Spend 40% of study time on Configuration, Object Manager, and Lightning App Builder. Use a Developer Edition org to practice. Take full-length practice exams under time pressure.',
+    studyStrategy: 'Spend roughly 60% of your study time mastering Data and Analytics Management, Configuration and Setup, Object Manager and Lightning App Builder, and Automation, the four domains that together make up 62% of the exam. Use a Developer Edition org to practice. Take full-length practice exams under time pressure.',
     whyItMatters: 'The Admin cert is the gateway to most Salesforce roles. It is often required for Consultant and Developer paths.',
   },
   'advanced-administrator': {

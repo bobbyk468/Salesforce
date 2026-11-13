@@ -1,6 +1,6 @@
 [
   {
-    "question": "A sales manager wants to see which of their sales reps have logged the most calls this month. Which report type should they use?",
+    "question": "A sales manager wants to find out which sales reps logged the most calls this month. Which report type should they use?",
     "options": [
       "Tasks and Events",
       "Activities with Accounts",
@@ -8,15 +8,15 @@
       "Activity History"
     ],
     "correctAnswer": 0,
-    "explanation": "The Tasks and Events report type allows you to report on activities including calls, meetings, and tasks across all users.",
+    "explanation": "The Tasks and Events report type shows calls, meetings, and tasks for users across the organization.",
     "whyWrong": [
-      "Activities with Accounts and Accounts with Activities focus on account-related activities, not standalone tasks/calls across reps.",
-      "Activity History is a related list on records, not a report type for building reports."
+      "Activities with Accounts and Accounts with Activities focus on account-related activity, rather than calls and tasks across sales reps.",
+      "Activity History is a record page list, not a report type for building this report."
     ],
     "examDomain": "Data and Analytics Management"
   },
   {
-    "question": "What is the maximum number of fields that can be tracked for field history on a custom object?",
+    "question": "With standard field history tracking, how many fields can an administrator track per object?",
     "options": [
       "10 fields",
       "20 fields",
@@ -24,31 +24,14 @@
       "15 fields"
     ],
     "correctAnswer": 1,
-    "explanation": "You can track up to 20 fields per object for field history tracking on both standard and custom objects.",
+    "explanation": "Field history tracking supports up to 20 fields on each standard or custom object.",
     "whyWrong": [
-      "10, 15, and 25 are not the platform limit; the documented maximum per object is 20."
+      "The limit is 20 fields per object, so 10, 15, and 25 are incorrect."
     ],
     "examDomain": "Data and Analytics Management"
   },
   {
-    "question": "A user needs to create a report that shows Opportunities grouped by Account and then by Stage. Which report format should be used?",
-    "options": [
-      "Tabular",
-      "Summary",
-      "Joined",
-      "Matrix"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Summary reports allow you to group rows of data, view subtotals, and create charts. They're ideal for grouping by Account and then by Stage.",
-    "whyWrong": [
-      "Tabular reports show flat rows only; they do not support grouping or subtotals.",
-      "Joined reports combine multiple report types and are not the primary format for simple grouping by Account and Stage.",
-      "Matrix reports are for row and column grouping (e.g. cross-tab), not hierarchical grouping by two dimensions."
-    ],
-    "examDomain": "Data and Analytics Management"
-  },
-  {
-    "question": "Which permission allows a user to transfer records they don't own?",
+    "question": "Which separate system permission is designed for transferring multiple records in bulk?",
     "options": [
       "View All",
       "Transfer Records",
@@ -56,11 +39,11 @@
       "Edit"
     ],
     "correctAnswer": 1,
-    "explanation": "The 'Transfer Records' permission allows users to transfer records they don't own to other users.",
+    "explanation": "Transfer Records lets a user transfer records they do not own to other users.",
     "whyWrong": [
-      "View All grants read access to all records, but viewing isn't the same as being able to transfer ownership.",
-      "Modify All grants full edit/delete access on all records of an object, but doesn't specifically grant transfer rights over records you don't own.",
-      "Edit only lets a user modify records they already have access to, it doesn't grant the ability to transfer ownership of records they don't own."
+      "View All gives read access to records; it does not grant permission to transfer them.",
+      "Modify All grants broad access and can also allow ownership changes, but Transfer Records is the separate permission designed for bulk transfers.",
+      "Edit lets a user change records they can access; it does not grant ownership-transfer rights for records they do not own."
     ],
     "examDomain": "Configuration and Setup"
   },
@@ -82,7 +65,7 @@
     ]
   },
   {
-    "question": "Which record-triggered flow trigger is used when you need to perform actions before the record is saved?",
+    "question": "Which record-triggered flow option runs before a record is saved?",
     "options": [
       "Platform Event",
       "After Save",
@@ -90,33 +73,16 @@
       "Before Save"
     ],
     "correctAnswer": 3,
-    "explanation": "Before Save flows run before the record is committed to the database, allowing you to modify field values or perform validation.",
+    "explanation": "A Before Save flow runs before Salesforce saves the record, so it can update field values or validate them.",
     "whyWrong": [
-      "Platform Event isn't a record-triggered flow timing option, it's a separate trigger type based on event messages, not before/after save timing.",
-      "After Save triggers run after the record is committed to the database, too late to modify field values before save.",
-      "After Delete triggers run following a delete operation, unrelated to modifying a record before it saves."
+      "A Platform Event flow starts from an event message; it is not a before-save timing option for a record-triggered flow.",
+      "An After Save flow runs after the record is saved, so it cannot change fields before that save.",
+      "An After Delete flow runs after a record is deleted; it does not run before a record is saved."
     ],
     "examDomain": "Automation"
   },
   {
-    "question": "What is the purpose of a Permission Set in Salesforce?",
-    "options": [
-      "To grant additional access to users without changing their profile",
-      "To create validation rules",
-      "To replace profiles entirely",
-      "To define page layouts"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Permission Sets extend user access by granting additional permissions, object access, and app access without modifying the user's profile.",
-    "whyWrong": [
-      "Validation rules enforce data quality logic, they're unrelated to what Permission Sets do.",
-      "Permission Sets don't replace profiles, every user still needs exactly one profile; permission sets layer additional access on top.",
-      "Page layouts are configured separately from Permission Sets, layouts control field/related-list display, not access grants."
-    ],
-    "examDomain": "Configuration and Setup"
-  },
-  {
-    "question": "Which feature allows users to customize their Home page layout with different components?",
+    "question": "Which feature lets an admin change the components shown on a Home page?",
     "options": [
       "Validation rules",
       "Record types",
@@ -124,67 +90,67 @@
       "Profiles only"
     ],
     "correctAnswer": 2,
-    "explanation": "Lightning App Builder can be used to customize the Home page, allowing users to add and arrange components.",
+    "explanation": "Lightning App Builder lets admins customize a Home page by adding and arranging components.",
     "whyWrong": [
-      "Validation rules enforce data entry rules; they have nothing to do with Home page layout customization.",
-      "Record types control which picklist values and page layouts are available for a record, they don't customize the Home page layout.",
-      "Profiles control overall access and settings, but customizing the Home page layout is a separate Lightning App Builder capability, not a profile setting."
+      "Validation Rules check data entered in records; they do not change Home page components.",
+      "Record types control available picklist values and page layouts for records; they do not customize the Home page.",
+      "Profiles control access and settings. Lightning App Builder is used to arrange Home page components."
     ],
     "examDomain": "Object Manager and Lightning App Builder"
   },
   {
-    "question": "What does a Campaign Influence report help sales managers track?",
+    "question": "What can sales managers learn from a Campaign Influence report?",
     "options": [
       "Email open rates only",
-      "Only campaign spend",
+      "Campaign spending only",
       "Lead source counts only",
-      "Which marketing campaigns influenced opportunities and closed revenue"
+      "Campaigns that influenced opportunities and closed revenue"
     ],
     "correctAnswer": 3,
-    "explanation": "Campaign Influence reporting shows how marketing campaigns contributed to opportunity creation and closed revenue.",
+    "explanation": "Campaign Influence reports show how marketing campaigns contributed to opportunities and closed revenue.",
     "whyWrong": [
-      "Email open rates are a Marketing Cloud/Pardot-level metric, not what Campaign Influence reports on within core Sales Cloud.",
-      "Campaign Influence tracks more than spend, it connects campaigns to the opportunities and revenue they contributed to.",
-      "Lead source counts are a separate reporting dimension: Campaign Influence specifically links campaigns to opportunity outcomes, not just lead counts."
+      "Email open rates are a separate marketing metric; they are not what Campaign Influence reports show in Sales Cloud.",
+      "Campaign Influence connects campaigns to opportunities and revenue; it is not limited to campaign spending.",
+      "Lead source counts do not show how campaigns influenced opportunity outcomes."
     ],
     "examDomain": "Sales and Marketing Applications"
   },
   {
-    "question": "Which Case assignment rule criteria type allows assigning cases based on multiple conditions?",
+    "question": "Which criteria options can a Case assignment rule use?",
     "options": [
       "Rule criteria only",
-      "Formula only",
-      "Rule criteria and formula",
+      "Formula criteria only",
+      "Both rule criteria and formula criteria",
       "Manual assignment only"
     ],
     "correctAnswer": 2,
-    "explanation": "Case assignment rules support both rule criteria (field-based conditions) and formula criteria for complex logic.",
+    "explanation": "Case assignment rules can use field-based rule criteria or formula criteria.",
     "whyWrong": [
-      "'Rule criteria only' undersells the actual flexibility, assignment rules can also use formula-based criteria for more complex conditions.",
-      "'Formula only' excludes the simpler rule-criteria option that's also available, both mechanisms exist side by side.",
-      "Manual assignment is the fallback when no rule matches, it isn't itself a rule criteria type."
+      "Assignment rules can use formulas as well as field-based rule criteria.",
+      "Assignment rules can use field-based criteria as well as formulas.",
+      "Manual assignment is not a criteria type; it may be used when no rule assigns the case."
     ],
     "examDomain": "Service and Support Applications"
   },
   {
-    "question": "What is the primary purpose of Queue-based case routing?",
+    "question": "Why assign cases to a queue?",
     "options": [
-      "To create reports",
-      "To send email notifications only",
-      "To group cases for teams to work from a shared list based on skills or workload",
-      "To delete cases automatically"
+      "Create reports",
+      "Send email notifications only",
+      "Give a team a shared list of cases to claim or work",
+      "Delete cases automatically"
     ],
     "correctAnswer": 2,
-    "explanation": "Queues allow cases to be routed to teams rather than individuals, enabling workload balancing and skill-based routing.",
+    "explanation": "A queue can own cases and give its members a shared list of work. Assignment rules or other routing tools can direct cases to the queue.",
     "whyWrong": [
-      "Queues organize records for teams to work from, they aren't a reporting tool.",
-      "Queues can trigger notifications, but that's a secondary feature, not their primary purpose.",
-      "Queues aren't a deletion mechanism, they're a routing and collaboration mechanism for shared work."
+      "Queues are for routing and sharing work, not for creating reports.",
+      "Queues may send notifications, but their main purpose is to let a team work from a shared list of records.",
+      "Queues route and organize work; they do not delete cases."
     ],
     "examDomain": "Service and Support Applications"
   },
   {
-    "question": "Which object is required to enable Products, Price Books, and Opportunities in Salesforce?",
+    "question": "Which records provide the product catalog and pricing that can be added to an opportunity?",
     "options": [
       "Lead",
       "Campaign",
@@ -192,33 +158,16 @@
       "Product and Price Book"
     ],
     "correctAnswer": 3,
-    "explanation": "Products and Price Books must be configured to enable the full opportunity-to-quote-to-order sales process.",
+    "explanation": "Products define what a company sells, while price books and their entries define the prices available for opportunities.",
     "whyWrong": [
-      "Lead is a separate object in the sales process, unrelated to enabling Products and Price Books on Opportunities.",
-      "Campaign tracks marketing campaign data, it isn't required to enable Products, Price Books, and Opportunities functionality.",
-      "Opportunity itself doesn't need to be 'enabled' via a separate object: Product and Price Book is the actual object relationship that must be set up to use products on opportunities."
+      "Leads are part of the sales process, but they do not provide product and price book functionality on opportunities.",
+      "Campaigns track marketing activity; they are not needed to use products and price books with opportunities.",
+      "Opportunities are used in this process, but Products and Price Books provide the product data associated with them."
     ],
     "examDomain": "Sales and Marketing Applications"
   },
   {
-    "question": "What does the 'View All' permission on an object allow?",
-    "options": [
-      "Delete all records",
-      "View all records in the org regardless of sharing rules",
-      "Transfer all records",
-      "Edit all records"
-    ],
-    "correctAnswer": 1,
-    "explanation": "View All bypasses sharing rules and allows the user to see all records of that object in the organization.",
-    "whyWrong": [
-      "'Delete all records' is part of Modify All, not View All: View All is read-only.",
-      "'Transfer all records' is a separate specific permission, not what View All grants.",
-      "'Edit all records' describes a different, broader permission (Modify All): View All doesn't grant edit access."
-    ],
-    "examDomain": "Configuration and Setup"
-  },
-  {
-    "question": "Which report format displays data in rows and columns with subtotals at the intersection?",
+    "question": "Which report format groups data by both rows and columns and shows subtotals where they meet?",
     "options": [
       "Matrix",
       "Tabular",
@@ -226,29 +175,12 @@
       "Summary"
     ],
     "correctAnswer": 0,
-    "explanation": "Matrix reports use both row and column grouping, with subtotals at the intersection of rows and columns.",
+    "explanation": "Matrix reports group by rows and columns and show subtotals at their intersections.",
     "whyWrong": [
-      "Tabular reports list rows in a simple flat list without any grouping or subtotals at row/column intersections.",
-      "Joined reports combine multiple report types side by side, they don't specifically provide the row/column subtotal grid Matrix does.",
-      "Summary reports group rows and show subtotals along one dimension, not intersecting rows and columns."
+      "Tabular reports are flat lists and do not show grouped subtotals.",
+      "Joined reports place multiple report types side by side; they do not create the row-and-column subtotal grid of a Matrix report.",
+      "Summary reports group rows and show subtotals for row groups, not at row-and-column intersections."
     ],
     "examDomain": "Data and Analytics Management"
-  },
-  {
-    "question": "What is the purpose of Chatter Groups in Salesforce?",
-    "options": [
-      "To enable collaboration and discussions around projects, topics, or teams",
-      "To create reports",
-      "To assign cases",
-      "To replace email"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Chatter Groups allow teams to collaborate, share files, and discuss work in a centralized feed.",
-    "whyWrong": [
-      "Chatter Groups aren't a reporting feature, that's a distinct Salesforce capability.",
-      "Chatter Groups don't handle case assignment, that's managed by assignment rules and queues, not Chatter.",
-      "Chatter Groups don't replace email, they're a separate, complementary collaboration channel."
-    ],
-    "examDomain": "Productivity and Collaboration"
   }
 ]

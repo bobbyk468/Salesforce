@@ -328,36 +328,25 @@ export default async function Home() {
             <div>
               <dt className="font-semibold text-gray-900">Pass mark</dt>
               <dd>
-                The percentage you must score to pass. It is set per exam and is not
-                curved, so a 65% pass mark means 65% of the scored questions. Pass marks
-                are published in each credential&apos;s official exam guide rather than on
-                the certification pages, so confirm yours there before booking.
+                The percentage needed to pass. Each exam sets its own pass mark; it is not curved. For example, a 65% pass mark means you need 65% of the scored questions. Pass marks appear in official exam guides, so check yours before booking.
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-gray-900">Exam fee and retake fee</dt>
               <dd>
-                The exam fee is the first-attempt registration cost in USD, before local
-                taxes. The retake fee is normally half the exam fee; the $75 entry-level
-                exams retake free. Fees change, so treat ours as a guide and check the
-                official page linked on each card.
+                The exam fee is the first-attempt price in USD, before local taxes. Retakes usually cost half the exam fee; $75 entry-level exams have free retakes. Fees can change, so confirm the current price on the official page linked from each card.
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-gray-900">Prerequisites</dt>
               <dd>
-                Most Salesforce certifications have no formal prerequisites, only
-                recommended experience. A handful genuinely require another credential
-                first, and two more are awarded for passing a set of component exams
-                rather than one of their own. The cards distinguish all three cases.
+                Most Salesforce certifications have no formal prerequisite, though experience may be recommended. Some require another credential first; two are awarded after you pass a set of component exams. The cards show which applies.
               </dd>
             </div>
             <div>
               <dt className="font-semibold text-gray-900">Questions and time</dt>
               <dd>
-                The scored question count and the time allowed. Most exams also include
-                up to five unscored trial questions that do not count towards your result
-                but do consume your time.
+                This is the number of scored questions and the time allowed. Most exams may also include up to five unscored trial questions. They do not affect your result, but they use exam time.
               </dd>
             </div>
           </dl>
@@ -386,17 +375,10 @@ export default async function Home() {
             How to Use Our Salesforce Free Practice Questions &amp; Study Guides
           </h2>
           <p className="mt-4 text-gray-700">
-            Each certification above links to free practice questions with explanations,
-            and many also link to a study guide. There is no sign-up and no paywall. The
-            practice questions are exam-style material aligned to the published exam
-            outline, not real exam content, so use them to find the topics you are weak
-            on rather than as a predictor of your score.
+            Each certification links to free practice questions with explanations; many also include a study guide. No sign-up is required. These questions are written to match the published exam outline, not copied from real exams. Use them to spot topics to review, not to predict your score.
           </p>
           <p className="mt-3 text-gray-700">
-            A workable order for most people: read the study guide for the Salesforce
-            certification you are targeting, work the practice questions until the
-            explanations stop surprising you, then confirm the current exam objectives
-            and fees on the official page before you book.
+            A useful sequence is to read the study guide, answer practice questions, and review any explanations that surprise you. Before booking, confirm the current exam objectives and fees on the official page.
           </p>
         </div>
       </section>
@@ -457,22 +439,22 @@ export default async function Home() {
             Salesforce Certification Preparation Guide &amp; Exam Overview
           </h2>
           <p>
-            A Salesforce certification is most useful when it matches the work you want to do. Start by comparing the role categories above with your current experience and the tasks you want to perform: administration, application development, consulting, architecture, marketing, analytics, or another listed specialty. A role label is a starting point, not a prerequisite rule. Check the individual credential page and the current issuer exam guide for required prerequisites, recommended experience, exam format, fees, and whether the credential is currently available.
+            Choose a certification that fits the work you want to do. Compare the role categories above with your experience and interests, such as administration, development, consulting, architecture, marketing, or analytics. A role category does not set prerequisites. Check the credential page and current exam guide for prerequisites, recommended experience, format, fees, and availability.
           </p>
           <h3 className="text-xl font-semibold text-gray-900">Build a study plan from the exam objectives</h3>
           <p>
-            Before studying, find the current official exam guide and use its objective areas as your checklist. Mark each topic as familiar, partly familiar, or new, then give more practice time to topics you have not used in a real Salesforce environment. The study resources and Salesforce certification practice questions linked from this directory can help you review terminology and check understanding. Treat practice scores as feedback about what to revisit; they cannot guarantee an exam result and should not replace hands-on work or the official guide.
+            Start with the current official exam guide and use its objectives as a checklist. Mark each topic as familiar, partly familiar, or new, then spend more time on areas you have not used in Salesforce. The linked study resources and practice questions can help you review and check your understanding. Use practice scores to find gaps; they cannot guarantee a result or replace hands-on work and the official guide.
           </p>
           <h3 className="text-xl font-semibold text-gray-900">Use hands-on practice and verify changing details</h3>
           <p>
-            Where possible, recreate the relevant tasks in a Salesforce Developer Edition, Trailhead Playground, or other environment appropriate to the product. For an administrator topic, that might mean configuring a feature and checking its effect on records and users. For a developer topic, it might mean building and testing a small component or automation. For a consultant or architect topic, practise explaining the trade-offs behind a solution and how it fits the stated requirements. Keep notes on mistakes, the reason an answer is correct, and the documentation you used to confirm it.
+            When possible, practise in a Salesforce Developer Edition, Trailhead Playground, or another suitable environment. Admins can configure a feature and check its effect on records and users; developers can build and test a component or automation. Consultants and architects can practise explaining why a solution meets the stated requirements. Note your mistakes and record the documentation that helped you confirm the answer.
           </p>
           <h3 className="text-xl font-semibold text-gray-900">Choose the next step with care</h3>
           <p>
-            Certification catalogs, exam names, fees, passing requirements, and objectives can change. Some credentials shown here may be retired, unavailable, or have incomplete public exam details; their pages identify those cases where known. Confirm the current status and booking terms with the issuer before paying for an exam. If you are deciding between tracks, use the role pages and certification paths to compare the sequence of topics and prerequisites. Then choose one exam, map its objectives to a weekly study routine, and revisit the plan after practice reveals gaps. This approach keeps your Salesforce study guide focused on skills you can demonstrate, while using questions as one part of preparation rather than as a substitute for learning.
+            Certification names, fees, requirements, and objectives can change. Some credentials may be retired, unavailable, or have incomplete public exam details; their pages note this where known. Confirm status and booking terms with the issuer before paying. To compare tracks, review their topics and prerequisites, then plan weekly study around one exam. Adjust the plan when practice reveals gaps. Use questions as one part of learning, alongside skills you can demonstrate.
           </p>
           <p>
-            When a practice question conflicts with an exam guide or product documentation, pause and check the source material. Record the objective, product area, and release context alongside your notes so that later changes are easier to spot. This simple review habit helps separate what you understand from what you still need to verify, and it makes each study session more useful than repeating questions from memory.
+            If a practice question conflicts with an exam guide or product documentation, check the source. Note the objective, product area, and release so you can track later changes. This helps you distinguish what you know from what still needs verification.
           </p>
         </article>
       </section>
@@ -500,7 +482,7 @@ export default async function Home() {
             href="/certifications/administrator"
             className="inline-flex items-center px-8 py-4 bg-white text-salesforce-dark rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Start Free ADM-201 Practice Test
+            Start Free Platform Administrator (ADM-201) Practice Test
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

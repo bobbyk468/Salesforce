@@ -244,7 +244,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'mulesoft-integration-foundations': { questions: 40, passingScore: '70%', duration: '70 min' },
   'ux-designer': { questions: 60, passingScore: '65%', duration: '105 min' },
   'platform-foundations': { questions: 40, passingScore: '62%', duration: '70 min' },
-  'sales-foundations': { questions: 40, passingScore: '70%', duration: '105 min' },
+  'sales-foundations': { questions: 60, passingScore: '70%', duration: '105 min' },
   'administrator-practice-test': { questions: 60, passingScore: '68%', duration: '105 min' },
   'email-specialist-practice-test': { questions: 60, passingScore: 'Not published', duration: '105 min' },
   // $150 AP
@@ -830,8 +830,8 @@ function makePracticeExamTitle(label: string, code?: string, dualIntent = false)
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
-  // Include the current exam code in the Administrator search title.
-  if (slug === 'administrator') return 'Salesforce Certified Platform Administrator Exam Questions (Plat-Admn-201)'
+  // Include both the current and legacy exam codes in the Administrator search title.
+  if (slug === 'administrator') return 'Platform Administrator (Plat-Admn-201 / ADM-201) Study Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -1017,7 +1017,7 @@ function getCertFaqName(slug: string, certTitle: string): string {
 const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     {
-      question: 'What is the difference between Salesforce Certified Platform Administrator (Plat-Admn-201) and ADM-201?',
+      question: 'What is the difference between Plat-Admn-201 and ADM-201?',
       answer: 'Salesforce Certified Platform Administrator is the current credential name and Plat-Admn-201 is its current exam code; ADM-201 is the legacy exam code still used in older study materials. Check the current Salesforce exam guide when booking. The current outline includes Agentforce as an 8% exam section.',
     },
     {
@@ -1029,7 +1029,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'The Platform Administrator exam has 60 scored questions. You have 105 minutes and need 68% (about 41 correct answers) to pass. Salesforce may include up to 5 unscored questions.',
     },
     {
-      question: 'Are Salesforce Platform Administrator Dumps Safe to Use for Plat-Admn-201?',
+      question: 'Why does Salesforce prohibit braindumps for the Plat-Admn-201 exam?',
       answer: 'Exam dumps violate the Salesforce certification NDA and can result in your certification being revoked. More importantly, dumps are often outdated and don\'t help you learn the material. Original practice questions with detailed explanations are a safer and more effective way to prepare.',
     },
     {
@@ -1057,16 +1057,16 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Following the 15 December 2025 outline refresh the 8 sections are: (1) Configuration and Setup (15%), (2) Object Manager and Lightning App Builder (15%), (3) Sales and Marketing Applications (10%), (4) Service and Support Applications (10%), (5) Productivity and Collaboration (10%), (6) Data and Analytics Management (17%), (7) Automation (15%), and (8) Agentforce (8%). Data and Analytics Management is the heaviest single section, and the four sections at 15% or above are 62% of the exam.',
     },
     {
-      question: 'Why do most ADM-201 candidates fail questions about OWD vs profiles vs roles?',
-      answer: 'Org-wide defaults (OWD) set the baseline access floor for all records. Profiles control object and field permissions, meaning which objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from applying the right rule to the wrong layer: trying to restrict access with roles, which only ever open access upward, or forgetting that a profile grants object access while sharing decides which individual records are visible.',
+      question: 'How should I distinguish OWD, profiles, and roles on the ADM-201 exam?',
+      answer: 'Org-wide defaults (OWD) set the baseline for record access. Profiles and permission sets control object and field permissions, while roles can open record access through the hierarchy. When answering a scenario, identify whether it asks about object, field, or record access before choosing a setting.',
     },
     {
-      question: 'Why do most ADM-201 candidates fail questions about Flow vs Process Builder?',
-      answer: 'Salesforce has retired Process Builder and Workflow Rules in favour of record-triggered Flows. Exam scenarios now expect Flow when the question describes record-based automation, so candidates who still default to Process Builder lose those marks. Know the four Flow types, record-triggered, scheduled, screen, and auto-launched, and when each is appropriate.',
+      question: 'How does the ADM-201 exam test Flow vs. Process Builder?',
+      answer: 'Salesforce has retired Process Builder and Workflow Rules in favour of Flow for new automation. Review record-triggered, scheduled, screen, and auto-launched flows, and consider the requirement when choosing a flow type.',
     },
     {
-      question: 'Why do most ADM-201 candidates fail questions about reports vs dashboards?',
-      answer: 'Joined reports allow cross-object reporting across multiple report types in a single view, which candidates frequently forget exists. Dashboard filter limitations also trip people up: dashboard filters support field equality, not contains or starts-with. Remember too that the running user determines whose data a dashboard shows unless it is dynamic.',
+      question: 'How are reports and dashboards tested on the ADM-201 exam?',
+      answer: 'Reports organize and summarize records; dashboards display report data in components such as charts and metrics. A dashboard’s running user determines whose data it shows, unless it is dynamic. Joined reports combine blocks from multiple report types in one view.',
     },
     {
       question: 'What is sharing in Salesforce and how is it different from permissions?',

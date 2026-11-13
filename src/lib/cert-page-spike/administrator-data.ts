@@ -5,7 +5,7 @@ export const ADMINISTRATOR_SLUG = 'administrator' as const
 
 /** Administrator page description includes the current and legacy exam codes. */
 export const administratorMetadataDescription =
-  'Salesforce Certified Platform Administrator exam questions, study guide and weightage for Plat-Admn-201 / ADM-201.'
+  'Platform Administrator (Plat-Admn-201 / ADM-201): free practice questions, 2026 weightage incl. Agentforce (8%), cost, passing score, study guide.'
 
 /** ADM-201 section subtopics (compact for smaller HTML). */
 export const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
