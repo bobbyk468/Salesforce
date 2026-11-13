@@ -356,7 +356,7 @@ export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
   'mulesoft-developer-ii': 'https://help.salesforce.com/s/articleView?id=005298955&language=en_US&type=1',
   'omnistudio-developer': 'https://help.salesforce.com/s/articleView?id=005298971&language=en_US&type=1',
   'slack-developer': 'https://help.salesforce.com/s/articleView?id=005298987&type=1&language=en_US',
-  'sales-cloud': 'https://trailhead.salesforce.com/en/credentials/salescloudsonsultant',
+  'sales-cloud': 'https://help.salesforce.com/s/articleView?id=005298976&language=en_US&type=1',
   'service-cloud': 'https://help.salesforce.com/s/articleView?id=005298989&language=en_US&type=1',
   'data-360-consultant': 'https://help.salesforce.com/s/articleView?id=005298940&language=en_US&type=1',
   'education-cloud-consultant': 'https://help.salesforce.com/s/articleView?id=005298934&type=1&language=en_US',
@@ -834,6 +834,7 @@ function getCertMetaTitle(slug: string): string {
   if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Practice & Guide'
   if (slug === 'agentforce-specialist') return 'Salesforce Agentforce Specialist (AI-201) Practice & Guide'
   if (slug === 'platform-foundations') return 'Salesforce Platform Foundations (Plat-101) Practice & Guide'
+  if (slug === 'sales-cloud') return 'Agentforce Sales Consultant (Sales Cloud) Practice & Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -1152,15 +1153,15 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What experience do I need before taking the Sales Cloud Consultant exam?',
-      answer: 'Salesforce recommends having the Platform Administrator certification and hands-on experience implementing Sales Cloud solutions. You should be comfortable with lead management, opportunity management, forecasting, and territory management.',
+      answer: 'The Salesforce Administrator certification is a prerequisite, and Salesforce describes candidates as having a year or more of hands-on experience implementing sales solutions. You should be comfortable with lead management, opportunity management, forecasting, and territory management.',
     },
     {
       question: 'What is the Sales Cloud Consultant passing score and exam fee in Summer \'26?',
-      answer: 'The Sales Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions in the session.',
+      answer: 'The exam, now named Agentforce Sales Consultant, has 60 scored multiple-choice questions plus up to five unscored questions, 105 minutes, and a passing score of 73%. The exam fee is $200 USD (retake $100 USD), and the Salesforce Administrator certification is a prerequisite.',
     },
     {
       question: 'What are the highest-weight topics on the Sales Cloud Consultant exam?',
-      answer: 'The highest-weight sections are Industry Knowledge (15%), Implementation Strategies (15%), Sales Cloud Solution Design (20%), and Marketing and Leads (15%). Together these cover 65% of the exam. Focus on lead-to-opportunity conversion, territory management, forecasting, and campaign influence.',
+      answer: 'The official outline has five sections: Consulting and Implementation Strategies (25%), Practical Application of Agentforce Sales Expertise (24%), Sales Lifecycle (20%), Data Management (18%), and Predictive and Generative AI (13%). The first two together cover 49% of the exam.',
     },
     {
       question: 'How is Sales Cloud Consultant different from Platform Administrator?',

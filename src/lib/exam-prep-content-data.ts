@@ -71,13 +71,13 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'sales-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design is 25%. Practice translating business requirements into Salesforce features.',
+      'Consulting and Implementation Strategies is the largest section at 25%. Practise discovery, deployment, adoption, and change-management scenarios.',
       'Know Lead conversion, assignment rules, and lead lifecycle inside out.',
       'Opportunity management: stages, products, forecasting, territory management.',
       'Be ready for “what would you recommend?” scenario questions.',
     ],
     prerequisites: ['Salesforce Certified Administrator', 'Sales Cloud implementation experience'],
-    focusAreas: ['Solution Design', 'Sales Cloud Data Model', 'Lead and Opportunity Management', 'Analytics'],
+    focusAreas: ['Consulting and Implementation', 'Lead to Opportunity to Quote', 'Sales Lifecycle', 'Data Management', 'Predictive and Generative AI'],
     studyStrategy: 'Think like a consultant. Given a scenario, recommend the right features and configuration. Study the Sales Cloud Implementation Guide and practice with sample requirements.',
     whyItMatters: 'Sales Cloud Consultant is a top cert for implementation and consulting roles.',
   },

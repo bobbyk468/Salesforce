@@ -63,6 +63,9 @@ const BESPOKE_BANKS = {
   'platform-foundations': 'src/lib/cert-page-spike/platform-foundations-sample-questions.json',
 }
 
+/** Pages whose authored bank has been cleaned up; keep them checked even though an imported bank exists. */
+const ALWAYS_CHECK = ['sales-cloud']
+
 function auditPage(slug) {
   const data = readJson(BESPOKE_BANKS[slug] ? join(ROOT, BESPOKE_BANKS[slug]) : join(DATA_DIR, `${slug}.json`), null)
   const questions = Array.isArray(data) ? data : data?.sampleQuestions
@@ -134,7 +137,7 @@ const slugs = requested.length
       // An imported bank overrides the page, so its own questions never render.
       .filter((slug) => !(banks[slug]?.length > 0))
       // Bespoke pages always render their authored bank, so always check it.
-      .concat(Object.keys(BESPOKE_BANKS))
+      .concat(Object.keys(BESPOKE_BANKS), ALWAYS_CHECK)
 
 let failed = 0
 let checked = 0
