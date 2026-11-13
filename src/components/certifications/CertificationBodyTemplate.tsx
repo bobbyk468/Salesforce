@@ -38,6 +38,7 @@ import type {
 import { parseMarkdown, renderMarkdownSegments } from '@/lib/cert-page-spike/markdown-parser'
 import AdministratorCertBody from '@/components/certifications/AdministratorCertBody'
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
+import PlatformFoundationsCertBody from '@/components/certifications/PlatformFoundationsCertBody'
 import AgentforceArchitectureDiagram from '@/components/certifications/AgentforceArchitectureDiagram'
 import EinsteinTrustLayerDiagram from '@/components/certifications/EinsteinTrustLayerDiagram'
 import MCPIntegrationDiagram from '@/components/certifications/MCPIntegrationDiagram'
@@ -96,7 +97,6 @@ import PardotFormLifecycleDiagram from '@/components/certifications/PardotFormLi
 import DataToDashboardDiagram from '@/components/certifications/DataToDashboardDiagram'
 import ChartTypesReferenceDiagram from '@/components/certifications/ChartTypesReferenceDiagram'
 import TSMArchitectureDiagram from '@/components/certifications/TSMArchitectureDiagram'
-import WhatIsSalesforceDiagram from '@/components/certifications/WhatIsSalesforceDiagram'
 import SalesMethodologyDiagram from '@/components/certifications/SalesMethodologyDiagram'
 import JTBDFrameworkDiagram from '@/components/certifications/JTBDFrameworkDiagram'
 import SLDSHooksDiagram from '@/components/certifications/SLDSHooksDiagram'
@@ -424,7 +424,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'tableau-data-analyst' ? <DataToDashboardDiagram /> : null}
         {slug === 'tableau-desktop-foundations' ? <ChartTypesReferenceDiagram /> : null}
         {slug === 'tableau-server-administrator' ? <TSMArchitectureDiagram /> : null}
-        {slug === 'platform-foundations' ? <WhatIsSalesforceDiagram /> : null}
         {slug === 'sales-foundations' ? <SalesMethodologyDiagram /> : null}
         {slug === 'strategy-designer' ? <JTBDFrameworkDiagram /> : null}
         {slug === 'ux-designer' ? <SLDSHooksDiagram /> : null}
@@ -637,6 +636,8 @@ export default function CertificationBodyTemplate({ slug, body }: Props) {
       return <AdministratorCertBody slug={slug} />
     case 'pd1':
       return <Developer1CertBody slug={slug} />
+    case 'platform-foundations':
+      return <PlatformFoundationsCertBody slug={slug} />
     case 'app-builder':
       return <AppBuilderTemplate slug={slug} body={body} />
     case 'associate':

@@ -65,7 +65,6 @@ import orderManagementAdminApJson from './order-management-admin-ap.json'
 import orderManagementDeveloperApJson from './order-management-developer-ap.json'
 import pardotConsultantJson from './pardot-consultant.json'
 import pardotSpecialistJson from './pardot-specialist.json'
-import platformFoundationsJson from './platform-foundations.json'
 import processAutomationApJson from './process-automation-ap.json'
 import publicSectorSolutionsApJson from './public-sector-solutions-ap.json'
 import publicSectorSolutionsConsultantJson from './public-sector-solutions-consultant.json'
@@ -162,7 +161,6 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'order-management-developer-ap',
   'pardot-consultant',
   'pardot-specialist',
-  'platform-foundations',
   'process-automation-ap',
   'public-sector-solutions-ap',
   'public-sector-solutions-consultant',
@@ -259,7 +257,6 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'order-management-developer-ap': validateAssociateSpikeBody(orderManagementDeveloperApJson, 'order-management-developer-ap'),
   'pardot-consultant': validateAssociateSpikeBody(pardotConsultantJson, 'pardot-consultant'),
   'pardot-specialist': validateAssociateSpikeBody(pardotSpecialistJson, 'pardot-specialist'),
-  'platform-foundations': validateAssociateSpikeBody(platformFoundationsJson, 'platform-foundations'),
   'process-automation-ap': validateAssociateSpikeBody(processAutomationApJson, 'process-automation-ap'),
   'public-sector-solutions-ap': validateAssociateSpikeBody(publicSectorSolutionsApJson, 'public-sector-solutions-ap'),
   'public-sector-solutions-consultant': validateAssociateSpikeBody(publicSectorSolutionsConsultantJson, 'public-sector-solutions-consultant'),

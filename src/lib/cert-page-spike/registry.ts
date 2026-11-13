@@ -7,6 +7,7 @@ import {
   advancedAdministratorCertPageBody,
 } from './advanced-administrator-data'
 import { DEVELOPER_1_SLUG, developer1CertPageBody } from './developer-1-data'
+import { PLATFORM_FOUNDATIONS_SLUG, platformFoundationsCertPageBody } from './platform-foundations-data'
 import { LEGACY_CERT_SLUGS, type LegacyCertSlug } from './legacy-cert-slugs.generated'
 import {
   PROMOTED_ASSOCIATE_SLUGS,
@@ -24,6 +25,7 @@ export const SPIKED_CERT_SLUGS = [
   ADMINISTRATOR_SLUG,
   ADVANCED_ADMINISTRATOR_SLUG,
   DEVELOPER_1_SLUG,
+  PLATFORM_FOUNDATIONS_SLUG,
   ...(PROMOTED_ASSOCIATE_SLUGS as readonly string[]),
   ...LEGACY_CERT_SLUGS,
 ] as const
@@ -42,4 +44,5 @@ export const certSpikeBodyBySlug: Record<SpikedCertSlug, CertSpikeBodyData> = {
   'administrator': administratorCertPageBody,
   'advanced-administrator': advancedAdministratorCertPageBody,
   [DEVELOPER_1_SLUG]: developer1CertPageBody,
+  'platform-foundations': platformFoundationsCertPageBody,
 }

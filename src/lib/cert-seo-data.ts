@@ -1319,7 +1319,19 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What topics are covered in the Platform Foundations exam?',
-      answer: 'The exam covers Customer 360 Platform basics, navigation and data model (Account, Contact, Lead, Opportunity), and reports and dashboards. It\'s a broad overview rather than deep technical knowledge.',
+      answer: 'The exam covers the Salesforce Ecosystem (32%), Navigation (28%), the Data Model including standard objects like Account, Contact, Lead, and Opportunity (25%), and Reports & Dashboards (15%). It is a broad overview rather than deep technical knowledge.',
+    },
+    {
+      question: 'What is the Platform Foundations exam format?',
+      answer: 'The exam has 40 scored multiple-choice questions, plus up to 5 unscored questions that don’t count toward your result, with a 70-minute time limit and a 62% passing score. It costs $75 for the first attempt and can be taken online with a proctor or at a Pearson VUE testing centre.',
+    },
+    {
+      question: 'Should I take Platform Foundations or Administrator first?',
+      answer: 'If you are already committed to a Salesforce career and have time to study, many candidates go straight for the Platform Administrator certification, which carries more career value. Platform Foundations works best as a confidence-builder and entry point if you are still deciding whether Salesforce is the right path, or want a quick credential while studying for Administrator.',
+    },
+    {
+      question: 'What concepts do most Platform Foundations candidates get wrong?',
+      answer: 'The most commonly misunderstood topics are: (1) standard objects vs. custom objects, what you can and cannot modify; (2) profiles vs. permission sets, baseline access vs. extension; and (3) the App Launcher vs. the Navigation Bar vs. the Home Page, three separate customisation areas. Learn these distinctions early to avoid losing marks on questions you expect to get right.',
     },
   ],
   // Additional certifications

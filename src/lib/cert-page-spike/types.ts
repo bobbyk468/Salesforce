@@ -173,6 +173,11 @@ export type PdiSpikeBody = {
   template: 'pd1'
 }
 
+/** Platform Foundations: bespoke layout lives in `PlatformFoundationsCertBody`; registry entry is a marker only. */
+export type PlatformFoundationsSpikeBody = {
+  template: 'platform-foundations'
+}
+
 /** Optional escape hatch: body loaded dynamically from `cert-bodies/<slug>.tsx` when listed in `legacy-cert-slugs.generated.ts`. */
 export type LegacySpikeBody = {
   template: 'legacy'
@@ -183,4 +188,5 @@ export type CertSpikeBodyData =
   | AppBuilderSpikeBody
   | AdminSpikeBody
   | PdiSpikeBody
+  | PlatformFoundationsSpikeBody
   | LegacySpikeBody
