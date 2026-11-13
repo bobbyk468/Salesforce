@@ -2,7 +2,7 @@ import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
 
 export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   {
-    question: "An admin wants a component on a Lightning record page to appear only when the Opportunity record’s Stage is Closed Won. Which feature should they configure in Lightning App Builder?",
+    question: "An admin wants a component on a Lightning record page to show up only when the Opportunity's Stage is Closed Won. What should they configure in Lightning App Builder?",
     examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "Component visibility filters",
@@ -11,15 +11,15 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
       "Page activation"
     ],
     correctAnswer: 0,
-    explanation: "Configure component visibility filters on the component in Lightning App Builder. The filter criteria determine when the component appears on the Lightning page.",
+    explanation: "Component visibility filters, set right on the component in Lightning App Builder. The filter criteria decide when it shows up.",
     whyWrong: [
-      "Dynamic Forms controls how record fields and sections are arranged; it is not the component visibility setting asked for.",
-      "A record-triggered Flow automates actions when a record changes; it does not control whether a page component is displayed.",
-      "Page activation assigns a Lightning page to users or contexts; component visibility filters control when an individual component appears."
+      "Dynamic Forms is about arranging fields and sections, not about showing or hiding a component based on a condition.",
+      "A record-triggered Flow reacts to record changes, it doesn't control whether a page component is visible.",
+      "Page activation decides who sees the page at all. It's the visibility filter that decides when one component on it appears."
     ]
   },
   {
-    question: "What is the maximum number of master-detail relationships allowed on a custom object?",
+    question: "What's the max number of master-detail relationships a custom object can have?",
     examDomain: 'Object Manager and Lightning App Builder',
     options: [
       "1",
@@ -28,78 +28,78 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
       "Unlimited"
     ],
     correctAnswer: 1,
-    explanation: "A custom object can have up to two master-detail relationship fields.",
+    explanation: "Two. A custom object can carry up to two master-detail relationship fields.",
     whyWrong: [
-      "A single master-detail relationship is allowed, but the actual platform maximum is higher than 1.",
-      "3 exceeds the actual platform limit for master-detail relationships on a custom object.",
-      "The limit is not unlimited: Salesforce caps master-detail relationships specifically to preserve sharing and cascade-delete integrity."
+      "One is allowed, but the real cap is higher than that.",
+      "Three is over the actual limit.",
+      "It's not unlimited. Salesforce caps this to keep sharing and cascade-delete behavior sane."
     ]
   },
   {
-    question: "A flow should branch based on whether an opportunity is Closed Won, then take different actions for each outcome. Which flow element should be used?",
+    question: "A flow needs to branch depending on whether an opportunity is Closed Won, then do different things for each case. Which element handles that?",
     examDomain: 'Automation',
     options: ["Decision", "Assignment", "Loop", "Get Records"],
     correctAnswer: 0,
-    explanation: "A Decision element evaluates conditions and routes the flow along the matching outcome path.",
+    explanation: "A Decision element. It checks the condition and sends the flow down the matching path.",
     whyWrong: [
-      "Assignment sets variable values but does not route the flow among conditional paths.",
-      "Loop iterates through a collection and is not the conditional branching element.",
-      "Get Records retrieves records; it does not evaluate outcomes to branch the flow."
+      "Assignment just sets variable values, it doesn't route the flow between paths.",
+      "Loop walks through a collection, that's not how you branch on a condition.",
+      "Get Records just fetches data. It doesn't evaluate anything to decide a path."
     ]
   },
   {
-    question: "An administrator assigns a Sales Operations Permission Set Group to 15 users. Three of those users should have all permissions in the group except the Delete permission on the Opportunity object. How should the administrator configure this without affecting other groups that reuse the same underlying permission sets?",
+    question: "An admin assigns a Sales Operations Permission Set Group to 15 users. Three of them should keep every permission in the group except Delete on Opportunity. How should the admin set this up without touching other groups that reuse the same underlying permission sets?",
     examDomain: 'Configuration and Setup',
     options: [
-      "Create a Muting Permission Set within the Sales Operations Permission Set Group and mute the Delete permission on Opportunity",
-      "Clone the underlying permission sets, remove Delete on Opportunity, and assign them individually",
+      "Create a Muting Permission Set inside the Sales Operations Permission Set Group and mute Delete on Opportunity",
+      "Clone the underlying permission sets, strip out Delete on Opportunity, and assign those clones individually",
       "Change the Organization-Wide Default (OWD) for Opportunity to Public Read Only",
       "Remove the Delete permission from the users' baseline Profile"
     ],
     correctAnswer: 0,
-    explanation: "Muting Permission Sets work inside a Permission Set Group to revoke specific object, field, or system permissions for that group while keeping the underlying permission sets intact for other groups.",
+    explanation: "A Muting Permission Set, added inside that Permission Set Group. It strips out just the one permission for that group, and leaves the underlying permission sets untouched for everyone else reusing them.",
     whyWrong: [
-      "Cloning permission sets for minor exceptions creates administrative bloat and defeats the purpose of reusable Permission Set Groups.",
-      "Organization-Wide Defaults (OWD) control record-level visibility, not object-level CRUD permissions like Delete.",
-      "Permissions in Salesforce are additive across Profiles and Permission Sets; if the Permission Set Group grants Delete on Opportunity, removing it from the Profile will not revoke Delete access."
+      "Cloning permission sets for a small exception just creates duplicate maintenance work, which defeats the point of a reusable Permission Set Group.",
+      "OWD controls record visibility, not object-level permissions like Delete.",
+      "Permissions stack across Profile and Permission Sets. If the group already grants Delete, pulling it from the Profile won't take it away."
     ]
   },
   {
-    question: "A regional sales director is leaving the company immediately. The administrator must prevent the director from logging into Salesforce right away, but the director is the running user of several executive dashboards and the recipient of active workflow email alerts. What should the administrator do first?",
+    question: "A regional sales director is leaving right now. The admin needs to block their login immediately, but the director is the running user on several executive dashboards and gets active workflow email alerts. What should the admin do first?",
     examDomain: 'Configuration and Setup',
     options: [
-      "Freeze the user record, reassign the dashboards and automation references, and then deactivate the user",
+      "Freeze the user, reassign the dashboards and automation references, then deactivate",
       "Delete the user record from Setup",
-      "Deactivate the user record immediately and ignore the dependency warnings",
-      "Change the user's Role in the Role Hierarchy to an inactive branch"
+      "Deactivate the user right away and ignore the dependency warnings",
+      "Move the user's Role to an inactive branch of the hierarchy"
     ],
     correctAnswer: 0,
-    explanation: "Clicking Freeze on the user record immediately blocks the user from logging in without breaking active dashboard running-user configurations or workflow email alerts. Once dependencies and records are transferred, the admin can deactivate the user to release the license.",
+    explanation: "Freeze them first. That blocks login instantly without breaking the dashboards or email alerts that depend on them. Once those dependencies are reassigned, deactivate to free up the license.",
     whyWrong: [
-      "User records can never be deleted in Salesforce; they can only be frozen or deactivated.",
-      "Salesforce blocks immediate deactivation when a user is the sole recipient of workflow email alerts or tied to critical system automation, and deactivating a dashboard running user causes dashboards to fail.",
-      "Changing a user's Role affects record sharing visibility upward in the hierarchy but does not prevent the user from logging in."
+      "You can't delete a user record in Salesforce, full stop. Freeze or deactivate are the only options.",
+      "Salesforce won't let you deactivate someone who's the sole recipient of active workflow emails or tied to critical automation, and the dashboards would break too.",
+      "Moving a Role affects what gets shared up the hierarchy. It doesn't stop anyone from logging in."
     ]
   },
   {
-    question: "After refreshing a Full Sandbox, an administrator tests a record-triggered Flow that sends an email alert to external customer addresses, but no emails are received. The Flow interview logs show the email action executed without errors. What should the administrator check first?",
+    question: "After a Full Sandbox refresh, an admin tests a record-triggered Flow that's supposed to email external customers. The Flow logs show no errors, but no emails arrive. What should the admin check first?",
     examDomain: 'Productivity and Collaboration',
     options: [
-      "Setup → Deliverability → Access to Send Email (Access Level) is set to System email only",
-      "The Organization-Wide Default for Contact is set to Private",
-      "The administrator's user record is missing the Marketing User checkbox",
-      "Field History Tracking is disabled on the Email field"
+      "Setup → Deliverability → Access to Send Email is set to System email only",
+      "The Organization-Wide Default on Contact is Private",
+      "The admin's own user record is missing the Marketing User checkbox",
+      "Field History Tracking is off for the Email field"
     ],
     correctAnswer: 0,
-    explanation: "Whenever a sandbox is created or refreshed, Salesforce automatically sets Email Deliverability to System email only, allowing only password resets and system notifications, to prevent accidental emails to real customers. Changing it to All email enables outbound emails from Flows and alerts.",
+    explanation: "Check Email Deliverability first. Every sandbox refresh resets it to System email only, so only password resets and system notices go out, nothing to real customers. Flip it to All email to let Flow and alert emails through again.",
     whyWrong: [
-      "OWD settings govern record visibility and do not silently block Flow email actions that have already executed.",
-      "The Marketing User feature license checkbox controls Campaign creation and management, not sandbox email deliverability.",
-      "Field History Tracking logs changes to field values and has no effect on outbound email delivery."
+      "OWD is about record visibility. It won't silently swallow an email action that already ran clean.",
+      "Marketing User just controls Campaign creation. It has nothing to do with sandbox email settings.",
+      "Field History Tracking logs field changes. It can't block an outbound email."
     ]
   },
   {
-    question: "Account executives frequently host project kickoff meetings attended by up to 12 client stakeholders from the same Account. They want to log a single Event in Salesforce and relate it to all 12 Contact records so the meeting appears on every attendee's activity timeline. Which feature should the administrator enable?",
+    question: "Account execs keep hosting kickoff meetings with up to 12 client stakeholders from the same Account, and want one Event logged that shows up on every attendee's timeline. What should the admin turn on?",
     examDomain: 'Productivity and Collaboration',
     options: [
       "Shared Activities in Activity Settings",
@@ -108,45 +108,45 @@ export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
       "Opportunity Contact Roles"
     ],
     correctAnswer: 0,
-    explanation: "Enabling Allow Users to Relate Multiple Contacts to Tasks and Events (Shared Activities) in Activity Settings lets reps associate up to 50 Contacts with a single Event or Task.",
+    explanation: "Shared Activities. Turn on 'Allow Users to Relate Multiple Contacts to Tasks and Events' and reps can tie up to 50 Contacts to one Event or Task.",
     whyWrong: [
-      "Einstein Activity Capture syncs emails and calendar events between Google/Microsoft and Salesforce, but relating multiple Contact records to a native Salesforce Event requires Shared Activities.",
-      "Salesforce does not allow creating custom Master-Detail relationships or standard junction objects on the Event/Task activity objects.",
-      "Opportunity Contact Roles link Contacts to an Opportunity, not to individual Task or Event activity records."
+      "Einstein Activity Capture syncs email and calendar from Google or Microsoft. Relating multiple Contacts to a native Event still needs Shared Activities.",
+      "You can't build a custom master-detail or junction object on Event or Task, Salesforce doesn't allow that.",
+      "Opportunity Contact Roles link Contacts to an Opportunity, not to a Task or Event."
     ]
   },
   {
-    question: "The VP of Sales wants a weekly report of all active Accounts that currently have zero open or closed Opportunities, without requiring the administrator to create a new Custom Report Type. Which reporting feature should the administrator use?",
+    question: "The VP of Sales wants a weekly report of active Accounts with zero open or closed Opportunities, and doesn't want the admin to build a new Custom Report Type for it. What feature fits?",
     examDomain: 'Data and Analytics Management',
     options: [
       "A standard Accounts report with a Cross Filter set to Accounts without Opportunities",
       "A Bucket Field on the Opportunity Stage column",
-      "A Reporting Snapshot scheduled to run every Monday",
+      "A Reporting Snapshot that runs every Monday",
       "A Row-Level Formula on an Opportunities report"
     ],
     correctAnswer: 0,
-    explanation: "Cross Filters let you filter the primary object in a report (Accounts) by whether related records (Opportunities, Cases, Activities) exist or do not exist, with or without, plus optional subfilters, right inside a standard Accounts report.",
+    explanation: "A Cross Filter, right inside a standard Accounts report. It can filter by whether related Opportunities (or Cases, or Activities) exist or don't, with sub-filters on top, no custom report type needed.",
     whyWrong: [
-      "Bucket Fields group existing report values into categories; an Opportunities report only includes Accounts that already have Opportunities.",
-      "Reporting Snapshots save tabular or summary report results into a custom object over time for historical trend analysis; they do not filter for parent records lacking child records.",
-      "A Row-Level Formula evaluates fields on existing rows in a report and cannot surface Accounts that are absent from an Opportunities report."
+      "Bucket Fields just group values that are already in the report. An Opportunities report only ever shows Accounts that already have Opportunities.",
+      "A Reporting Snapshot saves report results into a custom object over time, it's for trend tracking, not for finding parents missing a child record.",
+      "A Row-Level Formula works on rows that are already in the report. It can't surface Accounts that are missing from an Opportunities report in the first place."
     ]
   },
   {
-    question: "An administrator updates the instructions for a customer-facing Agentforce Service Agent and adds a new Flow action that queries a custom Warranty_Status__c field on the Asset object. When testing in Agentforce Builder, the agent selects the action correctly, but returns an error stating it cannot read the warranty status. What should the administrator check and use to validate the fix before activating the agent?",
+    question: "An admin updates a customer-facing Agentforce Service Agent and adds a Flow action that reads a custom Warranty_Status__c field on Asset. In testing, the agent picks the right action but says it can't read the warranty status. What should the admin fix, and how should they confirm it before going live?",
     examDomain: 'Agentforce',
     options: [
-      "Grant Read access on Asset and the Warranty_Status__c field to the Agent User's Permission Set, then test using Conversation Preview in Agentforce Builder",
-      "Set the Asset Organization-Wide Default to Public Read/Write and edit the tone in Prompt Builder",
-      "Disable the Einstein Trust Layer so the agent can read custom fields without masking",
-      "Convert the Flow action into a legacy Workflow Rule"
+      "Grant Read on Asset and Warranty_Status__c to the Agent User's Permission Set, then verify with Conversation Preview in Agentforce Builder",
+      "Set Asset's Organization-Wide Default to Public Read/Write and tweak the tone in Prompt Builder",
+      "Turn off the Einstein Trust Layer so the agent can read custom fields without masking",
+      "Rebuild the Flow action as a legacy Workflow Rule"
     ],
     correctAnswer: 0,
-    explanation: "Customer-facing Service Agents run under a dedicated Agent User following least-privilege security. If the Agent User lacks object permissions or field-level security on Warranty_Status__c, the action fails. After updating the Agent User's Permission Set, the admin validates the reasoning and output in Conversation Preview inside Agentforce Builder before activating.",
+    explanation: "Customer-facing Service Agents run as a dedicated Agent User, kept on a tight leash by design. No object or field access on Warranty_Status__c for that user means the action fails. Grant the access, then confirm it actually works with Conversation Preview before activating.",
     whyWrong: [
-      "OWD controls record sharing, not field-level security, and Prompt Builder manages prompt templates rather than field permissions.",
-      "The Einstein Trust Layer protects sensitive data sent to LLMs via data masking and zero retention; it does not block an internal Flow action from reading a custom field, and disabling security controls violates Salesforce best practices.",
-      "Workflow Rules are retired (end of support December 31, 2025) and cannot be invoked as conversational Agentforce actions."
+      "OWD is about record sharing, not field-level security, and Prompt Builder just manages prompt wording, not permissions.",
+      "The Trust Layer masks sensitive data going to the LLM and doesn't retain it. It's not what's blocking an internal Flow from reading a field, and turning off a security control isn't the fix anyway.",
+      "Workflow Rules were retired at the end of 2025. They can't be wired up as an Agentforce action at all."
     ]
   },
 ]

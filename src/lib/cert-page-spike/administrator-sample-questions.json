@@ -1,6 +1,6 @@
 [
   {
-    "question": "A sales manager wants to find out which sales reps logged the most calls this month. Which report type should they use?",
+    "question": "A sales manager wants to know which reps logged the most calls this month. Which report type should they use?",
     "options": [
       "Tasks and Events",
       "Activities with Accounts",
@@ -8,10 +8,10 @@
       "Activity History"
     ],
     "correctAnswer": 0,
-    "explanation": "The Tasks and Events report type shows calls, meetings, and tasks for users across the organization.",
+    "explanation": "Use Tasks and Events. It pulls calls, meetings, and tasks for everyone in the org, so the manager can see call counts by rep.",
     "whyWrong": [
-      "Activities with Accounts and Accounts with Activities focus on account-related activity, rather than calls and tasks across sales reps.",
-      "Activity History is a record page list, not a report type for building this report."
+      "Activities with Accounts and Accounts with Activities are about account-level activity, not calls per rep.",
+      "Activity History is just a list on a record page. It isn't a report type you can build this report from."
     ],
     "examDomain": "Data and Analytics Management"
   },
@@ -24,14 +24,14 @@
       "15 fields"
     ],
     "correctAnswer": 1,
-    "explanation": "Field history tracking supports up to 20 fields on each standard or custom object.",
+    "explanation": "20. That's the cap, on every standard or custom object.",
     "whyWrong": [
-      "The limit is 20 fields per object, so 10, 15, and 25 are incorrect."
+      "20 is the real number, so 10, 15, and 25 are all wrong."
     ],
     "examDomain": "Data and Analytics Management"
   },
   {
-    "question": "Which separate system permission is designed for transferring multiple records in bulk?",
+    "question": "Which separate system permission is built for transferring multiple records in bulk?",
     "options": [
       "View All",
       "Transfer Records",
@@ -39,16 +39,16 @@
       "Edit"
     ],
     "correctAnswer": 1,
-    "explanation": "Transfer Records lets a user transfer records they do not own to other users.",
+    "explanation": "Transfer Records. It lets a user hand off records they don't own to someone else.",
     "whyWrong": [
-      "View All gives read access to records; it does not grant permission to transfer them.",
-      "Modify All grants broad access and can also allow ownership changes, but Transfer Records is the separate permission designed for bulk transfers.",
-      "Edit lets a user change records they can access; it does not grant ownership-transfer rights for records they do not own."
+      "View All just grants read access, it doesn't let anyone move ownership.",
+      "Modify All is broad and can touch ownership too, but Transfer Records is the dedicated permission built for bulk transfers.",
+      "Edit lets you change records you can already reach. It doesn't give you rights over records you don't own."
     ],
     "examDomain": "Configuration and Setup"
   },
   {
-    "question": "A company wants an AI agent to answer common customer questions using approved company information and hand off complex cases to a person. Which Salesforce capability should the administrator configure?",
+    "question": "A company wants an AI agent to answer common customer questions from approved company info, and hand off anything complicated to a person. What should the administrator configure?",
     "options": [
       "Agentforce with an appropriate topic and actions",
       "A scheduled Flow that runs once each day",
@@ -57,11 +57,11 @@
     ],
     "correctAnswer": 0,
     "examDomain": "Agentforce",
-    "explanation": "Agentforce can be configured with topics and actions for customer interactions, with appropriate controls and handoff for requests the agent cannot resolve.",
+    "explanation": "Agentforce, set up with the right topic and actions. Give it proper guardrails and a handoff path for anything it can't safely answer.",
     "whyWrong": [
-      "A scheduled Flow runs at a defined time and is not a conversational agent for handling customer questions.",
-      "A dashboard presents report data; it does not respond to customer requests.",
-      "A validation rule checks data on save and cannot answer questions or route conversations."
+      "A scheduled Flow just runs at a set time. It can't hold a conversation with a customer.",
+      "A dashboard shows report data. It doesn't respond to anyone.",
+      "A validation rule only checks data on save, it can't answer questions or route a conversation."
     ]
   },
   {
@@ -73,11 +73,11 @@
       "Before Save"
     ],
     "correctAnswer": 3,
-    "explanation": "A Before Save flow runs before Salesforce saves the record, so it can update field values or validate them.",
+    "explanation": "Before Save. It runs before the record hits the database, so it can update or check fields on the way in.",
     "whyWrong": [
-      "A Platform Event flow starts from an event message; it is not a before-save timing option for a record-triggered flow.",
-      "An After Save flow runs after the record is saved, so it cannot change fields before that save.",
-      "An After Delete flow runs after a record is deleted; it does not run before a record is saved."
+      "A Platform Event flow kicks off from an event message, that's a different trigger entirely, not a before-save timing option.",
+      "After Save runs once the record is already saved, too late to change fields before that save.",
+      "After Delete fires once a record is gone. It has nothing to do with saving a record."
     ],
     "examDomain": "Automation"
   },
@@ -90,11 +90,11 @@
       "Profiles only"
     ],
     "correctAnswer": 2,
-    "explanation": "Lightning App Builder lets admins customize a Home page by adding and arranging components.",
+    "explanation": "Lightning App Builder. Use it to add and arrange components on a Home page.",
     "whyWrong": [
-      "Validation Rules check data entered in records; they do not change Home page components.",
-      "Record types control available picklist values and page layouts for records; they do not customize the Home page.",
-      "Profiles control access and settings. Lightning App Builder is used to arrange Home page components."
+      "Validation rules check what gets entered into a record, they have nothing to do with Home page layout.",
+      "Record types control which picklist values and layouts a record gets. They don't touch the Home page.",
+      "Profiles control access and settings, not what shows up on Home. That's Lightning App Builder's job."
     ],
     "examDomain": "Object Manager and Lightning App Builder"
   },
@@ -107,11 +107,11 @@
       "Campaigns that influenced opportunities and closed revenue"
     ],
     "correctAnswer": 3,
-    "explanation": "Campaign Influence reports show how marketing campaigns contributed to opportunities and closed revenue.",
+    "explanation": "It shows which campaigns actually influenced opportunities, and how much of that closed revenue they can take credit for.",
     "whyWrong": [
-      "Email open rates are a separate marketing metric; they are not what Campaign Influence reports show in Sales Cloud.",
-      "Campaign Influence connects campaigns to opportunities and revenue; it is not limited to campaign spending.",
-      "Lead source counts do not show how campaigns influenced opportunity outcomes."
+      "Email open rates are a separate marketing metric, not what Campaign Influence reports on in Sales Cloud.",
+      "Campaign Influence ties campaigns to revenue, it isn't limited to spend.",
+      "Lead source counts won't tell you which campaigns moved opportunities forward."
     ],
     "examDomain": "Sales and Marketing Applications"
   },
@@ -124,11 +124,11 @@
       "Manual assignment only"
     ],
     "correctAnswer": 2,
-    "explanation": "Case assignment rules can use field-based rule criteria or formula criteria.",
+    "explanation": "Both. You can build criteria from fields or from formulas.",
     "whyWrong": [
-      "Assignment rules can use formulas as well as field-based rule criteria.",
-      "Assignment rules can use field-based criteria as well as formulas.",
-      "Manual assignment is not a criteria type; it may be used when no rule assigns the case."
+      "Assignment rules support formulas too, not just field-based criteria.",
+      "They support field-based criteria too, not just formulas.",
+      "Manual assignment isn't a criteria type at all, it's just what happens when no rule catches the case."
     ],
     "examDomain": "Service and Support Applications"
   },
@@ -141,11 +141,11 @@
       "Delete cases automatically"
     ],
     "correctAnswer": 2,
-    "explanation": "A queue can own cases and give its members a shared list of work. Assignment rules or other routing tools can direct cases to the queue.",
+    "explanation": "So a team has one shared pool of work to pull from. Assignment rules or other routing can feed cases into that queue.",
     "whyWrong": [
-      "Queues are for routing and sharing work, not for creating reports.",
-      "Queues may send notifications, but their main purpose is to let a team work from a shared list of records.",
-      "Queues route and organize work; they do not delete cases."
+      "Queues route and share work. Reporting is a separate feature.",
+      "A queue might send a notification, but its real job is giving a team a shared list to work.",
+      "Queues organize work, they don't delete anything."
     ],
     "examDomain": "Service and Support Applications"
   },
@@ -158,16 +158,16 @@
       "Product and Price Book"
     ],
     "correctAnswer": 3,
-    "explanation": "Products define what a company sells, while price books and their entries define the prices available for opportunities.",
+    "explanation": "Products define what the company sells. Price books and their entries set the prices you can actually use on an opportunity.",
     "whyWrong": [
-      "Leads are part of the sales process, but they do not provide product and price book functionality on opportunities.",
-      "Campaigns track marketing activity; they are not needed to use products and price books with opportunities.",
-      "Opportunities are used in this process, but Products and Price Books provide the product data associated with them."
+      "Leads matter earlier in the sales process, but they don't carry product or price book data.",
+      "Campaigns track marketing activity. You don't need one to add products and pricing to an opportunity.",
+      "Opportunities are where products and price books get used, but they aren't the source of the product data itself."
     ],
     "examDomain": "Sales and Marketing Applications"
   },
   {
-    "question": "Which report format groups data by both rows and columns and shows subtotals where they meet?",
+    "question": "Which report format groups data by both rows and columns, with subtotals where they meet?",
     "options": [
       "Matrix",
       "Tabular",
@@ -175,11 +175,11 @@
       "Summary"
     ],
     "correctAnswer": 0,
-    "explanation": "Matrix reports group by rows and columns and show subtotals at their intersections.",
+    "explanation": "Matrix. It groups by rows and columns and totals up where they cross.",
     "whyWrong": [
-      "Tabular reports are flat lists and do not show grouped subtotals.",
-      "Joined reports place multiple report types side by side; they do not create the row-and-column subtotal grid of a Matrix report.",
-      "Summary reports group rows and show subtotals for row groups, not at row-and-column intersections."
+      "Tabular is just a flat list, no grouped subtotals at all.",
+      "Joined puts multiple report types side by side, it doesn't build the row-and-column grid a Matrix report does.",
+      "Summary groups rows and subtotals them, but not at row-and-column intersections like Matrix does."
     ],
     "examDomain": "Data and Analytics Management"
   }
