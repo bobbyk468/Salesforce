@@ -40,23 +40,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Can I get a Salesforce certification for free?',
-    answer: 'Yes, in certain circumstances. Salesforce has historically offered free exam vouchers at annual events like Dreamforce (September) and World Tour events globally. These typically cover associate-level certifications ($75 standard fee): Platform Foundations or MuleSoft Integration Foundations (AI Associate retired in February 2026). Additionally, employees of Salesforce consulting partners often receive fully subsidised exam fees as a company benefit.',
+    answer: 'Sometimes. Salesforce has offered free exam vouchers at events such as Dreamforce and World Tour. These offers have included associate-level exams that normally cost $75, such as Platform Foundations and MuleSoft Integration Foundations. AI Associate retired in February 2026. Employees of Salesforce consulting partners may also receive exam fee support from their employer.',
   },
   {
     question: 'Does Salesforce offer free certifications through Trailhead?',
-    answer: 'Trailhead is free to use for learning, all Trailhead modules, trails, superbadges, and content are free. However, Trailhead learning and superbadges are not Salesforce certifications. Certifications require a separate paid exam through Webassessor. Salesforce has run periodic promotions where completing a Trailhead trail unlocks a free exam voucher, but these are time-limited campaigns, not permanent free access.',
+    answer: 'Yes. Trailhead modules, trails, superbadges, and other learning content are free. They are not Salesforce certifications, which require a separate proctored exam booked through Trailhead Academy. Salesforce sometimes runs limited-time promotions that award an exam voucher for completing a Trailhead trail.',
   },
   {
     question: 'What is the cheapest Salesforce certification?',
-    answer: 'The three associate-level certifications cost $75 each, the lowest standard fee in the Salesforce portfolio: Salesforce Platform Foundations and MuleSoft Integration Foundations. These are also the easiest certifications, making them the lowest-risk entry point for beginners. Of these, Platform Foundations is the most widely recognised and the most recommended first certification.',
+    answer: 'The associate-level exams cost $75 each, the lowest standard fee in the Salesforce portfolio. Current options include Platform Foundations and MuleSoft Integration Foundations; AI Associate retired in February 2026. These exams offer a lower-cost entry point for beginners. Platform Foundations is a common first certification.',
   },
   {
     question: 'Can my employer pay for my Salesforce certification?',
-    answer: 'Many employers cover Salesforce certification exam fees, especially Salesforce consulting partners, where certification counts directly affect the company\'s Salesforce partner tier. For Salesforce partners, each employee certification counts toward partnership requirements, giving companies a direct financial incentive to fund employee certifications. Even non-partner employers often reimburse certifications through L&D budgets. Ask your manager or HR team before paying out of pocket.',
+    answer: 'Some employers cover Salesforce exam fees, especially consulting partners whose partner tier depends on employee certifications. Other employers may reimburse exam fees through a learning and development budget. Ask your manager or HR team before paying yourself.',
   },
   {
     question: 'Are Trailhead Superbadges the same as certifications?',
-    answer: 'No: Trailhead Superbadges and certifications are different credentials. Superbadges are awarded for completing complex, real-world challenges on Trailhead and appear on your Trailhead profile. They demonstrate hands-on skills but are not formal certifications. Certifications are awarded after passing a proctored exam through Webassessor/Kryterion and appear on a separate verified credential page that employers can check publicly. Both are valuable, but certifications carry more weight in job applications.',
+    answer: 'No. A Trailhead Superbadge and a Salesforce certification are different credentials. Superbadges are awarded for completing hands-on challenges and appear on your Trailhead profile, but they are not formal certifications. You earn a certification by passing a proctored exam booked through Trailhead Academy and delivered via Pearson VUE. Employers can check it on a separate public credential page. Both can be useful, though certifications may carry more weight in job applications.',
   },
 ]
 
@@ -76,13 +76,13 @@ export default function SalesforceFreeCertificationPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Legitimate ways to get your Salesforce certification at no cost, plus the lowest-cost entry points if a fully free exam is not available right now.
+          Find ways to earn a Salesforce certification for free, plus lower-cost options when no free exam voucher is available.
         </p>
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-amber-900 mb-1">Honest expectation</h2>
-        <p className="text-sm text-amber-800">Fully free Salesforce certification exams are not permanently available, they appear through time-limited event promotions. If a free voucher is not currently available, the $75 associate-level exams are the lowest-cost option. This page covers all routes to zero or reduced exam cost.</p>
+        <p className="text-sm text-amber-800">Free certification exams are offered through limited-time promotions, not year-round. When no free voucher is available, the $75 associate-level exams are the lowest-cost option. This guide covers free and discounted routes.</p>
       </div>
 
       <div className="space-y-6 mb-10">
@@ -91,25 +91,25 @@ export default function SalesforceFreeCertificationPage() {
             title: 'Route 1: Salesforce Events (Most Reliable Free Opportunity)',
             badge: 'Free, periodic',
             badgeColor: 'bg-green-100 text-green-800',
-            content: 'Salesforce\'s major annual events have historically included free associate-level exam vouchers for attendees. Dreamforce (San Francisco, September) is the primary opportunity: Salesforce often offers free Platform Foundations exams to registered attendees as part of the Trailblazer experience. World Tour events globally have also offered similar promotions for local attendees. These promotions are announced 4–8 weeks before each event on the Salesforce blog and Trailhead social channels. Follow @Trailhead and @Salesforce to catch announcements.',
+            content: 'Salesforce has offered free associate-level exam vouchers at major events. Dreamforce in San Francisco, held in September, is one opportunity; the company has offered Platform Foundations exams to registered attendees. World Tour events have also run offers for attendees. Announcements may appear 4–8 weeks before an event on the Salesforce blog and Trailhead social channels. Follow @Trailhead and @Salesforce for updates.',
           },
           {
             title: 'Route 2: Employer Sponsorship (Most Common Free Route)',
             badge: 'Free, if eligible',
             badgeColor: 'bg-green-100 text-green-800',
-            content: 'For professionals working at or joining a Salesforce consulting partner or ISV, employer-funded certification is the most common route to a free exam. Salesforce partners have a direct financial incentive to fund employee certifications, each certification counts toward partner tier requirements. Large SIs (Accenture, Deloitte, Capgemini, Wipro) and boutique Salesforce partners typically have L&D budgets specifically for Salesforce certifications. Ask your manager or HR team before paying out of pocket, many candidates do not realise their employer will cover the cost.',
+            content: 'If you work for or are joining a Salesforce consulting partner or ISV, your employer may pay for your exam. Partner companies have a financial reason to support employee certifications because they count toward partner tier requirements. Large system integrators such as Accenture, Deloitte, Capgemini, and Wipro, as well as smaller Salesforce partners, may have learning budgets for exams. Ask your manager or HR team before paying yourself.',
           },
           {
             title: 'Route 3: Trailhead Promotional Campaigns (Periodic)',
             badge: 'Free, time-limited',
             badgeColor: 'bg-blue-100 text-blue-800',
-            content: 'Salesforce has run campaigns where completing a specific Trailhead trail or superbadge challenge unlocks a free exam voucher code. These campaigns are not permanent, they run for 30–90 days and are tied to specific Salesforce product launches or milestones. To catch these: set up Google Alerts for "Salesforce free certification" and "Trailhead exam voucher"; follow Salesforce Trailhead, Salesforce Admins, and Salesforce Developers social accounts; and join Salesforce Trailblazer Community groups where members share promotion news quickly.',
+            content: 'Salesforce has run campaigns that award a free exam voucher after you complete a specific Trailhead trail or Superbadge challenge. These offers are temporary, often running for 30–90 days around a product launch or milestone. To find them, set Google Alerts for "Salesforce free certification" and "Trailhead exam voucher," follow Salesforce Trailhead, Salesforce Admins, and Salesforce Developers, and join Trailblazer Community groups.',
           },
           {
             title: 'Route 4: $75 Associate Certifications (Lowest Cost Entry)',
             badge: 'Lowest paid cost',
             badgeColor: 'bg-purple-100 text-purple-800',
-            content: 'If a free exam is not currently available, the three associate-level certifications are the lowest-cost entry into the Salesforce ecosystem at $75 each: Salesforce AI Associate (most widely recommended, no experience required), Salesforce Platform Foundations (broad Salesforce overview), and MuleSoft Integration Foundations (API and integration concepts). Of these, Platform Foundations is the most marketable first certification for professionals new to Salesforce. At $75, the ROI is extremely high, passing opens doors to Salesforce-related roles and demonstrates initiative.',
+            content: 'When no free exam is available, associate-level exams cost $75 each. Options listed here include AI Associate, Platform Foundations, and MuleSoft Integration Foundations. AI Associate retired in February 2026 and can no longer be booked. Platform Foundations gives beginners a broad Salesforce overview, while MuleSoft Integration Foundations covers APIs and integration concepts. A $75 exam can be a low-cost way to start learning Salesforce.',
           },
         ].map((section) => (
           <div key={section.title} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
@@ -169,7 +169,7 @@ export default function SalesforceFreeCertificationPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with Platform Foundations: $75</h2>
-        <p className="text-white mb-6">The most accessible entry point: no experience required, lowest fee, free practice questions available now.</p>
+        <p className="text-white mb-6">Start with a lower-cost exam that does not require prior Salesforce experience. Free practice questions are available.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/ai-associate#practice-questions" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             AI Associate Practice Questions

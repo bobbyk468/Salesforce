@@ -25,7 +25,7 @@ export default function IndiaGstNote({ note }: Props) {
   return (
     <p className="mt-2 text-xs text-gray-500 flex items-start gap-1.5">
       <span className="shrink-0">🇮🇳</span>
-      <span>{note}. Final amount confirmed at Webassessor checkout.</span>
+      <span>{note}. Final amount confirmed at checkout on Trailhead Academy.</span>
     </p>
   )
 }

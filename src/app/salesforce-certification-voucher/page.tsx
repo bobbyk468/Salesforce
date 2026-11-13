@@ -7,7 +7,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Cert Voucher & Discount Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce cert discounts and vouchers: Dreamforce, Trailhead, partner discounts, 50% retake vouchers Free practice questions.`
+const pageDescription = `Find Salesforce certification discounts and vouchers through events, Trailhead promotions, partner benefits, and exam retakes.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -39,23 +39,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Are there legitimate Salesforce certification discounts?',
-    answer: 'Yes: Salesforce offers several legitimate discount and voucher opportunities. The most reliable are: (1) Salesforce events like Dreamforce, World Tour, and TrailblazerDX, which often include free or discounted exam vouchers with conference registration; (2) Salesforce partner employee benefits, employees of Salesforce consulting partners typically receive subsidised exam fees; (3) the Trailhead Academy, which sometimes offers promotional pricing on certification bundles; and (4) the 50% off retake voucher available after a failed first attempt.',
+    answer: 'Yes. Salesforce offers several legitimate discounts and vouchers. These may come through events such as Dreamforce, World Tour, and TrailblazerDX; employee benefits at Salesforce partners; Trailhead Academy promotions; or the discounted retake available after a failed attempt. Offers and eligibility vary.',
   },
   {
     question: 'Does Salesforce offer a 50% retake discount?',
-    answer: 'Yes, if you fail a Salesforce certification exam, Salesforce provides a discounted retake at approximately 50% of the original fee. For a $200 exam, the retake is approximately $100. For a $400 architect exam, the retake is approximately $200. The retake discount is automatically available in your Webassessor account after a failed attempt. There is no time limit on using the retake voucher.',
+    answer: 'Yes. After a failed exam, Salesforce offers a discounted retake at about 50% of the original fee. For example, a $200 exam retake costs about $100, and a $400 architect exam retake costs about $200. The discount appears in your Trailhead Academy account after a failed attempt. It has no time limit.',
   },
   {
     question: 'Can I get a free Salesforce certification at Dreamforce?',
-    answer: 'Salesforce has historically offered free or heavily discounted associate-level certification opportunities at Dreamforce. These typically include Platform Foundations or MuleSoft Integration Foundations (AI Associate retired in February 2026 and is no longer bookable)ions exams, all $75 standard fee. Availability varies by year and is announced close to the event. Dreamforce registration (which itself has fees for in-person attendance) is typically required. Check the official Salesforce Trailhead blog as Dreamforce approaches for current offers.',
+    answer: 'Salesforce has offered free or discounted associate-level exams at Dreamforce in the past. Offers have included Platform Foundations and MuleSoft Integration Foundations. AI Associate retired in February 2026 and can no longer be booked. Availability changes each year and is announced closer to the event. In-person attendance may require paid Dreamforce registration. Check the Salesforce Trailhead blog for current offers.',
   },
   {
     question: 'Do Salesforce partner employees get exam discounts?',
-    answer: 'Yes, employees of registered Salesforce consulting partners (ISV, SI, reseller partners) often receive Salesforce certification exam subsidies as a partner benefit. The exact benefit varies by partner tier and agreement. Some large Salesforce partners cover 100% of exam fees for employees pursuing relevant certifications. Check your employer\'s HR or L&D team, and your Salesforce partner agreement details.',
+    answer: 'Employees of registered Salesforce partners, including ISVs, system integrators, and resellers, may receive exam subsidies. Benefits depend on the partner tier and agreement. Some large partners cover the full exam fee for relevant certifications. Ask your HR or learning team about your employer\'s policy.',
   },
   {
     question: 'Are there Trailhead vouchers for free certifications?',
-    answer: 'Salesforce has run Trailhead promotional campaigns that include exam vouchers, typically tied to completing specific Trailhead trails or superbadge challenges. These are not permanent offers; they are time-limited promotions. Follow @Trailhead on social media and check the Salesforce Trailhead blog regularly for announcements. When Salesforce runs these promotions, they typically last 30–90 days.',
+    answer: 'Salesforce has run limited-time Trailhead promotions that award exam vouchers for completing specific trails or superbadges. These offers are temporary. Follow @Trailhead and check the Salesforce Trailhead blog for announcements. Past promotions have typically lasted 30–90 days.',
   },
 ]
 
@@ -75,7 +75,7 @@ export default function SalesforceCertificationVoucherPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Legitimate ways to reduce your Salesforce certification exam costs, from event vouchers and partner benefits to retake discounts and Trailhead promotions.
+          Find ways to lower Salesforce exam costs through event offers, partner benefits, Trailhead promotions, and retake discounts.
         </p>
       </div>
 
@@ -101,9 +101,9 @@ export default function SalesforceCertificationVoucherPage() {
             titleColor: 'text-green-900',
             bodyColor: 'text-green-800',
             content: [
-              { label: 'Dreamforce (San Francisco, September)', detail: 'Salesforce\'s flagship annual conference. Historically includes free associate-level exam vouchers (Platform Foundations; AI Associate before it retired) for registered attendees. In-person attendance is required for exam voucher access.' },
-              { label: 'World Tour Events (Global, throughout year)', detail: 'Salesforce World Tour events in major cities (London, Sydney, New York, etc.) sometimes include discounted or free exam opportunities for attendees. Check the specific event agenda as announced.' },
-              { label: 'TrailblazerDX (San Francisco, March)', detail: 'Developer-focused Salesforce conference. Has offered certification promotions for developer-track certifications (PD1, PD2, JavaScript Developer I) to registered attendees.' },
+              { label: 'Dreamforce (San Francisco, September)', detail: 'Salesforce\'s main annual conference has offered free associate-level exam vouchers to registered attendees, including Platform Foundations. AI Associate was also offered before it retired. In-person attendance has been required for voucher access.' },
+              { label: 'World Tour Events (Global, throughout year)', detail: 'Salesforce World Tour events in cities such as London, Sydney, and New York sometimes offer free or discounted exams. Check each event\'s agenda for current details.' },
+              { label: 'TrailblazerDX (San Francisco, March)', detail: 'This developer-focused conference has offered certification promotions for developer exams such as PD1, PD2, and JavaScript Developer I.' },
             ],
           },
           {
@@ -112,9 +112,9 @@ export default function SalesforceCertificationVoucherPage() {
             titleColor: 'text-blue-900',
             bodyColor: 'text-blue-800',
             content: [
-              { label: 'How it works', detail: 'After failing a Salesforce certification exam, a discounted retake voucher appears automatically in your Webassessor account. The discount is approximately 50% of the original exam fee.' },
-              { label: 'Cost examples', detail: '$200 exam → ~$100 retake. $400 architect exam → ~$200 retake. $75 associate exam → ~$38 retake.' },
-              { label: 'No expiry pressure', detail: 'Retake vouchers do not have a short expiry; you can use them when you are ready. Salesforce does not enforce a waiting period between attempts, so you can reschedule as soon as you feel prepared.' },
+              { label: 'How it works', detail: 'After you fail a Salesforce certification exam, a discounted retake voucher appears in your Trailhead Academy account. The discount is about 50% of the original fee.' },
+              { label: 'Cost examples', detail: 'A $200 exam retake costs about $100. A $400 architect exam retake costs about $200. A $75 associate exam retake costs about $38.' },
+              { label: 'No expiry pressure', detail: 'Retake vouchers do not have a short expiry, so you can use one when you are ready. Check current scheduling rules before booking another attempt.' },
             ],
           },
           {
@@ -123,9 +123,9 @@ export default function SalesforceCertificationVoucherPage() {
             titleColor: 'text-purple-900',
             bodyColor: 'text-purple-800',
             content: [
-              { label: 'Consulting partner (SI) employees', detail: 'Many large Salesforce System Integrator partners (Accenture, Deloitte, Cognizant, Slalom, etc.) cover 100% of certification exam fees for employees. Check your employer\'s Learning & Development policy or HR portal.' },
-              { label: 'ISV partner employees', detail: 'Independent Software Vendors (ISVs) building on the Salesforce platform often subsidise relevant certifications (Platform Developer I, App Builder) for their developers.' },
-              { label: 'Salesforce itself', detail: 'Salesforce employees receive free access to all certification exams as an employee benefit.' },
+              { label: 'Consulting partner (SI) employees', detail: 'Some large Salesforce system integrators, such as Accenture, Deloitte, Cognizant, and Slalom, cover all certification exam fees for employees. Check your employer\'s learning and development policy or HR portal.' },
+              { label: 'ISV partner employees', detail: 'Independent software vendors that build on Salesforce may subsidize relevant certifications, such as Platform Developer I or App Builder, for their developers.' },
+              { label: 'Salesforce itself', detail: 'Salesforce employees receive free access to certification exams as an employee benefit.' },
             ],
           },
           {
@@ -134,9 +134,9 @@ export default function SalesforceCertificationVoucherPage() {
             titleColor: 'text-amber-900',
             bodyColor: 'text-amber-800',
             content: [
-              { label: 'Trail-based vouchers', detail: 'Salesforce has run promotions where completing a specific Trailhead trail or earning a superbadge unlocks a free exam voucher. These are time-limited campaigns, not permanent offers.' },
-              { label: 'Certification bundle promotions', detail: 'Salesforce Trailhead Academy occasionally runs multi-cert bundle pricing (e.g., ADM-201 + App Builder together at a reduced rate). Monitor the Trailhead Academy website for current pricing.' },
-              { label: 'How to find current promos', detail: 'Follow @Trailhead and @SalesforceAdmns on social media. Check the Salesforce blog. Join Trailblazer Community groups, community members share promotion announcements quickly.' },
+              { label: 'Trail-based vouchers', detail: 'Salesforce has offered free exam vouchers for completing selected Trailhead trails or earning superbadges. These campaigns run for a limited time.' },
+              { label: 'Certification bundle promotions', detail: 'Trailhead Academy sometimes offers a lower price for a bundle of certifications, such as ADM-201 and App Builder. Check its website for current prices.' },
+              { label: 'How to find current promos', detail: 'Follow @Trailhead and @SalesforceAdmns on social media, check the Salesforce blog, and join Trailblazer Community groups for promotion announcements.' },
             ],
           },
         ].map((section) => (
@@ -156,7 +156,7 @@ export default function SalesforceCertificationVoucherPage() {
 
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-2">What About Third-Party Voucher Sites?</h2>
-        <p className="text-sm text-gray-700">Be cautious of third-party websites claiming to sell Salesforce exam vouchers at steep discounts. Salesforce exams are administered through Webassessor (Kryterion), voucher codes must be valid Salesforce-issued codes. Unofficial voucher sellers are either scams or operating in violation of Salesforce’s terms of service. The legitimate discount sources are the ones listed above.</p>
+        <p className="text-sm text-gray-700">Be cautious with third-party sites that advertise steeply discounted Salesforce exam vouchers. Exams are booked through Trailhead Academy and delivered via Pearson VUE (OnVUE), and voucher codes must be valid Salesforce-issued codes. Use the discount sources listed above.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -173,7 +173,7 @@ export default function SalesforceCertificationVoucherPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Prepare Before You Pay</h2>
-        <p className="text-white mb-6">Use free practice questions to get exam-ready, minimise retake fees by passing first time.</p>
+        <p className="text-white mb-6">Prepare with free practice questions before booking your exam.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse Free Practice Questions
         </Link>

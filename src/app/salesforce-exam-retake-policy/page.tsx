@@ -41,23 +41,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce exam retake policy?',
-    answer: 'Salesforce does not impose a mandatory waiting period between exam attempts. You can reschedule your retake as soon as you are ready, practically speaking, scheduling logistics through Webassessor/Kryterion mean you will have at least 24 hours between attempts. There is no published limit on the number of attempts for most certifications. The retake fee is approximately 50% of the original exam fee.',
+    answer: 'Salesforce does not require a waiting period between exam attempts. You can schedule a retake when you are ready, though Trailhead Academy and Pearson VUE scheduling usually leave at least 24 hours between attempts. Salesforce has not published an attempt limit for most certifications. The retake fee is about 50% of the original exam fee.',
   },
   {
     question: 'How much does a Salesforce exam retake cost?',
-    answer: 'Retake fees are approximately 50% of the original exam fee: $75 exam → ~$38 retake. $200 exam → ~$100 retake. $400 architect exam → ~$200 retake. After a failed attempt, a discounted retake voucher appears automatically in your Webassessor account. You pay the discounted price when scheduling your next attempt.',
+    answer: 'Retakes cost about 50% of the original exam fee: a $75 exam costs about $38 to retake, a $200 exam about $100, and a $400 architect exam about $200. After a failed attempt, a discounted retake voucher appears in your Trailhead Academy account. You pay the reduced price when you schedule again.',
   },
   {
     question: 'How many times can I retake a Salesforce certification exam?',
-    answer: 'Salesforce does not publish a hard limit on retake attempts for most standard certification exams. You can attempt as many times as needed, though you will pay the retake fee for each attempt after the first. Practically speaking, if you are failing repeatedly, it signals a need for more structured study rather than simply rescheduling. Note: the CTA Board Review has specific policies, failed candidates typically must wait 6 months before reapplying.',
+    answer: 'Salesforce has not published a retake limit for most standard certification exams. You can try again as needed, but you will pay the retake fee after each failed attempt. If you fail more than once, use the score report to plan more focused study before booking again. The CTA Board Review has separate rules; candidates who fail typically wait 6 months before reapplying.',
   },
   {
     question: 'What score report do I receive after failing?',
-    answer: 'Salesforce provides a score report that shows your overall score and your performance in each exam section (e.g., you scored 60% in Data Management but 80% in Sharing Model Design). This breakdown is extremely valuable for retake preparation, it tells you exactly which sections need more study. The score report is available in your Webassessor account immediately after the exam.',
+    answer: 'Salesforce provides a score report with your overall score and results for each exam section. For example, it may show 60% in Data Management and 80% in Sharing Model Design. Use this breakdown to identify topics that need more study. The report is available in Trailhead Academy after the exam.',
   },
   {
     question: 'Does failing a Salesforce exam affect my record permanently?',
-    answer: 'No, failed attempts do not appear on your public Trailhead profile or certification verification. Your Trailhead credential page only shows active certifications you have passed. Employers and clients using the Salesforce certification verification tool will only see certifications you currently hold, not your exam history or number of attempts.',
+    answer: 'No. Failed attempts do not appear on your public Trailhead profile or certification verification page. Your Trailhead credentials show certifications you have passed. Employers and clients who use Salesforce verification can see your current credentials, not your exam history or number of attempts.',
   },
 ]
 
@@ -77,7 +77,7 @@ export default function SalesforceExamRetakePolicyPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Everything you need to know if you did not pass your Salesforce certification; retake costs, waiting periods, score reports, and how to prepare for your next attempt.
+          Find retake costs, waiting periods, attempt rules, and advice for preparing after a failed exam.
         </p>
       </div>
 
@@ -98,11 +98,11 @@ export default function SalesforceExamRetakePolicyPage() {
       <div className="bg-green-50 border border-green-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-green-900 mb-2">The key facts</h2>
         <ul className="space-y-1 text-sm text-green-800">
-          <li>✓ {RETAKE_POLICY.attemptsPerCycle} attempts at the same exam per release cycle; attempts reset when the next cycle starts</li>
-          <li>✓ Wait {RETAKE_POLICY.waitAfterFirstFail} after a first failure, {RETAKE_POLICY.waitAfterSecondFail} after a second, then {RETAKE_POLICY.afterThirdFail}</li>
-          <li>✓ Retakes cost {RETAKE_POLICY.retakeFeeShare}; Foundations exams have {RETAKE_POLICY.foundationsRetakeFee}</li>
+          <li>✓ You can take the same exam {RETAKE_POLICY.attemptsPerCycle} times per release cycle. Attempts reset when the next cycle starts.</li>
+          <li>✓ Wait {RETAKE_POLICY.waitAfterFirstFail} after your first failure and {RETAKE_POLICY.waitAfterSecondFail} after your second. After your third, wait {RETAKE_POLICY.afterThirdFail}.</li>
+          <li>✓ Retakes cost {RETAKE_POLICY.retakeFeeShare}. Foundations exams have a retake fee of {RETAKE_POLICY.foundationsRetakeFee}.</li>
           <li>✓ Failed attempts do not appear on your public Trailhead profile</li>
-          <li>✓ Score report by section helps you target your weak areas</li>
+          <li>✓ Use your section score report to find areas that need more study.</li>
         </ul>
       </div>
 
@@ -110,7 +110,7 @@ export default function SalesforceExamRetakePolicyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Retake Costs by Exam Type</h2>
         <div className="space-y-3">
           {[
-            { type: 'Associate exams (Platform Foundations, MuleSoft Integration Foundations; AI Associate retired Feb 2026s)', original: '$75', retake: '~$38' },
+            { type: 'Associate exams (Platform Foundations, MuleSoft Integration Foundations; AI Associate retired Feb 2026)', original: '$75', retake: '~$38' },
             { type: 'Standard professional/specialist exams (ADM-201, PD1, Sales Cloud, Service Cloud, etc.)', original: '$200', retake: '~$100' },
             { type: 'Architect exams (Integration Architect, Data Architect, IAM Architect, etc.)', original: '$400', retake: '~$200' },
           ].map((row) => (
@@ -129,11 +129,11 @@ export default function SalesforceExamRetakePolicyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">What to Do After Failing</h2>
         <div className="space-y-4">
           {[
-            { step: '1', title: 'Review your score report by section', desc: 'Log into Webassessor immediately after the exam. Your score report shows performance per section (e.g., 52% in Data Modelling, 78% in Security). Identify the two or three sections where you scored below the passing threshold; those are your retake focus areas.' },
-            { step: '2', title: 'Do not reschedule immediately', desc: 'Resist the urge to rebook within 48 hours. Most candidates who fail and immediately retake without additional study fail again. Give yourself 2–4 weeks to close the specific gaps identified in your score report.' },
-            { step: '3', title: 'Change your study approach', desc: 'If you relied primarily on Trailhead reading, add hands-on practice in a sandbox. If you did hands-on work, add scenario-based practice questions that simulate exam conditions. Most failures result from one weak study method, diversify your approach.' },
-            { step: '4', title: 'Target your weak sections specifically', desc: 'Focus 70% of retake study time on sections where you scored below passing. Do not waste time re-studying areas where you already scored above passing.' },
-            { step: '5', title: 'Practice exam conditions', desc: 'Complete full timed mock exams (same question count and time limit as the real exam) to build stamina and time management. Many candidates know the material but run out of time. Practise managing 60 questions in 90–105 minutes.' },
+            { step: '1', title: 'Review your score report by section', desc: 'Open your score report in Trailhead Academy after the exam. It shows your result for each section. Note the two or three sections where you scored below the passing threshold and focus your review there.' },
+            { step: '2', title: 'Give yourself time to study', desc: 'Avoid booking another attempt right away. The page recommends waiting 2–4 weeks to address the gaps in your score report before retaking the exam.' },
+            { step: '3', title: 'Vary your study approach', desc: 'If you mainly read Trailhead material, add hands-on sandbox practice. If you already did hands-on work, try scenario-based practice questions. Use more than one study method.' },
+            { step: '4', title: 'Focus on weaker sections', desc: 'Spend about 70% of your study time on sections where you scored below the passing threshold. Review stronger sections as needed.' },
+            { step: '5', title: 'Practice under exam conditions', desc: 'Take full-length timed practice exams to build stamina and manage your time. Practice answering 60 questions in 90–105 minutes.' },
           ].map((item) => (
             <div key={item.step} className="flex gap-4">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">{item.step}</div>
@@ -148,7 +148,7 @@ export default function SalesforceExamRetakePolicyPage() {
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-amber-900 mb-2">CTA Board Review: Different Policy</h2>
-        <p className="text-sm text-amber-800">The Salesforce Certified Technical Architect (CTA) Board Review has different retake rules than standard exams. Candidates who do not pass the live board presentation typically wait 6 months before reapplying and must resubmit application materials. Check the official Salesforce CTA programme page for current Board Review retake policies.</p>
+        <p className="text-sm text-amber-800">The Salesforce Certified Technical Architect (CTA) Board Review has separate retake rules. Candidates who do not pass the live presentation typically wait 6 months before reapplying and must submit their application materials again. Check Salesforce\'s CTA programme page for current rules.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -167,7 +167,7 @@ export default function SalesforceExamRetakePolicyPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Pass It First Time</h2>
-        <p className="text-white mb-6">Use free practice questions to build exam confidence before you book.</p>
+        <p className="text-white mb-6">Build confidence with free practice questions before your exam.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse Free Practice Questions
         </Link>

@@ -42,7 +42,7 @@ export const faqItems = [
   },
   {
     question: 'What is the MC Engagement Foundations exam format?',
-    answer: 'The exam consists of 40 multiple-choice questions with a 70-minute time limit. The passing score is 65%. The exam costs $75 for the first attempt, with a 65% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
+    answer: 'The exam consists of 40 multiple-choice questions with a 70-minute time limit. The passing score is 65%. The exam costs $75 for the first attempt, with a 65% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Pearson VUE testing centre.',
   },
   {
     question: 'What is the difference between MC Engagement Foundations and MC Engagement Admin?',

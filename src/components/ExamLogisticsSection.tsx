@@ -6,7 +6,7 @@ import IndiaGstNote from '@/components/IndiaGstNote'
 
 interface ExamLogisticsSectionProps {
   slug: string
-  /** Optional note (e.g. exam code / Webassessor) for certs like MuleSoft Foundations. */
+  /** Optional note (e.g. exam code / booking platform) for certs like MuleSoft Foundations. */
   examCodeNote?: React.ReactNode
 }
 

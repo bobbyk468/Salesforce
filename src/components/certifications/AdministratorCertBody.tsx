@@ -187,6 +187,14 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               headingLevel="h2"
             />
 
+            <p className="mt-3 text-sm text-gray-700">
+              Already have section-level scores from a practice test? Run them through the{' '}
+              <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+                Salesforce Exam Score Calculator
+              </Link>{' '}
+              to see where you stand against the 68% pass mark.
+            </p>
+
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
             <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" open>
               <summary className="cursor-pointer list-none">

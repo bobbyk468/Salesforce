@@ -43,7 +43,7 @@ export const faqItems = [
   },
   {
     question: 'What is the MC Engagement Developer exam format?',
-    answer: 'The exam consists of 60 multiple-choice and multiple-select questions with a 90-minute time limit. The passing score is approximately 63%. The exam costs $200 for the first attempt, with a 63% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Kryterion testing centre.',
+    answer: 'The exam consists of 60 multiple-choice and multiple-select questions with a 90-minute time limit. The passing score is approximately 63%. The exam costs $200 for the first attempt, with a 63% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Pearson VUE testing centre.',
   },
   {
     question: 'Do I need to memorise AMPscript syntax for the exam?',

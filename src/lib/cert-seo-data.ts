@@ -1615,7 +1615,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'mulesoft-integration-foundations': [
     {
       question: 'What is the exam code and fee for the MuleSoft Certified Integration Foundations Associate?',
-      answer: 'The MuleSoft Certified Integration Foundations exam (formerly MuleSoft Associate) has a registration fee of $75 USD. It is identified as the MuleSoft Integration Foundations certification in the Webassessor portal.',
+      answer: 'The MuleSoft Certified Integration Foundations exam (formerly MuleSoft Associate) has a registration fee of $75 USD. It is identified as the MuleSoft Integration Foundations certification in the Trailhead Academy portal.',
     },
     {
       question: 'What is the passing score and retake policy for the MuleSoft Foundations exam?',
@@ -1647,7 +1647,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Can I take the MuleSoft Integration Foundations exam online?',
-      answer: 'Yes. The exam is available as an online-proctored exam through Webassessor or at a Pearson VUE test center. Online proctoring requires a webcam, stable internet connection, and a quiet private space. Notes and reference materials are not permitted during the exam.',
+      answer: 'Yes. The exam is available as an online-proctored exam through Pearson VUE (OnVUE), booked via Trailhead Academy, or at a Pearson VUE test center. Online proctoring requires a webcam, stable internet connection, and a quiet private space. Notes and reference materials are not permitted during the exam.',
     },
   ],
   'mulesoft-developer-i': [
