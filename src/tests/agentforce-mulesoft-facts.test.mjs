@@ -6,11 +6,16 @@ const read = (path) => readFileSync(new URL(`../${path}`, import.meta.url), 'utf
 const agentGuide = 'https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1'
 const muleGuide = 'https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1'
 const pages = [
-  'components/certifications/merged/agentforce-specialist-study-guide.tsx',
-  'components/certifications/merged/agentforce-specialist-exam-tips.tsx',
+  'components/certifications/AgentforceSpecialistMergedGuide.tsx',
+  'components/certifications/AgentforceSpecialistMergedGuide.tsx',
   'components/certifications/merged/mulesoft-developer-i-study-guide.tsx',
   'components/certifications/merged/mulesoft-developer-i-exam-tips.tsx',
 ]
+// Agentforce Specialist is a bespoke page: one merged guide (listed twice so the
+// study-guide and exam-tips checks both run against it) and its own body JSON.
+const cardPath = (slug) => slug === 'agentforce-specialist'
+  ? 'lib/cert-page-spike/agentforce-specialist-body.json'
+  : `lib/cert-page-spike/promoted-associate/${slug}.json`
 const sources = Object.fromEntries(pages.map((path) => [path, read(path)]))
 
 test('Agentforce pages use current guide logistics, six official weights, and cite Salesforce', () => {
@@ -63,7 +68,7 @@ test('parent-integrated shared objective and logistics records contain corrected
     const entry = logistics.match(new RegExp(`'${slug}': \\{ questions: (\\d+), passingScore: '([^']+)', duration: '([^']+)' \\}`))
     assert.ok(entry, `Missing exact ${slug} logistics entry`)
     assert.deepEqual(entry.slice(1), ['60', facts.score, facts.duration])
-    const card = JSON.parse(read(`lib/cert-page-spike/promoted-associate/${slug}.json`)).certificationCard
+    const card = JSON.parse(read(cardPath(slug))).certificationCard
     assert.deepEqual(card.examDetails, { questions: '60 multiple-choice + up to 5 unscored', passingScore: facts.score, duration: facts.duration, cost: '$200' })
     const block = weights.match(new RegExp(`'${slug}': \\[([\\s\\S]*?)\\n  \\],`))
     assert.ok(block, `Missing ${slug} objective block`)

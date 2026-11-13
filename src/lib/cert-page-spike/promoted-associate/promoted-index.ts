@@ -4,7 +4,6 @@ import { validateAssociateSpikeBody } from '../validate-body'
 import administratorPracticeTestJson from './administrator-practice-test.json'
 import advancedFieldServiceApJson from './advanced-field-service-ap.json'
 import agentforceLifeSciencesConsultantJson from './agentforce-life-sciences-consultant.json'
-import agentforceSpecialistJson from './agentforce-specialist.json'
 import applicationArchitectJson from './application-architect.json'
 import b2bCommerceAdminApJson from './b2b-commerce-admin-ap.json'
 import b2bCommerceDeveloperApJson from './b2b-commerce-developer-ap.json'
@@ -100,7 +99,6 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'administrator-practice-test',
   'advanced-field-service-ap',
   'agentforce-life-sciences-consultant',
-  'agentforce-specialist',
   'application-architect',
   'b2b-commerce-admin-ap',
   'b2b-commerce-developer-ap',
@@ -196,7 +194,6 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'administrator-practice-test': validateAssociateSpikeBody(administratorPracticeTestJson, 'administrator-practice-test'),
   'advanced-field-service-ap': validateAssociateSpikeBody(advancedFieldServiceApJson, 'advanced-field-service-ap'),
   'agentforce-life-sciences-consultant': validateAssociateSpikeBody(agentforceLifeSciencesConsultantJson, 'agentforce-life-sciences-consultant'),
-  'agentforce-specialist': validateAssociateSpikeBody(agentforceSpecialistJson, 'agentforce-specialist'),
   'application-architect': validateAssociateSpikeBody(applicationArchitectJson, 'application-architect'),
   'b2b-commerce-admin-ap': validateAssociateSpikeBody(b2bCommerceAdminApJson, 'b2b-commerce-admin-ap'),
   'b2b-commerce-developer-ap': validateAssociateSpikeBody(b2bCommerceDeveloperApJson, 'b2b-commerce-developer-ap'),

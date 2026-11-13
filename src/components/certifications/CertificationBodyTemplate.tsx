@@ -39,7 +39,7 @@ import AdministratorCertBody from '@/components/certifications/AdministratorCert
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import PlatformFoundationsCertBody from '@/components/certifications/PlatformFoundationsCertBody'
 import AppBuilderCertBody from '@/components/certifications/AppBuilderCertBody'
-import AgentforceArchitectureDiagram from '@/components/certifications/AgentforceArchitectureDiagram'
+import AgentforceSpecialistCertBody from '@/components/certifications/AgentforceSpecialistCertBody'
 import EinsteinTrustLayerDiagram from '@/components/certifications/EinsteinTrustLayerDiagram'
 import MCPIntegrationDiagram from '@/components/certifications/MCPIntegrationDiagram'
 import AgenticOrchestrationDiagram from '@/components/certifications/AgenticOrchestrationDiagram'
@@ -364,7 +364,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
 
         <KeyConceptsSection id="key-concepts" h2={hideExamDetails ? 'Learning Concepts' : body.keyConcepts.h2.replace(/ for the exam/ig, '')} blocks={body.keyConcepts.blocks} />
 
-        {slug === 'agentforce-specialist' ? <AgentforceArchitectureDiagram /> : null}
         {slug === 'ai-associate' ? <EinsteinTrustLayerDiagram /> : null}
         {slug === 'claude-certified-architect-foundations' ? <MCPIntegrationDiagram /> : null}
         {slug === 'claude-certified-architect-professional' ? <AgenticOrchestrationDiagram /> : null}
@@ -503,6 +502,8 @@ export default function CertificationBodyTemplate({ slug, body }: Props) {
       return <Developer1CertBody slug={slug} />
     case 'platform-foundations':
       return <PlatformFoundationsCertBody slug={slug} />
+    case 'agentforce-specialist':
+      return <AgentforceSpecialistCertBody slug={slug} />
     case 'app-builder':
       return <AppBuilderCertBody slug={slug} />
     case 'associate':

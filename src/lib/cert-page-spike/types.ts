@@ -178,6 +178,11 @@ export type PlatformFoundationsSpikeBody = {
   template: 'platform-foundations'
 }
 
+/** Agentforce Specialist (AI-201): bespoke layout lives in `AgentforceSpecialistCertBody`; registry entry is a marker only. */
+export type AgentforceSpecialistSpikeBody = {
+  template: 'agentforce-specialist'
+}
+
 /** Optional escape hatch: body loaded dynamically from `cert-bodies/<slug>.tsx` when listed in `legacy-cert-slugs.generated.ts`. */
 export type LegacySpikeBody = {
   template: 'legacy'
@@ -189,4 +194,5 @@ export type CertSpikeBodyData =
   | AdminSpikeBody
   | PdiSpikeBody
   | PlatformFoundationsSpikeBody
+  | AgentforceSpecialistSpikeBody
   | LegacySpikeBody

@@ -57,9 +57,15 @@ function isStrawman(option) {
   return text.endsWith(' only') && text.length < STRAW_MAX_LENGTH
 }
 
+/** Bespoke pages keep their question bank outside promoted-associate. */
+const BESPOKE_BANKS = {
+  'agentforce-specialist': 'src/lib/cert-page-spike/agentforce-specialist-body.json',
+  'platform-foundations': 'src/lib/cert-page-spike/platform-foundations-sample-questions.json',
+}
+
 function auditPage(slug) {
-  const data = readJson(join(DATA_DIR, `${slug}.json`), null)
-  const questions = data?.sampleQuestions
+  const data = readJson(BESPOKE_BANKS[slug] ? join(ROOT, BESPOKE_BANKS[slug]) : join(DATA_DIR, `${slug}.json`), null)
+  const questions = Array.isArray(data) ? data : data?.sampleQuestions
   if (!Array.isArray(questions) || questions.length === 0) return null
 
   const problems = []
@@ -125,6 +131,7 @@ const slugs = requested.length
   : readdirSync(DATA_DIR)
       .filter((file) => file.endsWith('.json') && file !== 'promoted-index.json')
       .map((file) => file.slice(0, -'.json'.length))
+      .concat(Object.keys(BESPOKE_BANKS))
       // An imported bank overrides the page, so its own questions never render.
       .filter((slug) => !(banks[slug]?.length > 0))
 

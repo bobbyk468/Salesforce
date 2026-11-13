@@ -11,7 +11,6 @@ import type { ComponentType } from 'react'
 export const MERGED_CERT_CONTENT: Record<string, Array<() => Promise<{ default: ComponentType }>>> = {
   'advanced-administrator': [() => import('./merged/advanced-administrator-study-guide'), () => import('./merged/advanced-administrator-exam-tips')],
   'advanced-field-service-ap': [() => import('./merged/advanced-field-service-ap-exam-tips')],
-  'agentforce-specialist': [() => import('./merged/agentforce-specialist-study-guide'), () => import('./merged/agentforce-specialist-exam-tips')],
   'ai-associate': [() => import('./merged/ai-associate-study-guide'), () => import('./merged/ai-associate-exam-tips')],
   'application-architect': [() => import('./merged/application-architect-study-guide'), () => import('./merged/application-architect-exam-tips')],
   'b2b-commerce-admin-ap': [() => import('./merged/b2b-commerce-admin-ap-exam-tips')],
