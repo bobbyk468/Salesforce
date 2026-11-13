@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Implementation Consultants",
-        "description": "You roll out Slack for companies and design how teams, channels and workflows should be set up."
+        "description": "You help companies set up Slack workspaces, channels, and workflows for their teams."
       },
       {
         "label": "Change Management Specialists",
-        "description": "You help people switch from email and old tools to Slack, and measure whether it is working."
+        "description": "You guide people as they move from email and older tools to Slack, and track whether the change is working."
       },
       {
         "label": "Salesforce Consultants",
-        "description": "You connect Slack to Sales Cloud and Service Cloud so teams can work on Salesforce data inside Slack."
+        "description": "You connect Slack with Sales Cloud and Service Cloud so teams can work with Salesforce records in Slack."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Slack Consultant Exam Hard?",
-    "summary": "It is a moderate exam, but it covers more than features. You need to know how to plan a Slack rollout, set it up securely, connect it to Salesforce, and get people to actually use it.",
+    "summary": "This exam covers how a consultant delivers Slack for a client: discovery, Enterprise Grid design, migration, policies and settings, channel strategy, governance, and helping people learn it.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>About 67% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Wide scope.</strong> Workspace and channel design, Slack Connect, Workflow Builder, Salesforce integration and security.",
-      "<strong>People topics.</strong> Adoption planning, champions and success measures come up often."
+      "<strong>60 scored questions, plus up to 5 unscored questions</strong> in 90 minutes. Questions are multiple-choice or multiple-select.",
+      "<strong>67% to pass,</strong> or about 41 correct answers out of 60 scored questions. Check the official exam guide before booking.",
+      "<strong>Seven sections.</strong> Policies and Settings (22%), Learning and Enablement (18%), and Delivery and Migration (17%) carry the most weight.",
+      "<strong>No prerequisite.</strong> Salesforce lists none for this exam."
     ],
-    "passRateGuidance": "People who have run at least one Slack rollout, including the training and adoption work, do best. Before you book. Aim for 80% or more on practice tests."
+    "passRateGuidance": "Hands-on experience with a Slack rollout, including training and adoption, can help. Aim for at least 80% on practice tests before booking."
   },
   "examFormat": {
     "heading": "Slack Consultant Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a company's situation, such as a merger, a security rule or slow adoption, and ask what the consultant should recommend.",
+    "intro": "The exam is proctored online or at a test center. Many questions describe a company situation and ask what a consultant should recommend.",
+    "scenarioPercent": "Questions may cover a merger, a security requirement, or low adoption. Look for the company’s goal and constraints before choosing a recommendation.",
     "bestWayToPass": [
-      "<strong>Learn the structure:</strong> Workspaces, Enterprise Grid, channels, and how Slack Connect works with outside companies.",
-      "<strong>Know Workflow Builder:</strong> Triggers, steps and connectors, and when to use Salesforce Flow instead.",
-      "<strong>Understand the Salesforce link:</strong> The Salesforce apps for Slack and how records and alerts reach channels.",
-      "<strong>Plan for adoption:</strong> Champions, training, clear channel rules and how to measure success."
+      "<strong>Learn Slack structure:</strong> Review workspaces, Enterprise Grid, channels, and Slack Connect for work with outside organizations.",
+      "<strong>Compare automation tools:</strong> Learn Workflow Builder triggers and steps, and when Salesforce Flow is a better fit.",
+      "<strong>Study Salesforce integration:</strong> Know how the Salesforce apps for Slack show records and send alerts into channels.",
+      "<strong>Plan for adoption:</strong> Review champions, training, clear channel rules, and ways to measure success."
     ]
   },
   "certificationCard": {
     "code": "Slack Consultant",
-    "description": "This exam tests how you plan and run a Slack rollout: workspace and channel design, workflows, Salesforce integration, security and governance, and getting people to use it. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Policies and Settings (22%) and Learning and Enablement (18%).",
+    "description": "This exam covers planning and running a Slack rollout: workspace and channel design, workflows, Salesforce integration, security, governance, and user adoption. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Policies and Settings (22%) and Learning and Enablement (18%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
@@ -49,66 +49,63 @@
       "cost": "$200"
     },
     "topics": [
-      "Slack Solution Design",
-      "Change Management",
-      "User Adoption",
-      "Channels & Structure",
-      "Integrations",
-      "Governance",
-      "Slack Connect",
-      "Best Practices",
-      "Analytics",
-      "Security"
+      "Delivery and Migration",
+      "Discovery",
+      "Grid Design",
+      "Policies and Settings",
+      "Channel Strategy",
+      "Governance Structure",
+      "Learning and Enablement"
     ]
   },
   "keyConcepts": {
     "h2": "Slack Consultant: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Salesforce-Slack Integration Architecture",
-        "body": "Slack and Salesforce work together in several ways. The **Salesforce apps for Slack** let people search, view and update records, and get alerts, without leaving Slack. **Salesforce Flow** can post messages to Slack channels or create channels when something happens, such as a big deal closing. Teams can set up a channel per account or per major case, so everyone working on it talks in one place. **Agentforce** and AI features can also work inside Slack. Choose the simplest option that meets the need, and keep Salesforce as the system of record."
+        "heading": "Salesforce and Slack Integration",
+        "body": "The **Salesforce apps for Slack** let people search, view, and update records and receive alerts without leaving Slack. **Salesforce Flow** can post to a channel or create a channel after an event, such as a large deal closing. Teams can use a channel for an account or major case so everyone can coordinate in one place. **Agentforce** and other AI features can also work in Slack. Use the simplest option that meets the need, and keep Salesforce as the system of record."
       },
       {
-        "heading": "Slack-First Customer Service Design",
-        "body": "In customer service, Slack is often used for **swarming**: when a case is hard, the agent brings experts into a Slack channel linked to the case to solve it faster. Alerts about high-priority cases or missed service levels can go straight to the right channel. Knowledge shared in those channels can later become articles. The goal is faster answers for customers without agents having to chase people by email."
+        "heading": "Slack for Customer Service",
+        "body": "Support teams can use **swarming** when a case is difficult: an agent brings experts into a Slack channel linked to the case so they can work on it together. Teams can send alerts about urgent cases or missed service targets to the right channel. Useful answers from these discussions may later become Knowledge articles. The goal is to help customers faster and reduce email follow-ups between agents."
       },
       {
-        "heading": "Automations: Flow + Workflow Builder",
-        "body": "**Workflow Builder** lets anyone build simple no-code workflows in Slack, such as a request form that posts to a channel and asks for approval. Workflows start from a **trigger**, like a shortcut, a new channel member or a schedule, and run **steps**, including connectors to other apps. For processes that change Salesforce data or need complex logic, **Salesforce Flow** is usually the better tool, and it can send results to Slack. Workflows should be owned and reviewed so they don't pile up unused."
+        "heading": "Workflow Builder and Salesforce Flow",
+        "body": "**Workflow Builder** lets people create simple no-code workflows in Slack, such as a request form that posts to a channel for approval. A workflow starts with a **trigger**, such as a shortcut, a new channel member, or a schedule, then runs **steps**, which may connect to other apps. Use **Salesforce Flow** when a process changes Salesforce data or needs complex rules. It can send results to Slack. Assign owners to workflows and review them so unused workflows do not build up."
       },
       {
         "heading": "Data Governance and Compliance",
-        "body": "Admins control how long messages and files are kept with **retention policies**. **Legal holds** and **eDiscovery** support legal requests. **Data loss prevention** can spot sensitive data, like card numbers, in messages. **Enterprise Key Management** lets a company control its own encryption keys, and **data residency** keeps data in a chosen region. Use **SSO** for login and **SCIM** to create and remove users automatically from the company's identity system. Set clear rules for who can create channels and invite outside people."
+        "body": "Admins use **retention policies** to set how long messages and files are kept. **Legal holds** and **eDiscovery** support legal requests. **Data loss prevention** can detect sensitive information, such as payment card numbers, in messages. **Enterprise Key Management** lets a company manage its encryption keys, and **data residency** keeps data in a selected region. Use **SSO** for sign-in and **SCIM** to create or remove user accounts from the company identity system. Set clear rules for channel creation and invitations to outside users."
       },
       {
-        "heading": "Adoption Strategy and Change Management",
-        "body": "A rollout only succeeds if people use Slack well. Start with clear goals and a few key use cases, like moving project chatter out of email. Recruit **champions** in each team to help others. Agree on **channel naming conventions** and when to use channels versus direct messages. Train people in short sessions focused on their work. Measure success with things like active users, messages in channels compared with DMs, and fewer internal emails, then adjust the plan."
+        "heading": "Adoption and Change Management",
+        "body": "A Slack rollout works only when people use it. Start with clear goals and a few useful cases, such as moving project discussions out of email. Recruit **champions** in each team to help coworkers. Set **channel naming rules** and explain when to use channels or direct messages. Offer short training that relates to people’s work. Track active users, channel messages compared with DMs, and changes in internal email use. Adjust the plan based on what you learn."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Slack Consultant Exam",
-    "intro": "Most questions describe a company and its goals or limits. Pick the recommendation that solves the real problem, often a people or process issue rather than a feature gap.",
+    "intro": "Questions describe a company’s goals or limits. Identify the real problem first; the best answer may be a change to people or processes, not a new feature.",
     "blocks": [
       {
-        "heading": "Use Case Design",
-        "body": "Start with a few high-value use cases tied to business goals, then expand. Don't try to move everything at once."
+        "heading": "Choose Useful First Use Cases",
+        "body": "Start with a few important use cases that support business goals. Expand after teams have learned what works."
       },
       {
-        "heading": "Workflow Builder",
-        "body": "Use Workflow Builder for simple Slack processes. Use Salesforce Flow when Salesforce data or complex logic is involved."
+        "heading": "Choose the Right Workflow Tool",
+        "body": "Use Workflow Builder for simple Slack processes. Use Salesforce Flow when the process changes Salesforce data or needs complex logic."
       },
       {
-        "heading": "Salesforce for Slack Integration",
-        "body": "Bring records and alerts into the channels where people already work, and keep Salesforce as the source of truth."
+        "heading": "Connect Slack with Salesforce",
+        "body": "Bring relevant records and alerts into channels where teams work, and keep Salesforce as the source of truth."
       },
       {
-        "heading": "Adoption Strategy",
-        "body": "Champions, training, clear channel rules and measured goals. Adoption problems are rarely solved by adding features."
+        "heading": "Support Adoption",
+        "body": "Use champions, training, clear channel rules, and goals you can measure. Adding features alone rarely solves low adoption."
       },
       {
-        "heading": "Governance Framework",
-        "body": "Retention, legal hold, DLP, SSO, SCIM, and clear rules for channel creation and external sharing."
+        "heading": "Set Governance Rules",
+        "body": "Review retention, legal holds, data loss prevention, SSO, SCIM, channel creation, and external sharing."
       }
     ]
   },
@@ -170,243 +167,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A company wants to work with an outside agency in shared Slack channels, without giving the agency accounts in its own workspace. What should be used?",
+      "question": "An agency needs to work with a company in shared Slack channels. It does not want the company’s users added to its own workspace. What should it use?",
       "options": [
-        "A new workspace for the agency",
-        "Guest accounts for every agency employee",
-        "Slack Connect",
-        "A shared email inbox"
+        "Create a separate Slack workspace for the outside agency.",
+        "Give each agency worker a guest account in the company workspace.",
+        "Use Slack Connect to share channels between workspaces.",
+        "Set up one shared email inbox for both organizations."
       ],
       "correctAnswer": 2,
-      "explanation": "Slack Connect lets two organisations share channels while each keeps its own workspace and controls.",
+      "explanation": "Slack Connect lets organizations share channels while each keeps its own workspace and admin controls.",
       "whyWrong": [
-        "A new workspace splits conversations and adds overhead.",
-        "Guest accounts can work but add admin effort and live in your workspace.",
-        "Email is what the company is trying to move away from."
+        "A separate workspace would split the conversation and add setup work.",
+        "Guest accounts place outside users in the company workspace and require extra administration.",
+        "This is the feature for shared channels across separate organizations."
       ]
     },
     {
-      "question": "Sales reps want an alert in their team channel when an opportunity over $1 million is closed in Salesforce. What is the best approach?",
+      "question": "Sales reps want a Slack alert when a Salesforce Opportunity over $1 million closes. What should the team set up?",
       "options": [
-        "A Salesforce Flow posting to the channel",
-        "Ask each of the reps to post the update by hand",
-        "A daily email report",
-        "A Workflow Builder form"
+        "Use Salesforce Flow to post the alert to the team channel.",
+        "Ask each rep to post a message manually after a deal closes.",
+        "Send a report by email at the end of each day.",
+        "Build a Workflow Builder form for reps to submit the closed deal."
       ],
       "correctAnswer": 0,
-      "explanation": "Flow can react to the record change in Salesforce and post to Slack automatically.",
+      "explanation": "Salesforce Flow can respond to the Opportunity update and post a message to the Slack channel.",
       "whyWrong": [
-        "Manual posts get forgotten.",
-        "A daily email is slower and outside Slack.",
-        "A Workflow Builder form needs someone to fill it in."
+        "Manual posts may be forgotten and do not automate the alert.",
+        "A daily email arrives later and is not a channel alert.",
+        "A form needs someone to submit it; it does not react to the record change."
       ]
     },
     {
-      "question": "Employees often send IT requests by DM, and nothing is tracked. What could a consultant recommend that needs no code?",
+      "question": "Employees send IT requests by direct message, so requests are hard to track. What no-code solution could a consultant recommend?",
       "options": [
-        "Banning DMs",
-        "A custom Slack application built by the in-house developers",
-        "A weekly IT meeting",
-        "A Workflow Builder form posting to an IT channel"
+        "Ban direct messages without providing another way to request help.",
+        "Have developers build a custom Slack app for the request process.",
+        "Hold a weekly meeting to collect requests from employees.",
+        "Use a Workflow Builder form in the IT channel."
       ],
       "correctAnswer": 3,
-      "explanation": "Workflow Builder can collect requests in a form and post them to a channel where IT can track them.",
+      "explanation": "Workflow Builder can collect requests in a form and post them to an IT channel for the team to track.",
       "whyWrong": [
-        "Banning DMs doesn't create a request process.",
-        "A custom app is more than needed.",
-        "Weekly meetings are too slow for requests."
+        "Banning DMs does not create a replacement request process.",
+        "A custom app is more work than needed for a simple no-code process.",
+        "A weekly meeting delays requests and makes tracking difficult."
       ]
     },
     {
-      "question": "Legal requires that messages in certain channels are kept for seven years. What should be set?",
+      "question": "Legal requires messages in selected channels to be kept for seven years. What should the consultant configure?",
       "options": [
-        "A channel naming rule",
-        "Slack Connect",
-        "Retention policies on the channels",
-        "A single Workflow Builder step"
+        "A naming rule to mark channels with legal messages.",
+        "Slack Connect settings for those channels.",
+        "Retention policies for the selected channels.",
+        "A Workflow Builder step that reminds people to save messages."
       ],
       "correctAnswer": 2,
       "explanation": "Retention policies control how long messages and files are kept.",
       "whyWrong": [
-        "Naming rules don't affect retention.",
-        "Slack Connect shares channels with others.",
-        "Workflows don't control retention."
+        "A naming rule does not affect how long Slack keeps messages.",
+        "Slack Connect supports external collaboration, not message retention.",
+        "A reminder does not set or enforce a retention period."
       ]
     },
     {
-      "question": "When people leave the company, their Slack access should be removed automatically. What should be set up?",
+      "question": "When employees leave, their Slack accounts should be removed automatically. What should the company set up?",
       "options": [
-        "A retention policy",
-        "SCIM provisioning from the provider",
-        "Manual removal carried out each month",
-        "A naming convention"
+        "A retention policy for each departing user.",
+        "SCIM provisioning connected to the identity provider.",
+        "A monthly manual review to remove former employees.",
+        "A naming rule for accounts that should be disabled."
       ],
       "correctAnswer": 1,
-      "explanation": "SCIM lets the company's identity system create and remove Slack users automatically.",
+      "explanation": "SCIM can automatically create and remove Slack accounts through the company’s identity system.",
       "whyWrong": [
-        "Retention policies cover data, not users.",
-        "Manual removal can be missed.",
-        "Naming conventions are for channels."
+        "Retention policies govern data, not user account access.",
+        "A monthly manual check may leave former users active in the meantime.",
+        "Naming rules do not deactivate user accounts."
       ]
     },
     {
-      "question": "Six months after launch, many teams still use email for projects. What should the consultant focus on first?",
+      "question": "Six months after a Slack rollout, many teams still use email for projects. What should the consultant focus on first?",
       "options": [
-        "Turning off email for everyone",
-        "Adding more Slack apps",
-        "Buying more licences",
-        "Adoption work: champions"
+        "Turn off company email so teams have to use Slack.",
+        "Install more apps to encourage teams to change tools.",
+        "Buy more Slack licenses for every employee.",
+        "Improve adoption with champions, guidance, and training."
       ],
       "correctAnswer": 3,
-      "explanation": "Slow adoption is usually a people and process issue. Champions and clear guidance help most.",
+      "explanation": "Low use is often an adoption issue. Champions and clear guidance can help people change how they work.",
       "whyWrong": [
-        "Turning off email harms the business.",
-        "More apps don't change habits.",
-        "Licences don't drive use."
+        "Turning off email can disrupt work without teaching teams how to use Slack.",
+        "More apps do not necessarily help people change their habits.",
+        "More licenses do not ensure that people will use Slack."
       ]
     },
     {
-      "question": "Which measure best shows that teams are working in the open in Slack?",
+      "question": "Which measure best shows that teams are sharing work openly in Slack?",
       "options": [
-        "The number of emoji used",
-        "The number of workspaces",
-        "The share of messages in channels rather than DMs",
-        "The total number of apps that have been installed"
+        "How many emoji reactions people use.",
+        "How many workspaces the company has.",
+        "The share of messages posted in channels rather than DMs.",
+        "How many apps have been installed in the workspace."
       ],
       "correctAnswer": 2,
-      "explanation": "More messages in channels means more work is visible and searchable.",
+      "explanation": "A higher share of channel messages shows that more work is visible to the team instead of staying in private messages.",
       "whyWrong": [
-        "Emoji count doesn't show how work happens.",
-        "Workspace count isn't a usage measure.",
-        "App count doesn't show adoption."
+        "Emoji use does not show whether work is shared openly.",
+        "The number of workspaces does not measure how teams communicate.",
+        "Installed apps do not show whether teams work in channels or DMs."
       ]
     },
     {
-      "question": "A support agent is stuck on a complex case and needs help from engineering. What Slack-based approach fits?",
+      "question": "A support agent needs help from engineering with a complex case. What Slack approach fits?",
       "options": [
-        "Swarming: a channel on the case with the experts in it",
-        "Email the engineering team",
-        "Close the existing case and then open an entirely new one",
-        "Wait for the next team meeting"
+        "Start a case channel and bring the needed experts together to swarm.",
+        "Email the entire engineering team and wait for responses.",
+        "Close the case and create a new one for engineering.",
+        "Wait until the next team meeting to raise the case."
       ],
       "correctAnswer": 0,
-      "explanation": "Swarming brings the right people together in a channel to solve the case quickly.",
+      "explanation": "Swarming brings the right people together in a channel linked to the case so they can resolve it faster.",
       "whyWrong": [
-        "Email is slower and harder to follow.",
-        "Closing the case loses history.",
-        "Waiting delays the customer."
+        "Email is harder to follow and may delay the response.",
+        "Closing the case loses continuity and does not bring experts together.",
+        "Waiting for a meeting delays help for the customer."
       ]
     },
     {
-      "question": "People can't find the right channels because names are all different. What should the consultant recommend?",
+      "question": "Employees struggle to find channels because teams use different naming styles. What should the consultant recommend?",
       "options": [
-        "A naming convention with clear prefixes",
-        "A new workspace",
-        "Deleting the majority of the channels",
-        "More DMs"
+        "Set a clear channel naming convention with useful prefixes.",
+        "Create a separate workspace for every team.",
+        "Delete most channels without reviewing their use.",
+        "Move work conversations into direct messages."
       ],
       "correctAnswer": 0,
-      "explanation": "Naming conventions, such as proj- or team- prefixes, make channels easy to find and understand.",
+      "explanation": "A naming convention with prefixes, such as proj- or team-, helps people find channels.",
       "whyWrong": [
-        "A new workspace doesn't fix naming.",
-        "Deleting channels loses history.",
-        "More DMs make work less visible."
+        "A naming convention solves the discovery problem without splitting the workspace.",
+        "More workspaces do not fix unclear channel names.",
+        "Deleting channels can remove useful history and does not set a naming standard."
       ]
     },
     {
-      "question": "Messages must be scanned to stop people posting credit card numbers. What should be used?",
+      "question": "The company needs to detect credit card numbers posted in Slack messages. What should it use?",
       "options": [
-        "Data loss prevention",
-        "A naming convention",
-        "Huddles",
-        "A Workflow Builder form"
+        "Data loss prevention rules that scan message content.",
+        "A naming convention for channels that discuss payments.",
+        "Huddles so payment details are discussed by voice.",
+        "A Workflow Builder form for IT requests."
       ],
       "correctAnswer": 0,
-      "explanation": "Data loss prevention can detect and act on sensitive data in messages.",
+      "explanation": "Data loss prevention can detect sensitive information, such as payment card numbers, in messages.",
       "whyWrong": [
-        "Naming conventions don't scan content.",
-        "Huddles are for audio and video calls.",
-        "Forms collect input, they don't scan messages."
+        "Channel names do not scan messages.",
+        "Huddles are for live audio or video conversations.",
+        "A request form does not scan workspace messages."
       ]
     },
     {
-      "question": "A company has many business units, each needing its own workspace but with shared company-wide channels. What fits?",
+      "question": "A company needs separate workspaces for business units and shared company-wide channels. What setup fits?",
       "options": [
-        "One single channel for everyone",
-        "Enterprise Grid with several workspaces",
-        "Slack Connect set up between the separate business units",
-        "Separate unconnected workspaces"
+        "Use one channel for all employees in a single workspace.",
+        "Use Enterprise Grid to connect workspaces with central administration.",
+        "Use Slack Connect to link the company’s own business units.",
+        "Create workspaces that are not connected to each other."
       ],
       "correctAnswer": 1,
-      "explanation": "Enterprise Grid lets one company run several connected workspaces with shared channels and central controls.",
+      "explanation": "Enterprise Grid connects multiple company workspaces and supports central administration and shared channels.",
       "whyWrong": [
-        "One channel for everyone is unworkable.",
-        "Slack Connect is for outside organisations.",
-        "Unconnected workspaces can't share channels easily."
+        "One channel for everyone may not fit different business needs and does not provide separate workspaces.",
+        "Slack Connect is for collaboration between different organizations.",
+        "Unconnected workspaces cannot easily share company-wide channels."
       ]
     },
     {
-      "question": "A process needs to update several Salesforce records with complex rules when someone approves a request in Slack. What is the better tool?",
+      "question": "A Slack approval must update several Salesforce records using complex rules. Which tool should handle the record logic?",
       "options": [
-        "A pinned message",
-        "Workflow Builder used entirely on its own",
-        "A Slack reminder",
-        "Salesforce Flow, with Slack for the message"
+        "Pin a message with the approval instructions.",
+        "Use Workflow Builder alone to update all Salesforce records.",
+        "Set a Slack reminder for the person who approves.",
+        "Use Salesforce Flow for the record logic."
       ],
       "correctAnswer": 3,
-      "explanation": "Flow handles complex Salesforce logic, and it can still use Slack for the approval step.",
+      "explanation": "Salesforce Flow can handle complex Salesforce record logic while Slack supports the approval interaction.",
       "whyWrong": [
-        "Pinned messages don't automate anything.",
-        "Workflow Builder is best for simple Slack-side processes.",
-        "Reminders don't update records."
+        "A pinned message stores information but does not automate record updates.",
+        "Workflow Builder is suited to simpler Slack-side processes, not complex Salesforce logic.",
+        "A reminder does not update Salesforce records."
       ]
     },
     {
-      "question": "A company wants to control its own encryption keys for Slack data. What should be used?",
+      "question": "A company wants to manage its own encryption keys for Slack data. Which feature should it use?",
       "options": [
-        "Slack Connect",
-        "Enterprise Key Management",
-        "Message retention policies",
-        "SCIM"
+        "Slack Connect for shared-channel access.",
+        "Enterprise Key Management for encryption keys.",
+        "Retention policies for message storage periods.",
+        "SCIM provisioning for user accounts."
       ],
       "correctAnswer": 1,
-      "explanation": "Enterprise Key Management lets the company manage the keys used to encrypt its Slack data.",
+      "explanation": "Enterprise Key Management lets a company control the encryption keys used for its Slack data.",
       "whyWrong": [
-        "Slack Connect shares channels.",
-        "Retention controls how long data is kept.",
-        "SCIM manages user accounts."
+        "Slack Connect supports collaboration with external organizations.",
+        "Retention policies set how long data is kept.",
+        "SCIM manages user account provisioning."
       ]
     },
     {
-      "question": "Where should a Slack rollout start?",
+      "question": "What is a good first step when planning a Slack rollout?",
       "options": [
-        "Turning off email",
-        "Clear goals and a few high-value use cases",
-        "Installing as many apps as possible",
-        "Moving every single tool into Slack on the first day"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Starting with goals and a few use cases gives quick wins and something to measure.",
-      "whyWrong": [
-        "Turning off email is disruptive and unnecessary.",
-        "Lots of apps add noise.",
-        "Moving everything at once overwhelms people."
-      ]
-    },
-    {
-      "question": "Sales reps want to look up and update Salesforce opportunities without leaving Slack. What should be set up?",
-      "options": [
-        "A Workflow Builder form for each opportunity",
-        "A Slack reminder",
-        "The Salesforce app for Slack",
-        "A daily export to a channel"
+        "Turn off email before teams start using Slack.",
+        "Install as many apps as possible before setting goals.",
+        "Set clear goals and choose a few valuable use cases.",
+        "Move every company tool into Slack on the first day."
       ],
       "correctAnswer": 2,
-      "explanation": "The Salesforce app for Slack lets people search, view and update records from Slack.",
+      "explanation": "Starting with clear goals and a few use cases creates quick wins and ways to measure progress.",
       "whyWrong": [
-        "A form per opportunity is impractical.",
-        "Reminders don't show records.",
-        "A daily export is out of date and read-only."
+        "Turning off email is disruptive and not required to start a rollout.",
+        "Installing many apps can add noise before teams know what they need.",
+        "Moving every tool at once can overwhelm employees."
+      ]
+    },
+    {
+      "question": "Sales reps want to find and update Salesforce Opportunities without leaving Slack. What should the company set up?",
+      "options": [
+        "Create a separate Workflow Builder form for every Opportunity.",
+        "Install and configure the Salesforce app for Slack.",
+        "Use a Slack reminder to link to the Salesforce records.",
+        "Post a daily export of Opportunities to a channel."
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Salesforce app for Slack lets users find, view, and update records from Slack.",
+      "whyWrong": [
+        "A separate form for each Opportunity would be hard to maintain.",
+        "A reminder does not provide a way to work with the record.",
+        "This app supports Salesforce record work inside Slack."
+      ]
+    },
+    {
+      "question": "A client is merging three standalone workspaces into Enterprise Grid. What should happen before the migration is scheduled?",
+      "options": [
+        "Delete all channels with fewer than ten members in each workspace",
+        "Ask every user to export their own direct message history first",
+        "Turn off single sign-on until all workspaces have been moved over",
+        "Clean up user accounts and send a communication plan to users"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Pre-migration work includes scheduling, cleaning up user accounts, and telling users what will change and when.",
+      "whyWrong": [
+        "Channel size is not a reason to delete content before a migration.",
+        "Users do not need to export their own messages for a workspace migration.",
+        "Disabling sign-in controls weakens security and is not a pre-migration step."
+      ]
+    },
+    {
+      "question": "What should a consultant have agreed with the client by the end of discovery?",
+      "options": [
+        "A final list of every channel the company will ever need",
+        "A completed migration of the client's largest workspace",
+        "A recorded training course for all future employees",
+        "A vision statement and measurable success metrics"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Discovery ends with a shared vision for Slack and success metrics, which guide the design and show later whether the rollout worked.",
+      "whyWrong": [
+        "Channel needs change over time; discovery does not fix a permanent list.",
+        "Migration happens later, after design and planning.",
+        "Learning materials are built later, in the enablement phase."
+      ]
+    },
+    {
+      "question": "A company on Enterprise Grid wants an announcements channel that every employee in every workspace can see. What should the consultant recommend?",
+      "options": [
+        "An org-wide channel shared across all workspaces",
+        "A Slack Connect channel shared with each workspace",
+        "A private channel recreated in every single workspace",
+        "A separate workspace that holds only announcements"
+      ],
+      "correctAnswer": 0,
+      "explanation": "On Enterprise Grid, a channel can be shared across some or all workspaces, so one org-wide channel reaches every employee.",
+      "whyWrong": [
+        "Slack Connect is for working with outside organizations, not for a company's own workspaces.",
+        "Separate copies would split the announcements and have to be kept in step by hand.",
+        "An extra workspace adds overhead when one org-wide channel does the job."
+      ]
+    },
+    {
+      "question": "Which role has the highest level of control over an Enterprise Grid organization?",
+      "options": [
+        "Workspace Admin",
+        "Org Primary Owner",
+        "Channel Manager",
+        "Multi-Channel Guest"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Org Primary Owner sits at the top of the Enterprise Grid role hierarchy, above Org Owners, Org Admins, and the workspace-level roles.",
+      "whyWrong": [
+        "A Workspace Admin manages one workspace, not the whole organization.",
+        "A Channel Manager manages settings for individual channels.",
+        "A guest has limited access to selected channels only."
+      ]
+    },
+    {
+      "question": "Slack's experiential learning approach asks users to learn mainly by doing what?",
+      "options": [
+        "Reading a policy document before getting access",
+        "Watching a long recorded lecture on their own",
+        "Practising real tasks in Slack during the session",
+        "Passing a written test on Slack terminology"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Experiential learning has people use Slack while they learn, so they practise the habits they will need in daily work.",
+      "whyWrong": [
+        "Reading alone is not hands-on practice.",
+        "A lecture is passive; experiential learning is active.",
+        "A terminology test checks recall, not the ability to work in Slack."
       ]
     }
   ]

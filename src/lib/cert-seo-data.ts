@@ -1564,7 +1564,15 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Salesforce experience for Slack Consultant?',
-      answer: 'Yes, you should understand Salesforce basics and have Slack admin experience. The certification focuses on integrating Slack with Salesforce and designing collaboration solutions.',
+      answer: 'Salesforce lists no prerequisite for this exam. The outline is about delivering Slack for a client, so experience with Slack administration and rollouts helps more than Salesforce product knowledge.',
+    },
+    {
+      question: 'What is the Slack Consultant exam format?',
+      answer: 'The exam has 60 scored multiple-choice or multiple-select questions, plus up to five unscored questions, with a 90-minute time limit and a 67% passing score. The fee is $200 USD, with a $100 retake fee.',
+    },
+    {
+      question: 'What sections does the Slack Consultant exam cover?',
+      answer: 'The official outline has seven sections: Policies and Settings (22%), Learning and Enablement (18%), Delivery and Migration (17%), Grid Design (15%), Discovery (10%), Channel Strategy (10%), and Governance Structure (8%).',
     },
   ],
   'slack-administrator': [

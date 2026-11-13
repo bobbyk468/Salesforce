@@ -1,171 +1,131 @@
-/* Ported from /slack-consultant-exam-tips, merged into /certifications/slack-consultant in November 2026.
- * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
- * header) was dropped because the hub page already provides it. */
+/* Slack Certified Consultant study guide, merged into
+ * /certifications/slack-consultant (the old /slack-consultant-exam-tips page
+ * 301-redirects here). Section names and weights follow
+ * EXAM_WEIGHTAGE['slack-consultant'] in src/lib/exam-weightage-data.ts, which
+ * is verified against the official guide. */
 import Link from '@/components/AppLink'
-import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
-import ContentPageAuthor from '@/components/ContentPageAuthor'
-import ExamTipsCertLink from '@/components/ExamTipsCertLink'
-import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
-import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
-import LastUpdated from '@/components/LastUpdated'
+import { BookOpen, Target } from 'lucide-react'
 
+const EXAM_GUIDE_URL = 'https://help.salesforce.com/s/articleView?id=005298991&language=en_US&type=1'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const slug = 'slack-consultant'
-
-const pageTitle = buildExamTipsTitle(slug)
-const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Slack Consultant exam tips for ${RELEASE_CURRENT}: Slack implementation strategy, workflow automation, Salesforce integration.`
-
-const breadcrumbItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Slack Consultant Exam Tips', url: '/slack-consultant-exam-tips' },
-]
-
-export const faqItems = [
+const examSections: Array<{ name: string; weight: number; body: string }> = [
   {
-    question: 'What is the Slack Consultant exam format?',
-    answer: 'The Slack Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee ($100 retake). It tests the ability to implement Slack for clients: solution design, workflow automation, Salesforce integration, governance, and change management.',
+    name: 'Policies and Settings',
+    weight: 22,
+    body: 'Help org and workspace stakeholders agree on settings. Know the administrative roles and what each can change, how Org and Workspace Owners use the analytics dashboard, identity management settings, key org-level security settings, and Slack’s compliance capabilities. Recommend launch settings for channel management, Slack Connect, and app approval.',
   },
   {
-    question: 'What are the highest-weight Slack Consultant exam sections?',
-    answer: 'Solution Design (28%) and Workflow Automation (22%) together account for 50% of the exam. Understanding how to map client business requirements to Slack features, design channel structures, automate workflows with Workflow Builder, and integrate Slack with Salesforce are the most heavily tested skills.',
+    name: 'Learning and Enablement',
+    weight: 18,
+    body: 'Understand Slack’s experiential learning approach. Design a curriculum and learning plan for the client’s admins and another for its users, create the learning materials, and run the sessions. Troubleshoot common user issues, and recommend a rollout communication plan the client can carry out.',
   },
   {
-    question: 'How does the Slack Consultant exam differ from the Slack Administrator exam?',
-    answer: 'The Slack Administrator exam focuses on workspace management and administration tasks. The Slack Consultant exam focuses on implementation strategy: requirements gathering, solution design, adoption planning, and Salesforce integration. Consultants advise clients on how to deploy and use Slack effectively, administrators manage the ongoing platform.',
+    name: 'Delivery and Migration',
+    weight: 17,
+    body: 'Know Slack delivery best practices and who is responsible for what between Slack, the partner, and the client. Understand the end-to-end migration process: pre-migration work such as scheduling, user cleanup, and communications, then running the migration, tracking its status, and handling issues.',
   },
   {
-    question: 'What Salesforce integration knowledge is needed for Slack Consultant?',
-    answer: 'The exam tests Slack for Salesforce integration: Salesforce record notifications in Slack channels, creating and updating Salesforce records from Slack, using Salesforce flow to trigger Slack messages, and Einstein Conversation Mining. Understanding how Slack connects to Salesforce CRM data for sales and service workflows is a key exam area.',
+    name: 'Grid Design',
+    weight: 15,
+    body: 'Use what you learned in discovery to recommend an Enterprise Grid design. Know grid design best practices, present feasible options to the client, and support the final sign-off.',
   },
   {
-    question: 'What concepts do most Slack Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Slack Consultant exam are: (1) Workflow Builder vs Slack API: No-Code vs Pro-Code; (2) Canvas vs Posts vs Bookmarks: Persistent Content Types; (3) Salesforce for Slack Integration: Connected App vs Custom Integration. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    name: 'Discovery',
+    weight: 10,
+    body: 'Articulate the value of Slack, research how the client works today, and ask about their existing Slack experience, security, policies, and goals. Finish with a vision statement and success metrics.',
   },
-  ...getConceptFaqs('slack-consultant-exam-tips'),
+  {
+    name: 'Channel Strategy',
+    weight: 10,
+    body: 'Explain channel basics and best practices, the purpose of a channel naming convention, common channel use cases, and simple workflows such as onboarding and standup workflows.',
+  },
+  {
+    name: 'Governance Structure (Owner and Admin Roles)',
+    weight: 8,
+    body: 'Identify the governance team and help assign roles. Lead discussions on the admin support model, such as request, help, and approval flows, and advise on which admin processes can move into Slack.',
+  },
 ]
 
 export default function SlackConsultantExamTipsContent() {
   return (
     <div className="mt-12">
-
-
-
-
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Slack Consultant Tests</h2>
-        <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Solution design</strong>: Mapping client requirements to Slack features: channel strategy (public vs. private, naming conventions), Enterprise Grid design for multi-division organisations, Slack Connect for external collaboration, and workspace vs. channel governance decisions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Workflow automation</strong>: Building automations with Workflow Builder (no-code), using Workflow Builder with Salesforce triggers, understanding when to use Workflow Builder vs. custom Slack apps (API-based automation), and common workflow patterns for sales and service teams.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce integration and adoption</strong>: Slack for Salesforce app configuration, surfacing Salesforce data in Slack, sending Salesforce alerts to Slack channels, change management strategy for Slack adoption, and success metrics for deployment.</li>
-        </ul>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
-        <div className="space-y-3 text-sm text-gray-700">
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Solution Design</span>
-            <span className="font-bold text-salesforce-blue ml-4">28%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Workflow Automation</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Salesforce Integration</span>
-            <span className="font-bold text-salesforce-blue ml-4">20%</span>
-          </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Change Management and Adoption</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
-          </div>
-          <p className="text-xs text-gray-600 pt-1">Solution Design + Workflow + Salesforce Integration = 70%. Implementation strategy is as important as product knowledge.</p>
-        </div>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Slack Consultant Questions</h2>
-        <p className="text-sm text-gray-700 mb-3">
-          Questions describe a client implementation scenario and ask which Slack design decision, automation
-          approach, or adoption strategy is most appropriate. Think like an implementation consultant:
-          what is the simplest, most native Slack solution that meets the stated requirement?
+      <section id="section-deep-dives" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Slack Consultant Exam Sections: What Each One Tests</h2>
+        <p className="text-sm text-gray-600 mb-5">
+          Policies and Settings, Learning and Enablement, and Delivery and Migration together make up 57% of the exam. The section names below are the ones in the{' '}
+          <a className="text-salesforce-blue underline" href={EXAM_GUIDE_URL} target="_blank" rel="noreferrer nofollow noopener">
+            official exam guide
+          </a>
+          .
         </p>
-        <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For channel design questions: use public channels for team-wide communication and knowledge sharing; private channels for sensitive topics. Shared channels (Slack Connect) for external collaboration. Too many channels creates noise, the correct design consolidates to the minimum needed for effective communication.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: Workflow Builder is the no-code answer for most scenarios. Custom Slack apps (using the Slack API) are for complex requirements beyond Workflow Builder capabilities. When a scenario says ’without coding’ or ’non-technical admin’, the answer is Workflow Builder.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For adoption questions: successful Slack deployments start with executive sponsorship and a champion network. Phased rollout, starting with a pilot team, is preferred over big-bang deployment. Success metrics include messages sent, channels active, and response time improvements, not just adoption rate.</li>
-        </ul>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
-        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
-          <Clock className="h-4 w-4" />
-          80%+ on 3 timed full mocks before booking
-        </p>
-        <p className="text-sm text-gray-700 mt-3">
-          The Slack Consultant exam rewards practical implementation experience. Candidates who have led
-          or participated in a Slack deployment project perform significantly better than those who only
-          know Slack from an end-user perspective. Complete the Trailhead Slack Consultant trail
-          and review the official Slack Admin and Consultant guides before booking.
-        </p>
-      </section>
-
-
-            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Slack Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
-        <div className="space-y-5">
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-1">1. Workflow Builder vs Slack API: No-Code vs Pro-Code</h3>
-            <p className="text-sm text-gray-700">Workflow Builder is a no-code tool for automating Slack-native actions: sending messages, collecting form responses, posting to channels on a trigger. The Slack API is for complex integrations requiring custom logic, external data, or dynamic responses. Candidates recommend Workflow Builder for all automation, the exam expects Workflow Builder for simple, Slack-native automations and API/Bolt for complex custom integrations.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-1">2. Canvas vs Posts vs Bookmarks: Persistent Content Types</h3>
-            <p className="text-sm text-gray-700">Canvas is the collaborative document surface in a channel for shared notes, meeting agendas, and project details. Posts are formatted messages, they appear in the channel timeline. Bookmarks are pinned links/resources in a channel header. Candidates use Posts for all persistent reference content, the exam expects Canvas for collaborative, editable documents and Bookmarks for quick-access links.</p>
-          </div>
-          <div>
-            <h3 className="font-semibold text-gray-900 mb-1">3. Salesforce for Slack Integration: Connected App vs Custom Integration</h3>
-            <p className="text-sm text-gray-700">The Salesforce for Slack app is a pre-built integration (Salesforce Records app) that lets users view, create, and update Salesforce records from Slack using the official AppExchange app. Custom Slack-Salesforce integrations use the Slack API + Salesforce REST API. Candidates design custom integrations for standard CRM lookups, the exam expects the AppExchange-native Salesforce for Slack app for standard record operations.</p>
-          </div>
-        </div>
-      </section>
-
-<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
-        <dl className="space-y-4">
-          {faqItems.map((item, i) => (
-            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
-              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+        <div className="space-y-5 text-sm text-gray-700">
+          {examSections.map(({ name, weight, body }) => (
+            <div key={name}>
+              <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+                {name} ({weight}%)
+              </p>
+              <p>{body}</p>
             </div>
           ))}
-        </dl>
+        </div>
+        <p className="text-sm text-gray-700 mt-5 pt-5 border-t border-gray-100">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 67% pass mark.
+        </p>
       </section>
 
-
-
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Slack Consultant Prep</h2>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Slack Consultant Practice Questions <ArrowRight className="h-4 w-4" />
-          </Link>
-          <Link href="/certifications/slack-developer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Slack Developer Tips
-          </Link>
-          <Link href="/consultant-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Consultant Certification Path
-          </Link>
+      <section id="study-plan" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week Slack Consultant Study Plan</h2>
+        <div className="space-y-4 text-sm text-gray-700">
+          <p><strong>Week 1 &mdash; Policies and Settings (22%) and Governance Structure (8%):</strong> Review the Enterprise Grid roles and what each can change, identity management with SSO and SCIM, org-level security and compliance settings, and launch settings for channel management, Slack Connect, and app approval.</p>
+          <p><strong>Week 2 &mdash; Discovery (10%) and Grid Design (15%):</strong> Practise turning discovery notes into a vision statement, success metrics, and two or three grid design options with the trade-offs of each.</p>
+          <p><strong>Week 3 &mdash; Delivery and Migration (17%) and Channel Strategy (10%):</strong> Walk through a migration from pre-migration cleanup and communications to cutover and issue handling. Draft a channel naming convention and an onboarding workflow.</p>
+          <p><strong>Week 4 &mdash; Learning and Enablement (18%) and timed practice:</strong> Outline a learning plan for admins and one for users, plus a rollout communication plan. Then take timed practice sets (60 questions, 90 minutes) and review what you missed.</p>
         </div>
-        <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+      </section>
+
+      <section id="scenario-rules" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach Slack Consultant Scenario Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a client engagement and ask what the consultant should recommend. Look for the simplest native Slack answer that meets the stated need.
+        </p>
+        <ul className="space-y-3 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Channel design questions:</strong> public channels for team-wide work, private channels for sensitive topics, and Slack Connect for work with outside organizations.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Automation questions:</strong> when a scenario says &ldquo;without code&rdquo; or names a non-technical admin, the answer is Workflow Builder. Custom apps are for needs beyond it.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Adoption questions:</strong> look for executive sponsorship, a champion network, and a phased rollout that starts with a pilot team.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Settings questions:</strong> check which role is allowed to make the change, and whether it is an org-level or a workspace-level setting.</span></li>
+        </ul>
+      </section>
+
+      <section id="common-mistakes" className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts Slack Consultant Candidates Often Mix Up</h2>
+        <div className="space-y-5 text-sm text-gray-700">
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Slack Connect vs. Channels Shared Across Workspaces</h3>
+            <p>Slack Connect links your organization with a different organization. Sharing a channel across workspaces happens inside one Enterprise Grid organization. A scenario about the company’s own business units is a grid design question, not a Slack Connect one.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Org-Level vs. Workspace-Level Roles</h3>
+            <p>On Enterprise Grid, Org Owners and Org Admins manage settings for the whole organization, while Workspace Owners and Workspace Admins manage a single workspace. Many settings questions turn on which level a policy is set at.</p>
+          </div>
+          <div>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Workflow Builder vs. Custom Apps</h3>
+            <p>Workflow Builder is the no-code tool for Slack-native automation such as forms, scheduled messages, and onboarding steps. A custom app built on the Slack API is for logic or integrations that Workflow Builder cannot handle.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go After Slack Consultant</h2>
+        <p className="text-sm text-gray-700">
+          Related credentials are{' '}
+          <Link href="/certifications/slack-administrator" className="text-salesforce-blue font-medium hover:underline">Slack Administrator</Link> and{' '}
+          <Link href="/certifications/slack-developer" className="text-salesforce-blue font-medium hover:underline">Slack Developer</Link>. For other consultant exams, see the{' '}
+          <Link href="/consultant-certification-path" className="text-salesforce-blue font-medium hover:underline">consultant certification path</Link>.
         </p>
       </section>
     </div>

@@ -1002,13 +1002,13 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'slack-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%. Cover Slack Strategy, Channels/Workflows, Salesforce Integration, and Governance.',
-      'Know Slack strategy and design: workspace design, channel strategy, and adoption.',
+      'There are seven sections. Policies and Settings (22%), Learning and Enablement (18%), and Delivery and Migration (17%) carry the most weight.',
+      'Know discovery and Enterprise Grid design: vision, success metrics, and feasible grid options.',
       'Understand channels and workflows: channel management, Workflow Builder, and automation.',
       'Be ready for "how would you implement X?" consultant-style questions.',
     ],
-    prerequisites: ['Slack experience', 'Salesforce knowledge'],
-    focusAreas: ['Slack Strategy and Design', 'Channels and Workflows', 'Salesforce Integration', 'Governance and Best Practices'],
+    prerequisites: ['Slack administration or rollout experience'],
+    focusAreas: ['Policies and Settings', 'Learning and Enablement', 'Delivery and Migration', 'Grid Design', 'Channel Strategy'],
     studyStrategy: 'Think like a consultant. Design Slack solutions, integrate with Salesforce, and plan governance. Align with the exam outline.',
   },
   'omnistudio-consultant': {
