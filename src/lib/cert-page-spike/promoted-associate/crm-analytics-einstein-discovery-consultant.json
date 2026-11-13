@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the CRM Analytics Einstein Discovery Consultant exam for?",
+    "heading": "Who should take the CRM Analytics and Einstein Discovery Consultant exam?",
     "personas": [
       {
-        "label": "Analysts building in CRM Analytics",
-        "description": "You already make dashboards and now need the data layer: recipes, dataflows, security predicates and how predictions get back into Salesforce."
+        "label": "CRM Analytics practitioners",
+        "description": "You build datasets and dashboards and want to show that you understand data preparation, access controls, and predictions."
       },
       {
-        "label": "Admins asked to own analytics",
-        "description": "Reports and dashboards have hit their limit and CRM Analytics is the next step. This covers what that involves."
+        "label": "Salesforce administrators responsible for analytics",
+        "description": "Your team needs more than standard reports, and you support CRM Analytics work in Salesforce."
       },
       {
-        "label": "Consultants on analytics projects",
-        "description": "You scope and deliver these builds and need to know where the real constraints are, particularly around row-level security."
+        "label": "Analytics implementation consultants",
+        "description": "You scope or deliver analytics solutions and need to plan for security, model quality, and deployment."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the CRM Analytics Einstein Discovery Consultant Exam Hard?",
-    "summary": "Moderate, with a hard edge in two places. Row-level security through predicates and sharing inheritance is where candidates lose most marks, and Einstein Discovery model quality, bias checking and deployment is the part people have least hands-on experience with. The dashboard and dataset questions are fair.",
+    "heading": "How challenging is the CRM Analytics and Einstein Discovery Consultant exam?",
+    "summary": "The exam spans CRM Analytics data preparation and dashboards as well as Einstein Discovery models and predictions. Security design and model evaluation require careful study because they involve decisions beyond simply building a chart.",
     "bullets": [
-      "<strong>60 questions in 105 minutes.</strong> Some questions show a predicate or a recipe step and ask what it does.",
-      "<strong>Around 65% to pass.</strong>",
-      "<strong>Security is the hard section.</strong> Security predicates, inherited sharing, and what each one can and cannot express.",
-      "<strong>Einstein Discovery is half the exam's name.</strong> Story creation, model metrics, bias, and writing predictions back to records."
+      "<strong>60 questions.</strong> Check the current exam guide for the time limit and testing details.",
+      "<strong>65% passing score.</strong> Confirm the current requirement before scheduling.",
+      "<strong>Access controls matter:</strong> Understand security predicates and when a dataset can inherit Salesforce sharing.",
+      "<strong>Evaluate models before deployment:</strong> Review model metrics, potential leakage, and bias checks."
     ],
-    "passRateGuidance": "Two things tell you whether you are ready. Can you write a security predicate for a requirement such as managers see their team's rows, and say when inherited sharing is the better answer? And can you look at a story's model and say whether it is good enough to deploy, and why? If either is shaky, that is where the marks are."
+    "passRateGuidance": "Practice writing an access rule for a specific dataset and explain when inherited sharing may be suitable. Also review a Discovery model, assess its metrics, and check for leakage or bias before deciding whether it is ready to deploy."
   },
   "examFormat": {
-    "heading": "CRM Analytics Einstein Discovery Consultant Exam Format Explained",
-    "intro": "Proctored online or at a test centre. The shape of it:",
-    "scenarioPercent": "Most questions are a requirement followed by four approaches, often with more than one that would work. The distinguishing factor is usually maintainability: a recipe over a dataflow, inherited sharing over a hand-written predicate, standard embedding over custom code.",
+    "heading": "CRM Analytics and Einstein Discovery Consultant exam format",
+    "intro": "The exam is proctored online or at a test center. Questions cover data preparation, dashboard behavior, security, and predictive analytics.",
+    "scenarioPercent": "Many questions describe an analytics requirement and ask which feature best supports it. Compare solutions by their behavior and maintenance needs, such as using a recipe for data preparation or inherited sharing when the goal is to respect Salesforce sharing.",
     "bestWayToPass": [
-      "<strong>Build a recipe, not just a dashboard.</strong> Load data, join it, aggregate it, output a dataset. The transformation questions become obvious once you have done this.",
-      "<strong>Practise security predicates until the syntax is automatic.</strong> They are the most commonly failed topic and they are learnable in an afternoon.",
-      "<strong>Create a story end to end.</strong> Pick a dataset, let Discovery build a model. Read the metrics, then deploy the prediction to an object. Doing it once covers a surprising amount of ground.",
-      "<strong>Know when SAQL is actually needed.</strong> Most dashboard work does not require it, and the exam tests whether you know where the line is as much as it tests the syntax."
+      "<strong>Build a data preparation flow:</strong> Load, join, transform, and output data so you understand how recipes and dataflows differ.",
+      "<strong>Practice security design:</strong> Work through owner-based and role-based examples, and understand what each security approach can express.",
+      "<strong>Create and assess a Discovery story:</strong> Review model metrics and check for leakage and bias before deployment.",
+      "<strong>Learn dashboard interactions:</strong> Understand how selection and results bindings pass values between widgets, and when SAQL is needed."
     ]
   },
   "certificationCard": {
     "code": "Analytics & Discovery",
-    "description": "Covers the full CRM Analytics build: getting data in with dataflows and recipes, designing lenses and dashboards, row-level security, and using Einstein Discovery to create stories, evaluate models and write predictions back onto Salesforce records. The exam is 60 scored questions in 90 minutes, with a 65% pass mark, weighted towards Data Layer (23%) and Analytics Dashboard Implementation (19%).",
+    "description": "Covers CRM Analytics data preparation, datasets, dashboards, row-level access, and Einstein Discovery stories, model evaluation, and predictions on Salesforce records. The exam is 60 scored questions in 90 minutes, with a 65% pass mark, weighted towards Data Layer (23%) and Analytics Dashboard Implementation (19%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "CRM Analytics & Einstein Discovery: Key Concepts for the Exam",
+    "h2": "CRM Analytics and Einstein Discovery: core concepts",
     "blocks": [
       {
-        "heading": "Datasets, Dataflows and Recipes",
-        "body": "Everything in CRM Analytics queries a dataset, which is a columnar snapshot built on a schedule rather than a live view of Salesforce data. You get data in through two tools. Dataflows are the older JSON-defined approach, built from nodes such as sfdcDigest to pull an object, augment to join, flatten to resolve a role hierarchy, and sfdcRegister to output. Recipes are the newer visual tool, built on Data Prep, and they can do everything a dataflow can plus transformations that are painful in JSON: clustering, prediction, formula columns, appends and joins with a preview at every step. For new work, recipes are the expected answer, and the exam leans that way. Two dataflow nodes keep appearing in questions regardless: augment, because joining is so common, and flatten, because it is the only way to turn a hierarchy into something you can filter on."
+        "heading": "Datasets, Dataflows, and Recipes",
+        "body": "CRM Analytics dashboards and lenses query datasets. A dataset is prepared data that is refreshed through a data preparation process rather than a live view of Salesforce records. Dataflows define preparation steps in a JSON-based format. Recipes provide a visual way to join and transform data, with previews along the way. Common dataflow operations include digesting Salesforce data, augmenting a dataset with related columns, flattening hierarchical data, and registering an output dataset. Choose the preparation tool that fits the requirement and the org’s established approach."
       },
       {
-        "heading": "Lenses, Dashboards and Bindings",
-        "body": "A lens is a single exploration of one dataset. A dashboard assembles widgets, and the thing that makes dashboards hard is bindings: the expressions that let one widget drive another. Selection bindings take what the user has clicked and feed it into another query. Results bindings take the output of one query and use it in another, which is how you build a widget whose values depend on a calculation elsewhere. Pages let you split a dashboard into views without building separate dashboards. The design guidance the exam rewards is unexciting and consistent: filter at the dataset or query level rather than fetching everything and hiding it, limit the number of queries per dashboard because each is a round trip, and use faceting so related widgets filter together by default."
+        "heading": "Lenses, Dashboards, and Bindings",
+        "body": "A lens explores one dataset. A dashboard combines visualizations and other widgets. Bindings pass a value from one widget or query to another. A selection binding uses a user selection; a results binding uses query output. Pages can organize dashboard views. For performance and clarity, limit unnecessary queries and filter data close to where it is prepared or queried. Faceting can coordinate filters across related widgets."
       },
       {
         "heading": "Einstein Discovery Stories and Models",
-        "body": "A story is what Discovery produces when you point it at a dataset and name an outcome variable. It analyses the drivers of that outcome and produces insights in four flavours: what happened, why it happened, what will happen, and what to do about it. Behind the insights sits a model, and the exam expects you to be able to judge one. For a numeric outcome you look at R squared and mean absolute error; for a binary outcome you look at the confusion matrix and measures derived from it. The quality checks matter as much as the metrics. Discovery flags variables that leak the answer, such as a field that is only populated after the outcome is known, and it supports bias detection on sensitive variables so you can see whether the model treats groups differently. A model with strong metrics and a leaking variable is worse than useless, and questions test that you would reject it."
+        "body": "An Einstein Discovery story analyzes a dataset in relation to an outcome and highlights factors associated with that outcome. Review the model metrics that fit the outcome type: numeric predictions can be evaluated with measures such as R-squared and mean absolute error; classification models can be evaluated with a confusion matrix and related measures. Metrics are only part of the review. Check whether an input variable reveals information that would not be available when a prediction is made, and use bias checks to assess differences across relevant groups before deployment."
       },
       {
-        "heading": "Deploying Predictions Back to Salesforce",
-        "body": "A model only earns its keep when it reaches the people doing the work. Discovery deploys a prediction definition against a Salesforce object, which puts a prediction, the top drivers behind it, and suggested improvements onto the record, visible through the Einstein Predictions component. Predictions can be scored in real time as a user edits a record, or written in bulk to existing records. They can also be consumed in Flow, which is how you act on a score automatically rather than leaving it on screen. The points that get examined are the mapping step, where the model's variables must be matched to fields on the target object, and the distinction between scoring on demand and writing scores back to the records in bulk."
+        "heading": "Deploying Predictions to Salesforce",
+        "body": "A prediction definition connects a model to a Salesforce object so scores and related insights can be used in the business process. Deployment requires mapping model variables to fields available on the target object. Predictions may be evaluated as a user works with a record or applied to records in bulk, depending on the setup. A prediction can also be used in Flow to support an automated follow-up. Know how the model inputs map to the target data and how the score will be used."
       },
       {
         "heading": "Row-Level Security",
-        "body": "This is the section that decides results. A dataset is a flat snapshot and does not inherit Salesforce record access by default, so when a dataset is registered it is visible in full to anyone who can see it. There are two ways to restrict it. A security predicate is a filter expression stored on the dataset and applied to every query, written against dataset columns and user attributes, for example 'OwnerId' == \"$User.Id\". Predicates can express hierarchies by combining a flattened role column with the running user's role. The alternative is inherited sharing, where the dataset is configured to respect the sharing of the underlying Salesforce object, which is simpler to maintain and the right answer when the requirement is just mirror Salesforce sharing. Inherited sharing has limits on the number of records it can handle, which is exactly the trade-off questions probe: use inheritance for straightforward sharing on moderate volumes. Write a predicate when the rule is custom or the volume is large."
+        "body": "CRM Analytics datasets need an explicit access design. A security predicate filters dataset rows using dataset fields and user information. For example, an owner-based rule can compare the row owner with the current user. Hierarchy requirements may need a flattened hierarchy field or another representation suitable for the predicate. Inherited sharing can align dataset access with sharing on the source Salesforce object where supported. Choose based on the access requirement, source data, supported scale, and maintenance needs; do not assume that dataset access automatically mirrors Salesforce record access."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the CRM Analytics and Einstein Discovery Consultant Exam",
-    "intro": "This exam rewards having built something. The dashboard questions are forgiving; the security and model-quality questions are not.",
+    "h2": "How to prepare for the CRM Analytics and Einstein Discovery Consultant exam",
+    "intro": "For each scenario, identify whether it concerns data preparation, dashboard interaction, row access, model evaluation, or prediction deployment. Then choose the feature that meets the requirement and can be maintained.",
     "blocks": [
       {
-        "heading": "Recipes Over Dataflows",
-        "body": "Recipes are the current tool and the expected answer for new work. Know what they add: formula columns, clustering, prediction, visual previews."
+        "heading": "Choose Recipes or Dataflows",
+        "body": "Understand how both tools prepare data, and review the common dataflow operations. For a new preparation flow, know the capabilities of the visual recipe experience."
       },
       {
-        "heading": "Predicate Syntax",
-        "body": "Practise writing predicates for real requirements, including owner-based and role-hierarchy cases. The most commonly failed topic and the most quickly fixed."
+        "heading": "Write and Review Security Rules",
+        "body": "Practice owner-based and hierarchy-based access examples. Be able to explain when an explicit predicate is needed and when inherited sharing may fit."
       },
       {
-        "heading": "Inherited Sharing Trade-off",
-        "body": "Simpler to maintain, limited by record volume. Know when to choose it over a predicate and be ready to justify either."
+        "heading": "Assess the Model Before Deployment",
+        "body": "Use appropriate metrics for the prediction type, check for leakage, and assess bias across relevant groups before publishing a model."
       },
       {
-        "heading": "Judging a Model",
-        "body": "R squared and mean absolute error for numeric outcomes, the confusion matrix for binary ones. Watch for leaking variables and check bias on sensitive fields."
+        "heading": "Know the Binding Types",
+        "body": "Selection bindings use a user’s selection; results bindings use query results. Build a small example of each to learn how one widget can affect another."
       },
       {
-        "heading": "Bindings",
-        "body": "Selection bindings respond to clicks; results bindings use one query's output in another. Build one of each rather than reading about them."
+        "heading": "Map and Use Predictions",
+        "body": "When deploying a prediction, map the model variables to fields on the Salesforce object and decide whether users, bulk processing, or Flow will consume the score."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Consultant Certifications",
-    "intro": "Where analytics work usually leads next:",
+    "heading": "Related credentials after CRM Analytics and Einstein Discovery",
+    "intro": "Build on analytics skills with a Salesforce platform credential or a role-focused consultant certification.",
     "links": [
       {
         "href": "/certifications/data-360-consultant",
@@ -170,71 +170,71 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A dataset must show each user only the records they own. Which approach expresses this most directly?",
+      "question": "A dataset should show each user only rows they own. Which approach directly filters the rows by the current user?",
       "options": [
-        "A dashboard filter on owner",
-        "Removing the dataset from all apps",
-        "A predicate comparing owner to the running user",
-        "Field-level security applied on the source object itself"
+        "A dashboard-level owner filter",
+        "Remove the dataset from every app",
+        "An owner-based security predicate",
+        "Field-level security on the source object"
       ],
       "correctAnswer": 2,
-      "explanation": "Security predicates are applied to every query against the dataset and are designed for exactly this rule.",
+      "explanation": "A security predicate can compare the row owner value with the current user and restrict dataset rows accordingly.",
       "whyWrong": [
-        "A dashboard filter can be removed by the user and is not a security control.",
-        "Hiding the dataset blocks legitimate access rather than filtering rows.",
-        "Field-level security on the source object does not restrict rows in a registered dataset."
+        "A dashboard filter affects a particular view and is not a dataset-wide access rule.",
+        "Removing the dataset prevents use rather than providing owner-based row access.",
+        "Field-level security controls access to fields, not which dataset rows a user can see."
       ]
     },
     {
-      "question": "A requirement is simply that the dataset should respect the sharing already configured on the Salesforce object, and record volume is moderate. What is the best choice?",
+      "question": "The requirement is for dataset access to follow existing Salesforce object sharing, and the data volume is moderate. What should be considered first?",
       "options": [
         "Inherited sharing on the dataset",
-        "No restriction, relying on app permissions",
-        "A separate dataset per role",
-        "A hand-written security predicate replicating the sharing rules"
+        "No row restriction because app access is sufficient",
+        "A separate dataset for every role",
+        "A hand-written predicate that duplicates the sharing model"
       ],
       "correctAnswer": 0,
-      "explanation": "Inherited sharing mirrors Salesforce sharing without you maintaining a parallel rule set, which is why it suits this case.",
+      "explanation": "Inherited sharing can use access from the underlying Salesforce object when the dataset setup supports it.",
       "whyWrong": [
-        "App-level permissions control who sees the dataset, not which rows.",
-        "Duplicating datasets per role multiplies maintenance and refresh cost.",
-        "Replicating sharing in a predicate is more work to build and to keep correct."
+        "This directly matches the goal of respecting the source object sharing model.",
+        "App access alone does not necessarily restrict which rows a user can query.",
+        "Duplicating datasets by role increases maintenance and is not required by this scenario."
       ]
     },
     {
-      "question": "An Einstein Discovery model shows excellent accuracy, but one of its variables is only populated after the outcome has been decided. What should happen?",
+      "question": "A Discovery model has strong accuracy, but one input field is populated only after the outcome is known. What should the team do?",
       "options": [
-        "Deploy it, since the accuracy is high",
-        "Remove that variable and retrain",
-        "Convert it to a text field",
-        "Keep it but document the issue"
+        "Deploy because the accuracy score is high",
+        "Remove the field and retrain",
+        "Convert the field to text and keep it",
+        "Deploy and document the limitation"
       ],
       "correctAnswer": 1,
-      "explanation": "A variable known only after the outcome inflates accuracy in training and is useless at prediction time.",
+      "explanation": "A field that reveals information unavailable at prediction time can leak the outcome; remove it and retrain before judging the model again.",
       "whyWrong": [
-        "High accuracy caused by leakage will not survive contact with real data.",
-        "Changing the field type does not change when the value becomes known.",
-        "Documenting a broken model does not make it safe to deploy."
+        "Strong metrics do not make a model valid if it uses information from after the outcome.",
+        "Changing the field type does not remove the information leakage.",
+        "Documentation does not correct a model that relies on an unavailable future value."
       ]
     },
     {
-      "question": "Which dataflow node joins columns from one dataset onto another?",
+      "question": "Which dataflow operation adds matching columns from one dataset to another?",
       "options": [
-        "the augment join node",
+        "Augment",
         "sfdcDigest",
-        "the sfdcRegister node",
-        "flatten"
+        "sfdcRegister",
+        "Flatten"
       ],
       "correctAnswer": 0,
-      "explanation": "Augment is the join node, bringing fields from a right dataset onto a left one on a matching key.",
+      "explanation": "Augment joins related columns from another dataset based on matching key fields.",
       "whyWrong": [
-        "sfdcDigest extracts data from a Salesforce object.",
-        "sfdcRegister writes the result out as a dataset.",
-        "Flatten resolves a hierarchy into a column of ancestor values."
+        "Digest extracts Salesforce object data into the data preparation flow.",
+        "Register writes the prepared output as a dataset.",
+        "Flatten changes hierarchical data into a form that can be queried."
       ]
     },
     {
-      "question": "A dashboard must show a chart whose values depend on the result of a separate query rather than on a user click. What is needed?",
+      "question": "A dashboard widget should use the result of another query, rather than a value the user clicked. Which binding is appropriate?",
       "options": [
         "A results binding",
         "A security predicate",
@@ -242,171 +242,251 @@
         "A selection binding"
       ],
       "correctAnswer": 0,
-      "explanation": "Results bindings feed the output of one query into another, independent of user interaction.",
+      "explanation": "A results binding passes output from one query to another widget or query.",
       "whyWrong": [
-        "Predicates are a security mechanism.",
-        "A new dataset does not create the dependency between widgets.",
-        "Selection bindings respond to what the user has clicked."
+        "A security predicate limits data access and does not connect query results between widgets.",
+        "A separate dataset is not necessary just to pass one query’s result.",
+        "A selection binding responds to user selections rather than query output."
       ]
     },
     {
-      "question": "For new data preparation work in CRM Analytics, which tool is the expected choice?",
+      "question": "Which tool is a visual option for preparing and transforming data in CRM Analytics?",
       "options": [
-        "A standard report snapshot",
+        "A report snapshot",
         "An Apex batch job",
         "A JSON dataflow",
         "A recipe in Data Prep"
       ],
       "correctAnswer": 3,
-      "explanation": "Recipes are the current tool and cover everything dataflows do plus transformations that are difficult in JSON.",
+      "explanation": "Recipes provide a visual data preparation workflow with transformation steps and previews.",
       "whyWrong": [
-        "Report snapshots are a core Salesforce feature, unrelated to CRM Analytics datasets.",
-        "Apex is not how CRM Analytics datasets are built.",
-        "Dataflows remain supported but are no longer the recommended starting point."
+        "A report snapshot is not the CRM Analytics data preparation tool described here.",
+        "Apex can process data in custom code but is not the visual recipe interface.",
+        "Dataflows are JSON-defined; the question asks for the visual preparation tool."
       ]
     },
     {
-      "question": "A deployed prediction should trigger an automated follow-up task when the score falls below a threshold. How is this best done?",
+      "question": "A deployed score should create a follow-up task when it falls below a chosen threshold. What can automate that response?",
       "options": [
-        "Ask users to read the score and act manually",
-        "Add a formula field on the dashboard",
-        "Consume the prediction in Flow",
-        "Rebuild the model with a lower threshold"
+        "Ask users to check the score and create tasks manually",
+        "Add a formula to the dashboard",
+        "Use the prediction in a Flow",
+        "Retrain the model with a different threshold"
       ],
       "correctAnswer": 2,
-      "explanation": "Predictions can be consumed in Flow, which is how a score drives automated action.",
+      "explanation": "Flow can consume a prediction and create an action, such as a follow-up task, when conditions are met.",
       "whyWrong": [
-        "Manual action does not satisfy an automation requirement.",
-        "Dashboards display information and cannot create records.",
-        "Changing the model does not create the follow-up task."
+        "Manual review does not automate the requested follow-up.",
+        "A dashboard formula does not itself create Salesforce tasks.",
+        "Changing the model threshold is not the same as automating a task from the score."
       ]
     },
     {
-      "question": "Which dataflow node is required to filter on a role hierarchy within a dataset?",
+      "question": "Which dataflow operation can make a role hierarchy usable as dataset columns for filtering?",
       "options": [
-        "flatten",
-        "the augment join node",
+        "Flatten",
+        "Augment",
         "dim2mea",
-        "slice"
+        "Slice"
       ],
       "correctAnswer": 0,
-      "explanation": "Flatten converts a hierarchy into a multi-value column of ancestors, which a predicate or filter can then use.",
+      "explanation": "Flatten can turn hierarchical data into columns that can be queried or used in a predicate.",
       "whyWrong": [
-        "Augment joins datasets but does not resolve hierarchy paths.",
-        "dim2mea converts a dimension to a measure.",
-        "Slice selects or removes fields."
+        "Augment joins related columns but does not itself convert a hierarchy to flat rows.",
+        "dim2mea changes a dimension into a measure; it does not represent a role hierarchy.",
+        "Slice is not the dataflow operation described for flattening hierarchical relationships."
       ]
     },
     {
-      "question": "Which metrics are appropriate for judging a model that predicts a numeric outcome such as deal amount?",
+      "question": "Which measures are suitable when evaluating a model that predicts a numeric value such as deal amount?",
       "options": [
         "Precision and recall",
-        "The confusion matrix",
-        "R squared and mean absolute error",
-        "The total number of insights generated"
+        "A confusion matrix",
+        "R-squared and mean absolute error",
+        "The number of insights produced"
       ],
       "correctAnswer": 2,
-      "explanation": "Numeric outcomes are evaluated with regression measures such as R squared and mean absolute error.",
+      "explanation": "R-squared and mean absolute error are examples of metrics used to evaluate numeric predictions.",
       "whyWrong": [
-        "Precision and recall are classification measures.",
-        "Confusion matrices describe classification outcomes.",
-        "Insight count says nothing about model quality."
+        "Precision and recall are generally used for classification outcomes.",
+        "A confusion matrix summarizes classification results rather than numeric prediction error.",
+        "The count of insights does not measure the accuracy of numeric predictions."
       ]
     },
     {
-      "question": "Why does a CRM Analytics dashboard get slower as more widgets are added?",
+      "question": "Why can adding many widgets make a CRM Analytics dashboard slower?",
       "options": [
-        "Widgets are rendered sequentially on the server",
-        "Each query is a separate round trip against the dataset",
-        "Datasets expand with each widget",
-        "Security predicates are re-evaluated per user session only"
+        "The server must render each widget in a strict sequence",
+        "Each widget can add another dataset query",
+        "A new dataset is created for every widget",
+        "Predicates run only once for each user session"
       ],
       "correctAnswer": 1,
-      "explanation": "Query count is the main driver of dashboard performance, which is why consolidating and faceting helps.",
+      "explanation": "More widgets can mean more queries and requests, increasing the work needed to load the dashboard.",
       "whyWrong": [
-        "Rendering is not the bottleneck; querying is.",
-        "Datasets are fixed snapshots and do not grow when widgets are added.",
-        "Predicate evaluation is not the cause of the scaling problem described."
+        "Widgets do not necessarily render in a strict sequence on the server.",
+        "Dataset count does not automatically increase with each dashboard widget.",
+        "This does not describe how predicates cause dashboard loading delays."
       ]
     },
     {
-      "question": "A sensitive variable such as gender is present in a story's dataset. What should be done before deploying?",
+      "question": "A Discovery dataset includes a sensitive field such as gender. What should the team do before deployment?",
       "options": [
-        "Ignore it, since models are objective",
-        "Delete the dataset",
-        "Run bias detection across the groups",
-        "Convert it to a measure"
+        "Assume the model is objective because it is data-driven",
+        "Delete the entire dataset",
+        "Run bias checks across relevant groups",
+        "Convert the field into a measure"
       ],
       "correctAnswer": 2,
-      "explanation": "Discovery supports bias checking on sensitive variables, and checking is the responsible step before deployment.",
+      "explanation": "Bias checks can help the team evaluate whether model results differ across relevant groups before deployment.",
       "whyWrong": [
-        "Models reproduce patterns in their training data, including unfair ones.",
-        "Deleting the dataset discards work that may be legitimate once checked.",
-        "Changing the field type does not address the fairness question."
+        "Models can reproduce or amplify patterns in their training data; objectivity should not be assumed.",
+        "Deleting the dataset is unnecessary if the team can assess and govern the feature appropriately.",
+        "Changing the field type does not assess whether predictions differ across groups."
       ]
     },
     {
-      "question": "What is the relationship between a dataset and live Salesforce data?",
+      "question": "How does a CRM Analytics dataset relate to Salesforce records?",
       "options": [
-        "A dataset is a report type",
-        "A dataset is a snapshot refreshed on a schedule",
-        "A dataset queries Salesforce records in real time",
-        "A dataset is a view over the Salesforce database"
+        "It is a Salesforce report type",
+        "A scheduled snapshot of prepared data",
+        "It queries Salesforce live whenever a dashboard opens",
+        "It is a live database view"
       ],
       "correctAnswer": 1,
-      "explanation": "Datasets are built and refreshed by dataflows or recipes, so they reflect data as of the last run.",
+      "explanation": "A dataset contains prepared data that is refreshed through its data preparation process rather than acting as a live view.",
       "whyWrong": [
-        "Report types are a core reporting concept.",
-        "Real-time querying is not how CRM Analytics datasets work.",
-        "There is no live view; the data is copied in."
+        "A report type is a separate Salesforce reporting configuration.",
+        "A dataset is not automatically a live query of Salesforce each time a dashboard opens.",
+        "The dataset is prepared output, not a live database view."
       ]
     },
     {
-      "question": "A prediction definition is being deployed to the Opportunity object. Which step is essential?",
+      "question": "A prediction definition will be deployed to the Opportunity object. Which setup step is essential?",
       "options": [
-        "Adding a results binding",
-        "Mapping model variables to object fields",
-        "Writing a security predicate for the model",
-        "Creating a new dataflow"
+        "Add a results binding to the object",
+        "Map model variables to fields on the object",
+        "Write a security predicate for the model",
+        "Create a new dataflow"
       ],
       "correctAnswer": 1,
-      "explanation": "Variable to field mapping is what lets the model score live records on the target object.",
+      "explanation": "The model inputs must be mapped to fields available on the target Salesforce object for scoring.",
       "whyWrong": [
-        "Bindings are a dashboard construct.",
-        "Predicates secure dataset rows and are not part of prediction mapping.",
-        "A dataflow is not required to deploy an existing model."
+        "Bindings connect dashboard queries and widgets; they do not map model inputs to object fields.",
+        "A predicate controls dataset row access and is not the prediction field mapping.",
+        "A new dataflow may not be required to deploy a prediction definition."
       ]
     },
     {
-      "question": "When is writing SAQL by hand the appropriate choice?",
+      "question": "When is writing SAQL directly a reasonable choice?",
       "options": [
         "For every dashboard widget",
-        "To replace recipes",
-        "Whenever performance matters",
-        "When the builder cannot express it"
+        "To replace recipes for all data preparation",
+        "Whenever a dashboard has performance issues",
+        "When the builder cannot express the query"
       ],
       "correctAnswer": 3,
-      "explanation": "Most dashboard work needs no SAQL, so hand-written queries are for the cases the builder cannot express.",
+      "explanation": "SAQL is useful when the required query or calculation is not available through the builder controls.",
       "whyWrong": [
-        "Routine widgets are better built with the standard tooling and are easier to maintain.",
-        "SAQL queries data; recipes prepare it.",
-        "Hand-written SAQL is not automatically faster."
+        "Many dashboard widgets can be built without hand-written SAQL.",
+        "Recipes prepare data and are not replaced by SAQL for all preparation work.",
+        "Performance problems need diagnosis; custom SAQL is not automatically the solution."
       ]
     },
     {
-      "question": "A manager must see rows belonging to everyone beneath them in the role hierarchy. Which combination achieves this?",
+      "question": "A manager should see rows for everyone below them in a role hierarchy. Which approach can support this requirement?",
       "options": [
-        "Field-level security applied to the role field itself",
+        "Field-level security on the role field",
         "A dashboard filter on manager name",
-        "Separate dashboards per manager",
-        "A flattened role column plus a predicate"
+        "A separate dashboard for each manager",
+        "A flattened role field with a predicate"
       ],
       "correctAnswer": 3,
-      "explanation": "Flattening produces the ancestor path, and the predicate then compares it against the running user.",
+      "explanation": "A flattened hierarchy field can be combined with a predicate to express which rows fall under the running user.",
       "whyWrong": [
-        "Field-level security does not filter rows.",
-        "Dashboard filters are not a security control.",
-        "Building a dashboard per manager does not scale and leaves the data unsecured."
+        "Field-level security controls field visibility, not row-level hierarchy access.",
+        "A dashboard filter does not provide a complete dataset access rule.",
+        "Separate dashboards add maintenance and do not enforce the underlying row access."
+      ]
+    },
+    {
+      "question": "A company wants to turn on CRM Analytics for a group of users, but not for everyone in the org. What should the consultant check first?",
+      "options": [
+        "Permission sets and licenses that control who gets CRM Analytics access",
+        "The org's Salesforce edition alone",
+        "The number of custom objects in the org",
+        "The Lightning theme applied to the org"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Enabling CRM Analytics for a specific group of users depends on assigning the right permission sets and licenses to those users, not a blanket org-wide switch.",
+      "whyWrong": [
+        "Salesforce edition can gate feature availability generally, but it doesn't control which specific users get access.",
+        "The number of custom objects has nothing to do with who can use CRM Analytics.",
+        "A Lightning theme is a visual setting, unrelated to feature access."
+      ]
+    },
+    {
+      "question": "A team has built dataflows, recipes, and dashboards in a sandbox and now needs to move them to production. What should they plan for?",
+      "options": [
+        "A deployment process between environments, since CRM Analytics assets don't move automatically",
+        "Nothing, sandbox and production always share the same CRM Analytics assets",
+        "Manually retyping every SAQL query in production",
+        "Assets can only ever be built directly in production"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Moving CRM Analytics assets from sandbox to production requires a deliberate deployment/migration process between environments, assets don't sync automatically.",
+      "whyWrong": [
+        "Sandbox and production are separate environments with separate CRM Analytics assets.",
+        "A proper deployment process avoids the error-prone work of manually rebuilding queries.",
+        "Building directly in production skips the safe build-and-test workflow the exam expects."
+      ]
+    },
+    {
+      "question": "A business wants a working CRM Analytics app for standard sales metrics without building every dashboard and dataflow from scratch. What should the consultant use?",
+      "options": [
+        "A standard CRM Analytics templated app, configured to fit the business's needs",
+        "A blank app with every object imported manually",
+        "A single widget pasted into a Salesforce page",
+        "A Flow that generates reports"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A standard templated app (like Sales Analytics) comes with pre-built dataflows, datasets, and dashboards for a common use case, and the consultant configures it to match specific requirements instead of starting from zero.",
+      "whyWrong": [
+        "Manually importing every object from scratch ignores the time-saving purpose of templated apps.",
+        "A single widget doesn't deliver a full analytics app.",
+        "Flow automates business processes, it doesn't build a CRM Analytics app."
+      ]
+    },
+    {
+      "question": "Before building any dashboard, a consultant meets with stakeholders to confirm what questions the dashboard must answer and which of those matter most. What is this process called?",
+      "options": [
+        "Scoping, validating, and prioritizing dashboard design requirements",
+        "Writing SAQL queries immediately",
+        "Picking a random dashboard template",
+        "Skipping requirements and building based on guesswork"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Good dashboard design starts with scoping, validating, and prioritizing the business requirements before any build work begins, following CRM Analytics best practices.",
+      "whyWrong": [
+        "Writing SAQL is an implementation step that comes later, not the upfront requirements process.",
+        "Picking a template without scoping requirements risks building the wrong thing.",
+        "Skipping requirements gathering is exactly what best practices warn against."
+      ]
+    },
+    {
+      "question": "A dashboard has grown slow to load after several widgets were added. Which tool should the consultant use to find and fix the bottleneck?",
+      "options": [
+        "Dashboard Inspector",
+        "A new dataset with the same data duplicated",
+        "Field-level security",
+        "A permission set"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dashboard Inspector shows query execution details per widget, letting a consultant monitor and optimize dashboard performance.",
+      "whyWrong": [
+        "Duplicating the dataset adds overhead and doesn't diagnose the actual bottleneck.",
+        "Field-level security controls field visibility, it has nothing to do with dashboard load performance.",
+        "A permission set controls access, not query performance."
       ]
     }
   ]

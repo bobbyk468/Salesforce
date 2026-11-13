@@ -33,11 +33,11 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Salesforce CRM Analytics Consultant exam format?',
-    answer: 'The CRM Analytics and Einstein Discovery Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of CRM Analytics (formerly Tableau CRM / Einstein Analytics): dashboards, lenses, dataflows, recipes, SAQL queries, and Einstein Discovery predictive analytics.',
+    answer: 'The CRM Analytics and Einstein Discovery Consultant exam has 60 scored multiple-choice questions (plus up to 5 unscored), a 90-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests implementation of CRM Analytics (formerly Tableau CRM / Einstein Analytics): dashboards, lenses, dataflows, recipes, SAQL queries, and Einstein Discovery predictive analytics.',
   },
   {
     question: 'What are the highest-weight CRM Analytics Consultant exam sections?',
-    answer: 'Building and Customising Dashboards (28%) and Data Integration (22%) together account for 50% of the exam. Creating dashboards with steps and widgets, writing SAQL queries for custom calculations, configuring dataflows and recipes to prepare data, and setting up row-level security are the most heavily tested areas.',
+    answer: 'Data Layer (23%) and Analytics Dashboard Implementation (19%) together account for 42% of the exam. Configuring dataflows and recipes to prepare data, building dashboards with accurate query types and widget parameters, writing SAQL queries, and setting up row-level security are the most heavily tested areas.',
   },
   {
     question: 'What is SAQL and how important is it for this exam?',
@@ -75,22 +75,30 @@ export default function CrmAnalyticsExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Where the Exam Weight Falls</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Building and Customising Dashboards</span>
-            <span className="font-bold text-salesforce-blue ml-4">28%</span>
+            <span className="font-medium text-gray-900">Data Layer</span>
+            <span className="font-bold text-salesforce-blue ml-4">23%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data Integration and Dataflows</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+            <span className="font-medium text-gray-900">Analytics Dashboard Implementation</span>
+            <span className="font-bold text-salesforce-blue ml-4">19%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Security and Access</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+            <span className="font-medium text-gray-900">Admin/Configuration</span>
+            <span className="font-bold text-salesforce-blue ml-4">17%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Security</span>
+            <span className="font-bold text-salesforce-blue ml-4">16%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Analytics Dashboard Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
           <div className="flex justify-between items-start">
             <span className="font-medium text-gray-900">Einstein Discovery</span>
-            <span className="font-bold text-salesforce-blue ml-4">16%</span>
+            <span className="font-bold text-salesforce-blue ml-4">12%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Dashboards + Data Integration + Security = 68%. Row-level security and dataflow design are the most technically complex areas.</p>
+          <p className="text-xs text-gray-600 pt-1">Data Layer + Dashboard Implementation + Admin/Configuration = 59%. Row-level security and dataflow design are also technically complex areas worth extra practice.</p>
         </div>
       </section>
 

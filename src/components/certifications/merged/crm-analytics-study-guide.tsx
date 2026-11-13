@@ -29,18 +29,18 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Data Integration', weight: 23, note: 'Dataflows: transformations (augment, computeExpression, flatten, filter, sfdcDigest, sfdcRegister), scheduling, output datasets. Recipes: Data Prep UI, node types (input, output, formula, bucket, join, filter, aggregate), recipe scheduling. External data upload: CSV connector, SFTP. Connected datasets: live Salesforce data without dataflow. When to use dataflows vs recipes.' },
-  { name: 'Dashboards & Lenses', weight: 19, note: 'Dashboard designer: widget types (chart, table, number, filter, date), binding types (static, column, measure). SAQL in dashboards: inline queries. Lenses: exploratory analysis on a single dataset. Dashboard JSON editor for advanced customisation. Faceting: how widgets filter each other. Global filters and local filters. Mobile dashboard considerations.' },
-  { name: 'Analytics Projects & Solutions', weight: 18, note: 'Analytics templates: pre-built app templates for specific use cases (Sales Analytics, Service Analytics, CRM Analytics for Financial Services). Customising templates. Creating apps from scratch vs from templates. Analytics Studio navigation: apps, datasets, dashboards, lenses, recipes. Embedded analytics in Salesforce pages using Wave dashboard component or Analytics tab.' },
-  { name: 'Analytics Ecosystem & Admin', weight: 17, note: 'Platform overview: Analytics Studio, Data Manager, Data Integration Studio. Dataset limits and row counts. Scheduled dataflow and recipe jobs: run order, failure handling, dependency. Analytics notifications: alert users when metric thresholds are crossed. Analytics home page, navigation, and user experience configuration.' },
-  { name: 'Security & Row-Level Security', weight: 12, note: 'Dataset-level security: private vs shared datasets. Row-level security (RLS): predicate logic, security predicates on datasets to filter records per user. Sharing inheritance from Salesforce: replicating record-level security in analytics datasets using role hierarchy sharing. User attributes: dynamic predicates based on user profile fields. Dataset sharing with groups and roles.' },
-  { name: 'SAQL & Recipes', weight: 11, note: 'SAQL (Salesforce Analytics Query Language): q() function, groupby, foreach, order, limit, offset, cogroup for joins. SAQL in lenses vs in dashboard queries. Recipes formula nodes: date functions, string manipulation, conditional logic, bucket expressions. Common recipe transformations for data cleansing and enrichment.' },
+  { name: 'Data Layer', weight: 23, note: 'Data Manager to extract and load data into datasets. Scheduling refreshes for data syncs and dataflows/recipes within platform limits. Data transformations in dataflows/recipes. Dataset extended metadata (XMD): labels, values, colors. Delivery management: versioning and conversion.' },
+  { name: 'Analytics Dashboard Implementation', weight: 19, note: 'Configuring dashboards with query types and widget-level parameters. Selection/result interactions. Advanced functionality like windowing and time series analysis in compare tables. Making dashboards actionable in Lightning pages. Monitoring and optimizing query performance with Dashboard Inspector. Versioning and Dashboard Publisher.' },
+  { name: 'Admin/Configuration', weight: 17, note: 'Enabling CRM Analytics and its features, including permission sets and licenses. Designing solutions within data sync/dataflow/recipe limits. What the CRM Analytics API can and can\'t do. Migrating between environments for deployment.' },
+  { name: 'Security', weight: 16, note: 'Security settings for users, groups, and profiles. Row-based security using sharing inheritance and security predicates. App sharing based on user and group requirements.' },
+  { name: 'Analytics Dashboard Design', weight: 13, note: 'Scoping, validating, and prioritizing dashboard design requirements. Building dashboards that follow CRM Analytics best practices and UX design principles. Choosing and configuring the right standard templated app.' },
+  { name: 'Einstein Discovery', weight: 12, note: 'Building a model: choosing numeric, binary, or multi-classification predictions. Analyzing model results and proposing data improvements. Adjusting parameters and columns to improve a model. Enabling prediction features on Lightning record pages. Reading a Model Card to monitor and maintain model performance.' },
 ]
 
 export const faqItems = [
   {
     question: 'What is Salesforce CRM Analytics?',
-    answer: 'CRM Analytics (formerly Tableau CRM, formerly Einstein Analytics) is Salesforce\'s native business intelligence and analytics platform. It allows users to connect Salesforce and external data, build interactive dashboards, and surface AI-powered insights within the Salesforce UI. The CRM Analytics and Einstein Discovery Consultant certification validates skills in designing, building, and securing analytics solutions. The exam has 60 questions, 105-minute time limit, 65% passing score, and a $200 fee.',
+    answer: 'CRM Analytics (formerly Tableau CRM, formerly Einstein Analytics) is Salesforce\'s native business intelligence and analytics platform. It allows users to connect Salesforce and external data, build interactive dashboards, and surface AI-powered insights within the Salesforce UI. The CRM Analytics and Einstein Discovery Consultant certification validates skills in designing, building, and securing analytics solutions. The exam has 60 scored questions (plus up to 5 unscored), a 90-minute time limit, 65% passing score, and a $200 fee.',
   },
   {
     question: 'What is the difference between a dataflow and a recipe in CRM Analytics?',
@@ -56,7 +56,7 @@ export const faqItems = [
   },
   {
     question: 'How long should I study for the CRM Analytics exam?',
-    answer: 'Plan for 8–10 weeks with 10–12 hours per week. CRM Analytics requires hands-on experience, many exam questions test specific configuration steps in Analytics Studio that you cannot learn from reading alone. Use a free CRM Analytics developer org (available via Trailhead Playground) to build real dataflows, recipes, and dashboards. The Data Integration section (23%) is the most heavily weighted and requires practical dataflow/recipe knowledge.',
+    answer: 'Plan for 8–10 weeks with 10–12 hours per week. CRM Analytics requires hands-on experience, many exam questions test specific configuration steps in Analytics Studio that you cannot learn from reading alone. Use a free CRM Analytics developer org (available via Trailhead Playground) to build real dataflows, recipes, dashboards, and at least one Einstein Discovery model. The Data Layer section (23%) is the most heavily weighted and requires practical dataflow/recipe knowledge.',
   },
 ]
 
@@ -96,6 +96,13 @@ export default function CrmAnalyticsStudyGuideContent() {
             </div>
           ))}
         </div>
+        <p className="text-sm text-gray-700 mt-4">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 65% pass mark.
+        </p>
       </div>
 
       <div className="mb-8">
@@ -125,8 +132,8 @@ export default function CrmAnalyticsStudyGuideContent() {
             { week: 'Week 4', focus: 'Dashboard design. Build a dashboard with chart, table, number, and filter widgets. Configure faceting between widgets. Add a date filter and a global filter bar.' },
             { week: 'Week 5', focus: 'Lenses and SAQL, explore a dataset using the lens builder. Write basic SAQL queries: groupby, foreach, order, limit. Use cogroup to join two datasets in a SAQL query.' },
             { week: 'Week 6', focus: 'Row-level security, configure a security predicate on a dataset. Test that different users see different rows. Implement sharing inheritance from Salesforce using role hierarchy.' },
-            { week: 'Week 7', focus: 'Analytics templates and apps, explore the Sales Analytics app template. Customise an existing template. Understand the template structure (JSON files, assets, dataflows).' },
-            { week: 'Week 8', focus: 'Full mock exams. Data Integration (23%) and Dashboards (19%) are the largest sections. Focus on dataflow transformation node types and security predicate logic. Aim for 75%+.' },
+            { week: 'Week 7', focus: 'Einstein Discovery (12%), build a model and choose between numeric, binary, and multi-classification predictions. Review a Model Card to interpret performance. Enable a prediction field on a Lightning record page.' },
+            { week: 'Week 8', focus: 'Full mock exams. Data Layer (23%) and Analytics Dashboard Implementation (19%) are the largest sections. Focus on dataflow transformation node types, security predicate logic, and Einstein Discovery model evaluation. Aim for 75%+.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -164,6 +171,8 @@ export default function CrmAnalyticsStudyGuideContent() {
           <li>Sharing inheritance: replicating Salesforce record access in analytics datasets</li>
           <li>Connected datasets: live query to Salesforce, performance trade-offs</li>
           <li>Analytics templates: structure, customisation, app creation from templates</li>
+          <li>Einstein Discovery prediction types: numeric, binary, and multi-classification, and which fits a given business question</li>
+          <li>Model Cards: reading model performance to decide whether to maintain, retrain, or adjust a model</li>
         </ol>
       </div>
 
