@@ -53,6 +53,8 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
           certName={title}
           description="This entry-level exam is for people with some Salesforce experience. It covers platform navigation, standard objects, reports and dashboards, security, and Salesforce products. The exam is 40 scored questions in 70 minutes, with a 62% pass mark, weighted towards Salesforce Ecosystem (32%) and Navigation (28%)."
           pageUrl={`/certifications/${slug}`}
+          extraAlternateNames={['Platform Foundations', 'Salesforce Platform Foundations', 'Salesforce Associate Certification', 'Salesforce Associate', 'Plat-101', 'PLAT-101']}
+          extraIdentifiers={[{ propertyID: 'Exam Code', value: 'Plat-101' }]}
         />
         <script
           type="application/ld+json"
@@ -69,11 +71,14 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
             Independent study resource &bull; Check the current Salesforce exam guide before booking
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Salesforce Certified Platform Foundations Exam Questions &amp; Study Guide
+            Salesforce Certified Platform Foundations (Plat-101 / Associate) Study Guide &amp; Practice Questions
           </h1>
           <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
-            Prepare with free Salesforce Platform Foundations practice questions, plus a study plan and section weightage for the entry-level $75 associate exam. No sign-up required.
+            Prepare with free Salesforce Platform Foundations practice questions, plus a study plan and section weightage for the entry-level $75 exam. No sign-up required.
+          </p>
+          <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
+            Salesforce Certified Platform Foundations (Trailhead Academy exam code Plat-101) was previously called Salesforce Certified Associate. It is the same entry-level credential: a $75 exam with free retakes and no required maintenance, covering Salesforce Ecosystem (32%), Navigation (28%), Data Model (25%), and Reports &amp; Dashboards (15%).
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-5">
             <Link
@@ -226,6 +231,7 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
               <p className="text-sm text-gray-700 mb-2">Build on your platform foundations knowledge with these related Salesforce credentials:</p>
               <ul className="space-y-2 text-sm">
                 <li><Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Platform Administrator</Link></li>
+                <li><Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link></li>
                 <li><Link href="/certifications/developer-1" className="text-salesforce-blue font-medium hover:underline">Platform Developer I</Link></li>
                 <li><Link href="/certifications/sales-foundations" className="text-salesforce-blue font-medium hover:underline">Sales Foundations</Link></li>
                 <li><Link href="/certifications/agentforce-specialist" className="text-salesforce-blue font-medium hover:underline">Agentforce Specialist</Link></li>

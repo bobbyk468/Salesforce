@@ -25,6 +25,7 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'tableau-next-consultant': 'Analytics-Con-202',
   'public-sector-solutions-consultant': 'PubSec-Con-201',
   'agentforce-specialist': 'AI-201',
+  'platform-foundations': 'Plat-101',
 }
 
 export const EXAM_CODE_TITLE_LABELS: Record<string, string> = {
@@ -49,6 +50,7 @@ export const EXAM_CODE_TITLE_LABELS: Record<string, string> = {
   'tableau-next-consultant': 'Tableau Next Consultant',
   'public-sector-solutions-consultant': 'Public Sector Solutions Consultant',
   'agentforce-specialist': 'Agentforce Specialist',
+  'platform-foundations': 'Platform Foundations',
 }
 
 /** Return a code only when the catalog value is an exam alias, not prose. */

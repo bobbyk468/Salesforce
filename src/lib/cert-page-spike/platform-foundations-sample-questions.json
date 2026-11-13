@@ -1,6 +1,6 @@
 [
   {
-    "question": "Who is the Salesforce Associate certification for?",
+    "question": "Who is the Platform Foundations certification (formerly Salesforce Certified Associate) for?",
     "options": [
       "Developers only",
       "Architects only",
@@ -8,7 +8,7 @@
       "People with up to six months of Salesforce experience"
     ],
     "correctAnswer": 3,
-    "explanation": "The Associate certification is for people who may have up to six months of experience using Salesforce.",
+    "explanation": "Platform Foundations, previously called Salesforce Certified Associate, is for people who may have up to six months of experience using Salesforce.",
     "whyWrong": [
       "The certification is for a broad audience, not developers alone.",
       "This entry-level certification is not only for architects.",
@@ -128,19 +128,19 @@
     ]
   },
   {
-    "question": "Which object usually represents a company or person a business works with?",
+    "question": "A user wants to check whether Salesforce is having a service disruption right now. Where should they look?",
     "options": [
-      "Opportunity",
-      "Task",
-      "Report",
-      "Account"
+      "IdeaExchange, the product ideas site",
+      "AppExchange, the apps marketplace",
+      "Trailhead, the free learning site",
+      "trust.salesforce.com, the status site"
     ],
     "correctAnswer": 3,
-    "explanation": "An Account usually represents a company or person a business works with.",
+    "explanation": "trust.salesforce.com shows real-time system status, incidents, and planned maintenance for each Salesforce instance.",
     "whyWrong": [
-      "An Opportunity represents a potential sale.",
-      "A Task records work that someone needs to do.",
-      "A Report displays data; it does not represent a company or person."
+      "IdeaExchange is where customers suggest and vote on product ideas; it does not report system status.",
+      "AppExchange lists apps and components to install; it does not report system status.",
+      "Trailhead teaches Salesforce skills; it does not report system status."
     ]
   },
   {
@@ -176,35 +176,35 @@
     ]
   },
   {
-    "question": "What is the goal of the Customer 360 Platform?",
+    "question": "A sales rep wants to see open Opportunities as cards grouped by stage and drag a card to a new stage. What should they use?",
     "options": [
-      "Service Cloud only",
-      "A unified view of each customer across touchpoints and systems",
-      "Marketing only",
-      "Sales automation only"
+      "A dashboard built on a source report",
+      "The Kanban view of a list view",
+      "A joined report with two blocks",
+      "The Favorites list in the header"
     ],
     "correctAnswer": 1,
-    "explanation": "Customer 360 brings customer data together across products such as Sales and Service Cloud.",
+    "explanation": "The Kanban view displays a list view's records as cards in columns, and dragging a card to another column updates the record.",
     "whyWrong": [
-      "Customer 360 covers more than Service Cloud.",
-      "Customer 360 covers more than Marketing.",
-      "Customer 360 covers more than sales automation."
+      "A dashboard displays report data as charts; records cannot be dragged between stages on it.",
+      "A joined report combines report blocks; it is read-only and has no cards to drag.",
+      "Favorites are shortcuts to pages and records a user visits often; they do not group records by stage."
     ]
   },
   {
-    "question": "Which Salesforce feature lets users access Salesforce on phones and tablets?",
+    "question": "A manager needs a report that groups Opportunities by owner and shows a subtotal for each owner. Which report format fits?",
     "options": [
-      "Reports only",
-      "Email only",
-      "Salesforce mobile app",
-      "Desktop only"
+      "A tabular report, a plain list of rows",
+      "A list view pinned on the object tab",
+      "A summary report, grouped by rows",
+      "A report folder shared with the team"
     ],
     "correctAnswer": 2,
-    "explanation": "The Salesforce mobile app lets users work with Salesforce records on phones and tablets.",
+    "explanation": "A summary report groups rows by a field such as owner and can show subtotals for each group. A matrix report is needed only when grouping by both rows and columns.",
     "whyWrong": [
-      "Reports alone do not provide the full mobile experience.",
-      "Email alone does not provide access to the full Salesforce app.",
-      "Salesforce also has a mobile app; it is not desktop-only."
+      "A tabular report lists rows without groupings, so it cannot show subtotals per owner.",
+      "A list view filters records on an object tab; it does not produce grouped subtotals.",
+      "A report folder stores and shares reports; it is not a report format."
     ]
   },
   {

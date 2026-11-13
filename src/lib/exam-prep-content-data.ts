@@ -133,15 +133,15 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'platform-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'All three sections are roughly equal, cover the whole outline.',
+      'Salesforce Ecosystem (32%) and Navigation (28%) together make up 60% of the exam; Data Model (25%) and Reports & Dashboards (15%) make up the rest.',
       'Know standard objects and the basic data model (Account, Contact, Lead, Opportunity).',
       'Understand navigation: App Launcher, list views, and basic reports.',
       'No coding; focus on concepts and “what is this used for?”',
     ],
     prerequisites: ['Trailhead or introductory Salesforce experience'],
-    focusAreas: ['Customer 360 Platform Basics', 'Navigation and Data Model', 'Reports and Dashboards'],
+    focusAreas: ['Salesforce Ecosystem', 'Navigation', 'Data Model', 'Reports and Dashboards'],
     studyStrategy: 'Complete the official Trailhead trailmix. Use a Developer Edition org to click through every feature mentioned in the outline. This is an entry-level cert, breadth over depth.',
-    whyItMatters: 'The first step on the Salesforce credential path; often required before Administrator.',
+    whyItMatters: 'A common first step on the Salesforce credential path. It has no prerequisite and is not required before Platform Administrator.',
   },
   'ai-associate': {
     ...DEFAULT_PREP,

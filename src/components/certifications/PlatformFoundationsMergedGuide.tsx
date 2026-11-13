@@ -17,22 +17,22 @@ const sectionDeepDives: Array<{ name: string; weight: number; body: string }> = 
   {
     name: 'Salesforce Ecosystem',
     weight: 32,
-    body: 'Review Customer 360, the main product clouds (Sales, Service, Marketing, Experience, Data 360), AppExchange, Trailhead, and the Trailblazer Community. This is the single heaviest section, worth almost a third of the exam.',
+    body: 'Salesforce is multi-tenant and ships three automatic releases a year (Spring, Summer, Winter). Know the learning and community resources: Trailhead modules, projects, trails, trailmixes, and superbadges; Trailhead Playgrounds for hands-on practice; the Trailblazer Community; IdeaExchange for suggesting and voting on product ideas; and trust.salesforce.com for real-time system status and planned maintenance. AppExchange is the marketplace for installable apps. Match each Customer 360 product to its use case (Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Commerce Cloud, Data 360, Agentforce, Slack, MuleSoft, Tableau), and tell the career paths apart: admin, developer, business analyst, consultant, and architect.',
   },
   {
     name: 'Navigation',
     weight: 28,
-    body: 'Practise Lightning Experience, the App Launcher, global search, list views, the Home page, and the Salesforce mobile app. Know which of these is the right tool for finding an app versus finding a record.',
+    body: 'The App Launcher opens apps and items, and the navigation bar holds the tabs for the current app, which users can personalize. Global search finds records across objects. List views can be pinned, edited inline, shown as a Kanban board, and charted. On a record page, know the highlights panel, related lists, the activity timeline, and Path. Favorites (the star icon) are shortcuts to pages a user visits often. Users change their own time zone, locale, and language in personal settings, while org customization happens in Setup, where Quick Find locates a setting.',
   },
   {
     name: 'Data Model',
     weight: 25,
-    body: 'Review standard objects (Lead, Account, Contact, Opportunity, Case), custom objects, field types, and the difference between lookup and master-detail relationships. Know what happens when a Lead is converted.',
+    body: 'Know how Lead, Account, Contact, Opportunity, and Case relate, and that converting a Lead creates an Account and a Contact and can create an Opportunity. Custom objects and fields carry a __c suffix in their API names. A lookup is a loose link; with master-detail, deleting the parent deletes its children and the parent can hold roll-up summary fields. Schema Builder shows objects and relationships on one canvas. For data integrity, compare required fields, picklists, validation rules, and duplicate and matching rules. For data visibility, review org-wide defaults, roles, and sharing. The Data Import Wizard handles up to 50,000 records; Data Loader handles larger jobs.',
   },
   {
     name: 'Reports & Dashboards',
     weight: 15,
-    body: 'Learn what a report and a dashboard each do, how a list view differs from both, and how to read data back out of Salesforce.',
+    body: 'A report type decides which objects and fields a report can use. The four formats are tabular (a plain list), summary (grouped rows with subtotals), matrix (grouped by rows and columns), and joined (several blocks). Reports live in folders, which control who can see them, and users can subscribe to a report to receive results on a schedule. Each dashboard component is driven by one source report. A dashboard shows data as its running user sees it, unless it is a dynamic dashboard, which shows each viewer their own data.',
   },
 ]
 

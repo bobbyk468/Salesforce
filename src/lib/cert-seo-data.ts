@@ -833,6 +833,7 @@ function getCertMetaTitle(slug: string): string {
   // Include both the current and legacy exam codes in the Administrator search title.
   if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Practice & Guide'
   if (slug === 'agentforce-specialist') return 'Salesforce Agentforce Specialist (AI-201) Practice & Guide'
+  if (slug === 'platform-foundations') return 'Salesforce Platform Foundations (Plat-101) Practice & Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -1315,7 +1316,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'platform-foundations': [
     {
       question: 'Is Platform Foundations a good starting point for Salesforce certifications?',
-      answer: 'Yes, Platform Foundations is designed as an entry-level certification for users with up to 6 months of experience. It validates foundational knowledge and is often a stepping stone to the Platform Administrator certification.',
+      answer: 'Yes, Platform Foundations (exam code Plat-101, formerly Salesforce Certified Associate) is designed as an entry-level certification for users with up to 6 months of experience. It validates foundational knowledge and is often a stepping stone to the Platform Administrator certification.',
     },
     {
       question: 'What topics are covered in the Platform Foundations exam?',
@@ -1323,7 +1324,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the Platform Foundations exam format?',
-      answer: 'The exam has 40 scored multiple-choice questions, plus up to 5 unscored questions that don’t count toward your result, with a 70-minute time limit and a 62% passing score. It costs $75 for the first attempt and can be taken online with a proctor or at a Pearson VUE testing centre.',
+      answer: 'The exam has 40 scored multiple-choice questions, plus up to 5 unscored questions that don’t count toward your result, with a 70-minute time limit and a 62% passing score. Registration costs $75 and retakes are free. You register through Trailhead Academy and can take it online with a proctor or at a Pearson VUE testing centre. Salesforce lists no required maintenance for this certification at this time.',
     },
     {
       question: 'Should I take Platform Foundations or Administrator first?',

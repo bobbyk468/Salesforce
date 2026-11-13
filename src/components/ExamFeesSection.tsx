@@ -81,7 +81,9 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
           <div>
             <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Certification Validity</h3>
             <p className="text-gray-600 text-sm sm:text-base">
-              Maintenance and renewal requirements vary. Check the issuer’s current credential page for requirements that apply to you.
+              {slug === 'platform-foundations'
+                ? 'The official exam guide lists no required maintenance for this certification at this time. Check the issuer’s current credential page before relying on this.'
+                : 'Maintenance and renewal requirements vary. Check the issuer’s current credential page for requirements that apply to you.'}
             </p>
           </div>
         </div>
