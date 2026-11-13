@@ -131,9 +131,10 @@ const slugs = requested.length
   : readdirSync(DATA_DIR)
       .filter((file) => file.endsWith('.json') && file !== 'promoted-index.json')
       .map((file) => file.slice(0, -'.json'.length))
-      .concat(Object.keys(BESPOKE_BANKS))
       // An imported bank overrides the page, so its own questions never render.
       .filter((slug) => !(banks[slug]?.length > 0))
+      // Bespoke pages always render their authored bank, so always check it.
+      .concat(Object.keys(BESPOKE_BANKS))
 
 let failed = 0
 let checked = 0

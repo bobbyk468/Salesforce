@@ -2,33 +2,33 @@
   {
     "question": "Who is the Platform Foundations certification (formerly Salesforce Certified Associate) for?",
     "options": [
-      "Developers only",
-      "Architects only",
-      "Marketers only",
-      "People with up to six months of Salesforce experience"
+      "Developers with two or more years of Apex coding experience",
+      "Architects preparing for the Technical Architect review board",
+      "Administrators who already hold the Platform Administrator credential",
+      "People with up to six months of Salesforce user experience"
     ],
     "correctAnswer": 3,
     "explanation": "Platform Foundations, previously called Salesforce Certified Associate, is for people who may have up to six months of experience using Salesforce.",
     "whyWrong": [
-      "The certification is for a broad audience, not developers alone.",
-      "This entry-level certification is not only for architects.",
-      "It is for general Salesforce users, not only marketers."
+      "Platform Foundations is entry level and needs no coding experience.",
+      "That is an expert-level path; this exam is the entry point.",
+      "Platform Foundations sits before Platform Administrator, not after it."
     ]
   },
   {
     "question": "What does the Customer 360 Platform mean?",
     "options": [
-      "Marketing Cloud only",
-      "Salesforce products working together to connect customer data across an organization",
-      "Service Cloud only",
-      "Sales Cloud only"
+      "A single marketing product for sending email campaigns to customer lists",
+      "Salesforce products working together to connect customer data across teams",
+      "A dashboard that shows a full-circle chart of each customer's open cases",
+      "A premium support plan that gives customers round-the-clock phone access to Salesforce"
     ],
     "correctAnswer": 1,
     "explanation": "Customer 360 is Salesforce’s connected set of products that brings customer data together across the organization.",
     "whyWrong": [
-      "Customer 360 includes more than Marketing Cloud.",
-      "Customer 360 includes more than Service Cloud.",
-      "Customer 360 includes more than Sales Cloud."
+      "Customer 360 spans many products, not one marketing tool.",
+      "Customer 360 is a connected set of products, not a dashboard chart.",
+      "Customer 360 is not a support plan; it describes how Salesforce products share customer data."
     ]
   },
   {
@@ -50,81 +50,81 @@
   {
     "question": "What is a Salesforce record?",
     "options": [
-      "A dashboard",
-      "A permission set",
-      "One row of data in an object, such as one Account",
-      "A report type"
+      "A saved chart that summarizes many rows from a source report",
+      "A setting that controls which objects a user may open or edit",
+      "One item stored in an object, such as a single Account",
+      "One piece of information on an item, such as a phone number"
     ],
     "correctAnswer": 2,
     "explanation": "A record is one set of data in an object, like one Account.",
     "whyWrong": [
-      "A dashboard displays information; it is not one row of data.",
-      "A permission set controls access; it is not a data record.",
-      "A report type defines which data a report can use; it is not a record."
+      "That describes a dashboard component, not a record.",
+      "That describes a permission, not a record.",
+      "That describes a field. A record is the whole item."
     ]
   },
   {
     "question": "Where can users view their tasks and calendar in Salesforce?",
     "options": [
-      "List views only",
-      "Dashboards only",
-      "The Home page and Activity components",
-      "Reports only"
+      "The Schema Builder canvas in Setup",
+      "The AppExchange listing for their org",
+      "The Home page and the activity components",
+      "The report folder shared with their manager"
     ],
     "correctAnswer": 2,
     "explanation": "The Home page and Activity components can show tasks and calendar information.",
     "whyWrong": [
-      "List views show records; they are not the only place to see tasks and calendar.",
-      "Dashboards show charts and metrics, not the task and calendar features described.",
-      "Reports display data but are not the only place to view activities."
+      "Schema Builder shows objects and relationships, not a user's tasks.",
+      "AppExchange is a marketplace for apps; it does not show tasks or events.",
+      "A report folder stores reports; it is not where users see their tasks and calendar."
     ]
   },
   {
     "question": "What is a Salesforce Dashboard?",
     "options": [
-      "One report",
-      "A screen that displays several report charts and metrics together",
-      "An email template",
-      "A list view only"
+      "A filtered table of records from one object on its tab",
+      "A page that shows several report charts and metrics together",
+      "A reusable message layout with merge fields for sending email",
+      "A single grouped report with subtotals for each sales owner"
     ],
     "correctAnswer": 1,
     "explanation": "A Dashboard brings several report charts and metrics together in one view.",
     "whyWrong": [
-      "A Dashboard can combine multiple report components.",
-      "An email template stores reusable email content.",
-      "A list view shows a filtered set of records, not several report components."
+      "That describes a list view.",
+      "That describes an email template.",
+      "That describes a summary report; a dashboard combines components from several reports."
     ]
   },
   {
     "question": "Which Salesforce feature lets users collaborate on records in real time?",
     "options": [
-      "Validation Rules only",
-      "Workflow Rules",
+      "Validation rules",
+      "Scheduled report subscriptions",
       "Chatter and Activity",
-      "Reports only"
+      "Duplicate rules"
     ],
     "correctAnswer": 2,
     "explanation": "Chatter and Activity support record collaboration through comments, mentions, and related interactions.",
     "whyWrong": [
-      "Validation Rules check data; they are not collaboration tools.",
-      "Workflow Rules automate actions; they are not real-time collaboration tools.",
-      "Reports display data; they do not provide the collaboration features described."
+      "Validation rules check data on save; they are not collaboration tools.",
+      "Report subscriptions email report results on a schedule; they are not real-time collaboration.",
+      "Duplicate rules stop or flag duplicate records; they do not support collaboration."
     ]
   },
   {
     "question": "What is Lightning Experience?",
     "options": [
-      "Salesforce Classic only",
-      "A mobile app only",
-      "An API",
+      "Salesforce’s older user interface, kept for orgs that have not yet switched over",
+      "A programming interface that lets outside systems read and write records",
+      "A mobile-only app that replaces the desktop version of Salesforce",
       "Salesforce’s modern user interface, with responsive design and newer features"
     ],
     "correctAnswer": 3,
     "explanation": "Lightning Experience is Salesforce’s modern user interface, designed to work across screen sizes and offer current features.",
     "whyWrong": [
-      "Classic is Salesforce’s older interface.",
-      "Lightning Experience is not limited to a mobile app.",
-      "An API connects systems; it is not a user interface."
+      "That describes Salesforce Classic.",
+      "That describes an API, not a user interface.",
+      "Lightning Experience is the desktop interface; the Salesforce mobile app is separate."
     ]
   },
   {
@@ -146,33 +146,33 @@
   {
     "question": "What is a Salesforce List View?",
     "options": [
-      "A table of records from one object, filtered by selected conditions",
-      "A report type",
-      "A permission set",
-      "A dashboard only"
+      "A table of records from one object, filtered by chosen conditions",
+      "A definition of which objects and fields a report is able to use",
+      "A bundle of permissions that can be assigned on top of a profile",
+      "A page of charts in which each component draws on one source report"
     ],
     "correctAnswer": 0,
     "explanation": "A List View shows a filtered set of records in a table.",
     "whyWrong": [
-      "A report type defines which records and fields a report can use.",
-      "A permission set controls what a user can access.",
-      "A Dashboard displays charts and metrics rather than a filtered record table."
+      "That describes a report type.",
+      "That describes a permission set.",
+      "That describes a dashboard."
     ]
   },
   {
     "question": "Which navigation tools help users find apps and records in Salesforce?",
     "options": [
-      "Workflow",
+      "Schema Builder and Data Loader",
       "App Launcher and global search",
-      "Validation Rules only",
-      "Report Builder only"
+      "Flow Builder and validation rules",
+      "Report Builder and dashboard filters"
     ],
     "correctAnswer": 1,
     "explanation": "The App Launcher helps users open apps, and global search helps them find records and other content.",
     "whyWrong": [
-      "Workflow automates actions; it does not help users navigate or search.",
-      "Validation Rules check data; they do not help users navigate.",
-      "Report Builder creates reports; it is not the main app navigation or search tool."
+      "Schema Builder shows the data model and Data Loader moves data; neither is for everyday navigation.",
+      "These automate work and check data; they do not help users find apps or records.",
+      "These build and filter analytics; they are not the main way to find apps and records."
     ]
   },
   {
@@ -211,91 +211,91 @@
     "question": "What do Salesforce Reports do?",
     "options": [
       "Organize, filter, and display data from Salesforce records",
-      "Send emails only",
-      "Assign tasks",
-      "Create dashboards only"
+      "Send scheduled marketing emails to a list of selected contacts",
+      "Assign new records to users based on a set of routing criteria",
+      "Prevent records from saving when a field fails a set condition"
     ],
     "correctAnswer": 0,
     "explanation": "Reports let users select, organize, filter, and display data from Salesforce records.",
     "whyWrong": [
-      "Sending email is not the purpose of Reports.",
-      "Reports do not assign tasks.",
-      "Reports can be used in Dashboards, but they also have their own purpose."
+      "Sending email is not what a report does.",
+      "That describes assignment rules.",
+      "That describes a validation rule."
     ]
   },
   {
     "question": "Which Salesforce record represents a potential sale?",
     "options": [
-      "Opportunity",
       "Lead",
       "Account",
-      "Contact"
+      "Campaign Member",
+      "Opportunity"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 3,
     "explanation": "An Opportunity represents a potential sale or deal the team is pursuing.",
     "whyWrong": [
       "A Lead is a prospect who has not yet been qualified.",
       "An Account represents a company or other organization.",
-      "A Contact represents a person."
+      "A Campaign Member links a lead or contact to a campaign; it is not a sale."
     ]
   },
   {
     "question": "What happens when a Lead gets converted?",
     "options": [
       "It creates an Account and a Contact, and can also create an Opportunity",
-      "It deletes the Lead and creates nothing else",
-      "It only changes the Lead's status field",
-      "It creates a Case"
+      "It deletes the Lead and its activity history without creating other records",
+      "It changes the Lead's status to Closed and keeps it as an open Lead record",
+      "It creates a Case and a Campaign so the service team can follow up"
     ],
     "correctAnswer": 0,
     "explanation": "Converting a Lead turns it into an Account and a Contact, and optionally an Opportunity if there's a deal to track.",
     "whyWrong": [
-      "Converting keeps the record, it doesn't just delete it.",
-      "A status change alone isn't a conversion, conversion creates new records.",
-      "A Case tracks a customer issue, it isn't part of Lead conversion."
+      "Conversion creates new records; it does not simply delete the Lead.",
+      "A status change alone is not a conversion; conversion creates new records.",
+      "A Case tracks a customer issue; it is not part of Lead conversion."
     ]
   },
   {
     "question": "Which two things together control what a Salesforce user can do and see?",
     "options": [
-      "Profiles and permission sets control actions, record sharing controls which records",
-      "Only the Role Hierarchy matters",
-      "Only the user's password",
-      "Dashboards and reports"
+      "The role hierarchy alone, which sets both actions and record access",
+      "Profiles and permission sets for actions, plus record sharing for records",
+      "Login hours and password policies, which set what a signed-in user is able to do",
+      "Dashboards and report folders, which decide which data appears on screen"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 1,
     "explanation": "Profiles and permission sets decide what objects, fields, and actions a user has. Org-wide defaults, roles, and sharing rules separately decide which individual records they can reach.",
     "whyWrong": [
-      "The Role Hierarchy only affects record access, not what actions a user can take.",
-      "A password controls login, not what the user can do once signed in.",
-      "Dashboards and reports display data, they don't control access."
+      "The role hierarchy affects record access only, not what actions a user can take.",
+      "These control signing in, not what a user can do afterwards.",
+      "These display and organize analytics; they do not grant access to objects or records."
     ]
   },
   {
     "question": "A team wants to stop records from saving unless a required field is filled in. What should they use?",
     "options": [
+      "A dashboard filter",
+      "A list view chart",
       "A validation rule",
-      "A dashboard",
-      "A list view",
       "A permission set"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 2,
     "explanation": "A validation rule checks a record against a condition and blocks the save with an error message if it fails.",
     "whyWrong": [
-      "A dashboard displays data, it doesn't block a save.",
-      "A list view filters which records show in a list, it has no effect on saving.",
+      "A dashboard filter changes what a dashboard shows; it does not block a save.",
+      "A list view chart summarizes the records in a list; it has no effect on saving.",
       "A permission set grants access, it doesn't check field values on save."
     ]
   },
   {
     "question": "Before changing something in a live Salesforce org, a team wants to build and test it safely first. What should they use?",
     "options": [
-      "A sandbox",
       "A dashboard",
       "A report",
-      "A queue"
+      "A queue",
+      "A sandbox"
     ],
-    "correctAnswer": 0,
+    "correctAnswer": 3,
     "explanation": "A sandbox is a copy of the org used to build and test changes before moving them to production.",
     "whyWrong": [
       "A dashboard just displays report data, it isn't an environment for testing changes.",
@@ -309,14 +309,14 @@
       "AppExchange",
       "Trailhead",
       "The Trailblazer Community",
-      "Setup only"
+      "IdeaExchange"
     ],
     "correctAnswer": 0,
     "explanation": "AppExchange is Salesforce's marketplace for installable apps and components, free and paid.",
     "whyWrong": [
       "Trailhead is Salesforce's free learning site, it doesn't host installable apps.",
       "The Trailblazer Community is a forum for questions and discussion, not an app marketplace.",
-      "Setup is where an admin configures the org, it isn't where you find apps to install."
+      "IdeaExchange is where customers suggest and vote on product ideas, not where apps are installed from."
     ]
   }
 ]
