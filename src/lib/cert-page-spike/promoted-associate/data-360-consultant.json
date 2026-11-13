@@ -189,12 +189,12 @@
     {
       "question": "What is a data stream in Data 360?",
       "options": [
-        "A source connection that brings data into Data 360",
         "A live sales dashboard that streams current results",
         "A Marketing Cloud journey started by a segment",
-        "An Apex export job that sends data to a warehouse"
+        "An Apex export job that sends data to a warehouse",
+        "A source connection that brings data into Data 360"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "A data stream connects Data 360 to a source and brings that source data into the platform.",
       "whyWrong": [
         "A dashboard displays analytics rather than ingesting source records.",
@@ -207,7 +207,7 @@
       "options": [
         "Remote SOAP external objects",
         "CRM Analytics report types",
-        "Custom Lead fields for source metadata",
+        "Custom Lead fields that store source system metadata",
         "Standardized structures for business data"
       ],
       "correctAnswer": 3,
@@ -269,7 +269,7 @@
     {
       "question": "What does activation do in Data 360?",
       "options": [
-        "Runs identity resolution on newly ingested streams",
+        "Runs identity resolution rules on each newly ingested data stream",
         "Gives users access to edit segments",
         "Publishes segment membership to a connected destination",
         "Turns on Data 360 in Salesforce Setup"
@@ -285,12 +285,12 @@
     {
       "question": "What is a calculated insight?",
       "options": [
-        "A metric derived from Data 360 data",
         "A Salesforce metric updated by Apex",
+        "A metric derived from Data 360 data",
         "An Einstein score stored in a formula field",
         "A dashboard widget showing segment counts"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "A calculated insight derives a metric from Data 360 data, such as purchase value or recency.",
       "whyWrong": [
         "A calculated insight is a Data 360 measure, not a metric maintained by a custom Apex job.",
@@ -317,12 +317,12 @@
     {
       "question": "What work may a Data 360 Consultant perform on an implementation?",
       "options": [
-        "Plan a Data 360 implementation",
         "Manage org sharing and Data 360 user permissions",
         "Write Apex triggers for all platform event ingestion",
+        "Plan a Data 360 implementation",
         "Create marketing emails from activated segments"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "A consultant helps design and configure the end-to-end data workflow, including ingestion, unification, activation, and governance.",
       "whyWrong": [
         "User and record access can be part of the project, but it does not describe the full consulting role.",
@@ -349,12 +349,12 @@
     {
       "question": "How does Data 360 differ from a traditional data warehouse?",
       "options": [
-        "A scheduled snapshot of prepared customer data",
         "Requires all data to be transformed before ingestion",
         "Stores data only in relational tables",
-        "Cannot handle structured customer records"
+        "Cannot handle structured customer records",
+        "A scheduled snapshot of prepared customer data"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Data 360 is designed to unify customer data and make it available for segmentation, activation, and Salesforce use.",
       "whyWrong": [
         "Data 360 includes ingestion and transformation capabilities; external preprocessing is not always required.",
@@ -397,7 +397,7 @@
     {
       "question": "How can Data 360 support Einstein and Agentforce?",
       "options": [
-        "Only supports Marketing Cloud",
+        "Supports Marketing Cloud journeys but no AI features",
         "Provides unified customer context for AI",
         "Only supports batch data exports",
         "Does not support AI use cases"
@@ -413,7 +413,10 @@
     {
       "question": "A company has separate business units that each need their own isolated Data 360 data, with no accidental overlap between them. What should a consultant configure?",
       "options": [
-        "Data spaces", "A single shared dataset for everyone", "A permission set with no restrictions", "A Marketing Cloud business unit only"
+        "Data spaces",
+        "A single shared dataset for everyone",
+        "A permission set with no restrictions",
+        "A Marketing Cloud business unit only"
       ],
       "correctAnswer": 0,
       "explanation": "Data spaces are organizational containers in Data 360 that isolate data, letting separate business units keep their data apart within the same org.",
@@ -426,7 +429,10 @@
     {
       "question": "Two incoming records both have the email field populated, but with slightly different spellings of the customer's name. Which type of matching rule is designed to catch this as a likely match?",
       "options": [
-        "A fuzzy match rule on name + address", "An exact match rule on email only", "No rule can catch this", "A rule based on record creation date"
+        "A fuzzy match rule on name + address",
+        "An exact match rule on email only",
+        "No rule can catch this",
+        "A rule based on record creation date"
       ],
       "correctAnswer": 0,
       "explanation": "Fuzzy matching is designed to catch records that are likely the same person despite small variations, like a misspelled name, by matching on a combination of attributes rather than requiring an exact string match.",
@@ -439,7 +445,10 @@
     {
       "question": "A consultant needs to calculate each customer's total spend over the last 90 days from Data Model Object data. What's used to build that metric?",
       "options": [
-        "A Calculated Insight, written as a SQL query against DMOs", "A Data Action", "A Data Space", "An Activation Target"
+        "A Calculated Insight, written as a SQL query against DMOs",
+        "A Data Action triggered by a change in a Data Model Object",
+        "A Data Space",
+        "An Activation Target"
       ],
       "correctAnswer": 0,
       "explanation": "Calculated Insights are SQL-based metrics computed over DMO data, exactly the kind of aggregation needed for a rolling spend total.",
@@ -453,7 +462,7 @@
       "question": "A client asks whether they should use Data 360 or a narrower, already-existing Salesforce feature to solve a straightforward reporting need. What should the consultant do first?",
       "options": [
         "Scope the actual business requirement and recommend the right-sized tool, not default to the newest platform",
-        "Always recommend Data 360 regardless of the requirement",
+        "Recommend Data 360 for every reporting need, because it is the newest and broadest Salesforce data platform",
         "Tell the client it's impossible without more licenses",
         "Build the solution before discussing requirements"
       ],
@@ -468,7 +477,10 @@
     {
       "question": "A marketing user should be able to view Data 360 segments and insights, but not change ingestion or admin settings. Which permission set fits?",
       "options": [
-        "Data 360 Marketing Viewer", "Data 360 Admin", "A blank profile with no permission set", "System Administrator"
+        "Data 360 Marketing Viewer",
+        "Data 360 Admin",
+        "A blank profile with no permission set",
+        "System Administrator"
       ],
       "correctAnswer": 0,
       "explanation": "A Marketing Viewer-style permission set gives read access to segments and insights without granting the broader admin and ingestion configuration rights that a Data 360 Admin permission set would include.",

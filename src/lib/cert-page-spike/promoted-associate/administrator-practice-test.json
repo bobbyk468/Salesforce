@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Administrator exam for?",
+    "heading": "Who should take the Administrator exam?",
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with Administrator features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You use Administrator features and want to show that you can apply them to real implementation scenarios."
       },
       {
         "label": "Administrators",
-        "description": "You support Salesforce projects where Configuration & Setup, Object Manager & Fields, and Reports & Dashboards decisions affect the final design."
+        "description": "You support Salesforce projects and make decisions about setup, objects, fields, reports, and dashboards."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for administrator roles."
+        "description": "You want a focused credential to strengthen your Salesforce resume and prepare for administrator roles."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Administrator Exam Hard?",
-    "summary": "This practice-test page supports ADM-201 readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "heading": "Is the Administrator exam hard?",
+    "summary": "This practice test helps you prepare for ADM-201. Practical Salesforce experience helps because many questions ask you to choose the best setup, design, or troubleshooting step for a situation.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>68% passing score</strong>: build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong>: expect questions that test when to use Configuration & Setup, Object Manager & Fields, or Reports & Dashboards.",
-      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Administrator in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 questions</strong> in 105 minutes.",
+      "<strong>68% to pass</strong>: aim higher than the minimum before you book.",
+      "<strong>Scenario questions</strong>: choose when to use Configuration & Setup, Object Manager & Fields, or Reports & Dashboards.",
+      "<strong>Hands-on experience helps</strong>: you will be better prepared if you have configured or supported Salesforce in a real org, rather than only memorizing notes."
     ],
-    "passRateGuidance": "Aim for 80%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Aim for at least 80% on timed practice sets before you book. If you score below that, review the topics with the most questions first. Then retry the questions and explain why each wrong option is wrong."
   },
   "examFormat": {
-    "heading": "Administrator Exam Format Explained",
-    "intro": "The Administrator exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Administrator.",
+    "heading": "Administrator exam format",
+    "intro": "The Administrator exam is timed. Use these details to plan your pace and practice.",
+    "scenarioPercent": "Many questions describe a business need and offer several possible Salesforce solutions. Choose the safest option that is easiest to maintain for the Administrator role.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Configuration & Setup, Object Manager & Fields, and Reports & Dashboards because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Start with the official exam outline:</strong> Match each objective to your notes, Trailhead practice, and topics you need to study.",
+      "<strong>Focus on important topics:</strong> Spend more time on Configuration & Setup, Object Manager & Fields, and Reports & Dashboards, which often appear in difficult scenarios.",
+      "<strong>Practice with a timer:</strong> Use timed question sets to learn when to move on and when to return to a marked question.",
+      "<strong>Read every explanation:</strong> Learn why the correct option fits and why the other options do not."
     ]
   },
   "certificationCard": {
     "code": "Practice Test",
-    "description": "Official-style practice test for the Platform Administrator (ADM-201) certification. Use this to gauge readiness and practice under exam-like conditions before taking the real exam.",
+    "description": "Practice test for the Platform Administrator (ADM-201) exam. Use it to check your readiness and practice in exam-like conditions.",
     "examDetails": {
       "questions": 60,
       "passingScore": "68%",
@@ -62,49 +62,49 @@
     "blocks": [
       {
         "heading": "Data Model & Object Relationships",
-        "body": "The ADM-201 practice exam heavily tests data modeling. Know the difference between **Master-Detail** (cascade delete, roll-up summaries, child shares parent **OWD**) and Lookup (no cascade delete, independent sharing, no roll-up summaries). **External IDs** mark a text field for upsert operations and external system matching. **Schema Builder** provides a visual canvas to view and create objects and relationships. **Junction Objects** enable many-to-many. Compound fields (Address, Geolocation) store multiple components in one field. Expect 3–5 data model questions in every practice set."
+        "body": "The ADM-201 practice exam covers data modeling. Know how Master-Detail differs from Lookup: Master-Detail supports cascade delete and roll-up summaries, and the child record inherits the parent record’s sharing. A Lookup does not support cascade delete or roll-up summaries, and its records can have separate sharing. External IDs help match records with an outside system and support upsert operations. Schema Builder lets you view and create objects and relationships on a visual canvas. Junction objects create many-to-many relationships. Compound fields, such as Address and Geolocation, store several related values in one field. Expect about 3–5 data model questions in each practice set."
       },
       {
         "heading": "Security & Access Control",
-        "body": "**Object-level security**: set via Profiles and **Permission Sets** (CRUD). **Field-level security**: set via Profiles and Permission Sets per field. **Record-level security**: OWDs, **Role Hierarchy**, **Sharing Rules**, **Manual Sharing**, Teams. The principle of least privilege applies, start restrictive, open up selectively. Login Hours and Login IP Ranges restrict when and where users can log in. **Connected Apps** and **OAuth** govern API access. Delegated Administration lets non-sysadmin users manage specific user groups. Practice questions often present a user who can/cannot see something and ask what setting to change."
+        "body": "Object-level security controls which records a user can create, read, edit, or delete. Profiles and Permission Sets grant these permissions. Field-level security controls access to each field. Record-level access is controlled by OWD, the Role Hierarchy, Sharing Rules, Manual Sharing, and Teams. Follow least privilege: start with limited access and grant more only when needed. Login Hours and Login IP Ranges limit when and where users can sign in. Connected Apps and OAuth control API access. Delegated Administration lets selected non-admin users manage certain user groups. Questions may describe what a user can see and ask which setting to change."
       },
       {
         "heading": "Automation & Process Logic",
-        "body": "Flows are the primary answer for most automation questions in ADM-201. Record-Triggered (before/after save), Screen Flows (guided UI), Scheduled Flows (time-based), and Autolaunched Flows (called from other automation). **Validation Rules** fire before the record saves. Use them to enforce data quality. Formula fields are read-only calculated fields that update automatically. **Roll-Up Summary** fields aggregate child data on the parent. Default field values pre-fill fields on new records. Cross-Object Formulas reference parent object fields (up to 5 levels for Lookup, 1 level for **Master-Detail** from child to parent in roll-up direction)."
+        "body": "Flows are the main tool for most ADM-201 automation questions. Record-Triggered Flows run before or after a record is saved. Screen Flows guide users through a process. Scheduled Flows run at a set time, and Autolaunched Flows are called by other automation. Validation Rules stop a record from saving when it fails a condition. Formula fields calculate values and update automatically; users cannot edit them directly. Roll-Up Summary fields total or count child records on a parent. Default field values fill in fields on new records. Cross-Object Formulas can use fields from parent records: up to five levels through Lookup relationships, and one level through Master-Detail relationships from child to parent."
       },
       {
         "heading": "Reports & Dashboards for Practice Questions",
-        "body": "Exam practice questions frequently test who can see what on a dashboard. The Running User setting on a standard dashboard means everyone sees data as that user. Dynamic Dashboards (up to 5) let viewers see their own data, requires \"Run Reports\" permission. Dashboard components (charts, gauges, tables, metrics, Visualforce) each point to a source report. Report Schedules can be set to run reports and email results on a schedule. Custom Report Types define the objects and join conditions available to report builders. Bucket fields in reports let you group values without a formula field."
+        "body": "Questions often ask who can see dashboard data. A standard dashboard uses its Running User’s access, so viewers see data available to that user. Dynamic Dashboards let each viewer see data based on their own access; you can have up to five, and viewers need the “Run Reports” permission. Dashboard components, such as charts, gauges, tables, and metrics, use a source report. Report Schedules can run reports and email the results on a schedule. Custom Report Types set which objects and relationships report builders can use. Bucket fields group report values without creating a formula field."
       },
       {
         "heading": "AppExchange & Change Management",
-        "body": "**AppExchange** packages come in Managed (ISV, upgradeable, code protected) and Unmanaged (source editable, no upgrades) varieties. Always install AppExchange packages in a sandbox first and review required permissions before production install. Change Sets move metadata between orgs in the same Salesforce environment (e.g., sandbox to production). Sandboxes: Developer (small data), Developer Pro (more storage), Partial Copy (subset of data), Full (full copy). The deployment cycle is: develop in sandbox → test → deploy via Change Set, **Metadata API**, or Salesforce CLI."
+        "body": "AppExchange packages are either Managed (made by a provider, protected, and upgradeable) or Unmanaged (source can be edited, with no upgrades). Install packages in a sandbox first and check their requested permissions before installing them in production. Change Sets move metadata between orgs in the same Salesforce environment, such as from a sandbox to production. Developer sandboxes have little data; Developer Pro sandboxes have more storage; Partial Copy sandboxes contain a subset of data; Full sandboxes copy all data. A deployment may follow this path: build in a sandbox, test, then deploy with a Change Set, Metadata API, or Salesforce CLI."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to pass this ADM-201 practice test",
-    "intro": "Treat this page like a mini mock exam: same style of scenario stems, four options, and time pressure as the real ADM-201. Use the difficulty heatmap after each run to see which exam guide sections (Configuration, Security, Automation, Reports, etc.) are costing you points, then re-read the matching key concepts above before your next set.",
+    "intro": "Use this page as a short mock exam. The questions have the same kind of scenarios, four options, and time pressure as ADM-201. After each attempt, check the difficulty heatmap to find the exam topics that need work. Review the matching key concepts above before trying another set.",
     "blocks": [
       {
         "heading": "Simulate real exam pacing",
-        "body": "Complete a full block of practice questions in one sitting with no **Trailhead**, notes, or search. The live exam rewards quick pattern recognition on sharing, Flow vs older automation, and report formats, rehearsal without lookups trains that recall."
+        "body": "Answer a full set in one sitting without **Trailhead**, notes, or search. The exam tests how quickly you can recognize patterns in sharing, Flow versus older automation, and report formats. Practicing without lookups helps you recall these concepts."
       },
       {
         "heading": "Review every explanation",
-        "body": "For every miss. Read the explanation and the “why wrong” pattern: ADM-201 often swaps plausible distractors (e.g., Lookup vs **Master-Detail**, profile vs permission set, **OWD** vs sharing rule). Noting why each distractor fails prevents the same trap on a reworded question."
+        "body": "For each incorrect answer, read the explanation and note why the other options do not fit. ADM-201 may offer similar choices, such as Lookup versus **Master-Detail**, Profile versus Permission Set, or **OWD** versus Sharing Rule. This helps you avoid the same mistake when a question is worded differently."
       },
       {
         "heading": "Drill weak sections from the heatmap",
-        "body": "After two or three passes, if Automation or Security dominates your errors, pause new questions and spend a focused session on that topic alone, then return here and confirm the heatmap shifts before moving on."
+        "body": "After two or three attempts, check whether most mistakes come from Automation or Security. If they do, pause the practice questions and study that topic. Then return and check whether your heatmap improves."
       },
       {
         "heading": "Pair with the full administrator guide",
-        "body": "When a topic stays red on the heatmap. Use the main Platform Administrator page for study plan context, exam weightage, and FAQs, then come back to this practice test to verify the gap is closed."
+        "body": "If a topic stays red on the heatmap, use the main Platform Administrator page to review the study plan, exam topic weights, and FAQs. Then return to this practice test to check your progress."
       },
       {
         "heading": "Book the real exam when scores stabilize",
-        "body": "Aim for a comfortable margin above the practice passing threshold on several consecutive timed runs, not a single lucky score. Consistency across sessions is a better signal than one high mark."
+        "body": "Aim to score well above the practice passing mark on several timed attempts in a row. Consistent scores are a stronger sign of readiness than one high score."
       }
     ]
   },
@@ -162,7 +162,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A sales manager wants to see which reps have logged the most calls this month. Which report type should they use?",
+      "question": "A sales manager wants to find out which reps logged the most calls this month. Which report type should they use?",
       "options": [
         "Accounts with Activities",
         "Tasks and Events",
@@ -170,10 +170,15 @@
         "Activities with Accounts"
       ],
       "correctAnswer": 1,
-      "explanation": "Tasks and Events report type lets you report on activities including calls, meetings, and tasks."
+      "explanation": "The Tasks and Events report type includes activities such as calls, meetings, and tasks.",
+      "whyWrong": [
+        "This report type centres on Accounts, not on who logged the activities.",
+        "Activity History is a related list on a record, not a report type for comparing reps.",
+        "This report type is organised around Accounts rather than the reps' activity counts."
+      ]
     },
     {
-      "question": "What is the maximum number of fields that can be tracked for field history on a custom object?",
+      "question": "How many fields can you track in field history on a custom object?",
       "options": [
         "20 fields",
         "10 fields",
@@ -181,98 +186,143 @@
         "25 fields"
       ],
       "correctAnswer": 0,
-      "explanation": "You can track up to 20 fields per object for field history tracking."
+      "explanation": "Field history tracking can track up to 20 fields on each object.",
+      "whyWrong": [
+        "The limit is 20 fields per object, not 10.",
+        "The limit is 20 fields per object, not 15.",
+        "25 is above the limit of 20 fields per object."
+      ]
     },
     {
-      "question": "Which permission allows a user to transfer records they don't own?",
+      "question": "Which permission lets a user transfer records owned by someone else?",
       "options": [
-        "Modify All",
-        "View All",
+        "Modify All Data",
+        "View All Data",
         "Edit",
         "Transfer Records"
       ],
       "correctAnswer": 3,
-      "explanation": "The 'Transfer Records' permission allows users to transfer records they don't own to other users."
+      "explanation": "The Transfer Records permission lets users transfer records they do not own to another user.",
+      "whyWrong": [
+        "Modify All Data is a far broader permission than is needed just to transfer records.",
+        "View All Data only allows reading records.",
+        "Edit lets a user change records they can access; it does not allow transferring records owned by others."
+      ]
     },
     {
-      "question": "What does Organization-Wide Defaults (OWD) control?",
+      "question": "A new object should keep records private by default, with access opened only when needed. Which setting defines that starting point?",
       "options": [
-        "The baseline record-level access for each object (Private, Public Read Only, Public Read/Write)",
-        "Only field visibility",
-        "Only permission sets",
-        "Only profiles"
+        "Organization-wide defaults, which set baseline record access",
+        "Field-level security, which controls which fields a user can see",
+        "Permission sets, which grant extra permissions",
+        "Profiles, which set object permissions for users"
       ],
       "correctAnswer": 0,
-      "explanation": "OWD sets the baseline access. Role hierarchy, sharing rules, and manual sharing grant additional access."
+      "explanation": "The object’s OWD establishes baseline record access, such as Private or Public Read/Write. Sharing rules, the role hierarchy, or manual sharing can then extend access.",
+      "whyWrong": [
+        "Field-level security controls fields, not baseline record access.",
+        "Permission sets grant permissions to users; they do not set the default record access for an object.",
+        "Profiles control object and field permissions, not the default sharing of records."
+      ]
     },
     {
-      "question": "Which automation tool is recommended for updating a field when a record is created or edited?",
+      "question": "Which tool should an admin use to update a field when a record is created or edited?",
       "options": [
-        "Workflow Rule",
-        "Apex only",
+        "A time-based Workflow Rule",
+        "An Apex trigger",
         "Process Builder",
         "Record-Triggered Flow"
       ],
       "correctAnswer": 3,
-      "explanation": "Record-Triggered Flow is the recommended declarative tool for record-triggered automation."
+      "explanation": "Record-Triggered Flow is Salesforce’s recommended declarative tool for automation that runs when a record changes.",
+      "whyWrong": [
+        "Workflow Rules are a legacy tool; Salesforce recommends Flow for new automation.",
+        "Code is not needed when a declarative tool can do the job.",
+        "Process Builder is a legacy tool; Salesforce recommends Flow for new automation."
+      ]
     },
     {
-      "question": "What is a validation rule used for?",
+      "question": "What does a validation rule do?",
       "options": [
-        "Assigning records",
-        "Sending emails",
-        "Preventing invalid data from being saved based on criteria",
-        "Creating reports"
+        "Assigns records to users or queues based on the criteria that an admin sets",
+        "Sends emails",
+        "Stops records from saving when they do not meet set conditions",
+        "Creates reports"
       ],
       "correctAnswer": 2,
-      "explanation": "Validation rules enforce data quality by blocking saves that don't meet the criteria."
+      "explanation": "Validation Rules protect data quality by stopping a save when the record does not meet the set conditions.",
+      "whyWrong": [
+        "Assigning records is the job of assignment rules.",
+        "Sending emails is the job of email alerts.",
+        "Reports are built in Report Builder."
+      ]
     },
     {
-      "question": "Which report format shows data in a spreadsheet-like layout?",
+      "question": "Which report format displays records in rows and columns, like a spreadsheet?",
       "options": [
         "Tabular",
-        "Summary only",
+        "Summary",
         "Matrix",
         "Joined"
       ],
       "correctAnswer": 0,
-      "explanation": "Tabular reports display data in rows and columns, similar to a spreadsheet."
+      "explanation": "Tabular reports list records in rows and columns, similar to a spreadsheet.",
+      "whyWrong": [
+        "A summary report groups rows and shows subtotals.",
+        "A matrix report groups by both rows and columns.",
+        "A joined report combines several report blocks."
+      ]
     },
     {
-      "question": "What is the purpose of a roll-up summary field?",
+      "question": "What does a roll-up summary field do?",
       "options": [
-        "To create formulas",
-        "To track history",
-        "To link objects",
-        "To aggregate values from child records on a master-detail parent"
+        "Creates formulas",
+        "Tracks the history of changes made to fields on the parent record",
+        "Links objects",
+        "Totals or counts child records on a Master-Detail parent"
       ],
       "correctAnswer": 3,
-      "explanation": "Roll-up summary fields aggregate (SUM, COUNT, MIN, MAX) child records on a master object."
+      "explanation": "Roll-up summary fields can calculate values such as SUM, COUNT, MIN, and MAX from child records on a Master-Detail parent.",
+      "whyWrong": [
+        "Formula fields calculate values from fields on the same or a parent record.",
+        "Field history tracking records changes to fields.",
+        "Relationship fields link objects."
+      ]
     },
     {
-      "question": "Which feature restricts access to specific fields regardless of record access?",
+      "question": "Which feature controls access to specific fields, even when a user can access the record?",
       "options": [
-        "OWD",
+        "Organization-wide defaults",
         "Field-Level Security",
         "Role Hierarchy",
         "Sharing Rules"
       ],
       "correctAnswer": 1,
-      "explanation": "Field-Level Security controls view and edit access to fields at the profile or permission set level."
+      "explanation": "Field-Level Security controls whether users can view or edit fields. Admins set it in Profiles or Permission Sets.",
+      "whyWrong": [
+        "Organization-wide defaults set baseline record access, not field access.",
+        "The role hierarchy opens up record access, not field access.",
+        "Sharing rules extend record access, not field access."
+      ]
     },
     {
-      "question": "What does a Master-Detail relationship provide that a Lookup does not?",
+      "question": "What does a Master-Detail relationship support that a Lookup relationship does not?",
       "options": [
-        "Only cascade delete",
+        "Cascade delete, but no roll-up summaries",
         "Cascade delete and roll-up summary fields",
-        "Nothing different",
-        "Only roll-up summary"
+        "No additional features",
+        "Roll-up summary fields, but no cascade delete"
       ],
       "correctAnswer": 1,
-      "explanation": "Master-Detail supports cascade delete and roll-up summaries. Lookup is more flexible but doesn't support these."
+      "explanation": "Master-Detail supports cascade delete and roll-up summary fields. Lookup relationships are more flexible but do not support these features.",
+      "whyWrong": [
+        "Master-Detail also supports roll-up summary fields.",
+        "Master-Detail adds both cascade delete and roll-up summary fields.",
+        "Master-Detail also supports cascade delete."
+      ]
     },
     {
-      "question": "Which dashboard component displays a single value (e.g., total pipeline)?",
+      "question": "Which dashboard component displays one value, such as the total sales pipeline?",
       "options": [
         "Gauge",
         "Bar chart",
@@ -280,51 +330,76 @@
         "Table"
       ],
       "correctAnswer": 2,
-      "explanation": "The Metric component shows a single KPI or aggregated value prominently."
+      "explanation": "A Metric component highlights one key measure or total.",
+      "whyWrong": [
+        "A gauge shows a value against a target range.",
+        "A bar chart compares values across groups.",
+        "A table lists rows of data."
+      ]
     },
     {
-      "question": "What is a record type used for?",
+      "question": "Why use a record type?",
       "options": [
-        "Only workflows",
-        "Only page layouts",
-        "Offering different picklist values, page layouts, and processes for the same object",
-        "Only security"
+        "To trigger a different set of automation rules each time a user edits a record in the object",
+        "To assign a page layout, and nothing else",
+        "To offer different picklist values, page layouts, and business processes for the same object",
+        "To control which records users can see"
       ],
       "correctAnswer": 2,
-      "explanation": "Record types let you tailor picklists, page layouts, and business processes by record type."
+      "explanation": "Record types let you provide different picklist values, page layouts, and business processes for an object.",
+      "whyWrong": [
+        "Record types do not trigger automation.",
+        "Page layouts are one part of what a record type controls, not all of it.",
+        "Record access is controlled by sharing, not by record types."
+      ]
     },
     {
-      "question": "Which feature helps prevent duplicate accounts or contacts?",
+      "question": "Which feature can detect or prevent duplicate accounts or contacts?",
       "options": [
-        "Workflow rules only",
-        "Validation rules only",
+        "Workflow Rules with field updates",
+        "Validation Rules with a custom error message",
         "Duplicate Rules with Matching Rules",
-        "Process Builder only"
+        "Process Builder"
       ],
       "correctAnswer": 2,
-      "explanation": "Duplicate Rules use Matching Rules to detect and prevent or warn about duplicates."
+      "explanation": "Matching Rules identify possible duplicates. Duplicate Rules can then block them or warn users.",
+      "whyWrong": [
+        "Workflow Rules automate actions; they do not compare records.",
+        "Validation Rules check one record's values; they do not find matching records.",
+        "Process Builder automates actions; it does not detect duplicates."
+      ]
     },
     {
-      "question": "What does the Lightning App Builder allow you to customize?",
+      "question": "What can you customize with Lightning App Builder?",
       "options": [
-        "Only dashboards",
-        "App pages, record pages, and home pages with drag-and-drop components",
-        "Only reports",
-        "Only list views"
+        "Dashboards and their source reports, using a drag-and-drop chart editor",
+        "App, record, and home pages using drag-and-drop components",
+        "Report formats",
+        "List view filters"
       ],
       "correctAnswer": 1,
-      "explanation": "Lightning App Builder customizes app, record, and home pages with declarative components."
+      "explanation": "Lightning App Builder lets admins arrange declarative components on app, record, and home pages.",
+      "whyWrong": [
+        "Dashboards are built in the dashboard editor.",
+        "Reports are built in Report Builder.",
+        "List views are configured on the object tab."
+      ]
     },
     {
-      "question": "Which sharing option grants access to records owned by users in a role or group?",
+      "question": "Which option can share records owned by users in a role or group?",
       "options": [
         "Sharing Rules",
-        "Manual sharing only",
-        "OWD only",
-        "Public groups only"
+        "Manual Sharing",
+        "Organization-wide defaults",
+        "Public Groups"
       ],
       "correctAnswer": 0,
-      "explanation": "Sharing Rules grant access based on ownership (e.g., share with a role or group)."
+      "explanation": "Sharing Rules can grant record access based on ownership, such as sharing records with a role or group.",
+      "whyWrong": [
+        "Manual sharing shares one record at a time.",
+        "Organization-wide defaults set the baseline; they do not share records owned by a role or group.",
+        "A public group is a set of users that a sharing rule can use; it does not share records by itself."
+      ]
     }
   ]
 }

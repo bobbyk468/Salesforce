@@ -172,10 +172,10 @@
     {
       "question": "What does an OmniStudio Consultant mainly do?",
       "options": [
-        "Work only with CPQ",
-        "Work only with Slack",
+        "Configure CPQ price rules and product bundles for the sales operations team",
+        "Administer Slack workspaces",
         "Design and build sustainable, scalable OmniStudio solutions that meet business needs",
-        "Work only with email"
+        "Build email campaigns in Marketing Cloud"
       ],
       "correctAnswer": 2,
       "explanation": "An OmniStudio Consultant designs and implements solutions with OmniStudio tools to meet business needs and support long-term success.",
@@ -188,10 +188,10 @@
     {
       "question": "Which OmniStudio tool creates guided, step-by-step experiences?",
       "options": [
-        "DataRaptor only",
+        "DataRaptor",
         "OmniScript",
-        "FlexCard only",
-        "Integration Procedure only"
+        "FlexCard",
+        "Integration Procedure"
       ],
       "correctAnswer": 1,
       "explanation": "OmniScript guides users through a sequence of steps, fields, and actions.",
@@ -204,10 +204,10 @@
     {
       "question": "What should a consultant consider when designing for long-term success?",
       "options": [
-        "Single use only",
+        "A design built for a single use case",
         "A sustainable and scalable design",
-        "No documentation",
-        "Speed only"
+        "A build with no documentation",
+        "The fastest possible delivery date"
       ],
       "correctAnswer": 1,
       "explanation": "A good design should meet current needs and be sustainable, scalable, and useful to the customer over time.",
@@ -220,12 +220,12 @@
     {
       "question": "Which set of industries commonly uses OmniStudio solutions?",
       "options": [
-        "Financial Services, Insurance, and other industries",
-        "Manufacturing only",
-        "Retail only",
-        "Education only"
+        "Manufacturing companies and no other industries",
+        "Retail and consumer goods companies exclusively",
+        "Schools and universities, but not commercial businesses",
+        "Financial Services, Insurance, and other industries"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Financial Services and Insurance are examples of the industries that use OmniStudio, whose configurable components support industry-specific workflows.",
       "whyWrong": [
         "OmniStudio is not limited to Manufacturing.",
@@ -236,10 +236,10 @@
     {
       "question": "What kind of information does a FlexCard present to a user?",
       "options": [
-        "Slack messages",
-        "Email templates",
+        "Slack channel messages",
+        "A library of reusable email templates",
         "A compact card view of record data",
-        "Reports only"
+        "Scheduled report results"
       ],
       "correctAnswer": 2,
       "explanation": "FlexCards display data in a compact, card-based format.",
@@ -252,12 +252,12 @@
     {
       "question": "What does a DataRaptor do in OmniStudio?",
       "options": [
+        "Creates reports and dashboards for managers",
         "Extracts, loads, or transforms data",
-        "Creates reports only",
-        "Sends emails only",
+        "Sends email alerts",
         "Manages users"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "DataRaptors extract, load, and transform data for OmniStudio solutions.",
       "whyWrong": [
         "DataRaptors work with data; they are not limited to creating reports.",
@@ -268,9 +268,9 @@
     {
       "question": "Which OmniStudio component can call Apex or external services?",
       "options": [
-        "OmniScript only",
-        "FlexCard only",
-        "DataRaptor only",
+        "OmniScript step",
+        "FlexCard",
+        "DataRaptor Transform",
         "Integration Procedure"
       ],
       "correctAnswer": 3,
@@ -284,12 +284,12 @@
     {
       "question": "What types of checks can OmniScript validation support?",
       "options": [
+        "Required fields, with no other kind of check available",
+        "No validation; checks must be written in Apex",
         "Required fields, custom validation, and conditional rules",
-        "Required fields only",
-        "No validation",
-        "Custom rules only"
+        "Custom validation rules, but not required fields"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "OmniScript can check required fields, run custom validation, and apply conditional rules.",
       "whyWrong": [
         "Validation supports more than required fields.",
@@ -300,10 +300,10 @@
     {
       "question": "A team needs a repeatable release process for OmniStudio assets between environments. Which deployment path should it use?",
       "options": [
-        "Copy them by hand only",
-        "Use change sets only",
+        "Copy the components by hand into each environment",
+        "Use standard change sets for every OmniStudio asset",
         "Use OmniStudio FlexDeploy or source-driven deployment",
-        "No deployment method is available"
+        "No deployment method is available for OmniStudio components"
       ],
       "correctAnswer": 2,
       "explanation": "FlexDeploy and source-driven deployment are supported ways to promote OmniStudio assets through a controlled release process.",
@@ -316,9 +316,9 @@
     {
       "question": "What do OmniScript elements define?",
       "options": [
-        "FlexCards only",
-        "Emails",
-        "DataRaptors",
+        "The layout of a FlexCard",
+        "Email templates",
+        "DataRaptor field mappings for an Integration Procedure",
         "Steps, fields, and actions in an OmniScript flow"
       ],
       "correctAnswer": 3,
@@ -332,9 +332,9 @@
     {
       "question": "How can OmniStudio show content or choose a path based on data or user input?",
       "options": [
-        "Visibility only",
+        "Conditional visibility, with no branching",
         "Conditional visibility and branching",
-        "Branching only",
+        "Branching, with no conditional visibility",
         "It cannot use conditional logic"
       ],
       "correctAnswer": 1,
@@ -348,12 +348,12 @@
     {
       "question": "What helps an OmniStudio solution scale?",
       "options": [
-        "Reusable components, efficient DataRaptors, and good governance",
         "Ignore performance",
         "Avoid reuse",
-        "Build each flow for one use only"
+        "Build every flow for one use case and copy it whenever a similar need appears",
+        "Reusable components, efficient DataRaptors, and good governance"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Reusable components, efficient DataRaptors, and governance can improve performance and maintainability as a solution grows.",
       "whyWrong": [
         "Performance matters as usage grows.",
@@ -366,8 +366,8 @@
       "options": [
         "None",
         "OmniScripts and FlexCards",
-        "DataRaptors only",
-        "Integration Procedures only"
+        "DataRaptors",
+        "Integration Procedures"
       ],
       "correctAnswer": 1,
       "explanation": "OmniScripts and FlexCards can be embedded in Lightning pages.",
@@ -381,7 +381,7 @@
       "question": "What is one benefit of OmniScript compared with building a custom Apex user interface?",
       "options": [
         "No benefit",
-        "More complexity",
+        "More complexity, because every step has to be coded and tested by a developer",
         "Less flexibility",
         "A guided flow can be quicker to build and easier to maintain declaratively"
       ],
@@ -396,10 +396,10 @@
     {
       "question": "Which is a common OmniStudio use case in Financial Services?",
       "options": [
-        "Manufacturing only",
-        "Education only",
+        "Factory production scheduling",
+        "Student course enrolment and grading for universities",
         "Quote-to-cash, onboarding, and service workflows",
-        "Retail only"
+        "In-store retail stock counts"
       ],
       "correctAnswer": 2,
       "explanation": "OmniStudio can support Financial Services workflows such as quote-to-cash, customer onboarding, and service.",
@@ -412,7 +412,10 @@
     {
       "question": "A client needs to read a large volume of Salesforce records quickly for a read-only lookup, with no transformation required. Which DataRaptor type fits best?",
       "options": [
-        "Turbo Extract", "Load", "Transform", "A custom Apex class instead"
+        "Turbo Extract",
+        "Load",
+        "Transform",
+        "A custom Apex class instead"
       ],
       "correctAnswer": 0,
       "explanation": "Turbo Extract is optimized for fast, straightforward reads of Salesforce data, ideal for simple lookups without complex transformation.",
@@ -426,7 +429,7 @@
       "question": "Two independent data lookups are needed before an OmniScript can proceed, and neither depends on the other's result. How should the Integration Procedure be designed to minimize wait time?",
       "options": [
         "Run the two actions in parallel within the Integration Procedure",
-        "Always run every action sequentially regardless of dependency",
+        "Always run every action one after another, regardless of dependency",
         "Split them into two separate OmniScripts",
         "Avoid Integration Procedures entirely for this case"
       ],
@@ -442,7 +445,7 @@
       "question": "A consultant is deciding between building a new OmniStudio component from scratch and reusing an existing Integration Procedure that already does most of what's needed. What's the best-fit approach?",
       "options": [
         "Favor reuse of the existing component over duplicating the logic",
-        "Always build new regardless of existing components",
+        "Always build a brand-new component, regardless of what already exists",
         "Never reuse components across OmniScripts",
         "Ignore existing components without reviewing them"
       ],
@@ -476,7 +479,7 @@
         "Create and activate a new version, rather than overwriting the active version directly",
         "Edit the active version in place",
         "Delete the component and rebuild it",
-        "Make the change only in a sandbox and never promote it"
+        "Make the change in a sandbox, test it there, and never promote it to the production org"
       ],
       "correctAnswer": 0,
       "explanation": "OmniStudio components support versioning; the standard approach is to activate a new version rather than editing the currently active one directly.",

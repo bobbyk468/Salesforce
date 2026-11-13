@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "OmniStudio developers",
-        "description": "You build OmniScripts, FlexCards and Integration Procedures on industry cloud projects."
+        "description": "You build OmniScripts, FlexCards, and Integration Procedures for Salesforce Industries projects."
       },
       {
-        "label": "Salesforce developers moving to industries",
-        "description": "You know Apex and Lightning Web Components and now work on Communications, Health or Public Sector builds."
+        "label": "Salesforce developers moving to Industries",
+        "description": "You know Apex or Lightning Web Components and are learning OmniStudio for areas such as Communications, Health, or Public Sector."
       },
       {
         "label": "Technical consultants",
-        "description": "You decide when an OmniStudio tool is the right answer and when custom code is."
+        "description": "You choose when to use OmniStudio tools and when custom code is a better fit."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the OmniStudio Developer Exam Hard?",
-    "summary": "It is a moderate exam, but OmniStudio works unlike the rest of Salesforce. The tools are configured rather than coded, and the questions test whether you know which tool does which job and how data moves between them.",
+    "summary": "This exam tests how you build OmniStudio solutions and choose the right tool for each task. Know how data moves between OmniScripts, FlexCards, Data Mappers, and Integration Procedures.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>About 72% to pass</strong>, roughly 39 correct answers out of 60. Confirm it in the official exam guide before you book.",
-      "<strong>Tool choice.</strong> Most questions come down to picking the right one of four tools for a job.",
-      "<strong>Hands-on helps.</strong> If you have built and debugged an OmniScript that calls an Integration Procedure, much of this is familiar."
+      "<strong>60 scored questions</strong> and up to 5 unscored questions in 105 minutes.",
+      "<strong>72% passing score.</strong> Check the official exam guide before booking.",
+      "<strong>Choose the right tool.</strong> Know when to use an OmniScript, FlexCard, Data Mapper, or Integration Procedure.",
+      "<strong>Hands-on practice helps.</strong> Build an OmniScript that uses a Data Mapper and calls an Integration Procedure."
     ],
-    "passRateGuidance": "Build one OmniScript that reads data with a Data Mapper, calls an Integration Procedure and saves the result. Before you book. Aim for 85% or more on practice tests and be able to explain where each piece of data comes from."
+    "passRateGuidance": "Build an OmniScript that reads Salesforce data with a Data Mapper, calls an Integration Procedure, and saves a result. Practice until you can explain where each value comes from."
   },
   "examFormat": {
     "heading": "OmniStudio Developer Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe something a user needs to do on screen, or data that must be fetched or saved, and ask which OmniStudio component handles it.",
+    "intro": "The exam is proctored online or at a test center. Many questions describe what a user needs to do or what data a system must read or save.",
+    "scenarioPercent": "For each scenario, identify whether the task is a guided user flow, a compact data display, a data read or write, or server-side work. Then choose the OmniStudio tool that fits.",
     "bestWayToPass": [
-      "<strong>Learn the four tools:</strong> OmniScript for guided steps, FlexCard for displaying information, Data Mapper for reading and writing Salesforce data, Integration Procedure for server-side work.",
-      "<strong>Follow the data:</strong> Know how values pass into a component, between steps, and back out again.",
-      "<strong>Know when to go server-side:</strong> Anything heavy or involving several systems belongs in an Integration Procedure, not in the script.",
-      "<strong>Practise debugging:</strong> Use preview and the debug panel to see what data each element actually receives."
+      "<strong>Learn the four main tools:</strong> OmniScript guides users, FlexCard displays information, Data Mapper reads or writes data, and Integration Procedure runs server-side logic.",
+      "<strong>Follow the data:</strong> Know how values enter a component, move between steps, and return to the caller.",
+      "<strong>Move complex work server-side:</strong> Use an Integration Procedure for heavier work or calls to several systems.",
+      "<strong>Practice debugging:</strong> Use preview and the debug panel to see what data each element receives."
     ]
   },
   "certificationCard": {
     "code": "OmniStudio Developer",
-    "description": "This exam tests hands-on building with OmniStudio: OmniScripts, FlexCards, Data Mappers and Integration Procedures, plus how they fit together and how to extend them with custom components. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Omniscripts (20%) and Omnistudio Fundamentals (18%).",
+    "description": "This exam covers building with OmniStudio: OmniScripts, FlexCards, Data Mappers, and Integration Procedures, including how these tools work together and how to add custom components. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Omniscripts (20%) and Omnistudio Fundamentals (18%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "72%",
@@ -65,50 +65,50 @@
     "h2": "OmniStudio Developer: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "The Four Tools and What Each Is For",
-        "body": "**OmniScript** guides a user through steps on screen, collecting input and showing results, which suits processes like opening an account or changing a plan. **FlexCard** displays a compact, actionable summary of a record or customer, often as the entry point to an OmniScript. **Data Mapper** (previously DataRaptor) reads, transforms and writes Salesforce data: Extract reads records, Load writes them, Transform reshapes data without touching the database, and Turbo Extract is a faster read with fewer options. **Integration Procedure** runs server-side logic, calling several sources and combining the results in one round trip. Most exam questions reduce to choosing between these four."
+        "heading": "The Four Main OmniStudio Tools",
+        "body": "**OmniScript** guides a user through steps, collects information, and shows results. It can support tasks such as opening an account or changing a plan. **FlexCard** displays a compact summary of a record and can offer actions, such as opening an OmniScript. A **Data Mapper** (formerly DataRaptor) reads, transforms, or writes data. **Integration Procedure** runs server-side logic, calls other services, and combines results. Many exam questions ask which of these tools best fits a task."
       },
       {
-        "heading": "Data Mappers: Extract, Load and Transform",
-        "body": "A **Data Mapper Extract** queries Salesforce objects and returns structured JSON, with filters and field mappings defined in configuration. A **Load** takes JSON and writes it to Salesforce objects, creating or updating records, and can handle parent and child records together. A **Transform** changes the shape of data, for example flattening a nested structure or renaming keys, without reading or writing records. **Turbo Extract** is a faster, more limited read for simple single-object cases. Formulas can be applied inside a Data Mapper for small calculations. Keeping these in configuration rather than Apex is what allows admins to change them later."
+        "heading": "Data Mapper: Extract, Load, and Transform",
+        "body": "A **Data Mapper Extract** reads Salesforce data and returns it in a format such as JSON. **Data Mapper Load** writes input data to Salesforce records. **Data Mapper Transform** changes data from one shape to another without reading or writing Salesforce records. **Turbo Extract** is a faster option for simpler reads from one Salesforce object and related records, but it has fewer configuration options. Use Data Mappers for reusable, declarative data work that admins can update without Apex."
       },
       {
         "heading": "Integration Procedures and Performance",
-        "body": "An **Integration Procedure** runs on the server and is the right place for anything involving more than one call. Its elements include Data Mapper actions, HTTP actions to outside systems, Remote Actions to call Apex, and Response actions to shape the output. Two settings matter for speed. **Chainable** lets a long procedure continue in a separate transaction so it does not hit limits. Running elements **in parallel** lets independent calls happen at once instead of one after another. The main performance lesson for the exam is to do the work in one server-side procedure rather than making an OmniScript call out many times."
+        "body": "An **Integration Procedure** runs on the server and can combine several operations in one request. It can call Data Mappers, external services through HTTP actions, and Apex through Remote Actions. A **Chainable** procedure can continue work in another transaction when more processing is needed. **Parallel** elements can run independent calls at the same time. Use an Integration Procedure for server-side work rather than making an OmniScript call out repeatedly."
       },
       {
         "heading": "OmniScript Structure and Custom Components",
-        "body": "An OmniScript is built from **elements** grouped into **steps**. Input elements collect data, display elements show it, action elements fetch or save it, and **conditional views** show or hide elements based on what the user has entered. Data flows through the script's JSON, and each element reads from and writes to a named key, which is why naming matters. When the standard elements cannot do something, a **custom Lightning Web Component** can be embedded in the script and exchange data with it. OmniStudio components can also be placed on Lightning pages, in Experience Cloud sites, and called from FlexCards."
+        "body": "An OmniScript contains **steps** and **elements**. Input elements collect data, display elements show it, and action elements read or save data. **Conditional views** show or hide elements based on the user’s answers. The script stores information in JSON, and each element reads from or writes to named keys. When standard elements do not meet a need, a **custom Lightning Web Component** can be placed in the script and exchange data with it. OmniStudio components can also appear on Lightning pages or Experience Cloud sites."
       },
       {
-        "heading": "Debugging, Deployment and Versioning",
-        "body": "OmniStudio components are **versioned**: you activate a version, and to change it you create a new one rather than editing the active one. Preview mode and the debug panel show the JSON at each step, which is the fastest way to find out why an element received nothing. For moving between orgs, components are exported and imported as datapacks, and should be included in your release process like any other metadata. Watch for references to records by ID, which differ between orgs and are a common cause of a component working in one environment and failing in another."
+        "heading": "Debugging, Deployment, and Versions",
+        "body": "OmniStudio components use **versions**. Activate the version users need; create a new version to make changes. Preview and the debug panel show the JSON at each step, which helps find missing or unexpected data. Teams can move components between orgs as datapacks and include them in a release process. Record IDs differ across orgs, so hard-coded IDs can cause a component to work in one environment but fail in another."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce OmniStudio Developer Exam",
-    "intro": "Most questions name a task and expect you to pick the tool. Ask whether the work happens on screen or on the server, and whether it reads, writes or reshapes data.",
+    "intro": "Start by deciding whether the task happens on screen or on the server, and whether it reads, writes, or reshapes data. Then choose the OmniStudio tool built for that job.",
     "blocks": [
       {
-        "heading": "OmniScript Design",
-        "body": "Guided, multi-step user journeys. Use conditional views to show only what applies, and keep heavy work out of the script."
+        "heading": "Design OmniScripts",
+        "body": "Use OmniScripts for guided, multi-step user tasks. Show only relevant steps and keep heavy processing out of the script."
       },
       {
-        "heading": "Data Mappers",
-        "body": "Extract reads, Load writes, Transform reshapes, Turbo Extract is a fast simple read. Keep them configurable rather than coding equivalents in Apex."
+        "heading": "Use Data Mappers",
+        "body": "Extract reads data, Load writes data, Transform reshapes data, and Turbo Extract is a faster option for simple reads."
       },
       {
-        "heading": "Integration Procedures",
-        "body": "Server-side work combining several sources in one call. Use chainable for long processing and parallel elements for independent calls."
+        "heading": "Use Integration Procedures",
+        "body": "Use them for server-side work that combines data or services. Run independent actions in parallel when appropriate."
       },
       {
-        "heading": "FlexCards",
-        "body": "Compact summaries that display data and launch actions, often the entry point into an OmniScript."
+        "heading": "Build FlexCards",
+        "body": "Use FlexCards to show a compact summary of data and provide actions, often as a starting point for an OmniScript."
       },
       {
-        "heading": "Custom LWC in OmniStudio",
-        "body": "Embed a custom component when standard elements cannot do the job, and pass data in and out through the script's JSON."
+        "heading": "Add a Custom Lightning Web Component",
+        "body": "Use a custom component when standard OmniStudio elements cannot meet the need. Pass data through the OmniScript JSON."
       }
     ]
   },
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which OmniStudio tool is used to create guided, step-by-step digital experiences?",
+      "question": "Which OmniStudio tool guides a user through a series of steps?",
       "options": [
         "OmniScript",
-        "LWC only",
-        "Visualforce",
-        "Apex only"
+        "Lightning Web Component",
+        "Visualforce page",
+        "Apex class"
       ],
       "correctAnswer": 0,
-      "explanation": "OmniScript provides declarative, step-by-step guided experiences without code.",
+      "explanation": "An OmniScript guides a user through a step-by-step digital process.",
       "whyWrong": [
-        "LWC alone isn't OmniStudio's guided-experience tool: OmniScript is purpose-built for that.",
-        "Visualforce is a legacy Salesforce Core UI framework, not an OmniStudio tool.",
-        "Apex is a backend Salesforce Core language, not a guided-experience builder tool."
+        "This is the tool designed for guided user experiences.",
+        "A Lightning Web Component can extend an interface, but it is not the OmniStudio flow tool described.",
+        "Visualforce is a different Salesforce interface technology."
       ]
     },
     {
-      "question": "What is DataRaptor used for in OmniStudio?",
+      "question": "What can an OmniStudio Data Mapper do?",
       "options": [
-        "Data extraction, load, and transform (DET, DLT, DTT)",
-        "Sending emails",
-        "Slack messages",
-        "CPQ configuration"
+        "Read, transform, or write data",
+        "Send email messages to customers",
+        "Post messages to Slack",
+        "Configure CPQ products"
       ],
       "correctAnswer": 0,
-      "explanation": "DataRaptors handle data extraction (DET), load (DLT), and transform (DTT) for OmniStudio.",
+      "explanation": "Data Mappers can read Salesforce data, transform data, or write data to Salesforce.",
       "whyWrong": [
-        "DataRaptor isn't used for sending emails, that's outside its scope.",
-        "DataRaptor doesn't send Slack messages, it handles data extract/load/transform.",
-        "DataRaptor isn't a CPQ configuration tool."
+        "This describes the main Data Mapper tasks.",
+        "Sending email is not the main purpose of Data Mappers.",
+        "Slack messaging is not the purpose of Data Mappers."
       ]
     },
     {
-      "question": "Which component displays a compact, card-based view of record data?",
+      "question": "Which OmniStudio component displays a compact, card-style summary of record data?",
       "options": [
         "FlexCard",
         "Integration Procedure",
-        "DataRaptor",
+        "Data Mapper",
         "OmniScript"
       ],
       "correctAnswer": 0,
-      "explanation": "FlexCards display compact, card-based views of data with declarative layout.",
+      "explanation": "A FlexCard displays data in a compact card layout and can offer actions.",
       "whyWrong": [
-        "Integration Procedure orchestrates backend logic, it isn't a visual card component.",
-        "DataRaptor moves and transforms data, it doesn't render a card-based UI.",
-        "OmniScript builds guided flows, not compact card views."
+        "This is the component used for compact card-style displays.",
+        "An Integration Procedure runs server-side logic.",
+        "A Data Mapper reads, transforms, or writes data."
       ]
     },
     {
-      "question": "What is an Integration Procedure in OmniStudio?",
+      "question": "What is an Integration Procedure?",
       "options": [
-        "An email template",
-        "A reusable server-side flow that orchestrates APIs and DataRaptors",
-        "A report",
-        "A dashboard"
+        "An email template that merges record fields into messages sent to customers",
+        "A reusable server-side process that can call APIs and Data Mappers",
+        "A report that summarizes record data",
+        "A dashboard that combines charts"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration Procedures orchestrate server-side logic, APIs, and DataRaptors.",
+      "explanation": "An Integration Procedure runs server-side steps and can call APIs, Data Mappers, and other actions.",
       "whyWrong": [
-        "An email template is unrelated to backend orchestration logic.",
-        "A report is a Salesforce analytics artifact, not an orchestration flow.",
-        "A dashboard visualizes data, it isn't an orchestration mechanism."
+        "Email templates store message content.",
+        "This describes an Integration Procedure.",
+        "Reports summarize data; they do not orchestrate server-side actions."
       ]
     },
     {
-      "question": "Which industry solution commonly uses OmniStudio?",
+      "question": "Which areas commonly use OmniStudio for guided digital processes?",
       "options": [
-        "Manufacturing only",
-        "Education only",
-        "Financial Services, Insurance, and other industries for digital flows",
-        "Retail only"
+        "Manufacturing companies and no other industries",
+        "Schools and universities, but not commercial businesses",
+        "Financial Services, Insurance, and other industries",
+        "Retail and consumer goods companies exclusively"
       ],
       "correctAnswer": 2,
-      "explanation": "OmniStudio is used across Financial Services, Insurance, and other industries for digital experiences.",
+      "explanation": "OmniStudio is used across industries, including Financial Services and Insurance.",
       "whyWrong": [
-        "Manufacturing isn't the typical highlighted use case for OmniStudio.",
-        "Education isn't the typical highlighted use case for OmniStudio.",
-        "Retail alone undersells OmniStudio's broader industry use across Financial Services, Insurance, and more."
+        "OmniStudio is not limited to Manufacturing.",
+        "OmniStudio is not limited to Education.",
+        "This option reflects common OmniStudio use across industries."
       ]
     },
     {
-      "question": "What is DET (DataRaptor Extract) used for?",
+      "question": "What does a Data Mapper Extract do?",
       "options": [
-        "To load only",
-        "To transform only",
-        "To extract data from Salesforce or external sources",
-        "To send emails"
+        "Write records to Salesforce only",
+        "Transform data without reading or writing records",
+        "Read data from Salesforce objects",
+        "Send email messages"
       ],
       "correctAnswer": 2,
-      "explanation": "DET extracts data from Salesforce or external sources.",
+      "explanation": "A Data Mapper Extract reads Salesforce data and returns it in an output format such as JSON.",
       "whyWrong": [
-        "DET is specifically for extraction, not the loading step.",
-        "DET is the extract step, not the transform step (that's DTT).",
-        "DET isn't for sending emails, it's a data extraction tool."
+        "Writing records is handled by a Data Mapper Load.",
+        "Transform changes data structure without reading or writing Salesforce records.",
+        "Sending email is not the purpose of an Extract."
       ]
     },
     {
-      "question": "Which OmniScript element type defines a step?",
+      "question": "Which OmniScript element provides a step in the guided flow?",
       "options": [
-        "FlexCard only",
-        "Step or Type element",
-        "Integration Procedure only",
-        "DataRaptor only"
+        "FlexCard element",
+        "Step element",
+        "Integration Procedure element",
+        "Data Mapper element"
       ],
       "correctAnswer": 1,
-      "explanation": "Step and Type elements define OmniScript structure.",
+      "explanation": "A Step element divides an OmniScript into sections the user can complete in order.",
       "whyWrong": [
-        "FlexCard is a separate OmniStudio component, not an OmniScript element type.",
-        "Integration Procedure is a separate OmniStudio tool, not an OmniScript element type.",
-        "DataRaptor is a separate OmniStudio tool, not an OmniScript element type."
+        "FlexCards display compact information; they do not define an OmniScript step.",
+        "An Integration Procedure runs server-side logic.",
+        "A Data Mapper handles data operations."
       ]
     },
     {
-      "question": "What does FlexCard data source support?",
+      "question": "Which data sources can a FlexCard use?",
       "options": [
-        "No data",
-        "Apex, DataRaptor, or Integration Procedure",
-        "Email only",
-        "OmniScript only"
+        "No data source is available.",
+        "Apex, Data Mapper, or Integration Procedure",
+        "Email messages",
+        "A parent OmniScript, with no other source allowed"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexCards can use Apex, DataRaptor, or Integration Procedure.",
+      "explanation": "FlexCards can use sources such as Apex, a Data Mapper, or an Integration Procedure.",
       "whyWrong": [
-        "FlexCard data sources include far more than 'no data' implies.",
-        "Email isn't a valid FlexCard data source.",
-        "OmniScript alone doesn't capture the range of sources FlexCards can pull from (Apex, DataRaptor, Integration Procedure)."
+        "FlexCards can be connected to data sources.",
+        "This lists supported kinds of data source.",
+        "Email is not the only FlexCard data source."
       ]
     },
     {
-      "question": "Which OmniStudio feature supports conditional navigation?",
+      "question": "What lets an OmniScript show different steps based on data or user input?",
       "options": [
-        "No support",
-        "Static only",
-        "Linear only",
-        "conditional branching and navigation rules"
+        "OmniStudio does not support conditional navigation.",
+        "Only fixed, unchanging steps are supported.",
+        "All navigation must follow one linear path.",
+        "Conditional branching and navigation rules"
       ],
       "correctAnswer": 3,
-      "explanation": "Conditional branching controls OmniScript flow.",
+      "explanation": "OmniScript conditions can change which steps or elements appear based on data or user input.",
       "whyWrong": [
-        "OmniStudio does support conditional navigation; 'no support' is incorrect.",
-        "OmniScript navigation isn't limited to static, unconditional paths.",
-        "OmniScript supports branching logic, not just strictly linear flows."
+        "OmniStudio supports conditional logic.",
+        "Steps do not have to remain the same for every user.",
+        "An OmniScript can branch instead of following one fixed path."
       ]
     },
     {
-      "question": "What is the purpose of an Integration Procedure output?",
+      "question": "What does an Integration Procedure return to the component that called it?",
       "options": [
-        "To delete only",
-        "To replace input",
-        "To return data to the caller (OmniScript, FlexCard)",
-        "To log only"
+        "A command to delete the caller",
+        "A replacement for the caller’s input values, with no other output",
+        "Output data for the caller, such as an OmniScript or FlexCard",
+        "A log entry"
       ],
       "correctAnswer": 2,
-      "explanation": "Integration Procedure outputs return data to callers.",
+      "explanation": "The Integration Procedure returns output data to its caller, such as an OmniScript or FlexCard.",
       "whyWrong": [
-        "Deleting data isn't the purpose of an Integration Procedure output.",
-        "Integration Procedure output returns data, it doesn't replace input logic.",
-        "Logging isn't the primary purpose of an Integration Procedure's output, returning data to the caller is."
+        "An Integration Procedure does not exist to delete the calling component.",
+        "It can return results; it does not only replace input values.",
+        "Logging may be useful, but returning data is the purpose described."
       ]
     },
     {
-      "question": "Which deployment tool is used for OmniStudio?",
+      "question": "Which method can teams use to deploy OmniStudio components?",
       "options": [
-        "Change Sets only",
-        "Workbench only",
-        "Data Loader only",
-        "FlexDeploy or source-driven deployment"
+        "Change Sets",
+        "Workbench",
+        "Data Loader with a CSV file for every component type",
+        "FlexDeploy or a source-driven deployment process"
       ],
       "correctAnswer": 3,
-      "explanation": "FlexDeploy and source-driven deployment manage OmniStudio.",
+      "explanation": "Teams can deploy OmniStudio components with FlexDeploy or a source-driven deployment process.",
       "whyWrong": [
-        "Change Sets are a Salesforce Core deployment mechanism, not the OmniStudio-specific approach.",
-        "Workbench is a generic Salesforce tool, not the OmniStudio-specific deployment approach.",
-        "Data Loader moves records, not OmniStudio metadata."
+        "Change Sets are not the only deployment method.",
+        "Workbench is not the only deployment method.",
+        "Data Loader moves records, not OmniStudio component definitions."
       ]
     },
     {
       "question": "What does OmniScript Save behavior control?",
       "options": [
-        "Only navigation",
-        "Nothing",
-        "When and how OmniScript state is persisted",
-        "Only validation"
+        "Navigation between steps only",
+        "Nothing about the script data",
+        "When and how the OmniScript state is saved",
+        "Validation rules on Salesforce objects only"
       ],
       "correctAnswer": 2,
-      "explanation": "Save behavior controls state persistence.",
+      "explanation": "Save behavior controls when and how an OmniScript saves its state.",
       "whyWrong": [
-        "Save behavior is distinct from navigation logic.",
-        "OmniScript Save behavior does control something specific, persistence of state, so 'nothing' is incorrect.",
-        "Save behavior is distinct from validation logic."
+        "Save behavior is about persistence, not only navigation.",
+        "Save behavior changes how script state is stored.",
+        "Validation Rules check data; they do not control when the OmniScript saves its state."
       ]
     },
     {
-      "question": "Which OmniStudio component can invoke Apex?",
+      "question": "Which OmniStudio component can call Apex through a Remote Action?",
       "options": [
         "Integration Procedure",
-        "OmniScript only",
-        "FlexCard only",
-        "DataRaptor only"
+        "OmniScript Step",
+        "FlexCard",
+        "Data Mapper Extract"
       ],
       "correctAnswer": 0,
-      "explanation": "Integration Procedures can invoke Apex.",
+      "explanation": "An Integration Procedure can use a Remote Action to call an Apex class.",
       "whyWrong": [
-        "OmniScript orchestrates the guided experience but relies on Integration Procedures to invoke Apex.",
-        "FlexCard displays data, it doesn't invoke Apex directly.",
-        "DataRaptor moves/transforms data, it doesn't invoke Apex directly the way Integration Procedures can."
+        "This component can call Apex through a Remote Action.",
+        "An OmniScript can invoke an Integration Procedure that calls Apex.",
+        "A FlexCard is primarily for compact data display and actions."
       ]
     },
     {
-      "question": "What is the purpose of FlexCard merge fields?",
+      "question": "What do FlexCard merge fields do?",
       "options": [
-        "To replace DataRaptor",
-        "To send emails",
-        "To create reports",
-        "To display dynamic data from the data source"
+        "Replace a Data Mapper in the card's data source setup",
+        "Send an email",
+        "Create a report",
+        "Display changing values from the data source"
       ],
       "correctAnswer": 3,
-      "explanation": "Merge fields display dynamic data in FlexCards.",
+      "explanation": "Merge fields show values from a FlexCard’s data source in its display.",
       "whyWrong": [
-        "DataRaptor is a separate tool, merge fields don't replace it.",
-        "Merge fields display data; they don't send emails.",
-        "Merge fields render data on the card; they don't generate reports."
+        "Merge fields do not replace Data Mappers.",
+        "Sending email is not their purpose.",
+        "Reports are created with reporting tools, not FlexCard merge fields."
       ]
     },
     {
-      "question": "Which best practice applies to OmniStudio development?",
+      "question": "Which practice supports reliable OmniStudio development?",
       "options": [
-        "Single use only",
-        "Reusable elements, error handling, and user testing",
-        "No reuse",
-        "Ignore testing"
+        "Build each element for one use only.",
+        "Reuse components, handle errors, and test with users.",
+        "Avoid reusing components across solutions, even when they overlap.",
+        "Skip testing to speed up delivery."
       ],
       "correctAnswer": 1,
-      "explanation": "Reusable design, error handling, and testing support quality.",
+      "explanation": "Reusable elements, error handling, and user testing help make OmniStudio solutions easier to maintain and more reliable.",
       "whyWrong": [
-        "Building for single use contradicts the reusability best practice.",
-        "Avoiding reuse leads to duplicated, harder-to-maintain solutions, the opposite of best practice.",
-        "Ignoring testing increases risk of production failures, the opposite of best practice."
+        "Single-use components can make solutions harder to maintain.",
+        "Reuse can reduce repeated work and support consistency.",
+        "Skipping tests can allow problems to reach users."
       ]
     }
   ]

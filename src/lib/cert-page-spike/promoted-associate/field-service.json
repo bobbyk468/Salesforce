@@ -225,12 +225,12 @@
     {
       "question": "Where can a dispatcher see appointments plotted across a timeline?",
       "options": [
-        "Dispatcher Console Gantt",
         "A calendar list showing appointment dates",
         "A record list sorted by appointment time",
-        "A territory map showing service locations"
+        "A territory map showing service locations",
+        "Dispatcher Console Gantt"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Dispatcher Console Gantt is the best fit because the Dispatcher Console Gantt shows a visual timeline of scheduled appointments across service resources.",
       "whyWrong": [
         "A calendar list showing appointment dates is not the best choice because calendar View shows a different, less operationally detailed schedule view.",
@@ -289,12 +289,12 @@
     {
       "question": "Which dispatcher view supports manual appointment drag-and-drop?",
       "options": [
-        "Dispatcher Console Gantt",
         "A list view used to edit records",
+        "Dispatcher Console Gantt",
         "A map view used to locate service addresses",
         "A report used to summarize appointment history"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Dispatcher Console Gantt is the best fit because the Gantt allows manual drag-and-drop scheduling.",
       "whyWrong": [
         "A list view used to edit records is not the best choice because list View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
@@ -337,12 +337,12 @@
     {
       "question": "Which tasks can technicians complete in the Field Service mobile app?",
       "options": [
-        "Offline work, signatures and photos",
         "View the schedule only while online",
         "Run reports but not update service records",
+        "Offline work, signatures and photos",
         "View dashboards without appointment details"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Offline work, signatures and photos is the best fit because the mobile app supports offline work, signatures, and photos.",
       "whyWrong": [
         "View the schedule only while online is not the best choice because 'Online only' is the opposite of what the mobile app's offline capability provides.",
@@ -353,12 +353,12 @@
     {
       "question": "What enables the system to assign appointments automatically using optimization rules?",
       "options": [
-        "Optimization with Scheduling Policies",
         "Manual assignment by a dispatcher only",
         "The Gantt display with no scheduling service",
-        "A map that only shows service locations"
+        "A map that only shows service locations",
+        "Optimization with Scheduling Policies"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Optimization with Scheduling Policies is the best fit because the optimization service runs with scheduling policies for automatic assignment.",
       "whyWrong": [
         "Manual assignment by a dispatcher only is not the best choice because manual assignment is the opposite of the automated optimization being asked about.",
@@ -403,7 +403,7 @@
       "options": [
         "Sharing rules or settings that scope Service Appointment visibility to the resource's crew",
         "A new Work Type for each crew",
-        "A different Operating Hours record per technician",
+        "A different Operating Hours record for each technician, with a separate Service Territory per crew",
         "A Maintenance Plan per crew"
       ],
       "correctAnswer": 0,
@@ -436,7 +436,7 @@
         "Update the Asset record and its relationship to the Product Consumed",
         "Delete the old Asset record",
         "Ignore it, parts aren't tracked after installation",
-        "Create a new Work Order with no reference to the part"
+        "Create a new Work Order for the visit with no reference to the installed part"
       ],
       "correctAnswer": 0,
       "explanation": "Managing Assets includes updating Asset records and their relationships when parts are installed, so the system reflects what's actually on the customer's equipment.",
@@ -451,7 +451,7 @@
       "options": [
         "A van as a Service Resource with an associated Product Inventory location",
         "A Work Type",
-        "An Operating Hours record",
+        "An Operating Hours record that lists the days the van is in use by each technician",
         "A Schedule Policy"
       ],
       "correctAnswer": 0,
@@ -468,7 +468,7 @@
         "Customer sign-off configured in the Field Service mobile app",
         "A desktop-only report",
         "Operating Hours",
-        "A Service Territory member record"
+        "A Service Territory member record with the customer's name added to it"
       ],
       "correctAnswer": 0,
       "explanation": "Customer sign-off is a Field Service mobile app capability that lets a technician capture a signature confirming completed work, part of Configuring Mobility.",

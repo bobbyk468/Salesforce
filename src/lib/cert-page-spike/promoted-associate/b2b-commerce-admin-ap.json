@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the B2B Commerce Administrator AP exam for?",
+    "heading": "Who should take the B2B Commerce Administrator AP exam?",
     "personas": [
       {
         "label": "Salesforce admins managing B2B storefronts",
-        "description": "You look after a B2B Commerce store in Salesforce and want proof that you know how to set it up and run it."
+        "description": "You manage a B2B Commerce store and want to show that you can set it up and run it."
       },
       {
         "label": "Implementation partners",
-        "description": "You build B2B stores for clients and need a credential that shows you know the setup end to end."
+        "description": "You build B2B stores for clients and want to show that you understand the setup from start to finish."
       },
       {
         "label": "Operations leads",
-        "description": "You own the online ordering channel for business buyers and want to understand how products, prices and buyers fit together."
+        "description": "You manage online ordering for business buyers and want to understand products, pricing, and buyer access."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the B2B Commerce Administrator AP Exam Hard?",
-    "summary": "It is a fair but strict exam. The topics are practical admin tasks, but the pass mark is high, so you need to know the setup steps well rather than roughly.",
+    "heading": "Is the B2B Commerce Administrator AP exam hard?",
+    "summary": "The exam covers practical admin tasks, but the passing score is high. Learn the setup steps well so you can apply them to real situations.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>75% to pass</strong>, which is 45 correct answers. That is higher than most Accredited Professional exams.",
-      "<strong>Setup order matters.</strong> Many questions are about what must be in place before a buyer can see a product or check out.",
-      "<strong>Hands-on helps a lot.</strong> If you have built a test store yourself, many questions will feel familiar."
+      "<strong>75% to pass</strong>, or 45 correct answers. This is higher than many Accredited Professional exams.",
+      "<strong>Setup order matters:</strong> Know what must be configured before a buyer can see products or check out.",
+      "<strong>Hands-on practice helps:</strong> Build a test store to make the setup steps familiar."
     ],
-    "passRateGuidance": "Build a store in a trial or sandbox org before the exam. Before you book. Aim for 85% or more on practice tests, since the pass mark leaves little room for error."
+    "passRateGuidance": "Build a store in a trial or sandbox org before the exam. Aim for at least 85% on practice tests before booking, since the passing score is high."
   },
   "examFormat": {
-    "heading": "B2B Commerce Administrator AP Exam Format Explained",
+    "heading": "B2B Commerce Administrator AP exam format",
     "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions are short admin scenarios, such as a buyer who can't see a product or a price that looks wrong, and ask what to set up or fix.",
+    "scenarioPercent": "Many questions describe an admin problem, such as a buyer who cannot see a product or a price that looks wrong. Choose what to set up or fix.",
     "bestWayToPass": [
-      "<strong>Learn the chain from buyer to product:</strong> Buyer account, buyer group, entitlement policy, catalog and price book all have to line up.",
-      "<strong>Know when to rebuild the search index:</strong> Product and category changes don't show in the store until the index is rebuilt.",
-      "<strong>Understand checkout:</strong> Know the main checkout steps and where pricing, tax, shipping and inventory checks come in.",
-      "<strong>Practise in a real store:</strong> Create a buyer, give them access, and place a test order."
+      "<strong>Follow the buyer-to-product setup:</strong> Buyer account, buyer group, entitlement policy, catalog, and price book must work together.",
+      "<strong>Know when to rebuild the search index:</strong> Changes to products and categories may not appear until the index is rebuilt.",
+      "<strong>Learn checkout:</strong> Know where pricing, tax, shipping, inventory, and payment checks happen.",
+      "<strong>Practice in a store:</strong> Create a buyer, grant access, and place a test order."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up and run a B2B Commerce store in Salesforce: stores, buyers, catalogs, prices, search and checkout. The exam is 60 scored questions in 90 minutes, with a 75% pass mark, weighted towards Salesforce B2B Commerce App and Storefront Deployment (20% each).",
+    "description": "This exam tests how to set up and run a Salesforce B2B Commerce store, including buyers, products, catalogs, pricing, search, and checkout. The exam is 60 scored questions in 90 minutes, with a 75% pass mark, weighted towards Salesforce B2B Commerce App and Storefront Deployment (20% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "75%",
@@ -61,49 +61,49 @@
     "blocks": [
       {
         "heading": "Store Setup & Storefront Configuration",
-        "body": "A B2B store is created from the Commerce app and is built on an Experience Cloud site, which you design in Experience Builder. Each store has its own settings for currencies, languages, buyer access and checkout. The store is linked to one or more catalogs and to the buyer groups that can use it. Guest browsing can be turned on so visitors can see products before they log in, but buying still needs a buyer account. Keep a test store or sandbox to try changes before they reach buyers."
+        "body": "A B2B store is created in the Commerce app and runs on an Experience Cloud site. Use Experience Builder to design the site. Store settings include currency, language, buyer access, and checkout. Link the store to its catalogs and buyer groups. You can let guests browse products before logging in, but a buyer account is still needed to place an order. Test changes in a sandbox or test store first."
       },
       {
         "heading": "Product Catalog & Pricing",
-        "body": "Products live in a **catalog** organised into **categories**. A product can be simple or have variations, such as size and colour, set up with a variation parent and variation attributes. Prices come from **price books**, and each buyer group is assigned the price books it should use. If a buyer sees no price. Check that the product is in a price book linked to their buyer group. After changing products, categories or searchable fields, **rebuild the search index** so the changes appear in the store."
+        "body": "Products are organized in a **catalog** and **categories**. A product can be simple or have variations, such as size and color. Set up a variation parent and variation attributes so buyers can select an option. Prices come from **price books** assigned to buyer groups. If a buyer cannot see a price, check the price book linked to their group. After you change products, categories, or searchable fields, **rebuild the search index** so the store shows the changes."
       },
       {
         "heading": "Buyer Account & Contact Management",
-        "body": "A business customer is an Account that has been **enabled as a buyer account**. Its contacts become **buyer users**, who are external users that log in to the store. Buyer accounts are added to **buyer groups**. Buyer groups are the key link: they get **entitlement policies**, which decide which products the buyers can see and buy, and price books, which decide what they pay. Changing access for many customers at once is done by changing the buyer group, not each account."
+        "body": "A business customer is an Account enabled as a **buyer account**. Its Contacts can be set up as **buyer users**, who are external users that sign in to the store. Add buyer accounts to **buyer groups**. Groups link to **entitlement policies**, which control which products buyers can see and buy, and to price books, which set prices. To change access for many customers, update the buyer group rather than each account."
       },
       {
         "heading": "Order Management & Checkout",
-        "body": "Checkout takes the buyer from cart to order. Along the way the store checks inventory, works out prices, shipping and tax, and takes payment, often through integrations with outside systems. Once the order is placed it becomes an Order in Salesforce, and with Salesforce Order Management an **Order Summary** that tracks fulfilment, changes and returns. Buyers can reorder from their order history, and admins can set up approval steps or purchase limits where needed."
+        "body": "Checkout takes a buyer from cart to order. It can check inventory, calculate price, shipping, and tax, and take payment. These steps may connect to outside systems. After an order is placed, it is stored as an Order in Salesforce. With Salesforce Order Management, an **Order Summary** tracks fulfillment, changes, and returns. Buyers can reorder from their order history. Admins can also set approval steps or purchase limits."
       },
       {
         "heading": "Integration with Salesforce CRM",
-        "body": "Because the store runs inside Salesforce, buyer accounts, contacts, orders and cases are the same records your sales and service teams use. Sales reps can see what a customer ordered online. Service agents can handle order questions as Cases. Reports and dashboards can combine online orders with the rest of the pipeline. Outside systems such as an ERP usually supply prices, stock and order status through integrations."
+        "body": "The store runs in Salesforce, so sales and service teams can use the same Accounts, Contacts, Orders, and Cases. Reps can see what customers ordered online, and service agents can handle order questions in Cases. Reports and dashboards can include online orders. An ERP system may provide prices, stock levels, and order status through an integration."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce B2B Commerce Administrator Accredited Professional Exam",
-    "intro": "Most questions are about why a buyer can't see or buy something, or how to set something up for many buyers at once. Trace the chain from buyer to product.",
+    "h2": "How to pass the B2B Commerce Administrator AP exam",
+    "intro": "Many questions ask why a buyer cannot see or buy something, or how to set up a change for many buyers. Follow the steps from the buyer to the product.",
     "blocks": [
       {
         "heading": "Store Setup & Configuration",
-        "body": "A store sits on an Experience Cloud site. Settings like currency, language and guest browsing are set per store."
+        "body": "A store runs on an Experience Cloud site. Currency, language, and guest browsing are set for each store."
       },
       {
         "heading": "Product Catalog Management",
-        "body": "Products go in catalogs and categories. After changes, rebuild the search index, or buyers won't see them."
+        "body": "Products go in catalogs and categories. Rebuild the search index after changes so buyers see updated information."
       },
       {
         "heading": "Buyer Groups & Entitlements",
-        "body": "If a buyer can't see a product. Check the entitlement policy on their buyer group. If they can't see a price. Check the price book on the buyer group."
+        "body": "If a buyer cannot see a product, check the entitlement policy on their buyer group. If they cannot see a price, check the group’s price book."
       },
       {
         "heading": "Cart & Checkout Configuration",
-        "body": "Checkout steps cover inventory, pricing, shipping, tax and payment. Each can call an outside system."
+        "body": "Checkout may check inventory, price, shipping, tax, and payment. Each step may connect to another system."
       },
       {
         "heading": "Order Management Integration",
-        "body": "Placed orders become Orders, and with Order Management, Order Summaries that track fulfilment and returns."
+        "body": "Placed orders become Salesforce Orders. With Order Management, Order Summaries track fulfillment and returns."
       }
     ]
   },
@@ -165,115 +165,115 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A buyer logs in but can't see a new product line in the store. The products are in the catalog. What should the admin check first?",
+      "question": "A buyer signs in but cannot see a new product line. The products are in the catalog. What should the admin check first?",
       "options": [
-        "The buyer's password",
-        "The store's colour theme",
-        "The product's description length",
-        "The entitlement policy on the buyer's buyer group"
+        "Check the entitlement policy for the buyer group",
+        "Check the buyer’s password",
+        "Check the store’s color theme",
+        "Check the length of the product description field"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Entitlement policies control which products a buyer group can see. Add the product to the right policy.",
+      "whyWrong": [
+        "A wrong password would stop the buyer from signing in.",
+        "The store theme changes its appearance, not product access.",
+        "Description length does not control product visibility."
+      ]
+    },
+    {
+      "question": "A buyer can see a product but no price appears. What is the most likely cause?",
+      "options": [
+        "The search index was rebuilt recently, so prices have not been refreshed yet",
+        "The product is not in a price book assigned to the buyer group",
+        "The product has no image",
+        "The cart has too many items"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The buyer group needs a price book with a price for that product. Without a matching entry, the buyer will not see a price.",
+      "whyWrong": [
+        "A recent index rebuild does not remove a product price.",
+        "An image is not needed to show the price.",
+        "Cart size does not control product prices."
+      ]
+    },
+    {
+      "question": "An admin renamed categories and added products, but buyers still see the old names. What should the admin do?",
+      "options": [
+        "Change buyer profiles",
+        "Delete and recreate the store",
+        "Rebuild the search index",
+        "Ask buyers to clear their browser cache"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The store uses a search index for product search and navigation. Rebuild it so buyers can see product and category changes.",
+      "whyWrong": [
+        "Profiles do not control product or category names.",
+        "Recreating the store is unnecessary and could remove its setup.",
+        "The old names are in the search index, not the buyers’ browser cache."
+      ]
+    },
+    {
+      "question": "A company wants 300 customer accounts to receive a new 10% price list. What is the most efficient method?",
+      "options": [
+        "Edit the price setup for each of the 300 accounts, one account at a time",
+        "Create a new store for each account",
+        "Ask buyers to enter a discount code",
+        "Assign the price book to the buyer group for those accounts"
       ],
       "correctAnswer": 3,
-      "explanation": "Entitlement policies decide which products a buyer group can see. If the products aren't in the policy, the buyer won't see them.",
+      "explanation": "Assign the new price book to the buyer group so the change applies to all its accounts.",
       "whyWrong": [
-        "A wrong password would stop the login completely.",
-        "The theme changes how the store looks, not what products show.",
-        "Description length doesn't affect visibility."
+        "Changing 300 accounts one by one takes longer and can lead to errors.",
+        "One store can serve many buyer accounts.",
+        "A discount code depends on each buyer entering it."
       ]
     },
     {
-      "question": "A buyer can see a product but no price is shown. What is the most likely cause?",
+      "question": "What must happen before a contact at a customer company can sign in and place orders?",
       "options": [
-        "The search index is too new",
-        "The product has no image",
-        "The buyer has too many items in the cart",
-        "The product isn't in a price book assigned to the buyer's buyer group"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Prices come from the price books linked to the buyer group. No matching price book entry means no price.",
-      "whyWrong": [
-        "A recently rebuilt index isn't a problem.",
-        "Cart size doesn't hide prices.",
-        "Images don't affect prices."
-      ]
-    },
-    {
-      "question": "The admin renamed several categories and added new products, but buyers still see the old names. What should the admin do?",
-      "options": [
-        "Change the buyers' profiles",
-        "Rebuild the search index",
-        "Delete and recreate the store",
-        "Ask buyers to clear their cache"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Store search and navigation use the search index. It must be rebuilt for product and category changes to appear.",
-      "whyWrong": [
-        "Profiles don't control category names.",
-        "Recreating the store is unnecessary and loses setup.",
-        "The old names come from the index, not the buyers' browsers."
-      ]
-    },
-    {
-      "question": "A company wants 300 customer accounts to get a new 10% price list. What is the most efficient way?",
-      "options": [
-        "Edit each of the 300 accounts",
-        "Assign the new price book to the buyer group those accounts belong to",
-        "Create 300 new stores",
-        "Ask buyers to enter a discount code"
+        "Enable the account as a buyer account and create a buyer user for the contact",
+        "The contact needs a Sales Cloud license and a role above the account owner in the hierarchy",
+        "The contact must be a Salesforce admin",
+        "Mark the account as a competitor"
       ],
       "correctAnswer": 0,
-      "explanation": "Buyer groups let you change prices for many accounts at once by assigning a price book to the group.",
+      "explanation": "Enable the Account as a buyer account, then set up its Contact as an external buyer user.",
       "whyWrong": [
-        "Editing 300 accounts is slow and error-prone.",
-        "One store can serve many buyers.",
-        "A discount code relies on every buyer remembering it."
+        "External buyers do not need an internal Sales Cloud license.",
+        "Buyers are external users, not Salesforce admins.",
+        "Competitor status does not control store access."
       ]
     },
     {
-      "question": "What must happen before a contact at a customer company can log in and place orders?",
-      "options": [
-        "The contact must have a Sales Cloud licence",
-        "The contact must be a Salesforce admin",
-        "The account must be enabled as a buyer account and the contact must have a buyer user",
-        "The account must be marked as a competitor"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Buyer access starts with a buyer account. Its contacts are then set up as external buyer users who can log in to the store.",
-      "whyWrong": [
-        "Buyers don't need internal Sales Cloud licences.",
-        "Buyers are external users, not admins.",
-        "Competitor status has nothing to do with store access."
-      ]
-    },
-    {
-      "question": "Visitors should be able to browse products before logging in; but only logged-in buyers can place orders. What should be turned on?",
+      "question": "Visitors should browse products before signing in, but only signed-in buyers can order. What should be enabled?",
       "options": [
         "A second store for guests",
-        "Self-registration only",
         "Guest browsing for the store",
-        "Public Read/Write on all objects"
+        "Self-registration",
+        "Public Read/Write access on all objects"
       ],
-      "correctAnswer": 2,
-      "explanation": "Guest browsing lets visitors see the catalog without logging in, while checkout still needs a buyer account.",
+      "correctAnswer": 1,
+      "explanation": "Guest browsing lets visitors view the catalog without signing in. Checkout still requires a buyer account.",
       "whyWrong": [
-        "A second store is unnecessary for this.",
-        "Self-registration creates accounts but doesn't allow browsing without login.",
-        "Opening all objects is a big security risk."
+        "A second store is not needed for guest browsing.",
+        "Self-registration does not by itself let people browse before signing in.",
+        "Opening all objects would create a serious security risk."
       ]
     },
     {
-      "question": "A T-shirt comes in three sizes and four colours. How should it be set up in the catalog?",
+      "question": "A T-shirt comes in three sizes and four colors. How should it appear in the catalog?",
       "options": [
-        "A variation parent with variation attributes for size and colour",
-        "Twelve unrelated products",
-        "A separate category for each colour",
-        "One product with sizes in the description"
+        "Twelve separate products",
+        "A separate category for each color",
+        "One variation parent with size and color attributes",
+        "One product with all the sizes and colors in its description"
       ],
-      "correctAnswer": 0,
-      "explanation": "Variations group the options under one parent, so buyers pick size and colour on a single product page.",
+      "correctAnswer": 2,
+      "explanation": "Set up a variation parent with size and color attributes so buyers can choose an option on one product page.",
       "whyWrong": [
-        "Twelve separate products make browsing confusing.",
-        "Categories organise products. They don't create options.",
-        "Sizes in the description can't be selected or priced."
+        "Twelve separate products make browsing harder and repeat the product setup.",
+        "Categories organize products; they do not create selectable size and color options.",
+        "A description cannot let buyers select or price a product variation."
       ]
     },
     {
@@ -281,127 +281,127 @@
       "options": [
         "The store theme",
         "The search index",
-        "The buyer group",
-        "The checkout flow"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Buyer groups hold the entitlement policies and price books that apply to their buyer accounts.",
-      "whyWrong": [
-        "The theme controls look and feel.",
-        "The search index helps buyers find products, it doesn't control access.",
-        "Checkout handles buying, not visibility or pricing."
-      ]
-    },
-    {
-      "question": "During checkout, the store must confirm that items are in stock in the company's ERP. Where does this fit?",
-      "options": [
-        "The buyer's profile",
-        "A weekly report",
-        "The product description",
-        "The inventory check step in checkout, using an integration with the ERP"
+        "The checkout flow",
+        "The buyer group"
       ],
       "correctAnswer": 3,
-      "explanation": "Checkout has a step for checking inventory, which can call the outside system for live stock levels.",
+      "explanation": "Buyer groups link accounts to entitlement policies and price books.",
       "whyWrong": [
-        "Profiles control permissions, not stock.",
-        "A weekly report is far too late at checkout.",
-        "Descriptions can't check stock."
+        "The theme controls how the store looks.",
+        "The search index helps find products; it does not control access.",
+        "Checkout handles the order, not product access or pricing."
       ]
     },
     {
-      "question": "A sales rep wants to see what a customer has ordered through the B2B store. Where can they find it?",
+      "question": "During checkout, the store must check stock in the company’s ERP. Where should this happen?",
       "options": [
-        "Only by asking the customer",
-        "On the customer's Account in Salesforce, since store orders are Salesforce records",
-        "In the store's theme settings",
+        "In the checkout inventory step through an ERP integration",
+        "In the buyer’s profile",
+        "In a weekly report",
+        "In the product description, updated by hand whenever stock changes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The checkout inventory step can use an integration to check current stock in the ERP.",
+      "whyWrong": [
+        "Profiles control user details and access, not stock levels.",
+        "A weekly report is too late for a checkout stock check.",
+        "A product description cannot check inventory."
+      ]
+    },
+    {
+      "question": "A sales rep wants to see what a customer ordered in the B2B store. Where can they look?",
+      "options": [
+        "Ask the customer",
+        "On the customer’s Salesforce Account",
+        "In the store theme settings",
         "Only in a separate commerce system"
       ],
       "correctAnswer": 1,
-      "explanation": "The store runs in Salesforce, so orders are linked to the same Account records that reps use.",
+      "explanation": "B2B Commerce runs in Salesforce, and orders are linked to the customer’s Account.",
       "whyWrong": [
-        "There is no need to ask, the data is in Salesforce.",
-        "Theme settings don't hold order data.",
-        "B2B Commerce runs inside Salesforce, not in a separate system."
+        "Sales reps can check the order in Salesforce.",
+        "The store theme does not store order data.",
+        "B2B Commerce is part of Salesforce, not a separate system."
       ]
     },
     {
-      "question": "After an order is placed, the team wants to track fulfilment, changes and returns. What should they use?",
+      "question": "After an order is placed, the team needs to track fulfillment, changes, and returns. What should it use?",
       "options": [
         "Chatter posts",
         "A spreadsheet",
-        "Salesforce Order Management with Order Summaries",
-        "The cart object"
+        "Salesforce Order Management and Order Summaries",
+        "The cart record, kept open after checkout for each order"
       ],
       "correctAnswer": 2,
-      "explanation": "Order Management creates an Order Summary that tracks the order through fulfilment, changes and returns.",
+      "explanation": "Order Management creates an Order Summary to track an order through fulfillment, changes, and returns.",
       "whyWrong": [
         "Chatter is for collaboration, not order tracking.",
-        "A spreadsheet is manual and disconnected.",
-        "The cart is gone once the order is placed."
+        "A spreadsheet is manual and separate from Salesforce.",
+        "The cart is used before the order is placed."
       ]
     },
     {
-      "question": "The store must sell in US dollars and euros. Where is this set?",
+      "question": "The store must sell in US dollars and euros. Where should this be set?",
       "options": [
-        "In each product's name",
-        "In the store's currency settings, with price books for each currency",
-        "In the buyers' passwords",
-        "In the search index"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Stores can support several currencies, with prices coming from price books in each currency.",
-      "whyWrong": [
-        "Product names don't control currency.",
-        "Passwords are unrelated.",
-        "The search index doesn't set currency."
-      ]
-    },
-    {
-      "question": "An admin wants to change the layout of the store's home page without code. Which tool should they use?",
-      "options": [
-        "Workbench",
-        "Developer Console",
-        "Data Loader",
-        "Experience Builder"
+        "In each product name, with the currency code added as a suffix by hand",
+        "In the buyers’ passwords",
+        "In the search index",
+        "In store currency settings, with price books for each currency"
       ],
       "correctAnswer": 3,
-      "explanation": "B2B stores are built on Experience Cloud sites, and Experience Builder lets admins change pages with drag and drop.",
+      "explanation": "Set the currencies in the store and use price books with prices for each currency.",
       "whyWrong": [
-        "Workbench is a utility for queries and API work.",
-        "Developer Console is for code.",
+        "Product names do not set currency.",
+        "Passwords do not affect prices or currency.",
+        "The search index does not set currency."
+      ]
+    },
+    {
+      "question": "An admin wants to change the store home page without code. Which tool should they use?",
+      "options": [
+        "Experience Builder",
+        "Workbench",
+        "Developer Console",
+        "Data Loader"
+      ],
+      "correctAnswer": 0,
+      "explanation": "B2B stores use Experience Cloud sites. Experience Builder lets admins change pages with drag-and-drop tools.",
+      "whyWrong": [
+        "Workbench is for queries and API tasks.",
+        "Developer Console is used for code.",
         "Data Loader moves data."
       ]
     },
     {
-      "question": "A product should only be sold to buyers in the Healthcare buyer group. How should this be set up?",
+      "question": "A product should only be sold to buyers in the Healthcare group. How should the admin set this up?",
       "options": [
-        "Add the product only to the entitlement policy used by the Healthcare buyer group",
         "Remove the product from all price books",
-        "Put 'Healthcare only' in the product name",
+        "Add the product to the Healthcare group’s entitlement policy",
+        "Put “Healthcare only” in the product name and rely on buyers to notice it",
         "Hide the product with CSS"
       ],
-      "correctAnswer": 0,
-      "explanation": "Entitlement policies control which buyer groups can see and buy each product.",
+      "correctAnswer": 1,
+      "explanation": "Entitlement policies control which buyer groups can see and buy a product.",
       "whyWrong": [
-        "Removing prices stops everyone buying it, including Healthcare.",
-        "A note in the name doesn't stop others buying it.",
-        "CSS only hides the product on screen. It can still be found."
+        "",
+        "Removing it from all price books also stops Healthcare buyers from purchasing it.",
+        "Text in a product name does not prevent other groups from seeing it. CSS only hides a product; it does not control access."
       ]
     },
     {
-      "question": "Buyers often order the same items every month. Which feature saves them time?",
+      "question": "Buyers often order the same items each month. Which feature saves them time?",
       "options": [
-        "Reordering from their order history",
-        "Downloading the catalog as a PDF",
-        "Calling customer service every month",
-        "Creating a new account each time"
+        "Download the catalog as a PDF",
+        "Call customer service each month",
+        "Reorder from their order history",
+        "Create a new account for each order"
       ],
-      "correctAnswer": 0,
-      "explanation": "Buyers can reorder past orders from their order history, which adds the same items to the cart in one step.",
+      "correctAnswer": 2,
+      "explanation": "Buyers can reorder from past orders, which puts the same items in the cart in one step.",
       "whyWrong": [
-        "A PDF doesn't place an order.",
-        "Calling service is slower and costs more.",
-        "New accounts add confusion and lose history."
+        "A PDF catalog does not place an order.",
+        "Calling customer service takes longer.",
+        "Creating new accounts adds work and loses order history."
       ]
     }
   ]

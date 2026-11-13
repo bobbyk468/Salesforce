@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Public Sector Solutions Accredited Professional exam for?",
+    "heading": "Who is the Public Sector Solutions AP exam for?",
     "personas": [
       {
-        "label": "Government implementers",
-        "description": "You build Salesforce solutions for city, state or national agencies and want to prove you know Public Sector Solutions."
+        "label": "Public agency implementers",
+        "description": "You build Salesforce services for local, state, or national government and want to demonstrate your Public Sector Solutions knowledge."
       },
       {
-        "label": "Consultants and admins",
-        "description": "You set up licensing, permits, grants or benefits processes and want a credential that shows it."
+        "label": "Government consultants and admins",
+        "description": "You configure licence, permit, grant, or benefits processes and want a credential that reflects this work."
       },
       {
-        "label": "Career builders",
-        "description": "You know core Salesforce and want to specialise in the public sector."
+        "label": "Salesforce professionals entering government",
+        "description": "You know the Salesforce platform and want to apply those skills in the public sector."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Public Sector Solutions Accredited Professional Exam Hard?",
-    "summary": "It is a moderate exam. Public Sector Solutions has ready-made processes for licences, permits, inspections, grants and benefits, each with its own records. Most questions ask which of these fits an agency's need.",
+    "heading": "How difficult is the Public Sector Solutions AP exam?",
+    "summary": "Expect a moderate exam about government processes. Public Sector Solutions includes tools for licences, permits, inspections, grants, and benefits, with records for each process. Questions ask you to match an agency need to the appropriate process or record.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
-      "<strong>Process areas.</strong> Licensing and permitting, inspections, grants, benefits and case management.",
-      "<strong>Tools.</strong> OmniStudio for forms and guided steps, and Experience Cloud for constituent portals."
+      "<strong>60 multiple-choice questions</strong> with 90 minutes to answer.",
+      "<strong>About 65% to pass</strong>, or around 39 correct answers. Verify the current score in the official exam guide.",
+      "<strong>Government processes.</strong> Review licensing, inspections, grants, benefits, and case management.",
+      "<strong>Implementation tools.</strong> OmniStudio supports guided forms and steps; Experience Cloud supports constituent portals."
     ],
-    "passRateGuidance": "Walk through one licence application from submission to approval and inspection in a trial org before the exam. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Before the exam, follow a licence request from submission through review, approval, and inspection in a trial org. Aim for at least 75% on practice questions before booking."
   },
   "examFormat": {
-    "heading": "Public Sector Solutions Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe an agency task, such as issuing a food business licence or paying out a grant, and ask which feature or record handles it.",
+    "heading": "Public Sector Solutions AP exam format",
+    "intro": "Accredited Professional exams are delivered online. Prepare for questions like these:",
+    "scenarioPercent": "Many questions describe an agency task, such as granting a food business licence or paying a grant, and ask which feature or record supports it.",
     "bestWayToPass": [
-      "<strong>Learn each process area:</strong> What records licensing, inspections, grants and benefits use, and how they connect.",
-      "<strong>Follow an application:</strong> From the public form, through review and approval, to the issued licence or award.",
-      "<strong>Know OmniStudio's role:</strong> Intake forms, guided steps and data lookups are often built with it.",
-      "<strong>Think about the constituent:</strong> Self-service portals, status updates and accessible forms."
+      "<strong>Study the process records:</strong> Learn which records support licences, inspections, grants, and benefits and how they relate.",
+      "<strong>Trace an application:</strong> Follow it from public intake through review and approval to a licence or award.",
+      "<strong>Understand OmniStudio:</strong> Review how guided steps, intake forms, and data lookups use its tools.",
+      "<strong>Consider the constituent journey:</strong> Know how self-service, status updates, and accessible forms help the public."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Public Sector Solutions: licensing and permitting, inspections, grants, benefits, case management and constituent self-service.",
+    "description": "This exam covers configuring Public Sector Solutions for licensing and permitting, inspections, grants, benefits, case management, and constituent self-service.",
     "examDetails": {
       "questions": 60,
       "passingScore": "Not published",
@@ -57,59 +57,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Public Sector Solutions AP: Key Concepts for the Exam",
+    "h2": "Public Sector Solutions AP concepts to review",
     "blocks": [
       {
-        "heading": "Case Management for Government",
-        "body": "Agencies handle many kinds of cases, such as complaints, investigations and service requests. Public Sector Solutions builds on Service Cloud case management and adds features for government work, such as **interviews**, **investigations** and tracking the people and organisations involved. Cases can be routed to the right team, linked to related records like licences or inspections, and tracked against deadlines. Sensitive cases need tight sharing so only the right staff can see them."
+        "heading": "Government case management",
+        "body": "Agencies use cases to manage complaints, investigations, and service requests. Public Sector Solutions extends Service Cloud case management with government-focused records such as interviews and investigations, and helps track the people and organizations involved. Teams can route cases to the right staff, connect them to licences or inspections, and monitor deadlines. Restrict access when a case contains sensitive information."
       },
       {
-        "heading": "Licensing & Permitting",
-        "body": "Businesses and people apply for **licences** and **permits**, such as a food business licence or a building permit. A **regulatory authorization type** defines each kind of licence and its rules. An **application** is submitted, often through a public portal form, then reviewed, with checks, fees and approvals. When approved, the licence is issued as a record with an expiry date, and renewals can be handled the same way. Applicants can see the status of their application online."
+        "heading": "Licences and permits",
+        "body": "People and businesses apply for licences and permits, such as food service approval or a building permit. A regulatory authorization type defines a licence or permit and its rules. An application is submitted, often through a public portal, and then reviewed for checks, fees, and approvals. Once approved, the licence record includes an expiry date. Applicants can view the application status online, and renewals can use a similar process."
       },
       {
-        "heading": "Grants Management",
-        "body": "Agencies that give out money use **grants management**. A **funding opportunity** describes what is on offer and who can apply. Organisations submit **applications**, which are reviewed and scored by reviewers. Approved applications become **awards**, with a budget and conditions. Money is paid out in **disbursements**, often tied to milestones or reports from the grantee. This keeps a full record of how public money was given and used."
+        "heading": "Grant funding",
+        "body": "Grant programs use funding opportunities to describe available funds and eligibility. Organizations submit applications for review and scoring. If approved, an application becomes an award with a budget and conditions. Disbursements record payments, which may depend on milestones or grantee reports. These records help agencies track how public funds are awarded and spent."
       },
       {
-        "heading": "Inspections & Compliance",
-        "body": "Inspectors visit sites to check rules are being followed, for example a restaurant's hygiene or a building's safety. Inspections are planned as **visits**, with **assessment tasks** and indicators that the inspector completes, often on a mobile device in the field. Results can be pass, fail or need follow-up. Failed checks can lead to **violations** and enforcement actions, and repeat inspections can be scheduled. Results link back to the business and its licence."
+        "heading": "Inspections and compliance",
+        "body": "Inspectors visit locations to check requirements, such as restaurant hygiene or building safety. A planned visit can include assessment tasks for the inspector to complete, including on a mobile device. The result may pass, fail, or require follow-up. A failed check can create a violation and enforcement action, with another inspection scheduled as needed. The inspection connects to the business and its licence."
       },
       {
-        "heading": "Constituent Engagement & Digital Experience",
-        "body": "Members of the public expect to apply, pay and check status online. **Experience Cloud** portals let constituents submit applications, upload documents and track progress. **OmniStudio** tools often power the forms: **OmniScripts** guide people step by step, and **Integration Procedures** and **Data Mappers** fetch and save data. Forms should be accessible and work on phones. Many agencies run on **Government Cloud**, which meets public sector security standards."
+        "heading": "Digital service for constituents",
+        "body": "People expect to apply, pay, and check progress online. Experience Cloud portals allow constituents to submit applications, provide documents, and follow status. OmniStudio can power the forms: OmniScripts guide users through steps, while Integration Procedures and Data Mappers retrieve and save information. Forms should be accessible and usable on phones. Government Cloud is designed for public sector security standards."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Public Sector Solutions Accredited Professional Exam",
-    "intro": "Most questions name an agency process. Match it to the right area (licensing, inspections, grants, benefits or cases), then the record that represents it.",
+    "h2": "How to prepare for the Public Sector Solutions AP exam",
+    "intro": "First identify the agency process in the question: licensing, inspection, grants, benefits, or cases. Then select the record or feature that supports that process.",
     "blocks": [
       {
-        "heading": "Public Sector Data Model",
-        "body": "Each process area has its own records: authorization types and applications for licences, funding opportunities and awards for grants, visits and assessments for inspections."
+        "heading": "Know the public sector records",
+        "body": "Licensing uses authorization types and applications; grants use opportunities, applications, and awards; inspections use visits and assessments."
       },
       {
-        "heading": "Grants Management",
-        "body": "Funding opportunity, application, review, award, then disbursements. Payments can depend on milestones."
+        "heading": "Follow the grant lifecycle",
+        "body": "A funding opportunity leads to an application, review, and award. Disbursements record payments, which may depend on milestones."
       },
       {
-        "heading": "Licensing & Permitting",
-        "body": "Define licence types with regulatory authorization types. Applications move through review to an issued licence with an expiry date."
+        "heading": "Understand licensing",
+        "body": "Regulatory authorization types define licence rules. Applications pass through review before an issued licence receives an expiry date."
       },
       {
-        "heading": "Constituent 360 & Self-Service",
-        "body": "Portals let constituents apply, pay and track status. Staff see the full history in one place."
+        "heading": "Support constituent self-service",
+        "body": "Portals help people apply, pay, and check status. Staff can review the related history in Salesforce."
       },
       {
-        "heading": "OmniStudio for Government",
-        "body": "OmniScripts for guided public forms. Integration Procedures for fetching data from other systems."
+        "heading": "Use OmniStudio appropriately",
+        "body": "OmniScripts guide people through forms. Integration Procedures can retrieve data from other systems."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After This AP",
-    "intro": "Good next steps after Public Sector Solutions:",
+    "heading": "Credentials to consider after this AP",
+    "intro": "These certifications build on Public Sector Solutions:",
     "links": [
       {
         "href": "/certifications/omnistudio-consultant",
@@ -165,243 +165,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A city wants businesses to apply for a food business licence online and track their application. What should be set up?",
+      "question": "A city wants local businesses to apply for food licences online and follow their applications. What should the agency configure?",
       "options": [
-        "A licence application process with a public portal form",
-        "An inspection visit only",
-        "A grant funding opportunity",
-        "A Campaign for each business"
+        "A licence application process with an online public form",
+        "A visit for inspectors only",
+        "A funding opportunity for grants",
+        "A separate marketing campaign and landing page for each business"
       ],
       "correctAnswer": 0,
-      "explanation": "Licensing and permitting handles applications, review and issuing licences, and a portal lets applicants apply and track status.",
+      "explanation": "Licensing and permitting manages applications, review, and issuing licences. A portal lets applicants submit requests and check progress.",
       "whyWrong": [
-        "Inspections check compliance after licensing.",
-        "Grants are for giving out money, not issuing licences.",
-        "Campaigns are for marketing."
+        "Inspection visits are used to check compliance, often after a licence is issued.",
+        "Grant opportunities support funding, not licence applications.",
+        "Campaigns are marketing records, not a licensing process."
       ]
     },
     {
-      "question": "Where are the rules and settings for each kind of licence, such as a liquor licence, defined?",
+      "question": "Where should an agency define the rules for a particular licence, such as a liquor licence?",
       "options": [
-        "In a dashboard",
-        "In a regulatory authorization type",
-        "In a Case queue",
-        "In a funding opportunity"
+        "A dashboard",
+        "A regulatory authorization type",
+        "A case queue",
+        "A grant funding opportunity record"
       ],
       "correctAnswer": 1,
-      "explanation": "Regulatory authorization types describe each licence or permit type and its rules.",
+      "explanation": "A regulatory authorization type defines a licence or permit category and its rules.",
       "whyWrong": [
-        "Dashboards show data.",
-        "Queues route work.",
-        "Funding opportunities are for grants."
+        "Dashboards display data but do not define licence rules.",
+        "Queues route work to users; they do not define a licence type.",
+        "Funding opportunities describe grants."
       ]
     },
     {
-      "question": "An inspector visits a restaurant and must complete a hygiene checklist on a tablet. What should be used?",
+      "question": "An inspector needs to visit a restaurant and complete a hygiene checklist on a tablet. What should the agency use?",
       "options": [
         "An inspection visit with assessment tasks",
         "A licence renewal",
-        "A grant application",
+        "A grant application with an attached document checklist",
         "A Chatter post"
       ],
       "correctAnswer": 0,
-      "explanation": "Inspections are planned as visits, with assessment tasks the inspector completes in the field.",
+      "explanation": "An inspection visit can include assessment tasks that an inspector completes in the field.",
       "whyWrong": [
-        "Renewals extend a licence.",
-        "Grant applications are for funding.",
-        "Chatter isn't an inspection record."
+        "A renewal extends an existing licence.",
+        "Grant applications request funding.",
+        "Chatter is for collaboration, not tracking inspections."
       ]
     },
     {
-      "question": "A restaurant fails its hygiene inspection. What should happen next in the system?",
+      "question": "A restaurant does not pass its hygiene inspection. What is an appropriate next step?",
       "options": [
-        "Close the business's account",
-        "Record a violation and schedule a follow-up inspection",
-        "Delete the inspection",
-        "Issue a new licence"
+        "Close the business account",
+        "Record a violation and plan a follow-up inspection",
+        "Delete the inspection record and schedule nothing further",
+        "Issue another licence"
       ],
       "correctAnswer": 1,
-      "explanation": "Failed checks can lead to violations and repeat inspections, linked to the business and its licence.",
+      "explanation": "A failed assessment can result in a violation and a repeat inspection, linked to the business and its licence.",
       "whyWrong": [
-        "Closing the account removes the history.",
-        "Deleting it loses the record.",
-        "Failing doesn't earn a new licence."
+        "Closing an account is not how an inspection failure is recorded.",
+        "A failed visit should remain in the record for history.",
+        "A failed inspection does not justify issuing another licence."
       ]
     },
     {
-      "question": "A state agency offers $2 million in community grants. Where should the details of what is on offer and who can apply be recorded?",
+      "question": "A state agency is offering $2 million in community grants. Where should it describe the program and eligibility?",
       "options": [
         "A funding opportunity",
-        "A benefit enrollment",
+        "A benefits enrollment",
         "An inspection visit",
         "A regulatory authorization type"
       ],
       "correctAnswer": 0,
-      "explanation": "Funding opportunities describe the grant, its rules and who can apply.",
+      "explanation": "A funding opportunity describes a grant program, including what is offered and who may apply.",
       "whyWrong": [
-        "Benefit enrollments are for individuals receiving benefits.",
-        "Inspections check compliance.",
-        "Authorization types define licences."
+        "Benefit enrollment is for people receiving benefits.",
+        "Inspection visits record compliance checks.",
+        "Authorization types define licences and permits."
       ]
     },
     {
-      "question": "A grant has been awarded. Money should be paid in three parts as the grantee reaches milestones. What should be used?",
+      "question": "A grant award should be paid in three installments as the recipient meets milestones. Which record supports these payments?",
       "options": [
-        "One payment at the start",
-        "A violation",
-        "Disbursements tied to milestones",
+        "One payment made before any milestones",
+        "A violation record",
+        "Disbursements connected to milestones",
         "A licence renewal"
       ],
       "correctAnswer": 2,
-      "explanation": "Disbursements record payments, and can be linked to milestones or reports.",
+      "explanation": "Disbursements record grant payments and can be tied to milestones or reports.",
       "whyWrong": [
-        "One upfront payment removes control over progress.",
-        "Violations are for failed inspections.",
-        "Renewals are for licences."
+        "A single advance payment would not represent the requested staged payments.",
+        "Violations track failed compliance checks.",
+        "Licence renewals are unrelated to grant payments."
       ]
     },
     {
-      "question": "Grant applications must be scored by a panel of reviewers before decisions are made. What fits?",
+      "question": "A review panel must score grant applications before deciding which to fund. What should the agency use?",
       "options": [
-        "A dashboard",
-        "Application review with assigned reviewers and scoring",
+        "A dashboard of applications that each reviewer reads on their own",
+        "A structured application review with reviewers and scores",
         "An email inbox",
         "A licence type"
       ],
       "correctAnswer": 1,
-      "explanation": "Grants management supports reviews where reviewers score applications.",
+      "explanation": "The grants process supports application reviews in which assigned reviewers can score submissions.",
       "whyWrong": [
-        "Dashboards show results, they don't run reviews.",
-        "An inbox isn't a structured review.",
-        "Licence types are for licensing."
+        "A dashboard presents information but does not conduct a review.",
+        "An inbox does not provide a structured scoring process.",
+        "Licence types support licensing, not grant review."
       ]
     },
     {
-      "question": "The public intake form has many steps and needs to look up data from another government system. Which tools fit?",
+      "question": "A public intake form has several steps and must retrieve information from another government system. Which tools fit?",
       "options": [
         "A Campaign",
         "A report",
         "An OmniScript with an Integration Procedure",
-        "A single long text field"
+        "A long text field on the application for pasted details"
       ],
       "correctAnswer": 2,
-      "explanation": "OmniScripts guide people through steps, and Integration Procedures fetch data from other systems.",
+      "explanation": "OmniScripts guide a person through steps. Integration Procedures can retrieve data from another system.",
       "whyWrong": [
-        "Campaigns are for marketing.",
-        "Reports show data.",
-        "A text field can't guide or look up data."
+        "Campaigns are used for marketing.",
+        "Reports show existing data rather than guiding an intake flow.",
+        "A text field cannot guide a multi-step form or retrieve external data."
       ]
     },
     {
-      "question": "An investigation into a complaint involves interviews with several people. Which area handles this?",
+      "question": "A complaint investigation requires interviews with several people. Which Public Sector Solutions area supports this work?",
       "options": [
-        "Case management with investigations and interviews",
-        "Grants management",
-        "Loyalty",
-        "Licensing"
+        "Case management with investigation and interview features",
+        "Grant management",
+        "Loyalty management",
+        "Licensing and permitting, with a new licence type for each interview"
       ],
       "correctAnswer": 0,
-      "explanation": "Public sector case management includes features for investigations and interviews.",
+      "explanation": "Government case management includes support for investigations and interviews.",
       "whyWrong": [
-        "Grants are for funding.",
-        "Loyalty isn't part of this.",
-        "Licensing issues licences."
+        "Grant management handles public funding.",
+        "Loyalty tools are not designed for complaint investigations.",
+        "Licensing issues permits and licences."
       ]
     },
     {
-      "question": "A licence expires each year. How should renewals be handled?",
+      "question": "A licence expires every year. How should the agency process a renewal?",
       "options": [
-        "By phone only",
-        "By changing the expiry date by hand each year",
-        "By deleting and recreating the licence",
-        "Through a renewal application linked to the existing licence"
+        "Require applicants to call by phone only",
+        "Manually change the expiry date every year",
+        "Delete the licence record and create a replacement each year",
+        "Use a renewal application linked to the current licence"
       ],
       "correctAnswer": 3,
-      "explanation": "Renewals can follow the same application process, linked to the existing licence for a clear history.",
+      "explanation": "The renewal can follow an application process and remain linked to the existing licence for a clear history.",
       "whyWrong": [
-        "Phone-only is slow and hard to track.",
-        "Manual date changes skip checks and fees.",
-        "Deleting loses history."
+        "Phone-only handling is difficult to track and does not provide the online process.",
+        "Changing a date manually can skip required checks or fees.",
+        "Deleting and recreating the record loses the licence history."
       ]
     },
     {
-      "question": "An agency needs its Salesforce org to meet public sector security standards. What should it consider?",
+      "question": "An agency needs its Salesforce environment to meet public sector security requirements. What should it evaluate?",
       "options": [
-        "Public Read/Write sharing",
-        "A shared admin login",
+        "Public Read/Write record access",
+        "A shared administrator login",
         "A Developer Edition org",
         "Government Cloud"
       ],
       "correctAnswer": 3,
-      "explanation": "Government Cloud is designed to meet public sector security and compliance standards.",
+      "explanation": "Government Cloud is designed to meet public sector security and compliance requirements.",
       "whyWrong": [
-        "Public sharing exposes data.",
-        "Shared logins break accountability.",
-        "Developer Edition is for testing."
+        "Public sharing can expose records beyond the intended audience.",
+        "Shared logins make it difficult to know who performed an action.",
+        "Developer Edition is intended for development and testing."
       ]
     },
     {
-      "question": "A complaint is linked to a business that holds a licence and had a failed inspection. Why link these records?",
+      "question": "A complaint concerns a licensed business that also failed an inspection. Why connect the related records?",
       "options": [
-        "To hide the inspection",
-        "To make the complaint disappear",
-        "So staff can see the full history of the business in one place",
-        "To increase the fee"
+        "To hide the failed inspection",
+        "To remove the complaint from the system once the inspection closes",
+        "To let staff review the business history together",
+        "To raise the business’s licence fee"
       ],
       "correctAnswer": 2,
-      "explanation": "Linked records give staff a full view of the business, which helps with decisions.",
+      "explanation": "Related records give staff a fuller view of the business and help them make informed decisions.",
       "whyWrong": [
-        "Linking makes the inspection visible.",
-        "Linking doesn't remove records.",
-        "Fees are set by licence rules."
+        "Linking records does not hide the inspection.",
+        "A relationship does not remove the complaint.",
+        "Fees depend on licence rules, not on linking records."
       ]
     },
     {
-      "question": "Constituents should be able to upload documents and see their application status on their phone. What matters most?",
+      "question": "Constituents need to upload documents and check application status from a phone. What design best supports this?",
       "options": [
-        "Accepting documents by post only",
-        "An accessible, mobile-friendly Experience Cloud portal",
-        "Hiding the status",
-        "Requiring a desktop computer"
+        "Accepting documents only by postal mail",
+        "An accessible Experience Cloud portal designed for mobile use",
+        "Hiding the application status until a final decision has been reached",
+        "Requiring everyone to use a desktop computer"
       ],
       "correctAnswer": 1,
-      "explanation": "Portals should work on phones and be accessible to everyone.",
+      "explanation": "An accessible, mobile-friendly portal lets constituents send documents and follow progress on their phones.",
       "whyWrong": [
-        "Post-only is slow.",
-        "Hiding status leads to more calls.",
-        "Many people only use phones."
+        "Postal mail alone does not meet the mobile self-service need.",
+        "Visible status helps people understand where their application stands.",
+        "A desktop-only service excludes people who rely on phones."
       ]
     },
     {
-      "question": "Sensitive investigation cases should only be visible to the investigations team. What should be used?",
+      "question": "Only the investigations team should see sensitive investigation cases. How should access be configured?",
       "options": [
-        "A Chatter group",
-        "Public Read Only",
-        "Private sharing settings with access granted to that team",
-        "View All for all users"
+        "Use a Chatter group to control case access",
+        "Set organization-wide defaults to Public Read Only for all Case records",
+        "Keep sharing private and grant access to the investigation team",
+        "Give every user View All access"
       ],
       "correctAnswer": 2,
-      "explanation": "Tight sharing keeps sensitive cases visible only to the right staff.",
+      "explanation": "Private sharing with access granted to the investigation team limits visibility to the appropriate staff.",
       "whyWrong": [
-        "Chatter groups don't control case access.",
-        "Public Read Only shows them to everyone.",
-        "View All shows everything."
+        "A Chatter group does not set record access.",
+        "Public Read Only exposes records to all users.",
+        "View All gives everyone broad access."
       ]
     },
     {
-      "question": "Which records make up the main grants flow?",
+      "question": "Which records represent the core grants lifecycle?",
       "options": [
         "Campaign and campaign member",
-        "Lead, opportunity and quote",
-        "Visit and assessment task",
-        "Funding opportunity, application, award and disbursements"
+        "Lead, opportunity, and quote",
+        "Inspection visit, assessment task, violation, and regulatory code",
+        "Funding opportunity, application, award, and disbursements"
       ],
       "correctAnswer": 3,
-      "explanation": "Grants move from the opportunity on offer, to applications, to awards, to payments.",
+      "explanation": "The process starts with the funding offered, continues through applications and awards, and records payments as disbursements.",
       "whyWrong": [
-        "That is the marketing flow.",
-        "That is the sales flow.",
-        "Those are for inspections."
+        "Campaign records support marketing.",
+        "Leads, opportunities, and quotes are part of sales work.",
+        "Visits and assessment tasks support inspections."
       ]
     }
   ]

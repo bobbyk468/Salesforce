@@ -5,7 +5,7 @@
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with Nonprofit Cloud and NPSP features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You manage fundraising or program work and configure the nonprofit data model in Salesforce."
       },
       {
         "label": "Consultants and admins",
@@ -19,24 +19,24 @@
   },
   "examDifficulty": {
     "heading": "Is the Nonprofit Cloud Exam Hard?",
-    "summary": "The Nonprofit Cloud exam is moderate. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "This exam asks you to apply Salesforce knowledge to nonprofit scenarios. Practice choosing a configuration or troubleshooting approach for a stated need.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
       "<strong>65% passing score</strong>: build a margin above the minimum before booking.",
       "<strong>Scenario-based choices</strong>: expect questions that test when to use Nonprofit Data Model, NPSP Configuration, or Donation Management.",
-      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Nonprofit Cloud and NPSP in a real org are better prepared than candidates who only memorize notes."
+      "<strong>Practice matters.</strong> Build a sample donor household, record a gift, and follow its payment and reporting data."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Before booking, practice a complete nonprofit workflow: create a constituent, record a donation, track a payment, and report on fundraising results. Aim for 75% or more on timed practice."
   },
   "examFormat": {
     "heading": "Nonprofit Cloud Exam Format Explained",
-    "intro": "The Nonprofit Cloud exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Nonprofit Cloud and NPSP.",
+    "intro": "Use timed practice sets to prepare for the Nonprofit Cloud exam and review the topics you find difficult.",
+    "scenarioPercent": "Expect nonprofit scenarios about gifts, households, grant applications, and service delivery. Identify the record or process that matches the organization’s goal.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Nonprofit Data Model, NPSP Configuration, and Donation Management because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Trace a constituent:</strong> Follow a person from a household or organization relationship through donations and program participation.",
+      "<strong>Practice gift entry:</strong> Compare a one-time gift, recurring donation, payment, in-kind gift, and soft credit.",
+      "<strong>Review program and grant records:</strong> Learn how services, grant requirements, and outcomes are tracked.",
+      "<strong>Build nonprofit reports:</strong> Practice donor retention, campaign results, gift summaries, and program measures."
     ]
   },
   "certificationCard": {
@@ -66,55 +66,55 @@
     "blocks": [
       {
         "heading": "NPSP Core Data Model: Households and Affiliations",
-        "body": "Nonprofit Success Pack (**NPSP**) is the data model foundation for Nonprofit Cloud. The Household Account Model creates an Account for each individual Contact (their household), automatically named \"[Last Name] Household.\" This differs from the standard B2B account model. Affiliations link Contacts to organisational Accounts (employer, chapter, board membership), distinguishing where someone lives (Household) from where they work or serve (Organisation). The consultant configures the NPSP settings to match the nonprofit's engagement model and explains the household model to clients who are new to NPSP."
+        "body": "NPSP uses household Accounts to group related Contacts. Affiliations connect people to organizations, such as employers or boards. Nonprofit Cloud and NPSP use different product models, so check which solution an organization uses before choosing its data design."
       },
       {
         "heading": "Fundraising: Opportunities, Payments, and Recurring Donations",
-        "body": "In **NPSP**, Opportunities represent donations and grants. Payment objects track actual received payments against an Opportunity, a single donation can have multiple scheduled payments. **Recurring Donations** create a series of Opportunities automatically on a schedule (monthly, quarterly, annual). Soft Credits allow non-donors (spouses, organisations that encouraged a gift) to receive credit for a donation without being the primary donor. The consultant configures NPSP payment settings, recurring donation schedules, and soft credit relationships to match the organisation's fundraising model."
+        "body": "In NPSP, an Opportunity can represent a gift, and payment records can track amounts received. Recurring Donations can generate a series of Opportunities. Soft Credits give recognition to someone other than the primary donor. Configure these records to match fundraising practices."
       },
       {
         "heading": "Program Management: Services and Deliveries",
-        "body": "Program Management Module (PMM) tracks services delivered to beneficiaries. Key objects: Program (a service offering, food bank, job training), Program Engagement (a specific client's ongoing participation in a program), Service (a type of service, food box delivery, coaching session), Service Delivery (a specific instance of a service delivered to a client on a date). The consultant configures PMM to match the organisation's service model, sets up program-specific fields, and designs reports to measure program outcomes and client outcomes over time."
+        "body": "The Program Management Module tracks participation and services. A Program describes an offering, a Program Engagement links a participant to it, and a Service Delivery records a service provided. Use these records to report on activity and outcomes."
       },
       {
         "heading": "Grant Management: Funds and Allocations",
-        "body": "**NPSP** uses General Accounting Units (GAUs) to track restricted funds and allocations. A GAU represents a fund, grant, or project that donors and grantors restrict their gifts to. GAU Allocations split a donation between multiple GAUs (e.g., 60% to the education programme, 40% to general operations). The Award object (in Grants Management package) tracks grant applications, awards, and reporting requirements from funders. The consultant configures the fund management structure to support the organisation's grant reporting and restricted fund accounting needs."
+        "body": "General Accounting Units (GAUs) represent funds or purposes, and allocations can divide a gift among them. Grant management records can track applications, awards and funder requirements. Choose a structure that supports reporting on restricted funds."
       },
       {
         "heading": "Reporting and Impact Measurement",
-        "body": "Nonprofits need to demonstrate impact to funders and stakeholders. **NPSP** provides built-in reports for fundraising KPIs: donor retention rate, average gift size, year-over-year giving comparison, LYBUNT/SYBUNT analysis (Lapsed/Some Year But Unfortunately Not This year donors). Program impact reports track service delivery volume and client outcomes. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) for Nonprofits provides pre-built dashboards for major donor portfolio analysis, campaign performance, and program impact measurement. The consultant designs the reporting strategy to support annual reports, grant reporting, and board presentations."
+        "body": "Fundraising reports can show donor retention, gift size and changes in giving over time. Program reports can show services delivered and outcomes. Choose measures that help the organization report to its board, funders and other stakeholders. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) can support this analysis."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Nonprofit Cloud Consultant Exam",
-    "intro": "The Nonprofit Cloud exam tests implementation of NPSP (Nonprofit Success Pack) and Nonprofit Cloud features for mission-driven organizations. Focus on the data model differences from commercial Salesforce and the fundraising/program management features.",
+    "intro": "Study how Nonprofit Cloud supports fundraising and program work, and compare its data model with other Salesforce implementations.",
     "blocks": [
       {
         "heading": "NPSP Household Account Model",
-        "body": "**NPSP** uses **Household Accounts** (one per family/household) with Contacts as household members. Understand how this differs from the standard B2B account model and implications for duplicate management and household giving."
+        "body": "For an NPSP household, review how Contacts are grouped and how duplicate records and shared giving affect reports."
       },
       {
         "heading": "Gift Entry & Payment Processing",
-        "body": "Know Nonprofit Cloud **Gift Entry** with its batch entry templates, gift commitments, and partial soft credits. Understand how payment processors integrate and how gift records relate to Opportunities."
+        "body": "Trace a gift from entry through payment and credit. Check the capabilities of the specific nonprofit product in the scenario."
       },
       {
         "heading": "Relationships & Affiliations",
-        "body": "**NPSP** Relationships track personal connections between Contacts (e.g., spouse, board member). Affiliations track organizational connections between Contacts and Accounts. Know when to use each and how reciprocal relationships work."
+        "body": "Use Relationships for connections between people and Affiliations for a person’s connection to an organization."
       },
       {
         "heading": "Program Management",
-        "body": "Program Management Module (PMM) tracks services, programs, service schedules, and service deliveries. Know the PMM object model and how service delivery data rolls up to program reporting."
+        "body": "In PMM, distinguish the program, a participant’s engagement and each service delivery before designing reports."
       },
       {
         "heading": "TDTM (Table-Driven Trigger Management)",
-        "body": "**NPSP** uses TDTM to manage its trigger logic through configuration records rather than code. Understand how TDTM Handler records control trigger behavior and how to troubleshoot TDTM-related issues."
+        "body": "In NPSP, review TDTM handler configuration when troubleshooting managed trigger behavior."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "These certifications can extend nonprofit work into related Salesforce roles:",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which data model is recommended for tracking donations in Nonprofit Cloud?",
+      "question": "Which data model can a nonprofit use to manage donations in Salesforce?",
       "options": [
-        "Custom objects",
-        "Standard Opportunity object only",
-        "Standard Account object",
-        "NPSP (Nonprofit Success Pack) data model"
+        "The Nonprofit Success Pack (NPSP) data model.",
+        "Custom objects with no standard Salesforce records.",
+        "The standard Account object by itself.",
+        "A Campaign Member record for each gift."
       ],
       "correctAnswer": 3,
-      "explanation": "NPSP provides a specialized data model for tracking donations, with features like recurring donations, soft credits, and gift entry.",
+      "explanation": "NPSP provides a nonprofit data model for fundraising records such as donations.",
       "whyWrong": [
-        "Generic custom objects would require rebuilding what NPSP already provides natively.",
-        "A standard Opportunity object alone doesn't provide the nonprofit-specific donation tracking structure NPSP adds.",
-        "A standard Account object alone doesn't provide the nonprofit-specific donation data model NPSP adds."
+        "This is the nonprofit data model used for donation records.",
+        "A custom-only model does not use the nonprofit data model described.",
+        "Accounts can relate donors and organizations, but they do not track gifts on their own."
       ]
     },
     {
-      "question": "What is the purpose of Household Accounts in NPSP?",
+      "question": "What do Household Accounts represent in NPSP?",
       "options": [
-        "To track volunteer activities",
-        "To manage foundation grants",
-        "To track corporate donors",
-        "To group related individual contacts into family units"
+        "Volunteer shifts for community events.",
+        "Foundation grant applications.",
+        "Companies that make corporate gifts through a matching programme.",
+        "Groups of individual Contacts who are part of one household."
       ],
       "correctAnswer": 3,
-      "explanation": "Household Accounts group related individual contacts (family members) together, allowing you to track household giving and communications.",
+      "explanation": "A Household Account groups related individual Contacts and supports household-level relationship tracking.",
       "whyWrong": [
-        "Household Accounts aren't for tracking volunteer activities, that's a separate NPSP feature.",
-        "Household Accounts aren't for managing foundation grants, that's a separate NPSP feature.",
-        "Household Accounts aren't for tracking corporate donors, that's a different account type."
+        "Volunteer shifts are tracked with volunteer management records.",
+        "Grant applications are tracked separately from households.",
+        "A corporate donor is generally represented as an organization Account."
       ]
     },
     {
-      "question": "Which feature allows nonprofits to track in-kind donations?",
+      "question": "Which feature can record a donation of goods or services instead of cash?",
       "options": [
-        "Standard Opportunity",
-        "Gift Entry",
-        "In-Kind Gift fields on Opportunity",
-        "Campaign"
+        "A standard cash Opportunity with no extra details.",
+        "Gift Entry, which only enters cash donations.",
+        "In-Kind Gift fields on the Opportunity.",
+        "A Campaign Member record."
       ],
       "correctAnswer": 2,
-      "explanation": "NPSP includes In-Kind Gift fields on the Opportunity object to track non-monetary donations like goods and services.",
+      "explanation": "In-Kind Gift fields on an Opportunity can record non-cash donations.",
       "whyWrong": [
-        "A standard Opportunity alone doesn't have the specific in-kind tracking fields described.",
-        "Gift Entry is the data-entry interface, not itself the in-kind tracking field mechanism.",
-        "Campaign tracks marketing initiatives, not in-kind donation details."
+        "A cash Opportunity alone does not capture the in-kind details.",
+        "Gift Entry supports gift entry, but this option does not identify the in-kind fields.",
+        "This is the option used to track donated goods or services."
       ]
     },
     {
-      "question": "What is the Engagement Plan feature used for?",
+      "question": "What is an Engagement Plan used for in NPSP?",
       "options": [
-        "Marketing automation",
-        "Event management",
-        "Email campaigns",
-        "Creating task templates for donor stewardship"
+        "Automating marketing emails.",
+        "Scheduling fundraising events and their volunteer shifts.",
+        "Sending email campaigns.",
+        "Creating task templates for donor follow-up."
       ],
       "correctAnswer": 3,
-      "explanation": "Engagement Plans create templated task sequences for donor stewardship, ensuring consistent follow-up and cultivation activities.",
+      "explanation": "Engagement Plans create task templates for donor stewardship and follow-up.",
       "whyWrong": [
-        "Marketing automation is a different, unrelated capability from donor stewardship task templates.",
-        "Event management is a separate NPSP-adjacent feature, unrelated to donor stewardship task templates.",
-        "Email campaigns are a communication channel, not the task-templating feature being described."
+        "Marketing automation is a separate purpose.",
+        "Event management is not the purpose of Engagement Plans.",
+        "An email campaign does not create the donor task plan described."
       ]
     },
     {
-      "question": "How does NPSP handle recurring donations?",
+      "question": "How can NPSP manage a recurring donation?",
       "options": [
-        "Using Recurring Donation objects with installment Opportunities",
-        "Manual entry each month",
-        "Through standard Salesforce scheduling",
-        "External payment processor only"
+        "Use a Recurring Donation record that can generate installment Opportunities.",
+        "Enter a new donation manually each month.",
+        "Use only standard Salesforce scheduling.",
+        "Track it only in an external payment processor, with nothing stored in Salesforce."
       ],
       "correctAnswer": 0,
-      "explanation": "NPSP uses Recurring Donation objects that automatically create installment Opportunities based on the donation schedule.",
+      "explanation": "A Recurring Donation record can create Opportunities on the selected schedule.",
       "whyWrong": [
-        "Manual monthly entry is the opposite of NPSP's automated recurring donation handling.",
-        "Standard Salesforce scheduling doesn't natively handle the specific recurring-donation installment structure.",
-        "An external payment processor alone doesn't provide the internal Salesforce recurring-donation tracking structure."
+        "This is the NPSP feature designed for scheduled gifts.",
+        "Manual entry is not needed for a configured recurring donation.",
+        "Standard scheduling alone does not manage the donation records."
       ]
     },
     {
-      "question": "What is a Soft Credit in NPSP?",
+      "question": "What does a Soft Credit record?",
       "options": [
-        "An in-kind gift",
-        "A pledge only",
-        "Attributing a gift to a contact who influenced the donation (e.g., peer-to-peer)",
-        "A refund"
+        "A donated item or service.",
+        "A pledge that has been promised but has not yet been paid.",
+        "Recognition for someone who helped influence a gift.",
+        "A refunded payment."
       ],
       "correctAnswer": 2,
-      "explanation": "Soft credits attribute influence to contacts who helped secure the gift.",
+      "explanation": "A Soft Credit recognizes a person or organization that influenced a donation without making the primary gift.",
       "whyWrong": [
-        "An in-kind gift is a non-cash donation type, unrelated to the attribution concept a Soft Credit represents.",
-        "A pledge alone is a different giving commitment type, not the attribution concept a Soft Credit represents.",
-        "A refund is an unrelated financial transaction, not what a Soft Credit represents."
+        "An in-kind gift is a non-cash donation.",
+        "A pledge is a promise to give, not a Soft Credit.",
+        "A refund is handled as a payment adjustment."
       ]
     },
     {
-      "question": "Which NPSP feature supports tribute and memorial giving?",
+      "question": "Which NPSP feature supports tribute or memorial gifts?",
       "options": [
-        "Tribute and memorial fields and related processing",
-        "Household only",
-        "Standard Opportunity only",
-        "Campaign only"
+        "Tribute and memorial fields and related processes.",
+        "A Household Account by itself.",
+        "A standard Opportunity with no tribute information.",
+        "A Campaign record only."
       ],
       "correctAnswer": 0,
-      "explanation": "NPSP supports tribute and memorial giving with dedicated fields.",
+      "explanation": "Tribute and memorial fields let the organization record gifts made in someone’s honor or memory.",
       "whyWrong": [
-        "Household alone is a grouping structure, not the tribute/memorial giving feature.",
-        "A standard Opportunity alone doesn't have the specific tribute/memorial fields NPSP adds.",
-        "Campaign tracks marketing initiatives, not tribute/memorial giving specifics."
+        "A Household Account does not record tribute details on its own.",
+        "An Opportunity may hold a gift, but it needs tribute information.",
+        "A Campaign may organize outreach but does not record tribute details by itself."
       ]
     },
     {
-      "question": "What does the Affiliations object track?",
+      "question": "What does an Affiliation record link?",
       "options": [
-        "Only campaigns",
-        "Only donations",
-        "Relationships between contacts and accounts (e.g., employment, education)",
-        "Only households"
+        "A Contact to a Campaign only.",
+        "A donation to its payment only.",
+        "A Contact to an organization, such as an employer or school.",
+        "Two Household Accounts that happen to share one mailing address."
       ],
       "correctAnswer": 2,
-      "explanation": "Affiliations track contact-to-account relationships.",
+      "explanation": "Affiliations connect a Contact with an organization, such as an employer or school.",
       "whyWrong": [
-        "'Only campaigns' undersells Affiliations, which track relationships broadly, not just campaign involvement.",
-        "'Only donations' undersells Affiliations, which track relationships broadly, not just giving.",
-        "'Only households' undersells Affiliations, which track relationships beyond just household groupings."
+        "Campaign membership is handled with Campaign Member records.",
+        "Payment records are linked to gifts, not Affiliations.",
+        "Affiliations link Contacts to organizations rather than households."
       ]
     },
     {
-      "question": "Which NPSP feature helps manage volunteer hours?",
+      "question": "Which NPSP feature can track volunteer work?",
       "options": [
-        "Campaign only",
-        "Opportunity only",
-        "Volunteer Jobs and Volunteer Hours",
-        "Household only"
+        "Campaigns.",
+        "Opportunities.",
+        "Volunteer Jobs and Volunteer Hours.",
+        "Household Accounts and their members."
       ],
       "correctAnswer": 2,
-      "explanation": "Volunteer Jobs and Volunteer Hours track volunteer engagement.",
+      "explanation": "Volunteer Jobs and Volunteer Hours can track volunteer opportunities and completed service.",
       "whyWrong": [
-        "Campaign alone doesn't track volunteer hours specifically, that's a separate NPSP feature.",
-        "Opportunity alone doesn't track volunteer hours specifically, that's a separate NPSP feature.",
-        "Household alone doesn't track volunteer hours specifically, that's a separate NPSP feature."
+        "Campaigns are not the only volunteer tracking records.",
+        "Opportunities track gifts or grants, not volunteer hours.",
+        "Households do not track volunteer shifts by themselves."
       ]
     },
     {
-      "question": "What is the purpose of Payment records in NPSP?",
+      "question": "What do NPSP Payment records track?",
       "options": [
-        "To create campaigns",
-        "To track individual payments against an Opportunity (e.g., pledge installments)",
-        "To manage households",
-        "To replace Opportunities"
+        "Campaign creation and membership.",
+        "Payments received for an Opportunity, including installments.",
+        "Household relationships.",
+        "The replacement of the Opportunity record after the gift is closed."
       ],
       "correctAnswer": 1,
-      "explanation": "Payment records track individual payments against Opportunities.",
+      "explanation": "Payment records track amounts received against an Opportunity, such as payments toward a pledge.",
       "whyWrong": [
-        "'To create campaigns' misattributes Payment records' purpose to a different, unrelated function.",
-        "'To manage households' misattributes Payment records' purpose to a different, unrelated function.",
-        "Payment records don't replace Opportunities, they track individual payments against them."
+        "Campaigns are managed with Campaign records.",
+        "This describes NPSP Payment records.",
+        "Households group people; they do not track payments."
       ]
     },
     {
-      "question": "Which feature supports grant management in Nonprofit Cloud?",
+      "question": "Which records help manage nonprofit grant applications and their requirements?",
       "options": [
-        "Household only",
-        "Grant applications, requirements, and reporting",
-        "Standard Opportunity only",
-        "Campaign only"
+        "Household Accounts alone.",
+        "Grant application, requirement, and reporting records.",
+        "A standard Opportunity alone, with no related requirement records.",
+        "Campaigns alone."
       ],
       "correctAnswer": 1,
-      "explanation": "Grant management features support applications and reporting.",
+      "explanation": "Grant management features track applications, requirements, and reporting.",
       "whyWrong": [
-        "Household is a grouping structure, unrelated to grant management.",
-        "A standard Opportunity alone doesn't provide the specific grant-application tracking structure.",
-        "Campaign tracks marketing initiatives, not grant-specific application and reporting data."
+        "Household Accounts do not manage grant requirements.",
+        "An Opportunity may represent a grant but does not cover all grant requirements by itself.",
+        "Campaigns can organize outreach but do not manage grant compliance alone."
       ]
     },
     {
-      "question": "What does the Forecast object support in NPSP?",
+      "question": "What can the NPSP Forecast object support?",
       "options": [
-        "Inventory only",
-        "Budget and revenue forecasting for fundraising",
-        "Campaign only",
-        "Sales forecasting only"
+        "Inventory planning.",
+        "Fundraising budget and revenue forecasts.",
+        "Campaign email delivery.",
+        "Sales forecasts for commercial product lines."
       ],
       "correctAnswer": 1,
-      "explanation": "Forecast supports budget and revenue planning for nonprofits.",
+      "explanation": "Forecast records can support fundraising budget and revenue planning.",
       "whyWrong": [
-        "Inventory tracking is unrelated to fundraising revenue forecasting.",
-        "Campaign alone tracks marketing initiatives, not the broader fundraising forecast.",
-        "Sales forecasting alone is a generic Sales Cloud concept, not the nonprofit-specific fundraising forecast being described."
+        "Inventory planning is not the purpose of this object.",
+        "Campaign email delivery uses marketing features.",
+        "This is not limited to sales forecasting."
       ]
     },
     {
-      "question": "Which reporting need is common for nonprofits?",
+      "question": "Which report is useful to a nonprofit fundraising team?",
       "options": [
-        "Donor retention, campaign ROI, and gift summary",
-        "Only support cases",
-        "Only sales pipeline",
-        "Only product sales"
+        "Donor retention, campaign results, and gift totals.",
+        "Open customer support Cases grouped by product and priority.",
+        "Sales pipeline only.",
+        "Product sales only."
       ],
       "correctAnswer": 0,
-      "explanation": "Nonprofits need donor retention, campaign ROI, and gift reports.",
+      "explanation": "Nonprofit teams often track donor retention, campaign performance, and gift totals.",
       "whyWrong": [
-        "'Only support cases' misattributes nonprofit reporting to a Service Cloud concept, not donor/fundraising metrics.",
-        "'Only sales pipeline' misattributes nonprofit reporting to a Sales Cloud concept, not donor/fundraising metrics.",
-        "'Only product sales' misattributes nonprofit reporting to a Commerce concept, not donor/fundraising metrics."
+        "Support Cases do not measure fundraising results.",
+        "Sales pipeline reporting is not the nonprofit need described.",
+        "Product sales reports do not summarize donations."
       ]
     },
     {
-      "question": "What is the purpose of the Primary Affiliation in NPSP?",
+      "question": "What is the Primary Affiliation on a Contact used for?",
       "options": [
-        "To track donations only",
-        "To designate the primary account (e.g., employer) for a contact",
-        "To manage campaigns",
-        "To replace Household"
+        "Tracking donations only.",
+        "Identifying the Contact’s main organization, such as an employer.",
+        "Managing Campaign membership.",
+        "Replacing the Contact’s Household Account with the employer’s Account."
       ],
       "correctAnswer": 1,
-      "explanation": "Primary Affiliation designates the main account for a contact.",
+      "explanation": "Primary Affiliation marks a Contact’s main relationship to an organization, such as an employer.",
       "whyWrong": [
-        "'To track donations only' misattributes Primary Affiliation's purpose to a different NPSP function.",
-        "'To manage campaigns' misattributes Primary Affiliation's purpose to a different, unrelated function.",
-        "Primary Affiliation doesn't replace Household, they serve distinct, complementary purposes."
+        "Gift records track donations.",
+        "This is the purpose of Primary Affiliation.",
+        "Campaign membership is tracked separately."
       ]
     },
     {
-      "question": "Which integration is common for Nonprofit Cloud?",
+      "question": "Which systems are commonly connected to a nonprofit Salesforce org?",
       "options": [
-        "Payment processors, fundraising platforms, and accounting",
-        "Slack only",
-        "Marketing Cloud only",
-        "CPQ only"
+        "Payment, fundraising, and accounting systems.",
+        "Slack.",
+        "Marketing Cloud, with no other system connected.",
+        "CPQ."
       ],
       "correctAnswer": 0,
-      "explanation": "Nonprofits integrate with payment processors and fundraising tools.",
+      "explanation": "Nonprofits often connect payment processing, fundraising tools, and accounting systems.",
       "whyWrong": [
-        "Slack alone is unrelated to Nonprofit Cloud's typical fundraising and accounting integrations.",
-        "Marketing Cloud alone undersells the integration landscape, which includes payment processors and accounting systems too.",
-        "CPQ alone is unrelated to the typical fundraising/payment/accounting integrations Nonprofit Cloud implementations need."
+        "Slack can support collaboration but is not the only common nonprofit integration.",
+        "Marketing tools may be used, but they do not cover the integration needs described.",
+        "CPQ is not the common integration set described here."
       ]
     }
   ]

@@ -16,47 +16,47 @@
     }
   ],
   "whoIsThisFor": {
-    "heading": "Who is the Tableau Data Analyst exam for?",
+    "heading": "Who should take the Tableau Data Analyst exam?",
     "personas": [
       {
-        "label": "BI analysts",
-        "description": "You build dashboards people rely on and want a credential that proves the skill."
+        "label": "Business intelligence analysts",
+        "description": "You create dashboards that teams rely on and want to demonstrate your Tableau analysis skills."
       },
       {
         "label": "Data analysts",
-        "description": "You answer business questions with data and use Tableau as your main tool."
+        "description": "You use data to answer business questions, with Tableau as a primary tool."
       },
       {
-        "label": "Self-service analytics users",
-        "description": "You already build views for your own team and want to go deeper than the basics."
+        "label": "Self-service Tableau users",
+        "description": "You already build views for a team and want to strengthen your analytics skills."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Tableau Data Analyst Exam Hard?",
-    "summary": "This is a step up from Desktop Foundations. It tests whether you can actually get an answer out of data: calculations that work at the right level of detail, filters applied in the right order, and charts that suit the question being asked.",
+    "heading": "How challenging is the Tableau Data Analyst exam?",
+    "summary": "This exam goes beyond the Desktop Foundations credential. It checks whether you can answer questions with data, including choosing the right level of detail for calculations, applying filters in the right order, and selecting a suitable chart.",
     "bullets": [
       "<strong>60 questions</strong> in 105 minutes.",
-      "<strong>65% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book.",
-      "<strong>Level of detail expressions are the hard part.</strong> FIXED, INCLUDE and EXCLUDE come up repeatedly.",
-      "<strong>Hands-on matters.</strong> Reading about calculations is not enough. You need to have been surprised by one and worked out why."
+      "<strong>65% passing score</strong>, about 39 correct answers out of 60. Check the official guide for current details.",
+      "<strong>Level of detail expressions.</strong> Know how FIXED, INCLUDE, and EXCLUDE change calculation granularity.",
+      "<strong>Hands-on practice helps.</strong> Build calculations and investigate results that do not match expectations."
     ],
-    "passRateGuidance": "You are ready when you can explain why a FIXED calculation ignores a filter, and when a table calculation is the better choice. Aim for 75% or more on practice tests, and build the examples yourself rather than reading them."
+    "passRateGuidance": "Practise explaining why a FIXED expression may ignore a dimension filter and when a table calculation is a better fit. Aim for at least 75% on practice tests, and create the examples yourself."
   },
   "examFormat": {
-    "heading": "Tableau Data Analyst Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions pose a business question and ask which chart, calculation or filter answers it, or show a result that looks wrong and ask why.",
+    "heading": "Tableau Data Analyst exam format",
+    "intro": "The proctored exam is available online or at a test centre. Questions may ask you to select a chart, calculation, or filter for a business need, or explain an unexpected result.",
+    "scenarioPercent": "A scenario may ask which chart or calculation best answers a business question, or why a filtered view displays an unexpected value.",
     "bestWayToPass": [
-      "<strong>Learn the order of operations:</strong> Knowing when each filter type is applied explains most surprising numbers in Tableau.",
-      "<strong>Practise level of detail expressions:</strong> FIXED ignores the view's dimensions, INCLUDE adds one, EXCLUDE removes one.",
-      "<strong>Know calculations from table calculations:</strong> One works on the source data, the other on what is already in the view.",
-      "<strong>Use parameters:</strong> Let the viewer switch a measure, a threshold or a date range without editing the workbook."
+      "<strong>Study filter order:</strong> Learn when each filter type applies and how this affects results.",
+      "<strong>Practise LOD expressions:</strong> FIXED uses named dimensions, INCLUDE adds a dimension, and EXCLUDE removes one.",
+      "<strong>Separate row calculations from table calculations:</strong> Understand whether a formula uses source data or the values already in the view.",
+      "<strong>Use parameters appropriately:</strong> They let viewers change a measure, threshold, or date value without editing the workbook."
     ]
   },
   "certificationCard": {
     "code": "Tableau Data Analyst",
-    "description": "This exam tests practical analysis in Tableau: connecting and preparing data, writing calculations including level of detail expressions, choosing the right chart, and building dashboards that answer a business question. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Explore and Analyze Data (41%) and Create Content (26%).",
+    "description": "This exam tests how you connect and prepare data, create calculations and visualizations, and use Tableau to answer business questions. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Explore and Analyze Data (41%) and Create Content (26%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -73,59 +73,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Tableau Data Analyst: Key Concepts for the Exam",
+    "h2": "Tableau Data Analyst: concepts to practise",
     "blocks": [
       {
-        "heading": "Level of Detail Expressions",
-        "body": "Normally a calculation works at whatever level the view shows. **Level of detail (LOD) expressions** let you break that rule. **FIXED** computes at the dimensions you name and ignores the ones in the view, so `{FIXED [Customer]: SUM([Sales])}` gives each customer's total even in a view broken down by month. **INCLUDE** adds a dimension that is not in the view, which is how you average a value computed at a finer grain. **EXCLUDE** removes a dimension that is in the view, which is how you compare a row against its category total. The common exam trap is that FIXED is computed before dimension filters, so a FIXED total can ignore a filter unless that filter is promoted to a context filter."
+        "heading": "Level of detail expressions",
+        "body": "Most calculations use the dimensions currently in the view. Level of detail (LOD) expressions let you specify another granularity. FIXED calculates at the dimensions you name, regardless of dimensions in the view. For example, `{FIXED [Customer]: SUM([Sales])}` returns each customer’s total even when the view is split by month. INCLUDE adds a dimension that is not in the view; EXCLUDE removes one that is. A common exam point is that FIXED is evaluated before dimension filters, so a dimension filter may not change a FIXED result unless it is made a context filter."
       },
       {
-        "heading": "Order of Operations and Filter Types",
-        "body": "Tableau applies filters in a fixed order, and knowing it explains most unexpected numbers. **Extract filters** come first, then **data source filters**, then **context filters**, then **dimension filters**, then **measure filters**, and **table calculation filters** last. FIXED expressions are computed after context filters but before dimension filters, which is why making a filter a **context filter** changes a FIXED result. A **Top N filter** is also affected: it is applied after context, so putting a dimension filter into context changes which members reach the Top N. When a question shows a number that looks wrong, the answer is usually somewhere in this order."
+        "heading": "Filter types and order of operations",
+        "body": "Filter order explains many unexpected values. Extract filters run first, followed by data source filters, context filters, dimension filters, measure filters, and table calculation filters. FIXED expressions are computed after context filters but before dimension filters. Making a filter a context filter can therefore change a FIXED result. Top N filters are evaluated after context, so context filters can change which members qualify."
       },
       {
-        "heading": "Calculations and Table Calculations",
-        "body": "A regular **calculated field** works on the underlying rows before aggregation. A **table calculation** works on the data already in the view, which is why running totals, percent of total, rank, difference and moving average are table calculations. Table calculations depend on how they are **addressed and partitioned**: which direction they compute along and which group they restart in. Getting that wrong gives a running total that resets in the wrong place. Use a regular calculation when the logic belongs to the data, and a table calculation when it depends on what is displayed."
+        "heading": "Calculated fields and table calculations",
+        "body": "A regular calculated field works with underlying data before aggregation. A table calculation operates on results already returned to the view. Running totals, percent of total, rank, difference, and moving averages are common examples. Table calculations depend on addressing and partitioning: the direction of calculation and the point where it restarts. Use a regular calculation for logic about source data and a table calculation when the result depends on the displayed view."
       },
       {
-        "heading": "Parameters, Sets and Groups",
-        "body": "A **parameter** is a value the viewer chooses, such as a sales threshold or which measure to show, and it can be used in calculations, filters and titles. Parameters do not filter on their own: you use them in a calculated field, then filter on that field. A **set** is a saved selection of members, which can be fixed or computed by a rule, and sets can be combined to compare groups. A **group** combines members into one, such as rolling small categories into Other. **Bins** turn a continuous measure into ranges for a histogram. Knowing which of these to reach for is a frequent exam question."
+        "heading": "Parameters, sets, groups, and bins",
+        "body": "A parameter is a value a user can select, such as a threshold or measure. It does not filter data by itself; reference it in a calculation, filter, or title. A set stores a fixed or rule-based selection of members and can compare groups. A group combines members under one category, such as grouping small categories as Other. Bins divide a continuous measure into ranges for a histogram."
       },
       {
-        "heading": "Connections, Performance and Dashboards",
-        "body": "A **live connection** queries the source each time, while an **extract** copies data into Tableau's fast format and can be filtered or aggregated to keep it small. Extracts help with slow sources and allow offline work, at the cost of being as current as the last refresh. For performance, reduce the data before it reaches the view, avoid very wide crosstabs, and limit the number of filters shown on a dashboard. For dashboards, use **actions** so a selection in one sheet filters or highlights another, choose a layout that works at the size people will actually view it, and keep each dashboard focused on one question."
+        "heading": "Connections, performance, and dashboards",
+        "body": "A live connection queries the source when users view a workbook. An extract stores a Tableau-formatted copy that can be filtered or aggregated, supports offline use, and is only as fresh as its last refresh. Reduce unnecessary data, avoid overly wide crosstabs, and limit dashboard filters. Actions can let a selection in one sheet filter or highlight another. Size views for their actual use and keep each dashboard focused on a question."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Tableau Data Analyst Exam",
-    "intro": "Most questions give you a business question or a surprising number. Work out the level the calculation should run at, and where the filters sit in the order of operations.",
+    "h2": "How to prepare for the Tableau Data Analyst exam",
+    "intro": "For each scenario, identify the business question, calculation granularity, and filter order that should produce the needed result.",
     "blocks": [
       {
-        "heading": "Choosing a Chart",
-        "body": "Comparison across categories: bar. Change over time: line. Relationship between two measures: scatter. Part of a whole, used sparingly: pie or treemap."
+        "heading": "Select a chart for the task",
+        "body": "Use bars to compare categories, lines to show change over time, and scatter plots to compare two measures. Use pie or treemap views sparingly for part-to-whole comparisons."
       },
       {
-        "heading": "LOD Expressions",
-        "body": "FIXED ignores the view's dimensions, INCLUDE adds one, EXCLUDE removes one. FIXED is computed before dimension filters."
+        "heading": "Understand LOD expressions",
+        "body": "FIXED calculates at named dimensions, INCLUDE adds a dimension, and EXCLUDE removes one. FIXED is evaluated before dimension filters."
       },
       {
-        "heading": "Filter Order",
-        "body": "Extract, data source, context, dimension, measure, then table calculation filters. Promote a filter to context when a FIXED value must respect it."
+        "heading": "Learn filter order",
+        "body": "The order runs from extract and data source filters through context, dimension, and measure filters, then table calculations. Context can make a FIXED expression respect a filter."
       },
       {
-        "heading": "Dashboard Interactivity",
-        "body": "Filter and highlight actions connect sheets. Parameters let viewers change a measure or threshold without editing anything."
+        "heading": "Make dashboards interactive",
+        "body": "Filter and highlight actions connect sheets. Parameters can let viewers choose a measure or threshold."
       },
       {
-        "heading": "Performance",
-        "body": "Use an extract for slow sources, filter and aggregate it at creation, and keep views focused rather than enormous."
+        "heading": "Keep workbooks responsive",
+        "body": "Use extracts when they fit the freshness need, reduce rows and fields, and keep views focused."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Tableau Certifications",
-    "intro": "Good next steps after Tableau Data Analyst:",
+    "intro": "Build on your Tableau analytics knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/tableau-consultant",
@@ -181,119 +181,119 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Salesforce Certified Tableau Data Analyst?",
+      "question": "What is the main purpose of a Tableau Data Analyst?",
       "options": [
-        "Only creating charts",
-        "Managing Salesforce CRM",
-        "Marketing campaigns",
-        "Analyzing data and building actionable insights using Tableau"
+        "Create charts and nothing else, leaving all interpretation to other teams",
+        "Administer Salesforce CRM",
+        "Plan marketing campaigns",
+        "Analyze data and use Tableau to communicate useful findings"
       ],
       "correctAnswer": 3,
-      "explanation": "Tableau Data Analysts analyze data and build actionable insights using Tableau for visualization and exploration.",
+      "explanation": "A Tableau Data Analyst explores data and turns analysis into insights using Tableau.",
       "whyWrong": [
-        "'Only creating charts' undersells the role, which spans full data analysis and insight-building, not just chart creation.",
-        "Managing Salesforce CRM is unrelated to the Tableau Data Analyst's analytics-focused role.",
-        "Marketing campaigns are unrelated to the Tableau Data Analyst's analytics-focused role."
+        "The role includes more than making charts.",
+        "CRM administration is a different responsibility.",
+        "Marketing campaign management is not the focus of the Tableau Data Analyst credential."
       ]
     },
     {
-      "question": "Which Tableau capability is central to the Data Analyst role?",
+      "question": "Which activities are central to Tableau Data Analyst work?",
       "options": [
-        "Server administration only",
-        "Only formatting",
-        "Data connection, preparation, calculation, and visualization for analysis",
-        "License management"
+        "Administer Tableau Server only",
+        "Format sheets and dashboards without analyzing the data",
+        "Connect, prepare, calculate, and visualize data",
+        "Manage product licenses"
       ],
       "correctAnswer": 2,
-      "explanation": "Data Analysts use data connection, preparation, calculations, and visualization to deliver analysis.",
+      "explanation": "The analyst workflow includes connecting to data, preparing it, calculating, and visualizing results.",
       "whyWrong": [
-        "Server administration alone is a narrower technical skill, not the core Data Analyst focus.",
-        "'Only formatting' undersells the role, which spans the full data workflow from connection to visualization.",
-        "License management is an administrative task, unrelated to the Data Analyst's analytical role."
+        "Server administration alone does not represent the analyst role.",
+        "Formatting is only one small part of analysis.",
+        "License management is an administrative task rather than data analysis."
       ]
     },
     {
-      "question": "What does a FIXED LOD expression compute in Tableau?",
+      "question": "What does a FIXED LOD expression calculate?",
       "options": [
-        "A value filtered to the dimensions currently in the view",
-        "An aggregate at a specified dimension level, independent of the dimensions placed in the view",
-        "A cross-database join between two sources",
-        "A running total across all rows in the dataset"
+        "A result that follows only the dimensions shown in the view",
+        "An aggregate at the dimensions named in the expression",
+        "A join between separate data sources",
+        "A running total over all rows"
       ],
       "correctAnswer": 1,
-      "explanation": "FIXED LOD expressions compute a value at the declared dimension granularity regardless of what dimensions are on the Rows/Columns shelves.",
+      "explanation": "FIXED computes at its declared dimension level regardless of dimensions in the view.",
       "whyWrong": [
-        "This describes a regular aggregate filtered by view dimensions, the opposite of FIXED, which ignores view dimensions.",
-        "A cross-database join is a data-connection concept, unrelated to LOD expressions.",
-        "A running total is a table calculation concept, not what FIXED LOD computes."
+        "This describes an aggregate that responds to view dimensions, not FIXED.",
+        "A join combines data sources and is unrelated to LOD expressions.",
+        "A running total is a table calculation."
       ]
     },
     {
-      "question": "When should you add a Context Filter in Tableau?",
+      "question": "When can a context filter change a Top N result?",
       "options": [
-        "When a Top N or condition filter needs to run on a pre-filtered data subset rather than the full dataset",
-        "To change chart colour formatting",
-        "To connect to a live database source",
-        "To create a dual-axis chart"
+        "When the Top N should be computed over a subset of data",
+        "When the user wants to change the colors of marks in the view",
+        "When connecting to a live source",
+        "When creating a dual-axis chart"
       ],
       "correctAnswer": 0,
-      "explanation": "Without a context filter, Tableau computes Top N across all data first, then applies other filters. Context filters reverse that order.",
+      "explanation": "Context filters are evaluated before Top N, so they can limit the data considered for the Top N result.",
       "whyWrong": [
-        "Context filters don't affect chart color formatting, that's unrelated to their function.",
-        "Context filters aren't about connecting to live data sources, that's a separate data connection setting.",
-        "Context filters aren't specifically for creating dual-axis charts, that's an unrelated visualization feature."
+        "Color settings do not depend on context filters.",
+        "Connection type is configured separately.",
+        "Dual-axis charts combine measures and do not require context filters."
       ]
     },
     {
-      "question": "What is the main difference between a Live connection and an Extract in Tableau?",
+      "question": "How do live connections and extracts differ?",
       "options": [
-        "Live connections are less accurate than Extracts",
-        "Live connections query the data source in real time; Extracts are cached .hyper snapshots that are faster but need scheduled refresh",
-        "Live connections cannot be used on dashboards",
-        "Extracts only work with Excel files"
+        "Live connections are less accurate",
+        "Live connections query the source, while extracts use a refreshed snapshot",
+        "Live connections cannot be used in dashboards, so extracts are needed for every dashboard",
+        "Extracts work only with Excel"
       ],
       "correctAnswer": 1,
-      "explanation": "Live connections deliver fresh data on every view load; Extracts trade real-time currency for faster query performance.",
+      "explanation": "Live connections query the source when needed. Extracts store a copy that must be refreshed to reflect source changes.",
       "whyWrong": [
-        "Accuracy isn't the differentiator, both connection types can be accurate; the difference is real-time versus cached/refreshed data.",
-        "Live connections can absolutely be used on dashboards, this option denies a real capability.",
-        "Extracts work with many data source types, not just Excel files."
+        "Accuracy is not the basic difference between the two connection types.",
+        "Live connections can be used in dashboards.",
+        "Extracts can be created from many data source types."
       ]
     },
     {
-      "question": "What is a Tableau Parameter?",
+      "question": "What is a Tableau parameter?",
       "options": [
-        "A filter that automatically removes rows from the view",
-        "A dynamic, user-controlled input value that can replace a constant in a calculation, filter, or reference line",
-        "A data source connection setting",
-        "A dashboard layout configuration option"
+        "A filter that removes rows automatically whenever the source data is refreshed",
+        "A user-controlled value that can be used in calculations or filters",
+        "A connection setting for a data source",
+        "A setting that controls dashboard layout"
       ],
       "correctAnswer": 1,
-      "explanation": "Parameters accept user input at runtime, combine them with calculated fields or filters to create interactive, dynamic views.",
+      "explanation": "A parameter provides an input value that can drive a calculation, filter, reference line, or other workbook behavior.",
       "whyWrong": [
-        "A Parameter doesn't automatically remove rows, that's a filter's function, not a parameter's.",
-        "A Parameter isn't a data source connection setting, it's an input control used within calculations/filters.",
-        "A Parameter isn't a dashboard layout option, that's an unrelated dashboard configuration concept."
+        "A parameter does not filter rows by itself.",
+        "It is not a data connection setting.",
+        "It does not control layout."
       ]
     },
     {
-      "question": "How is data blending different from a join in Tableau?",
+      "question": "How does data blending differ from a join?",
       "options": [
-        "Blending links two separate data sources at the view level on a common dimension; joining combines tables within the same data source at query time",
-        "Blending creates a permanent new combined data source",
-        "There is no practical difference between the two",
-        "Blending is always faster than joining at the database level"
+        "Blending combines aggregated results from separate sources in a view; a join combines tables in a source",
+        "Blending creates a permanent replacement data source that overwrites both of the original sources on the server",
+        "There is no meaningful difference",
+        "Blending is always faster than a join"
       ],
       "correctAnswer": 0,
-      "explanation": "Blending is useful when data lives in two different source systems and a database-level join is not possible: Tableau aggregates each source separately and combines results.",
+      "explanation": "Blending is useful when sources remain separate: Tableau aggregates them independently and combines results in the view.",
       "whyWrong": [
-        "Blending doesn't create a new permanent combined data source, it links at the view level, not permanently.",
-        "There is a real, meaningful difference between blending and joining, this option denies it.",
-        "Blending isn't always faster than joining, performance depends on the specific scenario, not a fixed rule."
+        "Blending links results; it does not create a permanent combined source.",
+        "Blending and joining are different methods.",
+        "Performance depends on the source and scenario."
       ]
     },
     {
-      "question": "Which chart type best shows the distribution of a continuous measure across bins?",
+      "question": "Which chart shows the frequency distribution of a continuous measure grouped into ranges?",
       "options": [
         "Pie chart",
         "Gantt chart",
@@ -301,123 +301,123 @@
         "Treemap"
       ],
       "correctAnswer": 2,
-      "explanation": "A histogram groups continuous data into defined intervals (bins) and shows frequency, the standard chart for distribution analysis.",
+      "explanation": "A histogram uses bins to display how many values fall within each range.",
       "whyWrong": [
-        "A pie chart shows part-to-whole composition, not distribution across bins.",
-        "A Gantt chart shows timeline/duration data, not distribution of a continuous measure.",
-        "A treemap shows hierarchical proportions, not the binned distribution a histogram specifically shows."
+        "Pie charts show part-to-whole composition.",
+        "Gantt charts show schedules or durations.",
+        "Treemaps show hierarchical proportions."
       ]
     },
     {
-      "question": "What does an INCLUDE LOD expression do that FIXED does not?",
+      "question": "What does an INCLUDE LOD expression do?",
       "options": [
-        "INCLUDE is only used with date dimensions",
-        "INCLUDE ignores all active filters in the view",
-        "INCLUDE adds specified dimensions to the view's level of detail before aggregating, computing at a finer granularity than the view alone",
-        "INCLUDE creates a table calculation on the result set"
+        "Restricts LOD expressions to date fields",
+        "Ignores every active filter",
+        "Adds specified dimensions to the view’s level of detail before aggregation",
+        "Turns the result into a table calculation that is computed after all filters are applied"
       ],
       "correctAnswer": 2,
-      "explanation": "INCLUDE takes the view's dimensions and adds more, useful for computing per-member averages while the view aggregates at a higher level.",
+      "explanation": "INCLUDE adds dimensions to the view’s granularity before aggregation, which can support calculations at a finer level.",
       "whyWrong": [
-        "INCLUDE isn't limited to date dimensions, it works with any dimension type.",
-        "INCLUDE doesn't ignore filters, that's a mischaracterization of its actual behavior.",
-        "INCLUDE doesn't create a table calculation, it's a distinct LOD expression type."
+        "INCLUDE can use dimensions of different types.",
+        "INCLUDE does not ignore all filters.",
+        "An LOD expression is distinct from a table calculation."
       ]
     },
     {
-      "question": "What is a Filter Action in a Tableau dashboard?",
+      "question": "What does a dashboard filter action do?",
       "options": [
-        "An interactive action that passes selected marks as a filter to one or more target worksheets or dashboards",
-        "A context filter applied to a single worksheet",
-        "A server-side filter applied automatically to all worksheets on load",
-        "A data source filter that excludes null values globally"
+        "Uses selected marks to filter one or more target views",
+        "Applies a context filter to one worksheet",
+        "Filters all worksheets automatically when the server loads",
+        "Removes nulls from the data source globally"
       ],
       "correctAnswer": 0,
-      "explanation": "Filter actions allow users to click a mark and drill into filtered views, a core interactivity pattern in Tableau dashboards.",
+      "explanation": "When a user selects marks in the source view, the action passes those values to a target view or dashboard and filters its displayed data.",
       "whyWrong": [
-        "A context filter applies within a single worksheet, it isn't the cross-worksheet interactive action being described.",
-        "A server-side filter applied automatically to all worksheets describes a data source filter, not the interactive Filter Action being asked about.",
-        "A data source filter excluding nulls is a different, static filtering mechanism, not an interactive dashboard action."
+        "A context filter affects filter order within a worksheet.",
+        "A filter action is an interactive selection, not a server-wide static filter.",
+        "A data source filter is separate from dashboard actions."
       ]
     },
     {
-      "question": "How is a table calculation different from a regular aggregated measure in Tableau?",
+      "question": "How does a table calculation differ from a regular aggregate?",
       "options": [
-        "Table calculations cannot be used with date or time fields",
-        "Table calculations run on the aggregated data already returned to the view, not on the underlying database rows",
-        "Table calculations run on the database before data is returned to Tableau",
-        "Table calculations are always computed faster than database aggregations"
+        "It cannot use date fields",
+        "It works on aggregated values already in the view",
+        "It runs on database rows before Tableau receives them",
+        "It is always faster than a database aggregation"
       ],
       "correctAnswer": 1,
-      "explanation": "Table calculations (RUNNING_SUM, WINDOW_AVG, RANK, etc.) operate on the result set in the view, not on source rows.",
+      "explanation": "Table calculations operate on values already returned to and arranged in the view.",
       "whyWrong": [
-        "Table calculations absolutely can be used with date/time fields, this option denies a real capability.",
-        "Table calculations don't run on the database, they run on data already returned to Tableau, the opposite of this claim.",
-        "Table calculations aren't inherently faster than database aggregations, that's not the defining characteristic."
+        "Table calculations can use dates and times.",
+        "They run in Tableau on the view results, not on the database first.",
+        "Performance depends on the calculation and data."
       ]
     },
     {
-      "question": "A user needs to compare year-over-year sales in a single view. Which Tableau approach is most appropriate?",
+      "question": "A user wants to compare sales year over year in one view. What is a suitable approach?",
       "options": [
-        "Create separate worksheets for each year and place them side by side",
-        "Export the data to Excel and calculate manually",
+        "Build a separate worksheet for every year",
+        "Export the data to a spreadsheet and calculate the comparison manually for each year",
         "Add a separate context filter for each year",
-        "Use a table calculation with percent difference from LOOKUP, or a FIXED LOD expression with a year dimension"
+        "Use a year-over-year table calculation or an LOD expression at the needed grain"
       ],
       "correctAnswer": 3,
-      "explanation": "Percent difference table calculations or FIXED LOD expressions with year dimensions are the standard Tableau patterns for period-over-period comparison.",
+      "explanation": "A percent-difference table calculation or a suitable LOD calculation can compare periods within one view.",
       "whyWrong": [
-        "Creating separate worksheets per year doesn't allow direct comparison within a single unified view.",
-        "Manually exporting to Excel defeats the purpose of using Tableau's built-in calculation capabilities.",
-        "A separate context filter per year doesn't enable the year-over-year comparison calculation itself."
+        "Separate worksheets do not provide the requested single-view comparison.",
+        "Manual exports bypass Tableau’s calculation tools.",
+        "Context filters alone do not calculate the year-over-year difference."
       ]
     },
     {
-      "question": "How do you create a dual-axis chart in Tableau?",
+      "question": "What steps create a dual-axis view in Tableau?",
       "options": [
-        "Right-click the second measure pill on the Rows or Columns shelf and select Dual Axis, then synchronize axes if needed",
-        "Add a second data source as a blend and overlay the sheets",
-        "Drag two dimensions onto the Rows shelf",
-        "Use the Marks card to manually overlay two chart types"
+        "Use the second measure menu to select Dual Axis, then synchronize if needed",
+        "Blend a second data source and overlay two separate sheets on top of one another in a dashboard",
+        "Place two dimensions on Rows",
+        "Manually overlap marks on the Marks card"
       ],
       "correctAnswer": 0,
-      "explanation": "Dual Axis overlays two measures on independent axes in the same chart, right-click the second measure pill to enable it.",
+      "explanation": "A dual-axis chart overlays two measures. Select Dual Axis from the second measure’s menu, and synchronize when appropriate.",
       "whyWrong": [
-        "Blending a second data source and overlaying sheets isn't the standard dual-axis creation method.",
-        "Dragging two dimensions onto Rows doesn't create a dual-axis chart, that's unrelated to the dual-axis mechanism.",
-        "Manually overlaying chart types via the Marks card isn't how dual-axis charts are actually created in Tableau."
+        "Blending is not the standard way to create a dual axis.",
+        "Two dimensions on Rows do not create a dual-axis chart.",
+        "The dual-axis option controls the combined chart."
       ]
     },
     {
-      "question": "Which role in a Tableau deployment is responsible for certifying published data sources?",
+      "question": "Who can certify a published data source in a Tableau deployment?",
       "options": [
-        "Viewer licence user",
-        "Tableau Desktop Specialist",
-        "Server hardware administrator",
-        "Data Steward or content-certifying admin"
+        "Any Viewer user",
+        "A Tableau Desktop Specialist certificate holder by default",
+        "The server hardware administrator, and no other role in the deployment",
+        "A data steward or authorized content-certifying administrator"
       ],
       "correctAnswer": 3,
-      "explanation": "Certification is applied by Data Stewards or admins to published data sources, signalling to consumers that the data is authoritative and maintained.",
+      "explanation": "Certification is a content-governance action performed by a data steward or an authorized administrator.",
       "whyWrong": [
-        "A Viewer license user has read-only access, they don't have the ability to certify data sources.",
-        "Tableau Desktop Specialist is an entry-level certification, not a role responsible for certifying data sources.",
-        "Server hardware administration is an infrastructure role, unrelated to data source certification, which is a governance/content role."
+        "Viewer permissions alone do not grant certification rights.",
+        "A certification credential does not automatically confer deployment permissions.",
+        "Infrastructure duties do not necessarily include content certification."
       ]
     },
     {
-      "question": "What does a FIXED LOD expression compute?",
+      "question": "What does a FIXED LOD expression return?",
       "options": [
-        "Only table calculations",
-        "Only percentages",
-        "An aggregate at a specified dimension level, independent of the view",
-        "Only running totals"
+        "Only table calculations, computed across the rows and columns shown in the view",
+        "Only percentages of the total",
+        "An aggregate at specified dimensions, independent of the view dimensions",
+        "Only running totals along a date axis"
       ],
       "correctAnswer": 2,
-      "explanation": "FIXED LOD computes at the dimension level you specify, ignoring filters and dimensions in the view (except context filters).",
+      "explanation": "FIXED calculates at the dimension level you specify, independent of the view, and is affected by context filters.",
       "whyWrong": [
-        "'Only table calculations' misattributes FIXED LOD's function to a different Tableau feature.",
-        "'Only percentages' misattributes FIXED LOD's function to a specific calculation type it isn't limited to.",
-        "'Only running totals' misattributes FIXED LOD's function to a different calculation type."
+        "FIXED is an LOD expression, not a table calculation.",
+        "It can calculate values other than percentages.",
+        "Running totals are table calculations."
       ]
     }
   ]

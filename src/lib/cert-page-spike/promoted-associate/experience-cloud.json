@@ -169,12 +169,12 @@
     {
       "question": "Which site template supports customer self-service for creating and following cases?",
       "options": [
-        "Customer Service",
         "Build Your Own",
         "Partner Central",
-        "Help Center"
+        "Help Center",
+        "Customer Service"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Customer Service is the best fit because the Customer Service template is optimised for self-service portals, it includes pre-built components for case creation, case tracking, Knowledge article search, and community discussion.",
       "whyWrong": [
         "Build Your Own is not the best choice because 'Build Your Own' requires custom development, not the purpose-built self-service case template being asked about.",
@@ -233,12 +233,12 @@
     {
       "question": "Which partner-site capability lets resellers submit and follow potential deals?",
       "options": [
-        "Deal Registration",
         "Opportunity tracking",
+        "Deal Registration",
         "Lead conversion",
         "Partner management"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Deal Registration is the best fit because deal Registration allows channel partners to claim credit for potential deals by registering them through the partner portal. It prevents channel conflict and ensures partners receive appropriate credit when a deal closes.",
       "whyWrong": [
         "Opportunity tracking is not the best choice because 'Deal Registration' is the correct answer: Partner Relationship Management is the broader category, not the specific feature name being tested here.",
@@ -249,7 +249,7 @@
     {
       "question": "Who can use an Experience Cloud site, including visitors who do not sign in?",
       "options": [
-        "Only signed-in users; guests are unsupported",
+        "Only signed-in members; guest visitors are never supported",
         "Licensed external members and permitted guest visitors",
         "Only internal Salesforce users",
         "Only system administrators"
@@ -297,12 +297,12 @@
     {
       "question": "Where do administrators configure and manage Experience Cloud sites?",
       "options": [
-        "Experience Cloud Workspaces",
         "A shared document space",
         "A customization sandbox",
+        "Experience Cloud Workspaces",
         "A visitor analytics dashboard"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Experience Cloud Workspaces is the best fit because workspaces is the central administration area for Experience Cloud sites, accessible from Setup. It contains Experience Builder (visual page editor), Administration (members, login, security), Moderation, Analytics, and Content management panels.",
       "whyWrong": [
         "A shared document space is not the best choice because a collaborative document workspace is a different concept, not what Experience Builder Workspaces provides.",
@@ -361,12 +361,12 @@
     {
       "question": "What must be configured so partner users can update the Opportunities they are allowed to access?",
       "options": [
-        "Assign a partner license and share the target Opportunities",
-        "Copy portal updates with a custom Apex trigger",
+        "Copy partner updates into Opportunities with a custom Apex trigger",
         "Give partners internal CRM licenses",
-        "Expose Opportunities to unauthenticated visitors"
+        "Expose Opportunities to unauthenticated visitors",
+        "Assign a partner license and share the target Opportunities"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Assign a partner license and share the target Opportunities is the best fit because partner Community licences enable external partner users to access Salesforce objects including Opportunities. Sharing must be configured, via sharing rules, sharing sets, or External Account Hierarchy, to grant access to the specific records. Guest user access cannot be used for write operations on CRM records.",
       "whyWrong": [
         "Copy portal updates with a custom Apex trigger is not the best choice because a custom Apex trigger for syncing is unnecessary, native sharing configuration already provides this access.",
@@ -377,7 +377,7 @@
     {
       "question": "How can site members access reports and dashboards for their data?",
       "options": [
-        "CRM Analytics in an iframe only",
+        "CRM Analytics dashboards embedded in an iframe",
         "Reports and dashboards with sharing",
         "Chatter engagement metrics",
         "CMS publishing metrics"
@@ -426,8 +426,8 @@
       "question": "A company wants employees to sign into an Experience Cloud site using their existing corporate identity provider credentials, not a separate Salesforce password. What should the consultant set up?",
       "options": [
         "An authentication provider or SSO configuration for the site",
-        "A new password policy only",
-        "A Sharing Set",
+        "A stricter password policy applied to the site's member profile",
+        "A sharing set that grants access to related records",
         "A Content Workspace"
       ],
       "correctAnswer": 0,
@@ -443,7 +443,7 @@
       "options": [
         "A custom Lightning web component, after confirming it fits within Experience Cloud's customization limits",
         "Immediately promise it's impossible",
-        "Rebuild the entire site outside Salesforce",
+        "A full rebuild of the site on another platform, after confirming the budget with the client's sponsor",
         "Ignore the requirement"
       ],
       "correctAnswer": 0,
@@ -458,7 +458,7 @@
       "question": "A site owner wants to see how many members are actively logging in and engaging with content each month. What should they review?",
       "options": [
         "Experience Cloud site analytics and dashboards",
-        "The Branding Editor",
+        "The Branding Editor's theme and colour settings panel",
         "A Sharing Set",
         "A Content Type definition"
       ],

@@ -172,12 +172,12 @@
     {
       "question": "What is the main role of a Certified Slack Administrator?",
       "options": [
-        "Implement, configure, and manage Slack, and recommend useful policies and features",
-        "Develop Slack apps only",
+        "Develop custom Slack apps and publish them to the Slack Marketplace for other companies",
         "Create marketing campaigns in Slack",
-        "Manage Salesforce CRM"
+        "Manage Salesforce CRM",
+        "Implement, configure, and manage Slack, and recommend useful policies and features"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Certified Slack Administrators set up and manage Slack. They also recommend policies and features that help teams work well.",
       "whyWrong": [
         "The role includes much more than developing apps.",
@@ -188,12 +188,12 @@
     {
       "question": "Where do admins usually manage Slack settings for the whole organization?",
       "options": [
+        "Salesforce Setup",
         "Slack Admin or Org settings",
-        "Salesforce settings only",
         "Each channel separately",
         "Email Studio"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Admins use Slack Admin or Org settings for workspace and organization-wide controls.",
       "whyWrong": [
         "Salesforce settings control Salesforce, not Slack.",
@@ -206,7 +206,7 @@
       "options": [
         "Emoji reactions",
         "Search filters",
-        "Channel bookmarks",
+        "Channel bookmarks and pinned messages",
         "Admin policies and permissions"
       ],
       "correctAnswer": 3,
@@ -220,12 +220,12 @@
     {
       "question": "What does Slack Connect let organizations do?",
       "options": [
-        "Work securely with people from other organizations in shared channels",
-        "Connect email only",
+        "Connect a shared email inbox to a channel so that messages arrive in Slack",
         "Create CPQ quotes",
-        "Use internal channels only"
+        "Work securely with people from other organizations in shared channels",
+        "Use internal channels with colleagues"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Slack Connect supports secure collaboration with external organizations through shared channels.",
       "whyWrong": [
         "Slack Connect is for cross-organization collaboration, not email alone.",
@@ -239,7 +239,7 @@
         "Turn off all integrations",
         "Remove search",
         "Use workflows, a clear channel structure, and suitable settings",
-        "Limit each team to one channel"
+        "Limit each team to a single channel so that every conversation stays in one place"
       ],
       "correctAnswer": 2,
       "explanation": "Workflows, clear channel names, and useful settings can help teams work more efficiently.",
@@ -252,8 +252,8 @@
     {
       "question": "What is Slack Enterprise Grid for?",
       "options": [
-        "Reporting only",
-        "Email integration only",
+        "Building reports on workspace usage",
+        "Connecting company email to Slack so that messages are delivered to selected channels",
         "Connecting several workspaces under one organization with central administration",
         "Using only one workspace"
       ],
@@ -285,7 +285,7 @@
       "question": "What does a Slack message retention policy control?",
       "options": [
         "Channel names",
-        "Who can join a channel",
+        "Who is allowed to join a private channel",
         "Integrations",
         "How long messages and files are kept"
       ],
@@ -303,7 +303,7 @@
         "Theme settings",
         "Data retention and eDiscovery export policies",
         "Emoji settings",
-        "Notification preferences"
+        "Notification preferences for each member's devices"
       ],
       "correctAnswer": 1,
       "explanation": "Retention and eDiscovery policies help an organization preserve and recover data.",
@@ -317,7 +317,7 @@
       "question": "Which Slack feature lets people in separate workspaces collaborate in one shared channel?",
       "options": [
         "A channel with many members",
-        "A public channel only",
+        "A public channel inside one workspace that every member is able to find and join",
         "A channel shared by multiple Slack workspaces for cross-organization work",
         "A channel with integrations"
       ],
@@ -332,7 +332,7 @@
     {
       "question": "How can Slack admins control which apps members can install?",
       "options": [
-        "Channel creation settings",
+        "Channel creation settings in workspace permissions",
         "User invitation settings",
         "App management policies and approved app lists",
         "Message search"
@@ -348,9 +348,9 @@
     {
       "question": "What can Slack Analytics help admins understand?",
       "options": [
-        "Email statistics only",
+        "Email open and click statistics for campaigns",
         "Usage, adoption trends, and engagement",
-        "Message count only",
+        "The total message count",
         "Sales data"
       ],
       "correctAnswer": 1,
@@ -364,8 +364,8 @@
     {
       "question": "Which tools help admins manage many Slack users at once?",
       "options": [
-        "Email invitations only",
-        "Manual user setup only",
+        "Email invitations sent one by one",
+        "Manual setup of each user account in turn",
         "Channel invitations",
         "SCIM provisioning and directory sync"
       ],
@@ -380,9 +380,9 @@
     {
       "question": "Why might an organization use Slack compliance exports?",
       "options": [
-        "To create ordinary reports",
+        "To create ordinary usage reports for managers and team leads",
         "To export messages and files for legal or compliance needs",
-        "To back up files only",
+        "To back up files",
         "To share channels"
       ],
       "correctAnswer": 1,
@@ -396,12 +396,12 @@
     {
       "question": "Which Slack Connect action needs approval from both organizations?",
       "options": [
-        "Creating a shared channel between workspaces",
         "Sending a message",
         "Adding an emoji",
-        "Joining an existing channel"
+        "Joining an existing channel in your own workspace",
+        "Creating a shared channel between workspaces"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Creating a shared channel requires approval from admins in both organizations.",
       "whyWrong": [
         "Once the channel exists, sending a message does not require that setup approval.",
@@ -413,7 +413,7 @@
       "question": "An admin wants to turn on AI-powered channel recaps and thread summaries for their org. Where does that get configured?",
       "options": [
         "Slack AI settings, managed at the admin level with permissions assigned to users",
-        "There's no admin control, every member turns it on individually",
+        "There is no admin control, so every member has to turn it on individually for themselves",
         "Only Slack's own support team can enable it",
         "It's automatically on for every plan with no setting"
       ],
@@ -447,7 +447,7 @@
         "Day-to-day workspace management tasks like managing members and channels",
         "Only Owners can ever manage members, Admins cannot",
         "Only Admins can see billing information",
-        "Owner and Admin are the exact same role with no distinction"
+        "Owner and Admin are exactly the same role, with no distinction of any kind between them"
       ],
       "correctAnswer": 0,
       "explanation": "Admins and Owners share common day-to-day responsibilities like managing members and channels, though Owners typically hold additional org-level authority such as billing and plan changes.",
@@ -477,7 +477,7 @@
       "question": "A company manages which Slack workspaces a department can access through groups defined in their identity provider. After updating those IdP groups, what should the admin expect?",
       "options": [
         "Slack workspace access updates to reflect the IdP group changes, once synced",
-        "Nothing changes in Slack until every user is manually re-invited",
+        "Nothing changes in Slack until every affected user has been manually re-invited by an admin",
         "The IdP groups only affect email, not Slack",
         "IdP groups can only be set up once and never changed"
       ],

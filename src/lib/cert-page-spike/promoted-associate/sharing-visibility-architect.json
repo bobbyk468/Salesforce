@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Sharing and Visibility Architect exam for?",
+    "heading": "Who should take the Sharing and Visibility Architect exam?",
     "personas": [
       {
-        "label": "Security-Focused Admins",
-        "description": "You already set up profiles, roles and sharing rules, and you want to learn how to design a sharing model for a large org from the start."
+        "label": "Admins focused on access control",
+        "description": "You configure profiles, roles, and sharing rules and want to design secure access for a larger org."
       },
       {
-        "label": "Platform Architects",
-        "description": "Sharing and Visibility Architect is one of the four exams you need for Application Architect, so it sits on most architect paths."
+        "label": "Salesforce platform architects",
+        "description": "You are pursuing Application Architect, which includes the Sharing and Visibility Architect credential."
       },
       {
-        "label": "Compliance Specialists",
-        "description": "You need to prove who can see which records, and explain why, to auditors or security teams."
+        "label": "Compliance specialists",
+        "description": "You need to explain which users can access records and why, including to auditors."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Sharing and Visibility Architect Exam Hard?",
-    "summary": "It is harder than it looks. Most questions describe a user who can or can't see a record, and you have to work out which layer is causing it: org-wide defaults, the role hierarchy, sharing rules, teams, or something in code.",
+    "heading": "How challenging is the Sharing and Visibility Architect exam?",
+    "summary": "Questions ask you to diagnose why a person can or cannot access a record. You must identify the responsible layer, such as object permissions, org-wide defaults, the role hierarchy, sharing rules, teams, or Apex sharing.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>58% to pass</strong>, which is about 41 correct answers. Many questions have two answers that look right and differ by one sharing setting.",
-      "<strong>External users trip people up.</strong> Experience Cloud sharing sets, external org-wide defaults and guest user rules come up often.",
-      "<strong>Performance is tested too.</strong> Know what makes sharing recalculation slow, such as data skew and very deep role hierarchies."
+      "<strong>58% passing score</strong>, about 41 correct answers. Some options differ by one sharing setting.",
+      "<strong>External sharing matters.</strong> Review Experience Cloud sharing sets, external defaults, and guest-user rules.",
+      "<strong>Performance is tested.</strong> Learn how data skew, deep role hierarchies, and recalculations affect sharing."
     ],
-    "passRateGuidance": "You will do best if you have designed a sharing model for a real org, not just added a sharing rule here and there. Before you book. Aim for 75% or more on practice tests and be able to explain, step by step, why a user can see a record."
+    "passRateGuidance": "Hands-on experience with sharing models helps. Before booking, aim for 75% on practice questions and be ready to trace why a user can access a record."
   },
   "examFormat": {
-    "heading": "Sharing and Visibility Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Almost every question is a short scenario. A typical one says a group of users needs to see some records but not others, then asks for the simplest setup that does it without opening up too much access.",
+    "heading": "Sharing and Visibility Architect exam format",
+    "intro": "You may take the proctored exam online or at a test centre. Most questions describe a record-access scenario.",
+    "scenarioPercent": "Scenarios ask which users need specific records and which records must remain hidden. Choose the simplest design that grants only the required access.",
     "bestWayToPass": [
-      "<strong>Start from the most locked-down setting:</strong> Set org-wide defaults to the most private level anyone needs, then open access up with roles and rules. The exam favours this approach.",
-      "<strong>Separate object, field and record access:</strong> Profiles and permission sets control objects and fields. Sharing controls which records. Many wrong answers mix these up.",
-      "<strong>Study external sharing on its own:</strong> Partner and customer users follow different rules from internal users. Learn sharing sets, share groups and external defaults.",
-      "<strong>Know when code is needed:</strong> Apex managed sharing is the answer only when declarative sharing can't express the rule."
+      "<strong>Start with private defaults:</strong> Set org-wide defaults to the narrowest access required, then grant access where needed.",
+      "<strong>Separate permission layers:</strong> Profiles and permission sets control objects and fields; sharing controls records.",
+      "<strong>Study external users separately:</strong> Customer Community, partner, and guest users have different sharing options.",
+      "<strong>Use Apex only for complex rules:</strong> Choose managed sharing when declarative options cannot express the requirement."
     ]
   },
   "certificationCard": {
     "code": "Sharing & Visibility",
-    "description": "This exam tests how you design who can see and edit which data in Salesforce. You choose org-wide defaults, roles, sharing rules and permission sets, and you plan for external users and large data volumes. The exam is 60 scored questions in 120 minutes, with a 58% pass mark, weighted towards Access to Records (39%) and Permissions to Standard Objects, Custom Objects, and Fields (27%).",
+    "description": "This exam tests how you control access to Salesforce objects, fields, and records. Review org-wide defaults, roles, sharing rules, permission sets, external users, and performance. The exam is 60 scored questions in 120 minutes, with a 58% pass mark, weighted towards Access to Records (39%) and Permissions to Standard Objects, Custom Objects, and Fields (27%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "58%",
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Sharing and Visibility Architect: Key Concepts for the Exam",
+    "h2": "Sharing and Visibility Architect: concepts to review",
     "blocks": [
       {
-        "heading": "OWD and the Security Baseline",
-        "body": "Org-wide defaults (OWD) set the starting level of record access for each object: Private, Public Read Only or Public Read/Write. Everything else can only add access on top of OWD, never take it away. So the rule is simple: set OWD to the most restricted level any user needs, then open access up for the people who need more. For child objects in a master-detail relationship, the setting is Controlled by Parent. Internal and external users can have different defaults, and the external default can't be more open than the internal one."
+        "heading": "Org-wide defaults set the baseline",
+        "body": "Org-wide defaults (OWD) set the starting record access for an object: Private, Public Read Only, or Public Read/Write. Sharing mechanisms can grant more access but cannot remove access already granted by OWD. Start with the most restrictive level users need, then open access for other groups. Detail records in a master-detail relationship inherit access from the parent. Internal and external defaults may differ, but external access cannot be broader than internal access."
       },
       {
-        "heading": "Record Sharing: Role Hierarchy, Rules, and Manual Sharing",
-        "body": "The **role hierarchy** lets managers see the records their team owns. You can turn this off for custom objects with Grant Access Using Hierarchies. **Owner-based sharing rules** share records owned by one group with another group. **Criteria-based sharing rules** share records based on a field value, such as Region equals EMEA. **Account, Opportunity and Case teams** give access to named people on a single record. **Manual sharing** lets a record owner share one record with someone, but it is removed if the owner changes. **Apex managed sharing** covers the rules none of these can handle, and it survives an owner change."
+        "heading": "Sharing through roles, rules, and teams",
+        "body": "The role hierarchy can grant managers access to records owned below them. For custom objects, Grant Access Using Hierarchies may be turned off. Owner-based rules share by record owner; criteria-based rules share based on a field value. Account, Opportunity, and Case teams grant access to named people on a record. Manual shares are removed when ownership changes. Apex managed sharing handles more complex requirements and can persist after ownership changes when configured with a custom sharing reason."
       },
       {
-        "heading": "External User Sharing: Communities and Partner Portals",
-        "body": "Experience Cloud users are external, and they follow their own rules. **Customer Community** users don't use roles, so you give them access with **sharing sets** (for example, all Cases on the user's Account) and **share groups**. **Partner** and **Customer Community Plus** users have roles and can be included in sharing rules. Guest users (people who aren't logged in) have the tightest rules: their OWD is always Private, and you share records to them only with guest user sharing rules. Watch for questions where an internal setting accidentally opens access to external users."
+        "heading": "External user access",
+        "body": "Experience Cloud users follow separate sharing options. Customer Community users do not have roles; sharing sets can grant access to records related to their Account or Contact. Share groups can extend access to internal users connected to those records. Partner and Customer Community Plus users have roles and can be included in sharing rules. Guest users are unauthenticated and have Private defaults; use guest user sharing rules to give them access. Check that internal sharing does not expose records externally."
       },
       {
-        "heading": "Field and Object Security: Profiles vs Permission Sets",
-        "body": "Record sharing decides which rows a user can see. Object and field permissions decide which objects and columns. Every user has one profile, and Salesforce recommends keeping it minimal and adding access with **permission sets** and **permission set groups**. A muting permission set inside a group can remove a permission the group would otherwise grant. Field-level security hides a field everywhere, including reports, list views and the API. Restriction rules go the other way from sharing: they filter which records a user can see even if sharing would allow more."
+        "heading": "Object, field, and record permissions",
+        "body": "Record sharing determines which rows a user may access. Object and field permissions control access to objects and columns. Every user has one profile; keep it minimal and add access with permission sets and permission set groups. A muting permission set can remove permissions granted through a group. Field-level security applies to pages, reports, list views, and APIs. Restriction rules can narrow visible records even when sharing would allow more."
       },
       {
-        "heading": "Sharing Performance and Audit",
-        "body": "Sharing gets slow when one user owns a huge number of records (ownership skew) or one parent record has thousands of child records (account data skew). Both cause long sharing recalculations and record locking. Fixes include spreading ownership across several users, placing integration users high or outside the role hierarchy, and using **Defer Sharing Calculations** during large data changes. For audits. Use the Sharing button on a record to see why each user has access, Setup Audit Trail for configuration changes, and Field History Tracking or Shield Field Audit Trail for data changes."
+        "heading": "Performance and audit",
+        "body": "Sharing recalculation can slow when one user owns many records or a parent has many child records. Ownership and account data skew can also cause locks. Distribute ownership where possible, place integration users outside the role hierarchy when appropriate, and defer sharing calculations during large changes. A record’s Sharing view explains access. Setup Audit Trail tracks configuration changes; Field History Tracking and Shield Field Audit Trail track data changes."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Sharing and Visibility Architect Exam",
-    "intro": "Most questions come down to one thing: which setting gives exactly the access described, and no more. Read the scenario for who needs access, to which records, and whether they are internal or external.",
+    "h2": "How to prepare for the Sharing and Visibility Architect exam",
+    "intro": "Identify who needs access, which records they need, and whether the users are internal or external. Then choose the narrowest setting that meets the requirement.",
     "blocks": [
       {
-        "heading": "Access Evaluation Order",
-        "body": "Work through it in order: object permission first, then OWD, then role hierarchy, sharing rules, teams and manual shares. If the object permission is missing, no sharing setting will help."
+        "heading": "Trace the access layers",
+        "body": "Check object permissions first, then the record baseline and applicable sharing. Sharing cannot grant access to an object the user cannot read."
       },
       {
-        "heading": "Criteria-Based Sharing Rules",
-        "body": "Use these when access depends on a field value, not on who owns the record. They can't use formula fields, and they re-run when the field changes."
+        "heading": "Choose sharing rules by their basis",
+        "body": "Use criteria-based rules when access depends on a field value and owner-based rules when it depends on record ownership. Formula fields are not supported in criteria-based rules."
       },
       {
-        "heading": "External Sharing Model",
-        "body": "Customer Community users: sharing sets and share groups. Partner and Customer Community Plus users: roles and sharing rules. Guests: guest user sharing rules only."
+        "heading": "Separate external user types",
+        "body": "Customer Community users use sharing sets and share groups. Partner and Customer Community Plus users can use roles and sharing rules. Guest users need guest user sharing rules."
       },
       {
-        "heading": "Performance Considerations",
-        "body": "Watch for one owner with more than about 10,000 records, or one Account with more than about 10,000 child records. Both are signs of data skew."
+        "heading": "Recognize data skew",
+        "body": "One owner with many records or one Account with many child records can slow sharing calculations. Consider ownership distribution and deferred recalculation."
       },
       {
-        "heading": "Apex Managed Sharing",
-        "body": "Pick Apex sharing only when the rule is too complex for configuration, such as access based on a related record in another object. Use a custom sharing reason so the shares survive owner changes."
+        "heading": "Use Apex for complex sharing",
+        "body": "Use Apex managed sharing when configuration cannot express the rule, such as access based on a related record. A custom sharing reason can preserve shares after owner changes."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After Sharing and Visibility Architect, most people work toward Application Architect and then CTA:",
+    "intro": "Build on your security architecture knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -170,151 +170,151 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Sales reps should only see Opportunities they own. Their managers should see their team's Opportunities. What is the right starting setup?",
+      "question": "Sales reps should see only their Opportunities, while managers can see their teams’ records. What is a suitable starting setup?",
       "options": [
-        "OWD Private with manual sharing on every record",
-        "OWD Public Read Only with a sharing rule for managers",
-        "OWD Private with the role hierarchy granting manager access",
-        "OWD Public Read/Write with field-level security"
+        "Private OWD with manual sharing set up by hand for each record",
+        "Public Read Only OWD and a manager sharing rule",
+        "Private OWD with manager access through the role hierarchy",
+        "Public Read/Write OWD with field-level security"
       ],
       "correctAnswer": 2,
-      "explanation": "Private OWD hides other reps' records. The role hierarchy then lets each manager see what their team owns, with no extra rules.",
+      "explanation": "Private OWD limits peer visibility, while the role hierarchy can grant managers access to records owned by their teams.",
       "whyWrong": [
-        "Manual sharing on every record is slow, error-prone and is removed when the owner changes.",
-        "Public Read Only lets every rep see every Opportunity, which breaks the first requirement.",
-        "Field-level security hides fields, not records. Every rep could still open every Opportunity."
+        "Manual shares are hard to maintain and can be removed when ownership changes.",
+        "Public Read Only exposes other reps’ records.",
+        "Field security hides fields, not records."
       ]
     },
     {
-      "question": "A user can see an Account in a list view but gets an error when opening a custom object record related to it. Sharing looks correct. What should the architect check first?",
+      "question": "A user sees an Account in a list but cannot open a related custom object record. What should the architect check first?",
       "options": [
-        "The Account sharing rules",
-        "The user's role",
-        "The org's Login IP ranges",
-        "The user's object permissions on the custom object"
+        "The Account sharing rules for the user's role",
+        "The user’s role",
+        "The org login IP ranges",
+        "Read permission on the custom object"
       ],
       "correctAnswer": 3,
-      "explanation": "If a user has no Read permission on an object, no sharing setting can give them access. Object permission is always checked first.",
+      "explanation": "Object permission is required before record sharing can grant access.",
       "whyWrong": [
-        "Account sharing is already working, since the user can see the Account.",
-        "The role affects record access, but the error here points to the object itself.",
-        "Login IP ranges would block the whole login, not one object."
+        "The user can already view the Account, so its access is working.",
+        "A role affects record access but does not grant object permission.",
+        "An IP range would affect login, not just a single object."
       ]
     },
     {
-      "question": "All Cases with Region set to EMEA must be visible to the EMEA Support public group, no matter who owns them. What should be used?",
+      "question": "Cases with Region = EMEA must be shared with the EMEA Support group regardless of owner. Which feature fits?",
       "options": [
-        "Changing Case OWD to Public Read Only",
+        "Public Read Only Case OWD",
         "A Case team on every record",
-        "A criteria-based sharing rule on Case",
-        "An owner-based sharing rule on Case"
+        "A criteria-based Case sharing rule",
+        "An owner-based Case sharing rule for EMEA"
       ],
       "correctAnswer": 2,
-      "explanation": "The access depends on a field value, not on the owner. That is exactly what a criteria-based sharing rule does.",
+      "explanation": "The criteria is a field value rather than the record owner, so use criteria-based sharing.",
       "whyWrong": [
-        "Public Read Only would open every Case to everyone, not just EMEA Support.",
-        "Adding a team to every Case by hand doesn't scale and is easy to miss.",
-        "Owner-based rules share by who owns the record, and the owners here vary."
+        "Public Read Only would expose all Cases.",
+        "Adding teams to every Case is difficult to maintain.",
+        "Owner-based rules depend on who owns each record."
       ]
     },
     {
-      "question": "Customer Community users should see all Cases related to their own Account. Customer Community users don't have roles. What should the architect use?",
+      "question": "Customer Community users should view Cases related to their Account, but they do not have roles. What should be configured?",
       "options": [
-        "A sharing set based on the user's Account",
+        "A sharing set that matches the user’s Account to the Case",
         "A permission set with View All on Case",
-        "A criteria-based sharing rule for the community users",
+        "A criteria-based sharing rule covering all community users",
         "The role hierarchy"
       ],
       "correctAnswer": 0,
-      "explanation": "Sharing sets are built for this. They give Customer Community users access to records that match their Account or Contact.",
+      "explanation": "Sharing sets grant Customer Community users access to records related to their Account or Contact.",
       "whyWrong": [
-        "View All would show every Case in the org, including other customers' Cases.",
-        "Customer Community users without roles can't be added to most sharing rules.",
-        "These users have no roles, so the role hierarchy doesn't apply."
+        "View All would expose Cases across the org.",
+        "These users lack roles and cannot use most role-based sharing rules.",
+        "The role hierarchy does not apply to role-less community users."
       ]
     },
     {
-      "question": "An integration user owns 2 million Account records. Updates to the role hierarchy now take hours to process. What is the most likely cause?",
+      "question": "An integration user owns two million Accounts, and role updates now take hours. What is the likely cause?",
       "options": [
-        "Too many profiles in the org",
-        "Ownership data skew on the integration user",
-        "Too many permission set groups",
-        "Field-level security on Account"
+        "Too many profiles",
+        "Ownership data skew on that user",
+        "Too many permission set groups in use",
+        "Field security on Account"
       ],
       "correctAnswer": 1,
-      "explanation": "When one user owns a huge number of records, every change to their role or groups forces Salesforce to recalculate sharing on all of those records.",
+      "explanation": "When one user owns many records, role changes can trigger large sharing recalculations.",
       "whyWrong": [
-        "The number of profiles doesn't affect sharing recalculation.",
-        "Permission set groups control object and field access, not record sharing.",
-        "Field-level security isn't part of record sharing calculations."
+        "Profile count does not cause record sharing recalculation.",
+        "Permission set groups control object and field access.",
+        "Field security does not calculate record sharing."
       ]
     },
     {
-      "question": "Project records must be shared with every user listed in a related Project Member object. The list changes often. What should the architect recommend?",
+      "question": "Project access must be granted to users listed in a related Project Member object, and the list changes often. What should the architect use?",
       "options": [
         "An owner-based sharing rule",
-        "Setting Project OWD to Public Read/Write",
+        "Public Read/Write Project OWD",
         "Apex managed sharing with a custom sharing reason",
-        "Manual sharing by the project owner"
+        "Manual sharing by the project owner each time the list changes"
       ],
       "correctAnswer": 2,
-      "explanation": "The access depends on records in another object, which sharing rules can't express. Apex managed sharing can, and a custom reason keeps the shares when the owner changes.",
+      "explanation": "The access depends on records in another object, which declarative sharing cannot express. Apex managed sharing can implement it and preserve shares after ownership changes.",
       "whyWrong": [
-        "Owner-based rules can't read a list of members from another object.",
-        "Public Read/Write gives everyone access, not just project members.",
-        "Manual sharing depends on someone remembering to do it, and it is removed on owner change."
+        "Owner-based rules cannot read the related member list.",
+        "Public sharing grants access to everyone.",
+        "Manual shares require ongoing effort and are removed when ownership changes."
       ]
     },
     {
-      "question": "A manager in the role hierarchy should NOT automatically see records of a custom object owned by their team. What setting should be changed?",
+      "question": "Managers should not inherit automatic access to records for a custom object. Which setting should change?",
       "options": [
-        "Remove Read permission on the object from the manager's profile",
-        "Remove the manager's role",
-        "Add a restriction rule for the manager",
-        "Uncheck Grant Access Using Hierarchies on that custom object"
+        "Remove Read permission from their profile",
+        "Remove their role from the hierarchy and assign access with a profile",
+        "Add a restriction rule",
+        "Turn off Grant Access Using Hierarchies for the object"
       ],
       "correctAnswer": 3,
-      "explanation": "Grant Access Using Hierarchies can be turned off for custom objects. Managers then get no automatic access through the role hierarchy for that object.",
+      "explanation": "This custom-object setting prevents automatic access through the role hierarchy.",
       "whyWrong": [
-        "Removing Read permission stops the manager seeing any of these records, including their own.",
-        "Removing the role affects every object, not just this one.",
-        "Restriction rules could work, but turning off hierarchy access is simpler and is the intended setting."
+        "This removes all object access, including access the manager may need.",
+        "Removing the role affects access across many objects.",
+        "The hierarchy setting directly addresses the stated need."
       ]
     },
     {
-      "question": "Which statement about org-wide defaults is correct?",
+      "question": "Which statement about internal and external org-wide defaults is true?",
       "options": [
-        "Sharing rules can make access more restrictive than OWD",
-        "External OWD can't be more open than internal OWD",
-        "Permission sets can override OWD for single records",
-        "Internal OWD can be more restrictive than external OWD"
+        "Sharing rules can reduce access below OWD",
+        "External OWD can be more open than internal OWD",
+        "Permission sets grant access to individual records",
+        "External OWD cannot be more open than internal OWD"
+      ],
+      "correctAnswer": 3,
+      "explanation": "External defaults must be the same as or more restrictive than internal defaults.",
+      "whyWrong": [
+        "Sharing rules grant access and do not take it away.",
+        "External defaults cannot be broader.",
+        "Permission sets grant object and field permissions, not individual record access."
+      ]
+    },
+    {
+      "question": "Partner users should see Opportunities owned by users at their own partner company, but not other companies. What should be configured?",
+      "options": [
+        "Public Read Only Opportunity OWD",
+        "A sharing rule using partner-account roles",
+        "A sharing set for the partner users’ profile",
+        "View All on Opportunities"
       ],
       "correctAnswer": 1,
-      "explanation": "External users can never get a broader default than internal users. You can set external defaults to be the same or more private.",
+      "explanation": "Partner users have roles under their partner account, which can be used in a sharing rule for that company.",
       "whyWrong": [
-        "Sharing rules only add access. They never take it away.",
-        "Permission sets grant object and field access. Only View All or Modify All bypass sharing, and they apply to the whole object.",
-        "It is the other way round: external defaults must be equal to or stricter than internal ones."
+        "Public access would expose records to all partner companies.",
+        "Sharing sets are intended for Customer Community users.",
+        "View All exposes all Opportunities."
       ]
     },
     {
-      "question": "Partner users need to see Opportunities owned by other users at their own partner company, but not at other partner companies. What is the best approach?",
-      "options": [
-        "Set Opportunity OWD to Public Read Only",
-        "Share using the partner account's roles in a sharing rule",
-        "Use a sharing set",
-        "Give partner users the View All Opportunities permission"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Partner users get roles under their partner account. A sharing rule can share records owned by a partner account's roles with the other users in that same account.",
-      "whyWrong": [
-        "Public Read Only would show all Opportunities to all partners.",
-        "Sharing sets are for Customer Community users, not partner users.",
-        "View All would show every Opportunity in the org."
-      ]
-    },
-    {
-      "question": "Because of an old sharing rule, reps can see every record of a custom Invoice object. The business now wants reps to see only Invoices for their own country, without redesigning the sharing model. What feature fits?",
+      "question": "Reps can currently see every Invoice because of a broad sharing rule. They should see only invoices for their country without redesigning the model. Which feature can narrow visibility?",
       "options": [
         "A muting permission set",
         "A restriction rule",
@@ -322,91 +322,91 @@
         "Field-level security"
       ],
       "correctAnswer": 1,
-      "explanation": "Restriction rules filter the records a user can see, even when sharing would allow more. They are the only tool here that removes record visibility.",
+      "explanation": "Restriction rules filter which records users can see even if sharing grants broader access.",
       "whyWrong": [
-        "Muting permission sets remove object or field permissions, not record visibility.",
-        "Sharing rules only add access, so they can't narrow what a rep already sees.",
-        "Field-level security hides fields, not records."
+        "Muting permissions change object or field permissions, not record visibility.",
+        "Sharing rules add access rather than remove it.",
+        "Field security hides fields, not records."
       ]
     },
     {
-      "question": "Anonymous visitors to a public Experience Cloud site need to read published Knowledge-style records from a custom object. How is access given?",
+      "question": "Anonymous visitors should read selected records on a public Experience Cloud site. How should access be granted?",
       "options": [
-        "Create a guest user sharing rule",
-        "Add the guest user to the role hierarchy",
-        "Set the object's external OWD to Public Read Only",
-        "Add the guest user to a public group"
+        "A guest user sharing rule",
+        "A role-hierarchy assignment",
+        "Public Read Only external OWD",
+        "A regular public group"
       ],
       "correctAnswer": 0,
-      "explanation": "Guest users always have Private OWD. The only way to share records with them is a guest user sharing rule.",
+      "explanation": "Guest users have private defaults; grant record access through guest user sharing rules.",
       "whyWrong": [
-        "Guest users don't have roles.",
-        "Guest users are locked to Private and can't use more open defaults.",
-        "Guest users can't be added to regular public groups for sharing."
+        "Guest users do not have roles.",
+        "Guest defaults cannot be opened this way.",
+        "Guest users cannot be placed in regular public groups for record sharing."
       ]
     },
     {
-      "question": "A rep shares an Opportunity manually with a colleague. Later the Opportunity is reassigned to a new owner. What happens to the manual share?",
+      "question": "A manual share gives a colleague access to an Opportunity. The record later changes owners. What happens to the share?",
       "options": [
-        "It is kept and moved to the new owner",
-        "It is kept only if the colleague is in the same role",
-        "It becomes a sharing rule",
+        "It transfers to the new owner",
+        "It stays only if the users share a role",
+        "It turns into a sharing rule",
         "It is removed"
       ],
       "correctAnswer": 3,
-      "explanation": "Manual shares are deleted when the record owner changes. Apex managed sharing with a custom reason is the way to keep shares through owner changes.",
+      "explanation": "Manual shares are removed when record ownership changes. Apex managed sharing with a custom reason can preserve a programmed share.",
       "whyWrong": [
-        "Manual shares are not carried over to a new owner.",
-        "The colleague's role doesn't matter. The share is removed either way.",
-        "Manual shares never turn into sharing rules."
+        "Manual shares do not transfer automatically.",
+        "The colleague’s role does not preserve the manual share.",
+        "A manual share does not become a sharing rule."
       ]
     },
     {
-      "question": "A company is about to load 5 million records and change several sharing rules. They want to avoid long sharing recalculations during the load. What should they use?",
+      "question": "The org will load five million records and change sharing rules. How can the team avoid repeated recalculations during the work?",
       "options": [
-        "Turn off the role hierarchy",
-        "Change all OWD to Public Read/Write",
-        "Defer Sharing Calculations",
-        "Delete all sharing rules and recreate them"
+        "Turn off hierarchy access globally",
+        "Make OWD Public Read/Write",
+        "Defer Sharing Calculations, then recalculate after the load",
+        "Delete and recreate all sharing rules after each batch of records loads"
       ],
       "correctAnswer": 2,
-      "explanation": "Defer Sharing Calculations pauses recalculation while you make changes, then runs it once at the end.",
+      "explanation": "Deferring calculations lets the large data and configuration changes complete before recalculation.",
       "whyWrong": [
-        "You can't turn off the role hierarchy for standard objects, and it would change access for everyone.",
-        "Opening OWD would expose data to everyone, even for a short time.",
-        "Deleting and recreating rules causes two big recalculations instead of one."
+        "This is not a global option for all standard objects and could change access.",
+        "Opening access can expose data.",
+        "Deleting and recreating rules may cause multiple expensive recalculations."
       ]
     },
     {
-      "question": "A support agent should be able to edit the Status field on Cases but never see the Customer SSN field on Contact. Which tool controls the SSN requirement?",
+      "question": "An agent can edit Case Status but must not see a Contact’s Social Security number. Which setting controls that field?",
       "options": [
         "Field-level security",
         "Org-wide defaults",
-        "A sharing rule",
-        "The role hierarchy"
+        "A record sharing rule",
+        "Role hierarchy"
       ],
       "correctAnswer": 0,
-      "explanation": "Field-level security controls whether a user can see or edit a field. It hides the field in pages, reports, list views and the API.",
+      "explanation": "Field-level security controls visibility and edit access for a field, including in reports and APIs.",
       "whyWrong": [
-        "OWD sets record access, not field visibility.",
-        "Sharing rules control records, not fields.",
-        "The role hierarchy controls record access, not fields."
+        "OWD controls record access rather than field visibility.",
+        "Sharing rules grant record access, not field access.",
+        "The role hierarchy grants record access, not field access."
       ]
     },
     {
-      "question": "Auditors ask why a specific user can see a specific Account. What is the fastest way to find out?",
+      "question": "An auditor asks why a user can open one Account. Where should the admin check first?",
       "options": [
-        "Use the Sharing Hierarchy button on the Account record",
-        "Run a report on the user's profile",
-        "Export all sharing rules and read them",
-        "Check the user's login history"
+        "The Sharing details on that Account",
+        "A report showing the user’s profile",
+        "Every sharing rule exported for the org",
+        "The user’s login history"
       ],
       "correctAnswer": 0,
-      "explanation": "The Sharing Hierarchy button on a record lists the users who can access it and the reason for each, such as a role, a sharing rule or a team.",
+      "explanation": "The record’s Sharing view shows who has access and the reason, such as a rule, team, or ownership.",
       "whyWrong": [
-        "A profile report shows object permissions, not why one record is visible.",
-        "Reading every rule by hand is slow and can miss teams or manual shares.",
-        "Login history shows when someone logged in, not why they have access."
+        "A profile report shows object permissions, not why this record is visible.",
+        "Reading every rule is slow and may miss teams and manual shares.",
+        "Login history does not explain record access."
       ]
     }
   ]
