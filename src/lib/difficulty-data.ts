@@ -119,10 +119,10 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
     { sectionName: 'Analytics', difficulty: 'Easy', tip: 'Scheduling and utilization reports, factual recall of key metrics.' },
   ],
   'data-360-consultant': [
-    { sectionName: 'Data Cloud Architecture', difficulty: 'Hard', tip: 'Data model objects (Data Lake, Data Model Object) and when to use Data Cloud vs CRM analytics.' },
+    { sectionName: 'Data 360 Architecture', difficulty: 'Hard', tip: 'Data model objects (Data Lake, Data Model Object) and when to use Data 360 vs CRM analytics.' },
     { sectionName: 'Data Model and Identity', difficulty: 'Trap', tip: 'Identity resolution and graph, many candidates confuse identity types and resolution rules.' },
     { sectionName: 'Activation and Insights', difficulty: 'Moderate', tip: 'Activation targets and insight types. Know which channel or object each applies to.' },
-    { sectionName: 'Governance and Best Practices', difficulty: 'Moderate', tip: 'Data quality and governance in Data Cloud, retention and consent appear in scenarios.' },
+    { sectionName: 'Governance and Best Practices', difficulty: 'Moderate', tip: 'Data quality and governance in Data 360, retention and consent appear in scenarios.' },
   ],
   'crm-analytics-einstein-discovery-consultant': [
     { sectionName: 'CRM Analytics Setup', difficulty: 'Moderate', tip: 'Dataset creation and data prep. Know the difference between recipe and lens.' },

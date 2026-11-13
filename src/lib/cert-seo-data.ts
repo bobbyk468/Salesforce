@@ -1430,24 +1430,24 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'data-360-consultant': [
     {
-      question: 'What is Data Cloud (formerly Customer Data Platform)?',
-      answer: 'Data Cloud unifies customer data from multiple sources, creates a single customer identity, and activates that data across Salesforce clouds for personalized experiences.',
+      question: 'What is Data 360 (formerly Customer Data Platform / Data Cloud)?',
+      answer: 'Data 360 unifies customer data from multiple sources, creates a single customer identity, and activates that data across Salesforce clouds for personalized experiences.',
     },
     {
       question: 'What experience do I need for Data 360 Consultant?',
-      answer: 'You should have Salesforce CRM experience and understanding of data management, marketing, or analytics. Hands-on experience with Data Cloud setup, identity resolution, and activation is recommended.',
+      answer: 'You should have Salesforce CRM experience and understanding of data management, marketing, or analytics. Hands-on experience with Data 360 setup, identity resolution, and activation is recommended.',
     },
     {
       question: 'What is the Data 360 Consultant passing score and exam fee in Summer \'26?',
-      answer: 'The Salesforce Data 360 Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 70%. The exam fee is $200 USD (retake $100 USD). Platform Administrator certification is required.',
+      answer: 'The Salesforce Data 360 Consultant exam has 60 scored multiple-choice questions (plus up to 5 unscored), 105 minutes, and a passing score of 70%. The exam fee is $200 USD (retake $100 USD). There is no required prerequisite certification.',
     },
     {
-      question: 'What is identity resolution in Data Cloud and why does it appear on the exam?',
+      question: 'What is identity resolution in Data 360 and why does it appear on the exam?',
       answer: 'Identity resolution is the process of matching and merging records from different data sources into a single unified profile (called a Unified Individual). It uses rulesets to reconcile duplicate contacts from CRM, marketing, e-commerce, and other sources. The exam tests how to configure reconciliation rules, match rules, and understand the output, the Unified Individual and its related objects.',
     },
     {
-      question: 'What is the difference between a Data Stream and a Data Lake Object in Data Cloud?',
-      answer: 'A Data Stream is the ingestion connector that pulls data into Data Cloud from a source (Salesforce CRM, cloud storage, API). A Data Lake Object (DLO) is the raw table where ingested data is stored before mapping. When you map a DLO to a Data Model Object (DMO), the data becomes available for segmentation, activation, and identity resolution.',
+      question: 'What is the difference between a Data Stream and a Data Lake Object in Data 360?',
+      answer: 'A Data Stream is the ingestion connector that pulls data into Data 360 from a source (Salesforce CRM, cloud storage, API). A Data Lake Object (DLO) is the raw table where ingested data is stored before mapping. When you map a DLO to a Data Model Object (DMO), the data becomes available for segmentation, activation, and identity resolution.',
     },
   ],
   'crm-analytics-einstein-discovery-consultant': [

@@ -29,34 +29,35 @@ const pageDescription =
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'Data 360 Consultant', url: '/certifications/data-360-consultant' },
-  { name: 'Data Cloud Consultant Study Guide', url: '/data-360-consultant-study-guide' },
+  { name: 'Data 360 Consultant Study Guide', url: '/data-360-consultant-study-guide' },
 ]
 
 export const faqItems = [
   {
-    question: 'What is the Data Cloud Consultant exam format?',
-    answer: 'The Data Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 70% passing score, and a $200 fee ($100 retake). Despite the lower passing score, the exam is considered harder than most Salesforce certifications because it tests a complex technical domain: data ingestion, data modelling, identity resolution, SQL-based calculated insights, and activation configuration.',
+    question: 'What is the Data 360 Consultant exam format?',
+    answer: 'The Data 360 Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 70% passing score, and a $200 fee ($100 retake). Despite the lower passing score, the exam is considered harder than most Salesforce certifications because it tests a complex technical domain: data ingestion, data modelling, identity resolution, SQL-based calculated insights, and activation configuration.',
   },
   {
-    question: 'What are the highest-weight Data Cloud Consultant exam sections?',
-    answer: 'Data Ingestion and Modeling (28%) is the largest section, understanding data streams, data lake objects (DLOs), data model objects (DMOs), and how data maps from source to unified profile is the foundation of everything else. Identity Resolution, Segmentation, and Insights (25%) is second. Together they account for 53% of the exam.',
+    question: 'What are the highest-weight Data 360 Consultant exam sections?',
+    answer: 'Data Activations and Utilization (20%) is the largest section, followed by Data Source Connection and Ingestion (18%) and Data Enhancements, Sharing, and Analysis (18%). Together they account for 56% of the exam. Understanding data streams, Data Lake Objects (DLOs), Data Model Objects (DMOs), how data maps from source to unified profile, and how segments get activated downstream is the foundation of everything else.',
   },
   {
-    question: 'What SQL knowledge is needed for Data Cloud Consultant?',
-    answer: 'Calculated Insights in Data Cloud are created using SQL, specifically ANSI SQL with some Data Cloud-specific syntax. You need to write SELECT queries that aggregate data from Data Model Objects (DMOs). Common patterns tested: COUNT(), SUM(), AVG() with GROUP BY for building audience metrics, and DATE functions for recency calculations. The SQL is not as complex as a database developer role, but you must be comfortable writing and reading basic aggregation queries.',
+    question: 'What SQL knowledge is needed for Data 360 Consultant?',
+    answer: 'Calculated Insights in Data 360 are created using SQL, specifically ANSI SQL with some Data 360-specific syntax. You need to write SELECT queries that aggregate data from Data Model Objects (DMOs). Common patterns tested: COUNT(), SUM(), AVG() with GROUP BY for building audience metrics, and DATE functions for recency calculations. The SQL is not as complex as a database developer role, but you must be comfortable writing and reading basic aggregation queries.',
   },
   {
-    question: 'What is identity resolution in Data Cloud?',
-    answer: 'Identity resolution is the process of linking records from multiple data sources that belong to the same real-world customer into a single unified profile. Data Cloud uses Rulesets, configured matching rules (by email, phone, name + address, or custom criteria), to determine when two records represent the same person. The result is a Contact Point object (for each contact method like email, phone) and a unified Individual object (the merged profile). Understanding ruleset configuration and when to use fuzzy vs exact matching is heavily tested.',
+    question: 'What is identity resolution in Data 360?',
+    answer: 'Identity resolution is the process of linking records from multiple data sources that belong to the same real-world customer into a single unified profile. Data 360 uses Rulesets, configured matching rules (by email, phone, name + address, or custom criteria), to determine when two records represent the same person. The result is a Contact Point object (for each contact method like email, phone) and a unified Individual object (the merged profile). Understanding ruleset configuration and when to use fuzzy vs exact matching is heavily tested.',
   },
 ]
 
 const examSections = [
-  { name: 'Data Ingestion and Modeling', weight: 28, note: 'Data streams (batch, streaming), Data Lake Objects (DLOs), Data Model Objects (DMOs), field mapping, schema design' },
-  { name: 'Identity Resolution, Segmentation & Insights', weight: 25, note: 'Rulesets, matching rules, unified profiles, segment criteria, calculated insights with SQL, activation audiences' },
-  { name: 'Configure and Manage Data Cloud', weight: 20, note: 'Org configuration, permission sets, data spaces, consent management, data retention policies, error monitoring' },
-  { name: 'Act on Data with Salesforce Ecosystem', weight: 17, note: 'Activating segments to Marketing Cloud, Advertising, Service Cloud; Data Cloud for Agentforce grounding' },
-  { name: 'Administer Data Cloud', weight: 10, note: 'User administration, ingestion job monitoring, troubleshooting data gaps, managing data stream health' },
+  { name: 'Data Activations and Utilization', weight: 20, note: 'Activating segments to Marketing Cloud, Advertising, and Service Cloud; using Data 360 as the grounding layer for Agentforce.' },
+  { name: 'Data Source Connection and Ingestion', weight: 18, note: 'Data streams (batch, streaming), connecting source systems, and landing data into Data Lake Objects (DLOs).' },
+  { name: 'Data Enhancements, Sharing, and Analysis', weight: 18, note: 'Calculated Insights with SQL, consent management, data retention policies, and error monitoring for ingestion jobs.' },
+  { name: 'Harmonization and Unification', weight: 17, note: 'Rulesets, matching rules, Data Model Objects (DMOs), field mapping, and building the unified Individual profile.' },
+  { name: 'Solution Positioning', weight: 14, note: 'Scoping which Data 360 capabilities fit a business requirement, and positioning it within the wider Salesforce ecosystem.' },
+  { name: 'Data 360 Setup and Administration', weight: 13, note: 'Org configuration, permission sets, data spaces, user administration, and troubleshooting data stream health.' },
 ]
 
 export default function Data360ConsultantStudyGuideContent() {
@@ -67,7 +68,7 @@ export default function Data360ConsultantStudyGuideContent() {
       <CertInsightBlock certSlug="data-360-consultant" />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Data Cloud Consultant Exam at a Glance</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Data 360 Consultant Exam at a Glance</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {[
             { label: 'Questions', value: '60' },
@@ -87,9 +88,9 @@ export default function Data360ConsultantStudyGuideContent() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Data Cloud Consultant Exam Sections and Weightage</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Data 360 Consultant Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Data Ingestion (28%) + Identity Resolution &amp; Segmentation (25%) = 53% of the exam. Mastering the data model and identity resolution is the foundation for everything else.
+          Data Activations and Utilization (20%) + Data Source Connection and Ingestion (18%) + Data Enhancements, Sharing, and Analysis (18%) = 56% of the exam. Mastering the data model, ingestion, and activation is the foundation for everything else.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -105,6 +106,13 @@ export default function Data360ConsultantStudyGuideContent() {
             </div>
           ))}
         </div>
+        <p className="text-sm text-gray-700 mt-4">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 70% pass mark.
+        </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -113,52 +121,66 @@ export default function Data360ConsultantStudyGuideContent() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Data Ingestion and Modeling (28%)
+              Data Activations and Utilization (20%)
             </p>
-            <p>This section is the foundation of all Data Cloud work. Know the two ingestion object types: <strong>Data Lake Objects (DLOs)</strong>: the raw landing zone for ingested data (one DLO per data stream), and <strong>Data Model Objects (DMOs)</strong>: the normalised, unified schema objects that DLO data is mapped into (Individual, Contact Point Email, Contact Point Phone, Unified Individual, etc.). The Data Cloud canonical data model is based on a standard entity schema, understand the hierarchy: Individual → Contact Point → Unified Individual. Field mapping (from DLO fields to DMO fields) is the critical operational skill tested. Also know data stream types: batch (file-based via SFTP or cloud storage), streaming (real-time via API), and Salesforce CRM connector (syncing CRM objects directly).</p>
+            <p>Activating Data 360 segments to downstream channels. <strong>Marketing Cloud activation:</strong> publishing a segment to Marketing Cloud creates a data extension in SFMC that updates on the activation schedule. Know that the data extension contains the Unified Individual attributes selected during activation setup. <strong>Advertising activation:</strong> pushing segments to Google, Facebook, LinkedIn for paid media targeting. <strong>Service Cloud activation:</strong> surfacing unified profile data in Service Cloud agent console for real-time context. <strong>Agentforce grounding:</strong> Data 360 as the data layer for grounding AI agents with real-time customer context.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Identity Resolution, Segmentation &amp; Insights (25%)
+              Data Source Connection and Ingestion (18%)
             </p>
-            <p><strong>Identity Resolution:</strong> Rulesets define how records from different DLOs are matched and merged into a unified profile. Matching rule types: exact match (email address, phone number, high confidence), fuzzy match (name + address, lower confidence, higher recall). Know that when two records match, they link to the same Unified Individual. <strong>Calculated Insights:</strong> SQL-based metrics computed over DMO data (e.g., total spend per customer, days since last purchase). Written as SELECT queries with GROUP BY against DMO tables. <strong>Segmentation:</strong> Segment criteria filters Unified Individuals based on attributes or calculated insights. Segments can be time-based (related to when attributes change) or static.</p>
+            <p>This section is the foundation of all Data 360 work. Know the two ingestion object types: <strong>Data Lake Objects (DLOs)</strong>: the raw landing zone for ingested data (one DLO per data stream), and <strong>Data Model Objects (DMOs)</strong>: the normalised, unified schema objects that DLO data is mapped into (Individual, Contact Point Email, Contact Point Phone, Unified Individual, etc.). Know data stream types: batch (file-based via SFTP or cloud storage), streaming (real-time via API), and Salesforce CRM connector (syncing CRM objects directly).</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Configure and Manage Data Cloud (20%)
+              Data Enhancements, Sharing, and Analysis (18%)
             </p>
-            <p>Data Cloud org setup: enabling Data Cloud in a Salesforce org, configuring permission sets (Data Cloud Admin, Data Cloud Marketing Admin, Data Cloud Marketing Viewer), and understanding data spaces (organisational containers for data isolation, e.g., separating business unit data). Consent management: how Data Cloud tracks consent (opt-in/opt-out) and how consent propagates to activation. Data retention: setting retention periods on DLOs and DMOs. Error monitoring: reviewing ingestion job logs, identifying field mapping errors, and correcting data stream configuration issues.</p>
+            <p><strong>Calculated Insights:</strong> SQL-based metrics computed over DMO data (e.g., total spend per customer, days since last purchase). Written as SELECT queries with GROUP BY against DMO tables. <strong>Consent management:</strong> how Data 360 tracks consent (opt-in/opt-out) and how consent propagates to activation. <strong>Data retention:</strong> setting retention periods on DLOs and DMOs. <strong>Error monitoring:</strong> reviewing ingestion job logs, identifying field mapping errors, and correcting data stream configuration issues.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Act on Data with Salesforce Ecosystem (17%)
+              Harmonization and Unification (17%)
             </p>
-            <p>Activating Data Cloud segments to downstream channels. <strong>Marketing Cloud activation:</strong> publishing a segment to Marketing Cloud creates a data extension in SFMC that updates on the activation schedule. Know that the data extension contains the Unified Individual attributes selected during activation setup. <strong>Advertising activation:</strong> pushing segments to Google, Facebook, LinkedIn for paid media targeting. <strong>Service Cloud activation:</strong> surfacing unified profile data in Service Cloud agent console for real-time context. <strong>Agentforce grounding:</strong> Data Cloud as the data layer for grounding AI agents with real-time customer context.</p>
+            <p><strong>Identity Resolution:</strong> Rulesets define how records from different DLOs are matched and merged into a unified profile. Matching rule types: exact match (email address, phone number, high confidence), fuzzy match (name + address, lower confidence, higher recall). Know that when two records match, they link to the same Unified Individual. The Data 360 canonical data model is based on a standard entity schema, understand the hierarchy: Individual → Contact Point → Unified Individual. Field mapping (from DLO fields to DMO fields) is the critical operational skill tested here. <strong>Segmentation:</strong> Segment criteria filters Unified Individuals based on attributes or calculated insights. Segments can be time-based (related to when attributes change) or static.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-salesforce-blue" />
+              Solution Positioning (14%)
+            </p>
+            <p>Scoping which Data 360 capability actually fits a stated business requirement, rather than defaulting to the first plausible-sounding feature. Know when Data 360 is the right tool versus a narrower Salesforce feature, and how a Data 360 implementation fits alongside the rest of a customer's Salesforce footprint (CRM, Marketing Cloud, Service Cloud, Agentforce).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-salesforce-blue" />
+              Data 360 Setup and Administration (13%)
+            </p>
+            <p>Data 360 org setup: enabling Data 360 in a Salesforce org, configuring permission sets (Data 360 Admin, Data 360 Marketing Admin, Data 360 Marketing Viewer), and understanding data spaces (organisational containers for data isolation, e.g., separating business unit data). User administration, ingestion job monitoring, and troubleshooting data stream health.</p>
           </div>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Data Cloud Consultant Study Plan</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Data 360 Consultant Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Data Cloud Architecture &amp; Setup (20%):</strong> Study the overall Data Cloud architecture, enable Data Cloud in a Developer Edition org, configure permission sets, and explore the Data Cloud setup wizard. Understand data spaces and how they isolate data. Complete Trailhead’s &ldquo;Salesforce Data Cloud Basics&rdquo; trail.</p>
-          <p><strong>Week 2: Data Ingestion &amp; Modeling (28%):</strong> Create data streams (start with a Salesforce CRM connector stream, then add a batch file stream). Understand the DLO → DMO mapping workflow. Map DLO fields to standard DMO fields (especially to Individual and Contact Point DMOs). This week is the most important, data modelling is the foundation of everything else.</p>
-          <p><strong>Week 3: Identity Resolution (part of 25%):</strong> Configure a Ruleset with exact-match rules (email) and fuzzy-match rules (name + address). Run the identity resolution process and inspect the resulting Unified Individual records. Understand how to diagnose over-merging (too aggressive fuzzy matching) vs under-merging (too restrictive rules).</p>
-          <p><strong>Week 4: Calculated Insights &amp; Segmentation (part of 25%):</strong> Write Calculated Insight SQL queries. Start with simple COUNT and SUM aggregations, then practice date-based calculations (DATEDIFF, DATEADD). Build segments using Calculated Insights as criteria. Practice publishing a segment and inspecting the activation output.</p>
-          <p><strong>Week 5: Activation &amp; Ecosystem Integration (17% + 10%):</strong> Configure an activation to Marketing Cloud (create the activation, select attributes, set refresh schedule). Study Advertising activations conceptually. Review administration tasks: job monitoring, error log interpretation, ingestion troubleshooting.</p>
-          <p><strong>Week 6:</strong> Full timed mock exams. Target 80%+ before booking (above the 62% threshold to account for exam difficulty variance).</p>
+          <p><strong>Week 1: Data 360 Setup and Administration (13%) and Solution Positioning (14%):</strong> Study the overall Data 360 architecture, enable Data 360 in a Developer Edition org, configure permission sets, and explore the Data 360 setup wizard. Understand data spaces and how they isolate data. Complete Trailhead's "Salesforce Data 360 Basics" trail, and practice scoping which Data 360 capability fits a stated requirement.</p>
+          <p><strong>Week 2: Data Source Connection and Ingestion (18%):</strong> Create data streams (start with a Salesforce CRM connector stream, then add a batch file stream). Understand the DLO → DMO mapping workflow. Map DLO fields to standard DMO fields (especially to Individual and Contact Point DMOs).</p>
+          <p><strong>Week 3: Harmonization and Unification (17%):</strong> Configure a Ruleset with exact-match rules (email) and fuzzy-match rules (name + address). Run the identity resolution process and inspect the resulting Unified Individual records. Understand how to diagnose over-merging (too aggressive fuzzy matching) vs under-merging (too restrictive rules).</p>
+          <p><strong>Week 4: Data Enhancements, Sharing, and Analysis (18%):</strong> Write Calculated Insight SQL queries. Start with simple COUNT and SUM aggregations, then practice date-based calculations (DATEDIFF, DATEADD). Review consent management, data retention settings, and how to read an ingestion error log.</p>
+          <p><strong>Week 5: Data Activations and Utilization (20%, the largest section):</strong> Configure an activation to Marketing Cloud (create the activation, select attributes, set refresh schedule). Study Advertising and Service Cloud activations, and how Data 360 grounds Agentforce.</p>
+          <p><strong>Week 6:</strong> Full timed mock exams. Target 80%+ before booking (above the 70% pass mark to account for exam difficulty variance).</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach Data Cloud Consultant Scenario Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach Data 360 Consultant Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>DLO vs DMO questions:</strong> DLOs are raw landing zones, one per data stream, named after the source. DMOs are the normalised output, they follow the Data Cloud canonical model. When a question asks &ldquo;where is data stored after ingestion?&rdquo; the answer is the DLO. When it asks &ldquo;where do you query unified customer data?&rdquo; the answer is the DMO (specifically the Unified Individual DMO for merged profiles).</span>
+            <span><strong>DLO vs DMO questions:</strong> DLOs are raw landing zones, one per data stream, named after the source. DMOs are the normalised output, they follow the Data 360 canonical model. When a question asks &ldquo;where is data stored after ingestion?&rdquo; the answer is the DLO. When it asks &ldquo;where do you query unified customer data?&rdquo; the answer is the DMO (specifically the Unified Individual DMO for merged profiles).</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -166,7 +188,7 @@ export default function Data360ConsultantStudyGuideContent() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Activation questions:</strong> When data needs to flow from Data Cloud to Marketing Cloud for sending, the answer is an Activation publishing a segment to a Marketing Cloud data extension. The activation schedule (hourly, daily, real-time) depends on how fresh the audience needs to be. Real-time activation is only available for streaming data streams, batch data updates on the ingestion schedule.</span>
+            <span><strong>Activation questions:</strong> When data needs to flow from Data 360 to Marketing Cloud for sending, the answer is an Activation publishing a segment to a Marketing Cloud data extension. The activation schedule (hourly, daily, real-time) depends on how fresh the audience needs to be. Real-time activation is only available for streaming data streams, batch data updates on the ingestion schedule.</span>
           </li>
         </ul>
       </section>
@@ -179,7 +201,7 @@ export default function Data360ConsultantStudyGuideContent() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Set the mock benchmark higher than the 70% passing score because the real exam’s scenario
-          questions are harder than most practice banks. Candidates who pass mocks at exactly 62%
+          questions are harder than most practice banks. Candidates who pass mocks at exactly 70%
           frequently fail the real exam. The most common failure point is data modelling, candidates
           who have not configured DLO-to-DMO mappings hands-on consistently misidentify the correct
           mapping approach under exam conditions.
@@ -205,17 +227,17 @@ export default function Data360ConsultantStudyGuideContent() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Practice With Real Exam-Style Questions</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Apply this study guide with free Data Cloud Consultant practice questions:
+          Apply this study guide with free Data 360 Consultant practice questions:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Data Cloud Practice Questions <ArrowRight className="h-4 w-4" />
+            Data 360 Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <span className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Data Cloud Exam Tips
+            Data 360 Exam Tips
           </span>
           <Link href="/data-cloud-vs-marketing-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Data Cloud vs Marketing Cloud
+            Data 360 vs Marketing Cloud
           </Link>
         </div>
       </section>
@@ -226,11 +248,11 @@ export default function Data360ConsultantStudyGuideContent() {
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Data Cloud Consultant free practice exam, scored with full explanations.</p>
+        <p className="text-white mb-6">Try the Data 360 Consultant free practice exam, scored with full explanations.</p>
         <Link href="#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
-          Data Cloud Consultant Free Practice Exam &rarr;
+          Data 360 Consultant Free Practice Exam &rarr;
         </Link>
       </div>
     </div>

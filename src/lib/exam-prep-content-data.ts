@@ -279,14 +279,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'data-360-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'Data Cloud Architecture and Data Model are 50%. Know identity resolution and data model.',
-      'Understand activation (Marketing, Sales, Service) and segments.',
+      'Data Source Connection and Ingestion plus Harmonization and Unification are 35% combined. Know data streams, DLOs/DMOs, and identity resolution well.',
+      'Understand activation (Marketing, Advertising, Service, Agentforce grounding) and segments, the single largest section at 20%.',
       'Know governance: data quality, consent, and retention.',
-      'Review Data Cloud setup and connector types.',
+      'Review Data 360 setup and connector types.',
     ],
-    prerequisites: ['Salesforce CRM experience', 'Data or marketing background helpful'],
-    focusAreas: ['Data Cloud Architecture', 'Data Model and Identity', 'Activation and Insights', 'Governance'],
-    studyStrategy: 'Use a Data Cloud trial or sandbox. Build a data model, identity resolution, and at least one activation. Align with the official exam guide.',
+    prerequisites: ['None required', 'Salesforce CRM experience and a data or marketing background are helpful'],
+    focusAreas: ['Data Source Connection and Ingestion', 'Harmonization and Unification', 'Data Activations and Utilization', 'Governance'],
+    studyStrategy: 'Use a Data 360 trial or sandbox. Build a data model, identity resolution, and at least one activation. Align with the official exam guide.',
   },
   'javascript-developer-i': {
     ...DEFAULT_PREP,

@@ -2,42 +2,42 @@
   "template": "associate",
   "expertInsight": "The part that needs real practice is identity resolution. Reading about match rules teaches you the words, but you only understand reconciliation once you have watched two source records merge and seen which value won. Build one small end-to-end setup: bring data in. Map it, resolve it. Build a segment, send it somewhere. Also learn where data spaces fit, because questions about keeping brands or regions apart come up more than people expect.",
   "whoIsThisFor": {
-    "heading": "Who is the Data Cloud Consultant exam for?",
+    "heading": "Who should take the Data 360 Consultant exam?",
     "personas": [
       {
         "label": "Data architects",
-        "description": "You design how customer data is modelled and joined, and you want to show you can do it in Data 360."
+        "description": "You design customer data models and connections and want to demonstrate how to build them in Data 360."
       },
       {
-        "label": "CRM analysts",
-        "description": "You work with customer data across systems and want to prove you can unify and segment it."
+        "label": "CRM and data analysts",
+        "description": "You work with customer information across systems and want to validate your skills in unification and segmentation."
       },
       {
         "label": "Implementation consultants",
-        "description": "You deliver Data 360 projects and need a credential clients recognise."
+        "description": "You deliver Data 360 projects and need to show clients that you understand ingestion, identity resolution, and activation."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Data Cloud Consultant Exam Hard?",
-    "summary": "Salesforce renamed Data Cloud to Data 360, and the exam is now the Data 360 Consultant. It is a hard exam because almost nothing transfers from core Salesforce admin work. Data streams, data model objects, identity resolution and calculated insights are a new vocabulary, and the questions assume you have built with them.",
+    "heading": "How challenging is the Data 360 Consultant exam?",
+    "summary": "The exam covers Data 360 concepts and workflows that differ from core Salesforce administration. Study how source data is ingested, mapped to the data model, unified through identity resolution, and used for segments and activations.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong>, plus a few unscored ones, in 105 minutes.",
-      "<strong>70% to pass</strong>, about 42 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Its own vocabulary.</strong> Data streams, data lake objects, data model objects, identity resolution, calculated insights and activations.",
-      "<strong>Hands-on matters.</strong> Reading alone rarely gets people through. You need to have mapped and resolved real data."
+      "<strong>60 scored questions</strong> plus a small number of unscored questions, in 105 minutes.",
+      "<strong>70% passing score.</strong> Confirm the current passing requirement in the official exam guide before scheduling.",
+      "<strong>Learn the terminology:</strong> Review data streams, data lake objects, data model objects, identity resolution, calculated insights, and activations.",
+      "<strong>Practice the workflow:</strong> Ingest and map data, resolve profiles, build a segment, and activate it."
     ],
-    "passRateGuidance": "Build one complete flow in a trial org before you book: bring data in. Map it to the data model, resolve identities. Build a segment and activate it. Aim for 80% or more on practice tests, and make sure you can explain why two records merged."
+    "passRateGuidance": "Build a complete flow in a trial org: bring data in, map it to the data model, resolve identities, create a segment, and activate that segment. Aim for at least 80% on practice sets and be ready to explain why records should or should not be unified."
   },
   "examFormat": {
-    "heading": "Data Cloud Consultant Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions are short scenarios. A typical one describes customer records arriving from several systems and asks how to match them, or describes an audience the marketing team wants and asks how to build and send it.",
+    "heading": "Data 360 Consultant exam format",
+    "intro": "The exam is proctored online or at a test center. Questions focus on customer data workflows and their configuration.",
+    "scenarioPercent": "Many questions describe records arriving from several systems and ask how to unify them, or describe an audience need and ask how to build and send a segment to a destination.",
     "bestWayToPass": [
-      "<strong>Learn identity resolution properly:</strong> Know what match rules do, what reconciliation rules do, and which value wins when two sources disagree.",
-      "<strong>Map data yourself:</strong> Bring a CSV in. Map it to data model objects, and see how keys and relationships behave.",
-      "<strong>Practise segments and activations:</strong> Build a segment, then send it to a target such as Marketing Cloud, and know how often it refreshes.",
-      "<strong>Know how data gets in:</strong> Batch ingestion, streaming, and reading data where it sits without copying it."
+      "<strong>Separate matching from reconciliation:</strong> Know how identity resolution determines which records refer to one person and how it chooses values when sources differ.",
+      "<strong>Map data yourself:</strong> Ingest sample data and map it to data model objects. Pay attention to keys and relationships.",
+      "<strong>Build segments and activations:</strong> Create an audience and send it to a destination, then review how membership refreshes.",
+      "<strong>Compare ingestion methods:</strong> Review batch and streaming ingestion, plus options that access data without copying it."
     ]
   },
   "certificationCard": {
@@ -50,7 +50,7 @@
       "cost": "$200"
     },
     "topics": [
-      "Data Cloud Basics",
+      "Data 360 Basics",
       "Identity Resolution",
       "Data Model",
       "Segments",
@@ -63,59 +63,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Data Cloud Consultant: Key Concepts for the Exam",
+    "h2": "Data 360 Consultant: core concepts",
     "blocks": [
       {
-        "heading": "How Data 360 Works: Ingest, Model, Resolve, Segment, Activate",
-        "body": "The whole product follows one path, and most exam questions sit somewhere on it. **Data streams** bring data in from a source such as Salesforce CRM, an S3 bucket, a website or a mobile app. The raw data lands in **data lake objects**. You then **map** those to **data model objects (DMOs)**, which are the shared shape Data 360 understands, for example Individual, Contact Point Email and Order. **Identity resolution** matches records that belong to the same person and builds a **unified profile**. **Segments** pick groups out of those profiles. **Activations** send a segment to a target system so it can be used in a campaign or a journey. If you can place a question on this path, the answer is usually easy to see."
+        "heading": "The Data 360 Workflow",
+        "body": "A common workflow is to ingest source data, map it to the shared data model, resolve identities, create useful insights or segments, and activate results. Data streams connect to sources such as Salesforce, cloud storage, websites, or applications. Ingested data is stored in data lake objects (DLOs), then mapped to data model objects (DMOs) that represent concepts such as individuals or engagements. Identity resolution links records that refer to the same person. Segments select profiles that meet specified criteria, and activations send membership to a destination."
       },
       {
-        "heading": "Identity Resolution: Match Rules and Reconciliation",
-        "body": "Identity resolution runs in two steps. **Match rules** decide which records belong to the same person, for example an exact email match, a fuzzy name and address match, or a custom match on a loyalty ID. Several rules can run in order, and each one can catch records the previous one missed. **Reconciliation rules** then decide which value to keep when matched records disagree, for example 'most recently updated wins' or 'prefer the CRM source'. The result is one unified individual with links back to every source record. Watch for questions where a too-loose match rule merges two different people, which is the classic mistake."
+        "heading": "Ingestion and Data Modeling",
+        "body": "Data streams bring data into Data 360 through configured connectors or other supported ingestion methods. Data lake objects retain ingested source data. Mapping aligns fields and records with data model objects, which provide a consistent structure for using data across sources. Keys and relationships matter because they determine how records connect. Learn which ingestion method and mapping approach fit the source and the freshness requirement."
       },
       {
-        "heading": "Segments and Activation",
-        "body": "A **segment** is a group of unified profiles that match the filters you set, such as bought in the last 90 days and lives in Germany. Segments can use attributes from related objects and from calculated insights. They **refresh** on a schedule, so a segment is a living audience rather than a fixed list. An **activation** sends the segment to a target, such as Marketing Cloud, Advertising or an external system, and an **activation target** defines where it goes. You choose which attributes travel with it. Exam questions often turn on whether the data the marketer wants is actually available on the profile."
+        "heading": "Identity Resolution and Unified Profiles",
+        "body": "Identity resolution applies match rules to determine which source records refer to the same individual. Reconciliation rules determine which source value is used for a field when records are unified. The resulting unified profile brings together information from linked records. Matching and reconciliation solve different problems: matching decides whether records belong together, while reconciliation selects the value displayed for a field."
       },
       {
-        "heading": "Calculated Insights and Data Transforms",
-        "body": "**Calculated insights** are metrics you define once and reuse, written in SQL, such as lifetime spend, average order value or days since last purchase. They can be used in segments, in activations and on the profile. **Data transforms** reshape data during or after ingestion, for example splitting a full name or converting currencies, so you do not have to fix the source system. Both matter on the exam because they are how you answer business questions that the raw data cannot answer on its own."
+        "heading": "Calculated Insights, Segments, and Activations",
+        "body": "Calculated insights create derived measures from Data 360 data, such as purchase totals or days since a customer’s last activity. A segment selects profiles that meet criteria and can be refreshed according to its configuration. An activation publishes segment membership to a destination, such as a marketing platform or another connected system. Understand how source data, unified profiles, calculated insights, and segments support a downstream audience."
       },
       {
-        "heading": "Consent, Data Spaces and Governance",
-        "body": "Customer data brings rules with it. Consent and privacy preferences are held against the individual, and activations should respect them. **Data spaces** keep data apart inside one Data 360 org, which is how you separate brands, regions or business units without buying another org. Permission sets control who can see and build what. Know which objects hold personal data, how deletion requests are handled, and why you would use a data space rather than filters to keep two brands separate."
+        "heading": "Consent, Governance, and Data Actions",
+        "body": "Data 360 supports consent and privacy requirements through the configured consent data and privacy attributes. Implementations must use those controls to honor applicable preferences and requests. Data actions can respond to configured changes, such as segment membership, and initiate downstream work. Consider data governance, destination behavior, and refresh timing when designing an activation."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Data Cloud Consultant Exam",
-    "intro": "Almost every question sits somewhere on the path from raw data to an activated audience. Work out which step the scenario is describing, then pick the tool that belongs to that step.",
+    "h2": "How to prepare for the Data 360 Consultant exam",
+    "intro": "For each scenario, identify the step involved: source connection, data mapping, identity resolution, segment creation, or activation. Then choose the feature that performs that step.",
     "blocks": [
       {
-        "heading": "Getting Data In",
-        "body": "Batch ingestion for scheduled loads, streaming for events as they happen, and federated access when the data should stay in the source system."
+        "heading": "Know the Identity Resolution Steps",
+        "body": "Match rules determine whether records belong to the same individual. Reconciliation rules choose the surviving field values. Practice both decisions with records from multiple sources."
       },
       {
-        "heading": "Identity Resolution",
-        "body": "Match rules find the same person. Reconciliation rules choose which value wins. Loose match rules merge different people, which is the most common design error."
+        "heading": "Map a Source to the Data Model",
+        "body": "Ingest sample records and map their fields to suitable data model objects. Check identifiers and relationships so records can be connected correctly."
       },
       {
-        "heading": "Segmentation and Activation",
-        "body": "Segments are living audiences that refresh on a schedule. Activations send them to a target with the attributes you choose."
+        "heading": "Build and Activate an Audience",
+        "body": "Create a segment from profile criteria, then select a destination and activation settings. Understand how segment refresh affects when the audience changes."
       },
       {
-        "heading": "Calculated Insights",
-        "body": "Use these for metrics like lifetime value or purchase frequency, then filter segments on them."
+        "heading": "Compare Ingestion Options",
+        "body": "Review batch and streaming options and the cases where data can be accessed without being copied. Choose based on source capability and freshness needs."
       },
       {
-        "heading": "Data Spaces and Permissions",
-        "body": "Use data spaces to separate brands or regions. Use permission sets to control who can build segments and activations."
+        "heading": "Apply Consent and Governance",
+        "body": "Understand how consent and privacy attributes inform profile use and activation. Make sure downstream destinations respect the configured requirements."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Consultant Certifications",
-    "intro": "Good next steps after Data 360 Consultant:",
+    "heading": "Related credentials after the Data 360 Consultant exam",
+    "intro": "Continue with a Salesforce platform credential or a related analytics and data specialization.",
     "links": [
       {
         "href": "/certifications/marketing-cloud-consultant",
@@ -171,243 +171,311 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary purpose of Salesforce Data Cloud?",
+      "question": "What is the main purpose of Data 360?",
       "options": [
-        "A CPQ pricing engine for enterprise contracts",
-        "Unifying customer data from multiple sources to create a real-time, actionable customer profile",
-        "A data warehouse for Salesforce backups only",
-        "An email marketing platform for batch campaign sends"
+        "A pricing tool for enterprise contracts",
+        "Unify customer data into profiles",
+        "A backup store for Salesforce data",
+        "A batch email marketing system"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud unifies data from multiple sources (Salesforce orgs, external systems, web, mobile) to create a single, actionable customer profile that drives segmentation, activation, and AI.",
+      "explanation": "Data 360 brings customer data together from different sources so it can be understood and used across the business.",
       "whyWrong": [
-        "Data Cloud isn't a CPQ pricing engine, that's an entirely separate product category.",
-        "Data Cloud isn't a backup tool, it's built for real-time unified customer profiles, not just backup storage.",
-        "Data Cloud isn't an email marketing platform, that's Marketing Cloud's function."
+        "CPQ configures products and pricing; it is not the main purpose of Data 360.",
+        "Data 360 is not limited to backup storage.",
+        "Email delivery is one possible downstream use, not the platform’s overall purpose."
       ]
     },
     {
-      "question": "What is a Data Stream in Salesforce Data Cloud?",
+      "question": "What is a data stream in Data 360?",
       "options": [
-        "A connection that ingests data from a source system into Data Cloud, such as a Salesforce org, cloud storage, or external API",
-        "A real-time analytics dashboard that streams live sales data",
-        "A Marketing Cloud Journey that triggers based on Data Cloud segment membership",
-        "A scheduled Apex job that exports Data Cloud records to an external data warehouse"
+        "A source connection that brings data into Data 360",
+        "A live sales dashboard that streams current results",
+        "A Marketing Cloud journey started by a segment",
+        "An Apex export job that sends data to a warehouse"
       ],
       "correctAnswer": 0,
-      "explanation": "Data Streams are the ingestion layer, each Data Stream connects to a data source and maps incoming data to Data Cloud Data Model Objects (DMOs).",
+      "explanation": "A data stream connects Data 360 to a source and brings that source data into the platform.",
       "whyWrong": [
-        "A Data Stream doesn't itself provide analytics dashboards, that's a separate downstream capability, not the ingestion connection.",
-        "A Marketing Cloud Journey reacts to segments after they exist, it isn't the ingestion connection itself.",
-        "A scheduled Apex export job moves data out of Data Cloud, which is the opposite direction of what a Data Stream does (ingestion in)."
+        "A dashboard displays analytics rather than ingesting source records.",
+        "A journey may use activated data but is not a Data 360 data stream.",
+        "An export job sends data out rather than configuring a source ingestion."
       ]
     },
     {
-      "question": "What are Data Model Objects (DMOs) in Data Cloud?",
+      "question": "What are Data Model Objects (DMOs)?",
       "options": [
-        "Salesforce external objects that connect to a remote SOAP-based data source",
-        "Report types created for cross-object reporting in CRM Analytics",
-        "Custom fields on the Salesforce Lead object used to store data source metadata",
-        "Standardised tables in the Data Cloud data model that organise ingested data by category, such as Individual (person), Engagement, or other object types"
+        "Remote SOAP external objects",
+        "CRM Analytics report types",
+        "Custom Lead fields for source metadata",
+        "Standardized structures for business data"
       ],
       "correctAnswer": 3,
-      "explanation": "DMOs are the structured tables in Data Cloud's canonical data model. Key DMOs include Individual (unified person record), Contact Point Email, Contact Point Phone, and various Engagement types.",
+      "explanation": "DMOs provide a standardized structure for representing data such as individuals and engagements.",
       "whyWrong": [
-        "External objects connect to remote systems via a different mechanism: DMOs are Data Cloud's own standardized data model tables.",
-        "CRM Analytics report types are a separate reporting concept, unrelated to Data Cloud's DMOs.",
-        "Custom Lead fields are a Salesforce Core concept, unrelated to Data Cloud's standardized DMO structure."
+        "External objects expose external data and are not the shared Data 360 model described here.",
+        "Report types are used for Salesforce reporting, not to model ingested Data 360 data.",
+        "DMOs are broader modeled structures, not a set of Lead metadata fields."
       ]
     },
     {
-      "question": "What does Identity Resolution do in Salesforce Data Cloud?",
+      "question": "What does identity resolution do?",
       "options": [
-        "Validates that all incoming data complies with GDPR consent requirements before ingestion",
-        "Assigns unique Salesforce record IDs to Data Cloud profiles for CRM synchronisation",
-        "Links records from multiple data sources that belong to the same individual, creating a single unified profile by matching on email, phone, name, or custom rules",
-        "Authenticates external system API connections using OAuth 2.0 tokens"
+        "Checks privacy consent before ingestion",
+        "Assigns Salesforce IDs to profiles",
+        "Match records into a unified profile",
+        "Authenticates source APIs with OAuth"
       ],
       "correctAnswer": 2,
-      "explanation": "Identity Resolution applies matching and reconciliation rules to stitch together records from different sources into a single Unified Profile, resolving duplicate customer identities across channels.",
+      "explanation": "Identity resolution uses configured matching logic to determine which records represent the same person and combine them in a unified profile.",
       "whyWrong": [
-        "GDPR consent validation is a separate compliance function, not what Identity Resolution itself does.",
-        "Assigning Salesforce record IDs is a CRM-specific concept, distinct from Data Cloud's cross-source identity matching.",
-        "OAuth 2.0 authentication is a separate technical mechanism, unrelated to matching person records across sources."
+        "Consent handling is important but is separate from determining whether records match.",
+        "Record ID assignment is not the purpose of identity resolution.",
+        "OAuth authenticates connections; it does not link customer records."
       ]
     },
     {
-      "question": "What is a Unified Profile in Data Cloud?",
+      "question": "What is a unified profile?",
       "options": [
-        "A Salesforce Person Account record that merges duplicate contact records",
-        "A single, consolidated view of an individual that combines linked records from multiple sources after Identity Resolution has run",
-        "A custom report type that shows all interactions for a given Account",
-        "A Marketing Cloud subscriber profile enriched with Salesforce CRM data"
+        "A Person Account that replaces duplicate Contacts",
+        "A consolidated view of a person built from linked source records",
+        "A report type listing interactions for an Account",
+        "A Marketing Cloud subscriber record enriched with CRM data"
       ],
       "correctAnswer": 1,
-      "explanation": "After Identity Resolution links source records, a Unified Profile is created, providing a 360-degree view of the customer used for segmentation, activation, and AI grounding.",
+      "explanation": "A unified profile brings together information from source records that identity resolution has linked to the same individual.",
       "whyWrong": [
-        "A Person Account is a specific Salesforce CRM record type, not the same as a Data Cloud Unified Profile concept.",
-        "A custom report type displays existing data, it doesn't itself create a consolidated unified view.",
-        "A Marketing Cloud subscriber profile is scoped to marketing data, not the full cross-source Unified Profile Data Cloud builds."
+        "A unified profile is not necessarily a single Salesforce Person Account record.",
+        "A report type is a reporting construct, not a profile created from resolution.",
+        "A subscriber record may be a source or destination record but is not the unified profile itself."
       ]
     },
     {
-      "question": "What is a Segment in Data Cloud?",
+      "question": "What is a Data 360 segment?",
       "options": [
-        "A Marketing Cloud List used to manage email subscription preferences",
-        "A dynamic audience of Unified Profiles that meet defined criteria, used for targeted activation across channels",
-        "A scheduled data export job that sends records to an external BI platform",
-        "A named permission set group that controls user access to Data Cloud features"
+        "A Marketing Cloud list used only for subscription preferences",
+        "A criteria-based audience of unified profiles",
+        "A scheduled export to a business intelligence platform",
+        "A permission set group for Data 360 users"
       ],
       "correctAnswer": 1,
-      "explanation": "Segments filter Unified Profiles by attribute criteria (e.g., purchase history, location, engagement) and are evaluated on a defined refresh schedule. Segments are the basis for activation.",
+      "explanation": "A segment selects unified profiles that satisfy configured criteria for analysis or activation.",
       "whyWrong": [
-        "A Marketing Cloud List manages subscription preferences, a Data Cloud Segment is a broader dynamic audience construct.",
-        "A scheduled export job moves data out, unrelated to defining a dynamic targeted audience.",
-        "A permission set group controls access, not audience targeting, that's a different concept from a Segment."
+        "Subscription preferences are separate from defining an audience of profiles.",
+        "An export may deliver segment data but is not the segment itself.",
+        "Permission sets control user access and do not define customer audiences."
       ]
     },
     {
-      "question": "What is Activation in Salesforce Data Cloud?",
+      "question": "What does activation do in Data 360?",
       "options": [
-        "Running Identity Resolution to create Unified Profiles from ingested data streams",
-        "Granting users permission to view and edit Data Cloud segments",
-        "Publishing segment membership to a destination system, such as Marketing Cloud, Advertising Studio, or a custom external platform, to drive campaigns and personalisation",
-        "Enabling Data Cloud in a Salesforce org for the first time through the Setup menu"
+        "Runs identity resolution on newly ingested streams",
+        "Gives users access to edit segments",
+        "Publishes segment membership to a connected destination",
+        "Turns on Data 360 in Salesforce Setup"
       ],
       "correctAnswer": 2,
-      "explanation": "Activation sends segment membership data and selected profile attributes to downstream systems so they can be used for campaigns, ad targeting, and personalisation.",
+      "explanation": "Activation sends a segment and its membership to a configured destination for downstream use.",
       "whyWrong": [
-        "Running Identity Resolution creates Unified Profiles, that's a separate step that happens before activation.",
-        "Granting segment view/edit permissions is an access-control concept, unrelated to publishing segments to destination systems.",
-        "Enabling Data Cloud is a one-time setup step, not the ongoing activation of segments to destinations."
+        "Identity resolution creates unified profiles before segment activation.",
+        "User permissions are managed separately from sending segment data.",
+        "Enabling the product is not the same as publishing a segment to a destination."
       ]
     },
     {
-      "question": "What is a Calculated Insight in Data Cloud?",
+      "question": "What is a calculated insight?",
       "options": [
-        "A derived metric computed from Data Cloud data using SQL, such as total lifetime value, average order frequency, or days since last purchase, stored as an attribute on the Unified Profile",
-        "A Salesforce report metric automatically updated by a scheduled Apex job",
-        "An Einstein prediction score surfaced on a Salesforce record page via a formula field",
-        "A CRM Analytics widget that displays aggregated Data Cloud segment counts"
+        "A metric derived from Data 360 data",
+        "A Salesforce metric updated by Apex",
+        "An Einstein score stored in a formula field",
+        "A dashboard widget showing segment counts"
       ],
       "correctAnswer": 0,
-      "explanation": "Calculated Insights are SQL-based aggregations that enrich Unified Profiles with computed metrics, enabling segmentation and activation based on derived attributes like CLV or churn score.",
+      "explanation": "A calculated insight derives a metric from Data 360 data, such as purchase value or recency.",
       "whyWrong": [
-        "A Salesforce report metric updated by Apex is a CRM Core concept, not the same as a Data Cloud SQL-derived attribute.",
-        "An Einstein prediction score surfaced via formula field is a different mechanism from a Calculated Insight computed within Data Cloud.",
-        "A CRM Analytics widget displays data, it doesn't itself compute the underlying derived metric."
+        "A calculated insight is a Data 360 measure, not a metric maintained by a custom Apex job.",
+        "Prediction scores and calculated insights are different types of outputs.",
+        "A widget may display an insight but is not the insight definition itself."
       ]
     },
     {
-      "question": "Which consent mechanism does Data Cloud support for GDPR and CCPA compliance?",
+      "question": "Which approach supports consent and privacy handling in Data 360?",
       "options": [
-        "A Salesforce Shield encryption key that masks personal data for non-admin users",
-        "An Email Opt-Out field on the Marketing Cloud subscriber record that syncs to Data Cloud daily",
-        "Consent API and Individual's Privacy Attributes, allowing Data Cloud to respect opt-out and data deletion requests at the profile level across all ingested data",
-        "Manual record deletion performed by a Salesforce administrator on request"
+        "Shield encryption keys that hide fields",
+        "A daily synced Marketing Cloud opt-out",
+        "Configured consent and privacy attributes",
+        "Manual deletion by an administrator"
       ],
       "correctAnswer": 2,
-      "explanation": "Data Cloud honours consent through the Individual object's privacy attributes. Opt-outs and deletion requests propagate to prevent the use of suppressed profiles in segments and activations.",
+      "explanation": "Data 360 can use consent data and privacy attributes to support configured opt-out and deletion handling across ingested customer data.",
       "whyWrong": [
-        "Shield encryption protects data at rest, it doesn't manage opt-out/deletion consent requests.",
-        "An Email Opt-Out field syncing daily is a narrower, marketing-specific mechanism, not the platform-wide consent API Data Cloud provides.",
-        "Manual deletion by an admin isn't a systematic, API-driven consent mechanism."
+        "Encryption protects data but does not by itself record a person’s consent choices.",
+        "A single email field does not cover all consent and privacy information across sources.",
+        "Manual deletion alone does not provide a scalable configured privacy process."
       ]
     },
     {
-      "question": "What is the role of a Data Cloud Consultant on an implementation project?",
+      "question": "What work may a Data 360 Consultant perform on an implementation?",
       "options": [
-        "Designing the data ingestion architecture, configuring Identity Resolution, building segments, setting up activations, and advising customers on data governance strategy",
-        "Administering the Salesforce org's sharing model and permission sets for Data Cloud users",
-        "Writing Apex triggers to ingest data directly into Data Cloud from Salesforce Platform Events",
-        "Managing the Marketing Cloud account and creating email campaigns from Data Cloud segments"
+        "Plan a Data 360 implementation",
+        "Manage org sharing and Data 360 user permissions",
+        "Write Apex triggers for all platform event ingestion",
+        "Create marketing emails from activated segments"
       ],
       "correctAnswer": 0,
-      "explanation": "Data Cloud Consultants lead the full data platform implementation, from source mapping and ingestion through to identity resolution, segmentation, activation, and governance advisory.",
+      "explanation": "A consultant helps design and configure the end-to-end data workflow, including ingestion, unification, activation, and governance.",
       "whyWrong": [
-        "Administering sharing/permission sets is a general Salesforce admin task, not specific to Data Cloud consulting.",
-        "Writing Apex triggers for ingestion is a developer task, not the consultant's typical implementation-and-advisory role.",
-        "Managing Marketing Cloud campaigns is a narrower marketing execution task, not the broader Data Cloud consulting role described."
+        "User and record access can be part of the project, but it does not describe the full consulting role.",
+        "Custom Apex is not the only or default way to ingest source data into Data 360.",
+        "Email campaign creation is a downstream marketing task rather than the full consulting scope."
       ]
     },
     {
-      "question": "What is a Data Action in Salesforce Data Cloud?",
+      "question": "What is a Data Action used for?",
       "options": [
-        "A custom validation rule that prevents incorrectly formatted records from being ingested",
-        "An automated Flow triggered when a new Data Stream ingestion job completes",
-        "A batch export job that sends Data Cloud records to an external data lake",
-        "A trigger that fires when a profile's segment membership changes, used to initiate downstream processes such as updating a Salesforce record or triggering a Marketing Cloud journey"
+        "A validation rule for malformed records",
+        "A Flow after every ingestion job",
+        "A batch export to an external data lake",
+        "An event trigger for downstream work"
       ],
       "correctAnswer": 3,
-      "explanation": "Data Actions respond to segment entry or exit events, enabling real-time orchestration, for example, creating a Salesforce Task when a customer enters a high-churn-risk segment.",
+      "explanation": "Data Actions can respond to configured events such as a change in segment membership and start downstream processes.",
       "whyWrong": [
-        "A validation rule blocks bad data on entry, that's unrelated to triggering downstream processes on segment changes.",
-        "An ingestion-completion Flow trigger is a different event type from a segment-membership-change Data Action.",
-        "A batch export job moves data out on a schedule, it isn't the same as a real-time segment-membership-based trigger."
+        "Validation and data quality rules serve a different purpose.",
+        "Data Actions are not simply a Flow for every completed ingestion job.",
+        "An export moves data in batches and is different from event-based downstream action."
       ]
     },
     {
-      "question": "What distinguishes Salesforce Data Cloud from a traditional data warehouse?",
+      "question": "How does Data 360 differ from a traditional data warehouse?",
       "options": [
-        "Data Cloud is purpose-built for customer data unification, real-time segmentation, and AI grounding, with native Salesforce integration, Identity Resolution, and activation connectors that data warehouses do not provide out of the box",
-        "Data Cloud requires all data to be pre-processed in an ETL tool before ingestion, unlike data warehouses that accept raw data",
-        "Data Cloud stores data in relational tables exactly like a standard SQL database with no additional capabilities",
-        "Data Cloud cannot handle structured data; it is designed only for unstructured data such as call transcripts"
+        "A scheduled snapshot of prepared customer data",
+        "Requires all data to be transformed before ingestion",
+        "Stores data only in relational tables",
+        "Cannot handle structured customer records"
       ],
       "correctAnswer": 0,
-      "explanation": "Data Cloud is a customer data platform (CDP), built for real-time profile unification, segmentation, and activation. Traditional data warehouses store and query data but lack native identity resolution, activation, and Salesforce CRM integration.",
+      "explanation": "Data 360 is designed to unify customer data and make it available for segmentation, activation, and Salesforce use.",
       "whyWrong": [
-        "Data Cloud can ingest raw data directly, it doesn't require pre-processing through a separate ETL tool first.",
-        "Data Cloud has purpose-built capabilities well beyond a plain relational SQL database, this option denies its actual differentiators.",
-        "Data Cloud explicitly does handle structured data, this option incorrectly restricts it to unstructured data only."
+        "Data 360 includes ingestion and transformation capabilities; external preprocessing is not always required.",
+        "This description overlooks Data 360 data model and activation capabilities.",
+        "Data 360 supports structured customer data as well as the features described in the question."
       ]
     },
     {
-      "question": "Which Data Cloud object represents a unified person record across all sources?",
+      "question": "Which Data 360 object represents the unified person across source systems?",
       "options": [
         "Account",
         "Segment",
-        "Contact Point Email only",
+        "Contact Point Email",
         "Individual"
       ],
       "correctAnswer": 3,
-      "explanation": "The Individual DMO is the unified person record that Identity Resolution creates by stitching together data from multiple sources.",
+      "explanation": "Individual is the data model object representing a person; a unified profile can combine linked information about that person.",
       "whyWrong": [
-        "Account is a Salesforce CRM object, not the Data Cloud unified-person object.",
-        "Segment is a dynamic audience grouping, not the underlying unified person record itself.",
-        "Contact Point Email is one specific contact channel, not the full unified person record."
+        "Accounts represent organizations or customer accounts, not the person object asked for.",
+        "A segment is a group of profiles selected by criteria.",
+        "Contact Point Email represents an email address, not the person."
       ]
     },
     {
-      "question": "What is the purpose of a Data Cloud Data Stream?",
+      "question": "What is the purpose of a Data 360 data stream?",
       "options": [
-        "To create activation destinations",
-        "To run Calculated Insights",
-        "To connect a data source and map incoming records to DMOs for ingestion",
-        "To export segments"
+        "Create activation destinations",
+        "Run calculated insights",
+        "Ingest source data for mapping",
+        "Export completed segments"
       ],
       "correctAnswer": 2,
-      "explanation": "Data Streams define the connection to a source (e.g., Salesforce, external API) and the mapping to Data Cloud objects.",
+      "explanation": "A data stream connects to a source and ingests records that can then be mapped to the data model.",
       "whyWrong": [
-        "Creating activation destinations is a separate configuration step from ingesting and mapping data via a Data Stream.",
-        "Running Calculated Insights happens after data is already ingested, it's not the Data Stream's function.",
-        "Exporting segments is a downstream activation step, not what a Data Stream does at ingestion."
+        "Destinations are configured for activation, after the data preparation and segmentation steps.",
+        "Calculated insights derive measures from data already ingested.",
+        "Exporting segments is activation rather than source ingestion."
       ]
     },
     {
-      "question": "How does Data Cloud support Einstein and Agentforce?",
+      "question": "How can Data 360 support Einstein and Agentforce?",
       "options": [
-        "Only for Marketing Cloud",
-        "By providing unified profiles for grounding, enabling AI to access real customer data",
-        "Only for batch exports",
-        "It does not"
+        "Only supports Marketing Cloud",
+        "Provides unified customer context for AI",
+        "Only supports batch data exports",
+        "Does not support AI use cases"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud grounding lets Einstein and Agentforce access unified customer profiles for accurate, data-backed AI responses.",
+      "explanation": "Unified profiles can provide a consolidated customer context for supported Einstein and Agentforce use cases.",
       "whyWrong": [
-        "Grounding isn't Marketing-Cloud-only, it supports AI features across the Salesforce platform, including Agentforce.",
-        "Grounding isn't limited to batch exports, it's used for real-time AI context.",
-        "Data Cloud explicitly does support Einstein/Agentforce; 'it does not' denies a core integration point."
+        "Data 360 use is not limited to Marketing Cloud.",
+        "This describes how unified data can support AI grounding and context.",
+        "AI use is not limited to batch exports."
+      ]
+    },
+    {
+      "question": "A company has separate business units that each need their own isolated Data 360 data, with no accidental overlap between them. What should a consultant configure?",
+      "options": [
+        "Data spaces", "A single shared dataset for everyone", "A permission set with no restrictions", "A Marketing Cloud business unit only"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Data spaces are organizational containers in Data 360 that isolate data, letting separate business units keep their data apart within the same org.",
+      "whyWrong": [
+        "A single shared dataset is exactly what the company wants to avoid.",
+        "An unrestricted permission set controls access broadly, it doesn't create data isolation by business unit.",
+        "A Marketing Cloud business unit manages Marketing Cloud, not Data 360 data isolation."
+      ]
+    },
+    {
+      "question": "Two incoming records both have the email field populated, but with slightly different spellings of the customer's name. Which type of matching rule is designed to catch this as a likely match?",
+      "options": [
+        "A fuzzy match rule on name + address", "An exact match rule on email only", "No rule can catch this", "A rule based on record creation date"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Fuzzy matching is designed to catch records that are likely the same person despite small variations, like a misspelled name, by matching on a combination of attributes rather than requiring an exact string match.",
+      "whyWrong": [
+        "An exact match rule on email would actually work here too if emails matched exactly, but the question is about handling near-miss name spelling, which is what fuzzy matching is for.",
+        "Fuzzy matching exists specifically to catch cases like this.",
+        "Record creation date has nothing to do with identifying the same real-world person."
+      ]
+    },
+    {
+      "question": "A consultant needs to calculate each customer's total spend over the last 90 days from Data Model Object data. What's used to build that metric?",
+      "options": [
+        "A Calculated Insight, written as a SQL query against DMOs", "A Data Action", "A Data Space", "An Activation Target"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Calculated Insights are SQL-based metrics computed over DMO data, exactly the kind of aggregation needed for a rolling spend total.",
+      "whyWrong": [
+        "A Data Action triggers an event based on a condition, it doesn't compute an aggregated metric.",
+        "A Data Space isolates data, it doesn't calculate anything.",
+        "An Activation Target is a destination for a segment, not a calculation mechanism."
+      ]
+    },
+    {
+      "question": "A client asks whether they should use Data 360 or a narrower, already-existing Salesforce feature to solve a straightforward reporting need. What should the consultant do first?",
+      "options": [
+        "Scope the actual business requirement and recommend the right-sized tool, not default to the newest platform",
+        "Always recommend Data 360 regardless of the requirement",
+        "Tell the client it's impossible without more licenses",
+        "Build the solution before discussing requirements"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Solution Positioning is about matching the actual requirement to the right capability, sometimes that's Data 360, and sometimes an existing, simpler Salesforce feature already covers it.",
+      "whyWrong": [
+        "Defaulting to Data 360 regardless of fit is the opposite of good solution positioning.",
+        "Jumping to \"it's impossible\" without scoping the requirement isn't a real assessment.",
+        "Building before understanding the requirement risks solving the wrong problem."
+      ]
+    },
+    {
+      "question": "A marketing user should be able to view Data 360 segments and insights, but not change ingestion or admin settings. Which permission set fits?",
+      "options": [
+        "Data 360 Marketing Viewer", "Data 360 Admin", "A blank profile with no permission set", "System Administrator"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Marketing Viewer-style permission set gives read access to segments and insights without granting the broader admin and ingestion configuration rights that a Data 360 Admin permission set would include.",
+      "whyWrong": [
+        "Data 360 Admin grants configuration access well beyond what this user needs.",
+        "A blank profile with no permission set would leave the user without even the viewing access required.",
+        "System Administrator is far broader access than the scenario calls for, and isn't the Data 360-specific answer."
       ]
     }
   ]
