@@ -75,22 +75,26 @@ export default function ExperienceCloudExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Administration, Setup, and Configuration</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <span className="font-medium text-gray-900">Sharing, Visibility, and Licensing</span>
-            <span className="font-bold text-salesforce-blue ml-4">28%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Branding, Personalisation and Content</span>
-            <span className="font-bold text-salesforce-blue ml-4">23%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Community Setup and Configuration</span>
             <span className="font-bold text-salesforce-blue ml-4">17%</span>
           </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Adoption and Analytics</span>
-            <span className="font-bold text-salesforce-blue ml-4">12%</span>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Branding, Personalization, and Content</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Sharing + Branding = 51% of the exam. Licence types and sharing sets are your single highest-ROI study topics.</p>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">User Creation and Authentication</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Templates and Themes</span>
+            <span className="font-bold text-salesforce-blue ml-4">10%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">Administration + Sharing = 42% of the exam. Site setup, licence types, and sharing sets are your single highest-ROI study topics.</p>
         </div>
       </section>
 
