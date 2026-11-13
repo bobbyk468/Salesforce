@@ -84,13 +84,13 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'service-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design is 25%. Focus on case management, entitlements, and knowledge.',
+      'Agentforce Service Solution Design is the largest section at 15%, and no section is below 10%, so cover all eight.',
       'Know Omnichannel, queues, case assignment, and escalation.',
       'Understand Knowledge article types, data categories, and deflection.',
       'Practice scenario questions: “Customer wants X; what do you configure?”',
     ],
     prerequisites: ['Salesforce Certified Administrator', 'Service Cloud experience'],
-    focusAreas: ['Solution Design', 'Case and Knowledge Management', 'Omnichannel', 'Service Analytics'],
+    focusAreas: ['Solution Design', 'Intake and Interaction Channels', 'Case Management', 'Knowledge Management', 'Contact Center Analytics'],
     studyStrategy: 'Map exam sections to real Service Cloud features. Build a small service org: cases, knowledge, queues, and a simple flow. Practice explaining design decisions.',
   },
   'developer-1': {

@@ -1191,7 +1191,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'service-cloud': [
     {
       question: 'What topics are most important for the Service Cloud Consultant exam?',
-      answer: 'Solution Design (25%) is the largest section, followed by Case and Knowledge Management, Omnichannel, and Service Analytics. Focus on understanding how to design service solutions that meet business requirements, configure case management, and set up knowledge bases.',
+      answer: 'The exam, now named Agentforce Service Consultant, has eight sections of similar weight. Agentforce Service Solution Design is the largest at 15%, followed by Intake and Interaction Channels, Case Management, and Contact Center Analytics at 13% each. Focus on designing service solutions that meet business requirements, case management, and Knowledge.',
     },
     {
       question: 'Do I need the Platform Administrator certification before Service Cloud Consultant?',
@@ -1199,11 +1199,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the Service Cloud Consultant passing score and exam fee in Summer \'26?',
-      answer: 'The Agentforce Service Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 78%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
+      answer: 'The Agentforce Service Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 78%. The exam fee is $200 USD (retake $100 USD). Up to five unscored questions may be added.',
     },
     {
       question: 'What are the highest-weight sections in the Service Cloud Consultant exam?',
-      answer: 'The top sections by weight are: Service Cloud Solution Design (17%), Case Management (15%), and Contact Center Analytics (16%). Focus on Omni-Channel routing, entitlements and SLAs, Knowledge base setup, case escalation rules, and CTI integration patterns.',
+      answer: 'By weight: Agentforce Service Solution Design (15%); Intake and Interaction Channels, Case Management, and Contact Center Analytics (13% each); Industry Knowledge, Implementation Strategies, and Knowledge Management (12% each); and Integrations (10%). Focus on Omni-Channel routing, entitlements and SLAs, Knowledge setup, case escalation rules, and telephony integration.',
     },
     {
       question: 'What is the difference between Service Cloud Consultant and Platform Administrator?',

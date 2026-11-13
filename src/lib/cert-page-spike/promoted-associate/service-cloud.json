@@ -1,49 +1,49 @@
 {
   "template": "associate",
-  "expertInsight": "The questions that catch people out are usually about entitlement processes and milestones: when a milestone starts, when it pauses, and what happens when a case changes status. Many scenarios also give you several routing tools that would all work, and the right answer is the simplest one that meets the need. Read for the exact requirement, such as by skill, by queue or by customer tier, before choosing between assignment rules, Omni-Channel queues and skills-based routing.",
+  "expertInsight": "Start with the support requirement in each scenario: where the case came from, who should handle it, and what response time applies. Then choose the feature that meets that need. It helps to practice how case routing, entitlements, knowledge, and the Service Console fit into one support process.",
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
   "whoIsThisFor": {
-    "heading": "Who is the Service Cloud Consultant exam for?",
+    "heading": "Who is the Agentforce Service Consultant exam for?",
     "personas": [
       {
-        "label": "Support leads",
-        "description": "You run a support team on Service Cloud and want to show you can design how cases flow, not just work them."
+        "label": "Customer support professionals",
+        "description": "You work with Salesforce Service Cloud and want to show that you can design support processes."
       },
       {
-        "label": "Admins moving into consulting",
-        "description": "You already hold Platform Administrator and want a consultant credential in customer service."
+        "label": "Salesforce administrators",
+        "description": "You configure Salesforce and want to build deeper skills in case management and customer service."
       },
       {
-        "label": "Implementation consultants",
-        "description": "You set up Service Cloud for clients: case handling, routing, knowledge, service levels and self-service."
+        "label": "Service consultants",
+        "description": "You help organizations improve support operations and want to demonstrate your Agentforce Service (formerly Service Cloud) knowledge."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Service Cloud Consultant Exam Hard?",
-    "summary": "Salesforce now calls this credential Agentforce Service Consultant. It is a moderate to hard exam. Many questions offer several reasonable setups, and you have to pick the one that fits the business need best with the least effort.",
+    "heading": "Is the Agentforce Service Consultant Exam Hard?",
+    "summary": "Salesforce renamed Service Cloud Consultant to Agentforce Service Consultant. It is a moderately difficult exam with a high pass mark. Questions often present several reasonable setups and ask you to choose the one that meets the business need with the least effort.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>78% to pass</strong>, about 47 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Prerequisite:</strong> Platform Administrator.",
-      "<strong>Broad scope.</strong> Case management, routing, entitlements, knowledge, the Service Console, self-service and AI features."
+      "<strong>60 scored multiple-choice questions</strong>, plus up to five unscored, in 105 minutes.",
+      "<strong>78% to pass</strong>, or about 47 correct answers out of 60. Check the official exam guide before booking because Salesforce may update exam details.",
+      "<strong>Prerequisite:</strong> the Salesforce Platform Administrator certification.",
+      "<strong>Eight sections, none above 15%.</strong> Topics run from industry knowledge and implementation to channels, case management, knowledge, analytics, and integrations."
     ],
-    "passRateGuidance": "People who have set up a service org from start to finish do best. Before you book. Aim for 90% or more on practice tests and make sure you can explain when to use each routing option."
+    "passRateGuidance": "Hands-on experience setting up a service org can help. Before booking, aim for at least 90% on practice tests and make sure you can explain when to use each routing option."
   },
   "examFormat": {
-    "heading": "Service Cloud Consultant Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a support team with a specific problem, such as missed response times or cases going to the wrong team, and ask for the best setup.",
+    "heading": "Agentforce Service Consultant Exam Format Explained",
+    "intro": "The Agentforce Service Consultant exam focuses on choosing and configuring features for customer support teams.",
+    "scenarioPercent": "Many questions describe a customer support process and ask you to select the right setup. Look for details such as how cases arrive, how quickly they need a response, and which agents should handle them.",
     "bestWayToPass": [
-      "<strong>Know your routing options:</strong> Assignment rules, queues, Omni-Channel and skills-based routing each fit different needs.",
-      "<strong>Learn entitlements well:</strong> Entitlement processes, milestones, and what starts, pauses and completes them.",
-      "<strong>Understand knowledge:</strong> Article types, data categories, and how articles reach agents, bots and customers.",
-      "<strong>Know the agent tools:</strong> Service Console, macros, quick text and case feed."
+      "<strong>Practice case management:</strong> Review case channels, assignment rules, escalation rules, and support processes.",
+      "<strong>Compare routing options:</strong> Know when to use queues, skills-based routing, or an Omni-Channel flow.",
+      "<strong>Study service commitments:</strong> Learn how entitlements, milestones, and milestone actions track support targets.",
+      "<strong>Understand agent and customer tools:</strong> Review Salesforce Knowledge, Service Console features, and self-service options."
     ]
   },
   "certificationCard": {
     "code": "SVC",
-    "description": "This exam tests how you design Service Cloud solutions: case handling, routing, service levels, knowledge, the agent console and customer self-service. The exam is 60 scored questions in 105 minutes, with a 78% pass mark, weighted towards Agentforce Service Solution Design (15%) and Intake and Interaction Channels (13%).",
+    "description": "This exam tests how to design Service Cloud solutions for case handling, routing, service levels, knowledge, the agent console, and customer self-service. The exam is 60 scored questions in 105 minutes, with a 78% pass mark, weighted towards Agentforce Service Solution Design (15%) and Intake and Interaction Channels (13%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "78%",
@@ -51,66 +51,64 @@
       "cost": "$200"
     },
     "topics": [
-      "Service Cloud Solution Design",
-      "Case Management",
+      "Industry Knowledge",
+      "Implementation Strategies",
+      "Solution Design",
       "Knowledge Management",
-      "Omni-Channel",
-      "Service Console",
-      "Entitlements & SLAs",
-      "Service Analytics",
-      "Communities for Service",
-      "Field Service",
-      "Integration"
+      "Intake and Interaction Channels",
+      "Case Management",
+      "Contact Center Analytics",
+      "Integrations"
     ]
   },
   "keyConcepts": {
-    "h2": "Service Cloud Consultant: Key Concepts for the Exam",
+    "h2": "Agentforce Service Consultant: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Case Management: Origins, Assignment, and Escalation",
-        "body": "Cases can come in through email (**Email-to-Case**), web forms (**Web-to-Case**), phone, chat, messaging and self-service sites. The **case origin** field records the channel. **Assignment rules** decide which user or queue gets a new case, based on its fields. **Escalation rules** move cases or alert people if they stay open too long. **Auto-response rules** send the customer a first reply. Record types and support processes let different teams use different case statuses."
+        "heading": "Case Intake, Assignment, and Escalation",
+        "body": "Cases can arrive by email through **Email-to-Case**, from forms through **Web-to-Case**, or through phone, chat, messaging, and self-service sites. The **case origin** field records the channel. **Assignment rules** use case fields to send new cases to a user or queue. **Escalation rules** can move a case or alert someone when it stays open too long. **Auto-response rules** send an initial reply to the customer. Record types and support processes let different teams use different case statuses."
       },
       {
-        "heading": "Entitlements, Milestones, and Service Contracts",
-        "body": "**Entitlements** say what support a customer is owed, such as phone support with a four-hour response. **Entitlement processes** are timelines of **milestones**, like first response and resolution, each with a time limit. **Milestone actions** send warnings or escalate when a milestone is close to or past its limit. Milestones can pause, for example while waiting on the customer, if the process is set up that way. **Service contracts** group entitlements for a customer, and can be linked to assets."
+        "heading": "Entitlements, Milestones, and Contracts",
+        "body": "**Entitlements** describe the support a customer is owed, such as phone support with a four-hour response target. An **entitlement process** tracks **milestones**, such as first response or resolution, against time limits. **Milestone actions** can send a warning or escalate a case as a deadline approaches or passes. A milestone can pause while waiting for the customer if the process is configured that way. **Service contracts** can group a customer’s entitlements and link them to assets."
       },
       {
-        "heading": "Omni-Channel: Routing Models and Agent Capacity",
-        "body": "**Omni-Channel** pushes work to available agents instead of agents picking from a list. **Queue-based routing** offers work to members of a queue. **Skills-based routing** matches work to agents with the right skills, like language or product. **Omni-Channel flows** let you route with logic. **Capacity** limits how much work an agent gets at once, and each work item uses some of that capacity. **Presence statuses** show what kind of work an agent can take. Omni Supervisor shows queues and agents in real time."
+        "heading": "Omni-Channel Routing and Agent Capacity",
+        "body": "**Omni-Channel** routes work to agents who are available, instead of requiring them to pick work from a list. **Queue-based routing** offers work to queue members. **Skills-based routing** matches work to agents with skills such as a language or product area. **Omni-Channel flows** can apply routing logic. **Capacity** limits how much work an agent handles at once; each work item uses some of that capacity. **Presence statuses** show what kinds of work an agent can accept. Omni Supervisor provides a live view of queues and agents."
       },
       {
-        "heading": "Knowledge Management: Articles, Data Categories, and Case Deflection",
-        "body": "**Salesforce Knowledge** stores articles that answer common questions. Articles go through draft, review and publish stages, and can be shown internally, to customers, to partners or publicly. **Data categories** organise articles and control who sees which ones. Agents see suggested articles on cases and can attach them. Customers find articles on help sites, and bots can suggest them in chat. When customers solve problems themselves, it is called **deflection**."
+        "heading": "Knowledge and Case Deflection",
+        "body": "In Service Cloud, Knowledge supports case resolution by making approved articles available to agents and customers. Authors move articles through draft, review, and publication; data categories and channel visibility settings control which audiences can access them. Agents can attach or use suggested articles on a case, while help centers and bots support self-service. A case avoided because a customer found the answer is counted as deflection."
       },
       {
-        "heading": "Service Console: Macros, Quick Text, and Einstein Features",
-        "body": "The **Service Console** lets agents work several cases in tabs, with related records alongside. **Macros** run a set of steps, like sending a reply and closing a case, with one click. **Quick text** inserts standard phrases. The **case feed** shows the history of emails, calls and updates in one place. AI features, including Einstein and Agentforce, can classify cases, suggest replies and articles, and summarise conversations, helping agents work faster."
+        "heading": "Service Console Tools",
+        "body": "The **Service Console** lets agents work on several cases in tabs and view related records alongside them. **Macros** run a set of steps, such as sending a reply and closing a case. **Quick Text** inserts reusable phrases. The **case feed** shows emails, calls, and updates together. AI features, including Einstein and Agentforce, can classify cases, suggest replies or articles, and summarize conversations."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Service Cloud Consultant Exam",
-    "intro": "Most questions give a support team, a problem, and several setups that might work. Choose the one that meets the exact need most simply.",
+    "h2": "How to Pass the Agentforce Service Consultant Exam",
+    "intro": "For each question, identify the support team’s problem and choose the simplest setup that meets its requirements.",
     "blocks": [
       {
-        "heading": "Case Routing: Which Tool When",
-        "body": "Assignment rules for simple field-based assignment. Omni-Channel queues to push work to available agents. Skills-based routing when agents differ by skill."
+        "heading": "Choose a Case Routing Tool",
+        "body": "Use assignment rules for field-based assignment. Use Omni-Channel to push work to available agents. Use skills-based routing when cases need agents with particular skills."
       },
       {
-        "heading": "Knowledge Management",
-        "body": "Use data categories to control who sees articles. Publish to the right audience: internal, customer, partner or public."
+        "heading": "Make Knowledge Available",
+        "body": "Use data categories to organize articles and control access. Publish each article to the correct audience: internal users, customers, partners, or the public."
       },
       {
-        "heading": "Entitlements & SLAs",
-        "body": "Entitlement processes hold milestones with time limits. Milestone actions warn or escalate before limits are missed."
+        "heading": "Track Service Targets",
+        "body": "Entitlement processes define milestones and their time limits. Milestone actions can warn or escalate when a target is close or has been missed."
       },
       {
-        "heading": "Omni-Channel Configuration",
-        "body": "Set capacity and item size so agents get a manageable amount of work. Use presence statuses for each channel."
+        "heading": "Set Omni-Channel Capacity",
+        "body": "Configure capacity and work item size so agents receive a manageable workload. Set presence statuses to show which work each agent can accept."
       },
       {
-        "heading": "Self-Service & Deflection",
-        "body": "Help sites with good knowledge articles and bots answer simple questions, so agents can focus on harder ones."
+        "heading": "Support Self-Service",
+        "body": "Knowledge articles on help sites and answers from bots can resolve simple questions, leaving agents more time for complex issues."
       }
     ]
   },
@@ -150,243 +148,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Support emails should automatically become cases in Salesforce. What should be set up?",
+      "question": "A company wants incoming support emails to create Cases automatically. What should it set up?",
       "options": [
         "Email-to-Case",
-        "A Knowledge article",
-        "Escalation rules",
-        "Web-to-Lead"
+        "Web-to-Case",
+        "Case auto-response rules",
+        "Omni-Channel routing"
       ],
       "correctAnswer": 0,
-      "explanation": "Email-to-Case turns incoming support emails into cases.",
+      "explanation": "Email-to-Case turns emails sent to a support address into Cases and keeps later replies on the same Case.",
       "whyWrong": [
-        "Articles answer questions, they don't create cases.",
-        "Escalation rules act on cases that already exist.",
-        "Web-to-Lead creates leads from a web form."
+        "Web-to-Case creates Cases from a website form, not from email.",
+        "Auto-response rules reply to the customer; they do not create the Case.",
+        "Omni-Channel routes work that already exists; it does not turn email into Cases."
       ]
     },
     {
-      "question": "Gold customers must get a first response within one hour, and managers should be warned at 45 minutes. What should be used?",
+      "question": "Gold customers need a first response within one hour. Managers should get a warning after 45 minutes. What should the company set up?",
       "options": [
-        "An assignment rule",
-        "An entitlement process with a first response milestone and a warning action",
-        "A validation rule",
-        "A queue only"
+        "A case escalation rule that reassigns every Gold case after one hour has passed",
+        "An entitlement process with a first-response milestone and a warning action",
+        "An auto-response rule that emails the customer as soon as the case is created",
+        "A queue for Gold customers with a report subscription sent to managers hourly"
       ],
       "correctAnswer": 1,
-      "explanation": "Milestones track time limits, and milestone actions can warn before the limit is reached.",
+      "explanation": "An entitlement process tracks milestones such as first response against a time limit, and milestone warning actions fire before the deadline passes.",
       "whyWrong": [
-        "Assignment rules decide who gets the case, not response times.",
-        "Validation rules check data on save.",
-        "A queue holds cases but doesn't track service levels."
+        "An escalation rule acts on case age; it does not track a first-response target with a warning before the deadline.",
+        "An automatic reply does not track whether an agent responded in time.",
+        "An hourly report cannot warn at the 45-minute mark for each case."
       ]
     },
     {
-      "question": "Cases should be pushed to the next available agent, with each agent handling up to three at a time. What fits?",
+      "question": "Cases should go to the next available agent, and each agent can handle up to three at a time. What should the company use?",
       "options": [
-        "Escalation rules",
-        "Manual case picking from a list view",
-        "Omni-Channel with queue-based routing and agent capacity",
-        "Assignment rules only"
+        "Case assignment rules that rotate through a user list",
+        "A shared list view that agents refresh to pick up work",
+        "Omni-Channel queue-based routing with agent capacity",
+        "Escalation rules that reassign cases after ten minutes"
       ],
       "correctAnswer": 2,
-      "explanation": "Omni-Channel pushes work to available agents and uses capacity to limit how much each one gets.",
+      "explanation": "Omni-Channel pushes work to available agents and uses capacity to limit how many items each agent handles at once.",
       "whyWrong": [
-        "Escalation rules handle overdue cases.",
-        "Picking from a list isn't push routing and lets agents cherry-pick.",
-        "Assignment rules assign once and don't check availability or capacity."
+        "Assignment rules set an owner from case fields; they do not check availability or capacity.",
+        "A list view relies on agents choosing work; nothing limits how much each one takes.",
+        "Escalation rules act on case age, not on agent availability."
       ]
     },
     {
-      "question": "French-speaking customers must be routed to agents who speak French. What should be used?",
+      "question": "French-speaking customers must be routed to agents who speak French. Which routing method fits?",
       "options": [
-        "Macros",
-        "Auto-response rules",
-        "Queue-based routing to one shared queue",
+        "Queue-based routing",
+        "Case escalation rules",
+        "Web-to-Case",
         "Skills-based routing"
       ],
       "correctAnswer": 3,
-      "explanation": "Skills-based routing matches work to agents who have the required skill, such as French.",
+      "explanation": "Skills-based routing matches each work item to an agent who has the required skill, such as a language.",
       "whyWrong": [
-        "Macros speed up agent steps.",
-        "Auto-response rules send replies to customers.",
-        "One shared queue offers work to anyone."
+        "A queue offers work to all of its members; it does not match on an individual agent's skills.",
+        "Escalation rules act on case age, not on language.",
+        "Web-to-Case creates Cases from a form; it does not route them by skill."
       ]
     },
     {
-      "question": "A case has been open for 48 hours with no update. A manager should be alerted. What should be configured?",
+      "question": "A Case has been open for 48 hours without an update. A manager should be notified. What should be set up?",
       "options": [
-        "An escalation rule",
-        "Web-to-Case",
-        "A data category",
-        "An auto-response rule"
+        "A case escalation rule",
+        "A case assignment rule",
+        "A case auto-response rule",
+        "A Knowledge data category"
       ],
       "correctAnswer": 0,
-      "explanation": "Escalation rules act when cases stay open too long, for example by reassigning or notifying someone.",
+      "explanation": "An escalation rule can notify someone or reassign a Case when it has stayed open past a set time.",
       "whyWrong": [
-        "Web-to-Case creates cases from forms.",
-        "Data categories organise knowledge.",
-        "Auto-response rules reply to customers when cases are created."
+        "An assignment rule sets the first owner when a Case is created.",
+        "An auto-response rule replies to the customer; it does not alert a manager about an ageing Case.",
+        "Data categories organize articles and control who sees them."
       ]
     },
     {
-      "question": "Customers should find answers on a help site before contacting support. What is the core feature?",
+      "question": "Customers should be able to find answers on a help site before contacting support. What should the company provide?",
       "options": [
-        "Case teams",
-        "Knowledge articles published to the public or customer audience",
-        "Escalation rules",
-        "Assignment rules"
+        "Macros that agents run from the Service Console",
+        "Knowledge articles published to the help site",
+        "Quick Text snippets for common agent replies",
+        "An escalation rule for cases left unanswered"
       ],
       "correctAnswer": 1,
-      "explanation": "Published knowledge articles let customers solve problems themselves, which deflects cases.",
+      "explanation": "Publishing Knowledge articles to a customer-facing site lets people find answers themselves, which deflects Cases.",
       "whyWrong": [
-        "Case teams group people working a case.",
-        "Escalation rules handle overdue cases.",
-        "Assignment rules route cases."
+        "Macros save agents time; customers cannot use them.",
+        "Quick Text is an agent tool for inserting standard wording.",
+        "An escalation rule acts after a Case exists; it does not help customers serve themselves."
       ]
     },
     {
-      "question": "Some knowledge articles are for the partner portal only. How is access controlled?",
+      "question": "Some Knowledge articles should appear only in the partner portal. How should access be controlled?",
       "options": [
-        "Case priority",
-        "Article visibility settings and data categories",
-        "Deleting the articles",
-        "A separate org"
+        "Topics added to each partner-facing article",
+        "A separate record type for partner articles",
+        "Data categories and channel visibility settings",
+        "A validation rule on the article title field"
       ],
-      "correctAnswer": 1,
-      "explanation": "Article visibility and data categories decide which audiences can see each article.",
+      "correctAnswer": 2,
+      "explanation": "Channel settings decide where an article appears, and data category visibility decides which users can see it.",
       "whyWrong": [
-        "Case priority doesn't affect articles.",
-        "Deleting removes them for partners too.",
-        "A separate org is unnecessary."
+        "Topics help with search and navigation; they do not control who can see an article.",
+        "A record type sets an article's layout and fields, not its audience.",
+        "A validation rule checks data on save; it does not control visibility."
       ]
     },
     {
-      "question": "Agents repeat the same three steps when closing billing cases: send a standard email, set a status, and close. What saves time?",
+      "question": "Agents repeat the same steps to close billing Cases: send a standard email, update the status, and close the Case. What can save time?",
       "options": [
-        "A milestone",
+        "A dashboard",
         "A data category",
-        "An assignment rule",
+        "An entitlement",
         "A macro"
       ],
       "correctAnswer": 3,
-      "explanation": "Macros run several steps with one click.",
+      "explanation": "A macro runs a saved set of steps on a Case with one click, such as sending an email and updating the status.",
       "whyWrong": [
-        "Milestones track time limits.",
-        "Data categories organise articles.",
-        "Assignment rules route cases."
+        "A dashboard displays metrics; it does not perform steps on a Case.",
+        "Data categories classify Knowledge articles.",
+        "An entitlement describes the support a customer is owed."
       ]
     },
     {
-      "question": "Agents want to see the full history of emails, calls and changes on a case in one place. What should they use?",
+      "question": "Agents want to see emails, calls, and changes related to a Case in one place. What should they use?",
       "options": [
-        "Setup Audit Trail",
         "The case feed",
-        "A report folder",
-        "A dashboard"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The case feed shows a timeline of activity on the case.",
-      "whyWrong": [
-        "Audit Trail tracks setup changes.",
-        "A report folder stores reports.",
-        "Dashboards summarise many records."
-      ]
-    },
-    {
-      "question": "A customer replies that they need a week to gather information. The resolution milestone shouldn't count that time. What should be set up?",
-      "options": [
-        "Pause the milestone while the case is in a waiting-on-customer status",
-        "Lower the case priority",
-        "Close the case",
-        "Delete the milestone"
+        "The Omni Supervisor tab",
+        "The Knowledge sidebar",
+        "The entitlements list"
       ],
       "correctAnswer": 0,
-      "explanation": "Entitlement processes can stop the clock for certain case statuses, so waiting time isn't counted.",
+      "explanation": "The case feed shows a Case's emails, call logs, posts, and field changes in one timeline.",
       "whyWrong": [
-        "Priority doesn't stop milestone timers.",
-        "Closing the case ends support too early.",
-        "Deleting the milestone stops tracking entirely."
+        "Omni Supervisor shows queues and agents to supervisors, not one Case's history.",
+        "The Knowledge sidebar suggests articles; it does not show the Case's history.",
+        "The entitlements list shows what support the customer is owed."
       ]
     },
     {
-      "question": "A customer has a contract covering phone and email support for three of their products. How should this be represented?",
+      "question": "A customer needs a week to gather information. The resolution timer should stop during that wait. What should be configured?",
       "options": [
-        "Three separate Accounts",
-        "A Lead",
+        "Delete the entitlement and add it back when the customer replies",
+        "Pause the milestone while the case is waiting on the customer",
+        "Close the case and open a new one once the customer has replied",
+        "Raise the agent's Omni-Channel capacity for the rest of the week"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An entitlement process can pause milestone timers while a Case has a status such as waiting on customer.",
+      "whyWrong": [
+        "Removing the entitlement loses the tracking history.",
+        "Closing and reopening splits the history of one issue across two Cases.",
+        "Capacity controls how much work an agent takes; it has no effect on milestone timers."
+      ]
+    },
+    {
+      "question": "A customer has a contract for phone and email support for three products. How should this be represented?",
+      "options": [
+        "A queue with three public groups",
+        "A case record type for each product",
         "A service contract with entitlements",
-        "A Campaign"
+        "A Knowledge article for each product"
       ],
       "correctAnswer": 2,
-      "explanation": "Service contracts group the entitlements a customer has bought.",
+      "explanation": "A service contract represents the agreement with the customer, and its entitlements define the support that agreement includes.",
       "whyWrong": [
-        "Three Accounts split one customer.",
-        "Leads are prospects.",
-        "Campaigns are for marketing."
+        "Queues and groups route and share work; they do not record what a customer is owed.",
+        "Record types change the case process and layout, not the customer's support terms.",
+        "Articles hold answers, not contract terms."
       ]
     },
     {
-      "question": "Agents work on several cases at once and need related records side by side. Which interface fits?",
+      "question": "Agents handle several Cases at once and need related records open beside them. Which interface is designed for this work?",
       "options": [
-        "The Developer Console",
-        "Setup",
-        "A standard app with one tab per page",
+        "The Kanban list view",
+        "The Report Builder",
+        "The Setup home page",
         "The Service Console"
       ],
       "correctAnswer": 3,
-      "explanation": "The Service Console lets agents work in tabs and subtabs with related records alongside.",
+      "explanation": "The Service Console opens records in tabs and subtabs so agents can work on several Cases and see related records alongside them.",
       "whyWrong": [
-        "The Developer Console is for code.",
-        "Setup is for admins.",
-        "A standard app is slower for multi-tasking."
+        "Kanban shows records as cards in columns; it is not a multi-record workspace.",
+        "Report Builder creates reports.",
+        "Setup is where admins configure the org."
       ]
     },
     {
-      "question": "When a case is created, the customer should get an email confirming receipt with a case number. What should be configured?",
+      "question": "When a Case is created, the customer should receive an email confirming it and showing the Case number. What should be set up?",
       "options": [
-        "A macro",
-        "A milestone action",
-        "An auto-response rule",
-        "An escalation rule"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Auto-response rules send a reply to the customer when a case is created.",
-      "whyWrong": [
-        "Macros are run by agents.",
-        "Milestone actions act on time limits.",
-        "Escalation rules act on overdue cases."
-      ]
-    },
-    {
-      "question": "A supervisor needs to see live wait times and agent status across queues. What should they use?",
-      "options": [
-        "A monthly report",
-        "Data Loader",
-        "Omni Supervisor",
-        "Setup Audit Trail"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Omni Supervisor shows real-time queue and agent information and lets supervisors reassign work.",
-      "whyWrong": [
-        "Monthly reports aren't live.",
-        "Data Loader moves data.",
-        "Audit Trail tracks setup changes."
-      ]
-    },
-    {
-      "question": "A company wants AI to suggest the case category and the best reply to agents. What should they look at?",
-      "options": [
-        "Einstein and Agentforce service AI features",
-        "Assignment rules",
-        "Validation rules",
-        "Escalation rules"
+        "A case auto-response rule",
+        "A case assignment rule",
+        "A case escalation rule",
+        "An entitlement milestone"
       ],
       "correctAnswer": 0,
-      "explanation": "Service AI features can classify cases, suggest replies and summarise conversations.",
+      "explanation": "An auto-response rule sends an email template to the customer when a Case is created, and the template can include the Case number.",
       "whyWrong": [
-        "Assignment rules route cases.",
-        "Validation rules check data.",
-        "Escalation rules handle overdue cases."
+        "An assignment rule sets the owner; it does not email the customer.",
+        "An escalation rule acts on case age.",
+        "A milestone tracks a time target; it does not send the confirmation email."
+      ]
+    },
+    {
+      "question": "A supervisor needs to see current queue wait times and agent status. What should they use?",
+      "options": [
+        "Case assignment rules",
+        "Omni Supervisor",
+        "Knowledge data categories",
+        "Entitlement milestones"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Omni Supervisor gives a live view of agents, queues, and work items.",
+      "whyWrong": [
+        "Assignment rules set case owners; they do not show live status.",
+        "Data categories classify articles.",
+        "Milestones track time targets on individual Cases."
+      ]
+    },
+    {
+      "question": "A company wants routine order-status questions answered at any hour, with a handoff to a person when needed. What fits?",
+      "options": [
+        "A macro that agents run when an order question arrives",
+        "An auto-response rule that sends the same reply to all",
+        "An Agentforce service agent with escalation to a human",
+        "A dashboard that counts order questions for each week"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An AI service agent can handle routine requests around the clock and pass the conversation to a human when it falls outside its scope.",
+      "whyWrong": [
+        "A macro still needs a person on shift to run it.",
+        "A fixed reply cannot look up an individual order.",
+        "A dashboard reports on volume; it does not answer customers."
+      ]
+    },
+    {
+      "question": "A contact center wants more issues solved in the customer's first interaction. Which metric tracks this?",
+      "options": [
+        "Average handle time",
+        "Average speed of answer",
+        "Agent occupancy rate",
+        "First contact resolution"
+      ],
+      "correctAnswer": 3,
+      "explanation": "First contact resolution is the share of issues resolved in the first interaction, with no follow-up needed.",
+      "whyWrong": [
+        "Handle time measures how long an interaction takes, not whether it solved the issue.",
+        "Speed of answer measures how long customers wait to reach an agent.",
+        "Occupancy measures how much of an agent's time is spent on work."
+      ]
+    },
+    {
+      "question": "A new console is rolling out to 400 agents across three shifts. Which approach is most likely to succeed?",
+      "options": [
+        "Pilot with one team, then train each shift before its go-live",
+        "Switch every agent over on the same day with no pilot or training",
+        "Train supervisors only and let agents learn during live calls",
+        "Send a recorded demo to all agents a month after the launch"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A pilot surfaces problems with a small group, and training each shift before it goes live supports adoption.",
+      "whyWrong": [
+        "A single cutover with no pilot leaves no chance to catch problems early.",
+        "Agents are the main users and need training before they take live work.",
+        "Training that arrives after launch is too late."
+      ]
+    },
+    {
+      "question": "What is the core idea of Knowledge-Centered Service (KCS)?",
+      "options": [
+        "A separate team writes every article before the launch date",
+        "Agents create and improve articles as they resolve cases",
+        "Articles are locked after publishing and never revised",
+        "Customers may read articles only after opening a case"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In KCS, knowledge is captured and updated as part of solving each issue, so the knowledge base improves through daily use.",
+      "whyWrong": [
+        "KCS makes knowledge part of case work rather than a separate up-front project.",
+        "KCS expects articles to be improved each time they are used.",
+        "KCS supports self-service; it does not require a Case first."
+      ]
+    },
+    {
+      "question": "Executives want a monthly view of case volume and satisfaction, while supervisors need live queue status. What should the consultant provide?",
+      "options": [
+        "One tabular report of every open case, shared with both groups by email",
+        "A list view of closed cases that each group filters by date",
+        "A dashboard for executives and Omni Supervisor for supervisors",
+        "An email alert to both groups whenever a case is escalated"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Different stakeholders need different views: dashboards summarize trends over time, and Omni Supervisor shows live queue and agent status.",
+      "whyWrong": [
+        "A list of open cases gives neither a monthly trend nor a live queue view.",
+        "A list view does not summarize trends or show live queues.",
+        "Alerts report single events, not volume, satisfaction, or queue status."
+      ]
+    },
+    {
+      "question": "Agents should answer phone calls inside Salesforce and see the caller's record appear. A third-party phone system is already in place. What should the consultant consider?",
+      "options": [
+        "Web-to-Case forms that capture each caller's phone details",
+        "Email-to-Case with a dedicated routing address",
+        "A Knowledge data category for phone questions",
+        "Open CTI to connect the phone system to Salesforce"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Open CTI lets a third-party telephony system work inside Salesforce, including a softphone and screen pops for the caller's record.",
+      "whyWrong": [
+        "Web-to-Case handles website forms, not phone calls.",
+        "Email-to-Case handles email, not phone calls.",
+        "Data categories classify articles; they do not connect a phone system."
       ]
     }
   ]

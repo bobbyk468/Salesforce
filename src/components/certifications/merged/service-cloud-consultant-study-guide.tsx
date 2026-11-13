@@ -1,282 +1,158 @@
-/* Ported from /service-cloud-consultant-study-guide, merged into /certifications/service-cloud in November 2026.
- * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
- * header) was dropped because the hub page already provides it. */
+/* Agentforce Service Consultant (formerly Service Cloud Consultant) study guide,
+ * merged into /certifications/service-cloud. Consolidated November 2026 from the
+ * old /service-cloud-consultant-study-guide and /service-cloud-consultant-exam-tips
+ * pages into one flow. Section names and weights follow
+ * EXAM_WEIGHTAGE['service-cloud'] in src/lib/exam-weightage-data.ts, which is
+ * verified against the official guide. */
 import Link from '@/components/AppLink'
-import { Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
-import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
-import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { BookOpen, Target } from 'lucide-react'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
-import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
-import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
-import CertInsightBlock from '@/components/CertInsightBlock'
-import CredentialSchema from '@/components/CredentialSchema'
-import ExamPricingCard from '@/components/ExamPricingCard'
-import LastUpdated from '@/components/LastUpdated'
 
+const EXAM_GUIDE_URL = 'https://help.salesforce.com/s/articleView?id=005298989&language=en_US&type=1'
 
-
-
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const slug = 'service-cloud'
-
-const pageTitle = buildStudyGuideTitle(slug)
-const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription = `Service Cloud Consultant study guide: review Omni-Channel, entitlements, cases, and knowledge topics for exam preparation.`
-
-export const faqItems = [
+const examSections: Array<{ name: string; weight: number; body: string }> = [
   {
-    question: 'What is the Service Cloud Consultant exam format?',
-    answer: 'The Service Cloud Consultant (now Agentforce Service Consultant) exam has 60 multiple-choice questions, a 105-minute time limit, a 78% passing score, and a $200 fee ($100 retake). ADM-201 certification is strongly recommended, and 2+ years of Service Cloud implementation experience is expected. The exam tests your ability to design and implement omnichannel customer service solutions.',
+    name: 'Agentforce Service Solution Design',
+    weight: 15,
+    body: 'Analyze customer requirements and choose a design, weighing capabilities, limitations, and trade-offs for both the service agent experience and the customer experience. Given security and compliance requirements, decide how to secure customer data.',
   },
   {
-    question: 'What are the highest-weight Service Cloud Consultant exam sections?',
-    answer: 'Agentforce Service Solution Design (15%) is the largest section, it tests your ability to design service architectures for complex requirements. Intake and Interaction Channels (13%), Case Management (13%) and Contact Center Analytics (13%) follow close behind. The weightings are unusually flat: no section is worth less than 10%, so you cannot safely skip one.',
+    name: 'Intake and Interaction Channels',
+    weight: 13,
+    body: 'Recommend intake channels such as Email-to-Case, Web-to-Case, phone, chat, and messaging, and know the design considerations for each. This section also covers when to use AI agents in the service process, and how agentic service capabilities are configured.',
   },
   {
-    question: 'What is Omni-Channel in Service Cloud and why is it tested heavily?',
-    answer: 'Omni-Channel is Salesforce’s unified routing engine that distributes work (cases, chats, leads, custom objects) to agents based on their availability, capacity, and skills. The exam tests: routing models (queue-based routing, first-in-first-out to a queue; skills-based routing, match work to agents with the right skill set; external routing, route through third-party CTI), agent capacity (size-based vs tab-based), and presence statuses. Omni-Channel is one of the most commonly failed topics because it has many configuration nuances.',
+    name: 'Case Management',
+    weight: 13,
+    body: 'Design case handling from creation to closure: assignment, escalation, and auto-response rules, queues, and Omni-Channel routing. Know how case deflection is delivered through Experience Cloud sites, Agentforce, and Knowledge, and how entitlements, milestones, assets, business hours, and SLAs are configured.',
   },
   {
-    question: 'How does entitlement management work in Service Cloud?',
-    answer: 'Entitlements define the level of support a customer is entitled to (e.g., 24/7 phone support, 4-hour response SLA). An Entitlement Process defines the series of time-dependent milestones that must be completed for each case. Milestones are checkpoints (e.g., "First Response within 2 hours") that trigger escalation actions if breached. The exam tests: entitlement templates (auto-assign entitlements to cases), milestone actions (notifications and escalation), and how entitlements relate to Accounts, Contacts, and Assets.',
+    name: 'Contact Center Analytics',
+    weight: 13,
+    body: 'Build reports and dashboards that give each stakeholder the information they need, from executives tracking volume and satisfaction to supervisors watching queues.',
   },
-]
-
-const examSections = [
-  // Verified 4 November 2026 against the official exam guide:
-  // help.salesforce.com/s/articleView?id=005298989 — the credential was renamed
-  // Agentforce Service Consultant on 24 July 2026 and has eight sections.
-  { name: 'Agentforce Service Solution Design', weight: 15, note: 'Designing service architectures, channel strategy (phone, chat, email, social), contact centre design and deployment patterns' },
-  { name: 'Intake and Interaction Channels', weight: 13, note: 'Email-to-Case, web-to-case, messaging and chat channels, Omni-Channel routing models, agent capacity and presence statuses' },
-  { name: 'Case Management', weight: 13, note: 'Case assignment rules, queues, escalation rules, auto-response rules, case teams, case merge, entitlements and milestones' },
-  { name: 'Contact Center Analytics', weight: 13, note: 'Service reports and dashboards, Omni-Channel Supervisor, KPIs for contact centre performance' },
-  { name: 'Industry Knowledge', weight: 12, note: 'Contact centre terminology, service KPIs, and the business context a consultant is expected to recognise' },
-  { name: 'Implementation Strategies', weight: 12, note: 'Project phasing, discovery, stakeholder management and rollout approach for a service implementation' },
-  { name: 'Knowledge Management', weight: 12, note: 'Lightning Knowledge setup, data categories, article lifecycle (draft, review, publish, archive), Knowledge search' },
-  { name: 'Integrations', weight: 10, note: 'CTI and telephony integration, third-party chat, data migration for service orgs, contact centre data architecture' },
+  {
+    name: 'Industry Knowledge',
+    weight: 12,
+    body: 'Explain what drives contact center metrics and KPIs such as first contact resolution, average handle time, and customer satisfaction, and weigh the risks, benefits, and challenges of meeting a client’s desired outcome.',
+  },
+  {
+    name: 'Implementation Strategies',
+    weight: 12,
+    body: 'Know how to take part in a consulting engagement, recommend deployment and training strategies, and explain the considerations for data migration, data quality, data governance, and large data volumes.',
+  },
+  {
+    name: 'Knowledge Management',
+    weight: 12,
+    body: 'Explain the Knowledge article lifecycle, Knowledge-Centered Service (KCS), and Salesforce Knowledge configuration, including data categories and channel visibility. Configure Knowledge to support both agents and customer self-service.',
+  },
+  {
+    name: 'Integrations',
+    weight: 10,
+    body: 'Explain the use cases and considerations for core service integrations, including telephony (CTI), third-party solutions, and connections to external sources of data.',
+  },
 ]
 
 export default function ServiceCloudConsultantStudyGuideContent() {
   return (
     <div className="mt-12">
-
-
-      <CertInsightBlock certSlug="service-cloud-consultant" />
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Service Cloud Consultant Exam at a Glance</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[
-            { label: 'Questions', value: '60' },
-            { label: 'Time Limit', value: '105 min' },
-            { label: 'Passing Score', value: '78%' },
-            { label: 'Exam Fee', value: '$200' },
-          ].map(({ label, value }) => (
-            <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
-              <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-600 mt-1">{label}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          ADM-201 recommended. Retake fee: $100. Contact centre or customer service implementation experience strongly recommended.
+      <section id="section-deep-dives" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Agentforce Service Consultant Exam Sections: What Each One Tests</h2>
+        <p className="text-sm text-gray-600 mb-5">
+          The eight sections are close in weight, from 15% down to 10%, so none can be skipped. The section names below are the ones in the{' '}
+          <a className="text-salesforce-blue underline" href={EXAM_GUIDE_URL} target="_blank" rel="noreferrer nofollow noopener">
+            official exam guide
+          </a>
+          .
         </p>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Service Cloud Consultant Exam Sections and Weightage</h2>
-        <p className="text-sm text-gray-600 mb-4">
-          Solution Design (15%) + Intake and Interaction Channels (13%) + Case Management (13%) + Contact Center Analytics (13%) = 54% of the exam.
-        </p>
-        <div className="space-y-3">
-          {examSections.map(({ name, weight, note }) => (
+        <div className="space-y-5 text-sm text-gray-700">
+          {examSections.map(({ name, weight, body }) => (
             <div key={name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{name}</span>
-                <span className="text-salesforce-blue font-semibold">{weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
-              </div>
-              <p className="text-xs text-gray-600">{note}</p>
+              <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+                {name} ({weight}%)
+              </p>
+              <p>{body}</p>
             </div>
           ))}
         </div>
+        <p className="text-sm text-gray-700 mt-5 pt-5 border-t border-gray-100">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 78% pass mark.
+        </p>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Actually Tests</h2>
+      <section id="study-plan" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Agentforce Service Consultant Study Plan</h2>
+        <div className="space-y-4 text-sm text-gray-700">
+          <p><strong>Week 1 &mdash; Solution Design (15%) and Industry Knowledge (12%):</strong> Review contact center KPIs and what moves them. Practise turning a set of requirements into a design, noting the trade-offs for agents and for customers.</p>
+          <p><strong>Week 2 &mdash; Intake and Interaction Channels (13%):</strong> Configure Email-to-Case and Web-to-Case in a Developer Edition org. Review phone, chat, and messaging channels, and where an AI service agent fits.</p>
+          <p><strong>Week 3 &mdash; Case Management (13%):</strong> Build assignment, escalation, and auto-response rules. Set up Omni-Channel with a queue, presence statuses, and capacity, then an entitlement process with two milestones and a warning action.</p>
+          <p><strong>Week 4 &mdash; Knowledge Management (12%) and Contact Center Analytics (13%):</strong> Enable Lightning Knowledge, create data categories, and publish an article to a channel. Build a service dashboard for two different audiences.</p>
+          <p><strong>Week 5 &mdash; Implementation Strategies (12%) and Integrations (10%):</strong> Review deployment and training strategies, data migration and large data volumes, and the options for telephony and external data.</p>
+          <p><strong>Week 6 &mdash; Timed practice:</strong> Take full timed mocks (60 questions, 105 minutes) and review every missed question against the official objectives. The pass mark is 78%, about 47 of 60.</p>
+        </div>
+      </section>
+
+      <section id="scenario-rules" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach Agentforce Service Consultant Scenario Questions</h2>
+        <ul className="space-y-3 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Channel questions:</strong> choose the channel that matches how the customer makes contact: Web-to-Case for website forms, Email-to-Case for inbound email, messaging or chat for real-time conversations.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Routing questions:</strong> if agents specialize by product or language, use skills-based routing. If a generalist team shares the work, use queue-based routing.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>SLA questions:</strong> a time target tied to what the customer is owed points to entitlements and milestones. A simple alert based on case age points to an escalation rule. A confirmation to the customer points to an auto-response rule.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Knowledge visibility questions:</strong> channel settings control where an article appears, and data category visibility controls who can see it. If agents see an article and customers do not, check those two before the article status.</span></li>
+        </ul>
+      </section>
+
+      <section id="common-mistakes" className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts Agentforce Service Consultant Candidates Often Mix Up</h2>
         <div className="space-y-5 text-sm text-gray-700">
           <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Service Cloud Solution Design (22%)
-            </p>
-            <p>The largest section tests your ability to design a complete service solution for a business requirement. Key decision frameworks: when to recommend Email-to-Case vs web-to-case vs manually created cases, how to design a channel strategy (which contact channels to enable for which customer segments), and how to architect a contact centre with Salesforce as the CRM layer alongside third-party telephony (CTI). Know the Call Centre feature: integrates with third-party CTI adapters (Five9, Genesys, Amazon Connect) to surface caller information as cases are created. Also know the difference between an inbound service flow (customer initiates contact) vs outbound (agent initiates) and how each is supported in Service Cloud.</p>
+            <h3 className="font-semibold text-gray-900 mb-1">1. Entitlement Process vs. Service Contract vs. Escalation Rule</h3>
+            <p>An entitlement process is the timeline: milestones with time limits and actions. A service contract is the agreement with the customer that entitlements belong to. An escalation rule is separate from both: it acts on case age and does not track what a customer is owed.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Knowledge Management (12%)
-            </p>
-            <p>Salesforce Knowledge is the built-in knowledge base for agent and customer self-service. Key topics: <strong>Lightning Knowledge</strong> (the current standard, single Knowledge object, custom fields per record type; replaces Classic Knowledge’s article types). <strong>Data Categories</strong>: hierarchical categories that control article visibility (which customer communities see which articles, which agents see which internal articles). <strong>Article lifecycle:</strong> draft → In Review → Published → Archived. <strong>Knowledge search:</strong> how articles surface in the Service Console search, in Experience Cloud portals, and in Einstein Search. Know the difference between Lightning Knowledge (record types replace article types) and Classic Knowledge (deprecated but still tested for migrations).</p>
+            <h3 className="font-semibold text-gray-900 mb-1">2. Omni-Channel Routing Models: Least Active vs. Most Available</h3>
+            <p>Least Active sends work to the agent with the least open work. Most Available sends work to the agent with the largest gap between their capacity and their open work. They differ when agents have different capacities.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Intake and Interaction Channels (13%)
-            </p>
-            <p>Omni-Channel routes work items to agents. Know the three routing models: <strong>Queue-based routing</strong>: work items go into a queue, agents pull from the queue or work is pushed based on capacity; <strong>Skills-based routing</strong>: work is matched to agents who have the required skill (routing configurations specify which skill is needed); <strong>External routing</strong>: integration with third-party routing systems (e.g., telephony ACD). <strong>Agent capacity:</strong> Size-based (each work item has a weight; agent receives work until capacity is full) vs Tab-based (each open work item tab counts as 1, regardless of type). <strong>Presence statuses:</strong> define what types of work an agent can receive while in each status. Know that agents can decline work if it is not the right type for their current status.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Case Management (13%)
-            </p>
-            <p>Case routing: Assignment Rules evaluate conditions top-down and assign to a user or queue when criteria match, if no rule matches, the case goes to the default case owner. Escalation Rules: trigger time-based escalations (e.g., if a case is open for 4 hours without a response, escalate to manager). Auto-response rules: send automated email replies to contacts when cases are created via web-to-case or email-to-case. <strong>Email-to-Case:</strong> inbound emails create cases. Know how threading (Reply-To address format) keeps replies associated to the correct case. <strong>Web-to-Case:</strong> HTML form submissions create cases, know field mapping and spam filtering.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Entitlement Management (tested within Case Management)
-            </p>
-            <p>Entitlements link to Accounts (or Contacts, Assets) and define the SLA terms. An <strong>Entitlement Process</strong> defines the milestone sequence, each milestone has a time trigger, completion criteria, and optional actions (warning email at 75% elapsed time, escalation email on breach). <strong>Entitlement Templates</strong> auto-apply an entitlement to a case when the contact, account, or asset has an active entitlement. Know that milestones can be paused (e.g., waiting for customer response) using milestone completion criteria on the case.</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Knowledge Visibility: Data Categories vs. Topics vs. Record Types</h3>
+            <p>Data categories, together with channel settings, control which audiences can see an article. Topics are tags for search and navigation and do not control visibility. Record types define an article’s structure and layout.</p>
           </div>
         </div>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Service Cloud Consultant Study Plan</h2>
-        <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Solution Design (22%):</strong> Study contact centre architecture patterns, channel strategy design, and Salesforce Call Centre + CTI integration concepts. Practice: design a service architecture on paper for a given scenario (e.g., a retail company with email, chat, and phone channels).</p>
-          <p><strong>Week 2: Knowledge Management (18%):</strong> Enable Lightning Knowledge in a Developer Edition org. Create record types, data categories, and the article lifecycle workflow. Configure Knowledge search in the Service Console. Understand the migration path from Classic to Lightning Knowledge.</p>
-          <p><strong>Week 3: Omni-Channel (15%):</strong> Configure Omni-Channel in a sandbox: create a service channel, routing configuration, presence statuses, and queue. Enable skills-based routing. Assign an agent and test work routing. Understand the Omni-Channel Supervisor dashboard for real-time monitoring.</p>
-          <p><strong>Week 4: Case Management (15%):</strong> Configure Email-to-Case (with threading) and Web-to-Case. Build assignment rules, escalation rules, and auto-response rules. Practice: trace a case from web submission through assignment rule routing to escalation.</p>
-          <p><strong>Week 5: Entitlements, Console &amp; Integration (8% + 10% + 12%):</strong> Build an entitlement process with 2 milestones and breach actions. Configure the Service Console: Highlights Panel, utility bar, macros. Study CTI and third-party integration concepts for contact centres.</p>
-          <p><strong>Week 6:</strong> Full timed mock exams. Score 90%+ before booking. Focus revision on Omni-Channel routing configuration; it is the most consistently failed topic.</p>
-        </div>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach Service Cloud Consultant Scenario Questions</h2>
-        <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2">
-            <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Omni-Channel routing questions:</strong> When a scenario requires work to go to the next available agent in a queue (no skill matching), the answer is queue-based routing. When cases must be matched to agents with specific skills (e.g., Spanish-speaking agents for Spanish cases), the answer is skills-based routing. When the routing system is third-party telephony (a call centre ACD), the answer is external routing. Agents must have a Presence Status that includes the relevant service channel, if a status doesn’t include the channel, agents in that status won’t receive that type of work.</span>
-          </li>
-          <li className="flex gap-2">
-            <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Knowledge visibility questions:</strong> Data Categories control which articles are visible to which audiences, internal (agent-only), partner, and customer (public). If a scenario says certain articles should only be visible to premium customers, the answer involves Data Category visibility settings on the Experience Cloud site. If articles should only be visible to agents (not customers), the answer is setting the article’s channel to &ldquo;Internal App&rdquo; only.</span>
-          </li>
-          <li className="flex gap-2">
-            <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Case routing questions:</strong> Assignment rules assign new cases, they evaluate top-down and stop at the first matching rule. Escalation rules handle cases that have been open too long, they use time-based triggers. Auto-response rules send emails, they fire only on case creation. If a scenario asks what happens when no assignment rule matches, the answer is the case goes to the Default Case Owner (configurable in Support Settings).</span>
-          </li>
-        </ul>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Check Before You Book</h2>
-        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
-          <Clock className="h-4 w-4" />
-          90%+ on 3 timed full mocks (60 Q / 105 min) before booking
-        </p>
-        <p className="text-sm text-gray-700 mt-3">
-          The most common failure mode for Service Cloud Consultant is insufficient hands-on Omni-Channel
-          experience. Candidates who study Omni-Channel conceptually, without configuring it in a sandbox,
-          consistently miss routing model questions because the distinctions only become clear through
-          hands-on configuration. Build at least one Omni-Channel routing setup before booking.
-        </p>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+      <section id="day-before" className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
-          <li>Omni-Channel routing models: queue-based (FIFO pool) vs skills-based (matched to agent) vs external</li>
-          <li>Agent capacity: size-based (weighted) vs tab-based (count of open items)</li>
-          <li>Presence statuses: which channels an agent receives while in each status</li>
-          <li>Lightning Knowledge: record types replace article types; Data Categories control visibility</li>
-          <li>Article lifecycle: draft → In Review → Published → Archived</li>
-          <li>Case assignment rules: evaluate top-down, stop at first match, default owner if no match</li>
-          <li>Escalation rules: time-based triggers on open cases (not assignment)</li>
-          <li>Email-to-Case threading: Reply-To address keeps replies linked to the original case</li>
-          <li>Entitlement processes: milestone sequence with time triggers, warning actions, breach actions</li>
-          <li>Data Categories: control which Knowledge articles are visible to which Experience Cloud audiences</li>
+          <li>The eight section names and weights in the official guide</li>
+          <li>Contact center KPIs: first contact resolution, handle time, satisfaction</li>
+          <li>Email-to-Case, Web-to-Case, and messaging channel design</li>
+          <li>Assignment, escalation, and auto-response rules</li>
+          <li>Omni-Channel: queue-based vs. skills-based routing, capacity, presence</li>
+          <li>Entitlements, milestones, business hours, and service contracts</li>
+          <li>Knowledge lifecycle, KCS, data categories, and channel visibility</li>
+          <li>Case deflection through Experience Cloud sites, Agentforce, and Knowledge</li>
+          <li>Reports and dashboards for different service stakeholders</li>
+          <li>Telephony and external-data integration options</li>
         </ol>
-      </section>
-      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
-        <ul className="space-y-2">
-          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ Field Service vs Service Cloud Consultant, which cert to take?</Link></li>
-        </ul>
-      </div>
-
-
-      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Practice With Real Exam-Style Questions</h2>
-        <p className="text-sm text-gray-700 mb-4">
-          Apply this study guide with free Service Cloud Consultant practice questions:
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Service Cloud Practice Questions <ArrowRight className="h-4 w-4" />
-          </Link>
-          <span className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Service Cloud Exam Tips
-          </span>
-          <Link href="/sales-cloud-vs-service-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Sales Cloud vs Service Cloud
-          </Link>
-          <Link href="/field-service-vs-service-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Field Service vs Service Cloud
-          </Link>
-        </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After Service Cloud Consultant?</h2>
-        <p className="text-sm text-gray-700 mb-3">
-          After you’ve passed Service Cloud, you can either deepen your service specialism or round out a broader consultant profile:
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After Agentforce Service Consultant?</h2>
+        <p className="text-sm text-gray-700">
+          Common next steps are{' '}
+          <Link href="/certifications/field-service" className="text-salesforce-blue font-medium hover:underline">Agentforce Field Service and Operations Consultant</Link>,{' '}
+          <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>, or{' '}
+          <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Agentforce Sales Consultant</Link>. To compare the two consultant exams, see{' '}
+          <Link href="/sales-cloud-vs-service-cloud" className="text-salesforce-blue font-medium hover:underline">Sales vs Service Consultant</Link>.
         </p>
-        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
-          <li>
-            Go deeper into field operations with{' '}
-            <Link href="/field-service-vs-service-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">
-              Field Service Consultant
-            </Link>
-            {' '}if your org runs onsite work orders or dispatches technicians.
-          </li>
-          <li>
-            Pair Service Cloud with{' '}
-            <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
-              Sales Cloud Consultant
-            </Link>
-            {' '}to design full customer journeys from lead to ticket resolution.
-          </li>
-          <li>
-            If you own customer/partner communities, add{' '}
-            <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
-              Experience Cloud Consultant
-            </Link>
-            {' '}to cover self-service and portal experiences on top of your service processes.
-          </li>
-        </ul>
       </section>
 
-      
       <DifficultyHeatmap slug="service-cloud" />
-      {/* Hub CTA */}
-      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
-        <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Service Cloud Consultant free practice exam, scored with full explanations.</p>
-        <Link href="#practice-questions"
-          className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-        >
-          Service Cloud Consultant Free Practice Exam &rarr;
-        </Link>
-      </div>
     </div>
   )
 }

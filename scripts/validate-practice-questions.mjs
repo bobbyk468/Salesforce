@@ -64,7 +64,7 @@ const BESPOKE_BANKS = {
 }
 
 /** Pages whose authored bank has been cleaned up; keep them checked even though an imported bank exists. */
-const ALWAYS_CHECK = ['sales-cloud']
+const ALWAYS_CHECK = ['sales-cloud', 'service-cloud']
 
 function auditPage(slug) {
   const data = readJson(BESPOKE_BANKS[slug] ? join(ROOT, BESPOKE_BANKS[slug]) : join(DATA_DIR, `${slug}.json`), null)
