@@ -408,10 +408,10 @@
     {
       "question": "A client wants to know whether a managed package like Admissions Connect is compatible with their existing Education Cloud setup before installing it. What should the consultant review first?",
       "options": [
-        "The package's documented compatibility and considerations with the customer's current configuration",
-        "Just install it and see what breaks",
-        "Only the package's price",
-        "Whether the package name sounds relevant"
+        "The documented compatibility notes for the current configuration",
+        "Install it right away immediately without checking anything first at all",
+        "Only the sticker price of the managed package",
+        "Whether the package's name sounds relevant to the project"
       ],
       "correctAnswer": 0,
       "explanation": "Reviewing documented compatibility and configuration considerations before installing a managed package is part of understanding Education Cloud's configuration capabilities and constraints.",
@@ -424,12 +424,12 @@
     {
       "question": "An institution is rolling out a new Education Cloud implementation and wants end users to actually adopt it instead of reverting to spreadsheets. What should the consultant plan for, beyond the technical build?",
       "options": [
-        "Change management, training, and adoption planning as part of the implementation",
-        "Nothing, a technically correct build guarantees adoption",
-        "Skipping user testing to save time",
-        "Avoiding documentation since requirements rarely change"
+        "Assume a technically correct build guarantees adoption on its own, with nothing else needed",
+        "Change management, training, and adoption planning as part of the rollout",
+        "Skip user testing entirely to save time before launch",
+        "Avoid documentation since requirements rarely change anyway"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "A successful implementation plans for governance, change management, and adoption, not just the technical configuration, this is explicitly part of Implementation Strategies and Best Practices.",
       "whyWrong": [
         "A technically sound build can still fail if users don't adopt it, adoption needs deliberate planning.",
@@ -440,12 +440,12 @@
     {
       "question": "A university needs to migrate a large volume of historical student records into Education Cloud as part of an implementation. What should the consultant evaluate first?",
       "options": [
-        "Data volume, quality, and migration considerations for the target data model",
         "Whether the records can be renamed in bulk",
         "Only the color scheme of the destination object's page layout",
+        "Data volume, quality, and migration considerations for the target data model",
         "Whether the old system had a mobile app"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Evaluating data volume, data quality, and how records will map and migrate into the Education Cloud data model is a core data management consideration for an implementation.",
       "whyWrong": [
         "Bulk renaming isn't the key migration concern, data volume and mapping quality are.",
@@ -456,12 +456,12 @@
     {
       "question": "Leadership wants a report showing enrollment trends over time, broken out by program and recruitment source. What should the consultant consider when choosing a reporting approach?",
       "options": [
-        "Whether standard Salesforce reports and dashboards meet the need, or a more advanced analytics solution is justified",
-        "Always recommend the most expensive analytics product regardless of the need",
-        "Reporting is never needed in an education implementation",
-        "Only the Salesforce mobile app can produce reports"
+        "Always recommend the single most expensive analytics product available",
+        "Assume reporting is never needed in an education implementation",
+        "Assume only the Salesforce mobile app can ever produce a report",
+        "Whether standard reports and dashboards meet the need, or more is justified"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Distinguishing between what standard reporting can deliver and when a more advanced analytics solution is actually justified is the core skill tested in the Analytics domain.",
       "whyWrong": [
         "Recommending the most expensive option regardless of fit ignores the actual requirement.",
@@ -472,12 +472,12 @@
     {
       "question": "An institution's student information system (SIS) needs to stay in sync with Education Cloud so that enrollment changes in one system appear in the other. What should the consultant evaluate first?",
       "options": [
-        "The integration pattern and considerations for connecting the two systems reliably",
-        "Whether the SIS has a nice-looking login page",
-        "Whether both systems use the same font",
-        "Nothing, systems always sync automatically with no configuration"
+        "Whether the SIS login page looks visually appealing",
+        "Whether both systems happen to use the same font",
+        "Assume systems always sync automatically with zero configuration",
+        "The integration pattern needed to connect the two systems reliably"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Evaluating integration considerations, such as sync direction, frequency, and data mapping, for connecting an external system like an SIS is a core Integration and Data Management skill.",
       "whyWrong": [
         "A login page's appearance has nothing to do with whether two systems can integrate reliably.",

@@ -412,10 +412,10 @@
     {
       "question": "A company wants to turn on CRM Analytics for a group of users, but not for everyone in the org. What should the consultant check first?",
       "options": [
-        "Permission sets and licenses that control who gets CRM Analytics access",
-        "The org's Salesforce edition alone",
-        "The number of custom objects in the org",
-        "The Lightning theme applied to the org"
+        "Permission sets and licenses controlling CRM Analytics access",
+        "The org's Salesforce edition alone, with nothing else ever checked",
+        "The number of custom objects already in the org",
+        "The Lightning theme currently applied to the org"
       ],
       "correctAnswer": 0,
       "explanation": "Enabling CRM Analytics for a specific group of users depends on assigning the right permission sets and licenses to those users, not a blanket org-wide switch.",
@@ -428,12 +428,12 @@
     {
       "question": "A team has built dataflows, recipes, and dashboards in a sandbox and now needs to move them to production. What should they plan for?",
       "options": [
-        "A deployment process between environments, since CRM Analytics assets don't move automatically",
-        "Nothing, sandbox and production always share the same CRM Analytics assets",
-        "Manually retyping every SAQL query in production",
-        "Assets can only ever be built directly in production"
+        "Nothing, sandbox and production always share assets",
+        "A deployment process, since assets don't move on their own",
+        "Manually retyping every single SAQL query by hand in production",
+        "Assets can only be built inside production"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Moving CRM Analytics assets from sandbox to production requires a deliberate deployment/migration process between environments, assets don't sync automatically.",
       "whyWrong": [
         "Sandbox and production are separate environments with separate CRM Analytics assets.",
@@ -444,12 +444,12 @@
     {
       "question": "A business wants a working CRM Analytics app for standard sales metrics without building every dashboard and dataflow from scratch. What should the consultant use?",
       "options": [
-        "A standard CRM Analytics templated app, configured to fit the business's needs",
-        "A blank app with every object imported manually",
-        "A single widget pasted into a Salesforce page",
-        "A Flow that generates reports"
+        "A blank app built from scratch with no template",
+        "A single widget pasted onto a page",
+        "A standard templated app, configured to fit the need",
+        "A Flow built just to generate reports"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "A standard templated app (like Sales Analytics) comes with pre-built dataflows, datasets, and dashboards for a common use case, and the consultant configures it to match specific requirements instead of starting from zero.",
       "whyWrong": [
         "Manually importing every object from scratch ignores the time-saving purpose of templated apps.",
@@ -460,12 +460,12 @@
     {
       "question": "Before building any dashboard, a consultant meets with stakeholders to confirm what questions the dashboard must answer and which of those matter most. What is this process called?",
       "options": [
-        "Scoping, validating, and prioritizing dashboard design requirements",
-        "Writing SAQL queries immediately",
+        "Writing SAQL queries right away",
         "Picking a random dashboard template",
-        "Skipping requirements and building based on guesswork"
+        "Skipping requirements and guessing at the design",
+        "Scoping, validating, and prioritizing requirements first"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Good dashboard design starts with scoping, validating, and prioritizing the business requirements before any build work begins, following CRM Analytics best practices.",
       "whyWrong": [
         "Writing SAQL is an implementation step that comes later, not the upfront requirements process.",
@@ -476,12 +476,12 @@
     {
       "question": "A dashboard has grown slow to load after several widgets were added. Which tool should the consultant use to find and fix the bottleneck?",
       "options": [
-        "Dashboard Inspector",
         "A new dataset with the same data duplicated",
         "Field-level security",
-        "A permission set"
+        "A permission set",
+        "Dashboard Inspector"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Dashboard Inspector shows query execution details per widget, letting a consultant monitor and optimize dashboard performance.",
       "whyWrong": [
         "Duplicating the dataset adds overhead and doesn't diagnose the actual bottleneck.",

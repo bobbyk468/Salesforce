@@ -40,7 +40,7 @@
   },
   "certificationCard": {
     "code": "Agentforce Field Service and Operations Consultant",
-    "description": "This credential covers designing and deploying Field Service and Operations solutions. The exam has 60 scored questions and up to five unscored questions in 105 minutes, with a 63% pass mark, weighted towards Managing Scheduling and Optimization (28%) and Managing Work Orders (23%).",
+    "description": "This credential covers designing and deploying Field Service and Operations solutions. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Managing Scheduling and Optimization (28%) and Managing Work Orders (23%).",
     "examDetails": {
       "questions": "60 scored + up to 5 unscored",
       "passingScore": "63%",

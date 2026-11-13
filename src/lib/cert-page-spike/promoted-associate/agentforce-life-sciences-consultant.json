@@ -42,7 +42,7 @@
   "expertInsight": "Use Salesforce’s official exam guide and Trailhead preparation trail to study for this new 2026 credential. Focus on the current product and official courses (LSC001 and LSC002), since older Life Sciences Cloud material may describe features that have changed.",
   "certificationCard": {
     "code": "Agentforce Life Sciences Consultant",
-    "description": "This exam tests how to design and set up Agentforce Life Sciences for Customer Engagement. Topics include account and territory management, engagement plans, and compliant HCP/HCO interactions using Data 360 and Agentforce. The exam has 60 scored questions in 105 minutes and a 62% passing score.",
+    "description": "This exam tests how to design and set up Agentforce Life Sciences for Customer Engagement. Topics include account and territory management, engagement plans, and compliant HCP/HCO interactions using Data 360 and Agentforce. The exam is 60 scored questions in 105 minutes, with a 62% pass mark, weighted towards Foundations and Administration (36%) and Engagement Execution (28%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "62%",
@@ -424,12 +424,12 @@
     {
       "question": "A regulator requires that sample distribution in a region follow specific documented handling and reporting standards. What should the consultant ensure the sampling workflow applies?",
       "options": [
-        "GxP standards appropriate to the region",
         "No special standards, samples are unregulated",
+        "GxP standards appropriate to the region",
         "Only the rep's personal judgment",
         "A general data retention policy with no regional variation"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Sampling workflows must apply GxP (Good x Practice) standards aligned with regional regulatory requirements for sample distribution.",
       "whyWrong": [
         "Sample distribution in life sciences is heavily regulated, not unregulated.",
@@ -440,12 +440,12 @@
     {
       "question": "A company needs to track a sample from when it's dropped off to a rep's trunk stock through final delivery to an HCP, with full chain-of-custody visibility. What process should the consultant configure end-to-end?",
       "options": [
-        "The Sample Disbursement process",
         "A single unrelated Case record",
         "A Content Workspace",
+        "The Sample Disbursement process",
         "An Opportunity"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "The Sample Disbursement process manages the end-to-end lifecycle of a sample from distribution through delivery, providing the chain-of-custody tracking needed.",
       "whyWrong": [
         "A Case record tracks issues, it isn't designed for sample chain-of-custody tracking.",
@@ -456,12 +456,12 @@
     {
       "question": "A compliance team wants periodic verification that recorded sample stock matches what's physically on hand, with discrepancies flagged for correction. What should the consultant set up?",
       "options": [
-        "Inventory Counting, Adjustment, and Audits",
-        "A one-time manual email reminder",
-        "A Territory reassignment",
-        "An Engagement Plan template"
+        "A one-time manual email reminder sent to the compliance team",
+        "A Territory reassignment handled outside the system",
+        "An Engagement Plan template applied retroactively",
+        "Inventory Counting, Adjustment, and Audits"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Inventory Counting, Adjustment, and Audits are the configured capabilities for reconciling recorded sample stock against physical counts and flagging discrepancies.",
       "whyWrong": [
         "A one-time email reminder isn't a repeatable, systematic audit process.",
@@ -472,12 +472,12 @@
     {
       "question": "Leadership wants ongoing visibility into total sample stock levels, usage trends, and potential shortages across the whole sales organization. What should the consultant provide?",
       "options": [
-        "Sample Reports and Dashboards monitoring the full sample stock lifecycle",
-        "A single static spreadsheet emailed once a year",
-        "Verbal updates only in meetings",
-        "No reporting, since samples can't be reported on"
+        "A single static spreadsheet emailed out once a year",
+        "Verbal updates shared only in meetings, with nothing written down",
+        "No reporting at all, since samples can't be reported on",
+        "Sample Reports and Dashboards monitoring the full stock lifecycle"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Sample Reports and Dashboards are built specifically to monitor the full lifecycle of sample stock on an ongoing basis.",
       "whyWrong": [
         "A once-a-year static spreadsheet can't provide ongoing visibility into trends and shortages.",
