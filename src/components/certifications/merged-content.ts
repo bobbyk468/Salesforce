@@ -13,7 +13,6 @@ export const MERGED_CERT_CONTENT: Record<string, Array<() => Promise<{ default: 
   'advanced-field-service-ap': [() => import('./merged/advanced-field-service-ap-exam-tips')],
   'agentforce-specialist': [() => import('./merged/agentforce-specialist-study-guide'), () => import('./merged/agentforce-specialist-exam-tips')],
   'ai-associate': [() => import('./merged/ai-associate-study-guide'), () => import('./merged/ai-associate-exam-tips')],
-  'app-builder': [() => import('./merged/app-builder-study-guide'), () => import('./merged/app-builder-exam-tips')],
   'application-architect': [() => import('./merged/application-architect-study-guide'), () => import('./merged/application-architect-exam-tips')],
   'b2b-commerce-admin-ap': [() => import('./merged/b2b-commerce-admin-ap-exam-tips')],
   'b2b-commerce-developer-ap': [() => import('./merged/b2b-commerce-developer-ap-exam-tips')],

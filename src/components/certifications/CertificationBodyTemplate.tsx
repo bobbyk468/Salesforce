@@ -27,7 +27,6 @@ import {
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import type {
-  AppBuilderSpikeBody,
   AssociateSpikeBody,
   CertSpikeBodyData,
   IntroSegment,
@@ -39,13 +38,13 @@ import { parseMarkdown, renderMarkdownSegments } from '@/lib/cert-page-spike/mar
 import AdministratorCertBody from '@/components/certifications/AdministratorCertBody'
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import PlatformFoundationsCertBody from '@/components/certifications/PlatformFoundationsCertBody'
+import AppBuilderCertBody from '@/components/certifications/AppBuilderCertBody'
 import AgentforceArchitectureDiagram from '@/components/certifications/AgentforceArchitectureDiagram'
 import EinsteinTrustLayerDiagram from '@/components/certifications/EinsteinTrustLayerDiagram'
 import MCPIntegrationDiagram from '@/components/certifications/MCPIntegrationDiagram'
 import AgenticOrchestrationDiagram from '@/components/certifications/AgenticOrchestrationDiagram'
 import PromptStructureDiagram from '@/components/certifications/PromptStructureDiagram'
 import ToolCallingDiagram from '@/components/certifications/ToolCallingDiagram'
-import FlowVsApexDiagram from '@/components/certifications/FlowVsApexDiagram'
 import SalesProcessFlowDiagram from '@/components/certifications/SalesProcessFlowDiagram'
 import OmniChannelRoutingDiagram from '@/components/certifications/OmniChannelRoutingDiagram'
 import SharingModelDiagram from '@/components/certifications/SharingModelDiagram'
@@ -477,140 +476,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
   )
 }
 
-function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpikeBody }) {
-  const examSections = getExamWeightage(slug)
-  const title = slugToDisplayName(slug)
-  const card = body.certificationCard
-  const initialQuestions = getInitialPracticeQuestions(getPracticeQuestionsForExam(slug, body.sampleQuestions))
-
-  return (
-    <>
-      <CertPageSeo slug={slug} certTitle={title} />
-      <CredentialSchema certSlug={slug} certName={title} description={card.description} pageUrl={`/certifications/${slug}`} />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions), SLUG_TO_EXAM_CODE[slug])),
-        }}
-      />
-      <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
-      <div className="max-w-7xl mx-auto px-4">
-        <LastUpdated />
-      </div>
-      <div className="max-w-7xl mx-auto px-4">
-        <CertTrustBar slug={slug} />
-      </div>
-      <div className="max-w-7xl mx-auto px-4">
-        <CertPageCta slug={slug} certTitle={title} examCode={body.ctaExamCode} />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4">
-        <ReleaseNoteBadge />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4">
-        <ContentPageAuthor />
-      </div>
-
-      <CertificationPageShell tocSections={body.tocSections.filter((section) => section.id !== 'difficulty-heatmap')}>
-        {/* H1 first — see the note on the other shell above. */}
-        <CertificationCard
-          slug={slug}
-          title={title}
-          code={card.code}
-          description={card.description}
-          examDetails={card.examDetails}
-          topics={card.topics}
-          examSections={examSections}
-          h1Text={getCertH1Text(slug)}
-          examWeightageHeading={getCertExamWeightageHeading(slug)}
-          componentExams={card.componentExams}
-        />
-
-        {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
-
-        <ExamFeesSection slug={slug} />
-        <OfficialSourceRef slug={slug} />
-
-        <div id="exam-prep">
-          <ExamPrepContent slug={slug} />
-        </div>
-
-        {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
-
-        {body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
-        {body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
-        {body.differentiation && <CertDifferentiationSection data={body.differentiation} />}
-
-        <ScenarioTipsSection
-          h2={body.scenarioTips.h2}
-          intro={body.scenarioTips.intro}
-          blocks={body.scenarioTips.blocks}
-        />
-
-        <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
-
-        {slug === 'app-builder' ? <FlowVsApexDiagram /> : null}
-
-        <CertReadinessSummary slug={slug} />
-        <PracticeQuestionsSection
-          heading={getCertPracticeQuestionsHeading(slug)}
-          introText={getPracticeQuestionsIntro(initialQuestions.length, initialQuestions[0]?.source ? 'Select the requested number of answers, then check your selection.' : body.practiceIntroSuffix)}
-          questions={initialQuestions}
-        />
-
-        <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-6 sm:p-8 text-center">
-          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-            {body.moreQuestionsBlock.h3}
-          </h3>
-          {body.moreQuestionsBlock.paragraphs.map((para, idx) =>
-            renderMoreQuestionParagraph(
-              para,
-              `mq-${idx}`,
-              idx === body.moreQuestionsBlock.paragraphs.length - 1,
-            ),
-          )}
-          <a
-            href={body.moreQuestionsBlock.ctaHref}
-            className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
-          >
-            {body.moreQuestionsBlock.ctaLabel}
-          </a>
-        </div>
-
-        <CertPageFaq slug={slug} certTitle={title} />
-
-        <div id="related-certs">
-          <RelatedCertifications currentSlug={slug} />
-        </div>
-
-        <section
-          className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
-          aria-labelledby={body.afterCertSection.id}
-        >
-          <h2 id={body.afterCertSection.id} className="text-base font-semibold text-gray-900 mb-3">
-            {body.afterCertSection.heading}
-          </h2>
-          <p className="text-sm text-gray-700 mb-2">{body.afterCertSection.intro}</p>
-          <ul className="space-y-2 text-sm">
-            {body.afterCertSection.items.map((item) => (
-              <li key={item.link.href}>
-                {item.lead}
-                <Link href={item.link.href} className="text-salesforce-blue font-medium hover:underline">
-                  {item.link.label}
-                </Link>
-                {item.tail}
-              </li>
-            ))}
-          </ul>
-        </section>
-        <MergedCertContent slug={slug} />
-        <CiteThisPage certName={title} slug={slug} year={RELEASE_YEAR} />
-      </CertificationPageShell>
-    </>
-  )
-}
-
 /** Legacy cert pages render from `[slug]/page.tsx` via dynamic import; never pass `template: 'legacy'` here. */
 type CertBodyForTemplate = Exclude<CertSpikeBodyData, LegacySpikeBody>
 
@@ -639,7 +504,7 @@ export default function CertificationBodyTemplate({ slug, body }: Props) {
     case 'platform-foundations':
       return <PlatformFoundationsCertBody slug={slug} />
     case 'app-builder':
-      return <AppBuilderTemplate slug={slug} body={body} />
+      return <AppBuilderCertBody slug={slug} />
     case 'associate':
       return <AssociateTemplate slug={slug} body={body} />
     default:

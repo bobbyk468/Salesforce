@@ -1109,7 +1109,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What topics are covered in Platform App Builder (DEV-402)?',
-      answer: 'The exam covers Data Modeling (20%), Process Automation (25%), User Interface (20%), Testing, Debugging & Source Control (10%), and Security & Deployment (25%). Focus on hands-on experience with Lightning Pages, Flows, and Formula/Rollup Fields.',
+      answer: 'The exam covers Business Logic and Process Automation (32%), Data Modeling and Management (20%), Salesforce Fundamentals (18%), User Interface (17%), and App Deployment (13%). Focus on hands-on experience with Flow Builder, Lightning App Builder, and formula and roll-up summary fields.',
     },
     {
       question: 'Do I need Platform Administrator before taking Platform App Builder?',
