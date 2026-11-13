@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Higher education CRM consultants",
-        "description": "You help education institutions translate constituent, learner, admissions, or advancement needs into Salesforce solution designs."
+        "description": "You help colleges and universities turn student, admissions, advancement, and constituent needs into Salesforce designs."
       },
       {
-        "label": "Salesforce admins at educational institutions",
-        "description": "You support Salesforce solutions at an education institution and want structured notes on implementation and product-design concepts."
+        "label": "Salesforce administrators at educational institutions",
+        "description": "You support education-focused Salesforce solutions and want organized notes on implementation and product choices."
       },
       {
-        "label": "EdTech implementation partners",
-        "description": "You work with education customers on requirements, product choices, integrations, governance, and adoption."
+        "label": "Education technology partners",
+        "description": "You work with education customers on requirements, integrations, data governance, and adoption."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Education Cloud Consultant Exam Hard?",
-    "summary": "Salesforce’s published exam guide names this credential Salesforce Certified Education Cloud Consultant. The guide’s registration and exam dates have passed; Salesforce lists retirement effective February 1, 2027. Use the outline below as a historical guide reference, not as an active exam syllabus.",
+    "heading": "How should you use the Education Cloud Consultant exam guide?",
+    "summary": "Salesforce’s published guide describes the Salesforce Certified Education Cloud Consultant exam. Registration and delivery have ended, and Salesforce lists retirement effective February 1, 2027. Treat these details as a historical reference rather than an active exam syllabus.",
     "bullets": [
-      "<strong>Published format:</strong> 60 multiple-choice questions and up to five unscored questions in 105 minutes; the published passing score is 67%.",
+      "<strong>Published format:</strong> 60 multiple-choice questions plus up to five unscored questions in 105 minutes; the published passing score is 67%.",
       "<strong>Published fees:</strong> US$200 registration and US$100 retake; JPY 30,000 for each, plus applicable local tax.",
       "<strong>Prerequisite:</strong> Salesforce Certified Platform Administrator Certification.",
-      "<strong>Availability:</strong> registration ended July 24, 2026; the last exam date was August 31, 2026."
+      "<strong>Availability:</strong> Registration ended July 24, 2026, and the last exam date was August 31, 2026."
     ],
-    "passRateGuidance": "No practice score guarantees an exam result. The exam is no longer available for registration or delivery; use Salesforce’s current product documentation and Trailhead learning resources for ongoing Education/Agentforce Education study."
+    "passRateGuidance": "This exam is no longer available for registration or delivery. For current Education and Agentforce Education learning, use Salesforce documentation and Trailhead materials rather than treating this historical exam outline as a current syllabus."
   },
   "examFormat": {
-    "heading": "Education Cloud Consultant Exam Format Explained",
-    "intro": "The published exam guide lists the format below. Registration and exam delivery have ended.",
-    "scenarioPercent": "Salesforce does not publish a scenario-question percentage. The historical guide’s domains include requirements-based solution design, configuration, implementation strategy, integration/data management, and analytics.",
+    "heading": "Historical Education Cloud Consultant exam format",
+    "intro": "The published exam guide lists the format below; registration and exam delivery have ended.",
+    "scenarioPercent": "Salesforce does not publish a scenario-question percentage. The historical domains cover requirements-based solution design, configuration, implementation strategy, integration and data management, and analytics.",
     "bestWayToPass": [
-      "<strong>Start with requirements:</strong> Identify users, business processes, constraints, data ownership, outcomes, and existing systems before recommending a solution.",
-      "<strong>Compare product and data-model choices:</strong> Distinguish the Education Cloud platform solution from Education Data Architecture managed-package deployments; verify model-specific behavior in current documentation.",
-      "<strong>Plan implementation:</strong> Account for governance, change management, staffing, testing, deployment, adoption, and maintainability.",
-      "<strong>Assess integration and data:</strong> Document source-of-truth ownership, exchange direction, migration quality, error handling, and volume considerations."
+      "<strong>Start with institutional needs:</strong> Identify users, processes, constraints, data ownership, intended outcomes, and existing systems.",
+      "<strong>Confirm the product and data model:</strong> Distinguish the Education Cloud platform solution from Education Data Architecture package deployments and verify details in current documentation.",
+      "<strong>Plan implementation and adoption:</strong> Consider governance, change management, staffing, testing, deployment, and long-term support.",
+      "<strong>Design integrations around ownership:</strong> Document the source of truth for each data element, exchange timing, error handling, privacy, and migration needs."
     ]
   },
   "certificationCard": {
     "code": "Salesforce Certified Education Cloud Consultant",
-    "description": "Historical exam reference for Salesforce’s education implementation consultant credential. Salesforce now calls the product Agentforce Education; the exam guide’s domain outline aligns to Winter ’24 and is not a current exam syllabus.",
+    "description": "Historical reference for Salesforce’s education implementation consultant credential. Salesforce now calls the product Agentforce Education; the published exam guide reflects a Winter ’24 domain outline and is not a current exam syllabus.",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
@@ -58,59 +58,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Education Consultant: Product and Data-Model Study Notes",
+    "h2": "Education Consultant: product and data-model study notes",
     "blocks": [
       {
-        "heading": "EDA: Education Data Architecture Core Objects",
-        "body": "Education Data Architecture (EDA) is a Salesforce for Education managed-package data model. Salesforce distinguishes it from the Education Cloud platform solution, now called Agentforce Education. Identify which product and model an institution uses before applying object and relationship assumptions; verify the relevant model in its current documentation."
+        "heading": "Education Data Architecture and Product Choice",
+        "body": "Education Data Architecture (EDA) is a managed-package data model for education. Salesforce distinguishes it from the Education Cloud platform solution, now called Agentforce Education. Before applying assumptions about records or relationships, establish which product and model the institution uses. Check that product’s current documentation for object names, behavior, and supported features."
       },
       {
-        "heading": "Student Success Hub: Alerts, Cases, and Appointments",
-        "body": "Student success solutions should be designed around the institution’s goals, staff responsibilities, access policies, data sources, and intervention workflows. Confirm which licensed product features are available and how they behave before specifying alerts, cases, appointments, or plans."
+        "heading": "Student Success Workflows",
+        "body": "Design student success capabilities around institutional goals, staff responsibilities, access policies, available data, and intervention processes. Confirm which licensed features the institution has and how they work before specifying alerts, cases, appointments, or plans. The technology should support a defined student support process and its follow-up."
       },
       {
-        "heading": "Recruiting and Admissions",
-        "body": "Recruitment and admissions solutions can support the learner journey from initial interest through application and enrollment. Map the institution’s real process, required records, portal experience, staff handoffs, and external application-system interfaces before selecting configuration."
+        "heading": "Recruitment and Admissions",
+        "body": "Recruitment and admissions processes can span initial interest, application, review, decision, and enrollment. Map the actual institutional workflow, records, portal needs, staff handoffs, and interfaces to application systems. Requirements and product configuration vary, so verify how the chosen Education solution supports each step."
       },
       {
         "heading": "Experience Cloud for Students and Faculty",
-        "body": "Salesforce Help describes an online learner portal powered by Experience Cloud. Portal scope, record access, and available interactions depend on the institution’s products, licenses, configuration, and security requirements; validate those details in current documentation."
+        "body": "An online portal can give learners or faculty access to selected information and interactions. Portal scope depends on product, licenses, configuration, and security requirements. Define which audiences can see which records, then validate the proposed experience and sharing model in current documentation."
       },
       {
-        "heading": "Integration with SIS and LMS Systems",
-        "body": "For SIS, LMS, and other integrations, establish source-of-truth ownership per data element, exchange direction and timing, reconciliation and error handling, privacy/access requirements, and migration constraints. Do not assume a single system-of-record pattern for every institution."
+        "heading": "Integrating Student and Learning Systems",
+        "body": "For student information systems (SIS), learning management systems (LMS), and other sources, define which system owns each data element, which direction data moves, and how often it is exchanged. Plan reconciliation, error handling, privacy, access, and migration quality. Different institutions may use different systems of record, so avoid assuming one pattern fits all."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "Solution Design Practice Prompts",
-    "intro": "These prompts organize selected themes from the published guide’s domains. They are not predictions about the content of a current exam.",
+    "h2": "Education solution design practice prompts",
+    "intro": "These prompts summarize themes from the published guide and are not predictions about any current exam. Confirm product behavior and terminology in current documentation.",
     "blocks": [
       {
-        "heading": "Education Data Architecture (EDA)",
-        "body": "First establish whether the scenario uses the EDA managed package or the Education Cloud platform solution. Then confirm the applicable account model and relationships in the documentation for that product."
+        "heading": "Identify the Data Model",
+        "body": "Determine whether the scenario uses the EDA managed package or the Education Cloud platform solution. Then verify account models and relationships for that product."
       },
       {
-        "heading": "Student Lifecycle Management",
-        "body": "Trace the user and institutional journey from recruitment and admissions to student success and alumni engagement. Verify product boundaries and required staff handoffs for the selected deployment."
+        "heading": "Map the Student Journey",
+        "body": "Trace the institution’s processes from recruitment and admissions through student success and alumni engagement. Identify the users and handoffs at each stage."
       },
       {
-        "heading": "Program Enrollment & Course Management",
-        "body": "Use the institution’s requirements to identify academic program, course, and enrollment data needs; verify object names and relationships against the selected data model."
+        "heading": "Model Programs and Courses",
+        "body": "Use requirements to identify program, course, and enrollment information. Verify object names and relationships against the data model selected for the institution."
       },
       {
-        "heading": "Advisor & Success Hub Configuration",
-        "body": "For advising workflows, identify the goal, signal source, assigned staff, access rules, follow-up process, and currently licensed features."
+        "heading": "Design Advising Workflows",
+        "body": "Clarify the goal, relevant signals, assigned staff, access rules, follow-up process, and licensed features before configuring an advising solution."
       },
       {
-        "heading": "Reporting for Education",
-        "body": "Connect reporting needs to decision-makers and data quality. Compare available reports and analytics options, noting governance and data-volume constraints."
+        "heading": "Connect Reporting to Decisions",
+        "body": "Identify who will use each report and what decision it supports. Check data quality, access, governance, and volume before selecting an analytics approach."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "heading": "Related credentials for education solution consultants",
+    "intro": "For current learning, consider platform administration or a role-focused Salesforce credential that matches your implementation work.",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -166,243 +166,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A university needs to track an individual who is a prospective student, not yet attached to any organisation. How is this person stored?",
+      "question": "In the described education data model, where is a prospective student with no organization affiliation represented?",
       "options": [
-        "As a user record in the org with a licence assigned for the applicant portal",
-        "As a contact attached to a placeholder account created for unaffiliated people",
-        "As a lead record that is converted only once they accept an offer of a place",
+        "As an org user with a portal license",
+        "As a contact under a placeholder account",
+        "As a lead until the student accepts an offer",
         "As a person account"
       ],
       "correctAnswer": 3,
-      "explanation": "Education Cloud uses person accounts so an individual exists in their own right, which suits students who are not employees of an organisation.",
+      "explanation": "The study example represents an unaffiliated person as a person account. Confirm the model used by the institution before applying this pattern.",
       "whyWrong": [
-        "A user record is for someone logging in, not for the person being tracked.",
-        "A placeholder account is the workaround person accounts were designed to remove.",
-        "Leads lose the relationship history a prospective student accumulates."
+        "An applicant does not need an internal Salesforce user record merely to be represented as a person.",
+        "A placeholder account is not the model choice described in this example.",
+        "A lead may suit some processes, but it is not the answer in this specific study scenario."
       ]
     },
     {
-      "question": "What does an affiliation record represent?",
+      "question": "What does an affiliation record capture in an education data model?",
       "options": [
-        "A relationship between a person and an organisation",
-        "The set of courses a student has enrolled on during a given academic term",
-        "The advisor who has been assigned to support the student through their degree",
-        "The financial aid package that has been awarded to a particular student"
+        "A connection between a person and an organization",
+        "The courses a student takes during one academic term",
+        "The advisor assigned to support a student",
+        "The financial aid package awarded to a student"
       ],
       "correctAnswer": 0,
-      "explanation": "Affiliations connect a person to an organisation such as a school, department or employer, with a role and a date range.",
+      "explanation": "An affiliation represents a relationship between a person and an organization, such as an institution or employer.",
       "whyWrong": [
-        "Course enrolment is held on course connection records.",
-        "Advisor relationships are their own kind of connection.",
-        "Financial aid is tracked separately from affiliations."
+        "This describes the relationship captured by an affiliation.",
+        "Course participation is represented through academic program and course records.",
+        "An advisor relationship is a separate assignment."
       ]
     },
     {
-      "question": "A student enrols on a degree programme and then takes six courses within it. How is this modelled?",
+      "question": "A learner joins a degree program and takes six courses within it. Which structure best represents this?",
       "options": [
-        "An opportunity record for the programme with six product line items on it",
-        "A single affiliation record listing all six of the courses in its description",
-        "A program enrollment with course connections beneath it",
-        "Six separate program enrollments, one created for each of the courses taken"
+        "An opportunity for the program with six product lines",
+        "One affiliation listing all courses in its description",
+        "A program enrollment connected to the course records",
+        "Six separate program enrollments, one for each course"
       ],
       "correctAnswer": 2,
-      "explanation": "Program enrollment represents membership of the programme, and course connections record the individual courses taken within it.",
+      "explanation": "A program enrollment represents participation in the program and can relate to the courses taken, subject to the selected data model.",
       "whyWrong": [
-        "Opportunities track fundraising and admissions, not enrolment structure.",
-        "Course detail in free text cannot be reported on.",
-        "Each course is a connection, not a separate programme."
+        "Opportunities represent sales processes and do not model academic participation in this example.",
+        "An affiliation links a person to an organization rather than listing course enrollment.",
+        "One enrollment per course would confuse course participation with program enrollment."
       ]
     },
     {
-      "question": "Why does Education Cloud model a household as well as the individual student?",
+      "question": "Why might an education solution represent a household as well as an individual student?",
       "options": [
-        "Family members are often involved in decisions and giving",
-        "Course connections can only be created for students who belong to a household",
-        "Regulators require every student's home address to be stored on a separate object",
-        "The platform is unable to store more than one address against a person account"
+        "Family members may participate in decisions and giving",
+        "Course connections require every student to belong to a household",
+        "Regulations require each home address to use a separate object",
+        "A person account cannot store more than one address"
       ],
       "correctAnswer": 0,
-      "explanation": "Recruitment, financial aid and alumni giving all involve parents and siblings, so the household gives those relationships somewhere to live.",
+      "explanation": "Households can help represent family relationships that matter to education decisions and advancement activity.",
       "whyWrong": [
-        "Household membership is not a prerequisite for enrolment.",
-        "No such regulatory requirement exists.",
-        "Person accounts can hold multiple addresses."
+        "Course relationships do not universally require a household record.",
+        "This is not a general regulatory requirement for modeling addresses.",
+        "Address handling depends on the chosen data model and does not by itself require a household."
       ]
     },
     {
-      "question": "An admissions team needs to track an applicant through review, interview and decision. What fits best?",
+      "question": "An admissions team needs to track an application through review, interview, and decision. Which record best fits the process in this example?",
       "options": [
-        "A task assigned to an admissions officer for every stage the applicant reaches",
-        "A case raised against the applicant for each step of the admissions process",
-        "A new program enrollment created at the start of each stage of the process",
+        "A task for each stage",
+        "A case for each application step",
+        "A program enrollment for each stage",
         "An application record with stages"
       ],
       "correctAnswer": 3,
-      "explanation": "An application record moves through defined stages, which is what gives the team a pipeline view and consistent reporting.",
+      "explanation": "An application record can track the applicant’s progress through the defined admissions stages.",
       "whyWrong": [
-        "Tasks record activity but do not model the applicant's progress.",
-        "Cases are for issues and queries rather than a defined pipeline.",
-        "Enrolment happens after admission, not during it."
+        "Tasks may support assigned work but do not replace the application lifecycle record.",
+        "Cases manage service issues and are not the application process record described here.",
+        "Program enrollment applies after admission when the student participates in a program."
       ]
     },
     {
-      "question": "What is the purpose of an advisor link or relationship record?",
+      "question": "What does an advisor relationship record describe?",
       "options": [
-        "It holds the advisor's own employment details and contract information",
-        "It records who supports a student and in what capacity",
-        "It tracks the fees that the student owes for the advisory service provided",
-        "It lists the courses the advisor is responsible for teaching in the term"
+        "The advisor’s employment contract",
+        "Which advisor supports a student and how",
+        "Fees charged for advising",
+        "The courses the advisor teaches"
       ],
       "correctAnswer": 1,
-      "explanation": "Advising relationships need to be explicit so the institution knows who is responsible for a student and can report on caseloads.",
+      "explanation": "The relationship identifies which advisor supports the student and the capacity of that support.",
       "whyWrong": [
-        "Staff employment data belongs in human resources.",
-        "Advising is not normally charged for separately.",
-        "Teaching responsibility is a different relationship."
+        "An advisor’s employment contract belongs in personnel records.",
+        "Fees are not the purpose of a student-advisor relationship record.",
+        "Teaching assignments are separate from identifying a student’s advisor."
       ]
     },
     {
-      "question": "A student takes a leave of absence and returns the following year. What should happen to their records?",
+      "question": "A student pauses study and returns the following year. How should the institution preserve the history?",
       "options": [
-        "The original program enrollment is deleted and recreated on their return",
-        "The history is retained and a new enrolment period recorded",
-        "A second person account is created to represent the returning student",
-        "The affiliation is edited so that the gap in attendance is not visible"
+        "Delete the original enrollment and recreate it on return",
+        "Keep the history and record the new enrollment period",
+        "Create a second person account for the returning student",
+        "Remove the gap from the affiliation record"
       ],
       "correctAnswer": 1,
-      "explanation": "Academic history matters for progression and reporting, so the record of what happened is kept and the new period added alongside it.",
+      "explanation": "Retaining the original history and recording the new period preserves the student’s timeline.",
       "whyWrong": [
-        "Deleting enrolment loses the courses already completed.",
-        "A duplicate person account splits the student's entire history.",
-        "Hiding a genuine gap misrepresents the student's record."
+        "Deleting the original enrollment would erase useful academic history.",
+        "The returning learner is the same person, so a second person account would fragment their history.",
+        "Editing out the gap would hide a meaningful period in the student’s record."
       ]
     },
     {
-      "question": "Why is the educational institution hierarchy useful?",
+      "question": "Why model the structure of colleges, faculties, and departments?",
       "options": [
-        "It reflects how faculties and departments actually nest",
-        "It controls which members of staff are able to log in to the system at all",
-        "It determines the order in which students are offered places on a course",
-        "It sets the tuition fee that applies to each of the programmes on offer"
+        "It can reflect how the institution’s units relate to each other",
+        "It determines which employees can log in",
+        "It sets the order in which applicants receive offers",
+        "It calculates tuition for every program"
       ],
       "correctAnswer": 0,
-      "explanation": "Universities are structured in layers, and modelling that hierarchy lets you roll reporting and access up and down it.",
+      "explanation": "An organizational hierarchy can represent how institutional units are arranged and related.",
       "whyWrong": [
-        "Login access is governed by users and profiles.",
-        "Offer sequencing is an admissions decision.",
-        "Fees are held against programmes and courses."
+        "Login access is controlled through user and permission settings.",
+        "Admissions offers are handled by the admissions process, not organizational nesting.",
+        "Tuition is determined by program and pricing rules, not by hierarchy alone."
       ]
     },
     {
-      "question": "An institution wants to know which recruitment events led to enrolments. What makes this possible?",
+      "question": "An institution wants to learn which recruitment events are associated with later enrollments. What data link helps answer this?",
       "options": [
-        "Asking each enrolled student to recall which events they attended before",
-        "Comparing the number of events held with the total intake for that year",
-        "Linking event attendance through to the application",
-        "Counting the total number of people who attended each event in the period"
+        "Ask each enrolled student to remember every event",
+        "Compare yearly event counts with total enrollment",
+        "Connect event attendance with the application record",
+        "Count attendance at each event"
       ],
       "correctAnswer": 2,
-      "explanation": "Attribution needs the chain from attendance to application to enrolment, which means the records have to be connected rather than counted separately.",
+      "explanation": "Linking attendance to the application allows the institution to analyze event participation alongside application outcomes.",
       "whyWrong": [
-        "Recollection is unreliable and incomplete.",
-        "Comparing totals shows correlation at best.",
-        "Attendance counts alone cannot show what converted."
+        "Asking people to remember events may produce incomplete information.",
+        "Comparing aggregate event and enrollment totals cannot link an attendee to an outcome.",
+        "Attendance counts show event reach but not the later enrollment of each attendee."
       ]
     },
     {
-      "question": "What distinguishes a course from a course offering?",
+      "question": "What is the difference between a course and a course offering?",
       "options": [
-        "The course is for undergraduates and the offering is for postgraduates",
-        "The course is taught in person while the offering is delivered online only",
-        "The course is the definition; the offering is a specific run of it",
-        "The course is created by faculty and the offering by the admissions team"
+        "The course is undergraduate; the offering is postgraduate",
+        "The course is in-person; the offering is online",
+        "The course defines the subject; the offering is a specific run of it",
+        "Faculty create the course; admissions creates the offering"
       ],
       "correctAnswer": 2,
-      "explanation": "A course exists as a catalogue entry, and each offering is that course delivered in a particular term by a particular instructor.",
+      "explanation": "A course defines the academic subject, while an offering represents a particular instance or run of that course.",
       "whyWrong": [
-        "Both apply at any level of study.",
-        "Delivery mode is an attribute, not the distinction.",
-        "Who creates the record is not what separates the two concepts."
+        "The distinction does not depend on undergraduate or postgraduate level.",
+        "A course and its offering can have different delivery modes.",
+        "The difference is not based on which team creates each record."
       ]
     },
     {
-      "question": "A consultant finds the client storing student data in a custom object they built themselves. What should they weigh?",
+      "question": "A client built a custom object to store student data. What should the consultant assess first?",
       "options": [
-        "Whether the client has enough custom object capacity left in their org",
-        "Whether the custom object could be renamed to match the standard one instead",
-        "Whether the custom object can be moved into a separate Salesforce org",
-        "Whether the standard model already covers the requirement"
+        "Whether enough custom object capacity remains",
+        "Whether the custom object can be renamed to the standard name",
+        "Whether the data should be moved to another org",
+        "Whether the standard model already meets the requirement"
       ],
       "correctAnswer": 3,
-      "explanation": "Standard Education Cloud objects carry behaviour, reporting and future upgrades, so departing from them needs a reason the standard model cannot meet.",
+      "explanation": "Compare the requirement with the available standard data model before deciding whether custom storage is needed.",
       "whyWrong": [
-        "Capacity is rarely the real constraint; suitability is.",
-        "Renaming does not give the object the standard model's behaviour.",
-        "Moving data to another org fragments the institution's records."
+        "Capacity does not establish whether the data model fits the requirement.",
+        "Renaming a custom object does not give it standard object behavior.",
+        "A separate org is not the first step in assessing a data model."
       ]
     },
     {
-      "question": "Why would an institution use program enrollments rather than opportunities to track student participation?",
+      "question": "Why use program enrollment records rather than opportunities to track a learner’s participation?",
       "options": [
-        "Opportunities are unable to store any date fields for start and end periods",
-        "Enrolment is an ongoing state, not a deal to be won",
-        "Program enrollments are the only object that can relate to a person account",
-        "Opportunities cannot be reported on alongside the other education objects"
+        "Opportunities cannot store start and end dates",
+        "Enrollment represents ongoing study, not a sales deal",
+        "Only program enrollment can link to a person account",
+        "Education records cannot be reported with opportunities"
       ],
       "correctAnswer": 1,
-      "explanation": "Opportunities model a sales pipeline that closes. Enrolment is a continuing relationship with a start, an end and a status.",
+      "explanation": "Program enrollment represents a learner’s participation in an academic program rather than a prospective sales transaction.",
       "whyWrong": [
-        "Opportunities do have date fields; the mismatch is conceptual.",
-        "Many objects can relate to a person account.",
-        "Opportunities report perfectly well alongside other objects."
+        "Opportunities can store dates; that is not the reason to use enrollment.",
+        "The relationship to a person depends on the chosen data model.",
+        "Education data can be reported; reporting is not the key distinction."
       ]
     },
     {
-      "question": "An alumni office wants to track giving alongside academic history. What makes this straightforward?",
+      "question": "An alumni team wants to view giving activity alongside a person’s academic history. What supports this?",
       "options": [
-        "A separate alumni database synchronised with the student system each night",
-        "A second person account created for the individual once they graduate",
-        "The same person record carries both",
-        "A rule preventing academic records from being edited after graduation"
+        "A separate alumni database synced nightly",
+        "A second person account created after graduation",
+        "The same person record can relate to both histories",
+        "A rule that locks academic records at graduation"
       ],
       "correctAnswer": 2,
-      "explanation": "Because the person persists across the whole lifecycle, their study history and their giving sit on the same record rather than in two systems.",
+      "explanation": "Keeping one person identity connected to academic and advancement information supports a broader relationship view, subject to access controls.",
       "whyWrong": [
-        "A nightly sync between two systems invites drift and duplication.",
-        "A second account splits the person in half.",
-        "Locking records does not connect giving to academic history."
+        "A separate database can fragment history and requires synchronization.",
+        "A second person account could split one individual’s records.",
+        "Locking records does not connect academic and giving data."
       ]
     },
     {
-      "question": "What should a consultant establish before designing the data model?",
+      "question": "What should a consultant establish before designing an education data model?",
       "options": [
-        "Which reporting tool the institution intends to use after go-live",
-        "How the institution is structured and how students move through it",
-        "How many custom fields the institution has created in its previous system",
-        "Which Salesforce licence type each member of staff has been assigned"
+        "Which analytics product will be used after go-live",
+        "Map the institution and student journey",
+        "How many custom fields the legacy system contains",
+        "Which license each staff member currently has"
       ],
       "correctAnswer": 1,
-      "explanation": "The model has to fit the real academic structure and student lifecycle, so understanding those comes before any object design.",
+      "explanation": "Understanding the institution and its student lifecycle provides the context for selecting a suitable model.",
       "whyWrong": [
-        "Reporting tooling is downstream of the data model.",
-        "A count of legacy fields says little about what is needed now.",
-        "Licensing is a commercial detail that follows the design."
+        "Reporting tools matter, but first understand the institution’s structure and process.",
+        "Legacy field counts do not explain the institution’s business relationships.",
+        "Licenses affect scope but do not replace discovery of institutional needs."
       ]
     },
     {
-      "question": "Which best describes what Education Cloud is intended to support?",
+      "question": "Which statement best describes the intended scope of Education Cloud solutions?",
       "options": [
-        "The student relationship from enquiry to alumnus",
-        "The timetabling of classrooms and teaching staff across each academic term",
-        "The delivery of course content and assessment to enrolled students online",
-        "The payroll and contracts of the academic staff employed by the institution"
+        "Support the learner relationship over time",
+        "Scheduling every classroom and faculty member",
+        "Delivering all course content and online assessments",
+        "Managing academic staff payroll and contracts"
       ],
       "correctAnswer": 0,
-      "explanation": "It covers recruitment, admissions, enrolment, advising, retention and alumni relations as one continuous relationship.",
+      "explanation": "Education-focused Salesforce solutions can support relationships and processes across the learner lifecycle.",
       "whyWrong": [
-        "Timetabling is handled by specialist scheduling systems.",
-        "Content delivery is a learning management system's role.",
-        "Staff payroll belongs in human resources."
+        "Classroom scheduling may require another system or specialized tool.",
+        "Course content and assessments are commonly handled by an LMS.",
+        "Payroll and staff contracts are human resources functions."
+      ]
+    },
+    {
+      "question": "A client wants to know whether a managed package like Admissions Connect is compatible with their existing Education Cloud setup before installing it. What should the consultant review first?",
+      "options": [
+        "The package's documented compatibility and considerations with the customer's current configuration",
+        "Just install it and see what breaks",
+        "Only the package's price",
+        "Whether the package name sounds relevant"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Reviewing documented compatibility and configuration considerations before installing a managed package is part of understanding Education Cloud's configuration capabilities and constraints.",
+      "whyWrong": [
+        "Installing first and discovering problems afterward risks breaking a production org.",
+        "Price alone says nothing about whether the package fits the existing configuration.",
+        "A package's name doesn't establish technical compatibility."
+      ]
+    },
+    {
+      "question": "An institution is rolling out a new Education Cloud implementation and wants end users to actually adopt it instead of reverting to spreadsheets. What should the consultant plan for, beyond the technical build?",
+      "options": [
+        "Change management, training, and adoption planning as part of the implementation",
+        "Nothing, a technically correct build guarantees adoption",
+        "Skipping user testing to save time",
+        "Avoiding documentation since requirements rarely change"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A successful implementation plans for governance, change management, and adoption, not just the technical configuration, this is explicitly part of Implementation Strategies and Best Practices.",
+      "whyWrong": [
+        "A technically sound build can still fail if users don't adopt it, adoption needs deliberate planning.",
+        "Skipping testing increases the risk of deploying a broken or unusable solution.",
+        "Documentation supports long-term maintainability even when requirements seem stable."
+      ]
+    },
+    {
+      "question": "A university needs to migrate a large volume of historical student records into Education Cloud as part of an implementation. What should the consultant evaluate first?",
+      "options": [
+        "Data volume, quality, and migration considerations for the target data model",
+        "Whether the records can be renamed in bulk",
+        "Only the color scheme of the destination object's page layout",
+        "Whether the old system had a mobile app"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Evaluating data volume, data quality, and how records will map and migrate into the Education Cloud data model is a core data management consideration for an implementation.",
+      "whyWrong": [
+        "Bulk renaming isn't the key migration concern, data volume and mapping quality are.",
+        "Page layout color has nothing to do with a data migration's success.",
+        "Whether the old system had a mobile app is irrelevant to migrating its data."
+      ]
+    },
+    {
+      "question": "Leadership wants a report showing enrollment trends over time, broken out by program and recruitment source. What should the consultant consider when choosing a reporting approach?",
+      "options": [
+        "Whether standard Salesforce reports and dashboards meet the need, or a more advanced analytics solution is justified",
+        "Always recommend the most expensive analytics product regardless of the need",
+        "Reporting is never needed in an education implementation",
+        "Only the Salesforce mobile app can produce reports"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Distinguishing between what standard reporting can deliver and when a more advanced analytics solution is actually justified is the core skill tested in the Analytics domain.",
+      "whyWrong": [
+        "Recommending the most expensive option regardless of fit ignores the actual requirement.",
+        "Reporting on trends like this is exactly the kind of need education implementations address.",
+        "Reports and dashboards aren't limited to the mobile app."
+      ]
+    },
+    {
+      "question": "An institution's student information system (SIS) needs to stay in sync with Education Cloud so that enrollment changes in one system appear in the other. What should the consultant evaluate first?",
+      "options": [
+        "The integration pattern and considerations for connecting the two systems reliably",
+        "Whether the SIS has a nice-looking login page",
+        "Whether both systems use the same font",
+        "Nothing, systems always sync automatically with no configuration"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Evaluating integration considerations, such as sync direction, frequency, and data mapping, for connecting an external system like an SIS is a core Integration and Data Management skill.",
+      "whyWrong": [
+        "A login page's appearance has nothing to do with whether two systems can integrate reliably.",
+        "Matching fonts is irrelevant to system integration.",
+        "Systems don't sync automatically without deliberate integration configuration."
       ]
     }
   ]
