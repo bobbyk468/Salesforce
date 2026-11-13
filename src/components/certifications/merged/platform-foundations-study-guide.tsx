@@ -28,10 +28,10 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Salesforce Platform & Architecture', weight: 30, note: 'How the Salesforce platform works: multi-tenancy, metadata model, cloud products overview, and core platform concepts.' },
-  { name: 'Process Automation & App Development', weight: 28, note: 'Flow Builder, approval processes, formula fields, Lightning App Builder, and low-code development concepts.' },
-  { name: 'Data Modelling & Management', weight: 25, note: 'Standard and custom objects, fields, relationships (lookup vs master-detail), record types, and data quality.' },
-  { name: 'Security & Access', weight: 17, note: 'Profiles, permission sets, roles, OWD, field-level security, and record-level access fundamentals.' },
+  { name: 'Salesforce Ecosystem', weight: 32, note: 'Customer 360, the main product clouds (Sales, Service, Marketing, Experience, Data 360), AppExchange, Trailhead, and the Trailblazer Community.' },
+  { name: 'Navigation', weight: 28, note: 'Lightning Experience, the App Launcher, global search, list views, the Home page, and Salesforce Mobile.' },
+  { name: 'Data Model', weight: 25, note: 'Standard objects (Lead, Account, Contact, Opportunity, Case), custom objects, fields, and lookup vs master-detail relationships.' },
+  { name: 'Reports & Dashboards', weight: 15, note: 'What a report and a dashboard do, list views, and reading data back out of Salesforce.' },
 ]
 
 export const faqItems = [
@@ -41,7 +41,7 @@ export const faqItems = [
   },
   {
     question: 'What is the Platform Foundations exam format?',
-    answer: 'The exam consists of 40 multiple-choice questions with a 70-minute time limit. The passing score is 62%. The exam costs $75 for the first attempt, with a 62% discount retake voucher after a failed attempt. It can be taken online (proctored) or at a Pearson VUE testing centre.',
+    answer: 'The exam consists of 40 scored multiple-choice questions (plus up to 5 unscored questions) with a 70-minute time limit. The passing score is 62%. The exam costs $75 for the first attempt; a failed attempt gets a retake voucher for about 50% off. It can be taken online (proctored) or at a Pearson VUE testing centre.',
   },
   {
     question: 'How does Platform Foundations compare to AI Associate?',
@@ -100,13 +100,21 @@ export default function PlatformFoundationsStudyGuideContent() {
         </div>
       </div>
 
+      <p className="text-sm text-gray-700 mb-8">
+        Already have section-level scores from a practice test? Run them through the{' '}
+        <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+          Salesforce Exam Score Calculator
+        </Link>{' '}
+        to see where you stand against the 62% pass mark.
+      </p>
+
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">4-Week Study Plan</h2>
         <div className="space-y-3">
           {[
-            { week: 'Week 1', focus: 'Platform architecture & products', tasks: 'Complete Trailhead "Salesforce Platform Basics" and "CRM for Lightning Experience" modules. Understand multi-tenancy and the cloud product landscape.' },
-            { week: 'Week 2', focus: 'Data model & objects', tasks: 'Study standard vs custom objects, field types, and relationship types (lookup vs master-detail vs many-to-many). Build objects in a Trailhead Playground.' },
-            { week: 'Week 3', focus: 'Automation & security', tasks: 'Study Flow Builder basics, approval processes, profiles, permission sets, OWD, and roles. Complete the Trailhead security module.' },
+            { week: 'Week 1', focus: 'Salesforce Ecosystem (32%)', tasks: 'Complete Trailhead "Salesforce Platform Basics" and "CRM for Lightning Experience" modules. Learn Customer 360, the main product clouds, AppExchange, and Trailhead itself, this is the single heaviest section.' },
+            { week: 'Week 2', focus: 'Navigation (28%) & Data Model (25%)', tasks: 'Practice the App Launcher, global search, list views, and Salesforce Mobile. Study standard vs custom objects, field types, and relationship types (lookup vs master-detail). Build objects in a Trailhead Playground.' },
+            { week: 'Week 3', focus: 'Reports & Dashboards (15%) plus review', tasks: 'Learn what reports and dashboards do and how list views differ from both. Revisit anything shaky from Weeks 1 and 2.' },
             { week: 'Week 4', focus: 'Mock exams & review', tasks: 'Take full timed practice exams. Target 75%+ before booking. Review any weak areas identified in practice results.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-4">

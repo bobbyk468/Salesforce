@@ -7,6 +7,7 @@ import LastUpdated from '@/components/LastUpdated'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CredentialSchema from '@/components/CredentialSchema'
 import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
@@ -285,6 +286,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
     <>
       <CertPageSeo slug={slug} certTitle={title} />
       <div className="max-w-7xl mx-auto px-4"><CredentialStatusNotice slug={slug} /></div>
+      <CredentialSchema certSlug={slug} certName={title} description={card.description} pageUrl={`/certifications/${slug}`} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -485,6 +487,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
   return (
     <>
       <CertPageSeo slug={slug} certTitle={title} />
+      <CredentialSchema certSlug={slug} certName={title} description={card.description} pageUrl={`/certifications/${slug}`} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

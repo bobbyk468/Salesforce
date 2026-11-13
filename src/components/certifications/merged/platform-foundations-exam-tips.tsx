@@ -31,11 +31,11 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Salesforce Platform Foundations exam format?',
-    answer: 'The Salesforce Platform Foundations exam has 45 multiple-choice questions, a 70-minute time limit, a 62% passing score, and a $150 fee. It is an entry-level certification testing fundamental Salesforce platform concepts: navigation, objects, fields, automation basics, security model, and reports, positioned as a stepping stone before the full Administrator exam.',
+    answer: 'The Salesforce Platform Foundations exam has 40 scored multiple-choice questions (plus up to 5 unscored questions that don\'t count toward your result), a 70-minute time limit, a 62% passing score, and a $75 fee. It is an entry-level certification testing fundamental Salesforce platform concepts: the ecosystem, navigation, the data model, and reports and dashboards, positioned as a stepping stone before the full Administrator exam.',
   },
   {
     question: 'What are the highest-weight Platform Foundations exam sections?',
-    answer: 'Core Salesforce Platform Concepts (30%) and Data and Security (25%) together account for 55% of the exam. Understanding standard and custom objects, field types, the Salesforce security model (profiles, permission sets, OWDs, sharing rules), basic automation (Flow), and reports/dashboards are the most tested areas.',
+    answer: 'Salesforce Ecosystem (32%) and Navigation (28%) together account for 60% of the exam. Knowing Customer 360, the main product clouds, AppExchange, and Trailhead (Ecosystem), plus the App Launcher, global search, and Salesforce Mobile (Navigation), covers most of what\'s tested. Data Model (25%) and Reports & Dashboards (15%) make up the rest.',
   },
   {
     question: 'What is the difference between Platform Foundations and Administrator (ADM-201)?',
@@ -73,22 +73,22 @@ export default function PlatformFoundationsExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Core Salesforce Platform Concepts</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+            <span className="font-medium text-gray-900">Salesforce Ecosystem</span>
+            <span className="font-bold text-salesforce-blue ml-4">32%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data and Security</span>
+            <span className="font-medium text-gray-900">Navigation</span>
+            <span className="font-bold text-salesforce-blue ml-4">28%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Data Model</span>
             <span className="font-bold text-salesforce-blue ml-4">25%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Automation Basics</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
           <div className="flex justify-between items-start">
             <span className="font-medium text-gray-900">Reports and Dashboards</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Platform Concepts + Security + Automation = 77%. These three areas cover the vast majority of what every Salesforce user needs to know.</p>
+          <p className="text-xs text-gray-600 pt-1">Ecosystem + Navigation = 60%. Those two areas alone cover most of what every Salesforce user needs to know.</p>
         </div>
       </section>
 
