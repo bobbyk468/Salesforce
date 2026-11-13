@@ -102,16 +102,6 @@ export default function AgentforceSpecialistExamTipsContent() {
       </section>
 
       {/* Study plan */}
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week Agentforce Specialist Study Plan</h2>
-        <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: AI Agents (35%), the single largest section:</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create standard and custom topics, assign standard and custom actions, test conversations, and review how agents connect to channels like digital experience, email, voice, and Slack.</p>
-          <p><strong>Week 2: Prompt Engineering (20%) and Data 360 Fundamentals (20%):</strong> Practice with Prompt Builder, create and test flex prompts with merge fields, and review grounding techniques. Study Data 360 and Agentforce Data Library concepts: chunking, indexing, and retrievers. Review Trust Layer security and privacy features, including model access management.</p>
-          <p><strong>Week 3: Testing, Deployment and Maintenance (10%), Governance and Observability (10%), and Multi-Agent Orchestration (5%):</strong> Use Testing Center to evaluate an agent, review sandbox-to-production deployment considerations, and read up on agent analytics and monitoring. Review Multi Agent architecture and open protocols like MCP and A2A.</p>
-          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Re-test any weak sections and review errors against the official objectives.</p>
-        </div>
-      </section>
-
       {/* Scenario tips */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Handle Agentforce Scenario Questions</h2>
@@ -172,23 +162,11 @@ export default function AgentforceSpecialistExamTipsContent() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-        <div className="space-y-4">
-          {faqItems.map((item, i) => (
-            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <h3 className="font-semibold text-gray-900 mb-1">{item.question}</h3>
-              <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Related Exam Tips</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/certifications/ai-associate" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+          <Link href="/agentforce-specialist-vs-ai-associate" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">AI Associate Exam Tips</span>
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Agentforce Specialist vs. Retired AI Associate Comparison</span>
           </Link>
           <Link href="/certifications/administrator" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
@@ -219,10 +197,10 @@ export default function AgentforceSpecialistExamTipsContent() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/certifications/ai-associate"
+            href="/certifications/administrator"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
-            Start with AI Associate First
+            Recommended Prep: Platform Administrator
           </Link>
           <Link
             href="/certifications/role/administrator"

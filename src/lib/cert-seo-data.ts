@@ -832,6 +832,7 @@ function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
   // Include both the current and legacy exam codes in the Administrator search title.
   if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Practice & Guide'
+  if (slug === 'agentforce-specialist') return 'Salesforce Agentforce Specialist (AI-201) Practice & Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -2627,6 +2628,9 @@ export function getCertH1Text(slug: string): string {
   }
   if (slug === 'mulesoft-integration-architect') {
     return `MuleSoft Integration Architect Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
+  }
+  if (slug === 'agentforce-specialist') {
+    return `Salesforce Certified Agentforce Specialist (AI-201) Study Guide & Practice Questions`
   }
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   return `${primaryName} – Complete ${TITLE_YEAR} Guide`

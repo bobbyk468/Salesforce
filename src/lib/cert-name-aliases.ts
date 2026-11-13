@@ -19,6 +19,10 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     primaryName: 'Salesforce Certified Slack Administrator',
     formerName: 'Slack Certified Administrator',
   },
+  'agentforce-specialist': {
+    primaryName: 'Salesforce Certified Agentforce Specialist',
+    formerName: 'Salesforce Certified AI Specialist',
+  },
   administrator: {
     primaryName: 'Salesforce Certified Platform Administrator',
     formerName: 'Salesforce Certified Administrator',

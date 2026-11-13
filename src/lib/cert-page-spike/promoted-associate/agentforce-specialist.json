@@ -1,5 +1,22 @@
 {
   "template": "associate",
+  "introLead": [
+    { "type": "text", "text": "Complete 2026 preparation guide for the " },
+    { "type": "strong", "text": "Salesforce Certified Agentforce Specialist" },
+    { "type": "text", "text": " exam (official Trailhead Academy exam code " },
+    { "type": "strong", "text": "AI-201" },
+    { "type": "text", "text": ", frequently searched as " },
+    { "type": "strong", "text": "Agent Force Specialist" },
+    { "type": "text", "text": " and formerly known as " },
+    { "type": "strong", "text": "Salesforce Certified AI Specialist" },
+    { "type": "text", "text": "). This guide covers all 6 exam domains, including " },
+    { "type": "strong", "text": "AI Agents (35%)" },
+    { "type": "text", "text": ", " },
+    { "type": "strong", "text": "Prompt Engineering (20%)" },
+    { "type": "text", "text": ", and " },
+    { "type": "strong", "text": "Data 360 Fundamentals (20%)" },
+    { "type": "text", "text": ", plus 20 free practice test questions with full explanations." }
+  ],
   "whoIsThisFor": {
     "heading": "Who should take the Agentforce Specialist exam?",
     "personas": [
@@ -136,8 +153,8 @@
         "label": "Agentforce Specialist exam tips"
       },
       {
-        "href": "/certifications/ai-associate",
-        "label": "Salesforce AI Associate"
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator (ADM-201)"
       }
     ]
   },

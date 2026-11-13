@@ -52,12 +52,12 @@ export const faqItems = [
 ]
 
 const examSections = [
-  { name: 'Prompt Engineering', weight: 20, note: 'Study the prompt-engineering objectives in the current Salesforce exam guide.' },
-  { name: 'Data 360 Fundamentals', weight: 20, note: 'Review the Data 360 objectives listed in the exam guide.' },
-  { name: 'AI Agents', weight: 35, note: 'Review agent objectives, including configuration and capabilities, as specified by Salesforce.' },
-  { name: 'Testing, Deployment, and Maintenance', weight: 10, note: 'Use the published objectives to guide testing and lifecycle review.' },
-  { name: 'Governance and Observability', weight: 10, note: 'Review governance and observability objectives in the issuer guide.' },
-  { name: 'Multi-Agent Orchestration', weight: 5, note: 'Review the multi-agent orchestration objectives in the issuer guide.' },
+  { name: 'Prompt Engineering', weight: 20, note: 'Choosing and configuring Prompt Builder template types, access controls (Prompt Template Manager vs Prompt Template User), grounding techniques for a prompt, writing effective prompts, Trust Layer security and privacy features, and managing which models are accessible.' },
+  { name: 'Data 360 Fundamentals', weight: 20, note: 'Agentforce Data Library concepts, and the core Data 360 pipeline: chunking unstructured content into passages, indexing those passages, and using retrievers to pull the right context into a prompt or agent response.' },
+  { name: 'AI Agents', weight: 35, note: 'How an agent is built from Agent Script, including Canvas View and Script View; managing deterministic behavior with filters, variables, and template expressions; configuring standard and custom topics and actions; connecting agents to channels like digital experience, email, voice, and Slack; and understanding the security context an agent runs in.' },
+  { name: 'Testing, Deployment, and Maintenance', weight: 10, note: 'Testing an agent with Testing Center and understanding how its evaluations work, plus deployment considerations for moving an agent or prompt template from sandbox to production.' },
+  { name: 'Governance and Observability', weight: 10, note: 'Managing and monitoring agents in production, and reviewing agent analytics to judge and optimize performance over time.' },
+  { name: 'Multi-Agent Orchestration', weight: 5, note: 'Deciding when a Multi-Agent architecture is the right call for scalability and control, and understanding open multi-agent protocols such as Model Context Protocol (MCP) and Agent-to-Agent (A2A).' },
 ]
 
 export default function AgentforceSpecialistStudyGuideContent() {
@@ -180,8 +180,8 @@ export default function AgentforceSpecialistStudyGuideContent() {
           <span className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Agentforce Exam Tips
           </span>
-          <Link href="/certifications/ai-associate" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            AI Associate Study Guide
+          <Link href="/certifications/app-builder" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Platform App Builder (DEV-402) →
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">
