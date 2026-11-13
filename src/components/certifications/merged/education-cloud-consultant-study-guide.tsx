@@ -114,17 +114,6 @@ export default function EducationCloudConsultantStudyGuideContent() {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
-        <dl className="space-y-4">
-          {faqItems.map((item) => (
-            <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
-              <dd className="text-sm text-gray-700">{item.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">

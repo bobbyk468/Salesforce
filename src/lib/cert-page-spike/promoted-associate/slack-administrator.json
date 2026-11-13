@@ -40,7 +40,7 @@
     ]
   },
   "certificationCard": {
-    "code": "Slack Admin",
+    "code": "Slack-Admn-201",
     "description": "This exam covers Slack setup and daily administration: workspaces, channels, user accounts, roles, permissions, apps, security, compliance, Enterprise Grid, and Workflow Builder. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Governance, Security and Compliance (22%) and App and AI Administration and Automations (20%).",
     "examDetails": {
       "questions": 60,

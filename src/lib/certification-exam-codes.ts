@@ -11,8 +11,8 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'app-builder': 'DEV-402',
   'administrator-practice-test': 'ADM-201',
   'email-specialist-practice-test': 'CRT-550',
-  'sales-cloud': 'CRT-251',
-  'service-cloud': 'CRT-261',
+  'sales-cloud': 'Sales-Con-201',
+  'service-cloud': 'Service-Con-201',
   'experience-cloud': 'CRT-271',
   'email-specialist': 'CRT-550',
   'pardot-consultant': 'CRT-302',
@@ -26,6 +26,15 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'public-sector-solutions-consultant': 'PubSec-Con-201',
   'agentforce-specialist': 'AI-201',
   'platform-foundations': 'Plat-101',
+  'slack-administrator': 'Slack-Admn-201',
+  'data-360-consultant': 'Data-Con-101',
+  'field-service': 'FS-Con-101',
+}
+
+/** Earlier codes people still search for (mostly the certification prep course codes). */
+export const LEGACY_EXAM_CODES: Record<string, string> = {
+  'sales-cloud': 'CRT-251',
+  'service-cloud': 'CRT-261',
 }
 
 export const EXAM_CODE_TITLE_LABELS: Record<string, string> = {
@@ -36,7 +45,7 @@ export const EXAM_CODE_TITLE_LABELS: Record<string, string> = {
   'app-builder': 'Platform App Builder',
   'administrator-practice-test': 'Salesforce Admin',
   'email-specialist-practice-test': 'Email Specialist',
-  'sales-cloud': 'Sales Cloud Consultant',
+  'sales-cloud': 'Agentforce Sales Consultant',
   'service-cloud': 'Agentforce Service Consultant',
   'experience-cloud': 'Experience Cloud Consultant',
   'email-specialist': 'Email Specialist',

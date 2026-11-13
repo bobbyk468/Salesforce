@@ -15,6 +15,8 @@ export interface CertPrerequisite {
   requiredPrerequisites?: string[]
   /** Slug of recommended (but not required) prerequisite cert */
   recommendedPrerequisite?: string
+  /** True when the official exam guide states "Prerequisite: None". */
+  noPrerequisite?: boolean
   /** Additional notes about prerequisites */
   notes?: string
 }
@@ -75,7 +77,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'slack-administrator': {
     slug: 'slack-administrator',
-    recommendedPrerequisite: 'administrator',
+    noPrerequisite: true,
     notes: 'Slack enterprise platform administration',
   },
 
@@ -157,28 +159,34 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'sales-cloud': {
     slug: 'sales-cloud',
-    recommendedPrerequisite: 'administrator',
+    requiredPrerequisite: 'administrator',
     notes: 'Sales Cloud implementation and consulting',
   },
 
   'service-cloud': {
     slug: 'service-cloud',
-    recommendedPrerequisite: 'administrator',
+    requiredPrerequisite: 'administrator',
     notes: 'Service Cloud configuration and consulting',
   },
 
   'data-360-consultant': {
     slug: 'data-360-consultant',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Salesforce Data Cloud (CDP) implementation',
   },
 
   'experience-cloud': {
     slug: 'experience-cloud',
-    recommendedPrerequisite: 'administrator',
+    requiredPrerequisite: 'administrator',
     notes: 'Communities and Experience Cloud setup',
   },
 
+  'agentforce-life-sciences-consultant': {
+    slug: 'agentforce-life-sciences-consultant',
+    requiredPrerequisite: 'administrator',
+    notes: 'The official exam guide lists Platform Administrator as the prerequisite.',
+  },
   'field-service': {
     slug: 'field-service',
     requiredPrerequisites: ['administrator', 'service-cloud'],
@@ -187,6 +195,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'crm-analytics-einstein-discovery-consultant': {
     slug: 'crm-analytics-einstein-discovery-consultant',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'CRM Analytics and Einstein Discovery consulting',
   },
@@ -223,6 +232,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'omnistudio-consultant': {
     slug: 'omnistudio-consultant',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'OmniStudio consulting for industry clouds',
   },
@@ -241,7 +251,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'slack-consultant': {
     slug: 'slack-consultant',
-    recommendedPrerequisite: 'administrator',
+    noPrerequisite: true,
     notes: 'Slack enterprise consulting and integration',
   },
 

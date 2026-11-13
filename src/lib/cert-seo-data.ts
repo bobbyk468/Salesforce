@@ -835,7 +835,18 @@ function getCertMetaTitle(slug: string): string {
   if (slug === 'agentforce-specialist') return 'Salesforce Agentforce Specialist (AI-201) Practice & Guide'
   if (slug === 'platform-foundations') return 'Salesforce Platform Foundations (Plat-101) Practice & Guide'
   if (slug === 'app-builder') return 'Salesforce Platform App Builder (DEV-402) Practice & Guide'
-  if (slug === 'sales-cloud') return 'Agentforce Sales Consultant (Sales Cloud) Practice & Guide'
+  const bespokeTitles: Record<string, string> = {
+    'sales-cloud': 'Agentforce Sales Consultant (Sales-Con-201 / CRT-251) Guide',
+    'service-cloud': 'Agentforce Service Consultant (Service-Con-201) Exam Guide',
+    'crm-analytics-einstein-discovery-consultant': 'CRM Analytics & Einstein Discovery Consultant Practice Guide',
+    'data-360-consultant': 'Data 360 Consultant (Data-Con-101 / Data Cloud) Exam Guide',
+    'field-service': 'Agentforce Field Service Consultant (FS-Con-101) Exam Guide',
+    'experience-cloud': 'Salesforce Experience Cloud Consultant (CRT-271) Exam Guide',
+    'agentforce-life-sciences-consultant': 'Agentforce Life Sciences Consultant (Als-Con-201) Exam Guide',
+    'slack-administrator': 'Salesforce Slack Administrator (Slack-Admn-201) Exam Guide',
+    'slack-consultant': 'Salesforce Slack Consultant Exam Guide & Practice Questions'
+  }
+  if (bespokeTitles[slug]) return bespokeTitles[slug]
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
   if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
@@ -1431,7 +1442,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the Experience Cloud Consultant passing score and exam fee in Summer \'26?',
-      answer: 'The Experience Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
+      answer: 'The Experience Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD), and the Platform Administrator certification is a prerequisite. Up to five unscored questions may be added.',
     },
     {
       question: 'What types of Experience Cloud sites are covered in the exam?',
@@ -1492,6 +1503,14 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'Do I need education industry experience for Education Cloud Consultant?',
       answer: 'While helpful, it\'s not required. You need Platform Administrator certification and should understand educational processes. Hands-on experience with Education Cloud features is recommended.',
+    },
+    {
+      question: 'When does the Education Cloud Consultant certification retire?',
+      answer: 'Salesforce set three dates: the last day to register was July 24, 2026, the last day to take the exam was August 31, 2026, and the credential retires on February 1, 2027. After that it stays on your Trailblazer Profile marked as Retired, and maintenance is no longer required.',
+    },
+    {
+      question: 'What should I take instead of Education Cloud Consultant?',
+      answer: 'Salesforce points candidates to the Platform Administrator and Data 360 Consultant exams to validate foundational knowledge, and says comparable learning content is available on Trailhead.',
     },
   ],
   'pardot-consultant': [
@@ -2664,6 +2683,11 @@ export function getCertH1Text(slug: string): string {
     return `Salesforce Certified Agentforce Specialist (AI-201) Study Guide & Practice Questions`
   }
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
+  if (slug === 'sales-cloud') return `${primaryName} (Sales-Con-201 / CRT-251) Study Guide & Practice Questions`
+  if (slug === 'service-cloud') return `${primaryName} (Service-Con-201 / CRT-261) Study Guide & Practice Questions`
+  if (slug === 'data-360-consultant') return `${primaryName} (Data-Con-101 / Data Cloud) Study Guide & Practice Questions`
+  const h1Code = SLUG_TO_EXAM_CODE[slug]
+  if (h1Code) return `${primaryName} (${h1Code}) Study Guide & Practice Questions`
   return `${primaryName} – Complete ${TITLE_YEAR} Guide`
 }
 

@@ -41,7 +41,7 @@
   },
   "expertInsight": "Use Salesforce’s official exam guide and Trailhead preparation trail to study for this new 2026 credential. Focus on the current product and official courses (LSC001 and LSC002), since older Life Sciences Cloud material may describe features that have changed.",
   "certificationCard": {
-    "code": "Agentforce Life Sciences Consultant",
+    "code": "Als-Con-201",
     "description": "This exam tests how to design and set up Agentforce Life Sciences for Customer Engagement. Topics include account and territory management, engagement plans, and compliant HCP/HCO interactions using Data 360 and Agentforce. The exam is 60 scored questions in 105 minutes, with a 62% pass mark, weighted towards Foundations and Administration (36%) and Engagement Execution (28%).",
     "examDetails": {
       "questions": 60,

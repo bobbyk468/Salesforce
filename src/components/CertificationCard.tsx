@@ -62,9 +62,13 @@ export default function CertificationCard({
   const required = prerequisites?.requiredPrerequisites ?? (prerequisites?.requiredPrerequisite ? [prerequisites.requiredPrerequisite] : [])
   const prerequisiteText = required.length
     ? required.map(slugToDisplayName).join(', ')
-    : prerequisites?.recommendedPrerequisite
-      ? `Recommended preparation: ${slugToDisplayName(prerequisites.recommendedPrerequisite)}`
-      : 'No prerequisite listed in this guide'
+    : prerequisites?.noPrerequisite
+      ? prerequisites.recommendedPrerequisite
+        ? `None required. Recommended preparation: ${slugToDisplayName(prerequisites.recommendedPrerequisite)}`
+        : 'None required'
+      : prerequisites?.recommendedPrerequisite
+        ? `Recommended preparation: ${slugToDisplayName(prerequisites.recommendedPrerequisite)}`
+        : 'No prerequisite listed in this guide'
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-blue-100 cert-card [content-visibility:auto] [contain-intrinsic-size:auto_400px]">
       {/* Header: heading with exam name and primary keyword for SEO */}

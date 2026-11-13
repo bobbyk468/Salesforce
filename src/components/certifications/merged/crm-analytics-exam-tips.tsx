@@ -149,17 +149,6 @@ export default function CrmAnalyticsExamTipsContent() {
         </div>
       </section>
 
-<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
-        <dl className="space-y-4">
-          {faqItems.map((item, i) => (
-            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
-              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
-            </div>
-          ))}
-        </dl>
-      </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">More Exam-Prep Guides</h2>

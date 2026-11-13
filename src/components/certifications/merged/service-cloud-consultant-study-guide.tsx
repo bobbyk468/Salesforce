@@ -19,7 +19,7 @@ const examSections: Array<{ name: string; weight: number; body: string }> = [
   {
     name: 'Intake and Interaction Channels',
     weight: 13,
-    body: 'Recommend intake channels such as Email-to-Case, Web-to-Case, phone, chat, and messaging, and know the design considerations for each. This section also covers when to use AI agents in the service process, and how agentic service capabilities are configured.',
+    body: 'Recommend intake channels such as Email-to-Case, Web-to-Case, phone, chat, and messaging, and know the design considerations for each. Know the real-time channels by name: Messaging for In-App and Web for chat-style conversations, and Service Cloud Voice for telephony inside Salesforce. This section also covers when an Agentforce service agent is the right first point of contact, when it should hand off to a person, and how agentic service capabilities are configured.',
   },
   {
     name: 'Case Management',

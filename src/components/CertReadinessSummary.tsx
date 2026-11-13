@@ -19,7 +19,7 @@ export default function CertReadinessSummary({ slug }: { slug: string }) {
 
   return (
     <section id="is-this-exam-hard" className="mt-8 rounded-xl border border-gray-100 bg-white p-6">
-      <h2 className="text-xl font-bold text-gray-900 mb-3">Is the {displayName} Exam Hard?</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-3">{displayName} Exam: Readiness Summary</h2>
       <div className="grid gap-3 sm:grid-cols-3 text-sm">
         <p className="rounded-lg bg-amber-50 p-3 text-gray-700">
           <strong className="block text-gray-900">Difficulty</strong>

@@ -1,6 +1,6 @@
 import { isRetiredCredential, hasUnverifiedClaudeExamDetails } from '@/lib/credential-status'
 import { getCertFormerName } from '@/lib/cert-name-aliases'
-import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
+import { LEGACY_EXAM_CODES, SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 
 const SITE_URL = 'https://www.trailblazeprep.com'
 
@@ -19,14 +19,16 @@ export default function CredentialSchema({ certSlug, certName, description, page
   if (isRetiredCredential(certSlug) || hasUnverifiedClaudeExamDetails(certSlug)) return null
 
   const formerName = getCertFormerName(certSlug)
-  const examCode = getRecognizedExamCode(certSlug)
+  const examCode = SLUG_TO_EXAM_CODE[certSlug]
+  const legacyCode = LEGACY_EXAM_CODES[certSlug]
 
-  const alternateName = [...new Set([...(extraAlternateNames ?? []), formerName, examCode].filter((v): v is string => Boolean(v)))]
+  const alternateName = [...new Set([...(extraAlternateNames ?? []), formerName, examCode, legacyCode].filter((v): v is string => Boolean(v)))]
   // An explicit 'Exam Code' in extraIdentifiers replaces the auto-derived one,
   // so a page can state the current code and list the legacy code separately.
   const hasExplicitCode = (extraIdentifiers ?? []).some((id) => id.propertyID === 'Exam Code')
   const identifier = [
     ...(examCode && !hasExplicitCode ? [{ '@type': 'PropertyValue', propertyID: 'Exam Code', value: examCode }] : []),
+    ...(legacyCode ? [{ '@type': 'PropertyValue', propertyID: 'Legacy Exam Code', value: legacyCode }] : []),
     ...(extraIdentifiers ?? []).map((id) => ({ '@type': 'PropertyValue', ...id })),
   ]
 

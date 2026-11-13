@@ -66,7 +66,7 @@ const CREDENTIAL_STATUS: Record<string, CredentialStatusInfo> = {
   'education-cloud-consultant': {
     kind: 'exam-closed',
     label: 'Exam closed; credential retirement scheduled February 1, 2027',
-    message: 'Salesforce closed Education Cloud Consultant registration on July 24, 2026 and exam delivery after August 31, 2026. The credential retires February 1, 2027; it is not already retired. These notes preserve the published exam objectives for learning, not new exam bookings.',
+    message: 'Salesforce closed Education Cloud Consultant registration on July 24, 2026 and exam delivery after August 31, 2026. The credential retires February 1, 2027; it is not already retired. Holders keep it on their Trailblazer Profile, marked Retired, and maintenance is no longer required. Salesforce points candidates to the Platform Administrator and Data 360 Consultant exams instead. These notes preserve the published exam objectives for learning, not new exam bookings.',
     sourceLabel: 'Salesforce Education Cloud Consultant exam and retirement notice',
     sourceUrl: 'https://help.salesforce.com/s/articleView?id=005298934&language=en_US&type=1',
   },

@@ -42,7 +42,7 @@
     ]
   },
   "certificationCard": {
-    "code": "SCC",
+    "code": "Sales-Con-201",
     "description": "This exam covers how to design and configure Sales Cloud, from leads and accounts to opportunities, products, quotes, forecasts, territories, and reporting. The exam is 60 scored questions in 105 minutes, with a 73% pass mark, weighted towards Consulting and Implementation Strategies (25%) and Practical Application of Agentforce Sales Expertise (24%).",
     "examDetails": {
       "questions": 60,

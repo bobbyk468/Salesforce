@@ -41,7 +41,7 @@
     ]
   },
   "certificationCard": {
-    "code": "Experience Cloud",
+    "code": "CRT-271",
     "description": "This credential covers planning and implementing Experience Cloud sites for customers, partners and employees, including templates, external-user access, content and site administration. The exam is 60 scored questions in 105 minutes, with a 62% pass mark, weighted towards Administration, Setup, and Configuration (25%) and Sharing, Visibility, and Licensing (17%).",
     "examDetails": {
       "questions": 60,
