@@ -47,16 +47,16 @@ export const faqItems = [
   },
   {
     question: 'What Flow Builder topics does App Builder test?',
-    answer: 'Flow Builder is tested extensively in the Business Logic section (28%). Key topics: record-triggered flows (before-save vs after-save), screen flows (input components, navigation), scheduled-triggered flows, subflows, fault paths, and the order of execution. Specific scenario: when to use a before-save record trigger (efficient field updates) vs an after-save trigger (need to query related records after insert).',
+    answer: 'Flow Builder is tested extensively in the Business Logic section (32%). Key topics: record-triggered flows (before-save vs after-save), screen flows (input components, navigation), scheduled-triggered flows, subflows, fault paths, and the order of execution. Specific scenario: when to use a before-save record trigger (efficient field updates) vs an after-save trigger (need to query related records after insert).',
   },
 ]
 
 const examSections = [
-  { name: 'Business Logic and Process Automation', weight: 28, note: 'Flow Builder (record-triggered, screen, scheduled), approval processes, validation rules, formula fields, order of execution' },
-  { name: 'Salesforce Fundamentals', weight: 23, note: 'Platform basics, MVC pattern, declarative vs programmatic, user management, org setup, sharing model overview' },
+  { name: 'Business Logic and Process Automation', weight: 32, note: 'Flow Builder (record-triggered, screen, scheduled), approval processes, validation rules, formula fields, order of execution' },
   { name: 'Data Modeling and Management', weight: 20, note: 'Custom objects, field types (formula, roll-up summary, lookup, master-detail), schema relationships, data quality, import/export tools' },
+  { name: 'Salesforce Fundamentals', weight: 18, note: 'Platform basics, MVC pattern, declarative vs programmatic, user management, org setup, sharing model overview' },
   { name: 'User Interface', weight: 17, note: 'Lightning App Builder, page types (Home, Record, App), dynamic pages, component visibility rules, Lightning Experience navigation' },
-  { name: 'App Deployment', weight: 12, note: 'Change sets (outbound/inbound), sandbox types (Developer, Partial Copy, Full), deployment best practices, managed vs unmanaged packages' },
+  { name: 'App Deployment', weight: 13, note: 'Change sets (outbound/inbound), sandbox types (Developer, Partial Copy, Full), deployment best practices, managed vs unmanaged packages' },
 ]
 
 export default function AppBuilderStudyGuideContent() {
@@ -91,7 +91,7 @@ export default function AppBuilderStudyGuideContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">App Builder Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Business Logic + Fundamentals + Data Modeling = 71% of the exam. Master these three first.
+          Business Logic + Data Modeling + Fundamentals = 70% of the exam. Master these three first.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -107,6 +107,13 @@ export default function AppBuilderStudyGuideContent() {
             </div>
           ))}
         </div>
+        <p className="text-sm text-gray-700 mt-4">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 73% pass mark.
+        </p>
       </section>
 
       {/* Section deep-dives */}
@@ -180,9 +187,9 @@ export default function AppBuilderStudyGuideContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week App Builder Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Business Logic and Process Automation (28%):</strong> Flow Builder in depth, record-triggered (before/after), screen flows, scheduled flows, approval processes, validation rules, and order of execution. Practice: build a record-triggered flow that creates a follow-up task on Opportunity close, and a screen flow for new case intake.</p>
-          <p><strong>Week 2: Fundamentals + Data Modeling (43%):</strong> Sharing model (OWD, roles, sharing rules), profiles vs permission sets, MVC, custom objects, field types (formula, roll-up summary, lookup, master-detail), schema design patterns, Import Wizard vs Data Loader. Practice: design a data model for a custom app (e.g., event management) with proper relationship types.</p>
-          <p><strong>Week 3: UI + Deployment (29%):</strong> Lightning App Builder (page types, dynamic components, component visibility), compact layouts, record types, App Manager. Change sets, sandbox types, package types, deployment order. Practice: create a custom Lightning app with a custom record page using dynamic components.</p>
+          <p><strong>Week 1: Business Logic and Process Automation (32%):</strong> Flow Builder in depth, record-triggered (before/after), screen flows, scheduled flows, approval processes, validation rules, and order of execution. Practice: build a record-triggered flow that creates a follow-up task on Opportunity close, and a screen flow for new case intake.</p>
+          <p><strong>Week 2: Data Modeling + Fundamentals (38%):</strong> Custom objects, field types (formula, roll-up summary, lookup, master-detail), schema design patterns, Import Wizard vs Data Loader. Sharing model (OWD, roles, sharing rules), profiles vs permission sets, MVC. Practice: design a data model for a custom app (e.g., event management) with proper relationship types.</p>
+          <p><strong>Week 3: UI + Deployment (30%):</strong> Lightning App Builder (page types, dynamic components, component visibility), compact layouts, record types, App Manager. Change sets, sandbox types, package types, deployment order. Practice: create a custom Lightning app with a custom record page using dynamic components.</p>
           <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Score 85%+ consistently before booking (App Builder passing is 73%, aim 10 points above).</p>
         </div>
       </section>
@@ -220,7 +227,7 @@ export default function AppBuilderStudyGuideContent() {
         <p className="text-sm text-gray-700 mt-3">
           App Builder has the lowest passing score (73%) of the three admin-track exams, but do not be
           overconfident, the Flow Builder questions involve detailed scenario analysis. The most common failure
-          mode is weak performance on deployment questions (change sets, sandbox types), do not neglect the 12%
+          mode is weak performance on deployment questions (change sets, sandbox types), do not neglect the 13%
           App Deployment section even though it is the smallest.
         </p>
       </section>

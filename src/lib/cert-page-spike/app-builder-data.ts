@@ -7,34 +7,34 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   whoIsThisFor: {
     heading: 'Who is the Platform App Builder exam for?',
     personas: [
-      { label: 'Admins levelling up', description: 'You passed ADM-201 and want to prove you can design and build custom Salesforce applications using declarative tools.' },
-      { label: 'Business app builders', description: 'You create custom objects, flows, and Lightning pages for your team and want the credential to formalise those skills.' },
-      { label: 'Aspiring developers', description: 'You want to understand declarative boundaries before moving into Apex development and PD1.' },
+      { label: 'Admins levelling up', description: 'You have admin experience and want to show that you can build custom apps with Salesforce’s declarative tools.' },
+      { label: 'Business app builders', description: 'You build custom objects, flows, and Lightning pages and want a credential for those skills.' },
+      { label: 'Aspiring developers', description: 'You want to learn what declarative tools can do before studying Apex and Platform Developer I.' },
     ],
   },
   examDifficulty: {
     heading: 'Is the Platform App Builder Exam Hard?',
-    summary: 'App Builder is considered moderately difficult. It builds on ADM-201 knowledge but goes deeper into data modelling, business logic, and Lightning app configuration.',
+    summary: 'The exam builds on admin knowledge and asks you to apply data modelling, business logic, and Lightning configuration to app-building scenarios.',
     bullets: [
       '<strong>60 multiple-choice questions</strong> in 105 minutes.',
-      '<strong>73% passing score</strong>: slightly lower than ADM-201, but the questions are harder.',
-      '<strong>Scenario-heavy</strong>: most questions describe a business requirement and ask which declarative tool solves it.',
-      '<strong>No coding required</strong>: entirely declarative, but you need to know where declarative ends and code begins.',
+      '<strong>73% passing score</strong>, as listed in the current exam guide.',
+      '<strong>Scenario-based</strong>: questions can describe a business need and ask which declarative tool best meets it.',
+      '<strong>No coding required</strong>: know what declarative tools can do and when a requirement may need code.',
     ],
-    passRateGuidance: 'Score 85%+ on 3 timed practice exams before booking. Candidates with hands-on ADM-201 experience and custom app-building practice perform best.',
+    passRateGuidance: 'Use timed practice tests to find weak areas. Build a small app yourself to practise the concepts before booking.',
   },
   examFormat: {
     heading: 'App Builder Exam Format Explained',
-    intro: 'The exam is proctored online or at a test centre through Webassessor. Here is the format:',
-    scenarioPercent: 'About 60-70% of questions are scenario-based. They typically describe a business need and ask which combination of declarative features (objects, relationships, flows, validation rules, page layouts) satisfies it. The hardest scenarios involve choosing between Flow, approval processes, and custom Lightning components.',
+    intro: 'The exam is proctored online or at a test centre. Here is the format:',
+    scenarioPercent: 'Many questions use business scenarios. They ask which declarative features, such as objects, relationships, Flow, validation rules, or page layouts, meet a requirement. Some scenarios ask you to choose between automation, approval processes, and a custom component.',
     bestWayToPass: [
-      '<strong>Master data modelling:</strong> Know when to use lookup vs. master-detail, external objects, junction objects, and roll-up summary fields.',
-      '<strong>Study Flow Builder deeply:</strong> Screen flows, record-triggered flows, scheduled flows, and subflows are the most tested automation topics.',
-      '<strong>Know declarative vs. code boundaries:</strong> Understand when a requirement exceeds declarative capabilities and needs Apex or LWC.',
-      '<strong>Practice Lightning app configuration:</strong> Build apps with dynamic forms, Lightning pages, and utility bar components in a Developer Edition org.',
+      '<strong>Model data:</strong> Know when to use lookup and master-detail relationships, external objects, junction objects, and roll-up summary fields.',
+      '<strong>Practise Flow:</strong> Review screen flows, record-triggered flows, scheduled flows, and subflows.',
+      '<strong>Know when code is needed:</strong> Recognize when a requirement goes beyond declarative tools and needs Apex or Lightning Web Components.',
+      '<strong>Configure Lightning apps:</strong> Practise with Dynamic Forms, Lightning pages, and utility bar components in a Developer Edition org.',
     ],
   },
-  expertInsight: "App Builder is deceptively scenario-heavy, most questions aren't \"what does this feature do\" but \"which tool is the right choice here.\" The dividing line between Flow, Process Builder legacy knowledge, and custom Lightning components shows up constantly. I found the hardest section to be governor limits in declarative context: when does a screen flow hit CPU time limits vs. when does it hit DML limits? That nuance doesn't appear in most study guides.",
+  expertInsight: "Many App Builder questions ask you to choose a tool for a business requirement. Be ready to compare declarative options, such as Flow, with custom code when a requirement calls for it. Also review how Flow runs within platform limits.",
   introLead: [
     { type: 'text', text: 'New to Salesforce admin? Our ' },
     {
@@ -82,27 +82,27 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   scenarioTips: {
     h2: 'How to Pass the Platform App Builder Exam (DEV-402)',
     intro:
-      'The DEV-402 exam is scenario-based, most questions describe a business requirement and ask which declarative tool or configuration best meets it. Understanding when to use each Salesforce feature matters more than memorising field limits.',
+      'The DEV-402 exam uses business scenarios to test how you choose and configure Salesforce features. Focus on when each declarative tool fits a requirement.',
     blocks: [
       {
         heading: 'Data Modelling Scenarios',
-        body: 'When a question asks about relationships: use Master-Detail when child records only make sense in the context of the parent (cascade delete, roll-up summaries). Use Lookup when the child can exist independently. Junction objects solve many-to-many, always two Master-Detail relationships, not two Lookups. Roll-up summary fields only work on Master-Detail relationships.',
+        body: 'Use master-detail when the detail record depends on its master. Deleting a master deletes its detail records, and roll-up summary fields require a master-detail relationship. Use lookup when the related record can exist independently; lookup deletion behavior can be configured. A junction object uses two master-detail relationships to model a many-to-many relationship.',
       },
       {
         heading: 'Automation Decision Tree',
-        body: 'For most automation questions, the answer is Flow. Record-Triggered Flows handle field updates, record creation, and cross-object automation. Approval Processes handle multi-step human approvals with rejection paths. Workflow Rules and Process Builder are legacy, do not choose them unless the question specifies a constraint preventing Flow use.',
+        body: 'For new automation, Salesforce recommends Flow. Record-triggered flows can update fields, create records, and automate work across related records. Approval Processes manage structured human approvals. Workflow Rules and Process Builder are legacy tools; know their capabilities, but use Flow for new automation unless the question gives a specific constraint.',
       },
       {
         heading: 'Security and Visibility Layering',
-        body: 'The DEV-402 tests the Salesforce security model in sequence: OWD (baseline record access) → Role Hierarchy (opens up) → Sharing Rules (grants access to groups) → Manual Sharing → Field-Level Security → Page Layouts. Permission Sets grant additional permissions beyond profiles. Record Types control picklist values and page layout assignment, not field visibility.',
+        body: 'Understand the difference between record access and field access. Organization-Wide Defaults set baseline record access; role hierarchy, sharing rules, and manual sharing can open record access further. Profiles and permission sets control object and field permissions. Page layouts affect how fields appear, not whether a user has permission to access them. Record Types can provide different business processes, picklist values, and page layouts.',
       },
       {
         heading: 'App Design and Lightning App Builder',
-        body: 'Know the difference between App Page, Record Page, and Home Page in Lightning App Builder. Dynamic Forms move fields out of page layouts onto the Lightning Record Page directly, enabling visibility rules per field. Custom tabs, apps, and navigation items are all configured declaratively, no code required for standard app design.',
+        body: 'Know the difference between App Pages, Record Pages, and Home Pages in Lightning App Builder. Dynamic Forms let admins place supported fields on a Record Page and set visibility rules. Standard apps, tabs, and navigation items can be configured without code.',
       },
       {
         heading: 'Exam Strategy',
-        body: 'Read every scenario for the constraint: “without code” means declarative only; “most efficient” usually means the native feature over a custom-built solution. Watch for “administrators only” (profile-based) vs “certain users” (permission sets or sharing rules). Passing score is 73% (40/60 questions). Aim for 85%+ on full mocks before booking.',
+        body: 'Look for constraints such as “without code,” which points to declarative tools. Compare standard Salesforce features with custom solutions, and distinguish field permissions from record sharing when a scenario limits access. The current listed passing score is 73%. Use timed practice to find gaps before booking.',
       },
     ],
   },
@@ -111,23 +111,23 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     blocks: [
       {
         heading: 'Data Modeling: Objects, Fields, and Relationships',
-        body: 'Custom Objects extend Salesforce to store your business-specific data. Master-Detail relationships create tight parent-child bonds (child inherits sharing, supports roll-up summaries). Lookup relationships are looser, the child can exist without the parent. Junction Objects implement many-to-many relationships using two master-detail relationships. Schema Builder provides a visual data model canvas. The exam presents a business requirement and asks which relationship type and object design is appropriate. Know when to choose M-D vs Lookup based on cascade delete, sharing, and roll-up needs.',
+        body: 'Custom objects store business-specific data. Master-detail creates a dependent relationship: the detail record inherits sharing from its master, and the master can have roll-up summary fields. A lookup is more flexible, and the related record can exist independently. Junction Objects implement many-to-many relationships using two master-detail relationships. Schema Builder provides a visual data model canvas. Exam scenarios ask you to choose a relationship and object design for a business need. Compare master-detail and lookup based on record dependency, sharing, deletion behavior, and roll-up summaries.',
       },
       {
         heading: 'Business Logic and Process Automation',
-        body: 'Flows are the primary automation tool for App Builders. Record-Triggered Flows replace Workflow Rules (retiring) and Process Builder (retiring). Screen Flows provide guided multi-step experiences for users. Scheduled Flows run on a time-based schedule. Approval Processes handle multi-step human sign-off with defined approvers and entry criteria. The exam tests which automation tool handles a given scenario. Know that Flow replaces Workflow Rules for field updates and email alerts, and Approval Processes are for structured multi-person sign-off.',
+        body: 'Flow is Salesforce’s recommended tool for new automation. Record-triggered flows respond to record changes; screen flows guide users through a process; scheduled flows run at a set time. Approval Processes manage formal human approvals with defined approvers and criteria. Be able to select the tool that fits a scenario, and recognize Workflow Rules and Process Builder as legacy automation.',
       },
       {
         heading: 'User Interface: Lightning App Builder and Page Layouts',
-        body: 'Lightning App Builder lets admins compose pages by dragging standard and custom components onto a canvas, for Record Pages, Home Pages, and App Pages. Dynamic Forms move fields from traditional page layouts into the page itself, enabling conditional field visibility based on record values. Path provides stage guidance. Dynamic Actions control button visibility. List Views filter and display records without reports. The exam tests the difference between page layouts (profile/record type-based) and Dynamic Forms (component-level conditions).',
+        body: 'Lightning App Builder lets admins arrange standard and custom components on Record Pages, Home Pages, and App Pages. Dynamic Forms place supported fields on a Record Page and allow field visibility rules. Path guides users through stages, and Dynamic Actions can control when actions appear. List Views filter and display records. Know how page layouts differ from Lightning Record Pages and Dynamic Forms.',
       },
       {
         heading: 'Mobile Design: Compact Layouts and Navigation',
-        body: 'Salesforce Mobile App uses Compact Layouts to determine which fields appear in record highlights, related list previews, and push notifications, the top fields in the layout appear first. Mobile Navigation defines which items appear in the mobile sidebar. Quick Actions appear in the action bar on mobile. The exam tests how to configure the mobile experience and which settings affect which mobile surfaces.',
+        body: 'Compact Layouts choose the fields shown in record highlights and other compact record displays; field order matters. Mobile Navigation controls which items appear in the Salesforce mobile navigation menu. Quick Actions provide shortcuts to common tasks. Know which setting controls each part of the mobile experience.',
       },
       {
         heading: 'Analytics: Reports, Dashboards, and AppExchange',
-        body: 'Report Types determine which objects and relationships are available in a report. Tabular reports list records in rows; Summary adds grouping and subtotals; Matrix adds two dimensions of grouping; Joined combines up to 5 report blocks. Dashboards display visual components (charts, gauges, tables) from report data. AppExchange provides pre-built apps, components, and flows, always install in a sandbox first, review required permissions, and check for governor limit implications.',
+        body: 'Report Types determine which objects and relationships are available in a report. Tabular reports list records; Summary reports add grouping and subtotals; Matrix reports group by rows and columns; Joined reports combine up to five report blocks. Dashboards show charts, tables, and other components based on report data. AppExchange offers apps, components, and flows. Review permissions and test a package in a sandbox before installing it in production.',
       },
     ],
   },
@@ -135,13 +135,13 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     h3: 'Request Full DEV-402 Mock Exams & Study Plan',
     paragraphs: [
       { kind: 'segments', segments: [
-        { type: 'text', text: 'Most candidates book the exam after scoring ' },
+        { type: 'text', text: 'Use practice exams to check your readiness. A personal target of ' },
         { type: 'strong', text: '85%+' },
-        { type: 'text', text: ' on full mocks.' },
+        { type: 'text', text: ' on full mocks can help you identify areas to revisit.' },
       ]},
       {
         kind: 'text',
-        text: "If you're planning to test this quarter, aim to complete full mocks at least 10–14 days before your exam date.",
+        text: "Leave time after your practice tests to review the topics you missed before your exam.",
       },
       {
         kind: 'segments',
@@ -166,7 +166,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     id: 'app-builder-next-steps-heading',
     heading: 'After App Builder: Where to Go Next',
     intro:
-      'Most admins take App Builder after ADM-201, then move into cloud-specific consultant roles. If you enjoy designing data models and automation, consider specialising as a consultant on the clouds your org uses most.',
+      'After App Builder, consider a consultant credential that matches the work you enjoy. Your next step can depend on whether you build solutions for sales, service, or Experience Cloud users.',
     items: [
       {
         lead: 'For sales-heavy orgs, the natural next step is ',
@@ -198,26 +198,26 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   sampleQuestions: [
     {
       question:
-        'Which relationship type should be used when the child record should be deleted if the parent record is deleted?',
+        'By default, which relationship type deletes detail records when its master is deleted?',
       options: ['Lookup Relationship', 'Master-Detail Relationship', 'External Lookup', 'Hierarchical Relationship'],
       correctAnswer: 1,
       explanation:
-        'Master-Detail relationships create a cascade delete behavior where child records are automatically deleted when the parent is deleted.',
+        'Deleting a master record also deletes its related detail records. Lookup relationships normally clear the lookup value or block deletion, though some custom lookup fields can be configured for cascade deletion.',
       whyWrong: [
-        'Lookup Relationship keeps child records intact when the parent is deleted, no cascade delete behavior.',
+        'A lookup usually clears its value or prevents the parent from being deleted. Cascade deletion is an optional setting for eligible custom lookups, not the standard behavior.',
         'External Lookup links to data outside Salesforce and has no cascade delete behavior on internal records.',
         'Hierarchical Relationship is a special lookup limited to the User object; it does not cascade delete.',
       ],
     },
     {
-      question: 'What is the maximum number of roll-up summary fields that can be created on a master object?',
+      question: 'What is the default limit of roll-up summary fields on an object?',
       options: ['10', '25', '40', 'Unlimited'],
       correctAnswer: 1,
-      explanation: 'Each object can have a maximum of 25 roll-up summary fields.',
+      explanation: 'The default limit is 25 per object. Salesforce Support can increase it to a maximum of 40.',
       whyWrong: [
-        '10 understates the actual platform limit of 25 roll-up summary fields per object.',
-        '40 overstates the actual platform limit, the real cap is 25.',
-        'The limit isn’t unlimited: Salesforce enforces a specific cap of 25 to protect performance.',
+        'The default limit is 25, not 10.',
+        '40 is the maximum after an approved increase, not the default.',
+        'There is a limit: the default is 25 and the maximum after an increase is 40.',
       ],
     },
     {
@@ -235,28 +235,28 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     },
     {
       question:
-        'Which automation tool should be used to update a field based on criteria when a record is created or edited?',
+        'Which tool is recommended for a new field update when a record is created or edited?',
       options: ['Workflow Rule', 'Flow', 'Approval Process', 'All of the above'],
       correctAnswer: 1,
       explanation:
         'Flow (Record-Triggered Flow) is the recommended tool for automating field updates when records are created or edited.',
       whyWrong: [
-        'Workflow Rule can update fields, but it is deprecated in favor of Flow for new automation.',
+        'Workflow Rules can update fields, but Salesforce recommends Flow for new automation.',
         'Approval Process routes records for approval, it isn’t designed for straightforward criteria-based field updates.',
         '"All of the above" is wrong because Salesforce’s current guidance is to build new field-update automation in Flow, not treat all three as equally recommended.',
       ],
     },
     {
-      question: 'What is the purpose of a Junction Object?',
+      question: 'Why would you create a Junction Object?',
       options: [
-        'To create a one-to-many relationship',
-        'To create a many-to-many relationship',
-        'To store historical data',
-        'To link external systems',
+        'Create a one-to-many relationship',
+        'Create a many-to-many relationship',
+        'Store historical data',
+        'Connect external systems',
       ],
       correctAnswer: 1,
       explanation:
-        'A Junction Object is a custom object with two master-detail relationships used to create a many-to-many relationship between two objects.',
+        'A Junction Object uses two master-detail relationships to connect records in a many-to-many relationship.',
       whyWrong: [
         'A single master-detail or lookup relationship already handles a one-to-many relationship, no junction object is needed for that.',
         'Storing historical data is a different concept (e.g., field history tracking), unrelated to junction objects.',
@@ -264,11 +264,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       ],
     },
     {
-      question: 'What is the maximum number of master-detail relationships allowed on a custom object?',
+      question: 'How many master-detail relationships can a custom object have at most?',
       options: ['1', '2', '3', 'Unlimited'],
       correctAnswer: 1,
       explanation:
-        'A custom object can have a maximum of 2 master-detail relationships. This limit ensures data integrity and prevents overly complex data models.',
+        'A custom object can have up to two master-detail relationships.',
       whyWrong: [
         'A single master-detail relationship is allowed, but the actual platform maximum is higher than 1.',
         '3 exceeds the actual platform limit for master-detail relationships on a custom object.',
@@ -277,11 +277,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     },
     {
       question:
-        'Which component in Lightning App Builder allows users to see related records on a record page?',
-      options: ['Related List', 'Related Record', 'Record Detail', 'List View'],
+        'Which Lightning App Builder component displays all related lists on a record page?',
+      options: ['Related Lists', 'Related Record', 'Record Detail', 'List View'],
       correctAnswer: 0,
       explanation:
-        'The Related List component displays related records (child records) on a record page, such as Contacts on an Account page or Opportunities on an Account page.',
+        'The Related Lists component displays the related lists included on the record page. For example, it can show Contacts or Opportunities on an Account page.',
       whyWrong: [
         'Related Record shows a single linked record\'s fields, not a list of multiple related child records.',
         'Record Detail displays the current record\'s own fields, not related child records.',
@@ -290,7 +290,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     },
     {
       question:
-        'A developer wants to create a custom field that automatically calculates a value when a record is saved. Which field type should be used?',
+        'A developer needs a read-only field that calculates a value from other fields. Which type should they choose?',
       options: ['Formula', 'Auto Number', 'Text', 'Number'],
       correctAnswer: 0,
       explanation:
@@ -302,37 +302,37 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       ],
     },
     {
-      question: 'What is the purpose of a Record Type?',
+      question: 'Besides page layout assignment, what can Record Types control on the same object?',
       options: [
-        'To assign different page layouts to different users',
-        'To create different business processes and picklist values for the same object',
-        'To control field-level security',
-        'To automate record creation',
+        'Field-level security settings',
+        'Different business processes and picklist values',
+        'Record-level access to records',
+        'Automatic record creation',
       ],
       correctAnswer: 1,
       explanation:
-        'Record Types allow you to offer different business processes, picklist values, and page layouts to different users for the same object.',
+        'Record Types can provide different business processes and picklist values for the same object. Page layouts can also be assigned by record type and profile.',
       whyWrong: [
-        'Assigning page layouts to users is a downstream effect of Record Types, but layout assignment alone isn’t the core purpose Record Types serve.',
-        'Field-level security is controlled separately via profiles/permission sets, not Record Types.',
+        'Field-level security is controlled with profiles and permission sets, not Record Types.',
+        'Record-level access is controlled with organization-wide defaults, roles, and sharing, not Record Types.',
         'Automating record creation is handled by Flow or other automation tools, not Record Types.',
       ],
     },
     {
-      question: 'Which automation tool can be used to create records in related objects automatically?',
+      question: 'Which tool does Salesforce recommend for new automation that creates related records?',
       options: ['Workflow Rule', 'Process Builder', 'Flow', 'All of the above'],
       correctAnswer: 2,
       explanation:
-        'Flow (Record-Triggered Flow) is the recommended tool for creating records in related objects. Process Builder can also do this but is being deprecated.',
+        'Flow (Record-Triggered Flow) is the recommended tool for creating records in related objects. Process Builder can create related records, but Salesforce recommends Flow for new automation.',
       whyWrong: [
         'Workflow Rule cannot create records at all, it\'s limited to field updates, email alerts, tasks, and outbound messages.',
-        'Process Builder can create related records, but it is deprecated in favor of Flow for new automation.',
+        'Process Builder can create related records, but Salesforce no longer supports it and recommends Flow for new automation.',
         '"All of the above" is wrong because Workflow Rule specifically cannot create records, it doesn\'t belong in this group.',
       ],
     },
     {
       question:
-        'A user wants to restrict access to specific fields based on user profiles. Which feature should be used?',
+        'An admin needs to limit which fields users can view or edit. Which feature should they use?',
       options: ['Field-Level Security', 'Sharing Rules', 'Record Types', 'Page Layouts'],
       correctAnswer: 0,
       explanation:
@@ -344,37 +344,37 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       ],
     },
     {
-      question: 'What is the difference between a Lookup and Master-Detail relationship?',
+      question: 'Which feature is supported by a master-detail relationship but not a standard lookup relationship?',
       options: [
-        'Lookup allows cascade delete, Master-Detail does not',
-        'Master-Detail allows cascade delete and roll-up summary fields, Lookup does not',
+        'Lookup supports roll-up summaries, but master-detail does not',
+        'Master-detail supports roll-up summary fields; lookup does not',
         'There is no difference',
         'Lookup is only for standard objects',
       ],
       correctAnswer: 1,
       explanation:
-        "Master-Detail relationships support cascade delete (deleting parent deletes children) and roll-up summary fields. Lookup relationships are more flexible but don't support these features.",
+        "A master-detail relationship supports roll-up summary fields on the master. A standard lookup relationship does not.",
       whyWrong: [
-        "This reverses the actual behavior: Master-Detail supports cascade delete, not Lookup.",
+        "This reverses the roll-up summary behavior of these relationship types.",
         "There is a real, meaningful difference between the two relationship types, this option denies it entirely.",
         "Lookup relationships can be used on both standard and custom objects, they aren't restricted to standard objects only.",
       ],
     },
     {
-      question: 'Which Lightning App Builder component allows users to navigate between related records?',
-      options: ['Related List', 'Related Record', 'Record Detail', 'Navigation Menu'],
+      question: 'Which Lightning App Builder component displays fields from one related record?',
+      options: ['Related List–Single', 'Related Record', 'Record Detail', 'Navigation Menu'],
       correctAnswer: 1,
       explanation:
         "The Related Record component displays a single related record and allows navigation to that record's detail page.",
       whyWrong: [
-        "Related List displays multiple child records in a list, not a single navigable related record.",
+        "Related List–Single displays child records rather than fields from one related record.",
         "Record Detail shows the current record's own fields, not a related record to navigate to.",
         "'Navigation Menu' isn't a Lightning App Builder record-page component, it's a separate Experience Cloud/app-level navigation feature.",
       ],
     },
     {
       question:
-        'A company wants to ensure data quality by preventing duplicate records. Which feature should be implemented?',
+        'A company wants to detect and block duplicate records. Which features work together to do this?',
       options: ['Validation Rules', 'Duplicate Rules', 'Matching Rules', 'Both B and C'],
       correctAnswer: 3,
       explanation:
@@ -387,14 +387,79 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     },
     {
       question:
-        'Which Lightning App Builder component allows filtering records displayed on a record page?',
-      options: ['Related List', 'Related Record', 'Filter', 'List View'],
+        'Which Lightning App Builder component lets an admin filter a related list on a record page?',
+      options: ['Related List Quick Links', 'Related Record', 'Dynamic Related List–Single', 'Record Detail'],
       correctAnswer: 2,
-      explanation: 'The Filter component lets users filter records on a record page using predefined criteria.',
+      explanation: 'Dynamic Related List–Single lets an admin add filters to a related list in Lightning App Builder.',
       whyWrong: [
-        'Related List displays associated child records, it doesn\'t provide filtering controls itself.',
-        'Related Record shows a linked record\'s details, it isn\'t a filtering mechanism.',
-        'List View filters a list of records on a tab or app page, not records displayed within a specific record page layout.',
+        'Related List Quick Links provides links to related lists, not configured list filters.',
+        'Related Record displays a related record, not a filtered list.',
+        'Record Detail displays fields on the current record, not a filtered related list.',
+      ],
+    },
+    {
+      question: 'An admin builds and tests a new app in a sandbox. Which tool should they use to move that work into production?',
+      options: ['A change set', 'A validation rule', 'A dashboard', 'A permission set'],
+      correctAnswer: 0,
+      explanation: 'A change set moves metadata, like objects, fields, and flows, from one org to a related org, such as sandbox to production.',
+      whyWrong: [
+        "A validation rule checks data on save, it isn't a deployment tool.",
+        "A dashboard displays report data, it has nothing to do with moving metadata between orgs.",
+        "A permission set grants access, it doesn't deploy configuration changes.",
+      ],
+    },
+    {
+      question: 'A team wants to remove a field that was deployed by mistake. Can an inbound change set do that?',
+      options: [
+        "No, change sets can't delete components, that needs the Metadata API or a destructive-changes package",
+        "Yes, change sets can delete any component",
+        "Only an admin with the System Administrator profile can delete it this way",
+        "Yes, but only on the first deployment"
+      ],
+      correctAnswer: 0,
+      explanation: "Change sets only add or update components. Removing something already deployed needs the Metadata API or Change Set Deployments with a destructive-changes manifest.",
+      whyWrong: [
+        "Change sets are an additive tool, deletion isn't one of their capabilities.",
+        "Profile has nothing to do with what a change set itself is capable of.",
+        "The limitation isn't about which deployment attempt it is, change sets simply don't delete."
+      ],
+    },
+    {
+      question: "A sales manager should see every Opportunity owned by their direct reports, but reps shouldn't see each other's records. What combination controls this?",
+      options: [
+        "Organization-wide defaults set to Private, with the role hierarchy giving managers visibility upward",
+        "A single validation rule on Opportunity",
+        "A custom report type",
+        "A Lightning page component visibility rule"
+      ],
+      correctAnswer: 0,
+      explanation: "Setting the OWD to Private creates the baseline (reps only see their own), and the role hierarchy then opens visibility upward to managers over their reports, without opening it sideways between reps.",
+      whyWrong: [
+        "A validation rule checks data on save, it doesn't control record visibility.",
+        "A custom report type determines what fields and objects a report can use, it doesn't grant record access.",
+        "Component visibility rules control what's shown on a Lightning page, not which records a user can see."
+      ],
+    },
+    {
+      question: "A team needs to import 200,000 Account records from a CSV file using a repeatable, schedulable process. Which tool fits?",
+      options: ["Data Loader", "Import Wizard", "Report Builder", "Schema Builder"],
+      correctAnswer: 0,
+      explanation: "Data Loader handles bulk operations on any object, has no 50,000-record cap, and can run from the command line, which supports scheduling.",
+      whyWrong: [
+        "Import Wizard supports standard objects and some custom objects but caps out at 50,000 records and has no command-line or scheduling option.",
+        "Report Builder creates and filters reports, it doesn't import data.",
+        "Schema Builder visualizes and edits the data model, it isn't a data-loading tool."
+      ],
+    },
+    {
+      question: "A discount request over $10,000 needs sign-off from a manager, then a director, before the Opportunity can proceed. Which feature fits this requirement?",
+      options: ["An Approval Process", "A Record-Triggered Flow", "A validation rule", "Component visibility rules"],
+      correctAnswer: 0,
+      explanation: "An Approval Process defines entry criteria, a sequence of approval steps, and the actions to take on approval or rejection, exactly the multi-step human sign-off described here.",
+      whyWrong: [
+        "A Record-Triggered Flow automates logic without a human approval step built in, it's not designed for sequential sign-off.",
+        "A validation rule blocks a save based on a condition, it doesn't route a record for approval.",
+        "Component visibility rules control what's shown on a page, they have nothing to do with approval routing."
       ],
     },
   ],

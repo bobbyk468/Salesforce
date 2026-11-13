@@ -37,7 +37,7 @@ export const faqItems = [
   },
   {
     question: 'What are the highest-weight App Builder topics?',
-    answer: 'Declarative customisation (37%) and Data Modelling (23%) together account for 60% of the exam. Lightning App Builder, custom objects, formula fields, and validation rules are the most tested skills.',
+    answer: 'Business Logic and Process Automation (32%) and Data Modeling and Management (20%) together account for 52% of the exam. Flow Builder, custom objects, formula fields, and validation rules are the most tested skills.',
   },
   {
     question: 'How hard is the Platform App Builder exam?',
@@ -66,7 +66,7 @@ export default function AppBuilderExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass DEV-402</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The DEV-402 has 60 questions in 105 minutes. Passing score is 73%. Aim for 85%+ on full mocks before booking.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Highest-weight sections: Data Modelling &amp; Management (24%) and Process Automation &amp; Logic (27%), cover these first.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Highest-weight sections: Business Logic and Process Automation (32%) and Data Modeling and Management (20%), cover these first.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice declaratively in a Developer Edition org. The exam rewards hands-on understanding of when and why to use each feature.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The ADM-201 (Salesforce Administrator) is a recommended prerequisite. Take it first if you haven’t already.</li>
         </ul>
@@ -76,32 +76,36 @@ export default function AppBuilderExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Process Automation and Logic</span>
-            <span className="font-bold text-salesforce-blue ml-4">27%</span>
+            <span className="font-medium text-gray-900">Business Logic and Process Automation</span>
+            <span className="font-bold text-salesforce-blue ml-4">32%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data Modelling and Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">24%</span>
+            <span className="font-medium text-gray-900">Data Modeling and Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">20%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Security and Access</span>
-            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+            <span className="font-medium text-gray-900">Salesforce Fundamentals</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">User Interface</span>
+            <span className="font-bold text-salesforce-blue ml-4">17%</span>
           </div>
           <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">App Design and User Interface</span>
-            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+            <span className="font-medium text-gray-900">App Deployment</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Process Automation + Data Modelling = 51%. Master flows, record types, and object relationships first.</p>
+          <p className="text-xs text-gray-600 pt-1">Business Logic + Data Modeling = 52%. Master flows, record types, and object relationships first.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week DEV-402 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1:</strong> Data Modelling &amp; Management, object relationships (lookup vs master-detail, junction objects), roll-up summary fields, formula fields, validation rules, and schema design patterns.</p>
-          <p><strong>Week 2:</strong> Process Automation &amp; Logic: Record-Triggered Flows for field updates and cross-object automation, Approval Processes for multi-step human approvals, and when to choose each tool. Workflow Rules and Process Builder are legacy. Know them for elimination only.</p>
-          <p><strong>Week 3:</strong> Security &amp; App Design: OWD, role hierarchy, sharing rules, permission sets, field-level security, Lightning App Builder (page types, Dynamic Forms), record types, page layout assignments.</p>
-          <p><strong>Week 4:</strong> Full mock exams (aim for 85%+), revision of weak sections, reporting &amp; dashboards, and mobile/deployment basics. Book the exam only after hitting the mock benchmark consistently.</p>
+          <p><strong>Week 1:</strong> Business Logic and Process Automation (32%, the heaviest section): Record-Triggered Flows for field updates and cross-object automation, Approval Processes for multi-step human approvals, and when to choose each tool. Workflow Rules and Process Builder are legacy. Know them for elimination only.</p>
+          <p><strong>Week 2:</strong> Data Modeling and Management (20%): object relationships (lookup vs master-detail, junction objects), roll-up summary fields, formula fields, validation rules, and schema design patterns.</p>
+          <p><strong>Week 3:</strong> Salesforce Fundamentals (18%) and User Interface (17%): OWD, role hierarchy, sharing rules, permission sets, field-level security, Lightning App Builder (page types, Dynamic Forms), record types, page layout assignments.</p>
+          <p><strong>Week 4:</strong> Full mock exams (aim for 85%+), revision of weak sections, and App Deployment (13%): change sets, sandbox types, packages. Book the exam only after hitting the mock benchmark consistently.</p>
         </div>
       </section>
 
