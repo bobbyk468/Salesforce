@@ -18,7 +18,7 @@ export const OFFICIAL_CERT_NAMES: Record<string, string> = {
   'business-analyst': 'Salesforce Certified Business Analyst',
   'cpq-administrator': 'Salesforce Certified CPQ Administrator',
   'marketing-cloud-engagement-admin': 'Salesforce Certified Marketing Cloud Engagement Administrator',
-  'slack-administrator': 'Slack Certified Administrator',
+  'slack-administrator': 'Salesforce Certified Slack Administrator',
   'administrator-practice-test': 'Salesforce Certified Platform Administrator Practice Test',
   // Developer
   'developer-1': 'Salesforce Certified Platform Developer I',

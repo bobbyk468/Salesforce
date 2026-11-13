@@ -578,7 +578,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Delivery', percentage: 16 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298797
-  // Salesforce Accredited Agentforce Consumer Goods Professional: 33 questions, 64% to pass, 60 minutes.
+  // Salesforce Accredited Agentforce Consumer Goods Professional: 33 scored questions, plus up to five additional unscored questions; 64% to pass, 60 minutes. Salesforce guide 005298797 says the exam contains 33 multiple-choice/multiple-select questions and may add up to five unscored questions.
   'consumer-goods-cloud-ap': [
     { name: 'Data Setup', percentage: 36 },
     { name: 'Visit Execution', percentage: 36 },
@@ -670,7 +670,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Implement', percentage: 20 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298982
-  // Agentforce Sales Foundations: six sections, 40 scored questions, 70% to pass, 105 minutes.
+  // Agentforce Sales Foundations: six sections, 60 scored questions, 70% to pass, 105 minutes.
   'sales-foundations': [
     { name: 'Planning', percentage: 21 },
     { name: 'Customer Engagement', percentage: 15 },
@@ -719,6 +719,16 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Exploring and Analyzing Data', percentage: 37 },
     { name: 'Sharing Insights', percentage: 25 },
     { name: 'Understanding Tableau Concepts', percentage: 15 },
+  ],
+  // Verified 13 November 2026: help.salesforce.com/s/articleView?id=005298990
+  // 60 scored questions (+ up to 5 unscored), 65% to pass, 105 minutes.
+  'slack-administrator': [
+    { name: 'Governance, Security and Compliance', percentage: 22 },
+    { name: 'App and AI Administration and Automations', percentage: 20 },
+    { name: 'Fundamentals', percentage: 18 },
+    { name: 'Workspace and Org Management', percentage: 17 },
+    { name: 'User Lifecycle Management', percentage: 13 },
+    { name: 'Enabling Slack Success (Analytics and Adoption)', percentage: 10 },
   ],
   // Removed 4 November 2026 because no official outline could be found.
   //

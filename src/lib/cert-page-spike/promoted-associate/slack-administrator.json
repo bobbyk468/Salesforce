@@ -5,46 +5,46 @@
     "personas": [
       {
         "label": "IT administrators",
-        "description": "You run Slack for a company and handle the settings, users and apps."
+        "description": "You manage Slack settings, users, and apps for an organization."
       },
       {
         "label": "Workspace owners",
-        "description": "You approve apps, add and remove people, and decide who can do what."
+        "description": "You approve apps, manage user access, and decide what members can do."
       },
       {
         "label": "Collaboration platform managers",
-        "description": "You own the messaging tools for the business and want a credential that proves it."
+        "description": "You manage the company’s communication tools and want to show your Slack administration skills."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Slack Administrator Exam Hard?",
-    "summary": "It is a moderate exam, but wide. You need to know workspace and Enterprise Grid settings, how people get accounts, how apps are approved, what the security and compliance tools do, and how Workflow Builder works. Each topic is shallow on its own, but there are a lot of them.",
+    "summary": "This exam covers many parts of Slack administration: workspaces and Enterprise Grid, user accounts, app approvals, security and compliance, and Workflow Builder.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes, so just under two minutes each.",
-      "<strong>About 65% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Breadth is the difficulty.</strong> Settings, permissions, Enterprise Grid, Slack Connect, security, compliance and automation.",
-      "<strong>Admin experience helps most.</strong> If you have actually set up SSO and app approvals, much of this is familiar."
+      "<strong>60 scored questions</strong> and up to 5 unscored questions in 105 minutes.",
+      "<strong>65% to pass,</strong> or 39 of 60 scored questions. Check the official exam guide before booking.",
+      "<strong>Wide coverage.</strong> Review settings, permissions, Enterprise Grid, Slack Connect, security, compliance, and automation.",
+      "<strong>Hands-on admin work helps.</strong> Practice SSO, user provisioning, and app approvals in Slack."
     ],
-    "passRateGuidance": "You are ready when you can set up SSO and user provisioning, decide who may create channels and invite guests, approve an app. Build a simple workflow, and explain retention. Aim for 75% or more on practice tests before booking."
+    "passRateGuidance": "You are ready when you can explain how SSO and user provisioning work, who can create channels or invite guests, how to approve apps, and how retention works. Aim for at least 75% on practice tests before booking."
   },
   "examFormat": {
     "heading": "Slack Administrator Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe something a company needs, such as keeping messages for seven years or stopping guests from joining private channels, and ask which setting does it.",
+    "intro": "The exam is proctored online or at a test center. Many questions describe a company requirement and ask which Slack setting or feature meets it.",
+    "scenarioPercent": "A question may ask how to keep messages for seven years or stop guests from joining private channels. Identify the requirement, then choose the setting that controls it.",
     "bestWayToPass": [
-      "<strong>Learn the roles:</strong> Primary Owner, Owner, Admin, Member and the guest types, and what each can and cannot do.",
-      "<strong>Know Enterprise Grid:</strong> What changes when a company has several connected workspaces, and which settings move to the org level.",
-      "<strong>Study the security tools:</strong> SSO, SCIM provisioning, session length, data retention, legal holds, DLP and device management.",
-      "<strong>Use Workflow Builder:</strong> Build a workflow with a form and a channel post so the trigger and step options are familiar."
+      "<strong>Learn roles and access:</strong> Review Primary Owner, Owner, Admin, Member, and guest permissions.",
+      "<strong>Understand Enterprise Grid:</strong> Learn what changes when several workspaces share central organization settings.",
+      "<strong>Study security and compliance:</strong> Review SSO, SCIM, session length, retention, legal holds, data loss prevention, and device controls.",
+      "<strong>Practice Workflow Builder:</strong> Make a simple workflow that collects information and posts it to a channel. Learn its triggers and steps."
     ]
   },
   "certificationCard": {
     "code": "Slack Admin",
-    "description": "This exam tests how you set up and run Slack: workspaces and channels, user accounts and roles, permissions, apps, security and compliance settings, Enterprise Grid and Workflow Builder.",
+    "description": "This exam covers Slack setup and daily administration: workspaces, channels, user accounts, roles, permissions, apps, security, compliance, Enterprise Grid, and Workflow Builder. It has 60 scored questions and up to 5 unscored questions in 105 minutes, with a 65% passing score.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
+      "passingScore": "65%",
       "duration": "105 min",
       "cost": "$200"
     },
@@ -65,56 +65,56 @@
     "h2": "Slack Administrator: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Workspaces, Channels and Roles",
-        "body": "A **workspace** is the container people log in to. **Channels** are where work happens: public channels anyone in the workspace can join, private channels by invitation, and shared channels that reach outside the company. Roles run from **Primary Owner** (one per workspace; the only role that can delete it or transfer ownership) through **Owners** and **Admins** to **Members**. **Multi-channel guests** can be added to several channels, **single-channel guests** to one. Admins decide who may create or archive channels, who may invite guests, and which channels everyone joins by default."
+        "heading": "Workspaces, Channels, and Roles",
+        "body": "A **workspace** is the Slack environment people use to work together. **Channels** hold conversations. Public channels are open to workspace members, private channels require an invitation, and shared channels connect to another organization. A **Primary Owner** can transfer ownership or delete the workspace. **Owners** and **Admins** manage settings; **Members** use the workspace. **Multi-channel guests** can join several assigned channels, while **single-channel guests** can join one. Admins can control who creates or archives channels, who invites guests, and which channels new members join."
       },
       {
-        "heading": "Permissions, Security and Compliance",
-        "body": "Most exam questions in this area are about matching a requirement to a setting. **SSO** with SAML lets people sign in with the company identity provider, and can be made mandatory. **SCIM provisioning** creates and deactivates accounts automatically from that system, which is how leavers lose access the same day. **Session duration** controls how often people re-authenticate. **Retention settings** decide how long messages and files are kept, **legal holds** preserve a person's data for a case, and **DLP** can detect sensitive content. **Enterprise Key Management** gives the company control of its encryption keys, and mobile device management controls access from phones."
+        "heading": "Permissions, Security, and Compliance",
+        "body": "Match each security need to the right setting. **SSO** with SAML lets people sign in through the company identity provider and can be required. **SCIM provisioning** creates or deactivates accounts through that system. **Session duration** controls how often users sign in again. **Retention settings** control how long messages and files are kept. **Legal holds** preserve a person’s data for a legal matter, while **data loss prevention (DLP)** can detect sensitive content. **Enterprise Key Management** gives the company control of its encryption keys. Mobile device management controls access from phones."
       },
       {
-        "heading": "Managing Apps and Integrations",
-        "body": "Apps extend Slack, and an admin's job is to keep that safe without blocking useful work. You can require **app approval**, so a request goes to admins before anything is installed, and keep an approved list. Admins can see which apps are installed, which scopes they hold, and remove them. **Custom apps** built in-house are managed the same way. Know the difference between installing an app for yourself and for the whole workspace or org, and that on Enterprise Grid app policies can be set once at org level."
+        "heading": "Apps and Integrations",
+        "body": "Apps add features to Slack, and admins need to keep them secure while allowing useful work. Require **app approval** so an admin reviews requests before installation, and maintain an approved app list. Admins can review installed apps and the access scopes they have, then remove apps when needed. Apply the same checks to internal apps. Know whether an app is installed for one user, a workspace, or the full organization. Enterprise Grid can apply app policies across the organization."
       },
       {
         "heading": "Enterprise Grid Administration",
-        "body": "**Enterprise Grid** connects several workspaces under one organisation, which suits large companies where each business unit wants its own space. Some settings move up to the **org level**, such as SSO, retention policies and app approvals, so they apply everywhere. **Org-wide channels** can be shared across workspaces so company-wide announcements reach everyone. Users can belong to more than one workspace with a single account. Know when Grid is the answer, which is usually strict separation between units combined with central control."
+        "body": "**Enterprise Grid** connects several workspaces under one organization. It suits large companies where business units need separate spaces and central administration. Settings such as SSO, retention, and app approval can be managed at the **organization level**. **Org-wide channels** can share updates across workspaces. People can join more than one workspace with the same account. Choose Grid when a company needs both separation between teams and shared control."
       },
       {
         "heading": "Workflow Builder and Automation",
-        "body": "**Workflow Builder** creates simple automations with no code. A workflow starts from a **trigger**: someone clicks a shortcut, a person joins a channel, a scheduled time arrives, or a webhook fires. Steps can send a message, collect information with a **form**, or call a connected app. Typical uses are request forms, onboarding checklists and approval routing. Admins should know who may publish workflows and that unused workflows need reviewing, since they accumulate. For anything that has to change data in another system, a tool like Salesforce Flow is usually the better choice."
+        "body": "**Workflow Builder** lets people automate simple tasks in Slack without code. A workflow can start when someone clicks a shortcut, joins a channel, or when a scheduled time arrives. Steps can post a message, collect information in a **form**, or connect to another app. Common uses include request forms, onboarding checklists, and approvals. Admins should decide who can publish workflows and review unused ones. Use a tool such as Salesforce Flow when the process needs to change data in another system or apply complex rules."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Slack Administrator Exam",
-    "intro": "Most questions name a business or security requirement and ask which setting meets it. Learn where each setting lives, and whether it is per workspace or org wide.",
+    "intro": "Questions usually state a business or security need and ask which setting meets it. Check whether the setting applies to one workspace or to the whole organization.",
     "blocks": [
       {
         "heading": "Workspaces and Enterprise Grid",
-        "body": "One workspace for most companies. Enterprise Grid when business units need separation with central control, which moves key settings to org level."
+        "body": "A single workspace fits many companies. Enterprise Grid helps when business units need separate workspaces with central administration."
       },
       {
-        "heading": "Channel Governance",
-        "body": "Control who can create and archive channels, set default channels, and use naming conventions so people can find things."
+        "heading": "Channel Rules",
+        "body": "Decide who can create or archive channels, set default channels, and use naming rules that help people find the right place."
       },
       {
         "heading": "Apps and Security",
-        "body": "Require app approval. Keep an approved list, and review installed apps and their scopes."
+        "body": "Require app approval, maintain an approved list, and review each app’s access scopes."
       },
       {
-        "heading": "Compliance and Retention",
-        "body": "Retention sets how long messages are kept. Legal holds preserve data for a case. DLP spots sensitive content."
+        "heading": "Retention and Compliance",
+        "body": "Retention sets how long messages are kept. Legal holds preserve data for a case. DLP can detect sensitive information."
       },
       {
-        "heading": "Accounts and Sign-in",
-        "body": "SSO for logging in, SCIM for creating and removing accounts automatically. Together they handle joiners and leavers."
+        "heading": "Accounts and Sign-In",
+        "body": "Use SSO for sign-in and SCIM to create or remove accounts automatically through the company identity system."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications to Consider",
-    "intro": "Good next steps after Slack Administrator:",
+    "intro": "Build on your Slack administration knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/slack-consultant",
@@ -170,243 +170,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary responsibility of a Certified Slack Administrator?",
+      "question": "What is the main role of a Certified Slack Administrator?",
       "options": [
-        "Implementing, configuring, and managing Slack and recommending policies, settings, and features",
-        "Developing Slack apps only",
-        "Designing marketing campaigns in Slack",
-        "Managing Salesforce CRM"
+        "Implement, configure, and manage Slack, and recommend useful policies and features",
+        "Develop Slack apps only",
+        "Create marketing campaigns in Slack",
+        "Manage Salesforce CRM"
       ],
       "correctAnswer": 0,
-      "explanation": "Certified Slack Administrators have the skills to implement, configure, and manage Slack and can recommend policies, settings, and features to enhance team productivity.",
+      "explanation": "Certified Slack Administrators set up and manage Slack. They also recommend policies and features that help teams work well.",
       "whyWrong": [
-        "'Developing Slack apps only' undersells the role, which is about implementation and policy, not app development.",
-        "Designing marketing campaigns is unrelated to Slack administration.",
-        "Managing Salesforce CRM is a separate product, unrelated to Slack administration specifically."
+        "The role includes much more than developing apps.",
+        "Creating marketing campaigns is not Slack administration.",
+        "Salesforce CRM administration is a separate role."
       ]
     },
     {
-      "question": "Where are org-wide Slack settings typically managed?",
+      "question": "Where do admins usually manage Slack settings for the whole organization?",
       "options": [
-        "Slack Admin settings / Org settings",
-        "Only in Salesforce",
-        "In each channel",
-        "In Email Studio"
+        "Slack Admin or Org settings",
+        "Salesforce settings only",
+        "Each channel separately",
+        "Email Studio"
       ],
       "correctAnswer": 0,
-      "explanation": "Slack org-wide and workspace settings are managed in Slack Admin / Org settings.",
+      "explanation": "Admins use Slack Admin or Org settings for workspace and organization-wide controls.",
       "whyWrong": [
-        "Salesforce settings are a different product, unrelated to Slack's own admin configuration.",
-        "Per-channel settings don't control org-wide configuration, that's managed centrally.",
-        "Email Studio is a Marketing Cloud tool, entirely unrelated to Slack settings."
+        "Salesforce settings control Salesforce, not Slack.",
+        "Channel settings do not control the whole organization.",
+        "Email Studio is part of Marketing Cloud, not Slack administration."
       ]
     },
     {
-      "question": "Which Slack feature helps control who can create channels or invite guests?",
+      "question": "Which Slack controls can limit who creates channels or invites guests?",
       "options": [
-        "Emoji reactions only",
+        "Emoji reactions",
         "Search filters",
         "Channel bookmarks",
-        "Administration policies and permissions"
+        "Admin policies and permissions"
       ],
       "correctAnswer": 3,
-      "explanation": "Administration policies and permissions control channel creation, guest invites, and other workspace behavior.",
+      "explanation": "Admin policies and permissions can control channel creation, guest invitations, and other workspace actions.",
       "whyWrong": [
-        "Emoji reactions are a communication feature, unrelated to channel creation/invite control.",
-        "Search filters are a content-discovery feature, unrelated to channel creation/invite control.",
-        "Channel bookmarks are a content-organization feature, not an access-control mechanism."
+        "Emoji reactions are for communication, not workspace access.",
+        "Search filters help users find content.",
+        "Bookmarks save content; they do not control access."
       ]
     },
     {
-      "question": "What does Slack Connect allow administrators to manage?",
+      "question": "What does Slack Connect let organizations do?",
       "options": [
-        "Secure collaboration with external organizations via shared channels",
-        "Email integration only",
-        "CPQ quotes",
-        "Only internal channels"
+        "Work securely with people from other organizations in shared channels",
+        "Connect email only",
+        "Create CPQ quotes",
+        "Use internal channels only"
       ],
       "correctAnswer": 0,
-      "explanation": "Slack Connect enables secure collaboration with external organizations through shared channels.",
+      "explanation": "Slack Connect supports secure collaboration with external organizations through shared channels.",
       "whyWrong": [
-        "Email integration is a different, unrelated Slack feature.",
-        "CPQ quotes are entirely unrelated to Slack Connect's external collaboration purpose.",
-        "'Only internal channels' is the opposite of Slack Connect's specific external-collaboration purpose."
+        "Slack Connect is for cross-organization collaboration, not email alone.",
+        "CPQ quotes are unrelated to Slack Connect.",
+        "Slack Connect is designed to work across organizations, not only inside one."
       ]
     },
     {
-      "question": "Which capability is important for a Slack Administrator to recommend for team productivity?",
+      "question": "Which recommendation can help a team work better in Slack?",
       "options": [
-        "Disabling all integrations",
-        "Removing search",
-        "Workflow automation, channel structure, and appropriate settings",
-        "Limiting channels to one per team"
+        "Turn off all integrations",
+        "Remove search",
+        "Use workflows, a clear channel structure, and suitable settings",
+        "Limit each team to one channel"
       ],
       "correctAnswer": 2,
-      "explanation": "Admins recommend workflow automation, logical channel structure, and settings that enhance team productivity.",
+      "explanation": "Workflows, clear channel names, and useful settings can help teams work more efficiently.",
       "whyWrong": [
-        "Disabling all integrations would hurt productivity, the opposite of the recommendation being asked about.",
-        "Removing search would hurt productivity, the opposite of a sound recommendation.",
-        "Limiting channels to one per team is an overly restrictive constraint, not a genuine best-practice recommendation."
+        "Turning off every integration may remove useful tools.",
+        "Removing search makes it harder to find information.",
+        "One channel may not fit all team discussions."
       ]
     },
     {
-      "question": "What is the purpose of Slack Enterprise Grid?",
+      "question": "What is Slack Enterprise Grid for?",
       "options": [
-        "A reporting tool",
+        "Reporting only",
         "Email integration only",
-        "Connect multiple workspaces under one organization with centralized admin controls",
-        "A single workspace only"
+        "Connecting several workspaces under one organization with central administration",
+        "Using only one workspace"
       ],
       "correctAnswer": 2,
-      "explanation": "Enterprise Grid allows large organizations to connect multiple workspaces under centralized governance.",
+      "explanation": "Enterprise Grid lets large organizations connect and centrally manage multiple Slack workspaces.",
       "whyWrong": [
-        "A reporting tool undersells Enterprise Grid, which is about workspace connectivity and admin control, not just reporting.",
-        "Email integration is a different, unrelated Slack feature.",
-        "A single workspace is the opposite of what Enterprise Grid specifically connects (multiple workspaces)."
+        "Enterprise Grid does more than reporting.",
+        "Email is a separate feature.",
+        "Enterprise Grid supports multiple connected workspaces."
       ]
     },
     {
-      "question": "Which Slack feature allows users to create automated workflows without code?",
+      "question": "Which Slack feature lets people build simple automated workflows without code?",
       "options": [
-        "Slack Connect only",
+        "Slack Connect",
         "Workflow Builder",
-        "Channel management only",
+        "Channel management",
         "Search"
       ],
       "correctAnswer": 1,
-      "explanation": "Workflow Builder enables users to create automated workflows for common tasks without coding.",
+      "explanation": "Workflow Builder lets people create automated workflows for common tasks without writing code.",
       "whyWrong": [
-        "Slack Connect is for external collaboration, not no-code workflow automation.",
-        "Channel management alone doesn't provide the automated workflow-building capability being described.",
-        "Search is a content-discovery feature, unrelated to workflow automation."
+        "Slack Connect is for external collaboration.",
+        "Channel management does not build automated workflows.",
+        "Search helps find content."
       ]
     },
     {
-      "question": "What does channel retention control?",
+      "question": "What does a Slack message retention policy control?",
       "options": [
-        "Channel names only",
+        "Channel names",
         "Who can join a channel",
         "Integrations",
-        "How long messages are kept before automatic deletion"
+        "How long messages and files are kept"
       ],
       "correctAnswer": 3,
-      "explanation": "Retention policies determine how long messages and files are retained in channels for compliance.",
+      "explanation": "A retention policy defines how long workspace messages and files remain available before Slack removes them.",
       "whyWrong": [
-        "Channel names are a labeling detail, unrelated to message retention.",
-        "'Who can join a channel' is a membership control, not what retention specifically governs.",
-        "Integrations are a separate configuration area, unrelated to message retention settings."
+        "Channel names identify channels but do not control data retention.",
+        "Channel membership is a separate access control.",
+        "Integrations are configured separately from retention."
       ]
     },
     {
-      "question": "Which Slack setting helps prevent data loss when members leave?",
+      "question": "Which policies can help preserve Slack data when employees leave?",
       "options": [
-        "Theme settings only",
+        "Theme settings",
         "Data retention and eDiscovery export policies",
         "Emoji settings",
         "Notification preferences"
       ],
       "correctAnswer": 1,
-      "explanation": "Retention and eDiscovery policies ensure organizational data is preserved and recoverable.",
+      "explanation": "Retention and eDiscovery policies help an organization preserve and recover data.",
       "whyWrong": [
-        "Theme settings are a cosmetic feature, unrelated to data loss prevention.",
-        "Emoji settings are a cosmetic feature, unrelated to data loss prevention.",
-        "Notification preferences are a personal setting, unrelated to data retention/eDiscovery."
+        "Theme settings change appearance, not data retention.",
+        "Emoji settings change reactions, not data retention.",
+        "Notification preferences are personal settings, not data retention controls."
       ]
     },
     {
-      "question": "What is a Slack shared channel?",
+      "question": "Which Slack feature lets people in separate workspaces collaborate in one shared channel?",
       "options": [
         "A channel with many members",
         "A public channel only",
-        "A channel shared between two or more Slack workspaces for cross-org collaboration",
+        "A channel shared by multiple Slack workspaces for cross-organization work",
         "A channel with integrations"
       ],
       "correctAnswer": 2,
-      "explanation": "Shared channels enable secure collaboration between different organizations' Slack workspaces.",
+      "explanation": "A shared channel connects Slack workspaces so different organizations can work together.",
       "whyWrong": [
-        "A channel with many members doesn't define what makes it 'shared', that's about cross-workspace connection.",
-        "A public channel alone doesn't imply cross-workspace sharing, a shared channel specifically spans multiple workspaces.",
-        "A channel with integrations doesn't define what makes it 'shared', that's about cross-workspace connection, not integrations."
+        "A large membership does not make a channel shared across workspaces.",
+        "A public channel is not necessarily shared with another workspace.",
+        "Integrations do not define whether a channel is shared."
       ]
     },
     {
-      "question": "Which Slack admin capability helps control app installations?",
+      "question": "How can Slack admins control which apps members can install?",
       "options": [
-        "Channel creation only",
-        "User invitations only",
-        "App management policies and approved app directories",
+        "Channel creation settings",
+        "User invitation settings",
+        "App management policies and approved app lists",
         "Message search"
       ],
       "correctAnswer": 2,
-      "explanation": "App management policies let admins control which apps can be installed and used.",
+      "explanation": "App management policies and approved app lists let admins control which apps members can use.",
       "whyWrong": [
-        "Channel creation policies are a separate, distinct admin control from app management specifically.",
-        "User invitation controls are a separate, distinct admin control from app management specifically.",
-        "Message search is a content-discovery feature, unrelated to controlling app installations."
+        "Channel creation settings control channels, not apps.",
+        "Invitation settings control who can join, not app installation.",
+        "Search helps find messages; it does not control installed apps."
       ]
     },
     {
-      "question": "What does Slack Analytics provide to administrators?",
+      "question": "What can Slack Analytics help admins understand?",
       "options": [
         "Email statistics only",
-        "Usage metrics, adoption trends, and engagement data",
-        "Only message count",
+        "Usage, adoption trends, and engagement",
+        "Message count only",
         "Sales data"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack Analytics helps admins understand adoption, usage patterns, and engagement.",
+      "explanation": "Slack Analytics helps admins review how people use Slack, including adoption and engagement.",
       "whyWrong": [
-        "Email statistics are unrelated to Slack's own usage analytics.",
-        "'Only message count' undersells Analytics, which provides broader usage and adoption metrics.",
-        "Sales data is unrelated to Slack's own usage analytics."
+        "Slack Analytics focuses on Slack usage, not email statistics.",
+        "It provides more than a message count.",
+        "Sales data is not Slack usage analytics."
       ]
     },
     {
-      "question": "Which feature allows Slack admins to manage users at scale?",
+      "question": "Which tools help admins manage many Slack users at once?",
       "options": [
         "Email invitations only",
-        "Manual addition only",
-        "Channel invites",
+        "Manual user setup only",
+        "Channel invitations",
         "SCIM provisioning and directory sync"
       ],
       "correctAnswer": 3,
-      "explanation": "SCIM and directory sync enable bulk user provisioning and lifecycle management.",
+      "explanation": "SCIM provisioning and directory sync can create, update, and remove user accounts at scale.",
       "whyWrong": [
-        "Email invitations alone don't scale efficiently for large user bases, that's what SCIM provisioning addresses.",
-        "Manual addition alone doesn't scale: SCIM/directory sync is specifically built for managing users at scale.",
-        "Channel invites manage channel membership, not organization-wide user provisioning at scale."
+        "Email invitations are not an efficient way to manage a large user base.",
+        "Manual changes are difficult to maintain at scale.",
+        "Channel invitations manage channel membership, not organization-wide user accounts."
       ]
     },
     {
-      "question": "What is the purpose of Slack compliance exports?",
+      "question": "Why might an organization use Slack compliance exports?",
       "options": [
-        "To create reports",
-        "To export message and file data for legal, regulatory, or compliance requirements",
-        "To backup files only",
+        "To create ordinary reports",
+        "To export messages and files for legal or compliance needs",
+        "To back up files only",
         "To share channels"
       ],
       "correctAnswer": 1,
-      "explanation": "Compliance exports support eDiscovery and regulatory compliance requirements.",
+      "explanation": "Compliance exports can provide message and file data for legal, regulatory, or compliance reviews.",
       "whyWrong": [
-        "'To create reports' misattributes compliance exports' purpose to a different, unrelated function.",
-        "Compliance exports aren't primarily for file backup, their purpose is legal/regulatory data export.",
-        "'To share channels' misattributes compliance exports' purpose to a different, unrelated function."
+        "Compliance exports are for data export, not ordinary reporting.",
+        "They support more than file backup.",
+        "Slack Connect is used to share channels."
       ]
     },
     {
-      "question": "Which Slack Connect feature requires approval from both orgs?",
+      "question": "Which Slack Connect action needs approval from both organizations?",
       "options": [
         "Creating a shared channel between workspaces",
         "Sending a message",
         "Adding an emoji",
-        "Joining a channel"
+        "Joining an existing channel"
       ],
       "correctAnswer": 0,
-      "explanation": "Shared channel creation requires approval from admins of both connected organizations.",
+      "explanation": "Creating a shared channel requires approval from admins in both organizations.",
       "whyWrong": [
-        "Sending a message doesn't require special cross-org approval once a shared channel exists.",
-        "Adding an emoji is a routine reaction, not an action requiring cross-org approval.",
-        "Joining a channel is a routine membership action, not one requiring cross-org approval."
+        "Once the channel exists, sending a message does not require that setup approval.",
+        "Adding an emoji is a normal channel action.",
+        "Joining an existing channel is not the cross-organization setup step."
+      ]
+    },
+    {
+      "question": "An admin wants to turn on AI-powered channel recaps and thread summaries for their org. Where does that get configured?",
+      "options": [
+        "Slack AI settings, managed at the admin level with permissions assigned to users",
+        "There's no admin control, every member turns it on individually",
+        "Only Slack's own support team can enable it",
+        "It's automatically on for every plan with no setting"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Slack AI features like channel recaps, thread summaries, and AI-powered search are turned on and governed at the admin level, with user permissions assigned from there.",
+      "whyWrong": [
+        "Individual members don't control org-wide AI feature access, that's an admin setting.",
+        "Admins, not Slack support, manage their own org's AI feature access.",
+        "AI features are plan-gated and admin-controlled, not automatically on everywhere."
+      ]
+    },
+    {
+      "question": "A large company wants new hires automatically added to Slack the moment they're created in the company's identity provider, with no manual admin step. What provisioning method fits?",
+      "options": [
+        "SCIM or Just-in-Time (JIT) provisioning",
+        "Manual invites sent one at a time",
+        "Asking each new hire to self-register with a public signup link",
+        "CSV upload once a month"
+      ],
+      "correctAnswer": 0,
+      "explanation": "SCIM provisioning (or JIT provisioning tied to SSO login) automates account creation and deactivation from the identity provider, with no manual admin step needed per user.",
+      "whyWrong": [
+        "Manual invites don't scale and require an admin action for every new hire.",
+        "Public self-registration isn't a secure, governed provisioning method for an enterprise workspace.",
+        "A periodic CSV upload isn't automatic and introduces a delay between hire and access."
+      ]
+    },
+    {
+      "question": "What's a common responsibility that both the Admin and Owner roles share in Slack?",
+      "options": [
+        "Day-to-day workspace management tasks like managing members and channels",
+        "Only Owners can ever manage members, Admins cannot",
+        "Only Admins can see billing information",
+        "Owner and Admin are the exact same role with no distinction"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Admins and Owners share common day-to-day responsibilities like managing members and channels, though Owners typically hold additional org-level authority such as billing and plan changes.",
+      "whyWrong": [
+        "Admins can also manage members, that's a shared responsibility, not an Owner-exclusive one.",
+        "Billing is more commonly an Owner-level responsibility, not Admin-exclusive.",
+        "The roles share responsibilities but aren't identical, Owner carries extra authority."
+      ]
+    },
+    {
+      "question": "A team wants to track action items from a project directly inside Slack, assignable to members with due dates, instead of using channel messages alone. Which feature fits?",
+      "options": [
+        "Slack Lists",
+        "A Slack Canvas",
+        "A channel topic",
+        "A pinned message"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Slack Lists let teams track structured items like tasks, with fields such as assignee and due date, right inside Slack.",
+      "whyWrong": [
+        "A Canvas is better for structured reference content and documentation, not task tracking with assignees and due dates.",
+        "A channel topic is a short description line, it can't track individual action items.",
+        "A pinned message highlights one message, it doesn't provide structured, assignable task tracking."
+      ]
+    },
+    {
+      "question": "A company manages which Slack workspaces a department can access through groups defined in their identity provider. After updating those IdP groups, what should the admin expect?",
+      "options": [
+        "Slack workspace access updates to reflect the IdP group changes, once synced",
+        "Nothing changes in Slack until every user is manually re-invited",
+        "The IdP groups only affect email, not Slack",
+        "IdP groups can only be set up once and never changed"
+      ],
+      "correctAnswer": 0,
+      "explanation": "When an org manages workspace access through IdP groups, updating those groups and syncing them updates who has access in Slack, without manual re-invitations for each person.",
+      "whyWrong": [
+        "Manual re-invitation defeats the point of IdP-group-based access management.",
+        "IdP groups used for this purpose govern Slack workspace access, not just email.",
+        "IdP groups can be updated as org structure changes, they aren't a one-time, permanent setup."
       ]
     }
   ]

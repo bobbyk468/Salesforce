@@ -207,7 +207,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'business-analyst': { questions: 60, passingScore: '72%', duration: '105 min' },
   'cpq-administrator': { questions: 60, passingScore: '65%', duration: '105 min' },
   'marketing-cloud-engagement-admin': { questions: 60, passingScore: '67%', duration: '105 min' },
-  'slack-administrator': { questions: 60, passingScore: 'Not published', duration: '105 min' },
+  'slack-administrator': { questions: 60, passingScore: '65%', duration: '105 min' },
   'developer-1': { questions: 60, passingScore: '68%', duration: '105 min' },
   'developer-2': { questions: 60, passingScore: '70%', duration: '120 min' },
   'javascript-developer-i': { questions: 60, passingScore: '65%', duration: '105 min' },

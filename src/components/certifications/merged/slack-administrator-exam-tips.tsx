@@ -35,7 +35,7 @@ export const faqItems = [
   },
   {
     question: 'What are the highest-weight Slack Administrator exam sections?',
-    answer: 'Workspace Management (30%) and Security and Compliance (25%) together account for 55% of the exam. Understanding workspace settings, message retention policies, data loss prevention (DLP), guest access types, and Slack Connect governance are the most heavily tested topics.',
+    answer: 'Governance, Security and Compliance (22%) and App and AI Administration and Automations (20%) together account for 42% of the exam. Understanding security policies, PII handling, message-history compliance, AI feature rollout, and app approval workflows are the most heavily tested topics.',
   },
   {
     question: 'What is the difference between a guest and a member in Slack?',
@@ -73,22 +73,30 @@ export default function SlackAdministratorExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Workspace Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+            <span className="font-medium text-gray-900">Governance, Security and Compliance</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Security and Compliance</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Slack Connect and External Collaboration</span>
+            <span className="font-medium text-gray-900">App and AI Administration and Automations</span>
             <span className="font-bold text-salesforce-blue ml-4">20%</span>
           </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Apps and Integrations</span>
-            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Fundamentals</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Workspace Management + Security + Connect = 75%. Focus on access controls, retention policies, and guest governance.</p>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Workspace and Org Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">17%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">User Lifecycle Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Enabling Slack Success (Analytics and Adoption)</span>
+            <span className="font-bold text-salesforce-blue ml-4">10%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">Governance + App/AI Administration = 42%. Focus on security policies, compliance, app approvals, and AI feature governance first.</p>
         </div>
       </section>
 

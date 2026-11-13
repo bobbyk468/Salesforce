@@ -15,6 +15,10 @@ export interface CertNameAlias {
 
 /** Renamed certs: alias overrides OFFICIAL_CERT_NAMES; formerName used for "formerly X" in copy. */
 export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
+  'slack-administrator': {
+    primaryName: 'Salesforce Certified Slack Administrator',
+    formerName: 'Slack Certified Administrator',
+  },
   administrator: {
     primaryName: 'Salesforce Certified Platform Administrator',
     formerName: 'Salesforce Certified Administrator',

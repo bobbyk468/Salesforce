@@ -28,11 +28,12 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Workspace Configuration & Administration', weight: 28, note: 'Setting up workspaces, channels, naming conventions, workspace settings, and administrative management tasks.' },
-  { name: 'User Administration & Security', weight: 22, note: 'User provisioning, SSO/SCIM, guest users, permissions, data access controls, and two-factor authentication.' },
-  { name: 'Compliance & Data Retention', weight: 20, note: 'Message retention policies, data export settings, DLP (Data Loss Prevention) integrations, and eDiscovery.' },
-  { name: 'App & Integration Management', weight: 18, note: 'App approval workflows, Slack app directory management, Salesforce for Slack configuration, and webhook integrations.' },
-  { name: 'Slack Connect & Billing', weight: 12, note: 'Slack Connect channel setup for external collaboration, billing management, plan types, and licence management.' },
+  { name: 'Governance, Security and Compliance', weight: 22, note: 'Security policies, compliance for message history, tracking security concerns in Enterprise Grid, PII handling, workspace migration to Enterprise Grid, and conversation moderation.' },
+  { name: 'App and AI Administration and Automations', weight: 20, note: 'Implementing Slack AI, managing app installation and approvals, and evaluating app scopes against security policy.' },
+  { name: 'Fundamentals', weight: 18, note: 'Matching features to requirements, correct access levels, Admin vs Owner responsibilities, and when to use each Slack plan.' },
+  { name: 'Workspace and Org Management', weight: 17, note: 'Managing channels, cross-workspace channel permissions, workspace-wide settings, multi-workspace access, and Slack Connect configuration.' },
+  { name: 'User Lifecycle Management', weight: 13, note: 'Provisioning and deactivating users, authentication and provisioning by plan, IdP group management, Slack Connect and Guest access, and user group permissions.' },
+  { name: 'Enabling Slack Success (Analytics and Adoption)', weight: 10, note: 'Monitoring feature adoption, assessing user feedback, aligning Slack with business unit needs, and building a champion network.' },
 ]
 
 export const faqItems = [
@@ -42,7 +43,7 @@ export const faqItems = [
   },
   {
     question: 'What is the Slack Administrator exam format?',
-    answer: 'The exam consists of 60 multiple-choice and multiple-select questions with a 90-minute time limit. The passing score is approximately 65%. The exam costs $200 for the first attempt, with a no published pass markdiscount retake voucher after a failed attempt. It can be taken online (proctored) or at a Pearson VUE testing centre.',
+    answer: 'The exam consists of 60 scored multiple-choice and multiple-select questions (plus up to 5 unscored) with a 105-minute time limit. The passing score is 65%. The exam costs $200 for the first attempt; a failed attempt gets a retake voucher for about 50% off ($100). It can be taken online (proctored) or at a Pearson VUE testing centre.',
   },
   {
     question: 'Do I need the Salesforce Administrator certification first?',
@@ -68,8 +69,8 @@ export default function SlackAdministratorStudyGuideContent() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '90 min' },
-          { label: 'Passing Score', value: 'Not published' },
+          { label: 'Time Limit', value: '105 min' },
+          { label: 'Passing Score', value: '65%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
@@ -89,12 +90,19 @@ export default function SlackAdministratorStudyGuideContent() {
                 <span className="text-sm font-bold text-salesforce-blue">{section.weight}%</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.5}%` }} />
+                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 4.5}%` }} />
               </div>
               <p className="text-xs text-gray-600">{section.note}</p>
             </div>
           ))}
         </div>
+        <p className="text-sm text-gray-700 mt-4">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 65% pass mark.
+        </p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
