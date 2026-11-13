@@ -1,46 +1,46 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Agentforce Specialist exam for?",
+    "heading": "Who should take the Agentforce Specialist exam?",
     "personas": [
       {
-        "label": "AI-curious admins",
-        "description": "You want to add AI and agent-building skills to your Salesforce admin toolkit."
+        "label": "Salesforce administrators",
+        "description": "You understand Salesforce configuration and want to learn how Agentforce agents fit into that environment."
       },
       {
-        "label": "Automation specialists",
-        "description": "You build flows and bots and want to expand into Agentforce Studio and autonomous agents."
+        "label": "Automation practitioners",
+        "description": "You build flows or other automations and want to extend your skills to agent topics, actions, prompts, and testing."
       },
       {
         "label": "Consultants and architects",
-        "description": "You need to design AI agent solutions for clients and want the credential to validate your expertise."
+        "description": "You design Salesforce solutions and want to demonstrate your ability to plan and configure Agentforce use cases."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Agentforce Specialist Exam Hard?",
-    "summary": "The exam covers current Agentforce capabilities and assumes familiarity with Salesforce platform configuration. The official guide describes a typical candidate as having about one year of relevant experience; this is background guidance, not an exam prerequisite.",
+    "heading": "How challenging is the Agentforce Specialist exam?",
+    "summary": "The exam covers Agentforce configuration and assumes familiarity with Salesforce. Salesforce recommends relevant hands-on experience, but the experience guidance is not a prerequisite.",
     "bullets": [
-      "<strong>60 multiple-choice questions, plus up to five unscored questions</strong> in 105 minutes.",
-      "<strong>72% passing score.</strong>",
-      "<strong>No prerequisite certification is required.</strong> Salesforce lists Platform Administrator and Platform App Builder as recommended, not required.",
-      "The official audience description recommends practical experience with Agentforce Agent Builder, Prompt Builder, Data 360, Testing Center, and sandbox-to-production deployment."
+      "<strong>Exam length:</strong> 60 scored multiple-choice questions, with up to five unscored questions, in 105 minutes.",
+      "<strong>Passing score:</strong> 72%.",
+      "<strong>No required prerequisite:</strong> Platform Administrator and Platform App Builder are recommended credentials, not entry requirements.",
+      "<strong>Practical preparation:</strong> The exam guide recommends experience with Agent Builder, Prompt Builder, Data 360, Testing Center, and deployment from sandbox to production."
     ],
-    "passRateGuidance": "Use the official exam outline to identify gaps, then practice building, testing, and deploying agents in a suitable hands-on environment."
+    "passRateGuidance": "Use the official exam outline to plan your study. Where possible, build and test agents in a suitable environment, then practice explaining why each topic, action, grounding source, and escalation path fits its use case."
   },
   "examFormat": {
-    "heading": "Agentforce Specialist Exam Format Explained",
-    "intro": "The exam is proctored and delivered online or in-person. Here is the format:",
+    "heading": "Agentforce Specialist exam format",
+    "intro": "The exam is proctored and can be taken online or in person. Review the current official guide for booking and delivery details.",
     "bestWayToPass": [
-      "<strong>Get hands-on with Agent Builder:</strong> Build agents with multiple topics, configure channel routing, and test escalation paths in a scratch org.",
-      "<strong>Understand the Trust Layer:</strong> Review the security and privacy features identified in the official exam outline.",
-      "<strong>Study agent lifecycle:</strong> Topic classification, action mapping, guardrails, and how agents decide when to escalate to humans.",
-      "<strong>Review Prompt Builder:</strong> Understand prompt-template types, grounding, lifecycle, and effective-prompt practices."
+      "<strong>Practice with Agent Builder:</strong> Configure topics and actions, then test how the agent handles common requests and escalation.",
+      "<strong>Study trust and security:</strong> Learn the privacy and security controls described in the official exam material, including their limits.",
+      "<strong>Understand agent behavior:</strong> Review how topic classification, instructions, actions, and escalation work together.",
+      "<strong>Review Prompt Builder:</strong> Understand prompt template types, grounding choices, and how to test a prompt against its intended task."
     ]
   },
   "certificationCard": {
     "code": "Agentforce",
-    "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data Cloud grounding, and multi-channel deployment. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards AI Agents (35%) and Prompt Engineering (20%).",
+    "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data 360 grounding, and multi-channel deployment. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards AI Agents (35%) and Prompt Engineering (20%).",
     "examDetails": {
       "questions": "60 multiple-choice + up to 5 unscored",
       "passingScore": "72%",
@@ -57,63 +57,63 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Agentforce Specialist: Key Concepts for the Exam",
+    "h2": "Agentforce Specialist: concepts to understand",
     "blocks": [
       {
         "heading": "Official credential and exam details",
-        "body": "The [Salesforce Certified Agentforce Specialist Exam Guide](https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1) lists 60 multiple-choice questions and up to five unscored questions, 105 minutes, a 72% passing score, and no prerequisite. It lists Platform Administrator and Platform App Builder as recommended certifications, not requirements. The [Salesforce credential page](https://trailhead.salesforce.com/credentials/agentforcespecialist) describes the credential as managing and optimizing Agentforce. Check the current [Salesforce certification pricing](https://help.salesforce.com/s/articleView?id=005298916&language=en_US&type=1) before registration."
+        "body": "The [Salesforce Certified Agentforce Specialist Exam Guide](https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1) lists 60 multiple-choice questions, up to five unscored questions, 105 minutes, a 72% passing score, and no prerequisite. Platform Administrator and Platform App Builder are recommended credentials, not requirements. The [Salesforce credential page](https://trailhead.salesforce.com/credentials/agentforcespecialist) describes the credential as managing and optimizing Agentforce. Check [Salesforce certification pricing](https://help.salesforce.com/s/articleView?id=005298916&language=en_US&type=1) before registering."
       },
       {
-        "heading": "Topics and Actions, the Core Configuration Unit",
-        "body": "Topics and actions are among the building blocks identified in the official exam outline. Review standard and custom topics and actions, agent security context, and how the selected agent architecture fits a stated business use case."
+        "heading": "Topics and Actions",
+        "body": "Topics and actions are core parts of agent configuration in the official exam outline. Review how standard and custom topics describe the work an agent handles, and how actions let it perform specific tasks. Consider the agent security context and select an architecture that fits the business need."
       },
       {
-        "heading": "Guardrails and Agent Instructions",
-        "body": "Guardrails are negative constraints, they tell the agent what it must never do (e.g., never discuss pricing changes, never make commitments on behalf of finance). Agent instructions define tone, persona, and scope. Both are critical for safe, on-brand deployment. The exam tests the difference between positive instructions (what to do) and guardrails (what not to do)."
+        "heading": "Instructions and Guardrails",
+        "body": "Instructions guide the agent’s role, tone, and scope. Guardrails set boundaries on what it should not do. In a scenario, identify whether the requirement is asking for behavior guidance or a restriction, then configure the appropriate control."
       },
       {
-        "heading": "Einstein Trust Layer for Agentforce",
-        "body": "The Einstein Trust Layer provides security and privacy services for Agentforce, but data masking must not be treated as automatic: Salesforce documents that pattern-based and field-based LLM masking is disabled for agents. Salesforce documents zero data retention for information sent to third-party LLM providers; audit and feedback handling depends on the supported service and configuration. See Salesforce Help: [Trust and Agentforce](https://help.salesforce.com/s/articleView?id=sf.copilot_trust.htm&language=en_US&type=5), [Data Masking Limitations in Agentforce](https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US), and [Agentforce (Default) Considerations](https://help.salesforce.com/s/articleView?id=ai.agent_default_considerations.htm&language=en_US&type=5)."
+        "heading": "Einstein Trust Layer",
+        "body": "The Einstein Trust Layer provides security and privacy services for Agentforce, but do not assume every form of data masking is enabled for every agent. Salesforce documents that pattern-based and field-based LLM masking is disabled for agents. Salesforce also documents zero data retention for information sent to third-party LLM providers; audit and feedback handling depends on the supported service and configuration. See Salesforce Help: [Trust and Agentforce](https://help.salesforce.com/s/articleView?id=sf.copilot_trust.htm&language=en_US&type=5), [Data Masking Limitations in Agentforce](https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US), and [Agentforce (Default) Considerations](https://help.salesforce.com/s/articleView?id=ai.agent_default_considerations.htm&language=en_US&type=5)."
       },
       {
-        "heading": "Data Cloud Grounding",
-        "body": "Agentforce agents are integrated with Salesforce CRM data, with access controlled by the applicable agent and user permissions. Data 360 and Agentforce Data Libraries provide additional grounding options for configured sources such as knowledge articles and fields, uploaded files, or web sources; they are not a universal prerequisite for every agent data access path. Choose the grounding source based on the information needed and confirm the agent has the required permissions. See Salesforce Help: [The Building Blocks of Agents](https://help.salesforce.com/s/articleView?id=ai.copilot_building_blocks.htm&language=en_US) and [Ground Agentforce in Data](https://help.salesforce.com/s/articleView?id=ai.agent_parent_data.htm&language=en_US&type=5)."
+        "heading": "Data Grounding and Permissions",
+        "body": "Agentforce can use Salesforce CRM data according to the permissions and security context that apply to the agent. Data 360 and Agentforce Data Libraries offer additional grounding options for configured sources, such as knowledge articles, fields, uploaded files, or web sources. These options are not required for every agent data access path. Choose a source that contains the information needed and confirm access is configured. See Salesforce Help: [The Building Blocks of Agents](https://help.salesforce.com/s/articleView?id=ai.copilot_building_blocks.htm&language=en_US) and [Ground Agentforce in Data](https://help.salesforce.com/s/articleView?id=ai.agent_parent_data.htm&language=en_US&type=5)."
       },
       {
-        "heading": "Channels and Escalation",
-        "body": "Agentforce agents can be deployed across Experience Cloud, web chat, Slack, and messaging channels (SMS, WhatsApp). The Escalate to Agent standard action hands off the conversation, including full transcript, to **Omni-Channel** routing for a human agent. Know which channels require which configuration steps and when escalation is the appropriate action type."
+        "heading": "Channels and Human Escalation",
+        "body": "Agentforce can be deployed through supported channels such as Experience Cloud, web chat, Slack, and messaging. The Escalate to Agent standard action can hand a conversation to Omni-Channel for human routing. Learn which setup applies to the channel and when a handoff is appropriate."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Agentforce Specialist Exam",
-    "intro": "The Agentforce Specialist exam is scenario-based, questions describe a business requirement or a deployed agent configuration and ask which setting, action type, or architectural decision is correct. Understanding the why behind each Agentforce design choice is more important than memorising feature lists.",
+    "h2": "How to prepare for the Agentforce Specialist exam",
+    "intro": "Expect questions that describe a business need or an agent setup and ask you to choose a suitable configuration. Learn how the parts work together so you can explain why a design fits the scenario.",
     "blocks": [
       {
-        "heading": "Topics and Actions Scenarios",
-        "body": "When a question asks &ldquo;how does the agent know which topic to use?&rdquo; the answer is the Topic's natural language description. The LLM reads the description to route incoming requests. When a question asks &ldquo;what does the agent do within a topic?&rdquo; the answer is an Action (Flow, **Apex**, Prompt Template, external service, or standard action). If a scenario requires the agent to retrieve real-time customer data, the answer is typically a Flow action or an Integration Procedure, not a Prompt Template."
+        "heading": "Route requests to a topic and action",
+        "body": "A topic describes the kinds of requests an agent should handle; its description helps guide classification. Actions perform work associated with a topic, such as invoking a flow, Apex, a prompt template, or a supported standard action. Choose the action based on the task the scenario requires."
       },
       {
-        "heading": "Einstein Trust Layer Questions",
-        "body": "Do not assume that Agentforce's Einstein Trust Layer masks PII before every agent request. Salesforce documents pattern-based and field-based data masking as disabled for agents. For data sent to third-party LLM providers, Salesforce documents zero data retention; agent type, selected services, and configuration still matter. See the official [Agentforce masking limitations](https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US) and [Trust and Agentforce](https://help.salesforce.com/s/articleView?id=sf.copilot_trust.htm&language=en_US&type=5). Trust Layer services do not guarantee that a generated answer is factually correct."
+        "heading": "Apply Trust Layer controls carefully",
+        "body": "Do not assume the Trust Layer masks personal information in every agent request. Salesforce documents that pattern-based and field-based masking are disabled for agents. Salesforce describes zero data retention for information sent to third-party LLM providers, while audit and feedback handling depends on service and configuration. These services support security and privacy but do not guarantee a generated answer is correct. Review [Agentforce masking limitations](https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US) and [Trust and Agentforce](https://help.salesforce.com/s/articleView?id=sf.copilot_trust.htm&language=en_US&type=5)."
       },
       {
-        "heading": "Prompt Templates and Grounding",
-        "body": "Prompt templates let you standardise LLM instructions with merge fields from Salesforce records. When a question asks &ldquo;how do you ensure the agent references the specific account record when responding?&rdquo; the answer involves grounding the prompt with merge fields from the account. When a question mentions needing unified customer history across multiple data sources, Data Cloud grounding is the answer. Know the difference: merge field grounding (from standard Salesforce objects) vs Data Cloud grounding (unified profile across data sources)."
+        "heading": "Choose an appropriate grounding source",
+        "body": "Prompt templates can use Salesforce record data through supported merge fields and grounding features. Data 360 can support broader grounding when the needed information comes from configured sources. Identify what data the response needs, where that data lives, and whether the agent has permission to use it."
       },
       {
-        "heading": "Human Escalation and Channel Scenarios",
-        "body": "When a scenario says &ldquo;the agent should transfer the conversation to a human agent when it cannot resolve the issue&rdquo; the answer is the &ldquo;Escalate to Human Agent&rdquo; standard action with **Omni-Channel** routing. The agent passes the full transcript to the human agent. When a scenario asks which channels Agentforce supports. Know that it supports Experience Cloud, web chat, Slack, SMS, and WhatsApp. Each channel has specific configuration requirements tested in scenario questions."
+        "heading": "Plan channels and handoffs",
+        "body": "When a scenario requires a human to take over, identify the supported escalation action and routing setup for that deployment. Check channel-specific configuration rather than assuming the same steps apply to every channel."
       },
       {
-        "heading": "Exam Strategy",
-        "body": "Use the [official Salesforce exam guide](https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1) as the source of truth for current objectives and format. A focused preparation routine is to map each objective to a hands-on exercise, then review gaps against the guide."
+        "heading": "Follow the current exam guide",
+        "body": "Use the [official Salesforce exam guide](https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1) for the latest objectives and format. Turn each objective into a practical review task, then revisit the areas where you need more practice."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications to Consider",
-    "intro": "After this certification, common next steps in the admin track or consultant track:",
+    "heading": "Related Salesforce credentials",
+    "intro": "You can build on Agentforce study with administrator, app-building, sales, or service credentials:",
     "links": [
       {
         "href": "/certifications/advanced-administrator",
@@ -133,11 +133,11 @@
       },
       {
         "href": "#scenario-tips",
-        "label": "Agentforce Specialist Exam Tips →"
+        "label": "Agentforce Specialist exam tips"
       },
       {
         "href": "/certifications/ai-associate",
-        "label": "Start with Salesforce AI Associate →"
+        "label": "Salesforce AI Associate"
       }
     ]
   },
@@ -181,243 +181,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary responsibility of an Agentforce Specialist?",
+      "question": "What is the main role of an Agentforce Specialist?",
       "options": [
-        "Developing Apex code for agents",
-        "Managing and optimizing Agentforce with deep platform and Agentforce knowledge",
-        "Designing marketing campaigns",
-        "Configuring CPQ products"
+        "Configure, manage, and improve Agentforce agents",
+        "Write Apex code for agents",
+        "Design marketing campaigns",
+        "Set up CPQ products"
       ],
-      "correctAnswer": 1,
-      "explanation": "Certified Agentforce Specialists manage and optimize Agentforce and have deep understanding of both Salesforce platform configuration and Agentforce capabilities.",
+      "correctAnswer": 0,
+      "explanation": "Agentforce Specialists configure and improve agents using their knowledge of Salesforce and Agentforce.",
       "whyWrong": [
-        "Writing Apex code is a developer responsibility, not the core focus of the Agentforce Specialist role, which is configuration-focused.",
-        "Marketing campaign design is a Marketing Cloud function, unrelated to Agentforce agent configuration.",
-        "CPQ product configuration is a separate specialization, not part of the Agentforce Specialist's core responsibility."
+        "Writing Apex is mainly a developer task.",
+        "Marketing campaign design is a Marketing Cloud task.",
+        "CPQ product setup is a separate area of expertise."
       ]
     },
     {
       "question": "What is a Topic in Agentforce?",
       "options": [
-        "A Salesforce report category used to group related dashboards",
-        "A defined area of expertise that tells an agent when and how to handle a specific type of customer request, along with the actions available for that topic",
-        "A Flow element that triggers when a record is created",
-        "A permission set group that controls agent access to Salesforce objects"
+        "A report category for dashboards",
+        "An area that tells an agent which requests to handle and what actions it can use",
+        "A Flow element that runs when a record is created",
+        "A permission set group for agent access"
       ],
       "correctAnswer": 1,
-      "explanation": "Topics define the agent's scope, each topic specifies the instructions, tone, and available actions for a particular type of request such as order management or billing enquiries.",
+      "explanation": "A Topic defines the kinds of requests an agent handles. It includes instructions and the actions the agent can use.",
       "whyWrong": [
-        "Topics aren't related to report/dashboard grouping, that's an analytics concept, not an agent configuration concept.",
-        "A Flow trigger condition is a distinct automation concept unrelated to how Topics scope an agent's conversational behavior.",
-        "Permission set groups control data/feature access, not which types of customer requests an agent recognizes and handles."
+        "Reports and dashboards are not part of Topic setup.",
+        "A record-triggered Flow is a different automation feature.",
+        "Permission set groups control access, not which customer requests the agent handles."
       ]
     },
     {
-      "question": "What is an Agent Action in Agentforce?",
+      "question": "What is an Agent Action?",
       "options": [
-        "A page layout configuration for the Agent Console",
-        "A discrete task the agent can perform, such as running a Flow, calling an Apex method, invoking an external API, or generating content from a Prompt Template",
-        "An automated email triggered when a case is escalated",
-        "A custom Lightning Web Component displayed in the agent chat window"
+        "A page layout for Agent Console",
+        "An email sent when a Case is escalated",
+        "A task an agent can perform, such as running a Flow, Apex, API, or Prompt Template",
+        "A Lightning Web Component in the chat window"
       ],
-      "correctAnswer": 1,
-      "explanation": "Agent Actions are the executable steps available within a topic. Supported action types include Flows, Apex, external services, prompt templates, and standard Salesforce actions.",
+      "correctAnswer": 2,
+      "explanation": "Agent Actions are tasks an agent can perform. They can use Flows, Apex, external services, Prompt Templates, and standard Salesforce actions.",
       "whyWrong": [
-        "Page layout configuration is a UI/admin concept unrelated to what an agent can actually do during a conversation.",
-        "An automated email on case escalation is a standard Salesforce automation feature, not an Agentforce-specific Agent Action.",
-        "A custom LWC in the chat window is a UI display component, not a task the agent performs."
+        "A page layout changes the user interface; it is not an action an agent performs.",
+        "An email sent on escalation is not an Agent Action.",
+        "A Lightning Web Component changes the interface; it is not a task the agent performs."
       ]
     },
     {
-      "question": "Agentforce integrates with which Salesforce capability for unified customer data context?",
+      "question": "Which Salesforce capability gives Agentforce unified customer data?",
       "options": [
         "Marketing Cloud Journeys",
-        "Data Cloud",
         "Commerce Cloud product catalog",
-        "Slack channels"
+        "Slack channels",
+        "Data 360"
       ],
-      "correctAnswer": 1,
-      "explanation": "Data Cloud provides unified customer profiles that Agentforce can query to ground agent responses with accurate, real-time customer context.",
+      "correctAnswer": 3,
+      "explanation": "Data 360 provides unified customer profiles that Agentforce can use to add current customer context to responses.",
       "whyWrong": [
-        "Marketing Cloud Journeys manages marketing automation sequences, not unified customer data context for agent grounding.",
-        "Commerce Cloud's product catalog is scoped to product data, not the broader unified customer profile Agentforce needs.",
-        "Slack channels are a communication surface, not a data source for unified customer context."
+        "Marketing Cloud Journeys manages marketing automation.",
+        "The Commerce Cloud catalog contains product data, not a unified customer profile.",
+        "Slack channels are for communication, not unified customer data."
       ]
     },
     {
-      "question": "What is the Einstein Trust Layer and why is it important for Agentforce?",
+      "question": "What does the Einstein Trust Layer do for Agentforce?",
       "options": [
-        "A Salesforce reporting framework that tracks agent performance KPIs",
-        "A security framework that masks PII before sending prompts to the LLM, enforces zero data retention, and provides audit logs of all AI interactions",
-        "An approval process that requires human sign-off on every agent response before delivery",
-        "A custom Flow that validates agent outputs against a compliance rule set"
+        "Protects customer data, applies privacy controls, and logs AI activity",
+        "Reports agent performance",
+        "Requires approval before every agent response",
+        "Uses a custom Flow to check every output"
       ],
-      "correctAnswer": 1,
-      "explanation": "The Einstein Trust Layer ensures that customer data is protected when Agentforce interacts with external LLMs, masking sensitive fields, preventing data retention by model providers, and logging all AI activity for audit.",
+      "correctAnswer": 0,
+      "explanation": "The Einstein Trust Layer protects customer data when Agentforce uses external large language models. It can mask sensitive data, prevent model providers from retaining data, and log AI activity for review.",
       "whyWrong": [
-        "A KPI dashboard reports on performance after the fact, it doesn't provide the real-time privacy and security protections the Trust Layer delivers.",
-        "Requiring human sign-off on every response is a workflow/approval process, not what the Einstein Trust Layer itself does.",
-        "Custom Flow-based output validation is a configuration choice an admin might build, it's not what the platform's built-in Trust Layer provides."
+        "Performance reports do not provide privacy and security controls.",
+        "Human approval for every answer is not what the Trust Layer does.",
+        "A custom Flow can check outputs, but it is separate from the Trust Layer."
       ]
     },
     {
-      "question": "What are Guardrails in an Agentforce agent configuration?",
+      "question": "What are Guardrails in an Agentforce agent?",
       "options": [
-        "Row-level security rules that restrict which records the agent can access",
-        "Instructions that define what the agent should never do, for example, never discuss competitor pricing, never make promises about refunds",
-        "Rate limits that prevent the agent from sending more than a set number of messages per hour",
-        "A/B testing rules that route conversations between different agent versions"
+        "Record security rules",
+        "Instructions for what the agent must not do",
+        "Limits on messages per hour",
+        "Rules for testing different agent versions"
       ],
       "correctAnswer": 1,
-      "explanation": "Guardrails are negative instructions that constrain agent behaviour, preventing it from going off-topic, making unauthorised commitments, or generating harmful content.",
+      "explanation": "Guardrails tell the agent what not to do. They can help prevent off-topic replies, unauthorized promises, and harmful content.",
       "whyWrong": [
-        "Row-level security controls record visibility generally; Guardrails are specifically about defining prohibited agent behaviors, not data access.",
-        "Message rate limits are a technical throttling mechanism, unrelated to defining what topics or promises an agent should avoid.",
-        "A/B testing routes traffic between agent versions for experimentation, it doesn't define behavioral constraints."
+        "Record security controls which records a user can see.",
+        "Message limits control system traffic, not agent behavior.",
+        "A/B testing compares agent versions; it does not set behavior limits."
       ]
     },
     {
-      "question": "Which channel can Agentforce agents be deployed to for self-service customer interactions?",
+      "question": "Where can you deploy Agentforce agents for customer self-service?",
       "options": [
-        "Only internal Salesforce Service Console",
-        "Experience Cloud sites, messaging channels (SMS, WhatsApp), and web chat widgets",
-        "Only Slack and email",
-        "Only Salesforce mobile app push notifications"
+        "Salesforce Service Console only",
+        "Slack and email only",
+        "Experience Cloud, web chat, and messaging channels such as SMS or WhatsApp",
+        "Salesforce mobile push notifications only"
       ],
-      "correctAnswer": 1,
-      "explanation": "Agentforce agents can be deployed across multiple channels including Experience Cloud, web chat, and messaging platforms, enabling self-service without needing to reach a human agent.",
+      "correctAnswer": 2,
+      "explanation": "Agents can be deployed on Experience Cloud sites, web chat, and messaging channels so customers can get help without first reaching a person.",
       "whyWrong": [
-        "Restricting agents to only the internal Service Console would defeat the purpose of self-service customer-facing deployment.",
-        "Limiting deployment to only Slack and email excludes the web chat and Experience Cloud channels Agentforce actually supports.",
-        "Restricting to only mobile push notifications ignores the broader self-service channel options actually available."
+        "The internal Service Console alone does not provide customer self-service.",
+        "Agents can use channels beyond Slack and email.",
+        "Agents can use channels beyond mobile push notifications."
       ]
     },
     {
-      "question": "What is the role of Prompt Builder in the Agentforce ecosystem?",
+      "question": "What is Prompt Builder used for in Agentforce?",
       "options": [
-        "Building Lightning Record Page layouts for agent workspace components",
-        "Creating and managing reusable prompt templates that merge static instructions with dynamic CRM and Data Cloud data for agent actions",
-        "Configuring inbound routing rules for Omni-Channel skill-based assignment",
-        "Writing Apex test classes for custom agent action methods"
+        "Building Lightning Record Pages",
+        "Setting Omni-Channel routing rules",
+        "Writing Apex tests for custom actions",
+        "Creating reusable prompt templates that combine instructions with CRM or Data 360 data"
       ],
-      "correctAnswer": 1,
-      "explanation": "Prompt Builder enables admins and specialists to create prompt templates that combine instructions with live CRM data, used for field generation, record summaries, sales emails, and agent actions.",
+      "correctAnswer": 3,
+      "explanation": "Prompt Builder lets admins create prompt templates that combine instructions with live CRM data. These templates can support field generation, record summaries, sales emails, and agent actions.",
       "whyWrong": [
-        "Lightning Record Page layout building is a separate Salesforce admin task, unrelated to Prompt Builder's function.",
-        "Omni-Channel routing configuration is a Service Cloud feature, distinct from Prompt Builder's prompt-template role.",
-        "Writing Apex test classes is a developer task unrelated to Prompt Builder, which is a declarative prompt-authoring tool."
+        "Lightning Record Pages are built with Lightning App Builder.",
+        "Omni-Channel routing is a Service Cloud feature.",
+        "Apex tests are written by developers; Prompt Builder is a declarative tool."
       ]
     },
     {
-      "question": "How does an Agentforce agent know which Topic to apply to an incoming customer message?",
+      "question": "How does an Agentforce agent choose a Topic for a customer message?",
       "options": [
-        "It uses the case category field to match the record type",
-        "It uses a large language model to classify the customer's intent and match it to the most relevant Topic based on the topic's description and scope",
-        "It requires the customer to select a topic from a dropdown menu at the start of the conversation",
-        "It assigns topics randomly and escalates if it cannot resolve the request in two turns"
+        "It uses a large language model to match the message to a Topic description and scope",
+        "It matches the Case category to a record type",
+        "The customer must select a Topic from a menu",
+        "It selects a Topic at random and escalates after two turns"
       ],
-      "correctAnswer": 1,
-      "explanation": "Agentforce's reasoning engine (the LLM) classifies user intent and selects the most relevant Topic based on the topic descriptions and scope configured by the specialist.",
+      "correctAnswer": 0,
+      "explanation": "The reasoning engine uses a large language model to identify the customer’s intent and choose a Topic based on its description and scope.",
       "whyWrong": [
-        "Case category field matching is a simpler rule-based approach, not how Agentforce's LLM-driven Topic classification actually works.",
-        "Requiring the customer to manually pick a topic from a dropdown removes the natural-language understanding that defines Agentforce's approach.",
-        "Random topic assignment with a fixed escalation threshold isn't how Topic matching works, it's driven by LLM intent classification, not chance."
+        "Matching a Case category to a record type is a rule-based approach, not the described intent matching.",
+        "Customers do not have to choose a Topic from a menu.",
+        "Topic selection is based on the request, not a random choice or fixed two-turn rule."
       ]
     },
     {
-      "question": "What should an Agentforce Specialist do when an agent provides incorrect or off-topic responses?",
+      "question": "An agent gives incorrect or off-topic replies. What should the specialist do?",
       "options": [
-        "Delete the agent and rebuild it from scratch",
-        "Review and refine the Topic instructions, tighten guardrails, improve prompt template grounding, and test with diverse conversation scenarios",
-        "Add more Agent Actions to give the agent more options to choose from",
-        "Increase the LLM temperature setting to improve response creativity"
+        "Delete and rebuild the agent",
+        "Review Topic instructions, Guardrails, and prompt grounding, then test different conversations",
+        "Add more Agent Actions",
+        "Increase the model temperature"
       ],
       "correctAnswer": 1,
-      "explanation": "Tuning agent performance requires iterative refinement of topic instructions, guardrails, and prompt templates, alongside testing with real-world conversation variations to identify and fix gaps.",
+      "explanation": "Improve the Topic instructions, Guardrails, and prompt templates, then test a range of real conversation examples to find gaps.",
       "whyWrong": [
-        "Deleting and rebuilding from scratch discards existing configuration work without first diagnosing what's actually misconfigured.",
-        "Adding more Agent Actions gives the agent more options but doesn't fix the underlying issue of incorrect or off-topic responses.",
-        "Increasing LLM temperature adds randomness to output, which would make incorrect or off-topic responses more likely, not less."
+        "Rebuilding discards the setup before you know what needs to change.",
+        "More actions do not fix unclear instructions or incorrect grounding.",
+        "A higher temperature adds variation and may make answers less reliable."
       ]
     },
     {
-      "question": "Which Agentforce capability allows an agent to hand off a conversation to a human service agent when it cannot resolve the issue?",
+      "question": "How can an Agentforce agent hand a conversation to a human service agent?",
       "options": [
-        "Agent Escalation Flow",
-        "The Escalate to Agent standard action, which transfers the conversation and full context to Omni-Channel routing",
-        "A Workflow Rule that triggers a Case creation when sentiment is negative",
-        "An outbound email notification to the service team's shared inbox"
+        "Use an Agent Escalation Flow",
+        "Use a Workflow Rule to create a Case when sentiment is negative",
+        "Use the standard Escalate to Agent action to send the conversation and context to Omni-Channel",
+        "Email the service team’s shared inbox"
       ],
-      "correctAnswer": 1,
-      "explanation": "Agentforce includes a standard escalation action that hands the conversation, including full transcript and context, to a human agent via Omni-Channel, so the handover is not restarted.",
+      "correctAnswer": 2,
+      "explanation": "The standard escalation action transfers the conversation and its context to a human agent through Omni-Channel.",
       "whyWrong": [
-        "'Agent Escalation Flow' isn't the actual named Agentforce capability, the real standard action is 'Escalate to Agent.'",
-        "A Workflow Rule triggering Case creation on negative sentiment is a possible automation pattern, but it isn't the built-in mechanism for live conversation hand-off.",
-        "An outbound email notification doesn't transfer the live conversation and context, it just alerts a team after the fact."
+        "The built-in action is called Escalate to Agent.",
+        "A Workflow Rule may create a Case, but it does not hand over a live conversation.",
+        "An email alert does not transfer the live conversation and its context."
       ]
     },
     {
-      "question": "What is the primary exam focus of the Agentforce Specialist certification?",
+      "question": "What does the Agentforce Specialist exam mainly test?",
       "options": [
-        "Writing Apex classes and LWC components for custom Agentforce integrations",
-        "Configuring and optimising Agentforce agents, including topics, actions, prompt templates, guardrails, channels, and Data Cloud grounding",
-        "Designing enterprise data architecture for Data Cloud ingestion pipelines",
-        "Administering Service Cloud Omni-Channel routing and Einstein Case Classification"
+        "Apex and Lightning Web Component development",
+        "Data 360 ingestion architecture",
+        "Service Cloud routing and Case classification",
+        "Configuring agents, including Topics, actions, prompts, Guardrails, channels, and Data 360"
       ],
-      "correctAnswer": 1,
-      "explanation": "The Agentforce Specialist exam tests the ability to declaratively configure agents: defining topics and actions, crafting prompt templates, applying guardrails, deploying to channels, and grounding agents with Data Cloud.",
+      "correctAnswer": 3,
+      "explanation": "The exam tests how to configure agents: define Topics and actions, create prompt templates, use Guardrails, choose channels, and ground responses with Data 360.",
       "whyWrong": [
-        "Writing Apex and LWC for custom integrations is developer work, not the Specialist certification's configuration focus.",
-        "Data Cloud ingestion pipeline architecture is a Data Cloud/architect-level skill, not the core Agentforce Specialist exam focus.",
-        "Administering Omni-Channel routing and Case Classification are separate Service Cloud admin skills, not Agentforce-specific configuration."
+        "Apex and Lightning Web Components are development topics, not the main focus of this exam.",
+        "Data 360 ingestion architecture is a separate architecture skill.",
+        "Omni-Channel routing and Case classification are Service Cloud topics."
       ]
     },
     {
-      "question": "What is the purpose of Agentforce guardrails?",
+      "question": "What is the purpose of Agentforce Guardrails?",
       "options": [
-        "To improve response creativity",
-        "To define negative constraints, what the agent must never do",
-        "To increase LLM temperature",
-        "To add more data sources"
+        "Set limits on what the agent can do or say",
+        "Make replies more creative",
+        "Increase model temperature",
+        "Add more data sources"
       ],
-      "correctAnswer": 1,
-      "explanation": "Guardrails are negative constraints that prevent the agent from taking certain actions or making certain statements.",
+      "correctAnswer": 0,
+      "explanation": "Guardrails set limits on the agent’s actions and responses.",
       "whyWrong": [
-        "Guardrails don't affect response creativity, that's unrelated to their purpose.",
-        "Guardrails are configuration settings, not an LLM temperature control.",
-        "Guardrails define behavioral limits; they have nothing to do with adding data sources."
+        "Guardrails do not control how creative responses are.",
+        "Model temperature is a separate setting.",
+        "Guardrails do not add data sources."
       ]
     },
     {
-      "question": "Which action type can an Agentforce agent use to invoke a Flow?",
+      "question": "Which action type can an Agentforce agent use to run a Flow?",
       "options": [
-        "Only Apex",
-        "Flow action; agents can invoke Flows as discrete actions",
-        "Only external APIs",
-        "Only prompt templates"
+        "Apex only",
+        "Flow action",
+        "External API only",
+        "Prompt Template only"
       ],
       "correctAnswer": 1,
-      "explanation": "Flow is one of the standard action types an agent can use to perform automated tasks.",
+      "explanation": "A Flow is one of the standard action types an agent can use to perform tasks.",
       "whyWrong": [
-        "Agents can invoke more than just Apex; Flow is itself a distinct, supported action type.",
-        "External APIs are a separate action type from Flow; 'only external APIs' incorrectly excludes Flow actions.",
-        "Prompt templates are a different action type from Flow invocation, they don't cover invoking a Flow directly."
+        "Agents can use more than Apex actions.",
+        "External APIs are a separate action type.",
+        "Prompt Templates are different from Flow actions."
       ]
     },
     {
-      "question": "When should Data Cloud grounding be enabled for an Agentforce agent?",
+      "question": "When should you use Data 360 grounding for an Agentforce agent?",
       "options": [
         "Never",
-        "When the agent needs access to unified customer profiles and real CRM data for grounded responses",
         "Only for external channels",
-        "Only for testing"
+        "When the agent needs unified customer profiles and CRM data for its responses",
+        "Only while testing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Data 360 grounding gives the agent access to unified customer data so it can provide responses based on that information.",
+      "whyWrong": [
+        "Grounding is a common way to provide customer context.",
+        "Grounding is not limited to external channels.",
+        "Grounding can be used in production, not only in tests."
+      ]
+    },
+    {
+      "question": "Before activating an agent for real users, how should a specialist confirm it behaves correctly across a range of scenarios?",
+      "options": [
+        "Run it through Testing Center and review the evaluations",
+        "Deploy straight to production and watch for complaints",
+        "Ask the agent to describe its own instructions",
+        "Skip testing if the agent was built with a template"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Testing Center runs an agent against defined test cases and scores its responses, so a specialist can catch problems before real users see them.",
+      "whyWrong": [
+        "Deploying untested and waiting for complaints skips the verification step the exam expects.",
+        "Asking an agent to describe its own instructions doesn't verify its actual behavior across scenarios.",
+        "Templates still need testing, they aren't pre-verified for a specific org's data and configuration."
+      ]
+    },
+    {
+      "question": "What's the difference between an Employee agent and a Service agent in Agentforce?",
+      "options": [
+        "There is no difference, the terms are interchangeable",
+        "An Employee agent runs in the context of the logged-in internal user; a Service agent runs under a dedicated Agent User for external, customer-facing work",
+        "Employee agents can only use Flow actions, Service agents can only use Apex",
+        "Service agents cannot be tested in Testing Center"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud grounding provides the agent with unified customer data for accurate, data-backed responses.",
+      "explanation": "Employee agents act with the permissions of the internal user who's using them. Service agents, typically customer-facing, run under a separate Agent User whose permission sets define exactly what the agent can access.",
       "whyWrong": [
-        "Grounding is a core, commonly used Agentforce capability; 'never' misrepresents its actual purpose and use.",
-        "Data Cloud grounding isn't restricted to external channels only, it applies whenever the agent needs real customer data, regardless of channel.",
-        "Grounding isn't a testing-only feature, it's meant for production use whenever real CRM context improves response accuracy."
+        "They run under different security contexts, which is why the exam tests telling them apart.",
+        "Both agent types can use Flow, Apex, and other action types, the distinction isn't about which actions are available.",
+        "Testing Center works with both Employee and Service agents."
+      ]
+    },
+    {
+      "question": "A company wants two specialized agents, one for billing and one for technical support, to collaborate on a single complex customer request. Which concept addresses this?",
+      "options": [
+        "A single Topic with more detailed instructions",
+        "Multi-Agent architecture, using open protocols such as MCP or A2A to orchestrate between agents",
+        "A bigger Guardrail",
+        "A longer prompt template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When a use case needs more scalability and control than one agent configuration can offer, Multi-Agent Orchestration lets separate agents work together, coordinated through protocols like Model Context Protocol (MCP) or Agent-to-Agent (A2A) communication.",
+      "whyWrong": [
+        "Adding instructions to one Topic doesn't give you two specialized, independently-governed agents working together.",
+        "Guardrails constrain what a single agent can say or do, they don't coordinate multiple agents.",
+        "A longer prompt template doesn't solve a multi-agent coordination problem."
+      ]
+    },
+    {
+      "question": "An agent was built and tested in a sandbox. What should the specialist account for when moving it to production?",
+      "options": [
+        "Nothing, agents deploy identically everywhere",
+        "Dependencies such as connected data sources, permission sets for the Agent User, and any environment-specific configuration",
+        "Only the agent's name needs to change",
+        "Production doesn't support Agentforce"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Moving an agent from sandbox to production means checking that its grounding data sources, the Agent User's access, and any environment-specific settings all exist and are correctly configured in the target org.",
+      "whyWrong": [
+        "Environments differ in data, access, and configuration, so deployment isn't a simple no-op copy.",
+        "A name change alone doesn't address the real dependencies a deployment needs to carry over.",
+        "Production is a normal, supported environment for Agentforce agents."
+      ]
+    },
+    {
+      "question": "A company wants to prevent a specific large language model from being used by any agent in their org, for compliance reasons. Where is that controlled?",
+      "options": [
+        "In the Topic's instructions",
+        "Through model access management in the Trust Layer",
+        "By deleting the Prompt Builder app",
+        "It can't be restricted, all models are always available"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Trust Layer includes model access management, letting admins allow or block specific models from being used across the org's agents and prompt templates.",
+      "whyWrong": [
+        "Topic instructions shape agent behavior, they don't govern which underlying models are available org-wide.",
+        "Deleting Prompt Builder would break prompt template functionality entirely, it isn't a targeted model restriction.",
+        "Model access is specifically a governable setting through the Trust Layer, not an all-or-nothing default."
       ]
     }
   ]

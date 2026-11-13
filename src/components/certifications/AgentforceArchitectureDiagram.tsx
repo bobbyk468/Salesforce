@@ -1,6 +1,6 @@
 /**
  * High-level Agentforce exam mental model: channels → agent → topics/actions →
- * Trust Layer → LLM, with Data Cloud grounding. Improves dwell time and supports PAA-style understanding.
+ * Trust Layer → LLM, with Data 360 grounding. Improves dwell time and supports PAA-style understanding.
  */
 export default function AgentforceArchitectureDiagram() {
   return (
@@ -14,7 +14,7 @@ export default function AgentforceArchitectureDiagram() {
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         User messages enter through a channel; the agent routes to a <strong>Topic</strong>, runs{' '}
         <strong>Actions</strong> (Flow, Apex, APIs, prompts). Outbound model calls pass through the{' '}
-        <strong>Einstein Trust Layer</strong>. <strong>Data Cloud</strong> optionally grounds responses in a unified
+        <strong>Einstein Trust Layer</strong>. <strong>Data 360</strong> optionally grounds responses in a unified
         profile. Compare to merge-field grounding from core CRM when you study.
       </p>
       <svg
@@ -26,7 +26,7 @@ export default function AgentforceArchitectureDiagram() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <title id="agentforce-arch-diagram-title">
-          Diagram: channels connect to Agentforce agent, topics and actions, Trust Layer, external LLM, and Data Cloud
+          Diagram: channels connect to Agentforce agent, topics and actions, Trust Layer, external LLM, and Data 360
           grounding
         </title>
         <defs>
@@ -91,7 +91,7 @@ export default function AgentforceArchitectureDiagram() {
         <path d="M 434 208 L 434 228" stroke="#0b5cab" strokeWidth="2" markerEnd="url(#afArrow)" />
         <rect x="536" y="100" width="160" height="100" rx="8" fill="#ecfdf5" stroke="#059669" strokeWidth="1.5" />
         <text x="616" y="128" textAnchor="middle" fill="#0f172a" fontWeight="600">
-          Data Cloud
+          Data 360
         </text>
         <text x="616" y="148" textAnchor="middle" fill="#334155">
           Unified profiles

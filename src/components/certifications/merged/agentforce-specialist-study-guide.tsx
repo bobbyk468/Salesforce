@@ -86,6 +86,13 @@ export default function AgentforceSpecialistStudyGuideContent() {
         <p className="text-xs text-gray-600 mt-4">
           60 scored questions plus up to five unscored. Passing score: 72%. Retake fee: US$100 plus applicable taxes. Prerequisite: none; Salesforce recommends relevant experience and self-study.
         </p>
+        <p className="text-sm text-gray-700 mt-4">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 72% pass mark.
+        </p>
       </section>
 
 

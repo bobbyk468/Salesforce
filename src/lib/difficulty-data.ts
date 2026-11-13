@@ -52,9 +52,9 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
   ],
   'agentforce-specialist': [
     { sectionName: 'Agentforce Configuration', difficulty: 'Hard', tip: 'Topics, Instructions, and Actions are distinct concepts, confusing them is the most common failure point.' },
-    { sectionName: 'Platform and Security', difficulty: 'Moderate', tip: 'Permission sets for agent access, Data Cloud connections, and org-wide security implications.' },
+    { sectionName: 'Platform and Security', difficulty: 'Moderate', tip: 'Permission sets for agent access, Data 360 connections, and org-wide security implications.' },
     { sectionName: 'Agent Capabilities and Optimization', difficulty: 'Trap', tip: 'Apex @InvocableMethod vs Auto-Launched Flow actions. Know which to recommend per scenario.' },
-    { sectionName: 'Integration and Best Practices', difficulty: 'Hard', tip: 'Data Cloud grounding vs standard object access; agents do not automatically access all Salesforce data.' },
+    { sectionName: 'Integration and Best Practices', difficulty: 'Hard', tip: 'Data 360 grounding vs standard object access; agents do not automatically access all Salesforce data.' },
   ],
   'sales-cloud': [
     { sectionName: 'Solution Design', difficulty: 'Hard', tip: 'Multi-org vs single-org decisions and when to recommend each architecture pattern.' },

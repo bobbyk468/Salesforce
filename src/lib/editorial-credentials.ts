@@ -29,7 +29,7 @@ export const EDITORIAL_CREDENTIALS: EditorialCredential[] = [
   { label: 'Salesforce Certified Marketing Cloud Engagement Specialist', abbr: 'MC Email' },
   { label: 'Salesforce Certified Business Analyst', abbr: 'Business Analyst' },
   { label: 'Salesforce Certified JavaScript Developer', abbr: 'JS Dev I' },
-  { label: 'Salesforce Certified Data Cloud Consultant', abbr: 'Data Cloud' },
+  { label: 'Salesforce Certified Data 360 Consultant', abbr: 'Data 360' },
   { label: 'Salesforce Certified Agentforce Specialist', abbr: 'Agentforce' },
   { label: 'Salesforce Certified MuleSoft Integration Foundations', abbr: 'MuleSoft' },
 ]

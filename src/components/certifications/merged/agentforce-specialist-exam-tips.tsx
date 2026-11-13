@@ -103,11 +103,12 @@ export default function AgentforceSpecialistExamTipsContent() {
 
       {/* Study plan */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">3-Week Agentforce Specialist Study Plan</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week Agentforce Specialist Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Configuration and Security (50%):</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create topics, assign actions, test conversations. Review documented Trust Layer capabilities and configuration, including the agent masking limitation. Review org security: profiles, permission sets, and how they govern agent access.</p>
-          <p><strong>Week 2: Capabilities and Integration (50%):</strong> Practice with Prompt Builder, create and test flex prompts with merge fields. Build a Flow-based action and connect it to an Agent Topic. Study external action configuration (API-based actions, named credentials). Review best practices for testing agents and using the test panel in Agent Builder.</p>
-          <p><strong>Week 3:</strong> Full timed mock exams (60 Q / 105 min). Focus on scenario questions that combine configuration + security (e.g., &ldquo;a user cannot see the agent; what is the likely permission issue?&rdquo;). Re-test any weak sections. Review errors against the official objectives.</p>
+          <p><strong>Week 1: AI Agents (35%), the single largest section:</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create standard and custom topics, assign standard and custom actions, test conversations, and review how agents connect to channels like digital experience, email, voice, and Slack.</p>
+          <p><strong>Week 2: Prompt Engineering (20%) and Data 360 Fundamentals (20%):</strong> Practice with Prompt Builder, create and test flex prompts with merge fields, and review grounding techniques. Study Data 360 and Agentforce Data Library concepts: chunking, indexing, and retrievers. Review Trust Layer security and privacy features, including model access management.</p>
+          <p><strong>Week 3: Testing, Deployment and Maintenance (10%), Governance and Observability (10%), and Multi-Agent Orchestration (5%):</strong> Use Testing Center to evaluate an agent, review sandbox-to-production deployment considerations, and read up on agent analytics and monitoring. Review Multi Agent architecture and open protocols like MCP and A2A.</p>
+          <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min). Re-test any weak sections and review errors against the official objectives.</p>
         </div>
       </section>
 
@@ -164,8 +165,8 @@ export default function AgentforceSpecialistExamTipsContent() {
             <p className="text-sm text-gray-700">Apex @InvocableMethod actions are used when the agent needs complex data processing, callouts, or operations not possible in Flow. Auto-Launched Flows are used for standard business logic, data manipulation, and multi-step orchestration. The exam tests which to recommend given a scenario: if it requires external API calls or complex Apex logic, use Apex; if it is achievable declaratively. Use a Flow action.</p>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-1">3. Data Cloud Grounding vs Standard Object Data Access</h3>
-            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup; it is not automatic. Agent data sources depend on configured capabilities and access controls; Data 360 is not a universal prerequisite. See Salesforce documentation for supported sources and permissions.</p>
+            <h3 className="font-semibold text-gray-900 mb-1">3. Data 360 Grounding vs Standard Object Data Access</h3>
+            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data 360 grounding (real-time unified customer data) requires explicit Data 360 setup; it is not automatic. Agent data sources depend on configured capabilities and access controls; Data 360 is not a universal prerequisite. See Salesforce documentation for supported sources and permissions.</p>
           </div>
         </div>
       </section>
@@ -195,7 +196,7 @@ export default function AgentforceSpecialistExamTipsContent() {
           </Link>
           <Link href="/certifications/data-360-consultant" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Data Cloud Consultant Exam Tips</span>
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Data 360 Consultant Exam Tips</span>
           </Link>
           <Link href="/admin-certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />

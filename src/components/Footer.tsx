@@ -145,12 +145,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/sales-cloud#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Sales Cloud Consultant practice questions
+                  Agentforce Sales Consultant practice questions
                 </Link>
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/data-360-consultant#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Data Cloud Consultant practice questions
+                  Data 360 Consultant practice questions
                 </Link>
               </li>
             </ul>
