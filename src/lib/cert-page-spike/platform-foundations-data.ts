@@ -44,7 +44,7 @@ export const platformFoundationsExamDifficulty: ExamDifficulty = {
 
 export const platformFoundationsExamFormat: ExamFormat = {
   heading: 'Platform Foundations Exam Format Explained',
-  intro: 'You can take the exam online with a proctor or at a test centre. The questions cover a range of basic Salesforce topics.',
+  intro: 'You register through Trailhead Academy, and the exam is delivered by Pearson VUE, online with a proctor or at a test centre. The questions cover a range of basic Salesforce topics.',
   scenarioPercent:
     'About one-third of the questions use short scenarios. They describe a business need and ask which object, cloud, or feature would help.',
   bestWayToPass: [

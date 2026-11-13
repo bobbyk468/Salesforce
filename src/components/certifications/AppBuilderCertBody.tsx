@@ -44,7 +44,18 @@ export default function AppBuilderCertBody({ slug }: { slug: string }) {
     <div className="min-h-screen bg-pattern">
       <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={title} />
-        <CredentialSchema certSlug={slug} certName={title} description={card.description} pageUrl={`/certifications/${slug}`} />
+        <CredentialSchema
+          certSlug={slug}
+          certName={title}
+          description={card.description}
+          pageUrl={`/certifications/${slug}`}
+          extraAlternateNames={['Platform App Builder', 'Salesforce Platform App Builder', 'Plat-Admn-202', 'DEV-402', 'CRT-402']}
+          extraIdentifiers={[
+            { propertyID: 'Exam Code', value: 'Plat-Admn-202' },
+            { propertyID: 'Legacy Exam Code', value: 'DEV-402' },
+            { propertyID: 'Official Prep Course Code', value: 'CRT-402' },
+          ]}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -71,11 +82,14 @@ export default function AppBuilderCertBody({ slug }: { slug: string }) {
             Independent study resource &bull; Check the current Salesforce exam guide before booking
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Salesforce Certified Platform App Builder (DEV-402) Exam Questions &amp; Study Guide
+            Salesforce Certified Platform App Builder (Plat-Admn-202 / DEV-402) Exam Questions &amp; Study Guide
           </h1>
           <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
-            Prepare with free Platform App Builder (DEV-402) practice questions, plus a study plan and section weightage. No sign-up required.
+            Prepare with free Platform App Builder practice questions, plus a study plan and section weightage. No sign-up required.
+          </p>
+          <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
+            Platform App Builder is listed on Trailhead Academy under the exam code Plat-Admn-202. It is still widely known by its earlier code, DEV-402, and by CRT-402, the code of the certification prep course. All three refer to the same Salesforce Certified Platform App Builder credential.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-5">
             <Link

@@ -83,6 +83,8 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
             <p className="text-gray-600 text-sm sm:text-base">
               {slug === 'platform-foundations'
                 ? 'The official exam guide lists no required maintenance for this certification at this time. Check the issuer’s current credential page before relying on this.'
+                : slug === 'app-builder'
+                ? 'The official exam guide requires the Platform App Builder certification maintenance badge on Trailhead three times a year. Check the issuer’s current credential page for due dates.'
                 : 'Maintenance and renewal requirements vary. Check the issuer’s current credential page for requirements that apply to you.'}
             </p>
           </div>

@@ -125,7 +125,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/app-builder" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  App Builder study guide
+                  Platform App Builder (Plat-Admn-202) study guide
                 </Link>
               </li>
               <li>

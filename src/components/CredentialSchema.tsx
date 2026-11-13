@@ -21,9 +21,12 @@ export default function CredentialSchema({ certSlug, certName, description, page
   const formerName = getCertFormerName(certSlug)
   const examCode = getRecognizedExamCode(certSlug)
 
-  const alternateName = [...new Set([formerName, examCode, ...(extraAlternateNames ?? [])].filter((v): v is string => Boolean(v)))]
+  const alternateName = [...new Set([...(extraAlternateNames ?? []), formerName, examCode].filter((v): v is string => Boolean(v)))]
+  // An explicit 'Exam Code' in extraIdentifiers replaces the auto-derived one,
+  // so a page can state the current code and list the legacy code separately.
+  const hasExplicitCode = (extraIdentifiers ?? []).some((id) => id.propertyID === 'Exam Code')
   const identifier = [
-    ...(examCode ? [{ '@type': 'PropertyValue', propertyID: 'Exam Code', value: examCode }] : []),
+    ...(examCode && !hasExplicitCode ? [{ '@type': 'PropertyValue', propertyID: 'Exam Code', value: examCode }] : []),
     ...(extraIdentifiers ?? []).map((id) => ({ '@type': 'PropertyValue', ...id })),
   ]
 

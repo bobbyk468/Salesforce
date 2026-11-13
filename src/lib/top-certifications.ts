@@ -14,11 +14,11 @@
 export type TopCertLink = { label: string; href: string }
 
 export const TOP_CERTIFICATIONS: TopCertLink[] = [
-  { label: 'Salesforce Administrator (ADM-201) Practice Questions', href: '/certifications/administrator' },
-  { label: 'Salesforce Platform App Builder Study Guide', href: '/certifications/app-builder' },
+  { label: 'Platform Administrator (Plat-Admn-201 / ADM-201) Practice Questions', href: '/certifications/administrator' },
+  { label: 'Platform App Builder (Plat-Admn-202 / DEV-402) Study Guide', href: '/certifications/app-builder' },
   { label: 'Salesforce Platform Developer I (PD1) Practice Test', href: '/certifications/developer-1' },
   { label: 'Salesforce Business Analyst Exam Questions', href: '/certifications/business-analyst' },
-  { label: 'Salesforce Agentforce Specialist (AI) Practice Test', href: '/certifications/agentforce-specialist' },
+  { label: 'Agentforce Specialist (AI-201) Practice Test', href: '/certifications/agentforce-specialist' },
   { label: 'Salesforce Data 360 Consultant Study Guide', href: '/certifications/data-360-consultant' },
   { label: 'Salesforce Agentforce Sales Consultant Practice Questions', href: '/certifications/sales-cloud' },
   { label: 'Salesforce Agentforce Service Consultant Study Guide', href: '/certifications/service-cloud' },

@@ -19,22 +19,22 @@ const sectionDeepDives: Array<{ name: string; weight: number; body: string }> = 
   {
     name: 'Business Logic and Process Automation',
     weight: 32,
-    body: 'Flow Builder is the dominant topic here. A before-save record-triggered flow updates fields on the triggering record without DML, faster and more efficient. An after-save flow is needed when you must query or update related records after insert. Screen flows collect user input through screens and can launch from a button on a record page. Approval processes define entry criteria, submission actions, one or more approval steps, and final actions. Validation rules evaluate before triggers fire.',
+    body: 'Flow Builder is the dominant topic here. A before-save record-triggered flow updates fields on the triggering record without DML, faster and more efficient. An after-save flow is needed when you must query or update related records after insert. Screen flows collect user input through screens and can launch from a button on a record page. Approval processes define entry criteria, submission actions, one or more approval steps, and final actions. Validation rules evaluate before triggers fire. The Summer ’26 outline also asks you to describe the capabilities and use cases for Flow Approval processes, and for using Agentforce to automate business processes.',
   },
   {
     name: 'Data Modeling and Management',
     weight: 20,
-    body: 'Master-detail requires a parent, cascades delete, and is the only relationship type eligible for roll-up summary fields. Lookup has an optional parent and no cascade delete. A many-to-many relationship needs a junction object with two master-detail relationships. Formula fields are read-only calculated fields. Compare the Import Wizard (up to 50,000 records, no CLI) with Data Loader (bulk operations on any object, command-line capable, schedulable).',
+    body: 'Master-detail requires a parent, cascades delete, and is the only relationship type eligible for roll-up summary fields. Lookup has an optional parent and no cascade delete. A many-to-many relationship needs a junction object with two master-detail relationships. Formula fields are read-only calculated fields. Compare the Import Wizard (up to 50,000 records, no CLI) with Data Loader (bulk operations on any object, command-line capable, schedulable). Know the capabilities of external data sources: Salesforce Connect exposes outside data as external objects, whose API names end in __x, without copying it into Salesforce.',
   },
   {
     name: 'Salesforce Fundamentals',
     weight: 18,
-    body: 'Prefer declarative tools (Flow, validation rules, formula fields) unless a requirement cannot be met declaratively; the exam rewards the least-code answer. Org-wide defaults set the baseline record access, roles grant upward visibility, sharing rules open access horizontally, and manual sharing allows one-off exceptions. Profiles control object access and app access; permission sets grant additional permissions without changing the profile; permission set groups bundle several permission sets.',
+    body: 'Prefer declarative tools (Flow, validation rules, formula fields) unless a requirement cannot be met declaratively; the exam rewards the least-code answer. Org-wide defaults set the baseline record access, roles grant upward visibility, sharing rules open access horizontally, and manual sharing allows one-off exceptions. Profiles control object access and app access; permission sets grant additional permissions without changing the profile; permission set groups bundle several permission sets. The outline also covers common scenarios for extending an org through AgentExchange, and reports, report types, and dashboards.',
   },
   {
     name: 'User Interface',
     weight: 17,
-    body: 'Lightning App Builder has three page types: Home pages, Record pages, and App pages. Component visibility rules hide or show components based on field values or user attributes, with no code needed. Compact layouts control the fields shown in the highlights panel and on mobile cards. Record types control page layout, picklist values, and business process assignment, not field visibility.',
+    body: 'Lightning App Builder has three page types: Home pages, Record pages, and App pages. Component visibility rules hide or show components based on field values or user attributes, with no code needed. Compact layouts control the fields shown in the highlights panel and on mobile cards. Record types control page layout, picklist values, and business process assignment, not field visibility. For mobile, know the difference between global actions, which are not tied to a record, and object-specific actions, which act on or create records related to the one being viewed.',
   },
   {
     name: 'App Deployment',
@@ -49,7 +49,7 @@ export default function AppBuilderMergedGuide() {
       {/* What each section actually tests */}
       <section id="section-deep-dives" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Platform App Builder (DEV-402) Exam Sections: Topics and Weightings
+          Platform App Builder (Plat-Admn-202 / DEV-402) Exam Sections: Topics and Weightings
         </h2>
         <p className="text-sm text-gray-600 mb-5">
           Business Logic and Process Automation, Data Modeling and Management, and Salesforce Fundamentals together make up 70% of the outline. Master those three first.
@@ -150,6 +150,22 @@ export default function AppBuilderMergedGuide() {
             <p>Component visibility rules in Lightning App Builder control whether a component renders on a page, based on field values, user permissions, or device type; they do not control which page layout a profile sees. Page layout assignment is a separate, profile-based setting. If a scenario says &ldquo;only show this component to managers,&rdquo; the answer is a visibility rule, not a separate layout.</p>
           </div>
         </div>
+      </section>
+
+      {/* Official recommended resources */}
+      <section id="recommended-training" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Platform App Builder: Official Recommended Training</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          The official exam guide recommends one trailmix and five superbadge units on Trailhead. Registration is through Trailhead Academy, and the exam is delivered by Pearson VUE, online or at a testing center.
+        </p>
+        <ul className="space-y-1 text-sm text-gray-700 list-disc list-inside">
+          <li>Trailmix: Prepare for Your Salesforce Platform App Builder Certification</li>
+          <li>Object Relationships Superbadge Unit</li>
+          <li>User Access Fundamentals Superbadge Unit</li>
+          <li>Formulas Superbadge Unit</li>
+          <li>Data Quality and Validation Superbadge Unit</li>
+          <li>Flow Fundamentals Superbadge Unit</li>
+        </ul>
       </section>
 
       {/* Day-before review list */}

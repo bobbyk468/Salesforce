@@ -25,7 +25,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   },
   examFormat: {
     heading: 'App Builder Exam Format Explained',
-    intro: 'The exam is proctored online or at a test centre. Here is the format:',
+    intro: 'You register through Trailhead Academy, and the exam is delivered by Pearson VUE, proctored online or at a test centre. Here is the format:',
     scenarioPercent: 'Many questions use business scenarios. They ask which declarative features, such as objects, relationships, Flow, validation rules, or page layouts, meet a requirement. Some scenarios ask you to choose between automation, approval processes, and a custom component.',
     bestWayToPass: [
       '<strong>Model data:</strong> Know when to use lookup and master-detail relationships, external objects, junction objects, and roll-up summary fields.',

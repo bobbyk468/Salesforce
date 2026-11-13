@@ -42,7 +42,7 @@ export default function PlatformFoundationsMergedGuide() {
       {/* What each section actually tests */}
       <section id="section-deep-dives" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
-          Salesforce Platform Foundations Exam Sections: Topics and Weightings
+          Platform Foundations (Plat-101) Exam Sections: Topics and Weightings
         </h2>
         <p className="text-sm text-gray-600 mb-5">
           Salesforce Ecosystem and Navigation together make up 60% of the outline. Start there, then cover the Data Model and Reports &amp; Dashboards.

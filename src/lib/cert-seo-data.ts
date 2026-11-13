@@ -834,6 +834,7 @@ function getCertMetaTitle(slug: string): string {
   if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Practice & Guide'
   if (slug === 'agentforce-specialist') return 'Salesforce Agentforce Specialist (AI-201) Practice & Guide'
   if (slug === 'platform-foundations') return 'Salesforce Platform Foundations (Plat-101) Practice & Guide'
+  if (slug === 'app-builder') return 'Salesforce Platform App Builder (DEV-402) Practice & Guide'
   if (slug === 'sales-cloud') return 'Agentforce Sales Consultant (Sales Cloud) Practice & Guide'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
   if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
@@ -864,6 +865,14 @@ export function getCertMetaDescription(slug: string): string {
   if (isRetiredCredential(slug)) {
     return 'AI Associate retired February 2026. Review historical exam notes, or explore Agentblazer for current Salesforce AI learning.'
   }
+
+  // Hand-written for the bespoke pages: lead with the bare exam name and codes.
+  const bespoke: Record<string, string> = {
+    'platform-foundations': 'Platform Foundations (Plat-101, formerly Salesforce Associate): 20 free practice questions, weightage (Ecosystem 32%, Navigation 28%), $75 fee, study guide.',
+    'app-builder': "Platform App Builder (Plat-Admn-202 / DEV-402): 20 free practice questions, Summer '26 weightage (Automation 32%, Data Modeling 20%), 73% pass mark, guide.",
+    'agentforce-specialist': 'Agentforce Specialist (AI-201 / Agent Force): 20 free practice questions, weightage (AI Agents 35%, Prompt Engineering 20%, Data 360 20%), study guide.',
+  }
+  if (bespoke[slug]) return bespoke[slug]
 
   const shortName = certName
     .replace(/^Salesforce Certified\s+/i, '')
@@ -2646,7 +2655,7 @@ export function getCertH1Text(slug: string): string {
     return `Salesforce Business Analyst Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
   }
   if (slug === 'app-builder') {
-    return `Salesforce Platform App Builder (DEV-402): Free Practice Exam & Study Guide (${TITLE_YEAR})`
+    return `Salesforce Certified Platform App Builder (Plat-Admn-202 / DEV-402) Exam Questions & Study Guide`
   }
   if (slug === 'mulesoft-integration-architect') {
     return `MuleSoft Integration Architect Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
