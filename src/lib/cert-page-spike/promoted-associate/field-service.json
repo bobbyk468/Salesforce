@@ -5,43 +5,42 @@
     "personas": [
       {
         "label": "Service Cloud consultants expanding scope",
-        "description": "You already implement Service Cloud and want to add Field Service expertise for mobile workforce management projects."
+        "description": "You configure Field Service and want to show that you can design mobile workforce solutions."
       },
       {
         "label": "Field operations managers",
-        "description": "You manage dispatchers and field technicians using Salesforce Field Service and want to validate your configuration and scheduling knowledge."
+        "description": "You coordinate dispatchers and technicians and need to understand scheduling and field operations."
       },
       {
         "label": "Implementation partners",
-        "description": "You deliver Field Service implementations for clients and need the consultant credential to demonstrate end-to-end solution design expertise."
+        "description": "You implement Salesforce Field Service for customers and want to validate your solution skills."
       }
     ]
   },
   "examDifficulty": {
     "heading": "How to Prepare for the Exam",
-    "summary": "The official outline assigns the largest weight to Managing Scheduling and Optimization (28%) and Managing Work Orders (23%). Use the published domains to plan a balanced review.",
+    "summary": "The exam covers the Field Service and Operations consultant role. The largest listed domains are Managing Scheduling and Optimization (28%) and Managing Work Orders (23%). Review every domain in the current guide.",
     "bullets": [
-      "<strong>Exam format:</strong> 60 multiple-choice/multiple-select questions and up to five unscored questions in 105 minutes.",
+      "<strong>Exam format:</strong> 60 scored multiple-choice or multiple-select questions in 105 minutes; up to five unscored questions may also appear.",
       "<strong>Passing score:</strong> 63%; No pass-rate figure is stated in the exam guide reviewed.",
-      "<strong>Prerequisites:</strong> Salesforce Certified Platform Administrator and Salesforce Certified Agentforce Service Consultant.",
-      "<strong>Exam objectives:</strong> scheduling and optimization, work orders, resources, mobility, inventory, assets, maintenance plans, and permissions/sharing."
+      "<strong>Prerequisites:</strong> Hold both Platform Administrator and Agentforce Service Consultant credentials.",
+      "<strong>Topics to review:</strong> Work orders, resources, scheduling, mobile work, inventory, assets, maintenance, and access."
     ],
-    "passRateGuidance": "Use practice questions diagnostically, then verify concepts against the official exam outline and Salesforce Help. Practice scores are not an official threshold or a guarantee of exam results."
+    "passRateGuidance": "Use practice questions to find topics to revisit, then check your understanding against the official outline and Salesforce Help. A practice score does not guarantee an exam result."
   },
   "examFormat": {
     "heading": "Exam Format and Study Approach",
-    "intro": "The Salesforce exam guide specifies 60 scored multiple-choice/multiple-select questions, up to five unscored questions, and 105 minutes. The registration fee is US$200 plus applicable taxes; retake fee is US$100 plus applicable taxes.",
+    "intro": "The exam guide lists 60 scored multiple-choice or multiple-select questions, up to five unscored questions, and 105 minutes. Fees are US$200 for registration and US$100 for a retake, plus applicable taxes.",
     "bestWayToPass": [
-      "Read each scenario for the business requirement, affected record, current lifecycle state, and constraints before selecting a configuration.",
-      "Separate resource qualification (skills and territory membership) from scheduling objectives (the desired outcome among eligible choices).",
-      "Trace work from Work Order and Work Order Line Items to associated Service Appointments; distinguish planned products from consumed products.",
-      "Compare scheduling-service and optimization-service choices only after identifying scope, timing, and dispatch requirements.",
-      "Review every published exam domain, including mobility, assets, maintenance plans, and permissions/sharing."
+      "Review every domain in the official exam outline, including scheduling, work orders, mobile, inventory, assets and sharing.",
+      "Trace a job from Work Order through Service Appointment to resource assignment and completion.",
+      "Separate resource eligibility from the scheduling objective or preference.",
+      "Use practice questions to find gaps, then verify product behavior in Salesforce Help."
     ]
   },
   "certificationCard": {
     "code": "Agentforce Field Service and Operations Consultant",
-    "description": "The Salesforce Certified Agentforce Field Service and Operations Consultant credential validates the ability to design and deploy Field Service and Operations solutions for customer business processes. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Managing Scheduling and Optimization (28%) and Managing Work Orders (23%).",
+    "description": "This credential covers designing and deploying Field Service and Operations solutions. The exam has 60 scored questions and up to five unscored questions in 105 minutes, with a 63% pass mark, weighted towards Managing Scheduling and Optimization (28%) and Managing Work Orders (23%).",
     "examDetails": {
       "questions": "60 scored + up to 5 unscored",
       "passingScore": "63%",
@@ -63,42 +62,42 @@
     "h2": "Field Service Consultant: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Field Service Objects: Work Orders, Appointments, and Resources",
-        "body": "The Field Service data model centres on **Work Orders** (the service job), **Work Order Line Items** (specific tasks within the job), **Service Appointments** (the scheduled visit), and **Service Resources** (the worker, equipment, or crew). Assets track the customer equipment being serviced. Locations store physical addresses for service territories and parts inventory. The consultant must understand how these objects relate and how data flows from a Case &rarr; Work Order &rarr; Service Appointment &rarr; Resource assignment and completion."
+        "heading": "Core records and relationships",
+        "body": "A Work Order describes the work to be done. Work Order Line Items break that work into tasks. A Service Appointment represents the planned visit, and a Service Resource is the person, crew or equipment assigned to it. Assets identify customer equipment. Follow the links between the Case, Work Order, appointment and assigned resource."
       },
       {
-        "heading": "Scheduling and the Gantt",
-        "body": "The **Dispatcher Console** **Gantt** view shows all appointments on a timeline by resource. Drag-and-drop scheduling assigns appointments to resources. The Scheduling Policy defines the rules for the scheduler, constraints (working hours, required skills, territory) and objectives (minimise travel, maximise utilisation). Appointment Booking lets customers or agents select available slots. The In-Day Optimisation automatically reschedules appointments as the day changes (cancellations, new high-priority jobs). Know the difference between manual scheduling and automated optimisation."
+        "heading": "Scheduling and dispatch",
+        "body": "Dispatchers use the Dispatcher Console and its Gantt view to review and assign appointments. A Scheduling Policy gives the scheduler rules and objectives. The scheduler can weigh requirements such as skills, territory, availability and travel. Manual assignment and automated optimization are different ways to schedule work."
       },
       {
-        "heading": "Service Territories, Resources, and Skills",
-        "body": "Service Territories define the geographic areas where resources operate: Primary territory (where the resource primarily works) and Secondary/Relocation territories for expanded coverage. Service Resources are linked to Salesforce users (Employee type) or equipment (Equipment type). Skills define the competencies required for a Work Order; resources must have matching skills for skills-based routing. Operating Hours define when territories and resources are available. For a routing scenario. Check the resource’s active territory membership, required skills and skill levels, and applicable operating hours."
+        "heading": "Territories, resources and skills",
+        "body": "A Service Territory groups work by a geographic or logical area. Service Territory Members connect resources to territories for a period of time. Skills and required skill levels help determine whether a resource is qualified. Check these records along with availability when diagnosing an assignment."
       },
       {
-        "heading": "Mobile App and Offline Capabilities",
-        "body": "Field Service Mobile supports technician workflows on mobile devices; available records and behavior depend on configured mobile settings and data access. When assessing an offline requirement, distinguish the mobile app capability from the specific data, actions, and sync configuration available to the user. Do not assume every record or flow is available offline."
+        "heading": "Mobile work",
+        "body": "The Field Service mobile app lets technicians review assigned work and update records from a mobile device. Offline behavior depends on the configured mobile app and its data settings. Confirm which records and actions must be available without a connection."
       },
       {
-        "heading": "Parts and Inventory Management",
-        "body": "Products Required list the parts needed for a Work Order before the job. Products Consumed record actual parts used during the service visit. Return Orders handle parts returned to inventory. Locations track physical inventory (van stock, warehouse, customer site). Inventory transfers move stock between locations. The Service Report summarises the completed work, parts used, and technician notes, can be auto-generated and sent to the customer upon job completion. Know the difference between Products Required (planned) and Products Consumed (actual)."
+        "heading": "Parts and inventory",
+        "body": "Product Required records describe parts planned for a Work Order. Product Consumed records track parts actually used. Compare planned and actual quantities when reconciling a job. Inventory locations and transfers support the movement of stock."
       }
     ]
   },
   "scenarioTips": {
     "h2": "Original Scenario Review",
-    "intro": "These original examples are study aids, not reported exam items. Use official documentation to confirm product behavior and local configuration details.",
+    "intro": "For each scenario, identify the job, appointment, resource and scheduling constraint before choosing a setting.",
     "blocks": [
       {
-        "heading": "Resource eligibility versus preference",
-        "body": "A job is in a service territory but the expected technician is not considered. Check active Service Territory Members, required skills and skill levels, and operating hours before treating an account or Work Order resource preference as a hard eligibility rule."
+        "heading": "Start with the resource",
+        "body": "Check territory membership, required skills and availability before considering a preferred worker."
       },
       {
-        "heading": "Appointment lifecycle versus schedule policy",
-        "body": "A dispatcher cannot schedule an appointment with the expected policy. First check the appointment status, required fields, and whether the selected scheduling service supports the requested operation. A policy objective cannot repair an invalid lifecycle state."
+        "heading": "Follow the appointment lifecycle",
+        "body": "Review the Service Appointment status and required fields before changing scheduling configuration."
       },
       {
-        "heading": "Planned versus actual parts",
-        "body": "A Work Order lists parts expected before dispatch, but the technician uses a different quantity. Distinguish Products Required from Products Consumed; then verify the relevant inventory location and whether returned parts require a Return Order."
+        "heading": "Compare planned and used parts",
+        "body": "Product Required records describe expected parts; Product Consumed records capture what the technician used."
       }
     ]
   },
@@ -160,245 +159,325 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which record represents a technician or other worker that can be assigned field service work?",
+      "question": "Which Field Service record represents a worker or other resource that can receive an assignment?",
       "options": [
-        "Service Appointment",
-        "Service Territory",
-        "Operating Hours",
+        "A booked customer visit",
+        "A geographic service area",
+        "A schedule of working times",
         "Service Resource"
       ],
       "correctAnswer": 3,
-      "explanation": "A Service Resource represents a person or other resource used in field operations. Availability is affected by related configuration and is not simply a property of the record alone.",
+      "explanation": "Service Resource is the best fit because a Service Resource represents a person or other resource used in field operations. Availability is affected by related configuration and is not simply a property of the record alone.",
       "whyWrong": [
-        "Service Appointment represents scheduled work, not technician availability itself.",
-        "Service Territory defines a geographic/logical area, not individual technician availability.",
-        "Operating Hours define when a resource/location is generally open, but Service Resource specifically represents the technician's availability record."
+        "A booked customer visit is not the best choice because service Appointment represents scheduled work, not technician availability itself.",
+        "A geographic service area is not the best choice because service Territory defines a geographic/logical area, not individual technician availability.",
+        "A schedule of working times is not the best choice because operating Hours define when a resource/location is generally open, but Service Resource specifically represents the technician's availability record."
       ]
     },
     {
-      "question": "What is the purpose of a Scheduling Policy in Field Service?",
+      "question": "What does a Field Service Scheduling Policy tell the optimizer?",
       "options": [
-        "To assign resources to territories",
-        "To track service appointments",
-        "To define work rules and objectives for the optimizer",
-        "To manage parts inventory"
+        "Assign each worker to a territory",
+        "Track all scheduled customer visits",
+        "Scheduling Policy rules and objectives",
+        "Manage inventory for every service location"
       ],
       "correctAnswer": 2,
-      "explanation": "Scheduling Policies define work rules (constraints) and objectives that the scheduling optimizer uses when assigning appointments.",
+      "explanation": "Scheduling Policy rules and objectives is the best fit because scheduling Policies define work rules (constraints) and objectives that the scheduling optimizer uses when assigning appointments.",
       "whyWrong": [
-        "Assigning resources to territories is a separate configuration, not what a Scheduling Policy defines.",
-        "Tracking service appointments is a record-management function, not what a Scheduling Policy defines.",
-        "Managing parts inventory is a separate Field Service function, unrelated to Scheduling Policy's optimizer rules."
+        "Assign each worker to a territory is not the best choice because assigning resources to territories is a separate configuration, not what a Scheduling Policy defines.",
+        "Track all scheduled customer visits is not the best choice because tracking service appointments is a record-management function, not what a Scheduling Policy defines.",
+        "Manage inventory for every service location is not the best choice because managing parts inventory is a separate Field Service function, unrelated to Scheduling Policy's optimizer rules."
       ]
     },
     {
-      "question": "Which feature allows field technicians to access their schedule and update work orders offline?",
+      "question": "Which tool lets technicians review schedules and update work while offline?",
       "options": [
-        "Service Console",
-        "Field Service Mobile App",
-        "Lightning Experience",
-        "Dispatcher Console"
+        "Service Console for desktop agents",
+        "Field Service Mobile",
+        "Lightning Experience for office users",
+        "Dispatcher Console for dispatchers"
       ],
       "correctAnswer": 1,
-      "explanation": "The Field Service Mobile App allows technicians to access schedules, update work orders, and capture signatures even without internet connectivity.",
+      "explanation": "Field Service Mobile is the best fit because the Field Service Mobile App allows technicians to access schedules, update work orders, and capture signatures even without internet connectivity.",
       "whyWrong": [
-        "Service Console is a general Salesforce interface, not the mobile offline-capable app for technicians.",
-        "Lightning Experience is the general desktop interface, not the mobile offline app for field technicians.",
-        "Dispatcher Console is used by dispatchers in the office, not by field technicians in the field."
+        "Service Console for desktop agents is not the best choice because service Console is a general Salesforce interface, not the mobile offline-capable app for technicians.",
+        "Lightning Experience for office users is not the best choice because lightning Experience is the general desktop interface, not the mobile offline app for field technicians.",
+        "Dispatcher Console for dispatchers is not the best choice because dispatcher Console is used by dispatchers in the office, not by field technicians in the field."
       ]
     },
     {
-      "question": "What determines which technicians are eligible to be scheduled for a service appointment?",
+      "question": "Which details determine whether a technician qualifies for an appointment?",
       "options": [
-        "User Profile",
-        "Permission Sets",
-        "Role Hierarchy",
-        "Skill Requirements and Territory Membership"
+        "The technician’s Salesforce profile",
+        "Permission sets assigned to the technician",
+        "The technician’s place in the role hierarchy",
+        "Skills and territory membership"
       ],
       "correctAnswer": 3,
-      "explanation": "Skill Requirements on the Work Type and Service Territory membership determine which Service Resources are eligible for scheduling.",
+      "explanation": "Skills and territory membership is the best fit because skill Requirements on the Work Type and Service Territory membership determine which Service Resources are eligible for scheduling.",
       "whyWrong": [
-        "User Profile alone controls broad access, not the specific scheduling eligibility criteria.",
-        "Permission Sets grant feature access, not specifically scheduling eligibility.",
-        "Role Hierarchy determines record visibility, not specifically technician scheduling eligibility."
+        "The technician’s Salesforce profile is not the best choice because user Profile alone controls broad access, not the specific scheduling eligibility criteria.",
+        "Permission sets assigned to the technician is not the best choice because permission Sets grant feature access, not specifically scheduling eligibility.",
+        "The technician’s place in the role hierarchy is not the best choice because role Hierarchy determines record visibility, not specifically technician scheduling eligibility."
       ]
     },
     {
-      "question": "Which component shows dispatchers a visual timeline of scheduled appointments?",
+      "question": "Where can a dispatcher see appointments plotted across a timeline?",
       "options": [
         "Dispatcher Console Gantt",
-        "Calendar View",
-        "List View",
-        "Map View"
+        "A calendar list showing appointment dates",
+        "A record list sorted by appointment time",
+        "A territory map showing service locations"
       ],
       "correctAnswer": 0,
-      "explanation": "The Dispatcher Console Gantt shows a visual timeline of scheduled appointments across service resources.",
+      "explanation": "Dispatcher Console Gantt is the best fit because the Dispatcher Console Gantt shows a visual timeline of scheduled appointments across service resources.",
       "whyWrong": [
-        "Calendar View shows a different, less operationally detailed schedule view.",
-        "List View shows tabular data, not the visual timeline dispatchers use.",
-        "Map View shows geographic location, not the visual scheduling timeline being described."
+        "A calendar list showing appointment dates is not the best choice because calendar View shows a different, less operationally detailed schedule view.",
+        "A record list sorted by appointment time is not the best choice because list View shows tabular data, not the visual timeline dispatchers use.",
+        "A territory map showing service locations is not the best choice because map View shows geographic location, not the visual scheduling timeline being described."
       ]
     },
     {
-      "question": "What is the purpose of Work Type in Field Service?",
+      "question": "What setup record provides default work-order details such as duration, skills and parts?",
       "options": [
-        "To track inventory only",
-        "To assign territories",
-        "To define the template for work orders including duration, skills, and parts",
-        "To create reports"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Work Type defines the template for work orders including duration and skill requirements.",
-      "whyWrong": [
-        "'To track inventory only' misattributes Work Type's purpose to a different Field Service function.",
-        "Assigning territories is a separate configuration, unrelated to Work Type's template purpose.",
-        "Creating reports is a separate function, unrelated to Work Type's template purpose."
-      ]
-    },
-    {
-      "question": "Which object links a Service Appointment to a Work Order?",
-      "options": [
-        "Service Resource",
-        "Service Appointment (child of Work Order)",
-        "Operating Hours",
-        "Service Territory"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Service Appointments are child records of Work Orders.",
-      "whyWrong": [
-        "Service Resource represents the technician, not the object linking appointment to work order.",
-        "Operating Hours define availability windows, not the appointment-to-work-order link.",
-        "Service Territory defines a geographic area, not the appointment-to-work-order link."
-      ]
-    },
-    {
-      "question": "What does the scheduling optimizer consider when assigning appointments?",
-      "options": [
-        "Only territory",
-        "Skills, availability, travel time, and scheduling policies",
-        "Only skills",
-        "Only travel time"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The optimizer considers skills, availability, travel, and policies.",
-      "whyWrong": [
-        "'Only territory' undersells the optimizer's broader consideration of skills, travel time, and policies.",
-        "'Only skills' undersells the optimizer's broader consideration of availability, travel time, and policies.",
-        "'Only travel time' undersells the optimizer's broader consideration of skills, availability, and policies."
-      ]
-    },
-    {
-      "question": "Which feature allows dispatchers to manually drag and drop appointments?",
-      "options": [
-        "Dispatcher Console Gantt",
-        "List View only",
-        "Map View only",
-        "Reports"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The Gantt allows manual drag-and-drop scheduling.",
-      "whyWrong": [
-        "List View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
-        "Map View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
-        "Reports display data, they don't support interactive drag-and-drop scheduling."
-      ]
-    },
-    {
-      "question": "What is the purpose of Operating Hours in Field Service?",
-      "options": [
-        "To define skills only",
-        "To track parts only",
-        "To define when resources and locations are available",
-        "To create work orders"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Operating Hours define availability windows for resources and locations.",
-      "whyWrong": [
-        "'To define skills only' undersells Operating Hours, which is about availability windows, not skills.",
-        "'To track parts only' misattributes Operating Hours' purpose to a different Field Service function.",
-        "'To create work orders' misattributes Operating Hours' purpose to a different Field Service function."
-      ]
-    },
-    {
-      "question": "Which object is used to track consumable or returnable parts for work orders?",
-      "options": [
-        "Service Resource",
+        "Track inventory without linking it to a job",
+        "Choose the service territory for every customer",
         "Work Type",
-        "Product Required or Product Consumed",
-        "Service Territory"
+        "Build reports about completed jobs"
       ],
       "correctAnswer": 2,
-      "explanation": "Product Required and Product Consumed track parts on work orders.",
+      "explanation": "Work Type is the best fit because work Type defines the template for work orders including duration and skill requirements.",
       "whyWrong": [
-        "Service Resource represents the technician, not the parts-tracking object.",
-        "Work Type defines the job template, not the specific parts-tracking object.",
-        "Service Territory defines a geographic area, unrelated to tracking parts."
+        "Track inventory without linking it to a job is not the best choice because 'To track inventory only' misattributes Work Type's purpose to a different Field Service function.",
+        "Choose the service territory for every customer is not the best choice because assigning territories is a separate configuration, unrelated to Work Type's template purpose.",
+        "Build reports about completed jobs is not the best choice because creating reports is a separate function, unrelated to Work Type's template purpose."
       ]
     },
     {
-      "question": "What does the Field Service Mobile app support for technicians?",
+      "question": "How is a scheduled Service Appointment related to its Work Order?",
       "options": [
-        "Offline access, capture signatures, and photo attachments",
-        "Online only",
-        "Reports only",
-        "Dashboards only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The mobile app supports offline work, signatures, and photos.",
-      "whyWrong": [
-        "'Online only' is the opposite of what the mobile app's offline capability provides.",
-        "'Reports only' undersells the mobile app's broader field capabilities (offline, signatures, photos).",
-        "'Dashboards only' undersells the mobile app's broader field capabilities (offline, signatures, photos)."
-      ]
-    },
-    {
-      "question": "Which feature enables automatic scheduling based on optimization rules?",
-      "options": [
-        "Optimization service with scheduling policies",
-        "Manual assignment only",
-        "Gantt only",
-        "Map only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The optimization service runs with scheduling policies for automatic assignment.",
-      "whyWrong": [
-        "Manual assignment is the opposite of the automated optimization being asked about.",
-        "Gantt alone is a visualization tool, not the automated scheduling engine itself.",
-        "Map View alone is a visualization tool, not the automated scheduling engine itself."
-      ]
-    },
-    {
-      "question": "What is a Service Territory used for?",
-      "options": [
-        "To track parts only",
-        "To define geographic or logical areas for resource assignment",
-        "To create work types only",
-        "To manage contracts only"
+        "A Service Resource assigned to the job",
+        "Service Appointment under its Work Order",
+        "Operating Hours linked to the territory",
+        "A Service Territory linked to the customer"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Territories define areas for resource assignment and routing.",
+      "explanation": "Service Appointment under its Work Order is the best fit because service Appointments are child records of Work Orders.",
       "whyWrong": [
-        "'To track parts only' misattributes Service Territory's purpose to a different Field Service function.",
-        "'To create work types only' misattributes Service Territory's purpose to a different Field Service function.",
-        "'To manage contracts only' misattributes Service Territory's purpose to a different Field Service function."
+        "A Service Resource assigned to the job is not the best choice because service Resource represents the technician, not the object linking appointment to work order.",
+        "Operating Hours linked to the territory is not the best choice because operating Hours define availability windows, not the appointment-to-work-order link.",
+        "A Service Territory linked to the customer is not the best choice because service Territory defines a geographic area, not the appointment-to-work-order link."
       ]
     },
     {
-      "question": "Which Field Service feature supports contract-based entitlements and SLAs?",
+      "question": "Which factors can the optimizer use when it assigns an appointment?",
       "options": [
-        "Work Type only",
-        "Operating Hours only",
-        "Service Resource only",
+        "The territory by itself, without resource details",
+        "Skills, time, travel and policy",
+        "Skills alone, regardless of availability",
+        "Travel time alone, regardless of job requirements"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Skills, time, travel and policy is the best fit because the optimizer considers skills, availability, travel, and policies.",
+      "whyWrong": [
+        "The territory by itself, without resource details is not the best choice because 'Only territory' undersells the optimizer's broader consideration of skills, travel time, and policies.",
+        "Skills alone, regardless of availability is not the best choice because 'Only skills' undersells the optimizer's broader consideration of availability, travel time, and policies.",
+        "Travel time alone, regardless of job requirements is not the best choice because 'Only travel time' undersells the optimizer's broader consideration of skills, availability, and policies."
+      ]
+    },
+    {
+      "question": "Which dispatcher view supports manual appointment drag-and-drop?",
+      "options": [
+        "Dispatcher Console Gantt",
+        "A list view used to edit records",
+        "A map view used to locate service addresses",
+        "A report used to summarize appointment history"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dispatcher Console Gantt is the best fit because the Gantt allows manual drag-and-drop scheduling.",
+      "whyWrong": [
+        "A list view used to edit records is not the best choice because list View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
+        "A map view used to locate service addresses is not the best choice because map View alone doesn't support drag-and-drop scheduling, that's the Gantt's specific function.",
+        "A report used to summarize appointment history is not the best choice because reports display data, they don't support interactive drag-and-drop scheduling."
+      ]
+    },
+    {
+      "question": "What availability windows can Operating Hours define?",
+      "options": [
+        "Define skill requirements for each worker",
+        "Record which parts are in the van",
+        "Resource and location availability windows",
+        "Create work orders for new jobs"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Resource and location availability windows is the best fit because operating Hours define availability windows for resources and locations.",
+      "whyWrong": [
+        "Define skill requirements for each worker is not the best choice because 'To define skills only' undersells Operating Hours, which is about availability windows, not skills.",
+        "Record which parts are in the van is not the best choice because 'To track parts only' misattributes Operating Hours' purpose to a different Field Service function.",
+        "Create work orders for new jobs is not the best choice because 'To create work orders' misattributes Operating Hours' purpose to a different Field Service function."
+      ]
+    },
+    {
+      "question": "Which records track parts planned for or used on work orders?",
+      "options": [
+        "Service Resource records for each worker",
+        "Work Type records for common job templates",
+        "Product Required / Product Consumed",
+        "Service Territory records for dispatch areas"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Product Required / Product Consumed is the best fit because product Required and Product Consumed track parts on work orders.",
+      "whyWrong": [
+        "Service Resource records for each worker is not the best choice because service Resource represents the technician, not the parts-tracking object.",
+        "Work Type records for common job templates is not the best choice because work Type defines the job template, not the specific parts-tracking object.",
+        "Service Territory records for dispatch areas is not the best choice because service Territory defines a geographic area, unrelated to tracking parts."
+      ]
+    },
+    {
+      "question": "Which tasks can technicians complete in the Field Service mobile app?",
+      "options": [
+        "Offline work, signatures and photos",
+        "View the schedule only while online",
+        "Run reports but not update service records",
+        "View dashboards without appointment details"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Offline work, signatures and photos is the best fit because the mobile app supports offline work, signatures, and photos.",
+      "whyWrong": [
+        "View the schedule only while online is not the best choice because 'Online only' is the opposite of what the mobile app's offline capability provides.",
+        "Run reports but not update service records is not the best choice because 'Reports only' undersells the mobile app's broader field capabilities (offline, signatures, photos).",
+        "View dashboards without appointment details is not the best choice because 'Dashboards only' undersells the mobile app's broader field capabilities (offline, signatures, photos)."
+      ]
+    },
+    {
+      "question": "What enables the system to assign appointments automatically using optimization rules?",
+      "options": [
+        "Optimization with Scheduling Policies",
+        "Manual assignment by a dispatcher only",
+        "The Gantt display with no scheduling service",
+        "A map that only shows service locations"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Optimization with Scheduling Policies is the best fit because the optimization service runs with scheduling policies for automatic assignment.",
+      "whyWrong": [
+        "Manual assignment by a dispatcher only is not the best choice because manual assignment is the opposite of the automated optimization being asked about.",
+        "The Gantt display with no scheduling service is not the best choice because gantt alone is a visualization tool, not the automated scheduling engine itself.",
+        "A map that only shows service locations is not the best choice because map View alone is a visualization tool, not the automated scheduling engine itself."
+      ]
+    },
+    {
+      "question": "How does a Service Territory help organize field work?",
+      "options": [
+        "Track parts without identifying a work area",
+        "Geographic or logical service areas",
+        "Create standard job templates for each customer",
+        "Record service contracts and billing terms"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Geographic or logical service areas is the best fit because service Territories define areas for resource assignment and routing.",
+      "whyWrong": [
+        "Track parts without identifying a work area is not the best choice because 'To track parts only' misattributes Service Territory's purpose to a different Field Service function.",
+        "Create standard job templates for each customer is not the best choice because 'To create work types only' misattributes Service Territory's purpose to a different Field Service function.",
+        "Record service contracts and billing terms is not the best choice because 'To manage contracts only' misattributes Service Territory's purpose to a different Field Service function."
+      ]
+    },
+    {
+      "question": "Which Field Service features represent covered services and service-level commitments?",
+      "options": [
+        "Work Types to define expected job details",
+        "Operating Hours to set availability windows",
+        "Service Resources to list assigned workers",
         "Service Contracts and Entitlements"
       ],
       "correctAnswer": 3,
-      "explanation": "Service Contracts and Entitlements define SLAs and covered services.",
+      "explanation": "Service Contracts and Entitlements is the best fit because service Contracts and Entitlements define SLAs and covered services.",
       "whyWrong": [
-        "Work Type alone defines job templates, not entitlement/SLA tracking.",
-        "Operating Hours alone define availability windows, not entitlement/SLA tracking.",
-        "Service Resource alone represents technicians, not entitlement/SLA tracking."
+        "Work Types to define expected job details is not the best choice because work Type alone defines job templates, not entitlement/SLA tracking.",
+        "Operating Hours to set availability windows is not the best choice because operating Hours alone define availability windows, not entitlement/SLA tracking.",
+        "Service Resources to list assigned workers is not the best choice because service Resource alone represents technicians, not entitlement/SLA tracking."
+      ]
+    },
+    {
+      "question": "A dispatcher wants certain field technicians to see only the scheduled appointments assigned to their own crew, not every appointment in the org. What should the consultant configure?",
+      "options": [
+        "Sharing rules or settings that scope Service Appointment visibility to the resource's crew",
+        "A new Work Type for each crew",
+        "A different Operating Hours record per technician",
+        "A Maintenance Plan per crew"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sharing Service Appointments appropriately, scoped to a resource's crew or territory, is exactly what the Permissions and Sharing domain covers.",
+      "whyWrong": [
+        "A new Work Type defines job templates, it doesn't control who can see which appointments.",
+        "Operating Hours define availability windows, not record visibility.",
+        "A Maintenance Plan schedules preventive work, it doesn't control appointment sharing."
+      ]
+    },
+    {
+      "question": "Equipment at a customer site needs preventive service visits generated automatically on a recurring schedule. What should the consultant set up?",
+      "options": [
+        "A Maintenance Plan linked to the Asset",
+        "A one-off Work Order with no recurrence",
+        "A Service Territory",
+        "A Schedule Policy"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Maintenance Plan linked to an Asset generates Work Orders on a recurring schedule for preventive maintenance, exactly what's needed here.",
+      "whyWrong": [
+        "A one-off Work Order doesn't recur automatically, it's a single job.",
+        "A Service Territory organizes field work geographically, it doesn't generate recurring visits.",
+        "A Schedule Policy guides the optimizer's scheduling rules, it doesn't create the recurring work itself."
+      ]
+    },
+    {
+      "question": "A part is installed on a customer's equipment during a service visit. How should the consultant track which part now belongs to that equipment?",
+      "options": [
+        "Update the Asset record and its relationship to the Product Consumed",
+        "Delete the old Asset record",
+        "Ignore it, parts aren't tracked after installation",
+        "Create a new Work Order with no reference to the part"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Managing Assets includes updating Asset records and their relationships when parts are installed, so the system reflects what's actually on the customer's equipment.",
+      "whyWrong": [
+        "Deleting the Asset record would lose the equipment's service history.",
+        "Parts used in service visits are specifically tracked through Products Consumed and Asset relationships.",
+        "A Work Order with no part reference wouldn't document what was installed."
+      ]
+    },
+    {
+      "question": "A technician's van needs to carry the right parts for scheduled jobs, and the dispatcher wants to know what stock is on that van. What supports this?",
+      "options": [
+        "A van as a Service Resource with an associated Product Inventory location",
+        "A Work Type",
+        "An Operating Hours record",
+        "A Schedule Policy"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Modeling a van as a Service Resource (or linked location) with Product Inventory tracks what stock is available on that van, part of the Managing Inventory domain.",
+      "whyWrong": [
+        "A Work Type defines job templates, not inventory locations.",
+        "Operating Hours define availability, not stock tracking.",
+        "A Schedule Policy guides the optimizer, it doesn't track van inventory."
+      ]
+    },
+    {
+      "question": "A field service mobile user needs to capture a customer's signature confirming work is complete. What supports this?",
+      "options": [
+        "Customer sign-off configured in the Field Service mobile app",
+        "A desktop-only report",
+        "Operating Hours",
+        "A Service Territory member record"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Customer sign-off is a Field Service mobile app capability that lets a technician capture a signature confirming completed work, part of Configuring Mobility.",
+      "whyWrong": [
+        "A desktop-only report doesn't work in the field where the technician needs to capture a signature on-site.",
+        "Operating Hours define availability, unrelated to signature capture.",
+        "A Service Territory member record defines territory assignment, not sign-off capture."
       ]
     }
   ],
-  "practiceQuestionsIntroSuffix": " These are original practice items for learning, not actual or recalled Salesforce exam questions; answers apply to the stated scenarios and should be checked against current Salesforce Help."
+  "practiceQuestionsIntroSuffix": " Use these practice items to review the stated scenarios. They are not actual or recalled exam questions; check the answers against current Salesforce Help."
 }

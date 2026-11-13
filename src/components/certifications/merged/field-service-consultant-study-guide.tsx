@@ -103,6 +103,13 @@ export default function FieldServiceConsultantStudyGuideContent() {
             </div>
           ))}
         </div>
+        <p className="text-sm text-gray-700 mt-4">
+          Already have section-level scores from a practice test? Run them through the{' '}
+          <Link href="/tools/score-calculator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Exam Score Calculator
+          </Link>{' '}
+          to see where you stand against the 63% pass mark.
+        </p>
       </div>
 
       {/* Flexible study sequence; Salesforce does not prescribe a duration. */}
