@@ -12,8 +12,6 @@ interface QuestionCardProps {
   correctAnswers?: number[]
   source?: ImportedQuestionSource
   explanation?: string
-  /** Optional one-line summary always visible for SEO and skim readers (e.g. first sentence of explanation). */
-  explanationSummary?: string
   /** Optional 1–2 lines per wrong option: "Why others are wrong" (teaches, not just tests). */
   whyWrong?: string[]
 }
@@ -26,7 +24,6 @@ function QuestionCard({
   correctAnswers,
   source,
   explanation,
-  explanationSummary,
   whyWrong,
 }: QuestionCardProps) {
   const [selectedAnswers, setSelectedAnswers] = useState<number[]>([])
@@ -65,11 +62,6 @@ function QuestionCard({
       </div>
       
       <div className="p-4 sm:p-6 lg:p-8">
-        {explanationSummary && (
-          <p className="whitespace-pre-wrap [overflow-wrap:anywhere] text-gray-600 text-xs sm:text-sm mb-4 leading-relaxed border-l-2 border-salesforce-blue/30 pl-3">
-            <strong className="text-gray-700">Key takeaway:</strong> {explanationSummary}
-          </p>
-        )}
         {isMultiSelect && <p aria-live="polite" className="mb-2 text-sm text-gray-600">Select {answerKey.length} answers. {selectedAnswers.length} selected.</p>}
         <ol type="A" role="group" aria-label={isMultiSelect ? `Select ${answerKey.length} answers` : 'Select one answer'} className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
           {options.map((option, index) => {

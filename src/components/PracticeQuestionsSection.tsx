@@ -85,7 +85,6 @@ export default function PracticeQuestionsSection({
             correctAnswers={q.correctAnswers}
             source={q.source}
             explanation={q.explanation}
-            explanationSummary={q.explanation ? (q.explanation.split(/[.!?]/)[0]?.trim() ? q.explanation.split(/[.!?]/)[0].trim() + '.' : q.explanation) : undefined}
             whyWrong={q.whyWrong}
           />
                   )
