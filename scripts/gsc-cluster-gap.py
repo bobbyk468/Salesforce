@@ -113,18 +113,41 @@ def find_csv(base: Path, needle: str) -> Path | None:
     return None
 
 
+def pick_column(fieldnames: list[str], metric: str) -> str | None:
+    """
+    Find the column holding a metric.
+
+    A plain Performance export has "Clicks"; one downloaded with a comparison
+    range has "Last 7 days Clicks" and "Previous 7 days Clicks" instead. The
+    current period wins, and "Previous" is never used.
+    """
+    exact = [f for f in fieldnames if f.strip() == metric]
+    if exact:
+        return exact[0]
+    current = [
+        f for f in fieldnames
+        if f.strip().endswith(metric) and not f.strip().lower().startswith("previous")
+    ]
+    return current[0] if current else None
+
+
 def read_rows(path: Path) -> list[dict]:
     with path.open(newline="", encoding="utf-8-sig") as fh:
         reader = csv.DictReader(fh)
+        fields = reader.fieldnames or []
+        key = fields[0] if fields else ""
+        cols = {m: pick_column(fields, m) for m in ("Clicks", "Impressions", "Position")}
+        missing = [m for m, c in cols.items() if c is None]
+        if missing:
+            sys.exit(f"{path.name} has no {', '.join(missing)} column. Columns: {fields}")
         rows = []
         for row in reader:
-            key = reader.fieldnames[0]
             try:
                 rows.append({
                     "term": (row.get(key) or "").strip(),
-                    "clicks": int(float(row.get("Clicks") or 0)),
-                    "impressions": int(float(row.get("Impressions") or 0)),
-                    "position": float(row.get("Position") or 0),
+                    "clicks": int(float(row.get(cols["Clicks"]) or 0)),
+                    "impressions": int(float(row.get(cols["Impressions"]) or 0)),
+                    "position": float(row.get(cols["Position"]) or 0),
                 })
             except ValueError:
                 continue
