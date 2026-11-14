@@ -1,6 +1,6 @@
 import Link from '@/components/AppLink'
 import { slugToDisplayName, SLUG_TO_EXAM_CODE, SLUG_TO_EXAM_GUIDE_URL, getCertAboutExamHeading } from '@/lib/cert-seo-data'
-import { getCertPrimaryName, getCertFormerName } from '@/lib/cert-name-aliases'
+import { getCertPrimaryName } from '@/lib/cert-name-aliases'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
 import type { CertificationCategory } from '@/lib/certifications-data'
 
@@ -32,7 +32,6 @@ interface CertPageIntroProps {
 export default function CertPageIntro({ slug }: CertPageIntroProps) {
   const certTitle = slugToDisplayName(slug)
   const primaryName = getCertPrimaryName(slug, certTitle)
-  const formerName = getCertFormerName(slug)
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const examGuideUrl = SLUG_TO_EXAM_GUIDE_URL[slug]
   const roleSlug = getRoleSlugForCert(slug)
@@ -63,11 +62,12 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         {getCertAboutExamHeading(slug)}
       </h2>
 
+      {/* The credential's names, exam code and former name are stated in the
+          line directly under the H1, so this paragraph no longer repeats them
+          and opens on what the page is for instead. */}
       <p className="text-gray-700 leading-relaxed mb-3 text-sm sm:text-base">
-        This page is your <strong className="text-gray-900">{primaryName}</strong>
-        {examCode ? <> (exam <strong className="text-gray-900">{examCode}</strong>)</> : null}
-        {formerName ? <>, formerly <strong className="text-gray-900">{formerName}</strong>,</> : null}
-        {' '}study guide. The exam tests skills that employers want. It is for {audience} who want a credential.
+        This study guide is written for {audience} who want the credential, and the exam tests
+        skills that employers ask for.
       </p>
 
       <h3 className="text-sm font-semibold text-gray-900 mt-4 mb-2">What you get here</h3>
