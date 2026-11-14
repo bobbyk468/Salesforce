@@ -8,6 +8,7 @@ import ExamPrepContent from '@/components/ExamPrepContent'
 import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
 import AdministratorCtaSections from '@/components/AdministratorCtaSections'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertNamingLead from '@/components/CertNamingLead'
 import { getQuizJsonLd } from '@/lib/schema-data'
 import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import CertPageIntro from '@/components/CertPageIntro'
@@ -47,6 +48,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
     <div className="min-h-screen bg-pattern">
       <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+        <CertNamingLead slug={slug} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

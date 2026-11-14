@@ -2,6 +2,7 @@ import { isRetiredCredential, hasUnverifiedClaudeExamDetails } from '@/lib/crede
 import { getCertFormerName } from '@/lib/cert-name-aliases'
 import { LEGACY_EXAM_CODES, SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import { getCertAlias, getCertAlternateNames, getCertIdentifiers } from '@/lib/cert-alias-registry'
+import { getCertKeywordCluster } from '@/lib/cert-keyword-clusters'
 
 const SITE_URL = 'https://www.trailblazeprep.com'
 
@@ -26,9 +27,14 @@ export default function CredentialSchema({ certSlug, certName, description, page
   // When the alias registry knows this credential it supplies the names and
   // codes, the same ones the <title>, H1 and lead use.
   const registered = Boolean(getCertAlias(certSlug))
+  // The keyword cluster adds the vendor-prefixed and "Certified" phrasings and
+  // the numeral variants, so the credential entity lists every name a searcher
+  // types, not only the official one.
+  const cluster = getCertKeywordCluster(certSlug)
   const alternateName = [...new Set([
     ...(extraAlternateNames ?? []),
     ...getCertAlternateNames(certSlug),
+    ...(cluster?.alternateNames ?? []),
     formerName,
     ...(registered ? [] : [examCode, legacyCode]),
   ].filter((v): v is string => Boolean(v)))]
@@ -53,6 +59,7 @@ export default function CredentialSchema({ certSlug, certName, description, page
     credentialCategory: 'certification',
     ...(isRetiredCredential(certSlug) ? { creativeWorkStatus: 'Retired' } : {}),
     ...(alternateName.length ? { alternateName } : {}),
+    ...(cluster ? { keywords: cluster.keywords.join(', ') } : {}),
     ...(identifier.length ? { identifier } : {}),
     recognizedBy: {
       '@type': 'Organization',

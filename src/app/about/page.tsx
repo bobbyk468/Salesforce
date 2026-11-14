@@ -73,14 +73,14 @@ export default function AboutPage() {
           Who we are
         </h2>
         <p className="text-gray-700">
-          {SITE_NAME} is an independent study resource for people preparing for Salesforce certification exams.
+          {SITE_NAME} offers independent study materials for people preparing for Salesforce certification exams.
           We are not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
         </p>
         <p className="text-gray-700">
           <strong>Trademark notice:</strong> Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc. "{SITE_NAME}" is not affiliated with or endorsed by Salesforce’s Trailblazer program.
         </p>
         <p className="text-gray-700">
-          We help you see how each exam is weighted by section, get clear exam tips and prerequisites, and practice with sample questions before the real exam.
+          Our guides explain the topics covered in each exam, their relative weight, and any prerequisites. You can also use our tips and sample questions to check your understanding.
         </p>
       </section>
 
@@ -88,32 +88,32 @@ export default function AboutPage() {
         <h2 id="experience-heading" className="text-xl font-semibold text-gray-900">
           Our approach to exam prep
         </h2>
-        <p className="text-gray-700">We focus on three things:</p>
+        <p className="text-gray-700">Our study guides include:</p>
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
-          <li><strong>Section-wise exam weightage</strong>: So you know where to spend your study time.</li>
-          <li><strong>Exam prep content</strong>: Tips, prerequisites, focus areas, and a study strategy for each certification.</li>
-          <li><strong>Sample practice questions with explanations</strong>: Aligned with official exam outlines.</li>
+          <li><strong>Section-wise exam weightage</strong>: See which exam topics carry the most weight.</li>
+          <li><strong>Exam prep content</strong>: Find prerequisites, key topics, and ideas for your study plan.</li>
+          <li><strong>Sample practice questions with explanations</strong>: Test your understanding of topics in the exam outline.</li>
         </ul>
         <p className="text-gray-700">
-          We do not offer braindumps or real exam questions. Our materials help you learn and check your knowledge.
+          Our materials are designed to help you learn concepts and check your knowledge. We do not offer exam dumps or actual exam questions.
         </p>
       </section>
 
       <section className="prose prose-gray max-w-none space-y-4 mb-10" aria-labelledby="originality-heading">
         <h2 id="originality-heading" className="text-xl font-semibold text-gray-900">
-          Original content for SEO and learning
+          How we develop our content
         </h2>
         <p className="text-gray-700">
-          Everything published on this site is <strong>written for Trailblaze Prep</strong>. We do not republish other sites&apos; study guides or exam dumps, and we do not serve scraped question banks. Factual exam details, section weightings, fees and passing scores are taken from the issuer&apos;s own published exam guide and cited as such. Each certification page includes:
+          Our certification guides bring exam information and study advice together in one place. We use the issuer&apos;s published guides for details such as fees, passing scores, and topic weights, and cite those sources. Each certification page includes:
         </p>
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
-          <li><strong>Unique practice questions</strong>: Written to test concepts for that exam.</li>
-          <li><strong>Original exam tips and strategies</strong>: Based on official outlines and experience.</li>
-          <li><strong>Unique descriptions and explanations</strong>: Written fresh for this site.</li>
-          <li><strong>Original analysis</strong>: Weightage comes from official outlines; our presentation and recommendations are our own.</li>
+          <li><strong>Practice questions</strong>: Questions to help you review exam concepts.</li>
+          <li><strong>Exam tips and strategies</strong>: Study suggestions informed by exam outlines and experience.</li>
+          <li><strong>Descriptions and explanations</strong>: Plain-language descriptions and explanations.</li>
+          <li><strong>Exam topic guidance</strong>: Exam weights come from official outlines; our study recommendations explain how to use them.</li>
         </ul>
         <p className="text-gray-700 mt-4">
-          Original content helps search engines index and rank our pages. Each page gives unique value for your exam prep.
+          Use these resources alongside hands-on practice and the official exam guide.
         </p>
       </section>
 
@@ -122,10 +122,10 @@ export default function AboutPage() {
           Content freshness
         </h2>
         <p className="text-gray-700">
-          Salesforce exams and outlines change. We review and update content to match the latest blueprints and product changes.
+          Salesforce exams and products change over time. We review our guides as exam outlines and product features change.
         </p>
         <p className="text-gray-700">
-          Key pages are marked with a <strong>last updated</strong> date (currently {CONTENT_LAST_UPDATED}). Always check the official exam guide on Trailhead before booking.
+          Key pages show a <strong>last updated</strong> date (currently {CONTENT_LAST_UPDATED}). Check the official exam guide on Trailhead before you book.
         </p>
       </section>
 

@@ -28,61 +28,6 @@ export default function AdministratorCtaSections() {
         </Link>
       </div>
 
-      <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">
-        <h2 id="dumps-comparison-heading" className="text-lg font-bold text-gray-900 mb-3">
-          Official Exam Code of Conduct: Practice Questions vs. Unofficial Exam Dumps (Plat-Admn-201)
-        </h2>
-        <p className="text-sm text-gray-700 mb-4">
-          Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here’s why original practice questions are a better investment:
-        </p>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left border-collapse">
-            <thead>
-              <tr className="border-b-2 border-gray-200">
-                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
-                <th scope="col" className="py-2.5 pr-4 font-semibold text-emerald-700">Practice Questions</th>
-                <th scope="col" className="py-2.5 font-semibold text-red-700">Exam Dumps</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-700">
-              <tr className="border-b border-gray-100">
-                <td className="py-2.5 pr-4 font-medium">Legality</td>
-                <td className="py-2.5 pr-4 text-emerald-700">100% legitimate</td>
-                <td className="py-2.5 text-red-600">Violates Salesforce NDA</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-2.5 pr-4 font-medium">Learning Value</td>
-                <td className="py-2.5 pr-4 text-emerald-700">Builds real understanding</td>
-                <td className="py-2.5 text-red-600">Memorization without comprehension</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-2.5 pr-4 font-medium">Accuracy</td>
-                <td className="py-2.5 pr-4 text-emerald-700">Aligned with current exam outline</td>
-                <td className="py-2.5 text-red-600">Often outdated or incorrect</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-2.5 pr-4 font-medium">Explanations</td>
-                <td className="py-2.5 pr-4 text-emerald-700">Detailed why-right / why-wrong</td>
-                <td className="py-2.5 text-red-600">Rarely explained</td>
-              </tr>
-              <tr className="border-b border-gray-100">
-                <td className="py-2.5 pr-4 font-medium">Certification Risk</td>
-                <td className="py-2.5 pr-4 text-emerald-700">None</td>
-                <td className="py-2.5 text-red-600">Salesforce can revoke certification</td>
-              </tr>
-              <tr>
-                <td className="py-2.5 pr-4 font-medium">On-the-Job Skills</td>
-                <td className="py-2.5 pr-4 text-emerald-700">Prepares for real admin tasks</td>
-                <td className="py-2.5 text-red-600">No transferable knowledge</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs text-gray-600 mt-3">
-          Salesforce actively monitors for dump usage. Invest in legitimate practice materials that build lasting skills.
-        </p>
-      </section>
-
       <section id="platform-admin-vs-other" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-gray-50/50 p-6" aria-labelledby="comparison-heading">
         <h2 id="comparison-heading" className="text-xl font-bold text-gray-900 mb-4">
           Platform Administrator vs Other Salesforce Certifications

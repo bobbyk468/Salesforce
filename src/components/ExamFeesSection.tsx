@@ -4,6 +4,7 @@ import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-da
 import { SLUG_TO_EXAM_GUIDE_URL } from '@/lib/cert-seo-data'
 import { hasUnverifiedClaudeExamDetails, isComponentOnlyCredential, isUnavailableCredentialExam } from '@/lib/credential-status'
 import { slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertKeywordCluster } from '@/lib/cert-keyword-clusters'
 
 interface ExamFeesSectionProps {
   slug: string
@@ -29,12 +30,16 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
   const certName = slugToDisplayName(slug)
   
   const retakeCost = getRetakeCost(slug)
+  // Generic headings ("Exam Fees & Registration") competed with every other
+  // cert page for the same cost queries. Naming the exam in the heading is what
+  // makes "<name> certification exam fee" resolve to this section.
+  const bare = getCertKeywordCluster(slug)?.bare ?? certName
   
   return (
     <section className="mt-8 sm:mt-10 mb-8 sm:mb-10 bg-white rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 [content-visibility:auto] [contain-intrinsic-size:auto_300px]">
       <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 flex items-center gap-2">
         <DollarSign className="h-6 w-6 sm:h-7 sm:w-7 text-salesforce-blue" aria-hidden="true" />
-        Exam Fees & Registration
+        {bare} Certification Exam Fee, Retake Cost &amp; Registration
       </h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
@@ -72,7 +77,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
         <div className="flex items-start gap-3">
           <Calendar className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
           <div>
-            <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Certification Validity</h3>
+            <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">{bare} Certification Validity &amp; Maintenance Schedule</h3>
             <p className="text-gray-600 text-sm sm:text-base">
               {slug === 'platform-foundations'
                 ? 'The official exam guide lists no required maintenance for this certification at this time. Check the issuer’s current credential page before relying on this.'

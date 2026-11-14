@@ -29,6 +29,108 @@ function assertCheck(condition, label, detail = "") {
   }
 }
 
+// Per-page keyword cluster: the exact strings every one of the 95 pages must
+// render for the bare name, vendor-prefixed name, "... certification",
+// "... dumps" and every official/legacy code and numeral alias.
+// Mirrors src/lib/cert-keyword-clusters.ts.
+const CLUSTER_MAP = {
+  "platform-foundations": { bare: "Platform Foundations", vendor: "Salesforce", aliases: ["Plat-101", "Salesforce Associate"] },
+  "ai-associate": { bare: "AI Associate", vendor: "Salesforce", aliases: ["AI-101"] },
+  "marketing-cloud-engagement-foundations": { bare: "Marketing Cloud Engagement Foundations", vendor: "Salesforce", aliases: ["MC-101", "Marketing Associate"] },
+  "mulesoft-integration-foundations": { bare: "MuleSoft Integration Foundations", vendor: "Salesforce", aliases: ["Mule-101", "MuleSoft Associate"] },
+  "administrator": { bare: "Platform Administrator", vendor: "Salesforce", aliases: ["Plat-Admn-201", "ADM-201", "Salesforce Administrator"] },
+  "advanced-administrator": { bare: "Advanced Administrator", vendor: "Salesforce", aliases: ["Plat-Admn-301", "ADM-211", "Platform Administrator II", "Platform Administrator 2"] },
+  "app-builder": { bare: "Platform App Builder", vendor: "Salesforce", aliases: ["Plat-Admn-202", "DEV-402", "App Builder"] },
+  "agentforce-specialist": { bare: "Agentforce Specialist", vendor: "Salesforce", aliases: ["AI-201", "Agent Force Specialist", "AI Specialist"] },
+  "business-analyst": { bare: "Business Analyst", vendor: "Salesforce", aliases: ["BA-201"] },
+  "cpq-administrator": { bare: "CPQ Administrator", vendor: "Salesforce", aliases: ["Sales-Admn-202", "CPQ-211", "CPQ Specialist"] },
+  "marketing-cloud-engagement-admin": { bare: "Marketing Cloud Engagement Administrator", vendor: "Salesforce", aliases: ["MCE-Admn-201", "Marketing Cloud Administrator"] },
+  "slack-administrator": { bare: "Slack Administrator", vendor: "Salesforce", aliases: ["Slack-Admn-201", "Slack Certified Administrator"] },
+  "developer-1": { bare: "Platform Developer I", vendor: "Salesforce", aliases: ["Plat-Dev-201", "PD1", "Platform Developer 1", "CRT-450"] },
+  "developer-2": { bare: "Platform Developer II", vendor: "Salesforce", aliases: ["Plat-Dev-301", "PD2", "Platform Developer 2"] },
+  "javascript-developer-i": { bare: "JavaScript Developer I", vendor: "Salesforce", aliases: ["JS-Dev-101", "CRT-600", "JavaScript Developer 1"] },
+  "b2c-commerce-developer": { bare: "B2C Commerce Developer", vendor: "Salesforce", aliases: ["Comm-Dev-101", "CRT-500"] },
+  "industries-cpq-developer": { bare: "Industries CPQ Developer", vendor: "Salesforce", aliases: ["Ind-Dev-201", "Vlocity CPQ Developer"] },
+  "marketing-cloud-engagement-developer": { bare: "Marketing Cloud Engagement Developer", vendor: "Salesforce", aliases: ["MCE-Dev-201", "Marketing Cloud Developer"] },
+  "mulesoft-developer-i": { bare: "MuleSoft Developer I", vendor: "Salesforce", aliases: ["Mule-Dev-201", "MuleSoft Developer 1"] },
+  "mulesoft-developer-ii": { bare: "MuleSoft Developer II", vendor: "Salesforce", aliases: ["Mule-Dev-301", "MuleSoft Developer 2"] },
+  "mulesoft-hyperautomation-developer": { bare: "MuleSoft Hyperautomation Developer", vendor: "Salesforce", aliases: ["Mule-Dev-202", "MuleSoft Hyperautomation Specialist"] },
+  "omnistudio-developer": { bare: "OmniStudio Developer", vendor: "Salesforce", aliases: ["Plat-Dev-210"] },
+  "slack-developer": { bare: "Slack Developer", vendor: "Salesforce", aliases: ["Slack-Dev-201", "Slack Certified Developer"] },
+  "crm-analytics-einstein-discovery-consultant": { bare: "CRM Analytics and Einstein Discovery Consultant", vendor: "Salesforce", aliases: ["CRM Analytics Consultant", "Einstein Discovery Consultant"] },
+  "data-360-consultant": { bare: "Data 360 Consultant", vendor: "Salesforce", aliases: ["Data-Con-101", "Data Cloud Consultant"] },
+  "education-cloud-consultant": { bare: "Education Cloud Consultant", vendor: "Salesforce", aliases: [] },
+  "experience-cloud": { bare: "Experience Cloud Consultant", vendor: "Salesforce", aliases: ["CRT-271", "Community Cloud Consultant"] },
+  "field-service": { bare: "Field Service Consultant", vendor: "Salesforce", aliases: ["FS-Con-101", "Agentforce Field Service and Operations Consultant"] },
+  "pardot-consultant": { bare: "Marketing Cloud Account Engagement Consultant", vendor: "Salesforce", aliases: ["CRT-302", "Pardot Consultant"] },
+  "marketing-cloud-consultant": { bare: "Marketing Cloud Engagement Consultant", vendor: "Salesforce", aliases: ["MCE-Con-201", "Marketing Cloud Consultant"] },
+  "agentforce-life-sciences-consultant": { bare: "Agentforce Life Sciences Consultant", vendor: "Salesforce", aliases: ["Als-Con-201", "Life Sciences Cloud Consultant"] },
+  "nonprofit-cloud": { bare: "Nonprofit Cloud Consultant", vendor: "Salesforce", aliases: ["NP-Con-102", "Agentforce Nonprofit Consultant"] },
+  "nonprofit-success-pack-consultant": { bare: "Nonprofit Success Pack (NPSP) Consultant", vendor: "Salesforce", aliases: ["NP-Con-101", "NPSP Consultant"] },
+  "omnistudio-consultant": { bare: "OmniStudio Consultant", vendor: "Salesforce", aliases: ["Plat-Con-201"] },
+  "public-sector-solutions-consultant": { bare: "Public Sector Solutions Consultant", vendor: "Salesforce", aliases: ["PubSec-Con-201"] },
+  "revenue-cloud-consultant": { bare: "Revenue Management Consultant", vendor: "Salesforce", aliases: ["Rev-Con-201", "Revenue Cloud Consultant"] },
+  "sales-cloud": { bare: "Agentforce Sales Consultant", vendor: "Salesforce", aliases: ["Sales-Con-201", "CRT-251", "Sales Cloud Consultant"] },
+  "service-cloud": { bare: "Agentforce Service Consultant", vendor: "Salesforce", aliases: ["Service-Con-201", "CRT-261", "Service Cloud Consultant"] },
+  "slack-consultant": { bare: "Slack Consultant", vendor: "Salesforce", aliases: ["Slack-Con-201", "Slack Certified Consultant"] },
+  "email-specialist": { bare: "Marketing Cloud Engagement Specialist", vendor: "Salesforce", aliases: ["MC-202", "CRT-550", "Marketing Cloud Email Specialist"] },
+  "marketing-cloud-next-consultant": { bare: "Marketing Cloud Next Consultant", vendor: "Salesforce", aliases: ["MC-Con-201"] },
+  "pardot-specialist": { bare: "Marketing Cloud Account Engagement Specialist", vendor: "Salesforce", aliases: ["MC-201", "Pardot Specialist"] },
+  "application-architect": { bare: "Application Architect", vendor: "Salesforce", aliases: [] },
+  "data-architect": { bare: "Data Architect", vendor: "Salesforce", aliases: ["Plat-Arch-201", "Platform Data Architect"] },
+  "integration-architect": { bare: "Integration Architect", vendor: "Salesforce", aliases: ["Plat-Arch-204", "Platform Integration Architect"] },
+  "sharing-visibility-architect": { bare: "Sharing and Visibility Architect", vendor: "Salesforce", aliases: ["Plat-Arch-205", "Platform Sharing and Visibility Architect"] },
+  "system-architect": { bare: "System Architect", vendor: "Salesforce", aliases: [] },
+  "identity-access-management-architect": { bare: "Identity and Access Management Architect", vendor: "Salesforce", aliases: ["Plat-Arch-203", "Platform Identity and Access Management Architect"] },
+  "dev-lifecycle-deployment-architect": { bare: "Development Lifecycle and Deployment Architect", vendor: "Salesforce", aliases: ["Plat-Arch-202", "Platform Development Lifecycle and Deployment Architect"] },
+  "technical-architect": { bare: "Technical Architect", vendor: "Salesforce", aliases: ["CTA"] },
+  "technical-architect-evaluation": { bare: "Technical Architect - Architect Evaluation", vendor: "Salesforce", aliases: ["CTA Architect Evaluation"] },
+  "technical-architect-review-board": { bare: "Technical Architect - Architect Review Board", vendor: "Salesforce", aliases: ["CTA Review Board"] },
+  "b2b-solution-architect": { bare: "B2B Solution Architect", vendor: "Salesforce", aliases: ["Arch-301"] },
+  "b2c-commerce-architect": { bare: "B2C Commerce Architect", vendor: "Salesforce", aliases: ["Arch-303"] },
+  "b2c-solution-architect": { bare: "B2C Solution Architect", vendor: "Salesforce", aliases: ["Arch-302"] },
+  "heroku-architect": { bare: "Heroku Architect", vendor: "Salesforce", aliases: ["Plat-Arch-206"] },
+  "mulesoft-catalyst-consultant": { bare: "MuleSoft Catalyst Consultant", vendor: "Salesforce", aliases: ["Mule-Con-201"] },
+  "mulesoft-platform-architect": { bare: "MuleSoft Platform Architect", vendor: "Salesforce", aliases: ["Mule-Arch-201", "MuleSoft Platform Architect I"] },
+  "mulesoft-integration-architect": { bare: "MuleSoft Platform Integration Architect", vendor: "Salesforce", aliases: ["Mule-Arch-202", "MuleSoft Integration Architect"] },
+  "advanced-field-service-ap": { bare: "Advanced Field Service Accredited Professional", vendor: "Salesforce", aliases: ["Advanced Field Service AP"] },
+  "b2b-commerce-admin-ap": { bare: "B2B Commerce Administrator Accredited Professional", vendor: "Salesforce", aliases: ["B2B Commerce for Administrators Accredited Professional"] },
+  "b2b-commerce-developer-ap": { bare: "B2B Commerce Developer Accredited Professional", vendor: "Salesforce", aliases: ["B2B Commerce for Developers Accredited Professional"] },
+  "communications-cloud-ap": { bare: "Communications Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Agentforce Communications", "Agentforce Communications Accredited Professional"] },
+  "consumer-goods-cloud-ap": { bare: "Consumer Goods Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Agentforce Consumer Goods", "Agentforce Consumer Goods Accredited Professional"] },
+  "consumer-goods-tpm-ap": { bare: "Consumer Goods Cloud TPM Accredited Professional", vendor: "Salesforce", aliases: ["Trade Promotion Management Accredited Professional"] },
+  "contact-center-ap": { bare: "Contact Center Accredited Professional", vendor: "Salesforce", aliases: ["Contact Center AP"] },
+  "cpq-billing-ap": { bare: "CPQ and Billing Consultant Accredited Professional", vendor: "Salesforce", aliases: ["CPQ and Billing AP"] },
+  "energy-utilities-ap": { bare: "Energy and Utilities Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Energy and Utilities AP"] },
+  "financial-services-cloud-ap": { bare: "Financial Services Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Agentforce Financial Services", "Agentforce Financial Services Accredited Professional"] },
+  "health-cloud-ap": { bare: "Health Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Agentforce Health", "Agentforce Health Accredited Professional"] },
+  "heroku-developer-ap": { bare: "Heroku Developer Accredited Professional", vendor: "Salesforce", aliases: ["Heroku Developer AP"] },
+  "loyalty-management-ap": { bare: "Loyalty Management Accredited Professional", vendor: "Salesforce", aliases: ["Loyalty Management AP"] },
+  "manufacturing-cloud-ap": { bare: "Manufacturing Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Agentforce Manufacturing", "Agentforce Manufacturing Accredited Professional"] },
+  "marketing-cloud-advanced-cross-channel-ap": { bare: "Marketing Cloud Advanced Cross Channel Accredited Professional", vendor: "Salesforce", aliases: ["Advanced Cross Channel AP"] },
+  "marketing-cloud-intelligence-ap": { bare: "Marketing Cloud Intelligence Accredited Professional", vendor: "Salesforce", aliases: ["Datorama", "Datorama Accredited Professional"] },
+  "marketing-cloud-personalization-ap": { bare: "Marketing Cloud Personalization Accredited Professional", vendor: "Salesforce", aliases: ["Interaction Studio", "Interaction Studio Accredited Professional"] },
+  "media-cloud-ap": { bare: "Media Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Media Cloud AP"] },
+  "net-zero-cloud-ap": { bare: "Net Zero Cloud Accredited Professional", vendor: "Salesforce", aliases: ["Net Zero Cloud AP"] },
+  "order-management-admin-ap": { bare: "Order Management Administrator Accredited Professional", vendor: "Salesforce", aliases: ["Order Management Administrator AP"] },
+  "order-management-developer-ap": { bare: "Order Management Developer Accredited Professional", vendor: "Salesforce", aliases: ["Order Management Developer AP"] },
+  "process-automation-ap": { bare: "Process Automation Accredited Professional", vendor: "Salesforce", aliases: ["Process Automation AP"] },
+  "public-sector-solutions-ap": { bare: "Public Sector Solutions Accredited Professional", vendor: "Salesforce", aliases: ["Agentforce 360", "Agentforce 360 for Public Sector Professional"] },
+  "sales-foundations": { bare: "Agentforce Sales Foundations", vendor: "Salesforce", aliases: ["Sales-101", "Sales Foundations", "Sales Representative"] },
+  "strategy-designer": { bare: "Platform Strategy Designer", vendor: "Salesforce", aliases: ["Plat-UX-102", "Strategy Designer"] },
+  "ux-designer": { bare: "Platform User Experience Designer", vendor: "Salesforce", aliases: ["Plat-UX-101", "UX Designer", "User Experience Designer"] },
+  "tableau-architect": { bare: "Tableau Architect", vendor: "Salesforce", aliases: ["Analytics-Arch-201", "Tableau Certified Architect"] },
+  "tableau-consultant": { bare: "Tableau Consultant", vendor: "Salesforce", aliases: ["Analytics-Con-201", "Tableau Certified Consultant"] },
+  "tableau-next-consultant": { bare: "Tableau Next Consultant", vendor: "Salesforce", aliases: ["Analytics-Con-202"] },
+  "tableau-data-analyst": { bare: "Tableau Data Analyst", vendor: "Salesforce", aliases: ["Analytics-DA-201", "Tableau Certified Data Analyst"] },
+  "tableau-desktop-foundations": { bare: "Tableau Desktop Foundations", vendor: "Salesforce", aliases: ["Analytics-101", "Tableau Desktop Specialist"] },
+  "tableau-server-administrator": { bare: "Tableau Server Administrator", vendor: "Salesforce", aliases: ["Analytics-SA-201", "Tableau Server Certified Associate"] },
+  "claude-certified-associate": { bare: "Claude Certified Associate", vendor: "Anthropic", aliases: ["Claude Associate", "Claude Associate Foundations"] },
+  "claude-certified-developer": { bare: "Claude Certified Developer", vendor: "Anthropic", aliases: ["Claude Developer", "Claude Developer Foundations"] },
+  "claude-certified-architect-foundations": { bare: "Claude Certified Architect", vendor: "Anthropic", aliases: ["Claude Architect Foundations"] },
+  "claude-certified-architect-professional": { bare: "Claude Certified Architect", vendor: "Anthropic", aliases: ["Claude Architect Professional"] },
+};
+
 // Explicit per-page verification spec for all 95 certification pages (#1 to #95)
 const PAGE_SPECS = {
   // Track 1: Associate & Foundations (#1 - #4)
@@ -210,6 +312,44 @@ async function verifySingleCertPage(slug) {
   for (const f of spec.forbid) {
     assertCheck(!html.includes(f), `[${slug}] HTML excludes "${f}"`);
   }
+
+  // 5. Keyword-cluster coverage: the seven GSC search-intent patterns.
+  const cluster = CLUSTER_MAP[slug];
+  assertCheck(Boolean(cluster), `[${slug}] Has a CLUSTER_MAP entry`);
+  if (!cluster) return;
+  const lowerHtml = html.toLowerCase();
+  const bare = cluster.bare.toLowerCase();
+  const vendor = cluster.vendor.toLowerCase();
+  assertCheck(lowerHtml.includes(`${bare} certification`), `[${slug}] Includes "${cluster.bare} certification"`);
+  assertCheck(lowerHtml.includes(`${vendor} ${bare}`), `[${slug}] Includes "${cluster.vendor} ${cluster.bare}"`);
+  assertCheck(lowerHtml.includes(`${bare} dumps`), `[${slug}] Includes "${cluster.bare} dumps"`);
+  assertCheck(lowerHtml.includes(`${vendor} ${bare} dumps`), `[${slug}] Includes "${cluster.vendor} ${cluster.bare} dumps"`);
+  for (const alias of cluster.aliases) {
+    assertCheck(lowerHtml.includes(alias.toLowerCase()), `[${slug}] Includes alias "${alias}"`);
+  }
+  // The NDA-compliant comparison section, its table and its FAQ answer.
+  const dumpsSection = selectOne("#practice-vs-dumps", document);
+  assertCheck(Boolean(dumpsSection), `[${slug}] Renders the practice-vs-dumps section`);
+  if (dumpsSection) {
+    const sectionText = DomUtils.textContent(dumpsSection).replace(/\s+/g, " ").toLowerCase();
+    assertCheck(sectionText.includes(`${bare} dumps`), `[${slug}] Dumps section names "${cluster.bare} dumps"`);
+    assertCheck(sectionText.includes(`${vendor} ${bare} dumps`), `[${slug}] Dumps section names "${cluster.vendor} ${cluster.bare} dumps"`);
+    assertCheck(selectAll("tbody tr", dumpsSection).length >= 4, `[${slug}] Dumps comparison table has 4+ rows`);
+    assertCheck(/code of conduct/i.test(DomUtils.textContent(selectOne("h2", dumpsSection) ?? dumpsSection)),
+      `[${slug}] Dumps section H2 cites the exam code of conduct`);
+  }
+  const faqSectionText = content("#faq", document).toLowerCase();
+  assertCheck(faqSectionText.includes(`instead of ${bare} dumps`), `[${slug}] Visible FAQ answers the dumps question`);
+  const faqSchema = selectAll('script[type="application/ld+json"]', document)
+    .map((node) => DomUtils.textContent(node))
+    .filter((text) => text.includes('"FAQPage"'))
+    .join(" ")
+    .toLowerCase();
+  assertCheck(faqSchema.includes(`instead of ${bare} dumps`), `[${slug}] FAQPage JSON-LD carries the dumps question`);
+  // Naming-variant disambiguation lead near the top of the page.
+  const namingLead = content("[data-cert-naming-lead]", document).toLowerCase();
+  assertCheck(namingLead.includes(`${vendor} ${bare} certification`),
+    `[${slug}] Naming lead states "${cluster.vendor} ${cluster.bare} certification"`);
 }
 
 async function verifyHomepageAndRedirects() {

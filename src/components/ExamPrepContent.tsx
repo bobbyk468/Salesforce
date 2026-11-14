@@ -3,6 +3,7 @@ import { Lightbulb, Target, BookOpen, Zap, Award } from 'lucide-react'
 import { getExamPrepContent } from '@/lib/exam-prep-content-data'
 import { slugToDisplayName, getExamLogistics, getMockExamTargetLabel } from '@/lib/cert-seo-data'
 import { getTopSections } from '@/lib/exam-weightage-data'
+import { getCertKeywordCluster } from '@/lib/cert-keyword-clusters'
 
 interface ExamPrepContentProps {
   slug: string
@@ -12,6 +13,12 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
   const content = getExamPrepContent(slug)
   const certName = slugToDisplayName(slug)
   const showSharedFormatSection = slug !== 'administrator'
+  // The vendor-prefixed credential name in the heading, so the section answers
+  // "why get the <vendor> <name> certification" rather than a generic query.
+  const cluster = getCertKeywordCluster(slug)
+  const whyHeading = cluster
+    ? `Why the ${cluster.vendorName} Certification Matters`
+    : 'Why This Certification Matters'
 
   const logistics = getExamLogistics(slug)
   // The readiness target, not the pass mark: telling a reader to book at the pass
@@ -36,7 +43,7 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
           <div className="flex items-start gap-3 sm:gap-4">
             <Award className="h-5 w-5 sm:h-6 sm:w-6 text-salesforce-blue flex-shrink-0 mt-0.5" />
             <div className="space-y-2">
-              <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">Why This Certification Matters</h3>
+              <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">{whyHeading}</h3>
               {content.whyItMatters
                 .split(/(?<=[.!?])\s+/)
                 .filter((s) => s.trim().length > 0)

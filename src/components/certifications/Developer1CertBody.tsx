@@ -7,6 +7,7 @@ import LastUpdated from '@/components/LastUpdated'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertNamingLead from '@/components/CertNamingLead'
 import { getQuizJsonLd } from '@/lib/schema-data'
 import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import CodeBlock from '@/components/CodeBlock'
@@ -358,6 +359,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+        <CertNamingLead slug={slug} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
