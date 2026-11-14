@@ -74,6 +74,7 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Platform Foundations (Plat-101 / Associate) Study Guide &amp; Practice Questions
           </h1>
+          <CertNamingLead slug={slug} />
           <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             Prepare with free Salesforce Platform Foundations practice questions, plus a study plan and section weightage for the entry-level $75 exam. No sign-up required.
@@ -99,7 +100,6 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
             <span>Use this material alongside the current official exam guide.</span>
           </div>
         </section>
-        <CertNamingLead slug={slug} />
 
         <CertPageIntro slug={slug} />
         <ContentPageAuthor />

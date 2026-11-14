@@ -5,8 +5,8 @@ import PrerequisiteAlert from '@/components/PrerequisiteAlert'
 import { hasUnverifiedClaudeExamDetails, isUnavailableCredentialExam } from '@/lib/credential-status'
 import { CERT_PREREQUISITES } from '@/lib/cert-prerequisites'
 import { getExamLogistics, getPublishedExamFacts, slugToDisplayName } from '@/lib/cert-seo-data'
-import { getCertCodeLabel, getCertDisambiguationLead } from '@/lib/cert-alias-registry'
-import { getCertPrimaryName } from '@/lib/cert-name-aliases'
+import { getCertCodeLabel } from '@/lib/cert-alias-registry'
+import CertNamingLead from '@/components/CertNamingLead'
 import { getCredentialStatus } from '@/lib/credential-status'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
@@ -69,7 +69,6 @@ export default function CertificationCard({
       ? { questions: published.questions, passingScore: published.passingScore, duration: published.duration, cost: published.fee }
       : examDetails
   const codeLabel = hideExamDetails ? '' : getCertCodeLabel(slug) ?? code
-  const lead = hideExamDetails ? undefined : getCertDisambiguationLead(slug, getCertPrimaryName(slug, title))
   const status = getCredentialStatus(slug)
   const prerequisites = CERT_PREREQUISITES[slug]
   const required = prerequisites?.requiredPrerequisites ?? (prerequisites?.requiredPrerequisite ? [prerequisites.requiredPrerequisite] : [])
@@ -95,9 +94,12 @@ export default function CertificationCard({
         ) : (
           <h2 className="text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h2>
         )}
-        {headingLevel === 'h1' && lead && (
-          <p className="mt-3 text-sm text-white/90 max-w-3xl">{lead}</p>
-        )}
+        {/* The naming-variant line belongs directly under the H1: it is what
+            tells a searcher who typed any variant that they are in the right
+            place, and it carries every alias and exam code for the credential.
+            It states no exam facts, so unlike the stat grid it also renders for
+            credentials whose exam details are unverified. */}
+        {headingLevel === 'h1' && <CertNamingLead slug={slug} tone="card" />}
       </div>
 
       {/* Content */}

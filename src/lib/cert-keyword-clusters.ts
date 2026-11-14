@@ -239,3 +239,34 @@ export function getDumpsFaqItem(slug: string): { question: string; answer: strin
       `proctored exam safely.`,
   }
 }
+
+/**
+ * The one naming-variant sentence pair that sits directly under each page's H1.
+ *
+ * This used to be a separate block lower down the page, which pushed it past
+ * the quick-facts and weightage tables and left it restating what the card's
+ * own disambiguation line already said. Both jobs are done here, in the
+ * strongest position, so a searcher who typed any variant sees their wording
+ * in the first lines of the page.
+ *
+ * Returns undefined for credentials with no cluster entry.
+ */
+export function getCertNamingLeadText(slug: string): string | undefined {
+  const cluster = getCertKeywordCluster(slug)
+  if (!cluster) return undefined
+  const { bare, vendorName, certifiedName, aliases } = cluster
+  const variants = [
+    ...new Set([
+      vendorName,
+      certifiedName,
+      `${bare} certification`,
+      `${vendorName} certification`,
+      ...aliases,
+    ]),
+  ].filter((v) => v !== bare)
+  const also = variants.length ? ` It is also searched as ${listNames(variants)}.` : ''
+  return (
+    `${bare} is the exam behind the ${certifiedName} credential, and this page is the ` +
+    `${bare} certification study guide for it.${also}`
+  )
+}

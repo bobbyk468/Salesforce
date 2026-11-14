@@ -85,6 +85,7 @@ export default function AppBuilderCertBody({ slug }: { slug: string }) {
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             {getCertH1Text(slug)}
           </h1>
+          <CertNamingLead slug={slug} />
           <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             Prepare with free Platform App Builder practice questions, plus a study plan and section weightage. No sign-up required.
@@ -110,7 +111,6 @@ export default function AppBuilderCertBody({ slug }: { slug: string }) {
             <span>Use this material alongside the current official exam guide.</span>
           </div>
         </section>
-        <CertNamingLead slug={slug} />
 
         <ContentPageAuthor />
 

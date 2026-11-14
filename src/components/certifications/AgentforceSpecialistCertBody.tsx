@@ -68,6 +68,7 @@ export default function AgentforceSpecialistCertBody({ slug }: { slug: string })
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Agentforce Specialist (AI-201) Study Guide &amp; Practice Questions
           </h1>
+          <CertNamingLead slug={slug} />
           <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             {content.introLead.map((s, i) =>
@@ -92,7 +93,6 @@ export default function AgentforceSpecialistCertBody({ slug }: { slug: string })
             <span>Use this material alongside the current official exam guide.</span>
           </div>
         </section>
-        <CertNamingLead slug={slug} />
 
         <ContentPageAuthor />
 

@@ -7,7 +7,6 @@ import LastUpdated from '@/components/LastUpdated'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
-import CertNamingLead from '@/components/CertNamingLead'
 import CredentialSchema from '@/components/CredentialSchema'
 import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageCta from '@/components/CertPageCta'
@@ -348,8 +347,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         />
 
         <LastUpdated />
-
-        <CertNamingLead slug={slug} />
 
         {body.whoIsThisFor && <WhoIsThisForSection data={hideExamDetails || retired ? { ...body.whoIsThisFor, heading: retired ? 'Who may use this historical learning reference?' : 'Who may find these learning topics useful?' } : body.whoIsThisFor} />}
 

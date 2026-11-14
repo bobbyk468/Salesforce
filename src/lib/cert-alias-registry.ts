@@ -765,6 +765,10 @@ function joinNames(names: string[]): string {
  * exam name, the current code, any legacy code and the former credential name
  * so a searcher who typed any of them can see they are on the right page.
  * Returns undefined when there is nothing to disambiguate.
+ *
+ * Superseded on certification pages by getCertNamingLeadText in
+ * cert-keyword-clusters, which covers the same ground plus the vendor-prefixed
+ * and "... certification" phrasings. Kept for callers outside those pages.
  */
 export function getCertDisambiguationLead(slug: string, officialName: string): string | undefined {
   const alias = CERT_ALIAS_REGISTRY[slug]

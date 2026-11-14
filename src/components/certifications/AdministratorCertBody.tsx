@@ -104,12 +104,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Platform Administrator (Plat-Admn-201 / ADM-201) Exam Questions &amp; Study Guide
           </h1>
+          <CertNamingLead slug={slug} />
         <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             Prepare with Salesforce Certified Platform Administrator exam questions for Plat-Admn-201 (ADM-201), plus a study plan and topic weightage. Free practice, no sign-up required.
-          </p>
-          <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
-            This credential was previously called Salesforce Certified Administrator and is often known by its exam code, ADM-201. Its current name is Salesforce Certified Platform Administrator.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-5">
             <Link
@@ -129,7 +127,6 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             <span>Use this material alongside the current official exam guide.</span>
           </div>
         </section>
-        <CertNamingLead slug={slug} />
 
         {/* Condensed intro: shorter, benefit-focused (per CTR audit) */}
         <CertPageIntro slug={slug} />

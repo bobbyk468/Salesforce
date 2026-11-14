@@ -7,7 +7,6 @@ import LastUpdated from '@/components/LastUpdated'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
-import CertNamingLead from '@/components/CertNamingLead'
 import { getQuizJsonLd } from '@/lib/schema-data'
 import { SLUG_TO_EXAM_CODE } from '@/lib/certification-exam-codes'
 import CodeBlock from '@/components/CodeBlock'
@@ -422,8 +421,6 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           />
 
         <LastUpdated />
-
-        <CertNamingLead slug={slug} />
 
             {/* Who Is This Cert For */}
             <section className="mb-8 rounded-xl border border-gray-100 bg-gray-50/50 p-5 sm:p-6">

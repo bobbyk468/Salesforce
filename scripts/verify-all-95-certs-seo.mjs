@@ -357,13 +357,16 @@ async function verifySingleCertPage(slug) {
   const namingLead = content("[data-cert-naming-lead]", document).toLowerCase();
   assertCheck(namingLead.includes(`${vendor} ${bare} certification`),
     `[${slug}] Naming lead states "${cluster.vendor} ${cluster.bare} certification"`);
-  // The H1 leads the main content; the lead paragraph sits under it, never
-  // above it. Putting content before the H1 pushed the heading down the page
-  // and left the document outline starting below the fold.
+  // The naming lead belongs in the line directly under the H1. Placing it
+  // after the H1 but further down the page put it past the quick-facts and
+  // weightage tables, well outside the opening copy a searcher reads, so the
+  // gap is bounded rather than merely signed.
   const h1Index = html.search(/<h1[\s>]/);
   const leadIndex = html.indexOf("data-cert-naming-lead");
-  assertCheck(h1Index !== -1 && leadIndex > h1Index,
-    `[${slug}] Naming lead renders after the H1`, `h1 at ${h1Index}, lead at ${leadIndex}`);
+  const MAX_GAP = 1200;
+  assertCheck(h1Index !== -1 && leadIndex > h1Index && leadIndex - h1Index < MAX_GAP,
+    `[${slug}] Naming lead sits directly under the H1`,
+    `h1 at ${h1Index}, lead at ${leadIndex}, gap ${leadIndex - h1Index} (max ${MAX_GAP})`);
   // Jump link for the dumps section, so it can earn a SERP sitelink and
   // readers can reach it from the table of contents.
   const tocLinks = selectAll('nav[aria-label="Table of contents"] a[href^="#"]', document)
