@@ -366,8 +366,21 @@ async function verifySingleCertPage(slug) {
     `[${slug}] Naming lead renders after the H1`, `h1 at ${h1Index}, lead at ${leadIndex}`);
   // Jump link for the dumps section, so it can earn a SERP sitelink and
   // readers can reach it from the table of contents.
-  assertCheck(Boolean(selectOne('a[href="#practice-vs-dumps"]', document)),
+  const tocLinks = selectAll('nav[aria-label="Table of contents"] a[href^="#"]', document)
+    .map((a) => a.attribs.href.slice(1));
+  assertCheck(tocLinks.includes("practice-vs-dumps"),
     `[${slug}] Table of contents links to #practice-vs-dumps`);
+  // The table of contents must list sections in the order the page renders
+  // them, or the scroll-spy highlights the wrong entry. CertTableOfContents
+  // picks its tail order from a proxy (whether the page has a FAQ entry); this
+  // is what proves the proxy still holds on every page.
+  const positions = tocLinks
+    .map((id) => ({ id, at: html.indexOf(`id="${id}"`) }))
+    .filter((x) => x.at !== -1);
+  const inDocumentOrder = [...positions].sort((a, b) => a.at - b.at).map((x) => x.id);
+  assertCheck(JSON.stringify(positions.map((x) => x.id)) === JSON.stringify(inDocumentOrder),
+    `[${slug}] Table of contents is in document order`,
+    `TOC: ${positions.map((x) => x.id).join(" > ")} | DOM: ${inDocumentOrder.join(" > ")}`);
 
   // 6. The generated exam-format FAQ: a snippet-shaped answer stating scored
   // questions, duration, passing score and fee in one sentence.

@@ -4,28 +4,56 @@ import { useEffect, useState } from 'react'
 
 interface CertTableOfContentsProps {
   sections: Array<{ id: string; title: string }>
+  /**
+   * True when the page renders CertPageFaq (the dumps comparison, then the
+   * FAQ) above Related Certifications, as the shared associate template does.
+   * The five bespoke bodies render it below, so they leave this false.
+   */
+  faqAboveRelated?: boolean
 }
 
 /**
- * Every certification page renders the practice-vs-dumps section just above
- * its FAQ, but no page's tocSections data listed it, so the jump link was
- * missing sitewide. Inserting it here, immediately before the FAQ entry,
- * keeps the one list in document order without editing 90 JSON files, and
- * means a page added later cannot forget it. Retired and unverified
- * credentials have their "Exam FAQs" entry filtered out upstream but still
- * render both sections, so there the entry goes last rather than being
- * dropped.
+ * Puts the tail of the list into the order the page actually renders it.
+ *
+ * Two things were out of step. No page's tocSections data listed the
+ * practice-vs-dumps section, so its jump link was missing sitewide; and the
+ * shared associate template lists Related Certifications before the FAQ while
+ * rendering it after, which left the scroll-spy highlighting the wrong entry.
+ * Both are fixed here rather than across 90 JSON files.
+ *
+ * The dumps comparison and the FAQ always render together, in that order,
+ * because one component emits both. What differs between the two page
+ * families is whether that pair sits above or below Related Certifications,
+ * and only the page knows which, so it says so via `faqAboveRelated`. An
+ * earlier version inferred it from whether the TOC had a FAQ entry, which was
+ * wrong for retired credentials: their FAQ entry is filtered out upstream
+ * while the page still uses the associate layout.
  */
-function withDumpsSection(sections: Array<{ id: string; title: string }>) {
-  if (sections.length === 0 || sections.some((s) => s.id === 'practice-vs-dumps')) return sections
-  const entry = { id: 'practice-vs-dumps', title: 'Practice vs Dumps' }
-  const faqIndex = sections.findIndex((s) => s.id === 'faq')
-  if (faqIndex === -1) return [...sections, entry]
-  return [...sections.slice(0, faqIndex), entry, ...sections.slice(faqIndex)]
+function withOrderedTail(
+  sections: Array<{ id: string; title: string }>,
+  faqAboveRelated: boolean,
+) {
+  if (sections.length === 0) return sections
+  const dumps = sections.find((s) => s.id === 'practice-vs-dumps') ?? {
+    id: 'practice-vs-dumps',
+    title: 'Practice vs Dumps',
+  }
+  const faq = sections.find((s) => s.id === 'faq')
+  const related = sections.find((s) => s.id === 'related-certs')
+  const head = sections.filter(
+    (s) => !['practice-vs-dumps', 'faq', 'related-certs'].includes(s.id),
+  )
+  const pair = [dumps, ...(faq ? [faq] : [])]
+  return faqAboveRelated
+    ? [...head, ...pair, ...(related ? [related] : [])]
+    : [...head, ...(related ? [related] : []), ...pair]
 }
 
-export default function CertTableOfContents({ sections: rawSections }: CertTableOfContentsProps) {
-  const sections = withDumpsSection(rawSections)
+export default function CertTableOfContents({
+  sections: rawSections,
+  faqAboveRelated = false,
+}: CertTableOfContentsProps) {
+  const sections = withOrderedTail(rawSections, faqAboveRelated)
   const [activeId, setActiveId] = useState<string | null>(null)
 
   useEffect(() => {

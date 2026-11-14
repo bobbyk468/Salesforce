@@ -29,7 +29,8 @@ export default function CertificationPageShell({
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="min-w-0 lg:col-span-3">{children}</div>
         <aside className="min-w-0 lg:col-span-1">
-          <CertTableOfContents sections={tocSections} />
+          {/* The associate template renders CertPageFaq above Related Certifications. */}
+          <CertTableOfContents sections={tocSections} faqAboveRelated />
         </aside>
       </div>
     </div>
