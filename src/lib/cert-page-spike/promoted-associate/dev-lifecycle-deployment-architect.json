@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Development Lifecycle and Deployment Architect exam for?",
+    "heading": "Who should take the Development Lifecycle and Deployment Architect exam?",
     "personas": [
       {
-        "label": "DevOps Engineers",
-        "description": "You run Salesforce deployments today and want to show you can design the whole pipeline, from sandbox to production."
+        "label": "Salesforce DevOps engineers",
+        "description": "You run deployments and want to design the full pipeline from development through production."
       },
       {
-        "label": "Release Managers",
-        "description": "You plan releases across several teams and need to choose the right environments, tools and test steps."
+        "label": "Release managers",
+        "description": "You coordinate releases across teams and need to choose environments, tools, and test steps."
       },
       {
-        "label": "Platform Architects",
-        "description": "This is one of the four exams you need for System Architect, alongside Platform Developer I, Integration Architect and Identity and Access Management Architect."
+        "label": "Platform architects",
+        "description": "You are preparing for System Architect and want to validate lifecycle and deployment design alongside the other required architect credentials."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Development Lifecycle and Deployment Architect Exam Hard?",
-    "summary": "It is a practical exam. You need to know the sandbox types and their refresh limits, what each deployment tool can and can't do, and how to recover when a production deployment goes wrong.",
+    "heading": "How challenging is the Development Lifecycle and Deployment Architect exam?",
+    "summary": "The exam focuses on practical release design: choosing sandboxes, selecting deployment tools, testing changes, and recovering when a production release fails. Pay attention to the limits of each approach.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>65% to pass</strong>, which is 39 correct answers. Many questions turn on small differences between change sets, the Salesforce CLI and unlocked packages.",
-      "<strong>Real-world problems.</strong> Expect questions on deleting metadata, deployment order and what to do when there is no built-in rollback.",
-      "<strong>Pipeline design.</strong> You need to know how source control, scratch orgs and automated tests fit together in CI/CD."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "<strong>Deployment trade-offs:</strong> Compare change sets, Salesforce CLI, and unlocked packages, including what each can do.",
+      "<strong>Pipeline design:</strong> Understand how source control, scratch orgs, automated tests, and release steps fit together."
     ],
-    "passRateGuidance": "People who have run releases for a team do best. Before you book. Aim for 75% or more on practice tests and make sure you can draw an environment plan for a project with several teams."
+    "passRateGuidance": "Practice planning a release for several teams. Be ready to explain which environment each team needs, what the pipeline should test, and how to recover if a deployment causes a problem."
   },
   "examFormat": {
-    "heading": "Development Lifecycle and Deployment Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions are short scenarios about a team, a project or a failed release. You choose the right sandbox, tool or order of steps.",
+    "heading": "Development Lifecycle and Deployment Architect exam format",
+    "intro": "The exam is proctored online or at a test center. Questions describe release, environment, and team requirements.",
+    "scenarioPercent": "Many questions present a team or a release issue and ask which environment, tool, or sequence best addresses it.",
     "bestWayToPass": [
-      "<strong>Learn the sandbox table:</strong> Developer, Developer Pro, Partial Copy and Full. Know how much data each holds and how often it can be refreshed.",
-      "<strong>Know the limits of change sets:</strong> They can't delete metadata, only work between connected orgs, and leave no history in source control.",
-      "<strong>Understand source-driven development:</strong> Version control is the source of truth, and orgs are built from it.",
-      "<strong>Know the test rules:</strong> Production deployments with Apex need 75% overall code coverage, and you choose which tests run."
+      "<strong>Compare sandboxes:</strong> Review Developer, Developer Pro, Partial Copy, and Full sandboxes, including their data and refresh characteristics.",
+      "<strong>Know change set limits:</strong> Change sets work between connected orgs, do not provide source history, and cannot delete metadata.",
+      "<strong>Use source control as the record:</strong> Understand how teams develop from versioned source and deploy through the Salesforce CLI or packages.",
+      "<strong>Review test requirements:</strong> Learn production coverage rules and how test levels affect deployment validation."
     ]
   },
   "certificationCard": {
     "code": "Dev Lifecycle & Deployment",
-    "description": "This exam tests how you plan environments, manage releases and move changes safely from development to production using sandboxes, source control, packages and the Salesforce CLI. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards System Design (15%) and Building (14%).",
+    "description": "This exam covers environment strategy, release management, testing, source control, and deployment tools for Salesforce. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards System Design (15%) and Building (14%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Development Lifecycle and Deployment Architect: Key Concepts for the Exam",
+    "h2": "Development Lifecycle and Deployment Architect: core concepts",
     "blocks": [
       {
-        "heading": "Org Strategy: Sandboxes and Scratch Orgs",
-        "body": "Each sandbox type has a job. **Developer** sandboxes copy metadata only, hold 200 MB of data and can be refreshed every day. They suit one developer. **Developer Pro** is the same with 1 GB of data, which helps for bigger test data sets. **Partial Copy** includes metadata plus a sample of data chosen by a sandbox template, holds 5 GB and can be refreshed every 5 days. It suits QA and training. **Full** copies all data and metadata and can be refreshed every 29 days. It is the only safe place for performance testing and final user testing. **Scratch orgs** are short-lived orgs built from source and a definition file. They last up to 30 days and are used for package development and automated tests."
+        "heading": "Environment Strategy",
+        "body": "Choose an environment that fits the work. Developer sandboxes copy metadata and support individual development; Developer Pro provides more space for test data. Partial Copy sandboxes include metadata and a selected sample of data, which can support QA and training. Full sandboxes copy production data and metadata and are useful for realistic user acceptance and performance testing. Scratch orgs are temporary environments created from source and a definition file, typically for package development and automated testing. Review the current limits and refresh intervals for each type."
       },
       {
         "heading": "Version Control and Source-Driven Development",
-        "body": "In source-driven development, the code in Git is the truth, not any one org. Developers pull from Git, work in a sandbox or scratch org, and push their changes back with the Salesforce CLI. A common branching model has a main branch that matches production, a branch per release or environment, and a short-lived branch per feature. Merges go through pull requests, so someone reviews every change. This gives you a history of who changed what and a way to rebuild any environment. It also fixes the biggest problem with change sets: nothing is lost when a sandbox is refreshed."
+        "body": "In a source-driven process, version control is the authoritative record of changes. Developers work in branches, commit changes, and merge reviewed work through a pull request. The team can then deploy the approved source to test and production environments. This preserves history and makes it easier to recreate an environment after a sandbox refresh. Salesforce CLI supports source synchronization and deployment as part of this workflow."
       },
       {
-        "heading": "CI/CD Pipelines: Salesforce CLI and Packages",
-        "body": "A pipeline runs the same steps every time code is merged: check out the code, deploy to a test org, run Apex tests, and report the result. The **Salesforce CLI** does the deploying. You can **validate** a deployment against production ahead of time and then **quick deploy** it later without running the tests again, as long as it is within 10 days. **Unlocked packages** group related metadata into a versioned unit you can install and upgrade, which makes large orgs easier to split up. **DevOps Center** gives admins a point-and-click way to work with Git-based pipelines. **Change sets** are still fine for small teams but don't scale."
+        "heading": "CI/CD, CLI, and Packages",
+        "body": "A continuous integration pipeline can retrieve source, deploy it to a test org, run checks and tests, and report whether the change is ready. Salesforce CLI supports deployment and validation. A validated production deployment may be quick deployed later when it remains eligible. Unlocked packages group metadata into versioned components that can be installed and upgraded. DevOps Center offers a guided interface for Git-based change management. Change sets can still suit simple org-to-org releases but provide fewer controls and no source history."
       },
       {
-        "heading": "Testing in the Deployment Pipeline",
-        "body": "Apex code needs at least 75% overall test coverage to deploy to production, and every trigger needs some coverage. You choose the test level: **RunLocalTests** (the default for production when Apex is in the deployment), **RunSpecifiedTests** (faster, but each class in the deployment then needs 75% coverage from the tests you pick), or **RunAllTestsInOrg**. Beyond unit tests. Plan for integration testing in a Partial Copy sandbox, user acceptance testing in a Full sandbox, and regression testing before each release. Tests should create their own data and not depend on data in the org."
+        "heading": "Testing Deployments",
+        "body": "Production deployments that include Apex must meet the platform’s overall code coverage requirement, and deployed code must have appropriate test coverage. Test levels determine which tests run: RunLocalTests, RunSpecifiedTests, or RunAllTestsInOrg. Under RunSpecifiedTests, each deployed class must meet the applicable coverage requirement from the tests run. Use independent test data so tests do not depend on records in a particular org. Plan integration, acceptance, and regression testing in suitable environments."
       },
       {
-        "heading": "Release Management and Deployment Order",
-        "body": "Some things must be deployed in order: objects and fields before the layouts and code that use them, and permission sets after the fields they grant. Some changes can't be deployed with metadata at all, such as certain org settings, and need a written manual step. **Destructive changes** (deleting metadata) need a destructiveChanges.xml file and can't be done with change sets. Salesforce has no one-click rollback, so the plan is to keep the last good version in Git and redeploy it, and to use feature flags such as custom metadata to switch new features off. Schedule big releases around the three Salesforce seasonal releases and test in a preview sandbox first."
+        "heading": "Release Order and Recovery",
+        "body": "Deploy prerequisites before components that depend on them, such as fields before layouts or code that references those fields. Some metadata deletions require a destructive changes manifest and deployment tooling that supports it. Salesforce does not provide a universal rollback button for metadata deployments. Keep known-good source in version control and prepare a redeployment or mitigation plan. Feature flags can help disable a new capability while a fix is prepared. Test upcoming seasonal releases in a preview sandbox when appropriate."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Development Lifecycle and Deployment Architect Exam",
-    "intro": "Most questions ask for the right environment, tool or order of steps for a given team. Look for clues about team size, how much data is needed and how often changes ship.",
+    "h2": "How to prepare for the Development Lifecycle and Deployment Architect exam",
+    "intro": "Look for clues about data needs, team size, deployment frequency, and recovery requirements. Use those clues to choose the environment and release process.",
     "blocks": [
       {
-        "heading": "Sandbox Strategy",
-        "body": "Developers get Developer sandboxes. QA uses Partial Copy. Performance and final user testing use Full. If a question mentions realistic data volumes, the answer is a Full sandbox."
+        "heading": "Match Sandbox to the Work",
+        "body": "Use Developer environments for individual development, Partial Copy for representative QA data, and Full for realistic performance or final user testing."
       },
       {
-        "heading": "Change Set Limitations",
-        "body": "Change sets can't delete metadata, can't move between unrelated orgs and don't keep history. When a scenario needs any of those, look for the CLI or packages."
+        "heading": "Know What Change Sets Cannot Do",
+        "body": "Change sets have org connection and metadata limits and do not provide version history. For deletion or source-driven workflows, consider CLI deployment or packages."
       },
       {
-        "heading": "Source-Driven Development",
-        "body": "If the team keeps losing work when sandboxes are refreshed, or can't tell who changed what, the answer is version control with source-driven development."
+        "heading": "Keep Source in Version Control",
+        "body": "If work is lost during refreshes or the team cannot trace changes, establish a reviewed source-control workflow and deploy from versioned source."
       },
       {
-        "heading": "Package Development (2GP)",
-        "body": "Unlocked packages split a large org into versioned modules. Managed packages are for ISVs selling on AppExchange. Both are built with scratch orgs and a Dev Hub."
+        "heading": "Choose a Package Strategy",
+        "body": "Unlocked packages can divide a large org into versioned components. Managed packages serve distribution use cases such as ISV products. Understand how scratch orgs and a Dev Hub support package development."
       },
       {
-        "heading": "CI/CD Pipeline Design",
-        "body": "Every merge should trigger a deploy and test run. Validate against production early, then quick deploy in the release window."
+        "heading": "Build Automated Checks",
+        "body": "A CI pipeline can deploy a pull request to a test org and run the required tests before merge. Validate production deployments ahead of the release window when possible."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "After this exam, most people complete the other System Architect exams and then aim for CTA:",
+    "heading": "Related credentials for release and deployment architects",
+    "intro": "Continue with another Salesforce architecture credential or a role-focused development specialization.",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -170,167 +170,167 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A team needs to run performance tests with the same data volume as production before a big release. Which environment should they use?",
+      "question": "A team must performance-test a release with data volumes close to production. Which sandbox should it use?",
       "options": [
-        "Full sandbox",
-        "Partial Copy sandbox",
-        "Scratch org",
-        "Developer sandbox"
+        "A Full sandbox",
+        "A Partial Copy sandbox",
+        "A scratch org",
+        "A Developer sandbox"
       ],
       "correctAnswer": 0,
-      "explanation": "Only a Full sandbox has a complete copy of production data, so it is the only place where performance results mean something.",
+      "explanation": "A Full sandbox copies production data and metadata, making it the best fit for realistic performance testing.",
       "whyWrong": [
-        "A Partial Copy sandbox has only a sample of data, so load times won't match production.",
-        "Scratch orgs start empty and are meant for development, not load testing.",
-        "A Developer sandbox has no production data and only 200 MB of storage."
+        "A Full sandbox is intended for testing with a production-like copy.",
+        "A Partial Copy uses a selected sample rather than all production data.",
+        "A scratch org is temporary and is not a full production data copy."
       ]
     },
     {
-      "question": "An admin needs to delete three unused custom fields from production as part of a release. The team uses change sets today. What should they do?",
+      "question": "A release needs to remove unused custom fields from production. Which approach supports metadata deletion?",
       "options": [
-        "Refresh production from a sandbox",
-        "Use a destructiveChanges.xml file with the Salesforce CLI",
-        "Add the fields to an outbound change set marked for deletion",
-        "Remove the fields from all page layouts"
+        "Refresh production from a development sandbox",
+        "Deploy a destructive changes manifest with Salesforce CLI",
+        "Mark the fields for deletion in an outbound change set",
+        "Remove the fields from layouts but leave them in the org"
       ],
       "correctAnswer": 1,
-      "explanation": "Change sets can't delete metadata. A destructive changes manifest deployed with the CLI or Metadata API can.",
+      "explanation": "A destructive changes manifest can specify metadata to delete and can be deployed with supported tooling such as the Salesforce CLI.",
       "whyWrong": [
-        "You can't refresh production from a sandbox.",
-        "There is no deletion option in change sets.",
-        "Removing fields from layouts hides them but doesn't delete them."
+        "Refreshing production from a sandbox is not a safe metadata deletion strategy.",
+        "This approach explicitly describes metadata deletion through a deployment manifest.",
+        "Change sets do not support deleting metadata."
       ]
     },
     {
-      "question": "A deployment was validated against production on Monday and passed all tests. The release window is Thursday. How can they deploy quickly on Thursday?",
+      "question": "A deployment was validated on Monday and is still eligible on Thursday. How can the team deploy it quickly?",
       "options": [
-        "Run the whole validation again on the Thursday",
-        "Deploy with a change set instead",
+        "Run a new validation with all tests on Thursday",
+        "Switch to a change set for the release",
         "Deploy with RunAllTestsInOrg",
-        "Quick deploy the validated deployment"
+        "Quick deploy the already validated deployment"
       ],
       "correctAnswer": 3,
-      "explanation": "A validated deployment can be quick deployed within 10 days without running the tests again, which keeps the release window short.",
+      "explanation": "Quick deploy can release an eligible deployment that has already passed validation and its required tests.",
       "whyWrong": [
-        "Running validation again repeats the slow test run you already did.",
-        "A new change set would need its own tests in production.",
-        "Running all tests would be even slower."
+        "A new validation would repeat work that the prior validation already completed.",
+        "Changing tools does not make the validated deployment faster.",
+        "Running every test again defeats the quick deploy path."
       ]
     },
     {
-      "question": "Developers keep losing their work when the shared Developer Pro sandbox is refreshed. They also can't tell who changed what. What is the best fix?",
+      "question": "A shared sandbox refresh has erased developer work, and the team cannot tell who changed what. What should the architect recommend?",
       "options": [
-        "Use a Full sandbox instead",
-        "Adopt version control and source-driven development",
-        "Ask each of the developers to keep notes in a shared spreadsheet",
-        "Refresh the sandbox less often"
+        "Move the team to a Full sandbox only",
+        "Use source control and reviewed changes",
+        "Record changes in a shared spreadsheet",
+        "Stop refreshing the sandbox"
       ],
       "correctAnswer": 1,
-      "explanation": "With Git as the source of truth, a sandbox refresh loses nothing, and every change has a history with an author.",
+      "explanation": "Version control preserves change history and lets the team rebuild environments from source after refreshes.",
       "whyWrong": [
-        "A Full sandbox can be refreshed too; and still has no change history.",
-        "A spreadsheet is manual, unreliable and not a real record of changes.",
-        "Refreshing less often only delays the problem."
+        "A Full sandbox does not preserve a separate history of each developer’s changes.",
+        "A spreadsheet cannot serve as the source of truth for metadata changes.",
+        "Avoiding refreshes does not fix the lack of history or traceability."
       ]
     },
     {
-      "question": "A deployment uses RunSpecifiedTests. What coverage rule applies?",
+      "question": "A production deployment uses RunSpecifiedTests. What coverage requirement applies to the deployed Apex classes?",
       "options": [
         "Only triggers need coverage",
-        "The whole org must have 90% coverage",
-        "Each class and trigger needs 75% coverage",
-        "No coverage is needed when tests are specified"
+        "The entire org must have 90% coverage",
+        "Each deployed class needs 75% coverage from the selected tests",
+        "No coverage requirement applies when tests are specified"
       ],
       "correctAnswer": 2,
-      "explanation": "With RunSpecifiedTests, every class and trigger in the package must reach 75% coverage from the tests you chose.",
+      "explanation": "With RunSpecifiedTests, each deployed class must meet the applicable coverage requirement from the tests that are run.",
       "whyWrong": [
-        "Classes need coverage too; not only triggers.",
-        "90% is not a Salesforce requirement.",
-        "Coverage rules still apply. They just apply per class instead of org-wide."
+        "Coverage is not limited to triggers when using this test level.",
+        "The requirement is not a 90% whole-org threshold.",
+        "Specifying tests does not remove the production coverage requirement."
       ]
     },
     {
-      "question": "A large org has five teams changing the same metadata. Releases often break each other's work. What should the architect recommend to split the org into independent parts?",
+      "question": "Several teams need to develop independent components in a large org. What can help modularize and version the metadata?",
       "options": [
-        "Managed packages published on the AppExchange",
-        "One Full sandbox shared by all teams",
-        "Unlocked packages for each team's area",
-        "More change sets"
+        "Publish a managed package on AppExchange for every team",
+        "Give all teams one shared Full sandbox",
+        "Create unlocked packages for separate areas",
+        "Create additional change sets for each team"
       ],
       "correctAnswer": 2,
-      "explanation": "Unlocked packages let each team own a versioned set of metadata with clear dependencies, so they can release on their own schedule.",
+      "explanation": "Unlocked packages can group related metadata into versioned components that teams can develop and install independently.",
       "whyWrong": [
-        "Managed packages are for selling apps to other companies, not for internal teams.",
-        "Sharing one sandbox increases collisions instead of reducing them.",
-        "More change sets make the problem worse, since nobody can see what overlaps."
+        "Managed packages are commonly used for distributing protected products, not automatically for internal team modularization.",
+        "One shared sandbox does not isolate component ownership or release history.",
+        "More change sets do not create versioned source modules."
       ]
     },
     {
-      "question": "Which statement about scratch orgs is correct?",
+      "question": "Which statement describes a scratch org?",
       "options": [
-        "They are copies of production data",
-        "Built from source and a definition file",
-        "They remove the need for a Dev Hub entirely",
-        "They can be refreshed every 29 days"
+        "A production data copy for final user testing",
+        "A temporary org built from source and a definition file",
+        "An environment that removes the need for a Dev Hub",
+        "A sandbox that refreshes every 29 days"
       ],
       "correctAnswer": 1,
-      "explanation": "Scratch orgs are empty orgs created from a definition file. You push source to them and throw them away after use, within 30 days at most.",
+      "explanation": "A scratch org is a temporary environment created from source and a definition file, typically under a Dev Hub.",
       "whyWrong": [
-        "Scratch orgs start with no production data.",
-        "You need a Dev Hub to create scratch orgs.",
-        "29 days is the refresh interval for Full sandboxes."
+        "A scratch org is not a copy of production data.",
+        "Scratch org creation normally depends on a Dev Hub.",
+        "A 29-day refresh interval describes a Full sandbox in the source guidance."
       ]
     },
     {
-      "question": "A release went live and broke a key process. Salesforce has no rollback button. What is the best plan for next time?",
+      "question": "A release caused a production issue, and Salesforce has no general rollback button for metadata. What should the team plan to do?",
       "options": [
-        "Keep the old version in source control, use feature flags",
-        "Skip running any of the tests so the deployment is faster",
-        "Always deploy on Fridays",
-        "Never deploy Apex"
+        "Versioned source and a feature flag",
+        "Skip all tests so future deployments are faster",
+        "Schedule releases only on Fridays",
+        "Avoid deploying Apex code"
       ],
       "correctAnswer": 0,
-      "explanation": "With the last good version in Git you can redeploy it quickly. Feature flags, such as a custom metadata setting, let you turn a feature off without a deployment.",
+      "explanation": "Versioned known-good source supports redeployment, while a feature flag can help disable a feature during recovery.",
       "whyWrong": [
-        "Skipping tests increases the chance of breaking production.",
-        "Deploying on a certain day doesn't make rollback possible.",
-        "Avoiding Apex isn't realistic and doesn't address rollback."
+        "This is a practical recovery plan for metadata changes.",
+        "Skipping tests increases release risk rather than providing a recovery path.",
+        "The day of the week does not create a rollback capability."
       ]
     },
     {
-      "question": "The QA team needs a test environment with realistic sample data from several objects, refreshed about once a week. Which sandbox fits best?",
+      "question": "QA needs a sandbox with realistic sample data across several objects and a refresh about weekly. Which type best fits?",
       "options": [
-        "Scratch org",
-        "Developer sandbox",
-        "Partial Copy sandbox",
-        "Developer Pro sandbox"
+        "A scratch org",
+        "A Developer sandbox",
+        "A Partial Copy sandbox",
+        "A Developer Pro sandbox"
       ],
       "correctAnswer": 2,
-      "explanation": "A Partial Copy sandbox copies a sample of production data using a template and can be refreshed every 5 days.",
+      "explanation": "A Partial Copy sandbox can include a sample of production data selected by a template and supports a more frequent refresh than a Full sandbox.",
       "whyWrong": [
-        "Scratch orgs start empty and need data loaded by script.",
-        "Developer sandboxes have no production data.",
-        "Developer Pro also copies metadata only, with no production data."
+        "A scratch org is not a sample-data sandbox refreshed on a weekly schedule.",
+        "A Developer sandbox copies metadata but not production data.",
+        "Developer Pro provides more data space but does not include a template-based production sample."
       ]
     },
     {
-      "question": "A deployment fails because a page layout refers to a field that doesn't exist in production yet. What is the right fix?",
+      "question": "A page layout deployment fails because it references a field not yet in production. What is the correct deployment order?",
       "options": [
-        "Include the field, or deploy it first",
-        "Delete the layout",
-        "Run all tests",
-        "Deploy the layout first, then the field"
+        "Deploy the field before or with the layout",
+        "Delete the layout from the release",
+        "Run all Apex tests again",
+        "Deploy the layout first, then add the field"
       ],
       "correctAnswer": 0,
-      "explanation": "Metadata that is referenced must exist before or alongside the metadata that uses it. Deploy the field with the layout or before it.",
+      "explanation": "The field is a prerequisite for the layout that references it, so it must be deployed first or in the same valid deployment.",
       "whyWrong": [
-        "Deleting the layout loses work and isn't needed.",
-        "Tests don't fix a missing dependency.",
-        "Deploying the layout first is what caused the failure."
+        "This satisfies the dependency order between the field and layout.",
+        "Deleting the layout avoids the dependency but does not deliver the requested change.",
+        "Apex tests do not create a missing metadata field."
       ]
     },
     {
-      "question": "An admin team with little Git experience wants to move away from change sets and start using source control, using clicks rather than the command line. What should they look at?",
+      "question": "An admin team wants a guided, click-based way to manage Git-backed Salesforce changes. Which tool should it evaluate?",
       "options": [
         "Workbench",
         "Data Loader",
@@ -338,15 +338,15 @@
         "DevOps Center"
       ],
       "correctAnswer": 3,
-      "explanation": "DevOps Center gives a point-and-click interface on top of Git and pipelines, designed for admins and low-code teams.",
+      "explanation": "DevOps Center provides a guided interface for managing Salesforce changes through a source-control workflow.",
       "whyWrong": [
-        "Workbench is a utility for queries and simple deploys, not a pipeline tool.",
-        "Data Loader moves data, not metadata.",
-        "The Ant Migration Tool is command-line and is being retired."
+        "Workbench is a tool for inspecting and working with Salesforce APIs and data.",
+        "Data Loader imports and exports records rather than managing Git-based metadata releases.",
+        "Ant Migration Tool is command-line deployment tooling, not the guided interface described."
       ]
     },
     {
-      "question": "What is the minimum overall Apex code coverage needed to deploy to production?",
+      "question": "What is the minimum overall Apex code coverage required to deploy to production?",
       "options": [
         "75%",
         "50%",
@@ -354,59 +354,59 @@
         "100%"
       ],
       "correctAnswer": 0,
-      "explanation": "Salesforce requires at least 75% overall coverage, and every trigger must have some coverage.",
+      "explanation": "The production deployment requirement is at least 75% overall Apex code coverage, with deployed code also needing appropriate coverage.",
       "whyWrong": [
-        "50% is below the requirement.",
-        "65% is below the requirement.",
-        "100% is a good goal but not the rule."
+        "This is the stated overall coverage requirement.",
+        "50% is below the production threshold.",
+        "65% is below the production threshold."
       ]
     },
     {
-      "question": "Salesforce's next seasonal release is in six weeks. The team wants to test their custom code against it before production is upgraded. What should they do?",
+      "question": "The next Salesforce seasonal release arrives in six weeks. How can a team test its code before production is upgraded?",
       "options": [
         "Create a new Developer Edition org",
-        "Refresh a sandbox onto preview before the cutoff",
-        "Ask Salesforce to delay the upgrade",
-        "Wait until production has been upgraded and then test it"
+        "Place a sandbox on preview before the cutoff",
+        "Ask Salesforce to delay the production upgrade",
+        "Wait until production upgrades, then start testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Sandboxes on a preview instance get the new release a few weeks before production. Refreshing in time puts a sandbox on preview so you can test early.",
+      "explanation": "A preview sandbox lets the team test against the upcoming release before production is upgraded.",
       "whyWrong": [
-        "A Developer Edition org doesn't have your org's code or setup.",
-        "Salesforce doesn't delay releases for single customers.",
-        "Testing after the upgrade means any problems hit users first."
+        "A new Developer Edition org may not represent the org’s configuration and data.",
+        "The team should use the available preview process rather than request a delayed upgrade.",
+        "Waiting until production upgrades misses the pre-upgrade testing window."
       ]
     },
     {
-      "question": "A team wants every pull request to be tested automatically before it is merged. What is the core of the pipeline?",
+      "question": "Every pull request should be deployed and tested automatically before merge. What should the team implement?",
       "options": [
-        "Emailing changes to the release manager",
-        "A change set uploaded manually for every pull request",
-        "A CI job that deploys to a test org and runs tests",
+        "Email the change list to the release manager",
+        "Upload a change set manually for each pull request",
+        "A CI job that deploys to a test org and runs checks",
         "A weekly manual deployment"
       ],
       "correctAnswer": 2,
-      "explanation": "Continuous integration runs the same deploy and test steps on every change, so problems are found before the merge.",
+      "explanation": "A continuous integration job can deploy each change to a test org and run automated checks before merge.",
       "whyWrong": [
-        "Email isn't a pipeline and adds no testing.",
-        "Change sets can't be automated from a pull request.",
-        "A weekly manual deploy finds problems late."
+        "Email does not deploy or test the change automatically.",
+        "Manual change sets do not provide the requested per-pull-request automation.",
+        "A weekly manual release happens too late to gate each pull request."
       ]
     },
     {
-      "question": "Tests pass in the sandbox but fail in production because they rely on records that exist only in the sandbox. What should be changed?",
+      "question": "Tests pass in a sandbox but fail in production because they depend on sandbox-only records. What should be changed?",
       "options": [
-        "Use SeeAllData=true in all tests",
-        "Lower the coverage target",
-        "Copy all of the sandbox data into production",
-        "Make the tests create their own test data"
+        "Set SeeAllData=true in every test",
+        "Lower the production coverage requirement",
+        "Copy all sandbox data into production",
+        "Have each test create its own required data"
       ],
       "correctAnswer": 3,
-      "explanation": "Tests should build the data they need, using test setup methods or factories. Then they behave the same in every org.",
+      "explanation": "Tests should create their own data so they run consistently across environments.",
       "whyWrong": [
-        "SeeAllData makes tests depend on org data, which is the cause of the problem.",
-        "Lowering coverage doesn't fix failing tests, and 75% is fixed.",
-        "Copying test records into production pollutes real data."
+        "SeeAllData can make tests depend even more heavily on org-specific records.",
+        "Lowering coverage is not an available fix for brittle tests.",
+        "Copying sandbox data to production is unsafe and does not make tests independent."
       ]
     }
   ]

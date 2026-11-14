@@ -31,7 +31,7 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Order Management Administrator AP exam format?',
-    answer: 'The Order Management Administrator AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Order Management (OMS): configuring the order lifecycle, fulfilment workflows, return and exchange management, inventory tracking, and integration with commerce platforms and warehouse systems.',
+    answer: 'The Order Management Administrator AP exam has 60 multiple-choice questions, a 90-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Order Management (OMS): configuring the order lifecycle, fulfilment workflows, return and exchange management, inventory tracking, and integration with commerce platforms and warehouse systems.',
   },
   {
     question: 'What are the highest-weight Order Management Admin AP exam sections?',
@@ -88,7 +88,7 @@ export default function OrderManagementAdminApExamTipsContent() {
             <span className="font-medium text-gray-900">Reporting and Customer Service</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The OMS data model (Order Summary → Fulfilment Order → Order Delivery Group) is the foundation. Know these objects and their relationships.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 90 minutes, Pass/Fail, $150. The OMS data model (Order Summary → Fulfilment Order → Order Delivery Group) is the foundation. Know these objects and their relationships.</p>
         </div>
       </section>
 
@@ -110,7 +110,7 @@ export default function OrderManagementAdminApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">AP Exam Benchmark</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+          Pass 3 timed 60-question mocks before booking (Pass/Fail scoring)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Order Management Admin AP is for OMS implementation teams and commerce platform administrators.

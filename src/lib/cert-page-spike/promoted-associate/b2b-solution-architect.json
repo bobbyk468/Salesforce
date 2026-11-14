@@ -1,42 +1,42 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the B2B Solution Architect exam for?",
+    "heading": "Who should take the B2B Solution Architect exam?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You have built Sales Cloud, Service Cloud or CPQ solutions for B2B companies and want to show you can design across all of them."
+        "label": "Cross-cloud practitioners",
+        "description": "You have delivered Salesforce solutions for B2B businesses and want to show that you can design across clouds and connected systems."
       },
       {
         "label": "Solution designers",
-        "description": "You lead discovery and solution design on projects where several Salesforce clouds and outside systems have to work together."
+        "description": "You lead discovery and design for projects that connect Salesforce clouds with ERP, billing, warehouse, or other platforms."
       },
       {
-        "label": "Career builders",
-        "description": "You are moving from a single-cloud consultant role into a cross-cloud architect role."
+        "label": "Consultants moving into architecture",
+        "description": "You have focused on one cloud and are ready to plan the full B2B process across teams and systems."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the B2B Solution Architect Exam Hard?",
-    "summary": "It is a hard exam because it is wide. One question might be about the data model across clouds, the next about integration with an ERP, and the next about how to run the project. Real project experience helps more than memorising features.",
+    "heading": "How challenging is the B2B Solution Architect exam?",
+    "summary": "This exam covers a wide range of B2B design decisions. One question may focus on data shared across clouds, another on ERP integration, and another on delivery practices. Project experience helps you apply the concepts to business needs.",
     "bullets": [
-      "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones.",
-      "<strong>About 58% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Cross-cloud scenarios.</strong> Expect questions that mix Sales Cloud, Service Cloud, CPQ, Order Management, B2B Commerce and Experience Cloud.",
-      "<strong>Project delivery counts.</strong> Some questions are about discovery, governance and change management, not just technology."
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>58% to pass</strong>, which is 35 correct answers out of 60.",
+      "<strong>Cross-cloud situations:</strong> Questions may combine Sales Cloud, Service Cloud, CPQ, Order Management, B2B Commerce, and Experience Cloud.",
+      "<strong>Delivery practices matter:</strong> Prepare for questions about discovery, governance, and user adoption as well as technology."
     ],
-    "passRateGuidance": "People with several years of solution design work on B2B projects tend to do best. Before you book. Aim for 75% or more on practice tests and make sure you can explain how a quote turns into an order and an invoice across your systems."
+    "passRateGuidance": "Experience designing B2B solutions can help. Before booking, aim for 75% or more on practice tests and be ready to explain how a quote, order, invoice, and service request move across the systems in your design."
   },
   "examFormat": {
-    "heading": "B2B Solution Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a B2B company with a specific problem, such as slow quoting or customer data spread across systems, and ask which design solves it best.",
+    "heading": "B2B Solution Architect exam format",
+    "intro": "You can take the exam online with a proctor or at a test center. Expect scenarios about business processes and system design.",
+    "scenarioPercent": "Many questions describe a B2B company with a problem such as slow quoting or customer data split across systems. Choose the design that addresses the stated need and assigns clear ownership.",
     "bestWayToPass": [
-      "<strong>Follow the B2B process end to end:</strong> Lead, opportunity, quote, order, fulfilment, invoice and service. Know which cloud or system owns each step.",
-      "<strong>Know where data should live:</strong> Decide which system is the source of truth for accounts, products, prices and orders.",
-      "<strong>Learn the integration basics:</strong> When to use real-time APIs, events or batch loads between Salesforce and an ERP.",
-      "<strong>Don't skip delivery topics:</strong> Discovery, requirements, governance and adoption all show up."
+      "<strong>Trace the full B2B process:</strong> Understand how lead, opportunity, quote, order, fulfillment, invoice, and service fit together, and which system handles each step.",
+      "<strong>Set data ownership:</strong> Identify the source of truth for accounts, products, prices, and orders before designing synchronization.",
+      "<strong>Choose the integration pattern:</strong> Use real-time requests when a user needs an answer now, events when systems need to know about a change, and batch jobs for large scheduled loads.",
+      "<strong>Prepare for delivery questions:</strong> Review discovery, requirements, design governance, release planning, and adoption."
     ]
   },
   "certificationCard": {
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "B2B Solution Architect: Key Concepts for the Exam",
+    "h2": "B2B Solution Architect exam: key concepts",
     "blocks": [
       {
         "heading": "Solution Architecture Fundamentals",
-        "body": "A B2B solution architect starts with the business process, not the product list. Map the steps from first contact to renewal, find the pain points; and only then decide which cloud handles each step. A common B2B flow is: Sales Cloud for leads and opportunities, CPQ or Revenue Cloud for quotes, Order Management or the ERP for orders, the ERP for invoicing, and Service Cloud for support. Experience Cloud or B2B Commerce lets customers and partners serve themselves. Prefer standard features and configuration over custom code, because they are cheaper to run and upgrade."
+        "body": "Start with the business process and its problems, then choose the products and systems that support each step. A common B2B flow uses Sales Cloud for leads and opportunities, CPQ or Revenue Cloud for quotes, Order Management or an ERP for orders, an ERP for invoicing, and Service Cloud for support. Experience Cloud or B2B Commerce can give customers and partners self-service access. Prefer standard features and configuration when they meet the need; custom code adds work to maintain and upgrade."
       },
       {
         "heading": "Multi-Cloud Data Architecture",
-        "body": "Every key piece of data needs one system that owns it, called the source of truth. Customer accounts often live in Salesforce. Products and prices may be owned by the ERP and copied in. Orders may start in Salesforce and be finished in the ERP. Use **external IDs** to match the same record across systems, and keep the Account and Contact model simple so every cloud can share it. Watch for large data volumes on objects like Orders and Assets, and plan archiving. **Data Cloud** can bring customer data from many sources into one profile without moving everything into the core org."
+        "body": "Each important record should have a clear **source of truth**. For example, Salesforce may own customer accounts while an ERP owns products and prices, with those details synchronized into Salesforce for quoting. Orders may begin in Salesforce and continue in the ERP. Use **external IDs** to match records across systems and keep the shared Account and Contact model clear. Plan for large order and asset volumes, including archiving. **Data Cloud** can combine customer information from several sources into unified profiles without copying every record into core CRM objects."
       },
       {
         "heading": "Integration Architecture Patterns",
-        "body": "B2B projects nearly always connect to an ERP. Use real-time API calls only when a user is waiting, such as checking stock or credit during quoting. Use **Platform Events** or **Change Data Capture** when other systems just need to know something changed, like a closed opportunity. Use batch loads with Bulk API for large nightly syncs such as price lists. When several systems share the same data, middleware such as MuleSoft keeps the connections in one place and makes them reusable."
+        "body": "Most B2B designs connect Salesforce to an ERP. Use a real-time API request when someone is waiting for an answer, such as a stock or credit check during quoting. Use **Platform Events** or **Change Data Capture** to notify other systems that something changed. Use a batch process and Bulk API for large scheduled transfers, such as nightly price updates. When several systems need connections, middleware such as MuleSoft can organize and reuse those integrations."
       },
       {
         "heading": "Security & Compliance Design",
-        "body": "B2B customers and partners often log in to the same org through Experience Cloud. Plan sharing so each company sees only its own accounts, orders and cases. Use account relationships or sharing sets for external users. Think about data residency, consent and privacy rules such as GDPR when customer data crosses borders or systems. Use single sign-on for employees and, where it helps, for partners. Shield encryption and Event Monitoring may be needed in regulated industries."
+        "body": "Customers and partners may use an Experience Cloud site to access Salesforce. Set sharing so each company sees only its own accounts, orders, and cases; account relationships and sharing sets can support external access. Consider data residency, consent, and privacy rules such as GDPR when personal data moves between countries or systems. Single sign-on can simplify access for employees and partners. Regulated businesses may also need Shield encryption or Event Monitoring."
       },
       {
         "heading": "Governance, Change Management & Scalability",
-        "body": "Large B2B programmes touch many teams, so governance matters. Set up a design authority that approves big decisions, clear standards for naming and code, and a release plan with the right sandboxes. Run discovery workshops with the business before designing. Plan training and adoption early, since a good design that nobody uses still fails. Design for growth: more users, more orders and more countries should not need a rebuild."
+        "body": "Large B2B projects involve many groups, so agree on how design decisions are made. A design authority, shared naming and coding standards, and a release plan help teams stay aligned. Run business discovery before settling on a solution. Plan training and adoption early so people can use the new system. Design with expected growth in users, orders, and markets in mind."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce B2B Solution Architect Exam",
-    "intro": "Most questions give you a B2B company, a problem and several reasonable designs. Pick the one that solves the stated problem with the least custom work and a clear owner for each piece of data.",
+    "h2": "How to prepare for the B2B Solution Architect exam",
+    "intro": "Each scenario gives a business need and several possible designs. Choose an option that solves the stated problem, uses clear ownership for data, and avoids custom work when a standard approach fits.",
     "blocks": [
       {
-        "heading": "Multi-Cloud B2B Architecture",
-        "body": "Match each step of the B2B process to the cloud or system that owns it. Questions often hide the answer in which step is causing the pain."
+        "heading": "B2B Process Design",
+        "body": "Map each process step to the cloud or system responsible for it. Look for the step where the business is experiencing a delay or error."
       },
       {
-        "heading": "B2B Data Model Design",
-        "body": "Keep one shared Account model. Decide which system owns products, prices and orders, and use external IDs to keep them in sync."
+        "heading": "Shared Data Model",
+        "body": "Keep a consistent Account and Contact model. Decide which system owns products, prices, and orders, then use external IDs to link records."
       },
       {
-        "heading": "Integration Architecture for B2B",
-        "body": "Real time when a user waits, events when others just need to know, batch for big scheduled loads. Middleware once several systems share data."
+        "heading": "Integration Choices",
+        "body": "Use real-time calls when a person is waiting, events to notify other systems of changes, and batch processing for large scheduled transfers. Consider middleware as systems multiply."
       },
       {
-        "heading": "CPQ for B2B Commerce",
-        "body": "Quotes are usually built in CPQ or Revenue Cloud, then become orders. Know where pricing rules live and how the order reaches the ERP."
+        "heading": "Quoting and Commerce",
+        "body": "Know how CPQ or Revenue Cloud supports quotes and how approved quotes become orders. Identify where price rules live and how orders reach the ERP."
       },
       {
-        "heading": "Customer 360 for B2B",
-        "body": "Customers and partners often need a portal. Experience Cloud or B2B Commerce lets them see orders, cases and invoices without calling support."
+        "heading": "Customer Self-Service",
+        "body": "Use Experience Cloud or B2B Commerce when customers and partners need to check orders, cases, or invoices without contacting support."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A manufacturer's sales reps wait two days for quotes because pricing rules live in spreadsheets kept by the finance team. What should the architect recommend first?",
+      "question": "Sales reps wait two days for quotes because finance keeps pricing rules in spreadsheets. What should the architect recommend?",
       "options": [
-        "Build a custom Lightning component that reads the spreadsheet file each time",
-        "Move pricing and discounts into CPQ with approvals",
-        "Add more finance staff",
-        "Email the spreadsheet to reps every week"
+        "Build a custom component that reads the spreadsheet for every quote",
+        "Move pricing and discount rules into CPQ with approval steps",
+        "Hire more finance staff to answer quote requests",
+        "Send the spreadsheet to sales reps each week"
       ],
       "correctAnswer": 1,
-      "explanation": "Putting pricing and approvals into the quoting tool lets reps build correct quotes themselves, with approvals only where needed.",
+      "explanation": "Putting prices, discounts, and approval rules in CPQ lets reps create quotes with current rules and route exceptions for review.",
       "whyWrong": [
-        "A custom component on a spreadsheet is fragile and hard to maintain.",
-        "More staff treats the symptom and doesn't scale.",
-        "Weekly emails go out of date and reps still price by hand."
+        "Reading spreadsheets from custom code on every quote adds fragile work and leaves the pricing process unchanged.",
+        "More staff may reduce a queue but does not give reps a managed quoting process.",
+        "Weekly spreadsheets can become stale and do not enforce approvals in the quote flow."
       ]
     },
     {
-      "question": "Product and price data is owned by the ERP, but reps quote in Salesforce. How should product data be handled?",
+      "question": "The ERP owns product and price data, but sales reps create quotes in Salesforce. How should the architect handle that data?",
       "options": [
-        "Let the reps edit prices inside Salesforce and then copy them back into the ERP",
-        "Treat the ERP as source of truth and sync inwards",
-        "Ask reps to look up prices in the ERP for each quote",
-        "Keep two separate price lists and let reps choose"
+        "Let reps edit Salesforce prices and copy changes back to the ERP",
+        "Keep the ERP as the source of truth and sync the data into Salesforce",
+        "Require reps to check each price in the ERP while quoting",
+        "Keep two price lists and let reps decide which one to use"
       ],
       "correctAnswer": 1,
-      "explanation": "One system must own the data. If the ERP owns products and prices, Salesforce should receive copies and not change them.",
+      "explanation": "The ERP owns these records, so Salesforce should receive synchronized data for quoting rather than becoming a second owner.",
       "whyWrong": [
-        "Two-way editing causes conflicts and makes it unclear which price is right.",
-        "Looking up each price by hand is slow and causes mistakes.",
-        "Two price lists will drift apart and confuse everyone."
+        "Allowing edits in both systems creates conflicting values and unclear ownership.",
+        "Manual lookups slow quoting and can still lead to entry errors.",
+        "Two lists create uncertainty about which price is valid."
       ]
     },
     {
-      "question": "When a rep builds a quote, they must see live stock levels from the ERP before promising a delivery date. Which pattern fits?",
+      "question": "While preparing a quote, a rep must check current ERP stock before promising a delivery date. Which integration pattern fits?",
       "options": [
-        "A real-time request and reply call to the ERP",
-        "A Platform Event published when the quote is saved",
-        "A nightly batch sync of stock levels",
-        "A weekly export of stock data"
+        "Real-time ERP stock check",
+        "Publish a Platform Event after the quote is saved",
+        "Use the previous night’s stock batch",
+        "Send a weekly stock export to Salesforce"
       ],
       "correctAnswer": 0,
-      "explanation": "The rep is waiting for the answer to make a promise, so a real-time call that returns current stock is the right fit.",
+      "explanation": "The rep needs current stock before making a commitment, so a synchronous request and response fits the decision.",
       "whyWrong": [
-        "A Platform Event doesn't return an answer to the rep.",
-        "Nightly data can be hours out of date.",
-        "Weekly data is far too old for delivery promises."
+        "An event after saving the quote does not return stock while the rep is making the decision.",
+        "Nightly data may be too old for a live availability check.",
+        "A weekly export is even less current and cannot answer the immediate question."
       ]
     },
     {
-      "question": "Several systems (ERP, billing, warehouse and a data lake) all need to know when an order is placed in Salesforce. What is the best design?",
+      "question": "The ERP, billing platform, warehouse, and data lake all need to know when Salesforce places an order. What should the architect use?",
       "options": [
-        "A nightly CSV export to each system",
-        "Four separate Apex callouts in the order trigger",
-        "Publish an event when an order is placed",
-        "Each system calls Salesforce every minute to check for new orders"
+        "Send each system a nightly CSV file",
+        "Add four separate callouts to the order trigger",
+        "Publish an event when the order is placed",
+        "Have each system poll Salesforce every minute"
       ],
       "correctAnswer": 2,
-      "explanation": "Publishing one event lets every system react on its own. Salesforce doesn't need to know who is listening, and new subscribers can be added later.",
+      "explanation": "One order event can notify multiple subscribers. New systems can listen without adding another direct call to the order transaction.",
       "whyWrong": [
-        "Nightly exports are slow and need one integration per system.",
-        "Four callouts tie Salesforce to every system and fail if any one is down.",
-        "Constant polling wastes API calls and adds delay."
+        "A nightly file delays notification and may not meet downstream needs.",
+        "Four synchronous callouts couple the order transaction to every receiver.",
+        "Frequent polling adds load and makes every receiving system manage its own checks."
       ]
     },
     {
-      "question": "Partner companies log in to an Experience Cloud site to see their own orders. A partner must never see another partner's orders. What is the main design concern?",
+      "question": "Partner companies use Experience Cloud to view their orders. What is the key security design requirement?",
       "options": [
-        "Sharing so external users see only their account",
-        "How many reports the partners can run",
-        "The page layout that is used by the internal users of the system",
-        "The colour scheme of the site"
+        "Restrict each partner to its own account’s records",
+        "Limit how many reports partners can run",
+        "Use the internal users’ page layout for every partner",
+        "Choose a different color scheme for each company"
       ],
       "correctAnswer": 0,
-      "explanation": "With many companies in one org, the sharing model is what keeps each partner's data separate. External defaults should be private, then opened up per account.",
+      "explanation": "External sharing must keep each partner’s accounts and orders private from other companies.",
       "whyWrong": [
-        "Report counts don't control record access.",
-        "Internal page layouts don't affect what partners can see.",
-        "Branding doesn't affect who can see data."
+        "Report limits do not define which records a partner can access.",
+        "Page layouts control fields and presentation, not record-level access.",
+        "Brand colors do not enforce data separation."
       ]
     },
     {
-      "question": "A B2B company wants a single view of each customer, but customer data sits in Salesforce, the ERP, a marketing tool and a support system. The core org shouldn't store everything. What fits?",
+      "question": "Customer details are spread across Salesforce, an ERP, a marketing system, and support software. The core org should not hold all source records. What can provide a unified customer view?",
       "options": [
-        "Ask each team to update all four systems by hand",
-        "Use Data Cloud to unify the customer profiles",
-        "Pick one system and delete the others",
-        "Copy every system's data into custom objects"
+        "Ask staff to update all four systems by hand",
+        "Use Data Cloud to unify customer profiles from the sources",
+        "Delete all but one of the source systems",
+        "Copy every source record into custom CRM objects"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud is designed to bring customer data from many sources together into unified profiles, without loading it all into the core CRM objects.",
+      "explanation": "Data Cloud can bring data from multiple sources together into unified profiles without requiring every record to be stored in core CRM objects.",
       "whyWrong": [
-        "Manual updates in four systems never stay consistent.",
-        "Deleting systems that teams depend on isn't realistic.",
-        "Copying everything into custom objects bloats the org and is hard to keep in sync."
+        "Manual updates are costly and can leave the systems inconsistent.",
+        "Removing systems does not address the need to use their business functions and data.",
+        "Copying all source data into custom objects would add the storage burden the company wants to avoid."
       ]
     },
     {
-      "question": "Where should an architect start when designing a new B2B solution?",
+      "question": "Where should an architect begin when planning a new B2B solution?",
       "options": [
-        "Mapping the process and its pain points",
-        "Designing the page layouts",
-        "Writing the integration code",
-        "Choosing which of the Salesforce licences to buy"
+        "Map the process and pain points",
+        "Design the page layouts",
+        "Write the integration code",
+        "Choose Salesforce licenses"
       ],
       "correctAnswer": 0,
-      "explanation": "The process tells you what needs solving and which cloud or system should own each step. Products come after that.",
+      "explanation": "Understanding the process and its problems helps determine which capabilities and systems are needed.",
       "whyWrong": [
-        "Page layouts are a detail that depends on the process.",
-        "Code comes much later, after the design is agreed.",
-        "Licences depend on the design, so picking them first is backwards."
+        "Page layouts come after the user and process needs are understood.",
+        "Integration code depends on decisions about the process and systems.",
+        "Licensing should follow the solution requirements, not drive discovery."
       ]
     },
     {
-      "question": "An order is captured in Salesforce, fulfilled in the ERP and then invoiced. Which statement is the best design principle?",
+      "question": "Salesforce captures an order, the ERP fulfills it, and billing creates the invoice. What design principle helps keep the process clear?",
       "options": [
-        "Orders should be re-entered by hand in each system",
-        "Order data should only ever exist in Salesforce",
-        "Each step should have a clear owning system",
-        "Every system should be able to edit every order field"
+        "Re-enter the order by hand in each system",
+        "Keep order information only in Salesforce",
+        "Give each step a clear owning system",
+        "Let every system edit every order field"
       ],
       "correctAnswer": 2,
-      "explanation": "Clear ownership per step, linked by shared IDs, avoids conflicting edits and makes it easy to trace an order across systems.",
+      "explanation": "Clear ownership for each step reduces conflicting updates and makes the order easier to trace across systems.",
       "whyWrong": [
-        "Re-entering data by hand causes errors and delay.",
-        "The ERP needs the order to fulfil and invoice it.",
-        "Letting every system edit everything causes conflicts."
+        "Manual re-entry increases delay and data entry errors.",
+        "The ERP and billing system also need the order data to complete their work.",
+        "Allowing all systems to change every field creates conflicts over which value is correct."
       ]
     },
     {
-      "question": "A global B2B company stores customer data for EU customers. What must the architect consider?",
+      "question": "A global B2B company handles personal data for customers in the EU. What must the architect include in the design?",
       "options": [
-        "Only the speed of the website",
-        "Only the number of licences",
-        "Only the language of the user interface",
-        "Data privacy rules such as GDPR"
+        "Website performance alone",
+        "The number of user licenses alone",
+        "The interface language only",
+        "Privacy requirements such as GDPR"
       ],
       "correctAnswer": 3,
-      "explanation": "Personal data of EU customers falls under GDPR. The design must handle consent, data access requests and where the data is held.",
+      "explanation": "The solution must account for privacy obligations, including consent, data access requests, and where personal data is stored and processed.",
       "whyWrong": [
-        "Speed matters, but it doesn't address legal duties.",
-        "Licence counts don't cover privacy.",
-        "Translation is useful, but it isn't a privacy control."
+        "Performance alone does not address legal handling of personal data.",
+        "License counts do not determine privacy controls.",
+        "Language settings do not satisfy privacy requirements."
       ]
     },
     {
-      "question": "A programme has six delivery teams. Teams keep making conflicting design choices. What should the architect set up?",
+      "question": "Six delivery teams are making conflicting architecture choices. What governance step should the architect recommend?",
       "options": [
-        "Let each team decide on its own",
-        "A design authority with standards and review",
-        "A rule stating that only one of the teams may work on it at a time",
-        "One huge release every year"
+        "Allow each team to set its own standards",
+        "Set up a design authority and shared standards",
+        "Stop all but one team from working",
+        "Combine all work into one annual release"
       ],
       "correctAnswer": 1,
-      "explanation": "A design authority and shared standards keep decisions consistent while teams work in parallel.",
+      "explanation": "A design authority and shared standards help teams make consistent decisions while continuing work in parallel.",
       "whyWrong": [
-        "Working in isolation is what is causing the conflicts.",
-        "Only one team at a time would make delivery far too slow.",
-        "Yearly releases make each release riskier and slow down value."
+        "Independent standards can increase inconsistency across teams.",
+        "Stopping all but one team unnecessarily blocks parallel delivery.",
+        "One annual release can delay value and does not resolve design decisions during delivery."
       ]
     },
     {
-      "question": "Customers keep phoning support to ask about order status and download invoices. What is the best way to cut these calls?",
+      "question": "Customers call support to ask about order status and download invoices. What solution could reduce these calls?",
       "options": [
-        "Send each of the customers a spreadsheet once every week",
+        "Email each customer a spreadsheet every week",
         "Hire more support agents",
-        "Turn off the support phone line",
-        "A self-service portal for orders and invoices"
+        "Close the support phone line",
+        "Provide a self-service portal for orders and invoices"
       ],
       "correctAnswer": 3,
-      "explanation": "A self-service portal through Experience Cloud or B2B Commerce lets customers check orders and invoices themselves at any time.",
+      "explanation": "A portal through Experience Cloud or B2B Commerce lets customers find order and invoice information themselves.",
       "whyWrong": [
-        "Spreadsheets go out of date and still cause questions.",
-        "More agents handle the same calls at higher cost.",
-        "Turning off support harms customers."
+        "Weekly spreadsheets become outdated and make customers depend on staff.",
+        "More agents address call volume without letting customers self-serve.",
+        "Closing the support line removes help instead of solving the information need."
       ]
     },
     {
-      "question": "A business sponsor asks for a custom-built quoting engine. Standard CPQ meets 90% of the requirements. What should the architect recommend?",
+      "question": "A sponsor requests a custom quoting engine, but standard CPQ meets 90% of the requirements. What should the architect recommend?",
       "options": [
-        "Use standard CPQ and cover the rest simply",
-        "Wait a year for new features",
-        "Use two separate quoting tools alongside one another",
-        "Build the custom engine"
+        "Use standard CPQ and extend it for remaining needs",
+        "Delay the project for a year in case new features arrive",
+        "Run two quoting tools side by side",
+        "Build a separate custom quoting engine"
       ],
       "correctAnswer": 0,
-      "explanation": "Standard features are cheaper to build, run and upgrade. The gap can often be closed with configuration or a small extension.",
+      "explanation": "Standard CPQ covers most of the need. A limited extension or process adjustment is usually simpler to maintain than a separate engine.",
       "whyWrong": [
-        "Waiting delays value when most needs are already met.",
-        "Two tools confuse users and duplicate data.",
-        "A custom engine is costly to build and maintain for a small gain."
+        "Waiting does not address the remaining requirement or provide a current solution.",
+        "Two tools create duplicate processes and make quote management harder.",
+        "A separate engine adds cost and ongoing maintenance for needs mostly covered by CPQ."
       ]
     },
     {
-      "question": "Price list updates for 200,000 products come from the ERP once a night. Which approach fits?",
+      "question": "The ERP sends a nightly price update for 200,000 products. Which approach is suitable?",
       "options": [
-        "A real-time callout for each product",
-        "A Platform Event per product",
-        "Batch load with Bulk API",
-        "Manual entry by the product team"
+        "Make one real-time callout per product",
+        "Publish a Platform Event for every product",
+        "Use a batch load with Bulk API",
+        "Ask the product team to enter every price manually"
       ],
       "correctAnswer": 2,
-      "explanation": "Large, scheduled loads are what Bulk API is built for. It is efficient and uses few API calls.",
+      "explanation": "Bulk API is designed to move large data volumes efficiently in scheduled loads.",
       "whyWrong": [
-        "200,000 single calls would be slow and use up API limits.",
-        "Events per product add overhead for a simple nightly load.",
-        "Manual entry at this scale is not realistic."
+        "A separate real-time call for every item adds avoidable overhead.",
+        "An event for each product is not the best fit for a large nightly bulk transfer.",
+        "Manual entry is too slow and error-prone at this scale."
       ]
     },
     {
-      "question": "A good design was delivered, but six months later few sales reps use it. What was most likely missed?",
+      "question": "A solution launched six months ago, but few sales reps use it. What was likely missing?",
       "options": [
-        "More custom code",
-        "A good many more fields added to the page",
-        "A bigger sandbox",
-        "Training, change management and adoption"
+        "Add more custom code to the solution",
+        "Add more page fields for the sales reps",
+        "Increase the sandbox capacity for the project",
+        "Plan training and adoption"
       ],
       "correctAnswer": 3,
-      "explanation": "Even good solutions fail without training and change management. Adoption should be planned from the start.",
+      "explanation": "Users need preparation and support to adopt a new process. Adoption planning should begin during delivery.",
       "whyWrong": [
-        "More code doesn't fix people not using the system.",
-        "Extra fields usually make adoption worse.",
-        "Sandbox size doesn't affect adoption."
+        "More code does not address whether users understand or accept the process.",
+        "Adding fields can make the experience more complex without helping adoption.",
+        "A larger sandbox does not improve user readiness."
       ]
     },
     {
-      "question": "The same customer appears in Salesforce and in the ERP with different IDs. How should the two be linked?",
+      "question": "The same customer exists in Salesforce and the ERP, but each system uses a different record ID. How should integrations match the records?",
       "options": [
-        "Match the records by customer name during a nightly batch job",
-        "Ask users to link them by hand",
-        "Store the ERP's ID in an external ID field in Salesforce",
-        "Keep them separate"
+        "Match them by customer name during nightly processing",
+        "Ask users to connect the records manually",
+        "Store the ERP key in Salesforce as an external ID",
+        "Keep the records unrelated"
       ],
       "correctAnswer": 2,
-      "explanation": "An external ID field holds the other system's key, so integrations can match and upsert records reliably.",
+      "explanation": "An external ID stores the other system’s key so integrations can reliably match and upsert the same customer.",
       "whyWrong": [
-        "Names change and are not unique, so name matching causes errors.",
-        "Linking by hand is slow and error-prone.",
-        "Unlinked records mean no single view of the customer."
+        "Names can change or be shared by different customers, so they are not a reliable key.",
+        "Manual linking does not scale and can lead to mismatches.",
+        "Leaving records unrelated makes synchronization and reporting harder."
       ]
     }
   ]

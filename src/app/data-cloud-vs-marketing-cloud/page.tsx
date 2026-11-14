@@ -44,19 +44,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Data Cloud and Marketing Cloud?',
-    answer: 'Data Cloud is Salesforce’s customer data platform (CDP), it unifies customer data from multiple sources (CRM, web, mobile, data warehouses) into a single customer profile with identity resolution and real-time data streaming. Marketing Cloud (Marketing Cloud Engagement / SFMC) is an email and digital marketing execution platform for sending campaigns, journeys, and automated messaging. Data Cloud feeds unified audience segments INTO Marketing Cloud for activation; Marketing Cloud is the channel for execution.',
+    answer: 'Data Cloud is Salesforce’s customer data platform (CDP). It brings together data from sources such as CRM, web, mobile, and data warehouses to create unified customer profiles through identity resolution and real-time data streaming. Marketing Cloud (Marketing Cloud Engagement / SFMC) is used to run email and digital marketing, including campaigns, journeys, and automated messages. Data Cloud can send audience segments to Marketing Cloud for activation.',
   },
   {
     question: 'Are Data Cloud and Marketing Cloud certifications related?',
-    answer: 'They are related but distinct. The Data Cloud Consultant certification covers data ingestion, identity resolution, calculated insights, data lake objects, and activation to channels like Marketing Cloud. Marketing Cloud certifications (Admin, Developer, Email Specialist, Marketing Consultant) cover campaign execution, email studio, automation studio, and AMPscript. A professional implementing a Data Cloud + Marketing Cloud stack ideally holds both certifications.',
+    answer: 'The certifications cover different work. Data Cloud Consultant covers data ingestion, identity resolution, calculated insights, data lake objects, and activating data in channels such as Marketing Cloud. Marketing Cloud certifications, including Admin, Developer, Email Specialist, and Marketing Consultant, cover campaign execution, Email Studio, Automation Studio, and AMPscript. Someone implementing both platforms may benefit from both certifications.',
   },
   {
     question: 'Is Data Cloud Consultant harder than Marketing Cloud certifications?',
-    answer: 'Data Cloud Consultant is considered harder than most Marketing Cloud certifications because it tests a more complex technical domain, data modelling, identity resolution, data streams, calculated insights with SQL, and activation configuration. Marketing Cloud certifications range from moderate (Admin, Email Specialist) to hard (Developer, requiring AMPscript and SSJS proficiency). Data Cloud Consultant has a 62% passing score, which is lower than most exams, reflecting its difficulty.',
+    answer: 'Data Cloud Consultant is considered harder than most Marketing Cloud certifications. It tests data modelling, identity resolution, data streams, calculated insights with SQL, and activation setup. Marketing Cloud exams range from moderate (Admin, Email Specialist) to hard (Developer, which requires AMPscript and SSJS). Data Cloud Consultant has a 62% passing score, lower than most exams.',
   },
   {
     question: 'Which should I pursue first: Data Cloud or Marketing Cloud?',
-    answer: 'Take Marketing Cloud certifications first if you work in campaign execution, email marketing operations, or Marketing Cloud administration. Take Data Cloud Consultant first if you implement CDP solutions, data architecture, or work on customer data unification projects. Many organisations are now implementing Data Cloud as the data foundation for Marketing Cloud activation, in that context, Data Cloud expertise is the higher-value and more strategically important credential.',
+    answer: 'Start with a Marketing Cloud certification if you work in campaign execution, email marketing operations, or Marketing Cloud administration. Start with Data Cloud Consultant if you implement CDP solutions, data architecture, or customer data unification projects. Many organizations use Data Cloud as the data foundation for Marketing Cloud activation, so Data Cloud skills may be especially relevant to that work.',
   },
 ]
 
@@ -74,10 +74,7 @@ export default function DataCloudVsMarketingCloudPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Data Cloud and Marketing Cloud are frequently confused because they both deal with customer data
-          and marketing. But they serve very different purposes: Data Cloud is the data unification layer;
-          Marketing Cloud is the campaign execution layer. Here is how their certifications compare
-          and how to choose the right path for your career.
+          Data Cloud and Marketing Cloud both involve customer data and marketing, but serve different purposes. Data Cloud brings data together; Marketing Cloud runs campaigns. Compare their certifications and choose a path that fits your work.
         </p>
       </header>
 
@@ -89,22 +86,22 @@ export default function DataCloudVsMarketingCloudPage() {
         <div className="grid sm:grid-cols-2 gap-6 text-sm">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
             <p className="font-semibold text-salesforce-dark mb-2">Salesforce Data Cloud</p>
-            <p className="text-gray-700 mb-2">A customer data platform (CDP) that ingests data from multiple sources, resolves customer identities across touchpoints, and creates unified customer profiles for real-time activation.</p>
+            <p className="text-gray-700 mb-2">A customer data platform (CDP) that collects data from multiple sources, matches customer identities across touchpoints, and creates unified profiles for real-time activation.</p>
             <ul className="space-y-1 text-gray-700">
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Data ingestion from CRM, web, mobile, data warehouses</li>
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Identity resolution and unified customer profiles</li>
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Calculated insights with SQL for audience intelligence</li>
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Activation to Marketing Cloud, Advertising, and other channels</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Collects data from CRM, web, mobile, and data warehouses</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Matches identities and creates unified customer profiles</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Uses SQL to calculate insights for audience planning</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Activates data in Marketing Cloud, advertising, and other channels</li>
             </ul>
           </div>
           <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-4">
             <p className="font-semibold text-emerald-700 mb-2">Marketing Cloud (SFMC)</p>
-            <p className="text-gray-700 mb-2">A multi-channel marketing automation platform for executing email campaigns, SMS, push notifications, journeys, and personalised digital experiences.</p>
+            <p className="text-gray-700 mb-2">A multi-channel marketing automation platform for email campaigns, SMS, push notifications, customer journeys, and personalized digital experiences.</p>
             <ul className="space-y-1 text-gray-700">
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Email Studio for campaign creation and sending</li>
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Journey Builder for multi-step lifecycle automation</li>
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Automation Studio for data processing workflows</li>
-              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />AMPscript and SSJS for dynamic content personalisation</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Create and send campaigns in Email Studio</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Build multi-step journeys in Journey Builder</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Use Automation Studio to process data</li>
+              <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" />Personalize content with AMPscript and SSJS</li>
             </ul>
           </div>
         </div>
@@ -172,27 +169,25 @@ export default function DataCloudVsMarketingCloudPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Certification Path to Choose?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Your choice should follow your current project work. The two platforms complement each other:
-          Data Cloud feeds segments to Marketing Cloud for activation, but the certifications target
-          different specialisations.
+          Choose based on your current projects. The platforms can work together: Data Cloud sends audience segments to Marketing Cloud for activation, but their certifications cover different specializations.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
             <p className="text-sm font-semibold text-salesforce-dark mb-2">Pursue Data Cloud Consultant If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>You implement CDP or data unification solutions</li>
-              <li>You work on data architecture or marketing data pipelines</li>
-              <li>Your clients want unified customer profiles across systems</li>
-              <li>You have SQL proficiency and data modelling experience</li>
+              <li>You work with data architecture or marketing data pipelines</li>
+              <li>Your clients need unified customer profiles across systems</li>
+              <li>You know SQL and data modelling</li>
             </ul>
           </div>
           <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-4">
             <p className="text-sm font-semibold text-emerald-700 mb-2">Pursue Marketing Cloud Certifications If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>You manage or configure Marketing Cloud campaigns</li>
-              <li>Your role is in email marketing or marketing operations</li>
-              <li>You write AMPscript or build automation workflows</li>
-              <li>You administer SFMC accounts and data extensions</li>
+              <li>You manage or configure campaigns in Marketing Cloud</li>
+              <li>You work in email marketing or marketing operations</li>
+              <li>You write AMPscript or build automations</li>
+              <li>You manage SFMC accounts and data extensions</li>
             </ul>
           </div>
         </div>
@@ -236,7 +231,7 @@ export default function DataCloudVsMarketingCloudPage() {
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Practice for Your Path</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Practice for Your Chosen Path</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/certifications/data-360-consultant#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Data Cloud Consultant Practice Questions <ArrowRight className="h-4 w-4" />

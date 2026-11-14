@@ -1,46 +1,46 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Agentforce Revenue Management Consultant exam for?",
+    "heading": "Who should take the Agentforce Revenue Management Consultant exam?",
     "personas": [
       {
         "label": "Product-to-Cash consultants",
-        "description": "You lead discovery and design for an Agentforce Revenue Management implementation, translating business needs into catalog, pricing, contract, order, asset, and invoice-management solutions."
+        "description": "You lead discovery and solution design for Revenue Management, mapping business needs to catalog, pricing, contracts, orders, assets, and invoices."
       },
       {
-        "label": "Revenue operations and implementation leads",
-        "description": "You coordinate stakeholders, scope, licenses, permissions, build, testing, deployment, and adoption for a revenue lifecycle project."
+        "label": "Revenue operations and delivery leads",
+        "description": "You coordinate scope, stakeholders, licenses, permissions, configuration, testing, deployment, and adoption for revenue projects."
       },
       {
         "label": "Salesforce solution consultants",
-        "description": "You configure product catalogs and pricing, contracts and orders, asset lifecycle, or invoice management on Salesforce’s current on-core revenue platform."
+        "description": "You implement product catalogs, pricing, contracts, orders, asset lifecycle, or invoice management on Salesforce’s current on-core platform."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "What Does the Agentforce Revenue Management Consultant Exam Cover?",
-    "summary": "Salesforce describes this credential for consultants with broad Product-to-Cash knowledge and hands-on experience with Agentforce Revenue Management on core. The exam checks platform capability and implementation judgment, from catalog and pricing design through contracts, orders, assets, and invoicing.",
+    "heading": "What does the Agentforce Revenue Management Consultant exam cover?",
+    "summary": "Salesforce positions this credential for consultants who understand the Product-to-Cash lifecycle and have hands-on experience with Agentforce Revenue Management on core. The exam covers platform capabilities and implementation decisions, from product catalogs and pricing through contracts, orders, assets, and invoices.",
     "bullets": [
-      "<strong>60 multiple-choice questions, plus up to five unscored questions</strong> in 105 minutes.",
-      "<strong>63% passing score</strong>, as listed in Salesforce’s current exam guide.",
-      "<strong>Seven exam objectives</strong>: platform concepts, implementation readiness, catalog management, Configure-Price-Quote, contracts and orders, asset management, and invoice management.",
-      "<strong>Design and delivery judgment</strong>: map customer requirements to platform capabilities, explain trade-offs, and plan implementation, testing, deployment, and adoption."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>63% to pass</strong>, which is 38 correct answers out of 60.",
+      "<strong>Seven objective areas:</strong> platform concepts, implementation readiness, catalog management, Configure-Price-Quote, contracts and orders, asset management, and invoice management.",
+      "<strong>Implementation judgement:</strong> Match customer needs to platform features and plan trade-offs, testing, deployment, and adoption."
     ],
-    "passRateGuidance": "Use Salesforce’s current exam guide to structure study by objective. Practise mapping business requirements to out-of-the-box capabilities, then explain the licenses, configuration, trade-offs, test plan, and adoption steps the solution needs."
+    "passRateGuidance": "Organize study around Salesforce’s current exam objectives. Practise matching a customer need to standard platform features, then identify the required licenses, configuration, trade-offs, testing, and adoption steps."
   },
   "examFormat": {
-    "heading": "Agentforce Revenue Management Consultant Exam Format",
-    "intro": "Salesforce lists 60 multiple-choice questions, up to five unscored questions, and 105 minutes. The current guide organizes tested knowledge into seven objective areas:",
+    "heading": "Agentforce Revenue Management Consultant exam format",
+    "intro": "Salesforce lists 60 scored questions, up to five unscored questions, and a 105-minute time limit. The exam covers seven objective areas:",
     "bestWayToPass": [
-      "<strong>Plan for implementation readiness:</strong> Review licenses, permission sets, feature prerequisites, stakeholder responsibilities, project scope, risk, testing, deployment, and adoption.",
-      "<strong>Design product catalogs:</strong> Know how catalog categories, product classifications, attributes, products, and bundles support customer requirements.",
-      "<strong>Configure products and pricing:</strong> Practise product configuration and validation, pricing procedures, and generating accurate quotes for a stated business case.",
-      "<strong>Connect the post-quote lifecycle:</strong> Study current Salesforce Contracts, Order Management, Asset Management, and Invoice Management capabilities and their role in Product-to-Cash delivery."
+      "<strong>Check implementation readiness:</strong> Review licenses, permission sets, prerequisites, roles, scope, risks, testing, deployment, and adoption.",
+      "<strong>Structure the product catalog:</strong> Understand how categories, classifications, attributes, products, and bundles support sales needs.",
+      "<strong>Configure products and pricing:</strong> Practise product configuration, validation, pricing procedures, and accurate quotes for specific business cases.",
+      "<strong>Follow the lifecycle after quoting:</strong> Study current Contracts, Order Management, Asset Management, and Invoice Management capabilities."
     ]
   },
   "certificationCard": {
     "code": "Agentforce Revenue Management Consultant",
-    "description": "The Salesforce Certified Agentforce Revenue Management Consultant exam validates the ability to scope, design, build, and deploy the Agentforce Revenue Management product on core across the Product-to-Cash lifecycle. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Agentforce Revenue Management Platform Concepts and Configure, Price, Quote (18% each).",
+    "description": "This credential covers implementing Agentforce Revenue Management across the Product-to-Cash lifecycle, including catalog, pricing, contracts, orders, assets, and invoices. The guide notes that up to five questions may be unscored. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Agentforce Revenue Management Platform Concepts and Configure, Price, Quote (18% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
@@ -58,59 +58,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Agentforce Revenue Management Consultant: Key Exam Concepts",
+    "h2": "Agentforce Revenue Management Consultant: key topics",
     "blocks": [
       {
-        "heading": "Platform Concepts and Implementation Readiness",
-        "body": "The current exam guide covers Agentforce Revenue Management capabilities, its core data model, constraints, and trade-offs. Implementation readiness includes checking required licenses, permission sets, and feature prerequisites; assigning stakeholder responsibilities; creating scope and project plans; identifying risks; and planning build, test, deployment, and adoption. It also expects basic awareness of Flow, Lightning page components, Context Service, OmniStudio, Business Rules Engine, and APIs."
+        "heading": "Platform knowledge and implementation readiness",
+        "body": "The current exam guide covers Revenue Management capabilities, its core data model, constraints, and trade-offs. Readiness includes checking licenses, permission sets, and feature prerequisites; assigning stakeholder responsibilities; setting project scope; identifying risks; and planning build, test, deployment, and adoption. Candidates should also understand the basic roles of Flow, Lightning page components, Context Service, OmniStudio, Business Rules Engine, and APIs."
       },
       {
-        "heading": "Catalog Management and Product Configuration",
-        "body": "Catalog Management organizes product information as a reusable source for selling. Salesforce preparation material covers product categories, classifications, attributes, products, and bundles. In the product-configuration objective. Use the Product Configurator to customize product components and attributes, validate a configuration, and select out-of-the-box functionality that meets the stated requirement. See Salesforce’s [Product Catalog Management module](https://trailhead.salesforce.com/content/learn/modules/product-catalog-management-with-revenue-cloud) for product and bundle coverage."
+        "heading": "Catalog and product configuration",
+        "body": "Catalog Management organizes reusable product information. Salesforce preparation material covers categories, classifications, attributes, products, and bundles. Product configuration questions may ask how the Product Configurator changes product components or attributes and validates the result. Select standard functionality that meets the stated need. See Salesforce’s [Product Catalog Management module](https://trailhead.salesforce.com/content/learn/modules/product-catalog-management-with-revenue-cloud) for learning material about products and bundles."
       },
       {
-        "heading": "Pricing and Quote Design",
-        "body": "The Configure, Price, Quote objective asks candidates to use the Product Configurator and configure pricing procedures for customer-specific business cases. A consultant should translate requirements into an accurate quote, explain the selected pricing solution, and identify when an API or customization is needed. Salesforce’s current preparation trail includes Salesforce Pricing, Price Management, Advanced Price Management, and Transaction Management."
+        "heading": "Pricing and quote design",
+        "body": "The Configure-Price-Quote objective covers the Product Configurator and pricing procedures for customer-specific cases. Translate the requirements into an accurate quote, explain the chosen pricing approach, and identify when an API or customization is needed. Salesforce’s current preparation trail includes Salesforce Pricing, Price Management, Advanced Price Management, and Transaction Management."
       },
       {
-        "heading": "Contracts, Orders, and Asset Lifecycle",
-        "body": "The exam guide treats Salesforce Contracts and Order Management as separate objectives and also tests Asset Management. Salesforce preparation material includes digital contract management, order orchestration, and managing assets across the customer relationship. In a solution scenario, identify the out-of-the-box contract, order, or asset capability that fits the required process, then account for its implementation and lifecycle implications."
+        "heading": "Contracts, orders, and assets",
+        "body": "The exam guide lists Contracts and Orders as an objective area and also tests Asset Management. Preparation covers digital contract management, order orchestration, and managing assets through the customer relationship. For each scenario, choose the standard contract, order, or asset capability that fits and consider the implementation and lifecycle needs."
       },
       {
-        "heading": "Invoice and Usage Management",
-        "body": "Invoice Management is an explicit current exam objective. The official preparation trail covers billing basics, automating invoices, managing payments and credits, and tracking billing data. It also introduces Usage Management for modeling and tracking usage-based products and preparing usage data for invoicing. Match the capability to the business’s billing and usage requirement rather than assuming a particular legacy object flow."
+        "heading": "Invoices and usage-based products",
+        "body": "Invoice Management is a current exam objective. Salesforce preparation materials cover billing basics, invoice automation, payment and credit management, and billing data. Usage Management covers modeling and tracking usage-based products and preparing usage data for invoicing. Match the feature to the billing or usage requirement rather than assuming a legacy object flow."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Prepare for the Agentforce Revenue Management Consultant Exam",
-    "intro": "Use the current Salesforce exam objectives to organize preparation around platform concepts, implementation readiness, catalog management, product configuration and pricing, contracts and orders, assets, and invoicing.",
+    "h2": "How to prepare for the Agentforce Revenue Management Consultant exam",
+    "intro": "Use Salesforce’s current objectives to plan study across platform concepts, readiness, catalog, configuration and pricing, contracts and orders, asset management, and invoicing.",
     "blocks": [
       {
-        "heading": "Start with implementation readiness",
-        "body": "For a customer scenario, identify the licenses, permission sets, prerequisites, stakeholders, scope, risks, and adoption work needed before deciding how to configure the solution."
+        "heading": "Confirm implementation readiness",
+        "body": "Identify required licenses, permission sets, feature prerequisites, stakeholders, scope, risks, and adoption needs before deciding what to configure."
       },
       {
-        "heading": "Translate catalog needs into product setup",
-        "body": "Map catalog requirements to product categories, classifications, attributes, products, and bundles. For configuration questions, explain how the Product Configurator customizes and validates product components."
+        "heading": "Map catalog needs to product setup",
+        "body": "Connect requirements to categories, classifications, attributes, products, and bundles. Know how Product Configurator changes and validates components."
       },
       {
-        "heading": "Choose pricing and quote capabilities",
-        "body": "Given customer-specific requirements, decide how to configure pricing procedures and generate an accurate quote. Be ready to state solution trade-offs and when to involve a developer for an API or customization."
+        "heading": "Build accurate pricing and quotes",
+        "body": "Choose pricing procedures for the business case. Explain trade-offs and recognize when an API or customization is needed."
       },
       {
-        "heading": "Trace the post-quote process",
-        "body": "Recognize where Salesforce Contracts, Order Management, Asset Management, and Invoice Management fit the customer’s Product-to-Cash requirements. Account for order fulfillment, post-sale asset lifecycle, invoicing, payments, and credits where relevant."
+        "heading": "Trace the lifecycle after the quote",
+        "body": "Place Contracts, Order Management, Asset Management, and Invoice Management in the Product-to-Cash flow. Account for fulfillment, asset lifecycle, invoices, payments, and credits as needed."
       },
       {
-        "heading": "Plan delivery and prove the design",
-        "body": "A complete solution includes stakeholder alignment, a project plan, risk mitigation, testing, deployment, and adoption. Practise explaining why the chosen out-of-the-box capability fits the business requirement and what constraints remain."
+        "heading": "Plan and explain delivery",
+        "body": "Include stakeholder alignment, scope, risk, testing, deployment, and adoption. Be ready to explain why the selected standard capability fits and what constraints remain."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Build on your Revenue Cloud knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -166,103 +166,103 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which sequence best describes the Product-to-Cash lifecycle covered by Agentforce Revenue Management?",
+      "question": "Which sequence best represents the Product-to-Cash scope of Agentforce Revenue Management?",
       "options": [
-        "Only marketing",
-        "Only the management of the sales pipeline itself",
-        "Catalog, pricing, contracts, orders, assets, invoicing",
-        "Only service case management"
+        "Marketing journeys, email engagement, and lead nurturing",
+        "Opportunity pipeline management from qualification through close",
+        "Catalog, pricing, contracts, orders, assets, and invoices",
+        "Service case routing and customer support operations"
       ],
       "correctAnswer": 2,
-      "explanation": "Salesforce describes the credential as spanning Product-to-Cash and its guide includes catalog, Configure-Price-Quote, contracts and orders, asset management, and invoice management.",
+      "explanation": "The current exam objectives cover product catalog, Configure-Price-Quote, contracts and orders, assets, and invoice management.",
       "whyWrong": [
-        "Marketing alone does not cover the Product-to-Cash objectives.",
-        "The exam includes capabilities beyond the sales pipeline.",
-        "Service case management is not the lifecycle described in the current exam objectives."
+        "Marketing alone does not span Product-to-Cash.",
+        "The exam covers more than opportunity pipeline management.",
+        "Service case management is not among the Product-to-Cash objectives listed."
       ]
     },
     {
-      "question": "What does the current Agentforce Revenue Management Consultant credential validate?",
+      "question": "What does the current Agentforce Revenue Management Consultant credential assess?",
       "options": [
-        "Marketing campaign design and execution",
-        "Slack workspace administration only",
-        "Visual design of CRM pages only",
-        "Scoping, designing, building"
+        "Marketing campaign design and email delivery",
+        "Administration of Slack workspaces and permissions",
+        "Visual styling of CRM pages and reports only",
+        "Implementing the on-core Product-to-Cash lifecycle"
       ],
       "correctAnswer": 3,
-      "explanation": "Salesforce’s current exam guide describes the credential as validating the ability to scope, design, build, and deploy the on-core product across Product-to-Cash.",
+      "explanation": "Salesforce describes the role as implementing the on-core Revenue Management platform across Product-to-Cash.",
       "whyWrong": [
-        "Email marketing is a separate credential area.",
-        "Slack administration is a separate product specialty.",
-        "Page configuration is one platform capability, not the full consultant role."
+        "Marketing is a different product area.",
+        "Slack administration is a separate specialty.",
+        "Page design alone is much narrower than the consultant role."
       ]
     },
     {
-      "question": "Which set best matches the current Agentforce Revenue Management exam scope?",
+      "question": "Which group of capabilities most closely matches the exam objectives?",
       "options": [
-        "Catalog, configuration, pricing, orders, assets, invoices",
-        "Only the legacy Salesforce CPQ product rule engine",
-        "Only Marketing Cloud journeys",
-        "Only Sales Cloud opportunities"
+        "Catalog, pricing, contracts, orders, assets, and invoices",
+        "Legacy CPQ product rules without the wider lifecycle",
+        "Marketing Cloud journeys and subscriber messaging",
+        "Sales Cloud opportunity tracking from lead to close"
       ],
       "correctAnswer": 0,
-      "explanation": "Salesforce’s current exam guide lists catalog management, Configure-Price-Quote, contracts and orders, asset management, and invoice management as exam objectives.",
+      "explanation": "The exam spans catalog management, Configure-Price-Quote, contracts and orders, asset management, and invoice management.",
       "whyWrong": [
-        "The current exam is broader than legacy CPQ product rules.",
-        "Marketing Cloud journeys are outside these listed objectives.",
-        "Opportunities alone do not cover the Product-to-Cash capabilities tested."
+        "The current scope is broader than legacy CPQ product rules.",
+        "Marketing Cloud journeys are outside the listed objectives.",
+        "Opportunity management alone does not cover Product-to-Cash."
       ]
     },
     {
-      "question": "Which capability in Agentforce Revenue Management supports modeling and tracking usage-based products for invoicing?",
+      "question": "Which capability helps model and track usage-based products for invoicing?",
       "options": [
         "Usage Management",
-        "Only Sales Cloud forecasting",
+        "Sales Cloud forecasting only",
         "Marketing Cloud Automation Studio",
         "Chatter"
       ],
       "correctAnswer": 0,
-      "explanation": "Salesforce’s preparation trail describes Usage Management as modeling, tracking, and managing usage-based products through invoice-ready summaries.",
+      "explanation": "Salesforce preparation materials describe Usage Management for modeling and tracking usage-based products and preparing data for invoicing.",
       "whyWrong": [
-        "Sales Cloud forecasting does not model usage measures for invoicing.",
+        "Forecasting does not model usage for invoice processing.",
         "Automation Studio is a Marketing Cloud tool.",
-        "Chatter is a collaboration feature, not a usage billing capability."
+        "Chatter supports collaboration, not usage billing."
       ]
     },
     {
-      "question": "Which capability organizes products and bundles using catalog categories and classifications?",
+      "question": "Which capability organizes products and bundles with categories and classifications?",
       "options": [
-        "Only invoice payment processing",
+        "Invoice payment processing only",
         "Product Catalog Management",
-        "Salesforce Setup Audit Trail",
+        "Setup Audit Trail",
         "Email Studio"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce’s Product Catalog Management learning module covers organizing catalogs, products, and bundles with categories and classifications.",
+      "explanation": "Product Catalog Management organizes product and bundle information using categories and classifications.",
       "whyWrong": [
-        "Invoice payment processing happens later in the revenue lifecycle.",
-        "Setup Audit Trail records administrative changes and does not manage products.",
-        "Email Studio is part of Marketing Cloud and does not manage the Revenue Management catalog."
+        "Payment processing is a later billing activity.",
+        "Setup Audit Trail logs administrative configuration changes.",
+        "Email Studio is unrelated to the product catalog."
       ]
     },
     {
-      "question": "In Agentforce Revenue Management, what does the Product Configurator help a consultant do?",
+      "question": "What can the Product Configurator help a consultant do?",
       "options": [
-        "Configure Salesforce email sends",
-        "Set the permission set assignments for all users",
-        "Customise components and attributes, then validate",
-        "Create dashboards without product data"
+        "Configure email journeys for customer engagement",
+        "Set access permissions for every Salesforce user",
+        "Configure components and attributes, then validate",
+        "Create dashboards without using product data"
       ],
       "correctAnswer": 2,
-      "explanation": "Salesforce’s current exam guide includes using the Product Configurator to customize product components and attributes and validate a product configuration.",
+      "explanation": "The current exam guide includes configuring product components and attributes and validating the configuration.",
       "whyWrong": [
         "Email sends are outside product configuration.",
-        "Permission sets are part of platform readiness, not product configuration.",
-        "Dashboards are not the Product Configurator’s purpose."
+        "Permission sets are part of implementation readiness, not product configuration.",
+        "Dashboard design is not the Product Configurator’s purpose."
       ]
     },
     {
-      "question": "Which capability should a consultant consider for managing digital customer agreements in the Product-to-Cash process?",
+      "question": "Which capability should a consultant consider for managing digital customer agreements?",
       "options": [
         "Marketing Cloud Automation Studio",
         "Setup Audit Trail",
@@ -270,139 +270,219 @@
         "Chatter"
       ],
       "correctAnswer": 2,
-      "explanation": "Salesforce’s preparation trail includes Salesforce Contracts Foundations and digital contract management as part of the revenue management implementation path.",
+      "explanation": "Salesforce preparation material includes contract foundations and digital contract management in the Revenue Management learning path.",
       "whyWrong": [
-        "Automation Studio is a Marketing Cloud tool.",
-        "Setup Audit Trail records administrative changes; it does not manage customer agreements.",
-        "Chatter is a collaboration feature, not contract management."
+        "Automation Studio is for marketing automation.",
+        "Setup Audit Trail records configuration changes.",
+        "Chatter is a collaboration tool, not a contract capability."
       ]
     },
     {
-      "question": "Which statement best describes Usage Management in the current Revenue Management preparation material?",
+      "question": "What is the role of Usage Management in the current preparation material?",
       "options": [
-        "It creates marketing email journeys",
-        "It tracks usage products and summarises for invoicing",
-        "It assigns Salesforce user roles",
-        "It replaces product catalogue management altogether"
+        "Create email journeys for campaign audiences",
+        "Track usage-based products and prepare data for invoicing",
+        "Assign Salesforce roles and permission sets",
+        "Replace catalog management with a usage ledger"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce’s preparation trail describes Usage Management as modeling, tracking, and managing usage-based products through invoice-ready summaries.",
+      "explanation": "Usage Management models and tracks usage-based products and supports invoice-ready usage summaries.",
       "whyWrong": [
-        "Email journeys are unrelated to Revenue Management usage tracking.",
-        "User roles are part of implementation and access configuration.",
-        "Usage Management complements rather than replaces catalog management."
+        "Email journeys are not part of usage tracking.",
+        "User roles relate to access, not product usage.",
+        "Usage Management complements rather than replaces the catalog."
       ]
     },
     {
-      "question": "A customer needs orders fulfilled through defined orchestration processes after a sale. Which objective area is most relevant?",
+      "question": "A customer needs orders orchestrated for fulfillment after a sale. Which objective is most relevant?",
       "options": [
-        "Email Marketing Best Practices",
-        "Subscriber Data Management",
+        "Email marketing",
+        "Subscriber data management",
         "Service Cloud Knowledge",
         "Order Management"
       ],
       "correctAnswer": 3,
-      "explanation": "The current exam guide includes Contracts and Orders, and the preparation trail covers order management and order orchestration for order fulfillment.",
+      "explanation": "The exam includes Contracts and Orders, and the learning path covers order orchestration and fulfillment.",
       "whyWrong": [
         "Email marketing is a separate product domain.",
-        "Subscriber data is a Marketing Cloud concern.",
-        "Knowledge articles are unrelated to order orchestration."
+        "Subscriber data is related to Marketing Cloud.",
+        "Knowledge articles do not manage order fulfillment."
       ]
     },
     {
-      "question": "What is a key part of implementation readiness for an Agentforce Revenue Management project?",
+      "question": "What belongs in implementation readiness for a Revenue Management project?",
       "options": [
-        "Choosing a CPQ price book before gathering requirements",
-        "Licences, prerequisites, scope and adoption plan",
-        "Assuming every customer uses the same product configuration",
-        "Skipping build and testing to shorten delivery"
+        "Choose pricing before requirements are understood",
+        "Confirm licenses, prerequisites, scope, and adoption",
+        "Assume a standard product setup for every customer",
+        "Skip testing to shorten implementation time"
       ],
       "correctAnswer": 1,
-      "explanation": "The current exam guide includes required licenses, permission sets, prerequisite feature toggles, stakeholder roles, scope and project planning, risk mitigation, testing, deployment, and adoption.",
+      "explanation": "Readiness includes licenses, permissions, feature prerequisites, roles, scope, risk, testing, deployment, and adoption.",
       "whyWrong": [
-        "The guide emphasizes readiness and customer requirements rather than assuming an implementation detail.",
-        "Solutions should translate customer requirements into appropriate capabilities.",
-        "The exam guide explicitly includes build, test, deployment, and adoption."
+        "Implementation details should follow requirements discovery.",
+        "Configuration should reflect the customer’s needs.",
+        "Testing is part of the delivery plan."
       ]
     },
     {
-      "question": "Which capability area is used to track products and services a customer has purchased after the sale?",
+      "question": "Which capability area represents products a customer owns after purchase?",
       "options": [
         "Asset Management",
-        "Product Catalog Management only",
-        "Business Rules Engine only",
+        "Product Catalog Management alone",
+        "Business Rules Engine alone",
         "Email Studio"
       ],
       "correctAnswer": 0,
-      "explanation": "Salesforce’s preparation trail includes Asset Lifecycle Management and describes managing assets to support post-sale customer relationships.",
+      "explanation": "Asset Management supports the lifecycle of products and services after a sale.",
       "whyWrong": [
-        "A catalog organizes products for selling; it does not represent the customer’s purchased asset lifecycle.",
-        "Business Rules Engine supports decision automation but is not the asset lifecycle capability.",
-        "Email Studio is a Marketing Cloud application."
+        "The catalog organizes products for sale; it does not track a customer’s purchased assets.",
+        "Business Rules Engine supports decisions but is not the asset lifecycle tool.",
+        "Email Studio is a Marketing Cloud product."
       ]
     },
     {
-      "question": "A customer needs accurate quotes for different business cases. Which approach is covered by the current Configure, Price, Quote objective?",
+      "question": "A customer needs accurate quotes for different business cases. What should the consultant configure?",
       "options": [
-        "Configure pricing procedures, then quote accurately",
-        "Use only invoice payment settings",
-        "Replace catalog attributes with free-text notes",
-        "Defer pricing decisions until after order fulfillment"
+        "Set pricing procedures for each business case",
+        "Configure only invoice payment options",
+        "Use free-text notes instead of product attributes",
+        "Wait until after fulfillment to set a product price"
       ],
       "correctAnswer": 0,
-      "explanation": "The current exam guide asks candidates to configure pricing procedures for customer-specific business cases and generate accurate pricing quotes.",
+      "explanation": "The Configure-Price-Quote objective includes configuring pricing procedures for specific cases and generating accurate quotes.",
       "whyWrong": [
-        "Invoice management is a later, separate objective.",
-        "The Product Configurator and catalog use structured product information.",
-        "Pricing and quote generation occur before downstream orders and fulfillment."
+        "Invoice management is a separate downstream objective.",
+        "Structured catalog information supports product configuration.",
+        "Pricing and quote generation happen before downstream fulfillment."
       ]
     },
     {
-      "question": "When should a consultant identify a need for an API or customization?",
+      "question": "When should an implementation use an API or customization?",
       "options": [
-        "For every single catalog item, regardless of the requirements",
-        "Whenever a user needs a permission set",
-        "To avoid discussing solution trade-offs",
-        "When out-of-the-box capability cannot meet the requirement"
+        "Customize each catalog item as the default approach",
+        "Request an API whenever access permissions change",
+        "Avoid discussing the design trade-offs with stakeholders",
+        "When standard features do not meet the requirement"
       ],
       "correctAnswer": 3,
-      "explanation": "The current exam guide expects candidates to identify when APIs or customizations are needed and describe the requirements to a developer.",
+      "explanation": "The guide expects candidates to recognize when an API or customization is needed and explain the requirement to a developer.",
       "whyWrong": [
-        "The guide emphasizes choosing capabilities based on the customer case, not custom development by default.",
-        "Permission sets are part of configuration and access readiness, not by themselves a reason for an API.",
-        "The guide expects consultants to articulate solution trade-offs."
+        "Custom development should be driven by requirements, not applied by default.",
+        "Permission sets alone do not require an API.",
+        "Consultants should explain trade-offs rather than avoid them."
       ]
     },
     {
-      "question": "What is the purpose of organizing a product catalog with categories, classifications, and attributes?",
+      "question": "Why use categories, classifications, and attributes in a product catalog?",
       "options": [
-        "To replace order management",
-        "To issue customer payments",
-        "To structure products and bundles for selling",
-        "To store the marketing email engagement metrics"
+        "Replace order management with catalog categories",
+        "Use the catalog to process invoice payments",
+        "Organize products and bundles for selling",
+        "Store marketing email performance in product attributes"
       ],
       "correctAnswer": 2,
-      "explanation": "Salesforce’s Product Catalog Management material covers organizing product and bundle information with categories, classifications, and attributes.",
+      "explanation": "These catalog structures organize products and bundles so they can be selected and configured for sale.",
       "whyWrong": [
-        "Order Management is a separate downstream capability.",
-        "Payment and invoice functions are part of Invoice Management.",
-        "Email engagement metrics belong to Marketing Cloud."
+        "Order Management is a separate lifecycle capability.",
+        "Payment processing falls under invoice management.",
+        "Email engagement data belongs to marketing tools."
       ]
     },
     {
-      "question": "Which delivery practice is explicitly included in Salesforce’s current Revenue Management consultant exam guide?",
+      "question": "Which delivery work is included in the current Revenue Management Consultant exam guide?",
       "options": [
-        "Skip user acceptance testing after configuration",
-        "Lead discovery, manage risk, test, deploy, drive adoption",
-        "Focus only on writing custom code",
-        "Avoid any stakeholder alignment once a quote has been generated"
+        "Skip testing once configuration is complete",
+        "Plan discovery, risks, testing, deployment, and adoption",
+        "Focus only on custom code",
+        "Stop stakeholder alignment after producing a quote"
       ],
       "correctAnswer": 1,
-      "explanation": "The current guide includes discovery and design, project planning, risk mitigation, stakeholder alignment, build, testing, deployment, and adoption.",
+      "explanation": "The guide includes discovery, project planning, risk mitigation, stakeholder alignment, build, testing, deployment, and adoption.",
       "whyWrong": [
-        "The preparation trail includes user acceptance testing, and the guide covers testing.",
-        "The guide expects basic API and customization awareness, not a code-only focus.",
-        "Stakeholder alignment and business value are explicitly part of the consultant role."
+        "Testing is part of the stated preparation scope.",
+        "The role includes platform configuration and business design, not only code.",
+        "Stakeholder alignment remains relevant throughout delivery."
+      ]
+    },
+    {
+      "question": "A company sells one service at different list prices in the US and UK. What should a consultant verify first?",
+      "options": [
+        "Asset lifecycle transaction rules",
+        "The order decomposition structure",
+        "The invoice document template",
+        "Price book entries by currency"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The entries must carry the correct list price and currency for the selling context.",
+      "whyWrong": [
+        "An asset transaction rule governs changes after the product is owned.",
+        "Order structure affects fulfillment after quoting.",
+        "An invoice template changes presentation after pricing."
+      ]
+    },
+    {
+      "question": "A router requires a compatible power supply. Sellers need immediate feedback when they choose the wrong one. Where should the rule run?",
+      "options": [
+        "During the invoice generation batch",
+        "During the order fulfillment request",
+        "During the asset renewal reminder",
+        "During product configuration on the quote"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A configuration rule validates the choices while the seller is building the bundle.",
+      "whyWrong": [
+        "Billing happens after the bundle has already been configured.",
+        "Fulfillment happens after the customer has placed the order.",
+        "A renewal reminder does not validate the initial configuration."
+      ]
+    },
+    {
+      "question": "A purchased subscription is eligible for an upgrade halfway through its term. Which record represents what the customer owns today?",
+      "options": [
+        "The current customer asset record",
+        "The reusable product catalog entry",
+        "The draft quote for the upgrade",
+        "The invoice from the initial sale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The asset represents the customer’s installed or subscribed product and supports lifecycle changes.",
+      "whyWrong": [
+        "The catalog entry defines what can be sold to customers generally.",
+        "The draft quote represents the proposed change.",
+        "The initial invoice records billing at a point in time."
+      ]
+    },
+    {
+      "question": "An approved order needs warehouse and field-installation work to run independently. Which capability coordinates the work?",
+      "options": [
+        "Quote document generation",
+        "Fulfillment orchestration",
+        "Invoice posting configuration",
+        "Catalog attribute inheritance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Orchestration models the fulfillment tasks and their dependencies after the sale.",
+      "whyWrong": [
+        "Quote documents present the proposed sale.",
+        "Invoice posting handles the financial document.",
+        "Attributes describe products and their configuration options."
+      ]
+    },
+    {
+      "question": "Usage events reach billing without customer identifiers. What should the implementation validate before generating invoices?",
+      "options": [
+        "How invoices are grouped by language, layout, and billing cycle",
+        "How selling prices are inherited across product categories",
+        "How each event is matched to its usage entitlement",
+        "How delivery orders are split across fulfillment sites"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Usage must resolve to the right customer and entitlement before rated charges can be billed reliably.",
+      "whyWrong": [
+        "Grouping affects invoice presentation and batching.",
+        "Product categories do not link metered activity to a subscriber.",
+        "Fulfillment routing does not assign billable usage."
       ]
     }
   ],

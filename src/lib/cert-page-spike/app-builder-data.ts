@@ -18,6 +18,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     bullets: [
       '<strong>60 multiple-choice questions</strong> in 105 minutes.',
       '<strong>73% passing score</strong>, as listed in the current exam guide.',
+      '<strong>Maintenance:</strong> complete the Trailhead maintenance module 3 times a year (Spring, Summer, and Winter).',
       '<strong>Scenario-based</strong>: questions can describe a business need and ask which declarative tool best meets it.',
       '<strong>No coding required</strong>: know what declarative tools can do and when a requirement may need code.',
     ],
@@ -59,7 +60,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   certificationCard: {
     code: 'DEV-402',
     description:
-      'Platform App Builder tests whether you can design, build and deploy custom Salesforce applications with declarative tools: the data model, Flow and business logic, Lightning App Builder, and deployment. The exam is 60 scored questions in 105 minutes, with a 73% pass mark, weighted towards Business Logic and Process Automation (32%) and Data Modeling and Management (20%).',
+      'Platform App Builder tests whether you can design, build and deploy custom Salesforce applications with declarative tools: the data model, Flow and business logic, Lightning App Builder, and deployment. Review Agentforce capabilities and licensing, AgentExchange alongside AppExchange, and Flow Approval Processes. The exam is 60 scored questions in 105 minutes, with a 73% pass mark, weighted towards Business Logic and Process Automation (32%) and Data Modeling and Management (20%).',
     examDetails: {
       questions: 60,
       passingScore: '73%',

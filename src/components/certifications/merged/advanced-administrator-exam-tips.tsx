@@ -36,19 +36,19 @@ export const faqItems = [
   },
   {
     question: 'What are the highest-weight Advanced Administrator exam sections?',
-    answer: 'Security and Access (20%) and Extending Custom Objects and Applications (18%) are the highest-weight sections, together accounting for 38% of the ADM-211 exam. Advanced Process Automation (15%) and Analytics: Reports and Dashboards (14%) round out the key study areas.',
+    answer: 'Security and Access and Process Automation each account for 20% of the listed outline. Objects and Applications accounts for 19%. Use the official guide to check the current weights before you book.',
   },
   {
     question: 'How hard is the Advanced Administrator exam compared to ADM-201?',
-    answer: 'ADM-211 is significantly harder than ADM-201. It tests complex multi-step scenarios involving combinations of security model configurations, advanced automation, and data management, not individual feature knowledge. Most candidates need at least 2 years of hands-on Salesforce administration experience before attempting ADM-211.',
+    answer: 'ADM-211 builds on administrator knowledge and asks you to apply security, automation, and data-management features to more complex requirements. Hands-on administration experience can help you prepare.',
   },
   {
     question: 'What is the best way to study for the Advanced Administrator exam?',
-    answer: 'Focus on complex security scenarios involving combinations of OWD, role hierarchy, sharing rules, permission sets, and field-level security applied simultaneously. Study advanced automation (complex Flow logic, Approval Processes with dynamic routing) and advanced reporting (joined reports, matrix reports, report formulas). Practice scenario questions, the exam describes a complex requirement and asks which combination of features solves it.',
+    answer: 'Practise security scenarios that involve object permissions, field access, and record sharing. Review Flow, approval processes, joined and matrix reports, then explain why each feature fits a requirement.',
   },
   {
     question: 'What concepts do most Advanced Administrator candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Advanced Administrator exam are: (1) Record-Triggered Flow: Before-Save vs After-Save vs Scheduled Paths; (2) Territory Management 2.0: Assignment Rules vs Sharing Rules; (3) Change Data Capture vs Platform Events: Choosing the Right Tool. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'Review when to use before-save, after-save, and scheduled flow paths; how territory assignments differ from sharing rules; and when Change Data Capture or Platform Events fit an integration.',
   },
   ...getConceptFaqs('advanced-administrator-exam-tips'),
 ]
@@ -78,31 +78,30 @@ export default function AdvancedAdministratorExamTipsContent() {
             <span className="font-bold text-salesforce-blue ml-4">20%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Extending Custom Objects and Applications</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+            <span className="font-medium text-gray-900">Objects and Applications</span>
+            <span className="font-bold text-salesforce-blue ml-4">19%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Advanced Process Automation</span>
-            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+            <span className="font-medium text-gray-900">Process Automation</span>
+            <span className="font-bold text-salesforce-blue ml-4">20%</span>
           </div>
           <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Analytics: Reports and Dashboards</span>
-            <span className="font-bold text-salesforce-blue ml-4">14%</span>
+            <span className="font-medium text-gray-900">Data and Analytics Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Security + Custom Objects + Automation = 53%. These three sections define the exam. Complex security scenarios are the most common failure point.</p>
+          <p className="text-xs text-gray-600 pt-1">Security, Objects and Applications, and Process Automation together make up 59% of the listed outline.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach ADM-211 Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          ADM-211 questions describe a complex business requirement and ask which combination of Salesforce features satisfies it.
-          Unlike ADM-201, the answer is rarely a single feature; it is often a combination of configurations working together.
+          Some questions describe a business need and ask you to select one or more features that meet it. Identify the required result and any constraints before comparing the options.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For complex security questions: identify all constraints simultaneously (what can this group see? what can they edit? do any subsets need exceptions?). Work through OWD → role → sharing rule → profile → permission set in that order.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: Flow is always the modern answer. Choose between Record-Triggered Flow (automated, no user interaction), Screen Flow (guided user input), and Scheduled Flow (time-based) based on the trigger described in the scenario.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For reporting questions: Joined reports combine multiple report types. Matrix reports show data by two dimensions. Summary reports group by one dimension. Formula fields in reports vs. summary formulas are frequently confused. Know the difference.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions, identify what users must see and edit. Check object and field permissions separately from record access, then consider any exceptions.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions, compare record-triggered, screen, and scheduled flows. Consider an approval process when people must review and approve a record.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For reporting questions, compare joined blocks, matrix groupings, and summary groupings. Review when to use a report formula or summary formula.</li>
         </ul>
       </section>
 
@@ -113,28 +112,26 @@ export default function AdvancedAdministratorExamTipsContent() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          ADM-211 requires 2+ years of real Salesforce administration experience. Candidates who attempt it
-          within 3-6 months of ADM-201 typically fail. The complex security and automation scenarios
-          are not learnable from study guides alone; you need to have faced these challenges in real orgs.
+          Hands-on administration can help you apply the concepts. Use timed practice sets to find weak areas, then build and test the relevant configurations in a suitable org.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Advanced Administrator Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Three Concepts to Compare</h2>
+        <p className="text-sm text-gray-600 mb-5">Review these three distinctions and practise choosing the feature that meets each requirement.</p>
         <div className="space-y-5">
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">1. Record-Triggered Flow: Before-Save vs After-Save vs Scheduled Paths</h3>
-            <p className="text-sm text-gray-700">Before-Save flows run before the record is committed; they can modify the triggering record without DML and cannot create related records. After-Save flows run after commit and can create/update related records but cost DML governor limits. Scheduled Paths run at a future date/time on records that meet criteria at that point. Candidates choose wrong path types for scenarios: before-save for creating child records (impossible), after-save for modifying the trigger record without DML (inefficient).</p>
+            <p className="text-sm text-gray-700">Before-save flows can update the triggering record efficiently. After-save flows can work with related records and perform actions that require a saved record. Scheduled paths run later according to their configured timing and conditions.</p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">2. Territory Management 2.0: Assignment Rules vs Sharing Rules</h3>
-            <p className="text-sm text-gray-700">Territory Management 2.0 controls which accounts and their related objects a user can access based on geographic or segment-based territory models. Sharing rules extend access horizontally between peers. Candidates answer territory management questions using sharing rule logic. Key distinction: territory models have states (Planning, Active, Archived) and run assignment rules to associate accounts to territories; sharing rules have no concept of model states.</p>
+            <p className="text-sm text-gray-700">Territory Management uses models and assignment rules to associate accounts with territories. Sharing rules grant record access to groups of users. Compare their purposes and review the planning, active, and archived model states.</p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">3. Change Data Capture vs Platform Events: Choosing the Right Tool</h3>
-            <p className="text-sm text-gray-700">Change Data Capture (CDC) streams granular record changes (create/update/delete/undelete) from Salesforce to external systems that subscribe via the API. Platform Events are custom event messages published and subscribed to within and outside Salesforce for event-driven architecture. Candidates answer &ldquo;stream Salesforce record changes to a data warehouse&rdquo; questions with Platform Events (wrong, that’s CDC) and &ldquo;trigger async workflows on new order events&rdquo; with CDC (wrong, that’s Platform Events).</p>
+            <p className="text-sm text-gray-700">Change Data Capture publishes supported record changes for subscribers. Platform Events carry custom event messages between publishers and subscribers. Decide whether the requirement is to follow record changes or publish a business event.</p>
           </div>
         </div>
       </section>

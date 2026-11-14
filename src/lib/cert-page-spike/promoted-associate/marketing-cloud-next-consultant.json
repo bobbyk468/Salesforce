@@ -1,48 +1,48 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Marketing Cloud Next Consultant exam for?",
+    "heading": "Who should take the Marketing Cloud Next Consultant exam?",
     "personas": [
       {
         "label": "Marketing Cloud Consultants",
-        "description": "Consultants who design data-first marketing solutions on Data 360 and advise clients on Marketing Cloud Next architecture and implementation."
+        "description": "You design marketing solutions with Data 360 and advise clients on Marketing Cloud Next."
       },
       {
         "label": "Marketing Cloud Engagement practitioners moving to Next",
-        "description": "Practitioners with Marketing Cloud Engagement experience who are migrating skills to the Data Cloud-native Marketing Cloud Next platform."
+        "description": "You work with Marketing Cloud Engagement and want to learn the Data Cloud-based Marketing Cloud Next platform."
       },
       {
         "label": "Data 360 / Agentforce implementers",
-        "description": "Consultants who orchestrate AI-driven campaigns through Agentforce and Flow on top of a unified Data 360 customer profile."
+        "description": "You build campaigns with Agentforce and Flow using a unified Data 360 customer profile."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Marketing Cloud Next Consultant Exam Hard?",
-    "summary": "The exam tests whether you can design data-first marketing solutions on Data 360, orchestrate AI-driven campaigns through Agentforce and Flow, and advise on Marketing Cloud Next architecture, not just operate the send tool.",
+    "heading": "Is the Marketing Cloud Next Consultant exam hard?",
+    "summary": "The exam tests how to design marketing solutions with Data 360, use Agentforce and Flow in campaigns, and advise clients on Marketing Cloud Next. It covers more than sending email.",
     "bullets": [
-      "<strong>60 scored questions</strong> plus up to five unscored questions that do not affect your result.",
-      "<strong>105 minutes</strong> and a <strong>72% passing score</strong>.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>72% to pass</strong>, which is 44 correct answers out of 60.",
       "<strong>Exam fee</strong>: US$200; retake fee: US$100, plus applicable taxes.",
       "<strong>No formal prerequisite</strong>, but hands-on Marketing Cloud Next implementation or administration experience is strongly recommended."
     ],
-    "passRateGuidance": "Book the exam once you can explain data modeling and segmentation on Data 360, consent management, journey design, and sending-domain setup for Marketing Cloud Next without defaulting to classic Marketing Cloud Engagement answers."
+    "passRateGuidance": "Before booking, make sure you can explain Data 360 data models and segments, consent, journey design, and sending-domain setup. Avoid relying only on classic Marketing Cloud Engagement methods."
   },
   "examFormat": {
-    "heading": "Marketing Cloud Next Consultant Exam Format Explained",
-    "intro": "The exam is a proctored, scenario-based multiple-choice and multiple-select test delivered online or at a test center.",
-    "scenarioPercent": "Expect scenario-based questions about setup and governance, data modeling and segmentation, journey design, sending domains and consent, and reporting on Marketing Cloud Next.",
+    "heading": "Marketing Cloud Next Consultant exam format",
+    "intro": "The proctored exam has multiple-choice and multiple-select questions. You can take it online or at a test center.",
+    "scenarioPercent": "Many questions describe setup, governance, data and segments, journeys, consent, sending domains, or reporting in Marketing Cloud Next.",
     "bestWayToPass": [
-      "<strong>Know setup and governance:</strong> org-level configuration, roles, and governance decisions specific to Marketing Cloud Next.",
-      "<strong>Master data modeling and segmentation:</strong> how Data 360 models customer data and how segments are built from it for targeting.",
-      "<strong>Understand consent management:</strong> how consent signals gate which channels and journeys a contact can receive.",
-      "<strong>Design journeys with Agentforce and Flow:</strong> know how AI-orchestrated campaign steps fit alongside traditional Flow-based journey logic."
+      "<strong>Learn setup and governance:</strong> Study org settings, user roles, and who can build segments and journeys.",
+      "<strong>Study Data 360 and segments:</strong> Learn how customer data is modeled and used to target contacts.",
+      "<strong>Understand consent:</strong> Know how consent affects which messages and journeys a contact can receive.",
+      "<strong>Use Agentforce and Flow appropriately:</strong> Learn when an adaptive AI step fits and when a clear, rules-based Flow is needed."
     ]
   },
-  "expertInsight": "Use Salesforce's official Marketing Cloud Next Consultant exam guide and the Trailhead prep trail (roughly 5,500 points) as the study scope. This is a newly launched 2026 credential built on Data Cloud, so don't assume classic Marketing Cloud Engagement study material covers the Data 360 data model, consent, or Agentforce-orchestration topics correctly.",
+  "expertInsight": "Use Salesforce’s official Marketing Cloud Next Consultant exam guide and Trailhead preparation trail to set your study scope. This 2026 credential is built on Data 360. Classic Marketing Cloud Engagement material may not cover its data model, consent, or Agentforce orchestration.",
   "certificationCard": {
     "code": "Marketing Cloud Next Consultant",
-    "description": "This exam tests your ability to design data-first marketing solutions on Data 360, orchestrate AI campaigns via Agentforce and Flow, and advise on Marketing Cloud Next architecture and implementation. The exam is 60 scored questions in 105 minutes, with a 72% pass mark.",
+    "description": "This exam tests how to design marketing solutions on Data 360, use Agentforce and Flow in campaigns, and advise on Marketing Cloud Next. It has 60 scored questions in 105 minutes and a 72% passing score. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Campaign Design, Flow Orchestration & Content (30%) and Data Modeling, Identity Resolution & Segmentation (25%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "72%",
@@ -63,49 +63,49 @@
     "blocks": [
       {
         "heading": "Setup and Governance",
-        "body": "Marketing Cloud Next is built directly on Data 360, so initial setup decisions (business unit structure, user roles, governance of who can build segments and journeys) have a bigger architectural impact than in classic Marketing Cloud Engagement, where data and sends lived in a more self-contained environment."
+        "body": "Marketing Cloud Next is built on Data 360. Early choices about business units, user roles, and who can build segments or journeys affect the wider solution. Set these boundaries to match how the client’s marketing teams work."
       },
       {
         "heading": "Data Modeling and Segmentation",
-        "body": "Segments are built against the unified Data 360 customer profile rather than a Marketing Cloud-only data extension. Consultants need to know how source data maps into that model and how segment logic reads from it."
+        "body": "Segments use the unified Data 360 customer profile rather than a Marketing Cloud-only Data Extension. Learn how source data maps to the profile and how segment rules use that data."
       },
       {
         "heading": "Consent Management",
-        "body": "Consent signals captured in Data 360 gate which channels and journeys a given contact is eligible for. A journey design that ignores current consent state, or relies on stale consent data, is a compliance and deliverability risk."
+        "body": "Data 360 consent signals control which channels and journeys a contact can use. Check the current consent state. Using old consent data or ignoring it can create compliance and delivery risks."
       },
       {
         "heading": "Journey Design with Agentforce and Flow",
-        "body": "Marketing Cloud Next lets Agentforce agents orchestrate parts of a campaign (such as content selection or send timing) alongside explicit Flow logic. Consultants should know where AI orchestration is appropriate versus where a deterministic Flow step is required."
+        "body": "Agentforce can handle adaptive campaign steps, such as choosing content. Flow is useful for clear, rules-based steps. Know when each approach fits."
       },
       {
         "heading": "Sending Domains and Deliverability",
-        "body": "Sending domain configuration (authentication, reputation, and domain setup) still determines inbox placement on Marketing Cloud Next, the same way it did on classic Marketing Cloud Engagement, even though the campaign orchestration layer has changed."
+        "body": "Sending domain setup and sender reputation affect inbox placement, just as they do in Marketing Cloud Engagement. The campaign tools have changed, but email deliverability still matters."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Marketing Cloud Next Consultant Exam",
-    "intro": "Most questions describe a client marketing scenario and ask you to choose the Data 360-native configuration, not the classic Marketing Cloud Engagement equivalent.",
+    "h2": "How to pass the Marketing Cloud Next Consultant exam",
+    "intro": "Use the product model in each scenario. Start with Data 360 for profile data and consent, then choose the journey or delivery feature that fits.",
     "blocks": [
       {
         "heading": "Default to Data 360, not Data Extensions",
-        "body": "If an answer choice describes a classic Marketing Cloud Engagement Data Extension pattern where a Data 360-native segment or calculated insight would apply instead, that classic-pattern answer is usually the trap."
+        "body": "Marketing Cloud Next uses Data 360 customer profiles. Do not assume a classic Marketing Cloud Engagement Data Extension is the right source."
       },
       {
         "heading": "Trace consent before trace content",
-        "body": "When a scenario asks why a contact didn't receive a message, check consent and eligibility signals before assuming it's a content or send-time issue."
+        "body": "If a contact did not receive a message, check consent and eligibility before checking content or send time."
       },
       {
         "heading": "Know when Agentforce orchestration is the better fit",
-        "body": "Agentforce fits well for adaptive, judgment-based steps (like picking the best-performing content variant); a strictly sequential, rules-based step is usually still a Flow concern."
+        "body": "Use Agentforce for adaptive choices, such as selecting content based on signals. Use Flow for steps with fixed, explicit rules."
       },
       {
         "heading": "Separate deliverability from targeting",
-        "body": "A low open rate is often a sending-domain/deliverability issue; a low relevant-audience size is a segmentation issue. Don't conflate the two when picking a fix."
+        "body": "A low open rate may point to sending-domain or reputation issues. A small eligible audience may point to segmentation. Check which problem the scenario describes."
       },
       {
         "heading": "Watch for Omni-Channel and Service Cloud crossover",
-        "body": "Some scenarios blend into Service Cloud or Omni-Channel considerations when a journey hands off to service; know the boundary between marketing orchestration and service-side execution."
+        "body": "If a journey hands a contact to Service Cloud, Omni-Channel handles the service-side routing. Keep marketing steps separate from service routing."
       }
     ]
   },
@@ -113,261 +113,377 @@
     "heading": "Next Consultant Certifications",
     "intro": "After this credential, round out your marketing and data consultant track:",
     "links": [
-      { "href": "/certifications/data-360-consultant", "label": "Data 360 Consultant" },
-      { "href": "/certifications/marketing-cloud-consultant", "label": "Marketing Cloud Engagement Consultant" },
-      { "href": "/certifications/crm-analytics-einstein-discovery-consultant", "label": "CRM Analytics and Einstein Discovery" },
-      { "href": "/marketing-cloud-certification-path", "label": "Marketing Cloud certification path" }
+      {
+        "href": "/certifications/data-360-consultant",
+        "label": "Data 360 Consultant"
+      },
+      {
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Engagement Consultant"
+      },
+      {
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery"
+      },
+      {
+        "href": "/marketing-cloud-certification-path",
+        "label": "Marketing Cloud certification path"
+      }
     ]
   },
   "tocSections": [
-    { "id": "exam-prep", "title": "Exam Prep Content" },
-    { "id": "key-concepts", "title": "Key Concepts" },
-    { "id": "scenario-tips", "title": "How to Pass" },
-    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
-    { "id": "practice-questions", "title": "Practice Questions" },
-    { "id": "more-questions", "title": "Get More Questions" },
-    { "id": "related-certs", "title": "Related Certifications" },
-    { "id": "faq", "title": "Exam FAQs" }
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
   ],
   "sampleQuestions": [
     {
-      "question": "A client asks why Marketing Cloud Next segments behave differently from the Data Extensions they used in classic Marketing Cloud Engagement. What is the core architectural reason?",
+      "question": "Why do Marketing Cloud Next segments differ from Data Extensions in Marketing Cloud Engagement?",
       "options": [
-        "Segments are stored in a spreadsheet instead of a database",
-        "Segments are built against the unified Data 360 customer profile rather than a Marketing-Cloud-only data store",
-        "Segments can no longer be filtered by any criteria",
-        "Segments require a separate paid add-on to function at all"
+        "They use the unified Data 360 profile",
+        "They are stored in Marketing Cloud data extensions",
+        "Segments cannot filter by attributes",
+        "They require a separate segmentation license"
       ],
-      "correctAnswer": 1,
-      "explanation": "Marketing Cloud Next segmentation reads from the unified Data 360 profile, which is why it behaves differently from a self-contained Data Extension model.",
+      "correctAnswer": 0,
+      "explanation": "Marketing Cloud Next segments use unified customer profiles from Data 360, while Engagement Data Extensions use a different data model.",
       "whyWrong": [
-        "Marketing Cloud Next data is managed through Data 360, not spreadsheets.",
-        "Segments can still be filtered with logic; the architecture change is about the underlying data source, not filtering capability.",
-        "Segmentation is core functionality, not a separate paid add-on."
+        "Marketing Cloud Next uses Data 360, not spreadsheets, to manage customer data.",
+        "Segments can still filter by criteria. The difference is the underlying data source.",
+        "Segmentation is part of the platform; it does not require a separate add-on."
       ]
     },
     {
-      "question": "A contact withdraws email consent, but a scheduled journey still shows them as eligible for tomorrow's send. What should the consultant check first?",
+      "question": "A contact withdrew email consent but is still eligible for tomorrow’s journey send. What should the consultant check?",
       "options": [
-        "The email subject line length",
-        "Whether the journey's eligibility check reads current consent state from Data 360 before sending",
-        "The sender's email signature",
-        "The number of images in the email template"
+        "Review the subject line and preheader",
+        "Recheck Data 360 consent",
+        "Check sender profile and signature",
+        "Check image rendering in email clients"
       ],
       "correctAnswer": 1,
-      "explanation": "If a contact who withdrew consent is still shown as eligible, the journey's eligibility logic likely isn't re-checking current consent state before the send.",
+      "explanation": "Check whether the journey reads the latest Data 360 consent status before sending.",
       "whyWrong": [
-        "Subject line length has no bearing on consent eligibility.",
-        "An email signature is a content detail, unrelated to consent-based eligibility.",
-        "Image count is a content/design detail, unrelated to whether a send should be gated by consent."
+        "Subject line length does not determine whether the contact has consented.",
+        "A sender signature does not control consent checks.",
+        "Image count does not determine whether a contact is eligible to receive the email."
       ]
     },
     {
-      "question": "A client wants an AI-driven step that picks the best-performing content variant for each contact in real time. Which approach fits best?",
+      "question": "A client wants AI to select the best content variant for each contact in real time. What fits?",
       "options": [
-        "A strictly sequential Flow with no decision logic",
-        "An Agentforce-orchestrated step that adapts content selection based on performance signals",
-        "A manually updated spreadsheet of content choices",
-        "Disabling personalization entirely"
+        "A sequential Flow with no decisions",
+        "A manual spreadsheet of content choices",
+        "Agentforce uses performance data",
+        "Turn personalization off while following the campaign consent and brand controls"
       ],
-      "correctAnswer": 1,
-      "explanation": "Adaptive, judgment-based content selection is exactly the kind of step Agentforce orchestration is designed for within Marketing Cloud Next journeys.",
+      "correctAnswer": 2,
+      "explanation": "Agentforce can use performance signals to choose a content variant for each contact.",
       "whyWrong": [
-        "A strictly sequential Flow with no decision logic can't adapt content choice based on performance, which is what's required here.",
-        "A manual spreadsheet can't operate in real time at scale for every contact.",
-        "Disabling personalization contradicts the stated goal of picking the best-performing variant per contact."
+        "A Flow with no decision logic cannot adapt the choice to performance signals.",
+        "A manual spreadsheet cannot make a real-time choice at scale.",
+        "Turning off personalization works against selecting a relevant variant for each contact."
       ]
     },
     {
-      "question": "Email open rates have dropped sharply even though the audience size and content are unchanged. What should the consultant investigate first?",
+      "question": "Open rates dropped, but audience and content stayed the same. What should the consultant check first?",
       "options": [
-        "The segmentation logic",
-        "Sending domain authentication and reputation",
-        "The journey's entry criteria",
-        "The content's font choice"
+        "Check whether audience segments changed",
+        "Check journey entry rules and timing",
+        "Check font rendering in major email clients",
+        "Check sender authentication and reputation"
       ],
-      "correctAnswer": 1,
-      "explanation": "A sharp, unexplained open-rate drop with stable audience and content points to a deliverability issue, most often sending domain authentication or reputation.",
+      "correctAnswer": 3,
+      "explanation": "When audience and content stay the same, check sending-domain authentication and sender reputation for a deliverability problem.",
       "whyWrong": [
-        "Segmentation logic affects who is targeted, not the inbox-placement problem described here where the audience is unchanged.",
-        "Entry criteria determine who enters the journey, not a deliverability drop given a stable audience.",
-        "Font choice is a cosmetic detail, not a cause of an open-rate collapse."
+        "Segmentation logic controls who is targeted, not whether messages reach inboxes.",
+        "Journey entry criteria control who enters the journey, not inbox placement.",
+        "Font choice can affect appearance, but it does not explain a deliverability drop."
       ]
     },
     {
-      "question": "A journey step hands a contact off to a live service conversation after they click a specific link. Which capability is primarily responsible for that handoff?",
+      "question": "A journey sends a contact to a live service conversation after a link click. What handles the handoff?",
       "options": [
+        "Omni-Channel routing",
         "A Marketing Cloud Next sending domain",
-        "Omni-Channel routing on the service side receiving the handoff",
         "A Data 360 segment definition",
         "A consent management policy"
       ],
-      "correctAnswer": 1,
-      "explanation": "Handing a contact from a marketing journey into a live conversation is a service-side routing concern, typically handled by Omni-Channel.",
+      "correctAnswer": 0,
+      "explanation": "Omni-Channel routing on the service side routes the contact to a live service conversation.",
       "whyWrong": [
-        "Sending domain configuration affects deliverability, not conversation routing.",
-        "A segment definition controls targeting, not live conversation handoff.",
-        "Consent policy gates eligibility for communications, not how a live handoff is routed."
+        "A sending domain affects email delivery, not service routing.",
+        "A segment selects an audience; it does not route a live conversation.",
+        "Consent rules control communication eligibility, not the handoff route."
       ]
     },
     {
-      "question": "Which statement best describes governance considerations when setting up Marketing Cloud Next for a large enterprise client?",
+      "question": "What governance setup suits a large enterprise using Marketing Cloud Next?",
       "options": [
-        "Governance only matters for small clients",
-        "Business unit structure and role-based access to segments and journeys should reflect the org's real marketing team boundaries",
-        "Every marketer should have unrestricted access to every segment",
-        "Governance settings cannot be changed after initial setup"
+        "Governance is only for small clients",
+        "Align units and access with teams",
+        "Give every marketer access to every segment",
+        "Governance settings are permanent after setup"
       ],
       "correctAnswer": 1,
-      "explanation": "Because Marketing Cloud Next governance decisions have a bigger architectural footprint on a Data 360-native platform, they should map to the client's real team and data-access boundaries.",
+      "explanation": "For a large enterprise, business unit structure and role-based access should match the real marketing teams.",
       "whyWrong": [
-        "Governance matters at any scale, but is especially important for large, multi-team enterprise clients.",
-        "Unrestricted universal access defeats the purpose of role-based governance.",
-        "Governance settings can generally be adjusted as the org evolves, they aren't fixed forever at initial setup."
+        "Governance matters at every size and is especially important for large teams.",
+        "Giving every marketer access defeats role-based controls.",
+        "Governance can be updated as the organization changes."
       ]
     },
     {
-      "question": "A consultant needs to combine purchase history, support case data, and web behavior into one profile to drive a segment. Where does this unification happen in Marketing Cloud Next?",
+      "question": "Where does Marketing Cloud Next combine purchases, support cases, and web activity into one profile for segmentation?",
       "options": [
-        "Inside a single Marketing Cloud Engagement Data Extension",
-        "In the Data 360 unified customer profile that Marketing Cloud Next reads from",
-        "In a separate Excel workbook maintained manually",
-        "It cannot be done; each data source must stay separate"
+        "A Marketing Cloud Engagement Data Extension",
+        "A manual Excel workbook while following the campaign consent and brand controls",
+        "The unified profile in Data 360",
+        "Keep each source separate"
       ],
-      "correctAnswer": 1,
-      "explanation": "Data 360 is the unification layer that combines data from multiple sources into one customer profile that Marketing Cloud Next can segment against.",
+      "correctAnswer": 2,
+      "explanation": "Data 360 unifies source data into a customer profile that Marketing Cloud Next can use for segmentation.",
       "whyWrong": [
-        "A single Data Extension reflects the classic Marketing Cloud Engagement pattern, not the Data 360-native approach.",
-        "Manual spreadsheet unification doesn't scale and isn't how the platform is designed to unify data.",
-        "Unifying multi-source data for segmentation is exactly what Data 360 is built to do."
+        "An Engagement Data Extension is not the unified profile used for this Data 360-based design.",
+        "A manual spreadsheet is difficult to maintain and does not provide platform data unification.",
+        "Data 360 is designed to unify data sources for profile-based segmentation."
       ]
     },
     {
-      "question": "A journey needs to pause a contact until a specific consent type is granted, then resume. What is the correct design approach?",
+      "question": "A journey must wait until a contact grants a specific consent, then continue. What should it do?",
       "options": [
-        "Send the message regardless of consent and apologize later if needed",
-        "Add a wait/decision step that checks current consent state before allowing the contact to proceed",
-        "Remove the contact from the journey permanently",
-        "Ignore consent since the client approved the campaign"
+        "Send without consent while following the campaign consent and brand controls",
+        "Remove the contact permanently",
+        "Ignore consent after client approval",
+        "Wait for consent, then continue"
       ],
-      "correctAnswer": 1,
-      "explanation": "A wait/decision step that re-checks consent state is the correct way to gate progression on a consent requirement that may change over time.",
+      "correctAnswer": 3,
+      "explanation": "A wait and decision step can check current consent and let the contact continue after consent is granted.",
       "whyWrong": [
-        "Sending regardless of consent status creates compliance risk and defeats the purpose of consent management.",
-        "Permanently removing the contact doesn't allow them to proceed once they do grant consent later.",
-        "Client campaign approval does not override an individual contact's consent status."
+        "Sending without consent can violate the contact’s consent choice.",
+        "Removing the contact permanently prevents them from continuing after consent is granted.",
+        "A client’s campaign approval does not override a contact’s consent."
       ]
     },
     {
-      "question": "Which factor is most directly responsible for inbox placement (not landing in spam) for a Marketing Cloud Next send?",
+      "question": "What most affects whether a Marketing Cloud Next email reaches the inbox instead of spam?",
       "options": [
-        "The journey's entry segment size",
-        "Sending domain authentication (SPF/DKIM/DMARC-style setup) and sender reputation",
-        "The number of personalization tokens used",
-        "The journey's internal name"
+        "Sender authentication and reputation",
+        "Journey segment size and targeting while following the campaign consent and brand controls",
+        "Personalization tokens and content",
+        "Journey name and internal labels"
       ],
-      "correctAnswer": 1,
-      "explanation": "Domain authentication and sender reputation are the primary technical levers for inbox placement, independent of audience size or internal naming.",
+      "correctAnswer": 0,
+      "explanation": "Domain authentication and sender reputation are key factors in inbox placement.",
       "whyWrong": [
-        "Segment size affects how many people are targeted, not whether the message reaches the inbox versus spam.",
-        "Personalization token count is a content detail, not a deliverability authentication factor.",
-        "A journey's internal name has no effect on mailbox provider filtering decisions."
+        "Segment size affects how many people are targeted, not whether a message lands in spam.",
+        "Personalization tokens do not replace domain authentication or sender reputation.",
+        "An internal journey name does not affect mailbox filtering."
       ]
     },
     {
-      "question": "A client's compliance team wants a report showing exactly which contacts received which consent-gated message and when. What should the consultant recommend?",
+      "question": "Compliance needs to know which contacts got each consent-gated message and when. What should the consultant recommend?",
       "options": [
-        "Rely on each marketer's personal notes",
-        "Build reporting against journey send and consent-check history captured in the platform",
-        "Estimate the numbers at the end of each quarter",
-        "Tell the compliance team this cannot be tracked"
+        "Review marketer notes for each send",
+        "Report on send and consent history",
+        "Estimate quarterly totals from campaign reports",
+        "Check for stored consent events in the platform"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform-captured send and consent-check history gives an auditable, accurate basis for compliance reporting, rather than informal or estimated tracking.",
+      "explanation": "Platform send and consent-check history can show which contacts received which messages and when.",
       "whyWrong": [
-        "Personal notes are not an auditable or reliable compliance record.",
-        "Estimating figures doesn't meet a compliance team's need for exact send/consent records.",
-        "This kind of send and consent history is trackable within the platform, so dismissing it as impossible is incorrect."
+        "Personal notes are not a complete, reliable audit record.",
+        "Quarterly estimates do not provide the exact contacts and send times Compliance requested.",
+        "The platform can track send and consent events; this data can support the report."
       ]
     },
     {
-      "question": "A marketer wants to reuse the same journey logic across two business units with different sending domains. What is the best practice?",
+      "question": "A marketer wants to reuse journey logic in two business units with different sending domains. What is best?",
       "options": [
-        "Hard-code one business unit's domain into the shared journey",
-        "Parameterize the sending configuration so each business unit's journey instance uses its own domain",
-        "Duplicate the entire Data 360 profile for each business unit",
-        "Disable sending domains for both business units"
+        "Set one shared domain in the journey",
+        "Make a copy of each unified Data 360 profile",
+        "Set sending configuration per business unit",
+        "Turn off domain authentication while following the campaign consent and brand controls"
       ],
-      "correctAnswer": 1,
-      "explanation": "Parameterizing sending configuration per business unit lets shared journey logic be reused correctly without one unit's sends going out under the wrong domain.",
+      "correctAnswer": 2,
+      "explanation": "Configure sending separately for each business unit so each journey uses the correct domain.",
       "whyWrong": [
-        "Hard-coding one business unit's domain breaks correct sending for the other business unit.",
-        "Duplicating the entire unified profile per business unit defeats the purpose of a single unified Data 360 model.",
-        "Disabling sending domains entirely would break deliverability authentication for both business units."
+        "One hard-coded domain would be wrong for the other business unit.",
+        "Duplicating the unified profile undermines the shared Data 360 model.",
+        "Turning off authentication harms deliverability for both units."
       ]
     },
     {
-      "question": "A consultant is asked whether Agentforce can fully replace Flow for journey orchestration on a compliance-sensitive campaign. What is the most accurate answer?",
+      "question": "Can Agentforce fully replace Flow for compliance-sensitive journey steps?",
       "options": [
-        "Yes, Agentforce should always fully replace Flow",
-        "No, deterministic, rules-based compliance steps are generally still better suited to explicit Flow logic",
-        "No, Agentforce cannot be used in any journey",
-        "Yes, but only on weekends"
+        "Agentforce should replace every Flow",
+        "Agentforce cannot be used in journeys",
+        "Use Agentforce only on weekends",
+        "Use Flow for compliance rules"
       ],
-      "correctAnswer": 1,
-      "explanation": "Agentforce fits adaptive, judgment-based steps well, but deterministic compliance-critical logic is generally better served by explicit, auditable Flow steps.",
+      "correctAnswer": 3,
+      "explanation": "Use explicit Flow steps for deterministic, compliance-sensitive rules. Agentforce can still support adaptive steps.",
       "whyWrong": [
-        "Treating Agentforce as a full replacement for all orchestration ignores where deterministic logic is actually required.",
-        "Agentforce can be used within journeys; it isn't categorically excluded.",
-        "There's no day-of-week restriction on how orchestration tools can be used."
+        "Agentforce can be used in journeys; it is not excluded entirely.",
+        "This overstates the case for replacing Flow; deterministic compliance steps are better kept explicit.",
+        "There is no weekend-only restriction on these tools."
       ]
     },
     {
-      "question": "A segment built on Data 360 returns far fewer contacts than expected. What should the consultant check first?",
+      "question": "A Data 360 segment has far fewer contacts than expected. What should the consultant check first?",
       "options": [
-        "The email template's color scheme",
-        "Whether the underlying source data was correctly mapped and unified into the profile the segment reads from",
-        "The journey's send time",
-        "The marketer's job title"
+        "Check source mapping and profile unification",
+        "Check segment filters and audience definition",
+        "Check the journey schedule and send window",
+        "Check the campaign owner’s access while following the campaign consent and brand controls"
       ],
-      "correctAnswer": 1,
-      "explanation": "An unexpectedly small segment usually traces back to a data mapping/unification issue in the profile the segment is built against, not a cosmetic or scheduling detail.",
+      "correctAnswer": 0,
+      "explanation": "Check whether source data maps and unifies into the profile used by the segment.",
       "whyWrong": [
-        "Color scheme is a content detail with no effect on how many contacts match a segment definition.",
-        "Send time affects when a journey fires, not how many contacts a segment matches.",
-        "A marketer's job title has no bearing on segment match counts."
+        "Color scheme does not affect how many contacts match a segment.",
+        "Send time controls when the journey runs, not the segment’s size.",
+        "A marketer’s title does not change segment matching."
       ]
     },
     {
-      "question": "Which best describes the relationship between Marketing Cloud Next and Marketing Cloud Engagement for an existing client?",
+      "question": "How does Marketing Cloud Next relate to Marketing Cloud Engagement?",
       "options": [
-        "They are the exact same product with a different name",
-        "Marketing Cloud Next is a separate, Data Cloud-native platform; migrating from Engagement requires rethinking data, segmentation, and journey design",
-        "Marketing Cloud Engagement customers are automatically and silently moved to Next with no changes",
-        "Marketing Cloud Next only supports SMS, not email"
+        "Same product, different name while following the campaign consent and brand controls",
+        "Separate Data Cloud platform; redesign needed",
+        "Engagement users migrate automatically without changes",
+        "Next supports messaging but not email"
       ],
       "correctAnswer": 1,
-      "explanation": "Marketing Cloud Next is architecturally distinct, built on Data Cloud/Data 360, so moving from Engagement involves real redesign of data, segmentation, and journeys, not a simple rename.",
+      "explanation": "Marketing Cloud Next is a separate Data Cloud-native platform, so a move from Engagement needs data, segment, and journey redesign.",
       "whyWrong": [
-        "They share a brand family but are architecturally distinct products, not the same system under a new name.",
-        "Migration is a deliberate implementation project, not a silent automatic move with zero changes.",
-        "Marketing Cloud Next supports email and other channels, it is not SMS-only."
+        "The products are related but are not the same platform under a new name.",
+        "Moving to Next requires a deliberate implementation; it is not automatic.",
+        "Marketing Cloud Next supports email as well as other channels."
       ]
     },
     {
-      "question": "A client asks how Agentforce decides which content variant to show a given contact in a journey step. What should the consultant explain?",
+      "question": "How can Agentforce choose a content variant for a contact in a journey?",
       "options": [
-        "It is chosen entirely at random with no data input",
-        "It uses performance signals and the contact's unified profile data to select the most relevant variant",
-        "It always picks the most recently created variant regardless of performance",
-        "It requires the marketer to manually pick a variant for every single contact"
+        "Choose randomly while following the campaign consent and brand controls",
+        "Always choose the newest variant",
+        "Use performance and profile data",
+        "Ask a marketer to choose for each contact"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Agentforce can use performance data and the contact’s unified profile to choose a relevant content variant.",
+      "whyWrong": [
+        "Random choice ignores both performance and contact data.",
+        "The newest variant is not necessarily the best-performing one.",
+        "Manual selection for each contact does not scale and avoids the requested automation."
+      ]
+    },
+    {
+      "question": "A marketer sees fewer eligible people in a campaign segment than expected. What should they inspect first?",
+      "options": [
+        "The segment criteria, source data relationships, and consent filters",
+        "The color of the email template while following the campaign consent and brand controls",
+        "The number of images in the message while following the campaign consent and brand controls",
+        "The journey name and folder location while following the campaign consent and brand controls"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Segment logic, available profile data, and consent filters determine who qualifies for activation.",
+      "whyWrong": [
+        "Template color does not affect audience qualification.",
+        "Image count does not determine segment membership.",
+        "Journey labels and folders do not change the segment criteria."
+      ]
+    },
+    {
+      "question": "A team wants to trigger a journey from a new order event and personalize messages with customer profile data. What should the consultant verify?",
+      "options": [
+        "That every contact is placed in one static list while following the campaign consent and brand controls",
+        "That the event is mapped to the profile and the journey entry criteria use it",
+        "That consent checks are removed from the journey while following the campaign consent and brand controls",
+        "That order details are copied into email subject lines manually while following the campaign consent and brand controls"
       ],
       "correctAnswer": 1,
-      "explanation": "Agentforce orchestration uses performance data and the contact's profile to adaptively select content, which is the value proposition over manual or random selection.",
+      "explanation": "The event and profile data must be available to the journey entry logic and personalization.",
       "whyWrong": [
-        "Random selection with no data input would defeat the purpose of AI-driven personalization.",
-        "Always picking the newest variant ignores performance data entirely, which isn't how adaptive selection works.",
-        "Requiring manual per-contact selection at scale is exactly what AI orchestration is meant to avoid."
+        "A static list does not provide event-driven entry or current profile context.",
+        "Removing consent checks creates compliance risk.",
+        "Manual copying is error-prone and does not automate the workflow."
+      ]
+    },
+    {
+      "question": "A marketer has permission to send email but not SMS. How should a cross-channel journey behave?",
+      "options": [
+        "Send SMS anyway because the contact is in the audience",
+        "Treat email consent as consent for every channel while following the campaign consent and brand controls",
+        "Check channel-specific permission and use only allowed channels",
+        "Suppress all records without checking their preferences while following the campaign consent and brand controls"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Consent and permission should be evaluated for each channel before the journey sends.",
+      "whyWrong": [
+        "Audience membership does not override channel permissions.",
+        "Email consent does not automatically authorize SMS.",
+        "Suppressing everyone ignores valid channel preferences and permissions."
+      ]
+    },
+    {
+      "question": "A campaign team changes its sending domain. What should be checked before ramping up volume?",
+      "options": [
+        "Only the campaign subject line while following the campaign consent and brand controls",
+        "Whether all contacts have the same first name while following the campaign consent and brand controls",
+        "Whether old segments can be deleted while following the campaign consent and brand controls",
+        "Domain authentication, sending reputation, and a monitored ramp-up plan"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Domain authentication and a monitored ramp-up help protect deliverability when sending infrastructure changes.",
+      "whyWrong": [
+        "Subject line review alone does not authenticate a sending domain.",
+        "Contact names do not establish sender reputation or domain authentication.",
+        "Deleting segments does not prepare a new sending domain."
+      ]
+    },
+    {
+      "question": "A marketer wants to use AI to select content variants. What is a sound implementation practice?",
+      "options": [
+        "Disable measurement so variants cannot be compared while following the campaign consent and brand controls",
+        "Let generated content bypass review and consent checks while following the campaign consent and brand controls",
+        "Use personal data without confirming its permitted use while following the campaign consent and brand controls",
+        "Set clear eligibility and brand rules, then test outputs and monitor results"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Governed content selection should respect eligibility and brand rules and be evaluated after launch.",
+      "whyWrong": [
+        "This alternative does not meet the scenario requirements. Governed content selection should respect eligibility and brand rules and be evaluated after launch.",
+        "This alternative does not meet the scenario requirements. Governed content selection should respect eligibility and brand rules and be evaluated after launch.",
+        "This alternative does not meet the scenario requirements. Governed content selection should respect eligibility and brand rules and be evaluated after launch."
       ]
     }
   ],

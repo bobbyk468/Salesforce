@@ -46,19 +46,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Which is more valuable, Sales Cloud or Service Cloud Consultant?',
-    answer: 'Both are highly valued and widely recognised. Sales Cloud Consultant is slightly more common in the market because Sales Cloud implementations are extremely widespread. Service Cloud Consultant is equally respected and can command premium rates for complex omnichannel service implementations. Choose based on what cloud you are implementing in your current role.',
+    answer: 'Both certifications are valued. Sales Cloud Consultant appears in more roles because many Salesforce projects use Sales Cloud. Service Cloud Consultant is also respected, especially for complex customer service projects that use several channels. Choose the certification that matches the work you do now.',
   },
   {
     question: 'Can you take both Sales Cloud and Service Cloud Consultant certifications?',
-    answer: 'Yes, many Salesforce consultants hold both certifications. They are not mutually exclusive, and many client implementations require both. Taking both makes you a more versatile CRM consultant and increases your billable rate potential.',
+    answer: 'Yes. Consultants can earn both certifications, and some projects use both clouds. Holding both can prepare you for a wider range of client work.',
   },
   {
     question: 'Which is harder, Sales Cloud or Service Cloud Consultant?',
-    answer: 'Both have a 65% passing score and 60 questions in 105 minutes. Service Cloud Consultant is considered slightly harder by most candidates because the omnichannel routing, entitlement management, and service contract topics are more complex and less familiar to candidates without service operations experience.',
+    answer: 'Each exam has a 65% passing score, 60 questions, and 105 minutes. Some candidates find Service Cloud Consultant harder because it covers omnichannel routing, entitlements, and service contracts. These topics may be unfamiliar if you have not worked in service operations.',
   },
   {
     question: 'Do I need ADM-201 before Sales Cloud or Service Cloud Consultant?',
-    answer: 'ADM-201 is not a hard prerequisite for either exam, but it is strongly recommended. Both consultant exams assume platform-level knowledge of Salesforce (objects, automation, security model) that is covered in ADM-201. Most candidates who skip ADM-201 struggle with the foundational configuration scenarios.',
+    answer: 'ADM-201 is not a formal prerequisite, but it is recommended. Both exams expect you to know Salesforce objects, automation, and the security model. ADM-201 covers these platform basics.',
   },
 ]
 
@@ -76,9 +76,9 @@ export default function SalesCloudVsServiceCloudPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Sales Cloud and Service Cloud Consultant are the two most commonly held Salesforce consultant certifications.
-          Both test implementation expertise, but for different business functions. Here is how they compare
-          and how to choose the right one for your career.
+          Sales Cloud and Service Cloud Consultant are two widely held Salesforce consultant certifications.
+          Both test implementation skills, but they focus on different business needs. Compare their topics
+          and choose the one that fits your current work and career plans.
         </p>
       </header>
 
@@ -89,10 +89,10 @@ export default function SalesCloudVsServiceCloudPage() {
           certSlug: "sales-cloud",
           examTipsSlug: "certifications/sales-cloud",
           conditions: [
-          "Your clients use Salesforce primarily for pipeline, forecasting, or CRM",
-          "You come from a sales operations or CRM admin background",
-          "You want the most widely needed consultant credential",
-          "You work in B2B or enterprise sales environments",
+          "Your clients use Salesforce for pipeline, forecasting, or customer relationship management",
+          "You have a background in sales operations or CRM administration",
+          "You want a consultant credential used across many Salesforce projects",
+          "You work with B2B or enterprise sales teams",
           ],
         }}
         certB={{
@@ -100,17 +100,17 @@ export default function SalesCloudVsServiceCloudPage() {
           certSlug: "service-cloud",
           examTipsSlug: "certifications/service-cloud",
           conditions: [
-          "Your clients run call centres, field service, or customer support operations",
+          "Your clients run contact centres, field service, or customer support teams",
           "You work with cases, entitlements, Omni-Channel, or Knowledge",
-          "You are in a service-intensive industry, telco, utilities, retail",
-          "You want to differentiate from the larger pool of Sales Cloud consultants",
+          "You work in customer service focused industries such as telecom, utilities, or retail",
+          "You want to add a service specialty to your consulting skills",
           ],
         }}
         recommendation={{
           certName: "Sales Cloud Consultant",
           certSlug: "sales-cloud",
           examTipsSlug: "certifications/sales-cloud",
-          reason: "Sales Cloud Consultant has the broadest demand, almost every Salesforce implementation involves Sales Cloud at some level. Take it first to maximise consulting opportunities, then add Service Cloud to double your client-facing credential coverage.",
+          reason: "Sales Cloud Consultant applies to many Salesforce projects. Consider taking it first, then add Service Cloud if your clients also need customer support solutions.",
           careerPathSlug: "certification-path",
           careerPathLabel: "Salesforce Certification Path",
         }}
@@ -210,25 +210,25 @@ export default function SalesCloudVsServiceCloudPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which to Take First?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          The answer depends entirely on your current project experience. Take the exam for the cloud you are actively implementing.
+          Start with the cloud you use in your current projects. Your hands-on experience will help you connect exam topics to real implementation decisions.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
             <p className="text-sm font-semibold text-salesforce-dark mb-2">Take Sales Cloud Consultant First If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>Your clients are primarily in sales/revenue operations</li>
-              <li>You work in B2B SaaS, financial services, or manufacturing</li>
-              <li>You have configured opportunity stages and forecasting</li>
-              <li>Territory management is part of your implementations</li>
+              <li>Your clients focus on sales or revenue operations</li>
+              <li>You work in B2B software, financial services, or manufacturing</li>
+              <li>You have configured opportunity stages and forecasts</li>
+              <li>Your projects include territory management</li>
             </ul>
           </div>
           <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-4">
             <p className="text-sm font-semibold text-emerald-700 mb-2">Take Service Cloud Consultant First If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>Your clients operate contact centres or support operations</li>
-              <li>You work in retail, telecoms, utilities, or healthcare</li>
-              <li>You have configured case management and knowledge bases</li>
-              <li>Omnichannel and entitlement configuration are in your experience</li>
+              <li>Your clients run contact centres or support teams</li>
+              <li>You work in retail, telecom, utilities, or healthcare</li>
+              <li>You have configured case management and Knowledge</li>
+              <li>You have worked with Omni-Channel and entitlements</li>
             </ul>
           </div>
         </div>

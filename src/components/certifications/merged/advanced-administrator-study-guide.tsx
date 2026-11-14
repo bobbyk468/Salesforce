@@ -34,30 +34,30 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Salesforce Advanced Administrator exam format?',
-    answer: 'The Salesforce Advanced Administrator exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It requires ADM-201 (Salesforce Administrator) certification as a prerequisite and assumes 2+ years of Salesforce administration experience. The exam tests advanced security, complex automation, and platform-level governance topics that are not covered in ADM-201.',
+    answer: 'The listed format is 60 questions in 105 minutes, with a 65% passing score. The exam fee is $200 and the retake fee is $100. You must hold the Administrator credential first. Review the official guide before booking.',
   },
   {
     question: 'How is Advanced Administrator different from ADM-201?',
-    answer: 'ADM-201 tests core platform knowledge, basic security, standard automation, reports and dashboards. Advanced Administrator assumes that knowledge and tests deeper: complex flow logic (subflows, fault paths, invocable actions), advanced security configurations (custom permission sets, session-based permissions, Shield Platform Encryption), multi-step approval processes, Territory Management, and complex data management (data governance, org-level data quality). The Advanced Admin exam rewards candidates who have resolved real-world Salesforce configuration challenges.',
+    answer: 'ADM-201 covers a broad set of administration fundamentals. Advanced Administrator builds on that knowledge with more complex security, automation, data, and deployment scenarios.',
   },
   {
     question: 'What are the highest-weight Advanced Administrator exam sections?',
-    answer: 'Security and Access (20%) and Process Automation (20%) are the joint-largest sections, followed by Objects and Applications (19%). Together those three account for 59% of the exam, so advanced permission configuration, Flow and the object model deserve most of your study time.',
+    answer: 'Security and Access and Process Automation each account for 20% of the listed outline. Objects and Applications accounts for 19%. Together they represent 59%.',
   },
   {
     question: 'Do I need to know Apex or code for the Advanced Administrator exam?',
-    answer: 'No. The Advanced Administrator exam tests declarative (no-code) administration at an advanced level. You do not need to write Apex code. However, you need to understand when Apex is required (i.e., when declarative tools cannot meet a requirement); this is a common question pattern. Advanced flow concepts (invocable Apex actions called from flows, subflows) are tested; but only at the level of how to call and configure them, not how to write the Apex.',
+    answer: 'The exam focuses on administration and declarative tools. Review when a requirement may need code, and how a Flow can call an invocable action; you do not need to write Apex for this exam.',
   },
 ]
 
 const examSections = [
-  { name: 'Security and Access', weight: 20, note: 'Permission sets, permission set groups, session-based permissions, Salesforce Shield, field audit trail, platform encryption' },
-  { name: 'Extending Custom Objects and Applications', weight: 15, note: 'Advanced object relationships, external objects, big objects, custom metadata types, platform events' },
-  { name: 'Auditing and Monitoring', weight: 15, note: 'Field history tracking, setup audit trail, event monitoring, login history, debug logs, Health Check' },
-  { name: 'Sales Cloud', weight: 14, note: 'Enterprise Territory Management, Collaborative Forecasting, opportunity splits, advanced lead and account management' },
-  { name: 'Service Cloud', weight: 14, note: 'Advanced case management, Omni-Channel, entitlement management, escalation rules, Salesforce Knowledge lifecycle' },
-  { name: 'Data Management', weight: 12, note: 'Mass transfer, data governance, deduplication rules, Data Loader scheduling, import error management, archiving strategies' },
-  { name: 'Analytics, Reports and Dashboards', weight: 10, note: 'Joined reports, bucket fields, cross-filters, historical trending reports, dynamic dashboards, report subscriptions' },
+  { name: 'Security and Access', weight: 20, note: 'Permissions, sharing, and access troubleshooting' },
+  { name: 'Objects and Applications', weight: 19, note: 'Object configuration and application features' },
+  { name: 'Auditing and Monitoring', weight: 10, note: 'Setup history and monitoring tools' },
+  { name: 'Cloud Applications', weight: 11, note: 'Sales and service features' },
+  { name: 'Data and Analytics Management', weight: 13, note: 'Data quality, reporting, and dashboards' },
+  { name: 'Environment Management and Deployment', weight: 7, note: 'Sandboxes, deployment, and change management' },
+  { name: 'Process Automation', weight: 20, note: 'Flows and approval processes' },
 ]
 
 export default function AdvancedAdministratorStudyGuideContent() {
@@ -83,14 +83,14 @@ export default function AdvancedAdministratorStudyGuideContent() {
           ))}
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          ADM-201 certification required. Retake fee: $100. 2+ years of hands-on Salesforce administration experience strongly recommended.
+          The Administrator credential is a prerequisite. The listed retake fee is $100. Hands-on administration experience can help you prepare.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Advanced Administrator Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Security (20%) + Extending Objects (15%) + Auditing (15%) = 50% of the exam. Advanced security and governance topics are the core differentiator from ADM-201.
+          Security and Access and Process Automation each account for 20% of the listed outline. Use the other section weights to plan the rest of your study.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -116,35 +116,35 @@ export default function AdvancedAdministratorStudyGuideContent() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Security and Access (20%)
             </p>
-            <p>Goes well beyond ADM-201 security fundamentals. <strong>Session-based Permission Sets:</strong> permission sets that only activate during a specific authenticated session (e.g., step-up authentication for sensitive operations). <strong>Permission Set Groups:</strong> combine multiple permission sets into a single assignable group. <strong>Salesforce Shield:</strong> a suite of compliance and security tools: Field Audit Trail (retain field history for up to 10 years vs standard 18 months), Event Monitoring (track user activity at the API level, what fields were accessed, what data was exported), Platform Encryption (encrypt fields at rest using tenant secrets). Know when each Shield product applies, regulated industries (HIPAA, FINRA) with strict data retention requirements are the typical scenarios.</p>
+            <p>Compare <strong>session-based permission sets</strong>, which can be activated for a session, with <strong>permission set groups</strong>, which bundle permissions. Review the purposes of Salesforce Shield features: Field Audit Trail for extended history, Event Monitoring for activity logs, and Platform Encryption for protecting supported data at rest.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Extending Custom Objects and Applications (15%)
+              Objects and Applications (19%)
             </p>
-            <p><strong>External Objects:</strong> represent data stored outside Salesforce (in an external system) but accessible in the org via Salesforce Connect and OData 2.0 adapters. External objects support lookups and relationships but not all Salesforce features (no triggers, limited SOQL). <strong>Big Objects:</strong> store massive volumes of historical data within Salesforce (billions of records), used for compliance data archiving. Only support SOQL queries with specific index fields. <strong>Custom Metadata Types:</strong> configuration records that are deployable via changesets and metadata API (unlike Custom Settings which are data). Ideal for environment-specific configuration values. <strong>Platform Events:</strong> an event-driven messaging system, publish and subscribe to real-time events using flows, Apex, or external systems via CometD.</p>
+            <p><strong>External objects</strong> let users work with data stored outside Salesforce through Salesforce Connect. <strong>Big Objects</strong> store large volumes of data and use defined indexes for queries. <strong>Custom Metadata Types</strong> store configuration that can be deployed. <strong>Platform Events</strong> support event-driven messages between Salesforce and subscribers.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Auditing and Monitoring (10%)
             </p>
-            <p><strong>Setup Audit Trail:</strong> tracks the last 180 days of setup changes, who changed what, when. Essential for compliance and troubleshooting. <strong>Field History Tracking:</strong> tracks changes to up to 20 fields per object, retained for 18 months (Field Audit Trail extends this). <strong>Event Monitoring (Shield):</strong> detailed logs of user activity: API calls, login events, report exports, field access. Know the difference between Setup Audit Trail (setup changes) and Event Monitoring (user activity). <strong>Health Check:</strong> Salesforce’s built-in security review tool, scores your org against security best practices. Know what makes a high vs low Health Check score.</p>
+            <p><strong>Setup Audit Trail</strong> records setup changes; <strong>Field History Tracking</strong> records changes to selected fields. <strong>Event Monitoring</strong> provides activity logs, and <strong>Health Check</strong> helps review security settings. Practise choosing the tool that answers each audit question.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Sales Cloud (14%) and Service Cloud (14%)
+              Cloud Applications (11%)
             </p>
-            <p><strong>Sales Cloud:</strong> Enterprise Territory Management (ETM) is the key topic, territory models, territory types, assignment rules, and how opportunities are associated to territories. Opportunity Splits: divide credit for an opportunity between multiple sales reps (different split percentages per rep). Collaborative Forecasting with multiple forecast types. <strong>Service Cloud:</strong> Omni-Channel routing (queue-based, skills-based, external routing), routing incoming work items to agents based on capacity and skills. Entitlement Management: service contracts, entitlement processes, and milestones (SLA milestones that fire escalation actions when breached). Advanced Knowledge lifecycle: article review cycles, translation, archiving.</p>
+            <p>For sales scenarios, review territory models, account assignment, opportunity splits, and forecasts. For service scenarios, compare Omni-Channel routing, entitlements, milestones, and the Knowledge article lifecycle.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Analytics, Reports and Dashboards (10%)
+              Data and Analytics Management (13%)
             </p>
-            <p><strong>Joined Reports:</strong> combine data from up to 5 report types in a single report; each block has its own filters and groupings. Useful for comparing data from different objects side by side. <strong>Cross-filters:</strong> filter a report to show records with or without related records (e.g., accounts with no open opportunities). <strong>Bucket fields:</strong> group report values into named categories without creating formula fields. <strong>Historical Trending:</strong> track record changes over time (up to 3 months), useful for pipeline movement analysis. <strong>Dynamic Dashboards:</strong> display data based on the logged-in viewer’s context (each user sees their own data) vs a fixed running user.</p>
+            <p>Joined reports combine report blocks. Cross filters find records with or without related records, while bucket fields group values within a report. Review historical trending and how the running user affects a dashboard’s data.</p>
           </div>
         </div>
       </section>
@@ -152,12 +152,12 @@ export default function AdvancedAdministratorStudyGuideContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Advanced Administrator Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Advanced Security (20%):</strong> Study session-based permission sets, permission set groups, and Salesforce Shield (Field Audit Trail, Event Monitoring, Platform Encryption). Enable Health Check in a Developer Edition org and review your score. Understand each Shield product’s use case and regulatory context.</p>
-          <p><strong>Week 2: Advanced Objects &amp; Platform Features (15%):</strong> Study External Objects (Salesforce Connect, OData), Big Objects (use cases, query limitations), Custom Metadata Types vs Custom Settings (what makes CMT deployable), and Platform Events (publish/subscribe event model). Practice: create a Custom Metadata Type and deploy it via changeset.</p>
-          <p><strong>Week 3: Auditing &amp; Monitoring (15%):</strong> Learn Setup Audit Trail, Field History Tracking limits, and Event Monitoring. Complete Trailhead’s &ldquo;Audit Trail, Login History, and Setup&rdquo; module. Understand what each monitoring tool captures and for how long.</p>
-          <p><strong>Week 4: Sales Cloud (14%): </strong> Work through ETM, create a territory model, configure assignment rules, and associate opportunities. Study Opportunity Splits and Collaborative Forecasting with overrides. Practice: set up ETM from scratch in a Developer Edition org with Agentforce and Sales Cloud enabled.</p>
-          <p><strong>Week 5: Service Cloud &amp; Data Management (14% + 12%):</strong> Study Omni-Channel routing configurations (queue-based vs skills-based), entitlement processes and milestone actions. Review advanced data management: deduplication rules for large orgs, mass transfer scenarios, Data Loader scheduling.</p>
-          <p><strong>Week 6:</strong> Advanced analytics practice (joined reports, cross-filters, historical trending) + full timed mock exams. Score 75%+ consistently before booking.</p>
+          <p><strong>Week 1: Security and Access (20%):</strong> Compare session-based permission sets and permission set groups. Review when Field Audit Trail, Event Monitoring, and Platform Encryption may help, and inspect the Health Check settings available in your org.</p>
+          <p><strong>Week 2: Objects and Applications (19%):</strong> Compare external objects and Big Objects. Review Custom Metadata Types, Custom Settings, and Platform Events. If you have suitable environments, practise moving a Custom Metadata Type with a change set.</p>
+          <p><strong>Week 3: Auditing and Monitoring (10%):</strong> Compare Setup Audit Trail, Field History Tracking, and Event Monitoring. Review what each records and how long the information is available.</p>
+          <p><strong>Week 4: Cloud Applications (11%): </strong> Review territory models, assignment rules, opportunity splits, and Collaborative Forecasting. Where your org supports it, practise setting up a territory model and assigning accounts.</p>
+          <p><strong>Week 5: Data, Analytics, and Service Features:</strong> Compare queue-based and skills-based Omni-Channel routing. Review entitlements and milestones, then practise choosing duplicate management, mass transfer, or Data Loader for a data task.</p>
+          <p><strong>Week 6:</strong> Review process automation, deployments, and analytics. Use timed practice tests to identify any topics that need more work.</p>
         </div>
       </section>
 
@@ -166,15 +166,15 @@ export default function AdvancedAdministratorStudyGuideContent() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Salesforce Shield questions:</strong> If the scenario involves a regulated industry needing to retain field change history beyond 18 months, the answer is <strong>Field Audit Trail</strong>. If it involves tracking what data users accessed or exported (compliance/data exfiltration concern), the answer is <strong>Event Monitoring</strong>. If it involves encrypting sensitive data at rest (HIPAA, GDPR), the answer is <strong>Platform Encryption</strong>. Match the Shield product to the compliance requirement, not the other way around.</span>
+            <span><strong>Salesforce Shield questions:</strong> Compare the requirement with each Shield feature. Field Audit Trail extends supported field-history retention; Event Monitoring provides activity logs; Platform Encryption protects supported data at rest. Check the exact capability and licensing for the scenario.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Custom Metadata vs Custom Settings:</strong> If the scenario requires configuration values to be deployed to production via changeset (not manually re-entered), the answer is Custom Metadata Types. If the configuration just needs to be stored and retrieved at runtime but does not need to be deployed (or values differ per environment), Custom Settings may be acceptable. The exam strongly favours Custom Metadata Types for configuration that needs to move between environments.</span>
+            <span><strong>Custom Metadata vs Custom Settings:</strong> Custom Metadata Type records can move as metadata between environments. Custom Settings store configuration data. Compare whether the values need to be deployed, changed in an org, or selected for different users or profiles.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Report type questions:</strong> Need to show records from one object alongside related (or absence of related) records from another object? Use a <strong>cross-filter</strong>. Need to compare data from multiple report types side-by-side in one view? Use a <strong>joined report</strong>. Need to show how pipeline amounts changed week-over-week? Use <strong>Historical Trending</strong>. Each report feature has a specific use case, match it to the scenario requirement.</span>
+            <span><strong>Report type questions:</strong> A <strong>cross filter</strong> selects records with or without related records. A <strong>joined report</strong> combines report blocks. <strong>Historical Trending</strong> can show changes over time for supported data. Match the feature to the question and available report type.</span>
           </li>
         </ul>
       </section>
@@ -186,27 +186,23 @@ export default function AdvancedAdministratorStudyGuideContent() {
           75%+ on 3 timed full mocks (60 Q / 105 min) before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The most common failure mode is over-reliance on ADM-201 knowledge. Advanced Administrator
-          tests topics that are genuinely not covered in ADM-201, candidates who refresh their ADM-201
-          content instead of studying the Advanced Admin-specific topics (Shield, ETM, External Objects,
-          Opportunity Splits, Omni-Channel) consistently fall short. Focus your preparation on
-          what is new and different from the base Administrator exam.
+          Use your ADM-201 knowledge as a foundation, then practise the more advanced topics in the current outline. Review Shield, territory management, external objects, opportunity splits, and Omni-Channel where they apply to the requirements you are studying.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
-          <li>Salesforce Shield: Field Audit Trail (18 months → 10 years), Event Monitoring, Platform Encryption</li>
-          <li>Session-based Permission Sets: activate only during specific authenticated sessions</li>
-          <li>Custom Metadata Types vs Custom Settings: CMT is deployable; Settings are data</li>
-          <li>External Objects vs Big Objects: External (outside Salesforce, read-only); Big (inside, massive volume)</li>
-          <li>Platform Events: publish/subscribe event-driven messaging within and across systems</li>
-          <li>ETM object model: Territory Model → Territory Type → Territory → Assignment Rules</li>
-          <li>Opportunity Splits: divide opportunity credit between multiple reps (different types: Revenue, Overlay)</li>
-          <li>Omni-Channel routing: queue-based (first-come-first-served) vs skills-based (match skills to work)</li>
-          <li>Entitlement milestones: SLA checkpoints that fire escalation actions when breached</li>
-          <li>Joined reports vs cross-filters: joined (multiple report blocks); cross-filter (with/without related records)</li>
+          <li>Salesforce Shield: compare Field Audit Trail, Event Monitoring, and Platform Encryption</li>
+          <li>Session-based permission sets: review how activation is controlled</li>
+          <li>Custom Metadata Types and Custom Settings: compare metadata and configuration data</li>
+          <li>External Objects vs Big Objects: compare externally stored data with large-scale storage on Salesforce</li>
+          <li>Platform Events: review publishing and subscribing to events</li>
+          <li>Territory Management: review territory models, types, territories, and assignment rules</li>
+          <li>Opportunity splits: review how revenue and overlay splits allocate credit</li>
+          <li>Omni-Channel routing: compare queue-based and skills-based routing</li>
+          <li>Entitlement milestones: review time targets and configured actions</li>
+          <li>Joined reports and cross filters: compare report blocks with related-record filters</li>
         </ol>
       </section>
 
@@ -237,7 +233,7 @@ export default function AdvancedAdministratorStudyGuideContent() {
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
         <p className="text-sm text-gray-700">
-          After this certification, consider: <span className="text-salesforce-blue font-medium hover:underline">Advanced Administrator</span>, <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link>, or <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>.
+          For a different next step, consider: <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link>, or <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>.
         </p>
       </section>
 

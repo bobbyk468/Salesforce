@@ -4,46 +4,46 @@
     "heading": "Who is the Sales Foundations exam for?",
     "personas": [
       {
-        "label": "New sales reps using Salesforce",
-        "description": "You work deals in Salesforce every day and want a credential that shows you know the tool."
+        "label": "Sales representatives who use Salesforce",
+        "description": "You manage deals in Salesforce and want to show that you know the main sales tools."
       },
       {
         "label": "Sales managers",
-        "description": "You run a team on Salesforce and want to understand the pipeline and forecast properly."
+        "description": "You lead a team that uses Salesforce and want to understand its pipeline and forecasts."
       },
       {
         "label": "People moving into sales operations",
-        "description": "You support a sales team and need a grounding in how the process fits together."
+        "description": "You support a sales team and want to learn how its sales process works in Salesforce."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Sales Foundations Exam Hard?",
-    "summary": "This is an entry-level exam. It mixes Salesforce basics with everyday selling: how a deal moves from lead to closed, what the pipeline shows, and which tool helps at each step. There is nothing to configure and no code.",
+    "summary": "This entry-level exam covers both Salesforce and the sales process. It asks how a deal moves from lead to close, what pipeline information means, and which Salesforce tool supports each step. It does not require configuration or coding.",
     "bullets": [
-      "<strong>40 multiple-choice questions</strong> in 70 minutes.",
-      "<strong>70% to pass</strong>, about 25 correct answers out of 40. Confirm it in the official exam guide before you book.",
-      "<strong>Process plus platform.</strong> Expect both selling concepts and the Salesforce feature that supports them.",
-      "<strong>Pipeline and forecasting</strong> come up often, so know what each stage and forecast category means."
+      "<strong>40 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 28 correct answers out of 40.",
+      "<strong>Sales process and Salesforce tools.</strong> Expect questions about both selling and the features that support it.",
+      "<strong>Pipeline and forecasting.</strong> Learn what opportunity stages and forecast categories mean."
     ],
-    "passRateGuidance": "You are ready when you can take a deal from lead to closed in Salesforce without help, and explain what the pipeline report is telling you. Aim for 80% or more on practice tests."
+    "passRateGuidance": "You are ready when you can follow a deal from lead to close in Salesforce and explain what a pipeline report shows. Aim for at least 80% on practice tests."
   },
   "examFormat": {
     "heading": "Sales Foundations Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Many questions describe something a rep needs to do, such as logging a call or chasing a stalled deal, and ask which Salesforce feature to use.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Questions cover everyday sales work and the Salesforce features that support it.",
+    "scenarioPercent": "Many questions describe a sales representative’s task, such as logging a call or following up on a stalled deal, then ask which Salesforce feature to use.",
     "bestWayToPass": [
-      "<strong>Follow one deal end to end:</strong> Lead, qualification, conversion, opportunity, products, close. Know what each record is for.",
-      "<strong>Learn the pipeline vocabulary:</strong> Stage, probability, close date, amount and forecast category.",
-      "<strong>Know the productivity tools:</strong> Tasks and events, email logging, mobile and the Kanban view.",
-      "<strong>Read a report:</strong> Understand what a pipeline report and a simple dashboard are telling you."
+      "<strong>Follow a deal from start to finish:</strong> Review leads, qualification, conversion, opportunities, products, and closing. Know what each record represents.",
+      "<strong>Learn pipeline terms:</strong> Understand stage, probability, close date, amount, and forecast category.",
+      "<strong>Review sales tools:</strong> Know how tasks, events, email logging, mobile, and Kanban help representatives.",
+      "<strong>Read reports:</strong> Practice explaining what a pipeline report and a simple dashboard show."
     ]
   },
   "certificationCard": {
     "code": "Sales Foundations",
-    "description": "An entry-level exam covering the day-to-day of selling in Salesforce: leads and opportunities, the pipeline, forecasting, activity tracking, and the reports that show how the team is doing. The exam is 40 scored questions in 105 minutes, with a 70% pass mark, weighted towards Deal Management (37%) and Planning (21%).",
+    "description": "This entry-level exam covers everyday sales work in Salesforce: leads and opportunities, the pipeline, forecasting, activity tracking, and sales reports. The exam is 40 scored questions in 105 minutes, with a 70% pass mark, weighted towards Deal Management (37%) and Planning (21%).",
     "examDetails": {
-      "questions": 40,
+      "questions": 60,
       "passingScore": "70%",
       "duration": "105 min",
       "cost": "$200"
@@ -65,56 +65,56 @@
     "h2": "Sales Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Leads, Accounts, Contacts and Opportunities",
-        "body": "A **Lead** is someone who might become a customer but has not been qualified yet. When they look real, you **convert** the lead, which creates an **Account** (the company), a **Contact** (the person) and usually an **Opportunity** (the potential deal). Converting is one-way, so do it when the lead is genuinely qualified. An Account can have many Contacts and many Opportunities over time, which is how repeat business is tracked. Knowing which record holds which information is the foundation of everything else in this exam."
+        "heading": "Leads, Accounts, Contacts, and Opportunities",
+        "body": "A **Lead** is a potential customer who has not yet been qualified. When the lead is ready, you can **convert** it to create an **Account** (the company), a **Contact** (the person), and usually an **Opportunity** (the potential deal). Conversion is a one-way step, so do it when the lead is qualified. An Account can be linked to many Contacts and Opportunities, which helps track ongoing business. Know which record holds each kind of information."
       },
       {
-        "heading": "The Pipeline: Stages, Amount and Close Date",
-        "body": "An **Opportunity** carries a **stage** showing how far along it is, an **amount**, and a **close date**. Each stage has a **probability**, and the pipeline is the collection of open opportunities across stages. A **forecast category** groups stages into buckets such as Pipeline, Best Case, Commit and Closed, which is how managers judge what will land this quarter. Keeping the close date honest matters more than it looks: a pipeline full of overdue close dates tells a manager nothing. Reps move deals through stages as real progress happens, not to look busy."
+        "heading": "The Pipeline and Forecast Categories",
+        "body": "An **Opportunity** has a **stage** that shows its progress, an **amount**, and a **close date**. Stages have a **probability**, and open Opportunities together make up the pipeline. A **forecast category** groups stages into groups such as Pipeline, Best Case, Commit, and Closed. Managers use these categories to estimate what may close in a period. Keep close dates current so the pipeline gives a useful view of expected sales. Move deals to the next stage when they make real progress."
       },
       {
-        "heading": "Working the Deal: Activities and Productivity",
-        "body": "**Tasks** are things to do and **events** are meetings in the calendar, and both can be linked to a lead, contact, account or opportunity so the history stays with the record. Emails can be logged automatically so conversations are visible to the team. The **Kanban** view lets reps drag opportunities between stages. **Path** shows the guidance and required fields for the current stage. The Salesforce **mobile app** covers the same work away from a desk. **Chatter** lets a rep ask a question on the record itself, so the answer is kept with the deal rather than lost in email."
+        "heading": "Activities and Sales Productivity",
+        "body": "A **Task** is a to-do, while an **event** is a calendar item such as a meeting. Both can be linked to a Lead, Contact, Account, or Opportunity so the activity history stays with the record. Emails can be logged automatically to make conversations visible to the team. The **Kanban** view lets representatives move Opportunities between stages. **Path** shows guidance and required fields for a stage. The Salesforce **mobile app** supports work away from a desk. **Chatter** lets a representative ask questions on a record and keep the replies with the deal."
       },
       {
-        "heading": "Products, Quotes and Teams",
-        "body": "An opportunity can have **products** added from a **price book**, which sets what was sold and at what price, and that is where the amount usually comes from. A **quote** can be generated from those products and sent to the customer. When several people work one deal, an **opportunity team** records who is involved and what their role is. Larger deals may need an **approval** before a discount is given. None of this needs configuration knowledge for this exam: you need to recognise what each feature is for."
+        "heading": "Products, Quotes, and Sales Teams",
+        "body": "You can add **products** to an Opportunity from a **price book**, which lists products and their prices. A **quote** can be created from those products and sent to the customer. An **opportunity team** records who is working on a deal and what each person does. Larger deals may need approval before a discount is offered. This exam focuses on knowing what each feature is for, not on configuring it."
       },
       {
-        "heading": "Reports, Dashboards and Forecasts",
-        "body": "A **report** lists or summarises records, such as all open opportunities closing this quarter. A **dashboard** shows several reports as charts on one screen, which is how managers see the team at a glance. **Forecasting** rolls opportunity amounts up through the team so a manager can see what is expected to close, using the forecast categories. **List views** give a quick filtered list on a tab, which most reps use daily. For the exam. Know which of these answers a given question: a single filtered list, a summary, a visual overview, or a projection of what will close."
+        "heading": "Reports, Dashboards, and Forecasts",
+        "body": "A **report** lists or summarizes records, such as open Opportunities expected to close this quarter. A **dashboard** displays information from several reports as charts on one screen. **Forecasting** rolls Opportunity amounts up through the team so managers can estimate what may close. **List views** show a filtered list of records on a tab. Be ready to choose between a filtered list, a summary, a visual overview, and a sales projection."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Sales Foundations Exam",
-    "intro": "Most questions describe a rep's day and ask which feature fits. Match the task to the record or tool built for it.",
+    "intro": "Questions describe a sales representative’s work and ask which Salesforce record or feature fits the task.",
     "blocks": [
       {
         "heading": "Leads and Conversion",
-        "body": "Leads are unqualified. Converting creates an Account, a Contact and usually an Opportunity, and cannot be undone."
+        "body": "A Lead is an unqualified prospect. Converting it creates an Account and Contact, and usually an Opportunity. Conversion cannot be undone."
       },
       {
         "heading": "Opportunity Management",
-        "body": "Stage, amount and close date drive the pipeline. Forecast categories group stages into what managers commit to."
+        "body": "The stage, amount, and close date describe a deal in the pipeline. Forecast categories group stages for sales projections."
       },
       {
-        "heading": "Activity Management",
-        "body": "Tasks for to-dos, events for meetings, both linked to the record so the history stays in one place."
+        "heading": "Activities",
+        "body": "Use Tasks for to-dos and events for meetings. Link them to a record so the activity history stays together."
       },
       {
         "heading": "Reports and Dashboards",
-        "body": "Reports list and summarise, dashboards visualise several reports, list views give a quick filtered list."
+        "body": "Reports list or summarize records. Dashboards show information from several reports. List views give a filtered list of records."
       },
       {
         "heading": "Teams and Quotes",
-        "body": "Opportunity teams record who is working a deal. Products and price books set what is being sold, and quotes go to the customer."
+        "body": "Opportunity teams record who is working on a deal. Products and price books describe what is being sold; quotes present those products and prices to a customer."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications",
-    "intro": "Good next steps after Sales Foundations:",
+    "intro": "Build on your sales foundations knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/administrator",
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A rep has a business card from a conference for someone who has shown mild interest but has not been qualified. Which record should they create?",
+      "question": "A sales rep gets a business card from someone who is mildly interested but not yet qualified. Which record should they create?",
       "options": [
-        "An Opportunity",
-        "A Lead",
-        "An Account",
-        "A Quote"
+        "Opportunity",
+        "Lead",
+        "Account",
+        "Quote"
       ],
       "correctAnswer": 1,
-      "explanation": "Leads hold people who might become customers but have not been qualified yet.",
+      "explanation": "Use a Lead for a person who may become a customer but has not been qualified yet.",
       "whyWrong": [
-        "An Opportunity is a specific potential deal, which does not exist yet.",
-        "Accounts represent companies you already do business with or are actively working.",
-        "A Quote is a priced proposal, which is much further along."
+        "An Opportunity represents a potential deal; there is no qualified deal yet.",
+        "An Account represents a company the business works with.",
+        "A Quote is a priced offer, which comes later in the sales process."
       ]
     },
     {
-      "question": "A lead has been qualified and there is a real deal to pursue. What does converting the lead create?",
+      "question": "A Lead has been qualified and there is a real deal to pursue. What can converting the Lead create?",
       "options": [
-        "A Quote and then a signed Contract",
-        "An Account, Contact and Opportunity",
-        "Only an Account",
-        "A Case and a Task"
+        "A Quote and signed Contract, but no Contact",
+        "An Account and Contact, plus an optional Opportunity",
+        "An Account and Contact, but no Opportunity",
+        "A Case and Task, not a sales Opportunity"
       ],
       "correctAnswer": 1,
-      "explanation": "Conversion turns the lead into the company, the person and the potential deal.",
+      "explanation": "Lead conversion creates or links an Account and Contact. It can also create an Opportunity if there is a deal to pursue.",
       "whyWrong": [
-        "Quotes and contracts come later, after there is an opportunity.",
-        "The contact and the opportunity are created as well.",
-        "Cases are for service issues, not sales."
+        "A Quote and Contract usually come later in the sales process.",
+        "A converted Lead can create an Opportunity when one is needed.",
+        "Cases and Tasks are not the records created through Lead conversion."
       ]
     },
     {
-      "question": "Which three fields most directly define where a deal sits in the pipeline?",
+      "question": "Which three fields show where a deal is in the sales pipeline?",
       "options": [
-        "Stage, amount and close date",
-        "Lead source, industry and rating",
-        "Billing address, phone and website",
-        "Case origin, priority and status"
+        "Stage, amount, and close date",
+        "Lead source, industry, and rating",
+        "Billing address, phone, and website",
+        "Case origin, priority, and status"
       ],
       "correctAnswer": 0,
-      "explanation": "Stage shows progress, amount shows value, and close date shows when it is expected to land.",
+      "explanation": "Stage shows the deal’s progress, amount shows its value, and close date shows when it is expected to close.",
       "whyWrong": [
-        "Those describe where the lead came from and what the company is like.",
-        "Those are company details, not deal progress.",
-        "Those belong to Cases in service, not opportunities."
+        "These describe the Lead’s source and the company, not the deal’s progress.",
+        "These are company details, not pipeline fields.",
+        "These are Case fields used in customer support."
       ]
     },
     {
-      "question": "A manager wants to know what is likely to close this quarter, not just everything that is open. Which feature gives that?",
+      "question": "A manager wants to see what is likely to close this quarter. Which feature can help?",
       "options": [
-        "The activity timeline",
-        "A list view of all accounts",
+        "Activity timeline",
+        "A list view of all Accounts",
         "Forecasting with categories",
-        "The lead queue"
+        "Lead queue"
       ],
       "correctAnswer": 2,
-      "explanation": "Forecasting rolls opportunity amounts up by category, separating what is committed from what is merely in the pipeline.",
+      "explanation": "Forecasting groups Opportunity amounts by category, such as Commit and Pipeline, to show expected revenue.",
       "whyWrong": [
-        "The activity timeline shows what has happened on a record.",
-        "A list of accounts says nothing about expected revenue.",
-        "Lead queues hold unworked leads."
+        "An Activity timeline shows what happened on a record.",
+        "An Account list does not show expected revenue from deals.",
+        "A Lead queue holds Leads that need to be worked."
       ]
     },
     {
-      "question": "A rep needs to record a phone call they just made to a contact, so the history stays with the record. What should they use?",
+      "question": "A rep has just called a Contact and wants the call history saved on the record. What should they do?",
       "options": [
-        "Log an activity against the contact",
-        "Create a new Lead",
-        "Write it down in a personal notebook",
-        "Change the opportunity stage"
+        "Log the call as an activity on the Contact record",
+        "Create a new Lead for the same person",
+        "Write it in a personal notebook, outside Salesforce",
+        "Change the stage on the related Opportunity to record the call"
       ],
       "correctAnswer": 0,
-      "explanation": "Activities such as logged calls and tasks attach to the record, so anyone looking at it later sees the history.",
+      "explanation": "Logging a call as an activity attaches it to the Contact so others can see the history.",
       "whyWrong": [
-        "The person is already a contact, so a new lead would duplicate them.",
-        "A private note is invisible to the team.",
-        "Stage reflects deal progress, not a phone call."
+        "The person already has a Contact, so creating another Lead could duplicate them.",
+        "A private note is not saved for the team on the Salesforce record.",
+        "Changing a stage does not record the call."
       ]
     },
     {
-      "question": "Which view lets a rep drag opportunities from one stage to the next?",
+      "question": "Which view lets a rep move Opportunities between stages by dragging them?",
       "options": [
-        "A report",
-        "The main setup menu",
+        "A report that summarizes Opportunities",
+        "The Salesforce Setup menu for administrators",
         "The Kanban view",
-        "A dashboard"
+        "A dashboard that displays Opportunity charts"
       ],
       "correctAnswer": 2,
-      "explanation": "Kanban shows opportunities as cards by stage, and reps can drag them as deals progress.",
+      "explanation": "Kanban shows Opportunities as cards by stage, and users can drag cards as deals progress.",
       "whyWrong": [
-        "Reports list and summarise but are not used to move deals.",
-        "Setup is for administrators.",
-        "Dashboards display charts, they do not update records."
+        "Reports display and summarize data, but they do not move records between stages.",
+        "Setup is for configuring Salesforce, not moving Opportunities between stages.",
+        "Dashboards display charts; they do not update records."
       ]
     },
     {
-      "question": "What is the relationship between an Account and a Contact?",
+      "question": "How are an Account and a Contact related?",
       "options": [
-        "They are two words for the same record",
-        "Accounts are only used in service and Contacts only in sales",
+        "They are two names for the same record",
+        "Accounts are only for service, and Contacts are only for sales",
         "A Contact contains many Accounts",
-        "An Account is the company and Contacts are the people at it"
+        "Account represents a company; Contacts represent its people"
       ],
       "correctAnswer": 3,
-      "explanation": "The company is the Account and the people who work there are its Contacts.",
+      "explanation": "An Account represents a company, and its Contacts represent people linked to it.",
       "whyWrong": [
-        "They hold different information and serve different purposes.",
-        "Both are used across sales and service.",
-        "It is the other way round: an account has many contacts."
+        "Accounts and Contacts are different record types.",
+        "Both objects can be used by sales and service teams.",
+        "An Account can link to many Contacts, not the other way around."
       ]
     },
     {
-      "question": "A rep wants to add what is being sold, with prices, to a deal. What should they use?",
+      "question": "A rep wants to add products and prices to a deal. What should they use?",
       "options": [
-        "A Chatter post",
-        "A task on the account",
-        "A brand new lead created for each product",
-        "Products from a price book on the opportunity"
+        "A Chatter post describing each product and its price",
+        "A Task on the Account to list the products being sold",
+        "A new Lead record for every product on the deal",
+        "Add Price Book products to the Opportunity"
       ],
       "correctAnswer": 3,
-      "explanation": "Products come from a price book and are added to the opportunity, which usually sets the amount.",
+      "explanation": "Add products and prices from a Price Book to the Opportunity as line items.",
       "whyWrong": [
-        "Chatter is for conversation.",
-        "Tasks are to-dos, not line items.",
-        "Leads are unqualified people, not products."
+        "Chatter is for team discussion, not for adding product line items.",
+        "Tasks track work to do; they do not add products to a deal.",
+        "Leads represent prospects, not products."
       ]
     },
     {
-      "question": "Three colleagues are working the same large deal and the business wants that recorded. What fits?",
+      "question": "Three colleagues are working on one large deal, and the company wants to record their roles. What should it use?",
       "options": [
-        "An opportunity team with roles",
-        "A case for each colleague",
-        "Three separate opportunities",
-        "Converting the lead three times"
+        "An Opportunity Team with roles",
+        "A Case for each colleague",
+        "Three separate Opportunities for one deal and three reps",
+        "Convert the Lead three times"
       ],
       "correctAnswer": 0,
-      "explanation": "Opportunity teams record everyone involved in a deal and what their role is.",
+      "explanation": "An Opportunity Team records the people helping with a deal and their roles.",
       "whyWrong": [
-        "Cases are for customer issues.",
-        "Three opportunities would triple the forecast for one deal.",
-        "A lead can only be converted once."
+        "Opportunity Teams record team members and their roles on one deal.",
+        "Cases track customer service issues.",
+        "Three Opportunities would make one deal appear as three deals."
       ]
     },
     {
-      "question": "A manager wants one screen showing pipeline by stage, deals closing this month and team performance. What should be built?",
+      "question": "A manager wants one screen with pipeline by stage, deals closing this month, and team results. What should they create?",
       "options": [
-        "A quote",
-        "A dashboard built from reports",
-        "A single standard list view",
-        "A price book"
+        "A Quote with the monthly pipeline figures",
+        "A Dashboard built from reports",
+        "A single standard List View with all the records",
+        "A Price Book with products for the sales team"
       ],
       "correctAnswer": 1,
-      "explanation": "Dashboards place several reports as charts on one screen for an at-a-glance view.",
+      "explanation": "A Dashboard can show charts from several reports together on one screen.",
       "whyWrong": [
-        "Quotes are proposals for customers.",
-        "A list view shows one filtered list of records.",
-        "Price books hold product prices."
+        "A Quote is a priced offer to a customer.",
+        "A List View shows a filtered record list, not the requested set of charts.",
+        "A Price Book stores product prices."
       ]
     },
     {
-      "question": "Why does an accurate close date matter?",
+      "question": "Why should reps keep Opportunity close dates accurate?",
       "options": [
-        "It assigns the account owner",
-        "It changes the product price",
-        "It creates a support case automatically each time",
-        "Forecasts and pipeline reports depend on it"
+        "They set the Account owner",
+        "They change the product price",
+        "They create a Case automatically",
+        "Forecasts and pipeline reports use them"
       ],
       "correctAnswer": 3,
-      "explanation": "Close dates drive the time-based view of the pipeline, so wrong dates make forecasts meaningless.",
+      "explanation": "Close dates place deals in the right time period for pipeline reports and forecasts.",
       "whyWrong": [
-        "Ownership is set separately.",
-        "Prices come from the price book.",
-        "Cases are created in service processes."
+        "Account ownership is managed separately.",
+        "Prices come from product and Price Book settings.",
+        "Close dates do not automatically create support Cases."
       ]
     },
     {
-      "question": "A rep asks a product question and wants the answer kept with the deal for others to see. What fits best?",
+      "question": "A rep asks a product question and wants the answer saved with the deal for the team to see. What should they use?",
       "options": [
-        "Chatter on the opportunity",
-        "A personal task",
-        "Editing the account name",
+        "Chatter on the Opportunity",
+        "A personal Task",
+        "Change the Account name",
         "A private email"
       ],
       "correctAnswer": 0,
-      "explanation": "Chatter keeps the conversation attached to the record, so the next person sees it.",
+      "explanation": "Chatter on the Opportunity keeps the discussion with the deal so teammates can find it.",
       "whyWrong": [
-        "A task is a to-do, not a discussion.",
-        "Renaming the account loses data and answers nothing.",
-        "Email is invisible to colleagues unless logged."
+        "A Task tracks work to do; it is not a discussion.",
+        "Changing the Account name does not answer the question.",
+        "A private email is not visible to colleagues unless it is logged."
       ]
     },
     {
-      "question": "What does a forecast category do?",
+      "question": "In sales forecasting, what does the forecast category indicate about an opportunity?",
       "options": [
-        "Controls login access",
-        "Groups stages into buckets such as Commit",
-        "Decides which user ends up owning the account",
-        "Sets the product price"
+        "Controls which users can sign in to Salesforce",
+        "Groups Opportunity stages into forecast categories",
+        "Sets the Account owner for each sales rep",
+        "Sets prices for products in a Price Book"
       ],
       "correctAnswer": 1,
-      "explanation": "Forecast categories group stages so managers can separate confident revenue from early pipeline.",
+      "explanation": "Forecast categories group Opportunity stages so managers can separate expected revenue from earlier pipeline.",
       "whyWrong": [
-        "Access is controlled by the administrator.",
-        "Ownership is a separate field.",
-        "Prices come from price books."
+        "Login access is controlled through user access settings.",
+        "Account ownership is a separate field.",
+        "Product prices are set through Price Books."
       ]
     },
     {
-      "question": "A rep needs their deals and contacts while visiting a customer, away from their laptop. What should they use?",
+      "question": "A rep needs Salesforce records while visiting a customer without a laptop. What should they use?",
       "options": [
-        "Nothing is available off a desktop",
+        "Salesforce is not available away from a desktop",
         "A personal spreadsheet",
-        "The Salesforce mobile app",
+        "Salesforce mobile app",
         "A printed report from last month"
       ],
       "correctAnswer": 2,
-      "explanation": "The mobile app gives access to the same records and lets the rep log activity on the spot.",
+      "explanation": "The Salesforce mobile app lets a rep view records and log work while away from a computer.",
       "whyWrong": [
-        "Salesforce is available on mobile.",
-        "A spreadsheet is not shared and quickly drifts from the real data.",
-        "A printout goes out of date and cannot be updated."
+        "Salesforce has a mobile app for phones and tablets.",
+        "A personal spreadsheet is not the shared source of current Salesforce data.",
+        "A printout can become outdated and cannot be updated from the visit."
       ]
     },
     {
-      "question": "Which is the best description of a pipeline report?",
+      "question": "What best describes a pipeline report?",
       "options": [
         "A directory of employees",
-        "A record of all of the past invoices",
-        "Open opportunities grouped by stage",
-        "A list of closed cases"
+        "A history of all past invoices",
+        "Open Opportunities grouped by stage",
+        "A list of closed Cases"
       ],
       "correctAnswer": 2,
-      "explanation": "The pipeline is the set of open deals, and a pipeline report groups them so you can see where they sit.",
+      "explanation": "A pipeline report groups open Opportunities so users can see each deal’s stage.",
       "whyWrong": [
-        "Employee records are not the sales pipeline.",
-        "Invoices are billing records, usually in another system.",
-        "Cases belong to service."
+        "An employee directory is not a sales pipeline.",
+        "Invoices are billing records, not open sales deals.",
+        "Cases are customer service records."
       ]
     }
   ]

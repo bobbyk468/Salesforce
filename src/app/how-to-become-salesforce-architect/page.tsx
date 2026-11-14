@@ -43,23 +43,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How long does it take to become a Salesforce Architect?',
-    answer: 'The Application Architect credential (4 individual architect certs) typically takes 2–4 years after PD1. The full CTA path (Application Architect + System Architect + CTA evaluation) takes 4–8 years for most candidates. The CTA board review is one of the most rigorous credentialling processes in enterprise software, most successful candidates have 8–12 years of Salesforce experience and have led multiple large enterprise implementations.',
+    answer: 'After PD1, earning the Application Architect credential (4 individual architect certs) often takes 2–4 years. The full CTA path, including Application Architect, System Architect, and CTA evaluation, takes 4–8 years for many candidates. The CTA Board Review is one of the most demanding credential processes in enterprise software. Successful candidates often have 8–12 years of Salesforce experience and have led several large enterprise implementations.',
   },
   {
     question: 'What certifications are required for Salesforce Application Architect?',
-    answer: 'The Application Architect credential requires passing all four of these certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. Once all four are passed, Salesforce automatically awards the Application Architect credential. No separate Application Architect exam exists.',
+    answer: 'Pass all four component certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. Salesforce awards the Application Architect credential when you hold all four. There is no separate Application Architect exam.',
   },
   {
     question: 'What certifications are required for Salesforce System Architect?',
-    answer: 'The System Architect credential requires Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. There is no separate System Architect exam. The credential is granted once you hold all four. Platform Developer I is the only exam shared with Application Architect.',
+    answer: 'You need Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. There is no separate System Architect exam; Salesforce grants the credential when you hold all four. Platform Developer I is the only exam shared with Application Architect.',
   },
   {
     question: 'What is the CTA Board Review?',
-    answer: 'The CTA (Certified Technical Architect) Board Review is a live, in-person or virtual presentation to a panel of senior Salesforce architects. Candidates receive a complex business scenario in advance and present a Salesforce architecture solution, whiteboarding, defending design decisions, and responding to challenging questions. The evaluation is pass/fail. Most candidates attempt it multiple times before passing.',
+    answer: 'The Certified Technical Architect (CTA) Board Review is a live presentation, in person or virtual, to a panel of senior Salesforce architects. Candidates receive a complex business scenario and present an architecture solution. They use whiteboard diagrams, explain their design choices, and answer questions from the panel. The result is pass or fail, and many candidates attempt the review more than once.',
   },
   {
     question: 'What is the Salesforce architect salary in 2026?',
-    answer: 'Application Architects typically earn $130,000–$160,000 USD. System Architects and CTAs earn $160,000–$200,000+. Salesforce CTAs are among the highest-paid professionals in the Salesforce ecosystem; there are fewer than 1,000 CTAs globally as of 2026. Contract architects typically earn $150–$250 per hour depending on specialisation and location.',
+    answer: 'Application Architects typically earn $130,000–$160,000 USD. System Architects and CTAs earn $160,000–$200,000+. CTAs are among the highest-paid Salesforce professionals, and there are fewer than 1,000 worldwide as of 2026. Contract architects typically earn $150–$250 per hour, depending on specialization and location.',
   },
 ]
 
@@ -68,35 +68,35 @@ const stages = [
     stage: 'Foundation',
     time: '6–12 months',
     title: 'Admin + Developer Foundation',
-    description: 'The architect path requires mastery of the full Salesforce platform before specialising. Pass ADM-201 (administrator), then Platform Developer I (PD1). These two certifications give you the platform foundation, data model, security model, automation, Apex, LWC, needed for all architect-level thinking.',
+    description: 'Build a broad Salesforce foundation before choosing an architecture specialty. Earn ADM-201 (administrator) and Platform Developer I (PD1). These certifications introduce the platform, data and security models, automation, Apex, and LWC that you will use in architecture work.',
     certs: ['ADM-201 (Platform Administrator)', 'Platform Developer I (PD1)'],
   },
   {
     stage: 'Experience',
     time: '2–4 years',
     title: 'Build Hands-On Implementation Experience',
-    description: 'No amount of studying replaces hands-on project experience. Architects are expected to have led multiple large, complex Salesforce implementations, multi-org environments, custom integrations, large data volumes, complex sharing models. Work as a senior developer or technical lead on at least 3–5 enterprise Salesforce projects before pursuing architect certifications.',
+    description: 'Study cannot replace implementation experience. Architects are expected to lead complex Salesforce projects involving multiple orgs, custom integrations, large data volumes, and complex sharing models. Before pursuing architect certifications, work as a senior developer or technical lead on at least 3–5 enterprise Salesforce projects.',
     certs: ['Lead developer or technical architect role on enterprise projects', 'Experience across multiple clouds (Sales, Service, Platform, Marketing)'],
   },
   {
     stage: 'App Architect',
     time: '1–2 years',
     title: 'Application Architect (4 Certs, Auto-Awarded)',
-    description: 'Pursue the four Application Architect component exams in parallel or sequentially: Platform App Builder and Platform Developer I (already covered in the Foundation stage above) plus Data Architect and Sharing and Visibility Architect. Once all four are passed, Salesforce automatically awards the credential; there is no separate Application Architect exam.',
+    description: 'Complete the four Application Architect components, either one at a time or in parallel: Platform App Builder, Platform Developer I (covered in the Foundation stage), Data Architect, and Sharing and Visibility Architect. Salesforce awards the credential after you pass all four; there is no separate Application Architect exam.',
     certs: ['Platform App Builder (already completed)', 'Platform Developer I (already completed)', 'Data Architect', 'Sharing and Visibility Architect'],
   },
   {
     stage: 'Sys Architect',
     time: '1–2 years',
     title: 'System Architect (4 Component Certs, No Exam of Its Own)',
-    description: 'System Architect tests infrastructure and integration knowledge: API design, identity and access management (SSO, OAuth, SAML), and release management. Platform Developer I is the only exam shared with Application Architect, so Integration Architect, IAM Architect, and Dev Lifecycle Architect are new. There is no extra System Architect exam. The credential is granted once you hold all four.',
+    description: 'System Architect covers infrastructure and integration topics, including API design, identity and access management (SSO, OAuth, SAML), and release management. Platform Developer I is the only component shared with Application Architect. The other three components are Integration Architect, IAM Architect, and Dev Lifecycle Architect. Salesforce grants the credential once you hold all four; there is no additional System Architect exam.',
     certs: ['Platform Developer I (already completed)', 'Integration Architect', 'Identity and Access Management Architect', 'Dev Lifecycle and Deployment Architect'],
   },
   {
     stage: 'CTA',
     time: '6–18 months prep',
     title: 'Certified Technical Architect (CTA)',
-    description: 'After holding both Application and System Architect credentials, candidates may attempt the CTA evaluation. Preparation involves studying architecture decision frameworks, practicing whiteboard diagramming, and doing mock board reviews. The CTA Board Review tests ability to design enterprise Salesforce architecture under live questioning from senior architects.',
+    description: 'Once you hold both Application and System Architect credentials, you can attempt the CTA evaluation. Prepare by studying architecture decision frameworks, practicing whiteboard diagrams, and taking part in mock board reviews. At the CTA Board Review, you will need to design an enterprise Salesforce architecture and explain it to senior architects.',
     certs: ['CTA written exam', 'CTA Board Review (live presentation to architect panel)'],
   },
 ]
@@ -116,7 +116,7 @@ export default function HowToBecomeSalesforceArchitectPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          The complete roadmap from ADM-201 to Certified Technical Architect (CTA), certifications, experience milestones, timeline, and salary data.
+          Follow the stages from ADM-201 toward Certified Technical Architect (CTA), including the required certifications and project experience.
         </p>
       </div>
 
@@ -206,7 +206,7 @@ export default function HowToBecomeSalesforceArchitectPage() {
       {/* CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Your Architect Journey</h2>
-        <p className="text-white mb-6">Practice free architect-level questions and explore the certification path.</p>
+        <p className="text-white mb-6">Try free architect-level practice questions and review the certification path.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/role/architect" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
             View All Architect Certs <ArrowRight className="ml-2 h-4 w-4" />

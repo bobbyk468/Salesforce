@@ -46,23 +46,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between B2B and B2C Solution Architect certifications?',
-    answer: 'The Salesforce B2B Solution Architect certification focuses on enterprise sales and commerce architectures, integrating B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and partner portals across complex B2B sales cycles. The B2C Solution Architect certification focuses on consumer-facing commerce architectures: B2C Commerce (Salesforce Commerce Cloud), Marketing Cloud personalisation, and omnichannel consumer engagement. B2B is enterprise/manufacturing/distribution focused; B2C is retail/consumer goods focused.',
+    answer: 'B2B Solution Architect covers enterprise sales and commerce systems, including B2B Commerce, Sales Cloud, CPQ, Revenue Cloud, and partner portals. B2C Solution Architect focuses on consumer commerce through B2C Commerce (Salesforce Commerce Cloud), Marketing Cloud personalization, and omnichannel engagement. The first fits enterprise, manufacturing, and distribution work; the second fits retail and consumer goods.',
   },
   {
     question: 'Which should I take: B2B or B2C Solution Architect?',
-    answer: 'Choose based on your client and project experience. If you work with enterprise clients on complex sales cycles (CPQ, Revenue Cloud, partner communities, B2B Commerce) → B2B Solution Architect. If you work on consumer e-commerce and retail implementations (Salesforce Commerce Cloud, Marketing Cloud personalisation, loyalty programmes) → B2C Solution Architect. The two certifications serve fundamentally different industry segments.',
+    answer: 'Choose based on the projects you know. If you work on enterprise sales cycles involving CPQ, Revenue Cloud, partner communities, or B2B Commerce, choose B2B Solution Architect. If you work on consumer ecommerce, retail, Salesforce Commerce Cloud, Marketing Cloud personalization, or loyalty, choose B2C Solution Architect. The credentials serve different industries.',
   },
   {
     question: 'What prerequisites are required for B2B Solution Architect?',
-    answer: 'No formal prerequisites are listed, but Salesforce recommends holding relevant foundational certifications: Sales Cloud Consultant, Service Cloud Consultant, and either CPQ Administrator or Experience Cloud Consultant. B2B Solution Architect is a cross-cloud, scenario-based exam that assumes deep knowledge across the Salesforce B2B stack. Most candidates have 4–6 years of Salesforce implementation experience.',
+    answer: 'No formal prerequisites are listed. Salesforce recommends Sales Cloud Consultant, Service Cloud Consultant, and either CPQ Administrator or Experience Cloud Consultant as relevant foundation credentials. The scenario-based exam covers several parts of the Salesforce B2B stack. Many candidates have 4–6 years of Salesforce implementation experience.',
   },
   {
     question: 'What prerequisites are required for B2C Solution Architect?',
-    answer: 'No formal prerequisites are listed, but Salesforce recommends Marketing Cloud Email Specialist, B2C Commerce Developer, and Experience Cloud Consultant as relevant foundational credentials. B2C Solution Architect tests cross-cloud integrations between Commerce Cloud, Marketing Cloud, Service Cloud, and Einstein personalisation. Deep hands-on B2C Commerce and Marketing Cloud experience is essential.',
+    answer: 'No formal prerequisites are listed. Salesforce recommends Marketing Cloud Email Specialist, B2C Commerce Developer, and Experience Cloud Consultant as useful foundation credentials. The exam covers integrations across Commerce Cloud, Marketing Cloud, Service Cloud, and Einstein personalization. Hands-on experience with B2C Commerce and Marketing Cloud is important.',
   },
   {
     question: 'Are B2B and B2C Solution Architect exams similar in format?',
-    answer: 'Both exams follow the same format: 60 questions, 120 minutes, approximately 68% passing score, and a $400 fee. Both are scenario-based, testing multi-cloud architecture decisions rather than single-product features. The key difference is the Salesforce product ecosystem each exam covers: B2B Commerce, CPQ, Revenue Cloud (B2B) vs B2C Commerce, Marketing Cloud, personalisation (B2C).',
+    answer: 'Both exams are scenario-based and test multi-cloud architecture decisions. Each has 60 questions, 120 minutes, an approximately 68% passing score, and a $400 fee. The product scope differs: B2B Commerce, CPQ, and Revenue Cloud for B2B; B2C Commerce, Marketing Cloud, and personalization for B2C.',
   },
 ]
 
@@ -80,7 +80,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Two Salesforce architect-level credentials covering fundamentally different commerce ecosystems. Here’s how to choose the right one for your career.
+          These architect credentials focus on different commerce models. Compare the business needs, products, and client work each covers to find the closer fit.
         </p>
       </div>
 
@@ -91,10 +91,10 @@ export default function B2bVsB2cSolutionArchitectPage() {
           certSlug: "b2b-solution-architect",
           examTipsSlug: "certifications/b2b-solution-architect",
           conditions: [
-          "Your clients are enterprise B2B organisations using Sales, Service, and Revenue Cloud",
-          "You architect multi-cloud solutions for business-to-business use cases",
-          "You work with complex CRM, CPQ, and partner portal implementations",
-          "You want an architect credential outside the CTA path",
+          "Your enterprise clients use Sales, Service, or Revenue Cloud",
+          "You design solutions for business-to-business sales",
+          "Your projects include CRM, CPQ, or partner portals",
+          "You want a credential focused on B2B architecture",
           ],
         }}
         certB={{
@@ -102,17 +102,17 @@ export default function B2bVsB2cSolutionArchitectPage() {
           certSlug: "b2c-solution-architect",
           examTipsSlug: "certifications/b2c-solution-architect",
           conditions: [
-          "Your clients are consumer-facing businesses using Commerce, Marketing, and Service Cloud",
-          "You design solutions for B2C e-commerce, loyalty, or marketing automation",
-          "You work with Salesforce Commerce Cloud or Marketing Cloud integrations",
-          "You architect high-volume consumer data flows",
+          "Your clients sell to consumers through Commerce, Marketing, or Service Cloud",
+          "Your projects involve consumer ecommerce, loyalty, or marketing automation",
+          "You integrate Salesforce Commerce Cloud and Marketing Cloud",
+          "You design systems for high-volume consumer activity",
           ],
         }}
         recommendation={{
           certName: "B2B Solution Architect",
           certSlug: "b2b-solution-architect",
           examTipsSlug: "certifications/b2b-solution-architect",
-          reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud; otherwise B2B gives you wider applicability.",
+          reason: "Choose the credential that matches your client base. B2B Solution Architect fits enterprise sales and partner commerce work; B2C Solution Architect fits consumer storefronts and marketing. Your project experience is the clearest guide to which exam to take first.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",
         }}
@@ -234,7 +234,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Explore Both Architect Paths</h2>
-        <p className="text-white mb-6">Free practice questions for both Solution Architect certifications.</p>
+        <p className="text-white mb-6">Practice questions are available for both Solution Architect exams.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/b2b-solution-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             B2B Architect Practice

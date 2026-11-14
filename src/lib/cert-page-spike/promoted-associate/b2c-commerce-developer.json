@@ -1,42 +1,42 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the B2C Commerce Developer exam for?",
+    "heading": "Who should take the B2C Commerce Developer exam?",
     "personas": [
       {
-        "label": "SFCC developers",
-        "description": "You build and customize B2C Commerce storefronts using SFRA, ISML, and server-side JavaScript and want the certification to validate your full-stack SFCC skills."
+        "label": "B2C Commerce developers",
+        "description": "You build storefront features with SFRA, ISML, and server-side JavaScript, and want to show your end-to-end development skills."
       },
       {
-        "label": "Full-stack commerce engineers",
-        "description": "You work with controllers, templates, OCAPI/SCAPI, and Business Manager configuration and need a credential that covers the entire SFCC development stack."
+        "label": "Commerce engineers",
+        "description": "You work with controllers, templates, commerce APIs, and Business Manager settings across the B2C Commerce stack."
       },
       {
         "label": "Technical leads",
-        "description": "You manage cartridge architecture, deployment pipelines, and storefront performance for B2C Commerce projects and want to formalize your technical leadership."
+        "description": "You guide cartridge structure, code releases, and storefront performance, and want to validate your technical experience."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the B2C Commerce Developer Exam Hard?",
-    "summary": "The B2C Commerce Developer exam is considered one of the harder Salesforce developer certifications. The 65% passing score is moderate, but the exam covers the full SFCC stack, from SFRA architecture and ISML templates to OCAPI/SCAPI integration and Business Manager configuration, demanding broad and deep hands-on experience.",
+    "heading": "How challenging is the B2C Commerce Developer exam?",
+    "summary": "This exam covers a wide range of B2C Commerce development work. The 65% passing score is one part of the challenge; you also need to understand SFRA, templates, scripting, APIs, data, and Business Manager. Hands-on experience helps connect these topics.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>65% passing score</strong>: moderate on paper, but the breadth of topics (SFRA, scripting, APIs, data model, deployment) makes it demanding.",
-      "<strong>Full-stack depth</strong>: questions span server-side controllers, ISML templates, client-side JavaScript, and Business Manager operations, so you cannot skip any layer.",
-      "<strong>Hands-on SFRA experience essential</strong>: real project experience with SFRA controller development and at least one OCAPI or SCAPI integration is the strongest preparation."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "<strong>Several development layers:</strong> questions can cover controllers, ISML templates, browser code, APIs, data, and Business Manager tasks.",
+      "<strong>Practice in a sandbox:</strong> Build an SFRA controller, extend a template, and try an OCAPI or SCAPI integration to prepare."
     ],
-    "passRateGuidance": "Spend time in a B2C Commerce sandbox building custom controllers, overriding SFRA templates, and configuring jobs in Business Manager before booking the exam."
+    "passRateGuidance": "Use a B2C Commerce sandbox to build a custom controller, extend an SFRA template, and configure a job in Business Manager. Practice explaining why each pattern fits the task."
   },
   "examFormat": {
-    "heading": "B2C Commerce Developer Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Around 40-50% of questions are scenario-based. Common patterns describe a storefront customization requirement and ask which SFRA pattern, controller method, or API approach meets it. Expect questions on cartridge path resolution, template overrides, and OCAPI resource configuration.",
+    "heading": "B2C Commerce Developer exam format",
+    "intro": "You can take the exam online with a proctor or at a test center. Questions cover practical development choices across the platform.",
+    "scenarioPercent": "Some questions describe a storefront change and ask which SFRA pattern, controller approach, or API fits. Review cartridge path order, template overrides, and OCAPI resource settings.",
     "bestWayToPass": [
-      "<strong>Master the cartridge override pattern:</strong> Know how the cartridge path resolves controllers and templates, and when to use server.extend vs. server.replace.",
-      "<strong>Build with SFRA hands-on:</strong> Create custom controllers, override ISML templates, and work with the dw.* API in a sandbox environment.",
-      "<strong>Study OCAPI and SCAPI:</strong> Understand the Shop API vs. Data API, how authentication works for headless scenarios, and when to use each API.",
-      "<strong>Know Business Manager inside out:</strong> Practice configuring site preferences, running jobs, managing code versions, and diagnosing issues using the request log and pipeline profiler."
+      "<strong>Understand cartridge overrides:</strong> Learn how the path selects controllers and templates, and when `server.extend` or `server.replace` is appropriate.",
+      "<strong>Build with SFRA:</strong> Practice writing controllers, extending ISML templates, and using the `dw.*` APIs in a sandbox.",
+      "<strong>Compare the commerce APIs:</strong> Know the Shop and Data APIs, authentication basics for headless work, and when each API is useful.",
+      "<strong>Practice Business Manager tasks:</strong> Configure site preferences and jobs, manage code versions, and use logs and the pipeline profiler to investigate issues."
     ]
   },
   "certificationCard": {
@@ -62,53 +62,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "B2C Commerce Developer: Key Concepts for the Exam",
+    "h2": "B2C Commerce Developer exam: key concepts",
     "blocks": [
       {
-        "heading": "SFRA Architecture: Cartridges & Override Pattern",
-        "body": "**SFRA** is the Salesforce B2C Commerce reference architecture built on a cartridge system. **cartridges** are modular packages containing controllers, templates, models, and static assets. The cartridge path (configured in **Business Manager**) defines override priority, the leftmost cartridge wins. To customize, create a custom cartridge that overrides specific controllers or templates without editing base cartridges. This keeps base cartridge upgrades non-destructive. The `server.extend` and `server.replace` patterns in controllers allow adding before/after steps or completely replacing a route. The developer exam tests the correct use of the override pattern and common mistakes that break cartridge path resolution."
+        "heading": "SFRA Architecture: Cartridges & Overrides",
+        "body": "**SFRA** is Salesforce B2C Commerce’s reference storefront architecture. It uses **cartridges**, which package controllers, templates, models, and static files. The cartridge path in **Business Manager** sets priority: a cartridge earlier in the path wins when files share a location. To customize the storefront, put changes in your own cartridge and leave the base cartridge intact. In controllers, `server.extend` adds behavior to a route, while `server.replace` replaces it. Understand how path order affects which version runs."
       },
       {
         "heading": "Controllers, Scripts & Server-Side Logic",
-        "body": "**SFRA** controllers are JavaScript modules using the `server` framework. Routes handle GET and POST requests and render templates or return JSON. Middleware functions (authentication, CSRF, consent) can be prepended to any route. Models and helpers contain business logic separated from controllers. `dw.system`, `dw.order`, `dw.catalog`, the Digital SDK, provides access to Commerce Cloud server-side APIs. Custom scripts (`.js` files in `cartridge/scripts/`) encapsulate reusable logic. The exam tests how to add a middleware step to an existing controller route, how to call a custom script from a controller, and common governor limit considerations in server-side scripts."
+        "body": "SFRA controllers are JavaScript modules that use the `server` framework. Routes handle requests such as GET and POST, then render a template or return JSON. Middleware can add checks such as authentication, CSRF protection, or consent handling. Keep reusable business logic in models, helpers, or script modules instead of repeating it in controllers. The `dw.*` APIs provide access to server-side Commerce features. Custom scripts in `cartridge/scripts/` can hold logic shared by several routes. Be mindful of platform limits when a script queries or processes data."
       },
       {
         "heading": "Templates (ISML) & Client-Side Assets",
-        "body": "ISML (Internet Store Markup Language) is the server-side templating language. `<isinclude>` embeds sub-templates. `<isloop>` iterates collections. `<isset>` assigns variables. `<isif>` handles conditionals. Resource bundles (properties files) provide localized strings. Static assets (JS, CSS, images) are organized in `cartridge/static/` and referenced via `URLUtils.staticURL()`. Webpack compiles and bundles client-side JS in **SFRA**. SASS is compiled to CSS. Client-side JavaScript uses jQuery and Bootstrap in SFRA. The exam tests ISML syntax, how to pass data from controller to template via `pdict`, and how to add a new client-side component."
+        "body": "**ISML** is the server-side language used to build storefront pages. `<isinclude>` inserts another template, `<isloop>` repeats content for a collection, `<isset>` assigns a value, and `<isif>` handles a condition. Resource bundles store text for different locales. Put static JavaScript, CSS, and images in `cartridge/static/` and reference them with `URLUtils.staticURL()`. SFRA uses build tools such as Webpack to prepare browser code and SASS to produce CSS. Controllers pass data to templates through `pdict`. Keep dynamic content and caching behavior in mind when extending a page."
       },
       {
         "heading": "Jobs, Feeds & Business Manager Configuration",
-        "body": "Commerce Cloud Jobs run server-side scripts on a schedule or on-demand. Jobs process product feeds (import/export), order exports, and inventory updates. The Job Framework uses steps configured in **Business Manager**. IMPEX (Import/Export) handles large data loads via XML or CSV files placed in the IMPEX directory. Site Preferences store admin-configurable settings accessible in code via `dw.system.Site.current.preferences`. Custom Attributes extend standard objects (products, orders, customers) in Business Manager. The exam tests Job configuration, IMPEX file formats, and how to read custom site preferences in controller logic."
+        "body": "Commerce Cloud jobs run scripts on a schedule or when started by an administrator. Teams use them for tasks such as importing product or inventory feeds and exporting orders. Configure job steps in **Business Manager**. **IMPEX** supports bulk import and export using formats such as XML and CSV. **Site Preferences** hold settings that administrators can change and code can read through `dw.system.Site.current.preferences`. **Custom Attributes** add fields to standard objects such as products, orders, or customers. Know where to configure a job and how a controller reads a site preference."
       },
       {
         "heading": "Testing, Debugging & Deployment",
-        "body": "Commerce Cloud development uses the `sgmf-scripts` (**SFRA** build tools) and Salesforce Commerce Cloud CLI (`sfcc-ci`) for deployment. Code deployment uploads **cartridges** to a code version, which is then activated. The Request Log and Custom Log APIs (`dw.system.Logger`) support debugging. The Pipeline Profiler identifies slow controller routes. Functional tests use `mochawesome` reports. Unit testing is done with jest and `dw-api-types` mocks for Digital SDK. The exam tests the deployment sequence (cartridge upload → code version activation), how to write a testable controller with mocked dependencies, and how to diagnose errors using **Business Manager** logs."
+        "body": "Teams use build tools such as `sgmf-scripts` and deployment tools such as `sfcc-ci` to prepare and upload cartridges. Uploaded code is assigned to a code version, which is then activated. Use the Request Log and `dw.system.Logger` to investigate requests and application behavior. The Pipeline Profiler can help identify slow routes. Test controllers with dependencies that can be mocked, and use the project’s test tools and reports. For a release, understand the steps from uploading cartridges to activating the code version, and know where to look when errors appear in **Business Manager**."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce B2C Commerce Developer Exam",
-    "intro": "The B2C Commerce Developer exam tests hands-on SFCC development: ISML templates, controller development (SFRA), and script development. Focus on the SFRA architecture and how to implement common storefront customizations.",
+    "h2": "How to prepare for the B2C Commerce Developer exam",
+    "intro": "The exam checks whether you can build and troubleshoot B2C Commerce storefront features. Practice tracing a request through a controller, template, script, and any API or Business Manager settings it depends on.",
     "blocks": [
       {
-        "heading": "SFRA Architecture",
-        "body": "Know the **storefront** Reference Architecture (**SFRA**) MVC pattern: Routes (controllers), Models (data layer), Templates (ISML views), and how **cartridges** layer on top of SFRA using the cartridge path."
+        "heading": "SFRA Structure",
+        "body": "Know how controllers, models, and ISML templates work together, and how the cartridge path chooses which implementation runs."
       },
       {
-        "heading": "Controller Development",
-        "body": "Know how to create custom routes (server.get/post/append/prepend/replace), use middleware for authentication/CSRF protection, and how to return JSON responses or render ISML templates from controllers."
+        "heading": "Controller Routes",
+        "body": "Practice creating and extending routes with `server.get`, `server.post`, `server.append`, `server.prepend`, and `server.replace`. Add middleware for the needed checks and return either JSON or a rendered template."
       },
       {
         "heading": "ISML Templates",
-        "body": "Know ISML syntax: <isset>, <isif>, <isloop>, <isinclude>, <isreplace>, and how to use locale, currency, and content asset tags. Understand how template caching affects dynamic content rendering."
+        "body": "Review tags such as `<isset>`, `<isif>`, `<isloop>`, and `<isinclude>`. Learn how templates use locale, currency, and content assets, and how caching affects dynamic page content."
       },
       {
-        "heading": "Script Development",
-        "body": "Know how to write CommonJS-style scripts in SFCC, use the dw.* API (dw.catalog, dw.order, dw.customer), and how to call web services from scripts using the dw.net.HTTPClient."
+        "heading": "Scripts and Commerce APIs",
+        "body": "Write reusable CommonJS modules and use the `dw.*` APIs for catalog, order, and customer tasks. Know how server-side scripts call external services through `dw.net.HTTPClient`."
       },
       {
-        "heading": "Business Manager Configuration",
-        "body": "Know key **Business Manager** configurations: catalog setup, pricebook management, promotion configuration, **storefront** configuration (site preferences), and how to use the UX Studio for cartridge management."
+        "heading": "Business Manager Settings",
+        "body": "Practice setting up catalogs, price books, promotions, and site preferences. Know how Business Manager settings relate to the storefront and how to manage cartridges with the tools used by your team."
       }
     ]
   },
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A developer needs to add a field to the product object that the storefront will display. Where is this defined?",
+      "question": "A storefront needs to display an extra field for each product. Where should a developer define it?",
       "options": [
-        "In the system object metadata as a custom attribute",
-        "In a new custom object created alongside the standard product object",
-        "In the site preference settings for the storefront being developed",
-        "In a cartridge template that renders the value directly from the catalogue"
+        "Add a custom attribute to the product system object metadata",
+        "Create a separate custom object for product fields",
+        "Add the value to the site preference settings",
+        "Put the value directly in the template without extending product data"
       ],
       "correctAnswer": 0,
-      "explanation": "Custom attributes extend the standard system objects, which is how product data beyond the built-in fields is held.",
+      "explanation": "A custom attribute extends the standard product object so the additional value can be stored with each product.",
       "whyWrong": [
-        "A parallel custom object breaks the relationship to the product.",
-        "Site preferences hold configuration, not product attributes.",
-        "A template renders data; it does not define where the data lives."
+        "A separate custom object is unnecessary when the field belongs to each product.",
+        "Site preferences store site-level settings, not individual product values.",
+        "A template can display data but does not define or store the product field."
       ]
     },
     {
-      "question": "What is the purpose of the cartridge path?",
+      "question": "What does the cartridge path determine?",
       "options": [
-        "It defines which payment providers are enabled for the storefront",
-        "It controls the order in which jobs execute on the instance overnight",
-        "It decides which cartridge's version of a file wins",
-        "It lists the catalogues that have been assigned to the current site"
+        "Which payment providers are active",
+        "The order in which scheduled jobs run",
+        "Earlier matching cartridge wins",
+        "Which catalogs are assigned to the site"
       ],
       "correctAnswer": 2,
-      "explanation": "The cartridge path is searched in order, so a file in an earlier cartridge overrides the same path in a later one. That is the basis of customisation without editing base code.",
+      "explanation": "The path is searched in order, so a matching file in an earlier cartridge takes precedence over one later in the path.",
       "whyWrong": [
-        "Payment configuration is held in site preferences.",
-        "Job order is configured in the job framework.",
-        "Catalogue assignment is separate site configuration."
+        "Payment provider setup is separate from cartridge path order.",
+        "The path does not set job schedules.",
+        "Catalog assignment is configured separately in Business Manager."
       ]
     },
     {
-      "question": "A developer must customise checkout without modifying the base cartridge. What is the correct approach?",
+      "question": "A developer needs to change checkout behavior without editing base code. What should they do?",
       "options": [
-        "Override the relevant files in a custom cartridge",
-        "Copy the whole base cartridge and rename it as the project's own version",
-        "Disable the base cartridge entirely and rebuild checkout from scratch",
-        "Edit the base cartridge directly and keep a record of every change made"
+        "Use an earlier custom cartridge",
+        "Copy and rename the entire base cartridge",
+        "Remove the base cartridge and rebuild checkout",
+        "Edit the base cartridge and document the changes"
       ],
       "correctAnswer": 0,
-      "explanation": "Putting your own version earlier on the cartridge path lets you change behaviour while leaving the base code upgradeable.",
+      "explanation": "A custom cartridge earlier in the path can override selected behavior while leaving the base cartridge available for upgrades.",
       "whyWrong": [
-        "Wholesale copying inherits the maintenance burden of the entire cartridge.",
-        "Rebuilding checkout discards tested, compliant functionality.",
-        "Editing base code makes every future platform upgrade painful."
+        "Copying the whole base creates unnecessary maintenance work and diverges from the extension pattern.",
+        "Removing the base cartridge may remove standard features that the storefront depends on.",
+        "Direct edits to base code are hard to maintain through upgrades."
       ]
     },
     {
-      "question": "What does a controller do in a B2C Commerce storefront?",
+      "question": "What is the main job of a storefront controller?",
       "options": [
-        "It stores the product data that the storefront pages will display",
-        "It handles a request and decides what to render",
-        "It schedules the import jobs that refresh the catalogue each night",
-        "It defines the visual styling applied across the storefront's pages"
+        "Store product data for storefront pages",
+        "Handle a request and decide what response to return",
+        "Schedule nightly catalog imports",
+        "Set the visual style for storefront pages"
       ],
       "correctAnswer": 1,
-      "explanation": "Controllers receive the request. Run the server-side logic and choose the template or JSON response to return.",
+      "explanation": "A controller handles the request, runs server-side logic, and chooses a template or response such as JSON.",
       "whyWrong": [
-        "Product data lives in the catalogue and system objects.",
-        "Imports are configured as jobs.",
-        "Styling is handled by stylesheets and templates."
+        "Product data belongs to the catalog and data layer, not in the controller itself.",
+        "Jobs are configured separately and are not the controller’s main role.",
+        "Visual styling is handled by client-side assets such as CSS."
       ]
     },
     {
-      "question": "A developer needs to share logic between two controllers. What is the appropriate structure?",
+      "question": "Two controllers need to use the same server-side logic. What is a good way to share it?",
       "options": [
-        "A script module that both controllers require",
-        "A template fragment that each of the controllers renders in turn",
-        "A copy of the same function placed in each of the two controllers",
-        "A custom object holding the logic as a stored configuration value"
+        "A shared script module",
+        "Create a template fragment for each controller to render",
+        "Copy the function into both controllers",
+        "Store the logic text in a custom object"
       ],
       "correctAnswer": 0,
-      "explanation": "Shared server-side logic belongs in a module, so there is one implementation for both callers to use.",
+      "explanation": "A shared script module keeps one implementation that both controllers can call.",
       "whyWrong": [
-        "Templates render output; they are not a place for business logic.",
-        "Duplicated functions drift apart and double the bug surface.",
-        "Custom objects store data rather than executable logic."
+        "A template fragment is for rendering page content, not sharing server-side business logic.",
+        "Copying the function creates two versions that can drift apart.",
+        "A custom object stores data, not executable shared code."
       ]
     },
     {
-      "question": "Why does a developer need to be careful with API quotas on the platform?",
+      "question": "Why should developers watch platform API and query quotas?",
       "options": [
-        "Quotas set the maximum number of products a catalogue may contain",
-        "Quotas control how often the storefront's cache can be invalidated",
-        "Exceeding them degrades or fails the request",
-        "Quotas determine how many cartridges a site is permitted to use"
+        "They limit how many products a catalog can contain",
+        "They control how often storefront cache can be cleared",
+        "Exceeding a limit can slow down or fail a request",
+        "They set the maximum number of cartridges on a site"
       ],
       "correctAnswer": 2,
-      "explanation": "The platform enforces limits on operations such as object queries per request, and breaching them causes warnings and eventually failures.",
+      "explanation": "The platform limits some operations within a request; exceeding those limits can produce warnings and cause failures.",
       "whyWrong": [
-        "Catalogue size is a data concern rather than a quota.",
-        "Cache invalidation is configured separately.",
-        "Cartridge count is not governed by API quotas."
+        "Catalog size is not what these per-request limits describe.",
+        "Cache clearing frequency is controlled separately.",
+        "The limits do not determine how many cartridges a site can use."
       ]
     },
     {
-      "question": "What is the role of OCAPI or SCAPI in a B2C Commerce implementation?",
+      "question": "What do OCAPI and SCAPI provide in a B2C Commerce solution?",
       "options": [
-        "Importing the product catalogue from the client's own backend system",
-        "Rendering the storefront pages that shoppers see in their browser",
-        "Defining the business manager screens used by the client's merchants",
-        "Exposing commerce data and operations to external clients"
+        "A way to import a catalog from a retailer’s backend only",
+        "The rendering engine for shopper-facing pages",
+        "The screens merchants use in Business Manager",
+        "Commerce APIs for external clients"
       ],
       "correctAnswer": 3,
-      "explanation": "These APIs let external applications, including headless front ends and integrations, read and write commerce data.",
+      "explanation": "These APIs let external applications, including headless storefronts and integrations, work with commerce data and operations.",
       "whyWrong": [
-        "Catalogue import is handled by the job framework and feeds.",
-        "Storefront rendering is done by controllers and templates.",
-        "Business Manager screens are platform functionality."
+        "Catalog imports can use other supported feed and job patterns; that is not the APIs’ only purpose.",
+        "Storefront page rendering is handled by the storefront architecture or a separate front end.",
+        "Business Manager provides merchant configuration screens."
       ]
     },
     {
-      "question": "A price must differ for members of a loyalty scheme. What mechanism supports this?",
+      "question": "A loyalty program offers members a different product price. Which setup supports this?",
       "options": [
-        "A separate catalogue containing a duplicate of every eligible product",
-        "A customer group with its own price book",
-        "A promotion applied by the shopper entering a code at the checkout",
-        "A custom attribute on the product holding the member price value"
+        "Duplicate all eligible products in another catalog",
+        "Assign a separate price book to the member customer group",
+        "Require each member to enter a promotion code",
+        "Store the member price in a custom product attribute"
       ],
       "correctAnswer": 1,
-      "explanation": "Customer groups let the platform resolve a different price book for a defined set of shoppers.",
+      "explanation": "A customer group can be associated with a price book so eligible shoppers receive the group’s prices.",
       "whyWrong": [
-        "Duplicating the catalogue is unmaintainable.",
-        "A code requires shopper action and is not automatic membership pricing.",
-        "An attribute holds a number but does not make the platform charge it."
+        "Duplicating products is not needed to provide group-specific prices.",
+        "A promotion code is not the same as resolving prices through a customer group.",
+        "A custom attribute does not replace the platform’s price book behavior."
       ]
     },
     {
-      "question": "What should a developer consider when writing a job that processes the full catalogue?",
+      "question": "A job must process the full product catalog. What should the developer plan for?",
       "options": [
-        "Disabling the storefront while the job is running to avoid conflicts",
-        "Chunking the work so it stays within limits",
-        "Processing the records one at a time to guarantee nothing is skipped",
-        "Running the job during peak trading so errors are noticed quickly"
+        "Turn off the storefront for the whole run",
+        "Process the job in chunks",
+        "Handle records one at a time in a single long operation",
+        "Run the job during peak traffic to spot errors quickly"
       ],
       "correctAnswer": 1,
-      "explanation": "Large jobs need to process in chunks with checkpoints, or they exhaust resources and fail partway through.",
+      "explanation": "Breaking large workloads into chunks helps the job stay within limits and recover if a step fails.",
       "whyWrong": [
-        "Taking the storefront down for a routine job is not acceptable.",
-        "Row-by-row processing is what fails at catalogue scale.",
-        "Peak trading is the worst time to run heavy batch work."
+        "The storefront does not generally need to be disabled for a catalog job.",
+        "One long operation can consume too many resources and fail before completion.",
+        "Peak traffic is a poor time to run a resource-intensive job."
       ]
     },
     {
-      "question": "Why is content caching important on a storefront?",
+      "question": "Why does storefront caching matter?",
       "options": [
-        "It ensures the catalogue data is always completely up to date",
-        "It keeps response times low under real traffic",
-        "It removes the need to consider API quotas within controllers",
-        "It guarantees that every shopper sees personalised pricing"
+        "It guarantees the catalog is always current",
+        "It lowers response time under load",
+        "It removes the need to consider API quotas",
+        "It guarantees every shopper sees personalized prices"
       ],
       "correctAnswer": 1,
-      "explanation": "Caching is what allows a storefront to serve high traffic, and getting cache boundaries right is a core performance concern.",
+      "explanation": "Caching suitable content lets the storefront serve pages faster under real traffic.",
       "whyWrong": [
-        "Caching trades freshness for speed, so it does the opposite of this.",
-        "Quotas still apply to uncached work.",
-        "Aggressive caching makes personalisation harder, not guaranteed."
+        "Caching can make content stale unless its rules and invalidation are managed.",
+        "Caching does not remove platform limits on API or query use.",
+        "Personalized pricing still needs correct shopper and cache handling."
       ]
     },
     {
-      "question": "A developer finds personalised content being served from cache to the wrong shoppers. What is the cause?",
+      "question": "Personalized content for one shopper appears in another shopper’s cached page. What is the likely cause?",
       "options": [
-        "An API quota being exceeded during the rendering of the page",
-        "A missing custom attribute on the product records being displayed",
-        "Personalised output cached without varying on the shopper",
-        "The cartridge path placing the custom cartridge in the wrong position"
+        "A platform quota was exceeded while rendering the page",
+        "A product is missing a custom attribute",
+        "Cache personalized output by shopper",
+        "The custom cartridge is in the wrong path position"
       ],
       "correctAnswer": 2,
-      "explanation": "Caching a response that depends on who is viewing it, without including that in the cache key, serves one shopper's content to another.",
+      "explanation": "If a cached response depends on the shopper but the cache does not distinguish shoppers, one person may receive another person’s content.",
       "whyWrong": [
-        "Quota breaches cause failures rather than cross-contamination.",
-        "A missing attribute would show empty data rather than someone else's.",
-        "Cartridge order affects which code runs, not cache correctness."
+        "A quota issue may affect request behavior but does not explain sharing one shopper’s cached output.",
+        "A product field issue would not make personalized output cross between shoppers.",
+        "Cartridge order affects which code runs, not whether the cache varies by shopper."
       ]
     },
     {
-      "question": "What distinguishes a storefront catalogue from a master catalogue?",
+      "question": "How does a storefront catalog differ from a master catalog?",
       "options": [
-        "One is editable by merchants and the other only by developers",
-        "One holds physical goods while the other holds digital products only",
-        "One applies to a single site and the other to a single locale",
-        "One organises products for browsing; the other owns them"
+        "One is for merchant edits and one is only for developer edits",
+        "One contains physical goods and the other only digital goods",
+        "One is for a site and the other is for a locale",
+        "Master defines products; storefront organizes browsing"
       ],
       "correctAnswer": 3,
-      "explanation": "Products are defined in a master catalogue and then assigned into a storefront catalogue's category structure for navigation.",
+      "explanation": "Products are defined in the master catalog and placed into storefront catalog structures that control site navigation.",
       "whyWrong": [
-        "Both are managed through Business Manager.",
-        "Both can hold any product type.",
-        "Locale is handled separately from catalogue structure."
+        "Both catalog types can be managed through appropriate commerce tools and permissions.",
+        "The difference is not based on whether products are physical or digital.",
+        "A storefront catalog controls the assortment and navigation; it is not simply a locale setting."
       ]
     },
     {
-      "question": "A client wants a headless front end calling the commerce platform. What changes for the developer?",
+      "question": "A retailer switches to a headless front end that calls B2C Commerce APIs. What changes for the developer?",
       "options": [
-        "Jobs must be rewritten because they cannot run without a storefront",
-        "The cartridge path is no longer used for any purpose at all",
-        "Custom attributes can no longer be added to the system objects",
-        "Rendering moves out and the platform serves data"
+        "Jobs can no longer run without a storefront",
+        "The cartridge path has no use anywhere in the solution",
+        "System objects can no longer have custom attributes",
+        "The front end renders; Commerce serves API data"
       ],
       "correctAnswer": 3,
-      "explanation": "In a headless setup the front end owns presentation and the platform is consumed through its APIs, so server-side templating largely falls away.",
+      "explanation": "In a headless design, a separate front end handles presentation and consumes platform data and operations through APIs.",
       "whyWrong": [
-        "Jobs run independently of how the front end is built.",
-        "Cartridges remain relevant for server-side logic and hooks.",
-        "Object extension works as before."
+        "Jobs can still run as platform processes in a headless implementation.",
+        "The cartridge path can still matter for server-side code and other platform features.",
+        "Custom attributes can still extend system objects in a headless solution."
       ]
     },
     {
-      "question": "What is the safest way to handle a shopper's payment details in a custom checkout?",
+      "question": "A custom checkout needs to collect payment details. What is the safer approach?",
       "options": [
-        "Let the payment provider capture them directly",
-        "Pass them through the controller and log them for later reconciliation",
-        "Store them in a custom attribute on the shopper's own profile record",
-        "Hold them in session until the order has been successfully placed"
+        "Let the payment provider collect the details directly",
+        "Send card details through the controller and log them for later",
+        "Save card details in a custom shopper attribute",
+        "Keep card details in the session until the order is placed"
       ],
       "correctAnswer": 0,
-      "explanation": "Card data should never touch your application. The provider's hosted fields or redirect keeps it out of scope and out of your logs.",
+      "explanation": "Use the provider’s hosted fields or redirect so raw card data does not pass through the storefront application or its logs.",
       "whyWrong": [
-        "Logging payment details is exactly what must never happen.",
-        "Storing card details on a profile is a serious compliance breach.",
-        "Holding card data in session still brings it into scope."
+        "Logging card details exposes sensitive data and should be avoided.",
+        "Storing card details on the shopper profile would retain sensitive payment data in the application.",
+        "Session storage still puts card data in the application environment."
       ]
     },
     {
-      "question": "Which best describes what a developer is responsible for on a B2C Commerce project?",
+      "question": "Which work is a B2C Commerce developer mainly responsible for?",
       "options": [
-        "The visual design of the storefront's pages and brand styling",
-        "The merchandising decisions about which products to promote",
-        "Storefront behaviour, integrations and data extensions",
-        "The hosting infrastructure the commerce platform itself runs on"
+        "Choosing the storefront’s visual design and brand style",
+        "Deciding which products the merchandising team should promote",
+        "Storefront behavior, integrations, and data extensions",
+        "Operating the underlying hosting infrastructure"
       ],
       "correctAnswer": 2,
-      "explanation": "The developer builds and customises how the storefront behaves, extends the data model and connects the platform to other systems.",
+      "explanation": "Developers implement and customize storefront behavior, extend the data model, and connect Commerce with other systems.",
       "whyWrong": [
-        "Visual design is usually produced by designers.",
-        "Merchandising is a business user's role in Business Manager.",
-        "Infrastructure is operated by Salesforce."
+        "Visual design may be delivered with developers, but this does not describe the developer’s main platform responsibility.",
+        "Merchandising teams decide which products to feature.",
+        "Salesforce operates the underlying Commerce hosting infrastructure."
       ]
     }
   ]

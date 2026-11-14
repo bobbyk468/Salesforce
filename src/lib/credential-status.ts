@@ -10,8 +10,8 @@ export interface CredentialStatusInfo {
 
 const AI_ASSOCIATE_STATUS: CredentialStatusInfo = {
   kind: 'retired',
-  label: 'Retired February 2026',
-  message: 'Salesforce retired the AI Associate certification in February 2026. This page is retained as a historical learning reference; it is not a current exam guide.',
+  label: 'Retired February 2, 2026',
+  message: 'Salesforce retired the AI Associate certification on February 2, 2026, so the exam can no longer be taken. Holders keep the credential on their Trailblazer Profile, marked Retired, and maintenance is no longer required. This page is retained as a historical learning reference; it is not a current exam guide.',
   sourceLabel: 'Salesforce retirement notice',
   sourceUrl: 'https://trailhead.salesforce.com/en/credentials/aiassociate',
 }
@@ -55,8 +55,8 @@ const CLAUDE_ARCHITECT_FOUNDATIONS_STATUS: CredentialStatusInfo = {
 function examClosedAugust2026(name: string): CredentialStatusInfo {
   return {
     kind: 'exam-closed',
-    label: 'Exam closed; credential retires February 1, 2027',
-    message: `Salesforce closed ${name} registration on July 24, 2026 and exam delivery after August 31, 2026, so the exam can no longer be booked. The credential retires February 1, 2027; it is not already retired, and existing holders keep it. These notes preserve the published exam objectives for learning, not new exam bookings.`,
+    label: 'Exam closed August 31, 2026; credential retires February 1, 2027',
+    message: `Salesforce closed ${name} registration on July 24, 2026, and August 31, 2026 was the last day to take the exam, so it can no longer be booked. The credential officially retires on February 1, 2027. Holders keep it on their Trailblazer Profile, marked Retired, and maintenance is no longer required. These notes preserve the published exam outline for reference, not for new exam bookings.`,
     sourceLabel: 'Salesforce Certification Retirements',
     sourceUrl: 'https://help.salesforce.com/s/articleView?id=005388958&language=en_US&type=1',
   }
@@ -65,8 +65,8 @@ function examClosedAugust2026(name: string): CredentialStatusInfo {
 const CREDENTIAL_STATUS: Record<string, CredentialStatusInfo> = {
   'education-cloud-consultant': {
     kind: 'exam-closed',
-    label: 'Exam closed; credential retirement scheduled February 1, 2027',
-    message: 'Salesforce closed Education Cloud Consultant registration on July 24, 2026 and exam delivery after August 31, 2026. The credential retires February 1, 2027; it is not already retired. Holders keep it on their Trailblazer Profile, marked Retired, and maintenance is no longer required. Salesforce points candidates to the Platform Administrator and Data 360 Consultant exams instead. These notes preserve the published exam objectives for learning, not new exam bookings.',
+    label: 'Exam closed August 31, 2026; credential retires February 1, 2027',
+    message: 'Salesforce closed Education Cloud Consultant registration on July 24, 2026, and August 31, 2026 was the last day to take the exam, so it can no longer be booked. The credential officially retires on February 1, 2027. Holders keep it on their Trailblazer Profile, marked Retired, and maintenance is no longer required. Salesforce points candidates to the Platform Administrator and Data 360 Consultant exams for foundational knowledge. These notes preserve the published exam outline for reference, not for new exam bookings.',
     sourceLabel: 'Salesforce Education Cloud Consultant exam and retirement notice',
     sourceUrl: 'https://help.salesforce.com/s/articleView?id=005298934&language=en_US&type=1',
   },
@@ -98,6 +98,119 @@ const CREDENTIAL_STATUS: Record<string, CredentialStatusInfo> = {
   'claude-certified-developer': CLAUDE_STATUS,
   'claude-certified-architect-foundations': CLAUDE_ARCHITECT_FOUNDATIONS_STATUS,
   'claude-certified-architect-professional': CLAUDE_STATUS,
+}
+
+/** Short status line for certification cards on the homepage and role hubs. */
+export const EXAM_CLOSED_CARD_NOTE = 'Exam closed Aug 31, 2026; retires Feb 1, 2027'
+export const AI_ASSOCIATE_CARD_NOTE = 'Retired Feb 2, 2026'
+
+export function getCredentialCardNote(slug: string): string | undefined {
+  const kind = getCredentialStatus(slug)?.kind
+  if (kind === 'exam-closed') return EXAM_CLOSED_CARD_NOTE
+  if (kind === 'retired') return AI_ASSOCIATE_CARD_NOTE
+  return undefined
+}
+
+/**
+ * Active credentials on this site that a reader of a retiring page is pointed
+ * to. Where Salesforce's retirement notice (005388958) names a successor
+ * (CPQ Administrator and CPQ and Billing to Revenue Cloud Consultant, Heroku
+ * Developer to Heroku Architect, NPSP to Nonprofit Cloud Consultant, Education
+ * Cloud to Platform Administrator and Data 360 Consultant, Media Cloud to
+ * Revenue Cloud Consultant) the first link follows it. For the rest Salesforce
+ * names no successor, so these are the closest active credentials, and the
+ * banner describes them as related rather than as official replacements.
+ */
+export const RETIREMENT_NEXT_STEPS: Record<string, { href: string; label: string }[]> = {
+  'ai-associate': [
+    { href: '/certifications/agentforce-specialist', label: 'Agentforce Specialist (AI-201)' },
+    { href: '/certifications/platform-foundations', label: 'Platform Foundations (Plat-101)' },
+  ],
+  'advanced-field-service-ap': [
+    { href: '/certifications/field-service', label: 'Agentforce Field Service and Operations Consultant (FS-Con-101)' },
+  ],
+  'b2b-solution-architect': [
+    { href: '/certifications/application-architect', label: 'Application Architect' },
+    { href: '/certifications/integration-architect', label: 'Platform Integration Architect (Plat-Arch-204)' },
+  ],
+  'b2c-commerce-architect': [
+    { href: '/certifications/b2c-commerce-developer', label: 'B2C Commerce Developer (Comm-Dev-101)' },
+    { href: '/certifications/b2c-solution-architect', label: 'B2C Solution Architect (Arch-302)' },
+  ],
+  'consumer-goods-tpm-ap': [
+    { href: '/certifications/consumer-goods-cloud-ap', label: 'Agentforce Consumer Goods Professional' },
+  ],
+  'contact-center-ap': [
+    { href: '/certifications/service-cloud', label: 'Agentforce Service Consultant (Service-Con-201)' },
+  ],
+  'cpq-administrator': [
+    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+  ],
+  'cpq-billing-ap': [
+    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+  ],
+  'industries-cpq-developer': [
+    { href: '/certifications/omnistudio-developer', label: 'OmniStudio Developer (Plat-Dev-210)' },
+    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+  ],
+  'education-cloud-consultant': [
+    { href: '/certifications/administrator', label: 'Platform Administrator (Plat-Admn-201)' },
+    { href: '/certifications/data-360-consultant', label: 'Data 360 Consultant (Data-Con-101)' },
+  ],
+  'energy-utilities-ap': [
+    { href: '/certifications/omnistudio-consultant', label: 'OmniStudio Consultant (Plat-Con-201)' },
+  ],
+  'heroku-developer-ap': [
+    { href: '/certifications/heroku-architect', label: 'Heroku Architect (Plat-Arch-206)' },
+  ],
+  'loyalty-management-ap': [
+    { href: '/certifications/marketing-cloud-next-consultant', label: 'Marketing Cloud Next Consultant (MC-Con-201)' },
+  ],
+  'pardot-consultant': [
+    { href: '/certifications/marketing-cloud-next-consultant', label: 'Marketing Cloud Next Consultant (MC-Con-201)' },
+    { href: '/certifications/pardot-specialist', label: 'Marketing Cloud Account Engagement Specialist (MC-201)' },
+  ],
+  'marketing-cloud-advanced-cross-channel-ap': [
+    { href: '/certifications/marketing-cloud-next-consultant', label: 'Marketing Cloud Next Consultant (MC-Con-201)' },
+    { href: '/certifications/marketing-cloud-consultant', label: 'Marketing Cloud Engagement Consultant (MCE-Con-201)' },
+  ],
+  'marketing-cloud-intelligence-ap': [
+    { href: '/certifications/marketing-cloud-next-consultant', label: 'Marketing Cloud Next Consultant (MC-Con-201)' },
+    { href: '/certifications/data-360-consultant', label: 'Data 360 Consultant (Data-Con-101)' },
+  ],
+  'marketing-cloud-personalization-ap': [
+    { href: '/certifications/marketing-cloud-next-consultant', label: 'Marketing Cloud Next Consultant (MC-Con-201)' },
+    { href: '/certifications/data-360-consultant', label: 'Data 360 Consultant (Data-Con-101)' },
+  ],
+  'media-cloud-ap': [
+    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+    { href: '/certifications/communications-cloud-ap', label: 'Agentforce Communications Professional' },
+  ],
+  'mulesoft-catalyst-consultant': [
+    { href: '/certifications/mulesoft-platform-architect', label: 'MuleSoft Platform Architect (Mule-Arch-201)' },
+  ],
+  'mulesoft-hyperautomation-developer': [
+    { href: '/certifications/mulesoft-developer-i', label: 'MuleSoft Developer (Mule-Dev-201)' },
+    { href: '/certifications/agentforce-specialist', label: 'Agentforce Specialist (AI-201)' },
+  ],
+  'net-zero-cloud-ap': [
+    { href: '/certifications/data-360-consultant', label: 'Data 360 Consultant (Data-Con-101)' },
+  ],
+  'order-management-admin-ap': [
+    { href: '/certifications/b2b-commerce-admin-ap', label: 'B2B Commerce Administrator Accredited Professional' },
+    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+  ],
+  'order-management-developer-ap': [
+    { href: '/certifications/b2b-commerce-developer-ap', label: 'B2B Commerce Developer Accredited Professional' },
+    { href: '/certifications/b2c-commerce-developer', label: 'B2C Commerce Developer (Comm-Dev-101)' },
+  ],
+  'process-automation-ap': [
+    { href: '/certifications/app-builder', label: 'Platform App Builder (Plat-Admn-202)' },
+    { href: '/certifications/advanced-administrator', label: 'Platform Administrator II (Plat-Admn-301)' },
+  ],
+  'nonprofit-success-pack-consultant': [
+    { href: '/certifications/nonprofit-cloud', label: 'Agentforce Nonprofit Consultant (NP-Con-102)' },
+  ],
 }
 
 export function getCredentialStatus(slug: string): CredentialStatusInfo | undefined {

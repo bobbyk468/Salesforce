@@ -23,8 +23,8 @@
     "heading": "Is the Agentforce Service Consultant Exam Hard?",
     "summary": "Salesforce renamed Service Cloud Consultant to Agentforce Service Consultant. It is a moderately difficult exam with a high pass mark. Questions often present several reasonable setups and ask you to choose the one that meets the business need with the least effort.",
     "bullets": [
-      "<strong>60 scored multiple-choice questions</strong>, plus up to five unscored, in 105 minutes.",
-      "<strong>78% to pass</strong>, or about 47 correct answers out of 60. Check the official exam guide before booking because Salesforce may update exam details.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>78% to pass</strong>, which is 47 correct answers out of 60.",
       "<strong>Prerequisite:</strong> the Salesforce Platform Administrator certification.",
       "<strong>Eight sections, none above 15%.</strong> Topics run from industry knowledge and implementation to channels, case management, knowledge, analytics, and integrations."
     ],

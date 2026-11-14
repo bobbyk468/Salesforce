@@ -46,23 +46,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Which should I take first: JavaScript Developer I or Platform Developer I?',
-    answer: 'Take Platform Developer I (PD1) first. PD1 is the foundational Salesforce developer certification and is required or recommended before most other developer credentials. It establishes your Apex, SOQL, LWC, and deployment knowledge, the core Salesforce development stack. JavaScript Developer I validates JavaScript language skills specifically and is a complementary credential rather than a prerequisite for other Salesforce paths.',
+    answer: 'The recommendation is to take Platform Developer I (PD1) first. It covers core Salesforce development skills such as Apex, SOQL, Lightning Web Components, and deployment, and is required or recommended for many other developer credentials. JavaScript Developer I focuses on JavaScript and complements PD1; it is not a prerequisite for other Salesforce paths.',
   },
   {
     question: 'What is the main difference between JavaScript Developer I and Platform Developer I?',
-    answer: 'Platform Developer I (PD1) tests Salesforce-platform-specific skills: Apex triggers, Apex classes, SOQL, governor limits, Lightning Web Components within Salesforce, change sets, and SFDX deployment. JavaScript Developer I tests pure JavaScript language skills: ES6+ syntax, closures, Promises, async/await, DOM events, and Jest testing. PD1 is primarily Salesforce-specific; JS Dev I is language-agnostic JavaScript.',
+    answer: 'PD1 tests Salesforce platform skills, including Apex, SOQL, governor limits, Lightning Web Components, change sets, and SFDX deployment. JavaScript Developer I tests JavaScript topics such as ES6+ syntax, closures, Promises, async/await, DOM events, and Jest. One focuses on Salesforce development; the other focuses on the JavaScript language.',
   },
   {
     question: 'Do I need JavaScript knowledge for the Platform Developer I exam?',
-    answer: 'Basic JavaScript is helpful for PD1 since Lightning Web Components (LWC) use JavaScript. However, the PD1 exam tests Salesforce LWC concepts (@api, @wire, @track decorators, component communication) rather than deep JavaScript language knowledge. Strong Apex knowledge is more important than JavaScript depth for PD1. JavaScript Developer I is the certification that validates deep JavaScript proficiency.',
+    answer: 'Some JavaScript helps because Lightning Web Components use it. PD1 focuses on Salesforce LWC concepts, such as decorators and component communication, rather than advanced JavaScript. Strong Apex knowledge matters more for PD1; JavaScript Developer I is the exam focused on deeper JavaScript skills.',
   },
   {
     question: 'Can I take both certifications?',
-    answer: 'Yes, and many Salesforce developers hold both. PD1 + JavaScript Developer I is a strong combination for full-stack Salesforce developers: PD1 validates your Apex/platform skills, JS Dev I validates your JavaScript/LWC skills. Together they demonstrate both back-end (Apex) and front-end (JavaScript/LWC) Salesforce development competency.',
+    answer: 'Yes. The two credentials cover different parts of development: PD1 covers Apex and the Salesforce platform, while JavaScript Developer I covers JavaScript and LWC-related skills. Together they can show experience with both back-end and front-end Salesforce work.',
   },
   {
     question: 'Which certification has more job market demand?',
-    answer: 'Platform Developer I (PD1) has significantly more job market demand. PD1 is the foundational developer credential that employers look for first when hiring Salesforce developers. JavaScript Developer I is a valuable secondary credential but is rarely listed as a standalone requirement. For maximum career impact, prioritise PD1, then add JavaScript Developer I as a complementary certification.',
+    answer: 'PD1 has significantly more job market demand and is the foundational developer credential employers look for first. JavaScript Developer I is a useful secondary credential, but is rarely listed as a standalone requirement. For career impact, take PD1 first, then add JavaScript Developer I as a complement.',
   },
 ]
 
@@ -80,7 +80,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Two Salesforce developer certifications, one focused on JavaScript language skills, one on Salesforce platform development. Here’s how to choose.
+          These credentials cover different skills: JavaScript Developer I focuses on JavaScript, while Platform Developer I focuses on Salesforce development. Compare their scope and choose based on the work you want to do.
         </p>
       </div>
 
@@ -112,7 +112,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           certName: "Platform Developer I",
           certSlug: "developer-1",
           examTipsSlug: "certifications/developer-1",
-          reason: "Platform Developer I has broader employer recognition and is the standard entry point for Salesforce developer careers. JavaScript Developer I is a strong complement, take PD1 first to establish your core credentials, then add JavaScript Developer I to demonstrate frontend depth.",
+          reason: "Platform Developer I has broader employer recognition and is the standard entry point for Salesforce developer careers. Take PD1 first to build your platform foundation, then add JavaScript Developer I if you want to show frontend depth.",
           careerPathSlug: "developer-certification-path",
           careerPathLabel: "Developer Certification Path",
         }}
@@ -167,7 +167,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
 
       {/* Key differences */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Key Differences at a Glance</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Exams Differ</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -202,7 +202,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
       {/* Who should take each */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Take JavaScript Developer I if&hellip;</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">JavaScript Developer I may fit if&hellip;</h2>
           <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex items-start gap-2"><span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>You are a front-end developer wanting Salesforce credentials</li>
             <li className="flex items-start gap-2"><span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>You already hold PD1 and want to strengthen your JS/LWC credentials</li>
@@ -211,7 +211,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           </ul>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
-          <h2 className="text-lg font-bold text-gray-900 mb-3">Take Platform Developer I if&hellip;</h2>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">Platform Developer I may fit if&hellip;</h2>
           <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex items-start gap-2"><span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>You are starting a Salesforce developer career</li>
             <li className="flex items-start gap-2"><span className="text-green-500 font-bold flex-shrink-0 mt-0.5">✓</span>You want the credential required for architect and advanced developer paths</li>
@@ -235,7 +235,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: JavaScript Developer I or PD1?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between JavaScript Developer I and PD1</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead><tr className="border-b-2 border-gray-200">
@@ -257,7 +257,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
       <RelatedGuides links={getRelatedGuides('javascript-developer-i-vs-pd1')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Start Practising Today</h2>
+        <h2 className="text-2xl font-bold mb-2">Start Practising</h2>
         <p className="text-white mb-6">Free practice questions for both developer certifications.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/developer-1#practice-questions" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">

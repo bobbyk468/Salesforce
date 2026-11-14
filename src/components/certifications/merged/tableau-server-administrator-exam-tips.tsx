@@ -28,11 +28,11 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Tableau Server Administrator exam format?',
-    answer: 'The Tableau Server Administrator exam has 60 multiple-choice questions, a 120-minute time limit, a 65% passing score, and a $250 fee. It tests Tableau Server and Tableau Services Manager (TSM) administration: installation, configuration, user and content management, security, performance monitoring, and maintenance tasks.',
+    answer: 'The Salesforce Certified Tableau Server Administrator exam has 50 scored items plus up to five unscored questions, 90 minutes, a 64% passing score, and a US$200 fee. The current guide lists Tableau Server 2022.3 content.',
   },
   {
     question: 'What are the highest-weight Tableau Server Administrator exam sections?',
-    answer: 'Server Configuration and Maintenance (30%) and Security and Permissions (25%) together account for 55% of the exam. Configuring Tableau Services Manager (TSM), managing users and groups, implementing permissions at site and project level, and maintaining server health are the most heavily tested areas.',
+    answer: 'The official outline weights Administration (36%), Install & Configure (26%), Preparation (20%), Troubleshooting (12%), and Migration & Upgrade (6%).',
   },
   {
     question: 'What is Tableau Services Manager (TSM) and how is it tested?',
@@ -70,22 +70,26 @@ export default function TableauServerAdministratorExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Where the Exam Weight Falls</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Server Configuration and Maintenance</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+            <span className="font-medium text-gray-900">Preparation</span>
+            <span className="font-bold text-salesforce-blue ml-4">20%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Security and Permissions</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+            <span className="font-medium text-gray-900">Install &amp; Configure</span>
+            <span className="font-bold text-salesforce-blue ml-4">26%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">User and Content Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+            <span className="font-medium text-gray-900">Administration</span>
+            <span className="font-bold text-salesforce-blue ml-4">36%</span>
           </div>
           <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Performance Monitoring</span>
-            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+            <span className="font-medium text-gray-900">Troubleshooting</span>
+            <span className="font-bold text-salesforce-blue ml-4">12%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Configuration + Security + User Management = 77%. TSM commands and permission hierarchy are the most technically tested areas.</p>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Migration &amp; Upgrade</span>
+            <span className="font-bold text-salesforce-blue ml-4">6%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">The current guide version is Tableau Server 2022.3; review its objectives and the product details before scheduling.</p>
         </div>
       </section>
 
@@ -107,7 +111,7 @@ export default function TableauServerAdministratorExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Check Before You Book</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          75%+ on 3 timed full mocks before booking (65% passing score)
+          75%+ on 3 timed full mocks before booking (64% passing score)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Hands-on Tableau Server administration experience is essential for this exam. Set up a Tableau

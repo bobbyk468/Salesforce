@@ -42,23 +42,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Pardot Consultant and Marketing Cloud Consultant?',
-    answer: 'Pardot Consultant (now called Account Engagement Consultant) covers B2B marketing automation: lead management, scoring, Engagement Studio, Salesforce CRM integration, and B2B campaign tracking. Marketing Cloud Consultant covers B2C digital marketing: Journey Builder, audience segmentation, cross-channel marketing, deliverability, and enterprise Marketing Cloud platform management. Both are $200 certifications but for different marketing platforms and audiences.',
+    answer: 'Pardot Consultant, now called Account Engagement Consultant, covers B2B marketing automation, including lead management and scoring, Engagement Studio, Salesforce CRM integration, and campaign tracking. Marketing Cloud Consultant covers B2C digital marketing, including Journey Builder, audience segmentation, cross-channel campaigns, deliverability, and Marketing Cloud operations. Both exams cost $200, but they cover different platforms and audiences.',
   },
   {
     question: 'Which should I take: Pardot Consultant or Marketing Cloud Consultant?',
-    answer: 'Choose based on which platform your clients or employer use. If you work with B2B companies using Marketing Cloud Account Engagement (Pardot) for lead nurturing and CRM-integrated marketing, take Pardot Consultant. If you work with B2C brands running large-scale email, SMS, and cross-channel campaigns in Marketing Cloud Engagement, take Marketing Cloud Consultant. Both are valuable; neither is universally "better", it depends entirely on your work context.',
+    answer: 'Choose the credential that matches the platform you use. Account Engagement supports B2B lead nurturing and CRM-connected marketing; Marketing Cloud Engagement supports large email, SMS, and cross-channel campaigns for B2C brands. Neither is the right choice for everyone.',
   },
   {
     question: 'Can I hold both Pardot Consultant and Marketing Cloud Consultant?',
-    answer: 'Yes, both certifications can be held simultaneously and are independently maintained. Many marketing technology consultants at Salesforce partners hold both, as some enterprise clients use both Pardot for B2B sales enablement and Marketing Cloud Engagement for B2C campaigns. Holding both demonstrates broad marketing cloud expertise and is a career differentiator for senior MC consultant roles.',
+    answer: 'Yes. You can hold both credentials, and each is maintained separately. Some enterprise clients use Account Engagement for B2B work and Marketing Cloud Engagement for B2C campaigns, so consultants who support both platforms may find both useful.',
   },
   {
     question: 'Which is more in demand: Pardot or Marketing Cloud Consultant?',
-    answer: 'Marketing Cloud Consultant is generally more in demand in terms of job posting volume: Marketing Cloud Engagement powers high-volume consumer digital marketing programs at large enterprises. Pardot Consultant is highly valued in the B2B SaaS, technology, financial services, and professional services sectors where B2B marketing automation and Salesforce CRM integration are critical. Demand varies significantly by industry and company type.',
+    answer: 'Marketing Cloud Consultant may appear in more job postings because large enterprises use Marketing Cloud Engagement for high-volume consumer marketing. Pardot Consultant is valued in B2B SaaS, technology, financial services, and professional services, where marketing automation and Salesforce CRM integration matter. Demand varies by industry and employer.',
   },
   {
     question: 'What experience is needed before taking each consultant exam?',
-    answer: 'Pardot Consultant: Recommended to hold Pardot Specialist first; 1–2 years of hands-on Pardot/Account Engagement implementation experience. Marketing Cloud Consultant: Recommended to hold Marketing Cloud Email Specialist first; 1–2 years of Marketing Cloud platform experience managing enterprise Marketing Cloud implementations including Journey Builder and audience management.',
+    answer: 'For Pardot Consultant, the page recommends Pardot Specialist first and 1–2 years of hands-on Pardot or Account Engagement implementation experience. For Marketing Cloud Consultant, it recommends Marketing Cloud Email Specialist first and 1–2 years of platform experience, including Journey Builder and audience management.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both are Salesforce marketing certifications, but they serve completely different marketing contexts. Here is how to decide which one to pursue based on your role and clients.
+          These credentials cover different marketing platforms. Account Engagement supports B2B marketing, while Marketing Cloud Engagement supports B2C and cross-channel campaigns. Choose based on the platform used in your role.
         </p>
       </div>
 
@@ -115,7 +115,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">B2B vs B2C: The Core Difference</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">The Main Difference: B2B and B2C Marketing</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
           <div className="bg-blue-50 rounded-xl p-5">
             <h3 className="font-bold text-blue-900 mb-3">Account Engagement (Pardot)</h3>
@@ -155,7 +155,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Pardot Consultant or Marketing Cloud Consultant?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between Pardot Consultant and Marketing Cloud Consultant</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead><tr className="border-b-2 border-gray-200">
@@ -176,8 +176,8 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
       <RelatedGuides links={getRelatedGuides('pardot-consultant-vs-marketing-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Practice Marketing Certification Questions</h2>
-        <p className="text-white mb-6">Free practice questions for both Pardot Consultant and Marketing Cloud Consultant exams.</p>
+        <h2 className="text-2xl font-bold mb-2">Practise with Marketing Certification Questions</h2>
+        <p className="text-white mb-6">Review free practice questions for both consultant exams.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/pardot-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Pardot Consultant Practice

@@ -1,48 +1,48 @@
 {
   "template": "associate",
-  "expertInsight": "Application Architect is not an exam you book. You earn it by holding four certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. Once the fourth one is passed, the credential appears on your profile. If you already hold App Builder and Platform Developer I you are halfway there, and the two architect exams are the harder half. Platform Developer I is also the one exam that counts toward System Architect.",
+  "expertInsight": "Application Architect is earned by holding four certifications, not by passing a separate exam: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. The two architect exams are more challenging than the first two. Platform Developer I also counts toward System Architect.",
   "whoIsThisFor": {
-    "heading": "Who is the Application Architect exam for?",
+    "heading": "Who should work toward Application Architect?",
     "personas": [
       {
         "label": "Platform developers",
-        "description": "You know Apex and Lightning Web Components and want to show you can design a whole application, not just build parts of it."
+        "description": "You know Apex and Lightning Web Components and want to show that you can design a full Salesforce application."
       },
       {
         "label": "Senior admins",
-        "description": "You already design data models, role hierarchies and sharing, and want the architect credential that covers them."
+        "description": "You design data models and sharing access and want to earn an architect credential."
       },
       {
         "label": "Solution consultants",
-        "description": "You design end-to-end Salesforce solutions and want the credential employers ask for on architect roles."
+        "description": "You design full Salesforce solutions and want a credential for architect roles."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Application Architect Exam Hard?",
-    "summary": "There is no Application Architect exam. The credential is granted once you hold Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. The work is in those four exams, and the two architect ones are considerably harder than the first two.",
+    "heading": "Is Application Architect hard to earn?",
+    "summary": "There is no Application Architect exam. You earn the credential by holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. You must pass each exam; the two architect exams are harder than the first two.",
     "bullets": [
-      "<strong>No separate exam.</strong> The credential is awarded when all four component certifications are active.",
-      "<strong>Four exams to pass.</strong> Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect.",
-      "<strong>Each has its own format and fee.</strong> App Builder and Platform Developer I are the cheaper pair, and the two architect exams cost more. Check each exam guide for the current figures.",
-      "<strong>It pairs with System Architect.</strong> Hold both, and you can apply for the Technical Architect (CTA) review board."
+      "<strong>No separate exam:</strong> You receive the credential when all four component certifications are active.",
+      "<strong>Four exams:</strong> Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect.",
+      "<strong>Separate fees and formats:</strong> Check each exam guide for current details. The App Builder and Platform Developer I exams cost less than the architect exams.",
+      "<strong>It works toward System Architect:</strong> Hold both architect credentials to apply for the Technical Architect (CTA) review board."
     ],
-    "passRateGuidance": "Most people take Platform App Builder first, then Platform Developer I, then Data Architect and Sharing and Visibility Architect. Prepare for each exam on its own terms and use that exam's practice questions."
+    "passRateGuidance": "A common order is Platform App Builder, Platform Developer I, Data Architect, then Sharing and Visibility Architect. Study for each exam separately and use that exam’s practice questions."
   },
   "examFormat": {
-    "heading": "Application Architect Exam Format Explained",
-    "intro": "There is no Application Architect exam to book. Here is how the credential works:",
-    "scenarioPercent": "The two architect exams in this set are scenario-heavy. A typical question describes a business requirement and asks which data model, sharing design or build approach fits best.",
+    "heading": "How the Application Architect credential works",
+    "intro": "You do not book an Application Architect exam. You earn the credential by passing four separate exams:",
+    "scenarioPercent": "The two architect exams often use scenarios. They may describe a business need and ask you to choose a data model, access design, or build approach.",
     "bestWayToPass": [
-      "<strong>Start with Platform App Builder:</strong> Declarative building, the data model and automation basics. It is the gentlest of the four.",
-      "<strong>Then Platform Developer I:</strong> Apex, SOQL, triggers and testing. It also counts toward System Architect, so it is useful twice.",
-      "<strong>Then Data Architect:</strong> Data modelling, large data volumes, master data management and migration.",
-      "<strong>Finish with Sharing and Visibility Architect:</strong> Org-wide defaults, role hierarchy, sharing rules and external access."
+      "<strong>Start with Platform App Builder:</strong> Study declarative tools, data modeling, and automation basics.",
+      "<strong>Then take Platform Developer I:</strong> Study Apex, SOQL, triggers, and tests. This exam also counts toward System Architect.",
+      "<strong>Then take Data Architect:</strong> Study data modeling, large data volumes, master data management, and migration.",
+      "<strong>Finish with Sharing and Visibility Architect:</strong> Study org-wide defaults, role hierarchy, sharing rules, and external access."
     ]
   },
   "certificationCard": {
     "code": "Application Architect",
-    "description": "Application Architect is earned, not tested. You get it by holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. The practice questions here cover the data model and sharing topics those exams focus on.",
+    "description": "There is no separate Application Architect exam. Earn the credential by holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. These practice questions cover data modeling and record access.",
     "examDetails": {
       "questions": "No exam",
       "passingScore": "N/A",
@@ -89,49 +89,49 @@
     "blocks": [
       {
         "heading": "Data Modelling and Large Data Volumes",
-        "body": "From the Data Architect exam. Choose relationships for how the data behaves, not for convenience. A **lookup** is a loose link where either record can exist alone. A **master-detail** link makes the child depend on its parent, inherits the parent's sharing, and allows roll-up summary fields, but it also means deleting the parent deletes the children. **External objects** show data that stays in another system. **Big objects** hold very large volumes of historical data that is written and read but rarely updated. For large tables, keep queries **selective** by filtering on indexed fields. Watch for **data skew** where one parent owns too many children, and plan archiving before volumes become a problem."
+        "body": "From the Data Architect exam: choose relationships based on how the records should work. With a **Lookup**, each record can exist on its own. With **Master-Detail**, the child depends on the parent, inherits its sharing, and can use roll-up summary fields. Deleting a parent also deletes its children. **External Objects** show data that stays in another system. **Big Objects** store very large amounts of history that is rarely changed. For large tables, keep queries **selective** by filtering on indexed fields. Watch for **data skew**, such as one parent with too many children, and plan when to archive old data."
       },
       {
         "heading": "Choosing Between Configuration and Code",
-        "body": "Salesforce expects you to prefer configuration and reach for code only when configuration cannot do the job. **Flow** covers most automation, including record updates, guided screens and scheduled work. Code becomes the right answer when logic is genuinely complex, when very large volumes need batch processing, or when you must do something Flow cannot. The architect's job is to justify the choice: configuration is cheaper to maintain and survives upgrades, while code brings test requirements, deployment overhead and a maintenance burden. Questions that offer a custom-built option alongside a standard feature usually want the standard feature."
+        "body": "Salesforce recommends using configuration when it can meet the need. **Flow** handles most automation, including record updates, guided screens, and scheduled work. Use code when logic is complex, you need to process very large volumes, or configuration cannot do the task. Configuration is usually easier to maintain and can adapt to upgrades. Code requires tests and careful deployment, and someone must maintain it. When an answer offers a standard feature and custom code, consider the standard feature first."
       },
       {
         "heading": "Designing Record Access",
-        "body": "From the Sharing and Visibility exam. Access is built in layers and each layer can only open access further, never close it. **Org-wide defaults** set the baseline, so start as private as anyone needs and open up from there. The **role hierarchy** gives managers access to their team's records. **Sharing rules** share by owner or by field value. **Teams** and **manual shares** cover individual records, and **Apex managed sharing** handles rules that configuration cannot express. External users follow their own rules, with **sharing sets** for Experience Cloud customers. Object and field permissions come from profiles and permission sets, and they are checked before sharing ever applies."
+        "body": "From the Sharing and Visibility exam: record access has layers, and each layer can grant more access. **Org-Wide Defaults** set the starting level; begin with the most restricted level the business needs. The **Role Hierarchy** can give managers access to their team’s records. **Sharing Rules** grant access by record owner or field values. **Teams** and **Manual Sharing** grant access to specific records. **Apex Managed Sharing** handles rules that configuration cannot express. For Experience Cloud customers, **Sharing Sets** can grant access. Profiles and Permission Sets control object and field permissions before record sharing is applied."
       },
       {
         "heading": "Integration Patterns for Applications",
-        "body": "From both architect exams and Platform Developer I. Pick the pattern from the requirement: a synchronous callout when a user is waiting, **Platform Events** or **Change Data Capture** when other systems only need to know something changed, **Bulk API** for large scheduled loads, and **Salesforce Connect** when data should stay in the source system. Keep secrets out of code with **Named Credentials**. Remember the callout limits, 100 per transaction and 120 seconds in total, and move slow work into asynchronous Apex so the user is not kept waiting."
+        "body": "Use the integration pattern that fits the need. Use a synchronous callout when a user needs the answer before continuing. Use **Platform Events** or **Change Data Capture** when another system only needs to know that something changed. Use the **Bulk API** for large scheduled data loads. Use **Salesforce Connect** when data should remain in its source system. Store secrets in **Named Credentials**, not in code. Remember the limits of 100 callouts per transaction and 120 seconds total. Move slow work to asynchronous Apex so users do not have to wait."
       },
       {
         "heading": "Build Quality: Testing, Deployment and Governance",
-        "body": "Across all four exams, the same expectations recur. Apex needs at least 75% test coverage to reach production, and tests should build their own data and assert real outcomes. Changes move through sandboxes, with source control and the Salesforce CLI or DevOps Center for larger teams. Design for bulk from the start, since code that works on one record and fails on two hundred is the most common defect. Keep an eye on org limits and technical debt, and document the decisions behind the data model and sharing design so the next person can follow them."
+        "body": "The four exams all expect good development practices. Apex needs at least 75% test coverage for production, and tests should create their own data and check real results. Use sandboxes to build and test changes before production. Larger teams may use source control, Salesforce CLI, or DevOps Center. Design Apex for bulk processing so it works with 200 records, not just one. Track org limits and technical debt. Record why you chose a data model or access design so others can understand it later."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Application Architect Exam",
-    "intro": "Because this credential is four exams, prepare for each separately. These are the themes that run through all of them.",
+    "h2": "How to earn Application Architect",
+    "intro": "Prepare for the four component exams one at a time. These ideas appear across the exam set.",
     "blocks": [
       {
         "heading": "Data Modelling Choices",
-        "body": "Master-detail for dependent children, roll-ups and inherited sharing. Lookup when records stand alone. External objects when the data should not be copied."
+        "body": "Use Master-Detail when a child depends on its parent, needs roll-up summaries, or should inherit access. Use Lookup when records stand on their own. Use External Objects when data should stay in another system."
       },
       {
         "heading": "Record Access Design",
-        "body": "Start with the most private org-wide default anyone needs, then open access with the role hierarchy and sharing rules. Only use Apex sharing when configuration cannot express the rule."
+        "body": "Start with the most restricted org-wide default needed. Grant more access with the role hierarchy and sharing rules. Use Apex sharing only when configuration cannot express the rule."
       },
       {
         "heading": "Configuration Before Code",
-        "body": "Flow first. Code when logic is complex, volumes are large, or Flow genuinely cannot do it, and be ready to justify the choice."
+        "body": "Consider Flow first. Use code when the logic is complex, the volume is large, or Flow cannot meet the need. Be ready to explain the choice."
       },
       {
         "heading": "Integration Patterns",
-        "body": "User waiting means synchronous. Others just need to know means events. Large and scheduled means Bulk API. Should not be copied means Salesforce Connect."
+        "body": "If a user needs the response before continuing, use a synchronous callout. Use events to notify other systems. Use Bulk API for large scheduled loads. Use Salesforce Connect when data should stay in its source."
       },
       {
         "heading": "Large Data Volumes",
-        "body": "Keep queries selective, avoid ownership and account data skew, and plan archiving before the table gets big."
+        "body": "Keep large queries selective, avoid skewed record ownership, and plan to archive data before tables grow too large."
       }
     ]
   },
@@ -193,15 +193,15 @@
   ],
   "sampleQuestions": [
     {
-      "question": "An object will hold 40 million records and users need to filter by account. What should the architect plan for?",
+      "question": "An object will have 40 million records, and users need to filter by account. What should the architect plan?",
       "options": [
-        "A nightly batch job that copies the records into smaller summary objects",
-        "Selective filters backed by indexed fields",
-        "A separate Salesforce org created to hold the object's historical records",
-        "A restriction preventing users from running any reports on that object"
+        "Use selective filters with indexed fields",
+        "Copy records into nightly summary objects",
+        "Store older records in a separate Salesforce org",
+        "Block reports on the object"
       ],
-      "correctAnswer": 1,
-      "explanation": "At large volume, queries have to be selective against indexed fields or they time out, so the index strategy is part of the data model.",
+      "correctAnswer": 0,
+      "explanation": "Large-volume queries need selective filters on indexed fields to avoid timeouts.",
       "whyWrong": [
         "Summary copies help reporting but do not make the base object queryable.",
         "Splitting across orgs fragments the data and complicates every query.",
@@ -211,13 +211,13 @@
     {
       "question": "What is a skinny table used for?",
       "options": [
-        "Holding the audit history of changes made to a given record",
-        "Storing records that have been archived from the main object",
-        "Faster reads across frequently queried fields",
-        "Enforcing validation across a very large set of records"
+        "Record audit history",
+        "Archive records from the main object",
+        "Validate a very large number of records",
+        "Faster reads across commonly queried fields"
       ],
-      "correctAnswer": 2,
-      "explanation": "A skinny table holds a narrow set of commonly used fields so reads avoid joining the standard and custom field tables.",
+      "correctAnswer": 3,
+      "explanation": "A skinny table stores a small set of frequently used fields so Salesforce can read them without joining standard and custom field tables.",
       "whyWrong": [
         "Field history tracking records changes.",
         "Archiving is a separate data lifecycle concern.",
@@ -225,15 +225,15 @@
       ]
     },
     {
-      "question": "Users need read access to records they do not own, based on a field value. What should the architect use?",
+      "question": "Users need read access to records they do not own based on a field value. What should the architect use?",
       "options": [
-        "Criteria-based sharing rules",
-        "Manual sharing applied to each record by its owner after creation",
-        "A change to the organisation-wide default so the object is public",
-        "A role hierarchy restructured so every user sits beneath one role"
+        "Manual sharing for every record",
+        "Criteria-based Sharing Rules",
+        "Make the object public with OWD",
+        "Put all users under one role"
       ],
-      "correctAnswer": 0,
-      "explanation": "Criteria-based sharing opens records automatically according to field values, which is what a data-driven access requirement needs.",
+      "correctAnswer": 1,
+      "explanation": "Criteria-based Sharing Rules grant access automatically when records match field values.",
       "whyWrong": [
         "Manual sharing does not scale and depends on owners remembering.",
         "Making the object public grants far more access than required.",
@@ -241,15 +241,15 @@
       ]
     },
     {
-      "question": "What does the organisation-wide default for an object determine?",
+      "question": "When designing an object’s record-access model, what does the org-wide default establish before the other sharing mechanisms are applied?",
       "options": [
-        "The baseline access before any sharing is applied",
-        "How many records the object is permitted to contain in total",
-        "Which profiles are able to create records on that object",
-        "The fields that are visible on the object's page layouts"
+        "The total number of records allowed",
+        "Which profiles can create records",
+        "Starting record access before sharing",
+        "Which fields appear on the page layout"
       ],
-      "correctAnswer": 0,
-      "explanation": "The org-wide default sets the floor, and sharing rules, hierarchy and manual sharing can only open access above it.",
+      "correctAnswer": 2,
+      "explanation": "OWD is the baseline record-access level in the model. The hierarchy and sharing rules can grant additional access, while field visibility is controlled separately.",
       "whyWrong": [
         "There is no record cap set by the default.",
         "Object create permission comes from the profile or permission set.",
@@ -257,15 +257,15 @@
       ]
     },
     {
-      "question": "A requirement can be met with a flow or with Apex. What should decide the choice?",
+      "question": "A requirement could use Flow or Apex. What should decide which one to use?",
       "options": [
-        "Whether the org already contains more flows than Apex classes",
-        "Whether the declarative option genuinely meets it",
-        "Whether the development team is more comfortable writing Apex code",
-        "Whether the requirement was raised by a business or technical user"
+        "How many Flows and Apex classes already exist",
+        "Which approach the team prefers",
+        "Whether configuration can meet the requirement",
+        "Whether a business or technical user requested it"
       ],
-      "correctAnswer": 1,
-      "explanation": "Declarative build is cheaper to maintain and survives upgrades, so code should be reserved for what configuration cannot do.",
+      "correctAnswer": 2,
+      "explanation": "Use configuration when it can meet the need. Use Apex when configuration cannot or when the requirement calls for code.",
       "whyWrong": [
         "Existing counts say nothing about what suits this requirement.",
         "Team preference is not an architectural criterion.",
@@ -273,15 +273,15 @@
       ]
     },
     {
-      "question": "What is the main architectural cost of choosing Apex where configuration would do?",
+      "question": "What is one cost of choosing Apex when configuration could do the job?",
       "options": [
-        "A reduction in the number of records the object can store",
-        "Ongoing maintenance and test coverage obligations",
-        "An automatic increase in the org's licence requirements",
-        "The loss of the ability to report on the affected object"
+        "Less record storage",
+        "More maintenance and testing",
+        "Higher Salesforce license fees",
+        "Loss of reporting"
       ],
       "correctAnswer": 1,
-      "explanation": "Code needs tests, review, deployment discipline and someone who understands it years later, none of which configuration demands to the same degree.",
+      "explanation": "Apex needs tests, review, careful deployment, and ongoing maintenance.",
       "whyWrong": [
         "Storage is unaffected by implementation choice.",
         "Licensing does not change because logic is coded.",
@@ -289,15 +289,15 @@
       ]
     },
     {
-      "question": "An integration must notify an external system when an order is approved, without blocking the user. What pattern fits?",
+      "question": "An integration must notify an outside system when an order is approved without making the user wait. What pattern fits?",
       "options": [
-        "A synchronous callout made from the approval process itself",
-        "A nightly batch job that exports every approved order as a file",
-        "A manual export performed by an administrator after each approval",
-        "Asynchronous publication of an event"
+        "Call the system synchronously during approval",
+        "Export approved orders in a nightly batch",
+        "Publish an event asynchronously",
+        "Ask an admin to export each order"
       ],
-      "correctAnswer": 3,
-      "explanation": "Fire and forget notification suits an event, which decouples the two systems and keeps the user's transaction fast.",
+      "correctAnswer": 2,
+      "explanation": "An event can notify another system asynchronously, keeping it separate from the user’s transaction.",
       "whyWrong": [
         "A synchronous callout makes the user wait on an external system's availability.",
         "A nightly batch delays the notification by up to a day.",
@@ -305,15 +305,15 @@
       ]
     },
     {
-      "question": "When is a synchronous integration the right choice?",
+      "question": "When should an architect choose a synchronous integration?",
       "options": [
-        "When the volume of calls is expected to be extremely high",
-        "When the external system is known to respond slowly under load",
-        "When the user cannot continue without the response",
-        "When the receiving system has no availability guarantees at all"
+        "When call volume will be very high",
+        "When the outside system is slow",
+        "When the receiving system is often unavailable",
+        "When the user needs the response to continue"
       ],
-      "correctAnswer": 2,
-      "explanation": "Synchronous calls are justified where the answer is needed to proceed, such as a credit check or a real-time price.",
+      "correctAnswer": 3,
+      "explanation": "Use a synchronous call when the user cannot continue without a response, such as a credit check or real-time price.",
       "whyWrong": [
         "High volume favours asynchronous handling.",
         "A slow system is an argument against making the user wait.",
@@ -321,15 +321,15 @@
       ]
     },
     {
-      "question": "A manager must see records owned by their whole team. What provides this most simply?",
+      "question": "A manager needs access to records owned by their whole team. What is the simplest fit?",
       "options": [
-        "The role hierarchy with grant access enabled",
-        "Manual sharing applied by team members to their own manager",
-        "A sharing rule written for each individual manager in the business",
-        "A permission set granting View All on the object concerned"
+        "Role hierarchy with access to subordinate records",
+        "Manual sharing by each team member",
+        "A separate Sharing Rule for each manager",
+        "View All permission on the object"
       ],
       "correctAnswer": 0,
-      "explanation": "The role hierarchy exists to give managers access to their subordinates' records, and it maintains itself as people move.",
+      "explanation": "The Role Hierarchy can give managers access to records owned by people below them.",
       "whyWrong": [
         "Manual sharing depends on individuals remembering every time.",
         "Per-manager rules multiply and go stale as the organisation changes.",
@@ -337,15 +337,15 @@
       ]
     },
     {
-      "question": "What should an architect establish before designing a record access model?",
+      "question": "What should an architect learn before designing record access?",
       "options": [
-        "How many permission sets the org currently has in place",
-        "The number of profiles the previous implementation created",
-        "Which reporting tool the business intends to use after go-live",
-        "Who must see what, and what must stay restricted"
+        "Who must see each record and what must stay private",
+        "The number of permission sets in the org",
+        "The number of profiles from the last implementation",
+        "Which reporting tool the client will use"
       ],
-      "correctAnswer": 3,
-      "explanation": "Access design starts from the business rules about visibility and confidentiality, because those determine every structural choice that follows.",
+      "correctAnswer": 0,
+      "explanation": "Start access design with the business rules for who should see which records and what must remain private.",
       "whyWrong": [
         "Existing counts describe the present rather than the requirement.",
         "Legacy profile counts rarely reflect what is actually needed.",
@@ -353,15 +353,15 @@
       ]
     },
     {
-      "question": "Why does an architect care about test coverage beyond the platform minimum?",
+      "question": "Why should an architect care about test coverage beyond the platform minimum?",
       "options": [
-        "Coverage determines how many deployments may run each month",
-        "The platform refuses to run reports in orgs with low coverage",
-        "Tests are what make future change safe",
-        "Higher coverage increases the org's available storage allocation"
+        "It controls how many deployments can run each month",
+        "It controls whether reports can run",
+        "It increases storage",
+        "Tests help make future changes safer"
       ],
-      "correctAnswer": 2,
-      "explanation": "Coverage is not a target to hit once but the mechanism that lets someone change the system later without breaking it.",
+      "correctAnswer": 3,
+      "explanation": "Good tests help teams change the system later without breaking existing behavior.",
       "whyWrong": [
         "Deployment frequency is not governed by coverage.",
         "Reporting is unaffected.",
@@ -369,15 +369,15 @@
       ]
     },
     {
-      "question": "A master-detail relationship is proposed between two objects. What does this commit the design to?",
+      "question": "What does a Master-Detail relationship require?",
       "options": [
-        "Independent sharing settings on each of the two objects involved",
+        "Independent sharing for both objects",
         "Cascade delete and inherited record access",
-        "The ability to reparent the detail record at any time afterwards",
-        "A limit of one such relationship per object across the whole org"
+        "Reparenting at any time",
+        "Only one Master-Detail relationship per object"
       ],
       "correctAnswer": 1,
-      "explanation": "Master-detail ties the child's existence and its sharing to the parent, which is powerful and deliberately rigid.",
+      "explanation": "In Master-Detail, the child depends on the parent, inherits its record access, and can be deleted with the parent.",
       "whyWrong": [
         "The detail object inherits the master's sharing rather than having its own.",
         "Reparenting is restricted unless explicitly allowed.",
@@ -385,15 +385,15 @@
       ]
     },
     {
-      "question": "When is a lookup relationship preferable to master-detail?",
+      "question": "When is a Lookup relationship better than Master-Detail?",
       "options": [
-        "When the child must exist independently of the parent",
-        "When the child's access must be inherited from the parent",
-        "When roll-up summary fields are required on the parent object",
-        "When deleting the parent should always delete the children"
+        "When the child must inherit access from the parent",
+        "When the child must exist without the parent",
+        "When the parent needs standard roll-up summaries",
+        "When deleting the parent must delete its children"
       ],
-      "correctAnswer": 0,
-      "explanation": "A lookup leaves the two records independent, which is right when the child is meaningful on its own.",
+      "correctAnswer": 1,
+      "explanation": "Lookup is a better fit when the child record must be able to exist independently.",
       "whyWrong": [
         "Inherited access is a master-detail behaviour.",
         "Standard roll-up summaries require master-detail.",
@@ -401,15 +401,15 @@
       ]
     },
     {
-      "question": "What is the purpose of a deployment pipeline with distinct environments?",
+      "question": "Why use a deployment pipeline with separate environments?",
       "options": [
-        "It allows several administrators to edit production at the same time",
-        "It increases the number of API calls the org is allowed to make",
-        "It removes the need to write tests for the code being deployed",
-        "Change is validated before it reaches production"
+        "To let more admins edit production at once",
+        "To check changes before they reach production",
+        "To increase the org’s API limit",
+        "To remove the need for tests"
       ],
-      "correctAnswer": 3,
-      "explanation": "Separate environments let a change be built, tested and reviewed somewhere it cannot hurt anyone before it goes live.",
+      "correctAnswer": 1,
+      "explanation": "Separate environments let a team build, test, and review a change before it reaches production.",
       "whyWrong": [
         "Concurrent production editing is the risk a pipeline reduces.",
         "API limits are unrelated to deployment process.",
@@ -417,19 +417,99 @@
       ]
     },
     {
-      "question": "Which best describes how the Application Architect credential is obtained?",
+      "question": "How do you earn the Application Architect credential?",
       "options": [
-        "By passing a single scenario-based written examination",
-        "By completing a set of Trailhead superbadges and projects",
-        "By holding the four prerequisite certifications",
-        "By presenting a design to a panel of practising architects"
+        "Hold the four required certifications",
+        "Pass one scenario-based exam",
+        "Complete Trailhead superbadges and projects",
+        "Present a design to an architect panel"
       ],
-      "correctAnswer": 2,
-      "explanation": "Application Architect is awarded for holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There is no separate exam.",
+      "correctAnswer": 0,
+      "explanation": "You earn Application Architect by holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There is no separate exam.",
       "whyWrong": [
         "There is no examination for this credential itself.",
         "Superbadges are not what earns it.",
         "Panel defence is part of the CTA review board, not this credential."
+      ]
+    },
+    {
+      "question": "A detail record must inherit its parent’s record access and be deleted when the parent is deleted. Which relationship fits?",
+      "options": [
+        "Lookup",
+        "External lookup",
+        "Indirect lookup",
+        "Master-detail"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Master-detail makes the child dependent on the parent, with inherited access and cascade delete.",
+      "whyWrong": [
+        "Lookup records have independent sharing.",
+        "External lookup connects to an external object.",
+        "Indirect lookup maps external data to Salesforce records."
+      ]
+    },
+    {
+      "question": "A team needs to restrict field visibility for a group of users without changing their record access. Which control should it use?",
+      "options": [
+        "A sharing rule",
+        "Organization-Wide Defaults",
+        "Field-level security",
+        "A role hierarchy"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Field-level security controls access to fields independently of record sharing.",
+      "whyWrong": [
+        "Sharing rules grant record access.",
+        "OWD sets baseline record-level access.",
+        "Role hierarchy affects record access."
+      ]
+    },
+    {
+      "question": "An Apex trigger processes many records at once. Which design choice helps avoid governor-limit failures?",
+      "options": [
+        "Query and update records in collections outside loops",
+        "Run one SOQL query for each record",
+        "Perform a DML statement inside each loop iteration",
+        "Use a synchronous callout for every record"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Bulk processing uses collection-based queries and DML outside loops to reduce limit consumption.",
+      "whyWrong": [
+        "Per-record queries can exceed SOQL limits.",
+        "Per-record DML can exceed DML limits.",
+        "Per-record callouts add latency and do not solve bulk limit usage."
+      ]
+    },
+    {
+      "question": "A business process needs declarative record updates and a guided user interaction. Which platform tool should the architect assess first?",
+      "options": [
+        "Apex trigger",
+        "Visualforce controller",
+        "External middleware",
+        "Flow"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Flow supports declarative record automation and guided screen experiences.",
+      "whyWrong": [
+        "Apex is code and may be unnecessary when Flow meets the need.",
+        "Visualforce controllers are not the default declarative option.",
+        "Middleware is unnecessary for an in-org user flow."
+      ]
+    },
+    {
+      "question": "A custom object has very large data volumes and reports time out on broad queries. What should the architect evaluate first?",
+      "options": [
+        "A master-detail relationship for every related object",
+        "More page layouts",
+        "Selective filters and appropriate indexed fields",
+        "A dashboard refresh schedule"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Selective filters and indexes can help queries target smaller result sets at scale.",
+      "whyWrong": [
+        "Relationship type alone does not solve query selectivity.",
+        "Page layouts do not affect query performance.",
+        "Refresh scheduling does not address the underlying query design."
       ]
     }
   ]

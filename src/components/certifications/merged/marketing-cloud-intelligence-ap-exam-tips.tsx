@@ -31,7 +31,7 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Marketing Cloud Intelligence Accredited Professional exam format?',
-    answer: 'The Marketing Cloud Intelligence AP (formerly Datorama) exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Marketing Cloud Intelligence: connecting marketing data streams, data harmonisation and mapping, building custom KPIs, and creating executive marketing dashboards.',
+    answer: 'The Marketing Cloud Intelligence AP (formerly Datorama) exam has 40 multiple-choice questions, a 90-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Marketing Cloud Intelligence: connecting marketing data streams, data harmonisation and mapping, building custom KPIs, and creating executive marketing dashboards.',
   },
   {
     question: 'What are the highest-weight MCI AP exam sections?',
@@ -88,7 +88,7 @@ export default function MarketingCloudIntelligenceApExamTipsContent() {
             <span className="font-medium text-gray-900">Einstein Insights and Automation</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Data connections + harmonisation = 55%, getting clean, unified data into MCI is the core implementation challenge.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 90 minutes, Pass/Fail, $150. Data connections + harmonisation = 55%, getting clean, unified data into MCI is the core implementation challenge.</p>
         </div>
       </section>
 

@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with Industries CPQ features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You develop configurable product and pricing solutions with Industries CPQ."
       },
       {
         "label": "Developers",
-        "description": "You support Salesforce projects where Industries CPQ, Communications Cloud, and Media Cloud decisions affect the final design."
+        "description": "You work on communications, media or utility implementations that use Industries CPQ."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for developer roles."
+        "description": "You extend CPQ solutions and want to strengthen your configuration and integration skills."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Industries CPQ Developer Exam Hard?",
-    "summary": "The Industries CPQ Developer exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "This page reviews Industries CPQ development, including product configuration, pricing, orders and decomposition into fulfillment work.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>63% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>63% to pass</strong>, which is 38 correct answers out of 60.",
       "<strong>Scenario-based choices</strong>: expect questions that test when to use Industries CPQ, Communications Cloud, or Media Cloud.",
       "<strong>Hands-on context matters</strong>: candidates who have configured or supported Industries CPQ in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Use the published objectives to review product modeling, rules, pricing, order handling and integrations. For each practice scenario, explain why the chosen configuration works and where custom code is actually needed."
   },
   "examFormat": {
     "heading": "Industries CPQ Developer Exam Format Explained",
     "intro": "The Industries CPQ Developer exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Industries CPQ.",
+    "scenarioPercent": "Scenarios ask how to model a configurable offer, calculate its price, or carry an order into fulfillment.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Industries CPQ, Communications Cloud, and Media Cloud because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Start with the product model:</strong> Learn how Product Specifications, Product Offerings, Bundles, and attributes define what a customer can buy.",
+      "<strong>Apply configuration rules:</strong> Use attribute and context rules to allow valid choices and make products available for the right account, location, or existing service.",
+      "<strong>Use Apex only for gaps:</strong> Build custom code when declarative rules cannot meet the requirement, and keep the extension within the Industries CPQ framework.",
+      "<strong>Test the full configuration:</strong> Check bundles, dependencies, rule order, and the final order payload with realistic customer and product combinations."
     ]
   },
   "certificationCard": {
     "code": "Industries CPQ",
-    "description": "This exam covers building CPQ solutions for Communications, Media, and Energy & Utilities using the Industries product catalog, pricing procedures, and order decomposition. Expect questions on attribute rules, custom Apex pricing hooks, and OmniStudio integration.",
+    "description": "This page covers Industries CPQ solution development for configurable products and services, including catalog structure, rules, pricing and order processing.",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
@@ -65,50 +65,46 @@
     "h2": "Industries CPQ Developer: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Product Catalog & Configuration",
-        "body": "Industries CPQ (formerly Vlocity CPQ) uses a TM Forum-aligned product catalog. Product Specifications define the attributes and structure of a product. Product Offerings are the sellable versions with pricing. Product Bundles group related offerings (e.g., a broadband + voice + TV bundle). Attributes define configurable options, data cap, contract term, device color. Configuration Rules enforce valid attribute combinations and auto-set dependent attributes. Context Rules make product availability conditional on account type, geography, or existing products. The developer exam tests how to configure attribute rules, implement context rules in declarative logic, and extend configuration behavior with custom **Apex** when rules are insufficient."
+        "heading": "Product Catalog and Configuration",
+        "body": "Model the commercial offer and its selectable characteristics. Configuration rules guide valid choices while the customer or seller builds the offer."
       },
       {
-        "heading": "Pricing Rules & Calculation Framework",
-        "body": "Pricing in Industries CPQ uses a layered calculation framework. Price Lists define base prices for products and attributes. Pricing Procedures define the sequence of pricing steps, list price → adjustments → promotions → taxes → total. Pricing Elements are individual steps in the procedure (e.g., apply 10% loyalty discount). Pricing Variables store intermediate calculation results. Custom Pricing **Apex** classes implement complex pricing logic not achievable declaratively. Price Waterfall shows the full breakdown of how the final price was calculated. The developer exam tests how to implement a custom pricing step, how to debug a price calculation using the price waterfall, and how pricing procedures interact with multi-product bundles."
+        "heading": "Pricing",
+        "body": "Separate base prices, adjustments and promotions in the pricing design. Use the appropriate pricing records or procedures to calculate the result from product choices."
       },
       {
-        "heading": "Quote & Order Lifecycle",
-        "body": "The Industries CPQ quote lifecycle: Product Selection → Configuration → Pricing → Quote → Order → Fulfillment. Decomposition breaks complex bundled products into fulfillable line items for downstream provisioning systems. Order Items map to fulfillment line items with action codes (Add, Change, Remove, Suspend). Contract integration manages subscription amendments, when a customer changes an in-force service, a Change Order is created with the correct action codes. Quote versioning supports multiple concurrent scenarios. The developer exam tests the decomposition logic, how to configure action codes for amendments, and how to implement custom validation before order submission."
+        "heading": "Quote and Order Flow",
+        "body": "Follow the transaction from product selection through quote and order. Decomposition turns the customer-facing purchase into the work needed by downstream systems."
       },
       {
-        "heading": "Integration & API Patterns",
-        "body": "Industries CPQ exposes REST APIs for catalog queries, configuration, pricing, and order submission. The CPQ API is used by external systems (self-service portals, partner tools) to perform quoting and ordering programmatically. Asset-Based Ordering (ABO) APIs query existing customer assets to determine available change operations. Integration with OSS/BSS systems (provisioning, billing) uses the fulfillment API to push decomposed order items. The developer exam tests the correct API endpoint for a given operation, how to authenticate and call the CPQ API from an external system, and how to handle API error responses for failed configuration or pricing requests."
+        "heading": "APIs and Integration",
+        "body": "Use the supported integration interfaces for catalog, configuration and order tasks. Plan for authentication, errors, retries and clear status when another system is unavailable."
       },
       {
-        "heading": "Customization: Apex, LWC & OmniStudio",
-        "body": "Industries CPQ customization uses: Custom **Apex** for complex business logic (configuration rules, pricing steps, order validation), **LWC** components for custom UI within the CPQ cart or checkout, and OmniStudio (FlexCards, OmniScripts) for guided selling experiences. Integration Procedures (OmniStudio) handle multi-step API orchestration. DataRaptors transform data between Salesforce and external systems within CPQ flows. The developer exam tests which customization tool to use for a given requirement, declarative rules first, Apex for complex logic, LWC for custom UI, and OmniStudio for guided workflows. Know the OmniStudio activation sequence: DataRaptor → Integration Procedure → OmniScript."
+        "heading": "Declarative and Custom Logic",
+        "body": "Start with configuration rules and supported declarative tools. Add Apex or other custom logic when the requirement cannot be met cleanly with standard configuration."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Industries CPQ Developer Exam",
-    "intro": "The Industries CPQ Developer exam tests technical development of Vlocity/Industries CPQ solutions. Focus on product catalog configuration, pricing logic, custom development, and integration with order management.",
+    "intro": "Follow the product from selection through configuration, pricing, order submission and fulfillment.",
     "blocks": [
       {
-        "heading": "Industries CPQ Product Catalog",
-        "body": "Know how to configure Products, Product Characteristics, Attribute Categories, and how attribute values drive product configuration. Understand the Industries CPQ product hierarchy and how bundles are built."
+        "heading": "Model the offer first",
+        "body": "Identify the product, its attributes and the rules that make combinations valid."
       },
       {
-        "heading": "Pricing Architecture",
-        "body": "Know how Pricing Plans, Price Lists, Price List Entries, and Promotion Sets work together. Understand how the pricing engine applies promotions, discounts, and charge definitions to calculate the final price."
+        "heading": "Trace the price",
+        "body": "Check which values affect price and where each adjustment enters the calculation."
       },
       {
-        "heading": "Transaction Items & Decomposition",
-        "body": "Know the transaction item data model: how products decompose into order items, how asset-based ordering (ABO) tracks existing subscriber assets, and how amendments and disconnections update asset records."
+        "heading": "Follow decomposition",
+        "body": "Confirm how the commercial order becomes fulfillment items and how failures can be reviewed or resumed."
       },
       {
-        "heading": "Custom Development Patterns",
-        "body": "Know how to extend Industries CPQ with **Apex**: custom pricing engine hooks, custom product **validation rules**, and how to integrate custom calculation logic without overriding managed package logic."
-      },
-      {
-        "heading": "Order Management Integration",
-        "body": "Know how Industries CPQ integrates with Order Management for order fulfillment: decomposition rules, order templates, and how CPQ orders trigger downstream fulfillment processes."
+        "heading": "Prefer maintainable extensions",
+        "body": "Use declarative features where they fit; isolate custom code and provide tests and error handling."
       }
     ]
   },
@@ -170,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A developer must let a customer choose options on a product where each choice changes what else is available. What supports this?",
+      "question": "A buyer selects a service option that changes which other options are valid. How should the product be modeled?",
       "options": [
-        "A set of separate product records, one for each valid combination of choices",
-        "A text field where the sales user records the options the customer wanted",
-        "A product configuration with rules and attributes",
-        "A validation rule on the order object that rejects invalid combinations later"
+        "A configurable product with attributes and rules",
+        "A separate product record for every possible combination",
+        "A text note where sales staff list selections",
+        "A post-order check that rejects combinations"
       ],
-      "correctAnswer": 2,
-      "explanation": "Configuration models the product with attributes and rules, so the choices constrain each other as the user works through them.",
+      "correctAnswer": 0,
+      "explanation": "Configuration attributes represent the choices, and rules can guide or restrict combinations while the offer is being configured.",
       "whyWrong": [
-        "Enumerating every combination explodes the catalogue and is unmaintainable.",
-        "Free text cannot be priced, validated or fulfilled.",
-        "Catching errors after the fact is a poor experience and arrives too late."
+        "A separate product record for every possible combination is not the best choice because the scenario calls for A configurable product with attributes and rules.",
+        "A text note where sales staff list selections is not the best choice because the scenario calls for A configurable product with attributes and rules.",
+        "A post-order check that rejects combinations is not the best choice because the scenario calls for A configurable product with attributes and rules."
       ]
     },
     {
-      "question": "What does a product attribute do in Industries CPQ?",
+      "question": "A product needs a value such as bandwidth that affects eligibility and price. What should the model use?",
       "options": [
-        "It stores the historical prices the product has carried over time",
-        "It records which sales user configured the product for the customer",
-        "It defines which catalogue the product has been assigned into",
-        "It captures a characteristic that can drive rules and price"
+        "A quote comment",
+        "A product attribute",
+        "A sales user field",
+        "A payment-term record"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product attributes represent characteristics that rules and pricing can use.",
+      "whyWrong": [
+        "A quote comment is not the best choice because the scenario calls for A product attribute.",
+        "A sales user field is not the best choice because the scenario calls for A product attribute.",
+        "A payment-term record is not the best choice because the scenario calls for A product attribute."
+      ]
+    },
+    {
+      "question": "Two options cannot be sold together. Where should that restriction be enforced?",
+      "options": [
+        "A nightly report for sales managers",
+        "A trigger that silently removes one option after save",
+        "Configuration exclusion rule",
+        "A user confirmation checkbox on the order"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A configuration rule can prevent an invalid combination while the product is being built.",
+      "whyWrong": [
+        "A nightly report for sales managers is not the best choice because the scenario calls for A configuration rule that excludes the incompatible choice.",
+        "A trigger that silently removes one option after save is not the best choice because the scenario calls for A configuration rule that excludes the incompatible choice.",
+        "A user confirmation checkbox on the order is not the best choice because the scenario calls for A configuration rule that excludes the incompatible choice."
+      ]
+    },
+    {
+      "question": "A configured option changes the resulting price. What should the pricing element or matrix do?",
+      "options": [
+        "Store the customer’s payment terms",
+        "Choose which sales user can approve a discount",
+        "List products available in the catalog",
+        "Resolve a price from the selected attributes"
       ],
       "correctAnswer": 3,
-      "explanation": "Attributes hold the characteristics a customer selects or that describe the product, and rules and pricing can act on them.",
+      "explanation": "Pricing elements or matrices map configured values to the price that applies.",
       "whyWrong": [
-        "Price history is held in pricing records.",
-        "Ownership is tracked on the order or quote.",
-        "Catalogue assignment is separate configuration."
+        "Store the customer’s payment terms is not the best choice because the scenario calls for Resolve a price from the selected attributes.",
+        "Choose which sales user can approve a discount is not the best choice because the scenario calls for Resolve a price from the selected attributes.",
+        "List products available in the catalog is not the best choice because the scenario calls for Resolve a price from the selected attributes."
       ]
     },
     {
-      "question": "A rule must prevent two incompatible options being selected together. What should the developer build?",
+      "question": "A telecom order needs both a technician visit and a shipped router. What should happen after the customer submits it?",
       "options": [
-        "An Apex trigger that deletes one of the two options after they are saved",
-        "A report that the sales manager reviews at the end of each trading week",
-        "A required field on the order that asks the user to confirm compatibility",
-        "A configuration rule expressing the exclusion"
+        "Separate fulfillment items",
+        "Wait for the visit before allowing order submission",
+        "Add the router as a service attribute only",
+        "Create unrelated orders with no shared parent"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Decomposition creates the downstream fulfillment work needed to deliver the commercial order.",
+      "whyWrong": [
+        "Wait for the visit before allowing order submission is not the best choice because the scenario calls for Decompose the order into separate fulfillment items.",
+        "Add the router as a service attribute only is not the best choice because the scenario calls for Decompose the order into separate fulfillment items.",
+        "Create unrelated orders with no shared parent is not the best choice because the scenario calls for Decompose the order into separate fulfillment items."
+      ]
+    },
+    {
+      "question": "What does order decomposition do in an Industries CPQ flow?",
+      "options": [
+        "Remove products canceled after purchase",
+        "Order to fulfillment actions",
+        "Divide sales credit among representatives",
+        "Split each line into a separate invoice"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Decomposition turns the customer-facing order into deliverable actions for downstream processes.",
+      "whyWrong": [
+        "Remove products canceled after purchase is not the best choice because the scenario calls for Translate the commercial order into fulfillment actions.",
+        "Divide sales credit among representatives is not the best choice because the scenario calls for Translate the commercial order into fulfillment actions.",
+        "Split each line into a separate invoice is not the best choice because the scenario calls for Translate the commercial order into fulfillment actions."
+      ]
+    },
+    {
+      "question": "A developer needs custom behavior during product configuration. What should be checked first?",
+      "options": [
+        "Whether it can run after the order is submitted",
+        "Whether it fits inside one Apex trigger",
+        "Declarative rules first",
+        "Whether a report can identify the issue later"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Declarative rules are easier to maintain when they can meet the requirement; custom code is appropriate when they cannot.",
+      "whyWrong": [
+        "Whether it can run after the order is submitted is not the best choice because the scenario calls for Whether declarative configuration rules already meet the need.",
+        "Whether it fits inside one Apex trigger is not the best choice because the scenario calls for Whether declarative configuration rules already meet the need.",
+        "Whether a report can identify the issue later is not the best choice because the scenario calls for Whether declarative configuration rules already meet the need."
+      ]
+    },
+    {
+      "question": "A complex product catalog requires many attribute and price lookups. Why can caching help?",
+      "options": [
+        "It guarantees all catalog values are always current",
+        "It chooses the options a buyer may select",
+        "It replaces the need for product rules",
+        "It keeps repeated reads responsive"
       ],
       "correctAnswer": 3,
-      "explanation": "Configuration rules enforce compatibility while the user is configuring, which is where the mistake can still be prevented.",
+      "explanation": "Catalog configuration reads data repeatedly, so caching can help the experience stay responsive.",
       "whyWrong": [
-        "Silently deleting a selection confuses the user and hides the conflict.",
-        "A weekly report finds the problem long after the order has gone.",
-        "Asking a user to self-certify does not enforce anything."
+        "It guarantees all catalog values are always current is not the best choice because the scenario calls for It keeps repeated reads responsive.",
+        "It chooses the options a buyer may select is not the best choice because the scenario calls for It keeps repeated reads responsive.",
+        "It replaces the need for product rules is not the best choice because the scenario calls for It keeps repeated reads responsive."
       ]
     },
     {
-      "question": "What is the purpose of a pricing element or matrix in this context?",
+      "question": "A customer upgrades halfway through a contract. How should the price change be handled?",
       "options": [
-        "It stores the payment terms agreed with the customer's account",
-        "It resolves a price from the configured attributes",
-        "It records the discount each sales user is permitted to authorise",
-        "It lists the products that are currently available in the catalogue"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Pricing is derived from the configuration, so a matrix or element maps the chosen attributes to the price that results.",
-      "whyWrong": [
-        "Payment terms are commercial account data.",
-        "Discount authority is an approvals concern.",
-        "Catalogue availability is separate from pricing."
-      ]
-    },
-    {
-      "question": "A telecom customer orders a service that requires an engineer visit and a router shipment. What does this imply?",
-      "options": [
-        "The order cannot be submitted until the engineer visit has taken place",
-        "The router must be configured as an attribute of the service product",
-        "The order decomposes into separate fulfilment items",
-        "Two completely separate orders must be raised for the same customer"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Orders in industries settings break down into the technical and physical actions needed to deliver the service, each tracked to completion.",
-      "whyWrong": [
-        "Fulfilment follows submission rather than preceding it.",
-        "A shipped device is its own item, not an attribute.",
-        "Splitting into two orders loses the single customer commitment."
-      ]
-    },
-    {
-      "question": "What does order decomposition mean?",
-      "options": [
-        "Removing the products a customer later cancelled from the order",
-        "Dividing the order value across the sales users who contributed",
-        "Turning a commercial order into deliverable actions",
-        "Splitting a large order so each item is invoiced on its own"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Decomposition translates what the customer bought into the specific tasks and service orders that systems and people must carry out.",
-      "whyWrong": [
-        "Cancellation is an amendment to the order.",
-        "Revenue attribution is a reporting matter.",
-        "Invoicing is a billing concern rather than decomposition."
-      ]
-    },
-    {
-      "question": "A developer needs custom logic to run during configuration. What should they consider first?",
-      "options": [
-        "Whether declarative rules already cover the requirement",
-        "Whether the logic should instead run after the order is submitted",
-        "Whether the org has enough remaining Apex character capacity for it",
-        "Whether the logic can be written entirely in a single Apex trigger"
+        "Prorate the new charge over the remaining term",
+        "Cancel the original contract in full",
+        "Replace it with a new contract starting from the original date",
+        "Ask a seller to type an unexplained adjustment"
       ],
       "correctAnswer": 0,
-      "explanation": "Declarative configuration rules are easier to maintain and survive upgrades, so custom code should be the fallback rather than the default.",
+      "explanation": "Proration charges for the change over the part of the term when the upgraded service applies.",
       "whyWrong": [
-        "Running validation after submission defeats its purpose.",
-        "Code capacity is rarely the real constraint.",
-        "Choosing the implementation before checking the need is backwards."
+        "Cancel the original contract in full is not the best choice because the scenario calls for Prorate the new charge over the remaining term.",
+        "Replace it with a new contract starting from the original date is not the best choice because the scenario calls for Prorate the new charge over the remaining term.",
+        "Ask a seller to type an unexplained adjustment is not the best choice because the scenario calls for Prorate the new charge over the remaining term."
       ]
     },
     {
-      "question": "Why does caching matter for a configurable product catalogue?",
+      "question": "How do commercial and technical products differ?",
       "options": [
-        "Caching ensures the catalogue data is always perfectly current",
-        "Configuration involves many reads that must stay fast",
-        "It determines which attributes the customer is able to select",
-        "It removes the need to define any configuration rules at all"
+        "One is for consumers and one for businesses",
+        "Commercial offer vs. delivered components",
+        "One is always priced and the other is always free",
+        "One is chosen by sales and one by the customer"
       ],
       "correctAnswer": 1,
-      "explanation": "Resolving rules, attributes and prices touches a lot of data, so the platform caches aggressively to keep the experience responsive.",
+      "explanation": "The commercial product is the customer-facing offer; technical products describe components or services used to fulfill it.",
       "whyWrong": [
-        "Caching trades freshness for speed rather than guaranteeing currency.",
-        "Attribute availability comes from the configuration model.",
-        "Rules are still required regardless of caching."
+        "One is for consumers and one for businesses is not the best choice because the scenario calls for One is the offer the customer buys; the other represents what must be delivered.",
+        "One is always priced and the other is always free is not the best choice because the scenario calls for One is the offer the customer buys; the other represents what must be delivered.",
+        "One is chosen by sales and one by the customer is not the best choice because the scenario calls for One is the offer the customer buys; the other represents what must be delivered."
       ]
     },
     {
-      "question": "A price must change when a customer upgrades mid-contract. What handles the difference?",
+      "question": "A configuration rule must evaluate a new characteristic. Where should it be defined?",
       "options": [
-        "A credit note cancelling the whole of the original contract value",
-        "Proration across the remaining term",
-        "A new contract replacing the original from the start of its term",
-        "A manual adjustment typed in by the sales user on the order"
+        "In a separate custom object unrelated to the product model",
+        "As a free-text product description",
+        "As an attribute in the product model",
+        "As an order field added after configuration"
       ],
-      "correctAnswer": 1,
-      "explanation": "Mid-term changes are prorated so the customer pays for the new service only for the period they actually receive it.",
+      "correctAnswer": 2,
+      "explanation": "Configuration rules evaluate modeled product attributes.",
       "whyWrong": [
-        "A full credit reverses more than the change requires.",
-        "Replacing the contract discards the original term and its history.",
-        "Manual adjustment is error-prone where the platform can calculate it."
+        "In a separate custom object unrelated to the product model is not the best choice because the scenario calls for As an attribute in the product model.",
+        "As a free-text product description is not the best choice because the scenario calls for As an attribute in the product model.",
+        "As an order field added after configuration is not the best choice because the scenario calls for As an attribute in the product model."
       ]
     },
     {
-      "question": "What distinguishes a commercial product from a technical product in this model?",
+      "question": "Why use a hierarchy for related products?",
       "options": [
-        "One is configured by the customer and the other by the sales user",
-        "One applies to consumers and the other only to business customers",
-        "One is priced in the catalogue and the other is always free of charge",
-        "One is what the customer buys; the other is what is delivered"
+        "To set the order products appear in search",
+        "To decide which sales users may sell each item",
+        "To set commission rates",
+        "Inherit shared product rules"
       ],
       "correctAnswer": 3,
-      "explanation": "Customers buy a commercial offer, and that maps to the technical components and services that actually have to be provisioned.",
+      "explanation": "A hierarchy can hold shared product characteristics and rules so they do not need to be repeated.",
       "whyWrong": [
-        "Configuration is done against the commercial offer.",
-        "Both apply across customer types.",
-        "Both carry cost; the distinction is not about price."
+        "To set the order products appear in search is not the best choice because the scenario calls for To share common attributes and rules across products.",
+        "To decide which sales users may sell each item is not the best choice because the scenario calls for To share common attributes and rules across products.",
+        "To set commission rates is not the best choice because the scenario calls for To share common attributes and rules across products."
       ]
     },
     {
-      "question": "A developer is asked to add a field that the configuration rules will evaluate. What should they do?",
+      "question": "An order stops during decomposition. What should the solution provide?",
       "options": [
-        "Store it in a separate custom object linked back to the product",
-        "Define it as an attribute within the product model",
-        "Add it as a custom field on the order object and reference it there",
-        "Record it in the product description so users can read it directly"
+        "Visible, resumable failure",
+        "A full manual re-entry process",
+        "An unlimited silent retry loop",
+        "An automatic deletion of the customer order"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Operators need to see where processing stopped and resume safely after the cause is fixed.",
+      "whyWrong": [
+        "A full manual re-entry process is not the best choice because the scenario calls for A visible failure state and a way to resume after correction.",
+        "An unlimited silent retry loop is not the best choice because the scenario calls for A visible failure state and a way to resume after correction.",
+        "An automatic deletion of the customer order is not the best choice because the scenario calls for A visible failure state and a way to resume after correction."
+      ]
+    },
+    {
+      "question": "What is the risk of creating a separate catalog product for every combination of options?",
+      "options": [
+        "The order cannot be decomposed",
+        "Unmanageable catalog growth",
+        "Pricing stops working for all products",
+        "Only one option can be priced at a time"
       ],
       "correctAnswer": 1,
-      "explanation": "Rules evaluate the product model, so a value they need has to exist as an attribute within that model.",
+      "explanation": "Enumerating every combination causes the catalog to grow rapidly and become difficult to maintain.",
       "whyWrong": [
-        "A detached custom object is not part of the configuration model.",
-        "An order field is not available during product configuration.",
-        "Descriptive text cannot be evaluated by a rule."
+        "The order cannot be decomposed is not the best choice because the scenario calls for The catalog grows too large to manage as options multiply.",
+        "Pricing stops working for all products is not the best choice because the scenario calls for The catalog grows too large to manage as options multiply.",
+        "Only one option can be priced at a time is not the best choice because the scenario calls for The catalog grows too large to manage as options multiply."
       ]
     },
     {
-      "question": "Why would an implementation use a product hierarchy?",
+      "question": "Which work is Industries CPQ designed to support?",
       "options": [
-        "Shared attributes and rules can be inherited",
-        "It determines the order in which products appear in search results",
-        "It controls which sales users are permitted to sell each product",
-        "It sets the commission rate applied to each of the products sold"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Defining common attributes and rules once at a parent level and inheriting them avoids repeating the same configuration across many products.",
-      "whyWrong": [
-        "Search ordering is a presentation concern.",
-        "Selling permissions are handled by sharing and profiles.",
-        "Commission is a compensation calculation."
-      ]
-    },
-    {
-      "question": "An order fails during decomposition. What should the design provide?",
-      "options": [
-        "Visibility of the failure and a way to resume",
-        "A manual process where an agent rekeys the order from the beginning",
-        "A silent retry that repeats indefinitely until the step succeeds",
-        "An automatic rollback that deletes the customer's order entirely"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Orders in flight are valuable, so the process needs to surface where it stopped and allow it to continue from there once the cause is fixed.",
-      "whyWrong": [
-        "Rekeying loses data and invites fresh mistakes.",
-        "Indefinite silent retries hide the problem and waste resources.",
-        "Deleting the order discards a genuine customer commitment."
-      ]
-    },
-    {
-      "question": "What is the main risk of modelling every product variant as a separate product record?",
-      "options": [
-        "The catalogue becomes unmanageable as options multiply",
-        "Orders can no longer be decomposed into their fulfilment items",
-        "Configuration rules stop working once variants are defined at all",
-        "The platform is unable to price more than one variant at a time"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Options combine multiplicatively, so enumerating variants produces an enormous catalogue that nobody can maintain accurately.",
-      "whyWrong": [
-        "Decomposition is unaffected by how variants are modelled.",
-        "Rules continue to function.",
-        "Pricing handles many products; the problem is maintenance."
-      ]
-    },
-    {
-      "question": "Which best describes what Industries CPQ is designed for?",
-      "options": [
-        "Managing the field engineers who attend customer appointments",
-        "Producing the financial statements for a subscription business",
-        "Selling configurable services that must then be provisioned",
-        "Running the marketing campaigns that generate new customer demand"
+        "Scheduling engineers for customer visits",
+        "Preparing financial statements",
+        "Configurable offers through fulfillment",
+        "Creating marketing campaigns"
       ],
       "correctAnswer": 2,
-      "explanation": "It handles complex configurable offers in sectors such as telecom and utilities, through configuration, pricing, ordering and decomposition into fulfilment.",
+      "explanation": "Industries CPQ supports configurable offers through selection, pricing, ordering and fulfillment.",
       "whyWrong": [
-        "Engineer scheduling is field service.",
-        "Financial reporting is an accounting function.",
-        "Demand generation is a marketing activity."
+        "Scheduling engineers for customer visits is not the best choice because the scenario calls for Selling configurable services that then need provisioning.",
+        "Preparing financial statements is not the best choice because the scenario calls for Selling configurable services that then need provisioning.",
+        "Creating marketing campaigns is not the best choice because the scenario calls for Selling configurable services that then need provisioning."
       ]
     }
   ]

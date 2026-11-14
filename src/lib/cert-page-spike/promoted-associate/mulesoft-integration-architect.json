@@ -1,49 +1,49 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the MuleSoft Integration Architect exam for?",
+    "heading": "Who should take the MuleSoft Integration Architect exam?",
     "personas": [
       {
         "label": "Senior integration consultants",
-        "description": "You have built Mule applications for a few years and now design whole integration solutions for clients."
+        "description": "You have built Mule applications and now design complete integration solutions for customers."
       },
       {
         "label": "Enterprise architects",
-        "description": "You decide how a company's systems connect, where Mule apps run, and how they meet uptime and security needs."
+        "description": "You decide how systems connect and how the integration platform meets security, availability, and operational needs."
       },
       {
         "label": "Technical leads",
-        "description": "You lead MuleSoft teams and need to make and defend design choices on reliability, performance and deployment."
+        "description": "You guide MuleSoft teams and need to explain decisions about reliability, performance, and deployment."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the MuleSoft Integration Architect Exam Hard?",
-    "summary": "It is a hard exam. Few questions ask what a feature does. Most ask which design best meets a set of needs, such as no lost messages, a response under two seconds, or data that must stay on site.",
+    "heading": "How challenging is the MuleSoft Integration Architect exam?",
+    "summary": "The exam asks you to choose designs that meet both business needs and technical constraints. Questions often turn on reliability, latency, data volume, security, and where applications must run.",
     "bullets": [
-      "<strong>About 60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>70% to pass</strong>, per MuleSoft's training site. That is a higher bar than most Salesforce exams.",
-      "<strong>Design reasoning.</strong> Most questions turn on non-functional needs like reliability, speed, scale and security.",
-      "<strong>Whole platform scope.</strong> API-led layers, deployment options, messaging, transactions, monitoring and governance all come up."
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
+      "<strong>Architecture reasoning:</strong> Be ready to compare patterns against availability, performance, scale, and security requirements.",
+      "<strong>Broad platform scope:</strong> Review API-led design, deployment, messaging, transactions, monitoring, and governance."
     ],
-    "passRateGuidance": "People who have designed and run Mule apps in production do best. Before you book. Aim for 80% or more on practice tests and make sure you can explain when to use a queue, a transaction or an idempotent filter."
+    "passRateGuidance": "Practice designing integrations from a set of requirements. For each design, explain expected failure behavior, data flow, security, and runtime placement. Aim for at least 80% on practice questions and review any trade-off you cannot justify."
   },
   "examFormat": {
-    "heading": "MuleSoft Integration Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor. Here is what to expect:",
-    "scenarioPercent": "Most questions are scenarios. A typical one describes an integration with certain needs, for example no message may be lost and the target system is often down, and asks for the best design.",
+    "heading": "MuleSoft Integration Architect exam format",
+    "intro": "The exam is proctored online. Questions describe business and technical integration requirements.",
+    "scenarioPercent": "Most questions use scenarios, such as a requirement to avoid message loss during an outage or to process a large data volume within a defined window.",
     "bestWayToPass": [
-      "<strong>Read for the requirement:</strong> Underline words like 'guaranteed', 'real time', 'on premises' or 'thousands per second'. They point to the answer.",
-      "<strong>Know the deployment options:</strong> CloudHub 2.0, Runtime Fabric and customer-hosted runtimes, and when each fits.",
-      "<strong>Learn the reliability tools:</strong> Persistent queues, Anypoint MQ, transactions, idempotent filters, retries and dead-letter queues.",
-      "<strong>Understand API-led layers:</strong> Which logic belongs in System, Process and Experience APIs, and why."
+      "<strong>Read for constraints:</strong> Notice requirements such as guaranteed delivery, low latency, on-premises hosting, or high throughput.",
+      "<strong>Compare deployment models:</strong> Review CloudHub, Runtime Fabric, and customer-hosted runtimes.",
+      "<strong>Plan for reliability:</strong> Understand queues, transactions, idempotency, retries, and dead-letter handling.",
+      "<strong>Apply API-led layers:</strong> Put system access, cross-system business logic, and consumer-specific shaping in the appropriate APIs."
     ]
   },
   "certificationCard": {
     "code": "MuleSoft Integration Architect",
-    "description": "This exam tests how you design MuleSoft integration solutions that meet real business and technical needs: choosing deployment models, making integrations reliable and fast, and keeping them secure and governed. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Designing for the runtime plane technology architecture and Designing and developing Mule applications (15% each).",
+    "description": "This exam covers MuleSoft integration architecture, including API-led layers, runtime deployment, reliability, performance, security, and governance. The guide allows up to five additional unscored questions. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Designing for the runtime plane technology architecture and Designing and developing Mule applications (15% each).",
     "examDetails": {
-      "questions": "About 60",
+      "questions": "60 scored + up to 5 unscored",
       "passingScore": "70%",
       "duration": "120 min",
       "cost": "$400"
@@ -58,59 +58,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "MuleSoft Integration Architect: Key Concepts for the Exam",
+    "h2": "MuleSoft Integration Architect: core concepts",
     "blocks": [
       {
-        "heading": "Integration Architecture Patterns",
-        "body": "Start from what the integration must guarantee. **Synchronous** request and reply when a caller waits for an answer. **Asynchronous** messaging with Anypoint MQ or VM queues when the caller doesn't need to wait, or the target is slow or unreliable. **Batch** processing for large scheduled data sets, using the Batch Job scope. **Publish and subscribe** when many systems need the same event. **Scatter-gather** to call several systems at once and combine the results. Every pattern has a cost: queues add delay but protect against outages, and synchronous calls are simple but fail when the target is down."
+        "heading": "Integration Patterns and Delivery Guarantees",
+        "body": "Use synchronous request and reply when the caller needs an immediate answer. Asynchronous queues can buffer messages when the caller can continue or the target system may be unavailable. Batch processing handles large scheduled data sets. Publish and subscribe can distribute events to multiple consumers. Scatter-Gather calls independent routes in parallel and combines their results. Each choice has a cost: queues add processing delay but can protect work during an outage, while synchronous calls are direct but depend on the target being available."
       },
       {
-        "heading": "API-Led Connectivity: Three-Layer Architecture",
-        "body": "API-led connectivity splits APIs into three layers. **System APIs** wrap a single back-end system, such as SAP or a database, and hide its quirks. **Process APIs** combine data from several System APIs and apply business rules, such as building a full customer view. **Experience APIs** shape data for one consumer, such as a mobile app or a partner portal. The benefit is reuse: when a new app needs customer data, it calls the existing Process API instead of building new connections. Don't add layers for their own sake. A simple one-off integration may not need all three."
+        "heading": "API-Led Connectivity",
+        "body": "System APIs provide controlled access to systems of record. Process APIs combine data and apply business rules across systems. Experience APIs shape responses for a specific app or channel. This separation can support reuse and reduce coupling. Put logic in the layer that owns the responsibility and avoid copying the same transformation into every consumer."
       },
       {
-        "heading": "Security Architecture for Integrations",
-        "body": "Secure APIs at the edge with **API Manager policies**: client ID enforcement, OAuth 2.0 token checks, rate limiting and IP allow lists. Use TLS for data in transit, and mutual TLS when both sides must prove who they are. Keep passwords and keys out of code by using **secure properties** that are encrypted in configuration. For sensitive data, mask or encrypt fields before logging. Use separate environments and business groups so teams only reach what they own."
+        "heading": "Reliability, Transactions, and Idempotency",
+        "body": "Choose a delivery approach that matches the required guarantee. Queues can persist messages until a consumer processes them. Transactions coordinate operations that must succeed or roll back together when the participating resources support the transaction. Idempotency prevents a repeated request from creating duplicate effects, often by tracking an identifier in an Object Store or using a unique key. Retries should be bounded and failed messages should be visible for recovery."
       },
       {
-        "heading": "High Availability, Resilience, and SLAs",
-        "body": "For uptime, run more than one worker or replica so one failure doesn't stop the service. On customer-hosted runtimes, **clustering** shares work and state across nodes, and some tasks run on the primary node only. For no lost messages, use persistent queues, Anypoint MQ or **XA transactions** where several resources must succeed or fail together. Use **idempotent** designs, such as the Idempotent Message Validator with an Object Store, so retries don't create duplicates. **Until Successful** handles retries, and failed messages should land in a **dead-letter queue** for review. Set SLA tiers in API Manager to limit how much each consumer can call."
+        "heading": "Deployment and Runtime Architecture",
+        "body": "Select where Mule applications run based on network, security, availability, scale, and operational requirements. CloudHub provides managed cloud runtimes. Runtime Fabric supports deployment to customer-managed infrastructure such as Kubernetes while allowing Anypoint Platform management. Customer-hosted runtimes may suit other environments. Design for redundancy and understand how clustered deployments coordinate scheduled work."
       },
       {
-        "heading": "Anypoint Governance and Centre for Enablement",
-        "body": "A **Centre for Enablement (C4E)** is a small central team that helps other teams build and reuse APIs. It sets standards, publishes templates and shared assets in **Anypoint Exchange**, and measures reuse. It is not a gatekeeper that builds everything itself. **API Governance** checks API specs against rules, such as naming and security, before they are published. **Anypoint Monitoring** gives dashboards, alerts and log search across apps. Good governance means teams move faster because they start from proven assets."
+        "heading": "Security, Governance, and Operations",
+        "body": "Protect credentials through secure properties or a managed credential mechanism; never hard-code secrets. API Manager policies can enforce client identity, rate limits, and other controls. Governance and Exchange help teams apply standards and reuse APIs. Monitoring alerts can notify operators when error rates or other measures exceed thresholds. Include dashboards, alerts, and runbooks in the design."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the MuleSoft Integration Architect Exam",
-    "intro": "Most questions give you one or two firm requirements and several designs that almost work. Find the requirement that rules out the wrong ones.",
+    "h2": "How to prepare for the MuleSoft Integration Architect exam",
+    "intro": "Identify the requirement that rules out otherwise workable designs. Compare latency, throughput, delivery guarantees, runtime location, and operations.",
     "blocks": [
       {
-        "heading": "API-Led Connectivity Layers",
-        "body": "One back-end system: System API. Business rules across systems: Process API. Shaping data for a channel: Experience API."
+        "heading": "Choose the API-Led Layer",
+        "body": "Use a System API for a system of record, a Process API for cross-system logic, and an Experience API for a specific consumer."
       },
       {
-        "heading": "Center for Enablement (C4E)",
-        "body": "C4E enables and shares. If an answer says the C4E should build every API itself, it is probably wrong."
+        "heading": "Design for Reliability",
+        "body": "Use durable messaging when work must survive outages. Add idempotency, bounded retries, and a dead-letter path for failures."
       },
       {
-        "heading": "API Governance Framework",
-        "body": "Policies in API Manager, rules in API Governance, shared assets in Exchange and alerts in Anypoint Monitoring."
+        "heading": "Match Runtime to Constraints",
+        "body": "Compare managed cloud, Runtime Fabric, and customer-hosted options based on security, network access, operations, and availability."
       },
       {
-        "heading": "Architecture Decision Trade-offs",
-        "body": "Guaranteed delivery points to queues or transactions. Low latency points to synchronous calls and caching. Huge volume points to batch."
+        "heading": "Secure and Govern APIs",
+        "body": "Use API Manager policies for client controls and rate limiting. Store credentials securely and publish reusable assets with clear standards."
       },
       {
-        "heading": "Anypoint Platform Architecture",
-        "body": "CloudHub 2.0 for fully managed cloud. Runtime Fabric when you need your own Kubernetes or on-premises control. Customer-hosted for full control."
+        "heading": "Monitor the Solution",
+        "body": "Define operational measures and alerts before release. Make sure teams can see failures and know how to recover work."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "After MuleSoft Integration Architect, many people add Salesforce architect credentials:",
+    "heading": "Related credentials for MuleSoft integration architects",
+    "intro": "Continue with a MuleSoft developer, platform, or Salesforce integration architecture credential.",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Orders must never be lost, even when the target ERP is down for an hour. What design fits best?",
+      "question": "Orders must be preserved while the ERP is unavailable for an hour. Which design best supports this?",
       "options": [
-        "Store orders in memory until the ERP comes back",
-        "Queue the orders and process them when the ERP returns",
-        "Call the ERP synchronously and return an error if it is down",
-        "Drop orders that fail and ask customers to try again"
+        "Keep orders in volatile memory until the ERP returns",
+        "Queue the orders and process them when the ERP is available",
+        "Call the ERP synchronously and discard orders on error",
+        "Drop failed orders and ask customers to resubmit"
       ],
       "correctAnswer": 1,
-      "explanation": "A persistent queue holds each order safely until the ERP can take it, so nothing is lost during the outage.",
+      "explanation": "A durable queue can hold orders while the ERP is down and deliver them after service recovers.",
       "whyWrong": [
-        "Memory is lost if the app restarts.",
-        "A synchronous call fails while the ERP is down, and the order may be lost.",
-        "Dropping orders breaks the requirement."
+        "Volatile memory may be lost if the runtime restarts during the outage.",
+        "A queue can preserve orders until the ERP is available.",
+        "A synchronous call that fails does not preserve the order."
       ]
     },
     {
-      "question": "Customer data from SAP, Salesforce and a billing system must be combined into one view for several apps. Where should the combining logic live?",
+      "question": "Customer data from SAP, Salesforce, and billing must be combined for several applications. Where should that shared business logic live?",
       "options": [
-        "In an Experience API for each app",
+        "In a separate Experience API for each app",
         "In a Process API",
         "In the SAP System API",
-        "In each consuming app"
+        "In every consuming application"
       ],
       "correctAnswer": 1,
-      "explanation": "Process APIs combine data from several System APIs and apply business rules, so every app can reuse the same logic.",
+      "explanation": "A Process API can combine data from several systems and expose reusable business logic to multiple consumers.",
       "whyWrong": [
-        "Experience APIs shape data for a channel. Combining it there means repeating it per app.",
-        "A System API should wrap one system only.",
-        "Putting it in each app duplicates the work."
+        "An Experience API shapes data for one consumer rather than combining shared business logic.",
+        "A Process API can combine systems for multiple consumers.",
+        "A System API should focus on access to one source system."
       ]
     },
     {
-      "question": "A retry sends the same payment message twice. The target must not charge the customer twice. What should be used?",
+      "question": "A retried payment message could otherwise charge a customer twice. What should the design use?",
       "options": [
-        "A considerably bigger CloudHub worker size",
-        "A larger timeout",
-        "An idempotent validator on an Object Store",
-        "A scatter-gather"
+        "A larger CloudHub worker",
+        "A longer request timeout",
+        "Idempotency check",
+        "A Scatter-Gather scope"
       ],
       "correctAnswer": 2,
-      "explanation": "The idempotent validator remembers message IDs it has seen and rejects repeats, so the payment only happens once.",
+      "explanation": "An idempotency check can recognize a repeated request and prevent a second payment effect.",
       "whyWrong": [
-        "More capacity doesn't affect duplicate handling.",
-        "A longer timeout doesn't stop duplicates.",
-        "Scatter-gather calls several targets at once. It doesn't stop duplicates."
+        "Worker size does not prevent a duplicate payment.",
+        "A longer timeout cannot identify a repeated request.",
+        "Idempotency can detect a repeat and prevent a second charge."
       ]
     },
     {
-      "question": "A bank must run Mule apps on its own Kubernetes clusters inside its data centre, with central management from Anypoint Platform. Which option fits?",
+      "question": "A bank requires Mule workers to run on its own Kubernetes clusters so its infrastructure controls remain in force. Which deployment option fits?",
       "options": [
-        "Anypoint Studio with a manual deployment",
+        "Manual deployment from Anypoint Studio",
         "Runtime Fabric",
         "CloudHub 2.0",
-        "A single customer-hosted runtime with no management"
+        "An unmanaged customer-hosted runtime"
       ],
       "correctAnswer": 1,
-      "explanation": "Runtime Fabric runs Mule apps on the customer's own infrastructure while still being managed from Anypoint Platform.",
+      "explanation": "Runtime Fabric places the Mule runtime on customer-managed Kubernetes infrastructure while keeping it connected to Anypoint management.",
       "whyWrong": [
-        "Studio is a design tool, not a runtime.",
-        "CloudHub 2.0 runs in MuleSoft's cloud, not the bank's data centre.",
-        "An unmanaged runtime loses central management and is harder to scale."
+        "Studio is a development tool, not the managed customer Kubernetes runtime.",
+        "Runtime Fabric supports Anypoint-managed apps on customer infrastructure.",
+        "CloudHub is MuleSoft-managed hosting rather than the stated on-premises option."
       ]
     },
     {
-      "question": "A database update and a message to a JMS queue must both succeed or both be rolled back. What should be used?",
+      "question": "A database update and a JMS message must either both succeed or both roll back. What should the architect consider?",
       "options": [
         "A batch job",
-        "An Until Successful scope only",
-        "An XA transaction across both",
-        "Two separate flows"
+        "An Until Successful scope alone",
+        "XA transaction",
+        "Two independent flows"
       ],
       "correctAnswer": 2,
-      "explanation": "An XA transaction ties both resources together, so either both commit or both roll back.",
+      "explanation": "A supported XA transaction can coordinate participating resources so the operations commit or roll back together.",
       "whyWrong": [
-        "Batch jobs are for large data sets, not two-part commits.",
-        "Until Successful retries but doesn't roll back the other resource.",
-        "Separate flows can leave one done and the other not."
+        "Batch processing handles records but does not make two resource updates atomic.",
+        "Retries do not guarantee both resources commit or roll back together.",
+        "A supported XA transaction coordinates both resources."
       ]
     },
     {
-      "question": "A partner is calling an API so often that other consumers are slowed down. What should the architect apply?",
+      "question": "One partner is sending so many requests that other API consumers are slowed. What control should be applied?",
       "options": [
-        "Removing the partner's access entirely",
-        "Moving the API to a batch job",
-        "A rate-limiting policy in API Manager",
-        "A bigger CloudHub worker for everyone"
+        "Remove every consumer’s access",
+        "Move the API to a batch job",
+        "Apply a rate-limiting policy in API Manager",
+        "Increase worker size for all consumers"
       ],
       "correctAnswer": 2,
-      "explanation": "SLA tiers and rate limits cap how much each consumer can call, protecting the API for others.",
+      "explanation": "A rate-limiting policy can restrict request volume so one consumer does not overwhelm the API.",
       "whyWrong": [
-        "Removing access isn't needed when limits will do.",
-        "A batch job doesn't serve live API calls.",
-        "More capacity treats the symptom and costs more."
+        "Removing all access is broader than necessary.",
+        "Batch processing changes the data exchange pattern rather than limiting one consumer.",
+        "Rate limiting controls request volume for an API or consumer."
       ]
     },
     {
-      "question": "What is the main job of a Centre for Enablement (C4E)?",
+      "question": "What is the main purpose of a Center for Enablement?",
       "options": [
-        "To help teams reuse APIs through shared standards",
-        "To replace the security team",
-        "To approve every code change by hand",
-        "To build every single API on behalf of the whole company"
+        "Enable API reuse across teams",
+        "Replace the organization’s security team",
+        "Manually approve every code change",
+        "Build every API centrally for all teams"
       ],
       "correctAnswer": 0,
-      "explanation": "A C4E enables other teams with shared assets and guidance, so delivery speeds up and reuse grows.",
+      "explanation": "A C4E enables teams to discover and reuse assets and follow shared standards.",
       "whyWrong": [
-        "Security still needs its own experts.",
-        "Manual approval of every change slows teams down.",
-        "Building everything centrally creates a bottleneck."
+        "A C4E helps teams discover and reuse APIs through shared practices.",
+        "Security remains a separate organizational responsibility.",
+        "Manual approval of every change can turn enablement into a bottleneck."
       ]
     },
     {
-      "question": "An app must call three systems at the same time and combine the answers before replying. Which scope fits?",
+      "question": "An application must call three systems in parallel and combine the responses before returning. Which Mule scope fits?",
       "options": [
-        "Scatter-gather",
+        "Scatter-Gather",
         "Choice router",
         "Until Successful",
         "Batch Job"
       ],
       "correctAnswer": 0,
-      "explanation": "Scatter-gather sends requests in parallel and gathers the results into one response.",
+      "explanation": "Scatter-Gather runs routes in parallel and aggregates their responses.",
       "whyWrong": [
-        "Choice routes to one path, not several at once.",
-        "Until Successful retries one step, it doesn't call in parallel.",
-        "Batch is for large scheduled data sets."
+        "Scatter-Gather runs parallel routes and combines their results.",
+        "Choice routes messages by conditions rather than parallelizing calls.",
+        "Until Successful retries an operation but does not combine route responses."
       ]
     },
     {
-      "question": "10 million records must be moved from a database to a data warehouse every night. What is the best approach?",
+      "question": "Ten million records must move from a database to a warehouse overnight. What is a suitable approach?",
       "options": [
-        "A synchronous API call per record from the warehouse",
+        "A synchronous API call for each record",
         "Manual export and import",
-        "A Batch Job that processes records in blocks",
-        "A single flow that loads all records into memory"
+        "Batch processing in record groups",
+        "Load all records into memory in one flow"
       ],
       "correctAnswer": 2,
-      "explanation": "The Batch Job scope splits large data sets into blocks, handles errors per record and can run in parallel.",
+      "explanation": "Batch processing can handle large data sets as records in controlled steps.",
       "whyWrong": [
-        "Per-record API calls would be very slow.",
-        "Manual work at this scale isn't reliable.",
-        "Loading 10 million records into memory will fail."
+        "Synchronous per-record requests are inefficient at this volume.",
+        "Manual transfer is not a dependable nightly integration.",
+        "Batch jobs process large sets in manageable records or groups."
       ]
     },
     {
-      "question": "Where should passwords and API keys used by a Mule app be stored?",
+      "question": "Where should a Mule application’s passwords and API keys be stored?",
       "options": [
-        "Hard-coded in the flow XML",
-        "In a plain-text properties file in source control",
-        "In the API description in Exchange",
-        "In encrypted secure properties"
+        "In the flow XML as constants",
+        "In plain-text properties committed to source control",
+        "In an API description in Exchange",
+        "In encrypted secure properties or a managed credential store"
       ],
       "correctAnswer": 3,
-      "explanation": "Secure properties keep secrets encrypted in configuration, so they aren't readable in code or source control.",
+      "explanation": "Encrypted secure properties or managed credentials protect secrets from exposure in application source.",
       "whyWrong": [
-        "Hard-coded secrets can be read by anyone with the code.",
-        "Plain-text files in Git expose the secrets.",
-        "Exchange is for sharing APIs, not storing secrets."
+        "Hard-coded credentials can be exposed in source code.",
+        "Plain-text properties in source control are not a secure secret store.",
+        "Exchange descriptions are not a credential vault."
       ]
     },
     {
-      "question": "A Mule app on customer-hosted runtimes must keep running if one server fails, and a scheduled task must run only once across all servers. What should be used?",
+      "question": "How can a Mule cluster provide failover while avoiding duplicate execution of a scheduled job?",
       "options": [
-        "A cluster, with the scheduler running on the primary node",
-        "A single server with more memory",
-        "Separate copies of the application with no link at all between them",
-        "Running the scheduler on every server"
+        "Cluster with primary-node scheduling",
+        "One server with additional memory",
+        "Independent application copies without coordination",
+        "Run the scheduler on every server"
       ],
       "correctAnswer": 0,
-      "explanation": "A cluster keeps the app running when a node fails, and by default schedulers run only on the primary node, so the task runs once.",
+      "explanation": "Use a clustered deployment for redundancy and configure the scheduler to run on the primary node, so only one cluster member executes the task.",
       "whyWrong": [
-        "One server is a single point of failure.",
-        "Unlinked copies would each run the task, causing duplicates.",
-        "Running on every server makes the task run several times."
+        "A cluster supports failover, with scheduling configured to run only on the primary node.",
+        "More memory does not remove the single-server failure risk.",
+        "Independent nodes without coordination can duplicate scheduled work."
       ]
     },
     {
-      "question": "A new mobile app needs order data shaped for small screens. Existing System and Process APIs already provide order data. What should be built?",
+      "question": "Existing System and Process APIs expose order data. Which API should provide the mobile app with a focused order view for its small-screen workflow?",
       "options": [
         "A new System API to the ERP",
-        "A copy of the Process API",
-        "Direct access to the database from the mobile app",
+        "A copy of the Process API for each phone",
+        "Direct database access from the app",
         "An Experience API for the mobile app"
       ],
       "correctAnswer": 3,
-      "explanation": "An Experience API shapes existing data for one channel. It reuses the Process API instead of building new connections.",
+      "explanation": "An Experience API can tailor the existing business data and contract to a particular consumer such as the mobile app.",
       "whyWrong": [
-        "A new System API duplicates an existing connection.",
-        "Copying the Process API duplicates logic.",
-        "Direct database access skips security and reuse."
+        "A System API provides access to the ERP rather than tailoring the mobile response.",
+        "Copying the Process API creates duplicate logic.",
+        "Direct database access bypasses the existing API design."
       ]
     },
     {
-      "question": "Messages that keep failing after all retries must not block the queue and must be reviewed later. What should be used?",
+      "question": "Messages that still fail after bounded retries must be reviewed without blocking the queue. What should be used?",
       "options": [
-        "Retrying forever",
-        "Deleting the failed messages",
-        "Raising the queue's size",
+        "Retry forever",
+        "Delete failed messages",
+        "Increase the queue capacity",
         "A dead-letter queue"
       ],
       "correctAnswer": 3,
-      "explanation": "A dead-letter queue moves messages that still fail out of the way, so others keep flowing and someone can review them.",
+      "explanation": "A dead-letter queue holds messages that failed processing so they can be inspected and handled separately.",
       "whyWrong": [
-        "Endless retries block the queue and waste resources.",
-        "Deleting messages loses data.",
-        "A bigger queue doesn't fix the stuck messages."
+        "Infinite retries can block the queue and overload a failing system.",
+        "Deleting failed messages loses work that may need review.",
+        "A larger queue does not separate repeatedly failing messages for inspection."
       ]
     },
     {
-      "question": "An API must only be called by known applications that send a valid client ID and secret. What should be applied?",
+      "question": "An API should accept calls only from registered applications presenting valid client credentials. What should be applied?",
       "options": [
         "A caching policy",
-        "A client ID enforcement",
-        "A bigger worker",
-        "An IP allow list on the API gateway"
+        "Client ID enforcement",
+        "A larger worker",
+        "Restrict calls to approved network IPs"
       ],
       "correctAnswer": 1,
-      "explanation": "Client ID enforcement checks that each call comes from a registered application with valid credentials.",
+      "explanation": "Client ID enforcement requires registered clients to present their client credentials.",
       "whyWrong": [
-        "Caching affects speed, not security.",
-        "Worker size doesn't control access.",
-        "IP lists check where calls come from, not which application is calling."
+        "Caching does not verify which application is calling.",
+        "Client ID enforcement validates registered client credentials.",
+        "Worker size does not authenticate API consumers."
       ]
     },
     {
-      "question": "A team wants to be told when an API's error rate rises above 5%. What should they use?",
+      "question": "The team wants an alert when an API’s error rate exceeds five percent. What should it configure?",
       "options": [
-        "Alerts in Anypoint Monitoring",
-        "A weekly report from the C4E",
-        "Reading logs by hand each morning",
-        "Exchange ratings"
+        "An alert in Anypoint Monitoring",
+        "A weekly C4E report",
+        "A manual daily log review",
+        "Exchange asset ratings"
       ],
       "correctAnswer": 0,
-      "explanation": "Anypoint Monitoring can track error rates and send alerts as soon as a threshold is crossed.",
+      "explanation": "Anypoint Monitoring alerts can notify operators when a configured error-rate threshold is exceeded.",
       "whyWrong": [
-        "A weekly report is far too late for live problems.",
-        "Reading logs by hand is slow and easy to miss.",
-        "Exchange ratings are about asset quality, not live errors."
+        "Monitoring alerts can notify the team when a threshold is crossed.",
+        "A weekly report may miss an issue that needs immediate response.",
+        "Manual review does not automatically alert on a rate threshold."
       ]
     }
   ]

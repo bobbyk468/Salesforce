@@ -40,23 +40,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the easiest Salesforce certification?',
-    answer: 'Platform Foundations is the easiest Salesforce certification you can currently sit. It requires no prior Salesforce experience, covers a broad conceptual overview of the platform, has 40 questions, a 62% passing score and a $75 fee. AI Associate was the usual answer to this question until it retired in February 2026; it can no longer be booked, and the page for it on this site is kept as a historical reference.',
+    answer: 'Platform Foundations is currently the easiest Salesforce certification to take. It requires no prior Salesforce experience and covers the platform at a high level. The exam has 40 questions, a 62% passing score, and a $75 fee. AI Associate was once a common answer, but it retired in February 2026 and can no longer be booked. Its page on this site remains as a historical reference.',
   },
   {
     question: 'What is the hardest Salesforce certification?',
-    answer: 'The Salesforce Certified Technical Architect (CTA) Board Review is universally considered the hardest credential in the Salesforce ecosystem, and one of the most rigorous in enterprise software. It requires holding both Application Architect and System Architect credentials (8 individual certs total), then passing a live 2-hour presentation to a panel of senior Salesforce architects. There are fewer than 1,000 CTAs globally. Candidates typically have 8–12 years of Salesforce experience and often attempt the board multiple times.',
+    answer: 'The Salesforce Certified Technical Architect (CTA) Board Review is widely regarded as the hardest Salesforce credential. Candidates must hold both Application Architect and System Architect credentials (eight individual certifications in total), then give a live, two-hour presentation to a panel of senior Salesforce architects. There are fewer than 1,000 CTAs worldwide. Candidates typically have 8–12 years of Salesforce experience and may take the board more than once.',
   },
   {
     question: 'Is Platform Developer I (PD1) hard?',
-    answer: 'PD1 is moderately difficult. It requires knowledge of Apex (a Java-like language), SOQL, governor limits, Lightning Web Components, testing, and deployment. Candidates with prior programming experience (Java, C#, Python) typically find PD1 manageable with 8–12 weeks of dedicated study. Candidates with no programming background find it significantly harder and should budget 4–6 months. The pass rate is not published, but community estimates suggest 50–65% pass on the first attempt.',
+    answer: 'PD1 is moderately difficult. It covers Apex, SOQL, governor limits, Lightning Web Components, testing, and deployment. People with programming experience in languages such as Java, C#, or Python may need 8–12 weeks of focused study. Those new to programming may need 4–6 months. Salesforce does not publish a pass rate; community estimates put the first-attempt rate at 50–65%.',
   },
   {
     question: 'Is the Salesforce Administrator (ADM-201) exam hard?',
-    answer: 'ADM-201 is moderately challenging for complete beginners. The exam covers a broad range of Salesforce features, objects, security model (profiles, roles, sharing rules), automation, reports, dashboards, and data management; and requires 68% to pass. Most candidates without Salesforce experience pass in 8–12 weeks of part-time study. The biggest challenge is the breadth of topics, no single section is very deep, but all areas need solid coverage.',
+    answer: 'ADM-201 can be challenging for complete beginners because it covers many topics: Salesforce features and objects, security, automation, reports, dashboards, and data management. The passing score is 68%. Many candidates without Salesforce experience study part time for 8–12 weeks. The main challenge is covering the full range of topics, even though no one section goes very deep.',
   },
   {
     question: 'Do Salesforce consultant exams have a higher fail rate than admin exams?',
-    answer: 'Yes, consultant exams generally have higher fail rates than ADM-201. Consultant exams (Sales Cloud, Service Cloud, Experience Cloud) test scenario-based application of Salesforce features to real business requirements, not just feature knowledge. Questions typically describe a business problem and ask which Salesforce configuration solves it. This requires both feature knowledge and consulting judgment, which is harder to study for than factual recall.',
+    answer: 'Consultant exams often feel harder than ADM-201 because they ask you to apply Salesforce features to business scenarios. A question may describe a business problem and ask which configuration would solve it. This tests product knowledge and consulting judgment, not just recall.',
   },
 ]
 
@@ -65,62 +65,62 @@ const tiers = [
     tier: 'Entry Level',
     color: 'bg-green-100 text-green-800',
     borderColor: 'border-green-200',
-    description: 'Conceptual, minimal Salesforce experience required. Ideal starting points.',
+    description: 'These exams cover core concepts and require little or no Salesforce experience. They can be good starting points.',
     certs: [
-      { name: 'AI Associate (retired Feb 2026)', fee: '$75', questions: '40', passing: '65%', note: 'Retired; no longer bookable. Listed for historical reference.' },
-      { name: 'Platform Foundations', fee: '$75', questions: '40', passing: '62%', note: 'Broad Salesforce overview. Good for non-technical users.' },
-      { name: 'MuleSoft Integration Foundations', fee: '$75', questions: '40', passing: '70%', note: 'Conceptual integration. No Anypoint Studio required.' },
+      { name: 'AI Associate (retired Feb 2026)', fee: '$75', questions: '40', passing: '65%', note: 'Retired and no longer bookable; included as a historical reference.' },
+      { name: 'Platform Foundations', fee: '$75', questions: '40', passing: '62%', note: 'A broad Salesforce overview for non-technical users.' },
+      { name: 'MuleSoft Integration Foundations', fee: '$75', questions: '40', passing: '70%', note: 'Covers integration concepts; Anypoint Studio is not required.' },
     ],
   },
   {
     tier: 'Moderate',
     color: 'bg-yellow-100 text-yellow-800',
     borderColor: 'border-yellow-200',
-    description: 'Foundational certifications. Require 8–12 weeks of study with no prior experience.',
+    description: 'These foundational certifications may take 8–12 weeks of study if you have no prior experience.',
     certs: [
-      { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '68%', note: 'Broad but not deep. Most common first cert.' },
-      { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '73%', note: 'Declarative Salesforce. Assumes ADM-201 knowledge.' },
-      { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '72%', note: 'Higher passing score. AI/agent concepts are new for most.' },
-      { name: 'Tableau Data Analyst', fee: '$250', questions: '55', passing: '75%', note: 'Highest passing score. Hands-on Tableau required.' },
+      { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '68%', note: 'Covers a broad range of topics and is a common first certification.' },
+      { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '73%', note: 'Tests declarative Salesforce skills and assumes Administrator knowledge.' },
+      { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '72%', note: 'Covers AI and agent concepts that may be new to many candidates.' },
+      { name: 'Tableau Data Analyst', fee: '$250', questions: '55', passing: '75%', note: 'Requires hands-on Tableau experience and has the highest passing score here.' },
     ],
   },
   {
     tier: 'Challenging',
     color: 'bg-orange-100 text-orange-800',
     borderColor: 'border-orange-200',
-    description: 'Require foundational credentials + hands-on project experience.',
+    description: 'These certifications build on foundational knowledge and benefit from hands-on project experience.',
     certs: [
-      { name: 'Platform Developer I (PD1)', fee: '$200', questions: '60', passing: '68%', note: 'Apex, LWC, governor limits. Steep for non-developers.' },
-      { name: 'Sales Cloud Consultant', fee: '$200', questions: '60', passing: '73%', note: 'Scenario-heavy. Requires ADM-201 + Sales Cloud experience.' },
-      { name: 'Service Cloud Consultant', fee: '$200', questions: '60', passing: '78%', note: 'Omni-Channel, Knowledge, entitlements. Project experience needed.' },
-      { name: 'Marketing Cloud Email Specialist', fee: '$200', questions: '60', passing: '67%', note: 'MC sandbox experience essential. Deliverability is tricky.' },
-      { name: 'CPQ Administrator', fee: '$200', questions: '60', passing: '65%', note: 'Pricing cascade complexity. Hands-on CPQ config needed.' },
-      { name: 'MuleSoft Developer I', fee: '$200', questions: '60', passing: '70%', note: 'DataWeave + flow design. Anypoint Studio required.' },
+      { name: 'Platform Developer I (PD1)', fee: '$200', questions: '60', passing: '68%', note: 'Covers Apex, Lightning Web Components, and governor limits; coding experience helps.' },
+      { name: 'Sales Cloud Consultant', fee: '$200', questions: '60', passing: '73%', note: 'Uses business scenarios and assumes Administrator and Sales Cloud experience.' },
+      { name: 'Service Cloud Consultant', fee: '$200', questions: '60', passing: '78%', note: 'Covers Omni-Channel, Knowledge, and entitlements; project experience helps.' },
+      { name: 'Marketing Cloud Email Specialist', fee: '$200', questions: '60', passing: '67%', note: 'Marketing Cloud sandbox experience is useful; deliverability can be challenging.' },
+      { name: 'CPQ Administrator', fee: '$200', questions: '60', passing: '65%', note: 'Covers complex pricing rules and benefits from hands-on CPQ configuration.' },
+      { name: 'MuleSoft Developer I', fee: '$200', questions: '60', passing: '70%', note: 'Covers DataWeave and flow design; Anypoint Studio experience is required.' },
     ],
   },
   {
     tier: 'Very Hard',
     color: 'bg-red-100 text-red-800',
     borderColor: 'border-red-200',
-    description: 'Advanced credentials. Require multiple years of Salesforce experience.',
+    description: 'These advanced certifications usually require several years of Salesforce experience.',
     certs: [
-      { name: 'Platform Developer II (PD2)', fee: '$200', questions: '60', passing: '70%', note: 'Advanced Apex patterns, integration, performance. Requires PD1.' },
-      { name: 'Field Service Consultant', fee: '$200', questions: '60', passing: '63%', note: 'FSL managed package is complex. Requires Service Cloud foundation.' },
-      { name: 'Integration Architect', fee: '$400', questions: '60', passing: '67%', note: 'API design, middleware, async patterns. Deep technical knowledge.' },
-      { name: 'Data Architect', fee: '$400', questions: '60', passing: '58%', note: 'MDM, data modelling, large data volumes, ETL strategy.' },
-      { name: 'MuleSoft Developer II', fee: '$200', questions: '60', passing: '70%', note: 'Custom policies, advanced DataWeave, batch. Requires Dev I.' },
-      { name: 'Revenue Cloud Consultant', fee: '$200', questions: '60', passing: '63%', note: 'Billing + CPQ overlap. Complex quote-to-cash knowledge needed.' },
+      { name: 'Platform Developer II (PD2)', fee: '$200', questions: '60', passing: '70%', note: 'Covers advanced Apex, integrations, and performance; requires PD1.' },
+      { name: 'Field Service Consultant', fee: '$200', questions: '60', passing: '63%', note: 'Covers the Field Service managed package and assumes Service Cloud knowledge.' },
+      { name: 'Integration Architect', fee: '$400', questions: '60', passing: '67%', note: 'Requires strong technical knowledge of APIs, middleware, and asynchronous patterns.' },
+      { name: 'Data Architect', fee: '$400', questions: '60', passing: '58%', note: 'Covers master data management, data modelling, large data volumes, and ETL strategy.' },
+      { name: 'MuleSoft Developer II', fee: '$200', questions: '60', passing: '70%', note: 'Covers custom policies, advanced DataWeave, and batch processing; requires Developer I.' },
+      { name: 'Revenue Cloud Consultant', fee: '$200', questions: '60', passing: '63%', note: 'Covers billing and CPQ, with a focus on quote-to-cash processes.' },
     ],
   },
   {
     tier: 'Elite',
     color: 'bg-purple-100 text-purple-800',
     borderColor: 'border-purple-200',
-    description: 'The most demanding Salesforce credentials. Reserved for deeply experienced professionals.',
+    description: 'These are the most demanding Salesforce credentials and suit highly experienced professionals.',
     certs: [
-      { name: 'Application Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, granted on holding Platform App Builder, Platform Developer I, Data Architect and Sharing and Visibility Architect. No exam of its own.' },
-      { name: 'System Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'Composite credential, granted on holding Platform Developer I, Integration Architect, Identity and Access Management Architect and Development Lifecycle and Deployment Architect. No exam of its own.' },
-      { name: 'CTA Board Review', fee: '$6,000+', questions: 'Live', passing: 'Panel', note: 'Live 2-hour architecture presentation. Fewer than 1,000 CTAs worldwide.' },
+      { name: 'Application Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'A composite credential awarded after you earn Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There is no separate exam.' },
+      { name: 'System Architect', fee: '$400 × 4', questions: 'N/A', passing: 'N/A', note: 'A composite credential awarded after you earn Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate exam.' },
+      { name: 'CTA Board Review', fee: '$6,000+', questions: 'Live', passing: 'Panel', note: 'A live, two-hour architecture presentation reviewed by a panel. Fewer than 1,000 CTAs are worldwide.' },
     ],
   },
 ]
@@ -141,7 +141,7 @@ export default function SalesforceCertificationDifficultyPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Every major Salesforce certification ranked from easiest to hardest, with exam format, tips, and recommended study approach for each tier.
+          Compare major Salesforce certifications by difficulty, exam format, and the experience and study each may require.
         </p>
       </div>
 
@@ -172,10 +172,10 @@ export default function SalesforceCertificationDifficultyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">What Makes a Salesforce Exam Difficult?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
           {[
-            { factor: 'Passing score required', detail: 'Pass marks range from 58% to 78%. Administrator: 68%. MuleSoft Developer I: 70%. Tableau Data Analyst: 65%. Agentforce Specialist: 72%. Service Cloud Consultant: 78%. Higher = harder.' },
-            { factor: 'Question type', detail: 'Factual recall (easier) vs scenario-based application (harder). Consultant and architect exams are almost entirely scenario-based.' },
-            { factor: 'Breadth of topics', detail: 'ADM-201 covers many topics shallowly. Architect certs go deep into specific domains. Breadth requires more study time.' },
-            { factor: 'Experience required', detail: 'Associate certs: no experience needed. Architect certs: 5–10 years expected. Exams assume real project knowledge for senior credentials.' },
+            { factor: 'Passing score required', detail: 'Scores range from 58% to 78% in this comparison. Examples: Administrator 68%, MuleSoft Developer I 70%, Tableau Data Analyst 65%, Agentforce Specialist 72%, and Service Cloud Consultant 78%.' },
+            { factor: 'Question type', detail: 'Recall questions ask you to remember facts. Scenario questions ask you to apply features to a business problem. Consultant and architect exams rely heavily on scenarios.' },
+            { factor: 'Breadth of topics', detail: 'ADM-201 covers many topics at a basic level. Architect certifications go deeper into specific areas. Broad exams can take longer to study for.' },
+            { factor: 'Experience required', detail: 'Associate certifications require no experience. Architect certifications often expect 5–10 years. Senior exams may assume hands-on project knowledge.' },
           ].map((item) => (
             <div key={item.factor} className="rounded-lg bg-gray-50 p-4">
               <div className="font-semibold text-gray-900 mb-1">{item.factor}</div>
@@ -200,7 +200,7 @@ export default function SalesforceCertificationDifficultyPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with the Right Cert</h2>
-        <p className="text-white mb-6">Free practice questions for every certification, from Platform Foundations to CTA prep.</p>
+        <p className="text-white mb-6">Prepare with free practice questions, from Platform Foundations through CTA.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/platform-foundations" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Start: Platform Foundations (Easiest)

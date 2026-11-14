@@ -31,7 +31,7 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'How hard is the Advanced Field Service ap exam?',
-    answer: 'The Advanced Field Service ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Advanced Field Service ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
+    answer: 'The Advanced Field Service AP is a Pass/Fail accredited professional exam with 46 questions and a 75-minute time limit. It costs $150 and is designed for practitioners with hands-on implementation experience. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Advanced Field Service AP exam sections?',
@@ -88,7 +88,7 @@ export default function AdvancedFieldServiceApExamTipsContent() {
             <span className="font-medium text-gray-900">Analytics and Performance Metrics</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The Optimisation Engine and Scheduling Policies are the core differentiators of this advanced certification.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 46 questions, 75 minutes, Pass/Fail, $150. The Optimisation Engine and Scheduling Policies are the core differentiators of this advanced certification.</p>
         </div>
       </section>
 
@@ -110,7 +110,7 @@ export default function AdvancedFieldServiceApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Benchmark</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+          Pass 3 timed 46-question mocks before booking (Pass/Fail scoring)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Advanced Field Service AP assumes you have completed the Field Service Consultant credential

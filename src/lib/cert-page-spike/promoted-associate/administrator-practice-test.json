@@ -21,8 +21,8 @@
     "heading": "Is the Administrator exam hard?",
     "summary": "This practice test helps you prepare for ADM-201. Practical Salesforce experience helps because many questions ask you to choose the best setup, design, or troubleshooting step for a situation.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 minutes.",
-      "<strong>68% to pass</strong>: aim higher than the minimum before you book.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>68% to pass</strong>, which is 41 correct answers out of 60.",
       "<strong>Scenario questions</strong>: choose when to use Configuration & Setup, Object Manager & Fields, or Reports & Dashboards.",
       "<strong>Hands-on experience helps</strong>: you will be better prepared if you have configured or supported Salesforce in a real org, rather than only memorizing notes."
     ],

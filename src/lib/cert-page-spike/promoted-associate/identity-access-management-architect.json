@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Identity and Access Management Architect exam for?",
+    "heading": "Who should take the Identity and Access Management Architect exam?",
     "personas": [
       {
         "label": "Identity architects",
-        "description": "You design how people and systems log in, and you want the credential that proves it."
+        "description": "You design how people and systems authenticate and want to demonstrate your Salesforce identity architecture skills."
       },
       {
         "label": "Integration specialists",
-        "description": "You build server-to-server connections and need to pick the right OAuth flow with confidence."
+        "description": "You build server-to-server connections and need to choose the OAuth flow that fits each integration."
       },
       {
         "label": "Security engineers",
-        "description": "You own multi-factor authentication, Connected Apps and session policy for a Salesforce org."
+        "description": "You manage single sign-on, Connected Apps, multi-factor authentication, and session policy in Salesforce."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Identity and Access Management Architect Exam Hard?",
-    "summary": "It is a demanding exam because the answers turn on small differences between protocols. You need to know SAML and the OAuth flows well enough to match one to a specific situation, not just describe them. It is one of the four exams that earn the System Architect credential.",
+    "heading": "How challenging is the Identity and Access Management Architect exam?",
+    "summary": "The exam asks you to choose among identity protocols and authentication flows that can look similar. Understand who starts a login, whether a user is present, and how an application protects credentials.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 35 correct answers out of 60. Confirm it in the official exam guide before you book.",
-      "<strong>Protocol detail matters.</strong> Expect questions where two OAuth flows both look workable and only one fits.",
-      "<strong>Single sign-on design.</strong> Know which side starts the login, how users are provisioned, and what Salesforce can do as an identity provider."
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "<strong>Protocol distinctions:</strong> Match SAML, OAuth, and OpenID Connect to their roles in a solution.",
+      "<strong>Single sign-on design:</strong> Know which system is the identity provider, how users are provisioned, and how Salesforce can provide identity to another app."
     ],
-    "passRateGuidance": "You are ready when you can sketch each OAuth flow from memory, set up SAML single sign-on in both directions, and say what a Connected App's scopes and policies control. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Practice sketching the OAuth flows and both SAML sign-on directions. Also review how Connected App scopes and policies work, and how the chosen MFA method fits with single sign-on."
   },
   "examFormat": {
-    "heading": "Identity and Access Management Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a login or integration situation and ask which flow, setting or feature fits. The detail that decides it is usually whether a person is involved and whether the app can hold a secret safely.",
+    "heading": "Identity and Access Management Architect exam format",
+    "intro": "The exam is proctored online or at a test center. Questions describe sign-on, integration, or access requirements.",
+    "scenarioPercent": "Many questions present a login or integration scenario and ask which flow, policy, or identity feature fits. Look for whether a person is involved and whether the application can securely keep a client secret.",
     "bestWayToPass": [
-      "<strong>Match each OAuth flow to its situation:</strong> Web server when a person logs in through a browser, JWT bearer for server-to-server with no user, device flow for a TV or CLI, user-agent for a browser or mobile app.",
-      "<strong>Set up SAML both ways:</strong> Salesforce as the service provider logging users in from an outside provider, and Salesforce as the identity provider for other apps.",
-      "<strong>Learn Connected App controls:</strong> Scopes, IP restrictions, session policies and which users are pre-authorised.",
-      "<strong>Know the multi-factor rules:</strong> What satisfies the requirement, and how single sign-on interacts with it."
+      "<strong>Compare OAuth flows:</strong> Review browser-based authorization, server-to-server JWT or client credentials, user-agent, and device authorization use cases.",
+      "<strong>Understand SAML roles:</strong> Practice service-provider-initiated and identity-provider-initiated sign-on, including Salesforce as an identity provider.",
+      "<strong>Review Connected App controls:</strong> Know scopes, user access policies, IP restrictions, session settings, and refresh token policies.",
+      "<strong>Plan MFA and provisioning:</strong> Understand supported verification approaches, just-in-time provisioning, and external account lifecycle management."
     ]
   },
   "certificationCard": {
     "code": "Identity & Access Mgmt",
-    "description": "This exam tests how you design login and access for Salesforce: single sign-on with SAML, the OAuth flows, Connected Apps, multi-factor authentication, and how user accounts are created and kept in step. The exam is 60 scored questions in 120 minutes, with a 65% pass mark, weighted towards Accepting Third-Party Identity in Salesforce (21%) and Community (Partner and Customer) (18%).",
+    "description": "This exam covers Salesforce login and access architecture, including SAML single sign-on, OAuth flows, Connected Apps, multi-factor authentication, identity providers, and user provisioning. The exam is 60 scored questions in 120 minutes, with a 65% pass mark, weighted towards Accepting Third-Party Identity in Salesforce (21%) and Community (Partner and Customer) (18%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Identity and Access Management Architect: Key Concepts for the Exam",
+    "h2": "Identity and Access Management Architect: core concepts",
     "blocks": [
       {
-        "heading": "Authentication and Authorisation Are Not the Same",
-        "body": "**Authentication** proves who someone is, which is logging in. **Authorisation** decides what they may then do or which data an app may reach. SAML handles authentication for people. OAuth handles authorisation for applications: it gives an app a token to act on someone's behalf, or on its own behalf, without handing over a password. OpenID Connect sits on top of OAuth and adds an identity token, so an app learns who the user is as well as what it may do. Many exam questions become easy once you decide which of the two the scenario is really about."
+        "heading": "Authentication, Authorization, and Identity",
+        "body": "Authentication confirms who a user is. Authorization determines what an application or user may access. SAML is commonly used to exchange authentication assertions for single sign-on. OAuth provides delegated or application access through tokens without sharing a user password. OpenID Connect adds an identity layer to OAuth so an application can also learn who authenticated. Start a scenario by deciding whether it concerns identity verification, application authorization, or both."
       },
       {
-        "heading": "SAML Single Sign-On: Who Starts the Login",
-        "body": "With **SAML**, the **identity provider** checks the user and vouches for them, and the **service provider** is the app they are reaching. In **service-provider-initiated** single sign-on the user starts at Salesforce, is redirected to the provider to log in, and comes back with an assertion. In **identity-provider-initiated** single sign-on the user starts at the provider's portal and clicks through to Salesforce. Setup needs the provider's certificate, the entity ID and the login URL to match on both sides, and Salesforce needs **My Domain** turned on. Typical failures are a mismatched entity ID, an expired certificate, or clocks out of step so the assertion looks stale. Salesforce can also be the identity provider for other applications."
+        "heading": "SAML Single Sign-On",
+        "body": "The identity provider authenticates the user and issues an assertion; the service provider is the application the user wants to reach. In service-provider-initiated sign-on, the user begins at Salesforce and is redirected to the identity provider. In identity-provider-initiated sign-on, the user starts at the provider’s portal and opens Salesforce. Configure the trust values consistently, including the entity ID, certificate, and login URL. My Domain is part of Salesforce single sign-on setup. Certificate expiry, mismatched identifiers, and time differences can cause assertion failures. Salesforce can also act as an identity provider for other applications."
       },
       {
-        "heading": "OAuth 2.0 Flows and When Each Fits",
-        "body": "**Web server flow** (authorisation code) is for apps with a server that can keep a secret, where a person logs in through a browser. **User-agent flow** suits apps running in a browser or on a phone, where no secret can be hidden. **JWT bearer flow** is for server-to-server access with no person present: the app signs an assertion with a certificate and receives a token. **Client credentials flow** also covers server-to-server work tied to a single integration user. **Device flow** is for devices with awkward input, such as a TV, where the user authorises on another screen. **Refresh tokens** let an app get new access tokens without asking the user again, and their lifetime is controlled by policy."
+        "heading": "OAuth 2.0 Flows",
+        "body": "Choose a flow based on the client and the user interaction. The web server authorization-code flow suits a web application with a secure server that can protect its client secret. The user-agent flow is for clients that cannot keep a secret, such as a browser-based or mobile app. JWT bearer supports server-to-server access using a signed assertion, often without a user present. Client credentials can support server-to-server access tied to an integration user where available. Device authorization lets a user approve access on another device when the client has limited input. Refresh token policies determine how an application can renew access."
       },
       {
-        "heading": "Connected Apps: Scopes, Policies and Sessions",
-        "body": "A **Connected App** is how an outside application is registered with Salesforce. Its **scopes** limit what a token may do, for example reading data, managing the user's account or acting offline with a refresh token. **Policies** control who may use it: admin pre-authorised; so only chosen profiles or permission sets can connect, or self-authorised, where any user may approve it. You can restrict it to trusted **IP ranges**, set how long sessions last, and set a refresh token policy such as expiring after a period of inactivity. Newer orgs may use External Client Apps for the same purpose. Revoking the app's tokens cuts off access immediately."
+        "heading": "Connected Apps, Scopes, and Policies",
+        "body": "A Connected App registers an application that needs Salesforce access. OAuth scopes define the access the app requests, while policies determine which users can authorize or use it. Admin pre-authorization restricts use to configured users or permission sets; a self-authorized policy allows users to approve access under the org’s rules. Additional controls can include IP ranges, session settings, and refresh token policies. External Client Apps are another app-registration option in newer orgs. Revoking tokens prevents their further use."
       },
       {
-        "heading": "Provisioning, Multi-Factor and My Domain",
-        "body": "Accounts have to be created and removed as well as authenticated. **Just-in-time provisioning** creates or updates a Salesforce user from the SAML assertion the first time they log in. **User provisioning** for Connected Apps pushes accounts out to other systems. **SCIM** is the standard many identity providers use for the same job. **Multi-factor authentication** is required for Salesforce access, and the requirement can be met by a verification method in Salesforce or by single sign-on where the provider enforces it. **My Domain** gives the org its own login URL, which single sign-on and several identity features depend on. For customers, Experience Cloud supports social sign-on and self-registration."
+        "heading": "Provisioning, MFA, and My Domain",
+        "body": "Identity design includes creating, updating, and removing user accounts as well as authenticating them. Just-in-time provisioning can create or update a Salesforce user from a SAML assertion at sign-in. SCIM and other user provisioning approaches can synchronize account lifecycle with an identity system. Multi-factor authentication can be satisfied by a supported Salesforce verification method or by an identity provider in a single sign-on setup when configured to meet Salesforce requirements. My Domain provides an org-specific login URL and supports identity features. Experience Cloud can support configured customer sign-on and self-registration options."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Identity and Access Management Architect Exam",
-    "intro": "Nearly every question is a choice between protocols or flows. Look for whether a person is present, whether a secret can be kept, and which side starts the login.",
+    "h2": "How to prepare for the Identity and Access Management Architect exam",
+    "intro": "Identify whether a scenario concerns authenticating a person, authorizing an app, provisioning an account, or controlling a session. Then match the requirement to the protocol or feature.",
     "blocks": [
       {
-        "heading": "Choosing an OAuth Flow",
-        "body": "Person plus a server that keeps a secret: web server flow. No person at all: JWT bearer. Browser or mobile app with no secret: user-agent. Limited input device: device flow."
+        "heading": "Select an OAuth Flow",
+        "body": "Consider whether a person is present, whether the client can protect a secret, and whether the device has a browser. Use those details to compare web server, JWT bearer, client credentials, user-agent, and device flows."
       },
       {
-        "heading": "SAML Setup and Failures",
-        "body": "Entity ID, certificate and login URL must match on both sides, and My Domain must be on. Mismatched IDs, expired certificates and clock drift are the usual causes of failure."
+        "heading": "Check Both Sides of SAML",
+        "body": "Confirm which system is the identity provider and which is the service provider. Check the entity ID, certificate, login URL, and My Domain setup for consistency."
       },
       {
-        "heading": "Connected App Controls",
-        "body": "Scopes limit what a token can do. Admin pre-authorisation limits who can connect. IP ranges and session policies tighten it further."
+        "heading": "Apply Connected App Policies",
+        "body": "Scopes limit requested token access. User policies determine who may connect, while IP and session settings add further controls."
       },
       {
-        "heading": "Multi-Factor Authentication",
-        "body": "The requirement can be satisfied inside Salesforce or by the identity provider through single sign-on. Know which methods count."
+        "heading": "Plan MFA and Account Lifecycle",
+        "body": "Know which authentication methods satisfy the org’s MFA requirements and how just-in-time provisioning or SCIM keeps user accounts aligned."
       },
       {
-        "heading": "Provisioning Users",
-        "body": "Just-in-time provisioning creates users during single sign-on. SCIM and user provisioning keep accounts in step and remove leavers."
+        "heading": "Separate Login from Authorization",
+        "body": "SAML and OpenID Connect help establish user identity; OAuth tokens grant application access. Some solutions use more than one protocol to cover both needs."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "This is one of the four exams for System Architect. Good next steps:",
+    "heading": "Related credentials for identity architects",
+    "intro": "Build on identity and security work with a Salesforce architecture or integration credential.",
     "links": [
       {
         "href": "/certifications/system-architect",
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of an Identity and Access Management Architect?",
+      "question": "What is the main responsibility of an Identity and Access Management Architect?",
       "options": [
-        "Email only",
-        "Designing solutions that meet Single Sign-On (SSO) and identity requirements on the Salesforce Platform",
-        "Only reports",
-        "Slack only"
+        "Identity and SSO design",
+        "Designing reports and dashboards for business teams",
+        "Create analytical reports for business teams",
+        "Build Slack workspaces only"
       ],
-      "correctAnswer": 1,
-      "explanation": "They design solutions that meet SSO and identity requirements on the platform.",
+      "correctAnswer": 0,
+      "explanation": "The role designs identity, sign-on, and access solutions for Salesforce and connected applications.",
       "whyWrong": [
-        "Email is unrelated to the IAM Architect's core identity/SSO focus.",
-        "'Only reports' undersells the role, which is about SSO and identity architecture, not reporting.",
-        "Slack is unrelated to the IAM Architect's core identity/SSO focus."
+        "Email campaign design is a marketing task, not identity architecture.",
+        "Reporting does not address authentication or application access.",
+        "Workspace administration is not the role’s core identity focus."
       ]
     },
     {
-      "question": "Which protocol is commonly used for SSO with Salesforce?",
+      "question": "Which standards are commonly used for Salesforce identity and sign-on?",
       "options": [
-        "Only SOAP",
-        "Only HTTP",
-        "SAML 2.0 and OAuth 2.0",
-        "Only FTP"
+        "SOAP web services for exchanging enterprise records",
+        "HTTP as the transport for browser requests",
+        "HTTP protocol for carrying web requests between systems",
+        "FTP for transferring identity files between servers"
       ],
-      "correctAnswer": 2,
-      "explanation": "SAML 2.0 and OAuth 2.0 are used for SSO and identity with Salesforce.",
+      "correctAnswer": 1,
+      "explanation": "SAML and OAuth are widely used for single sign-on and application authorization.",
       "whyWrong": [
-        "'Only SOAP' is an API messaging protocol, not the specific SSO protocols being asked about.",
-        "'Only HTTP' is a generic transport protocol, not the specific identity protocols (SAML/OAuth) used for SSO.",
-        "'Only FTP' is a file transfer protocol, unrelated to SSO."
+        "SOAP is a service protocol, not the only identity standard.",
+        "HTTP carries requests but does not provide the sign-on protocol.",
+        "FTP transfers files and is not an identity standard."
       ]
     },
     {
       "question": "What does My Domain provide in Salesforce?",
       "options": [
-        "Custom login URL and foundation for SSO and identity",
-        "Only reports",
-        "Only branding",
-        "Only dashboards"
-      ],
-      "correctAnswer": 0,
-      "explanation": "My Domain provides custom login URL and is required for SSO and identity features.",
-      "whyWrong": [
-        "'Only reports' is unrelated to My Domain's actual identity/URL foundation purpose.",
-        "'Only branding' undersells My Domain, which specifically establishes the SSO/identity foundation, not just visual branding.",
-        "'Only dashboards' is unrelated to My Domain's actual identity/URL foundation purpose."
-      ]
-    },
-    {
-      "question": "Which feature allows users to log in once and access multiple connected apps?",
-      "options": [
-        "Only roles",
-        "Only profiles",
-        "Only permission sets",
-        "Single Sign-On (SSO)"
-      ],
-      "correctAnswer": 3,
-      "explanation": "SSO allows one login to access multiple connected applications.",
-      "whyWrong": [
-        "'Only roles' misattributes single-login access to a different access-control feature.",
-        "'Only profiles' misattributes single-login access to a different access-control feature.",
-        "'Only permission sets' misattributes single-login access to a different access-control feature."
-      ]
-    },
-    {
-      "question": "What is the purpose of Connected Apps in identity?",
-      "options": [
-        "Only internal apps",
-        "Only email",
-        "Only external apps",
-        "OAuth-based access for external and internal apps with configurable policies"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Connected Apps provide OAuth-based access with configurable policies.",
-      "whyWrong": [
-        "'Only internal apps' undersells Connected Apps, which manage both external and internal app access.",
-        "'Only email' is unrelated to Connected Apps' OAuth-based access purpose.",
-        "'Only external apps' undersells Connected Apps, which manage both external and internal app access."
-      ]
-    },
-    {
-      "question": "What is an Identity Provider (IdP) in SSO?",
-      "options": [
-        "A permission set",
-        "A profile",
-        "The system that authenticates users and asserts identity to Salesforce",
-        "Salesforce only"
+        "A reports folder for organizing analytics",
+        "A custom dashboard theme without a login domain",
+        "An org-specific login URL",
+        "A replacement for Salesforce access policies"
       ],
       "correctAnswer": 2,
-      "explanation": "IdP authenticates users and asserts identity to Salesforce.",
+      "explanation": "My Domain provides an org-specific Salesforce URL and supports identity features.",
       "whyWrong": [
-        "A permission set controls object/field access, it isn't an authentication system.",
-        "A profile controls access levels, it isn't an authentication/identity-asserting system.",
-        "Salesforce alone isn't the IdP in this scenario, the IdP is the external system asserting identity."
+        "Report folders organize analytics but do not provide a login domain.",
+        "Dashboard appearance is separate from the org-specific Salesforce URL.",
+        "This is the org-specific URL and identity foundation that My Domain provides."
       ]
     },
     {
-      "question": "Which OAuth flow is used for server-to-server integration?",
+      "question": "Which capability lets a user authenticate once and access several configured applications?",
       "options": [
-        "Authorization code only",
-        "Client credentials or JWT bearer",
-        "Implicit only",
-        "Device only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Client credentials and JWT bearer are for server-to-server.",
-      "whyWrong": [
-        "Authorization code flow is designed for user-facing scenarios, not server-to-server integration.",
-        "Implicit flow is a simplified user-facing flow, not designed for secure server-to-server integration.",
-        "Device flow is for devices without browsers, not the typical server-to-server integration scenario."
-      ]
-    },
-    {
-      "question": "What does Session Security Level control?",
-      "options": [
-        "Only timeout",
-        "Only OWD",
-        "Session requirements (e.g., high assurance, require re-auth)",
-        "Only IP"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Session Security Level enforces session assurance requirements.",
-      "whyWrong": [
-        "'Only timeout' undersells Session Security Level, which covers broader session requirements beyond just timeout.",
-        "'Only OWD' misattributes session security to an unrelated record-access concept.",
-        "'Only IP' undersells Session Security Level, which is about broader assurance/re-auth requirements, not just IP restriction."
-      ]
-    },
-    {
-      "question": "Which SAML attribute is used for user provisioning?",
-      "options": [
-        "Federation ID and other attributes for matching/provisioning",
-        "Only email",
-        "Only role",
-        "Only name"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Federation ID and attributes support user matching and provisioning.",
-      "whyWrong": [
-        "'Only email' undersells the Federation ID's specific matching/provisioning role.",
-        "'Only role' undersells the Federation ID's specific matching/provisioning role.",
-        "'Only name' undersells the Federation ID, which serves the specific matching/provisioning purpose described."
-      ]
-    },
-    {
-      "question": "What is the purpose of Auth. Provider?",
-      "options": [
-        "To create users only",
-        "To replace SSO",
-        "To configure external IdP connection (e.g., SAML, OAuth)",
-        "To assign permission sets"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Auth. Provider configures external IdP (SAML/OAuth) connection.",
-      "whyWrong": [
-        "'To create users only' undersells Auth. Provider's broader identity connection purpose.",
-        "Auth. Provider doesn't replace SSO, it configures the external connection SSO relies on.",
-        "'To assign permission sets' is unrelated to what an Auth. Provider configures."
-      ]
-    },
-    {
-      "question": "Which feature supports multi-factor authentication?",
-      "options": [
-        "Two-Factor Authentication (2FA) and verified modes",
-        "SSO only",
-        "OAuth only",
-        "SAML only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "2FA and verified modes support multi-factor authentication.",
-      "whyWrong": [
-        "'SSO only' misattributes multi-factor authentication to a different, single-login feature.",
-        "'OAuth only' misattributes MFA to a different authorization protocol.",
-        "'SAML only' misattributes MFA to a different SSO protocol."
-      ]
-    },
-    {
-      "question": "What does Federation ID enable?",
-      "options": [
-        "Only SSO",
-        "Linking Salesforce user to external identity for SSO and provisioning",
-        "Only permission sets",
-        "Only OAuth"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Federation ID links Salesforce user to external identity.",
-      "whyWrong": [
-        "'Only SSO' undersells Federation ID's specific role in both SSO and provisioning.",
-        "'Only permission sets' is unrelated to Federation ID's actual identity-linking purpose.",
-        "'Only OAuth' misattributes Federation ID's purpose to a different protocol."
-      ]
-    },
-    {
-      "question": "Which consideration applies when designing for multiple IdPs?",
-      "options": [
-        "Single IdP only",
-        "Domain-based routing and IdP selection logic",
-        "Manual only",
-        "No routing"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Domain-based routing supports multiple IdPs.",
-      "whyWrong": [
-        "'Single IdP only' is the opposite of the multi-IdP scenario the question describes.",
-        "'Manual only' contradicts the fact that automated routing logic is the actual design consideration.",
-        "'No routing' contradicts the fact that domain-based routing is a real design consideration for multiple IdPs."
-      ]
-    },
-    {
-      "question": "What is the purpose of Certificate and Key Management?",
-      "options": [
-        "To manage SAML certificates and signing keys for trust",
-        "To create users",
-        "To assign profiles",
-        "To create permission sets"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Certificate management ensures SAML and signing key trust.",
-      "whyWrong": [
-        "'To create users' misattributes certificate/key management's actual trust-and-signing purpose.",
-        "'To assign profiles' is unrelated to certificate and key management.",
-        "'To create permission sets' is unrelated to certificate and key management."
-      ]
-    },
-    {
-      "question": "Which best practice supports identity governance?",
-      "options": [
-        "No review",
-        "No logging",
-        "All access",
-        "Regular access reviews, least privilege, and audit logging"
+        "Roles",
+        "Profiles",
+        "Permission sets",
+        "Single sign-on"
       ],
       "correctAnswer": 3,
-      "explanation": "Access reviews, least privilege, and audit support governance.",
+      "explanation": "Single sign-on lets users authenticate through a trusted identity setup and reach configured applications.",
       "whyWrong": [
-        "'No review' contradicts the fact that regular access reviews are a core identity governance best practice.",
-        "'No logging' contradicts the fact that audit logging is a core identity governance best practice.",
-        "'All access' contradicts the least-privilege principle that's central to good identity governance."
+        "Roles affect record access and do not provide federated login.",
+        "Profiles assign permissions rather than authenticate across applications.",
+        "Permission sets grant permissions but do not provide single sign-on."
+      ]
+    },
+    {
+      "question": "What is a primary purpose of a Connected App?",
+      "options": [
+        "Registers an app's OAuth access",
+        "Send email to Salesforce users",
+        "Connect only apps hosted inside Salesforce",
+        "Replace every identity provider"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Connected App registers an application and configures scopes and policies for Salesforce access.",
+      "whyWrong": [
+        "Email delivery is unrelated to OAuth app registration.",
+        "Connected Apps can support applications hosted outside Salesforce.",
+        "Connected Apps can use identity providers; they do not replace them."
+      ]
+    },
+    {
+      "question": "In SAML single sign-on, what does the identity provider do?",
+      "options": [
+        "Assigns permission sets",
+        "Authenticates the user",
+        "Defines the Salesforce profile",
+        "Hosts Salesforce reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The identity provider authenticates the user and sends an assertion the service provider can validate.",
+      "whyWrong": [
+        "Permission assignment is authorization, not the IdP’s authentication function.",
+        "A profile is Salesforce authorization configuration.",
+        "Report hosting is not part of SAML identity exchange."
+      ]
+    },
+    {
+      "question": "A headless application authenticates by signing a JWT assertion with its registered certificate and has no user session. Which OAuth flow applies?",
+      "options": [
+        "Authorization-code flow for a browser login",
+        "User-agent flow for a public client",
+        "JWT bearer flow with a signed assertion",
+        "Device authorization for limited-input devices"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The JWT bearer flow exchanges a signed assertion for an access token, which supports server-to-server authentication without interactive user login.",
+      "whyWrong": [
+        "Authorization-code flow includes a user authorization step.",
+        "User-agent flow is for clients that cannot protect a secret and involve user authorization.",
+        "Device flow is suited to a user authorizing a device on another screen."
+      ]
+    },
+    {
+      "question": "What does a session security level control?",
+      "options": [
+        "Only the session timeout",
+        "Only org-wide record defaults",
+        "Only the user IP address",
+        "Required session assurance"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Session security levels distinguish the assurance expected for access to sensitive functions.",
+      "whyWrong": [
+        "Timeout is a separate session setting.",
+        "Org-wide defaults control record sharing, not session assurance.",
+        "IP restrictions are separate from session security levels."
+      ]
+    },
+    {
+      "question": "Which value can match an incoming SAML assertion to a Salesforce user?",
+      "options": [
+        "Federation ID and mapped user attributes",
+        "Use a role name as the sole user identifier",
+        "Use a display name as the sole user identifier",
+        "Match users by display name as the only identity value"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Federation ID commonly links an external identity to a Salesforce user; mapped attributes can also support provisioning.",
+      "whyWrong": [
+        "Email may be used in some setups but is not the only possible identifier.",
+        "Role names do not uniquely identify users.",
+        "Display names may not be unique and are not a reliable identity key."
+      ]
+    },
+    {
+      "question": "What does an Auth. Provider configuration do?",
+      "options": [
+        "Creates users without an identity source",
+        "Connects to an identity provider",
+        "Replaces all sign-on protocols",
+        "Assigns permission sets automatically"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An Auth. Provider configures Salesforce to connect with an external identity service through supported protocols.",
+      "whyWrong": [
+        "Provisioning may be configured separately; this is not the sole purpose.",
+        "Auth. Providers use protocols rather than replacing them.",
+        "Permission assignment is a separate authorization task."
+      ]
+    },
+    {
+      "question": "What can satisfy Salesforce MFA requirements?",
+      "options": [
+        "SSO in every configuration",
+        "OAuth tokens alone",
+        "An MFA verification method",
+        "SAML assertions alone"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Salesforce MFA can use supported verification methods or a single sign-on provider configured to meet requirements.",
+      "whyWrong": [
+        "SSO does not automatically satisfy MFA unless configured to do so.",
+        "OAuth grants application access but is not a second verification factor.",
+        "SAML sign-on alone does not necessarily provide the required second factor."
+      ]
+    },
+    {
+      "question": "What does a Federation ID help establish?",
+      "options": [
+        "Assigning permission sets to Salesforce users",
+        "An OAuth scope",
+        "A record-sharing rule",
+        "Link user to external identity"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Federation ID helps associate the Salesforce user record with the person’s identity at an external provider.",
+      "whyWrong": [
+        "Permission sets grant access and are separate from identity matching.",
+        "OAuth scopes define application permissions, not user identity mapping.",
+        "Sharing rules govern record access rather than federated identity."
+      ]
+    },
+    {
+      "question": "What should an architect consider when supporting multiple identity providers?",
+      "options": [
+        "Routing or selection logic for the right provider",
+        "Force every user through a single provider",
+        "Let users manually configure each login",
+        "Avoid choosing an identity provider"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Domain-based routing or another selection method can direct users to the appropriate identity provider.",
+      "whyWrong": [
+        "The requirement involves more than one provider.",
+        "Manual configuration is difficult to govern and scale.",
+        "Users need a defined provider to authenticate."
+      ]
+    },
+    {
+      "question": "What is Certificate and Key Management used for?",
+      "options": [
+        "Creating user accounts",
+        "Manage trust certificates",
+        "Assigning user profiles",
+        "Creating permission sets"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certificates and keys support signed assertions and other secure trust relationships.",
+      "whyWrong": [
+        "Account provisioning is a separate lifecycle process.",
+        "Profiles define permissions, not cryptographic trust.",
+        "Permission sets grant access and do not manage certificates."
+      ]
+    },
+    {
+      "question": "Which practice supports identity governance?",
+      "options": [
+        "Skip access reviews",
+        "Avoid audit logging",
+        "Access reviews, least privilege, and audit logs",
+        "Grant broad access to simplify administration"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Periodic reviews, limited access, and audit logs support accountable identity governance.",
+      "whyWrong": [
+        "Without reviews, unnecessary access may remain.",
+        "Audit records support accountability and investigation.",
+        "Broad access conflicts with least privilege."
       ]
     }
   ],

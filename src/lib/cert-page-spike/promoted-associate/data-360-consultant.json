@@ -22,8 +22,8 @@
     "heading": "How challenging is the Data 360 Consultant exam?",
     "summary": "The exam covers Data 360 concepts and workflows that differ from core Salesforce administration. Study how source data is ingested, mapped to the data model, unified through identity resolution, and used for segments and activations.",
     "bullets": [
-      "<strong>60 scored questions</strong> plus a small number of unscored questions, in 105 minutes.",
-      "<strong>70% passing score.</strong> Confirm the current passing requirement in the official exam guide before scheduling.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
       "<strong>Learn the terminology:</strong> Review data streams, data lake objects, data model objects, identity resolution, calculated insights, and activations.",
       "<strong>Practice the workflow:</strong> Ingest and map data, resolve profiles, build a segment, and activate it."
     ],
@@ -37,7 +37,7 @@
       "<strong>Separate matching from reconciliation:</strong> Know how identity resolution determines which records refer to one person and how it chooses values when sources differ.",
       "<strong>Map data yourself:</strong> Ingest sample data and map it to data model objects. Pay attention to keys and relationships.",
       "<strong>Build segments and activations:</strong> Create an audience and send it to a destination, then review how membership refreshes.",
-      "<strong>Compare ingestion methods:</strong> Review batch and streaming ingestion, plus options that access data without copying it."
+      "<strong>Compare ingestion methods:</strong> Review batch and streaming ingestion, plus Zero-Copy options that let supported sources share data without copying it."
     ]
   },
   "certificationCard": {

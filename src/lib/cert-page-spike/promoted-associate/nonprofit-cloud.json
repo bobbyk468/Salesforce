@@ -21,8 +21,8 @@
     "heading": "Is the Nonprofit Cloud Exam Hard?",
     "summary": "This exam asks you to apply Salesforce knowledge to nonprofit scenarios. Practice choosing a configuration or troubleshooting approach for a stated need.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>65% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
       "<strong>Scenario-based choices</strong>: expect questions that test when to use Nonprofit Data Model, NPSP Configuration, or Donation Management.",
       "<strong>Practice matters.</strong> Build a sample donor household, record a gift, and follow its payment and reporting data."
     ],
@@ -170,243 +170,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which data model can a nonprofit use to manage donations in Salesforce?",
+      "question": "A donor wants to pause an existing recurring gift through a nonprofit’s Experience site. Which agent capability fits?",
       "options": [
-        "The Nonprofit Success Pack (NPSP) data model.",
-        "Custom objects with no standard Salesforce records.",
-        "The standard Account object by itself.",
-        "A Campaign Member record for each gift."
+        "Use Donor Support to help manage the existing gift commitment",
+        "Use Volunteer Management to change the donor’s shift while following the program review process",
+        "Use Participant Management to update a care plan while following the program review process",
+        "Use Philanthropic Research to change a gift schedule"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Donor Support Agent can help donors pause, resume, close, or update an existing recurring gift commitment.",
+      "whyWrong": [
+        "Volunteer shift tools address scheduling, not donor gift changes.",
+        "Participant tracking supports program casework rather than gift servicing.",
+        "Philanthropic research informs outreach; it does not change gift schedules."
+      ]
+    },
+    {
+      "question": "A major-gifts officer has rough meeting notes and needs a structured interaction summary with follow-up tasks. Which agent is designed for this?",
+      "options": [
+        "Volunteer Management Agent",
+        "Donor Engagement Agent",
+        "Participant Management Agent",
+        "Donor Support Agent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Donor Engagement Agent turns relationship notes into structured summaries and follow-up tasks.",
+      "whyWrong": [
+        "Volunteer Management focuses on volunteer shifts and initiatives.",
+        "Participant Management supports case managers tracking program participants.",
+        "Donor Support helps donors manage recurring gift commitments."
+      ]
+    },
+    {
+      "question": "A fundraising team wants to tailor donor outreach using philanthropic research. Which capability should it consider?",
+      "options": [
+        "Participant Management Agent while following the program review process",
+        "Volunteer Management Agent",
+        "Philanthropic Research subagents",
+        "Donor Support Agent while following the program review process"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Philanthropic Research subagents can inform personalized donor outreach and engagement strategies.",
+      "whyWrong": [
+        "Participant Management supports program participant tracking.",
+        "Volunteer Management streamlines volunteer shift coordination.",
+        "Donor Support handles changes to recurring gift commitments."
+      ]
+    },
+    {
+      "question": "A volunteer coordinator needs to find uncovered shifts and suitable volunteers. What should they use?",
+      "options": [
+        "Donor Engagement Agent",
+        "Participant Management Agent",
+        "Donor Support Agent while following the program review process",
+        "Volunteer Management Agent"
       ],
       "correctAnswer": 3,
-      "explanation": "NPSP provides a nonprofit data model for fundraising records such as donations.",
+      "explanation": "The Volunteer Management Agent can identify unfilled shifts and suitable volunteers.",
       "whyWrong": [
-        "This is the nonprofit data model used for donation records.",
-        "A custom-only model does not use the nonprofit data model described.",
-        "Accounts can relate donors and organizations, but they do not track gifts on their own."
+        "Donor Engagement structures donor meeting notes and follow-ups.",
+        "Participant Management assists case managers with participants.",
+        "Donor Support helps manage recurring donor gift commitments."
       ]
     },
     {
-      "question": "What do Household Accounts represent in NPSP?",
+      "question": "A case manager needs to keep track of people receiving program services. Which capability is the best fit?",
       "options": [
-        "Volunteer shifts for community events.",
-        "Foundation grant applications.",
-        "Companies that make corporate gifts through a matching programme.",
-        "Groups of individual Contacts who are part of one household."
+        "Participant Management Agent",
+        "Philanthropic Research subagents",
+        "Donor Support Agent while following the program review process",
+        "Volunteer Management Agent"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Participant Management Agent assists case managers with participant tracking.",
+      "whyWrong": [
+        "Philanthropic Research focuses on donor engagement.",
+        "Donor Support is for recurring gift commitment changes.",
+        "Volunteer Management is for shifts and volunteer coordination."
+      ]
+    },
+    {
+      "question": "A nonprofit wants to report whether a program is achieving its intended results. Which capability should anchor the design?",
+      "options": [
+        "Recurring gift schedules while following the program review process",
+        "Outcome Management with defined indicators and results",
+        "Volunteer shift coverage while following the program review process",
+        "Donor interaction summaries while following the program review process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Outcome Management helps organizations track indicators and assess program results.",
+      "whyWrong": [
+        "Gift schedules track fundraising commitments, not program impact.",
+        "Shift coverage organizes volunteer staffing rather than program outcomes.",
+        "Interaction summaries preserve donor relationship notes, not outcome measures."
+      ]
+    },
+    {
+      "question": "A service program needs to coordinate referrals and ongoing client support. Which area is most relevant?",
+      "options": [
+        "Gift commitment management while following the program review process",
+        "Philanthropic research",
+        "Program and case management",
+        "Donor email deliverability"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Program and case management supports service delivery, participant records, care planning, and referrals.",
+      "whyWrong": [
+        "Gift commitment management handles recurring fundraising gifts.",
+        "Philanthropic research supports donor outreach planning.",
+        "Email deliverability concerns message delivery rather than client services."
+      ]
+    },
+    {
+      "question": "A funder wants to manage applications, review, awards, and grantee follow-up in one process. Which solution area fits?",
+      "options": [
+        "Volunteer Management",
+        "Donor Support",
+        "Outcome Management alone",
+        "Grantmaking"
       ],
       "correctAnswer": 3,
-      "explanation": "A Household Account groups related individual Contacts and supports household-level relationship tracking.",
+      "explanation": "Grantmaking supports the grant lifecycle, including applications and grantee management.",
       "whyWrong": [
-        "Volunteer shifts are tracked with volunteer management records.",
-        "Grant applications are tracked separately from households.",
-        "A corporate donor is generally represented as an organization Account."
+        "Volunteer Management coordinates people and shifts, not grant applications.",
+        "Donor Support manages donors’ recurring gift commitments.",
+        "Outcome Management measures results but is not the full grant lifecycle."
       ]
     },
     {
-      "question": "Which feature can record a donation of goods or services instead of cash?",
+      "question": "An administrator is preparing to enable Agentforce features for nonprofit teams. What should they do first?",
       "options": [
-        "A standard cash Opportunity with no extra details.",
-        "Gift Entry, which only enters cash donations.",
-        "In-Kind Gift fields on the Opportunity.",
-        "A Campaign Member record."
+        "Set up the nonprofit features and required platform AI prerequisites",
+        "Give every user access to all donor and case records while following the program review process",
+        "Replace the program data model with spreadsheet exports while following the program review process",
+        "Activate every agent without testing or assignment while following the program review process"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Agentforce setup depends on configuring the nonprofit capabilities and platform prerequisites that the organization will use.",
+      "whyWrong": [
+        "Broad access is not a prerequisite and conflicts with least privilege.",
+        "Spreadsheets do not replace configuring the nonprofit application.",
+        "Agents should be configured, tested, and assigned appropriately before use."
+      ]
+    },
+    {
+      "question": "A nonprofit wants an agent to answer volunteers about available shifts. What should the implementation team confirm?",
+      "options": [
+        "That donor records contain a gift schedule while following the program review process",
+        "That volunteer management is configured and shift information is available",
+        "That every volunteer can edit all shifts while following the program review process",
+        "That program outcomes are recorded as email consent while following the program review process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The agent needs the relevant volunteer and shift setup to coordinate shift questions reliably.",
+      "whyWrong": [
+        "Gift schedules relate to fundraising, not volunteer availability.",
+        "Unrestricted editing is unnecessary and unsafe for shift coordination.",
+        "Outcome records and email consent are unrelated data."
+      ]
+    },
+    {
+      "question": "A team wants an AI summary of donor meetings to create follow-up tasks. What should users review before acting?",
+      "options": [
+        "Whether a volunteer shift is full while following the program review process",
+        "Whether a grant application has a budget while following the program review process",
+        "Whether the generated summary and tasks accurately reflect the notes",
+        "Whether the donor has a participant care plan while following the program review process"
       ],
       "correctAnswer": 2,
-      "explanation": "In-Kind Gift fields on an Opportunity can record non-cash donations.",
+      "explanation": "Users should verify generated summaries and follow-up actions against the source notes before relying on them.",
       "whyWrong": [
-        "A cash Opportunity alone does not capture the in-kind details.",
-        "Gift Entry supports gift entry, but this option does not identify the in-kind fields.",
-        "This is the option used to track donated goods or services."
+        "Shift coverage is a volunteer operations concern, not donor meeting accuracy.",
+        "Grant budget review is unrelated to summarizing donor conversations.",
+        "A participant care plan does not validate donor interaction notes."
       ]
     },
     {
-      "question": "What is an Engagement Plan used for in NPSP?",
+      "question": "A nonprofit wants a donor to change the amount on an existing scheduled gift. Which distinction matters?",
       "options": [
-        "Automating marketing emails.",
-        "Scheduling fundraising events and their volunteer shifts.",
-        "Sending email campaigns.",
-        "Creating task templates for donor follow-up."
+        "Use a new volunteer shift record while following the program review process",
+        "Create a case referral for the donor while following the program review process",
+        "Change an outcome indicator while following the program review process",
+        "Manage the existing gift commitment through donor support"
       ],
       "correctAnswer": 3,
-      "explanation": "Engagement Plans create task templates for donor stewardship and follow-up.",
+      "explanation": "Donor Support is designed for changes to existing recurring gift commitments.",
       "whyWrong": [
-        "Marketing automation is a separate purpose.",
-        "Event management is not the purpose of Engagement Plans.",
-        "An email campaign does not create the donor task plan described."
+        "Volunteer shifts do not represent fundraising commitments.",
+        "Case referrals coordinate service delivery, not donor gift schedules.",
+        "Outcome indicators measure program results rather than gift amounts."
       ]
     },
     {
-      "question": "How can NPSP manage a recurring donation?",
+      "question": "A program manager wants to compare service delivery with participant outcomes. Which data should be related?",
       "options": [
-        "Use a Recurring Donation record that can generate installment Opportunities.",
-        "Enter a new donation manually each month.",
-        "Use only standard Salesforce scheduling.",
-        "Track it only in an external payment processor, with nothing stored in Salesforce."
+        "Program participation and defined outcome indicators or results",
+        "Email open rates and recurring gift amounts while following the program review process",
+        "Volunteer shifts and donor prospect scores while following the program review process",
+        "Grant budgets and marketing consent records while following the program review process"
       ],
       "correctAnswer": 0,
-      "explanation": "A Recurring Donation record can create Opportunities on the selected schedule.",
+      "explanation": "Connecting participation with defined outcome measures helps assess program results.",
       "whyWrong": [
-        "This is the NPSP feature designed for scheduled gifts.",
-        "Manual entry is not needed for a configured recurring donation.",
-        "Standard scheduling alone does not manage the donation records."
+        "Email engagement and gifts do not directly measure program outcomes.",
+        "Volunteer scheduling and prospect scoring serve different workflows.",
+        "Grant budgets and marketing consent are not a participant outcome model."
       ]
     },
     {
-      "question": "What does a Soft Credit record?",
+      "question": "A volunteer initiative has many unfilled shifts. Which next step is most aligned with Agentforce Nonprofit?",
       "options": [
-        "A donated item or service.",
-        "A pledge that has been promised but has not yet been paid.",
-        "Recognition for someone who helped influence a gift.",
-        "A refunded payment."
+        "Ask Donor Support to change gift amounts while following the program review process",
+        "Use volunteer shift coverage information to find gaps and suitable volunteers",
+        "Use a donor interaction summary as the shift roster while following the program review process",
+        "Replace shift planning with grant application review while following the program review process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Volunteer Management can help identify shift gaps and suitable volunteers for coverage.",
+      "whyWrong": [
+        "Gift servicing does not coordinate volunteer staffing.",
+        "Donor notes are not a reliable shift roster.",
+        "Grant review is unrelated to filling volunteer shifts."
+      ]
+    },
+    {
+      "question": "A nonprofit needs one platform for fundraising, programs, case management, and outcomes. Which solution area is intended for that combination?",
+      "options": [
+        "Marketing Cloud Engagement only",
+        "A custom spreadsheet for each team",
+        "Agentforce Nonprofit",
+        "A donor email domain configuration"
       ],
       "correctAnswer": 2,
-      "explanation": "A Soft Credit recognizes a person or organization that influenced a donation without making the primary gift.",
+      "explanation": "Agentforce Nonprofit brings together nonprofit capabilities such as fundraising, program and case management, and outcome management.",
       "whyWrong": [
-        "An in-kind gift is a non-cash donation.",
-        "A pledge is a promise to give, not a Soft Credit.",
-        "A refund is handled as a payment adjustment."
+        "Marketing Cloud Engagement is not the nonprofit operating solution described.",
+        "Separate spreadsheets do not provide the unified application capabilities requested.",
+        "Email domain configuration addresses sending, not nonprofit operations."
       ]
     },
     {
-      "question": "Which NPSP feature supports tribute or memorial gifts?",
+      "question": "A nonprofit wants to manage a recurring gift adjustment request without changing unrelated case records. Which design is appropriate?",
       "options": [
-        "Tribute and memorial fields and related processes.",
-        "A Household Account by itself.",
-        "A standard Opportunity with no tribute information.",
-        "A Campaign record only."
+        "Allow the agent to edit every record type while following the program review process",
+        "Use a volunteer shift workflow while following the program review process",
+        "Store the request as a marketing segment while following the program review process",
+        "Route the request through Donor Support for gift commitment management"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Donor Support is scoped to helping donors manage existing gift commitments.",
+      "whyWrong": [
+        "Broad record editing exceeds the task and increases risk.",
+        "Volunteer shift workflows do not manage donor gift commitments.",
+        "A marketing segment is not a transaction workflow for gift adjustments."
+      ]
+    },
+    {
+      "question": "A case manager receives a referral for a participant who needs several services. What should the system help coordinate?",
+      "options": [
+        "Participant case details, referrals, and follow-up care",
+        "Donor prospect research and cultivation while following the program review process",
+        "Volunteer shift swaps and coverage while following the program review process",
+        "Email authentication and deliverability while following the program review process"
       ],
       "correctAnswer": 0,
-      "explanation": "Tribute and memorial fields let the organization record gifts made in someone’s honor or memory.",
+      "explanation": "Program and case management supports participant tracking and coordinated referrals or care.",
       "whyWrong": [
-        "A Household Account does not record tribute details on its own.",
-        "An Opportunity may hold a gift, but it needs tribute information.",
-        "A Campaign may organize outreach but does not record tribute details by itself."
+        "Donor cultivation is a fundraising activity.",
+        "Shift coverage is part of volunteer management.",
+        "Email authentication supports message delivery, not case coordination."
       ]
     },
     {
-      "question": "What does an Affiliation record link?",
+      "question": "A donor asks to close an existing recurring gift. Which action is within the Donor Support Agent’s described scope?",
       "options": [
-        "A Contact to a Campaign only.",
-        "A donation to its payment only.",
-        "A Contact to an organization, such as an employer or school.",
-        "Two Household Accounts that happen to share one mailing address."
+        "Create a new outcome indicator while following the program review process",
+        "Help close the existing gift commitment",
+        "Assign a volunteer to a shift while following the program review process",
+        "Approve a participant referral while following the program review process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Donor Support can help donors pause, resume, close, or update existing gift commitments.",
+      "whyWrong": [
+        "Outcome indicators measure program results.",
+        "Volunteer assignment belongs to volunteer coordination.",
+        "Participant referrals are part of service delivery and casework."
+      ]
+    },
+    {
+      "question": "A leadership team needs to see both services delivered and changes for participants. Which approach is most useful?",
+      "options": [
+        "Track donor email opens as the only success measure",
+        "Count gift schedules without linking programs",
+        "Combine program activity with outcome measures",
+        "Review volunteer shifts as a substitute for client results"
       ],
       "correctAnswer": 2,
-      "explanation": "Affiliations connect a Contact with an organization, such as an employer or school.",
+      "explanation": "Program activity and outcome measures together help leaders understand delivery and results.",
       "whyWrong": [
-        "Campaign membership is handled with Campaign Member records.",
-        "Payment records are linked to gifts, not Affiliations.",
-        "Affiliations link Contacts to organizations rather than households."
+        "Email opens do not capture service delivery or participant outcomes.",
+        "Gift schedules measure fundraising commitments rather than program impact.",
+        "Shift coverage does not substitute for client outcome measurement."
       ]
     },
     {
-      "question": "Which NPSP feature can track volunteer work?",
+      "question": "A nonprofit plans to use AI-generated donor research to personalize outreach. What should the team do before sending messages?",
       "options": [
-        "Campaigns.",
-        "Opportunities.",
-        "Volunteer Jobs and Volunteer Hours.",
-        "Household Accounts and their members."
+        "Treat every generated detail as verified while following the program review process",
+        "Send the same message to every donor while following the program review process",
+        "Skip review because research is automated while following the program review process",
+        "Review research and tailor outreach using approved, relevant information"
       ],
-      "correctAnswer": 2,
-      "explanation": "Volunteer Jobs and Volunteer Hours can track volunteer opportunities and completed service.",
+      "correctAnswer": 3,
+      "explanation": "Generated research should be reviewed and used appropriately before it informs donor communications.",
       "whyWrong": [
-        "Campaigns are not the only volunteer tracking records.",
-        "Opportunities track gifts or grants, not volunteer hours.",
-        "Households do not track volunteer shifts by themselves."
-      ]
-    },
-    {
-      "question": "What do NPSP Payment records track?",
-      "options": [
-        "Campaign creation and membership.",
-        "Payments received for an Opportunity, including installments.",
-        "Household relationships.",
-        "The replacement of the Opportunity record after the gift is closed."
-      ],
-      "correctAnswer": 1,
-      "explanation": "Payment records track amounts received against an Opportunity, such as payments toward a pledge.",
-      "whyWrong": [
-        "Campaigns are managed with Campaign records.",
-        "This describes NPSP Payment records.",
-        "Households group people; they do not track payments."
-      ]
-    },
-    {
-      "question": "Which records help manage nonprofit grant applications and their requirements?",
-      "options": [
-        "Household Accounts alone.",
-        "Grant application, requirement, and reporting records.",
-        "A standard Opportunity alone, with no related requirement records.",
-        "Campaigns alone."
-      ],
-      "correctAnswer": 1,
-      "explanation": "Grant management features track applications, requirements, and reporting.",
-      "whyWrong": [
-        "Household Accounts do not manage grant requirements.",
-        "An Opportunity may represent a grant but does not cover all grant requirements by itself.",
-        "Campaigns can organize outreach but do not manage grant compliance alone."
-      ]
-    },
-    {
-      "question": "What can the NPSP Forecast object support?",
-      "options": [
-        "Inventory planning.",
-        "Fundraising budget and revenue forecasts.",
-        "Campaign email delivery.",
-        "Sales forecasts for commercial product lines."
-      ],
-      "correctAnswer": 1,
-      "explanation": "Forecast records can support fundraising budget and revenue planning.",
-      "whyWrong": [
-        "Inventory planning is not the purpose of this object.",
-        "Campaign email delivery uses marketing features.",
-        "This is not limited to sales forecasting."
-      ]
-    },
-    {
-      "question": "Which report is useful to a nonprofit fundraising team?",
-      "options": [
-        "Donor retention, campaign results, and gift totals.",
-        "Open customer support Cases grouped by product and priority.",
-        "Sales pipeline only.",
-        "Product sales only."
-      ],
-      "correctAnswer": 0,
-      "explanation": "Nonprofit teams often track donor retention, campaign performance, and gift totals.",
-      "whyWrong": [
-        "Support Cases do not measure fundraising results.",
-        "Sales pipeline reporting is not the nonprofit need described.",
-        "Product sales reports do not summarize donations."
-      ]
-    },
-    {
-      "question": "What is the Primary Affiliation on a Contact used for?",
-      "options": [
-        "Tracking donations only.",
-        "Identifying the Contact’s main organization, such as an employer.",
-        "Managing Campaign membership.",
-        "Replacing the Contact’s Household Account with the employer’s Account."
-      ],
-      "correctAnswer": 1,
-      "explanation": "Primary Affiliation marks a Contact’s main relationship to an organization, such as an employer.",
-      "whyWrong": [
-        "Gift records track donations.",
-        "This is the purpose of Primary Affiliation.",
-        "Campaign membership is tracked separately."
-      ]
-    },
-    {
-      "question": "Which systems are commonly connected to a nonprofit Salesforce org?",
-      "options": [
-        "Payment, fundraising, and accounting systems.",
-        "Slack.",
-        "Marketing Cloud, with no other system connected.",
-        "CPQ."
-      ],
-      "correctAnswer": 0,
-      "explanation": "Nonprofits often connect payment processing, fundraising tools, and accounting systems.",
-      "whyWrong": [
-        "Slack can support collaboration but is not the only common nonprofit integration.",
-        "Marketing tools may be used, but they do not cover the integration needs described.",
-        "CPQ is not the common integration set described here."
+        "Generated information can be inaccurate and needs verification.",
+        "A uniform message ignores the goal of personalized engagement.",
+        "Automation does not remove the need for review and responsible use."
       ]
     }
   ]

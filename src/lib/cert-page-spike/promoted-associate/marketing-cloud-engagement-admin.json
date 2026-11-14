@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Marketing Cloud Engagement Administrator exam for?",
+    "heading": "Who should take the Marketing Cloud Engagement Administrator exam?",
     "personas": [
       {
         "label": "Marketing Cloud administrators",
-        "description": "You manage day-to-day Marketing Cloud operations and want to validate your platform administration skills."
+        "description": "You operate a Marketing Cloud account and want to validate your administration skills."
       },
       {
         "label": "Email operations specialists",
-        "description": "You handle deliverability, user permissions, and data management in Marketing Cloud and want formal recognition."
+        "description": "You manage deliverability, user access, and subscriber data and want a formal credential."
       },
       {
-        "label": "Salesforce admins expanding into marketing",
-        "description": "You already manage the core Salesforce platform and want to add Marketing Cloud admin skills to your credentials."
+        "label": "Salesforce platform admins",
+        "description": "You already administer Salesforce and want to add Marketing Cloud operations skills."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Marketing Cloud Engagement Administrator Exam Hard?",
-    "summary": "The Engagement Administrator exam is moderately difficult. It tests platform setup, security configuration, subscriber data management, and deliverability best practices. You need hands-on experience with Business Unit architecture, role-based permissions, and Sender Authentication Packages.",
+    "heading": "How challenging is the Marketing Cloud Engagement Administrator exam?",
+    "summary": "This exam covers account setup, security, subscriber data, and email deliverability. Prepare for Business Unit design, role-based access, and sender authentication settings.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>67% passing score</strong>: slightly lower than some consultant exams, but the content is operationally deep.",
-      "<strong>Admin-specific focus</strong>: expect questions on Business Unit setup, IP warming, SAP configuration, and API security that pure marketers may not encounter.",
-      "<strong>Deliverability knowledge required</strong>: SPF, DKIM, DMARC, Reply Mail Management, and IP reputation monitoring are all tested."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>67% to pass</strong>, which is 41 correct answers out of 60.",
+      "<strong>Account administration.</strong> Study Business Units, IP warming, sender authentication, and API security.",
+      "<strong>Deliverability knowledge.</strong> Review SPF, DKIM, DMARC, Reply Mail Management, and IP reputation."
     ],
-    "passRateGuidance": "Spend at least 6 months managing a Marketing Cloud account before booking. Practice configuring Business Units, user roles, and Sender Authentication Packages in a sandbox."
+    "passRateGuidance": "Hands-on account administration helps. Practise Business Unit setup, role assignment, sender authentication, and deliverability monitoring in a sandbox before booking."
   },
   "examFormat": {
-    "heading": "Marketing Cloud Engagement Administrator Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring user permissions for a multi-Business Unit org, troubleshooting deliverability issues, and designing subscriber data retention policies.",
+    "heading": "Marketing Cloud Engagement Administrator exam format",
+    "intro": "The proctored exam is available online or at a test centre. Many questions describe an administrative task or incident.",
+    "scenarioPercent": "Scenarios may ask how to configure access in a multi-Business Unit account, diagnose delivery issues, or set data retention rules.",
     "bestWayToPass": [
-      "<strong>Know Business Unit architecture:</strong> Understand parent vs child BU settings, permission inheritance, and when to use shared vs local Data Extensions.",
-      "<strong>Study deliverability inside out:</strong> IP warming schedules, SAP setup, SPF/DKIM/DMARC, and Reply Mail Management are high-frequency topics.",
-      "<strong>Master user roles and security:</strong> Know the standard Marketing Cloud roles, how custom roles work, and how SSO and IP allowlisting secure the platform.",
-      "<strong>Understand Marketing Cloud Connect:</strong> Know how the Salesforce connector user is configured, what sync errors look like, and how to troubleshoot them."
+      "<strong>Design Business Units:</strong> Understand parent and child settings, permission scope, and shared versus local data extensions.",
+      "<strong>Study sender reputation:</strong> Review IP warming, sender authentication, SPF/DKIM/DMARC, and Reply Mail Management.",
+      "<strong>Manage users securely:</strong> Learn standard and custom roles, SSO, and IP allowlisting.",
+      "<strong>Review Marketing Cloud Connect:</strong> Understand the integration user, synchronized data, and sync troubleshooting."
     ]
   },
   "certificationCard": {
     "code": "MC Engagement Admin",
-    "description": "This exam focuses on the admin side of Marketing Cloud Engagement: Business Unit setup, user roles and permissions, subscriber data management, deliverability configuration, and CRM integration. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Setup (38%) and Subscriber Data Management (18%).",
+    "description": "This exam covers administration of Marketing Cloud Engagement, including Business Units, user permissions, subscriber data, sender authentication, deliverability, data retention, and Salesforce integration. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Setup (38%) and Subscriber Data Management (18%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
@@ -62,53 +62,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Marketing Cloud Engagement Admin: Key Concepts for the Exam",
+    "h2": "Marketing Cloud Engagement Administrator: topics to review",
     "blocks": [
       {
-        "heading": "Account Architecture and Business Units",
-        "body": "Marketing Cloud Engagement supports multi-Business Unit (BU) architectures. Business Units enable separate sending domains, user management, subscriber data, and reporting per BU, useful for regional or brand separation. The parent BU manages shared assets and enforces enterprise-level settings. User roles hierarchy: Administrator, Marketing Cloud Administrator, Marketing, Content Editor/Publisher, Viewer. Sender Authentication Package (SAP) provides the private IP, custom FROM domain, and branded link tracking for each BU. The admin exam tests BU design decisions and how permissions cascade."
+        "heading": "Account structure and Business Units",
+        "body": "Business Units separate users, subscriber data, sending configuration, and reporting, which can help organize brands or regions. The parent unit can manage shared assets and account-wide settings. Roles determine what users may do in a unit. A Sender Authentication Package can provide branded sending and tracking domains and a dedicated IP. Understand when a separate unit is needed and how permissions and shared data work across units."
       },
       {
-        "heading": "Subscriber Management at the Account Level",
-        "body": "The All Subscribers list is the master subscriber list, global unsubscribes are recorded here and override all other settings. Publication Lists enable opt-in preferences per content type. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends globally. Data Extensions store relational subscriber and event data. The Subscriber Key strategy (email address vs CRM ID) affects deduplication and cross-channel identity. The admin configures the subscriber data model and retention policies."
+        "heading": "Subscriber records and preferences",
+        "body": "All Subscribers is the account-level record of subscriber status; a global unsubscribe applies broadly. Publication lists let subscribers manage preferences by content type. Suppression lists exclude addresses from selected sends, while auto-suppression lists can apply across sends. Data extensions store structured subscriber or event data. Subscriber Key strategy, such as using a CRM ID rather than email, affects deduplication and cross-channel identity. Configure data models and retention according to business and privacy needs."
       },
       {
-        "heading": "IP Warming and Sender Reputation",
-        "body": "New dedicated IPs require IP warming, gradually increasing send volume over 4-8 weeks to establish sender reputation with ISPs. Send to the most engaged subscribers first. Monitor bounce rates, spam complaints, and inbox placement. SPF, DKIM, and DMARC configuration is required via the Sender Authentication Package. Reply Mail Management (RMM) handles inbound replies, route auto-replies, out-of-office, and unsubscribes automatically. The admin exam tests the warming schedule design and what metrics indicate reputation health."
+        "heading": "IP warming and sender reputation",
+        "body": "A new dedicated IP needs a gradual warming schedule, increasing volume over time to establish reputation with mailbox providers. Begin with engaged subscribers and monitor bounces, complaints, and inbox placement. Configure SPF, DKIM, and DMARC with the sender domain. Reply Mail Management can handle replies such as out-of-office messages and unsubscribe requests. Learn which metrics signal reputation problems."
       },
       {
-        "heading": "Roles, Permissions, and Security",
-        "body": "Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive, a user can have roles in multiple BUs. Marketing Cloud **SSO** connects to corporate identity systems (**SAML**/**OAuth**). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations."
+        "heading": "Roles, permissions, and account security",
+        "body": "Access is controlled through roles and permissions at the Business Unit level. Users may have different roles in different units. SSO can connect Marketing Cloud to a corporate identity provider using supported protocols. IP allowlisting restricts where users can sign in; account security can also include multi-factor authentication. Data permissions control access to data extensions. Monitor logins and use installed packages for API integrations."
       },
       {
-        "heading": "Salesforce CRM Integration (MC Connect)",
-        "body": "Marketing Cloud Connect integrates Engagement with Sales/Service Cloud. Synchronized Data Extensions pull CRM object records (Leads, Contacts, Campaigns) into Marketing Cloud for targeting. Triggered Sends fire in response to Salesforce record changes (e.g., Opportunity Closed Won). Journey Builder entry sources can use CRM reports or data extensions synced from Salesforce. Email send results sync back to the Contact/Lead record as individual send activities. The admin configures the integration settings, sync schedules, and troubleshoots sync errors."
+        "heading": "Salesforce CRM integration",
+        "body": "Marketing Cloud Connect links Engagement with Sales or Service Cloud. Synchronized data extensions can bring Leads, Contacts, Campaigns, and other CRM records into Marketing Cloud. Triggered sends can respond to Salesforce record changes. Journeys may use CRM data or synchronized data extensions as entry sources. Send results can be written back to Salesforce records. Administrators configure connections and sync schedules and troubleshoot synchronization errors."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Marketing Cloud Engagement Administrator Exam",
-    "intro": "The Marketing Cloud Engagement Administrator exam focuses on platform administration: user management, account setup, security, and data management. Questions test your ability to configure and maintain a Marketing Cloud instance.",
+    "h2": "How to prepare for the Marketing Cloud Engagement Administrator exam",
+    "intro": "Practise how to configure, secure, and maintain a Marketing Cloud account, including users, data, delivery, and integration.",
     "blocks": [
       {
-        "heading": "Account Setup & Business Units",
-        "body": "Know how to configure business units for multi-brand or multi-regional setups, how permissions are inherited, and how to manage shared content and data extensions across business units."
+        "heading": "Configure account structure",
+        "body": "Plan Business Units for brands or regions, understand inherited permissions, and manage shared assets and data extensions."
       },
       {
-        "heading": "User Roles & Permissions",
-        "body": "Know the standard Marketing Cloud roles (Administrator, Analyst, Content Creator, etc.) and how to create custom roles. Understand how role-based permissions control access to each studio and feature."
+        "heading": "Assign least-privilege roles",
+        "body": "Review standard roles, custom roles, and which studio or account features each role can access."
       },
       {
-        "heading": "Data Management & Retention",
-        "body": "Know how to configure data retention policies on data extensions, manage All Subscribers list hygiene, and use Contact Deletion to comply with data privacy regulations."
+        "heading": "Manage data and retention",
+        "body": "Configure data extension retention, maintain subscriber status, and learn Contact Deletion for privacy requests."
       },
       {
-        "heading": "Sender Authentication Package (SAP)",
-        "body": "Understand how SAP (Private Domain, SAP Subdomain, Reply Mail Management) improves email deliverability and brand reputation. Know the difference between a SAP and a standard shared IP configuration."
+        "heading": "Configure sender authentication",
+        "body": "Understand the domains, IP options, and Reply Mail Management included with a Sender Authentication Package and how it differs from shared sending."
       },
       {
-        "heading": "API Integration & Security",
-        "body": "Know how to create and manage API integrations (installed packages with **OAuth** credentials), configure IP whitelisting for API access, and monitor API usage for security anomalies."
+        "heading": "Secure API integrations",
+        "body": "Create installed packages with OAuth credentials, restrict IP access where appropriate, and monitor API activity."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A new marketing user must build and send email but must not be able to change account settings. What should the admin do?",
+      "question": "A marketing user needs to create and send email but must not change account settings. What access should the admin assign?",
       "options": [
-        "Assign a role with send and content rights only",
-        "Give the user the administrator role for the business unit they work in",
-        "Create a separate business unit and add the user there as its administrator",
-        "Share the existing administrator login with the new marketing user"
+        "A role with content and send permissions only",
+        "The Administrator role for the user’s Business Unit",
+        "A new Business Unit with the user as administrator",
+        "A shared administrator login"
       ],
       "correctAnswer": 0,
-      "explanation": "Roles control what a user can do. A send and content role gives them their job without account-level rights.",
+      "explanation": "A role limited to content and sending lets the user do the job without account-level administration.",
       "whyWrong": [
-        "The administrator role includes the account settings you are trying to protect.",
-        "A new business unit does not limit what an administrator can change inside it.",
-        "Shared logins remove any ability to tell who made a change."
+        "Administrator access includes the settings that should remain restricted.",
+        "Creating another unit and giving administrator access still grants excessive rights.",
+        "Shared accounts remove user-level accountability."
       ]
     },
     {
-      "question": "What does the sender authentication package provide?",
+      "question": "What does a Sender Authentication Package typically provide?",
       "options": [
-        "A library of prebuilt email templates for each of the standard studios",
-        "A set of default journeys that can be activated without any configuration",
-        "A dedicated domain and IP for sending",
-        "An automatic weekly report covering deliverability across the whole account"
+        "A collection of email templates for each studio",
+        "Prebuilt journeys ready to activate",
+        "A branded sending domain and dedicated IP",
+        "A weekly deliverability report"
       ],
       "correctAnswer": 2,
-      "explanation": "The package gives the account its own branded sending domain and dedicated IP, which is the basis of its sending reputation.",
+      "explanation": "The package can provide branded sending and tracking domains and a dedicated IP for sending reputation.",
       "whyWrong": [
-        "Templates are built in Content Builder and are not part of authentication.",
-        "Journeys are built by the customer, not supplied by the package.",
-        "Deliverability reporting is a separate feature from authentication."
+        "Templates are created in Content Builder.",
+        "Journeys are configured for the customer’s use case.",
+        "Reporting is separate from sender authentication."
       ]
     },
     {
-      "question": "A data extension holds 8 million rows and queries against it are slow. What should the admin consider first?",
+      "question": "A large data extension query is slow. What should the admin check first?",
       "options": [
-        "Moving the whole data extension into a brand new business unit",
-        "Adding a primary key and indexing the fields used in filters",
-        "Rebuilding the data extension as a standard subscriber list instead",
-        "Splitting the data extension into twelve smaller monthly extensions"
+        "Move the extension to a new Business Unit",
+        "Add a primary key and index the fields used in filters",
+        "Rebuild it as an All Subscribers list",
+        "Split it into twelve monthly extensions immediately"
       ],
       "correctAnswer": 1,
-      "explanation": "Keys and indexes are what let the platform find rows without scanning the whole table, so they come before any restructuring.",
+      "explanation": "Keys and indexes can help the platform locate rows without scanning the entire table.",
       "whyWrong": [
-        "Business units separate access and do not change query performance.",
-        "Lists are less capable than data extensions and would make this worse.",
-        "Splitting by month leaves you joining twelve tables for every query."
+        "Business Units organize access but do not directly improve query performance.",
+        "Subscriber lists are not a replacement for a structured data extension.",
+        "Splitting creates extra complexity and may require combining results."
       ]
     },
     {
-      "question": "Which statement about a retention policy on a data extension is correct?",
+      "question": "What does a data extension retention policy do?",
       "options": [
-        "It prevents any user in the account from deleting rows manually",
-        "It copies the rows into an archive extension before anything is removed",
-        "It automatically compresses older rows to reduce the storage used",
-        "It deletes rows, or the whole extension, after a set period"
+        "Prevents users from deleting rows manually",
+        "Copies records to an archive extension before deletion",
+        "Compresses old rows to save space",
+        "Deletes rows or the extension after the configured period"
       ],
       "correctAnswer": 3,
-      "explanation": "Retention removes data on a schedule, either row by row or the entire object, depending on how it is set.",
+      "explanation": "Retention settings remove data after the defined period, either by row or for the entire extension.",
       "whyWrong": [
-        "Retention does not restrict manual deletion by users.",
-        "No archive copy is made; the data is deleted.",
-        "There is no compression step involved."
+        "Retention does not prevent a user with permission from deleting data.",
+        "An archive copy is not automatically created by the policy.",
+        "Retention deletes data; it is not a compression feature."
       ]
     },
     {
-      "question": "An admin must give a partner agency access to one brand's data only. What is the right structure?",
+      "question": "A partner should access data for one brand only. What is the best structure?",
       "options": [
-        "A new set of user roles created inside the existing business unit",
-        "A separate Marketing Cloud contract purchased for the agency to use",
-        "A single shared account with the agency told which folders to use",
-        "A business unit for that brand, with the agency scoped to it"
+        "Create additional roles in the existing Business Unit only",
+        "Purchase a separate Marketing Cloud contract for the partner",
+        "Share one account login and explain which folders to use",
+        "Create a Business Unit for the brand and scope partner users to it"
       ],
       "correctAnswer": 3,
-      "explanation": "Business units are the data boundary in Marketing Cloud, so scoping the agency's users to one unit limits what they can reach.",
+      "explanation": "Business Units help separate brand data and access. Limit the partner’s users to the relevant unit.",
       "whyWrong": [
-        "Roles limit actions but not which brand's data is visible.",
-        "A second contract is expensive and splits the data unnecessarily.",
-        "Relying on instructions rather than permissions is not access control."
+        "Roles control actions but do not by themselves isolate brand data.",
+        "A separate contract may be unnecessary when a Business Unit meets the access need.",
+        "Instructions are not a security control."
       ]
     },
     {
-      "question": "What is the purpose of a send classification?",
+      "question": "What does a send classification define?",
       "options": [
-        "It ties a send to its sender and delivery profiles",
-        "It determines the order in which automation activities will run",
-        "It decides which content blocks are included in the finished email",
-        "It controls how many subscribers can be included in a single send"
+        "The sender profile and delivery profile for a send",
+        "The order of automation activities",
+        "Which content blocks appear in an email",
+        "The maximum number of subscribers per send"
       ],
       "correctAnswer": 0,
-      "explanation": "Send classification carries the sender profile and delivery profile, and marks the send as commercial or transactional.",
+      "explanation": "A send classification associates sender and delivery profiles and identifies the send type.",
       "whyWrong": [
-        "Activity order is set within the automation.",
-        "Content selection happens in the email itself, not the classification.",
-        "There is no audience size limit set by classification."
+        "Automation order is set in the workflow.",
+        "Email content is configured in the message.",
+        "Audience limits are not set by the classification."
       ]
     },
     {
-      "question": "A nightly import is failing silently and nobody notices for a week. What should the admin add?",
+      "question": "A nightly import fails without notice. What should the admin configure?",
       "options": [
-        "A larger file transfer window to allow the import more time to finish",
-        "Error notifications on the automation",
-        "A second copy of the same automation running later the same night",
-        "A manual check carried out by the marketing team every single morning"
+        "A longer file transfer window regardless of the cause",
+        "Error notifications for the automation",
+        "A duplicate automation that runs later",
+        "A daily manual check by the marketing team"
       ],
       "correctAnswer": 1,
-      "explanation": "Automations can notify on error, which turns a silent failure into something someone hears about the same night.",
+      "explanation": "Automation notifications can alert the team when an activity fails.",
       "whyWrong": [
-        "A longer window does not help if the cause is not a timeout.",
-        "A duplicate automation fails the same way and doubles the problem.",
-        "A daily manual check is unreliable and does not scale."
+        "A longer window helps only if the failure is caused by a timeout.",
+        "A duplicate can repeat the failure and create other issues.",
+        "A manual daily check is slower and less reliable than an alert."
       ]
     },
     {
-      "question": "Which best describes the All Subscribers list?",
+      "question": "What is the All Subscribers list?",
       "options": [
-        "A folder in Content Builder holding the audiences used by each journey",
-        "The account-level record of every subscriber and their status",
-        "A report showing which subscribers opened the most recent email sent",
-        "A list that must be rebuilt by the administrator before each major send"
+        "A Content Builder folder of journey audiences",
+        "The account-level record of subscriber identities and status",
+        "A report of the latest email openers",
+        "A list that admins rebuild before each major send"
       ],
       "correctAnswer": 1,
-      "explanation": "All Subscribers is the master record for the account, and it holds the global unsubscribe status.",
+      "explanation": "All Subscribers maintains account-level subscriber records and global unsubscribe status.",
       "whyWrong": [
-        "It is a subscriber record, not a content folder.",
-        "It is not a report on engagement.",
-        "It is maintained by the platform and is not rebuilt manually."
+        "It stores subscriber records rather than content assets.",
+        "It is not an engagement report.",
+        "The platform maintains it; administrators do not rebuild it for each send."
       ]
     },
     {
-      "question": "An admin needs to move a journey and its emails from a sandbox-style unit into production. What is the supported approach?",
+      "question": "How can an administrator move supported assets between Marketing Cloud Business Units?",
       "options": [
-        "Export each asset by hand and then import it into the target unit one by one",
-        "Rebuild everything manually in production and compare the two side by side",
-        "Use Package Manager to deploy the assets",
-        "Ask Salesforce support to copy the configuration across for the account"
+        "Export and import every item manually",
+        "Rebuild all assets in the production unit",
+        "Use Package Manager to package and deploy assets",
+        "Ask Salesforce Support to copy the account configuration"
       ],
       "correctAnswer": 2,
-      "explanation": "Package Manager exists to bundle and deploy Marketing Cloud assets between business units.",
+      "explanation": "Package Manager can bundle and deploy supported assets between units.",
       "whyWrong": [
-        "Manual export and import is slow and loses the links between assets.",
-        "Rebuilding by hand invites differences you will not notice.",
-        "Support does not perform customer configuration migrations."
+        "Manual transfer is slower and can break asset relationships.",
+        "Rebuilding introduces avoidable differences.",
+        "Routine asset migration is handled with platform tools."
       ]
     },
     {
-      "question": "What happens when a subscriber is added to the account's global suppression list?",
+      "question": "What happens when an address is added to a global suppression list?",
       "options": [
-        "They are excluded from sends across the account",
-        "They continue to receive transactional email but no commercial messages",
-        "They are moved automatically into a separate holding business unit",
-        "Their subscriber record is deleted from every data extension in the account"
+        "It is excluded from sends across the account",
+        "It can receive transactional sends but not commercial sends",
+        "It moves automatically to a holding Business Unit",
+        "Its subscriber record is deleted from every data extension"
       ],
       "correctAnswer": 0,
-      "explanation": "Global suppression removes the address from sends throughout the account, whatever audience is used.",
+      "explanation": "Global suppression excludes the address from sends across the account.",
       "whyWrong": [
-        "Global suppression is broader than the commercial and transactional split.",
-        "No business unit change takes place.",
-        "Suppression excludes the address; it does not delete stored data."
+        "Global suppression is broader than a commercial-only restriction.",
+        "Suppression does not move the contact to another unit.",
+        "Suppression excludes an address; it does not delete stored data."
       ]
     },
     {
-      "question": "A client reports that one subscriber received the same email twice. What is the most likely cause?",
+      "question": "A subscriber receives the same email twice. What is one likely cause?",
       "options": [
-        "The journey was activated twice on the same day by two different users",
-        "The email template contained two copies of the same content block inside it",
-        "The subscriber appears twice under different keys",
-        "The send classification was set to transactional rather than commercial"
+        "The journey was activated twice by two users",
+        "The email contains duplicate content blocks",
+        "The person exists under different Subscriber Keys",
+        "The send classification is transactional"
       ],
       "correctAnswer": 2,
-      "explanation": "Duplicate sends usually come from the same person existing as two records, because deduplication works on the subscriber key.",
+      "explanation": "Different Subscriber Keys can represent the same person as separate records and lead to duplicate sends.",
       "whyWrong": [
-        "Activating a journey twice creates versions rather than duplicate sends.",
-        "Duplicate content blocks affect the layout, not the number of emails.",
-        "Classification does not cause a second send."
+        "Activating a journey creates versions, not necessarily duplicate messages.",
+        "Repeated content affects layout, not the number of sends.",
+        "Send classification does not create duplicate subscribers."
       ]
     },
     {
-      "question": "Which tool should an admin use to see login history and changes made in the account?",
+      "question": "Which tool can show account logins and configuration changes?",
       "options": [
-        "The deliverability report produced each week by the sending domain",
-        "A SQL query written against the subscriber data views in the account",
+        "A weekly deliverability report",
+        "A query against subscriber data views",
         "Audit Trail",
-        "The tracking tab on each of the email jobs sent during the period"
+        "The tracking report for each email job"
       ],
       "correctAnswer": 2,
-      "explanation": "Audit Trail records security and configuration events, including logins and changes to users and settings.",
+      "explanation": "Audit Trail records security and configuration events such as logins and setting changes.",
       "whyWrong": [
-        "Deliverability reporting is about inbox placement.",
-        "Data views hold send and engagement data, not configuration changes.",
-        "Email tracking covers sends, not account administration."
+        "Deliverability reports cover sending performance.",
+        "Data views cover send and engagement data rather than administration events.",
+        "Email tracking reports describe message results."
       ]
     },
     {
-      "question": "What is the effect of setting a data extension as sendable?",
+      "question": "What does marking a data extension as sendable allow?",
       "options": [
-        "It is automatically backed up each night to a secondary storage location",
-        "It is excluded from the account's standard data retention processing",
-        "It becomes visible to every user in every business unit in the account",
-        "It can be used as the audience for a send"
+        "Automatic nightly backup",
+        "Exemption from retention rules",
+        "Visibility to every account user",
+        "Use as an audience for a send"
       ],
       "correctAnswer": 3,
-      "explanation": "Marking an extension sendable, and relating it to subscribers, is what allows it to be used as a send audience.",
+      "explanation": "A sendable data extension can be selected as an audience when it is related to subscriber information.",
       "whyWrong": [
-        "Sendable has nothing to do with backups.",
-        "Retention applies regardless of the sendable setting.",
-        "Visibility is governed by business unit and folder permissions."
+        "Sendable status does not configure backups.",
+        "Retention policies can still apply.",
+        "Access is controlled by permissions and Business Unit scope."
       ]
     },
     {
-      "question": "An admin wants to limit which IP addresses can log in to the account. Where is this configured?",
+      "question": "Where can an administrator restrict the IP addresses allowed to sign in?",
       "options": [
-        "In the role assigned to each individual user within the business unit",
-        "In the account security settings",
-        "In the sender authentication package supplied for the sending domain",
-        "In the delivery profile attached to each of the send classifications"
+        "In each user’s role",
+        "In account security settings",
+        "In the Sender Authentication Package",
+        "In a delivery profile"
       ],
       "correctAnswer": 1,
-      "explanation": "Login IP restrictions are part of the account's security settings alongside password and session policy.",
+      "explanation": "Login IP restrictions are part of account security configuration.",
       "whyWrong": [
-        "Roles control permissions, not network access.",
-        "The authentication package concerns sending reputation.",
-        "Delivery profiles govern sending, not logins."
+        "Roles grant product permissions rather than limiting network addresses.",
+        "Sender authentication controls email delivery identity.",
+        "Delivery profiles configure sending behavior, not login access."
       ]
     },
     {
-      "question": "Which is the strongest reason to use folders and a naming convention in a Marketing Cloud account?",
+      "question": "Why use folders and a consistent naming scheme for Marketing Cloud assets?",
       "options": [
-        "Assets become findable and safe to change",
-        "Journeys run noticeably faster when their assets sit in the same folder",
-        "Emails sent from well-named folders are delivered more reliably than others",
-        "The platform charges less for storage when assets are organised in folders"
+        "Find and safely update assets",
+        "Make journeys run faster",
+        "Improve deliverability automatically",
+        "Reduce storage charges"
       ],
       "correctAnswer": 0,
-      "explanation": "Shared content means an edit can affect many sends, so knowing what an asset is and who uses it is what keeps changes safe.",
+      "explanation": "Clear organization helps teams identify assets and understand where changes may have an effect.",
       "whyWrong": [
-        "Folder structure does not change journey performance.",
-        "Folder names have no effect on deliverability.",
-        "Storage is not priced by organisation."
+        "Folder structure does not change journey execution speed.",
+        "Folder names do not affect mailbox provider reputation.",
+        "Storage pricing is not reduced by naming conventions."
       ]
     }
   ]

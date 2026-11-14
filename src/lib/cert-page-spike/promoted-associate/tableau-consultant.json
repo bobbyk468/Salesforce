@@ -1,52 +1,52 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Tableau Consultant exam for?",
+    "heading": "Who should take the Tableau Consultant exam?",
     "personas": [
       {
         "label": "Analytics consultants",
-        "description": "You deliver Tableau projects for clients and want the credential that names the role."
+        "description": "You deliver Tableau projects for clients and want a credential for consulting work."
       },
       {
-        "label": "BI implementation leads",
-        "description": "You run the rollout: data sources, dashboards, publishing and getting people to use them."
+        "label": "Business intelligence project leads",
+        "description": "You manage data sources, dashboards, publishing, and user adoption."
       },
       {
         "label": "Solution architects",
-        "description": "You decide how Tableau fits with the rest of a client's data estate."
+        "description": "You design how Tableau fits within a client’s wider data environment."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Tableau Consultant Exam Hard?",
-    "summary": "This exam is about delivering Tableau to an organisation, not just building views. It covers gathering requirements, preparing data, designing dashboards people will actually use, and publishing and governing them on Tableau Cloud or Server.",
+    "heading": "How challenging is the Tableau Consultant exam?",
+    "summary": "This exam covers end-to-end Tableau delivery, not only view creation. It tests how you gather needs, prepare data, build useful dashboards, and publish and govern content on Tableau Cloud or Server.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 minutes.",
-      "<strong>63% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book.",
-      "<strong>Delivery, not just desktop.</strong> Expect discovery, data preparation, publishing, permissions and adoption.",
-      "<strong>Judgement questions.</strong> Several options will work; the right one fits the client's constraints."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>63% to pass</strong>, which is 38 correct answers out of 60.",
+      "<strong>Full delivery lifecycle.</strong> Expect discovery, data prep, publishing, access, and adoption.",
+      "<strong>Client judgement.</strong> Several choices may work, but select the one that best fits the stated audience and constraints."
     ],
-    "passRateGuidance": "You are ready when you can take a vague business request, turn it into a data source and a dashboard, publish it with sensible permissions, and explain the choices. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Practise turning a broad request into a data source and dashboard, publishing it with suitable access, and explaining your decisions. Aim for 75% or higher on practice tests."
   },
   "examFormat": {
-    "heading": "Tableau Consultant Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a client situation, such as a dashboard nobody uses or a data source that is slow for everyone, and ask what the consultant should do.",
+    "heading": "Tableau Consultant exam format",
+    "intro": "The proctored exam is available online or at a test centre. Many questions ask how to respond to a client situation.",
+    "scenarioPercent": "Scenarios may describe an unused dashboard, a shared data source that performs poorly, or another client challenge. Choose the next step that addresses the stated need.",
     "bestWayToPass": [
-      "<strong>Start from the question the business is asking:</strong> The right chart and the right data model both follow from it.",
-      "<strong>Know Tableau Prep:</strong> When to clean and shape data before it reaches the workbook, rather than with calculations inside it.",
-      "<strong>Learn published data sources:</strong> One governed source reused across workbooks is usually the answer to duplication and inconsistency.",
-      "<strong>Think about adoption:</strong> Training, subscriptions and alerts matter as much as the dashboard itself."
+      "<strong>Start with the business question:</strong> The audience and decision determine the data and visualization.",
+      "<strong>Prepare data upstream:</strong> Know when Tableau Prep is a better fit than repeating transformations in workbooks.",
+      "<strong>Use published sources:</strong> A governed source reused across workbooks can prevent conflicting definitions.",
+      "<strong>Plan adoption:</strong> Training, subscriptions, and alerts can be as important as the dashboard itself."
     ]
   },
   "certificationCard": {
     "code": "Tableau Consultant",
-    "description": "This exam covers delivering Tableau for an organisation: gathering requirements, preparing and publishing data, designing dashboards that get used, and managing permissions and adoption on Tableau Cloud or Server.",
+    "description": "This exam covers the delivery of Tableau solutions, from discovery and data preparation to dashboard design, publishing, governance, and adoption. It has 60 questions in 105 minutes and a 63% passing score. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Design and Troubleshoot Calculations and Workbooks (40%) and Evaluate Current State (22%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
       "duration": "105 min",
-      "cost": "$250"
+      "cost": "$200"
     },
     "topics": [
       "Requirements & Discovery",
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Tableau Consultant: Key Concepts for the Exam",
+    "h2": "Tableau Consultant: concepts to practise",
     "blocks": [
       {
-        "heading": "Discovery and Solution Design",
-        "body": "A consultant's first job is to find the real question. Ask who the audience is, what decision the dashboard supports, how current the data must be, and what people do today instead. Those answers determine almost everything: a dashboard for executives wants a few clear numbers, while one for analysts wants filters and detail. Agree the measures and their definitions in writing, because disagreement about what revenue means causes more rework than any technical problem. Then decide where logic belongs: in the source system, in Tableau Prep, in a published data source, or in the workbook."
+        "heading": "Discover needs and define the solution",
+        "body": "Begin by finding the decision the client needs to make. Ask who will use the result, how current the data must be, and what process they follow today. These answers shape the design: executives may need a few clear measures, while analysts may need filters and detail. Agree on measure definitions in writing to avoid disputes later. Decide whether logic belongs in the source system, Tableau Prep, a published data source, or a workbook."
       },
       {
-        "heading": "Preparing Data with Tableau Prep",
-        "body": "**Tableau Prep Builder** cleans and reshapes data before it reaches a workbook. Its steps include **clean** (rename, split, filter, change types), **join** and **union**, **aggregate**, **pivot** (turning columns into rows, which is how you fix spreadsheet-shaped data), and **output** to an extract or a published source. Doing this work in Prep rather than in workbook calculations means it happens once and every workbook benefits. Prep flows can be scheduled to run on a timetable so the output stays current."
+        "heading": "Prepare data with Tableau Prep",
+        "body": "Tableau Prep Builder cleans and reshapes data before it reaches a workbook. Steps can clean values, rename or split fields, filter records, change data types, join or union tables, aggregate, and pivot columns into rows. You can output the result as an extract or publish it as a source. Doing shared preparation upstream lets multiple workbooks use the same logic. Prep flows can run on a schedule to keep outputs current."
       },
       {
-        "heading": "Published Data Sources and Governance",
-        "body": "A **published data source** lives on Tableau Cloud or Server and can be reused by many workbooks. It carries its own joins, calculations, field names, descriptions and permissions. This is the main tool against the usual problem of five workbooks that each calculate revenue slightly differently. **Certification** marks a source as trusted so users can tell it apart from ad-hoc ones. Decide refresh schedules by how fresh the data must be, and remember that an extract refresh takes load off the source database while a live connection does not."
+        "heading": "Publish and govern shared sources",
+        "body": "A published data source on Tableau Cloud or Server can be reused by many workbooks. It can include joins, calculations, field names, descriptions, and permissions. This helps prevent different workbooks from defining a measure in different ways. Certification signals that a source is reviewed and trusted. Set refresh timing according to freshness needs; an extract reduces repeated source queries but is current only after its last refresh, while a live connection queries the source directly."
       },
       {
-        "heading": "Dashboard Design That Gets Used",
-        "body": "Design for the audience and the device. Lead with the headline number, then the breakdown, then the detail. Use **actions** so a selection in one view filters or highlights another, and keep the number of filters on screen small, since each one costs performance and attention. Size the dashboard for how people will actually view it rather than for your own monitor. Use colour deliberately: one highlight colour draws the eye where you want it, while a rainbow of categories tells the reader nothing. Avoid putting everything on one dashboard; two focused dashboards beat one crowded one."
+        "heading": "Design dashboards for their users",
+        "body": "Design for the audience and the device. Lead with the key finding, then provide breakdowns and detail. Actions can let a selection in one view filter or highlight another. Keep filters focused because they take attention and can affect performance. Size the dashboard for the screen people will use. Apply color deliberately to guide attention, and consider separate focused dashboards when audiences need different levels of detail."
       },
       {
-        "heading": "Publishing, Permissions and Adoption",
-        "body": "Content on Tableau Cloud or Server lives in **projects**, and permissions are best managed by **group** at the project level rather than per user per workbook. Plan who may view, who may edit and who may publish. **Subscriptions** email a view on a schedule and **data-driven alerts** notify people when a measure crosses a threshold, both of which bring users back without training them to remember. For adoption, launch with a small group, watch usage, and fix the first complaints quickly. A technically perfect dashboard nobody opens has not delivered anything."
+        "heading": "Publish, manage access, and support adoption",
+        "body": "Tableau Cloud and Server organize content in projects. Manage permissions by group at the project level where possible, and decide who can view, edit, or publish. Subscriptions send a view on a schedule; data-driven alerts notify users when a measure crosses a threshold. Launch to a small group, review usage, and respond to early feedback. A dashboard that people do not use has not delivered its intended value."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Tableau Consultant Exam",
-    "intro": "Most questions give you a client problem and several workable answers. Pick the one that fits the audience, the data and the constraints described.",
+    "h2": "How to prepare for the Tableau Consultant exam",
+    "intro": "Choose the answer that best fits the client’s audience, data, and constraints, even when other options could also work.",
     "blocks": [
       {
-        "heading": "Discovery",
-        "body": "Who is the audience, what decision does this support, how fresh must the data be, and what do they do today? Everything else follows."
+        "heading": "Start with discovery",
+        "body": "Identify the audience, the decision to support, required data freshness, and the current process before selecting a design."
       },
       {
-        "heading": "Where Logic Belongs",
-        "body": "Source system first, then Tableau Prep, then a published data source, then the workbook. The earlier it sits, the more reuse you get."
+        "heading": "Place transformations for reuse",
+        "body": "Prefer the source system, then Tableau Prep, then a published data source, and finally workbook logic when it must be view-specific."
       },
       {
-        "heading": "Published Data Sources",
-        "body": "One governed, certified source stops five workbooks disagreeing about the same measure."
+        "heading": "Use governed data sources",
+        "body": "A shared, trusted source helps keep measures consistent across workbooks."
       },
       {
-        "heading": "Dashboard Design",
-        "body": "Headline, breakdown, detail. Few filters, deliberate colour, sized for the device people actually use."
+        "heading": "Design for the audience",
+        "body": "Show the key finding first, limit filters, use color with care, and size dashboards for the device viewers use."
       },
       {
-        "heading": "Adoption",
-        "body": "Subscriptions and alerts bring users back. Launch small, watch usage, fix the first complaints fast."
+        "heading": "Check adoption",
+        "body": "Subscriptions and alerts can bring users back. Start with a small launch group, review usage, and address feedback."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Five workbooks each calculate revenue slightly differently and the numbers do not agree in meetings. What should the consultant recommend?",
+      "question": "Five workbooks calculate revenue differently, so teams disagree in meetings. What should the consultant recommend?",
       "options": [
-        "A training session on writing calculations",
-        "A certified data source with the agreed calculation",
-        "Switching all of the connections from extract to live",
-        "Rebuilding the five workbooks separately"
+        "Train each team to write calculations",
+        "One certified source",
+        "Change all connections from extracts to live",
+        "Rebuild each workbook independently"
       ],
       "correctAnswer": 1,
-      "explanation": "One governed source with the agreed definition is what stops workbooks disagreeing, and certification signals it is the trusted one.",
+      "explanation": "One governed source with the agreed definition prevents workbooks from calculating revenue differently. Certification marks it as trusted.",
       "whyWrong": [
-        "Training does not stop five separate definitions drifting apart again.",
-        "Connection type does not change how revenue is defined.",
-        "Rebuilding separately recreates the same problem."
+        "Training does not keep separate calculations aligned over time.",
+        "Connection type does not determine how revenue is defined.",
+        "Separate rebuilds preserve the same risk of inconsistent definitions."
       ]
     },
     {
-      "question": "A client's source data has monthly figures spread across twelve columns, one per month. What is the cleanest fix?",
+      "question": "Monthly sales values are spread across twelve columns, one for each month. What is a clean way to reshape the data?",
       "options": [
-        "Write twelve calculated fields in the workbook",
-        "Create twelve separate data sources",
-        "Ask the client to retype the data",
-        "Pivot the columns into rows in Tableau Prep"
+        "Create twelve calculations in every workbook",
+        "Publish twelve separate data sources",
+        "Ask users to re-enter the data in a new layout",
+        "Pivot month columns into rows in Prep"
       ],
       "correctAnswer": 3,
-      "explanation": "Pivoting turns spreadsheet-shaped columns into rows, which is the shape Tableau works with, and doing it in Prep means every workbook benefits.",
+      "explanation": "Pivoting converts the monthly columns into rows, a structure that is easier to analyze and can be reused across workbooks.",
       "whyWrong": [
-        "Twelve calculations repeat the problem in every workbook.",
-        "Twelve sources multiply the maintenance.",
-        "Retyping is error-prone and does not scale."
+        "Twelve workbook calculations repeat the transformation.",
+        "Many sources make maintenance harder.",
+        "Manual re-entry is error-prone and does not scale."
       ]
     },
     {
-      "question": "An executive dashboard is slow and cluttered, with fifteen filters on screen. What should the consultant do first?",
+      "question": "An executive dashboard is crowded and slow, with fifteen filters. What should the consultant do first?",
       "options": [
         "Move it to a larger server",
-        "Cut back to the measures executives decide on",
-        "Add a good many more filters so users can narrow further",
-        "Switch every chart to a table"
+        "Focus on executives’ key measures",
+        "Add further filters so users can narrow results",
+        "Replace every chart with a table"
       ],
       "correctAnswer": 1,
-      "explanation": "Executive audiences need a small number of clear numbers. Reducing scope fixes both the clutter and much of the slowness.",
+      "explanation": "Reducing the dashboard to the measures executives need can improve clarity and reduce work.",
       "whyWrong": [
-        "Hardware hides a design problem rather than fixing it.",
-        "More filters worsen both problems.",
-        "Tables are usually harder to read at a glance than charts."
+        "Hardware does not fix a crowded design.",
+        "More filters add clutter and may increase query cost.",
+        "Tables may make results harder to scan and do not address excess content."
       ]
     },
     {
-      "question": "A client needs the sales team notified when any region's weekly revenue falls below target. What fits?",
+      "question": "Sales leaders need an alert when a region’s weekly revenue drops below target. Which feature fits?",
       "options": [
-        "A weekly meeting to review the dashboard",
-        "A subscription emailing the dashboard daily",
-        "A note in the dashboard title",
-        "A data-driven alert on that measure"
+        "Hold a weekly meeting to inspect the dashboard",
+        "Send the entire dashboard to everyone each morning",
+        "Add a note to the dashboard title",
+        "Create a data-driven alert on the revenue measure"
       ],
       "correctAnswer": 3,
-      "explanation": "Data-driven alerts fire when a measure crosses a threshold, which is exactly the requirement.",
+      "explanation": "A data-driven alert can notify users when a measure crosses a defined threshold.",
       "whyWrong": [
-        "A meeting is slower and depends on someone noticing.",
-        "A daily email arrives whether or not anything is wrong.",
-        "A static note cannot react to data."
+        "A meeting depends on someone noticing the change and is not timely.",
+        "A scheduled subscription sends whether or not the threshold is crossed.",
+        "Static text cannot respond to changing data."
       ]
     },
     {
-      "question": "Where should permissions normally be managed on Tableau Cloud or Server?",
+      "question": "Where should permissions usually be managed on Tableau Cloud or Server?",
       "options": [
-        "By exporting dashboards as PDFs instead",
-        "Per user on each individual workbook",
-        "By group at the project level",
-        "By sharing passwords for a shared account"
+        "Export dashboards as PDFs for all users",
+        "Set them individually on every workbook",
+        "Use group permissions at the project level",
+        "Share a common user account and password"
       ],
       "correctAnswer": 2,
-      "explanation": "Group permissions set on projects scale and stay manageable as content and staff change.",
+      "explanation": "Group permissions at the project level are easier to manage as users and content change.",
       "whyWrong": [
-        "PDFs lose interactivity and go stale immediately.",
-        "Per-user, per-workbook permissions become unmanageable quickly.",
-        "Shared accounts destroy accountability and security."
+        "PDF exports lose interactivity and may become outdated.",
+        "Per-user settings on each workbook are difficult to maintain.",
+        "Shared accounts weaken security and accountability."
       ]
     },
     {
-      "question": "The business says it needs data 'in real time', but the source is a nightly warehouse load. What should the consultant do?",
+      "question": "The client asks for “real-time” reporting, but its warehouse loads new data nightly. What should the consultant do first?",
       "options": [
-        "Build the dashboard on a manual spreadsheet upload",
-        "Refresh the extract every five minutes",
-        "Clarify how fresh the data genuinely needs to be",
-        "Switch to a live connection and promise real time"
+        "Use a manual spreadsheet upload",
+        "Refresh an extract every five minutes",
+        "Clarify how fresh the data needs to be",
+        "Switch to live and promise real-time data"
       ],
       "correctAnswer": 2,
-      "explanation": "If the source only updates nightly, no Tableau setting makes it fresher. The requirement needs clarifying against what the data can support.",
+      "explanation": "A Tableau connection cannot make the underlying source fresher than its nightly update, so clarify the business need.",
       "whyWrong": [
-        "Manual uploads are less current and error-prone.",
+        "Manual uploads add effort and are not more current.",
         "Frequent refreshes of unchanged data waste resources.",
-        "A live connection to a nightly warehouse still shows nightly data."
+        "A live connection still reads data that updates only nightly."
       ]
     },
     {
-      "question": "A dashboard will mostly be viewed on tablets in the field. What should the consultant account for?",
+      "question": "Most viewers will use a dashboard on tablets while working in the field. What should the consultant consider?",
       "options": [
-        "Design and size the dashboard for that device",
-        "Increase the number of worksheets",
+        "Design and size the dashboard for tablet use",
+        "Add many more worksheets",
         "Use a fixed 4K layout",
-        "Assume desktop sizing will adapt automatically"
+        "Assume the desktop design will always resize well"
       ],
       "correctAnswer": 0,
-      "explanation": "Dashboards should be designed for the device people actually use, since a desktop layout often becomes unusable on a smaller screen.",
+      "explanation": "The dashboard should be planned for the screen and conditions in which people will use it.",
       "whyWrong": [
-        "More worksheets makes the small-screen problem worse.",
-        "A 4K layout is unusable on a tablet.",
-        "Automatic resizing rarely produces a good small-screen layout."
+        "More worksheets make the experience harder on a small screen.",
+        "A 4K layout is not suited to a tablet.",
+        "Automatic resizing may not produce a usable layout."
       ]
     },
     {
-      "question": "What is the main benefit of doing data cleaning in Tableau Prep rather than in workbook calculations?",
+      "question": "Why perform shared data cleanup in Tableau Prep rather than repeating it in workbook calculations?",
       "options": [
-        "It removes the need for permissions",
-        "The work happens once and every workbook using the output benefits",
-        "It makes the workbook file larger",
-        "It converts all live connections into extracts automatically"
+        "It removes the need to configure permissions",
+        "Reuse prepared data across workbooks",
+        "It makes every workbook file larger",
+        "It automatically converts live connections to extracts"
       ],
       "correctAnswer": 1,
-      "explanation": "Preparing data upstream means the logic is defined once, rather than repeated and varied in each workbook.",
+      "explanation": "Preparing data upstream makes the transformation consistent for all workbooks that use the output.",
       "whyWrong": [
-        "Permissions are still required on published content.",
-        "File size is not the point, and Prep output is usually smaller.",
-        "Connection type is a separate decision."
+        "Published content still needs appropriate permissions.",
+        "File size is not the benefit of using Prep.",
+        "Connection type is a separate configuration choice."
       ]
     },
     {
-      "question": "Six months after launch, usage data shows almost nobody opens the dashboard. What should the consultant investigate first?",
+      "question": "After six months, very few users open a dashboard. What should the consultant investigate first?",
       "options": [
-        "Whether it answers a real question",
-        "Whether to add more charts",
-        "Whether the colours match the brand",
-        "Whether to buy more licences"
+        "Check whether it answers a user need",
+        "Whether more charts should be added",
+        "Whether the colors match the brand",
+        "Whether the client should buy more licenses"
       ],
       "correctAnswer": 0,
-      "explanation": "Low usage usually means the dashboard does not support a decision people are making, which is a discovery failure rather than a design detail.",
+      "explanation": "Low usage may mean the dashboard does not answer a question users need to act on. Revisit the original need.",
       "whyWrong": [
-        "Adding content to an unused dashboard does not create demand.",
-        "Branding rarely determines whether people use a dashboard.",
-        "More licences do not create usage."
+        "More charts may add clutter without making the dashboard useful.",
+        "Brand colors are unlikely to explain whether a tool supports a decision.",
+        "More licenses do not increase adoption by themselves."
       ]
     },
     {
-      "question": "A client wants one dashboard covering executive summary, regional detail and individual rep performance. What is the better approach?",
+      "question": "A client needs executive summaries, regional analysis, and rep-level details. What is a better design approach?",
       "options": [
-        "Three copies of the same dashboard with different filters saved",
-        "One dashboard with every chart on it",
-        "Separate focused dashboards, linked, for each audience",
-        "A single giant crosstab"
+        "Create several nearly identical dashboards with saved filters",
+        "Put every chart and level of detail on one dashboard",
+        "Create focused dashboards for each audience and link them",
+        "Display all data in one large crosstab"
       ],
       "correctAnswer": 2,
-      "explanation": "Different audiences need different views. Focused dashboards are faster, clearer and easier to maintain.",
+      "explanation": "Separate focused dashboards can serve each audience clearly and are easier to maintain than a crowded or duplicated design.",
       "whyWrong": [
-        "Three near-identical copies triple the maintenance.",
-        "One dashboard for three audiences serves none of them well.",
-        "A giant crosstab is slow and hard to read."
+        "Near-identical copies increase maintenance work.",
+        "One dashboard may overwhelm users with different needs.",
+        "A large crosstab is difficult to scan and may perform poorly."
       ]
     },
     {
-      "question": "What does certifying a published data source communicate?",
+      "question": "What does certification of a published data source tell users?",
       "options": [
-        "That it refreshes a good deal faster than other sources",
-        "That it is encrypted",
-        "That only administrators can use it",
-        "That it is governed and should be preferred"
+        "It refreshes faster than other sources",
+        "Its contents are encrypted",
+        "Only administrators may access it",
+        "Mark it as reviewed and trusted"
       ],
       "correctAnswer": 3,
-      "explanation": "Certification marks a source as reviewed and trusted, helping users choose it over ad-hoc alternatives.",
+      "explanation": "Certification marks a source as reviewed and approved for users to prefer.",
       "whyWrong": [
         "Certification does not change refresh performance.",
-        "It is a trust marker, not an encryption setting.",
-        "Certified sources are meant to be widely used."
+        "It is not an encryption setting.",
+        "Certified sources can be used by authorized users beyond administrators."
       ]
     },
     {
-      "question": "Stakeholders disagree about what counts as an active customer. What should the consultant do before building?",
+      "question": "Stakeholders use different definitions of “active customer.” What should the consultant do before building?",
       "options": [
-        "Build one version and let them react",
-        "Get the definition agreed and written down",
-        "Show both definitions on the same chart",
-        "Use the definition the most senior person prefers"
+        "Build one definition and wait for feedback",
+        "Agree on a definition and document it",
+        "Show both measures in the same chart",
+        "Use the most senior stakeholder’s preferred definition"
       ],
       "correctAnswer": 1,
-      "explanation": "Undocumented measure definitions cause rework and arguments later. Agreeing them first is cheaper than rebuilding.",
+      "explanation": "Agreeing and recording the definition before building avoids rework and conflicting results.",
       "whyWrong": [
-        "Building first wastes effort when the definition changes.",
-        "Two competing numbers on one chart confuses the audience.",
-        "Seniority does not settle a definitional question correctly."
+        "Building before agreement risks rework.",
+        "Two competing measures can confuse the audience.",
+        "Seniority alone does not resolve the business definition."
       ]
     },
     {
-      "question": "A published extract takes two hours to refresh and finishes after the morning meeting. What is a reasonable first step?",
+      "question": "A published extract takes two hours and finishes after the morning meeting. What is a sensible first optimization?",
       "options": [
-        "Filter, drop unused fields and aggregate",
-        "Switch every one of the users to a live connection",
-        "Move the meeting",
-        "Refresh twice as often"
+        "Reduce rows and fields, then aggregate",
+        "Change all users to live connections",
+        "Move the meeting later",
+        "Schedule the extract to run more often"
       ],
       "correctAnswer": 0,
-      "explanation": "Smaller extracts refresh faster. Filtering, removing unused fields and aggregating are the standard levers.",
+      "explanation": "Reducing unnecessary extract data can shorten refresh time before changing infrastructure or schedules.",
       "whyWrong": [
-        "A live connection may be slower still and loads the source database.",
-        "Changing the business to suit the tool is a last resort.",
-        "More frequent refreshes of a slow extract makes it worse."
+        "Live connections may place more load on the source.",
+        "Changing the meeting schedule avoids the technical problem.",
+        "More frequent runs of a slow extract can create a larger queue."
       ]
     },
     {
-      "question": "Which sequence best reflects where calculation logic should live, most preferred first?",
+      "question": "Which order generally favors putting reusable transformation logic as far upstream as possible?",
       "options": [
-        "Workbook, then published data source, then Prep, then source",
-        "Wherever the developer prefers",
-        "Source system, Tableau Prep, published data source, workbook",
-        "Workbook only, always"
+        "Workbook, published source, Prep, then source system",
+        "Let each developer choose independently",
+        "Source, Prep, published source, workbook",
+        "Keep every calculation in the workbook"
       ],
       "correctAnswer": 2,
-      "explanation": "The earlier logic sits, the more consumers reuse it and the less it drifts between workbooks.",
+      "explanation": "Logic placed earlier can be reused by more downstream consumers and is less likely to diverge.",
       "whyWrong": [
-        "That reverses the preference and maximises duplication.",
-        "Consistency matters more than individual preference.",
-        "Workbook-only logic cannot be reused."
+        "This order starts with workbook logic and increases duplication.",
+        "A consistent placement strategy supports reuse better than individual preference.",
+        "Workbook-only logic is difficult for other workbooks to reuse."
       ]
     },
     {
-      "question": "What is the purpose of a subscription in Tableau Cloud or Server?",
+      "question": "What does a Tableau Cloud or Server subscription do?",
       "options": [
-        "To email a view to users on a schedule",
-        "To certify a data source",
-        "To refresh an extract",
-        "To grant someone permission to edit a workbook"
+        "Emails a view to users on a schedule",
+        "Marks a data source as certified",
+        "Refreshes an extract",
+        "Gives a user permission to edit a workbook"
       ],
       "correctAnswer": 0,
-      "explanation": "Subscriptions deliver a view by email on a timetable, which keeps users engaged without them remembering to look.",
+      "explanation": "A subscription sends a view by email at a chosen time or schedule.",
       "whyWrong": [
-        "Certification is a trust marker on a data source.",
-        "Refresh schedules are configured separately.",
-        "Editing rights come from permissions."
+        "Certification signals trust in a data source.",
+        "Extract refreshes are scheduled separately.",
+        "Editing access is controlled through permissions."
       ]
     }
   ]

@@ -9,9 +9,9 @@ const sampleQuestions = advancedAdministratorSampleQuestionsJson as SpikeSampleQ
 export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
   template: 'associate',
   introLead: [
-    { type: 'text', text: "If you haven't passed the entry-level admin exam yet. Start with our " },
+    { type: 'text', text: "If you have not yet passed the administrator exam, start with the " },
     { type: 'link', href: '/certifications/administrator', label: 'ADM-201 study guide' },
-    { type: 'text', text: ' first. For faster prep, use our ' },
+    { type: 'text', text: '. You can also use the ' },
     { type: 'link', href: '/certifications/administrator', label: `ADM-201 exam tips (${RELEASE_CURRENT})` },
     { type: 'text', text: ' and ' },
     { type: 'link', href: '/adm-201-vs-app-builder', label: 'ADM-201 vs App Builder guide' },
@@ -22,37 +22,37 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
   whoIsThisFor: {
     heading: 'Who is the Advanced Administrator exam for?',
     personas: [
-      { label: 'Experienced admins', description: 'You have ADM-201 and 2+ years of admin experience and want to validate advanced configuration skills.' },
-      { label: 'Senior admins', description: 'You manage complex orgs with advanced security models, delegated administration, and multi-layer automation.' },
-      { label: 'Admins moving into consulting', description: 'You want to demonstrate senior-level admin expertise before pursuing consultant certifications.' },
+      { label: 'Experienced admins', description: 'You have passed ADM-201, manage Salesforce, and want to demonstrate more advanced configuration skills.' },
+      { label: 'Senior admins', description: 'You manage security, delegated administration, and automation in a complex Salesforce org.' },
+      { label: 'Admins moving into consulting', description: 'You want to demonstrate advanced admin knowledge before preparing for a consultant credential.' },
     ],
   },
   examDifficulty: {
     heading: 'Is the Advanced Administrator Exam Hard?',
-    summary: 'The Advanced Administrator exam is moderately difficult. It builds directly on ADM-201 but goes significantly deeper into security, automation, and change management topics.',
+    summary: 'This exam builds on ADM-201. It asks how you would handle more complex security, automation, and change-management needs.',
     bullets: [
       '<strong>60 multiple-choice questions</strong> in 105 minutes.',
       '<strong>65% passing score</strong>: you can miss up to 21 questions.',
-      '<strong>Deeper than ADM-201</strong>: advanced Flow patterns, delegated administration, territory management, and complex sharing rules are all tested.',
-      '<strong>Requires real-world experience</strong>: scenario questions assume you have managed a production Salesforce org.',
+      '<strong>Advanced topics</strong>: review Flow patterns, delegated administration, territories, and sharing.',
+      '<strong>Practical experience helps</strong>: practise applying these features in realistic administration scenarios.',
     ],
-    passRateGuidance: 'Score 75%+ on 3 full practice exams before booking. Focus on the areas where ADM-201 was surface-level: advanced security, approval processes with cross-object conditions, and change sets.',
+    passRateGuidance: 'Use timed practice exams to find weak areas. Review advanced security, approval processes, and deployments, then practise the configurations in an org.',
   },
   examFormat: {
     heading: 'Advanced Administrator Exam Format Explained',
-    intro: 'The exam is proctored online or in-person through Webassessor. Here is the format:',
-    scenarioPercent: 'About 50-60% of questions are scenario-based. Common patterns include designing complex sharing rules for multi-business-unit orgs, troubleshooting automation conflicts (multiple flows on the same object), and configuring delegated administration for regional admin teams.',
+    intro: 'You can take the supervised exam online or at a test centre. Review the current guide for the format and booking details.',
+    scenarioPercent: 'Practise applying features to a business need. For example, design sharing for different teams, investigate flows, or give regional admins limited user-management duties.',
     bestWayToPass: [
-      '<strong>Master advanced security:</strong> Delegated administration, custom sharing rules, Apex-managed sharing, and territory management are the highest-tested areas.',
-      '<strong>Study advanced Flow patterns:</strong> Subflows, fault paths, scheduled paths, and the order of execution when multiple automations fire on the same record.',
-      '<strong>Know approval processes deeply:</strong> Cross-object field updates, parallel approvals, recall actions, and dynamic approval routing.',
-      '<strong>Understand change management:</strong> Change sets, deployment strategies, and sandbox types are tested more than in ADM-201.',
+      '<strong>Review security:</strong> Compare delegated administration, sharing rules, Apex-managed sharing, and territory management.',
+      '<strong>Practise advanced flows:</strong> Review subflows, fault paths, scheduled paths, and execution order when several automations run on a record.',
+      '<strong>Study approval processes:</strong> Review field updates, parallel approvals, recall actions, and routing decisions.',
+      '<strong>Review change management:</strong> Compare sandbox types, change sets, and deployment approaches.',
     ],
   },
   certificationCard: {
     code: 'ADM-211',
     description:
-      'Platform Administrator II (ADM-211) tests the harder half of running an org: complex sharing and security, delegated administration, multi-layer automation, auditing, and deployment between environments. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Security and Access and Process Automation (20% each).',
+      'Platform Administrator II (ADM-211) covers advanced administration, including sharing, security, delegated administration, automation, auditing, and deployments. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Security and Access and Process Automation (20% each).',
     examDetails: {
       questions: 60,
       passingScore: '65%',
@@ -77,56 +77,56 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
     blocks: [
       {
         heading: 'The Salesforce Security Model (Layered Access)',
-        body: 'Record access is built in layers: OWD sets the baseline (Private, Public Read Only, Public Read/Write). Role Hierarchy grants managers access to subordinates\' records. Sharing Rules extend access to groups or roles based on ownership or criteria. Manual Sharing grants one-off access. Object and field access is controlled separately by Profiles and Permission Sets. The exam frequently tests which layer to use for a given access requirement, and that access can only be opened wider, never restricted below OWD.',
+        body: 'Org-wide defaults set the baseline for record access. The role hierarchy, sharing rules, and manual sharing can grant more access. Profiles and permission sets control object and field permissions separately. Practise choosing the right access layer for a requirement.',
       },
       {
         heading: 'Advanced Automation: Flow vs Approval Process',
-        body: 'Flows handle complex multi-step logic, branching, loops, and real-time or scheduled automation. Approval Processes handle structured human sign-off workflows with defined approvers, multi-level steps, and approval/rejection actions. The exam tests when to use each, use Approval Processes for discount or contract sign-off scenarios; use Flow for dynamic automation without human involvement. Workflow Rules are legacy and being retired in favor of Flow.',
+        body: 'Flows can carry out multi-step logic, decisions, loops, and scheduled work. Approval processes route records to people for sign-off and define actions for approval or rejection. Compare both tools when a requirement needs human review or automatic processing.',
       },
       {
         heading: 'Delegated Administration and Permission Set Groups',
-        body: 'Delegated Administrators can manage users within defined profiles without full admin access, ideal for HR managers or regional admins. Permission Set Groups bundle multiple permission sets for easier assignment. Muting Permission Sets within a group suppress specific permissions without removing the entire set. The exam tests the difference between these features and when each is appropriate.',
+        body: 'Delegated administration gives selected users limited administration duties without full admin access. Permission Set Groups bundle permissions for assignment; a muting permission set can suppress selected permissions within a group. Practise choosing the right feature for each need.',
       },
       {
         heading: 'Data Management: Duplicate Rules, External IDs, and Custom Metadata',
-        body: 'Matching Rules identify duplicate records based on field comparisons. Duplicate Rules define what happens when duplicates are detected (alert, block, or log). External ID fields enable upsert operations via API and Data Loader, critical for integrations. Custom Metadata Types differ from Custom Settings in that metadata records are deployable via Change Sets and packages, while Custom Settings data must be manually recreated in each org.',
+        body: 'Matching rules identify potential duplicates; duplicate rules decide what happens when a match is found. External ID fields help match records during an upsert. Custom Metadata Type records can be deployed as metadata. Review how configuration data moves between environments.',
       },
       {
         heading: 'Advanced Reporting: Joined Reports and Cross Filters',
-        body: 'Joined Reports combine up to 5 report blocks from different report types in a single view, useful for comparing Opportunities vs. Cases for the same account. Cross Filters let you filter report results based on the presence or absence of related records (e.g., Accounts without Open Opportunities). Both are Advanced Administrator-level reporting features the exam regularly tests, along with report subscriptions, bucket fields, and report types.',
+        body: 'A joined report combines up to five blocks, which can use different report types. A cross filter selects records based on related records, such as accounts without open opportunities. Also review report types, subscriptions, and bucket fields.',
       },
     ],
   },
   scenarioTips: {
     h2: 'How to Pass the Salesforce Advanced Administrator Exam',
     intro:
-      'The Advanced Administrator exam builds on ADM-201 with deeper feature knowledge and architectural judgment. You are expected to know not just what a feature does, but when and why to choose it over alternatives in complex, multi-requirement scenarios.',
+      'This exam asks you to choose the right feature for a more complex requirement. Practise explaining why your choice fits and why the alternatives do not.',
     blocks: [
       {
         heading: 'Advanced Automation: Flows with Custom Metadata',
-        body: 'Know how to use Custom Metadata Types and Custom Settings to drive business logic in Flows without hardcoding values. Understand Flow collection variables, loops, and decision elements for complex multi-step automation.',
+        body: 'Practise using Custom Metadata Types and Custom Settings to supply values to flows. Review collections, loops, and decisions for multi-step automation.',
       },
       {
         heading: 'Change Sets & Deployment',
-        body: 'Know change set limitations (what cannot be deployed, dependent components), the difference between outbound and inbound change sets, and how sandboxes relate to production. Understand the full deployment lifecycle.',
+        body: 'Review what change sets can deploy, their dependencies, and the difference between outbound and inbound sets. Understand how sandboxes support the deployment process.',
       },
       {
         heading: 'Advanced Reporting: Joined Reports & Buckets',
-        body: 'Know when to use Joined Reports to combine data from multiple objects, how bucketing fields replaces formula fields for grouping, and how cross-filter reports restrict records based on related data.',
+        body: 'Use joined reports to bring related views together. Review how buckets group report values and how cross filters select records based on related records.',
       },
       {
         heading: 'Complex Security: Delegated Administration',
-        body: 'Understand how Delegated Administrators work and their limitations. Know how Field-Level Security interacts with page layouts and record access, and how to diagnose access issues using the Access Checker.',
+        body: 'Review what delegated admins can manage. Practise diagnosing access by checking field permissions, page layouts, and record sharing separately.',
       },
       {
         heading: 'Territory Management',
-        body: 'Enterprise Territory Management questions test assignment rules, territory hierarchies, and how territories interact with opportunity and account ownership. Know how to configure and troubleshoot territory-based forecasting.',
+        body: 'Review territory hierarchies and assignment rules. Practise explaining how territory assignments affect account access and forecasting.',
       },
     ],
   },
   nextCertsAfter: {
     heading: 'Next Certifications to Consider',
-    intro: 'After this certification, common next steps in the admin track or consultant track:',
+    intro: 'Consider these credentials as possible next steps:',
     links: [
       { href: '/certifications/administrator', label: 'Platform Administrator (ADM-201)' },
       { href: '/certifications/app-builder', label: 'Platform App Builder' },

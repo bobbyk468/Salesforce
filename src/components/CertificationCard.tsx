@@ -4,7 +4,10 @@ import DifficultyBadge from '@/components/DifficultyBadge'
 import PrerequisiteAlert from '@/components/PrerequisiteAlert'
 import { hasUnverifiedClaudeExamDetails, isUnavailableCredentialExam } from '@/lib/credential-status'
 import { CERT_PREREQUISITES } from '@/lib/cert-prerequisites'
-import { getExamLogistics, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getExamLogistics, getPublishedExamFacts, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertCodeLabel, getCertDisambiguationLead } from '@/lib/cert-alias-registry'
+import { getCertPrimaryName } from '@/lib/cert-name-aliases'
+import { getCredentialStatus } from '@/lib/credential-status'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 export interface ComponentExam {
@@ -58,6 +61,16 @@ export default function CertificationCard({
   const hideExamDetails = hasUnverifiedClaudeExamDetails(slug)
   const retired = isUnavailableCredentialExam(slug)
   const logistics = getExamLogistics(slug)
+  // Quick facts come from the central, guide-verified table whenever it holds
+  // plain numbers, so a stale per-page JSON value cannot contradict it.
+  const published = getPublishedExamFacts(slug)
+  const facts =
+    published && typeof published.questions === 'number'
+      ? { questions: published.questions, passingScore: published.passingScore, duration: published.duration, cost: published.fee }
+      : examDetails
+  const codeLabel = hideExamDetails ? '' : getCertCodeLabel(slug) ?? code
+  const lead = hideExamDetails ? undefined : getCertDisambiguationLead(slug, getCertPrimaryName(slug, title))
+  const status = getCredentialStatus(slug)
   const prerequisites = CERT_PREREQUISITES[slug]
   const required = prerequisites?.requiredPrerequisites ?? (prerequisites?.requiredPrerequisite ? [prerequisites.requiredPrerequisite] : [])
   const prerequisiteText = required.length
@@ -74,13 +87,16 @@ export default function CertificationCard({
       {/* Header: heading with exam name and primary keyword for SEO */}
       <div className="gradient-bg p-6 text-white">
         <div className="flex items-center gap-3 mb-4 flex-wrap">
-          {!hideExamDetails && code && <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">{code}</span>}
+          {!hideExamDetails && codeLabel && <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">{codeLabel}</span>}
           {!hideExamDetails && !retired && <DifficultyBadge slug={slug} size="sm" />}
         </div>
         {headingLevel === 'h1' ? (
           <h1 className="text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>
         ) : (
           <h2 className="text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h2>
+        )}
+        {headingLevel === 'h1' && lead && (
+          <p className="mt-3 text-sm text-white/90 max-w-3xl">{lead}</p>
         )}
       </div>
 
@@ -93,9 +109,34 @@ export default function CertificationCard({
 
         {/* Exam Details */}
         {hideExamDetails ? null : retired ? (
-          <p className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-            Current exam registration and delivery are unavailable. See the issuer notice above for current learning options.
-          </p>
+          <div className="mb-6 overflow-x-auto rounded-lg border border-amber-200">
+            <table className="w-full border-collapse text-left text-sm">
+              <caption className="bg-amber-50 px-4 py-3 text-left font-semibold text-amber-950">
+                {title} historical exam facts (this exam can no longer be booked)
+              </caption>
+              <tbody className="divide-y divide-amber-100">
+                {[
+                  ['Status', status?.label ?? 'Exam unavailable'],
+                  ['Official exam name and code', codeLabel ? `${title} (${codeLabel})` : title],
+                  ...(published
+                    ? [
+                        ['Questions (historical)', String(published.questions)],
+                        ['Time allotted (historical)', published.duration],
+                        ['Passing score (historical)', published.passingScore],
+                        ['Exam fee (historical)', published.fee],
+                        ['Retake fee (historical)', published.retake],
+                      ]
+                    : []),
+                  ['Prerequisite certifications (historical)', prerequisiteText],
+                ].map(([label, value]) => (
+                  <tr key={label}>
+                    <th scope="row" className="w-2/5 bg-gray-50 px-4 py-2 font-medium text-gray-700">{label}</th>
+                    <td className="px-4 py-2 text-gray-900">{value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         ) : componentExams && componentExams.length > 0 ? (
           <div className="mb-6 rounded-lg border border-violet-200 bg-violet-50 p-4">
             <p className="text-sm font-semibold text-gray-900 mb-3">
@@ -120,11 +161,11 @@ export default function CertificationCard({
               <caption className="bg-blue-50 px-4 py-3 text-left font-semibold text-gray-900">{title} exam quick facts</caption>
               <tbody className="divide-y divide-blue-100">
                 {[
-                  ['Official exam name and code', code ? `${title} (${code})` : title],
-                  ['Questions', String(examDetails.questions)],
-                  ['Time allotted', examDetails.duration],
-                  ['Passing score', examDetails.passingScore],
-                  ['Exam fee', examDetails.cost],
+                  ['Official exam name and code', codeLabel ? `${title} (${codeLabel})` : title],
+                  ['Questions', String(facts.questions)],
+                  ['Time allotted', facts.duration],
+                  ['Passing score', facts.passingScore],
+                  ['Exam fee', facts.cost],
                   ...(logistics?.retake ? [['Retake fee', logistics.retake]] : []),
                   ['Prerequisite certifications', prerequisiteText],
                   ['Study guide release', RELEASE_CURRENT],
@@ -140,15 +181,15 @@ export default function CertificationCard({
         )}
 
         {/* Exam weightage by section */}
-        {!hideExamDetails && !retired && examSections && examSections.length > 0 && (
+        {!hideExamDetails && examSections && examSections.length > 0 && (
           <div id="exam-weightage" className="mb-6">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">{examWeightageHeading ?? 'Exam Weightage by Section'}</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">{retired ? `Historical ${examWeightageHeading ?? 'Exam Weightage by Section'}` : examWeightageHeading ?? 'Exam Weightage by Section'}</h2>
             <div className="space-y-3">
               {examSections.map((section, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-center text-sm mb-1.5">
-                      <h3 className="text-gray-700 font-medium pr-2">{i + 1}. {section.name} ({section.percentage}%)</h3>
+                      <h3 className="text-gray-700 font-medium pr-2">{`${i + 1}. ${section.name}`}</h3>
                       <span className="text-salesforce-dark font-bold bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
                         {section.percentage}%
                       </span>

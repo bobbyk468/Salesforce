@@ -112,7 +112,6 @@ import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/
 import type { ReactNode } from 'react'
 
 import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
-import MergedCertContent from '@/components/certifications/MergedCertContent'
 /** Visible text of a segment, used only to decide spacing between segments. */
 function introSegmentText(s: IntroSegment): string {
   if (s.type === 'link') return s.label
@@ -293,7 +292,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         }}
       />
       {hideExamDetails || retired ? (
-        <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{retired ? 'Historical learning notes and practice questions. See the issuer notice above for credential status and current learning options.' : 'Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified.'}</p>
+        retired ? <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">Historical learning notes and practice questions. See the issuer notice above for credential status and current learning options.</p> : null
       ) : body.introLead?.length ? (
         <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
       ) : (
@@ -341,7 +340,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           description={hideExamDetails ? `Independent learning notes and practice questions about ${title}. Credential availability and exam details have not been verified with Anthropic.` : retired ? `Historical learning notes for ${title}. See the issuer notice above for credential status and current learning options.` : card.description}
           examDetails={card.examDetails}
           topics={card.topics}
-          examSections={hideExamDetails || retired ? undefined : examSections}
+          examSections={hideExamDetails ? undefined : examSections}
           h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}
           componentExams={card.componentExams}
@@ -365,8 +364,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <KeyConceptsSection id="key-concepts" h2={hideExamDetails ? 'Learning Concepts' : body.keyConcepts.h2.replace(/ for the exam/ig, '')} blocks={body.keyConcepts.blocks} />
 
         {slug === 'ai-associate' ? <EinsteinTrustLayerDiagram /> : null}
-        {slug === 'claude-certified-architect-foundations' ? <MCPIntegrationDiagram /> : null}
-        {slug === 'claude-certified-architect-professional' ? <AgenticOrchestrationDiagram /> : null}
+        {slug === 'claude-certified-architect-foundations' ? <section aria-label="Mental model"><MCPIntegrationDiagram /></section> : null}
+        {slug === 'claude-certified-architect-professional' ? <section aria-label="Mental model"><AgenticOrchestrationDiagram /></section> : null}
         {slug === 'claude-certified-associate' ? <PromptStructureDiagram /> : null}
         {slug === 'claude-certified-developer' ? <ToolCallingDiagram /> : null}
         {slug === 'sales-cloud' ? <SalesProcessFlowDiagram /> : null}
@@ -456,7 +455,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
             </h2>
             <p className="text-sm text-gray-700 mb-2">{body.nextCertsAfter.intro}</p>
             <ul className="space-y-2 text-sm">
-              {body.nextCertsAfter.links.map((l) => (
+              {body.nextCertsAfter.links.filter((l) => !isUnavailableCredentialExam(l.href.replace('/certifications/', ''))).map((l) => (
                 <li key={l.href}>
                   <Link href={l.href} className="text-salesforce-blue font-medium hover:underline">
                     {l.label}
@@ -468,7 +467,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         ) : null}
 
         {!hideExamDetails && <div id="related-certs"><RelatedCertifications currentSlug={slug} /></div>}
-        <MergedCertContent slug={slug} />
         <CiteThisPage certName={title} slug={slug} year={RELEASE_YEAR} />
       </CertificationPageShell>
     </>

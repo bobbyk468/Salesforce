@@ -40,23 +40,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How long does it take to study for the Salesforce Administrator exam?',
-    answer: 'Most candidates study for 2–4 months for the Administrator exam, investing 8–15 hours per week. This varies significantly by starting experience: professionals who use Salesforce daily may need 4–6 weeks; complete beginners typically need 3–4 months. The exam covers a broad range of platform topics, rushing through material without hands-on practice is the most common cause of first-attempt failures.',
+    answer: 'Most candidates prepare for the Administrator exam over 2–4 months, studying 8–15 hours a week. Your timeline depends on your experience: people who use Salesforce every day may need 4–6 weeks, while beginners may need 3–4 months. The exam covers many platform topics, so include hands-on practice in your plan.',
   },
   {
     question: 'Is Trailhead enough to pass a Salesforce certification exam?',
-    answer: 'Trailhead alone is generally not enough. Trailhead is excellent for conceptual understanding but lacks the exam-focused scenario training needed for the multiple-choice exam format. The most successful candidates combine Trailhead (30–40% of study time), hands-on sandbox practice (30–40%), and practice exam questions (20–30%). Candidates who only use Trailhead often know the concepts but struggle with applying them in scenario-based exam questions.',
+    answer: 'Trailhead is useful for learning concepts, but it may not give you enough practice applying them to exam scenarios. Combine Trailhead (30–40% of study time), hands-on sandbox practice (30–40%), and practice questions (20–30%). Candidates who only read Trailhead material may know the features but struggle with scenario questions.',
   },
   {
     question: 'What is the most effective study method for Salesforce certifications?',
-    answer: 'The most effective study method combines three elements: (1) structured reading: Trailhead trails and the official Exam Guide for your target cert; (2) hands-on practice, actively doing tasks in a sandbox, not just reading about them; and (3) scenario-based practice questions, simulated exam questions that test applied knowledge, not just feature recall. Candidates who skip hands-on practice typically struggle with scenario questions. Building a habit of 60–90 minutes of focused daily study outperforms cramming sessions.',
+    answer: 'Combine three methods: read Trailhead material and the official exam guide, practice tasks in a sandbox, and answer scenario-based questions. Hands-on work helps you apply what you read. A regular 60–90 minute study session each day is more useful than cramming.',
   },
   {
     question: 'How should I use practice questions effectively?',
-    answer: 'Practice questions are most effective when used in two phases: first, in study mode (untimed, reviewing explanations for every answer, correct and incorrect); then, in exam simulation mode (timed, full mock exam). Treat incorrect answers as learning opportunities, not failures. For every wrong answer, understand why the correct answer is right and why each distractor is wrong. Target 75%+ on multiple full mock exams before booking the real exam.',
+    answer: 'Use practice questions in two ways. First, work untimed and read the explanation for every answer. Then take full-length timed mock exams. For each wrong answer, learn why the right option is correct and why the other options are not. Aim for at least 75% on several full mock exams before booking.',
   },
   {
     question: 'Should I buy a paid study course for Salesforce certification?',
-    answer: 'Paid courses (Focus on Force, Udemy, Salesforce Trailhead Academy) can accelerate learning through structured content, but they are not required to pass. Many candidates pass certifications using only Trailhead (free) + hands-on practice (free via Developer Edition or Trailhead playground) + practice questions. A paid course is most valuable for candidates who prefer structured learning or who struggle with self-directed study. The quality of practice varies, prioritise scenario-based practice that mirrors real exam format.',
+    answer: 'Paid courses from providers such as Focus on Force, Udemy, and Salesforce Trailhead Academy can provide structure, but they are not required. Many candidates study with free Trailhead content, a free Developer Edition or Trailhead Playground, and practice questions. A paid course may help if you prefer a guided plan. Choose one with scenario-based practice similar to the exam.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function HowToStudyForSalesforceCertificationPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          A practical, proven study approach for Salesforce certification exams, what methods work, how to structure your study time, and the mistakes that cause most first-attempt failures.
+          Build a study plan for your Salesforce exam. Learn how to combine Trailhead, hands-on practice, and mock exams, and how to avoid common study mistakes.
         </p>
       </div>
 
@@ -84,9 +84,9 @@ export default function HowToStudyForSalesforceCertificationPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">The Three-Pillar Study Method</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { pillar: '1. Conceptual Reading', pct: '30–40%', desc: 'Trailhead trails, official Exam Guide, Release Notes. Build foundational understanding of how features work.', icon: '📖' },
-            { pillar: '2. Hands-On Practice', pct: '30–40%', desc: 'Actively configure features in a Developer Edition or Trailhead Playground. Do not just read, build.', icon: '🖥️' },
-            { pillar: '3. Practice Questions', pct: '20–30%', desc: 'Scenario-based questions that simulate exam conditions. Review every explanation, right and wrong answers.', icon: '✍️' },
+            { pillar: '1. Read and review concepts', pct: '30–40%', desc: 'Use Trailhead trails, the official exam guide, and release notes to learn how the features work.', icon: '📖' },
+            { pillar: '2. Practice hands-on', pct: '30–40%', desc: 'Configure features in a Developer Edition org or Trailhead Playground instead of only reading about them.', icon: '🖥️' },
+            { pillar: '3. Answer practice questions', pct: '20–30%', desc: 'Try scenario-based questions under exam conditions. Read explanations for correct and incorrect answers.', icon: '✍️' },
           ].map((item) => (
             <div key={item.pillar} className="bg-gray-50 rounded-xl p-4">
               <div className="text-2xl mb-2">{item.icon}</div>
@@ -102,12 +102,12 @@ export default function HowToStudyForSalesforceCertificationPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Step-by-Step Study Process</h2>
         <div className="space-y-4">
           {[
-            { step: '1', title: 'Download the official Exam Guide', desc: 'Every Salesforce certification has a free official Exam Guide (available on Salesforce Trailhead). It lists every topic section, weighting, and recommended experience level. Start here; this is your study syllabus.' },
-            { step: '2', title: 'Map Trailhead content to exam sections', desc: 'For each exam section, find the corresponding Trailhead trail or module. Trailhead has a "Prepare for Certification" section for most exams. Work through modules in order of exam weighting, heaviest sections first.' },
-            { step: '3', title: 'Build in a sandbox as you study', desc: 'For every concept you read about, go and do it in a sandbox. Set up a Trailhead Playground (free). If the exam covers "creating validation rules", create validation rules. Hands-on memory is stronger than reading memory.' },
-            { step: '4', title: 'Take practice questions in study mode', desc: 'After covering each exam section, do practice questions on that section, untimed, with full explanations. Read every explanation, not just the ones you got wrong. Build conceptual clarity.' },
-            { step: '5', title: 'Run full timed mock exams', desc: 'In the final 1–2 weeks, take full timed mock exams under real exam conditions: same number of questions, same time limit, no interruptions. Target 75%+ on multiple full mocks before booking.' },
-            { step: '6', title: 'Book the exam with a firm date', desc: 'Book your exam before you feel 100% ready, having a booked date creates urgency that prevents indefinite delay. Most candidates who "wait until they feel ready" wait too long.' },
+            { step: '1', title: 'Get the official exam guide', desc: 'Salesforce provides a free exam guide for each certification. It lists topic areas, their weighting, and recommended experience. Use it to plan what to study.' },
+            { step: '2', title: 'Match Trailhead content to exam topics', desc: 'Find a Trailhead trail or module for each exam section. Many certifications have a "Prepare for Certification" section. Start with the topics that carry the most weight.' },
+            { step: '3', title: 'Practice each feature in a sandbox', desc: 'Try the tasks you read about in a free Trailhead Playground or Developer Edition org. For example, if the exam covers validation rules, create some yourself.' },
+            { step: '4', title: 'Use practice questions while you study', desc: 'After reviewing a section, answer untimed questions about it and read every explanation. Review both the answers you got right and those you missed.' },
+            { step: '5', title: 'Take full timed mock exams', desc: 'In the final 1–2 weeks, take full mock exams with the same number of questions and time limit as the real test. Aim for 75% or higher on several mock exams before booking.' },
+            { step: '6', title: 'Choose an exam date', desc: 'Set a date that gives you time to prepare. A scheduled exam can help you stay on track, but leave enough time for review.' },
           ].map((item) => (
             <div key={item.step} className="flex gap-4">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">{item.step}</div>
@@ -123,11 +123,11 @@ export default function HowToStudyForSalesforceCertificationPage() {
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-amber-900 mb-3">The 5 Most Common Study Mistakes</h2>
         <ul className="space-y-2 text-sm text-amber-800">
-          <li>⚠ <strong>Only using Trailhead:</strong> Trailhead builds knowledge but not exam-taking skill. Practice questions are essential.</li>
-          <li>⚠ <strong>Skipping the sandbox:</strong> Reading about features without doing them produces fragile knowledge that fails under exam pressure.</li>
-          <li>⚠ <strong>Cramming the day before:</strong> Salesforce exams test applied understanding, not recall. Spaced study over weeks beats cramming.</li>
-          <li>⚠ <strong>Booking too early:</strong> If you are scoring below 65% on practice tests, you are not ready. Book after consistently hitting 75%+.</li>
-          <li>⚠ <strong>Ignoring low-weight sections:</strong> Even a 10% section contributes 5–6 questions. Ignoring them costs you points.</li>
+          <li>⚠ <strong>Using only Trailhead:</strong> Reading helps you learn features, but practice questions also help you apply what you know.</li>
+          <li>⚠ <strong>Skipping sandbox practice:</strong> Try the features yourself instead of only reading about them.</li>
+          <li>⚠ <strong>Cramming the day before:</strong> Spread your study across several weeks so you can practice applying the material.</li>
+          <li>⚠ <strong>Booking before you are ready:</strong> If you score below 65% on practice tests, spend more time studying. Aim for 75% or higher consistently before booking.</li>
+          <li>⚠ <strong>Ignoring low-weight topics:</strong> A 10% exam section may still contribute 5–6 questions. Review every section.</li>
         </ul>
       </div>
 
@@ -157,14 +157,14 @@ export default function HowToStudyForSalesforceCertificationPage() {
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
           <li><Link href="/salesforce-certification-passing-score" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce certification passing scores by tier</Link></li>
-          <li><Link href="/salesforce-exam-retake-policy" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce exam retake policy, what happens if you fail?</Link></li>
+          <li><Link href="/salesforce-exam-retake-policy" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce exam retake policy: what happens if you fail?</Link></li>
         </ul>
       </div>
 
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Free Practice Questions</h2>
-        <p className="text-white mb-6">Put the study method into practice, free scenario-based questions for every Salesforce certification.</p>
+        <p className="text-white mb-6">Put your study plan to work with free scenario-based questions for every Salesforce certification.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse All Certifications
         </Link>

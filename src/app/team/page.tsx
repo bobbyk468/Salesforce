@@ -91,22 +91,17 @@ export default function TeamPage() {
         <LastUpdated />
       </div>
       <p className="text-gray-600 mb-8">
-        Content is written and reviewed by Salesforce-certified practitioners with real implementation and exam experience.
+        Our content is written and reviewed by Salesforce-certified practitioners with implementation and exam experience.
       </p>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">Why Editorial Review Matters</h2>
         <div className="space-y-3 text-sm leading-6 text-gray-700">
           <p>
-            Certification pages can become misleading quickly when exam names, section weightage, passing scores, fees, or
-            release terminology changes. Trailblaze Prep treats those details as trust signals, not decoration. The review
-            process checks exam logistics against official Salesforce sources and keeps practical guidance separate from
-            speculative advice.
+            Exam names, section weights, passing scores, fees, and release terms can change. We check exam details against official Salesforce sources and keep practical guidance separate from speculation.
           </p>
           <p>
-            We also avoid leaked questions and braindumps. The goal is to help candidates understand the concepts behind the
-            exam, practise scenario-style reasoning, and choose the right certification path without putting their credential
-            or employer trust at risk.
+            We do not use leaked questions or braindumps. Our goal is to help candidates learn exam concepts, practise scenario-based reasoning, and choose a suitable certification path.
           </p>
         </div>
       </section>
@@ -175,11 +170,11 @@ export default function TeamPage() {
         <h2 className="text-xl font-semibold text-gray-900">How we verify content</h2>
         <ul className="space-y-2.5 text-gray-700">
           {[
-            'Each certification page is mapped directly to the official Salesforce exam outline before writing begins.',
-            'Practice questions are written to test real exam concepts, not surface-level recall.',
-            'Section weightage percentages are sourced from official Salesforce certification guides.',
-            'Pages are reviewed at each Salesforce release to align with updated exam objectives and terminology.',
-            'No braindumps, leaked questions, or copied exam content, ever.',
+            'We map each certification page to the official Salesforce exam outline before writing.',
+            'Practice questions test exam concepts and understanding.',
+            'Section weights come from official Salesforce certification guides.',
+            'We review pages at each Salesforce release for changes to exam objectives and terms.',
+            'We do not use braindumps, leaked questions, or copied exam content.',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
               <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
@@ -193,9 +188,7 @@ export default function TeamPage() {
       <section className="space-y-3 mb-8">
         <h2 className="text-xl font-semibold text-gray-900">What we cover</h2>
         <p className="text-gray-700 text-sm">
-          We cover all 90+ Salesforce certifications across Administrator, Developer, Consultant, Architect,
-          Marketing, Accredited Professional, Tableau, and MuleSoft tracks, each with section-wise exam weightage,
-          prerequisite guidance, exam-day tips, and free practice questions with full explanations.
+          We cover 90+ credentials across Administrator, Developer, Consultant, Architect, Marketing, Accredited Professional, Tableau, and MuleSoft tracks. Resources include exam weights, prerequisite guidance, exam-day tips, and free practice questions with explanations.
         </p>
       </section>
 
@@ -203,7 +196,7 @@ export default function TeamPage() {
       <section className="space-y-3">
         <h2 className="text-xl font-semibold text-gray-900">Contact the editorial team</h2>
         <p className="text-gray-700 text-sm">
-          Found an error, have a question, or want to suggest a topic? Use the{' '}
+          Found an error or want to suggest a topic? Use the{' '}
           <Link href="/contact#contact-form" className="text-salesforce-blue font-medium hover:underline">
             contact form
           </Link>

@@ -48,23 +48,23 @@ const certsBreadcrumb: { name: string; url: string }[] = [
 const faqItems = [
   {
     question: 'How do I find the current Salesforce certification catalog?',
-    answer: 'Check the Salesforce credential catalog for the current list. This directory groups our learning resources by role; Accredited Professional designations differ from certifications, and retired credentials are historical references.',
+    answer: 'Check Salesforce’s credential catalog for the current list. This directory groups study resources by role. Accredited Professional designations are different from certifications, and retired credentials are included for historical reference.',
   },
   {
     question: 'Which Salesforce certification should I explore first?',
-    answer: 'Choose a credential whose objectives match the work you want to do. Platform Administrator covers core administration, while Platform Foundations introduces platform concepts. Read the current issuer guide for prerequisites and recommended experience.',
+    answer: 'Choose a credential whose objectives fit the work you want to do. Platform Administrator covers core administration; Platform Foundations introduces platform concepts. Check the current exam guide for prerequisites and recommended experience.',
   },
   {
     question: 'How much does a Salesforce certification cost?',
-    answer: 'Fees vary by credential, location, taxes, and promotions. Confirm prices and retake terms in the current issuer exam guide and registration portal before booking. Our fee guide is a starting point rather than a price quote.',
+    answer: 'Fees vary by credential, location, taxes, and promotions. Before booking, confirm the current price and retake terms in the issuer’s exam guide and registration portal. Our fee guide is for reference, not a price quote.',
   },
   {
     question: 'How long should I spend preparing?',
-    answer: 'Study time depends on your experience and the exam objectives. Identify unfamiliar topics, practice hands-on tasks, and use original questions to check your understanding. There is no fixed study period that guarantees a pass.',
+    answer: 'Study time depends on your experience and the exam objectives. Identify unfamiliar topics, practise relevant tasks, and use original questions to check your understanding. No fixed study period guarantees a pass.',
   },
   {
     question: 'How do I decide whether a certification fits my career goals?',
-    answer: 'Compare the objectives with your target role, the skills employers in your location request, and the time and cost of preparation. A certification can demonstrate knowledge, but it does not guarantee a job or salary increase.',
+    answer: 'Compare the objectives with your target role, local job requirements, and the time and cost of study. A certification can show knowledge, but it does not guarantee a job or a salary increase.',
   },
 ]
 
@@ -113,10 +113,10 @@ export default function CertificationsIndexPage() {
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Salesforce Certifications: Free Practice Questions &amp; Study Guides</h1>
         <LastUpdated />
         <p className="text-xl text-gray-600 mb-3 max-w-3xl mx-auto">
-          Browse independent study resources across Administrator, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and Designer tracks. Confirm current exam details with the issuer; retired credentials are historical references.
+          Browse independent study resources for Administrator, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and Designer tracks. Check current exam details with the issuer. Retired credentials are shown for historical reference.
         </p>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          New to Salesforce? Start with <Link href="/certifications/administrator" className="text-salesforce-dark hover:underline font-medium">Administrator (ADM-201)</Link>. Already an admin? Progress to <Link href="/certifications/app-builder" className="text-salesforce-dark hover:underline font-medium">App Builder</Link> or a <Link href="/consultant-certification-path" className="text-salesforce-dark hover:underline font-medium">Consultant track</Link>. Working in AI? The <Link href="/certifications/agentforce-specialist" className="text-salesforce-dark hover:underline font-medium">Agentforce Specialist</Link> and <Link href="/certifications/ai-associate" className="text-salesforce-dark hover:underline font-medium">AI Associate</Link> learning resources cover different levels of AI experience. AI Associate retired in February 2026; it is retained here as a historical reference.
+          New to Salesforce? Begin with <Link href="/certifications/administrator" className="text-salesforce-dark hover:underline font-medium">Administrator (ADM-201)</Link>. Already an admin? Consider <Link href="/certifications/app-builder" className="text-salesforce-dark hover:underline font-medium">App Builder</Link> or a <Link href="/consultant-certification-path" className="text-salesforce-dark hover:underline font-medium">Consultant track</Link>. For AI study, the <Link href="/certifications/agentforce-specialist" className="text-salesforce-dark hover:underline font-medium">Agentforce Specialist</Link> and <Link href="/certifications/ai-associate" className="text-salesforce-dark hover:underline font-medium">AI Associate</Link> learning resources cover different levels of AI experience. AI Associate retired in February 2026; it is retained here as a historical reference.
         </p>
       </header>
 
@@ -173,7 +173,7 @@ export default function CertificationsIndexPage() {
       {/* Browse by Role */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Browse Certifications by Role</h2>
-        <p className="text-gray-600 mb-5 text-sm">Each role page lists all certifications in that track with exam details, difficulty ratings, and direct links to practice questions.</p>
+        <p className="text-gray-600 mb-5 text-sm">Each role page lists the credentials in that track, exam details, difficulty ratings, and links to practice questions.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {CERTIFICATION_CATEGORIES.map((category) => (
             <Link

@@ -61,7 +61,7 @@ test('related study and tips pages avoid unverified current-release exam alignme
   // come from the /certifications/data-architect hub, so the release-label
   // assertions that guarded them moved to the hub's own title helper. What
   // still matters here is that the ported copy names no unverified release.
-  assert.match(study, /RELEASE_YEAR/)
+  assert.match(read('src/lib/seo-title-helpers.ts'), /RELEASE_YEAR/)
   assert.doesNotMatch(tips, /RELEASE_CURRENT|Summer ['’]?26/)
   assert.doesNotMatch(study, /RELEASE_CURRENT|Summer ['’]?26/)
 })

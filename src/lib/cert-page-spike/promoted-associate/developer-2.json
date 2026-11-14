@@ -23,8 +23,8 @@
     "heading": "Is the Platform Developer II Exam Hard?",
     "summary": "Platform Developer II is a challenging Salesforce exam. It tests how well you can read Apex and choose a sound design. Questions often ask what happens with many records, within governor limits, or when code needs to recover from a failure.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>70% to pass</strong>, or about 42 correct answers out of 60.",
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
       "<strong>Read and reason about code.</strong> You may need to predict what happens when code processes 200 records or retries a job.",
       "<strong>Check the current exam guide.</strong> Salesforce has changed the requirements associated with this credential, so confirm them before you book."
     ],
@@ -115,20 +115,20 @@
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After Developer",
+    "heading": "Next Certifications After Platform Developer II",
     "intro": "Good next steps after Platform Developer II:",
     "links": [
       {
-        "href": "/certifications/javascript-developer-i",
-        "label": "JavaScript Developer I"
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/certifications/system-architect",
+        "label": "System Architect"
       },
       {
         "href": "/certifications/integration-architect",
-        "label": "Integration Architect"
-      },
-      {
-        "href": "/certifications/application-architect",
-        "label": "Application Architect"
+        "label": "Platform Integration Architect (Plat-Arch-204)"
       },
       {
         "href": "/developer-certification-path",
@@ -409,6 +409,86 @@
         "Creating the same data in each method repeats work and can slow tests.",
         "Fewer assertions do not make a test run faster, and they can reduce test quality.",
         "SeeAllData=true ties tests to org data and can make them fragile and unpredictable."
+      ]
+    },
+    {
+      "question": "A batch job updates invoices with partial success enabled. How should support identify which input rows failed?",
+      "options": [
+        "Check the batch job status after finish",
+        "Read the last updated invoice timestamp",
+        "Query the rows using the batch job ID",
+        "Match each SaveResult to its input row"
+      ],
+      "correctAnswer": 3,
+      "explanation": "SaveResult entries follow the input order. Inspect each failure’s errors and log its source row.",
+      "whyWrong": [
+        "The job status summarizes execution without identifying every row.",
+        "A timestamp cannot explain which input rows failed.",
+        "The async job ID does not identify the affected invoice rows."
+      ]
+    },
+    {
+      "question": "An Apex service queries records for an LWC. It must enforce the caller’s object, field, and record access. Which query mode fits?",
+      "options": [
+        "Run a system-mode SOQL query",
+        "Cache the response in the browser",
+        "Mark the Apex method cacheable",
+        "Use SOQL in USER_MODE"
+      ],
+      "correctAnswer": 3,
+      "explanation": "User-mode SOQL enforces object, field, and record access for the query operation.",
+      "whyWrong": [
+        "System mode does not provide those user access checks by default.",
+        "A browser cache cannot enforce access on the server.",
+        "Cacheability changes how results are fetched and stored."
+      ]
+    },
+    {
+      "question": "A scheduled calculation must be tested without depending on the current date. How should the date be supplied?",
+      "options": [
+        "Fetch the date from the running user",
+        "Read the date from a global constant",
+        "Pass a date into the calculation",
+        "Read the date in every helper method"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Passing the date lets production use its clock while tests exercise a fixed date and boundary cases.",
+      "whyWrong": [
+        "The running user does not make time deterministic.",
+        "A global fixed date would affect production behavior.",
+        "Each helper still depends on a changing clock."
+      ]
+    },
+    {
+      "question": "A service uses an HTTP callout to retrieve exchange rates. What should the unit test use to simulate a timeout response?",
+      "options": [
+        "Change the endpoint to a test org",
+        "Set an HttpCalloutMock response",
+        "Supply a static test exchange rate",
+        "Run the callout after Test.stopTest"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Register an HttpCalloutMock to return a fixed HTTP response, such as 504, without calling the provider.",
+      "whyWrong": [
+        "A test endpoint still makes the result depend on an external service.",
+        "A static rate skips the HTTP error handling path.",
+        "Test.stopTest runs async work but does not supply an HTTP response."
+      ]
+    },
+    {
+      "question": "An Apex team packages an implementation behind an interface. Two consumers need different implementations. What simplifies testing both paths?",
+      "options": [
+        "Create one singleton implementation",
+        "Inject an interface implementation",
+        "Make the interface methods static",
+        "Add a test flag to the implementation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Inject either implementation through the interface and replace it with a test double when isolating callers.",
+      "whyWrong": [
+        "Static methods do not give each consumer a configurable instance.",
+        "A singleton fixes the implementation choice for both consumers.",
+        "A test flag changes production behavior instead of isolating the dependency."
       ]
     }
   ]

@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Designers working on Salesforce projects",
-        "description": "You know UX practice already and need the platform half: SLDS, Lightning App Builder, what can actually be changed and what cannot."
+        "description": "You already understand user experience design and want to apply it within Salesforce, including SLDS, Lightning App Builder, and platform limits."
       },
       {
         "label": "Admins who have become the de facto designer",
-        "description": "Nobody else is deciding how the pages look, so you are. This covers the research and accessibility vocabulary to back up those decisions."
+        "description": "You handle page and workflow choices for your team and want to ground those decisions in user research and accessibility practice."
       },
       {
         "label": "Product designers moving into enterprise software",
-        "description": "Consumer design instincts need adjusting for a platform where users spend eight hours a day and the component library is fixed."
+        "description": "You are bringing product design skills into enterprise software, where people use the platform all day and many interface components follow a shared design system."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the UX Designer Exam Hard?",
-    "summary": "Moderate, and awkward in a specific way: it tests two bodies of knowledge that rarely sit in the same head. One half is design practice, research methods, design thinking, WCAG. The other half is Salesforce configuration, SLDS, App Builder, Dynamic Forms. Designers tend to lose marks on the second; admins on the first.",
+    "summary": "The UX Designer exam combines design practice with Salesforce configuration. Prepare for research methods, design thinking, and WCAG alongside SLDS, Lightning App Builder, and Dynamic Forms. Designers may need more platform practice; administrators may need to review research and accessibility.",
     "bullets": [
-      "<strong>60 questions in 105 minutes.</strong> No code to read, so time is rarely the binding constraint.",
-      "<strong>Around 65% to pass,</strong> which leaves room for roughly 21 wrong.",
-      "<strong>Design thinking phases get asked directly.</strong> A question describes an activity and wants to know whether it belongs to Empathise, Define, Ideate, Prototype or Test.",
-      "<strong>Accessibility is specific, not general.</strong> WCAG 2.1 AA, the four POUR principles, and the actual contrast ratio of 4.5:1 for body text."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "Know the five design thinking phases and the work products associated with each one.",
+      "Review WCAG 2.1 AA, POUR, and contrast requirements: 4.5:1 for normal text and 3:1 for large text."
     ],
-    "passRateGuidance": "Two checks before booking. Can you name a research method appropriate to a question you are handed, and say what it will and will not tell you? And can you look at a page requirement and say whether Dynamic Forms, a compact layout, or neither is the answer? Those two cover most of what the exam does."
+    "passRateGuidance": "Practice matching a research question to a method and describing what its findings can establish. Also review when Lightning App Builder, Dynamic Forms, or a compact layout addresses a page requirement."
   },
   "examFormat": {
     "heading": "UX Designer Exam Format Explained",
-    "intro": "Proctored online or at a test centre. The shape of it:",
-    "scenarioPercent": "Around half the questions describe a situation. Three patterns recur: pick the research method for a stated question, identify which accessibility principle a problem breaches, and choose the Salesforce feature that satisfies a page requirement.",
+    "intro": "The exam is proctored online or at a test center. It combines UX methods with Salesforce design features.",
+    "scenarioPercent": "Many questions present a situation and ask you to choose a research approach, identify an accessibility issue, or select a Salesforce feature that meets a page requirement.",
     "bestWayToPass": [
-      "<strong>Learn the phases by their outputs.</strong> Interviews and journey maps belong to Empathise, a problem statement to Define, sketches to Ideate, and so on. When a question describes an artefact, the phase follows from it.",
-      "<strong>Treat WCAG as facts to know, not principles to grasp.</strong> The contrast ratios, what a text alternative is for, keyboard operability. These are the questions you either get or do not.",
-      "<strong>Open Lightning App Builder and change something.</strong> Add a Dynamic Form, put a visibility rule on a field, edit a compact layout. The feature names stick once you have used them.",
-      "<strong>Separate qualitative from quantitative.</strong> Interviews and usability tests tell you why; surveys and analytics tell you how many. Several questions hinge only on that split."
+      "Connect each design thinking phase to its output: research informs Empathise, a problem statement supports Define, sketches support Ideate, a model supports Prototype, and user feedback supports Test.",
+      "Memorize the WCAG details that appear in practical questions, including contrast, text alternatives, keyboard access, and visible focus.",
+      "Use Lightning App Builder to practice placing Dynamic Forms fields, configuring visibility, and editing compact layouts.",
+      "Separate methods that explain user behavior, such as interviews and usability tests, from surveys and analytics that measure patterns across a larger group."
     ]
   },
   "certificationCard": {
     "code": "UX Designer",
-    "description": "This exam covers user research, wireframing and prototyping, accessibility to WCAG 2.1 AA, and the Salesforce tools you use to apply them: the Lightning Design System, Lightning App Builder, Dynamic Forms and Experience Cloud. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Declarative Design (27%) and Salesforce Lightning Design System (SLDS) (21%).",
+    "description": "The exam covers user research, design thinking, wireframes and prototypes, WCAG 2.1 AA accessibility, and Salesforce tools such as SLDS, Lightning App Builder, Dynamic Forms, and Experience Cloud. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Declarative Design (27%) and Salesforce Lightning Design System (SLDS) (21%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -66,23 +66,23 @@
     "blocks": [
       {
         "heading": "The Five Phases of Design Thinking",
-        "body": "Empathise, Define, Ideate, Prototype, Test. The exam treats these as a vocabulary you need rather than a philosophy, and the fastest route in is through what each phase produces. Empathise produces research: interviews, observation, journey maps, personas. Define narrows that into a problem statement, often written as a point of view or a how-might-we question. Ideate produces options, sketches, crazy eights, affinity diagrams, with the rule that quantity precedes judgement. Prototype produces something a person can react to, from a paper sketch to a clickable mock. Test puts it in front of users and produces findings that send you back round. The phases are iterative rather than a sequence you finish, and questions sometimes check that you know going backwards is normal."
+        "body": "The five phases are Empathise, Define, Ideate, Prototype, and Test. Empathise gathers evidence through interviews, observation, personas, and journey maps. Define turns that evidence into a focused problem statement or how-might-we question. Ideate generates possible solutions, often with sketches or affinity diagrams. Prototype makes an idea tangible for feedback; Test evaluates it with users and produces findings for the next iteration. The process can move between phases as new evidence appears."
       },
       {
         "heading": "Choosing a Research Method",
-        "body": "The most common scenario on this exam hands you a question and asks which method answers it. Qualitative methods explain reasons: interviews surface motivations, contextual inquiry shows what people actually do rather than what they report, usability testing reveals where a design fails and why, with five to eight participants typically enough to find the recurring problems. Quantitative methods measure scale: surveys tell you how widespread an attitude is, analytics show real behaviour at volume, task completion rates and time on task give you a number to compare against. Two specialist methods come up by name. Card sorting asks users to group content and tells you how they expect information to be organised. Tree testing takes a structure you already have and checks whether people can find things in it. Sorting builds the structure, testing validates it."
+        "body": "Choose a research method based on the question. Interviews explore motivations, contextual inquiry observes real tasks, and usability tests uncover where an interface causes difficulty. These qualitative methods help explain why. Surveys and analytics can measure how common a behavior or opinion is. Card sorting helps users group content and informs a proposed information structure; tree testing evaluates whether users can find items in an existing structure."
       },
       {
         "heading": "Wireframes, Prototypes and Handoff",
-        "body": "These sit on a ladder of fidelity, and the exam cares about matching the rung to the purpose. A sketch or low-fidelity wireframe is for agreeing layout and hierarchy cheaply, and its roughness is useful because people criticise it freely. A high-fidelity mock carries real colour, type and spacing and is what you use to agree the visual design. An interactive prototype is for testing flow, where the question is whether someone can get through a task rather than whether a button is the right blue. Handoff to an admin or developer needs more than pictures: the states a component takes, what happens when data is missing or a list is empty, error and validation behaviour, and the responsive rules. Designs that only show the happy path are the ones that get built wrong."
+        "body": "Choose fidelity to match the decision being made. Low-fidelity sketches and wireframes help teams agree on layout before investing in detail. High-fidelity designs communicate final visual treatment. Interactive prototypes help evaluate flows and task completion. Handoff should also describe component states, empty and error cases, validation, and responsive behavior so implementation covers more than the ideal path."
       },
       {
         "heading": "Accessibility: WCAG 2.1 and SLDS",
-        "body": "WCAG organises everything under four principles, POUR. Perceivable means it can be sensed: text alternatives for images, captions for media, and contrast of at least 4.5:1 for normal text and 3:1 for large text. Operable means it can be driven: every interactive element reachable and usable by keyboard, with a visible focus indicator, and no reliance on a mouse or on precise timing. Understandable means it behaves predictably: consistent navigation, clear labels, errors that explain how to fix them. Robust means it works with assistive technology: valid markup and correct ARIA roles and names. The Lightning Design System matters here because its components already meet much of this, which is why building with SLDS and respecting its markup is usually the accessible answer and hand-rolled custom markup usually is not."
+        "body": "WCAG uses four principles: Perceivable, Operable, Understandable, and Robust (POUR). Provide text alternatives, captions, and adequate contrast: at least 4.5:1 for normal text and 3:1 for large text. Make interactions available from a keyboard with visible focus. Use predictable navigation, clear labels, and actionable errors. Valid markup and suitable ARIA names and roles support assistive technology. SLDS components provide an accessible baseline when their intended markup and behavior are preserved."
       },
       {
         "heading": "Lightning App Builder, Dynamic Forms and the Tooling",
-        "body": "This is the half that catches designers out. Lightning App Builder composes record pages from components, with component visibility rules that show or hide based on field values, device or user. Dynamic Forms breaks the old monolithic page layout into individual fields you can place in any section and make conditional, which is how you keep a long record page from overwhelming users. Dynamic Actions does the same for buttons; surfacing only the actions valid in the current context. Compact layouts control what shows in the record highlights panel and in mobile previews, so they decide what a user sees first. Path guides users through stages with key fields and guidance for success. For the exam, the pattern is a requirement such as showing a field only to a certain profile; or only when a status is set, and the answer is the specific feature designed for it."
+        "body": "Lightning App Builder arranges components on record pages and can show or hide components based on rules. Dynamic Forms lets admins place individual fields and set field visibility conditions. Dynamic Actions applies similar context rules to actions. Compact layouts determine the highlights panel and mobile preview content. Path guides users through a process with stage-specific fields and guidance. Match the requirement to the feature that controls that part of the page."
       }
     ]
   },
@@ -92,29 +92,29 @@
     "blocks": [
       {
         "heading": "Phases by Their Artefacts",
-        "body": "Learn which output belongs to which design thinking phase. That mapping answers the phase questions directly."
+        "body": "Use the artifact named in a question to identify the relevant phase, and remember that design thinking can loop back when testing reveals a new need."
       },
       {
         "heading": "WCAG Numbers",
-        "body": "4.5:1 for normal text, 3:1 for large text, keyboard operability, visible focus, text alternatives. Memorise them; they are asked as facts."
+        "body": "Review 4.5:1 for normal text and 3:1 for large text, along with keyboard access, visible focus, and text alternatives."
       },
       {
         "heading": "Qualitative or Quantitative",
-        "body": "Interviews and usability tests explain why. Surveys and analytics measure how many. Most method questions turn on this one distinction."
+        "body": "Use interviews and usability studies to learn why; use surveys and analytics to estimate how many people show a pattern."
       },
       {
         "heading": "Card Sorting Versus Tree Testing",
-        "body": "Sorting discovers how users would organise content. Tree testing checks whether they can navigate a structure you already built."
+        "body": "Card sorting helps develop a content structure. Tree testing checks whether people can navigate a structure that already exists."
       },
       {
         "heading": "Dynamic Forms and Visibility Rules",
-        "body": "Go into Lightning App Builder and set a field to appear only when a picklist has a certain value. The feature names are much easier to recall afterwards."
+        "body": "Practice a field visibility rule in Lightning App Builder so you can recognize when Dynamic Forms is the right tool."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Designer Certifications",
-    "intro": "Where designers usually go next:",
+    "intro": "Build on your UX design knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/strategy-designer",
@@ -166,7 +166,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A team has written a problem statement after three weeks of user interviews. Which design thinking phase have they just completed?",
+      "question": "A team interviewed users for three weeks and then wrote a problem statement. Which design thinking phase did it finish?",
       "options": [
         "Ideate",
         "Test",
@@ -174,79 +174,79 @@
         "Define"
       ],
       "correctAnswer": 3,
-      "explanation": "Define is the phase that turns research into a sharply stated problem.",
+      "explanation": "Define turns research findings into a clear problem statement.",
       "whyWrong": [
-        "Ideate generates options after the problem is defined.",
-        "Testing validates a prototype, which does not exist yet.",
-        "Empathise is the research itself, which came before the statement."
+        "Ideate creates possible solutions after the problem is defined.",
+        "Test checks a prototype, which has not been made yet.",
+        "Empathise is the research phase that came before the problem statement."
       ]
     },
     {
-      "question": "A designer needs to know whether users can find a policy document in the existing navigation. Which method fits?",
+      "question": "A designer wants to know whether users can find a policy in the current navigation. Which method should they use?",
       "options": [
         "A/B testing",
         "A survey",
         "Tree testing",
-        "A card sort"
+        "Card sorting"
       ],
       "correctAnswer": 2,
-      "explanation": "Tree testing checks findability within a structure that already exists.",
+      "explanation": "Tree testing checks whether people can find information in an existing structure.",
       "whyWrong": [
-        "A/B testing compares two variants, which is not the question here.",
-        "A survey captures opinion, not whether someone can navigate.",
-        "Card sorting discovers how users would group content, which is useful when building a structure rather than checking one."
+        "A/B testing compares two versions of something.",
+        "A survey asks people what they think; it does not show whether they can navigate.",
+        "Card sorting shows how people would group information when designing a structure."
       ]
     },
     {
-      "question": "Body text on a custom component is mid-grey on white at a contrast ratio of 3.2:1. Which WCAG 2.1 AA requirement does this fail?",
+      "question": "Text on a custom component has a contrast ratio of 3.2:1 against its background. Which WCAG 2.1 AA rule does it fail for normal text?",
       "options": [
-        "Understandable, because grey is ambiguous",
+        "Understandable, because grey is unclear",
         "Perceivable, because normal text needs at least 4.5:1",
-        "Robust, because grey is simply not a valid colour value",
+        "Robust, because grey is not a valid color",
         "Operable, because the text cannot be clicked"
       ],
       "correctAnswer": 1,
-      "explanation": "Contrast minimums sit under Perceivable, and normal-size text requires 4.5:1.",
+      "explanation": "Contrast is part of Perceivable. Normal-size text needs a contrast ratio of at least 4.5:1.",
       "whyWrong": [
-        "Understandable concerns predictability and clarity of language and behaviour.",
-        "Robust concerns compatibility with assistive technology.",
-        "Operable concerns keyboard and input, not contrast."
+        "Understandable is about clear, predictable content and behavior.",
+        "The stated contrast ratio is below the minimum for normal text.",
+        "Robust is about working with assistive technology; Operable is about input and controls."
       ]
     },
     {
-      "question": "A record page must show a Reason for Discount field only when the Discount field is above zero. What satisfies this?",
+      "question": "A record page should show the Reason for Discount field only when Discount is above zero. What should the team use?",
       "options": [
         "Dynamic Forms with a field visibility rule",
-        "A compact layout",
-        "A new record type",
-        "A validation rule placed onto the object"
+        "A compact layout for the record highlights panel",
+        "A new record type for discount requests",
+        "A validation rule on the object"
       ],
       "correctAnswer": 0,
-      "explanation": "Dynamic Forms allows per-field placement and conditional visibility based on field values.",
+      "explanation": "Dynamic Forms can show or hide a field based on a field value.",
       "whyWrong": [
-        "Compact layouts control the highlights panel, not conditional display in the form.",
-        "Record types are a heavier structural change than this requirement needs.",
-        "A validation rule enforces data entry; it does not hide a field."
+        "Compact layouts control the highlights panel, not field visibility on the form.",
+        "A new record type is more than this requirement needs.",
+        "Validation Rules check data; they do not hide fields."
       ]
     },
     {
-      "question": "A product owner asks why users abandon a multi-step form. Which approach will answer that?",
+      "question": "A product owner wants to know why users abandon a multi-step form. Which research method can answer this?",
       "options": [
-        "Moderated usability testing with a small number of users",
-        "Reviewing page view analytics",
+        "Moderated usability testing with a small group",
+        "Reviewing page-view analytics",
         "Counting support tickets",
-        "A satisfaction survey sent out to every single one of the users"
+        "Sending a satisfaction survey to every user"
       ],
       "correctAnswer": 0,
-      "explanation": "Watching people attempt the task shows where and why they stop, which is a qualitative question.",
+      "explanation": "Watching users try the task can show where they stop and why.",
       "whyWrong": [
-        "Analytics show that abandonment happens without explaining the cause.",
-        "Ticket volume is an indirect signal and only captures people who complained.",
-        "A survey measures attitude at scale but rarely explains a specific failure point."
+        "Analytics can show that users leave, but usually not why.",
+        "Support tickets only include people who report a problem and may not reveal where the form fails.",
+        "A survey can collect opinions but may not show the exact point where users get stuck."
       ]
     },
     {
-      "question": "Which WCAG principle is breached when a dropdown can only be opened with a mouse?",
+      "question": "A dropdown can only be opened with a mouse. Which WCAG principle does this violate?",
       "options": [
         "Understandable",
         "Perceivable",
@@ -254,31 +254,31 @@
         "Robust"
       ],
       "correctAnswer": 2,
-      "explanation": "Operable covers keyboard access and input independence.",
+      "explanation": "Operable includes being able to use controls with a keyboard, not just a mouse.",
       "whyWrong": [
-        "Understandable is about predictable behaviour and clear language.",
-        "Perceivable is about whether content can be sensed, such as contrast and text alternatives.",
-        "Robust is about compatibility with assistive technology."
+        "Understandable concerns clear content and predictable behavior.",
+        "Perceivable concerns whether people can sense content, such as through text alternatives and contrast.",
+        "Robust concerns compatibility with assistive technology."
       ]
     },
     {
-      "question": "Why is building with Lightning Design System components usually the more accessible choice?",
+      "question": "Why are Lightning Design System components usually a good choice for accessibility?",
       "options": [
-        "They load a great deal faster than any hand-written custom markup does",
-        "They cannot be customised",
-        "They bypass WCAG requirements",
-        "They already implement much of the required markup, focus handling and ARIA"
+        "They improve performance by reducing every page load time",
+        "They cannot be customized or extended",
+        "They remove the need to follow WCAG",
+        "They include accessible markup, focus handling, and ARIA support"
       ],
       "correctAnswer": 3,
-      "explanation": "SLDS components are built to meet accessibility requirements, so using them inherits that work.",
+      "explanation": "SLDS components include accessibility features such as suitable markup and focus handling, reducing the work needed to meet accessibility requirements.",
       "whyWrong": [
-        "Performance is a separate concern from accessibility.",
+        "Page speed is a separate concern from accessibility.",
         "SLDS components can be themed and extended.",
-        "Nothing bypasses WCAG; SLDS helps you meet it."
+        "Teams still need to meet WCAG; SLDS helps with that work."
       ]
     },
     {
-      "question": "A stakeholder wants to agree on page layout and hierarchy before any visual design work. What should the designer produce?",
+      "question": "A stakeholder wants to agree on the page layout and information order before visual design begins. What should the designer create?",
       "options": [
         "A written specification only",
         "Low-fidelity wireframes",
@@ -286,123 +286,123 @@
         "A fully styled high-fidelity mock"
       ],
       "correctAnswer": 1,
-      "explanation": "Low fidelity keeps the conversation on structure, and its roughness invites honest criticism.",
+      "explanation": "Low-fidelity wireframes focus the discussion on layout and hierarchy before color and detailed styling.",
       "whyWrong": [
-        "A document alone makes layout hard to evaluate.",
-        "An interactive prototype is for testing flow, which is a later question.",
-        "High fidelity moves the discussion to colour and type too early."
+        "A written document alone can make it hard to review layout.",
+        "An interactive prototype helps test a flow, which is a later step.",
+        "A detailed mock may shift the discussion to color and styling too early."
       ]
     },
     {
-      "question": "What does card sorting tell a designer?",
+      "question": "What can card sorting tell a designer?",
       "options": [
         "Whether a prototype is usable",
-        "How many users prefer a given colour",
-        "How users expect content to be grouped and labelled",
-        "Whether a given page meets the contrast requirements"
+        "How many users prefer a certain color",
+        "How users group and label content",
+        "Whether a page meets contrast rules"
       ],
       "correctAnswer": 2,
-      "explanation": "Card sorting surfaces the user's own mental model of how information belongs together.",
+      "explanation": "Card sorting shows how users expect related information to be grouped and labeled.",
       "whyWrong": [
-        "Usability is established by testing a prototype with tasks.",
-        "Preference at scale is a survey question.",
-        "Contrast is measured, not sorted."
+        "Usability testing checks whether people can use a prototype.",
+        "A survey can measure preferences across many people.",
+        "Contrast is checked against accessibility standards, not with card sorting."
       ]
     },
     {
-      "question": "A long record page overwhelms users, and different teams need different fields. What is the appropriate Salesforce response?",
+      "question": "A long record page overwhelms users, and different teams need different fields. What should the team try?",
       "options": [
-        "Dynamic Forms, placing fields in sections with visibility rules",
-        "Create an entirely separate custom object for each one of the teams",
-        "Train users to scroll",
-        "Remove the fields nobody uses"
+        "Use Dynamic Forms with field visibility rules",
+        "Create separate custom objects for each team’s fields",
+        "Train users to scroll through the long page",
+        "Remove fields that some users do not need"
       ],
       "correctAnswer": 0,
-      "explanation": "Dynamic Forms exists for exactly this: breaking the layout into fields that appear conditionally.",
+      "explanation": "Dynamic Forms lets the team organize fields and show them only when relevant.",
       "whyWrong": [
-        "Separate objects fragment the data model for a presentation problem.",
-        "Training around a design problem leaves the design problem in place.",
-        "Removing fields other teams rely on solves one problem by creating another."
+        "Separate objects would split the data to solve a page-layout problem.",
+        "Training does not fix a page that is hard to use.",
+        "Removing fields could prevent other teams from doing their work."
       ]
     },
     {
-      "question": "Which handoff detail is most often missing and most likely to cause a build to go wrong?",
+      "question": "Which design handoff detail is often missed and can cause implementation problems?",
       "options": [
-        "The designer's rationale document",
+        "The designer’s rationale document",
         "The font file",
-        "A list of competitor products",
-        "Empty, loading and error states"
+        "A list of competitors",
+        "Empty, loading, and error states"
       ],
       "correctAnswer": 3,
-      "explanation": "Designs that show only the populated happy path leave the developer to invent the rest.",
+      "explanation": "If a design only shows the normal, completed state, developers may have to guess what to build for empty, loading, or error situations.",
       "whyWrong": [
-        "Rationale is useful context but does not change what gets built.",
-        "Typography is usually specified and is rarely the gap.",
-        "Competitor research is background, not build detail."
+        "The rationale is useful, but missing interface states can directly change what gets built.",
+        "Fonts should be specified, but the question asks for a common gap in interface behavior.",
+        "Competitor research provides background, not build details."
       ]
     },
     {
-      "question": "Roughly how many participants are typically enough for a usability test to surface the recurring problems?",
+      "question": "How many participants are often enough for a usability test to find recurring problems?",
       "options": [
         "One",
-        "Thirty to fifty",
+        "30 to 50",
         "Five to eight",
         "Several hundred"
       ],
       "correctAnswer": 2,
-      "explanation": "A small number of participants reveals most of the repeat issues, which is why usability testing is cheap to run often.",
+      "explanation": "A small group of about five to eight participants can reveal recurring usability problems.",
       "whyWrong": [
-        "A single participant cannot show you which problems recur.",
-        "Thirty to fifty is the scale of a quantitative study, not a usability test.",
-        "Hundreds of participants is survey or analytics territory."
+        "One participant may reveal a problem, but cannot show whether it recurs.",
+        "A group of 30 to 50 is more typical of a quantitative study.",
+        "Hundreds of participants are usually used for surveys or analytics, not a usability test."
       ]
     },
     {
-      "question": "What does Dynamic Actions control?",
+      "question": "What do Dynamic Actions control on a Salesforce record page?",
       "options": [
-        "Sharing rules on the object",
-        "Which buttons appear, based on record context",
+        "Record sharing rules",
+        "Which buttons appear based on the record context",
         "Which fields are required",
-        "The record highlights panel at the top of the page"
+        "The highlights panel at the top of the page"
       ],
       "correctAnswer": 1,
-      "explanation": "Dynamic Actions surfaces only the actions valid in context, reducing the clutter of a fixed button bar.",
+      "explanation": "Dynamic Actions show the actions that fit the current record context.",
       "whyWrong": [
-        "Sharing is a security configuration, unrelated to action display.",
-        "Field requirements come from the field definition or validation.",
-        "The highlights panel is governed by the compact layout."
+        "Sharing Rules control access to records.",
+        "Field requirements are controlled by field settings or validation logic.",
+        "Compact layouts control the highlights panel."
       ]
     },
     {
-      "question": "A designer wants to know how widespread a complaint about navigation is across 4,000 users. Which method is appropriate?",
+      "question": "A designer wants to measure how many of 4,000 users have the same navigation complaint. Which method fits?",
       "options": [
         "A usability test",
         "A survey",
         "Contextual inquiry",
-        "A card sort"
+        "Card sorting"
       ],
       "correctAnswer": 1,
-      "explanation": "Measuring how many people share an attitude at that scale is what surveys are for.",
+      "explanation": "A survey can measure how widespread an opinion or complaint is across a large group.",
       "whyWrong": [
-        "Usability testing explains specific failures with a handful of participants.",
-        "Contextual inquiry is deep observation of a few people in their own setting.",
-        "Card sorting informs structure rather than measuring prevalence."
+        "Usability tests show how a small group behaves and where they struggle.",
+        "Contextual inquiry closely observes a small number of people in their work setting.",
+        "Card sorting helps design or review how information is grouped."
       ]
     },
     {
-      "question": "Which best describes the relationship between the design thinking phases?",
+      "question": "Which statement best describes the design thinking phases?",
       "options": [
-        "Iterative: testing can send you back a phase",
-        "Interchangeable in any order",
-        "Optional after the first release",
-        "Strictly sequential, and completed once and for all"
+        "They are iterative, and teams can return to an earlier phase",
+        "They can happen in any order and all mean the same thing",
+        "They are optional after the first release",
+        "They follow a strict order, with each phase completed only once"
       ],
       "correctAnswer": 0,
-      "explanation": "The phases loop. Testing frequently sends a team back to redefine the problem or generate new options.",
+      "explanation": "Design thinking is iterative. Testing can show that a team should redefine the problem or create new ideas.",
       "whyWrong": [
-        "There is a logical order even though teams revisit phases.",
-        "Iteration continues after release rather than stopping.",
-        "Treating them as a one-way sequence is the common misunderstanding."
+        "The phases have different purposes, even though teams may return to earlier phases.",
+        "Teams can keep learning and improving after release.",
+        "The phases are revisited; they are not a one-way process."
       ]
     }
   ]

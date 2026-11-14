@@ -47,19 +47,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce admin certification path?',
-    answer: 'The admin path starts with ADM-201 (Salesforce Administrator), then progresses to Advanced Administrator and Platform App Builder, followed by specialist credentials like Service Cloud, Sales Cloud, or Field Service depending on your career focus.',
+    answer: 'Begin with ADM-201 (Salesforce Administrator), then consider Advanced Administrator and Platform App Builder. After that, choose a specialist credential such as Service Cloud, Sales Cloud, or Field Service based on your career goals.',
   },
   {
     question: 'Do you need any prerequisites for the ADM-201 exam?',
-    answer: 'No official prerequisites exist for ADM-201. However, Salesforce recommends 6+ months of hands-on experience. Completing the Salesforce Administrator Trailmix on Trailhead before the exam is strongly advised.',
+    answer: 'ADM-201 has no official prerequisites, but Salesforce recommends 6+ months of hands-on experience. Salesforce also advises completing the Administrator Trailmix on Trailhead before taking the exam.',
   },
   {
     question: 'How long does the Salesforce admin certification path take?',
-    answer: 'ADM-201 takes 1–3 months of study. The full path to multiple specialist certifications typically takes 2–3 years, depending on your pace and access to hands-on project experience.',
+    answer: 'Plan for 1–3 months of study for ADM-201. Earning several specialist certifications usually takes 2–3 years, depending on your pace and access to hands-on project work.',
   },
   {
     question: 'What jobs does Salesforce admin certification lead to?',
-    answer: 'ADM-201 opens roles such as Salesforce Admin ($70–100k), Senior Admin ($90–130k), Business Analyst, Functional Consultant, and Platform Manager. Each additional certification strengthens your position for senior and specialist roles.',
+    answer: 'ADM-201 can support applications for roles such as Salesforce Admin ($70–100k), Senior Admin ($90–130k), Business Analyst, Functional Consultant, and Platform Manager. Additional certifications can help you qualify for senior and specialist roles.',
   },
 ]
 
@@ -74,7 +74,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'None',
     timeEstimate: '6–8 weeks',
-    why: 'ADM-201 is the foundation of the admin track and the most widely held Salesforce credential. It tests every core admin function: security model, automation (Flow Builder), data management, reports and dashboards, and the sales/service application setup. Almost every Salesforce admin role lists this as a requirement; it is the starting point for any admin career path.',
+    why: 'ADM-201 is the foundation of the admin track and the most widely held Salesforce credential. It covers core admin work, including security, Flow Builder, data management, reports, dashboards, and sales and service setup. Many Salesforce admin roles require it, making it a common starting point for this career path.',
     topics: ['Security model (OWD, roles, profiles, permission sets)', 'Flow Builder and approval processes', 'Reports and dashboards', 'Data import and management', 'Cases and Knowledge basics'],
   },
   {
@@ -87,7 +87,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'None (ADM-201 strongly recommended)',
     timeEstimate: '4–6 weeks',
-    why: 'App Builder validates your ability to design and build custom Salesforce applications using declarative tools. It builds directly on ADM-201 fundamentals and adds data modelling depth, complex app design patterns, and Lightning app configuration. Many admin roles expect both ADM-201 and App Builder, together they show full declarative build capability.',
+    why: 'App Builder tests your ability to design and build Salesforce apps with declarative tools. It builds on ADM-201 and adds data modelling, app design, and Lightning app configuration. Some admin roles ask for both ADM-201 and App Builder to show a broader set of declarative skills.',
     topics: ['Custom object modelling', 'Complex field types (formula, roll-up)', 'Lightning app design', 'Page layout and record type strategy', 'Automation design patterns'],
   },
   {
@@ -100,7 +100,7 @@ const pathSteps = [
     passingScore: '65%',
     prereq: 'ADM-201 recommended',
     timeEstimate: '6–8 weeks',
-    why: 'The Advanced Administrator cert goes deeper on every topic from ADM-201: complex automation (advanced Flow patterns, approval processes with conditional logic), advanced security configurations (delegated administration, custom sharing rules, Apex-managed sharing), and advanced reporting (cross-object formulas, joined reports, custom report types). Target this for senior admin roles or before moving to Consultant certs.',
+    why: 'Advanced Administrator builds on ADM-201 with more complex automation, such as advanced Flow patterns and approval processes with conditional logic; advanced security, including delegated administration and custom sharing rules; and advanced reporting, such as joined reports and custom report types. Consider it for senior admin roles or before pursuing consultant certifications.',
     topics: ['Advanced Flow patterns (subflows, fault paths)', 'Delegated administration', 'Complex sharing rules and territory management', 'Change sets and deployment', 'Advanced analytics (joined reports, dynamic dashboards)'],
   },
   {
@@ -113,7 +113,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'ADM-201 required',
     timeEstimate: '6–8 weeks',
-    why: 'Once you have ADM-201 and App Builder, Consultant certifications let you specialise by business domain. Sales Cloud Consultant focuses on CRM implementation, lead-to-opportunity-to-close process, forecasting, and territory management. Service Cloud Consultant focuses on case management, Omni-Channel, entitlements, and Knowledge. Choose the one that matches your current client work or job market target.',
+    why: 'After ADM-201 and App Builder, consultant certifications let you focus on a business area. Sales Cloud Consultant covers CRM implementation, the lead-to-close process, forecasting, and territory management. Service Cloud Consultant covers case management, Omni-Channel, entitlements, and Knowledge. Choose the one that fits your current client work or target role.',
     topics: ['Sales: lead conversion, products/price books, forecasting', 'Service: case management, Omni-Channel routing, entitlements', 'Solution design scenarios', 'Business requirement analysis', 'Deployment and adoption strategy'],
   },
 ]
@@ -132,9 +132,7 @@ export default function AdminCertificationPathPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          The Salesforce administrator certification path starts with ADM-201 and branches into App Builder,
-          Advanced Admin, and Consultant specialisations. This guide maps the optimal sequence based on your
-          current role and career goal.
+          Start with ADM-201, then choose whether to focus on App Builder, Advanced Administrator, or consulting. This guide shows a suggested sequence for different roles and career goals.
         </p>
       </header>
 
@@ -148,10 +146,10 @@ export default function AdminCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Here: Which Cert Based on Your Goal</h2>
         <div className="space-y-2 text-sm text-gray-700">
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>New to Salesforce:</strong> Start with ADM-201. It is the fastest path to a hirable Salesforce credential and the prerequisite for most Consultant certifications.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have ADM-201, want to build custom apps:</strong> Take App Builder next. It pairs naturally with admin work and opens solution design roles.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have ADM-201, targeting senior admin roles:</strong> Advanced Administrator is the direct next step. Many large enterprise orgs list it for Senior Salesforce Administrator positions.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Targeting consulting or implementation roles:</strong> After ADM-201 (+ App Builder optionally), move directly to Sales Cloud or Service Cloud Consultant. These are the most job-market relevant credentials for Salesforce consulting careers.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>New to Salesforce:</strong> Start with ADM-201. It is a common entry credential and a prerequisite for many consultant certifications.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have ADM-201 and want to build custom apps:</strong> Consider App Builder next. It builds on admin skills and can support solution design work.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have ADM-201 and want a senior admin role:</strong> Advanced Administrator is a natural next step. Many large organizations list it for Senior Salesforce Administrator roles.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Want consulting or implementation work:</strong> After ADM-201, you can add App Builder and then pursue Sales Cloud or Service Cloud Consultant.</span></div>
         </div>
       </section>
 
@@ -264,7 +262,7 @@ export default function AdminCertificationPathPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start the Admin Path</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Begin with the ADM-201 study guide and practice questions, or browse the full administrator certification hub:
+          Start with the ADM-201 study guide and practice questions, or explore the full Administrator certification hub:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

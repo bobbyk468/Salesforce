@@ -42,19 +42,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Should I take OmniStudio Developer or Consultant first?',
-    answer: 'There is no official prerequisite, but most candidates take OmniStudio Consultant first. The Consultant exam covers the full OmniStudio toolset (OmniScripts, DataRaptors, FlexCards, Integration Procedures) from a solution design perspective; it is the foundation for understanding what each component does and when to use it. The Developer exam then goes deeper into customisation, Apex extension patterns, and LWC overrides.',
+    answer: 'There is no official prerequisite. Many candidates start with OmniStudio Consultant, which covers OmniScripts, DataRaptors, FlexCards, and Integration Procedures from a solution design perspective. OmniStudio Developer goes further into custom code, Apex extensions, and LWC overrides.',
   },
   {
     question: 'What is the difference between OmniStudio Developer and Consultant exams?',
-    answer: 'OmniStudio Consultant validates that you can design and configure OmniStudio solutions using the declarative toolset, selecting the right component for a business requirement, building DataRaptors, configuring Integration Procedures, and designing FlexCards. OmniStudio Developer validates that you can extend OmniStudio with code: LWC custom components, Apex methods, TypeScript overrides in OmniScripts, and advanced Integration Procedure performance patterns.',
+    answer: 'OmniStudio Consultant covers designing and configuring declarative solutions: choosing components for a business need, building DataRaptors, configuring Integration Procedures, and designing FlexCards. OmniStudio Developer covers code-based extensions, including custom LWC components, Apex methods, TypeScript overrides in OmniScripts, and Integration Procedure performance.',
   },
   {
     question: 'Is OmniStudio Developer harder than OmniStudio Consultant?',
-    answer: 'OmniStudio Developer is generally considered harder because it requires both declarative OmniStudio knowledge AND coding skills (LWC, Apex, TypeScript). OmniStudio Consultant focuses on configuration and design; it is accessible to consultants without deep coding backgrounds. Developer requires hands-on development experience with the OmniStudio SDK.',
+    answer: 'OmniStudio Developer is generally considered harder because it combines declarative OmniStudio knowledge with LWC, Apex, and TypeScript. Consultant focuses on design and configuration, while Developer expects hands-on work with the OmniStudio SDK.',
   },
   {
     question: 'Which industries use OmniStudio certifications most?',
-    answer: 'OmniStudio is used across all Salesforce Industry Cloud implementations: Communications Cloud, Energy & Utilities Cloud, Health Cloud, Financial Services Cloud, Public Sector Solutions, Manufacturing Cloud, and Media Cloud. Professionals working on any Industry Cloud project benefit from OmniStudio certification, as OmniStudio is the underlying technology layer for guided processes and complex integrations in all these clouds.',
+    answer: 'OmniStudio is used in Salesforce industry cloud projects, including Communications, Energy & Utilities, Health, Financial Services, Public Sector Solutions, Manufacturing, and Media Cloud. It supports guided processes and complex integrations in these areas, so the certifications may be useful to people working on industry cloud implementations.',
   },
 ]
 
@@ -72,8 +72,7 @@ export default function OmnistudioDeveloperVsConsultantPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both OmniStudio certifications validate expertise in Salesforce’s Industry Cloud toolset, but they serve
-          different roles. Consultant focuses on configuration and design; Developer adds code-level customisation skills.
+          Both credentials cover Salesforce OmniStudio, but they suit different kinds of work. Consultant focuses on configuration and design; Developer adds code-based customisation.
         </p>
       </header>
 
@@ -131,7 +130,7 @@ export default function OmnistudioDeveloperVsConsultantPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">The 4 Core OmniStudio Components (Both Exams)</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Four OmniStudio Components Covered by Both Exams</h2>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong>: Guided multi-step processes (e.g., customer onboarding, quote creation). Developer exam adds TypeScript overrides and custom LWC steps.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong>: Data extraction, transformation, and loading without code. Developer exam adds custom Apex integration patterns for DataRaptors.</li>
@@ -153,7 +152,7 @@ export default function OmnistudioDeveloperVsConsultantPage() {
       </section>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: OmniStudio Developer or Consultant?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between OmniStudio Developer and Consultant</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>

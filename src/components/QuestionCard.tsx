@@ -58,7 +58,7 @@ function QuestionCard({
   return (
     <div className="bg-gradient-to-br from-white via-blue-50/20 to-white rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg overflow-hidden border border-blue-100/50 hover:shadow-xl hover:border-blue-200 transition-all duration-300 backdrop-blur-sm">
       <div className="bg-gradient-to-r from-salesforce-blue/10 to-salesforce-light/10 px-4 sm:px-6 py-3 sm:py-4 border-b border-salesforce-blue/20">
-        <h3 className="text-salesforce-blue font-semibold text-sm sm:text-base">Question {questionNumber}: {question}</h3>
+        <h3 className="text-salesforce-blue font-semibold text-sm sm:text-base">{`Question ${questionNumber}: ${question}`}</h3>
       </div>
       
       <div className="p-4 sm:p-6 lg:p-8">

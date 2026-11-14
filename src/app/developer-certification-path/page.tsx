@@ -46,19 +46,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce developer certification path?',
-    answer: 'The developer path starts with Platform Developer I (PD1), optionally includes JavaScript Developer I, then advances to Platform Developer II (PD2), and finally Integration Architect for candidates pursuing the architect track.',
+    answer: 'Start with Platform Developer I (PD1). You can also take JavaScript Developer I, then move on to Platform Developer II (PD2). If you want to pursue architecture, consider Integration Architect next.',
   },
   {
     question: 'What is the first Salesforce developer certification to get?',
-    answer: 'Platform Developer I (PD1, exam code CRT-450) is the entry point for all Salesforce developer certifications. It validates Apex fundamentals, SOQL, DML, governor limits, and LWC basics.',
+    answer: 'Platform Developer I (PD1, exam code CRT-450) is the starting point for Salesforce developer certifications. It covers Apex fundamentals, SOQL, DML, governor limits, and basic LWC skills.',
   },
   {
     question: 'How long does it take to become a certified Salesforce developer?',
-    answer: 'PD1 takes 2–3 months of study. Progressing to PD2 typically requires 12–18 months of real Apex project experience after PD1. The full developer-to-architect path usually takes 3–5 years.',
+    answer: 'Plan for 2–3 months of study for PD1. Moving on to PD2 typically requires 12–18 months of real Apex project experience after PD1. The full path from developer to architect usually takes 3–5 years.',
   },
   {
     question: 'Is PD2 required for the Salesforce architect track?',
-    answer: 'PD2 is strongly recommended and often expected for the architect track, though it is not always a hard prerequisite for every architect cert. The CTA panel review effectively requires it as part of a broader cert portfolio.',
+    answer: 'PD2 is strongly recommended and often expected for the architect track, though it is not a formal prerequisite for every architect certification. The CTA panel review effectively expects it as part of a broader certification portfolio.',
   },
 ]
 
@@ -73,7 +73,7 @@ const pathSteps = [
     passingScore: '68%',
     prereq: 'None (ADM-201 recommended)',
     timeEstimate: '6–8 weeks',
-    why: 'PD1 is the entry point for all Salesforce developer certifications. It validates Apex fundamentals, SOQL/DML, governor limits, trigger best practices, and LWC basics. Without PD1, you cannot sit PD2 and most senior developer roles list it as a requirement.',
+    why: 'PD1 is the starting point for Salesforce developer certifications. It covers Apex fundamentals, SOQL and DML, governor limits, trigger best practices, and basic LWC skills. You need PD1 before taking PD2, and many senior developer roles require it.',
     topics: ['Apex triggers and classes', 'SOQL and DML', 'Governor limits', 'LWC basics (@AuraEnabled)', '75% code coverage requirement'],
   },
   {
@@ -86,7 +86,7 @@ const pathSteps = [
     passingScore: '65%',
     prereq: 'None (takes well alongside PD1)',
     timeEstimate: '4–6 weeks',
-    why: 'The JavaScript Developer I cert validates modern JS skills: ES6+, async patterns, testing with Jest, and debugging. It is most valuable if you are building LWC-heavy applications or targeting senior UI developer roles. Take this alongside or after PD1: JavaScript knowledge reinforces LWC study.',
+    why: 'JavaScript Developer I covers modern JavaScript skills, including ES6+, asynchronous patterns, Jest testing, and debugging. It may be useful if you build LWC-heavy apps or want a senior UI developer role. Take it alongside or after PD1; JavaScript knowledge supports LWC study.',
     topics: ['ES6+ features (const/let, arrow functions, destructuring)', 'Promises and async/await', 'DOM manipulation', 'Jest unit testing', 'Module patterns'],
   },
   {
@@ -99,7 +99,7 @@ const pathSteps = [
     passingScore: '65%',
     prereq: 'PD1 certification required',
     timeEstimate: '3–6 months real experience + 4 weeks study',
-    why: 'PD2 is the most respected developer credential and a prerequisite for the architect track. It tests advanced Apex patterns, complex REST/SOAP integrations, performance optimisation, and enterprise design patterns (trigger frameworks, selector/domain/service layer). Most candidates need real project experience before this exam, not just study.',
+    why: 'PD2 is a respected developer credential and a prerequisite for the architect track. It covers advanced Apex patterns, REST and SOAP integrations, performance, and enterprise design patterns such as trigger frameworks and selector, domain, and service layers. Most candidates need project experience as well as study before this exam.',
     topics: ['Advanced Apex design patterns', 'REST and SOAP callouts', 'Platform Events and streaming', 'Named Credentials', 'HttpCalloutMock and WebServiceMock testing'],
   },
   {
@@ -112,7 +112,7 @@ const pathSteps = [
     passingScore: '63%',
     prereq: 'PD2 recommended (not required)',
     timeEstimate: '3–4 months',
-    why: 'The Integration Architecture Designer credential signals senior integration expertise and is on the path toward the Certified Technical Architect (CTA). It covers integration patterns (point-to-point vs hub-and-spoke vs ESB), security protocols, performance considerations, and MuleSoft/middleware decisions. Most relevant for developers moving to technical lead or architect tracks.',
+    why: 'Integration Architect demonstrates advanced integration skills and is part of the path toward Certified Technical Architect (CTA). It covers integration patterns, security protocols, performance, and MuleSoft and middleware decisions. It may suit developers moving into technical lead or architect roles.',
     topics: ['Integration patterns (synchronous vs asynchronous)', 'API design and security (OAuth, JWT)', 'Middleware and ESB decisions', 'Data migration architecture', 'Error handling and retry patterns'],
   },
 ]
@@ -131,9 +131,7 @@ export default function DeveloperCertificationPathPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          The Salesforce developer certification path runs from PD1 (entry-level) through PD2 (senior) to Integration
-          Architecture Designer (architect track). This guide maps the right sequence based on your current
-          experience and career goal.
+          The Salesforce developer path starts with PD1, advances to PD2, and can lead to Integration Architect. This guide suggests a sequence based on your experience and career goal.
         </p>
       </header>
 
@@ -147,10 +145,10 @@ export default function DeveloperCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Here: Which Cert Based on Your Experience</h2>
         <div className="space-y-2 text-sm text-gray-700">
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>New to Salesforce development:</strong> Start with PD1. Build a basic Apex class and trigger first on a free Developer org, hands-on experience makes PD1 significantly easier.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1, building LWC apps:</strong> Take JavaScript Developer I alongside or just before PD2 prep. The JS cert reinforces modern front-end patterns.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1, targeting senior dev roles:</strong> Move to PD2 after 6–12 months of real Apex project experience. Do not rush PD2; it requires applied design pattern knowledge, not just study.</span></div>
-          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Targeting architect track:</strong> PD1 + PD2 + Integration Architecture Designer is the standard developer-to-architect progression. Each cert also earns domain credit toward the CTA panel review.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>New to Salesforce development:</strong> Start with PD1. Practice building a basic Apex class and trigger in a free Developer org to gain hands-on experience.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1 and build LWC apps:</strong> Consider JavaScript Developer I alongside or before PD2 study. It covers modern front-end patterns.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Have PD1 and want a senior developer role:</strong> Consider PD2 after 6–12 months of real Apex project experience. The exam tests applied design patterns as well as technical knowledge.</span></div>
+          <div className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Want to pursue architecture:</strong> PD1, PD2, and Integration Architect form a common developer-to-architect path. Each certification also earns domain credit toward the CTA panel review.</span></div>
         </div>
       </section>
 
@@ -197,7 +195,7 @@ export default function DeveloperCertificationPathPage() {
                 href={`/certifications/${item.slug}`}
                 className="inline-flex items-center gap-1 py-1 text-xs text-salesforce-blue font-medium hover:underline"
               >
-                View study guide + practice questions
+                View study guide and practice questions
                 <ArrowRight className="h-3 w-3" />
               </Link>
             </div>
@@ -247,7 +245,7 @@ export default function DeveloperCertificationPathPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start the Developer Path</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Begin with PD1 practice questions and exam weightage, or browse the full developer certification hub:
+          Start with PD1 practice questions and exam weightings, or explore the full Developer certification hub:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

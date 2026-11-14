@@ -5,41 +5,41 @@
     "personas": [
       {
         "label": "Platform Engineers",
-        "description": "Engineers who design multi-agent systems, configure MCP servers, and build the infrastructure that other developers ship Claude-powered features on top of."
+        "description": "You design agent workflows and need to reason about task boundaries and tool access."
       },
       {
         "label": "DevOps and Infrastructure Leads",
-        "description": "Team leads responsible for integrating Claude Code into CI/CD pipelines, managing CLAUDE.md configuration hierarchies, and enforcing quality gates on AI-generated code changes."
+        "description": "You configure MCP servers or Claude Code for a team."
       },
       {
         "label": "Senior Developers Moving Into Architecture",
-        "description": "Experienced developers who have built Claude integrations and now need to prove they can design reliable, multi-agent workflows with proper orchestration, failure handling, and context management."
+        "description": "You are studying how to make agent systems easier to control and debug."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Claude Certified Architect Foundations Exam Hard?",
-    "summary": "The CCAR-F is a significant step up from the Developer exam. It tests system-design judgment, decomposing problems into agent workflows, choosing MCP transport protocols, configuring Claude Code for team-wide consistency, and designing prompt architectures that stay reliable under production load. Candidates who have designed and operated a real multi-agent system find the exam manageable; those with only single-agent or prototype experience will find the orchestration and reliability domains challenging.",
+    "summary": "This page contains independent practice material about agent workflows, MCP, Claude Code configuration, prompt design and reliability. The credential details have not been independently confirmed.",
     "bullets": [
-      "<strong>720/1000 passing score</strong>: you must perform well across all five domains, especially the heavily weighted Agentic Architecture section.",
-      "<strong>Hands-on system design experience is essential</strong>: candidates who have built an MCP server, configured Claude Code at the team level, and debugged a multi-agent failure loop report the exam aligns closely with real-world problems."
+      "<strong>Exam details:</strong> Confirm the current format, passing score, and eligibility with Anthropic before planning an exam.",
+      "<strong>Practical experience:</strong> Build and troubleshoot agent workflows to apply the concepts in this guide."
     ],
-    "passRateGuidance": "If you can design a multi-agent workflow, explain when to use stdio vs. SSE transport for MCP, and write a CLAUDE.md hierarchy that resolves cleanly, you are ready to book."
+    "passRateGuidance": "Use these independent practice notes to review agent boundaries, tools, context handling and failure behavior. Credential details on this page are unverified, so do not treat the practice material as an official exam outline."
   },
   "examFormat": {
     "heading": "Claude Certified Architect Foundations Exam Format Explained",
     "intro": "The exam is proctored online. Here is the format:",
-    "scenarioPercent": "Almost every question describes a production system with specific constraints, latency requirements, compliance needs, team structure, failure modes, and asks which architectural decision best addresses the scenario. The exam tests tradeoff reasoning, not implementation syntax.",
+    "scenarioPercent": "The practice scenarios ask you to choose an architecture for a stated workflow, tool boundary, context or failure constraint.",
     "bestWayToPass": [
-      "<strong>Build a multi-agent workflow end-to-end:</strong> Implement a coordinator that delegates to subagents, pass context between them, handle failures, and monitor the pipeline, this directly maps to the exam’s largest domain.",
-      "<strong>Stand up an MCP server with real tools:</strong> Expose a database lookup and a file reader, connect them to Claude Code, and debug tool-selection errors by refining your schemas.",
-      "<strong>Configure Claude Code on a real codebase:</strong> Write CLAUDE.md files at different directory levels, create custom slash commands, and set up hooks, the exam tests the configuration hierarchy and conflict-resolution rules.",
-      "<strong>Study failure modes, not just happy paths:</strong> What happens when a tool call fails mid-pipeline, when the context window fills up, or when an agent loops indefinitely? Catalog these scenarios and write recovery strategies for each."
+      "<strong>Build an agent workflow:</strong> Try delegating tasks, passing context, and handling failures between agents.",
+      "<strong>Try an MCP server:</strong> Connect a tool such as a data lookup and review how its schema affects tool selection.",
+      "<strong>Practise Claude Code configuration:</strong> Explore CLAUDE.md files, commands, and hooks in a test codebase.",
+      "<strong>Test failure cases:</strong> Consider tool errors, context limits, and repeated agent actions; plan how to detect and recover from them."
     ]
   },
   "certificationCard": {
     "code": "CCAR-F",
-    "description": "Independent learning notes and practice questions about Claude Certified Architect – Foundations. Credential availability and exam details have not been verified with Anthropic.",
+    "description": "Independent practice material for Claude Certified Architect – Foundations. This is not an official Anthropic exam guide; the availability and details of this credential remain unverified.",
     "examDetails": {
       "questions": 60,
       "passingScore": "720/1000",
@@ -59,49 +59,45 @@
     "blocks": [
       {
         "heading": "Designing Multi-Agent Systems",
-        "body": "You need to decide when a single agent with several tools is enough and when to split work across specialized subagents coordinated by a hub."
+        "body": "Use one agent when the work shares tools and success criteria. Split work when stages need different context, permissions or checks, and define how results return to the coordinator."
       },
       {
         "heading": "MCP Servers and Tool Boundaries",
-        "body": "The Model Context Protocol gives Claude a standardized way to reach databases, APIs, file systems, and other services. split across two, when to use stdio transport (local, single-client) vs. SSE (remote, multi-client), how to write tool schemas tight enough that Claude rarely mis-invokes them, and what security controls to put between the model and your production systems."
+        "body": "MCP provides a standard way for a model client to connect to tools and resources. Keep each tool focused, describe its inputs and outputs, and grant only the access it needs."
       },
       {
-        "heading": "Claude Code for Teams and CI/CD",
-        "body": "Claude Code is a terminal-based coding agent. You need to understand how CLAUDE.md files layer, user-level defaults, repo-root project context, directory-level overrides, and how to write custom slash commands, set permission hooks, and plug Claude Code into continuous integration pipelines so it can review pull requests, run migrations, or enforce style guides automatically."
+        "heading": "Claude Code for Teams",
+        "body": "Project-level instructions can give a team shared context and conventions. Keep them versioned with the codebase and use deterministic checks for rules that must always run."
       },
       {
-        "heading": "Prompt Architecture for Complex Applications",
-        "body": "At the architect level, prompts are system components, not one-off instructions. You need to know how to enforce JSON output via tool-use schemas, build few-shot examples that handle edge cases, and design validation-and-retry loops that feed parsing errors back to Claude so it self-corrects. Expect questions on context-window budgeting, how much of the window to reserve for instructions vs. user content vs. tool results."
+        "heading": "Prompt Design and Context",
+        "body": "A prompt should state the task, constraints and expected output. Remove conflicting examples and return only the context needed for the next step."
       },
       {
-        "heading": "Keeping Systems Reliable as They Scale",
-        "body": "The final domain covers what goes wrong when an agent runs in production. You need iteration limits that stop runaway loops, circuit breakers that pause work and escalate rather than silently failing, context-management strategies for conversations that approach the window limit, and handoff patterns that pass curated summaries between agents instead of dumping entire histories."
+        "heading": "Reliability and Failure Handling",
+        "body": "Set clear stopping conditions, handle temporary failures with bounded retries and make tool errors visible. Test the workflow with both expected and failure cases."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Architect Foundations Exam",
-    "intro": "The CCAR-F rewards system-design instinct more than memorized syntax. If you have designed and operated a production system that uses Claude agents, MCP, or Claude Code at the team level, you are well-positioned. If not, build one first.",
+    "intro": "For each scenario, identify the workflow stages, tools, context limits and failure behavior that matter.",
     "blocks": [
       {
-        "heading": "Build a Multi-Agent Workflow End-to-End",
-        "body": "Pick a task that naturally decomposes, say, research a topic, draft a report, and fact-check the result, and implement it with a coordinator agent that delegates to subagents. Pay attention to how you pass context between agents, where failures happen, and what metrics you would monitor. That experience directly maps to exam questions."
+        "heading": "Split work by responsibility",
+        "body": "Use subagents when tasks have distinct tools, context or acceptance checks."
       },
       {
-        "heading": "Stand Up an MCP Server",
-        "body": "Build a server that exposes two or three tools (a database lookup, a file reader, a webhook sender). Connect it to Claude Code or a custom agent. Notice when Claude mis-selects a tool and ask yourself what you would change in the schema to fix it. That debugging habit is what the MCP questions test."
+        "heading": "Limit tool access",
+        "body": "Give each agent only the tools it needs and keep the tool descriptions explicit."
       },
       {
-        "heading": "Configure Claude Code on a Real Codebase",
-        "body": "Write CLAUDE.md files at different directory levels and observe how Claude Code merges them. Create a custom slash command, set up a pre-commit hook, and run Claude Code in a CI job. The exam tests the configuration hierarchy and conflict-resolution rules, hands-on experience makes those questions obvious."
+        "heading": "Make shared rules reviewable",
+        "body": "Store project conventions in the repository and use hooks or other deterministic controls for mandatory checks."
       },
       {
-        "heading": "Practice Architectural Tradeoff Conversations",
-        "body": "The exam is not about right vs. wrong; it is about better vs. worse given constraints. When you see a question with four plausible answers, ask yourself which option handles the constraint the question emphasized (latency? cost? security? compliance?) without introducing a new failure mode. That lens resolves most ambiguous choices."
-      },
-      {
-        "heading": "Study Failure Modes, Not Just Happy Paths",
-        "body": "What happens when the third tool call in a five-step pipeline fails? What if the model hallucinates a tool name that doesn’t exist? What if the context window fills up mid-conversation? The exam loves these edge cases. Catalog five or six failure scenarios and write down the recovery strategy for each."
+        "heading": "Plan handoffs and retries",
+        "body": "Pass a concise structured summary and set bounded retry behavior for transient failures."
       }
     ]
   },
@@ -155,170 +151,250 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A legal team needs an agent that reads contracts, flags risky clauses and drafts revisions. Which orchestration fits best?",
+      "question": "A legal workflow extracts contract clauses, checks risk and drafts revisions. Which design gives the work clear boundaries?",
       "options": [
-        "A single agent looped over the contract until it stops producing changes",
-        "Three agents working independently on the same contract and merging their output",
-        "A coordinator delegating each stage to a subagent",
-        "One agent that reads, flags and rewrites the whole contract in a single prompt"
+        "A coordinator assigns each stage to a scoped subagent",
+        "Several agents edit the same contract at once",
+        "One agent repeats the full task until output stops changing",
+        "One prompt performs every stage without intermediate review"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A coordinator can delegate distinct stages and review their results; legal revisions still need appropriate human review.",
+      "whyWrong": [
+        "Several agents edit the same contract at once is not the best choice because the scenario calls for A coordinator assigns each stage to a scoped subagent.",
+        "One agent repeats the full task until output stops changing is not the best choice because the scenario calls for A coordinator assigns each stage to a scoped subagent.",
+        "One prompt performs every stage without intermediate review is not the best choice because the scenario calls for A coordinator assigns each stage to a scoped subagent."
+      ]
+    },
+    {
+      "question": "Why should a subagent receive only the tools needed for its task?",
+      "options": [
+        "Every MCP host requires this before connection",
+        "It removes the need for instructions",
+        "It limits unintended actions and makes behavior more predictable",
+        "It guarantees shorter responses"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Limiting tools reduces the actions an agent can take and makes its behavior easier to control.",
+      "whyWrong": [
+        "Every MCP host requires this before connection is not the best choice because the scenario calls for It removes the need for instructions.",
+        "It limits unintended actions and makes behavior more predictable is not the best choice because the scenario calls for It removes the need for instructions.",
+        "It guarantees shorter responses is not the best choice because the scenario calls for It removes the need for instructions."
+      ]
+    },
+    {
+      "question": "An agent repeatedly receives tens of thousands of JSON tokens and loses focus. What is the best first change?",
+      "options": [
+        "Ask the agent to infer missing fields",
+        "Increase context and continue sending the full payload",
+        "Filtered summary, details on demand",
+        "Move the same response to another server"
       ],
       "correctAnswer": 2,
-      "explanation": "Separating extraction, risk assessment and drafting keeps each subagent's job narrow and auditable. A legal revision also needs human review before it counts as final.",
+      "explanation": "Reducing irrelevant context addresses the source of the problem while preserving a path to retrieve details.",
       "whyWrong": [
-        "Looping until the output stabilises is not a termination condition you can reason about for legal text.",
-        "Independent agents with no coordinator duplicate work and give you no defined merge semantics.",
-        "A single prompt covering all three tasks makes failures hard to isolate and the reasoning hard to audit."
+        "Ask the agent to infer missing fields is not the best choice because the scenario calls for Return a filtered summary and provide details on demand.",
+        "Increase context and continue sending the full payload is not the best choice because the scenario calls for Return a filtered summary and provide details on demand.",
+        "Move the same response to another server is not the best choice because the scenario calls for Return a filtered summary and provide details on demand."
       ]
     },
     {
-      "question": "What is the main reason to give a subagent a narrow tool set rather than every available tool?",
+      "question": "What is the basic difference between an MCP resource and an MCP tool?",
       "options": [
-        "It is required before any MCP server can be registered with the host",
-        "It allows the subagent to run without any system prompt at all",
-        "It limits unintended actions and aids predictability",
-        "It makes the subagent's responses shorter and cheaper to generate"
+        "A resource is always faster",
+        "A resource can only be created by the host",
+        "Tools never require access controls",
+        "Resources are readable; tools act"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Resources expose content, while tools are callable operations.",
+      "whyWrong": [
+        "A resource is always faster is not the best choice because the scenario calls for A resource provides content to read; a tool performs an operation.",
+        "A resource can only be created by the host is not the best choice because the scenario calls for A resource provides content to read; a tool performs an operation.",
+        "Tools never require access controls is not the best choice because the scenario calls for A resource provides content to read; a tool performs an operation."
+      ]
+    },
+    {
+      "question": "A team wants shared project conventions when developers use Claude Code. What should it do?",
+      "options": [
+        "Commit shared project configuration",
+        "Ask every developer to copy global settings by hand",
+        "Have one person run every session",
+        "Keep the rules only in an unversioned wiki"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Repository configuration is shared, reviewable and versioned with the project.",
+      "whyWrong": [
+        "Ask every developer to copy global settings by hand is not the best choice because the scenario calls for Commit the project configuration and instructions to the repository.",
+        "Have one person run every session is not the best choice because the scenario calls for Commit the project configuration and instructions to the repository.",
+        "Keep the rules only in an unversioned wiki is not the best choice because the scenario calls for Commit the project configuration and instructions to the repository."
+      ]
+    },
+    {
+      "question": "A rule must run every time before a tool action. Why may a hook be stronger than a prompt instruction?",
+      "options": [
+        "Hooks run only after the session ends",
+        "The harness runs hooks",
+        "Hooks can only be set by a central administrator",
+        "Hooks always use fewer tokens"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A hook is enforced by the harness rather than relying on the model to follow an instruction.",
+      "whyWrong": [
+        "Hooks run only after the session ends is not the best choice because the scenario calls for The harness invokes the hook as part of the workflow.",
+        "Hooks can only be set by a central administrator is not the best choice because the scenario calls for The harness invokes the hook as part of the workflow.",
+        "Hooks always use fewer tokens is not the best choice because the scenario calls for The harness invokes the hook as part of the workflow."
+      ]
+    },
+    {
+      "question": "A long prompt contains examples that disagree with each other and performance is falling. What should be checked first?",
+      "options": [
+        "Whether headings should be moved to the end",
+        "Whether the glossary is alphabetized",
+        "Whether the examples conflict",
+        "Whether all prose should become bullet points"
       ],
       "correctAnswer": 2,
-      "explanation": "Least privilege applies to agents as it does to services: fewer capabilities means a smaller blast radius and more predictable behaviour.",
+      "explanation": "Conflicting examples make the intended behavior ambiguous and should be corrected.",
       "whyWrong": [
-        "There is no such precondition on registering an MCP server.",
-        "A system prompt is still needed regardless of how many tools are exposed.",
-        "Tool count is not what determines response length or cost in any direct way."
+        "Whether headings should be moved to the end is not the best choice because the scenario calls for Whether the examples conflict.",
+        "Whether the glossary is alphabetized is not the best choice because the scenario calls for Whether the examples conflict.",
+        "Whether all prose should become bullet points is not the best choice because the scenario calls for Whether the examples conflict."
       ]
     },
     {
-      "question": "A tool returns 40,000 tokens of JSON on every call, and the agent degrades over a long session. What is the best first change?",
+      "question": "What is exponential backoff intended to handle in a tool pipeline?",
       "options": [
-        "Return a filtered summary, with detail on demand",
-        "Call the tool less often and let the agent infer the missing data",
-        "Raise the context window and keep returning the full payload each time",
-        "Move the tool to a separate MCP server with the same response shape"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The problem is context consumed per call. Returning less by default, with drill-down available, fixes the cause rather than deferring it.",
-      "whyWrong": [
-        "Asking the model to infer data it could retrieve trades a context problem for an accuracy problem.",
-        "A larger window delays the same failure instead of preventing it.",
-        "Relocating the tool does not change what it returns."
-      ]
-    },
-    {
-      "question": "What distinguishes an MCP resource from an MCP tool?",
-      "options": [
-        "A resource can only be defined by the host, never by a server",
-        "A resource is faster to access than a tool in all transports",
-        "A resource requires authentication whereas a tool never does",
-        "A resource is data to read; a tool is an action"
+        "A wrong response schema",
+        "A lack of context",
+        "An ambiguous prompt",
+        "Transient failures"
       ],
       "correctAnswer": 3,
-      "explanation": "Resources are addressable content the model can read. Tools are callable operations with side effects or computed results.",
+      "explanation": "A growing delay between retries helps handle transient failures without repeatedly adding load.",
       "whyWrong": [
-        "Servers define resources; that is their purpose.",
-        "Access speed is an implementation detail, not the defining difference.",
-        "Authentication requirements depend on the server, not on the primitive type."
+        "A wrong response schema is not the best choice because the scenario calls for Temporary failures without adding pressure to an overloaded service.",
+        "A lack of context is not the best choice because the scenario calls for Temporary failures without adding pressure to an overloaded service.",
+        "An ambiguous prompt is not the best choice because the scenario calls for Temporary failures without adding pressure to an overloaded service."
       ]
     },
     {
-      "question": "A team wants every developer to get the same project conventions, allowed commands and context when they run Claude Code. What should they do?",
+      "question": "A research agent needs to hand findings to a drafting agent. What should the coordinator pass?",
       "options": [
-        "Ask each developer to set the same preferences in their own global settings",
-        "Have one developer run all Claude Code sessions for the team",
-        "Document the conventions in the team wiki and rely on code review",
-        "Commit the configuration files to the repository"
+        "A structured summary with the findings the draft needs",
+        "The full transcript, including every tool response",
+        "Only the final sentence",
+        "A live reference that lets the drafting agent query the other agent"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A concise, structured handoff gives the next agent the needed context without carrying irrelevant history.",
+      "whyWrong": [
+        "The full transcript, including every tool response is not the best choice because the scenario calls for A structured summary with the findings the draft needs.",
+        "Only the final sentence is not the best choice because the scenario calls for A structured summary with the findings the draft needs.",
+        "A live reference that lets the drafting agent query the other agent is not the best choice because the scenario calls for A structured summary with the findings the draft needs."
+      ]
+    },
+    {
+      "question": "When is splitting work across subagents most useful?",
+      "options": [
+        "Whenever a task calls more than one tool",
+        "Different tools and success criteria",
+        "Whenever a task takes longer than a minute",
+        "Whenever the prompt exceeds a few hundred words"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Decomposition helps when stages can be scoped and evaluated separately.",
+      "whyWrong": [
+        "Whenever a task calls more than one tool is not the best choice because the scenario calls for When stages need different tools or have different success criteria.",
+        "Whenever a task takes longer than a minute is not the best choice because the scenario calls for When stages need different tools or have different success criteria.",
+        "Whenever the prompt exceeds a few hundred words is not the best choice because the scenario calls for When stages need different tools or have different success criteria."
+      ]
+    },
+    {
+      "question": "An agent must retrieve records but must not modify them. How should access be configured?",
+      "options": [
+        "Grant administrator access so the agent can resolve any issue",
+        "Share another user’s credentials so no permission setup is needed",
+        "Grant scoped read access to only the records needed for the task",
+        "Allow unrestricted record access and rely on prompt instructions"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Grant only the required read access to the records needed for its task.",
+      "whyWrong": [
+        "Broad privileges exceed the read-only requirement and increase potential impact.",
+        "Shared credentials obscure accountability and bypass proper access controls.",
+        "Prompt text is not an access-control boundary."
+      ]
+    },
+    {
+      "question": "Several agents return research findings with conflicting claims. What should the coordinator do?",
+      "options": [
+        "Validate results against the task and sources, then resolve conflicts",
+        "Accept every result and combine the claims without review",
+        "Let agents overwrite one another until only one result remains",
+        "Increase every agent’s permissions so they can settle the conflict"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Check the findings against requirements and sources, then resolve conflicts.",
+      "whyWrong": [
+        "Combining conflicting claims without review can produce an unreliable answer.",
+        "Overwriting hides disagreement instead of resolving it with evidence.",
+        "More permissions do not establish which claim is correct."
+      ]
+    },
+    {
+      "question": "A tool server returns a response with missing required fields. What should the system do?",
+      "options": [
+        "Pass the response directly to a consequential action",
+        "Check the response schema and fail safely when required fields are missing",
+        "Assume omitted values are correct and fill them in without evidence",
+        "Disable logs and continue so the workflow does not stop"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Validate the response and fail safely or request a corrected result.",
+      "whyWrong": [
+        "Missing fields can make downstream actions incorrect or unsafe.",
+        "Inventing missing values can corrupt later decisions.",
+        "Suppressing diagnostics makes invalid responses harder to detect."
+      ]
+    },
+    {
+      "question": "A workflow can send an external payment. Where should authorization be checked?",
+      "options": [
+        "Only in the natural-language prompt to the agent",
+        "After the payment completes, when a reviewer checks the result",
+        "Only in the model’s final explanation of why it acted",
+        "In application logic before execution, with any required confirmation"
       ],
       "correctAnswer": 3,
-      "explanation": "Checking configuration into the repository makes it versioned, reviewable and automatically shared with anyone who clones it.",
+      "explanation": "In application logic before the payment action is executed.",
       "whyWrong": [
-        "Per-developer settings drift immediately and cannot be reviewed.",
-        "Funnelling work through one person is a bottleneck, not an architecture.",
-        "A wiki page is not enforced and is not loaded into the session."
+        "A prompt is not a reliable enforcement point for a consequential action.",
+        "Post-action review cannot prevent an unauthorized payment.",
+        "An explanation does not enforce user authorization or policy."
       ]
     },
     {
-      "question": "Which is the strongest reason to prefer a hook over an instruction in a prompt for a rule that must always hold?",
+      "question": "A small, linear workflow works with one agent. What is a sensible architecture choice?",
       "options": [
-        "The harness runs it, so it cannot be skipped",
-        "A hook runs after the session ends, when nothing can interfere",
-        "A hook can only be configured by an organisation administrator",
-        "A hook consumes fewer tokens than the equivalent instruction"
+        "Add multiple agents even when they do not add needed capability",
+        "Give multiple agents shared write access to the same records",
+        "Start with the simplest design that meets the requirements",
+        "Avoid measuring behavior so the workflow stays easy to operate"
       ],
-      "correctAnswer": 0,
-      "explanation": "Instructions are guidance the model may weigh against other context. Hooks are deterministic code the harness runs.",
+      "correctAnswer": 2,
+      "explanation": "Keep the simpler design and add coordination only if requirements need it.",
       "whyWrong": [
-        "Hooks fire around tool calls during the session, not after it.",
-        "Hooks can be configured at project level; not only centrally.",
-        "Token cost is a minor consideration next to whether the rule is guaranteed."
-      ]
-    },
-    {
-      "question": "A prompt has grown to include task instructions, output format, domain glossary and twelve examples, and accuracy is falling. What should be examined first?",
-      "options": [
-        "Whether the output format section should be moved to the very end",
-        "Whether the examples contradict each other",
-        "Whether the glossary should be alphabetised for easier lookup",
-        "Whether the prompt would perform better written entirely in bullet points"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Contradictory examples are a common and high-impact failure in large prompts, because the model has to resolve a conflict you did not intend to create.",
-      "whyWrong": [
-        "Section position matters far less than internal consistency.",
-        "Ordering a glossary has no bearing on model accuracy.",
-        "Reformatting does not resolve a substantive conflict in the content."
-      ]
-    },
-    {
-      "question": "What problem does a retry with exponential backoff solve in an agent pipeline?",
-      "options": [
-        "Tools that return data in an unexpected schema",
-        "Transient failures, without amplifying load",
-        "Context exhaustion during a long multi-step task",
-        "Incorrect model output caused by an ambiguous prompt"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Backoff is for failures that resolve themselves, and the increasing delay avoids adding to the pressure that caused them.",
-      "whyWrong": [
-        "A schema mismatch fails identically on every retry.",
-        "Context exhaustion needs a change to what is in context, not another attempt.",
-        "Retrying an ambiguous prompt reproduces the same ambiguity."
-      ]
-    },
-    {
-      "question": "A multi-agent workflow must pass findings from a research subagent to a drafting subagent. What should the coordinator pass?",
-      "options": [
-        "A reference to the research subagent so drafting can query it directly",
-        "A structured summary of what drafting needs",
-        "Only the final sentence of the research subagent's response",
-        "The research subagent's entire transcript, including its tool output"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Passing a structured, task-relevant summary keeps the drafting agent's context clean and makes the handoff predictable.",
-      "whyWrong": [
-        "Subagents do not remain available as queryable services after they report.",
-        "One sentence usually discards the substance the drafting step depends on.",
-        "A full transcript floods the next agent's context with material it does not need."
-      ]
-    },
-    {
-      "question": "Which signal best indicates that a task should be decomposed into subagents rather than handled by one agent?",
-      "options": [
-        "Stages differ in tool needs and success criteria",
-        "The task involves calling more than one tool",
-        "The task takes longer than a minute to complete",
-        "The task's prompt is longer than a few hundred words"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Decomposition pays off when stages genuinely differ in what they need and how you judge them, because each can then be scoped and verified separately.",
-      "whyWrong": [
-        "Plenty of single-agent tasks legitimately use several tools.",
-        "Duration is a weak proxy for structural complexity.",
-        "Prompt length alone says nothing about whether stages are separable."
+        "Extra agents add coordination and failure paths without solving a requirement.",
+        "Shared writes can cause conflicts and broaden the impact of mistakes.",
+        "Measurement is useful for understanding reliability even in a simple design."
       ]
     }
   ],
   "introLead": [
     {
       "type": "text",
-      "text": "Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified."
+      "text": "These are independent study topics for architect-level Claude skills. We have not confirmed that Anthropic offers this specific exam or published its format."
     }
   ]
 }

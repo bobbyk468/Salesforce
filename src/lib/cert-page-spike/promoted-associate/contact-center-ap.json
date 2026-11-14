@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Contact Center AP exam for?",
+    "heading": "Who should take the Contact Center AP exam?",
     "personas": [
       {
         "label": "Service Cloud implementers",
-        "description": "You set up routing, voice and digital channels in Service Cloud and want to prove contact centre skills."
+        "description": "You set up Omni-Channel routing, voice, or digital channels and want to prove your contact center skills."
       },
       {
         "label": "Contact center managers",
-        "description": "You run a team of agents and want to understand how the system routes work and measures performance."
+        "description": "You lead an agent team and want to understand how work is routed and measured."
       },
       {
         "label": "Partners delivering contact center projects",
-        "description": "You build Service Cloud Voice, messaging and bot solutions for clients."
+        "description": "You build Service Cloud Voice, messaging, and bot solutions for clients."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Contact Center AP Exam Hard?",
-    "summary": "It is a moderate exam focused on how work reaches agents and how agents handle it. Routing is the biggest topic, followed by voice, bots and digital channels.",
+    "heading": "Is the Contact Center AP exam hard?",
+    "summary": "This exam focuses on how work reaches agents and how agents handle it. Routing is the largest topic, followed by voice, bots, and digital channels.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 66% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
-      "<strong>Routing depth.</strong> Queues, skills, capacity, presence statuses and Omni-Channel flows.",
-      "<strong>Channels.</strong> Service Cloud Voice, messaging, bots and knowledge for self-service."
+      "<strong>60 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>66% to pass</strong>, which is 40 correct answers out of 60.",
+      "<strong>Routing matters:</strong> Study queues, skills, capacity, presence statuses, and Omni-Channel Flows.",
+      "<strong>Know the channels:</strong> Prepare for Service Cloud Voice, messaging, bots, and knowledge-based self-service."
     ],
-    "passRateGuidance": "People who have set up Omni-Channel and at least one voice or messaging channel do best. Before you book. Aim for 80% or more on practice tests."
+    "passRateGuidance": "Hands-on work with Omni-Channel and at least one voice or messaging channel helps. Aim for 80% or higher on timed practice tests before booking."
   },
   "examFormat": {
-    "heading": "Contact Center AP Exam Format Explained",
+    "heading": "Contact Center AP exam format",
     "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a contact centre problem, such as calls going to the wrong team or agents getting too many chats at once, and ask what to change.",
+    "scenarioPercent": "Questions often describe a contact center problem, such as calls reaching the wrong team or agents receiving too many chats. Choose the setting that fixes it.",
     "bestWayToPass": [
-      "<strong>Learn routing options:</strong> Queue-based, skills-based and attribute-based routing, and when each fits.",
-      "<strong>Understand capacity:</strong> How agent capacity and work item size decide how much work an agent gets at once.",
-      "<strong>Know the voice setup:</strong> Service Cloud Voice with Amazon Connect or a partner telephony provider, and how IVR fits in.",
-      "<strong>Plan self-service:</strong> Bots and knowledge articles that answer simple questions before they reach an agent."
+      "<strong>Choose a routing method:</strong> Know when to use queues, skills, or attributes to match work with agents.",
+      "<strong>Set agent capacity:</strong> Learn how capacity and work item size affect the amount of work each agent receives.",
+      "<strong>Understand voice setup:</strong> Know how Service Cloud Voice, Amazon Connect or a partner telephony provider, and IVR fit together.",
+      "<strong>Design self-service:</strong> Use bots and knowledge articles to answer common questions before they reach an agent."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up a contact centre in Service Cloud: routing work to agents, voice and digital channels, bots, knowledge and reporting.",
+    "description": "This exam tests how to set up a Service Cloud contact center, including agent routing, voice and digital channels, bots, knowledge, and reporting. It has 60 scored questions in 75 minutes and a 66% passing score.",
     "examDetails": {
       "questions": 60,
       "passingScore": "66%",
@@ -62,49 +62,49 @@
     "blocks": [
       {
         "heading": "Omni-Channel Routing & Queues",
-        "body": "**Omni-Channel** pushes work, like cases, chats and calls, to agents who are available. **Queue-based routing** sends work to a queue and offers it to any available member. **Skills-based routing** matches work to agents who have the right skills, such as a language or product. **Omni-Channel flows** let you decide routing with logic, for example sending VIP customers to a special team. **Routing configurations** set priority and how much capacity each item uses. Agents set a **presence status**, such as Available for Chat, to show what work they can take."
+        "body": "**Omni-Channel** routes cases, chats, calls, and other work to available agents. **Queue-based routing** offers work to available members of a queue. **Skills-based routing** matches work to agents with the right skills, such as a language or product. **Omni-Channel Flows** can use logic, such as sending VIP customers to a specialist team. **Routing configurations** set priority and how much capacity each work item uses. Agents choose a **presence status** to show which types of work they can take."
       },
       {
         "heading": "Service Cloud Voice & CTI Integration",
-        "body": "**Service Cloud Voice** brings phone calls into the Service Console, with the call, transcript and customer record on one screen. It works with **Amazon Connect** or with partner telephony providers. Calls can be routed through Omni-Channel alongside other work. The **IVR** (the phone menu) and contact flows are built in the telephony system and can look up Salesforce data to route calls. Real-time transcription lets supervisors see what is happening and lets AI suggest next steps."
+        "body": "**Service Cloud Voice** brings phone calls into the Service Console alongside the customer record and transcript. It can use **Amazon Connect** or a partner telephony provider. Calls can be routed through Omni-Channel with other work. The **IVR** (phone menu) and contact flows are set up in the telephony system, which can look up Salesforce data. Real-time transcription can help supervisors follow calls and can support AI suggestions."
       },
       {
         "heading": "Einstein Bots & Digital Engagement",
-        "body": "Customers can reach the business through **messaging** channels such as web chat, in-app messaging, SMS and WhatsApp. **Bots**, including Einstein Bots and Agentforce agents, can answer common questions, collect details and hand over to a person when needed. A good handover passes the conversation and details to the agent so the customer doesn't repeat themselves. Messaging sessions can be routed through Omni-Channel just like cases and calls."
+        "body": "Customers can contact a business through **messaging** such as web chat, in-app messaging, SMS, and WhatsApp. **Bots**, including Einstein Bots and Agentforce agents, can answer common questions, collect details, and hand a conversation to a person. Pass the conversation and details to the agent so the customer does not have to repeat them. Omni-Channel can route messaging sessions as it routes cases and calls."
       },
       {
         "heading": "Knowledge Management & Deflection",
-        "body": "**Salesforce Knowledge** holds articles that answer common questions. Agents can search and attach articles to cases. Customers can find them on a help site, and bots can suggest them in chat. When customers solve problems themselves, it is called **deflection**, and it reduces the number of contacts. Articles go through a draft, review and publish process, and can be shown to different audiences, such as internal agents only or the public."
+        "body": "Knowledge articles can support several contact-center channels: agents search for and attach answers to cases, help sites publish self-service content, and bots can suggest articles during chat. When the customer resolves an issue without agent help, the contact center records a deflected interaction. Keep article publishing and audience visibility in mind when planning which answers each channel can surface."
       },
       {
         "heading": "Reporting & Contact Center Analytics",
-        "body": "Supervisors use **Omni Supervisor** to watch queues, agent status and wait times in real time, and can reassign work. Reports and dashboards show average handle time, first contact resolution, wait time, abandonment rate and customer satisfaction. Service Cloud Voice and messaging add call and conversation data. Use these numbers to adjust staffing, routing rules and bot content."
+        "body": "**Omni Supervisor** lets supervisors monitor queues, agent status, and wait times in real time, and reassign work. Reports and dashboards can show average handle time, first contact resolution, wait time, abandonment rate, and customer satisfaction. Use these measures to review staffing, routing, and bot content."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Contact Center Accredited Professional Exam",
-    "intro": "Most questions are about getting the right work to the right agent at the right time. Think about skills, capacity and priority.",
+    "h2": "How to pass the Contact Center AP exam",
+    "intro": "Many questions ask how to get the right work to the right agent at the right time. Check skills, capacity, and priority before choosing a setting.",
     "blocks": [
       {
         "heading": "Service Cloud Voice Architecture",
-        "body": "Voice runs through Amazon Connect or a partner provider. The phone menu lives in the telephony system. The agent works in the Service Console."
+        "body": "Voice uses Amazon Connect or a partner provider. The phone menu is set up in the telephony system, while agents handle calls in the Service Console."
       },
       {
         "heading": "Omni-Channel Routing for Contact Center",
-        "body": "Queue-based for simple setups, skills-based when agents differ by language or product, flows when routing needs logic."
+        "body": "Use queues for straightforward routing, skills when agents have different abilities, and Omni-Channel Flows when routing needs decision logic."
       },
       {
         "heading": "IVR Design & Self-Service",
-        "body": "Use the IVR to identify the caller and their reason, then route. Offer self-service for simple tasks like balance checks."
+        "body": "Use an IVR to identify the caller and reason for calling, then route the call. Offer self-service for simple requests."
       },
       {
         "heading": "Agent Experience Configuration",
-        "body": "The Service Console with macros, quick text and knowledge helps agents work faster."
+        "body": "Macros, Quick Text, and Knowledge can help agents resolve cases faster in the Service Console."
       },
       {
         "heading": "Reporting & Analytics",
-        "body": "Omni Supervisor for live monitoring. Reports for handle time, wait time, resolution and satisfaction."
+        "body": "Use Omni Supervisor for live queues and agent status. Reports help track handle time, wait time, resolution, and satisfaction."
       }
     ]
   },
@@ -166,119 +166,119 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Spanish-speaking customers keep reaching agents who only speak English. What routing approach fixes this?",
+      "question": "Spanish-speaking customers are reaching agents who speak only English. Which routing method can fix this?",
       "options": [
+        "Spanish skill-based routing",
+        "Queue-based routing to a shared team",
         "Lower the case priority",
-        "Queue-based routing sending everything to one large queue",
-        "Skills-based routing with a Spanish language skill",
         "Increase agent capacity"
       ],
-      "correctAnswer": 2,
-      "explanation": "Skills-based routing sends work only to agents with the required skill, such as a language.",
-      "whyWrong": [
-        "Priority changes order, not who receives it.",
-        "One queue offers work to anyone, regardless of language.",
-        "More capacity doesn't fix who gets the work."
-      ]
-    },
-    {
-      "question": "Agents are getting too many chats at once and response times are suffering. What should be adjusted?",
-      "options": [
-        "Agent capacity and the size each chat uses",
-        "The IVR menu",
-        "The case page layout",
-        "The layout used for the knowledge articles themselves"
-      ],
       "correctAnswer": 0,
-      "explanation": "Capacity settings control how much work an agent receives at the same time.",
+      "explanation": "Skills-based routing sends work only to agents with the needed skill, such as speaking Spanish.",
       "whyWrong": [
-        "The IVR handles phone calls, not chats.",
-        "Page layouts don't affect routing.",
-        "Article layout doesn't affect how many chats agents get."
+        "",
+        "Priority changes the order of work, not which agents receive it.",
+        "More capacity does not match customers with the right language skill."
       ]
     },
     {
-      "question": "VIP customers should go straight to a senior team, while others follow normal routing. What is the most flexible way?",
+      "question": "Agents receive too many chats at once and response times are getting worse. What should the admin adjust?",
       "options": [
-        "A knowledge article",
-        "An Omni-Channel flow that checks and routes",
-        "Manual assignment carried out by a supervisor each time",
-        "A separate org for VIPs"
+        "The IVR menu and phone options",
+        "Set capacity and chat size",
+        "The Case page layout",
+        "The email routing profile"
       ],
       "correctAnswer": 1,
-      "explanation": "Omni-Channel flows let you apply logic, like VIP status, when routing work.",
+      "explanation": "Capacity settings control how much work an agent can receive at once. Adjust the capacity and the amount each chat uses.",
       "whyWrong": [
-        "Knowledge articles don't route work.",
-        "Manual assignment is slow and inconsistent.",
-        "A separate org is far too much for this."
+        "The IVR handles phone calls, not chats.",
+        "Page layouts do not control routing.",
+        "Email routing settings do not control chat capacity."
       ]
     },
     {
-      "question": "Phone calls, the customer record and a live transcript should appear together in the Service Console. What provides this?",
+      "question": "VIP customers should go to a senior team while other customers use normal routing. What is the most flexible setup?",
       "options": [
-        "Email-to-Case handling",
+        "A Knowledge article for VIP customers",
+        "Manual assignment by a supervisor",
+        "Omni-Channel Flow for VIP routing",
+        "A separate Salesforce org"
+      ],
+      "correctAnswer": 2,
+      "explanation": "An Omni-Channel Flow can check customer details, such as VIP status, and route the work based on that information.",
+      "whyWrong": [
+        "Knowledge articles provide information; they do not route work.",
+        "Manual assignment is slow and may be inconsistent.",
+        "A separate org is more than this routing need requires."
+      ]
+    },
+    {
+      "question": "Agents need the phone call, customer record, and live transcript together in the Service Console. What provides this?",
+      "options": [
+        "Email-to-Case",
         "Web-to-Lead",
         "Service Cloud Voice",
         "A dashboard"
       ],
-      "correctAnswer": 2,
-      "explanation": "Service Cloud Voice brings calls into the console with the customer record and transcription.",
+      "correctAnswer": 3,
+      "explanation": "Service Cloud Voice brings calls into the Service Console with customer information and transcription.",
       "whyWrong": [
-        "Email-to-Case handles emails.",
-        "Web-to-Lead captures leads from a web form.",
-        "Dashboards show summary data."
+        "Email-to-Case handles email messages.",
+        "Web-to-Lead captures leads from a website form.",
+        ""
       ]
     },
     {
-      "question": "Where is the phone menu (press 1 for billing, 2 for support) usually built when using Service Cloud Voice with Amazon Connect?",
+      "question": "When using Service Cloud Voice with Amazon Connect, where is the “press 1 for billing” phone menu usually built?",
       "options": [
-        "In a knowledge article",
         "In Amazon Connect contact flows",
-        "In a standard Salesforce page layout",
-        "In a validation rule"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The IVR and contact flows live in the telephony system, which can look up Salesforce data to route calls.",
-      "whyWrong": [
-        "Articles hold answers.",
-        "Page layouts arrange record pages.",
-        "Validation rules check data on save."
-      ]
-    },
-    {
-      "question": "Many customers ask the same simple question about delivery times. How can the business reduce chats about it?",
-      "options": [
-        "Lower the priority assigned to the chat channel",
-        "Remove the chat button",
-        "A bot answers with an article, then hands over",
-        "Hire more agents"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Bots with knowledge can answer common questions, which deflects simple contacts away from agents.",
-      "whyWrong": [
-        "Lower priority only delays the answer.",
-        "Removing chat hurts customers.",
-        "More agents cost more and don't reduce volume."
-      ]
-    },
-    {
-      "question": "When a bot hands a chat to an agent, what should the handover include?",
-      "options": [
-        "The conversation so far and details the bot collected",
-        "A link to the bot's settings",
-        "Nothing at all, because the agent simply has to start fresh",
-        "Only the customer's name"
+        "In a Salesforce Knowledge article",
+        "In a Salesforce page layout",
+        "In a Validation Rule"
       ],
       "correctAnswer": 0,
-      "explanation": "Passing the conversation and details means the customer doesn't have to repeat themselves.",
+      "explanation": "The IVR and contact flows are set up in the telephony system. They can use Salesforce data to help route calls.",
       "whyWrong": [
-        "Bot settings are for admins.",
-        "Starting fresh frustrates the customer.",
-        "A name alone isn't enough to help."
+        "Knowledge articles provide answers, not phone menus.",
+        "Page layouts arrange record pages.",
+        "Validation Rules check record data when users save it."
       ]
     },
     {
-      "question": "A supervisor wants to see in real time which agents are busy and how long customers are waiting. What should they use?",
+      "question": "Customers ask the same simple delivery question many times. What can reduce chats about it?",
+      "options": [
+        "Lower the chat channel’s priority",
+        "Bot answer then agent handoff",
+        "Remove the chat option",
+        "Hire more agents"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A bot can answer common questions with Knowledge and hand the conversation to an agent when needed.",
+      "whyWrong": [
+        "Lower priority delays a response but does not answer the question.",
+        "Removing chat makes it harder for customers to get help.",
+        "More agents may handle the volume but do not reduce repeated questions."
+      ]
+    },
+    {
+      "question": "When a bot transfers a chat to an agent, what information should it pass along?",
+      "options": [
+        "Bot setup link and configuration notes",
+        "Customer name and chosen topic only",
+        "Pass the chat and collected details",
+        "A fresh chat with no prior messages"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Passing the conversation and collected details helps the agent continue without asking the customer to repeat information.",
+      "whyWrong": [
+        "",
+        "A name alone may not give the agent enough context.",
+        "Starting over makes the customer repeat what they already told the bot."
+      ]
+    },
+    {
+      "question": "A supervisor wants to see live agent status and customer wait times. Which tool should they use?",
       "options": [
         "Setup Audit Trail",
         "A monthly report",
@@ -286,123 +286,123 @@
         "Omni Supervisor"
       ],
       "correctAnswer": 3,
-      "explanation": "Omni Supervisor shows live queue and agent status, and lets supervisors reassign work.",
+      "explanation": "Omni Supervisor shows queue and agent status in real time and lets supervisors reassign work.",
       "whyWrong": [
-        "Audit Trail tracks setup changes.",
-        "Monthly reports are not real time.",
-        "Data Loader moves data."
+        "Setup Audit Trail records configuration changes.",
+        "A monthly report is not a live view.",
+        "Data Loader moves records in bulk."
       ]
     },
     {
-      "question": "How does an agent show they are ready to take chats but not phone calls?",
+      "question": "An agent should be available for chats but not phone calls. What should they do?",
       "options": [
-        "A presence status covering chat",
-        "Log out of Salesforce altogether",
-        "Turn off the console",
-        "Change their profile"
+        "Chat-enabled presence status",
+        "Sign out of Salesforce completely",
+        "Close the Service Console",
+        "Change their user profile"
       ],
       "correctAnswer": 0,
       "explanation": "Presence statuses tell Omni-Channel which kinds of work an agent can receive.",
       "whyWrong": [
-        "Logging out stops all work.",
-        "Turning off the console stops all work.",
-        "Profiles control permissions, not live availability."
+        "",
+        "Closing the console would stop the agent from handling work there.",
+        "A profile controls permissions, not live availability."
       ]
     },
     {
-      "question": "Agents write the same reply to password reset requests many times a day. What saves them time?",
+      "question": "Agents send the same password-reset reply many times each day. What can save time?",
       "options": [
-        "A new IVR menu",
-        "A larger configured capacity",
-        "A new queue",
-        "Quick text or a macro"
+        "Set up a new IVR menu",
+        "Quick Text or Macro",
+        "Increase agent capacity",
+        "Create another queue"
       ],
-      "correctAnswer": 3,
-      "explanation": "Quick text inserts standard replies, and macros can run several steps at once.",
+      "correctAnswer": 1,
+      "explanation": "Quick Text inserts a saved response. A Macro can run several steps at once.",
       "whyWrong": [
-        "The IVR is for phone calls.",
-        "Capacity changes how much work agents get.",
-        "A queue changes routing, not replies."
+        "An IVR menu is for phone calls.",
+        "Capacity controls how much work agents receive.",
+        "A queue routes work; it does not provide a saved reply."
       ]
     },
     {
-      "question": "Which measure shows how often customers hang up or leave before reaching an agent?",
+      "question": "Which measure shows how often customers leave before an agent answers?",
       "options": [
-        "First contact resolution",
-        "Number of knowledge articles",
+        "First Contact Resolution",
+        "Knowledge article count",
         "Abandonment rate",
         "Average handle time"
       ],
       "correctAnswer": 2,
-      "explanation": "Abandonment rate tracks contacts that end before an agent answers.",
+      "explanation": "Abandonment rate measures contacts that end before an agent answers.",
       "whyWrong": [
-        "First contact resolution measures problems solved on the first try.",
-        "Article count isn't a contact measure.",
-        "Handle time measures how long agents spend."
+        "First Contact Resolution measures issues solved on the first contact.",
+        "Article count is not a contact outcome measure.",
+        "Average handle time measures how long an agent spends on a contact."
       ]
     },
     {
-      "question": "Customers want to message the business on WhatsApp and have those conversations handled by agents in Salesforce. What should be set up?",
+      "question": "Customers want to use WhatsApp and have their conversations handled by Salesforce agents. What should be set up?",
       "options": [
-        "Web-to-Case",
-        "A WhatsApp channel routed through Omni-Channel",
-        "Email-to-Case handling",
-        "A public-facing knowledge base and nothing more"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Messaging supports channels like WhatsApp, and sessions can be routed to agents through Omni-Channel.",
-      "whyWrong": [
-        "Web-to-Case creates cases from a web form.",
-        "Email-to-Case handles emails.",
-        "Knowledge alone can't hold a conversation."
-      ]
-    },
-    {
-      "question": "A knowledge article should be visible to agents but not to customers on the help site. How is this controlled?",
-      "options": [
-        "Article visibility settings",
-        "Changing the case priority",
-        "Deleting the article",
-        "Putting it in a different org"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Knowledge articles have visibility settings for internal users, customers, partners and the public.",
-      "whyWrong": [
-        "Case priority doesn't affect articles.",
-        "Deleting it removes it for agents too.",
-        "A different org is unnecessary."
-      ]
-    },
-    {
-      "question": "Urgent cases should be offered to agents before normal ones in the same queue. What should be set?",
-      "options": [
-        "A considerably longer case description field",
-        "More agents in the queue",
-        "A different page layout",
-        "A higher routing priority for urgent cases"
+        "Web-to-Case from a web form",
+        "Email-to-Case for email requests",
+        "A public Knowledge site only",
+        "Omni-Channel WhatsApp routing"
       ],
       "correctAnswer": 3,
-      "explanation": "Routing priority decides which work is offered first.",
+      "explanation": "Messaging supports channels such as WhatsApp, and Omni-Channel can route sessions to agents.",
       "whyWrong": [
-        "Description length doesn't affect routing.",
-        "More agents doesn't change order.",
-        "Layouts don't affect routing."
+        "Web-to-Case creates cases from a website form.",
+        "Email-to-Case handles email requests.",
+        "A Knowledge site can provide information but does not handle a live conversation."
       ]
     },
     {
-      "question": "A manager wants to know how many problems are solved during the customer's first contact. Which measure fits?",
+      "question": "A Knowledge article should be available to agents but hidden from customers on the help site. How should this be controlled?",
       "options": [
-        "The average speed to answer",
-        "First contact resolution",
-        "Abandonment rate",
-        "Agent utilisation"
+        "Article visibility settings",
+        "Case priority",
+        "Delete the article",
+        "Move the article to a separate org"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Knowledge visibility settings control which audiences can see an article, including internal users and the public.",
+      "whyWrong": [
+        "",
+        "Deleting the article also removes it for agents.",
+        "A separate org is unnecessary for controlling article visibility."
+      ]
+    },
+    {
+      "question": "Urgent cases should be offered before normal cases in the same queue. What should the admin set?",
+      "options": [
+        "Make the Case description field longer",
+        "Set urgent-case priority",
+        "Add more agents to the queue",
+        "Use a different page layout"
       ],
       "correctAnswer": 1,
-      "explanation": "First contact resolution shows the share of issues solved without a follow-up.",
+      "explanation": "Routing priority determines which work is offered first.",
+      "whyWrong": [
+        "Description length does not affect routing.",
+        "More agents change capacity, not the order of work.",
+        "Page layouts do not set routing order."
+      ]
+    },
+    {
+      "question": "A manager wants to measure how many issues are solved during the customer’s first contact. Which measure fits?",
+      "options": [
+        "Average time before an agent answers",
+        "Abandonment rate",
+        "First Contact Resolution",
+        "Agent utilization"
+      ],
+      "correctAnswer": 2,
+      "explanation": "First Contact Resolution shows the share of issues solved without a follow-up contact.",
       "whyWrong": [
         "Speed to answer measures wait time.",
-        "Abandonment measures customers who leave.",
-        "Utilisation measures how busy agents are."
+        "Abandonment rate tracks customers who leave before an agent responds.",
+        "Utilization measures how busy agents are."
       ]
     }
   ]

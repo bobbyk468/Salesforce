@@ -1,50 +1,50 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Marketing Cloud Intelligence exam for?",
+    "heading": "Who should take the Marketing Cloud Intelligence AP exam?",
     "personas": [
       {
-        "label": "Marketing analytics professionals",
-        "description": "You report on campaign and media performance and want to prove you can set up Marketing Cloud Intelligence well."
+        "label": "Marketing analytics teams",
+        "description": "You report on campaign and media results and want to show that you can configure Marketing Cloud Intelligence."
       },
       {
-        "label": "Data-driven marketing consultants",
-        "description": "You help clients pull marketing data from many platforms into one place."
+        "label": "Marketing data consultants",
+        "description": "You help customers bring data from multiple marketing platforms into one reporting environment."
       },
       {
-        "label": "BI specialists moving into marketing analytics",
-        "description": "You know dashboards and data models and want to apply them to marketing data."
+        "label": "Business intelligence analysts",
+        "description": "You understand data models and dashboards and want to apply those skills to marketing analytics."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Marketing Cloud Intelligence Exam Hard?",
-    "summary": "It is a moderate exam. The hardest part is the data side: bringing in data from many platforms, mapping it to the data model and making the numbers add up correctly. Dashboard questions are usually easier.",
+    "heading": "How challenging is the Marketing Cloud Intelligence AP exam?",
+    "summary": "This is a moderate exam. Data integration and modeling are the more challenging topics: importing data, mapping it to the shared model, and ensuring metrics aggregate correctly. Dashboard questions tend to focus on basic reporting choices.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
-      "<strong>Data focus.</strong> Data streams, mapping, harmonisation and how measurements are aggregated.",
-      "<strong>Reporting.</strong> Dashboards, widgets, filters and calculated measurements."
+      "<strong>40 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>60% to pass</strong>, which is 24 correct answers out of 40.",
+      "<strong>Data preparation.</strong> Review streams, field mapping, harmonization, and metric aggregation.",
+      "<strong>Reporting.</strong> Know dashboards, widgets, filters, and calculated measures."
     ],
-    "passRateGuidance": "People who have connected several ad platforms and built a cross-channel dashboard do best. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Hands-on experience connecting advertising platforms and building a cross-channel dashboard helps. Aim for at least 75% on practice tests before booking."
   },
   "examFormat": {
-    "heading": "Marketing Cloud Intelligence Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a data problem, such as the same campaign named differently on two platforms or totals that look too high, and ask how to fix it.",
+    "heading": "Marketing Cloud Intelligence AP exam format",
+    "intro": "Accredited Professional exams are delivered online. Many questions describe a data or reporting problem:",
+    "scenarioPercent": "A scenario may show inconsistent campaign names across platforms or totals that seem too high. Identify whether the issue is data ingestion, mapping, harmonization, or aggregation.",
     "bestWayToPass": [
-      "<strong>Learn data streams:</strong> How data comes in through connectors or files, and how often.",
-      "<strong>Understand mapping:</strong> Each source field is mapped to a dimension or measurement in the data model.",
-      "<strong>Master harmonisation:</strong> Making data from different platforms line up, for example by a shared campaign key.",
-      "<strong>Know aggregation:</strong> Why some measures should be summed and others should not."
+      "<strong>Understand data streams:</strong> Learn how connectors and files load data and how streams are scheduled.",
+      "<strong>Map source fields correctly:</strong> Place each incoming field into the right dimension or measurement.",
+      "<strong>Harmonize platform values:</strong> Use shared keys or rules to align equivalent campaigns and other data.",
+      "<strong>Check aggregation:</strong> Additive metrics can be summed; rates need to be recalculated from their component values."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Marketing Cloud Intelligence: bringing in marketing data, mapping and harmonising it, building calculated measures, and creating dashboards.",
+    "description": "This exam covers Marketing Cloud Intelligence data integration and reporting, including workspaces, data streams, field mapping, harmonization, calculated measures, dashboards, and data monitoring. Check Salesforce’s current guide for the question count, time, and passing score.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
+      "passingScore": "60%",
       "duration": "90 min",
       "cost": "$150"
     },
@@ -57,53 +57,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Marketing Cloud Intelligence: Key Concepts for the Exam",
+    "h2": "Marketing Cloud Intelligence: concepts to review",
     "blocks": [
       {
-        "heading": "Intelligence Platform Architecture",
-        "body": "Marketing Cloud Intelligence brings marketing data from many sources, such as ad platforms, web analytics, email and CRM, into one place for reporting. Data is organised in **workspaces**, which can hold different brands or clients. Inside, a shared **data model** gives every source the same structure, with **dimensions** (things you describe, like campaign, channel or date) and **measurements** (things you count, like spend, clicks or conversions). Once data fits the model, it can be compared across channels in one dashboard."
+        "heading": "Platform structure and data model",
+        "body": "Marketing Cloud Intelligence combines marketing data from sources such as advertising platforms, web analytics, email, and CRM for shared reporting. Workspaces can separate brands or clients. The common data model uses dimensions to describe data, such as campaign, channel, or date, and measurements to quantify it, such as spend, clicks, or conversions. Mapping data into this model allows comparison across channels in one dashboard."
       },
       {
-        "heading": "Data Streams and Harmonisation",
-        "body": "Each source comes in through a **data stream**, using a built-in connector or a file upload. During setup you **map** each source field to a dimension or measurement in the model. **Harmonisation** makes data from different sources line up. For example, if Google Ads and Meta use different campaign names, you can use a shared key or naming pattern so both link to the same campaign. Classification rules can create new dimensions from patterns in names, such as reading the product line from a campaign name."
+        "heading": "Streams and harmonization",
+        "body": "A data stream brings in information through a built-in connector or file. During setup, map each source field to a dimension or measurement. Harmonization aligns values that represent the same thing across sources; for example, different campaign names can be linked with a shared key or naming rule. Classification rules can also derive dimensions, such as product line, from a campaign name."
       },
       {
-        "heading": "Insights, KPIs, and Custom Metrics",
-        "body": "Beyond raw data, teams need numbers like cost per acquisition or return on ad spend. **Calculated measurements** are formulas built from other measurements. **Calculated dimensions** group or relabel values. **Aggregation** matters: spend and clicks can be added up, but rates like click-through rate must be recalculated from their parts, not summed. Getting aggregation wrong is a common reason totals look strange. Insights features can flag unusual changes in key numbers."
+        "heading": "KPIs and calculated measures",
+        "body": "Calculated measurements combine existing values to create metrics such as cost per acquisition or return on ad spend. Calculated dimensions group or relabel values. Aggregation must match the metric: spend and clicks can be summed, while a rate such as click-through rate should be recalculated from total clicks and impressions. Incorrect aggregation can make totals misleading. Insight features can flag unusual changes in key values."
       },
       {
-        "heading": "Dashboards and Data Visualisation",
-        "body": "**Dashboards** are made of pages and **widgets**, such as charts, tables and single-number tiles. **Filters** let users narrow by date, channel or campaign. Good dashboards start with the question the viewer needs answered and show only what helps answer it. Share dashboards with the right users, and schedule them to be emailed if people need regular updates. Pivot-style tables help analysts explore data before deciding what goes on a dashboard."
+        "heading": "Dashboards and visualizations",
+        "body": "Dashboards contain pages and widgets such as charts, tables, and single-value tiles. Filters narrow results by date, channel, or campaign. Start with the question the viewer needs answered and include only relevant views. Share dashboards with the intended users and schedule email delivery when regular updates are needed. Pivot-style tables can help analysts explore data before choosing dashboard views."
       },
       {
-        "heading": "API Integration and Automation",
-        "body": "Data streams can run on a **schedule**, so dashboards stay current without manual uploads. When a built-in connector doesn't exist, data can be sent through files or APIs. Marketing Cloud Intelligence data can also be shared with other tools, such as Salesforce or a data warehouse. Monitor data stream runs and set alerts so failed loads are noticed quickly, since a missed load leaves gaps in reports."
+        "heading": "Automation and integrations",
+        "body": "Schedule data streams to keep reports current. If a built-in connector is unavailable, use supported file or API ingestion. Marketing Cloud Intelligence data can also be shared with Salesforce or a warehouse. Monitor stream runs and alert on failures; an unnoticed failure can leave incomplete reporting."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Marketing Cloud Intelligence Accredited Professional Exam",
-    "intro": "Most questions start with a data problem. Ask whether it comes from how data was brought in, how it was mapped, or how it is being added up.",
+    "h2": "How to prepare for the Marketing Cloud Intelligence AP exam",
+    "intro": "When a report looks wrong, determine whether the cause is the source data, field mapping, harmonization, or aggregation.",
     "blocks": [
       {
-        "heading": "Data Streams & Connectors",
-        "body": "Use built-in connectors where possible. Set a schedule so data stays current."
+        "heading": "Use streams and connectors",
+        "body": "Choose a built-in connector when available and schedule streams to keep information current."
       },
       {
-        "heading": "Data Model & Harmonization",
-        "body": "Map every field to the right dimension or measurement. Use shared keys to link the same campaign across sources."
+        "heading": "Map and harmonize data",
+        "body": "Map each field to the correct dimension or measurement. Use common keys to align matching campaigns across platforms."
       },
       {
-        "heading": "Model Builder",
-        "body": "Build calculated measurements for KPIs like cost per acquisition. Recalculate rates from their parts."
+        "heading": "Build calculated measures",
+        "body": "Use calculated measurements for KPIs such as cost per acquisition. Recalculate rates from their component totals."
       },
       {
-        "heading": "Dashboard Design",
-        "body": "Start from the viewer's question. Use filters instead of building many near-identical pages."
+        "heading": "Design for the viewer",
+        "body": "Start with the reporting question. Use filters to narrow results instead of duplicating similar dashboard pages."
       },
       {
-        "heading": "Einstein Integration",
-        "body": "Use automated insights to spot sudden changes in performance that need attention."
+        "heading": "Monitor data quality",
+        "body": "Use automated insights and alerts to notice sudden metric changes or failed data loads."
       }
     ]
   },
@@ -165,55 +165,55 @@
   ],
   "sampleQuestions": [
     {
-      "question": "The same campaign appears as 'Spring_Sale_US' in Google Ads and 'US Spring Sale' in Meta. The team wants one combined row. What should be done?",
+      "question": "The same campaign appears as “Spring_Sale_US” in Google Ads and “US Spring Sale” in Meta. The team needs a combined result. What should it do?",
       "options": [
-        "Harmonise the sources with a shared campaign key or naming pattern",
-        "Rename each one of the campaigns by hand at the end of every single week",
-        "Report on each platform separately",
-        "Delete one of the data streams"
+        "Harmonize both names to one campaign key",
+        "Standardize campaign names and link them with a shared key",
+        "Keep separate platform reports only",
+        "Remove one of the data streams"
       ],
       "correctAnswer": 0,
-      "explanation": "Harmonisation links data from different sources to the same campaign, so it can be combined.",
+      "explanation": "Harmonization maps equivalent values from different sources to the same campaign for combined reporting.",
       "whyWrong": [
-        "Manual renaming is slow and breaks easily.",
-        "Separate reports don't give the combined view.",
-        "Deleting a stream loses data."
+        "Manual renaming is difficult to maintain and can be inconsistent.",
+        "Separate reporting does not provide the requested combined view.",
+        "Removing a stream would discard useful data."
       ]
     },
     {
-      "question": "A dashboard shows click-through rate summed across campaigns, giving 340%. What is wrong?",
+      "question": "A dashboard sums click-through rates across campaigns and shows 340%. What is the likely problem?",
       "options": [
-        "There are too many widgets",
-        "The rate is being summed instead of recalculated from clicks and impressions",
-        "The data stream is late",
-        "The filter has been applied to entirely the wrong date field on the dashboard"
+        "There are too many dashboard widgets",
+        "Recalculate from clicks and impressions",
+        "The data stream ran late",
+        "The date filter uses the wrong field"
       ],
       "correctAnswer": 1,
-      "explanation": "Rates must be calculated from their parts after adding up clicks and impressions, not summed directly.",
+      "explanation": "A rate should be recalculated from the summed clicks and impressions, not added across campaigns.",
       "whyWrong": [
-        "Widget count doesn't affect the maths.",
-        "Late data wouldn't create a rate over 100%.",
-        "Date filters don't cause summed rates."
+        "Widget count does not change the rate calculation.",
+        "Late data does not explain summing rates above 100%.",
+        "A date filter would not make summed rates mathematically valid."
       ]
     },
     {
-      "question": "When setting up a new data stream, what must be done with each source field?",
+      "question": "When a data stream is configured, what should happen to each incoming source field?",
       "options": [
-        "Map it to a dimension or measurement",
-        "Leave it unmapped",
-        "Add it to a dashboard first",
-        "Rename the field in the original source system instead"
+        "Map it to the model",
+        "Leave every field unmapped",
+        "Add it to a dashboard before mapping",
+        "Rename it in the source system"
       ],
       "correctAnswer": 0,
-      "explanation": "Mapping puts each field in the right place in the shared model, so it can be used and compared.",
+      "explanation": "Mapping aligns source fields to the shared data model so reports can use them consistently.",
       "whyWrong": [
-        "Unmapped fields can't be used in reports.",
-        "Data must be mapped before it can be shown.",
-        "Source names don't need changing."
+        "Unmapped fields are not ready for standard reporting.",
+        "Fields must be modeled before they can be used in a dashboard.",
+        "Source field renaming is not required for mapping."
       ]
     },
     {
-      "question": "Which of these is a measurement rather than a dimension?",
+      "question": "Which item is a measurement rather than a dimension?",
       "options": [
         "Spend",
         "Campaign name",
@@ -221,187 +221,187 @@
         "Channel"
       ],
       "correctAnswer": 0,
-      "explanation": "Measurements are numbers you add up or calculate, like spend. Dimensions describe the data, like campaign or channel.",
+      "explanation": "Spend is a numeric value that can be measured or aggregated.",
       "whyWrong": [
-        "Campaign name is a dimension.",
-        "Country is a dimension.",
-        "Channel is a dimension."
+        "Campaign name describes the data and is a dimension.",
+        "Country describes where activity occurred and is a dimension.",
+        "Channel categorizes the source and is a dimension."
       ]
     },
     {
-      "question": "The team needs cost per acquisition for each channel. What should they create?",
+      "question": "The team needs cost per acquisition by channel. What should it create?",
       "options": [
-        "A new data stream configured for that advertising platform",
-        "A calculated measurement of spend divided by conversions",
-        "A filter",
-        "A new workspace"
+        "A new data stream for the advertising platform",
+        "A calculated measurement using spend and conversions",
+        "A filter on the campaign field",
+        "A separate workspace for each channel"
       ],
       "correctAnswer": 1,
-      "explanation": "Calculated measurements build KPIs from existing measurements.",
+      "explanation": "A calculated measurement can divide spend by conversions to produce the KPI.",
       "whyWrong": [
-        "A new stream brings in data, it doesn't calculate KPIs.",
-        "Filters narrow data, they don't create measures.",
-        "A workspace organises data, it doesn't calculate."
+        "A new stream ingests data but does not calculate the metric.",
+        "Filters select data; they do not create a KPI.",
+        "Workspaces organize data and are not needed for this calculation."
       ]
     },
     {
-      "question": "Campaign names follow a pattern like 'BRAND_PRODUCT_COUNTRY'. The team wants a Product dimension. What should they use?",
+      "question": "Campaign names use the pattern “BRAND_PRODUCT_COUNTRY.” The team wants to create a Product dimension from the names. What should it configure?",
       "options": [
-        "Ask each of the teams to add a product field to their own files",
-        "A new workspace",
-        "Create a dashboard filter",
-        "A classification rule that extracts the product from the name"
+        "Require every platform team to add a product field to its files",
+        "Create another workspace",
+        "Add a dashboard filter",
+        "Use a classification rule to extract the product value"
       ],
       "correctAnswer": 3,
-      "explanation": "Rules can read values from naming patterns and create new dimensions automatically.",
+      "explanation": "A classification rule can identify values in a naming pattern and create a dimension.",
       "whyWrong": [
-        "Adding fields everywhere is slow and needs every platform to change.",
-        "A workspace doesn't create dimensions.",
-        "A filter can't create a dimension."
+        "Manual changes across every source are harder to maintain.",
+        "A workspace organizes data but does not parse campaign names.",
+        "Filters select existing values; they do not create a dimension."
       ]
     },
     {
-      "question": "Dashboards are out of date because someone forgot to upload last week's file. What should be changed?",
+      "question": "Reports are outdated because users forget to upload last week’s file. What should change?",
       "options": [
-        "Add more widgets",
-        "Upload the source files a good deal less often",
-        "Schedule the data stream to run automatically",
-        "Delete the dashboard"
+        "Add more dashboard widgets",
+        "Upload each source less often",
+        "Schedule the stream",
+        "Delete the existing dashboard"
       ],
       "correctAnswer": 2,
-      "explanation": "Scheduled data streams keep data current without relying on manual uploads.",
+      "explanation": "A scheduled stream updates data without relying on a manual upload.",
       "whyWrong": [
-        "Widgets don't load data.",
-        "Less often makes it worse.",
-        "Deleting the dashboard doesn't fix the data."
+        "Widgets display data but do not load it.",
+        "Less frequent uploads would make freshness worse.",
+        "Deleting the dashboard does not address ingestion."
       ]
     },
     {
-      "question": "An agency manages marketing data for three separate clients who must not see each other's data. How should this be organised?",
+      "question": "An agency serves three clients, and each client must have separate data and access. How should the account be organized?",
       "options": [
-        "Separate widgets for each client",
-        "One single dashboard with a client filter applied",
-        "One data stream for all clients",
-        "Separate workspaces for each client"
+        "Use a separate widget for each client",
+        "Use a shared dashboard filter as the only control",
+        "Combine all clients in one data stream",
+        "Create a separate workspace for each client"
       ],
       "correctAnswer": 3,
-      "explanation": "Workspaces keep each client's data and setup separate.",
+      "explanation": "Separate workspaces keep each client’s data and configuration isolated.",
       "whyWrong": [
-        "Widgets don't separate access.",
-        "A filter doesn't stop people seeing other clients' data.",
-        "One stream mixes all the data."
+        "Widgets do not control client data access.",
+        "A user-facing filter is not an adequate security boundary.",
+        "Combining client data in one stream weakens separation."
       ]
     },
     {
-      "question": "A data stream failed overnight and nobody noticed for a week. What should be set up?",
+      "question": "A data stream failed overnight and no one noticed for a week. What should the team add?",
       "options": [
-        "A new KPI",
-        "More filters",
-        "A single larger dashboard layout",
-        "Monitoring and alerts on the runs"
+        "A calculated KPI",
+        "Extra dashboard filters",
+        "A larger dashboard layout",
+        "Add stream alerts"
       ],
       "correctAnswer": 3,
-      "explanation": "Alerts on failed runs let the team fix problems before reports are affected.",
+      "explanation": "Monitoring and alerts can notify the team when a load fails so they can correct missing data.",
       "whyWrong": [
-        "A KPI doesn't monitor loads.",
-        "Filters don't detect failures.",
-        "Dashboard size doesn't detect failures."
+        "A KPI does not monitor ingestion status.",
+        "Filters do not detect failed loads.",
+        "Dashboard size does not identify a data stream failure."
       ]
     },
     {
-      "question": "A dashboard viewer only wants to see last month's results for the email channel. What should they use?",
+      "question": "A dashboard viewer wants last month’s results for the email channel. What should they use?",
       "options": [
-        "A new data stream configured for that advertising platform",
-        "A newly created calculated measurement",
-        "Filters for date and channel",
+        "A new data stream",
+        "A new calculated measure",
+        "Date and channel filters",
         "A new workspace"
       ],
       "correctAnswer": 2,
-      "explanation": "Filters let users narrow the dashboard without changing the data or building new pages.",
+      "explanation": "Filters narrow existing dashboard data without creating new sources or pages.",
       "whyWrong": [
-        "A new stream isn't needed to view existing data.",
-        "A calculated measurement creates a new number, it doesn't narrow data.",
-        "A workspace is far more than needed."
+        "A new stream is not required to view existing information.",
+        "A calculated measure creates a metric rather than restricting the view.",
+        "A workspace is unnecessary for filtering a dashboard."
       ]
     },
     {
-      "question": "A connector doesn't exist for a small ad platform the client uses. How can its data be brought in?",
+      "question": "A small advertising platform has no built-in connector. How can its data be ingested?",
       "options": [
-        "By copying it into a widget",
-        "Through a file upload or API data stream",
-        "It can't be used",
-        "By typing the value directly into a dashboard widget"
+        "Copy it into a dashboard widget",
+        "Use a file or API stream",
+        "Assume the data cannot be used",
+        "Type values into a dashboard tile"
       ],
       "correctAnswer": 1,
-      "explanation": "File and API-based streams can bring in data from sources without a built-in connector.",
+      "explanation": "File and API ingestion can support sources without a built-in connector.",
       "whyWrong": [
-        "Widgets display data.",
-        "Data can still be brought in another way.",
-        "Dashboards display data, they don't store it."
+        "Widgets display data but do not store source records.",
+        "A missing connector does not prevent file or API ingestion.",
+        "Dashboard tiles are not an ingestion method."
       ]
     },
     {
-      "question": "What is the main reason to bring all marketing data into one data model?",
+      "question": "Why bring marketing data from several platforms into a shared model?",
       "options": [
-        "So results can be compared across channels and platforms",
-        "So that each platform's own reports continue to look different",
-        "So dashboards load more slowly",
-        "So data stays in separate tools"
+        "To compare results across channels in one place",
+        "To keep each platform’s report definitions different",
+        "To make dashboards load more slowly",
+        "To prevent the source data from being used elsewhere"
       ],
       "correctAnswer": 0,
-      "explanation": "A shared model makes data from different sources comparable in one place.",
+      "explanation": "A shared model makes compatible measures and dimensions comparable across sources.",
       "whyWrong": [
-        "The aim is consistency, not difference.",
-        "Speed isn't the reason.",
-        "Keeping data separate defeats the purpose."
+        "The goal is consistent comparison rather than different definitions.",
+        "Dashboard speed is not the reason to centralize data.",
+        "A shared model does not require disabling other uses of source data."
       ]
     },
     {
-      "question": "Total conversions look doubled after adding a second data stream that also reports conversions. What is the likely cause?",
+      "question": "Conversions double after a second stream is added, and both sources report the same events. What should the analyst investigate?",
       "options": [
-        "The workspace is too small",
-        "The dashboard simply has a great many more pages than it needs",
-        "The same conversions are counted in both sources and need de-duplicating",
-        "The filter is wrong"
+        "The workspace size",
+        "The number of dashboard pages",
+        "De-duplicate the events",
+        "The dashboard’s color palette"
       ],
       "correctAnswer": 2,
-      "explanation": "When two sources report the same events, adding them together double-counts. Decide which source to trust or de-duplicate.",
+      "explanation": "The same conversions may be counted twice. Determine the authoritative source or remove duplicates.",
       "whyWrong": [
-        "Workspace size isn't a factor.",
-        "Page count doesn't double numbers.",
-        "A filter wouldn't double the total."
+        "Workspace size does not double conversion totals.",
+        "Page count does not change how events are counted.",
+        "Color has no effect on metric totals."
       ]
     },
     {
-      "question": "Leaders want an automatic heads-up when cost per click jumps unexpectedly. What helps?",
+      "question": "Leaders want an alert when cost per click rises unexpectedly. What should be configured?",
       "options": [
-        "Removing the KPI",
-        "Adding more data streams",
-        "Automated insights or alerts on that KPI",
-        "Checking the dashboard over just once every quarter"
+        "Remove the KPI from reporting",
+        "Add unrelated data streams",
+        "Alert on the KPI",
+        "Review the dashboard only once a quarter"
       ],
       "correctAnswer": 2,
-      "explanation": "Insights and alerts flag unusual changes so the team can act quickly.",
+      "explanation": "Automated insights or alerts can identify unusual changes so the team can respond promptly.",
       "whyWrong": [
-        "Removing the KPI hides the problem.",
-        "More streams don't spot changes.",
-        "Quarterly checks are too slow."
+        "Removing the KPI hides the issue.",
+        "More data streams do not monitor the metric by themselves.",
+        "Quarterly review may be too late to respond."
       ]
     },
     {
-      "question": "What should a well-designed dashboard start from?",
+      "question": "What should guide the design of a Marketing Cloud Intelligence dashboard?",
       "options": [
-        "The colour scheme",
-        "The question the viewer must answer",
-        "Every available widget",
-        "Whichever is the largest data stream"
+        "The color palette alone",
+        "Start with the viewer’s question",
+        "Every widget available in the tool",
+        "The size of the largest data stream"
       ],
       "correctAnswer": 1,
-      "explanation": "Good dashboards are built around the decisions viewers need to make.",
+      "explanation": "Dashboard content should support the decisions and questions of its viewers.",
       "whyWrong": [
-        "Colours come after content.",
-        "Too many widgets make dashboards hard to read.",
-        "Data size doesn't decide what to show."
+        "Visual styling follows the reporting purpose.",
+        "Too many widgets can make results difficult to interpret.",
+        "Source volume alone does not determine what belongs on a dashboard."
       ]
     }
   ]

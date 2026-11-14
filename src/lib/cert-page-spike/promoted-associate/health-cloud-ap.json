@@ -5,46 +5,46 @@
     "personas": [
       {
         "label": "Healthcare implementation consultants",
-        "description": "You set up Health Cloud for providers, payers or life sciences firms and want to prove you know the product."
+        "description": "You configure Health Cloud for a provider, payer or healthcare organization."
       },
       {
         "label": "Salesforce admins in healthcare",
-        "description": "You run Health Cloud and want to understand care plans, clinical data and care teams properly."
+        "description": "You administer a healthcare org and work with care teams, plans and clinical data."
       },
       {
         "label": "Health IT partners and architects",
-        "description": "You connect Health Cloud to electronic health records and other clinical systems."
+        "description": "You connect Salesforce with EHRs or other healthcare systems."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Health Cloud Accredited Professional Exam Hard?",
-    "summary": "It is a moderate exam. You need to know Health Cloud's patient and clinical data model, how care is coordinated, and how health data comes in from other systems. Some healthcare background helps.",
+    "summary": "The exam covers Health Cloud’s patient and clinical data model, care coordination and connections to healthcare systems. Know how the org represents patients before selecting related records.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>60 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "Check the current official exam guide for the passing score; do not infer it from a practice test.",
       "<strong>Data model focus.</strong> Patients, care teams, care plans and the clinical objects based on FHIR.",
       "<strong>Industry processes.</strong> Care management, appointments, utilisation management and data integration."
     ],
-    "passRateGuidance": "Set up a patient with a care plan and care team in a trial org before the exam. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Use practice questions to find gaps, then check the current exam guide and Salesforce Help for product behavior. A practice score is a study aid, not a promise of an exam result."
   },
   "examFormat": {
     "heading": "Health Cloud Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a care scenario, such as coordinating a patient's care after hospital discharge, and ask which Health Cloud feature fits.",
+    "intro": "Accredited Professional exams are taken online. Check the current exam guide for the latest details.",
+    "scenarioPercent": "Scenarios describe a patient, provider or care-team need. Identify the record or process involved, and account for the organization’s patient model and data integrations.",
     "bestWayToPass": [
-      "<strong>Learn the patient model:</strong> Patients as person accounts, their care team, and related clinical records.",
-      "<strong>Understand care plans:</strong> Templates, problems, goals and tasks, and how care coordinators use them.",
-      "<strong>Know the clinical objects:</strong> Conditions, medications, observations and encounters, modelled on FHIR.",
-      "<strong>Think about privacy:</strong> Health data needs tight access control and audit trails."
+      "Confirm how the implementation represents patients and clinical records.",
+      "Review care plans, care teams, patient timelines and appointment workflows.",
+      "Understand the role of FHIR and the organization’s EHR integration.",
+      "Treat access controls, encryption and audit requirements as part of the design."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Health Cloud: the patient and clinical data model, care plans and care teams, appointments, utilisation management and connections to clinical systems.",
+    "description": "This exam covers Health Cloud’s patient and clinical data model, care plans and teams, appointments, utilization management and integrations. The exam is 60 scored questions in 90 minutes, with a 63% pass mark, weighted towards Design and Implement (42% each).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
+      "passingScore": "63%",
       "duration": "90 min",
       "cost": "$150"
     },
@@ -62,49 +62,49 @@
     "blocks": [
       {
         "heading": "Health Cloud Data Model: Patients, Providers, and Care Plans",
-        "body": "Patients and members are usually **person accounts**. The **care team** is the group of people involved in a patient's care, such as doctors, nurses, family members and care coordinators, each with a role. Health Cloud includes **clinical data objects** modelled on the **FHIR** standard, such as health conditions, medications, care observations (like blood pressure readings) and encounters (visits). Providers and their facilities, specialties and networks can also be stored. The **patient timeline** shows events like visits and results in date order."
+        "body": "Health Cloud can represent patients, providers, facilities and care relationships. Some orgs use person accounts for patients; the patient model depends on the implementation. Clinical data objects can represent items such as conditions, medications, observations and encounters, with data aligned to healthcare standards such as FHIR. The patient timeline presents related events in date order."
       },
       {
         "heading": "Care Plan Management and Coordination",
-        "body": "A **care plan** sets out how a patient's needs will be managed. It is usually built from a **care plan template** and includes **problems** (what needs addressing), **goals** (what the patient wants to achieve) and **tasks** or interventions (the work to get there). Care coordinators use care plans to track progress, assign tasks to the care team and adjust the plan as things change. Assessments can capture information from the patient, which can feed into the plan."
+        "body": "A care plan organizes a patient’s problems, goals, and the tasks or interventions needed to address them. Teams can start with a template, assign work, track progress, and update the plan. Assessments can supply information for care planning."
       },
       {
         "heading": "Intelligent Appointment Management (IAM)",
-        "body": "**Intelligent appointment management** lets staff and patients book appointments with the right provider, at the right place, at a time that works. It can check the provider's availability, skills and location. Patients can book through a self-service site. Reminders and confirmations reduce missed appointments, and booked appointments link back to the patient's record and timeline."
+        "body": "Intelligent appointment management helps match appointments to provider availability, skills, and location. Depending on the setup, patients can book through self-service and receive reminders or confirmations. Appointments can be connected to the patient record."
       },
       {
         "heading": "FHIR Integration and EHR Connectivity",
-        "body": "Most clinical data lives in **electronic health record (EHR)** systems. Health Cloud uses objects aligned to **FHIR**, the common standard for health data, which makes it easier to bring in conditions, medications and visits. Integrations often use **MuleSoft** and its healthcare accelerators, or FHIR-based APIs, to move data between the EHR and Health Cloud. Keep the EHR as the source of truth for clinical records and bring in what care teams need to coordinate care."
+        "body": "Clinical records often live in an electronic health record system. Health Cloud can exchange relevant information through integrations, including FHIR-based APIs and MuleSoft healthcare accelerators. Design the flow around the system of record and the information care teams need."
       },
       {
         "heading": "Analytics and Population Health Management",
-        "body": "Beyond single patients, organisations want to look after groups, such as all patients with diabetes. Reports, dashboards and **CRM Analytics** can find patients who are due for check-ups or at higher risk. **Utilization management** handles requests for approval of care, such as prior authorisation, with care requests reviewed against criteria. Because this is sensitive health data, use strict sharing, field-level security, **Shield** encryption and event monitoring, and follow rules like HIPAA."
+        "body": "Reports, dashboards, and CRM Analytics can help teams identify groups that need follow-up, such as patients due for a check-up. Utilization management supports review of care requests against criteria. Protect health information with appropriate sharing, field security, encryption, monitoring, and applicable privacy controls."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Health Cloud Accredited Professional Exam",
-    "intro": "Most questions begin with a patient or care team need. Find the record that represents it, then the feature that acts on it.",
+    "intro": "Identify the patient or provider need, then trace it to the correct care record or process.",
     "blocks": [
       {
-        "heading": "Health Cloud Data Model",
-        "body": "Patients are person accounts. Clinical records like conditions and medications use FHIR-aligned objects."
+        "heading": "Confirm the patient model",
+        "body": "Health Cloud implementations may represent patients differently; follow the org’s configured model."
       },
       {
-        "heading": "Patient 360 View",
-        "body": "The patient card, timeline and care team give coordinators a full view of the patient in one place."
+        "heading": "Build care around the patient",
+        "body": "Care plans organize needs, goals and tasks; care teams identify the people supporting the patient."
       },
       {
-        "heading": "Care Plan Configuration",
-        "body": "Care plan templates define standard problems, goals and tasks. Coordinators adjust them for each patient."
+        "heading": "Use clinical data records",
+        "body": "Choose the appropriate condition, medication, observation or encounter record for the data."
       },
       {
-        "heading": "Interoperability: FHIR & HL7",
-        "body": "Bring clinical data from EHRs using FHIR-based integrations, often with MuleSoft."
+        "heading": "Keep the EHR relationship clear",
+        "body": "Know which system is authoritative and how the integration transfers the data care teams need."
       },
       {
-        "heading": "Utilization Management & Prior Auth",
-        "body": "Care requests capture requests for approval, which reviewers check against clinical criteria."
+        "heading": "Review access before sharing",
+        "body": "Use permissions and sharing settings to limit sensitive health records to appropriate users."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A care coordinator needs to see everyone involved in a patient's care, including their GP, a specialist and their daughter. What feature shows this?",
+      "question": "Which Health Cloud feature lists the people involved in a patient’s care and their roles?",
       "options": [
-        "An Opportunity team",
-        "The household record for the patient",
-        "The care team record",
-        "A price book"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The care team lists the people involved in a patient's care, each with their role.",
-      "whyWrong": [
-        "Opportunity teams are for sales deals.",
-        "Households group people who share finances, not care roles.",
-        "Price books hold product prices."
-      ]
-    },
-    {
-      "question": "A patient leaves hospital and needs a structured plan with goals and tasks for recovery. What should the coordinator create?",
-      "options": [
-        "A care plan from a template",
-        "A Lead",
-        "A Campaign",
-        "A standard Case record and nothing else"
+        "Care Team",
+        "An Opportunity Team",
+        "The patient’s household",
+        "A Price Book"
       ],
       "correctAnswer": 0,
-      "explanation": "Care plans set out problems, goals and tasks, and templates make them quick and consistent to create.",
+      "explanation": "Care Team is the best fit because the care team lists the people involved in a patient's care, each with their role.",
       "whyWrong": [
-        "Leads are for sales.",
-        "Campaigns are for marketing.",
-        "A Case tracks an issue, but doesn't structure goals and tasks."
+        "An Opportunity Team is not the best choice because opportunity teams are for sales deals.",
+        "The patient’s household is not the best choice because households group people who share finances, not care roles.",
+        "A Price Book is not the best choice because price books hold product prices."
       ]
     },
     {
-      "question": "Health Cloud's clinical objects, such as conditions and medications, are based on which standard?",
+      "question": "What can a coordinator create to organize a patient’s recovery goals and tasks?",
       "options": [
-        "FHIR",
+        "Create a Lead for the patient",
+        "Template-based Care Plan",
+        "Create a Campaign for the discharge",
+        "Use a standard Case without a care plan"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Template-based Care Plan is the best fit because care plans set out problems, goals and tasks, and templates make them quick and consistent to create.",
+      "whyWrong": [
+        "Create a Lead for the patient is not the best choice because leads are for sales.",
+        "Create a Campaign for the discharge is not the best choice because campaigns are for marketing.",
+        "Use a standard Case without a care plan is not the best choice because a Case tracks an issue, but doesn't structure goals and tasks."
+      ]
+    },
+    {
+      "question": "Which standard informs Health Cloud’s clinical data model?",
+      "options": [
         "OAuth",
         "SOAP",
+        "FHIR",
         "SAML"
       ],
-      "correctAnswer": 0,
-      "explanation": "Health Cloud's clinical data model is aligned with FHIR, the common standard for exchanging health data.",
+      "correctAnswer": 2,
+      "explanation": "FHIR is the best fit because health Cloud's clinical data model is aligned with FHIR, the common standard for exchanging health data.",
       "whyWrong": [
-        "OAuth is for authorising app access.",
-        "SOAP is a web service protocol, not a health data standard.",
-        "SAML is for single sign-on."
+        "OAuth is not the best choice because oAuth is for authorising app access.",
+        "SOAP is not the best choice because sOAP is a web service protocol, not a health data standard.",
+        "SAML is not the best choice because sAML is for single sign-on."
       ]
     },
     {
-      "question": "Blood pressure readings from a patient's visits should be stored in Health Cloud. Which object fits?",
+      "question": "Which Health Cloud record is suited to a blood-pressure measurement?",
       "options": [
-        "Care observation",
-        "Care team role",
-        "Account-contact relationship",
-        "Care plan template"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Care observations record measurements like blood pressure or blood sugar.",
-      "whyWrong": [
-        "Care team roles describe people's roles.",
-        "That links people to accounts.",
-        "Templates define standard plans."
-      ]
-    },
-    {
-      "question": "The EHR holds the official clinical records. How should Health Cloud get the data care teams need?",
-      "options": [
-        "Replace the EHR with Health Cloud",
-        "Ask nurses to retype the data",
-        "Email PDFs of each record",
-        "Integrate with the EHR over FHIR APIs"
+        "Care Team Role",
+        "Account-Contact Relationship",
+        "Care Plan Template",
+        "Care Observation"
       ],
       "correctAnswer": 3,
-      "explanation": "Integration brings clinical data in automatically, while the EHR stays the source of truth.",
+      "explanation": "Care Observation is the best fit because care observations record measurements like blood pressure or blood sugar.",
       "whyWrong": [
-        "Health Cloud isn't designed to replace the EHR.",
-        "Retyping is slow and causes errors.",
-        "PDFs can't be used as structured data."
+        "Care Team Role is not the best choice because care team roles describe people's roles.",
+        "Account-Contact Relationship is not the best choice because that links people to accounts.",
+        "Care Plan Template is not the best choice because templates define standard plans."
       ]
     },
     {
-      "question": "Patients should be able to book appointments with the right provider through a self-service site. What should be used?",
+      "question": "If the EHR remains the clinical source of truth, how can Health Cloud receive needed data?",
       "options": [
-        "A price book",
-        "Intelligent appointments",
-        "A Chatter group",
-        "A web-to-lead form on the public site"
+        "FHIR integration",
+        "Replace the EHR",
+        "Ask nurses to retype records",
+        "Email record PDFs"
+      ],
+      "correctAnswer": 0,
+      "explanation": "FHIR integration is the best fit because integration brings clinical data in automatically, while the EHR stays the source of truth.",
+      "whyWrong": [
+        "Replace the EHR is not the best choice because retyping is slow and causes errors.",
+        "Ask nurses to retype records is not the best choice because pDFs can't be used as structured data.",
+        "Email record PDFs is not the best choice because it does not meet the scenario as directly as Integrate with the EHR using FHIR APIs."
+      ]
+    },
+    {
+      "question": "Which capability supports patient self-service appointment booking with an appropriate provider?",
+      "options": [
+        "Price Book for provider services and rates",
+        "Intelligent Appointment Management",
+        "Chatter group for patient booking requests",
+        "Web-to-Lead form for new patient referrals"
       ],
       "correctAnswer": 1,
-      "explanation": "Intelligent appointment management matches patients with providers by availability, skills and location, including self-service booking.",
+      "explanation": "Intelligent Appointment Management is the best fit because intelligent appointment management matches patients with providers by availability, skills and location, including self-service booking.",
       "whyWrong": [
-        "Price books hold prices.",
-        "Chatter groups are for collaboration.",
-        "Web-to-lead captures sales leads."
+        "Price Book for provider services and rates is not the best choice because it does not meet the scenario as directly as Intelligent Appointment Management.",
+        "Chatter group for patient booking requests is not the best choice because chatter groups are for collaboration.",
+        "Web-to-Lead form for new patient referrals is not the best choice because web-to-lead captures sales leads."
       ]
     },
     {
-      "question": "A coordinator wants to see a patient's visits, results and events in date order. What should they use?",
+      "question": "Which view presents a patient’s visits, results and other events in date order?",
       "options": [
-        "A dashboard of all patients",
-        "The patient timeline",
-        "Setup Audit Trail",
-        "A custom report built in the report builder"
+        "Build a dashboard for every patient",
+        "Review the Setup Audit Trail",
+        "Open the Patient Timeline for ordered events",
+        "Create a report instead of using the timeline"
       ],
-      "correctAnswer": 1,
-      "explanation": "The timeline shows a patient's events in order on their record.",
+      "correctAnswer": 2,
+      "explanation": "Open the Patient Timeline for ordered events is the best fit because the timeline shows a patient's events in order on their record.",
       "whyWrong": [
-        "A dashboard summarises many patients.",
-        "Audit Trail tracks setup changes.",
-        "Building a report each time is slow."
+        "Build a dashboard for every patient is not the best choice because it does not meet the scenario as directly as Open the Patient Timeline for ordered events.",
+        "Review the Setup Audit Trail is not the best choice because audit Trail tracks setup changes.",
+        "Create a report instead of using the timeline is not the best choice because building a report each time is slow."
       ]
     },
     {
-      "question": "A doctor's request for approval of an MRI scan must be reviewed against criteria before it is covered. Which feature fits?",
+      "question": "Which process handles clinical requests that need coverage review, such as an MRI?",
       "options": [
-        "A Campaign",
-        "A Lead conversion",
-        "An action plan on its own, with nothing else",
-        "Utilization management requests"
+        "Campaign",
+        "Lead conversion",
+        "Action Plan alone",
+        "Utilization request"
       ],
       "correctAnswer": 3,
-      "explanation": "Utilization management handles prior authorisation through care requests that reviewers assess.",
+      "explanation": "Utilization request is the best fit because utilization management handles prior authorisation through care requests that reviewers assess.",
       "whyWrong": [
-        "Campaigns are for marketing.",
-        "Lead conversion is for sales.",
-        "Action plans list tasks but don't run the approval review."
+        "Campaign is not the best choice because lead conversion is for sales.",
+        "Lead conversion is not the best choice because action plans list tasks but don't run the approval review.",
+        "Action Plan alone is not the best choice because it does not meet the scenario as directly as Utilization Management request."
       ]
     },
     {
-      "question": "A clinic wants to find all diabetic patients who haven't had a check-up in 12 months. What is the best approach?",
+      "question": "How can a clinic identify diabetic patients who have not had a recent check-up?",
       "options": [
+        "Report on conditions and encounters",
         "Search Chatter",
-        "Reports on conditions and encounters",
-        "Ask each doctor to remember",
-        "Look through each of the patient records by hand"
+        "Ask clinicians to remember",
+        "Open every patient record manually"
       ],
-      "correctAnswer": 1,
-      "explanation": "Reports and analytics on clinical data can find groups of patients who need follow-up.",
+      "correctAnswer": 0,
+      "explanation": "Report on conditions and encounters is the best fit because reports and analytics on clinical data can find groups of patients who need follow-up.",
       "whyWrong": [
-        "Chatter isn't a clinical record.",
-        "Memory is unreliable.",
-        "Checking by hand doesn't scale."
+        "Search Chatter is not the best choice because it does not meet the scenario as directly as Report on conditions and encounters.",
+        "Ask clinicians to remember is not the best choice because memory is unreliable.",
+        "Open every patient record manually is not the best choice because checking by hand doesn't scale."
       ]
     },
     {
-      "question": "Which measure best protects sensitive health data in Health Cloud?",
+      "question": "Which controls help protect sensitive health information in Health Cloud?",
       "options": [
-        "Public Read/Write sharing",
-        "Strict sharing, encryption and audit trails",
-        "One single shared login used by all of the staff",
-        "Storing data in Chatter"
+        "Set sharing to Public Read/Write",
+        "Data access controls",
+        "Use one shared staff login",
+        "Store records in Chatter"
       ],
       "correctAnswer": 1,
-      "explanation": "Health data needs tight access control, encryption and records of who accessed what.",
+      "explanation": "Data access controls is the best fit because health data needs tight access control, encryption and records of who accessed what.",
       "whyWrong": [
-        "Public sharing exposes data.",
-        "Shared logins remove accountability.",
-        "Chatter isn't a secure store for clinical data."
+        "Set sharing to Public Read/Write is not the best choice because it does not meet the scenario as directly as Restrict sharing, encrypt data and audit access.",
+        "Use one shared staff login is not the best choice because shared logins remove accountability.",
+        "Store records in Chatter is not the best choice because chatter isn't a secure store for clinical data."
       ]
     },
     {
-      "question": "A care plan template for heart failure has standard goals and tasks. A specific patient needs an extra task. What should the coordinator do?",
+      "question": "How should a coordinator handle an extra task needed for one patient but absent from the standard plan?",
       "options": [
         "Create a new org",
-        "Change the care plan template for every single patient",
-        "Add the task to that patient's care plan",
+        "Change the template for every patient",
+        "Patient-specific care-plan task",
         "Delete the care plan"
       ],
       "correctAnswer": 2,
-      "explanation": "Care plans start from templates but can be adjusted for each patient.",
+      "explanation": "Patient-specific care-plan task is the best fit because care plans start from templates but can be adjusted for each patient.",
       "whyWrong": [
-        "A new org isn't needed.",
-        "Changing the template affects every future plan.",
-        "Deleting loses the plan."
+        "Create a new org is not the best choice because changing the template affects every future plan.",
+        "Change the template for every patient is not the best choice because it does not meet the scenario as directly as Add the extra task to that patient’s care plan.",
+        "Delete the care plan is not the best choice because deleting loses the plan."
       ]
     },
     {
-      "question": "A patient's medication list should be visible to the care team in Health Cloud. Which type of object holds it?",
+      "question": "Which kind of Health Cloud record holds a patient’s medication information?",
       "options": [
-        "Price book entry",
-        "Campaign member",
-        "The clinical medication objects",
-        "The standard Opportunity product object"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Health Cloud has clinical objects for medications, aligned to FHIR.",
-      "whyWrong": [
-        "Price book entries hold product prices.",
-        "Campaign members are for marketing.",
-        "Opportunity products are for sales."
-      ]
-    },
-    {
-      "question": "How are individual patients usually stored in Health Cloud?",
-      "options": [
-        "As patient person accounts",
-        "As standard Product records in the catalogue",
-        "As Leads",
-        "As Users"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Person accounts combine account and contact details for an individual, which fits patients.",
-      "whyWrong": [
-        "Products are things that are sold.",
-        "Leads are prospects.",
-        "Users log in to Salesforce."
-      ]
-    },
-    {
-      "question": "An assessment asks a patient about their mobility and mood. How can the answers help their care?",
-      "options": [
-        "They replace the EHR",
-        "They change the price book",
-        "The answers inform the care plan goals",
-        "They are only ever used for marketing purposes"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Assessment answers help coordinators spot needs and shape the care plan.",
-      "whyWrong": [
-        "Assessments don't replace the EHR.",
-        "Price books are unrelated.",
-        "They are for care, not marketing."
-      ]
-    },
-    {
-      "question": "A health network wants to record which providers belong to which networks and specialties. What should be used?",
-      "options": [
-        "A standard Campaign hierarchy structure",
-        "Opportunity stages",
-        "Email templates",
-        "The provider and network records"
+        "Price Book Entry",
+        "Campaign Member",
+        "Opportunity Product",
+        "Medication records"
       ],
       "correctAnswer": 3,
-      "explanation": "Health Cloud can store providers, facilities, specialties and networks for referrals and scheduling.",
+      "explanation": "Medication records is the best fit because health Cloud has clinical objects for medications, aligned to FHIR.",
       "whyWrong": [
-        "Campaigns are for marketing.",
-        "Opportunity stages track deals.",
-        "Email templates format messages."
+        "Price Book Entry is not the best choice because campaign members are for marketing.",
+        "Campaign Member is not the best choice because it does not meet the scenario as directly as Clinical medication records.",
+        "Opportunity Product is not the best choice because opportunity products are for sales."
+      ]
+    },
+    {
+      "question": "How might an implementation represent an individual patient?",
+      "options": [
+        "Person Account",
+        "Create a Product record for the patient",
+        "Create a Lead for each patient",
+        "Create a Salesforce User for each patient"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Person Account is the best fit because person accounts combine account and contact details for an individual, which fits patients.",
+      "whyWrong": [
+        "Create a Product record for the patient is not the best choice because products are things that are sold.",
+        "Create a Lead for each patient is not the best choice because leads are prospects.",
+        "Create a Salesforce User for each patient is not the best choice because users log in to Salesforce."
+      ]
+    },
+    {
+      "question": "How can patient assessment answers support care planning?",
+      "options": [
+        "Replace the EHR",
+        "Assessment results guide care",
+        "Change the Price Book",
+        "Use the answers only for marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Assessment results guide care is the best fit because assessment answers help coordinators spot needs and shape the care plan.",
+      "whyWrong": [
+        "Replace the EHR is not the best choice because price books are unrelated.",
+        "Change the Price Book is not the best choice because it does not meet the scenario as directly as Use the responses to inform care-plan goals.",
+        "Use the answers only for marketing is not the best choice because they are for care, not marketing."
+      ]
+    },
+    {
+      "question": "Which records can represent providers, their networks and specialties?",
+      "options": [
+        "Campaign hierarchy for network promotions",
+        "Opportunity stages",
+        "Provider-network records",
+        "Email templates"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Provider-network records is the best fit because health Cloud can store providers, facilities, specialties and networks for referrals and scheduling.",
+      "whyWrong": [
+        "Campaign hierarchy for network promotions is not the best choice because opportunity stages track deals.",
+        "Opportunity stages is not the best choice because email templates format messages.",
+        "Email templates is not the best choice because it does not meet the scenario as directly as Provider and network records."
       ]
     }
   ]

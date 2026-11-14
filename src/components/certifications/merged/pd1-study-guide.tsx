@@ -22,33 +22,25 @@ const slug = 'developer-1'
 
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription = `Platform Developer I study guide for ${RELEASE_CURRENT}: review five exam sections on Apex limits, testing, async patterns, and scenarios.`
+const pageDescription = `Platform Developer I study guide for ${RELEASE_CURRENT}: review four exam sections on Apex limits, testing, async patterns, and scenarios.`
 
 export const faqItems = [
   {
     question: 'How many sections does the PD1 exam have?',
-    answer: 'The Platform Developer I exam covers 4 sections: Process Automation and Logic (28%), Developer Fundamentals (27%), User Interface (25%), and Testing, Debugging, and Deployment (20%). Process Automation and Logic and Developer Fundamentals together account for 55%, so start there.',
+    answer: 'The exam has four sections: Process Automation and Logic (28%), Developer Fundamentals (27%), User Interface (25%), and Testing, Debugging, and Deployment (20%). The first two sections make up 55% together.',
   },
   {
     question: 'What is the passing score for the PD1 exam?',
-    answer: 'The PD1 passing score is 68%. The exam has 60 scored multiple-choice questions plus 5 unscored pilot questions (you cannot tell which is which), a 110-minute time limit, and a $200 exam fee. Retakes cost $100.',
+    answer: 'The listed passing score is 68%. The exam has 60 questions, up to five additional unscored questions, and 105 minutes. The fee is $200 and a retake is $100, plus applicable taxes.',
   },
   {
     question: 'Do I need to know Java or another language before studying PD1?',
-    answer: 'No prior programming language experience is required, but PD1 tests real Apex code. You need to read Apex class syntax, understand governor limits in context, and identify correct vs incorrect code patterns. The exam does NOT require you to write code from memory, but you must understand what code does and spot errors.',
+    answer: 'You can study Apex without knowing a particular language first. Practise reading class syntax, tracing code, and identifying how governor limits apply.',
   },
   {
     question: 'What Apex governor limits are tested on PD1?',
     answer: 'Key per-transaction Apex limits include 100 SOQL queries synchronously (200 asynchronously), 150 DML statements, 50,000 records retrieved by SOQL queries, and 100 callouts. The CPU-time limit is 10,000ms synchronously and 60,000ms asynchronously. Limits are enforced by execution context; special contexts and other documented exceptions can differ, and exceeding a governor limit can cause an unhandled runtime exception.',
   },
-]
-
-const examSections = [
-  { name: 'Process Automation and Logic', weight: 30, note: 'Apex classes, triggers, governor limits, bulkification, async Apex (Future, Batch, Queueable, Scheduled)' },
-  { name: 'Testing, Debugging, and Deployment', weight: 25, note: 'Test classes, @isTest, Test.startTest/stopTest, code coverage (75% minimum), debugging tools, change sets, metadata API' },
-  { name: 'User Interface', weight: 23, note: 'Lightning Web Components (LWC), Aura components, Visualforce basics, @wire service, lightning-record-form, JavaScript in LWC' },
-  { name: 'Integration', weight: 15, note: 'REST vs SOAP callouts, HttpRequest, HTTP methods (GET/POST/PUT/DELETE), JSON parsing, Named Credentials, external services' },
-  { name: 'Salesforce Fundamentals', weight: 7, note: 'Platform basics, MVC pattern, declarative vs programmatic, object relationships, sharing model fundamentals' },
 ]
 
 export default function Pd1StudyGuideContent() {
@@ -57,49 +49,6 @@ export default function Pd1StudyGuideContent() {
 
 
       <CertInsightBlock certSlug="pd1" />
-
-      {/* Exam snapshot */}
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">PD1 Exam at a Glance</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {[
-            { label: 'Questions', value: '60' },
-            { label: 'Time Limit', value: '105 min' },
-            { label: 'Passing Score', value: '68%' },
-            { label: 'Exam Fee', value: '$200' },
-          ].map(({ label, value }) => (
-            <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
-              <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-600 mt-1">{label}</p>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-gray-600 mt-4">
-          Retake fee: $100. No hard prerequisites required (ADM-201 knowledge assumed). 5 unscored pilot questions included, you cannot identify them.
-        </p>
-      </section>
-
-      {/* Exam weightage */}
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">PD1 Exam Sections and Weightage</h2>
-        <p className="text-sm text-gray-600 mb-4">
-          Process Automation and Logic and Developer Fundamentals together account for 55% of the exam. Master Apex and the platform data model first.
-        </p>
-        <div className="space-y-3">
-          {examSections.map(({ name, weight, note }) => (
-            <div key={name}>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="font-medium text-gray-800">{name}</span>
-                <span className="text-salesforce-blue font-semibold">{weight}%</span>
-              </div>
-              <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
-              </div>
-              <p className="text-xs text-gray-600">{note}</p>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Section deep-dives */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -110,7 +59,7 @@ export default function Pd1StudyGuideContent() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Process Automation and Logic (28%)
             </p>
-            <p>The heart of the PD1 exam. <strong>Apex governor limits</strong> are per transaction: SOQL is limited to 100 queries synchronously and 200 asynchronously; DML statements to 150; and records retrieved by SOQL queries to 50,000. CPU time is limited to 10,000ms synchronously and 60,000ms asynchronously. The callout limit is 100 per transaction. <strong>Bulkification</strong> is a specific governor limit scenario; you must know why SOQL or DML inside a for-loop violates limits and how to fix it using List/Map patterns. These are general per-transaction limits; the applicable context and documented exceptions matter, and exceeding a governor limit can cause an unhandled runtime exception. <strong>Async Apex</strong>: Future methods (simple callouts, @future(callout=true), cannot be monitored); Batch Apex (Database.Batchable interface, 3 methods: start/execute/finish, up to 50M records in batches of 200 default); Queueable (can be chained, accepts non-primitive types); Scheduled (Schedulable interface, cron expression). <strong>Most common mistake:</strong> confusing when to use Future vs Queueable; Queueable is preferred when you need chaining or non-primitive parameters.</p>
+            <p><strong>Governor limits</strong> apply per transaction. For example, the general SOQL query limit is 100 synchronously and 200 asynchronously; the DML statement limit is 150. CPU and other limits vary by context. Collect records and perform queries and DML in bulk. Compare Future, Batch, Queueable, and Scheduled Apex by the work they can handle, and consult the official limits reference for exceptions.</p>
             <p className="mt-2 text-xs text-gray-600">Verify current values and context-specific exceptions in Salesforce&apos;s <a className="underline text-salesforce-blue" href="https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-apexgov.html" target="_blank" rel="noreferrer nofollow noopener">Apex Governor Limits quick reference</a> and <a className="underline text-salesforce-blue" href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_gov_limits.htm" target="_blank" rel="noreferrer nofollow noopener">Execution Governors and Limits</a>.</p>
           </div>
           <div>
@@ -118,28 +67,28 @@ export default function Pd1StudyGuideContent() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Testing, Debugging, and Deployment (20%)
             </p>
-            <p><strong>Test class rules the exam enforces:</strong> 75% code coverage minimum for deployment (not per-class, across the org), @isTest annotation on class and methods, Test.startTest() / Test.stopTest() resets governor limits and forces async execution, System.assert/assertEquals/assertNotEquals for assertions. <strong>Test data isolation:</strong> @isTest(SeeAllData=false) is the default, test classes cannot see real org data unless SeeAllData=true (avoid this). Use Test.getStandardPricebookId() for price book in tests. <strong>Deployment:</strong> sandbox → production via change sets or metadata API. SFDX/SF CLI: sfdx force:source:push (scratch org), force:source:retrieve, force:mdapi:deploy. <strong>Debugging:</strong> Developer Console, Debug Logs, SOQL Query Plan, anonymous Apex for testing.</p>
+            <p><strong>Testing:</strong> Review the overall 75% Apex coverage requirement and trigger coverage rules. Create test data, run the code, and assert the result. Use Test.startTest() and Test.stopTest() when appropriate, and mock external callouts. For deployment and troubleshooting, practise using sandboxes, deployment tools, debug logs, and the Developer Console.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               User Interface (25%)
             </p>
-            <p><strong>Lightning Web Components (LWC)</strong> dominate this section. Key concepts: @api (public property, passed from parent), @track (reactive private property, deprecated in newer versions, all properties reactive now), @wire (calls Apex or standard library functions declaratively). Component lifecycle hooks: constructor(), connectedCallback(), renderedCallback(), disconnectedCallback(). <strong>LWC to Apex:</strong> @AuraEnabled on Apex methods, cacheable=true for wire, without cacheable for imperative calls. <strong>LWC events:</strong> custom events bubble with composed+bubbles options. <strong>Aura:</strong> still tested at lower depth, know component lifecycle, Aura events vs LWC custom events, and that Aura can contain LWC but not vice versa.</p>
+            <p><strong>Lightning Web Components:</strong> Review public properties and methods with @api, data provision with @wire, and the use of @track for supported object and array changes. Understand lifecycle hooks, Apex calls, and custom events. Compare Lightning Web Components with Aura and Visualforce.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Integration (tested within Process Automation and Logic)
             </p>
-            <p><strong>REST vs SOAP:</strong> REST uses JSON, lightweight, stateless, simpler to implement; SOAP uses WSDL/XML, stricter contract, legacy systems. <strong>Callouts:</strong> HttpRequest object, HttpRequest.setEndpoint(), HttpRequest.setMethod('GET'), Http.send(). Named Credentials store endpoint + authentication. Use them for credentials security. Callouts cannot be made from Apex triggers without @future(callout=true) or Queueable. <strong>Inbound:</strong> REST API (standard /services/data/vXX.0/ endpoints), SOAP API (WSDL import), Bulk API (CSV-based, high-volume). Apex allows 100 callouts per transaction.</p>
+            <p><strong>Integrations:</strong> Compare REST and SOAP, then practise making an Apex HTTP callout. Review endpoints, authentication with Named Credentials, response handling, and callout limits. For inbound work, understand the roles of Salesforce APIs and custom Apex REST endpoints.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Developer Fundamentals (27%)
             </p>
-            <p>MVC pattern (Model = objects/fields, View = Visualforce/LWC, Controller = Apex), declarative vs programmatic development, when to choose each. Object relationships (master-detail, lookup, many-to-many via junction object), sharing model basics (OWD, role hierarchy, sharing rules, with sharing / without sharing in Apex). Know that <code>with sharing</code> enforces the running user’s sharing rules; <code>without sharing</code> ignores them (admin context).</p>
+            <p>Review the model, view, and controller roles and when to use declarative or programmatic features. Practise choosing object relationships and explaining record access through org-wide defaults, roles, and sharing rules. In Apex, understand what <code>with sharing</code> and <code>without sharing</code> mean for record-level access.</p>
           </div>
         </div>
       </section>
@@ -149,8 +98,8 @@ export default function Pd1StudyGuideContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Critical Apex Patterns for the Exam</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <div className="bg-gray-50 rounded-lg p-4">
-            <p className="font-semibold text-gray-900 mb-2">Bulkified Trigger Pattern (always correct):</p>
-            <pre className="text-xs font-mono text-gray-700 overflow-x-auto">{`trigger AccountTrigger on Account (before insert, before update) {
+            <p className="font-semibold text-gray-900 mb-2">Bulk processing example:</p>
+            <pre className="text-xs font-mono text-gray-700 overflow-x-auto">{`trigger AccountTrigger on Account (before update) {
   List<Id> accountIds = new List<Id>();
   for (Account acc : Trigger.new) {
     accountIds.add(acc.Id);       // collect IDs
@@ -164,7 +113,7 @@ export default function Pd1StudyGuideContent() {
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">Async Apex Decision Tree:</h3>
             <ul className="space-y-1">
-              <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need a callout from a trigger? → @future(callout=true)</span></li>
+              <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need a callout from a trigger? → Consider asynchronous Apex with callout support</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need to chain jobs or pass non-primitive data? → Queueable</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need to process millions of records? → Batch Apex (Database.Batchable)</span></li>
               <li className="flex gap-2"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Need to run daily/weekly automatically? → Schedulable (implements Schedulable)</span></li>
@@ -186,12 +135,12 @@ export default function Pd1StudyGuideContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week PD1 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Apex Fundamentals and Governor Limits (30%):</strong> Apex syntax, data types, SOQL, SOSL, DML operations, governor limits. Practice in Developer Edition org: write a simple trigger with SOQL outside the loop. Complete Trailhead &ldquo;Apex Basics &amp; Database&rdquo; and &ldquo;Apex Triggers&rdquo; modules.</p>
-          <p><strong>Week 2: Async Apex (part of 30%):</strong> Future methods, Batch Apex, Queueable, Schedulable. Learn the interfaces and method signatures by writing each type. Practice: write a batch class that updates all Contacts missing an email. Run it in anonymous Apex. Verify with System.debug logs.</p>
-          <p><strong>Week 3: Testing and Deployment (25%):</strong> Test class structure, @isTest annotations, Test.startTest/stopTest, code coverage, mock callouts (HttpCalloutMock), and static resources for test data. Practice: write a test class for your batch Apex that achieves 100% coverage.</p>
-          <p><strong>Week 4: LWC and User Interface (23%):</strong> LWC component anatomy (HTML/JS/CSS/XML), @api, @wire, @track, component communication (events, pubsub), lightning-record-form, lightning-datatable. Practice: build a simple LWC that displays accounts using @wire(getRecord).</p>
-          <p><strong>Week 5: Integration and Fundamentals (22%):</strong> REST/SOAP callouts, HttpRequest, Named Credentials, inbound REST API, Bulk API overview. Review MVC, sharing model (with sharing / without sharing). Study integration patterns: outbound (Apex callouts) and inbound (custom REST endpoints with @RestResource).</p>
-          <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min), weak-area targeted revision. Score 80%+ consistently (PD1 passing is 68%, aim 10 points above) before booking.</p>
+          <p><strong>Week 1: Apex Fundamentals and Governor Limits:</strong> Review Apex syntax, SOQL, SOSL, DML, and governor limits. In a Developer Edition org, write a trigger that processes a collection without querying inside a loop.</p>
+          <p><strong>Week 2: Async Apex:</strong> Compare Future, Batch, Queueable, and Scheduled Apex. Write a small batch job, run it, and inspect the results and debug logs.</p>
+          <p><strong>Week 3: Testing and Deployment (20%):</strong> Practise test data setup, assertions, coverage, and callout mocks. Write tests for your batch job and review the results.</p>
+          <p><strong>Week 4: LWC and User Interface (25%):</strong> Build a simple Lightning Web Component. Review its files, public properties, data access, and events.</p>
+          <p><strong>Week 5: Integration and Fundamentals:</strong> Review callouts, Named Credentials, Salesforce APIs, sharing, and the model-view-controller pattern. Compare inbound and outbound integrations.</p>
+          <p><strong>Week 6:</strong> Take timed practice tests and review the topics you missed. Use the official exam guide to check the current format before booking.</p>
         </div>
       </section>
 
@@ -201,19 +150,19 @@ export default function Pd1StudyGuideContent() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Governor limit questions:</strong> If you see SOQL or DML inside a for-loop in the code; that is wrong. The fix is always to collect IDs in a list, query outside the loop, and store results in a Map. Eliminate all answers that put SOQL/DML inside loops.</span>
+            <span><strong>Governor limit questions:</strong> Check whether SOQL or DML runs repeatedly inside a loop. Consider collecting IDs, querying once, and using a map to find results.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Test class questions:</strong> If the scenario mentions &ldquo;code coverage&rdquo; below 75%, you need to add test methods. If it mentions tests passing locally but failing on deployment, the issue is usually SeeAllData=true (test relies on org data). System.assert is required, inserting a record without asserting is insufficient coverage.</span>
+            <span><strong>Test class questions:</strong> Review the deployment coverage requirement and any test-data dependencies. Write assertions that check the intended behavior, and investigate failures instead of assuming one cause.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Async Apex questions:</strong> Identify the constraint: needs a callout from a trigger → Future. Needs chaining or SObject parameter → Queueable. Processes large datasets → Batch. Needs to run on a schedule → Scheduled. Needs to be monitored with status → Batch (has System.scheduleBatch and Apex Jobs UI).</span>
+            <span><strong>Async Apex questions:</strong> Match the work to the tool: consider asynchronous Apex for trigger callouts, Queueable for chaining or complex inputs, Batch for large datasets, and Scheduled Apex for timed work.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>LWC questions:</strong> If a parent component needs to pass data to a child, use @api. If a child needs to notify a parent, fire a custom event with this.dispatchEvent(new CustomEvent(’eventname’, &#123; detail: data &#125;)). If you need to call Apex imperatively, import the method and call it in connectedCallback() or a click handler.</span>
+            <span><strong>LWC questions:</strong> Use @api to expose a child component property or method. Use a custom event when a child needs to notify its parent. Review when to call Apex imperatively and when to use @wire.</span>
           </li>
         </ul>
       </section>
@@ -223,13 +172,10 @@ export default function Pd1StudyGuideContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          80%+ on 3 timed full mocks (60 Q / 105 min) before booking
+          Use timed practice tests to find topics to revisit
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          PD1 passing score is 68%. The code-reading questions are designed to look ambiguous, a candidate who understands
-          governor limits and bulkification can eliminate 2 of 4 answers immediately on most questions. If you are
-          consistently failing governor limit questions, spend another week writing Apex in a Developer Edition org.
-          Hands-on writing is the fastest way to internalise these patterns.
+          The listed passing score is 68%. Use your practice results to choose what to review. If limits or bulk processing remain difficult, write and test examples in a Developer Edition org.
         </p>
       </section>
 
@@ -277,7 +223,7 @@ export default function Pd1StudyGuideContent() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Practice With Real Exam-Style Questions</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Apply this study guide with free PD1 practice questions, exam weightage breakdown, and prep tips:
+          Check your understanding with the practice questions and review the topics you missed:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

@@ -41,23 +41,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce exam retake policy?',
-    answer: 'Salesforce does not require a waiting period between exam attempts. You can schedule a retake when you are ready, though Trailhead Academy and Pearson VUE scheduling usually leave at least 24 hours between attempts. Salesforce has not published an attempt limit for most certifications. The retake fee is about 50% of the original exam fee.',
+    answer: `Within each release cycle, Salesforce allows ${RETAKE_POLICY.attemptsPerCycle} attempts at the same exam. After a first failure, wait ${RETAKE_POLICY.waitAfterFirstFail}; after a second, wait ${RETAKE_POLICY.waitAfterSecondFail}; after a third, wait until ${RETAKE_POLICY.afterThirdFail}. Attempts reset at the next release cycle.`,
   },
   {
     question: 'How much does a Salesforce exam retake cost?',
-    answer: 'Retakes cost about 50% of the original exam fee: a $75 exam costs about $38 to retake, a $200 exam about $100, and a $400 architect exam about $200. After a failed attempt, a discounted retake voucher appears in your Trailhead Academy account. You pay the reduced price when you schedule again.',
+    answer: 'Most retakes cost 50% of the original exam fee. Accredited Professional exams cost $150 to retake, the same as the first attempt; Foundations exams have no retake fee. Pearson VUE applies the retake price when you book through Trailhead Academy.',
   },
   {
     question: 'How many times can I retake a Salesforce certification exam?',
-    answer: 'Salesforce has not published a retake limit for most standard certification exams. You can try again as needed, but you will pay the retake fee after each failed attempt. If you fail more than once, use the score report to plan more focused study before booking again. The CTA Board Review has separate rules; candidates who fail typically wait 6 months before reapplying.',
+    answer: `You can attempt the same exam ${RETAKE_POLICY.attemptsPerCycle} times in one release cycle. After a third failure, wait until the next release cycle begins; your attempt count then resets. The Technical Architect Review Board has separate policies, so check its current programme guidance.`,
   },
   {
     question: 'What score report do I receive after failing?',
-    answer: 'Salesforce provides a score report with your overall score and results for each exam section. For example, it may show 60% in Data Management and 80% in Sharing Model Design. Use this breakdown to identify topics that need more study. The report is available in Trailhead Academy after the exam.',
+    answer: 'Salesforce provides a section-level score report after the exam. Use the breakdown to identify topics that need more study; the report is available in Trailhead Academy.',
   },
   {
     question: 'Does failing a Salesforce exam affect my record permanently?',
-    answer: 'No. Failed attempts do not appear on your public Trailhead profile or certification verification page. Your Trailhead credentials show certifications you have passed. Employers and clients who use Salesforce verification can see your current credentials, not your exam history or number of attempts.',
+    answer: 'The public credential view is for earned certifications. For details about your exam history and score report, sign in to Trailhead Academy.',
   },
 ]
 
@@ -83,16 +83,24 @@ export default function SalesforceExamRetakePolicyPage() {
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
-          { label: 'Waiting Period', value: 'None' },
+          { label: 'Waiting Period', value: '24h, then 14d' },
           { label: 'Retake Cost', value: '~50%' },
-          { label: 'Attempt Limit', value: 'None' },
-          { label: 'Fail on Record', value: 'No' },
+          { label: 'Attempts', value: '3 per cycle' },
+          { label: 'Foundations Retake', value: 'Free' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
             <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
+      </div>
+
+      <div className="mb-8 rounded-xl border border-blue-200 bg-blue-50 p-5 text-sm text-blue-950">
+        <h2 className="mb-1 font-bold">2026–2027 free-retake promotion</h2>
+        <p>
+          Salesforce and Pearson are offering one free retake for eligible $200 and $400 exams when candidates opted in and completed their paid first attempt by November 17, 2026. Eligible retakes can be taken January 4–April 7, 2027. Accredited Professional and Technical Architect exams are excluded.{' '}
+          <a className="font-semibold underline" href="https://help.salesforce.com/s/articleView?id=005460244&language=en_US&type=1" target="_blank" rel="noopener noreferrer">See Salesforce’s promotion terms</a>.
+        </p>
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-5 mb-8">
@@ -110,9 +118,11 @@ export default function SalesforceExamRetakePolicyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Retake Costs by Exam Type</h2>
         <div className="space-y-3">
           {[
-            { type: 'Associate exams (Platform Foundations, MuleSoft Integration Foundations; AI Associate retired Feb 2026)', original: '$75', retake: '~$38' },
-            { type: 'Standard professional/specialist exams (ADM-201, PD1, Sales Cloud, Service Cloud, etc.)', original: '$200', retake: '~$100' },
-            { type: 'Architect exams (Integration Architect, Data Architect, IAM Architect, etc.)', original: '$400', retake: '~$200' },
+            { type: 'Foundations exams (Platform Foundations, MuleSoft Integration Foundations)', original: '$75', retake: 'Free' },
+            { type: 'Standard professional and specialist exams', original: '$200', retake: '$100' },
+            { type: 'Architect exams', original: '$400', retake: '$200' },
+            { type: 'Accredited Professional exams', original: '$150', retake: '$150' },
+            { type: 'Technical Architect evaluation / review board', original: '$1,500 / $4,500', retake: '$750 / $2,250' },
           ].map((row) => (
             <div key={row.type} className="flex flex-wrap items-center justify-between gap-3 py-3 border-b border-gray-100 last:border-0 text-sm">
               <span className="text-gray-700 flex-1">{row.type}</span>
@@ -129,7 +139,7 @@ export default function SalesforceExamRetakePolicyPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">What to Do After Failing</h2>
         <div className="space-y-4">
           {[
-            { step: '1', title: 'Review your score report by section', desc: 'Open your score report in Trailhead Academy after the exam. It shows your result for each section. Note the two or three sections where you scored below the passing threshold and focus your review there.' },
+            { step: '1', title: 'Review your score report by section', desc: 'Open your score report in Trailhead Academy after the exam. Note the sections that need more study and focus your review there.' },
             { step: '2', title: 'Give yourself time to study', desc: 'Avoid booking another attempt right away. The page recommends waiting 2–4 weeks to address the gaps in your score report before retaking the exam.' },
             { step: '3', title: 'Vary your study approach', desc: 'If you mainly read Trailhead material, add hands-on sandbox practice. If you already did hands-on work, try scenario-based practice questions. Use more than one study method.' },
             { step: '4', title: 'Focus on weaker sections', desc: 'Spend about 70% of your study time on sections where you scored below the passing threshold. Review stronger sections as needed.' },
@@ -148,7 +158,7 @@ export default function SalesforceExamRetakePolicyPage() {
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-amber-900 mb-2">CTA Board Review: Different Policy</h2>
-        <p className="text-sm text-amber-800">The Salesforce Certified Technical Architect (CTA) Board Review has separate retake rules. Candidates who do not pass the live presentation typically wait 6 months before reapplying and must submit their application materials again. Check Salesforce\'s CTA programme page for current rules.</p>
+        <p className="text-sm text-amber-800">The Salesforce Certified Technical Architect Architect Evaluation and Review Board have separate pricing and scheduling rules. Confirm the current requirements with Salesforce before applying again.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

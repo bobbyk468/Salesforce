@@ -40,28 +40,28 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the passing score for Salesforce Administrator exam?',
-    answer: 'The Platform Administrator (ADM-201) exam requires 68%, which is 41 of the 60 scored questions. That figure comes from the official Salesforce exam guide, not from candidate reports.',
+    answer: 'Platform Administrator (ADM-201) requires a score of 68%, or 41 of the 60 scored questions. This figure comes from the official Salesforce exam guide.',
   },
   {
     question: 'Do all Salesforce exams have the same passing score?',
-    answer: 'No. Associate-level exams ($75) typically require around 70%. Specialist and Professional exams ($200) generally require 62–68% depending on the exam. Architect exams ($400) often require around 67%. Salesforce does not disclose exact thresholds, these figures come from candidate reports and study guide publishers.',
+    answer: 'No. Associate exams ($75) typically require about 70%. Specialist and Professional exams ($200) generally require 62–68%, depending on the exam. Architect exams ($400) often require about 67%. Salesforce does not disclose every exact threshold; some figures come from candidate reports and study guide publishers.',
   },
   {
     question: 'How is the Salesforce exam score calculated?',
-    answer: 'Salesforce reports an unweighted percentage: your correct answers out of the scored questions, compared against the passing score in that exam’s official guide. Unscored pilot questions do not count. You receive a pass or fail result plus a section-by-section breakdown showing where you were strong and weak.',
+    answer: 'Salesforce calculates your score as the percentage of scored questions you answered correctly and compares it with the passing score in the official exam guide. Unscored pilot questions do not count. You receive a pass or fail result and a breakdown by exam section.',
   },
   {
     question: 'What score should I aim for on practice exams?',
-    answer: 'Aim for 75%+ on multiple full-length timed practice exams before booking the real exam. This provides a safety margin, passing thresholds range from about 60%% to 78%% depending on the exam, so practising well above your own exam’s mark gives you buffer for exam-day variability, harder questions, or nerves. Consistently scoring below 70% on practice suggests more study is needed.',
+    answer: 'Aim for at least 75% on several full-length, timed practice exams before booking. This gives you a margin above the passing score, which ranges from about 60% to 78% depending on the exam. If you consistently score below 70%, spend more time studying before you book.',
   },
   {
     question: 'Does the Technical Architect (CTA) exam have a passing score?',
-    answer: 'The CTA is not a multiple-choice exam. It is a live Board Review where you present a hypothetical architecture to a panel of CTAs. There is no numerical passing score, the board evaluates you on six criteria (architecture, design, security, scalability, etc.) and makes a pass/fail decision. Preparation focuses on presentation skills and architecture storytelling, not a percentage threshold.',
+    answer: 'The CTA is not a multiple-choice exam. In the live Board Review, you present a hypothetical architecture to a panel of CTAs. There is no numerical passing score. The board evaluates six criteria, including architecture, design, security, and scalability, then decides pass or fail. Prepare to explain your architecture clearly, not to reach a percentage threshold.',
   },
 ]
 
 const passingScores = [
-  { tier: 'Associate', fee: '$75', typicalScore: '62-70%', examples: 'Platform Foundations, MuleSoft Integration Foundations, AI Associate (retired Feb 2026s' },
+  { tier: 'Associate', fee: '$75', typicalScore: '62-70%', examples: 'Platform Foundations, MuleSoft Integration Foundations, AI Associate (retired Feb 2026)' },
   { tier: 'Specialist', fee: '$200', typicalScore: '~62–65%', examples: 'Email Specialist, Pardot Specialist, Platform Developer I' },
   { tier: 'Professional / Consultant', fee: '$200', typicalScore: '~63–68%', examples: 'Administrator, Sales Cloud Consultant, Service Cloud Consultant' },
   { tier: 'Architect', fee: '$400', typicalScore: '58-70%', examples: 'Integration Architect, Data Architect, Sharing & Visibility Architect' },
@@ -84,12 +84,12 @@ export default function SalesforceCertificationPassingScorePage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Salesforce publishes an exact passing score in each official exam guide, and this page lists the verified figure for every credential we hold a guide for. They range from 48% to 78%, so the tier generalisations you will find elsewhere are not much use. Accredited Professional and board-reviewed exams are the exception: those cut scores are not published publicly.
+          Salesforce lists exact passing scores in official exam guides. This page shows verified scores where a guide is available. Scores range from 48% to 78%. Salesforce does not publish numerical cut scores for Accredited Professional and board-reviewed exams.
         </p>
       </div>
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
-        <p className="text-sm text-amber-800"><strong>Note:</strong> the figures below come from each credential&apos;s official Salesforce exam guide, not from estimates. Accredited Professional and board-reviewed exams are the exception: Salesforce does not publish a numeric cut score for those. Aim roughly ten points above your own exam&apos;s mark on practice tests to leave a margin.</p>
+        <p className="text-sm text-amber-800"><strong>Note:</strong> figures below come from official Salesforce exam guides rather than estimates. Salesforce does not publish a numerical passing score for Accredited Professional and board-reviewed exams. On practice tests, aim about ten points above the score required for your exam.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -121,10 +121,10 @@ export default function SalesforceCertificationPassingScorePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Use This When Studying</h2>
         <ol className="space-y-3 text-sm text-gray-700 list-decimal list-inside">
-          <li><strong>Target 75%+ on practice exams.</strong> This gives you a buffer above your exam’s own threshold, which ranges from about 60% to 78%.</li>
-          <li><strong>Do not rely on "just passing."</strong> Exam difficulty varies by sitting; a 66% on one practice run may not translate to a pass on the real exam.</li>
-          <li><strong>Take multiple full mock exams.</strong> Consistently hitting 75%+ across 2–3 full mocks is a strong readiness indicator.</li>
-          <li><strong>Review every wrong answer.</strong> Understanding why you missed questions matters more than the raw percentage.</li>
+          <li><strong>Aim for 75% or higher.</strong> This gives you a margin above the exam threshold, which ranges from about 60% to 78%.</li>
+          <li><strong>Do not aim only to scrape a pass.</strong> A score of 66% on a practice test may not translate to a pass on exam day.</li>
+          <li><strong>Take several full practice exams.</strong> Scoring 75% or higher on two or three full tests can help you judge if you are ready.</li>
+          <li><strong>Review each wrong answer.</strong> Learn why an answer was wrong instead of focusing only on your score.</li>
         </ol>
       </div>
 
@@ -144,7 +144,7 @@ export default function SalesforceCertificationPassingScorePage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Until You Hit 75%+</h2>
-        <p className="text-white mb-6">Free practice questions for every Salesforce certification, simulate the real exam and track your score.</p>
+        <p className="text-white mb-6">Practice with questions for every Salesforce certification and track your score.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse All Certifications
         </Link>

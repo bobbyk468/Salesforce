@@ -27,7 +27,7 @@ const pageDescription =
 export const faqItems = [
   {
     question: 'What is the Salesforce Health Cloud Accredited Professional exam format?',
-    answer: 'The Health Cloud Accredited Professional (AP) exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Health Cloud configuration: patient and member management, care plans, provider network management, and healthcare-specific data model concepts.',
+    answer: 'The Health Cloud Accredited Professional (AP) exam has 60 questions, a 90-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Health Cloud configuration: patient and member management, care plans, provider network management, and healthcare-specific data model concepts.',
   },
   {
     question: 'What are the highest-weight Health Cloud AP exam sections?',
@@ -84,7 +84,7 @@ export default function HealthCloudApExamTipsContent() {
             <span className="font-medium text-gray-900">Data Model and Compliance</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Patient Management + Care Plans + Provider = 80% of tested content.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 60 questions, 90 minutes, Pass/Fail, $150. Patient Management + Care Plans + Provider = 80% of tested content.</p>
         </div>
       </section>
 
@@ -106,7 +106,7 @@ export default function HealthCloudApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">AP Exam Benchmark</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+          Pass 3 timed 60-question mocks before booking (Pass/Fail scoring)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Health Cloud AP is a practitioner-level accreditation for implementation partners and

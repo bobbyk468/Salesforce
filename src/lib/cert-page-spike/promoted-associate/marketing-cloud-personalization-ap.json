@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Personalization specialists",
-        "description": "You implement real-time web and email personalization using Marketing Cloud Personalization (Interaction Studio) and want to certify your skills."
+        "description": "You set up real-time experiences across web and email with Marketing Cloud Personalization, formerly Interaction Studio, and want to validate that work."
       },
       {
         "label": "Marketing Cloud implementation partners",
-        "description": "You deliver personalization projects for clients and need the AP credential to validate your hands-on expertise with the platform."
+        "description": "You deliver Personalization implementations for customers and need to show hands-on platform knowledge."
       },
       {
         "label": "E-commerce and content strategists",
-        "description": "You manage product recommendations and dynamic content experiences and want to prove your ability to configure Einstein Recipes and campaign targeting."
+        "description": "You manage product suggestions or dynamic content and want to demonstrate skills with Einstein Recipes and campaign targeting."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Marketing Cloud Personalization Exam Hard?",
-    "summary": "The Marketing Cloud Personalization AP exam is moderately difficult. It tests real-time personalization concepts including web SDK implementation, catalog configuration, Einstein Recipes, and A/B testing. Candidates who have not implemented the Personalization (Interaction Studio) web beacon and configured campaigns will struggle.",
+    "summary": "The exam covers how Personalization collects behavior and uses it for relevant experiences. Prepare for web SDK setup, catalog data, Einstein Recipes, campaign configuration, and experiment measurement. Prior implementation experience makes the scenarios easier to reason through.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>70% passing score</strong>: standard for AP-level exams.",
-      "<strong>Technical SDK knowledge</strong>: you need to understand how the web SDK (Evergage beacon) captures behavioral data and sends events to the Personalization platform.",
-      "<strong>ML-driven recommendations</strong>: expect questions on Einstein Recipe types (Collaborative Filtering, Content Affinity, User Trending) and how to configure Strategies with boosters and exclusions."
+      "<strong>50 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 35 correct answers out of 50.",
+      "Understand how the web SDK captures behavior and sends events to Personalization.",
+      "Review Einstein Recipe approaches and how strategies can use boosters and exclusions."
     ],
-    "passRateGuidance": "Implement the web SDK on at least one site, configure a product catalog, and build at least 2-3 web campaigns with A/B testing before booking. Hands-on experience with Einstein Recipes is essential."
+    "passRateGuidance": "Get hands-on with the web SDK, a product catalog, and several campaigns. Configure an A/B test and try Einstein Recipes so you can connect each setting to an actual use case."
   },
   "examFormat": {
     "heading": "Marketing Cloud Personalization Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. You’ll be asked to choose between server-side and client-side campaigns, configure a recommendation strategy for a specific page type, or design a triggered campaign based on segment entry.",
+    "intro": "The exam is proctored online or at a test center. Scenario questions may ask you to choose a campaign delivery method, build a recommendation strategy, or trigger an experience from segment membership.",
+    "scenarioPercent": "About 50–60% of questions are scenario-based. Be ready to choose a campaign delivery method, configure recommendations for a page, or respond to a visitor entering a segment.",
     "bestWayToPass": [
-      "<strong>Understand the web SDK:</strong> Know how the Evergage beacon is deployed, how sitemap configurations map page types, and how events flow to the Personalization platform.",
-      "<strong>Master Einstein Recipes:</strong> Know the difference between Collaborative Filtering, Content Affinity, and User Trending, and how to combine them in a Strategy with boosters and exclusions.",
-      "<strong>Know campaign types:</strong> Understand server-side (pre-render) vs client-side (post-render) campaigns, triggered email, and open-time email personalization.",
-      "<strong>Practice A/B testing:</strong> Configure control groups, measure lift metrics (CTR, revenue per impression), and know how to interpret campaign performance reports."
+      "Understand how the web beacon and sitemap identify page types, catalog items, and visitor actions. Know how those events reach the Personalization service.",
+      "Compare Collaborative Filtering, Content Affinity, and User Trending. Practice combining recipe output with strategy rules, boosters, and exclusions.",
+      "Review web campaigns, triggered email, open-time email, and server-side delivery. Choose based on when and where the experience must appear.",
+      "Set up a control group and review measures such as click-through rate and revenue per impression to assess campaign lift."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests real-time personalization with Marketing Cloud Personalization (Interaction Studio): web SDK setup, catalog configuration, Einstein Recipes, campaign targeting, and A/B testing.",
+    "description": "This exam covers Marketing Cloud Personalization setup, recommendations, campaigns, and testing. The certification details list 60 questions, a 75-minute limit, and a 70% passing score.",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",
@@ -61,56 +61,56 @@
     "h2": "Marketing Cloud Personalization: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Catalog and Unified Profile",
-        "body": "Marketing Cloud Personalization (formerly Interaction Studio) builds Unified Profiles by tracking individual behaviour across channels. The Catalog stores product, article, or content items with attributes, forming the basis for recommendation algorithms. Item types (Products, Articles, Blog Posts) can be configured with custom attributes. Catalog data can be ingested via sitemap, feeds, or API. The Unified Profile aggregates engagement history across web, email, mobile, and in-store touchpoints."
+        "heading": "Catalog and unified profiles",
+        "body": "Personalization collects behavior across channels and builds a unified view of each visitor. Its catalog stores products, articles, and other recommendable items with attributes. Catalog records can arrive through a sitemap, feed, or API. The profile brings together engagement from web, email, mobile, and other connected touchpoints."
       },
       {
-        "heading": "Einstein Recipes and Recommendation Strategies",
-        "body": "Einstein Recipes define how the ML algorithm selects recommended items. Recipe types: Collaborative Filtering (users who viewed/bought X also liked Y), Content Affinity (attributes the individual user prefers), User Trending (popular among similar users). Strategies combine multiple Recipes with explicit rules (exclude viewed items; include only in-stock items, boost by margin). The exam tests how to configure a Strategy for a given personalisation scenario, e.g., homepage recommendations vs cart page cross-sell vs post-purchase email."
+        "heading": "Einstein Recipes and strategies",
+        "body": "Recipes use different signals to select items. Collaborative Filtering finds items associated with behavior from similar users; Content Affinity reflects attributes a visitor tends to engage with; User Trending uses popularity signals. A strategy can combine recipes with rules, such as excluding previously viewed items, requiring stock, or boosting selected attributes. Choose a mix that fits the placement and goal."
       },
       {
-        "heading": "Web Campaigns and Server-Side Personalisation",
-        "body": "Web Campaigns are the delivery mechanism for personalised experiences. Server-Side Campaigns run before the page renders, for personalising page content without DOM flicker. Client-Side Campaigns inject content after page load, for overlays, pop-ups, and callouts. A/B testing is built into campaigns, control group receives the default experience, treatment group receives the personalised version. The exam tests when to use server-side vs client-side delivery and how to configure campaign targeting rules."
+        "heading": "Web campaigns and delivery",
+        "body": "Campaigns deliver personalized experiences. Server-side campaigns prepare content before the page is rendered and can avoid visible page changes. Client-side campaigns update the page after load and suit elements such as overlays or callouts. A/B tests compare a treatment experience with a control that continues to see the default."
       },
       {
-        "heading": "Segmentation and Triggered Campaigns",
-        "body": "Segment Builder creates real-time audience segments based on Unified Profile attributes, engagement score, category affinity, lifecycle stage. Segments update in real time as users engage. Triggered Campaigns fire when a user enters or exits a segment, or performs a specific action (abandons cart, views a product). Triggered messages can fire via email (via Marketing Cloud **Journey Builder**), mobile push, or real-time web experiences. The exam tests segment design and trigger condition configuration."
+        "heading": "Segments and triggered experiences",
+        "body": "Segments describe audiences using profile fields and behavior, such as category affinity or lifecycle stage. They can change as new activity arrives. A triggered campaign can respond when someone enters or leaves a segment or performs an action, such as viewing a product or abandoning a basket. Experiences can reach web, mobile, or connected email journeys."
       },
       {
-        "heading": "Channel Integration: Email and Salesforce",
-        "body": "Email Integration connects Personalization with Marketing Cloud: Einstein Recipe recommendations appear in email templates via **AMPscript** or Open Time Email. **Journey Builder** integration enables triggered journeys based on Personalization segment entry. Salesforce CRM integration surfaces personalised recommendations in Sales and Service Cloud records. The exam tests how recommendation blocks are implemented in emails, how to pass user context between channels, and how to measure personalisation lift (revenue per recommendation shown)."
+        "heading": "Email and Salesforce connections",
+        "body": "Personalization can provide recommendations for Marketing Cloud email through supported integrations, including AMPscript or open-time email approaches. Journey Builder can use segment events to start journeys. Salesforce CRM connections can surface recommendations in Sales or Service Cloud. Measure outcomes such as revenue associated with recommendations, not only the number displayed."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Personalization Accredited Professional Exam",
-    "intro": "The Marketing Cloud Personalization (Interaction Studio) AP exam tests real-time personalization capabilities. Focus on web SDK implementation, campaign configuration, and how to use behavioral data for personalized experiences.",
+    "intro": "This exam focuses on using behavior and profile data to tailor experiences in real time. Study SDK and sitemap setup, catalog quality, campaign design, and measurement.",
     "blocks": [
       {
         "heading": "Web SDK Implementation",
-        "body": "Know how to implement the Personalization web SDK (Evergage beacon), configure sitemap mappings for page types and item catalog, and how event data is sent to the Personalization platform."
+        "body": "Learn how the Personalization web SDK is installed and how sitemap mappings describe pages, catalog items, and events."
       },
       {
         "heading": "Catalog & User Profile",
-        "body": "Understand the Personalization catalog (Products, Articles, Blog Posts) and how item attributes drive recommendations. Know how User Profile attributes are built from behavioral events and how they power segmentation."
+        "body": "Review catalog item types and attributes, and how profile fields built from events support audience segments."
       },
       {
         "heading": "Campaign Types",
-        "body": "Know the four campaign types: Web (in-page personalization), Triggered Email, Open-Time Email, and Server-Side (API-based). Understand when to use each and how they integrate with Marketing Cloud."
+        "body": "Compare in-page web campaigns, triggered email, open-time email, and server-side experiences; understand their Marketing Cloud connections."
       },
       {
         "heading": "Einstein Recipes & Recommendations",
-        "body": "Know how to configure Einstein Recipe types (Trending, Recently Viewed, Similar Items, Collab Filtering) and how Boosters and Exclusions customize recommendation logic for specific use cases."
+        "body": "Distinguish recipe approaches such as trending, recently viewed, similar items, and collaborative filtering. Learn how strategy boosters and exclusions shape results."
       },
       {
         "heading": "Reporting & A/B Testing",
-        "body": "Know how to interpret campaign performance reports (impressions, CTR, revenue per impression) and configure A/B tests against a control group to measure the lift from personalization."
+        "body": "Read reports using impressions, click-through rate, and revenue per impression. Use a control group to estimate the incremental effect."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "These Salesforce credentials complement an AP in personalization with platform and implementation knowledge.",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -166,7 +166,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A retailer wants product recommendations on its homepage to react to what the visitor is doing right now. What does this require?",
+      "question": "A shop wants its homepage recommendations to respond to a visitor’s current activity. What signal is needed?",
       "options": [
         "A manually curated list of products chosen by the merchandising team weekly",
         "A segment built the previous week from the visitor's purchase history alone",
@@ -174,7 +174,7 @@
         "Behaviour evaluated in the current session"
       ],
       "correctAnswer": 3,
-      "explanation": "Personalization responds to in-session behaviour, so what the visitor clicks and views in the current visit changes what they are shown.",
+      "explanation": "Current-session events let the experience adapt to what the visitor is viewing or doing now.",
       "whyWrong": [
         "A hand-curated list is the same for everyone and never adapts.",
         "Last week's segment misses everything about this visit.",
@@ -182,15 +182,15 @@
       ]
     },
     {
-      "question": "What is a catalog in Marketing Cloud Personalization?",
+      "question": "What information is stored in a Marketing Cloud Personalization catalog?",
       "options": [
         "The structured set of items that can be recommended",
-        "The list of email templates available for use in a personalised campaign",
+        "The list of email templates available for use in a personalized campaign",
         "The record of every page each visitor has viewed over the last twelve months",
-        "The schedule controlling when each personalisation campaign goes live"
+        "The schedule controlling when each personalization campaign goes live"
       ],
       "correctAnswer": 0,
-      "explanation": "The catalog holds the items, such as products or articles, along with their attributes, which is what recommendations are drawn from.",
+      "explanation": "The catalog contains recommendable products or content and the attributes used to describe them.",
       "whyWrong": [
         "Email templates are content assets, not catalog items.",
         "Visitor history is behavioural data rather than the catalog.",
@@ -198,7 +198,7 @@
       ]
     },
     {
-      "question": "Why does the quality of catalog attributes matter so much?",
+      "question": "Why do complete, accurate catalog attributes improve recommendations?",
       "options": [
         "The number of attributes decides how many campaigns can run at one time",
         "Recommendations can only use attributes that exist",
@@ -206,7 +206,7 @@
         "Attributes are required before any email can be sent to a known visitor"
       ],
       "correctAnswer": 1,
-      "explanation": "A recommendation rule can only filter or rank on data it has, so missing or inconsistent attributes directly limit what you can personalise on.",
+      "explanation": "Strategies can only filter and rank using available attributes, so gaps or inconsistent values limit relevance.",
       "whyWrong": [
         "Campaign capacity is not a function of attribute count.",
         "Attribute data does not drive page load performance.",
@@ -214,7 +214,7 @@
       ]
     },
     {
-      "question": "A visitor is browsing anonymously and then signs in. What should happen to their behaviour data?",
+      "question": "A visitor browses before signing in. How can Personalization use that earlier activity?",
       "options": [
         "The session is tied to their known profile",
         "The known profile is replaced entirely by the new anonymous session data",
@@ -222,7 +222,7 @@
         "Two separate profiles are kept permanently, one anonymous and one known"
       ],
       "correctAnswer": 0,
-      "explanation": "Identity resolution links the anonymous session to the known profile, so the browsing that led up to sign-in is not lost.",
+      "explanation": "Identity resolution can connect the anonymous activity to the known visitor profile after sign-in.",
       "whyWrong": [
         "Overwriting the known profile would destroy its history.",
         "Discarding pre-login behaviour throws away the most recent intent signal.",
@@ -230,7 +230,7 @@
       ]
     },
     {
-      "question": "What does an affinity score represent?",
+      "question": "What does a visitor’s affinity score describe?",
       "options": [
         "The total amount of money the visitor has spent across all their orders",
         "How strongly a visitor leans towards an attribute",
@@ -238,7 +238,7 @@
         "The number of separate sessions the visitor has started in a given month"
       ],
       "correctAnswer": 1,
-      "explanation": "Affinity is built from repeated behaviour and expresses a visitor's inclination towards a category, brand or other attribute.",
+      "explanation": "An affinity score reflects the visitor’s observed preference for a category, brand, or other attribute.",
       "whyWrong": [
         "Lifetime spend is a monetary measure, not an affinity.",
         "Merchandising priority is a business decision, not visitor behaviour.",
@@ -246,7 +246,7 @@
       ]
     },
     {
-      "question": "A campaign should only show to visitors who have put something in the basket but not checked out. How is this expressed?",
+      "question": "How can a campaign target visitors who added an item to the basket but did not buy?",
       "options": [
         "As a segment based on in-session behaviour",
         "As a change to the catalog attributes on each of the products in the basket",
@@ -254,7 +254,7 @@
         "As a manual list of visitors compiled each morning by the marketing team"
       ],
       "correctAnswer": 0,
-      "explanation": "Segments can be defined on behaviour, including what has happened in the current session, which is what basket abandonment is.",
+      "explanation": "Define a behavior-based segment for visitors who added an item and have not completed checkout.",
       "whyWrong": [
         "Catalog attributes describe items, not visitor state.",
         "A nightly export cannot drive an on-site message during the visit.",
@@ -262,15 +262,15 @@
       ]
     },
     {
-      "question": "Why is a control group used when testing a personalisation campaign?",
+      "question": "What does the control group tell you in a campaign experiment?",
       "options": [
         "To ensure that each visitor sees the campaign no more than once per session",
         "To show what would have happened without it",
-        "To reduce the amount of traffic the personalisation engine has to process",
+        "To reduce the amount of traffic the personalization engine has to process",
         "To satisfy a requirement that every campaign is reviewed before it goes live"
       ],
       "correctAnswer": 1,
-      "explanation": "Without a group that does not see the campaign, a rise in conversion cannot be attributed to the personalisation rather than to something else.",
+      "explanation": "A control group provides a baseline, helping distinguish campaign lift from changes that would have happened anyway.",
       "whyWrong": [
         "Frequency capping is a separate campaign setting.",
         "Control groups are about measurement, not reducing load.",
@@ -278,7 +278,7 @@
       ]
     },
     {
-      "question": "What distinguishes a recipe from a simple rule in recommendations?",
+      "question": "How does an Einstein Recipe differ from a single recommendation rule?",
       "options": [
         "A recipe runs overnight whereas a simple rule is evaluated in real time",
         "A recipe applies to email while a simple rule applies only to the website",
@@ -286,7 +286,7 @@
         "A recipe combines and weights several strategies"
       ],
       "correctAnswer": 3,
-      "explanation": "A recipe lets you blend approaches, such as popularity, affinity and similarity, and weight them, rather than applying one filter.",
+      "explanation": "A recipe can combine recommendation approaches and weight their contributions; a simple rule applies a condition or sort.",
       "whyWrong": [
         "Recipes are evaluated in real time as well.",
         "Both can serve web and email channels.",
@@ -294,7 +294,7 @@
       ]
     },
     {
-      "question": "A client complains that recommendations keep suggesting items the visitor already bought. What should be configured?",
+      "question": "What should a strategy do when purchased items should no longer be recommended?",
       "options": [
         "A reduction in the total number of recommendations shown on the page",
         "A nightly refresh of the affinity scores held against each visitor profile",
@@ -302,7 +302,7 @@
         "An exclusion rule for purchased items"
       ],
       "correctAnswer": 3,
-      "explanation": "Recommendation logic supports excluding items based on prior behaviour, which is exactly what a repeat purchase of a one-off item needs.",
+      "explanation": "Add an exclusion based on purchase history so previously bought items are removed from the results.",
       "whyWrong": [
         "Showing fewer bad recommendations does not make them relevant.",
         "Refreshing affinity does not stop already-purchased items appearing.",
@@ -310,7 +310,7 @@
       ]
     },
     {
-      "question": "What is the purpose of a sitemap or tracking implementation in Personalization?",
+      "question": "What does the Personalization sitemap or tracking setup describe to the platform?",
       "options": [
         "It lists the URLs that search engines are permitted to index on the site",
         "It tells the platform what each page and action means",
@@ -318,7 +318,7 @@
         "It controls which pages are cached by the content delivery network used"
       ],
       "correctAnswer": 1,
-      "explanation": "The tracking implementation identifies page types, items being viewed and actions being taken, which is what turns raw traffic into usable behaviour.",
+      "explanation": "The setup maps pages, items, and visitor actions so Personalization can interpret incoming activity.",
       "whyWrong": [
         "Search engine indexing is handled by a different kind of sitemap.",
         "Email engagement is tracked by the email platform.",
@@ -326,23 +326,23 @@
       ]
     },
     {
-      "question": "Why would a retailer personalise search results as well as recommendations?",
+      "question": "Why can personalized search results be useful alongside product recommendations?",
       "options": [
-        "Search results are the only part of a website that can be personalised",
+        "Search results are the only part of a website that can be personalized",
         "Personalising search removes the need to maintain catalog attributes",
         "Search already signals strong intent",
         "Search traffic is unaffected by the visitor's own browsing behaviour"
       ],
       "correctAnswer": 2,
-      "explanation": "Someone typing a query is telling you what they want, so ordering those results by their affinities is a high-value place to personalise.",
+      "explanation": "A search query signals immediate intent, and visitor context can help rank matching results more usefully.",
       "whyWrong": [
-        "Most of the page can be personalised, not just search.",
-        "Search personalisation depends on catalog attributes rather than replacing them.",
+        "Most of the page can be personalized, not just search.",
+        "Search personalization depends on catalog attributes rather than replacing them.",
         "Browsing behaviour is highly relevant to how results should be ranked."
       ]
     },
     {
-      "question": "A campaign performs well on desktop but poorly on mobile. What is the sensible response?",
+      "question": "Desktop results are strong, but mobile results are weak. What should the team do?",
       "options": [
         "Apply the desktop version unchanged and wait for the figures to improve",
         "Switch the campaign off entirely across both of the available channels",
@@ -350,7 +350,7 @@
         "Assume the mobile measurement is wrong and continue without any change"
       ],
       "correctAnswer": 2,
-      "explanation": "Screen size and intent differ between devices, so a placement that works on one may need different content or positioning on the other.",
+      "explanation": "Review mobile placement and behavior separately, then adjust the campaign for that device context.",
       "whyWrong": [
         "Waiting for an unchanged campaign to improve is not a plan.",
         "Turning off a campaign that works on desktop discards real value.",
@@ -358,7 +358,7 @@
       ]
     },
     {
-      "question": "What does a frequency cap on a campaign do?",
+      "question": "What does a campaign frequency cap limit?",
       "options": [
         "It limits how often a visitor sees the message",
         "It caps the number of separate campaigns that may run on a single page",
@@ -366,7 +366,7 @@
         "It sets a maximum number of visitors who can be shown the campaign at once"
       ],
       "correctAnswer": 0,
-      "explanation": "Frequency capping stops the same message being shown repeatedly to one visitor, which protects the experience and the message's effect.",
+      "explanation": "A frequency cap sets the maximum number of times the same visitor sees a campaign.",
       "whyWrong": [
         "Campaign conflicts are handled by prioritisation.",
         "Item count per placement is a separate setting.",
@@ -374,15 +374,15 @@
       ]
     },
     {
-      "question": "A business wants to prove the value of personalisation to its finance team. What should it present?",
+      "question": "Which evidence best shows the financial effect of personalization?",
       "options": [
         "The volume of behavioural events the platform captured across the website",
         "The number of campaigns the marketing team managed to launch that quarter",
         "Conversion and revenue against the control group",
-        "The total number of personalised impressions served during the period"
+        "The total number of personalized impressions served during the period"
       ],
       "correctAnswer": 2,
-      "explanation": "Finance wants the incremental effect, which means the difference in conversion and revenue between the personalised and the control experience.",
+      "explanation": "Compare conversion and revenue for the treatment against the control to estimate incremental value.",
       "whyWrong": [
         "Event volume shows the platform is working, not that it earns money.",
         "Campaign count measures team output rather than outcome.",
@@ -390,7 +390,7 @@
       ]
     },
     {
-      "question": "Which best describes what Marketing Cloud Personalization does?",
+      "question": "What is the central purpose of Marketing Cloud Personalization?",
       "options": [
         "Manages the paid advertising budget across each of the available channels",
         "Sends scheduled marketing emails to segments built the previous evening",
@@ -398,7 +398,7 @@
         "Stores the organisation's consolidated customer records across every system"
       ],
       "correctAnswer": 2,
-      "explanation": "It evaluates who the visitor is and what they are doing now, and selects the content, offers or recommendations to show them in response.",
+      "explanation": "It uses visitor profile and current behavior to choose a relevant experience in the moment.",
       "whyWrong": [
         "Paid media budgeting is handled by advertising tools.",
         "Scheduled email sending is Marketing Cloud Engagement's role.",

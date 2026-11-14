@@ -68,6 +68,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
       { name: 'Agentforce Field Service and Operations Consultant', href: '/certifications/field-service' },
       { name: 'Marketing Cloud Account Engagement Consultant', href: '/certifications/pardot-consultant' },
       { name: 'Marketing Cloud Engagement Consultant', href: '/certifications/marketing-cloud-consultant' },
+      { name: 'Marketing Cloud Next Consultant', href: '/certifications/marketing-cloud-next-consultant' },
       { name: 'Agentforce Life Sciences Consultant', href: '/certifications/agentforce-life-sciences-consultant' },
       { name: 'Agentforce Nonprofit Consultant', href: '/certifications/nonprofit-cloud' },
       { name: 'Nonprofit Success Pack (NPSP)', href: '/certifications/nonprofit-success-pack-consultant' },

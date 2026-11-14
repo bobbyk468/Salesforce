@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Marketing Cloud Consultant exam for?",
+    "heading": "Who should take the Marketing Cloud Consultant exam?",
     "personas": [
       {
         "label": "Marketing Cloud implementers",
-        "description": "You design and deploy Marketing Cloud solutions for clients and want to validate your consulting expertise."
+        "description": "You design and deliver Marketing Cloud solutions for clients and want to validate your consulting skills."
       },
       {
         "label": "Email marketing managers",
-        "description": "You run campaigns in Marketing Cloud and want to prove you can architect data models, journeys, and integrations."
+        "description": "You run campaigns and want to show that you can design data models, journeys, and integrations."
       },
       {
-        "label": "Salesforce consultants adding marketing skills",
-        "description": "You already hold a core Salesforce credential and want to expand into Marketing Cloud solution design."
+        "label": "Salesforce consultants expanding into marketing",
+        "description": "You already have Salesforce platform experience and want to add Marketing Cloud solution design."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Marketing Cloud Consultant Exam Hard?",
-    "summary": "Marketing Cloud Consultant is a challenging exam. It tests solution architecture across Journey Builder, Automation Studio, Contact Builder, and CRM integration. You need both technical depth and the ability to translate business requirements into a scalable Marketing Cloud design.",
+    "heading": "How challenging is the Marketing Cloud Consultant exam?",
+    "summary": "This exam tests solution design across Journey Builder, Automation Studio, Contact Builder, and CRM integration. It requires technical knowledge and the ability to turn business needs into a scalable Marketing Cloud design.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>67% passing score</strong>: standard for consultant-level Salesforce exams.",
-      "<strong>Breadth of coverage</strong>: you must know data architecture, Journey Builder vs Automation Studio selection, and Marketing Cloud Connect configuration.",
-      "<strong>Real-world design skills</strong>: expect scenario questions that require you to recommend the right tool for a given business requirement."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>67% to pass</strong>, which is 41 correct answers out of 60.",
+      "<strong>Broad coverage.</strong> Study data architecture, Journey Builder versus Automation Studio, and Marketing Cloud Connect.",
+      "<strong>Scenario decisions.</strong> Recommend the tool and data design that fit the business requirement."
     ],
-    "passRateGuidance": "Complete at least two end-to-end Marketing Cloud implementations before booking. Score 80%+ on practice exams to feel confident on test day."
+    "passRateGuidance": "Hands-on experience with end-to-end Marketing Cloud implementations helps. Aim for at least 80% on practice tests before booking."
   },
   "examFormat": {
-    "heading": "Marketing Cloud Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. You’ll be given a business requirement and asked to recommend the correct Marketing Cloud tool, data architecture, or integration approach.",
+    "heading": "Marketing Cloud Consultant exam format",
+    "intro": "The proctored exam is available online or at a test centre. Many questions give a business need and ask for a solution.",
+    "scenarioPercent": "Scenarios may ask which Marketing Cloud tool, data model, or integration approach best meets a requirement.",
     "bestWayToPass": [
-      "<strong>Master Journey Builder vs Automation Studio:</strong> Know when to use each tool and how they complement each other in a campaign architecture.",
-      "<strong>Study data architecture:</strong> Understand Data Extensions, Contact Builder relationships, and how to design a data model that supports segmentation and personalization.",
-      "<strong>Learn Marketing Cloud Connect:</strong> Know how synchronized Data Extensions, triggered sends, and CRM data flow between Salesforce and Marketing Cloud.",
-      "<strong>Practice compliance scenarios:</strong> Understand CAN-SPAM, GDPR, and CASL requirements and how Marketing Cloud implements consent management."
+      "<strong>Choose the right automation tool:</strong> Know how Journey Builder and Automation Studio differ and how they can work together.",
+      "<strong>Design the data model:</strong> Review data extensions, Contact Builder relationships, segmentation, and personalization needs.",
+      "<strong>Understand Marketing Cloud Connect:</strong> Study synchronized data extensions, triggered sends, and CRM data flows.",
+      "<strong>Apply compliance requirements:</strong> Learn how consent and unsubscribe handling support CAN-SPAM, GDPR, and CASL obligations."
     ]
   },
   "certificationCard": {
     "code": "MC Consultant",
-    "description": "This exam tests solution design for Marketing Cloud: gathering requirements, architecting data models, configuring Journey Builder and Automation Studio, and integrating with Salesforce CRM. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Data Modeling and Management (21%) and Integration (20%).",
+    "description": "This exam covers Marketing Cloud solution design and implementation, including data architecture, journeys and automations, CRM integration, cross-channel strategy, personalization, governance, and compliance. The exam is 60 scored questions in 105 minutes, with a 67% pass mark, weighted towards Data Modeling and Management (21%) and Integration (20%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
@@ -62,53 +62,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Key Concepts for the Marketing Cloud Consultant Exam",
+    "h2": "Marketing Cloud Consultant: concepts to review",
     "blocks": [
       {
-        "heading": "Discovery & Solution Architecture",
-        "body": "This involves gathering business requirements and translating them into a technical solution. You need to understand how to design data models, recommend the right Marketing Cloud products, and think about long-term scalability. Understanding Business Units and when to use them is critical."
+        "heading": "Discovery and solution design",
+        "body": "Gather business and marketing needs, then translate them into a technical design. Identify the audience, segmentation and personalization requirements, reporting needs, and expected scale. Choose suitable Marketing Cloud products and Business Unit structure. Plan for maintainability as the account grows."
       },
       {
-        "heading": "Data Design and Management",
-        "body": "**Contact Builder** is the heart of Marketing Cloud. You must understand how to link **Data Extensions** to create a single view of the customer. Be comfortable with the difference between Lists and Data Extensions, and why Data Extensions are preferred. Basic SQL knowledge for queries in **Automation Studio** is also tested."
+        "heading": "Data model and subscriber information",
+        "body": "Contact Builder connects data extensions to contact records and supports a unified contact view. Understand the differences between lists and data extensions and why data extensions are common for flexible models. Use a consistent Subscriber Key to identify a person. Basic SQL is useful for queries in Automation Studio."
       },
       {
-        "heading": "Automation Tools: Journey Builder vs. Automation Studio",
-        "body": "Know the difference: **Journey Builder** is for 1:1 customer journeys that react to customer behavior. **Automation Studio** is for ETL (Extract, Transform, Load) and other data management tasks on a schedule. You'll be given scenarios and asked to choose the right tool."
+        "heading": "Journey Builder and Automation Studio",
+        "body": "Journey Builder manages contact-level paths that can react to behavior over time. Automation Studio handles scheduled or event-driven batch work such as imports, SQL queries, and extracts. Questions often ask which tool fits a campaign or data task. The tools can be combined in a solution."
       },
       {
         "heading": "Marketing Cloud Connect",
-        "body": "This is the integration between Marketing Cloud and Sales/Service Cloud. You need to know how to configure it, what data is synchronized, and how to troubleshoot common issues. Understanding how to use Salesforce data to segment and personalize in Marketing Cloud is key."
+        "body": "Marketing Cloud Connect links Marketing Cloud Engagement with Sales or Service Cloud. Review setup, synchronized records, and ways to use CRM data for segmentation and personalization. Know how to investigate common synchronization issues and how Salesforce-triggered messaging fits."
       },
       {
-        "heading": "Personalization with AMPscript and Dynamic Content",
-        "body": "You'll be tested on your ability to personalize content. Understand how to use personalization strings, Dynamic Content blocks, and basic **AMPscript** functions like `LookupRows()` to pull data from **Data Extensions** into your emails."
+        "heading": "Personalization with AMPscript and dynamic content",
+        "body": "Personalize content with strings, Dynamic Content blocks, and AMPscript. Functions such as `LookupRows()` can retrieve matching data from data extensions. Select a method that fits the data and content requirement, and plan a sensible default when personalization data is missing."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Marketing Cloud Consultant Exam",
-    "intro": "The Marketing Cloud Consultant exam tests solution design and implementation planning for Marketing Cloud. Focus on discovering requirements, designing scalable data architectures, and integrating Marketing Cloud with Salesforce CRM.",
+    "h2": "How to prepare for the Marketing Cloud Consultant exam",
+    "intro": "The exam tests solution design and implementation planning. Practise discovery, data modeling, CRM integration, and compliance decisions.",
     "blocks": [
       {
-        "heading": "Discovery & Requirements",
-        "body": "Know how to elicit marketing requirements: campaign types, audience segmentation needs, personalization requirements, and reporting needs. Map business requirements to Marketing Cloud features and identify gaps."
+        "heading": "Discover the requirements",
+        "body": "Clarify campaign types, audience segments, personalization, reporting, and data needs. Map each requirement to a platform capability and note any gaps."
       },
       {
-        "heading": "Data Architecture Design",
-        "body": "Design **Data Extensions**, relationship tables, and how to structure data for efficient segmentation. Know when to use **Contact Builder** data model vs. standalone data extensions for complex subscriber data."
+        "heading": "Design a reusable data model",
+        "body": "Plan data extensions, relationships, and keys for segmentation. Decide when Contact Builder relationships are needed."
       },
       {
-        "heading": "Marketing Cloud Connect",
-        "body": "Know how Marketing Cloud Connect integrates with Salesforce CRM: synced **Data Extensions**, triggered sends from Salesforce records, **Journey Builder** Salesforce activities, and how the connected app is configured."
+        "heading": "Plan the CRM connection",
+        "body": "Understand synchronized data extensions, Salesforce-triggered sends, Journey Builder CRM activities, and connected-app configuration."
       },
       {
-        "heading": "Cross-Channel Strategy",
-        "body": "Understand how to design coordinated campaigns across Email, SMS (MobileConnect), Push (MobilePush), and Advertising. Know how **Journey Builder** orchestrates cross-channel experiences."
+        "heading": "Coordinate channels",
+        "body": "Plan how email, SMS, push, and advertising work together in a journey while respecting preferences and consent."
       },
       {
-        "heading": "Governance & Compliance",
-        "body": "Know GDPR, CAN-SPAM, and CASL requirements and how to implement compliance in Marketing Cloud: consent management, preference centers, unsubscribe handling, and data retention policies."
+        "heading": "Include governance and compliance",
+        "body": "Plan consent, preference centers, unsubscribe handling, and retention to support applicable privacy and anti-spam requirements."
       }
     ]
   },
@@ -162,243 +162,323 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A client sends to 4 million subscribers and wants one email with different offers by region. What is the simplest way to build it?",
+      "question": "A client sends to four million subscribers and wants different regional offers in one email. What is a maintainable solution?",
       "options": [
-        "Four business units, each holding its own copy",
-        "One email with dynamic content driven by a region field",
-        "Four separate emails, one for each region sent in turn",
-        "One email for each region, each built from its own template"
+        "Create four Business Units with a copy of the email in each",
+        "Create four separate emails and send them in sequence",
+        "Use one email with Dynamic Content based on a region field",
+        "Build a different template for every region"
       ],
-      "correctAnswer": 1,
-      "explanation": "Dynamic content varies part of the email based on a field on the audience, so you build and maintain one asset instead of four.",
+      "correctAnswer": 2,
+      "explanation": "Dynamic Content can display different offers based on a field in the send audience, while the team maintains one email.",
       "whyWrong": [
-        "Business units separate data and permissions; they are not a way to vary content.",
-        "Four emails means four things to update every time the offer changes.",
-        "Separate templates multiply the maintenance for the same result."
+        "Business Units separate users and data; they are not needed to vary content.",
+        "One asset avoids maintaining several regional versions.",
+        "Separate templates multiply maintenance work."
       ]
     },
     {
-      "question": "A new client's subscriber data sits in 12 unrelated data extensions with no common key. What should the consultant do first?",
+      "question": "A client has 12 unrelated data extensions with no common identifier. What should the consultant establish first?",
       "options": [
-        "Delete the smaller extensions and keep the largest one",
-        "Agree a single subscriber key and map every source to it",
-        "Load all 12 into Journey Builder and let it match them",
-        "Build a separate send for each data extension to keep them apart"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Nothing reliable can be built until one identifier ties the records together. That decision comes before journeys or sends.",
-      "whyWrong": [
-        "Deleting data loses history the client may need.",
-        "Journey Builder cannot match records that share no key.",
-        "Separate sends per source guarantees duplicate emails to the same person."
-      ]
-    },
-    {
-      "question": "What is the role of Contact Builder in a Marketing Cloud implementation?",
-      "options": [
-        "It links records across channels and sets data relationships",
-        "It schedules every automation that imports, queries and extracts",
-        "It builds the HTML and content blocks used in emails",
-        "It reports on opens, clicks and bounces for each send"
+        "Choose a Subscriber Key and map each source to it",
+        "Delete the smaller extensions",
+        "Load every extension into Journey Builder to match the records",
+        "Send separately from each extension"
       ],
       "correctAnswer": 0,
-      "explanation": "Contact Builder is the data layer where contacts are tied together by contact key and where attribute sets are related.",
+      "explanation": "A consistent identifier is needed to connect records before journeys or sends can use the data reliably.",
       "whyWrong": [
-        "Automation Studio schedules imports and queries.",
-        "Content Builder is where email content is built.",
-        "Analytics Builder and the tracking views cover reporting."
+        "Deleting data may remove needed history.",
+        "Journey Builder cannot match records without a shared key.",
+        "Separate sends risk contacting the same person multiple times."
       ]
     },
     {
-      "question": "A client wants a welcome series that starts the moment someone subscribes on their website. Which entry source fits?",
+      "question": "What is Contact Builder’s role in a Marketing Cloud solution?",
       "options": [
-        "A manual audience selected before each send",
-        "An API event triggered by the website form",
-        "A scheduled data extension refresh each night",
-        "A file drop into the FTP folder once a week"
-      ],
-      "correctAnswer": 1,
-      "explanation": "An API event lets the website tell Marketing Cloud immediately, which is what real-time entry requires.",
-      "whyWrong": [
-        "Manual selection cannot react to a subscriber in real time.",
-        "A nightly refresh delays entry by up to a day.",
-        "A weekly file drop is far slower than the requirement allows."
-      ]
-    },
-    {
-      "question": "A journey is live and the client asks to change the wait between two emails from 3 days to 1. What must happen?",
-      "options": [
-        "Delete the journey entirely and rebuild it again from scratch",
-        "Edit the wait activity in the running journey",
-        "Pause the journey, edit it, then resume it",
-        "Create a new version of the journey and activate it"
+        "Schedule imports, queries, and extracts",
+        "Create email layouts and content blocks",
+        "Report opens, clicks, and bounces for a send",
+        "Connect contact records and define data relationships"
       ],
       "correctAnswer": 3,
-      "explanation": "Running journeys are locked. Changes go into a new version, and contacts already in flight finish on the old one.",
+      "explanation": "Contact Builder links contact data through keys and relationships.",
       "whyWrong": [
-        "Deleting throws away the journey's history needlessly.",
-        "A running journey cannot be edited in place.",
-        "Pausing does not unlock the activities for editing."
+        "Automation Studio schedules batch activities.",
+        "Content Builder stores email assets and blocks.",
+        "Tracking and analytics tools report send results."
       ]
     },
     {
-      "question": "Which situation genuinely calls for separate business units?",
+      "question": "A website signup should start a welcome journey as soon as the form is submitted. Which entry source fits?",
       "options": [
-        "Two email templates with different colour schemes",
-        "Two automations that are scheduled to run at different times",
-        "Two reports that measure different tracking metrics",
-        "Two brands that must not see each other's subscriber data"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Business units exist to separate data access and permissions, which is what two brands with a data boundary need.",
-      "whyWrong": [
-        "Template styling is a content choice, not a data boundary.",
-        "Automation timing is set per automation in one unit.",
-        "Reports can filter without separating the data."
-      ]
-    },
-    {
-      "question": "A client's open rates look healthy but click rates are very low. What should the consultant examine first?",
-      "options": [
-        "Whether the content and call to action match the subject",
-        "Whether the send classification is set to transactional",
-        "Whether the data extension has the right primary key",
-        "Whether the sending IP address needs to be warmed again"
-      ],
-      "correctAnswer": 0,
-      "explanation": "People opened, so the subject line worked. The drop happens after the open, which points at the content and the call to action.",
-      "whyWrong": [
-        "Send classification governs opt-out handling, not clicks.",
-        "The primary key affects data integrity, not click behaviour.",
-        "IP warming affects whether mail is delivered, not what happens after an open."
-      ]
-    },
-    {
-      "question": "What does a SQL Query activity in Automation Studio write its results to?",
-      "options": [
-        "A subscriber list created automatically each time",
-        "A report shown on screen when the query runs",
-        "A target data extension chosen in the activity",
-        "An email that is sent to the account owner"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Query activities are configured with a target data extension, and the rows land there for later use.",
-      "whyWrong": [
-        "Queries write to data extensions, not to lists.",
-        "There is no on-screen result grid for a scheduled query.",
-        "Results are not emailed anywhere by default."
-      ]
-    },
-    {
-      "question": "A client must prove which emails a given subscriber received over the last year. What supports this best?",
-      "options": [
-        "The All Subscribers list filtered by status",
-        "The tracking tab found on each individual email job record",
-        "A screenshot of the journey taken at launch",
-        "Data Views queried into a data extension and retained"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Data Views hold send and engagement history, and querying them into a retained data extension keeps the record beyond the standard window.",
-      "whyWrong": [
-        "All Subscribers shows current status, not send history.",
-        "Per-job tracking is hard to assemble per subscriber across a year.",
-        "A screenshot shows the design, not who received what."
-      ]
-    },
-    {
-      "question": "Which is the best reason to use a data extension rather than a subscriber list?",
-      "options": [
-        "You want the email to render on mobile",
-        "You want the send to go out a good deal more quickly",
-        "You need your own columns and a key you control",
-        "You need the subscribers to be opted in"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Data extensions are tables you define, so they suit anything needing custom fields or relationships.",
-      "whyWrong": [
-        "Rendering is a content concern, not an audience one.",
-        "Send speed is not determined by the audience type.",
-        "Opt-in status lives on the subscriber record either way."
-      ]
-    },
-    {
-      "question": "A client asks why some contacts in a journey never received the first email. What is a likely cause?",
-      "options": [
-        "They were excluded by a suppression list on the send",
-        "The journey had too many decision splits in it",
-        "The email was saved into the wrong content folder by mistake",
-        "The data extension had more columns than needed"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Suppression and exclusion lists are applied at send time, so contacts can enter a journey and still not be mailed.",
-      "whyWrong": [
-        "Split count does not stop an email being sent.",
-        "Folder location does not affect delivery.",
-        "Extra columns are harmless to a send."
-      ]
-    },
-    {
-      "question": "What should a consultant do before migrating a client onto a new sending domain?",
-      "options": [
-        "Switch every automation across on the same evening",
-        "Remove the unsubscribe footer for the whole transition period",
-        "Warm the domain gradually, starting with engaged subscribers",
-        "Send the full list on day one to establish volume"
-      ],
-      "correctAnswer": 2,
-      "explanation": "A new domain has no reputation, so volume is built up slowly and the most engaged subscribers are mailed first.",
-      "whyWrong": [
-        "Moving everything at once removes any ability to roll back.",
-        "Removing the unsubscribe link breaches anti-spam law.",
-        "A large first send from an unknown domain invites filtering."
-      ]
-    },
-    {
-      "question": "Which best describes the difference between Automation Studio and Journey Builder?",
-      "options": [
-        "Automation Studio can only import files from an FTP folder",
-        "Automation Studio is newer and replaces Journey Builder",
-        "Automation Studio runs batches; Journey Builder follows one contact",
-        "Automation Studio is able to send email while Journey Builder is not"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Automation Studio processes data in scheduled batches. Journey Builder moves individual contacts along a path over time.",
-      "whyWrong": [
-        "File imports are one activity among many.",
-        "Both are current and serve different purposes.",
-        "Journey Builder sends email as part of a journey."
-      ]
-    },
-    {
-      "question": "A stakeholder asks for a single number to judge campaign health. What should the consultant advise?",
-      "options": [
-        "No single number works; pick a few tied to the goal",
-        "Use the open rate, since it is by far the clearest measure",
-        "Use the size of the subscriber list over time",
-        "Use the total number of emails sent each month"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Open rate alone is easy to misread, so the honest answer is a small set of measures chosen against what the campaign is for.",
-      "whyWrong": [
-        "Open rate is affected by privacy features and says little about outcomes.",
-        "List size says nothing about engagement or revenue.",
-        "Volume sent measures activity, not results."
-      ]
-    },
-    {
-      "question": "A client wants personalisation to fall back to a generic greeting when the first name is missing. Where is this handled?",
-      "options": [
-        "In the data extension, by making the field required",
-        "In the email content, using a default in the personalisation",
-        "In the journey, by adding another decision split",
-        "In the send classification, by changing the sender profile used"
+        "Select an audience manually before each send",
+        "Use an API event triggered by the website",
+        "Refresh a data extension overnight",
+        "Drop a file on FTP once a week"
       ],
       "correctAnswer": 1,
-      "explanation": "A default in the content means a blank field produces a sensible greeting instead of an empty one.",
+      "explanation": "An API event can notify Marketing Cloud when the signup occurs, allowing prompt entry.",
       "whyWrong": [
-        "Making the field required does not fill in the rows you already hold.",
-        "A split routes contacts; it does not supply a fallback value.",
-        "Sender profiles set the from address, not the greeting."
+        "Manual selection is not an automatic real-time trigger.",
+        "A nightly refresh delays entry.",
+        "A weekly file is much slower than the requirement."
+      ]
+    },
+    {
+      "question": "A live journey needs a wait changed from three days to one. What must the consultant do?",
+      "options": [
+        "Delete and rebuild the journey",
+        "Edit the active journey directly",
+        "Create and activate a new journey version",
+        "Pause it, change the activity, then resume the same version"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A running version is locked; make the change in a new version. Contacts already in the old version can finish there.",
+      "whyWrong": [
+        "Deleting removes useful history unnecessarily.",
+        "The active journey version cannot be edited in place.",
+        "Pausing does not unlock the version for editing."
+      ]
+    },
+    {
+      "question": "When should a client consider separate Business Units?",
+      "options": [
+        "When two emails use different colors",
+        "When two automations run at different times",
+        "When reports measure different metrics",
+        "Separate units for data boundaries"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Business Units provide a boundary for users and data, which fits the need to separate brand information.",
+      "whyWrong": [
+        "Different styling is a content design choice.",
+        "Automation schedules can differ within one unit.",
+        "Reports can use different metrics without separate units."
+      ]
+    },
+    {
+      "question": "Open rates are healthy but click rates are low. What should the consultant examine first?",
+      "options": [
+        "Whether the send is classified as transactional",
+        "Whether the data extension primary key is configured",
+        "Whether the message content and call to action fit the subject",
+        "Whether the sending IP needs to be warmed again"
+      ],
+      "correctAnswer": 2,
+      "explanation": "People opened the email, so review what they saw and whether the call to action encouraged a click.",
+      "whyWrong": [
+        "Send classification affects sending behavior, not click interest.",
+        "Primary keys affect data integrity rather than post-open engagement.",
+        "IP reputation affects delivery, not what readers do after opening."
+      ]
+    },
+    {
+      "question": "Which destination must be set in a Query Activity so its SQL results are saved for later use?",
+      "options": [
+        "A target data extension",
+        "To a new subscriber list",
+        "To an on-screen report",
+        "To an email sent to the account owner"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Choose the destination Data Extension in the activity configuration; that is where the query writes its result rows.",
+      "whyWrong": [
+        "The query target is a data extension, not a list.",
+        "Scheduled queries do not provide an interactive results grid.",
+        "Results are not emailed automatically."
+      ]
+    },
+    {
+      "question": "A client needs a year of history showing which emails each subscriber received. What is a suitable approach?",
+      "options": [
+        "Filter All Subscribers by current status",
+        "Query Data Views into a retained data extension",
+        "Review the tracking page for every email job manually",
+        "Save a screenshot of the journey at launch"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data Views contain send history. Query and retain the results when longer-term records are needed.",
+      "whyWrong": [
+        "All Subscribers shows status, not a year of send activity.",
+        "Manual review across jobs is difficult and incomplete.",
+        "A journey screenshot does not show which subscribers received each message."
+      ]
+    },
+    {
+      "question": "Why use a data extension instead of a subscriber list?",
+      "options": [
+        "To improve mobile rendering",
+        "To make the send faster",
+        "To record opt-in status",
+        "Custom fields and key control"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A data extension allows the consultant to define columns and a primary key for the use case.",
+      "whyWrong": [
+        "Rendering depends on email design, not audience storage.",
+        "Send speed is not determined by list type alone.",
+        "Opt-in status can be handled with either audience model."
+      ]
+    },
+    {
+      "question": "Some contacts enter a journey but do not receive its first email. What is one likely cause?",
+      "options": [
+        "Too many decision splits",
+        "The email is saved in a different content folder",
+        "A suppression or exclusion list on the send",
+        "The data extension has extra columns"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Suppression and exclusion rules are evaluated at send time, so a contact may enter a journey and still be excluded from the message.",
+      "whyWrong": [
+        "Split count does not by itself block a send.",
+        "Folder location does not determine recipient eligibility.",
+        "Unused columns do not normally prevent a send."
+      ]
+    },
+    {
+      "question": "Before changing a client to a new sending domain, what should the consultant recommend?",
+      "options": [
+        "Move every automation on the same evening",
+        "Warm the domain gradually",
+        "Remove unsubscribe links during the transition",
+        "Send to the full list on day one"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A new domain has no established reputation. Gradual volume and engaged recipients support a safer warm-up.",
+      "whyWrong": [
+        "A simultaneous change makes issues harder to isolate or reverse.",
+        "Unsubscribe links must remain available.",
+        "A large first send can harm deliverability."
+      ]
+    },
+    {
+      "question": "How do Automation Studio and Journey Builder differ?",
+      "options": [
+        "Automation Studio only imports FTP files",
+        "Batch work versus contact journeys",
+        "Automation Studio replaces Journey Builder",
+        "Automation Studio sends emails, but Journey Builder cannot"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Automation Studio handles scheduled batch operations; Journey Builder moves contacts along a path over time.",
+      "whyWrong": [
+        "FTP import is one of many Automation Studio activities.",
+        "The tools serve different purposes and can be used together.",
+        "Journey Builder can send messages as journey activities."
+      ]
+    },
+    {
+      "question": "A stakeholder wants one metric to judge campaign success. What should the consultant advise?",
+      "options": [
+        "Use open rate as the only measure",
+        "Measures tied to the goal",
+        "Track subscriber list size over time",
+        "Count total emails sent each month"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Campaign success depends on the goal, so select a few relevant measures rather than rely on one number.",
+      "whyWrong": [
+        "Open rates may be affected by privacy features and do not measure all outcomes.",
+        "List size alone does not show engagement or business impact.",
+        "Send volume measures activity rather than results."
+      ]
+    },
+    {
+      "question": "A first-name field may be blank. How can the email show a generic greeting as a fallback?",
+      "options": [
+        "Make the field required in the data extension",
+        "Add a Journey Builder decision split",
+        "Change the send classification’s sender profile",
+        "Use a default value in the email personalization"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A content default can provide a suitable greeting when the personalization field is empty.",
+      "whyWrong": [
+        "A required setting does not fill existing blank rows.",
+        "A journey split routes contacts but does not supply fallback text.",
+        "Sender profiles control sending identity, not email greeting content."
+      ]
+    },
+    {
+      "question": "A client wants a customer who completed a journey to enter it again only after a defined period. Which setting should the consultant review?",
+      "options": [
+        "The sender profile",
+        "The account time zone only",
+        "Journey re-entry settings",
+        "The email classification"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Journey re-entry settings control whether and when a contact can enter a journey again.",
+      "whyWrong": [
+        "Sender profiles control message identity.",
+        "The account time zone does not set contact eligibility.",
+        "Email classifications define send characteristics."
+      ]
+    },
+    {
+      "question": "A team needs to send Salesforce CRM attributes into Marketing Cloud Engagement for segmentation. Which integration should the consultant plan?",
+      "options": [
+        "A publication list",
+        "A send classification",
+        "A content block",
+        "Marketing Cloud Connect"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Marketing Cloud Connect supports integration between Salesforce CRM and Marketing Cloud Engagement.",
+      "whyWrong": [
+        "A publication list manages subscriber preferences.",
+        "A send classification sets sender and delivery profiles.",
+        "A content block stores reusable content."
+      ]
+    },
+    {
+      "question": "A marketer needs to send a one-time campaign to a defined audience. Which combination is needed?",
+      "options": [
+        "Email, audience, and send classification",
+        "Journey, approval, and data filter",
+        "Business unit, role, and sender domain",
+        "Automation, landing page, and mobile message"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A send uses content, an audience, and a send classification with sender and delivery settings.",
+      "whyWrong": [
+        "A journey is not required for a one-time send.",
+        "The other items do not constitute the basic send configuration.",
+        "Those tools are not all required for an email send."
+      ]
+    },
+    {
+      "question": "A client has separate regional teams that must manage their own users and data. Which structure should the consultant evaluate?",
+      "options": [
+        "Business Units",
+        "Publication Lists",
+        "Shared Data Extensions",
+        "Send Classifications"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Business Units can separate teams, users, and data within an account.",
+      "whyWrong": [
+        "Publication Lists manage subscriber preferences.",
+        "A shared data extension does not provide organizational separation.",
+        "Send Classifications define sender and delivery behavior."
+      ]
+    },
+    {
+      "question": "The marketing team wants to automate a recurring file import followed by a SQL query and send. Which product is the best fit?",
+      "options": [
+        "Automation Studio",
+        "Journey Builder",
+        "Content Builder",
+        "Contact Builder"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Automation Studio runs scheduled activities such as imports, queries, and sends.",
+      "whyWrong": [
+        "Journey Builder orchestrates an individual contact’s path.",
+        "Content Builder stores marketing assets.",
+        "Contact Builder models contact data and relationships."
       ]
     }
   ]

@@ -2,7 +2,7 @@ import Link from '@/components/AppLink'
 import { DollarSign, RefreshCw, Calendar, ExternalLink } from 'lucide-react'
 import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 import { SLUG_TO_EXAM_GUIDE_URL } from '@/lib/cert-seo-data'
-import { getCredentialStatus, hasUnverifiedClaudeExamDetails, isComponentOnlyCredential, isUnavailableCredentialExam } from '@/lib/credential-status'
+import { hasUnverifiedClaudeExamDetails, isComponentOnlyCredential, isUnavailableCredentialExam } from '@/lib/credential-status'
 import { slugToDisplayName } from '@/lib/cert-seo-data'
 
 interface ExamFeesSectionProps {
@@ -11,19 +11,7 @@ interface ExamFeesSectionProps {
 
 /** Dedicated "Exam Fees & Registration" section for better cost query CTR and user clarity. */
 export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
-  if (isUnavailableCredentialExam(slug)) return null
-  const credentialStatus = getCredentialStatus(slug)
-  if (hasUnverifiedClaudeExamDetails(slug)) {
-    return (
-      <section className="mt-8 mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
-        <h2 className="text-xl font-bold text-gray-900">Credential details</h2>
-        <p className="mt-2 text-sm text-gray-700">Fees, retake rules, format, and availability have not been verified from Anthropic. Check the issuer announcement for current program information.</p>
-        <a className="mt-3 inline-flex items-center gap-2 text-salesforce-blue underline" href={credentialStatus?.sourceUrl} target="_blank" rel="nofollow noopener noreferrer">
-          Anthropic Claude Partner Network announcement <ExternalLink className="h-4 w-4" aria-hidden="true" />
-        </a>
-      </section>
-    )
-  }
+  if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) return null
   if (isComponentOnlyCredential(slug)) {
     return (
       <section className="mt-8 mb-8 rounded-xl border border-violet-200 bg-violet-50 p-6">
@@ -68,6 +56,11 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
           <p className="text-xs sm:text-sm text-gray-600 mt-1">If you need to retake the exam</p>
         </div>
       </div>
+      {slug === 'public-sector-solutions-consultant' && (
+        <p className="mb-4 text-sm text-gray-600">
+          Introductory pricing applies through April 27, 2027. Check the official exam guide for pricing after that date.
+        </p>
+      )}
       <p className="text-xs text-gray-600 mb-4">
         Comparing certs?{' '}
         <Link href="/salesforce-certification-cost" className="text-salesforce-blue underline">
@@ -84,7 +77,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
               {slug === 'platform-foundations'
                 ? 'The official exam guide lists no required maintenance for this certification at this time. Check the issuer’s current credential page before relying on this.'
                 : slug === 'app-builder'
-                ? 'The official exam guide requires the Platform App Builder certification maintenance badge on Trailhead three times a year. Check the issuer’s current credential page for due dates.'
+                ? 'The Platform App Builder exam guide says maintenance is due three times a year. Salesforce’s maintenance schedule lists App Builder in the Winter cycle. Check your Trailblazer profile for your assigned badge and deadline.'
                 : 'Maintenance and renewal requirements vary. Check the issuer’s current credential page for requirements that apply to you.'}
             </p>
           </div>

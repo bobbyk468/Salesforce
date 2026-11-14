@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the JavaScript Developer I exam for?",
+    "heading": "Who should take the JavaScript Developer I exam?",
     "personas": [
       {
-        "label": "Web developers moving into Salesforce",
-        "description": "Your JavaScript is already good. What you need is the component model, the Apex boundary and the security rules."
+        "label": "Web developers moving to Salesforce",
+        "description": "You know JavaScript and want to learn how Lightning Web Components, Apex calls, and Salesforce security fit together."
       },
       {
-        "label": "Salesforce developers who came from Apex",
-        "description": "This is the exam that exposes self-taught JavaScript. The language half is where the marks go, not the LWC half."
+        "label": "Salesforce developers learning JavaScript",
+        "description": "You build with Apex and LWC and want to strengthen your knowledge of JavaScript language behavior."
       },
       {
-        "label": "Anyone who writes Lightning Web Components",
-        "description": "Whether or not you want the credential, the syllabus is a reasonable list of what you should know to write components that behave."
+        "label": "LWC developers",
+        "description": "You create Lightning components and want a structured review of component lifecycle, events, asynchronous code, and browser standards."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the JavaScript Developer I Exam Hard?",
-    "summary": "A JavaScript exam that happens to run on Salesforce. Most of it is language fundamentals: scope, closures, prototypes, promises, the event loop, and reading code to say what it prints. The Salesforce content is real but smaller. Platform developers who learned JavaScript as they went tend to find this harder than they expect.",
+    "heading": "How challenging is the JavaScript Developer I exam?",
+    "summary": "The exam focuses on JavaScript fundamentals as well as Salesforce component development. Be ready to read code and reason about scope, closures, prototypes, promises, and execution order, then apply those ideas to Lightning Web Components.",
     "bullets": [
-      "<strong>60 questions in 105 minutes.</strong> Code-reading questions eat time, so do not spend five minutes on one snippet.",
-      "<strong>65% to pass,</strong> leaving roughly 19 you can get wrong.",
-      "<strong>Execution order is the recurring theme.</strong> Promises are microtasks, setTimeout is a macrotask, and a snippet mixing them is a near certainty.",
-      "<strong>The LWC half is lifecycle and data.</strong> connectedCallback against renderedCallback, wire against imperative Apex, and how events cross the shadow boundary."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "<strong>Execution order matters:</strong> Know how synchronous code, promise callbacks, and timers run.",
+      "<strong>LWC concepts matter:</strong> Review lifecycle hooks, wire versus imperative Apex, events, and component security."
     ],
-    "passRateGuidance": "Open a console and predict the output before you run it. Closures in loops, a promise chain with a setTimeout in the middle, this inside a regular function against an arrow function. If you get those right consistently, the exam will not surprise you. If not, that is where to spend your week."
+    "passRateGuidance": "Use a JavaScript console to predict a snippet’s output before running it. Practice closures, function binding, promises, and timers. Also build an LWC that reads data with wire and performs an imperative action from a user event."
   },
   "examFormat": {
-    "heading": "JavaScript Developer I Exam Format Explained",
-    "intro": "Proctored online or at a test centre. The shape of it:",
-    "scenarioPercent": "Close to half the questions involve code. Usually it is a snippet with a question about what it logs, in what order, or why it throws. The rest is choosing the right decorator, lifecycle hook or async pattern for a stated requirement.",
+    "heading": "JavaScript Developer I exam format",
+    "intro": "The exam is proctored online or at a test center. It covers JavaScript language behavior and Salesforce development concepts.",
+    "scenarioPercent": "Some questions ask you to predict what a code snippet returns, logs, or throws. Others ask which decorator, lifecycle hook, event pattern, or asynchronous approach fits a requirement.",
     "bestWayToPass": [
-      "<strong>Write the code, do not read about it.</strong> Every topic on this syllabus can be tested in a browser console in under a minute. Guess the output first, then run it.",
-      "<strong>Learn the event loop properly.</strong> Call stack, microtask queue, macrotask queue. Once you can place a promise callback and a setTimeout callback on the right queue, the ordering questions become mechanical.",
-      "<strong>Know what this binds to in each case.</strong> Method call, standalone function, arrow function, callback passed to another function. Four cases, asked repeatedly.",
-      "<strong>Build one component that calls Apex both ways.</strong> Once with wire, once imperatively from a button. The difference between them stops being abstract."
+      "<strong>Write and run small examples:</strong> Predict the result first, then use the browser console to check your understanding.",
+      "<strong>Understand the event loop:</strong> Separate synchronous work, promise microtasks, and timer tasks when tracing output.",
+      "<strong>Practice function context:</strong> Compare method calls, standalone functions, arrow functions, and callbacks.",
+      "<strong>Build an LWC that uses Apex:</strong> Read data with wire and call Apex imperatively when an action needs explicit timing."
     ]
   },
   "certificationCard": {
     "code": "JS Developer I",
-    "description": "Core JavaScript and the Lightning Web Components model: ES6 syntax, scope and closures, prototypes, promises and async/await, the event loop, the web component standards LWC is built on, calling Apex, and Lightning Web Security. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Objects, Functions, and Classes (25%) and Variables, Types, and Collections (23%).",
+    "description": "Covers JavaScript fundamentals and Lightning Web Components, including ES6 syntax, scope, closures, prototypes, promises, async/await, the event loop, component lifecycle, Apex calls, and Lightning Web Security. The exam is 60 scored questions in 105 minutes, with a 65% pass mark, weighted towards Objects, Functions, and Classes (25%) and Variables, Types, and Collections (23%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "JavaScript Developer I: Key Concepts for the Exam",
+    "h2": "JavaScript Developer I: core concepts",
     "blocks": [
       {
-        "heading": "Scope, Closures and this",
-        "body": "A closure is a function that keeps access to the variables of the scope it was created in, even after that scope has returned. It is the mechanism behind private state, factory functions and most callback bugs. The classic exam case is a loop that creates functions: with var, every function shares one binding and they all see the final value, while let creates a fresh binding each iteration and they see what you expected. Separately, this is decided by how a function is called rather than where it is written. Called as a method, this is the object. Called standalone, it is undefined in strict mode. In an arrow function, there is no own this at all, so it comes from the enclosing scope, which is exactly why arrow functions are used for callbacks that need the surrounding context. Expect a snippet where a method is passed as a callback and loses its binding."
+        "heading": "Scope, Closures, and this",
+        "body": "A closure is a function together with access to variables in the scope where it was created. It can preserve values after the outer function returns. In loops, var shares one function-scoped binding; let creates a new block-scoped binding for each iteration. The value of this depends on how a function is called. A method call uses the object before the dot, while a standalone strict-mode function has undefined as this. Arrow functions do not create their own this; they use the surrounding value."
       },
       {
         "heading": "Prototypes and Classes",
-        "body": "JavaScript inheritance works through a chain of objects. Every object has a prototype, and a property lookup walks up that chain until it finds the property or runs out. Class syntax is a cleaner way of writing the same thing: a class body defines methods on the prototype, extends sets up the chain, and super calls the parent. Two details are examinable. Methods defined in the class body live on the prototype and are shared across instances, whereas properties assigned in the constructor belong to each instance. And instanceof asks whether a prototype appears anywhere in an object's chain, which is why it answers true for an inherited type as well as the exact one."
+        "body": "JavaScript looks up properties on an object and then along its prototype chain. Class syntax provides a familiar way to create constructor functions and prototype methods. Methods declared in a class body are placed on the class prototype; fields assigned on each instance belong to that instance. extends sets up inheritance, and super refers to the parent class. instanceof checks whether a constructor’s prototype appears in an object’s prototype chain."
       },
       {
-        "heading": "Promises, async/await and Error Handling",
-        "body": "A promise is an object representing a result that has not arrived. It settles once, either resolved or rejected, and then handlers registered with then, catch and finally run. Chaining matters because each then returns a new promise, so returning a value passes it along and returning a promise waits for it. async and await are syntax over the same thing: an async function always returns a promise, and await pauses inside it until the awaited promise settles. For error handling, a rejection travels down a chain until something catches it, and an uncaught rejection is a silent failure you should treat as a bug. The combinators get asked by behaviour: Promise.all rejects as soon as any input rejects, Promise.allSettled always resolves and reports each outcome, and Promise.race settles with whichever finishes first."
+        "heading": "Promises and Error Handling",
+        "body": "A promise represents a result that may become available later. It settles once, either fulfilled or rejected. then, catch, and finally register handlers, and each then creates a new promise for the next step. Returning a value passes it down the chain; returning a promise makes the chain wait for it. An async function always returns a promise, and await pauses that function until the promise settles. Promise.all rejects if an input rejects, Promise.allSettled reports every result, and Promise.race settles with the first input to settle."
       },
       {
         "heading": "The Event Loop",
-        "body": "JavaScript runs one thing at a time. Synchronous code runs to completion on the call stack. When the stack empties, the runtime drains the microtask queue, which is where promise callbacks go; and only then takes one task from the macrotask queue, which is where setTimeout and setInterval callbacks go. That ordering is the whole answer to most execution-order questions: all synchronous logging first, then promise callbacks, then timer callbacks, even a setTimeout with a delay of zero. It is also why a long synchronous loop freezes the page, since nothing else can run until the stack clears. Knowing this one model well is worth more marks than any other single topic on the exam."
+        "body": "JavaScript runs synchronous code on the call stack. After that work completes, the runtime processes queued promise callbacks (microtasks) before taking the next timer or other task. A setTimeout callback therefore runs after synchronous code and queued promise callbacks, even when its delay is zero. Long synchronous work blocks the event loop and delays user interface updates."
       },
       {
-        "heading": "Lightning Web Components: Lifecycle, Apex and Security",
-        "body": "LWC is built on web component standards, so a component is a custom element with its own shadow tree. The lifecycle hooks have specific moments: constructor runs before the component is in the DOM and must not touch it, connectedCallback runs when it is inserted and is where you start work that does not need rendered markup, renderedCallback runs after every render and so must guard against repeating itself, and disconnectedCallback is where you clean up subscriptions and listeners. For data, the wire service is declarative and reactive: it fetches when its parameters change and is right for reading. Imperative calls are made from JavaScript when you need control over timing, such as on a button click, or when the call changes data. Events travel up: by default an event raised inside a shadow tree does not cross the boundary unless it is created with composed true, which is why custom events are usually handled by the immediate parent. Lightning Web Security replaced LockerService and restricts what component code can reach, including direct DOM access outside the component's own tree."
+        "heading": "Lightning Web Components, Apex, and Security",
+        "body": "LWC uses web component standards, including a component’s own shadow tree. The constructor runs before the element is connected. connectedCallback runs when it is inserted into the DOM; renderedCallback runs after rendering and may run more than once; disconnectedCallback is used for cleanup. The wire service provisions data reactively when its parameters change. Imperative Apex calls give JavaScript explicit control over when a request is made. Custom events communicate with parent components; event options determine whether an event crosses a shadow boundary. Lightning Web Security limits access to resources outside a component’s permitted scope."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce JavaScript Developer I Exam",
-    "intro": "Treat the language half as the exam and the platform half as a supplement. Nearly everything here is testable in a console in under a minute.",
+    "h2": "How to prepare for the JavaScript Developer I exam",
+    "intro": "For code questions, trace the execution and state before choosing an answer. For LWC questions, identify the component lifecycle moment or data access pattern involved.",
     "blocks": [
       {
         "heading": "Predict, Then Run",
-        "body": "Write snippets, guess the output, then execute. This single habit covers closures, hoisting, this binding and execution order."
+        "body": "Write a short example, predict its output, and then run it. This helps with scope, closures, function context, and execution order."
       },
       {
-        "heading": "The Three Queues",
-        "body": "Call stack, then microtasks, then one macrotask. Promise callbacks beat setTimeout every time, including setTimeout zero."
+        "heading": "Trace the Event Loop",
+        "body": "Run synchronous code first, then promise callbacks, then timer callbacks. Use that order when tracing promise and setTimeout examples."
       },
       {
-        "heading": "Four Cases for this",
-        "body": "Method call, standalone call, arrow function, and a method passed as a callback. Know what this is in each."
+        "heading": "Check this in Context",
+        "body": "Compare a method call, standalone function, arrow function, and method passed as a callback. The call style determines the value of this."
       },
       {
-        "heading": "Promise Combinators by Behaviour",
-        "body": "all rejects fast, allSettled never rejects, race settles first. Questions describe the behaviour rather than naming the method."
+        "heading": "Select Promise Methods by Behavior",
+        "body": "Promise.all rejects when an input rejects; allSettled reports each outcome; race settles with the first promise to settle."
       },
       {
-        "heading": "Lifecycle Hooks by Timing",
-        "body": "connectedCallback for setup without the DOM, renderedCallback after every render so guard it, disconnectedCallback for cleanup."
+        "heading": "Match Lifecycle Hooks to Timing",
+        "body": "Use connectedCallback for setup that does not need rendered markup, renderedCallback for work after rendering with a guard against repeats, and disconnectedCallback for cleanup."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After Developer",
-    "intro": "Where developers usually go next:",
+    "heading": "Related credentials for JavaScript developers",
+    "intro": "Build on JavaScript and LWC skills with a Salesforce developer or platform credential.",
     "links": [
       {
         "href": "/certifications/developer-2",
@@ -166,39 +166,39 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which JavaScript feature is used to handle asynchronous operations without blocking the main thread?",
+      "question": "Which JavaScript feature provides a standard way to work with asynchronous results without blocking the main thread?",
       "options": [
-        "Synchronous loops",
-        "var declarations",
-        "Promises and async/await",
-        "Callbacks only"
+        "Synchronous loops run on the main thread",
+        "var declarations set function-scoped bindings",
+        "Promises and async/await handle asynchronous results",
+        "Callbacks are the only way to handle asynchronous code"
       ],
       "correctAnswer": 2,
-      "explanation": "Promises and async/await are the modern JavaScript approach for handling asynchronous operations.",
+      "explanation": "Promises and async/await let code handle results that arrive later while the main thread continues other work.",
       "whyWrong": [
-        "Synchronous loops block the main thread, the opposite of what's needed for async handling.",
-        "var is a variable declaration keyword, unrelated to asynchronous operations.",
-        "Callbacks alone are an older async pattern; Promises/async-await are the modern standard tested on this exam."
+        "A synchronous loop can block the main thread while it runs.",
+        "Variable declarations define bindings but do not manage asynchronous results.",
+        "Callbacks can handle asynchronous work; promises and async/await are also standard options."
       ]
     },
     {
-      "question": "What is the primary use of Lightning Web Components (LWC) in the Salesforce ecosystem?",
+      "question": "What are Lightning Web Components used for in Salesforce?",
       "options": [
-        "Email templates",
-        "Data modeling",
-        "Building reactive UI components that run on the Lightning Platform",
-        "Backend Apex only"
+        "Creating Salesforce email templates for customers",
+        "Designing Salesforce database records",
+        "Building interactive UI components on the Lightning Platform",
+        "Running Apex exclusively on the server"
       ],
       "correctAnswer": 2,
-      "explanation": "LWC is the standard for building performant, reusable UI components on the Salesforce Lightning Platform.",
+      "explanation": "LWC is Salesforce’s component model for building interactive user interfaces on the Lightning Platform.",
       "whyWrong": [
-        "Email templates are unrelated to LWC's purpose as a UI component framework.",
-        "Data modeling is a separate concern from building UI components.",
-        "LWC runs on the client (browser) side, not as backend Apex logic."
+        "Email templates are not LWC user interface components.",
+        "Data modeling defines stored records rather than reactive UI components.",
+        "LWC builds interactive components for the Lightning Platform."
       ]
     },
     {
-      "question": "Which keyword creates a block-scoped variable in JavaScript?",
+      "question": "Which keyword declares a block-scoped variable in JavaScript?",
       "options": [
         "let",
         "function",
@@ -206,31 +206,31 @@
         "global"
       ],
       "correctAnswer": 0,
-      "explanation": "let (and const) create block-scoped variables; var is function-scoped.",
+      "explanation": "let creates a binding scoped to the nearest block.",
       "whyWrong": [
-        "function declares a function, not a variable.",
-        "var is function-scoped, not block-scoped; this is precisely why let/const were introduced.",
-        "'global' is not a JavaScript variable declaration keyword."
+        "let, not function, declares a block-scoped variable.",
+        "var is function-scoped rather than block-scoped.",
+        "global is not a JavaScript declaration keyword."
       ]
     },
     {
-      "question": "What does the shadow DOM provide in web components?",
+      "question": "What does the shadow DOM provide for a web component?",
       "options": [
-        "Encapsulation of styles and markup",
-        "Database access",
-        "API keys",
-        "Server-side rendering"
+        "Encapsulating component markup and styles",
+        "Querying Salesforce databases",
+        "Storing API keys in a browser component",
+        "Rendering the component on the server"
       ],
       "correctAnswer": 0,
-      "explanation": "Shadow DOM provides style and markup encapsulation so component internals don't leak out.",
+      "explanation": "The shadow DOM provides an encapsulated component tree for markup and styles.",
       "whyWrong": [
-        "Shadow DOM doesn't manage database access.",
-        "Shadow DOM has nothing to do with API keys or security credentials.",
-        "Shadow DOM is a client-side browser feature, unrelated to server-side rendering."
+        "The shadow DOM encapsulates a component’s tree and styles.",
+        "Database queries are performed through data services, not the shadow DOM.",
+        "Secrets should not be stored in client-side components."
       ]
     },
     {
-      "question": "Which LWC decorator makes a property available to the component's template?",
+      "question": "Which LWC decorator exposes a public component property to its parent?",
       "options": [
         "@api",
         "@invocable",
@@ -238,15 +238,15 @@
         "@wire"
       ],
       "correctAnswer": 0,
-      "explanation": "@api exposes a public property that can be set by a parent component.",
+      "explanation": "The @api decorator marks a property or method as part of the component’s public interface.",
       "whyWrong": [
-        "@invocable is not an LWC decorator, it's unrelated to component properties.",
-        "@track is used for reactive private property tracking, not for exposing properties to the template/parent.",
-        "@wire is used for provisioning data from Salesforce, not for exposing properties externally."
+        "@api exposes a property or method publicly.",
+        "@invocable is not the LWC public-property decorator.",
+        "@track is not the decorator for exposing a property to a parent."
       ]
     },
     {
-      "question": "Which LWC wire adapter is used to get a record by Id?",
+      "question": "Which wire adapter retrieves a record by its record ID?",
       "options": [
         "getListUi",
         "getObjectInfo",
@@ -254,31 +254,31 @@
         "createRecord"
       ],
       "correctAnswer": 2,
-      "explanation": "getRecord wire adapter fetches a record by Id with specified fields.",
+      "explanation": "getRecord retrieves a Salesforce record when supplied with its record ID and requested fields.",
       "whyWrong": [
-        "getListUi retrieves a list of records, not a single record by Id.",
-        "getObjectInfo retrieves object metadata, not record field data.",
-        "createRecord creates a new record, it doesn't retrieve an existing one."
+        "getListUi is not the record-by-ID adapter.",
+        "getObjectInfo returns metadata rather than a record.",
+        "createRecord creates records rather than retrieving one by ID."
       ]
     },
     {
-      "question": "What does the spread operator (...) do in JavaScript?",
+      "question": "What does the JavaScript spread operator do?",
       "options": [
-        "Creates classes",
-        "Handles errors",
-        "Deletes properties",
-        "Expands iterables or copies/merges objects"
+        "Creates class definitions",
+        "Handles thrown errors",
+        "Deletes object properties",
+        "Expands iterable values"
       ],
       "correctAnswer": 3,
-      "explanation": "The spread operator expands arrays or copies/merges object properties.",
+      "explanation": "Spread syntax expands iterable values and can copy or merge object properties.",
       "whyWrong": [
-        "The spread operator doesn't create classes.",
-        "The spread operator doesn't handle errors, that's the role of try/catch.",
-        "The spread operator doesn't delete properties, rest/destructuring with omission handles that differently."
+        "Class declarations use class syntax.",
+        "Error handling uses try/catch or rejection handlers.",
+        "Spread syntax expands iterable values and can copy or merge object properties."
       ]
     },
     {
-      "question": "Which LWC lifecycle hook runs when the component is inserted into the DOM?",
+      "question": "Which LWC lifecycle hook runs when a component is added to the DOM?",
       "options": [
         "renderedCallback",
         "connectedCallback",
@@ -286,123 +286,123 @@
         "errorCallback"
       ],
       "correctAnswer": 1,
-      "explanation": "connectedCallback runs when the component is added to the DOM.",
+      "explanation": "connectedCallback runs when the component is inserted into the DOM.",
       "whyWrong": [
-        "renderedCallback fires after every render, not specifically on initial DOM insertion.",
-        "disconnectedCallback fires when a component is removed from the DOM, not inserted.",
-        "errorCallback fires when a descendant component throws an error, unrelated to DOM insertion."
+        "renderedCallback runs after rendering.",
+        "connectedCallback runs when the component is inserted into the DOM.",
+        "disconnectedCallback runs when the component is removed."
       ]
     },
     {
-      "question": "What is the purpose of @wire in LWC?",
+      "question": "What does the @wire service do in LWC?",
       "options": [
-        "To track state",
-        "To reactively fetch data or call Apex imperatively with reactive parameters",
-        "To handle events",
-        "To expose properties"
+        "Tracks all component state automatically",
+        "Supplies data reactively when parameters change",
+        "Handles DOM events",
+        "Exposes a property to parent components"
       ],
       "correctAnswer": 1,
-      "explanation": "@wire reactively fetches data when parameters change.",
+      "explanation": "@wire provisions data reactively from a supported adapter or Apex method when its configuration changes.",
       "whyWrong": [
-        "@wire itself doesn't track state, that's the role of @track or reactive properties.",
-        "@wire doesn't directly handle DOM events, that's done with event listeners.",
-        "@wire is for provisioning data, not for exposing properties to templates (that's @api)."
+        "@wire is not a general automatic state tracker.",
+        "@wire provisions data reactively when its configuration changes.",
+        "Event handlers respond to events; they do not provide wire data."
       ]
     },
     {
-      "question": "Which JavaScript method creates a new array from another without mutating the original?",
+      "question": "Which array method returns a new array by transforming each element?",
       "options": [
         "push",
-        "map or slice",
+        "map",
         "splice",
         "pop"
       ],
       "correctAnswer": 1,
-      "explanation": "map and slice return new arrays; they don't mutate the original.",
+      "explanation": "map calls a function for each element and returns a new array of the results.",
       "whyWrong": [
-        "push mutates the original array by adding to it.",
-        "splice mutates the original array in place.",
-        "pop mutates the original array by removing its last element."
+        "push modifies an array by adding an element.",
+        "map returns a new array of transformed values.",
+        "splice changes the original array."
       ]
     },
     {
-      "question": "What does event.target refer to in a DOM event handler?",
+      "question": "In a DOM event handler, what does event.target identify?",
       "options": [
-        "The element that dispatched the event",
-        "The window",
-        "The document",
+        "The event source element",
+        "The global window object in the browser",
+        "The document object",
         "The parent element"
       ],
       "correctAnswer": 0,
-      "explanation": "event.target is the element that triggered the event.",
+      "explanation": "event.target identifies the element that dispatched the event.",
       "whyWrong": [
-        "event.target is not the window object; window is the global browsing context.",
-        "event.target refers to the specific element that fired the event, not the whole document.",
-        "event.target is not the parent element; that would require traversing the DOM tree separately."
+        "event.target identifies the element that dispatched the event.",
+        "window is a global browser object, not necessarily the event source.",
+        "document represents the page document, not necessarily the event source."
       ]
     },
     {
-      "question": "Which Aura component attribute type is similar to @api in LWC?",
+      "question": "Which Aura concept is closest to an LWC public property marked with @api?",
       "options": [
         "aura:method",
-        "aura:attribute with access='global' or 'public'",
+        "Public Aura attribute",
         "aura:handler",
         "aura:registerEvent"
       ],
       "correctAnswer": 1,
-      "explanation": "aura:attribute with public/global access exposes data like @api.",
+      "explanation": "A public Aura attribute exposes a value on the component in a way that is similar to an LWC public property.",
       "whyWrong": [
-        "aura:method exposes a callable method, not a data property equivalent to @api.",
-        "aura:handler registers event handling logic, not a component-facing property.",
-        "aura:registerEvent is used to declare that a component can fire an event, not to expose a property."
+        "aura:method exposes a method, not an attribute.",
+        "A publicly accessible aura:attribute is similar to an LWC public property.",
+        "aura:registerEvent declares an event, not a public attribute."
       ]
     },
     {
       "question": "What is a JavaScript module?",
       "options": [
-        "A variable only",
-        "A class only",
-        "A file that exports bindings for reuse and encapsulates code",
-        "A function only"
+        "A variable declaration",
+        "A class declaration",
+        "A file that exports code",
+        "A single function"
       ],
       "correctAnswer": 2,
-      "explanation": "Modules export bindings and provide encapsulation via import/export.",
+      "explanation": "A module groups code in a file, can export bindings for reuse, and has its own scope.",
       "whyWrong": [
-        "A module isn't limited to a single variable; it can export multiple bindings.",
-        "A JavaScript module can contain more than a single class, it's a broader unit of code organization.",
-        "A module isn't limited to functions alone; it can export any bindings."
+        "A module can contain variables but is more than a declaration.",
+        "A module can include a class but is not limited to one.",
+        "A module can contain many functions and is not just one function."
       ]
     },
     {
-      "question": "Which LWC method is used to navigate programmatically?",
+      "question": "Which API is used for programmatic navigation in LWC?",
       "options": [
         "history.push",
         "NavigationMixin is not used",
-        "window.location",
-        "NavigationMixin.GeneratePage"
+        "window.location in every case",
+        "NavigationMixin.Navigate"
       ],
       "correctAnswer": 3,
-      "explanation": "NavigationMixin.GeneratePage enables programmatic navigation in LWC.",
+      "explanation": "NavigationMixin.Navigate is the supported LWC pattern for navigating to a page reference.",
       "whyWrong": [
-        "history.push is a browser history API concept, not the LWC-specific navigation method.",
-        "NavigationMixin is in fact the standard way LWC handles programmatic navigation, this option incorrectly denies its use.",
-        "window.location causes a full page reload, which isn't the LWC-recommended navigation approach."
+        "history.push is not the standard LWC navigation pattern.",
+        "LWC provides NavigationMixin for programmatic navigation.",
+        "window.location can navigate, but it is not the recommended LWC navigation API."
       ]
     },
     {
       "question": "What does const prevent in JavaScript?",
       "options": [
-        "Block scope",
-        "Variable declaration",
-        "All mutations",
-        "Reassignment of the variable binding (but not mutation of objects)"
+        "Using block scope",
+        "Declaring a variable",
+        "All changes to an object",
+        "Reassigning the binding"
       ],
       "correctAnswer": 3,
-      "explanation": "const prevents reassignment; object/array contents can still be mutated.",
+      "explanation": "const prevents reassignment of the binding, but an object stored in it may still be mutable.",
       "whyWrong": [
-        "const has nothing to do with block scope, that behavior comes from let and const equally, not from preventing scope.",
-        "const doesn't prevent variable declaration, it's a way of declaring variables.",
-        "const does not prevent mutation of the contents of objects/arrays, only reassignment of the binding itself."
+        "const declarations are block-scoped.",
+        "const declares a variable binding.",
+        "Objects assigned to const can still be mutated."
       ]
     }
   ]

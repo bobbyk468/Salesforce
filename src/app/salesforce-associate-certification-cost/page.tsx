@@ -41,44 +41,44 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How much does a Salesforce associate certification cost?',
-    answer: 'Most Salesforce associate or foundations-level credentials are the lowest-cost Salesforce certification tier, commonly listed around $75. Always confirm the current price in the official Salesforce certification registration flow before booking.',
+    answer: 'Most Salesforce associate or foundations-level certifications cost about $75, making them the lowest-cost tier. Confirm the current price in Salesforce registration before you book.',
   },
   {
     question: 'Which Salesforce associate certification should I take first?',
-    answer: 'Platform Foundations is the best broad starting point for most beginners because it covers CRM, platform basics, flow, security, and app-building concepts. AI-focused learners should look at Agentforce options, since AI Associate retired in February 2026, depending on current Salesforce availability.',
+    answer: 'Platform Foundations is a broad starting point for beginners. It covers CRM, platform basics, Flow, security, and app-building concepts. If you are focused on AI, compare current Agentforce options; AI Associate retired in February 2026.',
   },
   {
     question: 'What should I take after an associate certification?',
-    answer: 'Most candidates move from Platform Foundations or AI-focused associate credentials to Administrator (ADM-201), Platform App Builder, or a specialist track that matches their job role.',
+    answer: 'After Platform Foundations or an AI-focused associate credential, many candidates move on to Administrator (ADM-201), Platform App Builder, or a specialist certification related to their role.',
   },
 ]
 
 const options = [
-  { name: 'Platform Foundations', href: '/certifications/platform-foundations', cost: '$75 tier', bestFor: 'Beginners who want broad Salesforce platform knowledge before ADM-201.' },
-  { name: 'AI Associate', href: '/certifications/ai-associate', cost: '$75 tier when active', bestFor: 'Business users and analysts validating Salesforce AI concepts. Check current retirement guidance on the page.' },
-  { name: 'Agentforce Specialist', href: '/certifications/agentforce-specialist', cost: '$200 tier', bestFor: 'Candidates moving from AI literacy into practical Agentforce implementation topics.' },
+  { name: 'Platform Foundations', href: '/certifications/platform-foundations', cost: '$75 tier', bestFor: 'Beginners learning Salesforce basics before Administrator.' },
+  { name: 'AI Associate', href: '/certifications/ai-associate', cost: '$75 tier when active', bestFor: 'Business users and analysts learning Salesforce AI concepts. Check the page for current retirement information.' },
+  { name: 'Agentforce Specialist', href: '/certifications/agentforce-specialist', cost: '$200 tier', bestFor: 'Candidates moving from AI basics to Agentforce implementation.' },
 ]
 
 const costFactors = [
   {
     heading: 'Exam fee is only part of the cost',
-    body: 'Associate-level credentials are usually cheaper than standard Salesforce certifications, but retakes, study time, practice resources, and the opportunity cost of choosing the wrong first exam matter more than the base fee.',
+    body: 'Associate-level exams usually cost less than standard certifications. Also consider the cost of retakes, study materials, and the time spent preparing for an exam that may not fit your goal.',
   },
   {
     heading: 'Foundational does not always mean best for jobs',
-    body: 'A foundations credential can help beginners learn the vocabulary, but Administrator (ADM-201), App Builder, Developer I, and consultant certs usually carry stronger hiring signal for role-specific job postings.',
+    body: 'A foundations credential can teach beginners Salesforce terms and concepts. Administrator (ADM-201), App Builder, Developer I, and consultant certifications may carry more weight for jobs that ask for those skills.',
   },
   {
     heading: 'Check current availability before booking',
-    body: 'Salesforce occasionally retires or renames entry-level credentials as the product portfolio changes. Use the official registration flow as the final source for current fee, delivery options, and exam availability.',
+    body: 'Salesforce may retire or rename entry-level certifications as its products change. Check the official registration flow for current fees, exam formats, and availability.',
   },
 ]
 
 const nextSteps = [
-  'If you want an admin job, move from Platform Foundations to Administrator (ADM-201).',
-  'If you want AI/Agentforce work, compare AI Associate with Agentforce Specialist before paying.',
-  'If you already use Salesforce at work, a role-based certification may be a better ROI than another entry credential.',
-  'If budget is tight, choose the first exam that directly supports your next job application, not the cheapest badge.',
+  'For an admin role, consider moving from Platform Foundations to Administrator (ADM-201).',
+  'For AI or Agentforce work, compare available certifications before paying for an exam.',
+  'If you already use Salesforce at work, a role-based certification may be more useful than another entry-level credential.',
+  'If your budget is limited, choose the exam that best supports your next job application rather than choosing by price alone.',
 ]
 
 export default function SalesforceAssociateCertificationCostPage() {
@@ -90,7 +90,7 @@ export default function SalesforceAssociateCertificationCostPage() {
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Updated for {RELEASE_CURRENT}</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Associate Certification Cost</h1>
         <LastUpdated />
-        <p className="text-lg text-gray-600">Associate-level Salesforce credentials are the lowest-cost way to start, but the right first choice depends on whether you want broad CRM fundamentals, AI literacy, or a path toward ADM-201.</p>
+        <p className="text-lg text-gray-600">Associate-level credentials are a lower-cost way to start. Choose based on whether you want broad CRM fundamentals, AI knowledge, or a path toward ADM-201.</p>
       </header>
 
       <ContentPageAuthor />
@@ -115,8 +115,8 @@ export default function SalesforceAssociateCertificationCostPage() {
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Recommended Path</h2>
-        <p className="text-sm text-gray-700 mb-3">If your goal is employability, treat associate certification as a stepping stone, not the finish line.</p>
-        <p className="text-sm text-gray-700"><strong>Best path for most beginners:</strong> Platform Foundations &rarr; Administrator (ADM-201) &rarr; App Builder or a consultant/specialist track.</p>
+        <p className="text-sm text-gray-700 mb-3">If you are working toward a job, think of an associate certification as one step in your path.</p>
+        <p className="text-sm text-gray-700"><strong>A common path for beginners:</strong> Platform Foundations &rarr; Administrator (ADM-201) &rarr; App Builder or a consultant or specialist certification.</p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -139,7 +139,7 @@ export default function SalesforceAssociateCertificationCostPage() {
           ))}
         </ul>
         <p className="text-sm text-gray-700 mt-4">
-          Compare the low entry fee against career signal. A $75 credential can be useful, but a $200 role-based credential may create more interview value if it matches your target job.
+          Weigh the lower fee against the credential's relevance to your career. A $75 certification can help, while a $200 role-based certification may be more useful in interviews if it matches your target job.
         </p>
       </section>
 

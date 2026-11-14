@@ -1,44 +1,44 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Technical Architect Review Board exam for?",
+    "heading": "Who should prepare for the Technical Architect Review Board?",
     "personas": [
       {
-        "label": "Candidates with a board date",
-        "description": "You have cleared the evaluation and are preparing to present to the judges."
+        "label": "Candidates who passed the evaluation",
+        "description": "You cleared the first CTA stage and are preparing to present your design to the board."
       },
       {
-        "label": "Architects planning the attempt",
-        "description": "You want to know what the day involves before committing the fee and the preparation time."
+        "label": "Architects considering the board",
+        "description": "You want to understand the final assessment and preparation effort before booking."
       },
       {
-        "label": "Mentors and mock-board judges",
-        "description": "You coach candidates and need the format and the common failure modes clear."
+        "label": "CTA mentors and mock-panel members",
+        "description": "You help candidates practise and want to explain the format and common pitfalls."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Technical Architect Review Board Exam Hard?",
-    "summary": "This is the final stage of CTA and the hardest assessment Salesforce runs. You are given an enterprise scenario, design a complete solution, then present and defend it to a panel of judges who are themselves CTAs. There is no question paper and no partial credit for knowing the platform.",
+    "heading": "How challenging is the Technical Architect Review Board?",
+    "summary": "The review board is the final CTA stage and a demanding architecture assessment. You receive an enterprise scenario, design a solution, present it, and defend your choices to a panel of Certified Technical Architects. There is no question paper or score for platform knowledge alone.",
     "bullets": [
-      "<strong>A live defence, not an exam.</strong> You present your architecture and answer sustained questioning.",
-      "<strong>Judged by practising CTAs.</strong> The decision is the panel's, against the areas the scenario requires you to cover.",
-      "<strong>Entry is gated.</strong> You must hold both architect credentials and have passed the evaluation stage.",
-      "<strong>Fee:</strong> third-party sources put this stage at around US$4,500, separate from the evaluation. Confirm current fees with Salesforce."
+      "<strong>Live presentation and defence.</strong> Explain your architecture and answer detailed questions.",
+      "<strong>Practising CTA judges.</strong> The panel evaluates the areas required by the scenario.",
+      "<strong>Prerequisites apply.</strong> Hold both architect credentials and pass the evaluation first.",
+      "<strong>Fee:</strong> External sources report about US$4,500 for the board, separate from the evaluation. Confirm current pricing with Salesforce."
     ],
-    "passRateGuidance": "Candidates who pass have almost always sat several mock boards with practising CTAs. If you have never had a design pulled apart out loud, you are not ready, however strong your platform knowledge is."
+    "passRateGuidance": "Candidates often prepare by completing several mock boards with practising CTAs. Practise presenting and defending a design aloud; platform knowledge by itself is not enough."
   },
   "examFormat": {
-    "heading": "Technical Architect Review Board Exam Format Explained",
-    "intro": "The board is a presentation and defence built on a scenario. Here is what the day involves:",
+    "heading": "What happens at the Technical Architect Review Board?",
+    "intro": "The board is a scenario-based presentation followed by a defence. Prepare for these parts of the day:",
     "bestWayToPass": [
-      "<strong>Use a fixed running order:</strong> Data, security and sharing, integration, development lifecycle, licensing. Cover it the same way every time so nothing is dropped under pressure.",
-      "<strong>Lead with the business outcome:</strong> Say what the design achieves before how it works. Judges assess whether a business audience could follow you.",
-      "<strong>Pre-empt the obvious challenges:</strong> Name the weak points yourself, with the mitigation, before a judge finds them.",
-      "<strong>Rehearse hostile questioning:</strong> The questioning is where most candidates come apart. Practise being interrupted."
+      "<strong>Follow the same outline:</strong> Cover data, security and sharing, integration, delivery lifecycle, and licensing each time.",
+      "<strong>Start with the outcome:</strong> Explain the business result and overall solution before moving into technical details.",
+      "<strong>Raise risks early:</strong> Describe weak points and mitigations before the judges have to ask.",
+      "<strong>Practise interruptions:</strong> Rehearse answering challenges while keeping your reasoning clear."
     ]
   },
-  "practiceQuestionsIntroSuffix": ", practice thinking like a CTA and defending architecture decisions for the Review Board.",
+  "practiceQuestionsIntroSuffix": ", practise CTA-style reasoning and defending architecture decisions for the Review Board.",
   "certificationCard": {
     "code": "CTA Step 2",
     "description": "The final stage of CTA. You receive an enterprise scenario, design a full solution, then present and defend it to a panel of Certified Technical Architects. Passing earns the credential.",
@@ -59,53 +59,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "CTA Review Board: Key Concepts for Preparation",
+    "h2": "Technical Architect Review Board: preparation guide",
     "blocks": [
       {
-        "heading": "The Format of the Day",
-        "body": "You are given a scenario describing a company: its business goals, existing systems, constraints and pain points. You prepare a solution architecture, then present it to a panel of judges. The presentation is followed by extended questioning, where judges probe the parts of the design they find weakest. They are not trying to catch you out on trivia. They are testing whether your design holds together, whether you understood the requirements, and whether you can reason about it under pressure. The outcome is the panel's judgement against the areas the scenario demands, not a percentage."
+        "heading": "How the board works",
+        "body": "You receive a scenario about a company, including its goals, systems, constraints, and problems. You prepare an architecture, present it to a panel, and answer extended questions. The judges test whether the solution meets the requirements, holds together, and can be defended under pressure. They are evaluating the required areas, not calculating a percentage score."
       },
       {
-        "heading": "Preparing the Architecture",
-        "body": "Design for the scenario in front of you, not for a textbook enterprise. Cover the data model and how it handles the volumes described, how records are secured and shared including any external users, how the systems integrate and in which direction, how changes are built and released, and which licences the design implies. Prefer standard capability and justify every departure from it. Keep the solution proportionate: unnecessary components are not neutral, because each one is something a judge can ask about and something you must defend."
+        "heading": "Design for the stated needs",
+        "body": "Address the scenario in front of you. Cover the data model and expected volume, record access for internal and external users, integrations and data direction, release practices, and licences. Prefer standard features where they fit and explain any custom work. Keep the design proportionate: every unnecessary component adds cost and creates another decision to defend."
       },
       {
-        "heading": "Presenting Clearly",
-        "body": "Judges sit through many presentations, and clarity carries weight. Start with the business outcome and the shape of the solution, then go through your running order. Use diagrams that can be read at a glance and that you can talk through without reciting. Keep to time: running out before you reach licensing or release management means those areas go uncovered. Speak as if the audience includes the sponsor who would pay for this, because the ability to explain architecture to a business audience is explicitly part of what is assessed."
+        "heading": "Present for a mixed audience",
+        "body": "Explain the business outcome and solution outline first, then work through a consistent structure. Use diagrams that are readable and easy to discuss. Manage time so you reach each required area, including licensing and release management. Present in terms a business sponsor can follow; communication is part of the assessment."
       },
       {
-        "heading": "Handling the Questioning",
-        "body": "This is where most candidates are decided. Expect judges to challenge your choices, propose alternatives and introduce complications. For each significant decision. Know the requirement it serves, the alternative you rejected, and the cost you accepted. When a challenge is sound, acknowledge it and adjust: that reads as judgement. When it is not, defend your position calmly with the reasoning. Both instant capitulation and refusal to engage are negative signals. Saying you do not know, then explaining how you would find out, is better than inventing an answer."
+        "heading": "Respond to the panel",
+        "body": "Expect questions that challenge choices or introduce new complications. For each important decision, know the requirement it supports, the alternative you rejected, and the trade-off you accepted. Reconsider a choice when an argument is sound; calmly defend it when your reasoning still holds. If you do not know something, say so and explain how you would find out rather than guessing."
       },
       {
-        "heading": "Common Reasons Candidates Fail",
-        "body": "Four patterns recur. **Missed requirements:** a strong design that does not address something the scenario asked for. **Unjustified choices:** components on the diagram the candidate cannot explain. **No acknowledged trade-offs:** presenting the design as having no downsides, which suggests it was not analysed. **Poor time management:** running out before covering every area. Notice that none of these is a knowledge gap. Candidates reach this stage having passed seven exams; what separates passes from failures is judgement and delivery."
+        "heading": "Common failure patterns",
+        "body": "Candidates can miss stated requirements, include components they cannot justify, ignore trade-offs, or run out of time before covering every area. These problems reflect judgement and presentation as much as technical knowledge. A repeatable structure and full mock-board practice help expose them before the assessment."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Technical Architect Review Board Exam",
-    "intro": "The board tests whether you can design under constraints and defend it to people who will push back. Preparation means rehearsal, not revision.",
+    "h2": "How to prepare for the Technical Architect Review Board",
+    "intro": "The panel expects you to design within constraints and explain your choices when challenged. Practise the presentation and discussion, not only the technical topics.",
     "blocks": [
       {
-        "heading": "A Fixed Running Order",
-        "body": "Data, security and sharing, integration, lifecycle, licensing. The same order every time means nothing gets forgotten when the clock is against you."
+        "heading": "Use a consistent outline",
+        "body": "Cover data, security and sharing, integration, delivery lifecycle, and licensing in the same order so you do not forget an area."
       },
       {
-        "heading": "Justify Every Component",
-        "body": "If it is on the diagram, be ready to say which requirement put it there and what you considered instead."
+        "heading": "Explain every component",
+        "body": "For each item in the architecture, identify the requirement it serves and the alternative you considered."
       },
       {
-        "heading": "Name Your Own Weaknesses",
-        "body": "Raising a trade-off before a judge does shows analysis. Claiming there are none shows the opposite."
+        "heading": "Raise risks and mitigations",
+        "body": "Explain trade-offs yourself. Acknowledging limits shows that you assessed the design."
       },
       {
-        "heading": "Answer the Question Asked",
-        "body": "Under pressure it is tempting to retreat to what you rehearsed. Judges notice when an answer does not address the challenge."
+        "heading": "Answer the challenge",
+        "body": "Listen to the question and address it directly instead of repeating a prepared answer."
       },
       {
-        "heading": "Mock Boards",
-        "body": "Practise with people who will interrupt and disagree. It is the single highest-value preparation for this stage."
+        "heading": "Practise mock boards",
+        "body": "Ask experienced architects to interrupt and question your decisions during rehearsal."
       }
     ]
   },
@@ -167,243 +167,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does the review board session consist of?",
+      "question": "What happens during the Technical Architect Review Board?",
       "options": [
-        "Presenting a solution to a given scenario and defending it under questioning",
-        "A written document submitted in advance",
-        "A 60-question multiple-choice exam",
-        "A hands-on configuration task completed in a live Salesforce org"
+        "Present and defend a scenario-based solution to a panel",
+        "Submit a written architecture document before the session",
+        "Complete a 60-question multiple-choice paper",
+        "Configure a solution in a live Salesforce org"
       ],
       "correctAnswer": 0,
-      "explanation": "Candidates present their architecture to a panel and then face extended questioning on it.",
+      "explanation": "The candidate presents an architecture and answers detailed questions from the panel.",
       "whyWrong": [
-        "A document alone is not the assessment; the defence is central.",
-        "There is no multiple-choice component at the board.",
-        "There is no hands-on build."
+        "A document alone is not the board assessment; the candidate must also defend the design.",
+        "The board does not use a multiple-choice paper.",
+        "The assessment is a presentation and discussion, not a live build."
       ]
     },
     {
-      "question": "A judge proposes an alternative to the candidate's integration approach, and the argument is sound. What is the best response?",
+      "question": "A judge gives a sound reason to reconsider an integration choice. What should the candidate do?",
       "options": [
-        "Acknowledge the point and adjust",
-        "Defend the original choice regardless",
-        "Apologise and ask the judge to decide",
-        "Change the requirement so the original design fits"
+        "Consider the objection and adjust when warranted",
+        "Keep the original design regardless of the objection",
+        "Ask the judge to make the architecture decision",
+        "Change the scenario requirement to fit the design"
       ],
       "correctAnswer": 0,
-      "explanation": "Reasoned adjustment in the face of a good argument demonstrates the judgement being assessed.",
+      "explanation": "Considering a valid challenge and making a reasoned adjustment demonstrates judgement.",
       "whyWrong": [
-        "Refusing to move on a sound objection reads as inflexibility.",
-        "Deferring the decision abandons the architect's role.",
-        "Requirements are fixed; the design must serve them."
+        "Ignoring a strong objection can appear inflexible.",
+        "The architect is responsible for evaluating options and making a recommendation.",
+        "The scenario requirements remain fixed; the design must address them."
       ]
     },
     {
-      "question": "A candidate finishes the presentation without covering licensing or release management. Why does this matter?",
+      "question": "A candidate runs out of time before discussing licensing and release management. Why is this a problem?",
       "options": [
-        "It does not matter if the data model is strong",
-        "Those areas go unassessed",
-        "The judges will cover them afterwards",
-        "It only affects the fee"
+        "It is acceptable as long as the data model is detailed",
+        "The panel cannot assess required areas left uncovered",
+        "The judges will automatically cover both topics afterward",
+        "It changes the amount of the exam fee"
       ],
       "correctAnswer": 1,
-      "explanation": "The panel judges whether the required areas were addressed. Running out of time leaves gaps that count against you.",
+      "explanation": "The panel checks coverage of required areas. Missing topics because of poor time management creates gaps.",
       "whyWrong": [
-        "One strong area does not compensate for missing others.",
-        "The candidate is responsible for covering the ground.",
-        "Fees are unrelated to performance."
+        "A strong data model does not replace other required areas.",
+        "Candidates are responsible for presenting the required coverage.",
+        "Fees are unrelated to the candidate’s performance."
       ]
     },
     {
-      "question": "Which best describes what the panel is assessing?",
+      "question": "What does the panel evaluate?",
       "options": [
-        "How quickly the candidate speaks",
-        "Judgement: coverage, justification, trade-offs, risk and communication",
-        "The visual design of the slides",
-        "Recall of Salesforce feature names and the platform limits that apply"
+        "Speaking speed alone",
+        "Judgement, coverage, risk, and communication",
+        "The visual polish of the slide deck",
+        "Memory of feature names and platform limits only"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform knowledge is assumed from the prerequisites. The board assesses the reasoning built on top of it.",
+      "explanation": "The board focuses on how the candidate applies knowledge through sound decisions and clear communication.",
       "whyWrong": [
-        "Pace matters only insofar as it affects clarity and coverage.",
-        "Readable diagrams help, but polish is not the criterion.",
-        "Feature recall was tested by the seven prerequisite exams."
+        "Speed matters only when it affects clarity and coverage.",
+        "Clear visuals help, but slide polish is not the main criterion.",
+        "Prerequisite exams already assess platform knowledge; the board looks at architecture reasoning."
       ]
     },
     {
-      "question": "What must be true before a candidate can sit the review board?",
+      "question": "What must a candidate complete before taking the review board?",
       "options": [
-        "They have worked at Salesforce",
-        "They have completed at least one relevant Trailhead superbadge",
-        "They hold both architect credentials and have passed the evaluation stage",
-        "They hold the Administrator credential"
+        "Employment at Salesforce",
+        "At least one relevant Trailhead superbadge",
+        "Both architect credentials and a passed evaluation",
+        "The Administrator credential alone"
       ],
       "correctAnswer": 2,
-      "explanation": "Both architect credentials are prerequisites, and the evaluation stage gates access to the board.",
+      "explanation": "The CTA path requires both architect credentials, followed by a successful evaluation before the board.",
       "whyWrong": [
-        "There is no employer requirement.",
-        "Superbadges are not part of the CTA path.",
-        "Administrator is far below the requirement."
+        "There is no requirement to work for Salesforce.",
+        "A superbadge is not a CTA prerequisite.",
+        "Administrator alone does not meet the entry requirements."
       ]
     },
     {
-      "question": "A candidate is asked about a component they included but cannot explain. What does this cost them?",
+      "question": "A candidate cannot explain why an unneeded component appears in the design. What is the likely impact?",
       "options": [
-        "Nothing at all, because extra components demonstrate useful breadth",
-        "It improves the score for ambition",
-        "Credibility, because every element of the design should be justifiable",
-        "Only time, not marks"
+        "It demonstrates useful breadth without any downside",
+        "It raises the ambition score",
+        "It weakens the defence because every component needs a reason",
+        "It only uses presentation time and does not affect the assessment"
       ],
       "correctAnswer": 2,
-      "explanation": "Unjustified components invite questions the candidate cannot answer, which undermines the whole defence.",
+      "explanation": "A component the candidate cannot justify invites questions and undermines confidence in the overall design.",
       "whyWrong": [
-        "Breadth without justification is a liability, not a strength.",
-        "Ambition is not a criterion.",
-        "It affects the judgement, not just the clock."
+        "Extra components without a purpose add complexity rather than useful breadth.",
+        "Ambition is not the measure of architecture quality.",
+        "The panel assesses the reasoning, not only the time used."
       ]
     },
     {
-      "question": "How should a candidate open the presentation?",
+      "question": "How should a candidate begin the presentation?",
       "options": [
-        "With a list naming every single Salesforce product used in the design",
-        "With the business outcome and the overall shape of the solution",
-        "With an apology for the time constraints",
-        "With the governor limits that apply"
+        "List every Salesforce product included in the design",
+        "Lead with the business outcome and solution",
+        "Apologize for the time available before starting",
+        "Start by listing the governor limits that apply"
       ],
       "correctAnswer": 1,
-      "explanation": "Leading with the outcome lets the panel follow the reasoning, and the ability to explain to a business audience is assessed.",
+      "explanation": "Starting with the outcome helps the panel follow what the design is meant to achieve.",
       "whyWrong": [
-        "A product list does not explain what the solution achieves.",
-        "Apologising wastes the time available.",
-        "Limits are detail, not the opening frame."
+        "A product inventory does not establish the business value.",
+        "An apology uses time without explaining the design.",
+        "Technical limits are details, not the opening context."
       ]
     },
     {
-      "question": "A candidate does not know the answer to a detailed question about a product's behaviour. What is the best response?",
+      "question": "The candidate is unsure about a product detail raised by a judge. What is the best response?",
       "options": [
-        "Invent a plausible-sounding answer",
-        "Blame the scenario for being unclear",
-        "Say so, then explain how they would establish the answer",
-        "Change the subject across to an area of the design that is stronger"
+        "Invent an answer that sounds plausible",
+        "Blame the scenario for not explaining it",
+        "Admit uncertainty and explain how to verify",
+        "Switch to a stronger area of the design"
       ],
       "correctAnswer": 2,
-      "explanation": "Admitting a gap and describing how you would resolve it is treated far better than a confident invention.",
+      "explanation": "It is better to be candid and explain how to find the answer than to make an unsupported claim.",
       "whyWrong": [
-        "Judges are practising CTAs and will recognise an invented answer.",
-        "Blaming the scenario does not answer it.",
-        "Avoiding the question is obvious to the panel."
+        "Judges can recognize unsupported guesses, which harms credibility.",
+        "Blaming the scenario does not answer the question.",
+        "Avoiding the question is apparent to the panel."
       ]
     },
     {
-      "question": "Which is a common reason candidates fail the board?",
+      "question": "Which issue commonly causes a candidate to fail the board?",
       "options": [
-        "Producing a strong design that misses a stated requirement",
-        "Finishing the presentation early",
-        "Using standard Salesforce features",
-        "Knowing a great deal too much about enterprise integration patterns"
+        "A design that misses a stated requirement",
+        "Finishing before the allotted presentation time",
+        "Using standard Salesforce features where they fit",
+        "Knowing enterprise integration patterns in depth"
       ],
       "correctAnswer": 0,
-      "explanation": "Missed requirements are among the most frequent failures, because coverage is fundamental to the judgement.",
+      "explanation": "Missing a stated requirement is a common and avoidable failure because requirement coverage is central to the assessment.",
       "whyWrong": [
-        "Finishing early is fine if everything was covered.",
-        "Standard features are preferred over custom build.",
-        "Depth is an advantage, not a problem."
+        "Time left over is acceptable if all required areas are covered.",
+        "Standard capabilities are often preferred when they meet the need.",
+        "Relevant architecture knowledge supports a stronger design."
       ]
     },
     {
-      "question": "Why is a fixed running order recommended?",
+      "question": "Why should candidates use a consistent presentation outline?",
       "options": [
-        "It shortens the session",
-        "It replaces the need for diagrams",
-        "It guarantees that the judges will not ask any further questions at all",
-        "It makes coverage of every required area automatic under time pressure"
+        "It shortens the official session",
+        "It removes the need for architecture diagrams",
+        "State a trade-off and its mitigation",
+        "Cover each required area under time pressure"
       ],
       "correctAnswer": 3,
-      "explanation": "A rehearsed order means data, security, integration, lifecycle and licensing are all addressed without relying on memory.",
+      "explanation": "A repeatable order helps the candidate address data, security, integration, lifecycle, and licensing without relying on memory.",
       "whyWrong": [
-        "The session length is set by the format.",
-        "Diagrams remain central.",
-        "Questioning follows regardless of structure."
+        "The allotted session length does not change.",
+        "Diagrams still help communicate the architecture.",
+        "The panel asks questions regardless of the presentation outline."
       ]
     },
     {
-      "question": "What is the right attitude to trade-offs in the presentation?",
+      "question": "How should a candidate discuss trade-offs?",
       "options": [
-        "Avoid mentioning any weakness",
-        "List all of the trade-offs but offer no mitigation for any of them",
-        "Name them yourself, with the mitigation, before a judge raises them",
-        "Claim the design has no downsides"
+        "Avoid mentioning any weaknesses",
+        "List possible drawbacks without discussing a response",
+        "Explain the risk and how it will be managed",
+        "Claim the design has no disadvantages"
       ],
       "correctAnswer": 2,
-      "explanation": "Raising trade-offs with mitigations demonstrates that the design was analysed rather than assembled.",
+      "explanation": "Explaining a trade-off and how to manage it shows that the candidate has evaluated the design.",
       "whyWrong": [
-        "Hidden weaknesses are found during questioning anyway.",
-        "Naming problems without mitigations is only half the work.",
-        "A design with no stated downsides suggests no analysis."
+        "Unmentioned risks may emerge during questioning.",
+        "Identifying a drawback without considering mitigation leaves the analysis incomplete.",
+        "Every design has trade-offs; denying them suggests weak analysis."
       ]
     },
     {
-      "question": "Who sits on the panel?",
+      "question": "Who evaluates the candidate at the review board?",
       "options": [
-        "Automated assessment software",
+        "Automated scoring software",
         "Practising Certified Technical Architects",
-        "Salesforce sales representatives",
-        "Other candidates who are also taking the board that day"
+        "Sales representatives",
+        "Other candidates taking the board that day"
       ],
       "correctAnswer": 1,
-      "explanation": "The board is judged by people who hold the credential and have done the work.",
+      "explanation": "The board is a live assessment by people who hold the CTA credential and practise architecture.",
       "whyWrong": [
-        "It is a live human assessment.",
-        "The assessment is technical, not commercial.",
-        "Candidates are assessed individually, not by peers."
+        "The decision is made by a panel, not automated software.",
+        "The board evaluates architecture rather than sales performance.",
+        "Candidates are assessed individually by the panel."
       ]
     },
     {
-      "question": "A candidate's design uses custom code where a standard feature would serve. How should they handle it at the board?",
+      "question": "A solution uses custom code where a standard feature might work. What should the candidate do?",
       "options": [
-        "Remove the requirement it addresses",
-        "Argue that custom code is always a more flexible choice than standard features",
-        "Present it without comment",
-        "Be ready to justify why the standard feature was unsuitable, or change the design"
+        "Remove the scenario requirement that prompted the design",
+        "Claim custom code is always more flexible",
+        "Present the code without explaining the choice",
+        "Justify custom work or use the standard feature"
       ],
       "correctAnswer": 3,
-      "explanation": "Custom build needs a reason. Without one, the standard capability is the expected answer.",
+      "explanation": "Custom work needs a reason; if standard capability meets the requirement, it is usually the better choice.",
       "whyWrong": [
-        "Requirements cannot be removed.",
-        "Flexibility does not justify the maintenance cost on its own.",
-        "Unexplained custom build is exactly what questioning will target."
+        "The stated requirements cannot be removed.",
+        "Flexibility by itself does not justify maintenance and complexity.",
+        "Unexplained choices are likely to be challenged."
       ]
     },
     {
-      "question": "What is the most valuable preparation for the questioning section?",
+      "question": "What is the most useful preparation for the panel’s questions?",
       "options": [
-        "Mock boards with people who interrupt and challenge the design",
-        "Reading a good deal more of the official Salesforce documentation",
-        "Preparing longer slides",
-        "Memorising the scenario format"
+        "Practise defending designs in mock boards",
+        "Read more documentation without presenting a design",
+        "Create longer slides for the presentation",
+        "Memorize the scenario format"
       ],
       "correctAnswer": 0,
-      "explanation": "The questioning tests defending a design live, a skill built only by being challenged in practice.",
+      "explanation": "Mock boards build the skill of explaining and defending decisions during live questioning.",
       "whyWrong": [
-        "Documentation covers knowledge, which is already assumed.",
-        "Longer slides reduce the time available to defend.",
-        "The format is not what decides the result."
+        "Documentation supports platform knowledge but does not rehearse live defence.",
+        "Longer slides reduce time for discussion and do not practise responses.",
+        "Knowing the format alone does not prepare the candidate to defend choices."
       ]
     },
     {
-      "question": "How is the outcome decided?",
+      "question": "How does the panel reach its decision?",
       "options": [
-        "By an automated rubric with no human input",
-        "By the length of the candidate's experience",
-        "By a percentage score calculated across the multiple-choice answers given",
-        "By the panel's judgement against the areas the scenario requires"
+        "Through automated scoring with no human review",
+        "By counting the candidate’s years of experience",
+        "Using a percentage score from multiple-choice answers",
+        "Panel judgement against the scenario requirements"
       ],
       "correctAnswer": 3,
-      "explanation": "The panel judges the defence against the required areas; there is no percentage mark.",
+      "explanation": "The panel evaluates the candidate’s architecture and defence against the scenario; it is not a percentage-based question score.",
       "whyWrong": [
-        "Judges make the decision, not software.",
-        "Experience helps you prepare but does not decide the result.",
-        "There are no multiple-choice answers to score."
+        "The panel makes the decision.",
+        "Experience can help preparation but does not determine the outcome.",
+        "There is no multiple-choice answer sheet."
       ]
     }
   ]

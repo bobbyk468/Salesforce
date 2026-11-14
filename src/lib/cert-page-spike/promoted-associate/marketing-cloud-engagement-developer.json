@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Marketing Cloud developers",
-        "description": "You write AMPscript, SSJS, and build CloudPages and want to certify your development skills."
+        "description": "You build Marketing Cloud solutions with AMPscript, SSJS, and CloudPages, and want to demonstrate those development skills."
       },
       {
         "label": "Email developers moving to Marketing Cloud",
-        "description": "You have HTML/CSS email experience and want to prove your ability to build dynamic, data-driven content in Marketing Cloud."
+        "description": "You know HTML and CSS for email and want to show that you can add data-driven content in Marketing Cloud."
       },
       {
         "label": "Integration specialists",
-        "description": "You work with Marketing Cloud REST and SOAP APIs and want to validate your ability to build custom solutions and automations."
+        "description": "You connect Marketing Cloud with other systems and want to validate your API and automation skills."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Marketing Cloud Engagement Developer Exam Hard?",
-    "summary": "The Engagement Developer exam is one of the harder Marketing Cloud certifications. It requires you to write and interpret AMPscript and SSJS code, understand REST and SOAP API patterns, and know how to build custom Journey Builder activities. Candidates without coding experience will struggle significantly.",
+    "summary": "This is a technical exam. It covers AMPscript and SSJS code, REST and SOAP integrations, and custom Journey Builder activities. Practical coding experience helps with both interpreting snippets and choosing an implementation.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>63% passing score</strong>: standard for developer-level exams, but the technical depth makes it challenging.",
-      "<strong>Code interpretation required</strong>: expect questions that show AMPscript or SSJS snippets and ask you to predict the output or identify errors.",
-      "<strong>API knowledge tested</strong>: you must know REST and SOAP endpoint patterns, OAuth authentication, and when to use each API."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>63% to pass</strong>, which is 38 correct answers out of 60.",
+      "Expect code-reading questions where you determine what AMPscript or SSJS does, or spot a problem.",
+      "Know REST and SOAP patterns, OAuth authentication, and which API fits a task."
     ],
-    "passRateGuidance": "Build at least 3-5 AMPscript-powered emails and 2-3 CloudPages before booking. Write SSJS Script Activities in Automation Studio and make at least a few REST API calls to feel confident."
+    "passRateGuidance": "Before scheduling, build several AMPscript emails and CloudPages, create SSJS Script Activities in Automation Studio, and make test REST API requests."
   },
   "examFormat": {
     "heading": "Marketing Cloud Engagement Developer Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. You’ll be asked to select the correct AMPscript function for a data retrieval task, choose between SSJS and AMPscript for a given use case, or design an API integration approach.",
+    "intro": "The exam is proctored online or at a test center. It includes scenario questions about data retrieval, language choice, and integration design.",
+    "scenarioPercent": "About 50–60% of questions use scenarios. You may need to select an AMPscript function, choose between AMPscript and SSJS, or plan an API integration.",
     "bestWayToPass": [
-      "<strong>Master AMPscript data functions:</strong> Lookup, LookupRows, LookupOrderedRows, InsertData, and UpdateData are tested heavily. Know when to use each one.",
-      "<strong>Know SSJS vs AMPscript boundaries:</strong> Use AMPscript for email personalization, SSJS for complex logic and API calls in CloudPages and Script Activities.",
-      "<strong>Study REST API endpoints:</strong> Know the key /contacts/, /messaging/, and /data/ endpoint families and how OAuth 2.0 client credentials authentication works.",
-      "<strong>Practice CloudPages development:</strong> Build landing pages with form capture, personalized URLs, and dynamic content to prepare for hands-on scenario questions."
+      "Practice AMPscript data functions such as Lookup, LookupRows, LookupOrderedRows, InsertData, and UpdateData. Match each function to the data operation it performs.",
+      "Use AMPscript for email personalization and learn where SSJS is a better fit for richer logic or API work in CloudPages and Script Activities.",
+      "Review the Marketing Cloud REST endpoint families for contacts, messaging, and data, along with OAuth 2.0 client-credentials authentication.",
+      "Build CloudPages that accept forms and display dynamic content; practice handling submitted data safely."
     ]
   },
   "certificationCard": {
     "code": "MC Engagement Developer",
-    "description": "This exam tests hands-on coding in Marketing Cloud: writing AMPscript and SSJS, building CloudPages, calling REST and SOAP APIs, and creating custom Journey Builder activities. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Programmatic Languages (35%) and API (22%).",
+    "description": "The exam covers AMPscript and SSJS development, CloudPages, REST and SOAP APIs, and custom Journey Builder activities. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Programmatic Languages (35%) and API (22%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
@@ -65,56 +65,52 @@
     "h2": "Marketing Cloud Engagement Developer: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "AMPscript Advanced Functions",
-        "body": "Key AMPscript functions: Lookup() retrieves a single DE value; LookupRows() returns a full rowset; Row() and Field() navigate rowsets. FOR/NEXT loops iterate over rowsets. IIF() is the inline conditional; IF/ELSEIF/ENDIF for multi-branch logic. TreatAsContentArea() renders a content area by name. HTTPGet() and HTTPPost() call external APIs from AMPscript. DateAdd() and DateParse() handle date manipulation. The developer exam tests selecting the right function for a given personalisation or data retrieval scenario."
+        "heading": "AMPscript for data and content",
+        "body": "Use Lookup to return a field value and LookupRows to return matching rows. Row and Field navigate a rowset, while FOR/NEXT iterates through it. IIF handles a short inline condition; IF/ELSEIF/ENDIF supports branching. TreatAsContentArea renders a named content area. HTTPGet and HTTPPost make HTTP requests, and DateAdd and DateParse support date work. Choose a function based on the data or personalization task."
       },
       {
-        "heading": "Server-Side JavaScript (SSJS) in Marketing Cloud",
-        "body": "SSJS runs on Marketing Cloud servers (not in the browser) using JavaScript 1.6 syntax. Platform functions (Marketing Cloud-specific) are available alongside standard JS. Common uses: HTTP POST to external systems, manipulating Data Extensions, complex data processing. SSJS runs in Email, Landing Pages, and Automation Studio Script activities. Key objects: Platform.Load(), HTTP.Post(), Retrieve(), DataExtension.Add(). The developer exam tests when to use SSJS vs AMPscript: SSJS for complex logic and API integration, AMPscript for personalisation within emails."
+        "heading": "SSJS on the Marketing Cloud server",
+        "body": "Server-Side JavaScript runs in Marketing Cloud contexts, not in the visitor’s browser. It can use JavaScript alongside platform features for HTTP requests, Data Extension work, and more involved processing. It is available in email, landing pages, and Automation Studio Script Activities. Know the roles of Platform.Load, HTTP.Post, Retrieve, and DataExtension.Add, and when AMPscript is simpler for email personalization."
       },
       {
-        "heading": "CloudPages and Dynamic Content",
-        "body": "CloudPages host landing pages, microsites, and smart capture forms. AMPscript-powered CloudPages can capture form data to Data Extensions (SmartCapture). Personalised URLs (PURLs) embed subscriber tokens in CloudPage URLs for pre-filled forms. Dynamic content blocks in emails show different content to different audiences based on rules, configured in Content Builder. The developer builds reusable content blocks with AMPscript logic for personalisation across campaigns."
+        "heading": "CloudPages and reusable content",
+        "body": "CloudPages can host landing pages, microsites, and forms. A page can capture submitted fields into a Data Extension, including through Smart Capture. Personalized URLs can carry subscriber context for a prefilled experience. In Content Builder, dynamic content rules select different email content for different audiences. Shared content blocks let teams reuse personalization logic."
       },
       {
-        "heading": "Marketing Cloud REST and SOAP APIs",
-        "body": "**REST API**: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). **SOAP API**: Subscriber, List, TriggeredSend objects, legacy but still tested. Authentication: obtain access token via **OAuth** 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body."
+        "heading": "REST and SOAP integration",
+        "body": "Marketing Cloud REST endpoints cover work such as contacts, Data Extensions, and message sends. SOAP remains available for objects including Subscriber, List, and TriggeredSend. An integration obtains an OAuth 2.0 client-credentials access token and sends it as a Bearer token. Be able to select the API and endpoint that match the operation."
       },
       {
-        "heading": "Automation Studio Script Activities",
-        "body": "Script Activities run SSJS code within Automation Studio workflows. Common use cases: data manipulation between DE extracts, calling external APIs, complex data quality checks before sends. Script Activities run synchronously. Keep them under 30 minutes to avoid timeout. Error handling: use try/catch in SSJS; log errors to a dedicated error DE. The developer designs automation sequences combining Script Activities, SQL Query Activities, Data Extract Activities, and File Transfer Activities for complex data processing pipelines."
+        "heading": "Automation Studio scripts",
+        "body": "A Script Activity runs SSJS as one step in an Automation Studio workflow. Teams use it for data handling, external requests, or checks that are awkward to express in SQL. Combine it with Query, Data Extract, and File Transfer activities as needed. Use try/catch and a suitable error log; account for activity run-time limits."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Engagement Developer Exam",
-    "intro": "The Marketing Cloud Engagement Developer exam tests technical development skills: AMPscript, SSJS, REST/SOAP APIs, and custom activities. Questions require you to write or interpret code snippets and design custom solutions.",
+    "intro": "The exam checks whether you can build and maintain Marketing Cloud solutions with AMPscript, SSJS, APIs, and custom activities. Practice reading code and choosing a design for a concrete requirement.",
     "blocks": [
       {
         "heading": "AMPscript Proficiency",
-        "body": "Master AMPscript data functions: Lookup, LookupRows, LookupOrderedRows, UpdateData, InsertData. Know conditional logic (IIF, CASE), date/string functions, and how to use AMPscript in subject lines, preheaders, and email body."
+        "body": "Know how to retrieve and update Data Extension data, use conditions and date or string functions, and place AMPscript in email fields and content."
       },
       {
         "heading": "Server-Side JavaScript (SSJS)",
-        "body": "Know SSJS for CloudPages and landing page logic: using Platform.Load to import functions, Core.JavaScript library for data extensions (Rows, Row objects), and how SSJS differs from client-side JavaScript."
+        "body": "Review SSJS in CloudPages and Script Activities, including Platform.Load and the Core library patterns for working with rows. Distinguish server-side code from browser JavaScript."
       },
       {
         "heading": "REST & SOAP API Usage",
-        "body": "Know the key Marketing Cloud **REST API** endpoints: /contacts/v1/contacts, /messaging/v1/messageDefinitionSends, /data/v1/async, and how to authenticate using **OAuth** 2.0 client credentials."
-      },
-      {
-        "heading": "Custom Activities in Journey Builder",
-        "body": "Know how to build custom Journey Builder activities using the Custom Activity API: the config.json structure, execute/save/publish/validate endpoints, and how activities interact with Journey Builder's UI."
+        "body": "Study REST resources for contacts, messaging, and data, plus OAuth client-credentials authentication. Recognize SOAP use cases too."
       },
       {
         "heading": "Query Activities & Data Extensions",
-        "body": "Know how to write SQL in Automation Studio Query Activities to transform and aggregate data extension data. Understand overwrite vs. append destination actions and how to join data extensions in queries."
+        "body": "Practice Automation Studio SQL, joins, and destination actions such as overwrite and append."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Marketing Certifications",
-    "intro": "After this marketing certification, consider these related credentials:",
+    "intro": "These credentials build on related Marketing Cloud and marketing automation skills.",
     "links": [
       {
         "href": "/certifications/marketing-cloud-consultant",
@@ -166,7 +162,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A developer needs to retrieve a value from a data extension and use it in an email. Which AMPscript function does this?",
+      "question": "Which AMPscript function reads a matching field value from a Data Extension for an email?",
       "options": [
         "RaiseError, which stops processing for the subscriber being rendered",
         "Lookup",
@@ -174,7 +170,7 @@
         "InsertData, which writes a new row into the target data extension instead"
       ],
       "correctAnswer": 1,
-      "explanation": "Lookup returns a single field value from a data extension row matching the criteria supplied.",
+      "explanation": "Lookup reads one field from the Data Extension row that matches the supplied search conditions.",
       "whyWrong": [
         "RaiseError halts the send for that subscriber.",
         "That function performs date conversion.",
@@ -182,23 +178,23 @@
       ]
     },
     {
-      "question": "What is the main reason to use SSJS rather than AMPscript in a Marketing Cloud build?",
+      "question": "When is SSJS a better choice than AMPscript in a Marketing Cloud solution?",
       "options": [
-        "It is the only language able to read from a sendable data extension",
+        "It would be the only language able to read from a sendable data extension",
         "It renders more quickly than AMPscript does during a large email send",
-        "It is required whenever an email contains more than one content block",
+        "It would be required whenever an email contains more than one content block",
         "It handles loops, objects and API calls more comfortably"
       ],
       "correctAnswer": 3,
-      "explanation": "Server-Side JavaScript suits logic with real data structures, iteration and platform API work, where AMPscript becomes awkward.",
+      "explanation": "SSJS is useful when the solution needs richer data structures, loops, or Marketing Cloud platform calls.",
       "whyWrong": [
         "AMPscript reads data extensions perfectly well.",
-        "AMPscript is generally the faster choice for inline personalisation.",
+        "AMPscript is generally the faster choice for inline personalization.",
         "Content block count has nothing to do with the language."
       ]
     },
     {
-      "question": "A cloud page must accept a form post and write it to a data extension. What should the developer be most careful about?",
+      "question": "A CloudPage stores submitted form data in a Data Extension. What is the key safety step?",
       "options": [
         "Validating and encoding the submitted input",
         "Confirming that the data extension has a retention policy configured on it",
@@ -206,7 +202,7 @@
         "Checking that the page uses the same template as the rest of the site"
       ],
       "correctAnswer": 0,
-      "explanation": "A public endpoint accepting user input needs validation and encoding, or it becomes an injection and data integrity problem.",
+      "explanation": "Validate and encode public form input before using it; this reduces injection risk and protects data quality.",
       "whyWrong": [
         "Retention matters for storage, not for accepting input safely.",
         "Folder location is housekeeping rather than a safety concern.",
@@ -214,7 +210,7 @@
       ]
     },
     {
-      "question": "What does a triggered send definition provide?",
+      "question": "What does a Triggered Send definition let an integration do?",
       "options": [
         "A reusable configuration for sending one message on demand",
         "A journey entry source that evaluates a data extension every hour",
@@ -230,23 +226,23 @@
       ]
     },
     {
-      "question": "A developer must call the Marketing Cloud REST API from an external system. What is needed first?",
+      "question": "What must an external client obtain before it can call the Marketing Cloud REST API?",
       "options": [
-        "A data extension marked as sendable and related to subscribers",
+        "A Data Extension marked as sendable and related to subscribers",
         "An access token obtained from the auth endpoint",
-        "A cloud page published with a public URL for the system to call",
+        "A CloudPage published with a public URL for the system to call",
         "A triggered send definition created and published in the account"
       ],
       "correctAnswer": 1,
-      "explanation": "REST calls are authenticated with a token obtained from the authentication endpoint using the installed package credentials.",
+      "explanation": "The client uses Installed Package credentials to request an access token from the authentication endpoint.",
       "whyWrong": [
         "Sendable extensions matter for sends, not for authenticating.",
-        "Cloud pages are a different integration surface.",
+        "CloudPages are a different integration surface.",
         "Triggered sends are one thing you might call, not a prerequisite."
       ]
     },
     {
-      "question": "What is the purpose of an installed package in Marketing Cloud?",
+      "question": "What information does an Installed Package provide for an API integration?",
       "options": [
         "It schedules the automations that run overnight in the account",
         "It defines the retention rules applied to each data extension",
@@ -262,15 +258,15 @@
       ]
     },
     {
-      "question": "A SQL query in Automation Studio must combine subscriber data with send history. Where does the send data come from?",
+      "question": "Which source can an Automation Studio SQL query use for send history?",
       "options": [
         "Data views exposed within the account",
-        "A data extension that the developer creates and populates by hand",
+        "A Data Extension that the developer creates and populates by hand",
         "The tracking tab on each of the individual email jobs that were sent",
         "The All Subscribers list filtered to the relevant date range"
       ],
       "correctAnswer": 0,
-      "explanation": "Data views such as _Sent, _Open and _Click expose send and engagement history to queries.",
+      "explanation": "Query data views such as _Sent, _Open, and _Click to access send and engagement records.",
       "whyWrong": [
         "Manual population would be unmaintainable and immediately stale.",
         "Per-job tracking is a user interface view, not a queryable source.",
@@ -278,15 +274,15 @@
       ]
     },
     {
-      "question": "Why must a developer be careful with a SQL query that has no filter on date?",
+      "question": "Why should a query over Marketing Cloud data views usually limit its date range?",
       "options": [
-        "It can scan far more data than it needs to",
+        "It could scan far more data than it needs to",
         "Queries without a date filter are rejected by the platform automatically",
         "The results will be written to the wrong target data extension instead",
         "Data views only return rows from the current calendar month in any case"
       ],
       "correctAnswer": 0,
-      "explanation": "Unbounded queries over large data views are slow and can time out, so constraining the period is basic hygiene.",
+      "explanation": "A date condition limits the rows scanned and helps prevent a large query from timing out.",
       "whyWrong": [
         "The platform does not reject them outright.",
         "The target is set in the activity regardless of the filter.",
@@ -294,7 +290,7 @@
       ]
     },
     {
-      "question": "What happens to an AMPscript error during a send?",
+      "question": "If AMPscript fails while rendering one subscriber’s email, what is the likely result?",
       "options": [
         "The send is paused until a developer corrects the error in the content",
         "The entire send is cancelled and no subscriber receives the email at all",
@@ -302,7 +298,7 @@
         "That subscriber's message fails while others continue"
       ],
       "correctAnswer": 3,
-      "explanation": "AMPscript is evaluated per subscriber, so a failure affects that individual message rather than the whole job.",
+      "explanation": "AMPscript is evaluated for each subscriber; an error can fail that subscriber’s message while the rest of the send continues.",
       "whyWrong": [
         "Sends are not paused for developer intervention.",
         "A single failure does not cancel the send.",
@@ -310,31 +306,31 @@
       ]
     },
     {
-      "question": "A developer needs the same personalisation logic in twelve emails. What is the maintainable approach?",
+      "question": "How can a team reuse the same personalization logic across many emails?",
       "options": [
-        "A cloud page that each of the emails links out to when it is opened",
+        "A CloudPage that each of the emails links out to when it is opened",
         "A shared content block containing the logic",
         "The same code pasted into each of the twelve individual email templates",
         "A separate triggered send definition created for each of the emails"
       ],
       "correctAnswer": 1,
-      "explanation": "A shared block is referenced by each email, so the logic is written and corrected in one place.",
+      "explanation": "Put the logic in one shared content block so every email can use the same maintained version.",
       "whyWrong": [
-        "Sending readers to a web page is not personalisation of the email.",
+        "Sending readers to a web page is not personalization of the email.",
         "Twelve copies means twelve places to fix every bug.",
         "Triggered sends are about sending, not sharing logic."
       ]
     },
     {
-      "question": "What distinguishes a sendable data extension from a non-sendable one?",
+      "question": "What makes a Data Extension sendable?",
       "options": [
-        "It is permitted to hold more rows than a non-sendable extension can",
-        "It is visible to every business unit configured within the account",
-        "It is backed up automatically each night by the platform itself",
-        "It is related to subscribers so it can be used as an audience"
+        "It would be permitted to hold more rows than a non-sendable extension can",
+        "It would be visible to every business unit configured within the account",
+        "It would be backed up automatically each night by the platform itself",
+        "It would be related to subscribers so it can be used as an audience"
       ],
       "correctAnswer": 3,
-      "explanation": "Marking an extension sendable and mapping its relationship to subscribers is what allows it to be targeted by a send.",
+      "explanation": "A sendable Data Extension has a configured relationship to subscriber data, allowing it to serve as a send audience.",
       "whyWrong": [
         "Row capacity is not affected by the sendable flag.",
         "Visibility is governed by business unit and folders.",
@@ -342,15 +338,15 @@
       ]
     },
     {
-      "question": "A journey must be entered by a single contact when an external system says so. What should the developer use?",
+      "question": "Which Journey Builder entry method lets an outside system add one contact on demand?",
       "options": [
-        "A data extension entry source re-evaluated once every fifteen minutes",
+        "A Data Extension entry source re-evaluated once every fifteen minutes",
         "An automation that imports a file each time the external system changes",
         "An API event entry source",
         "A triggered send definition invoked directly by the external system"
       ],
       "correctAnswer": 2,
-      "explanation": "API events let an external system inject one contact into a journey in real time.",
+      "explanation": "An API event can pass an individual contact into Journey Builder when the external system signals it.",
       "whyWrong": [
         "A re-evaluated extension is still batch and introduces delay.",
         "File-based import is slower and more fragile than an event.",
@@ -358,7 +354,7 @@
       ]
     },
     {
-      "question": "Why would a developer store configuration values in a data extension rather than in the code?",
+      "question": "Why keep changeable settings in a Data Extension instead of hard-coding them?",
       "options": [
         "The platform imposes a strict limit on the length of any AMPscript block",
         "They can be changed without editing and republishing content",
@@ -374,15 +370,15 @@
       ]
     },
     {
-      "question": "A developer is asked to make an email render differently for subscribers in two countries. What is the simplest approach?",
+      "question": "How can one email show different content to subscribers in two countries?",
       "options": [
         "Two separate emails, each one sent to its own country segment",
-        "A cloud page that detects the recipient's location when they open it",
+        "A CloudPage that detects the recipient's location when they open it",
         "Conditional content driven by a country attribute",
         "Two triggered send definitions, one configured for each of the countries"
       ],
       "correctAnswer": 2,
-      "explanation": "Conditional logic on an attribute you already hold keeps it to a single asset with one place to maintain.",
+      "explanation": "Use conditional content based on the country attribute so one email can be maintained.",
       "whyWrong": [
         "Two emails doubles the maintenance for the same outcome.",
         "Detecting location on open is unreliable and happens too late.",
@@ -390,7 +386,7 @@
       ]
     },
     {
-      "question": "Which best describes the developer's role in a Marketing Cloud implementation?",
+      "question": "What work does a Marketing Cloud developer primarily deliver?",
       "options": [
         "Deciding which audiences each of the marketing campaigns should target",
         "Designing the visual layout and copy used in each of the email templates",

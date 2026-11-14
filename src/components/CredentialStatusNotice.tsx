@@ -1,10 +1,14 @@
-import { getCredentialStatus } from '@/lib/credential-status'
+import Link from '@/components/AppLink'
+import { getCredentialStatus, RETIREMENT_NEXT_STEPS } from '@/lib/credential-status'
 
 export default function CredentialStatusNotice({ slug }: { slug: string }) {
   const status = getCredentialStatus(slug)
   if (!status) return null
 
+  const isClaudeCredential = slug.startsWith('claude-certified-')
+
   const retired = status.kind === 'retired'
+  const nextSteps = RETIREMENT_NEXT_STEPS[slug]
 
   return (
     <aside
@@ -17,21 +21,33 @@ export default function CredentialStatusNotice({ slug }: { slug: string }) {
         {status.label}
       </p>
       <p className={`mt-1 text-sm ${retired ? 'text-amber-900' : 'text-blue-900'}`}>
-        {status.message}{' '}
-        {slug === 'ai-associate' && retired && (
-          <>
-            For current Salesforce AI learning, visit{' '}
-            <a href="https://trailhead.salesforce.com/agentblazer" target="_blank" rel="noopener noreferrer nofollow" className="font-medium underline">
-              Agentblazer on Trailhead
-            </a>
-            {' '}or explore the current{' '}
-            <a href="/certifications/agentforce-specialist" className="font-medium underline">
-              Agentforce Specialist
-            </a>
-            {' '}credential.
-          </>
-        )}
+        {isClaudeCredential
+          ? 'Pearson says eligibility is limited to Claude Partner Network organizations. Anthropic has not published exam fees, question counts, duration, or passing scores; check the issuer for current details.'
+          : status.message}
       </p>
+      {nextSteps?.length ? (
+        <p className={`mt-2 text-sm ${retired ? 'text-amber-900' : 'text-blue-900'}`}>
+          <span className="font-semibold">Active credentials to consider instead:</span>{' '}
+          {nextSteps.map((step, i) => (
+            <span key={step.href}>
+              {i > 0 ? (i === nextSteps.length - 1 ? ' and ' : ', ') : ''}
+              <Link href={step.href} className="font-medium underline">
+                {step.label}
+              </Link>
+            </span>
+          ))}
+          .
+          {slug === 'ai-associate' && (
+            <>
+              {' '}For current Salesforce AI learning, see{' '}
+              <a href="https://trailhead.salesforce.com/agentblazer" target="_blank" rel="noopener noreferrer nofollow" className="font-medium underline">
+                Agentblazer on Trailhead
+              </a>
+              .
+            </>
+          )}
+        </p>
+      ) : null}
       <a
         href={status.sourceUrl}
         target="_blank"

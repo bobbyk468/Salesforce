@@ -33,34 +33,34 @@ const breadcrumbItems = [
 ]
 
 const faqItems = [
-  { question: 'Which Pardot certification should I take first?', answer: 'Most candidates should start with Pardot Specialist. It is the entry credential for Account Engagement users and covers lead management, automation, scoring, grading, forms, landing pages, and reporting.' },
-  { question: 'Is Pardot now called Marketing Cloud Account Engagement?', answer: 'Yes. Salesforce renamed Pardot to Marketing Cloud Account Engagement, but many candidates and employers still search for Pardot certification.' },
-  { question: 'Is Pardot Specialist or Pardot Consultant harder?', answer: 'Pardot Consultant is harder because it tests implementation judgment, business requirements, integrations, and multi-system marketing automation scenarios.' },
+  { question: 'Which Pardot certification should I take first?', answer: 'Start with Pardot Specialist if you are new to Account Engagement. It covers lead management, automation, scoring, grading, forms, landing pages, and reports.' },
+  { question: 'Is Pardot now called Marketing Cloud Account Engagement?', answer: 'Yes. Salesforce renamed Pardot to Marketing Cloud Account Engagement. Many candidates and employers still use the name Pardot when searching for certifications.' },
+  { question: 'Is Pardot Specialist or Pardot Consultant harder?', answer: 'Pardot Consultant is harder. It tests how you plan implementations, gather business requirements, connect systems, and design marketing automation across platforms.' },
 ]
 
 const comparisonRows = [
   {
     label: 'Best first exam',
-    specialist: 'Pardot Specialist is the better first exam for hands-on marketers, admins, and marketing operations users.',
-    consultant: 'Pardot Consultant is better after you have implementation experience and can translate business requirements into Account Engagement architecture.',
+    specialist: 'Pardot Specialist is a good first exam for marketers, admins, and marketing operations staff who use the tools.',
+    consultant: 'Pardot Consultant suits people with implementation experience who can turn business requirements into an Account Engagement design.',
   },
   {
     label: 'Core focus',
-    specialist: 'Feature behavior: prospects, lists, forms, automation rules, Engagement Studio, scoring, grading, and email reporting.',
-    consultant: 'Solution design: lead lifecycle, connector strategy, campaign influence, governance, migration choices, and stakeholder requirements.',
+    specialist: 'Covers prospects, lists, forms, automation rules, Engagement Studio, scoring, grading, and email reporting.',
+    consultant: 'Covers solution design, lead lifecycle, connector strategy, campaign influence, governance, migration choices, and stakeholder needs.',
   },
   {
     label: 'Difficulty',
-    specialist: 'Moderate, but the 72% passing score leaves limited room for guessing.',
-    consultant: 'Harder because scenarios are broader and often include tradeoffs across Salesforce, sales process, and marketing automation.',
+    specialist: 'Moderate difficulty. The 72% passing score leaves little room for guessing.',
+    consultant: 'More difficult. Questions cover broader scenarios and tradeoffs across Salesforce, sales processes, and marketing automation.',
   },
 ]
 
 const studyMilestones = [
-  'Build a test form, form handler, landing page, and completion action so you understand when each fires.',
-  'Create automation rules, dynamic lists, segmentation lists, and suppression lists; then explain the difference without notes.',
-  'Configure scoring and grading examples and know which one measures engagement versus fit.',
-  'Review Salesforce connector sync behavior, field precedence, prospect assignment, and lead/contact matching.',
+  'Build a test form, form handler, landing page, and completion action. Learn when each one runs.',
+  'Create automation rules, dynamic lists, segmentation lists, and suppression lists. Be able to explain how they differ.',
+  'Set up scoring and grading examples. Know which measures engagement and which measures fit.',
+  'Review how the Salesforce connector syncs data, chooses field values, assigns prospects, and matches leads and contacts.',
 ]
 
 export default function PardotCertificationPage() {
@@ -71,24 +71,24 @@ export default function PardotCertificationPage() {
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Account Engagement / Pardot</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pardot Certification Guide</h1>
         <LastUpdated />
-        <p className="text-lg text-gray-600">Pardot is now Marketing Cloud Account Engagement, but the search intent is still clear: candidates want to know which Pardot certification to take and how to prepare.</p>
+        <p className="text-lg text-gray-600">Pardot is now called Marketing Cloud Account Engagement. This guide explains which Pardot certification to take and how to prepare for it.</p>
       </header>
       <ContentPageAuthor />
       <section className="grid md:grid-cols-2 gap-4 mb-8">
         <Link href="/certifications/pardot-specialist" className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm hover:border-salesforce-blue/50">
           <p className="text-xs font-semibold uppercase tracking-wide text-salesforce-blue mb-2">Start here</p>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Pardot Specialist</h2>
-          <p className="text-sm text-gray-700">Best for marketers and admins who operate campaigns, forms, automation rules, scoring, grading, and segmentation.</p>
+          <p className="text-sm text-gray-700">For marketers and admins who manage campaigns, forms, automation rules, scoring, grading, and segmentation.</p>
         </Link>
         <Link href="/certifications/pardot-consultant" className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm hover:border-salesforce-blue/50">
           <p className="text-xs font-semibold uppercase tracking-wide text-salesforce-blue mb-2">Next step</p>
           <h2 className="text-xl font-bold text-gray-900 mb-2">Pardot Consultant</h2>
-          <p className="text-sm text-gray-700">Best for implementation consultants designing Account Engagement solutions for clients and complex B2B funnels.</p>
+          <p className="text-sm text-gray-700">For consultants who design Account Engagement solutions for clients and complex B2B marketing processes.</p>
         </Link>
       </section>
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Recommended Pardot Certification Path</h2>
-        <p className="text-sm text-gray-700">Pardot Specialist &rarr; Pardot Consultant &rarr; Marketing Cloud Consultant or Business Analyst, depending on whether you want a marketing operations path or implementation consulting path.</p>
+        <p className="text-sm text-gray-700">A common path is Pardot Specialist, then Pardot Consultant, followed by Marketing Cloud Consultant or Business Analyst. Choose the next step based on whether you want to focus on marketing operations or implementation consulting.</p>
       </section>
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Pardot Specialist vs Pardot Consultant</h2>
@@ -102,7 +102,7 @@ export default function PardotCertificationPage() {
           ))}
         </div>
         <p className="text-sm text-gray-700 mt-4 pt-4 border-t border-gray-100">
-          If you mainly operate campaigns, choose Specialist first. If you gather requirements, design lead lifecycle architecture, and advise clients on how Account Engagement connects with Salesforce, move toward Consultant.
+          If you mainly run campaigns, start with Specialist. If you gather requirements, design lead processes, and advise clients on how Account Engagement connects to Salesforce, consider Consultant.
         </p>
       </section>
       <section className="rounded-xl border border-amber-100 bg-amber-50/40 p-6 mb-8">
@@ -113,7 +113,7 @@ export default function PardotCertificationPage() {
           ))}
         </ul>
         <p className="text-sm text-gray-700 mt-4">
-          Avoid dumps for this track. Pardot questions often hinge on exact feature behavior, so memorized answers break quickly when the scenario changes.
+          Avoid exam dumps. Questions often test how features work, so memorized answers may fail when a scenario changes.
         </p>
       </section>
       <RelatedGuides links={getRelatedGuides('pardot-certification')} />

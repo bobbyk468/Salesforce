@@ -41,23 +41,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How long does it take to become a Salesforce Developer?',
-    answer: 'From no prior Salesforce experience to PD1 certified and job-ready, expect 6–12 months. The technical learning curve is steeper than the admin path: Apex is a statically typed language similar to Java, and Lightning Web Components requires JavaScript proficiency. Candidates with prior programming experience (Java, C#, Python, JavaScript) typically reach PD1 in 12–16 weeks of focused study. True beginners may take 6–9 months.',
+    answer: 'Plan for 6–12 months to go from no Salesforce experience to PD1 certification and job readiness. The technical path is steeper than the admin path: Apex is similar to Java, and Lightning Web Components requires JavaScript skills. People with experience in Java, C#, Python, or JavaScript may prepare for PD1 in 12–16 weeks of focused study. Beginners may need 6–9 months.',
   },
   {
     question: 'Do I need to know programming before becoming a Salesforce Developer?',
-    answer: 'Prior programming experience is very helpful but not strictly required. Salesforce recommends starting with ADM-201 (admin certification) before PD1, the Salesforce platform, data model, and security model must be understood before writing Apex. If you have no programming background, budget extra time for Apex fundamentals. JavaScript knowledge is increasingly important for Lightning Web Components.',
+    answer: 'Programming experience helps, but it is not required. Salesforce recommends taking ADM-201 before PD1 so you understand the platform, data model, and security before writing Apex. If you are new to programming, allow extra time to learn Apex basics. JavaScript is also important for Lightning Web Components.',
   },
   {
     question: 'What is the Salesforce Platform Developer I (PD1) certification?',
-    answer: 'PD1 (Platform Developer I, exam DEV-450) is the foundational Salesforce developer certification. It tests Apex triggers and classes, SOQL and SOSL, governor limits, Lightning Web Components (LWC), Visualforce basics, testing (Test.startTest/stopTest, assert methods), and deployment (change sets, SFDX). The exam is 60 questions, 105 minutes, 68% passing score, $200 fee.',
+    answer: 'PD1 (Platform Developer I, exam DEV-450) is the core Salesforce developer certification. It covers Apex triggers and classes, SOQL and SOSL, governor limits, Lightning Web Components (LWC), Visualforce basics, testing (Test.startTest/stopTest and assert methods), and deployment (change sets and SFDX). The exam has 60 questions, lasts 105 minutes, has a 68% passing score, and costs $200.',
   },
   {
     question: 'What is the Salesforce developer salary in 2026?',
-    answer: 'Entry-level Salesforce Developers (PD1 certified, 0–2 years experience) typically earn $75,000–$100,000 USD. Mid-level developers with PD1 + PD2 and 2–5 years of experience earn $100,000–$140,000. Senior developers and architects earn $140,000–$180,000+. Contract Salesforce developers typically earn $85–$130 per hour. Salaries vary significantly by location: US tech hubs pay 20–40% more than national averages.',
+    answer: 'Entry-level Salesforce Developers with PD1 and 0–2 years of experience typically earn $75,000–$100,000 USD. Mid-level developers with PD1 and PD2 and 2–5 years of experience earn $100,000–$140,000. Senior developers and architects earn $140,000–$180,000+. Contract developers typically earn $85–$130 per hour. Pay varies by location; US tech hubs pay 20–40% above national averages.',
   },
   {
     question: 'What comes after Platform Developer I?',
-    answer: 'After PD1, the most common next steps are: Platform Developer II (PD2), tests advanced Apex patterns, integration architecture, performance optimisation; JavaScript Developer I, validates JavaScript/LWC skills specifically; Salesforce Architect path, starting with Integration Architect or Data Architect requires strong PD1 knowledge. Many developers also pursue administrator-track certs (App Builder, Advanced Admin) alongside their developer credentials.',
+    answer: 'After PD1, common next steps include Platform Developer II (PD2), which covers advanced Apex, integration architecture, and performance; JavaScript Developer I, which focuses on JavaScript and LWC skills; or the architect path, starting with Integration Architect or Data Architect. The architect path assumes strong PD1 knowledge. Many developers also earn admin-track credentials such as App Builder or Advanced Administrator.',
   },
 ]
 
@@ -66,35 +66,35 @@ const steps = [
     step: '1',
     title: 'Learn Salesforce Platform Basics',
     time: '4–6 weeks',
-    description: 'Before writing a single line of Apex, you need to understand the Salesforce platform thoroughly. Start with Trailhead, the Salesforce Fundamentals trail covers objects, fields, the data model, security model (profiles, roles, sharing), and basic automation. Create a free Salesforce Developer Edition org and follow along hands-on.',
+    description: 'Learn how the Salesforce platform works before you write Apex. Start with Trailhead and the Salesforce Fundamentals trail, which covers objects, fields, the data model, security (profiles, roles, and sharing), and basic automation. Create a free Salesforce Developer Edition org to practice along the way.',
     resources: ['Salesforce Platform Basics (Trailhead)', 'Data Modeling trail (Trailhead)', 'Free Salesforce Developer Edition org'],
   },
   {
     step: '2',
     title: 'Learn Apex Fundamentals',
     time: '4–6 weeks',
-    description: 'Apex is Salesforce\'s proprietary Java-like language. Study Apex syntax, data types, collections (List, Set, Map), SOQL and SOSL, triggers (before/after, insert/update/delete), classes, exception handling, and governor limits. The 75% code coverage requirement for deployment is a key concept. Practice writing triggers and classes in your Developer Edition org.',
+    description: 'Apex is Salesforce\'s Java-like programming language. Learn its syntax, data types, collections (List, Set, Map), SOQL and SOSL, triggers (before/after, insert/update/delete), classes, exception handling, and governor limits. Also study the 75% code coverage requirement for deployment. Practice writing triggers and classes in your Developer Edition org.',
     resources: ['Apex Basics & Database trail (Trailhead)', 'Apex Developer Guide (Salesforce docs)', 'Trigger Fundamentals trail'],
   },
   {
     step: '3',
     title: 'Learn Lightning Web Components (LWC)',
     time: '3–4 weeks',
-    description: 'LWC is Salesforce\'s modern front-end framework built on Web Standards. You need solid JavaScript (ES6+) before starting LWC. Learn LWC component structure (HTML template, JS controller, CSS), data binding, event handling (@api, @track, @wire decorators), calling Apex from LWC, and deploying components with SFDX. JavaScript Developer I certification complements this step.',
+    description: 'Lightning Web Components (LWC) is Salesforce\'s front-end framework built on web standards. Build your JavaScript (ES6+) skills first. Then learn component structure (HTML template, JS controller, CSS), data binding, event handling (@api, @track, and @wire decorators), calling Apex from LWC, and deploying components with SFDX. JavaScript Developer I can complement this study.',
     resources: ['JavaScript Skills for Salesforce Developers (Trailhead)', 'Lightning Web Components Basics (Trailhead)', 'LWC Dev Guide (developer.salesforce.com)'],
   },
   {
     step: '4',
     title: 'Study Platform Developer I (PD1) Exam',
     time: '3–4 weeks',
-    description: 'With solid Apex and LWC knowledge, focus PD1 exam preparation on the specific exam sections: Developer Fundamentals (27%), Process Automation and Logic (28%), User Interface (25%), and Testing, Debugging, and Deployment (20%). Practice questions, review weak areas, and target 75%+ on mocks before scheduling.',
+    description: 'Once you know Apex and LWC, prepare for the PD1 exam sections: Developer Fundamentals (27%), Process Automation and Logic (28%), User Interface (25%), and Testing, Debugging, and Deployment (20%). Use practice questions to find weak areas and aim for at least 75% on mock exams before scheduling.',
     resources: ['Trailblaze Prep PD1 practice questions (free)', 'PD1 Study Guide', 'PD1 Exam Tips 2026'],
   },
   {
     step: '5',
     title: 'Get Project Experience',
     time: 'Ongoing',
-    description: 'Certification opens doors, but project experience closes the deal. Contribute to Salesforce projects through pro bono work (Salesforce.org Nonprofit), open-source projects, or internal Salesforce implementations at your current employer. Document your work in a GitHub portfolio: Salesforce employers increasingly review code samples alongside certifications.',
+    description: 'Certification can help you get noticed, but project experience also matters. Gain experience through pro bono work with Salesforce.org Nonprofit, open-source projects, or Salesforce implementations at your current employer. Document your work in a GitHub portfolio; employers may review code samples along with certifications.',
     resources: ['Salesforce.org Nonprofit volunteer opportunities', 'GitHub portfolio with Apex/LWC samples', 'Salesforce Stack Exchange (answer questions to build reputation)'],
   },
 ]
@@ -116,7 +116,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          From zero to Salesforce Developer, the step-by-step path to PD1 certification, LWC skills, and your first Salesforce development role.
+          Follow the path from learning Salesforce development to PD1 certification and your first development role. Review the skills and study resources along the way.
         </p>
       </div>
 
@@ -173,11 +173,11 @@ export default function HowToBecomeSalesforceDeveloperPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce Developer Certification Path</h2>
         <div className="space-y-3 text-sm text-gray-700">
           {[
-            { cert: 'ADM-201 (Administrator)', note: 'Recommended first, establishes Salesforce platform knowledge' },
-            { cert: 'Platform Developer I (PD1)', note: 'Core developer credential: Apex, LWC, SOQL, governor limits, deployment' },
-            { cert: 'JavaScript Developer I', note: 'Validates JavaScript/ES6+ skills used in LWC development' },
-            { cert: 'Platform Developer II (PD2)', note: 'Advanced developer: Apex patterns, integration architecture, performance' },
-            { cert: 'Architect Track', note: 'After PD1+PD2: Integration Architect, Data Architect → Application Architect → CTA' },
+            { cert: 'ADM-201 (Administrator)', note: 'Recommended first; builds your knowledge of the Salesforce platform' },
+            { cert: 'Platform Developer I (PD1)', note: 'Core developer skills: Apex, LWC, SOQL, governor limits, and deployment' },
+            { cert: 'JavaScript Developer I', note: 'Covers JavaScript and ES6+ skills used in LWC development' },
+            { cert: 'Platform Developer II (PD2)', note: 'Advanced Apex patterns, integration architecture, and performance' },
+            { cert: 'Architect Track', note: 'After PD1 and PD2: Integration Architect, Data Architect, Application Architect, then CTA' },
           ].map((item, i) => (
             <div key={item.cert} className="flex items-start gap-3">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
@@ -195,9 +195,9 @@ export default function HowToBecomeSalesforceDeveloperPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce Developer Salary ({RELEASE_CURRENT})</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { level: 'Entry-Level', range: '$75k–$100k', desc: 'PD1 certified, 0–2 years experience' },
-            { level: 'Mid-Level', range: '$100k–$140k', desc: 'PD1 + PD2, 2–5 years experience' },
-            { level: 'Senior/Architect', range: '$140k–$180k+', desc: 'Multiple certs, 5+ years experience' },
+            { level: 'Entry-Level', range: '$75k–$100k', desc: 'PD1 certified, with 0–2 years of experience' },
+            { level: 'Mid-Level', range: '$100k–$140k', desc: 'PD1 and PD2, with 2–5 years of experience' },
+            { level: 'Senior/Architect', range: '$140k–$180k+', desc: 'Several certifications, with 5+ years of experience' },
           ].map((tier) => (
             <div key={tier.level} className="rounded-lg bg-gray-50 border border-gray-100 p-4 text-center">
               <div className="text-sm text-gray-600 mb-1">{tier.level}</div>
@@ -224,7 +224,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
       {/* CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Your Developer Journey</h2>
-        <p className="text-white mb-6">Practice free PD1 questions and build your developer knowledge today.</p>
+        <p className="text-white mb-6">Use free PD1 practice questions to build your developer skills.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/developer-1#practice-questions" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
             PD1 Practice Questions <ArrowRight className="ml-2 h-4 w-4" />

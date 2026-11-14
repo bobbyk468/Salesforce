@@ -272,7 +272,7 @@ function ContactPageContent() {
           <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">Contact Us</h1>
         <LastUpdated />
           <p className="text-base md:text-xl text-white">
-            Have questions about our study materials? We'd love to hear from you.
+            Have a question about our study materials? Send us a message.
           </p>
         </div>
       </section>
@@ -451,17 +451,14 @@ function ContactPageContent() {
             <div className="lg:col-span-1 lg:col-start-1 lg:row-start-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Questions about our materials or pricing? Just want to say hello? We’re here to help.
+                Questions about our materials or pricing? Send us a message and we’ll help.
               </p>
               <div className="mb-8 space-y-3 text-sm leading-6 text-gray-700">
                 <p>
-                  Use this page for questions about certification coverage, full mock exam access, exam-specific study
-                  plans, or corrections to published exam details. If your message is about one certification, include the
-                  exam name or code so we can route the reply faster.
+                  Ask us about certification coverage, mock exam access, study plans, or corrections to published exam details. For a question about one certification, include its name or exam code.
                 </p>
                 <p>
-                  We review support messages manually. Most replies include the relevant certification page, recommended next
-                  resource, and any pricing or access details needed for full practice materials.
+                  We review messages manually. We’ll point you to relevant study resources and share pricing or access details when needed.
                 </p>
               </div>
 
@@ -520,7 +517,7 @@ function ContactPageContent() {
               <div className="mt-8 p-6 bg-salesforce-blue/10 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Frequently Asked Questions</h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Find answers to common questions about our certification materials and study guides.
+                  See answers to common questions about our study materials and guides.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li>• How do I access the study materials?</li>

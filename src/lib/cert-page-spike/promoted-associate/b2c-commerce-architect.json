@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the B2C Commerce Architect exam for?",
+    "heading": "Who should take the B2C Commerce Architect exam?",
     "personas": [
       {
-        "label": "Senior SFCC architects",
-        "description": "You have led B2C Commerce builds and want proof that you can design whole storefront programmes, not just features."
+        "label": "Experienced B2C Commerce architects",
+        "description": "You have led storefront projects and want to show that you can plan a complete commerce solution, not only build individual features."
       },
       {
-        "label": "Technical leads evaluating commerce patterns",
-        "description": "You decide between SFRA and a headless storefront, and you plan integrations, caching and site operations."
+        "label": "Commerce technical leads",
+        "description": "You choose between SFRA and a headless storefront, then plan integrations, caching, and site operations."
       },
       {
-        "label": "Solution architects",
-        "description": "You work on retail projects where B2C Commerce has to fit with Order Management, Marketing Cloud and outside systems."
+        "label": "Retail solution architects",
+        "description": "You design retail systems where B2C Commerce must work with Order Management, Marketing Cloud, and external services."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the B2C Commerce Architect Exam Hard?",
-    "summary": "It is one of the harder commerce exams. You need deep B2C Commerce knowledge and you have to weigh trade-offs, such as speed versus flexibility or custom code versus standard features. Salesforce lists B2C Commerce Developer as a prerequisite.",
+    "heading": "How challenging is the B2C Commerce Architect exam?",
+    "summary": "This is a demanding commerce exam. You need strong B2C Commerce knowledge and must compare design choices, such as launch speed versus flexibility and custom code versus standard features. Salesforce lists B2C Commerce Developer as a prerequisite.",
     "bullets": [
-      "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones, in about 105 minutes.",
-      "<strong>About 65% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Trade-off questions.</strong> SFRA or headless, OCAPI or SCAPI, page caching choices, and how to integrate with other systems.",
-      "<strong>Experience matters.</strong> Years on real B2C Commerce projects, with different traffic levels and site setups, is the best preparation."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "<strong>Questions ask you to choose a design.</strong> Be ready to compare SFRA and headless storefronts, OCAPI and SCAPI, caching options, and integration patterns.",
+      "<strong>Project experience helps.</strong> Work on real storefronts with different traffic levels and site setups is valuable preparation."
     ],
-    "passRateGuidance": "People who have taken a site live and supported it during peak trading do best. Before you book. Aim for 75% or more on practice tests and be able to explain why you would pick a headless storefront or not."
+    "passRateGuidance": "Experience launching a site and supporting it through busy trading periods is useful. Before booking, aim for at least 75% on practice tests and be able to explain when a headless storefront is a good fit."
   },
   "examFormat": {
-    "heading": "B2C Commerce Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions are scenarios. A typical one describes a retailer with several brands and countries and asks for the best way to set up sites, catalogs, code or integrations.",
+    "heading": "What to expect on the B2C Commerce Architect exam",
+    "intro": "You can take the exam online with a proctor or at a test center. Expect questions like these:",
+    "scenarioPercent": "Most questions describe a retailer, such as a company with several brands and countries. You may need to choose how to organize sites, catalogs, code, or integrations.",
     "bestWayToPass": [
-      "<strong>Know the cartridge path:</strong> Cartridges on the left override those on the right. Keep custom code in your own cartridges, not in the base.",
-      "<strong>Understand caching:</strong> Page caching is the main lever for speed. Know what can be cached and what must stay dynamic.",
-      "<strong>Learn the APIs:</strong> SCAPI and the Shopper APIs for new headless builds, OCAPI for older ones, and SLAS for shopper login.",
-      "<strong>Plan multi-site setups:</strong> Shared master catalog, separate storefront catalogs, price books and locales per site."
+      "<strong>Trace the cartridge path:</strong> Cartridges farther left take priority over those to the right. Put custom work in your own cartridge instead of changing the base.",
+      "<strong>Plan caching:</strong> Page caching is a major way to improve speed. Know which content can be cached and which shopper-specific parts must stay current.",
+      "<strong>Choose the right APIs:</strong> Learn SCAPI and Shopper APIs for newer headless builds, OCAPI for existing integrations, and SLAS for shopper sign-in.",
+      "<strong>Design for multiple sites:</strong> A shared master catalog can support separate storefront catalogs, price books, and locales for each site."
     ]
   },
   "certificationCard": {
     "code": "B2C Architect",
-    "description": "This exam tests how you design and run Salesforce B2C Commerce sites: choosing a storefront approach, setting up sites and catalogs, planning integrations, and keeping sites fast and secure.",
+    "description": "Show that you can plan and operate Salesforce B2C Commerce storefronts: choose a storefront model, organize sites and catalogs, design integrations, and protect performance and security.",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "B2C Commerce Architect: Key Concepts for the Exam",
+    "h2": "B2C Commerce Architect exam: core ideas",
     "blocks": [
       {
         "heading": "Architecture Patterns & Scalability",
-        "body": "A B2C Commerce realm holds several instances: sandboxes for developers, then Development, Staging and Production. Code and data are built and tested on Staging, then **replicated** to Production. A realm can run many sites, which share code but can have their own catalogs, prices and settings. For a retailer with several brands or countries, the usual design is one **master catalog** for products, separate **storefront catalogs** per site to control what each one shows, and separate **price books** per currency or market. Scale comes from the platform, but your code must still be efficient: avoid heavy logic on every page request and use jobs for batch work."
+        "body": "A B2C Commerce realm contains environments such as developer sandboxes, Development, Staging, and Production. Teams prepare and test code and data in Staging, then **replicate** them to Production. One realm can host multiple sites. Those sites may share code while using different catalogs, prices, and settings. For several brands or countries, a common design uses one **master catalog** for the product set, a **storefront catalog** for the assortment shown on each site, and **price books** for market or currency prices. The platform supports scale, but efficient code still matters: avoid costly work on every page request and use jobs for bulk processing."
       },
       {
         "heading": "Storefront Architecture & Headless Commerce",
-        "body": "**SFRA** (Storefront Reference Architecture) is the standard server-rendered storefront. You customise it by adding your own cartridges on top, without editing the base code. **Composable Storefront** (PWA Kit with Managed Runtime) is the headless option: a React front end that calls the B2C Commerce APIs. Headless gives more freedom in the front end and fits teams with strong JavaScript skills, but it means more to build and run yourself. Pick SFRA when speed to market and standard features matter most, and headless when the brand needs a very custom experience or one front end for several back ends."
+        "body": "**SFRA** (Storefront Reference Architecture) renders pages on the server and provides standard storefront features. Extend it with your own cartridges instead of editing its base code. **Composable Storefront** (PWA Kit with Managed Runtime) is the headless choice: a React front end that uses B2C Commerce APIs. It gives the team more front-end control, but the team must build and operate more pieces. SFRA often suits projects that value a faster launch and built-in commerce features. Headless can fit a highly custom experience or a shared front end for several back ends."
       },
       {
         "heading": "Integration Architecture: OCAPI, SCAPI & Connectors",
-        "body": "**SCAPI** (Salesforce Commerce API), including the Shopper APIs, is the modern API set and is the default for new headless builds. **OCAPI** (Open Commerce API) is the older API, still used on many sites. **SLAS** handles shopper login and tokens for headless storefronts. For outside systems, use **service framework** definitions in Business Manager so calls have timeouts, logging and circuit breakers. Large data such as product feeds and inventory usually come in through scheduled **jobs** that import XML or CSV files. Payment, tax and address providers usually plug in through certified **LINK cartridges**."
+        "body": "**SCAPI** (Salesforce Commerce API), including the Shopper APIs, is the modern API set and a common starting point for new headless storefronts. **OCAPI** (Open Commerce API) remains in use on many established sites. **SLAS** provides shopper sign-in and tokens for headless storefronts. For external services, configure calls through the Business Manager **service framework** to set timeouts, logging, and circuit breakers. Use scheduled **jobs** to import large product or inventory files, often in XML or CSV. Payment, tax, and address integrations may use certified **LINK cartridges**."
       },
       {
         "heading": "Performance, Caching & CDN Strategy",
-        "body": "Page caching is the biggest performance lever. Cache whole pages or page parts with the iscache tag, and keep user-specific bits, like the mini cart, as small uncached includes loaded separately. Set sensible cache times and clear the cache when catalog or content changes. The **eCDN** serves images and static files from locations close to the shopper. Watch the platform **quotas**, which limit things like the number of objects or API calls per request, and fix code that breaks them before peak season. Test with realistic traffic before big sale days."
+        "body": "Page caching is one of the main tools for improving response time. Cache full pages or suitable page sections with the iscache tag. Keep personal content, such as a shopper’s mini cart, in a small uncached section that loads separately. Choose cache times carefully and clear cached content when product or site content changes. The **eCDN** serves images and other static files from locations closer to shoppers. Watch platform **quotas**, which limit resources such as objects or API calls in a request, and fix quota violations before a busy season. Test with traffic patterns that resemble real promotions."
       },
       {
         "heading": "Security, Compliance & Site Operations",
-        "body": "Never store raw card numbers on the platform. Use a payment provider's cartridge so card data goes straight to them as a token, which keeps you out of most PCI scope. Use role-based access in Business Manager so each team only sees what it needs. Handle shopper privacy requests, consent and cookie rules for each country. For operations, plan code deployments through Staging with replication, schedule jobs outside peak hours, and set up log monitoring and alerts. Have a clear plan for peak trading such as Black Friday, including code freezes."
+        "body": "Do not store unprotected card numbers in B2C Commerce. Send card data to a payment provider through its cartridge and keep a token on the commerce side; this can reduce PCI scope. Use Business Manager roles to give each team only the access it needs. Follow privacy, consent, and cookie requirements in each market. For operations, move code through Staging before replication, schedule large jobs away from busy periods, and monitor logs with alerts. Prepare for peak events such as Black Friday, including a deployment freeze when appropriate."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce B2C Commerce Architect Exam",
-    "intro": "Most questions describe a retailer's needs and ask for the best design. Look for clues about how many brands and countries there are, how custom the front end must be, and how much traffic to expect.",
+    "h2": "How to prepare for the B2C Commerce Architect exam",
+    "intro": "Read each retailer scenario for its number of brands and markets, the front-end experience it needs, and expected traffic. Use those details to choose a design and explain the trade-offs.",
     "blocks": [
       {
-        "heading": "SFCC Architecture & Multi-Site",
-        "body": "Several brands or countries usually means one realm, several sites, a shared master catalog and separate storefront catalogs and price books."
+        "heading": "Sites, Catalogs & Markets",
+        "body": "For multiple brands or countries, consider one realm with several sites, a shared master catalog, and storefront catalogs and price books that fit each market."
       },
       {
-        "heading": "Cartridge Architecture",
-        "body": "Put custom code in your own cartridges and place them to the left of the base on the cartridge path. Never edit the base cartridge directly."
+        "heading": "Cartridge Design",
+        "body": "Keep custom code in your own cartridges and place them before the base cartridge in the path so your code can extend standard behavior without changing the base."
       },
       {
-        "heading": "Performance Optimization",
-        "body": "Cache as much of each page as you can. Load shopper-specific parts separately so they don't stop the rest of the page being cached."
+        "heading": "Page Speed",
+        "body": "Cache reusable page content. Load shopper-specific content separately so it does not prevent the rest of the page from being cached."
       },
       {
-        "heading": "Integration Patterns",
-        "body": "SCAPI for new headless builds, jobs for large feeds, the service framework for outside calls, and LINK cartridges for payment and tax."
+        "heading": "External Integrations",
+        "body": "Use SCAPI for current headless storefront work, jobs for large imports, the service framework for external calls, and suitable LINK cartridges for providers."
       },
       {
-        "heading": "Security Architecture",
-        "body": "Tokenise payments through a provider, give Business Manager users only the roles they need, and respect each country's privacy rules."
+        "heading": "Access & Operations",
+        "body": "Tokenize payment data with a provider, assign Business Manager roles by job need, follow local privacy rules, and plan deployments and monitoring before peak events."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A retailer runs three brands in five countries. Most products are shared, but each brand shows a different range and each country has its own prices. What is the best catalog design?",
+      "question": "A retailer sells across three brands and five countries. Many products are shared, but each brand has a different assortment and each country has different prices. Which catalog model fits?",
       "options": [
-        "One master catalog, storefront catalogs, price books",
-        "Store the prices as custom attributes on each of the products",
-        "A separate master catalog for every site",
-        "One storefront catalog shared by all sites"
+        "Master catalog, site catalogs, market price books",
+        "Put each market price in a custom product attribute",
+        "Create a separate master catalog for every site",
+        "Show the same storefront catalog on every site"
       ],
       "correctAnswer": 0,
-      "explanation": "A shared master catalog avoids duplicating products. Storefront catalogs control what each site shows, and price books handle prices per market.",
+      "explanation": "A shared master catalog avoids copying common products. Each storefront catalog controls its site’s assortment, while price books hold market prices.",
       "whyWrong": [
-        "Prices in custom attributes skip the price book system and are hard to manage.",
-        "Separate master catalogs duplicate shared products and make updates harder.",
-        "One shared storefront catalog can't show a different range per brand."
+        "Custom attributes bypass the normal price book model and make price maintenance harder.",
+        "Separate master catalogs duplicate shared products and complicate updates.",
+        "A single storefront catalog cannot control a different assortment for each brand."
       ]
     },
     {
-      "question": "A developer needs to change how the checkout page works on an SFRA site. Where should the change go?",
+      "question": "An SFRA team needs to change checkout behavior. Where should developers make the change?",
       "options": [
-        "In Business Manager site preferences",
-        "In a custom cartridge earlier on the cartridge path",
-        "In a cartridge placed to the right of the base cartridge",
-        "Directly in the app_storefront_base cartridge"
+        "In site preferences in Business Manager",
+        "In a custom cartridge placed before the base cartridge",
+        "In a cartridge placed after the base cartridge",
+        "Directly in app_storefront_base"
       ],
       "correctAnswer": 1,
-      "explanation": "Cartridges on the left override those on the right. Putting changes in your own cartridge keeps the base untouched, so upgrades are easier.",
+      "explanation": "A custom cartridge earlier in the path can override or extend base behavior while keeping the base cartridge unchanged.",
       "whyWrong": [
-        "Site preferences change settings, not page logic.",
-        "A cartridge on the right is overridden by the base, so the change wouldn't apply.",
-        "Editing the base makes future SFRA upgrades painful."
+        "Site preferences do not replace checkout implementation code.",
+        "A later cartridge does not take precedence over the base cartridge.",
+        "Changing the base cartridge makes future upgrades harder and is not the recommended extension pattern."
       ]
     },
     {
-      "question": "A brand wants a highly custom, app-like front end built by their React team, with fast page loads. Which approach fits best?",
+      "question": "A retailer wants a highly customized, app-like storefront built by its React team. Which approach is the best fit?",
       "options": [
-        "OCAPI calls from ISML templates",
-        "SFRA with a custom theme",
-        "Composable Storefront on the Commerce APIs",
-        "Business Manager content slots and nothing more"
+        "Call OCAPI from ISML templates",
+        "Extend SFRA with a custom theme",
+        "Use Composable Storefront with the Commerce APIs",
+        "Use only Business Manager content slots"
       ],
       "correctAnswer": 2,
-      "explanation": "Composable Storefront is the headless option built on React and the Commerce APIs, and it suits teams that want full control of the front end.",
+      "explanation": "Composable Storefront uses a React front end with Commerce APIs, giving the team control over a custom storefront experience.",
       "whyWrong": [
-        "ISML is SFRA's template language. Calling OCAPI from it isn't a headless design.",
-        "SFRA is server-rendered and less suited to an app-like React experience.",
-        "Content slots manage content, not the whole front-end design."
+        "OCAPI calls in server-rendered ISML templates do not provide the requested React headless storefront.",
+        "SFRA can be customized, but it remains a server-rendered storefront rather than the headless approach requested.",
+        "Content slots help manage content but do not create a complete React storefront."
       ]
     },
     {
-      "question": "Category pages load slowly at peak. Each page includes the shopper's mini cart. What should the architect recommend?",
+      "question": "Category pages slow down during peak traffic. Each page also renders the shopper’s mini cart. What should the architect recommend?",
       "options": [
-        "Move the whole category page into a job",
-        "Turn off page caching to keep the cart accurate",
+        "Run the entire category page as a job",
+        "Disable page caching so the cart stays current",
         "Add more product images",
-        "Cache the page, load the mini cart uncached"
+        "Cache shared pages; load the mini cart separately"
       ],
       "correctAnswer": 3,
-      "explanation": "Caching the main page and loading the shopper-specific mini cart separately gives fast pages without showing the wrong cart.",
+      "explanation": "Cache the reusable category page and load the shopper-specific cart separately. This protects page speed while keeping cart details current.",
       "whyWrong": [
-        "Jobs run in the background and can't serve live pages.",
-        "Turning off caching makes the slowdown worse.",
-        "More images slow the page further."
+        "A page displayed to shoppers cannot be replaced by a background job.",
+        "Turning off page caching removes a useful performance benefit for shared category content.",
+        "More images would add work and would not address the cart’s effect on caching."
       ]
     },
     {
-      "question": "A new headless storefront needs shoppers to log in and get tokens to call the Shopper APIs. What should be used?",
+      "question": "A new headless storefront needs shopper sign-in and tokens for calls to the Shopper APIs. Which service should it use?",
       "options": [
-        "Shopper Login and API Access Service",
-        "Business Manager user accounts",
-        "A shared API key in the front end",
-        "Basic authentication applied on every single call"
+        "Shopper Login and API Access Service (SLAS)",
+        "Business Manager employee accounts",
+        "A shared API key stored in the front end",
+        "Basic authentication on every shopper request"
       ],
       "correctAnswer": 0,
-      "explanation": "SLAS is the service for shopper login and API tokens in headless B2C Commerce builds.",
+      "explanation": "SLAS handles shopper login and token access for headless B2C Commerce storefronts.",
       "whyWrong": [
-        "Business Manager accounts are for staff, not shoppers.",
-        "A shared key in the front end can be copied by anyone.",
-        "Basic auth isn't how the Shopper APIs authenticate shoppers."
+        "Business Manager accounts are for administrators and staff, not shopper authentication.",
+        "A secret embedded in front-end code can be exposed and is not a shopper login solution.",
+        "Basic authentication on each request is not the intended shopper token flow."
       ]
     },
     {
-      "question": "The retailer must avoid storing card numbers on the platform to reduce PCI scope. What is the right design?",
+      "question": "A retailer wants to reduce PCI scope and avoid keeping card numbers in B2C Commerce. What design should it use?",
       "options": [
-        "A provider LINK cartridge that tokenises",
-        "Encrypt the card numbers inside a custom object",
+        "Use a tokenizing provider LINK cartridge",
+        "Encrypt card numbers in a custom object",
         "Email card details to the finance team",
-        "Store cards in session data only"
+        "Keep the card number only in session data"
       ],
       "correctAnswer": 0,
-      "explanation": "With tokenisation, the card data goes to the payment provider and the site only keeps a token, which greatly reduces PCI scope.",
+      "explanation": "A provider can receive payment details and return a token, so the commerce site does not need to retain the raw card number.",
       "whyWrong": [
-        "Encrypted cards on the platform still bring the site into PCI scope.",
-        "Emailing card details is insecure and breaks PCI rules.",
-        "Session data still passes through and stores card data."
+        "Encryption does not remove the risk and scope created by storing card numbers in the platform.",
+        "Email is not a secure payment data flow and leaves card details exposed.",
+        "Session storage still puts card data on the commerce platform."
       ]
     },
     {
-      "question": "Inventory levels for 500,000 products arrive from the warehouse system every hour. How should they be loaded?",
+      "question": "A warehouse sends inventory updates for 500,000 products every hour. How should the team load the feed?",
       "options": [
-        "One OCAPI call per product every hour",
-        "Updating stock during each page view",
-        "Manual updates in Business Manager",
-        "A scheduled inventory import job"
+        "Make one OCAPI request for each product every hour",
+        "Update inventory during every shopper page view",
+        "Enter each update manually in Business Manager",
+        "Run a scheduled inventory import job"
       ],
       "correctAnswer": 3,
-      "explanation": "Scheduled jobs that import inventory files are the standard way to handle large, regular feeds.",
+      "explanation": "A scheduled job can process a large inventory feed in batches and is suited to regular imports.",
       "whyWrong": [
-        "Half a million API calls per hour is wasteful and may hit quotas.",
-        "Updating stock on page views slows pages and doesn't keep stock in sync.",
-        "Manual updates can't keep up at this scale."
+        "Hundreds of thousands of individual calls create avoidable overhead for a bulk feed.",
+        "Page requests should not be responsible for importing warehouse data.",
+        "Manual updates are not practical at this scale or frequency."
       ]
     },
     {
-      "question": "Code has been tested on Staging and is ready for Production. How does it usually reach Production?",
+      "question": "The team tested code in Staging and is ready to release it to Production. How is it normally moved?",
       "options": [
-        "Developers upload it straight to Production from their sandboxes",
-        "Replication from Staging to Production",
-        "Rebuilding the site by hand",
-        "Copying files by FTP"
+        "Upload it to Production directly from each developer sandbox",
+        "Replicate it from Staging to Production",
+        "Rebuild the storefront by hand in Production",
+        "Copy the files to Production over FTP"
       ],
       "correctAnswer": 1,
-      "explanation": "Code and data are prepared on Staging and then replicated to Production, which keeps the two in step.",
+      "explanation": "The team prepares and tests changes in Staging, then uses replication to move them to Production.",
       "whyWrong": [
-        "Uploading straight to Production skips testing and is not the standard flow.",
-        "Rebuilding by hand is slow and error-prone.",
-        "FTP isn't how code is deployed to Production."
+        "Direct uploads from individual sandboxes bypass the standard release path.",
+        "Manually rebuilding Production is not the normal controlled deployment process.",
+        "FTP file copying is not the standard B2C Commerce deployment method."
       ]
     },
     {
-      "question": "A call to an outside tax service sometimes hangs and slows checkout. What should the architect use for this call?",
+      "question": "An external tax service sometimes stops responding and holds up checkout. What should the architect configure?",
       "options": [
-        "Running the call in a nightly job",
-        "The service framework with a timeout and circuit breaker",
-        "A plain HTTP call with no timeout",
-        "Calling the tax service directly from the shopper's own browser"
+        "Run the tax request only in an overnight job",
+        "Use the service framework with a timeout and circuit breaker",
+        "Make a plain HTTP request with no timeout",
+        "Call the tax service directly from the shopper’s browser"
       ],
       "correctAnswer": 1,
-      "explanation": "Service definitions in the service framework let you set timeouts, logging and a circuit breaker, so one slow service doesn't stall checkout.",
+      "explanation": "The service framework supports controls such as timeouts and circuit breakers so an unresponsive provider does not hold requests indefinitely.",
       "whyWrong": [
-        "Tax is needed during checkout, not overnight.",
-        "No timeout lets the call hang and block the shopper.",
-        "Calling from the browser exposes the integration and is hard to secure."
+        "Checkout needs a tax result during the shopper’s purchase, so an overnight job does not meet the need.",
+        "Without a timeout, a stalled provider can keep checkout waiting.",
+        "A browser-side call exposes integration details and does not provide the server-side controls needed here."
       ]
     },
     {
-      "question": "A new site is being built from scratch with a headless front end. Which API set should be the default choice?",
+      "question": "A new site is being designed with a headless front end. Which API set should the team consider first?",
       "options": [
         "SOAP web services",
-        "OCAPI, the earlier generation of the APIs",
+        "OCAPI for every new headless feature",
         "SCAPI and the Shopper APIs",
-        "Direct access to the database"
+        "Direct database access"
       ],
       "correctAnswer": 2,
-      "explanation": "SCAPI is the current API set for headless builds and is where Salesforce is investing.",
+      "explanation": "SCAPI and the Shopper APIs are the current commerce APIs commonly used for new headless storefronts.",
       "whyWrong": [
-        "SOAP isn't the storefront API for B2C Commerce.",
-        "OCAPI still works but is the older choice for new builds.",
-        "There is no direct database access on the platform."
+        "SOAP is not the default API choice for this new headless design.",
+        "OCAPI remains in use, but SCAPI is the modern starting point for new headless work.",
+        "Direct database access is not an appropriate storefront integration pattern."
       ]
     },
     {
-      "question": "Before Black Friday, a load test shows some pages breaking platform quotas. What should the team do?",
+      "question": "Before Black Friday, load testing shows that some pages exceed platform quotas. What should the team do?",
       "options": [
-        "Ask shoppers to visit at quieter times",
-        "Ignore it entirely, since quotas only ever apply in sandboxes",
-        "Turn off the eCDN",
-        "Fix the code that breaks the quotas before peak"
+        "Tell shoppers to visit outside peak hours",
+        "Ignore the findings because quotas apply only in sandboxes",
+        "Disable the eCDN",
+        "Find and fix the quota-heavy code before peak trading"
       ],
       "correctAnswer": 3,
-      "explanation": "Quotas are enforced on Production. Code that breaks them can fail under load, so it must be fixed before peak trading.",
+      "explanation": "Quota issues can affect Production. The team should correct the code and retest before the expected traffic surge.",
       "whyWrong": [
-        "Asking shoppers to wait isn't a real fix.",
-        "Quotas apply in Production too.",
-        "Turning off the eCDN would make performance worse."
+        "Changing shopper visit times does not correct the platform issue.",
+        "Production quotas also matter, so ignoring the test results is unsafe.",
+        "Disabling the eCDN does not fix the code that exceeds quotas and may hurt delivery performance."
       ]
     },
     {
-      "question": "The merchandising team should manage promotions but must not change site code or payment settings. How is this controlled?",
+      "question": "The merchandising team should manage promotions but must not change code or payment settings. How should access be limited?",
       "options": [
-        "Business Manager roles with least privilege",
-        "Give everyone Administrator access",
-        "Remove the promotions module from Business Manager",
-        "Share one login for the whole team"
+        "Least-privilege Business Manager roles",
+        "Give every merchandiser Administrator access",
+        "Remove the promotions tools from Business Manager",
+        "Have the whole team share one login"
       ],
       "correctAnswer": 0,
-      "explanation": "Business Manager roles let you grant only the modules each team needs, such as promotions, without wider access.",
+      "explanation": "Business Manager roles can grant the promotion functions the team needs without granting unrelated permissions.",
       "whyWrong": [
-        "Full admin access gives far more than the team needs.",
-        "Removing promotions stops the team doing their job.",
-        "Shared logins remove accountability and are a security risk."
+        "Administrator access is broader than the stated need.",
+        "Removing the promotions tools would prevent the team from doing its assigned work.",
+        "Shared accounts weaken accountability and do not enforce individual permissions."
       ]
     },
     {
-      "question": "Product images load slowly for shoppers in Asia, while the site is hosted in Europe. What helps most?",
+      "question": "Shoppers in Asia report that product images load slowly, while the main site runs in Europe. What can help most?",
       "options": [
-        "Move every one of the images into the cartridge",
-        "Serve images and static files via eCDN",
+        "Bundle all images inside the application cartridge",
+        "Serve the images and static files through eCDN",
         "Turn off page caching",
-        "Make all images larger"
+        "Increase the image dimensions"
       ],
       "correctAnswer": 1,
-      "explanation": "The eCDN serves static files from locations close to the shopper, which cuts load times far from the main site.",
+      "explanation": "The eCDN can serve static assets from locations closer to shoppers, reducing the distance those files travel.",
       "whyWrong": [
-        "Images in cartridges still come from the same place and bloat code.",
-        "Page caching helps speed. Turning it off makes things worse.",
-        "Larger images load more slowly."
+        "Bundling images in the cartridge does not place them closer to shoppers and can complicate updates.",
+        "Page caching does not solve the geographic delivery of image files.",
+        "Larger images require more data and can make loading slower."
       ]
     },
     {
-      "question": "When should an architect choose SFRA over a headless storefront?",
+      "question": "When is SFRA a better choice than a headless storefront?",
       "options": [
-        "When the site won't use any Salesforce APIs",
-        "When the team has deep React skills and wants full control",
-        "When speed to market and standard commerce features matter most",
-        "When the brand needs a front end shared with a mobile app and kiosks"
+        "When the site will not use any Salesforce APIs",
+        "When the team wants a React front end with full control",
+        "When the project values a fast launch and standard commerce features",
+        "When the same front end must serve a mobile app and store kiosks"
       ],
       "correctAnswer": 2,
-      "explanation": "SFRA gives a working storefront with standard features out of the box, so it is often the faster route to launch.",
+      "explanation": "SFRA provides standard storefront behavior and can help a team launch sooner when those features meet the requirements.",
       "whyWrong": [
-        "Every B2C Commerce storefront relies on the platform either way.",
-        "Strong React teams wanting full control is the case for headless.",
-        "Sharing one front end across channels is a strength of headless, not SFRA."
+        "SFRA sites still use Salesforce platform capabilities and APIs as needed.",
+        "A React team seeking full front-end control is a stronger match for a headless storefront.",
+        "A shared front end across apps and kiosks may favor a headless architecture."
       ]
     },
     {
-      "question": "A retailer wants to show different home page banners per country without code changes. What should be used?",
+      "question": "A retailer needs different home page banners by country, with changes managed by merchandisers and no code release. What should it use?",
       "options": [
-        "Hard-code banners in ISML templates",
-        "Separate cartridges per country",
-        "Content slots and assets in Business Manager",
-        "A custom object that holds raw HTML strings"
+        "Hard-code banner content in ISML templates",
+        "Create separate cartridges for each country’s banners",
+        "Manage content slots and assets in Business Manager",
+        "Store raw HTML in a custom object"
       ],
       "correctAnswer": 2,
-      "explanation": "Content slots and assets let merchandisers manage banners per site or locale in Business Manager without a deployment.",
+      "explanation": "Business Manager content slots and assets let merchandisers manage site or locale content without changing code.",
       "whyWrong": [
-        "Hard-coded banners need a code change every time.",
-        "Separate cartridges per country add needless code.",
-        "HTML in custom objects is hard to manage and skips the content tools."
+        "Hard-coded templates require a code change and deployment to update banners.",
+        "Country-specific cartridges add code and deployment work for content changes.",
+        "Raw HTML in custom objects is not the standard content-management approach."
       ]
     }
   ]

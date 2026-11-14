@@ -29,7 +29,7 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'How hard is the Net Zero Cloud ap exam?',
-    answer: 'The Net Zero Cloud ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Net Zero Cloud ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
+    answer: 'The Net Zero Cloud AP is a Pass/Fail accredited professional exam with 55 questions and a 75-minute time limit. It costs $150 and is designed for practitioners with hands-on implementation experience. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are Scope 1, 2, and 3 emissions and why does the exam test them?',
@@ -86,7 +86,7 @@ export default function NetZeroCloudApExamTipsContent() {
             <span className="font-medium text-gray-900">Data Ingestion and Integration</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Knowing Scope 1/2/3 definitions and GHG Protocol methodology is the foundation for all carbon accounting questions.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 55 questions, 75 minutes, Pass/Fail, $150. Knowing Scope 1/2/3 definitions and GHG Protocol methodology is the foundation for all carbon accounting questions.</p>
         </div>
       </section>
 
@@ -108,7 +108,7 @@ export default function NetZeroCloudApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">AP Exam Benchmark</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+          Pass 3 timed 55-question mocks before booking (Pass/Fail scoring)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Net Zero Cloud AP requires both Salesforce product knowledge and sustainability domain knowledge.

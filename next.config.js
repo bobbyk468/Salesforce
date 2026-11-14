@@ -4,6 +4,23 @@
 // the URL, because many slugs differ (/pd1-study-guide -> developer-1).
 const mergedCertPageRedirects = require('./redirects/merged-cert-pages.json')
 
+const credentialAliasRedirects = [
+  ['/certifications/platform-administrator', '/certifications/administrator'],
+  ['/certifications/platform-app-builder', '/certifications/app-builder'],
+  ['/certifications/platform-developer-1', '/certifications/developer-1'],
+  ['/certifications/platform-developer-2', '/certifications/developer-2'],
+  ['/certifications/agentforce-sales-consultant', '/certifications/sales-cloud'],
+  ['/certifications/sales-cloud-consultant', '/certifications/sales-cloud'],
+  ['/certifications/agentforce-service-consultant', '/certifications/service-cloud'],
+  ['/certifications/service-cloud-consultant', '/certifications/service-cloud'],
+  ['/certifications/field-service-consultant', '/certifications/field-service'],
+  ['/certifications/experience-cloud-consultant', '/certifications/experience-cloud'],
+  ['/certifications/account-engagement-consultant', '/certifications/pardot-consultant'],
+  ['/certifications/account-engagement-specialist', '/certifications/pardot-specialist'],
+  ['/certifications/marketing-cloud-engagement-consultant', '/certifications/marketing-cloud-consultant'],
+  ['/certifications/nonprofit-cloud-consultant', '/certifications/nonprofit-cloud'],
+]
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -56,6 +73,19 @@ const nextConfig = {
       // 301 redirects for old cert slugs that were renamed
       // Old slug → current slug (prevents 404s from external links / Ahrefs)
       ...mergedCertPageRedirects,
+      ...credentialAliasRedirects.map(([source, destination]) => ({ source, destination, permanent: true })),
+      // Claude credential names include "Foundations"; send the long-form slug
+      // people guess from the name to the page that exists.
+      {
+        source: '/certifications/claude-certified-associate-foundations',
+        destination: '/certifications/claude-certified-associate',
+        permanent: true,
+      },
+      {
+        source: '/certifications/claude-certified-developer-foundations',
+        destination: '/certifications/claude-certified-developer',
+        permanent: true,
+      },
       // ADM-201 consolidation (November 2026): the standalone study guide and
       // exam tips pages targeted the same intent as the credential hub and were
       // merged into it. Their unique content now lives in Adm201MergedGuide.

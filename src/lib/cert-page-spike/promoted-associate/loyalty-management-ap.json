@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Loyalty Management Accredited Professional exam for?",
+    "heading": "Who should take the Loyalty Management AP exam?",
     "personas": [
       {
-        "label": "Loyalty program builders",
-        "description": "You design or run a points and tiers programme for a retailer, airline, hotel or similar brand."
+        "label": "Loyalty program teams",
+        "description": "You design or manage points and tier programs for a retailer, airline, hotel, or similar business."
       },
       {
-        "label": "Consultants and admins",
-        "description": "You set up Salesforce Loyalty Management for clients and want to show you know the product."
+        "label": "Salesforce consultants and admins",
+        "description": "You implement Salesforce Loyalty Management and want to demonstrate product knowledge."
       },
       {
-        "label": "Career builders",
-        "description": "You know core Salesforce and want to specialise in customer loyalty."
+        "label": "Salesforce professionals building a specialty",
+        "description": "You know the core platform and want to focus on customer loyalty."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Loyalty Management Accredited Professional Exam Hard?",
-    "summary": "It is a moderate exam. Most questions are about how points are earned and spent, how members move between tiers, and how program processes apply the rules.",
+    "heading": "How challenging is the Loyalty Management AP exam?",
+    "summary": "This is a moderate exam about earning and redeeming points, tier changes, and the processes that apply loyalty rules.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 69% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
-      "<strong>Programme design.</strong> Currencies, tiers, benefits, promotions and vouchers.",
-      "<strong>Rules engine.</strong> How transaction journals and program processes award and redeem points."
+      "<strong>50 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>69% to pass</strong>, which is 35 correct answers out of 50.",
+      "<strong>Program design.</strong> Review point currencies, tiers, benefits, promotions, and vouchers.",
+      "<strong>Rules and transactions.</strong> Learn how transaction journals and program processes award or redeem points."
     ],
-    "passRateGuidance": "Build a small programme in a trial org with two tiers and a promotion, then post a few transactions. Before you book. Aim for 80% or more on practice tests."
+    "passRateGuidance": "Create a small program in a trial org with two tiers and one promotion, then post sample transactions. Aim for at least 80% on practice questions before booking."
   },
   "examFormat": {
-    "heading": "Loyalty Management Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a loyalty need, such as double points for a weekend or keeping gold status for another year, and ask how to set it up.",
+    "heading": "Loyalty Management AP exam format",
+    "intro": "Accredited Professional exams are delivered online. Questions commonly describe a loyalty program requirement:",
+    "scenarioPercent": "A scenario may ask how to give double points on a weekend or renew a member’s Gold status. Select the program setting or process that implements the rule.",
     "bestWayToPass": [
-      "<strong>Learn the currencies:</strong> Qualifying points decide tier status. Non-qualifying points are spent on rewards.",
-      "<strong>Understand transaction journals:</strong> Every purchase or activity is posted as a journal, then processed by rules.",
-      "<strong>Know program processes:</strong> They hold the rules for accrual, redemption and tier changes.",
-      "<strong>Practise promotions:</strong> Bonus points, limits and eligibility for a set of members."
+      "<strong>Separate the currencies:</strong> Qualifying points affect tier status; non-qualifying points can be redeemed for rewards.",
+      "<strong>Follow the transaction:</strong> Purchases and activities are posted as journals that program processes evaluate.",
+      "<strong>Study program processes:</strong> Understand how rules govern accrual, redemption, and tier changes.",
+      "<strong>Practise promotions:</strong> Review bonus points, eligibility, date ranges, and member limits."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Salesforce Loyalty Management: programmes, points and tiers, accrual and redemption rules, promotions, vouchers, partners and reporting.",
+    "description": "This exam covers Salesforce Loyalty Management program design and operations, including currencies, tiers, benefits, promotions, transaction journals, program processes, and point redemption. It has 60 questions in 90 minutes; confirm the current passing score in the official guide.",
     "examDetails": {
       "questions": 60,
       "passingScore": "69%",
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Loyalty Management AP: Key Concepts for the Exam",
+    "h2": "Loyalty Management AP: concepts to review",
     "blocks": [
       {
-        "heading": "Program Design: Tiers & Points",
-        "body": "A **loyalty program** holds everything about one scheme. **Program currencies** are the points members collect. **Qualifying** points count toward tier status. **Non-qualifying** points can be spent on rewards but don't affect tier. **Tier groups** contain **tiers**, such as Silver, Gold and Platinum, each with thresholds and **benefits** like free delivery or lounge access. Tiers can be reviewed on a set schedule, and rules decide whether members move up, stay, or drop down."
+        "heading": "Program structure, tiers, and points",
+        "body": "A loyalty program contains its currencies, tiers, benefits, and rules. Qualifying points count toward a member’s tier status; non-qualifying points can be spent but do not affect status. Tier groups organize levels such as Silver, Gold, and Platinum. Each tier can have thresholds and benefits, such as free delivery or lounge access. Scheduled tier reviews determine whether a member advances, keeps their tier, or moves down."
       },
       {
-        "heading": "Points Accrual & Redemption Rules",
-        "body": "Every purchase, flight or other activity is recorded as a **transaction journal**. **Program processes** contain the rules that act on journals, for example: give 1 point per dollar spent, or 2 points per dollar for Gold members. Redemption works the same way: a journal for a reward triggers rules that take points away. Points can be set to **expire** after a period, and the **member's ledger** shows every change to their balance, so balances can always be explained."
+        "heading": "Accrual and redemption",
+        "body": "A purchase, flight, or other activity is recorded as a transaction journal. Program processes evaluate journals and apply rules, such as awarding one point per dollar or a higher rate for Gold members. A redemption journal can trigger a process that subtracts points. Points can expire after a defined period, and the member ledger records balance changes so each earning, redemption, or expiry can be explained."
       },
       {
-        "heading": "Promotions & Member Engagement",
-        "body": "**Promotions** encourage certain behaviour, like double points on a weekend or bonus points for a first purchase in a new category. They can be limited to certain members, products or dates, and capped so they don't cost too much. **Vouchers** give members a discount or reward they can use later. **Badges** and **games** can add fun elements. Members can see their points, tier and vouchers through a member portal built on Experience Cloud."
+        "heading": "Promotions and member engagement",
+        "body": "Promotions encourage behavior such as earning double points on a weekend or receiving a bonus for a first purchase in a category. A promotion may set eligible members, products, dates, and caps. Vouchers give a member a reward or discount to use later. Badges and games can add engagement features. An Experience Cloud member portal can display points, tier, and vouchers."
       },
       {
-        "heading": "Partner Integration & Ecosystem",
-        "body": "Many programmes let members earn and spend points with **partners**, such as an airline programme that gives points for hotel stays. **Loyalty program partners** are set up with their own terms, and the brand can track how many points each partner has issued or redeemed, which is used for billing between companies. Partners usually send transactions through APIs, and the same journals and rules then apply."
+        "heading": "Partner programs",
+        "body": "Loyalty programs may let members earn or redeem points with partners, such as earning hotel points through a car rental. Configure partner terms and track points issued or redeemed by each partner for settlement between companies. Partners commonly send transactions through APIs, after which the program’s journals and rules process them."
       },
       {
-        "heading": "Analytics & Program Reporting",
-        "body": "Brands need to know whether the programme pays off. Reports and the **Loyalty Analytics** app show active members, points issued and redeemed, tier movement and promotion results. **Points liability**, the value of unspent points, is an important finance number. Combining loyalty data with purchase and marketing data, for example in **Data Cloud**, helps target the right offers to the right members."
+        "heading": "Reporting and program value",
+        "body": "Reports and Loyalty Analytics help teams review active membership, points earned and redeemed, tier changes, and promotion results. Points liability is the value of unspent points and an important finance measure. Combining loyalty, purchase, and marketing data—for example in Data Cloud—can support more relevant member offers."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Loyalty Management Accredited Professional Exam",
-    "intro": "Most questions start with a programme rule written in plain words. Work out which currency, tier, process or promotion makes that rule happen.",
+    "h2": "How to prepare for the Loyalty Management AP exam",
+    "intro": "Translate each program requirement into a currency, tier, process, or promotion setting that will make it happen.",
     "blocks": [
       {
-        "heading": "Loyalty Program Setup",
-        "body": "Programme, currencies, tier groups and tiers come first. Benefits attach to tiers."
+        "heading": "Set up the program first",
+        "body": "Create the program and currencies, then configure tier groups and tiers. Attach member benefits to the appropriate tier."
       },
       {
-        "heading": "Accrual & Redemption Rules",
-        "body": "Activity is posted as transaction journals. Program processes apply the rules to award or remove points."
+        "heading": "Trace earning and redemption",
+        "body": "Activities become transaction journals. Program processes apply rules to award or remove points."
       },
       {
-        "heading": "Member Enrollment & Lifecycle",
-        "body": "Members join, earn, move between tiers and may become inactive. Expiry and tier review rules handle this over time."
+        "heading": "Review the member lifecycle",
+        "body": "Members enroll, earn points, move between tiers, and may become inactive. Tier reviews and expiry rules manage changes over time."
       },
       {
-        "heading": "Partner Management",
-        "body": "Partners send transactions too. Track points issued and redeemed per partner for billing."
+        "heading": "Configure partner activity",
+        "body": "Partners can submit transactions. Track each partner’s points earned and redeemed for settlement."
       },
       {
-        "heading": "Loyalty Analytics",
-        "body": "Watch points liability, redemption rate and tier movement, as well as promotion results."
+        "heading": "Use loyalty reporting",
+        "body": "Monitor points liability, redemption, tier movement, and promotion results."
       }
     ]
   },
@@ -166,231 +166,231 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Members should reach Gold status based on points earned from flights, but points from a credit card partner should only be spendable. How should currencies be set up?",
+      "question": "Flight activity should count toward Gold status, but credit-card points should only be spendable. How should the program distinguish them?",
       "options": [
-        "All points as qualifying",
-        "Flight points as qualifying",
-        "All points as non-qualifying",
-        "Use one currency and ignore tiers"
+        "Make every currency qualifying",
+        "Make flight points qualifying",
+        "Make every currency non-qualifying",
+        "Use one currency and remove tier status"
       ],
       "correctAnswer": 1,
-      "explanation": "Qualifying points count toward tiers. Non-qualifying points can be spent but don't change status.",
+      "explanation": "Qualifying points count toward tiers. Non-qualifying points can be redeemed without changing status.",
       "whyWrong": [
-        "Making all points qualifying lets credit card spend drive status.",
-        "Making all points non-qualifying means nothing drives tier status.",
-        "Ignoring tiers removes a core part of the programme."
+        "If all points qualify, credit-card activity could affect tier status.",
+        "If no points qualify, flight activity cannot advance a member’s tier.",
+        "This setup does not meet the requirement to use tiers."
       ]
     },
     {
-      "question": "A member buys a $120 jacket in store. How is this recorded before points are given?",
+      "question": "A member buys a $120 jacket in a store. What record should be created before points are awarded?",
       "options": [
-        "As a transaction journal for the processes to act on",
-        "As a partner organisation record on the programme",
-        "As a voucher",
-        "As a new tier"
+        "A purchase transaction journal",
+        "A loyalty partner record",
+        "A voucher for a future reward",
+        "A new tier for the member"
       ],
       "correctAnswer": 0,
-      "explanation": "Purchases are posted as transaction journals, and the rules in program processes award the points.",
+      "explanation": "Purchases are recorded as transaction journals, which program processes evaluate to award points.",
       "whyWrong": [
-        "Partners are other companies in the programme.",
-        "Vouchers are rewards to use later.",
-        "Tiers are status levels."
+        "A partner is another company in the loyalty program.",
+        "Vouchers represent rewards for later use.",
+        "Tiers are member status levels, not purchase records."
       ]
     },
     {
-      "question": "Gold members should earn 2 points per dollar, while others earn 1. Where is this rule set?",
+      "question": "Gold members earn two points per dollar while other members earn one. Where should this rule be configured?",
       "options": [
-        "In the voucher definition held against the promotion",
-        "In the partner settings",
-        "In a program process rule checking the tier",
-        "In the member's address"
+        "In the voucher definition",
+        "In the loyalty partner settings",
+        "A tier-based program process rule",
+        "In the member address"
       ],
       "correctAnswer": 2,
-      "explanation": "Program processes hold accrual rules and can use conditions like tier.",
+      "explanation": "Program processes can apply accrual rules based on conditions such as tier.",
       "whyWrong": [
-        "Vouchers are rewards.",
-        "Partner settings cover partner terms, not tier rates.",
-        "Address doesn't drive earning."
+        "A voucher is a reward, not an earning-rate rule.",
+        "Partner settings do not define member tier earning rates.",
+        "The address does not determine the point rate described."
       ]
     },
     {
-      "question": "The brand wants double points on all purchases over one holiday weekend, capped at 500 bonus points per member. What should be used?",
+      "question": "The brand wants double points on purchases over a holiday weekend, capped at 500 bonus points per member. What should it configure?",
       "options": [
         "A new tier",
-        "A manual points adjustment for each member",
-        "A promotion with dates",
-        "A new currency"
+        "Manual point adjustments for each member",
+        "A dated promotion with a member cap",
+        "A new point currency"
       ],
       "correctAnswer": 2,
-      "explanation": "Promotions can run for set dates, change how points are earned, and include caps.",
+      "explanation": "A promotion can define dates, bonus earning, and a cap for each member.",
       "whyWrong": [
-        "Tiers are status levels, not time-limited offers.",
-        "Manual adjustments don't scale.",
-        "A new currency isn't needed for bonus points."
+        "A tier represents status, not a temporary offer.",
+        "Manual adjustments are difficult to manage at scale.",
+        "A new currency is unnecessary for a bonus."
       ]
     },
     {
-      "question": "Points should disappear if they aren't used within 24 months. What should be configured?",
+      "question": "Unspent points should expire after 24 months. What should be configured?",
       "options": [
-        "Points expiry rules for the currency",
-        "A partner agreement",
+        "Currency point-expiry rules",
+        "A partner contract",
         "A new tier group",
-        "Deleting the members who are inactive"
+        "Deletion of inactive members"
       ],
       "correctAnswer": 0,
-      "explanation": "Expiry rules remove points after a set time; which also helps control points liability.",
+      "explanation": "Expiry rules remove points after a defined period and help the business manage outstanding liability.",
       "whyWrong": [
-        "Partner agreements cover partners.",
-        "Tier groups don't control expiry.",
-        "Deleting members loses their history."
+        "Partner agreements cover partner terms.",
+        "Tier groups organize status levels, not expiry.",
+        "Deleting members would remove their history."
       ]
     },
     {
-      "question": "A member asks why their balance dropped last month. Where can an agent see every change to the balance?",
+      "question": "A member asks why their points balance fell last month. Where can the agent review the changes?",
       "options": [
-        "The points ledger",
-        "The partner list",
-        "The tier definition record",
-        "A promotion record"
+        "The member’s points ledger",
+        "The list of program partners",
+        "The tier definition",
+        "The promotion record"
       ],
       "correctAnswer": 0,
-      "explanation": "The ledger records each earning, redemption and expiry, so balances can be explained.",
+      "explanation": "The ledger records the member’s point changes, including earnings, redemptions, and expiry.",
       "whyWrong": [
-        "The partner list doesn't show a member's balance.",
-        "Tier definitions describe tiers, not one member's history.",
-        "A promotion shows one offer."
+        "The partner list does not show a member’s transactions.",
+        "A tier definition explains status rules rather than balance history.",
+        "One promotion does not show every balance change."
       ]
     },
     {
-      "question": "Members of a hotel programme should also earn points when they rent cars from a partner company. What should be set up?",
+      "question": "Hotel members should earn points when they rent cars through a partner. What should the program add?",
       "options": [
         "A loyalty program partner",
-        "A new tier",
-        "A manual email process",
-        "A second programme for car rental"
+        "Another tier",
+        "A manual email workflow",
+        "A separate car-rental program"
       ],
       "correctAnswer": 0,
-      "explanation": "Partners can be part of a programme, sending transactions that earn points under agreed terms.",
+      "explanation": "A program partner can send qualifying transactions under agreed partner terms.",
       "whyWrong": [
-        "Tiers don't add partners.",
-        "Emails aren't an integration.",
-        "A second programme splits the member's points."
+        "Tiers define status, not participating companies.",
+        "Email is not a scalable transaction integration.",
+        "A separate program would split the member experience."
       ]
     },
     {
-      "question": "Finance wants to know the value of all unspent points. What is this called?",
+      "question": "Finance asks for the value of points members have earned but not redeemed. What is this measure called?",
       "options": [
         "Enrollment rate",
         "Points liability",
-        "The overall redemption rate",
+        "Redemption rate",
         "Tier movement"
       ],
       "correctAnswer": 1,
-      "explanation": "Points liability is the value of points members could still redeem, which finance must account for.",
+      "explanation": "Points liability measures the value of unspent points the business may need to honor.",
       "whyWrong": [
-        "Enrollment rate shows sign-ups.",
-        "Redemption rate shows how much is spent.",
-        "Tier movement shows status changes."
+        "Enrollment rate measures sign-ups.",
+        "Redemption rate measures how many points are used.",
+        "Tier movement measures status changes."
       ]
     },
     {
-      "question": "Gold members get free delivery. Where is this recorded?",
+      "question": "Gold members receive free delivery. Where should this benefit be configured?",
       "options": [
-        "As a points currency",
+        "As a point currency",
         "As a benefit on the Gold tier",
-        "As a transaction journal entry",
+        "As a transaction journal",
         "As a partner"
       ],
       "correctAnswer": 1,
-      "explanation": "Benefits attach to tiers so members get them while in that tier.",
+      "explanation": "Benefits are attached to tiers so members receive them while they hold that status.",
       "whyWrong": [
-        "Currencies are points.",
-        "Journals record activity.",
-        "Partners are other companies."
+        "Currencies represent points.",
+        "Journals record activities and transactions.",
+        "Partners are other companies in the program."
       ]
     },
     {
-      "question": "A member reaches Gold in March. When should the programme check whether they keep Gold?",
+      "question": "A member reached Gold in March. When should the system check whether they retain the status?",
       "options": [
-        "Never, tiers are permanent",
-        "Only at the point when they telephone the support team",
-        "Every time they log in",
-        "At the tier review date set in the tier rules"
+        "Never; tier status is permanent",
+        "When the member calls support",
+        "Whenever the member signs in",
+        "Tier review date"
       ],
       "correctAnswer": 3,
-      "explanation": "Tier rules define when status is reviewed and what is needed to keep it.",
+      "explanation": "Tier rules define review timing and the requirements for retaining status.",
       "whyWrong": [
-        "Tiers usually need to be re-earned.",
-        "Support calls don't trigger reviews.",
-        "Login checks aren't how tiers work."
+        "Tier status can be subject to review.",
+        "A support call does not trigger a tier review.",
+        "Logging in is unrelated to the tier schedule."
       ]
     },
     {
-      "question": "Members should see their points, tier and vouchers online. What is the usual way?",
+      "question": "Members need to view points, tier, and vouchers online. What is a common solution?",
       "options": [
-        "A weekly PDF statement sent by email",
-        "Calling the contact centre",
-        "A portal built on Experience Cloud",
-        "A Chatter group"
+        "Email a PDF statement each week",
+        "Ask members to call the contact center",
+        "Provide a member portal using Experience Cloud",
+        "Create a Chatter group"
       ],
       "correctAnswer": 2,
-      "explanation": "An Experience Cloud site can show members their loyalty details at any time.",
+      "explanation": "Experience Cloud can host a portal where members can view loyalty information.",
       "whyWrong": [
-        "A PDF is out of date between statements.",
-        "Calling support costs more and is slower.",
-        "Chatter groups aren't for member accounts."
+        "A PDF can become outdated between statements.",
+        "Phone support is slower and less convenient for routine viewing.",
+        "Chatter is not designed as a member portal."
       ]
     },
     {
-      "question": "After a promotion, the marketing team wants to know if it increased spend. What should they look at?",
+      "question": "After a promotion, marketing wants to know whether it increased spending. What should the team review?",
       "options": [
-        "The colour scheme used across the member portal",
+        "The portal color palette",
         "The number of tiers",
-        "The expiry rule",
-        "Promotion results in Loyalty Analytics"
+        "The points-expiry rule",
+        "Promotion performance results"
       ],
       "correctAnswer": 3,
-      "explanation": "Reporting on promotion performance shows whether it changed member behaviour.",
+      "explanation": "Promotion reporting helps evaluate whether an offer changed member behavior.",
       "whyWrong": [
-        "Portal design is unrelated.",
-        "Tier count doesn't measure the promotion.",
-        "Expiry rules don't measure results."
+        "Portal styling does not measure promotion performance.",
+        "Tier count does not show the promotion’s effect.",
+        "Expiry rules do not measure spending uplift."
       ]
     },
     {
-      "question": "A member returns a product they earned 120 points on. What should happen?",
+      "question": "A member returns a purchase that earned 120 points. What should the program do?",
       "options": [
-        "Delete the member",
-        "A transaction journal that removes the points",
-        "Move the member down into a lower tier straight away",
-        "Nothing, points stay"
+        "Delete the member record",
+        "A reversal transaction journal",
+        "Move the member down a tier immediately",
+        "Leave the points unchanged"
       ],
       "correctAnswer": 1,
-      "explanation": "Returns should be posted as journals so rules can reverse the points earned.",
+      "explanation": "A return can be recorded as a journal so program rules can reverse the points associated with the purchase.",
       "whyWrong": [
-        "Deleting the member is extreme.",
-        "Tier changes follow tier rules, not every return.",
-        "Leaving the points rewards a purchase that didn't stick."
+        "Deleting the member would remove unrelated history.",
+        "Tier changes follow tier rules rather than every return.",
+        "Keeping points for a returned purchase leaves the balance inaccurate."
       ]
     },
     {
-      "question": "The brand wants to send members personalised offers based on loyalty, purchase and web data together. What helps most?",
+      "question": "The brand wants tailored offers based on loyalty, purchases, and web activity together. What helps unify these signals?",
       "options": [
-        "Using only the tier name",
-        "Keeping each data set separate",
-        "Bringing the data together in Data Cloud",
-        "Asking all of the members to fill in a feedback survey"
+        "Use only the member’s tier",
+        "Keep each data set in a separate system",
+        "Bring the data together in Data Cloud",
+        "Ask every member to complete a survey"
       ],
       "correctAnswer": 2,
-      "explanation": "Data Cloud combines data from many sources into one profile, which supports better targeting.",
+      "explanation": "Data Cloud can unify information from different sources to support more relevant targeting.",
       "whyWrong": [
-        "Tier alone is too broad.",
-        "Separate data makes personalisation hard.",
-        "Surveys miss real behaviour."
+        "Tier alone provides limited information.",
+        "Separate data makes it harder to personalize offers across behaviors.",
+        "Surveys do not capture all observed behavior."
       ]
     },
     {
-      "question": "A member earns a $10 reward to use on their next order. What should be issued?",
+      "question": "A member earns a $10 discount to use on a later order. What should the program issue?",
       "options": [
         "A partner record",
         "A tier group",
@@ -398,11 +398,11 @@
         "A voucher"
       ],
       "correctAnswer": 3,
-      "explanation": "Vouchers hold rewards like discounts that members can use later.",
+      "explanation": "Vouchers represent rewards or discounts members can use later.",
       "whyWrong": [
-        "Partners are other companies.",
-        "Tier groups hold tiers.",
-        "Tiers are status levels."
+        "Partners are other participating companies.",
+        "Tier groups organize status levels.",
+        "A tier is a status level, not a redeemable discount."
       ]
     }
   ]

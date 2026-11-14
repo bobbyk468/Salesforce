@@ -5,49 +5,47 @@
     "personas": [
       {
         "label": "Government and public sector consultants",
-        "description": "Consultants who design and implement Public Sector Solutions for licensing, permitting, inspections, grants, benefits, and case management programs."
+        "description": "You implement agency programs such as permits, inspections, grants, benefits, or case management."
       },
       {
         "label": "Public Sector Solutions AP holders moving up",
-        "description": "Practitioners who hold the Public Sector Solutions Accredited Professional credential and are moving into a full consultant-level implementation role."
+        "description": "You hold the Public Sector Solutions Accredited Professional credential and want to move into consultant-level delivery."
       },
       {
         "label": "Business Analysts on government projects",
-        "description": "Analysts who gather requirements for constituent self-service, case management, and regulatory program delivery on the Salesforce Platform."
+        "description": "You gather requirements for government services, including constituent self-service and regulatory programs."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Public Sector Solutions Consultant Exam Hard?",
-    "summary": "The exam tests whether you can design and implement Public Sector Solutions programs end to end, licensing and permitting, inspections, grants and benefits, case management, and constituent self-service, not just recognize the product's feature list.",
+    "summary": "The exam focuses on designing Public Sector Solutions for agency work. Review licensing, inspections, grants and benefits, case management, and services for constituents.",
     "bullets": [
-      "<strong>60 scored questions</strong> plus up to five unscored questions that do not affect your result.",
-      "<strong>105 minutes</strong>.",
-      "<strong>Exam fee</strong>: US$200; retake fee: US$100, plus applicable taxes.",
-      "<strong>Passing score</strong>: not published by Salesforce at the time of writing; always verify the current figure in your certification account."
+      "<strong>Exam fee</strong>: US$150; retakes are US$75 through April 27, 2027.",
+      "<strong>Passing score</strong>: 72%."
     ],
-    "passRateGuidance": "Book the exam once you can walk through a licensing/permitting workflow, a grants or benefits case, and a constituent self-service scenario, and explain which Public Sector Solutions object model each one relies on."
+    "passRateGuidance": "Practice explaining a permitting process, a grant or benefit case, and a self-service application. Identify the Public Sector Solutions records and configuration needed for each."
   },
   "examFormat": {
     "heading": "Public Sector Solutions Consultant Exam Format Explained",
-    "intro": "The exam is a proctored, scenario-based multiple-choice and multiple-select test delivered online or at a test center.",
-    "scenarioPercent": "Expect scenario-based questions built around a government agency deciding how to configure licensing, case management, or constituent-facing self-service.",
+    "intro": "The supervised exam uses multiple-choice and multiple-select questions and can be taken online or at a test center.",
+    "scenarioPercent": "Questions can describe an agency requirement and ask you to choose a setup for licensing, case management, or constituent self-service.",
     "bestWayToPass": [
-      "<strong>Know licensing and permitting:</strong> how applications, renewals, and compliance workflows are modeled and automated.",
-      "<strong>Master case management for government:</strong> how case types, queues, and escalation paths fit regulatory and constituent-service requirements.",
-      "<strong>Understand grants and benefits:</strong> how program eligibility, disbursement, and compliance tracking are configured.",
-      "<strong>Design constituent self-service:</strong> how Experience Cloud and OmniStudio-style flows let constituents apply, track status, and submit documents without agency staff doing it for them."
+      "<strong>Trace a permit:</strong> Follow an application through review, approval, renewal, and compliance work.",
+      "<strong>Review government cases:</strong> Match case types, queues, and escalation paths to agency needs.",
+      "<strong>Study grants and benefits:</strong> Connect eligibility decisions, payments, and compliance tracking to the program process.",
+      "<strong>Design self-service:</strong> Explore how constituents can apply, submit documents, and check status using Experience Cloud and guided flows."
     ]
   },
-  "expertInsight": "Use Salesforce's official Public Sector Solutions Consultant exam guide and Trailhead prep trail as the study scope. This is a newly launched 2026 consultant-level credential above the existing Public Sector Solutions Accredited Professional exam, so don't assume AP-level study material alone is sufficient depth.",
+  "expertInsight": "Use the official Public Sector Solutions Consultant guide and Trailhead preparation materials to define your study scope. Check the consultant objectives separately from the Accredited Professional material so you cover the required depth.",
   "certificationCard": {
     "code": "Public Sector Solutions Consultant",
-    "description": "This exam tests your ability to design and implement Public Sector Solutions programs: licensing and permitting, inspections, grants and benefits, case management, and constituent self-service. The exam is 60 scored questions in 105 minutes; Salesforce has not published a passing score for it.",
+    "description": "This exam tests your ability to design and implement Public Sector Solutions programs: licensing and permitting, inspections, grants and benefits, case management, and constituent self-service. It has 60 scored questions plus up to five unscored questions, with 105 minutes to complete it. The passing score is 72%.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
+      "passingScore": "72%",
       "duration": "105 min",
-      "cost": "$200"
+      "cost": "$150"
     },
     "topics": [
       "Licensing and Permitting",
@@ -62,45 +60,45 @@
     "blocks": [
       {
         "heading": "Licensing and Permitting",
-        "body": "Licensing and permitting programs model applications, reviews, approvals, renewals, and compliance checks. Consultants need to know how to configure the application lifecycle so it reflects the agency's real regulatory steps, not a generic case flow."
+        "body": "Map licensing and permit applications to the agency’s actual review, approval, renewal and compliance steps. Configure the lifecycle around those requirements."
       },
       {
         "heading": "Inspections",
-        "body": "Inspection management ties scheduled or complaint-driven inspections to the underlying license, permit, or case, so inspection outcomes can trigger downstream compliance actions."
+        "body": "Connect an inspection to the relevant permit, license or case. Its result can inform later compliance work."
       },
       {
         "heading": "Grants and Benefits Management",
-        "body": "Grants and benefits programs track eligibility criteria, application review, disbursement, and ongoing compliance reporting. A consultant should know how program rules are configured so eligibility decisions are consistent and auditable."
+        "body": "Grant and benefit programs may need eligibility checks, application review, disbursement and reporting. Define rules and records that support consistent decisions and an audit trail."
       },
       {
         "heading": "Case Management for Government",
-        "body": "Government case management extends standard case management with case types, queues, and escalation paths suited to regulatory and constituent-service workloads, where SLAs and public accountability matter more than in a typical commercial support case."
+        "body": "Design case types, queues and escalation paths around the agency’s regulatory and constituent-service work. Consider service targets and accountability when routing cases."
       },
       {
         "heading": "Constituent Self-Service",
-        "body": "Constituent self-service lets residents and businesses apply for licenses, permits, grants, or benefits, and track status, through an Experience Cloud site, reducing the volume of manual intake work for agency staff."
+        "body": "A constituent portal can let residents or businesses submit applications and check their status. Plan the Experience Cloud experience around the services and access each user needs."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Public Sector Solutions Consultant Exam",
-    "intro": "Most questions describe a government agency scenario and ask you to pick the configuration that fits that specific program type (licensing, grants, case management, or self-service).",
+    "intro": "For each agency scenario, first identify the program and its users. Then compare the available configuration against the stated requirement.",
     "blocks": [
       {
         "heading": "Identify the program type first",
-        "body": "A question about renewals and compliance checks is almost always a licensing/permitting question; a question about eligibility and disbursement is almost always a grants/benefits question. Identify the program type before picking an answer."
+        "body": "First decide whether the requirement concerns a permit, benefit, grant or another service. Then match the proposed configuration to that process."
       },
       {
         "heading": "Separate inspections from generic case management",
-        "body": "Inspections tie to a specific license, permit, or case and can trigger compliance actions; don't treat an inspection scenario as a plain, standalone case management question."
+        "body": "If the work involves an inspection, identify the related permit or case and what should happen after the result is recorded."
       },
       {
         "heading": "Default to self-service when the scenario is about reducing staff workload",
-        "body": "If the goal described is letting constituents self-serve applications or status checks, the answer is almost always an Experience Cloud self-service configuration, not an internal-only case queue change."
+        "body": "For online applications and status checks, assess whether a constituent portal meets the requirement and access needs."
       },
       {
         "heading": "Watch for compliance and auditability requirements",
-        "body": "Government programs usually require an auditable trail of eligibility decisions and approvals; an answer that skips documentation or review steps is usually the trap."
+        "body": "Look for requirements to document eligibility, approvals and reviews. The process should retain the evidence needed for an audit."
       }
     ]
   },
@@ -108,268 +106,384 @@
     "heading": "Next Consultant Certifications",
     "intro": "After this credential, round out your public sector and consultant track:",
     "links": [
-      { "href": "/certifications/public-sector-solutions-ap", "label": "Public Sector Solutions AP" },
-      { "href": "/certifications/experience-cloud", "label": "Experience Cloud Consultant" },
-      { "href": "/certifications/business-analyst", "label": "Business Analyst" },
-      { "href": "/consultant-certification-path", "label": "Consultant certification path" }
+      {
+        "href": "/certifications/public-sector-solutions-ap",
+        "label": "Public Sector Solutions AP"
+      },
+      {
+        "href": "/certifications/experience-cloud",
+        "label": "Experience Cloud Consultant"
+      },
+      {
+        "href": "/certifications/business-analyst",
+        "label": "Business Analyst"
+      },
+      {
+        "href": "/consultant-certification-path",
+        "label": "Consultant certification path"
+      }
     ]
   },
   "tocSections": [
-    { "id": "exam-prep", "title": "Exam Prep Content" },
-    { "id": "key-concepts", "title": "Key Concepts" },
-    { "id": "scenario-tips", "title": "How to Pass" },
-    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
-    { "id": "practice-questions", "title": "Practice Questions" },
-    { "id": "more-questions", "title": "Get More Questions" },
-    { "id": "related-certs", "title": "Related Certifications" },
-    { "id": "faq", "title": "Exam FAQs" }
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
   ],
   "sampleQuestions": [
     {
-      "question": "A city agency wants applicants to renew a business license online without calling an office. What should the consultant recommend?",
+      "question": "A city agency wants people to renew business licenses online without calling an office. What should it use?",
       "options": [
-        "Require every renewal to be submitted by mail",
-        "An Experience Cloud self-service flow for license renewal",
-        "A Chatter post asking staff to manually process renewals",
-        "Disabling renewals entirely"
+        "Set up a self-service license renewal flow in Experience Cloud.",
+        "Require every renewal to be mailed to the agency office.",
+        "Ask staff to process each renewal through an internal Chatter post.",
+        "Stop accepting renewals, even when a license is still valid."
       ],
-      "correctAnswer": 1,
-      "explanation": "Experience Cloud self-service is the standard way to let constituents complete processes like license renewal without agency staff handling every request manually.",
+      "correctAnswer": 0,
+      "explanation": "Experience Cloud can provide a self-service process so people can complete license renewals online.",
       "whyWrong": [
-        "Requiring mail submission contradicts the stated goal of an online, self-service process.",
-        "A Chatter post is an internal collaboration tool, not a constituent-facing self-service mechanism.",
-        "Disabling renewals entirely doesn't meet the agency's actual requirement."
+        "Mailing renewals does not meet the goal of online self-service.",
+        "Chatter is for internal collaboration, not a public renewal process.",
+        "The agency needs to support renewals, not disable them."
       ]
     },
     {
-      "question": "An inspection fails for a permitted facility. What should happen next in a well-designed Public Sector Solutions configuration?",
+      "question": "An inspection fails for a permitted facility. What should happen next?",
       "options": [
-        "Nothing; inspections are informational only",
-        "The failed inspection outcome should be able to trigger a compliance action tied to the related permit",
-        "The permit is automatically renewed regardless of the inspection result",
-        "The inspector's personal calendar is deleted"
+        "Treat inspections as informational and take no action on the permit. while following the agency review and access rules",
+        "Link the failed inspection to a compliance action on the related permit.",
+        "Renew the permit automatically despite the failed inspection.",
+        "Delete the inspector’s calendar instead of changing the permit."
       ],
       "correctAnswer": 1,
-      "explanation": "Inspections are tied to the related license/permit so that outcomes like a failure can drive downstream compliance actions.",
+      "explanation": "Linking inspection results to the permit lets a failure trigger the required compliance action.",
       "whyWrong": [
-        "Treating inspection outcomes as purely informational ignores their role in driving compliance actions.",
-        "Automatically renewing a permit despite a failed inspection defeats the purpose of the inspection.",
-        "Deleting a calendar has nothing to do with how an inspection outcome should be handled."
+        "A failed inspection can affect compliance; it should not be ignored.",
+        "Automatic renewal despite failure would defeat the purpose of the inspection.",
+        "Calendar settings do not determine how the agency handles an inspection result."
       ]
     },
     {
-      "question": "A grants program needs to track whether each applicant meets income and residency eligibility rules before approving disbursement. What is this primarily an example of?",
+      "question": "A grants program must check income and residency before approving payment. What does this describe?",
       "options": [
-        "Case escalation configuration",
-        "Grants and benefits eligibility and compliance tracking",
-        "Inspection scheduling",
-        "Experience Cloud theming"
+        "Case escalation for urgent constituent issues.",
+        "Scheduling inspections at applicant addresses.",
+        "Grant eligibility and compliance tracking.",
+        "Changing the visual theme of the public website."
       ],
-      "correctAnswer": 1,
-      "explanation": "Tracking eligibility criteria before approving disbursement is a core grants and benefits management concern.",
+      "correctAnswer": 2,
+      "explanation": "Checking income and residency before payment is part of grants and benefits eligibility and compliance.",
       "whyWrong": [
-        "Case escalation is about routing urgent cases, not eligibility determination.",
-        "Inspection scheduling is unrelated to income/residency eligibility review.",
-        "Experience Cloud theming is a cosmetic concern, not an eligibility or compliance mechanism."
+        "Case escalation routes urgent cases; it does not decide grant eligibility.",
+        "Inspection scheduling is separate from reviewing income and residency.",
+        "Website theming is cosmetic and does not check eligibility."
       ]
     },
     {
-      "question": "A constituent-services case about a pothole complaint needs to escalate automatically if unresolved after 5 business days. What should the consultant configure?",
+      "question": "A pothole complaint should be escalated if it remains unresolved after five business days. What should the consultant configure?",
       "options": [
-        "A report that nobody reviews",
-        "A case escalation rule or SLA-driven flow tied to the case queue",
-        "A permanent case lock",
-        "A manual reminder the agent must remember on their own"
+        "A report that staff may review when they have time.",
+        "A permanent lock that prevents staff from updating the case.",
+        "A reminder that relies on the agent to remember the deadline.",
+        "A case escalation rule or SLA flow tied to the case queue."
       ],
-      "correctAnswer": 1,
-      "explanation": "An escalation rule or SLA-driven automation is the correct way to guarantee an unresolved case escalates after a defined time, rather than relying on manual follow-up.",
+      "correctAnswer": 3,
+      "explanation": "A case escalation rule or SLA-based flow can trigger action when the five-day deadline is reached.",
       "whyWrong": [
-        "An unreviewed report does nothing to trigger an actual escalation.",
-        "Locking the case prevents further work on it, the opposite of escalating it for resolution.",
-        "Relying on an agent's memory is not a reliable or auditable SLA mechanism."
+        "A report does not trigger an escalation by itself.",
+        "Locking the case stops staff from resolving it.",
+        "A manual reminder is easy to miss and does not enforce the service target."
       ]
     },
     {
-      "question": "Which best describes the relationship between the Public Sector Solutions Accredited Professional exam and the Public Sector Solutions Consultant exam?",
+      "question": "How do the Public Sector Solutions AP and Consultant exams differ?",
       "options": [
-        "They are identical exams with different names",
-        "The AP credential covers foundational setup; the Consultant credential goes deeper into end-to-end program implementation",
-        "The Consultant exam has no relationship to Public Sector Solutions at all",
-        "The AP exam replaced the Consultant exam entirely"
+        "The AP covers basics; the Consultant exam covers full implementation.",
+        "They are the same exam offered under two different names.",
+        "The Consultant exam has no connection to Public Sector Solutions. while following the agency review and access rules",
+        "The AP replaced the Consultant exam and is no longer separate."
       ],
-      "correctAnswer": 1,
-      "explanation": "The AP credential is a foundational-level exam, while the Consultant credential tests deeper, end-to-end implementation across licensing, grants, case management, and self-service.",
+      "correctAnswer": 0,
+      "explanation": "The AP focuses on foundational setup. The Consultant exam tests deeper implementation across programs such as licensing, grants, and case management.",
       "whyWrong": [
-        "They are distinct exams at different depth levels, not the same exam under two names.",
-        "The Consultant exam is squarely about Public Sector Solutions implementation, so this understates the connection.",
-        "Both credentials currently coexist; the AP was not simply replaced by the Consultant exam."
+        "These are separate credentials with different levels of coverage.",
+        "The Consultant exam is specifically about Public Sector Solutions implementation.",
+        "Both credentials are distinct exams; the AP did not replace the Consultant exam."
       ]
     },
     {
-      "question": "An agency wants applicants to upload supporting documents (proof of residency, income statements) as part of an online application. What should the consultant recommend?",
+      "question": "Applicants must upload proof of residency and income with an online application. What should the consultant recommend?",
       "options": [
-        "Require documents to be faxed to a central office",
-        "A document upload step built into the Experience Cloud self-service application flow",
-        "Disable attachments across the org",
-        "Ask applicants to mail printed copies only"
+        "Require applicants to fax each document to the agency.",
+        "Add file uploads to the Experience Cloud application flow.",
+        "Turn off attachments across Salesforce so no files can be submitted.",
+        "Ask applicants to print and mail every supporting document."
       ],
       "correctAnswer": 1,
-      "explanation": "Building document upload directly into the self-service application flow keeps the process online and reduces manual intake work, matching the agency's goal.",
+      "explanation": "A document upload step in the online application keeps submission self-service and reduces manual intake.",
       "whyWrong": [
-        "Requiring faxes contradicts the goal of a fully online application process.",
-        "Disabling attachments would prevent applicants from submitting required documents at all.",
-        "Requiring mailed copies defeats the purpose of an online self-service application."
+        "Faxing documents does not meet the goal of an online application.",
+        "Turning off attachments prevents applicants from submitting the required evidence.",
+        "Mailing printed documents does not meet the goal of online self-service."
       ]
     },
     {
-      "question": "A licensing board wants different approval steps depending on whether a license is a first-time application or a renewal. What is the best design approach?",
+      "question": "A licensing board needs different approval steps for first-time applications and renewals. What is the best design?",
       "options": [
-        "Use the exact same approval path for every license regardless of type",
-        "Configure distinct application lifecycle paths (or record types) for first-time applications versus renewals",
-        "Reject all renewal applications automatically",
-        "Require board members to memorize which path to use manually"
+        "Use one identical approval path for every license request.",
+        "Reject every renewal automatically, regardless of its details.",
+        "Use separate lifecycle paths for new applications and renewals.",
+        "Ask board members to remember which steps apply to each request."
       ],
-      "correctAnswer": 1,
-      "explanation": "Distinct lifecycle paths or record types let the system enforce different approval steps appropriate to first-time applications versus renewals.",
+      "correctAnswer": 2,
+      "explanation": "Separate lifecycle paths or record types let the system apply the right approval steps to each application type.",
       "whyWrong": [
-        "Using one identical path for both ignores the agency's stated requirement for different steps.",
-        "Automatically rejecting renewals contradicts the goal of processing them appropriately.",
-        "Relying on manual memorization instead of system configuration is unreliable and not scalable."
+        "One identical path would ignore the different approval requirements.",
+        "Automatically rejecting all renewals would prevent valid renewals.",
+        "Relying on memory is less reliable than configuring the process in Salesforce."
       ]
     },
     {
-      "question": "Which scenario is the clearest example of a case management (rather than licensing or grants) configuration need?",
+      "question": "Which request is mainly about case management rather than licensing, grants, or inspections?",
       "options": [
-        "Tracking a business's annual permit renewal",
-        "Routing and resolving a constituent's reported code violation through defined queues and SLAs",
-        "Calculating a grant applicant's income eligibility",
-        "Scheduling a routine facility inspection"
+        "Track a business permit’s annual renewal date. while following the agency review and access rules",
+        "Check a grant applicant’s household income before payment. while following the agency review and access rules",
+        "Schedule a routine inspection for a permitted facility.",
+        "Route and resolve a complaint through queues and deadlines."
       ],
-      "correctAnswer": 1,
-      "explanation": "Routing and resolving a constituent complaint through queues and SLAs is a case management concern, distinct from licensing, grants, or inspection scheduling.",
+      "correctAnswer": 3,
+      "explanation": "Routing and resolving a constituent complaint through queues and service deadlines is case management.",
       "whyWrong": [
-        "Permit renewal tracking is a licensing/permitting concern, not core case management.",
-        "Income eligibility calculation is a grants and benefits concern.",
-        "Inspection scheduling is its own domain, separate from general case routing."
+        "Permit renewal is a licensing and permitting task.",
+        "Checking income for a grant is a grants and benefits task.",
+        "Scheduling a facility inspection is an inspection-management task."
       ]
     },
     {
-      "question": "An agency's legal team requires a complete, unalterable audit trail of every eligibility decision made on benefit applications. What should the consultant ensure?",
+      "question": "Legal staff need a complete audit trail of every benefit eligibility decision that cannot be changed afterward. What should the consultant ensure?",
       "options": [
-        "Eligibility decisions are stored only in an agent's personal notes",
-        "Eligibility decisions and their supporting data are captured and protected from post-decision edits in the system of record",
-        "Eligibility decisions are deleted after approval to save storage",
-        "Eligibility decisions can be freely edited at any time by any user"
+        "Store each decision and its evidence in a protected system of record.",
+        "Keep decisions only in an employee’s private notes outside the case record.",
+        "Delete the decision details after approval to reduce storage use.",
+        "Allow any user to change an eligibility decision at any time."
       ],
-      "correctAnswer": 1,
-      "explanation": "An auditable, tamper-resistant record of eligibility decisions is exactly what a legal/compliance audit-trail requirement calls for.",
+      "correctAnswer": 0,
+      "explanation": "The system of record should capture each decision and supporting data and protect it from unauthorized changes.",
       "whyWrong": [
-        "Personal notes are not part of an auditable system of record.",
-        "Deleting decisions after approval destroys the audit trail the legal team requires.",
-        "Allowing unrestricted edits after a decision undermines the integrity of the audit trail."
+        "Private notes do not provide a complete audit trail in the system of record.",
+        "Deleting decision details would remove the audit history.",
+        "Unrestricted edits would undermine the audit trail’s integrity."
       ]
     },
     {
-      "question": "A constituent checks their benefits application status online and sees it is 'Under Review.' What is most likely powering this status display?",
+      "question": "A constituent sees “Under Review” when checking a benefits application online. What should supply that status?",
       "options": [
-        "A static image that never updates",
-        "The underlying case or application record's status field, surfaced through the self-service portal",
-        "A randomly generated status unrelated to the actual record",
-        "An email the constituent sent to themselves"
+        "A fixed image that never changes as the case moves forward.",
+        "The status on the actual case or application record, shown in the portal.",
+        "A randomly selected status that is separate from the agency record. while following the agency review and access rules",
+        "A personal email the constituent sent to themselves. while following the agency review and access rules"
       ],
       "correctAnswer": 1,
-      "explanation": "Self-service status displays reflect the real underlying record's status field, kept in sync with the actual case or application state.",
+      "explanation": "The portal should display the current status stored on the related case or application record.",
       "whyWrong": [
-        "A static image can't reflect a dynamically changing application status.",
-        "The status shown should reflect the actual record state, not be random or disconnected from it.",
-        "An email the constituent sent themselves has no bearing on the agency's internal record status."
+        "A fixed image cannot show changes to the application.",
+        "A random status would not reflect the application’s real state.",
+        "The constituent’s own email is not connected to the agency record."
       ]
     },
     {
-      "question": "Which best describes why constituent self-service matters to a public sector consultant's design decisions?",
+      "question": "Why is constituent self-service useful when designing a public program?",
       "options": [
-        "It has no effect on agency staff workload",
-        "It reduces manual intake work for agency staff while giving constituents a transparent way to apply and track status",
-        "It is only relevant to private-sector companies",
-        "It replaces the need for any case management entirely"
+        "It leaves agency staff workload unchanged.",
+        "It applies only to private-sector businesses.",
+        "Self-service cuts intake work and shows status.",
+        "It removes the need for case management altogether."
       ],
-      "correctAnswer": 1,
-      "explanation": "Self-service reduces manual intake burden on staff and gives constituents visibility into their own application or case status, which is the core value proposition for public sector programs.",
+      "correctAnswer": 2,
+      "explanation": "Self-service reduces manual intake and gives constituents a way to submit requests and check their status.",
       "whyWrong": [
-        "Self-service is specifically meant to reduce manual staff workload, not leave it unaffected.",
-        "Self-service is highly relevant to public sector programs, which is exactly why it's a core exam topic here.",
-        "Self-service complements, rather than replaces, the case management that still handles the work behind the scenes."
+        "Self-service is intended to reduce some manual work for staff.",
+        "Public agencies use self-service for public programs.",
+        "Self-service works alongside case management; it does not replace it."
       ]
     },
     {
-      "question": "An inspector needs to see only the inspections assigned to their own territory, not every inspection in the org. What should primarily control this?",
+      "question": "An inspector should see only inspections assigned to their territory. What should control this access?",
       "options": [
-        "The org's storage limit",
-        "Record-level sharing/visibility rules scoped to the inspector's territory or assignment",
-        "The inspector's email signature",
-        "The Lightning page's color theme"
+        "The agency’s available Salesforce storage space.",
+        "The inspector’s email signature and contact details.",
+        "The color theme on the Lightning page. while following the agency review and access rules",
+        "Record-level sharing by territory or assignment."
       ],
-      "correctAnswer": 1,
-      "explanation": "Scoping visibility to an inspector's assigned territory is a record-level sharing/visibility configuration, not a cosmetic or capacity concern.",
+      "correctAnswer": 3,
+      "explanation": "Record-level sharing and visibility settings can limit inspection records based on territory or assignment.",
       "whyWrong": [
-        "Storage limits govern capacity, not which records a specific user can see.",
-        "An email signature has no bearing on record visibility.",
-        "Page color theme is cosmetic and unrelated to data visibility rules."
+        "Storage limits affect capacity, not which records a user can view.",
+        "Email signatures do not control record access.",
+        "Page color is cosmetic and does not affect data access."
       ]
     },
     {
-      "question": "A grants program wants to automatically flag applications that are missing required supporting documents before they reach a reviewer. What is the best approach?",
+      "question": "A grants program wants missing documents flagged before an application reaches a reviewer. What should it use?",
       "options": [
-        "Let reviewers manually check every application for missing documents with no automation",
-        "Use validation/flow logic to flag incomplete applications before routing them to a reviewer",
-        "Approve every application regardless of completeness",
-        "Reject every application automatically with no review"
+        "Use validation or Flow to flag missing documents.",
+        "A manual review with no automatic checks or alerts.",
+        "Automatic approval of every application, even when documents are missing.",
+        "Automatic rejection of every application without reviewing it."
       ],
-      "correctAnswer": 1,
-      "explanation": "Automated validation or flow logic that flags incomplete applications before review reduces reviewer workload and catches issues earlier than a fully manual check.",
+      "correctAnswer": 0,
+      "explanation": "Validation or Flow logic can identify missing documents before the application reaches a reviewer.",
       "whyWrong": [
-        "Relying entirely on manual review doesn't meet the stated goal of automatically flagging missing documents.",
-        "Approving regardless of completeness ignores the requirement to catch missing documentation.",
-        "Automatically rejecting every application, complete or not, isn't what the agency asked for."
+        "Manual-only review does not meet the requirement to flag missing items automatically.",
+        "Approving incomplete applications ignores the stated requirement.",
+        "The agency wants to flag incomplete applications for review, not reject every application."
       ]
     },
     {
-      "question": "Which statement most accurately describes licensing and permitting configuration in Public Sector Solutions?",
+      "question": "What does licensing and permitting configuration in Public Sector Solutions support?",
       "options": [
-        "It only supports a single, fixed application process for every license type",
-        "It models the application, review, approval, renewal, and compliance lifecycle so it can be configured per license or permit type",
-        "It has no connection to inspections or compliance",
-        "It is only usable by federal agencies, not state or local government"
+        "One fixed application process for every type of license. while following the agency review and access rules",
+        "A configurable application-to-compliance lifecycle for each permit type.",
+        "A process that has no connection to inspections or compliance. while following the agency review and access rules",
+        "A system that only federal agencies can use. while following the agency review and access rules"
       ],
       "correctAnswer": 1,
-      "explanation": "Licensing and permitting configuration is built to model a configurable lifecycle across application, review, approval, renewal, and compliance, tailored per license or permit type.",
+      "explanation": "Licensing and permitting tools support a configurable lifecycle for each license or permit type, including review, renewal, and compliance.",
       "whyWrong": [
-        "A single fixed process for every license type would not meet the real variety of licensing programs agencies run.",
-        "Licensing and permitting ties directly into inspections and compliance actions, they are not disconnected.",
-        "Public Sector Solutions is used across federal, state, and local government contexts, not limited to federal agencies."
+        "Agencies can configure processes for different license types.",
+        "Licensing and permitting can connect to inspections and compliance.",
+        "Public Sector Solutions supports public agencies at different levels of government."
       ]
     },
     {
-      "question": "A consultant is asked whether the Public Sector Solutions Consultant exam's passing score is published by Salesforce. What is the accurate answer to give a client?",
+      "question": "A city agency investigates fraud across departments and needs to share relevant case details with an authorized partner. What should the consultant recommend?",
       "options": [
-        "Yes, it is always exactly 65% for every candidate",
-        "No, Salesforce has not published a specific passing score for this exam as of this writing, so candidates should verify current details in their certification account",
-        "No passing score exists; everyone who registers automatically passes",
-        "The passing score changes daily based on the candidate's location"
+        "Publish the full case file on a public portal while following the agency review and access rules",
+        "Email all case records to every partner employee",
+        "Use Investigative Case Management with need-to-know sharing",
+        "Copy restricted details into an unrestricted spreadsheet while following the agency review and access rules"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Investigative Case Management supports investigation workflows, while compliant sharing should limit disclosure to authorized recipients and relevant data.",
+      "whyWrong": [
+        "Publishing a full file would expose case details broadly.",
+        "Sending all records ignores authorization and data minimization.",
+        "An unrestricted spreadsheet can expose sensitive details outside approved controls."
+      ]
+    },
+    {
+      "question": "An agency wants investigators to manage complex matters involving people, incidents, evidence, and follow-up. Which solution is most relevant?",
+      "options": [
+        "Licensing and permit renewal while following the agency review and access rules",
+        "Investigative Case Management",
+        "Volunteer shift scheduling",
+        "Donor gift servicing while following the agency review and access rules"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce has not published a specific passing score for this exam, so the accurate guidance is to verify current exam details directly rather than quote an unverified number.",
+      "explanation": "Investigative Case Management supports investigation workflows and related records such as people, incidents, evidence, and activities.",
       "whyWrong": [
-        "Stating a specific unpublished number as fact would be inaccurate and misleading to the client.",
-        "There is still a pass/fail outcome; registration alone doesn't guarantee passing.",
-        "There's no basis for a passing score that changes daily by location; this misrepresents how certification scoring works."
+        "Licensing handles permits and renewals, not investigations.",
+        "Volunteer scheduling is unrelated to public-sector investigations.",
+        "Donor gift servicing is a nonprofit fundraising workflow."
+      ]
+    },
+    {
+      "question": "An investigator needs to share case information with another authorized agency while protecting restricted details. What should the consultant recommend?",
+      "options": [
+        "Export the full case file to a public folder while following the agency review and access rules",
+        "Email all records to every partner contact while following the agency review and access rules",
+        "Use approved, permission-controlled sharing and disclose only authorized data",
+        "Copy sensitive details into an unrestricted report while following the agency review and access rules"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Use compliant sharing controls, confirm recipient authorization, and disclose only the information needed for the permitted purpose.",
+      "whyWrong": [
+        "This alternative does not meet the scenario requirements. Use compliant sharing controls, confirm recipient authorization, and disclose only the information needed for the permitted purpose.",
+        "This alternative does not meet the scenario requirements. Use compliant sharing controls, confirm recipient authorization, and disclose only the information needed for the permitted purpose.",
+        "This alternative does not meet the scenario requirements. Use compliant sharing controls, confirm recipient authorization, and disclose only the information needed for the permitted purpose."
+      ]
+    },
+    {
+      "question": "A licensing team wants applicants to submit complete applications online and check progress. What should the portal support?",
+      "options": [
+        "Staff-only access with no status view while following the agency review and access rules",
+        "A shared spreadsheet of applicant data while following the agency review and access rules",
+        "A generic page that accepts no documents while following the agency review and access rules",
+        "Secure submission, required document collection, and application status"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A secure self-service experience can collect required materials and show relevant case or application status.",
+      "whyWrong": [
+        "A staff-only process does not provide online applicant self-service.",
+        "A shared spreadsheet creates access and process-control risks.",
+        "A page that cannot accept documents does not meet the stated requirement."
+      ]
+    },
+    {
+      "question": "A benefits program needs to verify eligibility before a caseworker approves an application. What should the process include?",
+      "options": [
+        "Configured eligibility checks and a review step before determination",
+        "Automatic approval of every submitted application while following the agency review and access rules",
+        "A permit inspection with no applicant record while following the agency review and access rules",
+        "A public report containing income documents while following the agency review and access rules"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Eligibility rules and review steps help staff assess an application before making a benefits determination.",
+      "whyWrong": [
+        "Automatic approval skips the required eligibility assessment.",
+        "A permit inspection is a different public-sector workflow.",
+        "Sensitive documents should not be exposed through a public report."
+      ]
+    },
+    {
+      "question": "A field inspector completes a site visit and finds a violation. What should happen next?",
+      "options": [
+        "Delete the inspection record while following the agency review and access rules",
+        "Replace the inspection with a grant application while following the agency review and access rules",
+        "Close the matter without notifying staff while following the agency review and access rules",
+        "Record findings and route the case for the required follow-up"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Recording findings and routing follow-up preserves the inspection history and supports enforcement or remediation.",
+      "whyWrong": [
+        "This alternative does not meet the scenario requirements. Recording findings and routing follow-up preserves the inspection history and supports enforcement or remediation.",
+        "This alternative does not meet the scenario requirements. Recording findings and routing follow-up preserves the inspection history and supports enforcement or remediation.",
+        "This alternative does not meet the scenario requirements. Recording findings and routing follow-up preserves the inspection history and supports enforcement or remediation."
       ]
     }
   ],
   "introLead": [
     {
       "type": "text",
-      "text": "Public Sector Solutions Consultant covers licensing and permitting, inspections, grants and benefits management, government case management, and constituent self-service. This is a newly launched 2026 credential, so use this sample practice set alongside Salesforce's own"
+      "text": "This guide covers licensing, inspections, grants, benefits, cases, and constituent self-service. Use these practice questions alongside Salesforce's own"
     },
     {
       "type": "link",

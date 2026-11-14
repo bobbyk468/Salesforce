@@ -1,86 +1,86 @@
 {
   "template": "associate",
-  "expertInsight": "Salesforce's current credential name is Salesforce Certified Marketing Cloud Account Engagement Specialist. This page uses “Pardot Specialist” as a legacy search label; current Salesforce materials call the product Account Engagement.",
+  "expertInsight": "Salesforce now calls Pardot Marketing Cloud Account Engagement. The product name changed in 2022. Salesforce’s current credential name is Marketing Cloud Account Engagement Specialist; “Pardot Specialist” remains a useful legacy search term.",
   "whoIsThisFor": {
     "heading": "Who is the Account Engagement Specialist exam for?",
     "personas": [
       {
         "label": "B2B marketing practitioners",
-        "description": "You use Account Engagement (Pardot) daily for email campaigns, forms, and lead nurturing and want to certify your hands-on skills."
+        "description": "You build and send B2B emails, manage forms, and use Account Engagement to nurture prospects."
       },
       {
         "label": "Marketing coordinators and specialists",
-        "description": "You configure automation rules, dynamic lists, and Engagement Studio programs and want formal recognition of your Pardot proficiency."
+        "description": "You maintain lists, automation rules, and Engagement Studio programs for your marketing team."
       },
       {
         "label": "Salesforce admins supporting marketing teams",
-        "description": "You manage the Pardot-Salesforce integration and want to validate your knowledge of prospect sync, scoring, and lead management."
+        "description": "You help marketing users with prospect records, Salesforce sync, and lead qualification."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Account Engagement Specialist Exam Hard?",
-    "summary": "The official exam guide covers visitors and prospects, administration, forms and landing pages, lead management, email marketing, and Engagement Studio.",
+    "summary": "The Account Engagement Specialist exam checks whether you can use the product’s main marketing features. Study prospect records, administration, forms, lead management, email, and Engagement Studio. Be ready to apply settings to practical tasks.",
     "bullets": [
-      "<strong>60 multiple-choice/multiple-select questions</strong> and up to five unscored questions in 90 minutes.",
-      "<strong>72% passing score.</strong>",
-      "<strong>Exam objectives:</strong> Visitors and Prospects (8%), Administration (11%), Forms, Form Handlers and Landing Pages (20%), Lead Management (24%), Email Marketing (20%), and Engagement Studio (17%).",
-      "<strong>Preparation:</strong> Review how scoring, grading, automation, prospect records, and Salesforce integration work against the official objectives."
+      "<strong>Format:</strong> The guide lists 60 scored multiple-choice or multiple-select questions, up to five unscored questions, and 90 minutes.",
+      "<strong>72% to pass</strong>, which is 44 correct answers out of 60.",
+      "<strong>Exam topics:</strong> The guide covers visitors and prospects, administration, forms and landing pages, lead management, email marketing, and Engagement Studio.",
+      "<strong>Preparation:</strong> Practice the product tasks in a safe account and check your study against the current official exam guide."
     ],
-    "passRateGuidance": "Use hands-on practice to review the official objectives. Build a sample Engagement Studio program, and explain scoring, grading, and prospect sync behavior."
+    "passRateGuidance": "Use the exam outline as a checklist. Practice setting up forms, lists, scoring, automation, and nurture programs, then explain what each setting will do to a prospect record."
   },
   "examFormat": {
     "heading": "Account Engagement Specialist Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "The official guide does not publish a percentage of scenario-based questions. Practice applying its objectives to prospect, automation, forms, and Salesforce integration situations.",
+    "intro": "The exam is proctored online or at a test center and uses multiple-choice and multiple-select questions.",
+    "scenarioPercent": "Salesforce does not publish the share of scenario questions. Prepare to apply the product features to tasks involving prospects, forms, email, automation, and Salesforce sync.",
     "bestWayToPass": [
-      "<strong>Know the automation hierarchy:</strong> Understand when to use completion actions (one-time, asset-specific), automation rules (continuous, criteria-based), and Engagement Studio (multi-step nurture programs).",
-      "<strong>Master scoring vs grading:</strong> Scoring measures engagement (activity-based), grading measures fit (attribute-based). Know scoring categories for multi-product tracking and grading profiles for ideal customer matching.",
-      "<strong>Study Pardot-Salesforce sync:</strong> Understand field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), the connector user’s permissions, and how prospects map to leads and contacts.",
-      "<strong>Practice forms and progressive profiling:</strong> Know the difference between Pardot Forms and Form Handlers, how progressive profiling works on repeat visits, and how completion actions trigger follow-up automations."
+      "<strong>Choose the right automation:</strong> Know what happens after one asset interaction, what an ongoing rule evaluates, and how a nurture program guides prospects over time.",
+      "<strong>Separate interest from fit:</strong> Scoring reflects prospect activity. Grading reflects how well a prospect matches the target profile.",
+      "<strong>Follow prospect sync:</strong> Learn how prospects connect to Salesforce leads and contacts, how field sync settings work, and what access the connector user needs.",
+      "<strong>Practice forms and profiling:</strong> Know when a form handler fits an existing external form, and how progressive profiling gathers new details over repeat visits."
     ]
   },
   "differentiation": {
     "heading": "Account Engagement Specialist Traps & Readiness Checklist",
-    "intro": "These topics involve exact Account Engagement feature behavior as well as general marketing concepts.",
+    "intro": "Review the exact behavior of Account Engagement features as well as the marketing concepts behind them.",
     "commonTraps": [
       {
-        "trap": "Treating completion actions, automation rules, and Engagement Studio as interchangeable",
-        "fix": "Use completion actions for asset-specific one-time responses, automation rules for continuous criteria matching, and Engagement Studio for timed nurture journeys with branching."
+        "trap": "Assuming every automation tool does the same job",
+        "fix": "Choose completion actions for a response to an asset interaction, automation rules for ongoing criteria, and Engagement Studio for timed journeys with branches."
       },
       {
         "trap": "Mixing up scoring and grading",
-        "fix": "Scoring measures engagement. Grading measures profile fit. Both signals can inform routing and sales follow-up decisions."
+        "fix": "A score reflects engagement; a grade reflects profile fit. Use both when deciding how sales should follow up."
       },
       {
         "trap": "Ignoring connector sync precedence",
-        "fix": "Know field sync behavior, connector user permissions, and when Salesforce, Account Engagement, or most recently updated values win."
+        "fix": "Check field synchronization settings and connector permissions, including which system’s value wins when fields differ."
       },
       {
         "trap": "Choosing Pardot Forms when a Form Handler is required",
-        "fix": "Use Pardot Forms for native hosted capture and progressive profiling; use Form Handlers when an existing external form must stay in place."
+        "fix": "Use a Pardot Form for hosted capture and progressive profiling. A Form Handler connects an existing external form."
       }
     ],
     "readinessBenchmarks": [
-      "You can explain the difference between a dynamic list, segmentation list, suppression list, and automation rule without notes.",
-      "You have built at least one Engagement Studio program with wait steps, rules, and completion actions.",
-      "You can diagnose a prospect sync issue from field values, CRM ownership, and connector permissions.",
-      "You can explain the official objectives and review why each practice answer is correct."
+      "You can distinguish dynamic, segmentation, and suppression lists from automation rules.",
+      "You have built an Engagement Studio program with waits, rules, and completion actions.",
+      "You can investigate a prospect sync issue using field values, ownership, and connector access.",
+      "You can explain the official objectives and why each practice answer fits."
     ],
     "whoShouldSkip": [
-      "You have never configured Account Engagement assets or the Salesforce connector hands-on.",
-      "Your work is mostly Journey Builder, Automation Studio, or Email Studio; start with Marketing Cloud Email Specialist instead."
+      "You have not yet configured Account Engagement assets or its Salesforce connector.",
+      "Your work centers on Journey Builder, Automation Studio, or Email Studio; consider Email Specialist first."
     ],
     "adjacentCerts": [
       {
         "href": "/certifications/pardot-consultant",
         "label": "Account Engagement Consultant",
-        "guidance": "Better if you design full B2B marketing architecture and implementation strategy."
+        "guidance": "Consider this if you design the overall B2B marketing implementation."
       },
       {
         "href": "/certifications/email-specialist",
         "label": "Marketing Cloud Email Specialist",
-        "guidance": "Better if your day-to-day work is Email Studio, deliverability, AMPscript, and subscriber data."
+        "guidance": "Consider this if you work mainly with Email Studio, deliverability, AMPscript, and subscriber data."
       }
     ]
   },
@@ -103,53 +103,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Pardot Specialist: Key Concepts for the Exam",
+    "h2": "Account Engagement Specialist: Key Concepts",
     "blocks": [
       {
-        "heading": "Scoring vs Grading: Interest vs Fit",
-        "body": "**Scoring** is activity-based, it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. **Grading** is attribute-based, it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The official exam outline includes both scoring and grading under Lead Management."
+        "heading": "Scoring and grading",
+        "body": "Scoring estimates interest based on actions such as form submissions, email clicks, and page visits. Grading measures fit with a target profile, using details such as role, industry, or company size. A prospect may show strong interest but still be a poor fit. Use both measures to support lead qualification."
       },
       {
-        "heading": "Automation Hierarchy: Completion Actions vs Automation Rules vs Engagement Studio",
-        "body": "**Completion Actions** fire once when a prospect interacts with a specific asset (form submitted, email clicked). **Automation Rules** continuously evaluate all prospects against criteria and fire actions when criteria are met; they can run repeatedly. **Engagement Studio** is for time-based nurture with conditional branching, it combines wait steps and actions into a visual programme. Know when each is appropriate and when they overlap."
+        "heading": "Automation tools",
+        "body": "Completion actions run after a prospect interacts with a specific asset. Automation Rules evaluate prospects against criteria and can take actions when the criteria match. Engagement Studio guides prospects through a nurture program with waits, rules, triggers, and actions. Segmentation Rules create a list from criteria at the time the rule runs; Dynamic Lists update as prospects meet or stop meeting criteria."
       },
       {
-        "heading": "Pardot-Salesforce Sync: Field Sync Behaviour",
-        "body": "When Account Engagement and Salesforce hold different values for the same field, the field sync behaviour setting controls the outcome: Account Engagement wins, Salesforce wins, or Most Recently Updated wins. Each field can be configured independently. Practice tracing sync outcomes when CRM or marketing data should take precedence."
+        "heading": "Salesforce sync",
+        "body": "Account Engagement and Salesforce can hold values for the same field. Its sync behavior setting decides how differences are handled, such as Salesforce taking precedence, Account Engagement taking precedence, or the most recently updated value winning. Check the connector user’s access when records or fields do not sync as expected."
       },
       {
-        "heading": "Prospects and Visitors: Identification and Tracking",
-        "body": "An anonymous website visitor becomes a Prospect when identified by email, via a form submission or a tracked email click that places a browser cookie. Pardot tracks all subsequent page views under that prospect record. **Dynamic Lists** automatically update membership as prospect attributes change. Scoring Categories maintain separate scores per product line. Know how each mechanism connects to prospect lifecycle stages."
+        "heading": "Visitors and prospects",
+        "body": "A visitor is not yet identified. When a person submits a form or follows a tracked email link, Account Engagement may associate browser activity with a prospect record. Dynamic Lists update membership based on current criteria. Scoring Categories keep separate scores for different products or areas of interest."
       },
       {
-        "heading": "Pardot Forms vs Form Handlers",
-        "body": "Pardot Forms are fully hosted by Pardot, they support progressive profiling (showing new fields on repeat visits), built-in validation, and native landing page embedding. Form Handlers connect Pardot to existing third-party forms on external websites, the visitor submits to the third-party form, which posts data to Pardot in the background. Use Form Handlers when you cannot replace an existing form; use Pardot Forms for new data capture assets."
+        "heading": "Forms and form handlers",
+        "body": "An Account Engagement form is hosted by the product and supports features such as validation and progressive profiling. A form handler connects an existing external form to Account Engagement. Choose based on whether the client can replace the form and which form features the process needs."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Account Engagement Specialist Exam",
-    "intro": "The Account Engagement Specialist exam tests hands-on configuration knowledge. Focus on the execution side, automation rules, dynamic lists, email sends, and form configuration, rather than high-level solution design.",
+    "intro": "The Specialist exam focuses on using Account Engagement features correctly. Work through the task the marketer needs to complete, then pick the feature that handles it.",
     "blocks": [
       {
-        "heading": "Automation Rules vs. Segmentation Rules",
-        "body": "Automation Rules run continuously and apply actions retroactively to matching prospects. **Segmentation Rules** run once. Dynamic Lists update membership continuously based on criteria. Know which to use for each requirement."
+        "heading": "Lists and automation",
+        "body": "Use Dynamic Lists for groups that should update as prospect data changes. Use a Segmentation Rule for a group fixed at the time it runs. Match Completion Actions, Automation Rules, and Engagement Studio to the event or journey."
       },
       {
-        "heading": "Email Configuration & Deliverability",
-        "body": "Know the difference between **List Emails**, Engagement Studio emails, and Operational emails (bypass opt-out). Understand SPF, DKIM, and how sender score affects deliverability."
+        "heading": "Email and deliverability",
+        "body": "Check the sending setup and domain authentication when delivery is poor. Learn the purpose of SPF and DKIM, and use appropriate recipient lists and consent settings."
       },
       {
-        "heading": "Dynamic Content",
-        "body": "Know how to configure dynamic content variations based on prospect fields (industry, score, etc.) for email personalization. Understand the default variation requirement and how dynamic content is inserted via HML or custom redirects."
+        "heading": "Dynamic content",
+        "body": "Dynamic content changes a section of an asset based on prospect data. Define a default version and test each variation so every recipient sees suitable content."
       },
       {
-        "heading": "Forms & Progressive Profiling",
-        "body": "Configure forms with dependent fields, progressive profiling (showing new fields on repeat visits), and Kiosk mode for events. Know how completion actions trigger follow-up automations."
+        "heading": "Forms and progressive profiling",
+        "body": "Use a form handler when an external form must remain in place. Progressive profiling can request new fields on later visits. Check which follow-up actions run after submission."
       },
       {
-        "heading": "Pardot API & Integrations",
-        "body": "Know the key Pardot API capabilities, how Pardot integrates with third-party tools via Zapier or direct API, and how the Salesforce-Pardot connector user's permission set controls data sync."
+        "heading": "Salesforce sync",
+        "body": "When data does not appear as expected, check the connector user’s access, the field sync behavior, and the prospect’s related Salesforce record."
       }
     ]
   },
@@ -207,266 +207,266 @@
   ],
   "sampleQuestions": [
     {
-      "question": "An anonymous website visitor fills in a form. What happens to them in Account Engagement?",
+      "question": "A person who has not been identified submits an Account Engagement form. What happens next?",
       "options": [
-        "They stay an anonymous visitor until a sales user converts them by hand",
-        "They are added to the next Engagement Studio program that happens to be running",
-        "They are created as a lead in Salesforce without any Account Engagement record",
-        "They become a prospect record"
+        "Account Engagement creates a prospect record using the submitted identifying details",
+        "The person remains a visitor until a sales rep creates a Salesforce lead",
+        "The form submission starts every active Engagement Studio program",
+        "Salesforce creates a contact, but Account Engagement keeps no record"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A visitor becomes a prospect once identified by email address, which the form submission supplies. Account Engagement can then associate the captured activity with that prospect.",
+      "whyWrong": [
+        "A sales rep does not need to create the prospect manually after an identified form submission.",
+        "A form submission does not enroll someone in every running program.",
+        "Account Engagement records the prospect as well as the form activity."
+      ]
+    },
+    {
+      "question": "Which action usually adds to a prospect’s score?",
+      "options": [
+        "Working for a company in the target industry",
+        "Holding a job title listed in the ideal customer profile",
+        "Working at a company of the preferred size",
+        "Opening a marketing email and clicking a link"
       ],
       "correctAnswer": 3,
-      "explanation": "A visitor becomes a prospect once they are identified by email address, which a form submission supplies. The visitor activity already captured is then associated with that prospect.",
+      "explanation": "Scoring reflects engagement activities such as email opens and link clicks. Grading uses profile attributes to measure fit.",
       "whyWrong": [
-        "Identification happens automatically on submission, with no manual step.",
-        "Program membership is a separate decision from identification.",
-        "The prospect record is created in Account Engagement first."
+        "Industry is a profile detail used to assess fit.",
+        "Job title is a profile detail used to assess fit.",
+        "Company size is a profile detail used to assess fit."
       ]
     },
     {
-      "question": "Which prospect behaviour feeds the score rather than the grade?",
+      "question": "A prospect downloads several guides but works at a company outside the target market. How should the record reflect this?",
       "options": [
-        "The size of the company the prospect works for as recorded on the account",
-        "The industry recorded on the prospect's own company record in the database",
-        "The job title that the prospect entered when they first completed a form",
-        "Opening an email and clicking its links"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Score rises and falls with engagement activities such as email opens, link clicks, form submissions and page views. Grade is driven by profile attributes instead.",
-      "whyWrong": [
-        "Company size is a profile attribute and affects grade.",
-        "Industry is a profile attribute and affects grade.",
-        "Job title is a profile attribute and affects grade."
-      ]
-    },
-    {
-      "question": "A prospect has downloaded three whitepapers but works well outside the target market. How should this look?",
-      "options": [
-        "A low score and a low grade because the company is outside the target market",
-        "High score, low grade",
-        "A low score and a high grade because of the company they happen to work for",
-        "A high score and an equally high grade because of the download activity"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Scoring measures how interested a prospect is, and three downloads is real interest. Grading measures how well they fit the ideal customer profile, which here is poor.",
-      "whyWrong": [
-        "The activity alone rules out a low score, whatever the fit.",
-        "Three downloads is substantial activity, so the score would not be low.",
-        "A high grade would mean the company matches the target profile, which it does not."
-      ]
-    },
-    {
-      "question": "A company wants to keep its website forms exactly as they are but capture the submissions. What fits?",
-      "options": [
-        "A landing page built in Account Engagement and linked from the website menu",
-        "A form handler",
-        "A dynamic list that is populated from the website's own submission database",
-        "An Account Engagement form embedded in place of the current website form"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Form handlers accept posts from existing external forms, so the markup and styling you already have stay untouched while the data flows into Account Engagement.",
-      "whyWrong": [
-        "A landing page hosts new content rather than preserving the current page.",
-        "Dynamic lists segment prospects and do not capture submissions.",
-        "An Account Engagement form would replace the existing form and its markup."
-      ]
-    },
-    {
-      "question": "How do automation rules differ from completion actions?",
-      "options": [
-        "Rules are configured by an administrator and completion actions by a marketer",
-        "Rules apply to prospects and completion actions apply to anonymous visitors",
-        "Rules look across the whole database; actions are tied to one asset",
-        "Rules run only once for each prospect whereas completion actions can run again"
+        "Low score and high grade",
+        "High score and high grade",
+        "High score and low grade",
+        "Low score and low grade"
       ],
       "correctAnswer": 2,
-      "explanation": "Automation rules continually check updated prospects across the database and can match again when a Repeat Rule is enabled. A completion action fires only on the asset it belongs to.",
+      "explanation": "Scoring measures how interested a prospect is, and the downloads show interest. Grading measures fit, so this prospect should have a lower grade.",
       "whyWrong": [
-        "Either can be configured by anyone with the right permission.",
-        "Both work on prospects; neither targets anonymous visitors.",
-        "Repetition is a configuration choice rather than a fixed limit."
+        "The downloads show activity, so the score should not be low.",
+        "A poor fit should not receive a high grade simply for being active.",
+        "The prospect is engaged, so the score should be high."
       ]
     },
     {
-      "question": "A marketer needs a one-time static list of prospects who match a set of criteria as of today. What should they use?",
+      "question": "A company wants to keep its existing website form and capture the submissions in Account Engagement. Which feature should it use?",
       "options": [
-        "A segmentation rule",
+        "An Account Engagement landing page linked from the site",
+        "A form handler connected to the external form",
+        "A Dynamic List populated from the site database",
+        "An Account Engagement form that replaces the external form"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Form handlers connect Account Engagement to existing external forms, so the client can keep its form design and send submissions to the product.",
+      "whyWrong": [
+        "A landing page does not capture submissions from the form the company wants to keep.",
+        "A Dynamic List groups prospects; it does not receive form submissions.",
+        "Replacing the form would not meet the requirement to keep the existing form."
+      ]
+    },
+    {
+      "question": "The team needs to apply a field update to prospects across the database whenever they meet a changing set of criteria. Which tool should they use?",
+      "options": [
+        "An Automation Rule",
+        "A Completion Action on a landing page",
+        "A static list made by a Segmentation Rule",
+        "A one-time export from Salesforce"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Automation Rules continually check updated prospects against criteria and can run again when Repeat Rule is enabled. This lets the rule apply actions when prospects meet the criteria again.",
+      "whyWrong": [
+        "A Completion Action runs after a specific asset interaction.",
+        "A Segmentation Rule creates a list at the time it runs.",
+        "A one-time export does not continue to evaluate changing criteria."
+      ]
+    },
+    {
+      "question": "A marketer wants a fixed list of prospects who met criteria when a campaign launched. What should they run?",
+      "options": [
+        "A Dynamic List",
+        "A Completion Action",
+        "A Segmentation Rule",
+        "An Engagement Studio trigger"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A Segmentation Rule creates a list based on the criteria at the time it runs.",
+      "whyWrong": [
+        "A Dynamic List changes as prospects meet or stop meeting its criteria.",
+        "A Completion Action responds to an asset interaction.",
+        "A trigger checks for behavior within a nurture program."
+      ]
+    },
+    {
+      "question": "A lead is deleted in Salesforce, but its Account Engagement prospect record remains. What should the admin expect?",
+      "options": [
+        "The connector pauses until an admin approves the deletion",
+        "The Salesforce deletion does not automatically delete the prospect record",
+        "Account Engagement creates a replacement lead in Salesforce",
+        "The prospect is removed from all Account Engagement lists immediately"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Salesforce lead deletion does not automatically remove the associated prospect record from Account Engagement.",
+      "whyWrong": [
+        "A deletion does not necessarily pause the connector.",
+        "The deletion does not itself create a replacement lead.",
+        "The prospect record can remain until separately handled."
+      ]
+    },
+    {
+      "question": "Salesforce and Account Engagement contain different values for a synced field. What determines which value is kept?",
+      "options": [
+        "The system with the most custom fields",
+        "The field’s sync behavior setting",
+        "The system where the record was first created",
+        "The user who most recently viewed the record"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The sync behavior configured for that field determines how conflicting values are handled.",
+      "whyWrong": [
+        "The number of custom fields does not decide which value wins.",
+        "Record creation order is not the field sync setting.",
+        "Viewing a record does not change its field value or sync precedence."
+      ]
+    },
+    {
+      "question": "A prospect clicks a tracked link in an email and then browses the company website. Why can Account Engagement connect that activity to the prospect?",
+      "options": [
+        "The tracked link ties the browser to a known prospect",
+        "The website automatically creates a Salesforce contact for every visitor",
+        "The prospect’s company IP address identifies the individual",
+        "A tracking cookie identifies every visitor before they click the email"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A tracked email link can associate the browser with a known prospect, so later visits can be added to that record.",
+      "whyWrong": [
+        "A website visit does not automatically create a contact.",
+        "A shared company IP address does not reliably identify an individual.",
+        "Before identification, a tracking cookie alone does not tell the system who the person is."
+      ]
+    },
+    {
+      "question": "Marketing emails are reaching spam folders. Which setup should the team review first?",
+      "options": [
+        "Whether prospect grades are included in the email template",
+        "Whether Engagement Studio has a wait step before each message",
+        "Check SPF and DKIM for the sending domain",
+        "Whether Dynamic Lists are sorted by score"
+      ],
+      "correctAnswer": 2,
+      "explanation": "SPF and DKIM help mail systems confirm that the sending domain is authorized to send the message.",
+      "whyWrong": [
+        "Grades in a template do not authenticate the sender.",
+        "Wait steps control timing, not domain authentication.",
+        "List sorting does not authenticate email."
+      ]
+    },
+    {
+      "question": "A new Salesforce field is not syncing to Account Engagement. What should the admin check?",
+      "options": [
+        "Whether the prospect has opened an email recently",
+        "Whether the connector user has access to the object and field",
+        "Whether the prospect is on a Dynamic List",
+        "Whether the field is included in an Engagement Studio program"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The connector user needs suitable access for the object and field to sync.",
+      "whyWrong": [
+        "Email activity does not grant field access.",
+        "Dynamic List membership does not control field permissions.",
+        "A program does not enable field synchronization."
+      ]
+    },
+    {
+      "question": "A returning prospect should see only the form fields not already collected. Which feature supports this?",
+      "options": [
         "A completion action",
-        "A dynamic list",
-        "An automation rule"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Segmentation rules run once against matching prospects and produce a fixed list.",
-      "whyWrong": [
-        "Completion actions are tied to a single asset submission.",
-        "A dynamic list keeps updating, which is the opposite of a static snapshot.",
-        "Automation rules run on an ongoing basis rather than once."
-      ]
-    },
-    {
-      "question": "A prospect is deleted in Salesforce but the record remains in Account Engagement. What is the expected sync behaviour?",
-      "options": [
-        "Deletion does not cascade to Account Engagement",
-        "A duplicate prospect is created",
-        "The prospect is deleted immediately in both systems",
-        "The connector pauses until resolved"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Deletion does not cascade from Salesforce to Account Engagement, so the prospect record persists.",
-      "whyWrong": [
-        "No duplicate is produced by a deletion.",
-        "Deletions are not mirrored automatically.",
-        "The connector continues operating normally."
-      ]
-    },
-    {
-      "question": "When a field value differs between Salesforce and Account Engagement, what normally decides the winner?",
-      "options": [
-        "Whichever record was created first",
-        "The value is discarded in both systems",
-        "The field's sync behaviour setting",
-        "Account Engagement always wins"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Each field has a configurable sync behaviour, and the default treats Salesforce as the system of record.",
-      "whyWrong": [
-        "Creation order does not govern field conflicts.",
-        "Conflicts resolve to one value rather than clearing both.",
-        "Account Engagement winning is a configurable option, not the default."
-      ]
-    },
-    {
-      "question": "How does Account Engagement normally convert a visitor into a prospect?",
-      "options": [
-        "When the cookie expires",
-        "The visitor identifies themselves, usually via a form",
-        "After a set number of page views",
-        "Only once a sales user has created the record by hand"
-      ],
-      "correctAnswer": 1,
-      "explanation": "An anonymous visitor becomes a prospect once they supply identifying information, most commonly through a form.",
-      "whyWrong": [
-        "Cookie expiry ends tracking rather than creating a prospect.",
-        "Page view volume alone does not identify anybody.",
-        "Manual creation is possible but is not the normal conversion path."
-      ]
-    },
-    {
-      "question": "A company wants to keep its existing website form markup and styling exactly as it is, but capture submissions in Account Engagement. What fits?",
-      "options": [
+        "A scoring category",
         "A form handler",
-        "An Account Engagement form",
-        "A landing page",
-        "A dynamic list"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Form handlers accept posts from a form you host and style yourself, leaving the existing markup untouched.",
-      "whyWrong": [
-        "An Account Engagement form would replace the existing form and its markup.",
-        "A landing page hosts new content rather than preserving an existing page.",
-        "Dynamic lists segment prospects and do not capture submissions."
-      ]
-    },
-    {
-      "question": "What is a trade-off of using a form handler rather than an Account Engagement form?",
-      "options": [
-        "It cannot pass data to Salesforce",
-        "It requires a separate Engagement Studio licence to be bought",
-        "It cannot trigger completion actions",
-        "Progressive profiling and validation are unavailable"
+        "Progressive profiling"
       ],
       "correctAnswer": 3,
-      "explanation": "Features built into Account Engagement forms, including progressive profiling and native validation, are lost when you host the form yourself.",
+      "explanation": "Progressive profiling can present new fields on later visits instead of asking for the same details again.",
       "whyWrong": [
-        "Form handlers do pass captured data through to Account Engagement and on to Salesforce.",
-        "No separate licence is involved.",
-        "Completion actions are available on form handlers."
+        "A Completion Action runs after an asset interaction.",
+        "A Scoring Category separates scores; it does not control form fields.",
+        "A Form Handler connects an external form to Account Engagement."
       ]
     },
     {
-      "question": "What does progressive profiling achieve on a form?",
+      "question": "A prospect should wait three days before moving to the next step in Engagement Studio. Which element creates the delay?",
       "options": [
-        "It asks only for fields not yet captured",
-        "It scores the prospect twice",
-        "It hides the whole form from any prospect already known",
-        "It validates email syntax"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Progressive profiling keeps forms short by requesting only fields not yet captured for that prospect.",
-      "whyWrong": [
-        "Scoring is unrelated to field display.",
-        "The form remains available to known prospects with different fields.",
-        "Syntax validation is a separate form feature."
-      ]
-    },
-    {
-      "question": "An Engagement Studio program should pause a prospect's path for three days before the next email. Which element does this?",
-      "options": [
-        "A rule",
-        "A trigger",
         "A wait step",
-        "An action step"
+        "A trigger",
+        "A rule",
+        "An action"
       ],
-      "correctAnswer": 2,
-      "explanation": "Wait steps hold the prospect in place for a defined period before the program continues.",
+      "correctAnswer": 0,
+      "explanation": "A wait step holds the prospect for the set period before the program continues.",
       "whyWrong": [
-        "Rules branch on data the prospect already has.",
-        "Triggers branch on something the prospect does within a window.",
-        "Actions change data or send something."
+        "A trigger checks for behavior.",
+        "A rule checks prospect data.",
+        "An action performs a task; it does not create a time delay."
       ]
     },
     {
-      "question": "What is the difference between a trigger and a rule in Engagement Studio?",
+      "question": "Within Engagement Studio, what does a trigger check that a rule does not?",
       "options": [
-        "A trigger is faster",
-        "A rule may only be used once in any single program",
-        "They behave identically",
-        "A trigger waits for behaviour; a rule checks data"
+        "Whether prospect data matches set criteria",
+        "Whether the prospect has reached a score threshold",
+        "Whether the prospect has performed a behavior such as clicking an email",
+        "Whether the prospect belongs to a particular Salesforce campaign"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A trigger waits for a prospect action, such as an email click. A rule checks information already stored on the prospect.",
+      "whyWrong": [
+        "Checking stored prospect details is the role of a rule.",
+        "A score threshold is a data condition a rule can evaluate.",
+        "Campaign membership is prospect data, not a behavior trigger."
+      ]
+    },
+    {
+      "question": "A prospect submits a form and should receive a follow-up action tied only to that form. Which feature fits?",
+      "options": [
+        "A Dynamic List based on the prospect’s current score",
+        "A Segmentation Rule that runs once each morning",
+        "An Automation Rule that watches the entire prospect database",
+        "A Completion Action on the form"
       ],
       "correctAnswer": 3,
-      "explanation": "Triggers listen for behaviour during a window, while rules evaluate existing prospect data immediately.",
+      "explanation": "Completion Actions run after a prospect interacts with a specific asset, such as submitting this form.",
       "whyWrong": [
-        "Speed is not the distinction.",
-        "There is no single-use restriction on rules.",
-        "They evaluate genuinely different things."
+        "A Dynamic List updates membership but does not run a one-time form-specific follow-up.",
+        "A Segmentation Rule creates a list from criteria at the time it runs.",
+        "An Automation Rule evaluates prospect criteria, rather than responding only to this form submission."
       ]
     },
     {
-      "question": "Scoring has been configured so that a pricing page visit adds more points than a blog visit. Why is this reasonable?",
+      "question": "A marketer wants one email to show different product information based on each prospect’s industry. What should they add?",
       "options": [
-        "Scores must always differ between pages",
-        "Blog pages are not tracked by default",
-        "Pricing interest signals stronger buying intent",
-        "Pricing pages load more quickly than the blog pages do"
+        "A Segmentation Rule",
+        "A Form Handler",
+        "A separate email send for every prospect",
+        "Dynamic Content"
       ],
-      "correctAnswer": 2,
-      "explanation": "Scoring is meant to reflect how much an action indicates intent, and pricing interest indicates more than casual reading.",
+      "correctAnswer": 3,
+      "explanation": "Dynamic Content can show different sections of an asset based on prospect field values.",
       "whyWrong": [
-        "Equal weighting is allowed; the point is that weight should reflect intent.",
-        "Blog visits are tracked and can carry points.",
-        "Load speed has nothing to do with scoring."
-      ]
-    },
-    {
-      "question": "A marketer wants different content shown inside one email depending on the prospect's industry. What should they use?",
-      "options": [
-        "A segmentation rule",
-        "Dynamic content",
-        "A separate email per industry",
-        "A form handler"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Dynamic content varies a region of the email based on prospect field values, keeping it to a single asset.",
-      "whyWrong": [
-        "Segmentation rules build lists rather than varying content within an email.",
-        "Building one email per industry multiplies maintenance for the same result.",
-        "Form handlers capture submissions and do not affect email content."
+        "A Segmentation Rule groups prospects but does not vary content within an email.",
+        "A Form Handler receives data from an external form.",
+        "The same asset can serve different content without sending a separate email to each person."
       ]
     }
   ],
   "introLead": [
     {
       "type": "text",
-      "text": "This guide covers Marketing Cloud Account Engagement work across prospects, lead qualification, forms, email, automation, and reporting. Its 15 sample questions check prospect records, scoring versus grading, and forms versus form handlers. Compare the practice set with Salesforce's"
+      "text": "This guide covers hands-on Marketing Cloud Account Engagement work: prospects, lists, lead qualification, forms, email, automation, and Salesforce sync. The 16 sample questions focus on day-to-day setup and troubleshooting. Compare your study plan with Salesforce’s "
     },
     {
       "type": "link",

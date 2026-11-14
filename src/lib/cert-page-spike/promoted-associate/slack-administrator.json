@@ -21,8 +21,8 @@
     "heading": "Is the Slack Administrator Exam Hard?",
     "summary": "This exam covers many parts of Slack administration: workspaces and Enterprise Grid, user accounts, app approvals, security and compliance, and Workflow Builder.",
     "bullets": [
-      "<strong>60 scored questions</strong> and up to 5 unscored questions in 105 minutes.",
-      "<strong>65% to pass,</strong> or 39 of 60 scored questions. Check the official exam guide before booking.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
       "<strong>Wide coverage.</strong> Review settings, permissions, Enterprise Grid, Slack Connect, security, compliance, and automation.",
       "<strong>Hands-on admin work helps.</strong> Practice SSO, user provisioning, and app approvals in Slack."
     ],

@@ -272,7 +272,7 @@
         "Runs a custom Flow that rewrites each agent output into the brand's tone"
       ],
       "correctAnswer": 0,
-      "explanation": "The Einstein Trust Layer protects customer data when Agentforce uses external large language models. It can mask sensitive data, prevent model providers from retaining data, and log AI activity for review.",
+      "explanation": "The Einstein Trust Layer applies privacy controls such as zero data retention at supported external model providers. Pattern-based and field-based PII masking is disabled for Agentforce agents. The available audit records depend on the service and configuration.",
       "whyWrong": [
         "Performance reports do not provide privacy and security controls.",
         "Human approval for every answer is not what the Trust Layer does.",

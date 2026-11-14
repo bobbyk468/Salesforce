@@ -115,12 +115,26 @@ export default function CertificationGrid({
                           {cert.name}
                         </Link>
                       </CardHeading>
+                    </div>
+
+                    <div className="mb-3 flex flex-wrap gap-2">
+                      {cert.examCode && (
+                        <span className="rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-xs font-semibold text-gray-700">
+                          {cert.examCode}
+                        </span>
+                      )}
                       {cert.level && (
-                        <span className="flex-shrink-0 rounded-full bg-salesforce-blue/10 px-2.5 py-1 text-xs font-semibold text-salesforce-dark">
+                        <span className="rounded-full bg-salesforce-blue/10 px-2.5 py-1 text-xs font-semibold text-salesforce-dark">
                           {cert.level}
                         </span>
                       )}
                     </div>
+
+                    {cert.statusNote && (
+                      <p className="mb-3 rounded-md border border-amber-200 bg-amber-50 px-2.5 py-1.5 text-xs font-semibold text-amber-900">
+                        {cert.statusNote}
+                      </p>
+                    )}
 
                     <p className="mb-4 text-sm leading-relaxed text-gray-600">
                       {cert.description}

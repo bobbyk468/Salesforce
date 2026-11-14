@@ -49,19 +49,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Should you take ADM-201 or App Builder first?',
-    answer: 'Always start with ADM-201. The Platform App Builder certification builds directly on admin knowledge, custom objects, validation rules, and automation concepts are shared between both exams. ADM-201 provides the foundation.',
+    answer: 'Start with ADM-201. Platform App Builder builds on admin knowledge, and the exams share topics such as custom objects, validation rules, and automation. ADM-201 gives you the platform foundation for App Builder.',
   },
   {
     question: 'Is ADM-201 harder than Platform App Builder?',
-    answer: 'ADM-201 is broader and generally considered harder due to its wider scope: 65 questions across 7 topic areas. App Builder is more focused on declarative development. Candidates with a development background may find App Builder easier.',
+    answer: 'ADM-201 covers more areas and is often considered harder because it has 65 questions across 7 topic areas. App Builder focuses on declarative development. If you have development experience, you may find App Builder easier.',
   },
   {
     question: 'Do ADM-201 and App Builder share exam content?',
-    answer: 'Yes, approximately 30% of content overlaps, particularly in automation (Flows, Process Builder), data modelling (custom objects, fields), and Lightning App Builder. Studying for both together is efficient.',
+    answer: 'Yes. About 30% of the topics overlap, including automation (Flows and Process Builder), data modeling (custom objects and fields), and Lightning App Builder. Some candidates prepare for both exams during the same study period.',
   },
   {
     question: 'Which certification is more valuable: ADM-201 or App Builder?',
-    answer: 'ADM-201 is more widely recognised for Salesforce Admin roles and is often required by employers. App Builder is more valuable for developer-adjacent or product builder roles and is a prerequisite for the System Architect certification path.',
+    answer: 'ADM-201 is more widely recognized for Salesforce admin roles and is often listed by employers. App Builder can help with roles focused on building Salesforce apps and supports the System Architect certification path.',
   },
 ]
 
@@ -79,8 +79,8 @@ export default function Adm201VsAppBuilderPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both certifications are declarative and popular for Salesforce careers, but they test different strengths.
-          This guide helps you choose the right starting point based on your role and goals.
+          Both certifications focus on Salesforce configuration, but they cover different skills.
+          Compare their focus areas and choose a starting point that fits your role and goals.
         </p>
       </header>
 
@@ -91,10 +91,10 @@ export default function Adm201VsAppBuilderPage() {
           certSlug: "administrator",
           examTipsSlug: "certifications/administrator",
           conditions: [
-          "You are new to Salesforce entirely",
-          "Your role involves users, data, security, or reports",
-          "You want the most widely required Salesforce credential",
-          "You are building a foundation for all future certifications",
+          "You are new to Salesforce",
+          "Your work involves users, data, security, or reports",
+          "You want a credential commonly requested for admin roles",
+          "You want a foundation for other Salesforce certifications",
           ],
         }}
         certB={{
@@ -102,17 +102,17 @@ export default function Adm201VsAppBuilderPage() {
           certSlug: "app-builder",
           examTipsSlug: "certifications/app-builder",
           conditions: [
-          "You already hold the Admin certification",
-          "You build Lightning pages, flows, or custom apps regularly",
-          "You want a fast second cert with high overlap to your existing knowledge",
-          "You are planning toward the Architect certification path",
+          "You already have the Administrator certification",
+          "You regularly build Lightning pages, flows, or custom apps",
+          "You want a second certification that builds on your current knowledge",
+          "You are working toward the Architect certification path",
           ],
         }}
         recommendation={{
           certName: "Salesforce Administrator",
           certSlug: "administrator",
           examTipsSlug: "certifications/administrator",
-          reason: "Always take Administrator first. It is the required foundation: App Builder explicitly builds on ADM-201 content, and many employers list Admin as a prerequisite for App Builder roles. Attempting App Builder without Admin knowledge is the most common reason candidates fail.",
+          reason: "Take Administrator first to build your knowledge of Salesforce setup, security, automation, and data. App Builder uses many of the same platform concepts, so this foundation can make the next exam easier to prepare for.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin Certification Path",
         }}
@@ -167,17 +167,17 @@ export default function Adm201VsAppBuilderPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which One Should You Take First?</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>ADM-201 first</strong> if you are new to Salesforce or preparing for admin-focused roles.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>DEV-402 next</strong> if you want to build custom applications after mastering admin fundamentals.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />For most candidates, the best path is ADM-201 -&gt; DEV-402 -&gt; Advanced Administrator or Consultant tracks.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Start with <strong>ADM-201</strong> if you are new to Salesforce or want an admin-focused role.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>DEV-402 next</strong> if you want to build custom apps using declarative tools.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />A common sequence is ADM-201, then DEV-402, followed by an Advanced Administrator or Consultant path.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Career Outcome &amp; Salary Differences</h2>
         <p className="text-sm text-gray-700 mb-4">
-          ADM-201 signals readiness for day-to-day Salesforce administration: user setup, access controls, standard automation, data integrity, and reporting.
-          App Builder validates that you can design and build custom apps with stronger declarative architecture skills.
+          ADM-201 covers day-to-day Salesforce administration, including user setup, access controls, automation, data quality, and reporting.
+          App Builder focuses on designing and creating custom apps with declarative tools.
         </p>
         <div className="grid sm:grid-cols-2 gap-4 mb-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
@@ -200,8 +200,8 @@ export default function Adm201VsAppBuilderPage() {
           </div>
         </div>
         <p className="text-sm text-gray-700">
-          If your immediate goal is to get into Salesforce operations roles quickly, ADM-201 gives faster job-market relevance.
-          Adding DEV-402 after ADM-201 typically adds $15–25k to salary range and unlocks Consultant-track opportunities.
+          If you are aiming for a Salesforce operations role, ADM-201 may be the more relevant first credential.
+          Adding DEV-402 can show that you also know how to design and build custom apps, and it supports Consultant-track options.
         </p>
       </section>
 

@@ -45,23 +45,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Which should I take first: UX Designer or Strategy Designer?',
-    answer: 'If you have a design or UX background. Start with UX Designer, it tests familiar skills (research, wireframing, prototyping, usability testing) applied to the Salesforce platform. If you have a business analysis, consulting, or product strategy background. Start with Strategy Designer, it tests design thinking methodology and business context framing that aligns better with strategic roles. Many professionals hold both certifications, as they are complementary.',
+    answer: 'Start with UX Designer if you have a design or UX background. It applies familiar skills such as research, wireframing, prototyping, and usability testing to Salesforce. If your background is business analysis, consulting, or product strategy, consider Strategy Designer, which focuses on design thinking and framing business problems. The certifications cover different parts of the design process, so some people earn both.',
   },
   {
     question: 'Are UX Designer and Strategy Designer useful for non-designers?',
-    answer: 'Yes, both certifications are valuable for Salesforce professionals who are not traditional designers. Admins who design user flows, business analysts who design processes, consultants who present solutions to clients, and project managers who oversee implementations all benefit from designer-track knowledge. The certifications are increasingly valued in consulting engagements where UX and design thinking improve Salesforce adoption.',
+    answer: 'Yes. Admins who design user flows, business analysts who map processes, consultants who present solutions, and project managers who guide implementations can all use designer-track skills. UX and design thinking can help teams improve how people use Salesforce.',
   },
   {
     question: 'Which certification is harder: UX Designer or Strategy Designer?',
-    answer: 'Most candidates find Strategy Designer slightly harder than UX Designer, the passing score is lower (70% vs 65%) reflecting the difficulty. Strategy Designer requires applying abstract design thinking frameworks to complex business scenarios, which is less intuitive for candidates without strategic design exposure. UX Designer tests more concrete skills (research methods, wireframing, SLDS) that are easier to study from materials.',
+    answer: 'Candidates may find Strategy Designer more challenging because it asks them to apply abstract design frameworks to complex business situations. The passing scores are 70% for Strategy Designer and 65% for UX Designer. UX Designer focuses on practical skills such as research methods, wireframing, and SLDS, which some candidates find easier to prepare for.',
   },
   {
     question: 'What jobs require UX Designer vs Strategy Designer?',
-    answer: 'UX Designer is most relevant for roles like: Salesforce UX Designer, Lightning Experience Designer, CRM Adoption Specialist, and Solution Designer. Strategy Designer is most relevant for roles like: Design Strategist, Digital Transformation Consultant, Product Manager, and Customer Experience Architect. Both certifications appear in job descriptions for senior consultant and architect roles where design thinking is valued.',
+    answer: 'UX Designer aligns with roles such as Salesforce UX Designer, Lightning Experience Designer, CRM Adoption Specialist, and Solution Designer. Strategy Designer aligns with Design Strategist, Digital Transformation Consultant, Product Manager, and Customer Experience Architect roles. Both can be relevant to senior consultant and architect roles that use design thinking.',
   },
   {
     question: 'Can I take both UX Designer and Strategy Designer exams?',
-    answer: 'Yes; you can hold both certifications. Many Salesforce designers hold both, as they cover different aspects of the design process. UX Designer covers execution (research → prototype → test), and Strategy Designer covers strategy (business context → product direction → outcome measurement). Together they demonstrate end-to-end design capability from strategic framing through tactical delivery.',
+    answer: 'Yes. The certifications cover different stages of design work. UX Designer focuses on execution: research, prototyping, and testing. Strategy Designer focuses on framing the business context, setting product direction, and measuring outcomes. Together, they cover work from strategic planning through detailed design.',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both sit in the Salesforce Designer track, but they test very different skills. Here is a full comparison to help you choose which to take first (or whether to pursue both).
+          Both certifications are in the Salesforce Designer track, but one centers on user experience and the other on business strategy. Compare their work and exam focus to choose what fits your role.
         </p>
       </div>
 
@@ -90,10 +90,10 @@ export default function UxDesignerVsStrategyDesignerPage() {
           certSlug: "ux-designer",
           examTipsSlug: "certifications/ux-designer",
           conditions: [
-          "You design interfaces, flows, or Lightning page layouts in Salesforce",
-          "You want to demonstrate UX fundamentals and accessibility knowledge",
-          "You work closely with developers on component and page design",
-          "You are new to the designer certification track",
+          "You design Salesforce interfaces, flows, or Lightning page layouts",
+          "You want to show your knowledge of UX fundamentals and accessibility",
+          "You collaborate with developers on components and pages",
+          "You are entering the designer certification track",
           ],
         }}
         certB={{
@@ -102,16 +102,16 @@ export default function UxDesignerVsStrategyDesignerPage() {
           examTipsSlug: "certifications/strategy-designer",
           conditions: [
           "You lead discovery workshops, journey mapping, or design sprints",
-          "You translate ambiguous business problems into Salesforce solutions",
-          "You work at a strategic level with stakeholders, not just on UI",
-          "You want the higher-differentiation credential in the designer track",
+          "You turn broad business problems into Salesforce solutions",
+          "You work with stakeholders on strategy as well as interface decisions",
+          "You want to focus on strategy and design thinking",
           ],
         }}
         recommendation={{
           certName: "UX Designer",
           certSlug: "ux-designer",
           examTipsSlug: "certifications/ux-designer",
-          reason: "UX Designer covers the foundational design principles that underpin Strategy Designer content. Take it first to build the vocabulary and frameworks, then Strategy Designer becomes a natural, well-supported progression.",
+          reason: "Choose UX Designer if you want to apply research and interface design in Salesforce. Choose Strategy Designer if your work starts earlier, with discovery, business goals, and product direction. The order depends on whether your current work is hands-on design or strategic planning.",
           
         }}
       />
@@ -202,11 +202,11 @@ export default function UxDesignerVsStrategyDesignerPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Designing wireframes, prototypes, and Lightning UI components</td><td className="py-2.5 font-semibold text-salesforce-blue">UX Designer</td></tr>
-              <tr><td className="py-2.5 pr-4">Facilitating service design, customer journey mapping, or CX strategy workshops</td><td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td></tr>
-              <tr><td className="py-2.5 pr-4">UI/UX designer with Figma, wireframing, or accessibility background</td><td className="py-2.5 font-semibold text-salesforce-blue">UX Designer, direct skill transfer</td></tr>
-              <tr><td className="py-2.5 pr-4">Business analyst or consultant focused on outcomes and process redesign</td><td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td></tr>
-              <tr><td className="py-2.5 pr-4">Both, which first?</td><td className="py-2.5 font-semibold text-gray-700">UX Designer, more practical for Salesforce orgs; Strategy Designer is more senior/consultative</td></tr>
+              <tr><td className="py-2.5 pr-4">You design wireframes, prototypes, or Lightning UI components</td><td className="py-2.5 font-semibold text-salesforce-blue">UX Designer</td></tr>
+              <tr><td className="py-2.5 pr-4">You facilitate service design, journey mapping, or customer experience workshops</td><td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td></tr>
+              <tr><td className="py-2.5 pr-4">You have a UI/UX background in Figma, wireframing, or accessibility</td><td className="py-2.5 font-semibold text-salesforce-blue">UX Designer, direct skill transfer</td></tr>
+              <tr><td className="py-2.5 pr-4">You work as an analyst or consultant focused on outcomes and process change</td><td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td></tr>
+              <tr><td className="py-2.5 pr-4">You plan to earn both and need an order</td><td className="py-2.5 font-semibold text-gray-700">Choose by your current focus: UX execution or strategy and discovery</td></tr>
             </tbody>
           </table>
         </div>
@@ -216,7 +216,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice for Both Designer Exams</h2>
-        <p className="text-white mb-6">Free practice questions for UX Designer and Strategy Designer, both in the Salesforce Designer track.</p>
+        <p className="text-white mb-6">Try free practice questions for both Salesforce Designer track exams.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/ux-designer" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             UX Designer Practice

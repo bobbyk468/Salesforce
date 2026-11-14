@@ -47,19 +47,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Can you take PD2 without PD1?',
-    answer: 'No: Salesforce Platform Developer II (PD2) officially requires PD1 certification as a prerequisite. You cannot register for PD2 without holding an active PD1 credential.',
+    answer: 'No. You must hold an active Platform Developer I (PD1) credential before you can register for Platform Developer II (PD2).',
   },
   {
     question: 'Which is harder, PD1 or PD2?',
-    answer: 'PD2 is significantly harder. While PD1 tests Apex fundamentals and governor limits, PD2 tests advanced design patterns, complex REST and SOAP integrations, and performance optimisation. Most PD2 candidates need 6–12 months of real project experience after PD1.',
+    answer: 'PD2 is significantly harder. PD1 covers Apex fundamentals and governor limits, while PD2 covers advanced design patterns, complex REST and SOAP integrations, and performance optimization. Many candidates need 6–12 months of project experience after PD1.',
   },
   {
     question: 'How long after PD1 should you wait before taking PD2?',
-    answer: 'Most candidates wait 12–18 months after PD1 to gain sufficient project experience. PD2 is not an exam you can pass on study alone; it requires applied knowledge of trigger frameworks, selector/domain/service layers, and enterprise integration patterns.',
+    answer: 'Many candidates wait 12–18 months after PD1 to gain more project experience. Study alone may not be enough: PD2 expects you to apply trigger frameworks, selector/domain/service layers, and enterprise integration patterns.',
   },
   {
     question: 'Are PD1 and PD2 both needed for the architect track?',
-    answer: 'Yes: PD1 and PD2 are both typically required on the path to Certified Technical Architect (CTA). PD2 is also a recommended (though not always required) precursor to Integration Architect and Application Architect.',
+    answer: 'PD1 and PD2 are both typically part of the path to Certified Technical Architect (CTA). PD2 is also recommended, though not always required, before Integration Architect and Application Architect.',
   },
 ]
 
@@ -77,8 +77,8 @@ export default function Pd1VsPd2Page() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Platform Developer I and Platform Developer II are sequential Salesforce developer credentials.
-          PD1 is required before PD2, and the jump in difficulty is significant. Here is what separates them.
+          Platform Developer I and II are sequential Salesforce developer credentials. PD1 is required for PD2,
+          which expects stronger design, integration, and performance skills. Compare the exams and use the readiness signs below to plan your next step.
         </p>
       </header>
 
@@ -89,10 +89,10 @@ export default function Pd1VsPd2Page() {
           certSlug: "developer-1",
           examTipsSlug: "certifications/developer-1",
           conditions: [
-          "You do not yet hold the PD1 certification",
-          "You are building foundational Apex and LWC skills",
+          "You have not earned PD1 yet",
+          "You are developing your core Apex and LWC skills",
           "You have 0–2 years of Salesforce development experience",
-          "You want the credential that unlocks developer career paths",
+          "You need the foundation for later developer credentials",
           ],
         }}
         certB={{
@@ -101,8 +101,8 @@ export default function Pd1VsPd2Page() {
           examTipsSlug: "certifications/developer-2",
           conditions: [
           "You already hold Platform Developer I",
-          "You work with Apex design patterns, async jobs, or performance tuning daily",
-          "You are targeting senior developer or tech lead roles",
+          "You use Apex patterns, asynchronous jobs, or performance tuning at work",
+          "You are aiming for a senior developer or tech lead role",
           "You have 3+ years of Salesforce development experience",
           ],
         }}
@@ -110,7 +110,7 @@ export default function Pd1VsPd2Page() {
           certName: "Platform Developer I",
           certSlug: "developer-1",
           examTipsSlug: "certifications/developer-1",
-          reason: "PD1 is the prerequisite, not just logically but in employer expectations. You cannot attempt PD2 credibly without having mastered PD1 content. Most developers spend 6–12 months between PD1 and PD2.",
+          reason: "PD1 is a formal prerequisite for PD2. After earning it, give yourself time to apply its concepts in projects before moving to advanced design patterns and integrations. Many developers spend 6–12 months between the exams.",
           careerPathSlug: "developer-certification-path",
           careerPathLabel: "Developer Certification Path",
         }}
@@ -188,25 +188,25 @@ export default function Pd1VsPd2Page() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Gets Harder in PD2?</h2>
         <p className="text-sm text-gray-700 mb-4">
-          PD1 tests whether you understand Apex and the Salesforce data model. PD2 tests whether you can make the right
-          architectural decision under complex constraints. The specific jumps:
+          PD1 checks your understanding of Apex and the Salesforce data model. PD2 asks you to apply that knowledge
+          when designing solutions with more complex requirements. The main areas that require deeper practice are:
         </p>
         <ul className="space-y-2.5 text-sm text-gray-700">
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Integration depth:</strong> PD2 covers REST and SOAP callouts, Named Credentials, Platform Events, and streaming API, none of which appear significantly in PD1.</span>
+            <span><strong>Integration depth:</strong> PD2 covers REST and SOAP callouts, Named Credentials, Platform Events, and streaming API in greater depth than PD1.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Design patterns:</strong> Expect questions on Trigger framework patterns, Selector/Domain/Service layer architecture (FFLib), and when to use each async mechanism at scale.</span>
+            <span><strong>Design patterns:</strong> Study trigger framework approaches, Selector/Domain/Service layer architecture (FFLib), and how to choose asynchronous methods at scale.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Performance:</strong> Query optimization, SOSL vs SOQL trade-offs, collection efficiency, and managing heap/CPU in complex transactions.</span>
+            <span><strong>Performance:</strong> Practice query optimization, SOSL vs SOQL choices, efficient collections, and heap/CPU management in complex transactions.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Testing:</strong> PD2 expects comprehensive test strategies, mock callouts (HttpCalloutMock, WebServiceMock), test data isolation, and complex assertion patterns.</span>
+            <span><strong>Testing:</strong> PD2 expects broader test strategies, mocked callouts (HttpCalloutMock, WebServiceMock), isolated test data, and detailed assertions.</span>
           </li>
         </ul>
       </section>
@@ -215,14 +215,14 @@ export default function Pd1VsPd2Page() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">When Are You Ready for PD2?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Most candidates who struggle with PD2 attempt it too soon after PD1.
-          Salesforce recommends practical experience before sitting PD2, and the exam reflects that.
+          Project experience helps prepare you for PD2's design and troubleshooting scenarios.
+          Use these signs to check whether you are ready to move beyond PD1 fundamentals.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You have built real integrations (REST callouts, Platform Events, external system connections).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can explain and choose between trigger framework patterns (one trigger per object, handler pattern, etc.).</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You are comfortable mocking HTTP callouts in test classes and achieving meaningful assertion coverage.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You score 80%+ consistently on PD1-level practice exams: PD1 fundamentals should feel automatic at the PD2 stage.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You have built integrations using REST callouts, Platform Events, or external systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can explain when to use trigger patterns, such as one trigger per object or a handler pattern.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can mock HTTP callouts in tests and write meaningful assertions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You consistently score 80%+ on PD1 practice exams and can apply the fundamentals without hesitation.</li>
         </ul>
       </section>
 
@@ -230,7 +230,7 @@ export default function Pd1VsPd2Page() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Career Impact: PD1 vs PD1 + PD2</h2>
         <p className="text-sm text-gray-700 mb-3">
-          PD1 alone opens mid-level Salesforce developer roles. Adding PD2 signals senior-level readiness and is often listed as preferred or required for architect-track positions.
+          PD1 can support applications for Salesforce developer roles. PD2 shows deeper development experience and may be preferred or required for some architect-track positions.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
@@ -267,27 +267,27 @@ export default function Pd1VsPd2Page() {
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
-                <td className="py-2.5 pr-4">New to Salesforce development or coming from an admin background</td>
+                <td className="py-2.5 pr-4">You are new to Salesforce development or moving from administration</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">PD1, start here</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Have 1–2 years of Apex experience and real project delivery</td>
+                <td className="py-2.5 pr-4">You have 1–2 years of Apex experience and delivered projects</td>
                 <td className="py-2.5 font-semibold text-purple-700">PD2; you are likely ready</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Java, Python, or backend developer switching to Salesforce</td>
+                <td className="py-2.5 pr-4">You are moving from Java, Python, or backend development to Salesforce</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">PD1: Apex fundamentals first, then PD2 in 6–12 months</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Targeting the CTA (Certified Technical Architect) track</td>
+                <td className="py-2.5 pr-4">You plan to pursue the CTA (Certified Technical Architect) track</td>
                 <td className="py-2.5 font-semibold text-purple-700">PD1 + PD2 both required</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Want a senior developer or tech lead role</td>
+                <td className="py-2.5 pr-4">You want a senior developer or tech lead role</td>
                 <td className="py-2.5 font-semibold text-purple-700">PD2, separates mid from senior on CVs</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Score below 75% on PD1 practice exams regularly</td>
+                <td className="py-2.5 pr-4">You regularly score below 75% on PD1 practice exams</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">PD1, strengthen PD1 fundamentals before attempting PD2</td>
               </tr>
             </tbody>
@@ -299,7 +299,7 @@ export default function Pd1VsPd2Page() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start With PD1 Practice</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Free practice questions, exam weightage, and governor limit reference for both certifications.
+          Review free practice questions, exam weights, and governor limit references for both certifications.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

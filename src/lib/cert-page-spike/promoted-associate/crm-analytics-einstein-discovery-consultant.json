@@ -21,8 +21,8 @@
     "heading": "How challenging is the CRM Analytics and Einstein Discovery Consultant exam?",
     "summary": "The exam spans CRM Analytics data preparation and dashboards as well as Einstein Discovery models and predictions. Security design and model evaluation require careful study because they involve decisions beyond simply building a chart.",
     "bullets": [
-      "<strong>60 questions.</strong> Check the current exam guide for the time limit and testing details.",
-      "<strong>65% passing score.</strong> Confirm the current requirement before scheduling.",
+      "<strong>60 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
       "<strong>Access controls matter:</strong> Understand security predicates and when a dataset can inherit Salesforce sharing.",
       "<strong>Evaluate models before deployment:</strong> Review model metrics, potential leakage, and bias checks."
     ],

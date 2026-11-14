@@ -45,19 +45,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce consultant certification path?',
-    answer: 'The Salesforce consultant path starts with the Administrator (ADM-201) certification as the foundation. From there, you specialise in a cloud product: Sales Cloud Consultant, Service Cloud Consultant, Marketing Cloud Consultant, Experience Cloud Consultant, or Field Service Consultant depending on your area of practice.',
+    answer: 'Start with Administrator (ADM-201) to build a foundation in Salesforce. Then choose a product area, such as Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, or Field Service, based on your work.',
   },
   {
     question: 'What is the first certification for the Salesforce consultant track?',
-    answer: 'Salesforce Administrator (ADM-201) is the required foundation for all consultant certifications. It is a recommended (and for some certifications, required) prerequisite. Most consultant exams assume ADM-201-level platform knowledge as a baseline.',
+    answer: 'Administrator (ADM-201) is a recommended foundation for consultant certifications and is a required prerequisite for some of them. Most consultant exams assume you understand the platform at this level.',
   },
   {
     question: 'What is the most popular Salesforce consultant certification?',
-    answer: 'Sales Cloud Consultant and Service Cloud Consultant are the most widely held consultant certifications, as Sales Cloud and Service Cloud are Salesforce\'s two most commonly implemented products. Most implementations require at least one certified consultant for each cloud.',
+    answer: 'Sales Cloud Consultant and Service Cloud Consultant are among the most widely held consultant credentials. These clouds are commonly implemented, and many projects need at least one certified consultant for each.',
   },
   {
     question: 'Can I take multiple consultant certifications?',
-    answer: 'Yes, many Salesforce consultants hold multiple cloud certifications. Common pairings are Sales Cloud + Service Cloud (for full CRM consultants), or Sales Cloud + Experience Cloud (for customer portal implementations). Each certification adds a distinct specialisation and increases your value to clients.',
+    answer: 'Yes. Many Salesforce consultants earn certifications in more than one cloud. Common combinations include Sales Cloud and Service Cloud for CRM work, or Sales Cloud and Experience Cloud for customer portal projects. Each credential adds a different area of expertise.',
   },
 ]
 
@@ -75,9 +75,7 @@ export default function ConsultantCertificationPathPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Salesforce consultant certifications validate your ability to implement specific Salesforce products for clients.
-          Unlike administrator certifications (which are platform-wide), consultant certifications are product-specific.
-          Here is how to choose your specialisation and the right order to earn them.
+          Salesforce consultant certifications show that you can implement specific Salesforce products for clients. Administrator certifications cover platform-wide skills, while consultant certifications focus on particular products. Use this guide to choose a specialization and plan the order of your exams.
         </p>
       </header>
 
@@ -89,11 +87,9 @@ export default function ConsultantCertificationPathPage() {
 
       {/* Foundation */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Step 1: Foundation: Salesforce Administrator (ADM-201)</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Step 1: Build a Foundation with Administrator (ADM-201)</h2>
         <p className="text-sm text-gray-700 mb-3">
-          All consultant certifications assume ADM-201-level knowledge of the Salesforce platform. Before pursuing any
-          consultant certification, ensure you are comfortable with objects, fields, automation, security model, and
-          reports, the topics the consultant exams build on.
+          Consultant exams assume that you understand the Salesforce platform at the ADM-201 level. Before you pursue one, make sure you know objects, fields, automation, security, and reports. Consultant exams build on these topics.
         </p>
         <Link href="/certifications/administrator" className="inline-flex items-center gap-2 text-sm text-salesforce-blue font-medium hover:underline">
           ADM-201 exam tips <ArrowRight className="h-3 w-3" />
@@ -102,15 +98,14 @@ export default function ConsultantCertificationPathPage() {
 
       {/* Core cloud consultants */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Step 2: Choose Your Cloud Specialisation</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Step 2: Choose a Cloud Specialization</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Pick the Salesforce cloud that matches your current or target practice. Most consultants specialise in the
-          clouds their employer implements most often.
+          Choose a Salesforce cloud that matches your current work or the area you want to enter. Many consultants focus on the products their employer implements most often.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 p-4">
             <p className="font-semibold text-gray-900 mb-1">Sales Cloud Consultant</p>
-            <p className="text-sm text-gray-600 mb-2">Opportunity management, forecasting, territory management, CPQ basics. Most common consultant cert.</p>
+            <p className="text-sm text-gray-600 mb-2">Covers opportunities, forecasting, territories, and CPQ basics. It is a common consultant certification.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/sales-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
@@ -119,7 +114,7 @@ export default function ConsultantCertificationPathPage() {
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
             <p className="font-semibold text-gray-900 mb-1">Service Cloud Consultant</p>
-            <p className="text-sm text-gray-600 mb-2">Cases, entitlements, omnichannel routing, knowledge base, service contracts.</p>
+            <p className="text-sm text-gray-600 mb-2">Covers cases, entitlements, omnichannel routing, Knowledge, and service contracts.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/service-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
@@ -128,7 +123,7 @@ export default function ConsultantCertificationPathPage() {
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
             <p className="font-semibold text-gray-900 mb-1">Experience Cloud Consultant</p>
-            <p className="text-sm text-gray-600 mb-2">Customer/partner portals, licence types, sharing model for external users, Experience Builder.</p>
+            <p className="text-sm text-gray-600 mb-2">Covers customer and partner portals, license types, external-user sharing, and Experience Builder.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/nonprofit-cloud#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
@@ -137,7 +132,7 @@ export default function ConsultantCertificationPathPage() {
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
             <p className="font-semibold text-gray-900 mb-1">Field Service Consultant</p>
-            <p className="text-sm text-gray-600 mb-2">Work orders, service territories, scheduling optimisation, mobile workforce management.</p>
+            <p className="text-sm text-gray-600 mb-2">Covers work orders, service territories, scheduling, and mobile workforce management.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/field-service#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
@@ -146,7 +141,7 @@ export default function ConsultantCertificationPathPage() {
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
             <p className="font-semibold text-gray-900 mb-1">Marketing Cloud Consultant</p>
-            <p className="text-sm text-gray-600 mb-2">Discovery and architecture, account configuration, business unit strategy, data design.</p>
+            <p className="text-sm text-gray-600 mb-2">Covers discovery, solution design, account setup, business unit strategy, and data design.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/marketing-cloud-engagement-admin#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
@@ -155,7 +150,7 @@ export default function ConsultantCertificationPathPage() {
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
             <p className="font-semibold text-gray-900 mb-1">Education Cloud Consultant</p>
-            <p className="text-sm text-gray-600 mb-2">EDA data model, student lifecycle, higher education industry knowledge, FERPA.</p>
+            <p className="text-sm text-gray-600 mb-2">Covers the EDA data model, student lifecycle, higher education, and FERPA.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/education-cloud-consultant#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>
@@ -169,11 +164,11 @@ export default function ConsultantCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Additional Consultant Specialisations</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pardot Specialist / Pardot Consultant</strong>: Marketing automation with Account Engagement. Specialist before Consultant. <Link href="/certifications/pardot-specialist" className="text-salesforce-blue underline">Pardot exam tips</Link></li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Revenue Cloud Consultant</strong>: CPQ, billing, revenue recognition. Requires CPQ knowledge before attempting.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Analyst</strong>: Discovery, user stories, stakeholder management. 72% passing score, higher than standard certs. <Link href="/certifications/business-analyst" className="text-salesforce-blue underline">BA exam tips</Link></li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Nonprofit Cloud Consultant</strong>: NPSP data model, donor management, grant tracking for nonprofit organisations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Health Cloud Consultant</strong>: Patient/member management, care coordination, healthcare compliance (HIPAA).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pardot Specialist / Pardot Consultant</strong>: These certifications cover Account Engagement marketing automation. Take Specialist before Consultant. <Link href="/certifications/pardot-specialist" className="text-salesforce-blue underline">Pardot exam tips</Link></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Revenue Cloud Consultant</strong>: Covers CPQ, billing, and revenue recognition. CPQ knowledge helps before you take the exam.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Business Analyst</strong>: Covers discovery, user stories, and stakeholder management. Its 72% passing score is higher than standard certifications. <Link href="/certifications/business-analyst" className="text-salesforce-blue underline">BA exam tips</Link></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Nonprofit Cloud Consultant</strong>: Covers the NPSP data model, donor management, and grant tracking for nonprofits.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Health Cloud Consultant</strong>: Covers patient and member management, care coordination, and healthcare compliance such as HIPAA.</li>
         </ul>
       </section>
 
@@ -198,7 +193,7 @@ export default function ConsultantCertificationPathPage() {
 
       {/* CTA */}
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Consultant Prep</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Prepare for a Consultant Certification</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/certifications/service-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Service Cloud Study Guide <ArrowRight className="h-4 w-4" />

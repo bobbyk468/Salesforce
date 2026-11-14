@@ -1,51 +1,51 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Marketing Cloud Advanced Cross-Channel exam for?",
+    "heading": "Who should take the Marketing Cloud Advanced Cross-Channel AP exam?",
     "personas": [
       {
-        "label": "Cross-channel marketing specialists",
-        "description": "You design campaigns across email, SMS, push, and advertising in Marketing Cloud and want to validate your multi-channel expertise."
+        "label": "Cross-channel marketers",
+        "description": "You plan campaigns that use email, SMS, push, and advertising and want to validate your orchestration skills."
       },
       {
-        "label": "Marketing Cloud implementation partners",
-        "description": "You implement Marketing Cloud solutions for clients and need the AP credential to demonstrate advanced cross-channel delivery skills."
+        "label": "Marketing Cloud implementation consultants",
+        "description": "You deliver cross-channel Marketing Cloud solutions for clients."
       },
       {
-        "label": "Journey Builder power users",
-        "description": "You build complex multi-branch journeys with Einstein features and want to certify your advanced orchestration skills."
+        "label": "Advanced Journey Builder users",
+        "description": "You build branching journeys and use Einstein tools to coordinate customer engagement."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Marketing Cloud Advanced Cross-Channel Exam Hard?",
-    "summary": "The Advanced Cross-Channel AP exam is moderately difficult. It goes well beyond single-channel email marketing and requires deep knowledge of Journey Builder’s advanced features, Mobile Studio, Advertising Studio, and Einstein engagement tools. Candidates who have only worked with Email Studio will find this exam challenging.",
+    "heading": "How challenging is the Marketing Cloud Advanced Cross-Channel exam?",
+    "summary": "This exam extends beyond email marketing. It covers advanced Journey Builder features, Mobile Studio, Advertising Studio, and Einstein engagement tools. Email Studio experience alone may not cover the required cross-channel skills.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>no published passing score</strong>: standard for AP-level exams.",
-      "<strong>Multi-channel depth</strong>: you need hands-on experience with MobileConnect (SMS), MobilePush, Advertising Studio audience sync, and cross-channel Journey Builder design.",
-      "<strong>Einstein features tested</strong>: Engagement Scoring, Send Time Optimization, and Content Selection are all fair game."
+      "<strong>40 scored questions</strong> in 60 minutes, plus up to five unscored questions that do not count.",
+      "<strong>67% to pass</strong>, which is 27 correct answers out of 40.",
+      "<strong>Cross-channel practice.</strong> Review SMS, push, audience synchronization, and multichannel journeys.",
+      "<strong>Einstein features.</strong> Study Engagement Scoring, Send Time Optimization, and Content Selection."
     ],
-    "passRateGuidance": "Build at least 2-3 multi-channel journeys using SMS and push alongside email before booking. Practice configuring Advertising Studio audiences and Einstein engagement splits."
+    "passRateGuidance": "Build multi-channel journeys that use SMS and push along with email. Practise setting up advertising audiences and Einstein engagement splits before booking."
   },
   "examFormat": {
-    "heading": "Marketing Cloud Advanced Cross-Channel Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. You’ll be asked to design a cross-channel journey, choose the right Einstein feature for a personalization requirement, or configure mobile messaging compliance.",
+    "heading": "Marketing Cloud Advanced Cross-Channel exam format",
+    "intro": "The proctored exam is offered online or at a test centre. Many items describe a multichannel marketing scenario.",
+    "scenarioPercent": "Scenarios may ask you to plan a cross-channel journey, select an Einstein feature for personalization, or meet mobile messaging consent requirements.",
     "bestWayToPass": [
-      "<strong>Master advanced Journey Builder features:</strong> Einstein Engagement Splits, Random Splits for A/B testing, Wait Until Event, and Engagement Frequency Splits.",
-      "<strong>Know mobile messaging compliance:</strong> TCPA opt-in requirements for SMS, push notification permissions, and how each channel’s consent model differs from email.",
-      "<strong>Study Advertising Studio:</strong> Understand how to sync audiences to Facebook Custom Audiences and Google Customer Match, and how Lead Ads capture data back into Marketing Cloud.",
-      "<strong>Learn Einstein engagement tools:</strong> Know how Engagement Scoring, Send Time Optimization, and Content Selection work together to personalize at scale."
+      "<strong>Use advanced Journey Builder tools:</strong> Review Einstein Engagement Splits, Random Splits, Wait Until Event, and Engagement Frequency Splits.",
+      "<strong>Know mobile consent:</strong> Study SMS opt-in requirements, push permissions, and how consent differs by channel.",
+      "<strong>Study Advertising Studio audiences:</strong> Learn how audiences sync to ad platforms and how lead forms return data.",
+      "<strong>Apply Einstein engagement tools:</strong> Understand how scoring, send-time optimization, and content selection support personalization."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam goes beyond single-channel sends. You will need to coordinate Journey Builder across email, SMS, push, and advertising while using Einstein for engagement scoring and send-time optimization.",
+    "description": "This exam covers advanced cross-channel marketing in Marketing Cloud Engagement, including Journey Builder, MobileConnect, MobilePush, Advertising Studio, Contact Builder, and Einstein engagement tools. Check the current exam guide for the exam’s question count, time, and passing score.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
-      "duration": "90 min",
+      "passingScore": "67%",
+      "duration": "60 min",
       "cost": "$150"
     },
     "topics": [
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Marketing Cloud Advanced Cross-Channel: Key Concepts for the Exam",
+    "h2": "Marketing Cloud Advanced Cross-Channel: key topics",
     "blocks": [
       {
-        "heading": "Advanced Journey Builder Design",
-        "body": "Advanced Cross-Channel builds on the Foundations cert. Advanced Journey features: Einstein Engagement Splits (AI-based routing by engagement score), Random Splits for A/B/n testing at scale, Engagement Frequency Splits (route by how often a contact has received messages), Wait Until Event (pause until a specific event occurs). Multi-journey coordination, managing contact entry into multiple journeys simultaneously. The exam tests how to design complex multi-branch journeys and when to use each split type."
+        "heading": "Advanced Journey Builder",
+        "body": "Advanced Journey Builder includes Einstein Engagement Splits that route based on engagement scores, Random Splits for experiments, Engagement Frequency Splits based on recent messaging volume, and Wait Until Event activities. Consider how the contact enters, how the journey coordinates with other journeys, and whether contacts can re-enter. Be ready to choose the split that matches the requirement."
       },
       {
-        "heading": "Mobile Messaging: MobileConnect and MobilePush",
-        "body": "MobileConnect manages SMS/MMS marketing. Keywords and shortcodes for opt-in/opt-out. Triggered sends via API. MobilePush manages push notifications to iOS and Android apps registered with Marketing Cloud. In-app messaging within mobile apps. Both channels integrate with **Journey Builder** as activities. Compliance: SMS requires explicit opt-in (TCPA in US), double opt-in recommended. The exam tests channel-specific compliance requirements and how each mobile channel integrates into cross-channel journeys."
+        "heading": "MobileConnect and MobilePush",
+        "body": "MobileConnect supports SMS and MMS marketing, including keywords, short codes, and API-triggered sends. MobilePush sends notifications to registered iOS and Android apps and can support in-app messages. Both can be used as Journey Builder activities. Learn channel-specific consent: SMS requires explicit opt-in, including under TCPA in the United States; push messages require app-level permission. Do not treat email consent as consent for mobile channels."
       },
       {
-        "heading": "Advertising Studio: Audience Sync",
-        "body": "**Advertising Studio** syncs Marketing Cloud subscriber data with advertising platforms. Facebook Custom Audiences, sync email lists or Data Extension contacts to Facebook for matched advertising. Google Customer Match, same concept for Google Ads. Lead Ads, capture leads from Facebook/Google into Marketing Cloud **Data Extensions**. Audience Builder creates unified audiences across multiple data sources. The exam tests how to create, activate, and suppress audiences in advertising platforms using Marketing Cloud data."
+        "heading": "Advertising Studio audience activation",
+        "body": "Advertising Studio can sync Marketing Cloud audiences to advertising platforms such as Facebook Custom Audiences and Google Customer Match. Lead Ads can send captured lead information back to Marketing Cloud data extensions. Audience Builder supports audience creation across data sources. Know how marketers activate and suppress audiences and where the data moves."
       },
       {
-        "heading": "Contact Builder and Data Architecture",
-        "body": "**Contact Builder** is the unified data management layer. Attribute Groups link **Data Extensions** to Contact records using a key field (usually **Subscriber Key**). Data Designer creates the contact data schema, defining which DEs store which attributes, and how they relate to the Contact record. The Contact model supports cross-channel identity: Email, SMS, push, and advertising all reference the same contact. The exam tests Contact Builder data model design and how to link multiple data sources into a unified Contact profile."
+        "heading": "Contact Builder and identity",
+        "body": "Contact Builder links data extensions to contact records through attribute groups and key fields, commonly Subscriber Key. Data Designer defines the contact model and relationships. A unified contact identity allows email, SMS, push, and advertising data to refer to the same person. Use consistent keys to avoid duplicate profiles and disjointed communications."
       },
       {
-        "heading": "Einstein Features: Engagement Scoring and Recommendations",
-        "body": "Einstein Engagement Scoring predicts how likely a contact is to open, click, convert, or unsubscribe. Scores are updated daily and available as Data Extension attributes for segmentation and personalisation. Send Time Optimisation (STO) sends each contact's email at the historically optimal time. Einstein Content Selection automatically personalises which content block a recipient sees based on predicted engagement. The exam tests which Einstein feature addresses a given personalisation requirement and what data is needed to enable it."
+        "heading": "Einstein engagement tools",
+        "body": "Einstein Engagement Scoring estimates a contact’s likelihood to open, click, convert, or unsubscribe. Scores are refreshed and can support segmentation and personalization. Send Time Optimization selects an email delivery time based on a contact’s history. Einstein Content Selection chooses content based on predicted engagement. Match the feature to the personalization or timing goal and understand what data it needs."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Marketing Cloud Advanced Cross-Channel Accredited Professional Exam",
-    "intro": "The Advanced Cross-Channel AP exam tests deep expertise in coordinating marketing across channels in Marketing Cloud. Focus on Journey Builder's advanced capabilities, cross-channel orchestration, and personalization at scale.",
+    "h2": "How to prepare for the Marketing Cloud Advanced Cross-Channel AP exam",
+    "intro": "Practise coordinating channels in Marketing Cloud, using advanced Journey Builder options, and applying personalization tools to a clear business need.",
     "blocks": [
       {
-        "heading": "Advanced Journey Builder",
-        "body": "Know all **Journey Builder** entry sources (data extension, Salesforce data, inbound chat, API event), activity types, and decision splits. Understand how to use Einstein STO, Einstein Engagement Scoring, and random split for testing."
+        "heading": "Build advanced journeys",
+        "body": "Review entry sources, journey activities, Einstein splits, and Random Splits. Know how re-entry and frequency limits affect contacts."
       },
       {
-        "heading": "Cross-Channel Coordination",
-        "body": "Know how to design journeys that span Email, SMS, Push, and Advertising channels. Understand how frequency capping, channel preference, and suppression work across channels in a single journey."
+        "heading": "Coordinate channels",
+        "body": "Plan how email, SMS, push, and advertising work together. Consider contact preferences, consent, frequency, and suppression."
       },
       {
-        "heading": "Transactional Messaging",
-        "body": "Understand the difference between marketing messages (opt-in required) and transactional messages (service-based, bypass opt-out). Know how to configure Transactional Send Definitions via the API."
+        "heading": "Separate marketing from transactional messages",
+        "body": "Review how consent and transactional send definitions apply, including messages initiated through APIs."
       },
       {
-        "heading": "Personalization at Scale",
-        "body": "Know how to use Dynamic Content blocks driven by data extension lookups, **AMPscript** conditional content, and Einstein Content Selection for AI-driven personalization across large audiences."
+        "heading": "Personalize at scale",
+        "body": "Use data extension lookups and AMPscript for conditional content. Understand when Einstein Content Selection fits."
       },
       {
-        "heading": "Journey Measurement & Optimization",
-        "body": "Know how to use Journey Analytics to measure path performance, configure control groups for holdout testing, and use Einstein Engagement Frequency to optimize send cadence."
+        "heading": "Measure and improve journeys",
+        "body": "Review journey analytics, control groups, and frequency tools to measure paths and optimize message cadence."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A journey must send an SMS only to contacts who did not open the email sent three days earlier. What routes them?",
+      "question": "A journey should send SMS only to contacts who did not open an email three days earlier. Which tool should route them?",
       "options": [
-        "A decision split evaluated against the contact's stored profile attributes",
-        "A separate journey launched manually for the contacts who did not respond",
-        "A suppression list containing everyone who opened the original email sent",
+        "A decision split using stored profile data",
+        "A separate journey launched manually",
+        "A suppression list for email openers",
         "An engagement split on the email"
       ],
       "correctAnswer": 3,
-      "explanation": "Engagement splits route on whether the contact opened or clicked a previous send in the journey, which is exactly this condition.",
+      "explanation": "An engagement split checks whether a contact opened or clicked an earlier journey message.",
       "whyWrong": [
-        "Decision splits read data you already hold, not engagement with a send.",
-        "A second manual journey loses the connection to the original send.",
-        "A suppression list excludes from sending rather than routing within a journey."
+        "Decision splits evaluate stored data, not activity on the email.",
+        "A manual journey is disconnected from the earlier send and its results.",
+        "A suppression list excludes contacts rather than routing them along a journey."
       ]
     },
     {
-      "question": "What does a contact need before a journey can send them an SMS?",
+      "question": "What is needed before a journey can send a contact an SMS?",
       "options": [
-        "A completed purchase recorded against their profile in the last twelve months",
-        "Membership of at least one publication list configured within the account",
-        "A mobile number and a recorded opt-in",
-        "An email address that has already been confirmed as deliverable by the platform"
+        "A purchase within the last year",
+        "Membership in an email publication list",
+        "A mobile number and recorded SMS consent",
+        "A confirmed email address"
       ],
       "correctAnswer": 2,
-      "explanation": "Mobile messaging requires both a usable number and consent, and consent for SMS is separate from consent for email.",
+      "explanation": "SMS messaging requires a usable phone number and opt-in; email permission is separate.",
       "whyWrong": [
-        "Purchase history is not a prerequisite for messaging.",
-        "Publication lists govern email categories.",
-        "An email address is irrelevant to whether an SMS can be sent."
+        "Purchase history is not required to send a message.",
+        "Publication lists manage email preferences.",
+        "Email deliverability does not determine SMS eligibility."
       ]
     },
     {
-      "question": "Why is a single contact key important in a cross-channel journey?",
+      "question": "Why use one contact key across channels?",
       "options": [
-        "It sets the time zone used when the journey calculates its wait periods",
-        "It ties the same person's channels together",
-        "It determines the order in which the journey activities will be executed",
-        "It controls which business unit the journey is permitted to send from"
+        "It sets the journey wait time",
+        "It connects the same person’s channel records",
+        "It determines the order of journey activities",
+        "It selects the sending business unit"
       ],
       "correctAnswer": 1,
-      "explanation": "Without one identifier across email, mobile and push, the same person appears as several contacts and receives duplicate or contradictory messages.",
+      "explanation": "A shared contact key links the person’s email, mobile, push, and other channel records.",
       "whyWrong": [
-        "Time zone handling is a separate journey setting.",
-        "Activity order is defined by the journey canvas.",
-        "Business unit scope is configured on the journey itself."
+        "Wait and time-zone behavior use separate settings.",
+        "The canvas defines activity order.",
+        "Business unit access is configured separately."
       ]
     },
     {
-      "question": "A journey should pause overnight and resume sending at 9am local time. What supports this?",
+      "question": "A message should be sent at 9 a.m. in each contact’s local time. What feature should be used?",
       "options": [
-        "A decision split that routes contacts according to their recorded country",
-        "Send-time and time-zone settings on the activity",
-        "A wait step configured with a fixed duration measured in hours and minutes",
-        "A separate journey version built for each of the time zones being targeted"
+        "Route by the contact’s country",
+        "Use activity send-time and time-zone settings",
+        "Wait a fixed number of hours",
+        "Build one journey for each time zone"
       ],
       "correctAnswer": 1,
-      "explanation": "Journeys support waiting until a specific time, evaluated against the contact's time zone, rather than only waiting a fixed duration.",
+      "explanation": "Journey timing settings can send at a specified local time rather than after one fixed delay.",
       "whyWrong": [
-        "Routing by country does not by itself control send time.",
-        "A fixed duration lands at a different local time for each contact.",
-        "A version per time zone is unmanageable and duplicates the logic."
+        "Country routing alone does not set the delivery time.",
+        "A fixed wait can end at different local times.",
+        "Separate journeys for every time zone duplicate the logic."
       ]
     },
     {
-      "question": "What is the purpose of a push notification's deep link?",
+      "question": "What does a push notification deep link do?",
       "options": [
-        "It confirms to the platform that the notification was successfully delivered",
-        "It opens the relevant screen inside the app",
-        "It sets how long the notification will remain visible on the device screen",
-        "It records the contact's consent to receive further push notifications later"
+        "Confirms delivery to Marketing Cloud",
+        "Opens a relevant screen inside the app",
+        "Sets how long the notification remains visible",
+        "Records the user’s permission for future messages"
       ],
       "correctAnswer": 1,
-      "explanation": "A deep link takes the person straight to the content the message is about, instead of dropping them on the app's home screen.",
+      "explanation": "A deep link directs the user to a specific place in the app.",
       "whyWrong": [
-        "Delivery confirmation is reported separately by the platform.",
-        "Display duration is controlled by the device and the operating system.",
-        "Consent is captured when the app requests permission."
+        "Delivery status is reported separately.",
+        "Display duration is controlled by the device and operating system.",
+        "Consent is handled through app permission and related settings."
       ]
     },
     {
-      "question": "A campaign runs across email, SMS and push. What is the main risk to manage?",
+      "question": "A campaign uses email, SMS, and push. What risk should the team manage?",
       "options": [
-        "Over-messaging the same person",
-        "The three channels being unable to share a single creative design template",
-        "The platform being unable to report on more than one channel at a time",
-        "Each channel requiring its own entirely separate Marketing Cloud account"
+        "Sending too many messages to the same person",
+        "Being unable to reuse one creative format across channels",
+        "Being unable to report on multiple channels",
+        "Needing a separate Marketing Cloud account per channel"
       ],
       "correctAnswer": 0,
-      "explanation": "The same contact can be reachable on all three, so without frequency limits or suppression they receive the same message repeatedly.",
+      "explanation": "The same contact may be reachable through all three channels, so frequency controls and suppression help prevent over-messaging.",
       "whyWrong": [
-        "Channels legitimately use different creative formats.",
-        "Cross-channel reporting is a standard capability.",
-        "One account handles multiple channels."
+        "Different channels may need different creative formats.",
+        "Marketing Cloud supports cross-channel reporting.",
+        "Multiple channels can be managed within an account."
       ]
     },
     {
-      "question": "What does a journey's entry source re-evaluation setting control?",
+      "question": "What does the journey entry-source re-evaluation frequency control?",
       "options": [
-        "How long the journey will keep running before it closes automatically",
-        "Which of the available channels the journey is permitted to send through",
-        "How many times a single contact may travel through the journey in total",
-        "How often new qualifying contacts are picked up"
+        "How long the journey stays active",
+        "Which channels may be used",
+        "How many times a contact may re-enter",
+        "How often new eligible contacts are added"
       ],
       "correctAnswer": 3,
-      "explanation": "Re-evaluation frequency determines how quickly newly qualifying contacts enter, which matters for anything meant to feel responsive.",
+      "explanation": "Re-evaluation frequency determines how often the entry source is checked for new qualifying contacts.",
       "whyWrong": [
-        "Journey duration is not set by entry evaluation.",
-        "Channel use is defined by the activities on the canvas.",
-        "Re-entry is governed by a separate contact re-entry setting."
+        "Journey duration is not controlled by entry-source frequency.",
+        "Journey activities determine channel use.",
+        "Re-entry behavior is configured separately."
       ]
     },
     {
-      "question": "A contact replies STOP to an SMS. What must happen?",
+      "question": "A contact replies STOP to an SMS. What should happen?",
       "options": [
-        "They are opted out of SMS immediately",
-        "They are removed from every journey and channel across the whole account",
-        "Their email subscription is cancelled at the same time as the SMS opt-out",
-        "A case is created for an agent to review before any action is taken"
+        "Opt the contact out of SMS promptly",
+        "Remove the contact from every channel and journey",
+        "Unsubscribe the contact from email as well",
+        "Wait for an agent to approve the opt-out"
       ],
       "correctAnswer": 0,
-      "explanation": "STOP is a mandatory opt-out keyword, and it must take effect for mobile messaging without delay or human intervention.",
+      "explanation": "STOP is a mobile opt-out keyword and the SMS opt-out should take effect promptly.",
       "whyWrong": [
-        "Opting out of SMS does not imply opting out of other channels.",
-        "Email consent is separate and should not be revoked automatically.",
-        "Manual review would delay a legally required opt-out."
+        "An SMS opt-out does not automatically remove consent for every channel.",
+        "Email consent is separate from SMS consent.",
+        "Requiring manual approval would delay a required opt-out."
       ]
     },
     {
-      "question": "Why would a marketer use a holdout group in a cross-channel programme?",
+      "question": "Why use a holdout group in a cross-channel program?",
       "options": [
-        "To test whether the creative renders correctly on every type of device",
-        "To comply with a requirement that some contacts are never contacted",
-        "To reduce the total message volume the platform has to process each day",
-        "To measure what the programme actually added"
+        "Test whether creative renders on devices",
+        "Ensure some people never receive marketing",
+        "Reduce the amount of data processed",
+        "Measure the program’s incremental effect"
       ],
       "correctAnswer": 3,
-      "explanation": "A group deliberately left out of the programme shows what would have happened anyway, which is the only way to attribute the result.",
+      "explanation": "A holdout provides a comparison group to show what would have happened without the program.",
       "whyWrong": [
-        "Rendering is checked with test sends and preview tools.",
-        "Holdouts are a measurement device, not a consent mechanism.",
-        "Volume reduction is not the purpose of a holdout."
+        "Rendering is checked with previews and test sends.",
+        "Consent controls determine whether a person may receive marketing.",
+        "Reducing processing is not the purpose of a holdout."
       ]
     },
     {
-      "question": "What is the difference between an API event and a data extension entry source?",
+      "question": "How does an API event entry source differ from a data extension entry source?",
       "options": [
-        "One is triggered per contact, the other evaluated in batches",
-        "One can only be used for email while the other supports mobile channels",
-        "One requires a developer to configure whereas the other does not at all",
-        "One works in a sandbox environment and the other only in production"
+        "API events are real time; data extension entries are scheduled",
+        "API events support email only; data extensions support mobile only",
+        "Only data extensions require configuration",
+        "API events work only in sandboxes"
       ],
       "correctAnswer": 0,
-      "explanation": "An API event lets an external system inject a single contact in real time. A data extension source is evaluated on a schedule.",
+      "explanation": "An external system can send an API event to enter a contact promptly, while a data extension source is evaluated on a schedule.",
       "whyWrong": [
-        "Both entry sources can feed journeys using any channel.",
-        "Both need configuration; neither is developer-only.",
-        "Both work in any environment."
+        "Both entry sources can support journeys with different channels.",
+        "Both require configuration, though the setup differs.",
+        "Both can be used in different environments."
       ]
     },
     {
-      "question": "A journey has been running for a month and the client wants to change an email's subject line. What is required?",
+      "question": "A live journey needs a subject-line change. What should the marketer do?",
       "options": [
-        "A direct edit to the email, which the running journey will then pick up",
-        "A pause on the journey while the subject line is amended and then resumed",
-        "A new version of the journey",
-        "A duplicate journey running alongside the original with the new subject"
+        "Edit the email directly and let the journey pick it up",
+        "Pause the journey and edit the running version",
+        "Create a new journey version",
+        "Duplicate the journey and run both"
       ],
       "correctAnswer": 2,
-      "explanation": "Running journeys are locked, so the change goes into a new version while contacts already in flight complete the old one.",
+      "explanation": "Running journey versions are locked; make the change in a new version.",
       "whyWrong": [
-        "Journey activities reference a fixed version of the asset.",
-        "Pausing does not unlock the journey for editing.",
-        "Two parallel journeys would double-message the audience."
+        "The active journey references the version of the activity it started with.",
+        "Pausing does not make the version editable.",
+        "Parallel journeys may cause duplicate messages."
       ]
     },
     {
-      "question": "Which measure best shows whether adding SMS to an email programme was worthwhile?",
+      "question": "How can the team measure whether adding SMS improved an email program?",
       "options": [
-        "The click-through rate recorded on the SMS messages that were opened",
-        "Incremental conversion against a comparable group",
-        "The total number of text messages the platform delivered in the period",
-        "The reduction in the number of email sends the programme now requires"
+        "Review SMS click-through rate alone",
+        "Compare incremental conversions",
+        "Count the total number of texts delivered",
+        "Count how many email sends were removed"
       ],
       "correctAnswer": 1,
-      "explanation": "The question is whether SMS added anything, which needs a comparison against a group that received email alone.",
+      "explanation": "A comparable group helps measure conversions attributable to the added channel.",
       "whyWrong": [
-        "SMS click rate alone does not show whether email would have converted anyway.",
-        "Message volume is activity, not value.",
-        "Sending fewer emails is not itself a benefit."
+        "SMS clicks alone do not show what would have happened without SMS.",
+        "Delivered volume is activity, not incremental value.",
+        "Reducing email sends does not show whether outcomes improved."
       ]
     },
     {
-      "question": "What should drive the choice of channel for a given message?",
+      "question": "What should guide the channel selected for a message?",
       "options": [
-        "Urgency, consent and where the person engages",
-        "The channel the marketing team is most comfortable building in",
-        "The channel that produced the highest open rate in the previous quarter",
-        "The channel that currently has the lowest cost per message sent"
+        "Urgency, consent, and user preference",
+        "The channel the marketing team finds easiest",
+        "The highest open rate from last quarter",
+        "The lowest cost per message"
       ],
       "correctAnswer": 0,
-      "explanation": "Channel choice follows the nature of the message and the person's consent and habits, not internal convenience.",
+      "explanation": "Choose a channel that suits the message and the contact’s permissions and engagement.",
       "whyWrong": [
-        "Team familiarity is not a customer-centred reason.",
-        "A past open rate on other content says little about this message.",
-        "Cost alone ignores whether the message will land or be welcome."
+        "Internal convenience does not center the customer need.",
+        "Past open rates may not predict response to this message.",
+        "Cost alone ignores consent and suitability."
       ]
     },
     {
-      "question": "A contact exists in the journey but never reaches the SMS activity. What should be checked first?",
+      "question": "A contact reaches the journey but never arrives at an SMS activity. What should be checked first?",
       "options": [
-        "Whether the contact record includes a completed purchase history",
-        "Whether the business unit has enough remaining send capacity left",
-        "Whether they were routed down a different path",
-        "Whether the email creative contains a valid and tested deep link"
+        "Whether the contact has a recent purchase",
+        "Whether the account has enough send capacity",
+        "Whether a split sent the contact down another path",
+        "Whether the email has a working deep link"
       ],
       "correctAnswer": 2,
-      "explanation": "Splits route contacts down different branches, so the usual reason an activity is never reached is that the contact took another path.",
+      "explanation": "Journey splits can route contacts away from an activity, so inspect the contact’s path first.",
       "whyWrong": [
-        "Purchase history is not normally a routing condition.",
-        "Capacity would affect many contacts, not one path.",
-        "Deep links affect what happens after a tap, not journey routing."
+        "Purchase history matters only if it is part of a decision rule.",
+        "Capacity limits would affect sending rather than journey routing.",
+        "Deep links control the destination after a push tap, not journey entry to SMS."
       ]
     },
     {
-      "question": "Which best describes the point of cross-channel orchestration?",
+      "question": "What is the goal of cross-channel orchestration?",
       "options": [
-        "Sending the identical message through every available channel at once",
-        "Allowing each channel team to run its own independent campaigns",
-        "One coordinated conversation across channels",
-        "Replacing email entirely with mobile and push messaging over time"
+        "Send the same message on every channel at once",
+        "Let each channel team run independent campaigns",
+        "Coordinate the customer conversation",
+        "Replace email with mobile and push"
       ],
       "correctAnswer": 2,
-      "explanation": "The aim is a single coherent sequence where each channel plays its part and the contact is not messaged twice for the same thing.",
+      "explanation": "Cross-channel orchestration coordinates channels so each message supports a coherent customer experience.",
       "whyWrong": [
-        "Duplicating one message across channels is the problem, not the goal.",
-        "Independent teams produce exactly the uncoordinated experience to avoid.",
-        "Channels complement each other rather than replacing one another."
+        "Duplicate messages across channels can overwhelm contacts.",
+        "Separate campaigns can conflict or repeat messages.",
+        "Channels can complement one another rather than replace email."
       ]
     }
   ]

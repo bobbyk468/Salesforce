@@ -1,42 +1,42 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the CPQ Administrator exam for?",
+    "heading": "Who should take the CPQ Administrator exam?",
     "personas": [
       {
-        "label": "Admins who have inherited a CPQ org",
-        "description": "CPQ was implemented by a partner and now you maintain it. This is the ground you need to cover to work on it safely."
+        "label": "Administrators supporting an existing CPQ org",
+        "description": "You maintain a Salesforce CPQ setup built by another team and need to understand its products, rules, pricing, and contract workflows."
       },
       {
-        "label": "Revenue operations people",
-        "description": "You own quoting and renewals as a process and need to know what the tool can and cannot be made to do."
+        "label": "Revenue operations teams",
+        "description": "You manage quoting or renewals and want to know which CPQ settings support each part of the sales process."
       },
       {
-        "label": "Consultants moving into quote-to-cash",
-        "description": "Core Salesforce skills transfer less here than you would expect. CPQ has its own data model and its own rule engine."
+        "label": "Consultants working with quote-to-cash",
+        "description": "You know Salesforce and want to build practical knowledge of CPQ objects, configuration rules, and pricing behavior."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the CPQ Administrator Exam Hard?",
-    "summary": "One of the harder Salesforce exams, and not because the questions are tricky. CPQ is a managed package with its own data model, its own pricing sequence and its own rule engine, and almost none of it follows from general admin experience. The passing score is the usual 65%, but the volume of product-specific detail is what makes it hard.",
+    "heading": "How challenging is the CPQ Administrator exam?",
+    "summary": "The exam asks how Salesforce CPQ handles product configuration, pricing, approvals, and contract changes. General Salesforce administration helps, but CPQ has its own records and pricing sequence, so hands-on practice is valuable.",
     "bullets": [
-      "<strong>60 questions in 105 minutes.</strong> Most questions are a quoting requirement with four plausible configurations.",
-      "<strong>Around 65% to pass.</strong> Standard threshold, unusually dense subject matter.",
-      "<strong>Product rules and price rules get confused constantly.</strong> Product rules decide what can be on the quote. Price rules change values on the quote lines.",
-      "<strong>The pricing sequence is examinable in order.</strong> List, special, regular, customer, net, and what each stage can alter."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
+      "<strong>Know the rule categories:</strong> Product rules control product selection; price rules update quote or quote line fields.",
+      "<strong>Learn the pricing sequence:</strong> Be able to place list, special, regular, customer, and net price in order."
     ],
-    "passRateGuidance": "The honest test is whether you have built one. Configure a bundle with options and constraints, add a discount schedule. Write a price rule that fires on the Quote Line Editor, contract the quote and then run a renewal and an amendment. If you have not done that cycle end to end at least once, reading about it will not be enough."
+    "passRateGuidance": "Practice configuring a bundle, adding rules, and testing prices in a CPQ org. Then contract a quote and work through a renewal and an amendment. Aim for at least 75% on practice sets and explain why the chosen configuration fits each requirement."
   },
   "examFormat": {
-    "heading": "CPQ Administrator Exam Format Explained",
-    "intro": "Proctored online or at a test centre. The shape of it:",
-    "scenarioPercent": "Most of the exam is scenario work. A business wants tiered discounting, or a bundle where choosing one option excludes another, or a mid-term upgrade prorated correctly, and you have to name the CPQ mechanism that does it.",
+    "heading": "Salesforce CPQ Administrator exam format",
+    "intro": "The exam is proctored online or at a test center. Questions cover configuration and quoting tasks.",
+    "scenarioPercent": "Many questions describe a sales requirement, such as limiting bundle choices, applying tiered discounts, or changing a contract mid-term. Decide which CPQ feature owns that behavior.",
     "bestWayToPass": [
-      "<strong>Get a developer org with CPQ installed and build in it.</strong> There is no substitute. The Quote Line Editor behaves in ways no description prepares you for.",
-      "<strong>Draw the pricing waterfall out by hand.</strong> List, special, regular, customer, net. Then place discount schedules, block prices, contracted prices and price rules on it. Many questions are answerable from that one diagram.",
-      "<strong>Learn the rule types by what they touch.</strong> Product rules evaluate and act on product selection, validation and alerts. Price rules write to fields. Once that is firm, most rule questions resolve.",
-      "<strong>Follow one deal through the whole lifecycle.</strong> Quote to order to contract to subscription to renewal to amendment. Renewals and amendments are a reliable source of questions and are the part people skip."
+      "<strong>Practice in a CPQ org:</strong> Build a bundle and use the Quote Line Editor so you can observe how settings affect a quote.",
+      "<strong>Map the pricing waterfall:</strong> Learn the order of price stages and where contracted prices, discount schedules, and manual discounts apply.",
+      "<strong>Separate rule types:</strong> Product rules govern selection and validation; price rules write values to quote fields.",
+      "<strong>Follow the contract lifecycle:</strong> Review how a quote becomes an order, contract, subscriptions, renewal, or amendment."
     ]
   },
   "certificationCard": {
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "CPQ Administrator: Key Concepts for the Exam",
+    "h2": "CPQ Administrator: core exam concepts",
     "blocks": [
       {
-        "heading": "Product Rules Versus Price Rules",
-        "body": "This distinction is the single most important thing on the exam. Product rules act on what is allowed to be on a quote. They come in four types: validation rules block a quote that breaks a condition, selection rules add, remove, enable or disable options automatically, alert rules warn without blocking, and filter rules restrict what the product search returns. They are driven by error conditions and actions, and they mostly fire in the configurator. Price rules act on field values. They have conditions and then price actions that write a value, a formula or a field reference into a target field on the quote line or the quote. The things to hold on to are the evaluation events, which decide when a rule runs: On Initialization, Before Calculate, On Calculate and After Calculate. If a question describes something that stops a quote, think product rule. If it describes something that changes a number, think price rule."
+        "heading": "Product Rules and Price Rules",
+        "body": "Product rules control what users can select in a bundle or product search. Validation rules report conditions that must be fixed, selection rules add or change options, alert rules show a warning, and filter rules narrow search results. Price rules use conditions and actions to update quote or quote line fields. Evaluation events determine when a price rule runs, such as Before Calculate or After Calculate. When a scenario asks to control product choices, consider a product rule; when it asks to set a field value, consider a price rule."
       },
       {
-        "heading": "Bundles, Features and Options",
-        "body": "A bundle is a parent product with product options attached, usually grouped into features. Features carry the min and max option counts, which is how you enforce rules like choose exactly one platform and up to three add-ons. Options carry their own quantity, bundled flag and selection defaults, and a bundled option is priced inside the parent rather than separately, which is why its price does not appear on its own quote line. Configuration attributes sit at the top of the configurator and let a user pick once, for example a region or a tier, and have that selection drive the options beneath through selection rules. Nested bundles are allowed, an option that is itself a bundle, and the exam expects you to know that the configurator walks down into them. The common scenario is a constraint such as choosing option A must disable option B, and the answer is a selection rule with the appropriate action."
+        "heading": "Bundles, Features, and Options",
+        "body": "A bundle is a parent product with configurable options, which can be grouped into features. Feature minimum and maximum values control how many options a user can select. An option can have its own quantity and pricing behavior; a bundled option contributes to the parent price instead of showing its own separate total. Configuration attributes let a user make a selection that rules can use to control other options. Nested bundles allow an option to contain another configurable group."
       },
       {
         "heading": "The Pricing Waterfall",
-        "body": "CPQ prices a line in a fixed sequence and each stage can only be influenced by particular mechanisms. List price comes from the price book entry. Special price is where block pricing, contracted prices and subscription pricing apply. Regular price is the special price adjusted for quantity-based pricing. Customer price is regular price after discounts, which is where discount schedules and manual discounts land. Net price is customer price after any partner and distributor discounts. Knowing the order matters because a question will tell you a discount is not being applied as expected, and the reason is usually that something earlier in the sequence has already fixed the value. Discount schedules themselves come in two shapes: slab, where each tier applies only to the units inside it, and range, where the tier reached applies to all units. Questions test that difference with numbers."
+        "body": "CPQ calculates prices in stages: list price, special price, regular price, customer price, and net price. The price book supplies list price. Contracted prices and block pricing can affect special price; quantity adjustments feed into regular price; discount schedules and manual discounts contribute to customer price; partner or distributor discounts can affect net price. A discount schedule can use slab pricing, where each tier applies to units within that tier, or range pricing, where the reached tier applies to the full quantity."
       },
       {
-        "heading": "Discounts, Contracted Prices and Approvals",
-        "body": "Discounting in CPQ comes from several places and they stack in a defined way. Discount schedules apply automatically by volume or term. Contracted prices hold a negotiated price for a specific account and product, and they apply at the special price stage, which means they override list price for that customer on every future quote. Manual discounts are entered by the sales user on the line and can be capped by the discount fields on the product or by approvals. Approvals are where CPQ departs from core Salesforce: advanced approvals is a separate package feature with approval chains, smart approvals that skip approvers who have already approved an equal or larger discount, and approval rules based on quote or line conditions. If a question mentions parallel approvers or an approver being skipped on resubmission, it is about advanced approvals rather than standard approval processes."
+        "heading": "Discounts, Contracted Prices, and Approvals",
+        "body": "Discount schedules apply configured discounts by volume or term. A contracted price stores a negotiated price for a product and account. Sales users may enter manual discounts, subject to configured limits and approvals. Advanced Approvals supports approval chains and features such as smart approvals, which can skip an approver who already approved an equal or greater discount. Identify whether a question concerns calculating a price or routing a quote for approval."
       },
       {
-        "heading": "Contracts, Subscriptions, Renewals and Amendments",
-        "body": "When a quote is ordered and contracted, CPQ creates a contract and turns subscription products into subscription records with start and end dates. Renewals are driven by the contract: renewal forecasting and renewal quoting flags determine whether CPQ creates the renewal opportunity and quote automatically as the end date approaches, and the renewal quote starts from the current subscriptions rather than from scratch. Amendments handle change inside the term. An amendment quote shows the existing subscriptions and lets you add, remove or change quantity, and CPQ prorates the difference across the remaining term, which is why the amount on an amendment is rarely the full list price. Two details earn marks: an amendment is always made against the contract rather than the original quote, and the subscription term and the proration multiplier are what drive the prorated figures."
+        "heading": "Contracts, Subscriptions, Renewals, and Amendments",
+        "body": "When a quote is ordered and contracted, CPQ can create subscription records with start and end dates. Renewal forecasting and renewal quoting settings control automatic creation of renewal opportunities and quotes. Amendments change a contract during its active term. The amendment quote uses the contract and its subscriptions as the starting point, and CPQ prorates changes over the remaining term. Keep renewals, which start a new term, separate from amendments, which change the current term."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce CPQ Administrator Exam",
-    "intro": "CPQ scenarios describe a commercial requirement and expect you to name the configuration. Knowing which object or rule type owns each behaviour is most of the work.",
+    "h2": "How to prepare for the CPQ Administrator exam",
+    "intro": "For each scenario, identify whether the requirement concerns product selection, field values, pricing, approval, or contract timing. Then choose the CPQ feature that owns that behavior.",
     "blocks": [
       {
-        "heading": "Rule Type by Effect",
-        "body": "Blocks or changes the product selection, product rule. Writes a value into a field, price rule. Sort this out first and a quarter of the exam becomes easier."
+        "heading": "Choose a Rule by Its Effect",
+        "body": "A rule that controls bundle choices is a product rule. A rule that updates a quote field is a price rule. Know what each product rule type does."
       },
       {
-        "heading": "The Waterfall in Order",
-        "body": "List, special, regular, customer, net. Know which mechanism acts at which stage, especially contracted prices at special and discount schedules at customer."
+        "heading": "Follow the Pricing Stages",
+        "body": "Memorize list, special, regular, customer, and net price in sequence. Practice identifying where contracted prices, discount schedules, and manual discounts are applied."
       },
       {
-        "heading": "Slab Versus Range Schedules",
-        "body": "Range applies the reached tier to every unit. Slab applies each tier only to the units within it. Expect to be given quantities and prices."
+        "heading": "Compare Slab and Range",
+        "body": "With slab pricing, each tier rate applies to units inside that tier. With range pricing, the reached tier applies to all units. Work through sample quantities to see the difference."
       },
       {
-        "heading": "Advanced Approvals Vocabulary",
-        "body": "Smart approvals, approval chains, parallel approvers. If these words appear, the answer is advanced approvals, not the standard approval process."
+        "heading": "Recognize Advanced Approvals",
+        "body": "Smart approvals and approval chains are Advanced Approvals features. A resubmitted quote may skip an approver who approved an equal or larger discount already."
       },
       {
-        "heading": "Amendment Proration",
-        "body": "Amendments work from the contract, show existing subscriptions, and prorate over the remaining term. Build one in an org and watch the numbers."
+        "heading": "Distinguish Amendments from Renewals",
+        "body": "An amendment changes the active contract and prorates the change over the remaining term. A renewal creates the next term from the contract subscriptions."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications to Consider",
-    "intro": "Where CPQ admins commonly go next:",
+    "heading": "Next credentials for CPQ administrators",
+    "intro": "Consider a related product, billing, revenue, or platform credential as your responsibilities grow.",
     "links": [
       {
         "href": "/certifications/cpq-billing-ap",
@@ -170,87 +170,87 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A bundle must prevent a user from selecting the Premium Support option when the Basic tier has been chosen. What should the admin configure?",
+      "question": "A bundle should make Premium Support unavailable whenever a buyer selects the Basic tier. Which configuration fits?",
       "options": [
-        "A selection rule that disables the option",
-        "A validation rule on the Quote object",
-        "A price rule with a conditional action",
-        "A discount schedule"
+        "A selection rule that disables Premium Support",
+        "A validation rule that blocks the quote after configuration",
+        "A price rule that changes the quote line amount",
+        "A discount schedule for the Basic tier"
       ],
       "correctAnswer": 0,
-      "explanation": "Selection rules add, remove, enable or disable options in the configurator, which is exactly this requirement.",
+      "explanation": "Selection rules can enable or disable bundle options based on another choice, which matches this requirement.",
       "whyWrong": [
-        "A validation rule would block the quote after the fact rather than preventing the selection.",
-        "Price rules change field values; they do not control option availability.",
-        "Discount schedules affect pricing, not option availability."
+        "A validation rule reports or blocks an invalid configuration rather than disabling the option as the user chooses.",
+        "Price rules update field values and do not control whether a product option is available.",
+        "Discount schedules set discounts by volume or term, not option availability."
       ]
     },
     {
-      "question": "A negotiated price for one account on one product must apply automatically to all future quotes for that account. What should be used?",
+      "question": "A special negotiated amount for one account and product should appear on every future quote. What should the admin create?",
       "options": [
-        "A new price book for the account",
+        "A separate price book for the account",
         "A contracted price",
-        "A discount schedule",
+        "A discount schedule for all accounts",
         "A manual discount on each quote"
       ],
       "correctAnswer": 1,
-      "explanation": "Contracted prices store an account-specific price for a product and apply at the special price stage on every quote.",
+      "explanation": "A contracted price stores the negotiated account and product price so CPQ can apply it to future quotes.",
       "whyWrong": [
-        "A dedicated price book per account does not scale and is not the CPQ mechanism for this.",
-        "Discount schedules apply by volume or term, not by account.",
-        "Manual discounts rely on the user remembering, which is not automatic."
+        "A separate price book is not the CPQ feature for maintaining a contracted product price.",
+        "A discount schedule varies by quantity or term rather than by a particular account price.",
+        "Manual entry depends on the user and does not apply automatically."
       ]
     },
     {
-      "question": "A discount schedule is configured so that reaching the 100-unit tier applies that tier's rate to all 100 units. Which type is this?",
+      "question": "A schedule applies the tier reached at 100 units to all 100 units. Which schedule method is this?",
       "options": [
-        "Slab",
-        "Term",
-        "Range",
+        "Slab pricing",
+        "Term pricing",
+        "Range pricing",
         "Block pricing"
       ],
       "correctAnswer": 2,
-      "explanation": "Range schedules apply the rate of the tier reached to the entire quantity.",
+      "explanation": "Range pricing applies the reached tier to the full quantity, so all 100 units use that tier rate.",
       "whyWrong": [
-        "Slab applies each tier's rate only to the units falling inside that tier.",
-        "Term discounts vary by subscription length, not quantity.",
-        "Block pricing sets a fixed total for a quantity band rather than a per-unit discount."
+        "Slab pricing applies each tier rate only to the units within that tier.",
+        "Term pricing varies by subscription length, not quantity tiers.",
+        "Block pricing assigns a fixed price to a quantity block rather than applying a reached discount rate to all units."
       ]
     },
     {
-      "question": "A customer wants to add 20 licences four months into a twelve-month contract. What should the admin do?",
+      "question": "A customer wants 20 more licenses four months into a 12-month contract. What should the admin create?",
       "options": [
-        "Create an entirely new quote on a new opportunity",
-        "Create a renewal quote",
-        "Create an amendment quote from the contract",
-        "Edit the original quote"
+        "A new quote on a separate opportunity",
+        "A renewal quote for the next term",
+        "An amendment quote from the contract",
+        "An edit to the original quote"
       ],
       "correctAnswer": 2,
-      "explanation": "Amendments are made against the contract and prorate the change across the remaining term.",
+      "explanation": "An amendment quote changes an active contract and can prorate the additional licenses over the remaining term.",
       "whyWrong": [
-        "A separate new quote would not prorate against the existing term or link to the contract.",
-        "Renewals handle the next term, not a change inside the current one.",
-        "The original quote is closed once contracted and should not be edited."
+        "A separate quote would not make the change against the active contract.",
+        "A renewal quote is for the next contract term, not a mid-term change.",
+        "The contracted sale should be changed through an amendment rather than by editing the original quote."
       ]
     },
     {
-      "question": "At which stage of the pricing waterfall do discount schedules take effect?",
+      "question": "At which pricing stage do discount schedules contribute their discount?",
       "options": [
-        "The special price stage",
+        "Special price",
         "Customer price",
         "Net price",
         "List price"
       ],
       "correctAnswer": 1,
-      "explanation": "Discounts, including schedules, are applied to produce the customer price.",
+      "explanation": "Discount schedules contribute to the customer price stage of the CPQ pricing waterfall.",
       "whyWrong": [
-        "Special price is where contracted prices and block pricing act.",
-        "Net price applies partner and distributor discounts after customer price.",
-        "List price comes straight from the price book entry before any adjustment."
+        "Special price is where mechanisms such as contracted prices and block pricing can apply.",
+        "Net price follows customer price and can include partner or distributor discounts.",
+        "List price comes from the price book before later pricing adjustments."
       ]
     },
     {
-      "question": "Which evaluation event should a price rule use if it must set a field before CPQ performs its calculation?",
+      "question": "A price rule must set a field before CPQ calculates prices. Which evaluation event should it use?",
       "options": [
         "On Save",
         "On Initialization",
@@ -258,15 +258,15 @@
         "Before Calculate"
       ],
       "correctAnswer": 3,
-      "explanation": "Before Calculate runs ahead of the calculation so the value is in place when CPQ prices the line.",
+      "explanation": "Before Calculate runs before the pricing calculation, allowing the rule to set the field in time.",
       "whyWrong": [
-        "On Save is not one of the CPQ price rule evaluation events.",
-        "On Initialization runs when the editor opens, not around each calculation.",
-        "After Calculate runs once pricing is complete, which is too late to influence it."
+        "On Save is not a CPQ price rule evaluation event for this purpose.",
+        "On Initialization runs when the editor initializes, not immediately before a calculation.",
+        "After Calculate occurs after the pricing calculation has completed."
       ]
     },
     {
-      "question": "A sales user must be warned that a configuration is unusual; but still allowed to proceed. Which product rule type fits?",
+      "question": "A sales user should see a warning about an unusual configuration but still be allowed to continue. Which product rule type fits?",
       "options": [
         "Validation",
         "Selection",
@@ -274,139 +274,139 @@
         "Filter"
       ],
       "correctAnswer": 2,
-      "explanation": "Alert rules display a message without preventing the quote from continuing.",
+      "explanation": "An alert rule presents a message without blocking the user from continuing.",
       "whyWrong": [
-        "Validation rules block the quote, which the requirement explicitly does not want.",
-        "Selection rules change which options are chosen or available.",
-        "Filter rules restrict what the product search returns."
+        "Validation rules are used to flag conditions that may prevent a quote from proceeding.",
+        "Selection rules change which options are selected or available.",
+        "Filter rules limit the products displayed in product search."
       ]
     },
     {
-      "question": "What happens to subscription products when a quote is ordered and contracted?",
+      "question": "What does CPQ create for subscription products when an ordered quote is contracted?",
       "options": [
-        "Subscription records with start and end dates",
-        "They are held until the renewal date",
-        "They are deleted from the quote",
-        "They convert to one-off products"
+        "Dated subscription records",
+        "Records held until the renewal date",
+        "Deleted quote lines",
+        "One-time product records"
       ],
       "correctAnswer": 0,
-      "explanation": "Contracting turns subscription quote lines into subscription records that drive renewals and amendments.",
+      "explanation": "Contracting creates subscription records that represent the service term and support later renewals or amendments.",
       "whyWrong": [
-        "Subscriptions are created at contracting, not at renewal.",
-        "Quote lines remain as the record of what was sold.",
-        "Subscription products stay subscriptions; their pricing type does not change."
+        "The subscriptions are created during contracting rather than waiting until renewal.",
+        "The quote remains as the record of what was sold; its lines are not simply deleted.",
+        "A subscription product remains a subscription rather than becoming a one-time product."
       ]
     },
     {
-      "question": "An approver who has already approved a 20% discount should not be asked again when the quote is resubmitted at 15%. Which feature does this?",
+      "question": "An approver approved a 20% discount. On resubmission at 15%, the same approver should be skipped. Which feature supports this?",
       "options": [
-        "A validation rule placed on the quote record",
-        "A standard approval process",
-        "An approval alert rule",
-        "Smart approvals in advanced approvals"
+        "A validation rule attached to the quote record",
+        "A standard Salesforce approval process",
+        "An alert rule shown during product configuration",
+        "Smart approvals"
       ],
       "correctAnswer": 3,
-      "explanation": "Smart approvals skip approvers who have already approved an equal or greater discount on resubmission.",
+      "explanation": "Smart approvals can skip an approver who previously approved an equal or greater discount.",
       "whyWrong": [
-        "Validation rules block records; they do not route approvals.",
-        "Standard Salesforce approval processes restart the chain on resubmission.",
-        "Alert rules display messages and are unrelated to approval routing."
+        "Validation rules address record conditions and do not determine whether an approver is repeated.",
+        "The requirement describes smart approval behavior rather than a basic approval process.",
+        "Product alert rules display messages during configuration and do not route approvals."
       ]
     },
     {
-      "question": "A feature in a bundle must allow between one and three options to be selected. Where is this set?",
+      "question": "A bundle feature must require at least one and no more than three options. Where should this be set?",
       "options": [
-        "The quantity field on each option",
-        "The bundle's price book entry",
-        "A validation product rule",
-        "The min and max fields on the feature"
+        "The option quantity value on each individual product option",
+        "The price book entry linked to the parent bundle product",
+        "A validation product rule that runs after selections are made",
+        "Feature min/max option limits"
       ],
       "correctAnswer": 3,
-      "explanation": "Features carry the minimum and maximum option counts that constrain selection within them.",
+      "explanation": "Feature minimum and maximum values directly set how many options a user must or may select.",
       "whyWrong": [
-        "Option quantity controls how many of that option, not how many options.",
-        "Price book entries set pricing, not configuration limits.",
-        "A validation rule could catch a breach afterwards but the feature fields enforce it directly."
+        "Option quantity controls how many units of an option are added, not the number of choices in a feature.",
+        "Price book entries define price information rather than selection limits.",
+        "A validation rule could report an invalid count, but the feature fields define the selection limits."
       ]
     },
     {
-      "question": "What does a bundled product option mean for pricing?",
+      "question": "What does the bundled flag on a product option mean for its price?",
       "options": [
-        "Its price sits in the parent, not on its own line",
-        "It is always free of charge",
-        "It must be discounted to zero manually",
-        "It appears as a separate quote line with its own total"
+        "Included in the price of the parent product",
+        "The option must always be free",
+        "The admin must manually discount it to zero",
+        "It always has a separately priced quote line"
       ],
       "correctAnswer": 0,
-      "explanation": "Bundled options are priced within the parent product rather than contributing their own line total.",
+      "explanation": "A bundled option contributes to the parent product price rather than adding a separate option price.",
       "whyWrong": [
-        "Bundled is about where the price sits, not whether the option has value.",
-        "No manual discounting is needed; the behaviour is built in.",
-        "A separately priced line is what an unbundled option produces."
+        "Bundled describes how the price is represented; it does not mean the option has no value.",
+        "The bundled setting handles the pricing relationship without a manual zero discount.",
+        "A separately priced option is the behavior of an unbundled option."
       ]
     },
     {
-      "question": "A configuration attribute is placed at the top of a bundle configurator. What is it for?",
+      "question": "Why add a configuration attribute at the top of a bundle configurator?",
       "options": [
-        "Replacing the need for product rules",
-        "Storing the final quote total",
-        "One selection that drives the options below",
-        "Setting the contract end date"
+        "To remove the need for product rules",
+        "To store the final quote total",
+        "A choice that drives dependent options",
+        "To set the contract end date"
       ],
       "correctAnswer": 2,
-      "explanation": "Configuration attributes let a user choose once, and selection rules then act on that choice across the bundle.",
+      "explanation": "A configuration attribute lets a user make a choice that selection rules can apply to options below it.",
       "whyWrong": [
-        "Attributes supply input to rules rather than replacing them.",
-        "Totals are calculated on the quote, not held in a configuration attribute.",
-        "Contract dates come from the contracting process."
+        "Attributes can provide inputs to product rules rather than replace the rules.",
+        "The quote calculation determines totals; a configuration attribute is not the total field.",
+        "Contract dates are set through the contract and subscription process."
       ]
     },
     {
-      "question": "A renewal opportunity and quote should be created automatically as a contract approaches its end date. What governs this?",
+      "question": "A renewal opportunity and quote should be created as a contract approaches its end date. What controls this?",
       "options": [
         "The amendment process",
-        "The renewal forecasting and quoting settings",
-        "A scheduled Apex job written by the admin",
+        "Renewal forecast and quote creation settings",
+        "A custom scheduled Apex job",
         "A price rule with an After Calculate event"
       ],
       "correctAnswer": 1,
-      "explanation": "Those two contract flags are what tell CPQ to generate the renewal opportunity and quote.",
+      "explanation": "The contract renewal forecasting and renewal quoting settings govern automatic renewal record creation.",
       "whyWrong": [
-        "Amendments handle change within the current term.",
-        "Custom code is unnecessary because the feature is standard.",
-        "Price rules affect field values on a quote, not renewal creation."
+        "Amendments handle changes during the current contract term.",
+        "Standard CPQ renewal settings can support this without a custom scheduled job.",
+        "Price rules update quote values and do not create renewal opportunities."
       ]
     },
     {
-      "question": "Why might a manual discount entered by a sales user fail to change the net price as expected?",
+      "question": "Why might a user-entered manual discount not affect the net price as expected?",
       "options": [
-        "Net price ignores all discounts",
-        "An earlier stage has already fixed the value",
-        "Manual discounts are not supported in CPQ",
-        "Discounts only apply to subscription products"
+        "The net price stage does not include discounts entered on a quote",
+        "An earlier price stage may set the value before later adjustments",
+        "CPQ does not support manual discounts on quoted products",
+        "Manual discounts apply only to subscription product lines"
       ],
       "correctAnswer": 1,
-      "explanation": "The waterfall runs in order, so a value set at an earlier stage can override what a later discount attempts.",
+      "explanation": "The pricing waterfall runs in order, and earlier values or settings can affect how later discounting is calculated.",
       "whyWrong": [
-        "Net price is the result of discounts, not immune to them.",
-        "Manual discounting is a standard CPQ capability.",
-        "Discounts apply to one-off products as well as subscriptions."
+        "Net price is calculated after discounts rather than excluding them all.",
+        "Manual discounts are a supported CPQ capability.",
+        "Discounts can apply to one-time products as well as subscriptions."
       ]
     },
     {
-      "question": "Which best describes what a filter rule does?",
+      "question": "What does a product filter rule do?",
       "options": [
-        "Restricts what the product search returns",
-        "Writes a value into a target field",
+        "Limits the products returned by search",
+        "Writes a value into a target quote field",
         "Blocks a quote from being saved",
-        "Prorates an amendment"
+        "Calculates prorated charges for an amendment"
       ],
       "correctAnswer": 0,
-      "explanation": "Filter rules narrow the product selection a user can search, based on conditions.",
+      "explanation": "A filter rule narrows the products returned during product selection based on its conditions.",
       "whyWrong": [
-        "Writing field values is what price actions do.",
-        "Blocking a save is the job of a validation rule.",
-        "Proration is part of the amendment calculation, not a rule type."
+        "Writing field values is handled by price rule actions.",
+        "A validation rule is used to flag or prevent an invalid quote condition.",
+        "Amendment proration is part of CPQ contract change calculations."
       ]
     }
   ]

@@ -42,23 +42,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between MuleSoft Integration Foundations and MuleSoft Developer I?',
-    answer: 'MuleSoft Integration Foundations (MCIA Associate) is an entry-level conceptual certification, it tests understanding of API-led connectivity, Anypoint Platform components, and integration concepts without requiring hands-on Anypoint Studio experience. MuleSoft Developer I (MCIA-Level-1) is a professional-level practical certification that tests building real Mule 4 flows in Anypoint Studio, writing DataWeave transformations, configuring connectors, and deploying to CloudHub.',
+    answer: 'MuleSoft Integration Foundations (MCIA Associate) is an entry-level, conceptual certification. It covers API-led connectivity, Anypoint Platform components, and integration concepts. You do not need hands-on Anypoint Studio experience. MuleSoft Developer I (MCIA-Level-1) is a professional certification that tests how you build Mule 4 flows in Anypoint Studio, write DataWeave transformations, configure connectors, and deploy to CloudHub.',
   },
   {
     question: 'Should I take MuleSoft Integration Foundations before Developer I?',
-    answer: 'Integration Foundations is a good starting point if you have no prior MuleSoft experience. It validates conceptual understanding ($75, 40 questions, 70 minutes) and serves as a confidence builder before the more demanding Developer I exam ($200, 60 questions, 120 minutes). However, experienced developers can skip Integration Foundations and go directly to Developer I with Anypoint Studio practice.',
+    answer: 'Integration Foundations can be a good first step if you are new to MuleSoft. It tests conceptual knowledge ($75, 40 questions, 70 minutes) before the more hands-on Developer I exam ($200, 60 questions, 120 minutes). Experienced developers can skip it and prepare directly for Developer I with Anypoint Studio practice.',
   },
   {
     question: 'Which MuleSoft certification has more job market value?',
-    answer: 'MuleSoft Developer I has significantly more job market value. Employers hiring MuleSoft developers look for Developer I (or higher) as the baseline credential. Integration Foundations is a useful introductory credential for business analysts and non-developers who work with MuleSoft teams, but it is rarely sufficient for developer roles. For maximum career impact, target Developer I.',
+    answer: 'MuleSoft Developer I is more valuable for developer roles. Employers often look for Developer I or higher as a baseline credential. Integration Foundations can help business analysts and other non-developers who work with MuleSoft teams, but it may not be enough for a developer role.',
   },
   {
     question: 'Is the MuleSoft Integration Foundations exam easier than Developer I?',
-    answer: 'Yes: Integration Foundations is significantly easier. Integration Foundations is 40 questions, 70 minutes, and tests conceptual knowledge only (no coding required). Developer I is 60 questions, 120 minutes, requires understanding DataWeave expressions, Mule 4 flow design, and connector configuration. Both require 70% passing score, but the depth of knowledge tested is vastly different.',
+    answer: 'Yes. Integration Foundations is easier: it has 40 questions, takes 70 minutes, and tests concepts without coding. Developer I has 60 questions, takes 120 minutes, and covers DataWeave, Mule 4 flow design, and connector configuration. Both have a 70% passing score, but Developer I tests more advanced skills.',
   },
   {
     question: 'Does Integration Foundations count towards the Developer I exam?',
-    answer: 'Integration Foundations is a standalone credential; it does not reduce the scope of the Developer I exam or waive any sections. Developer I is a separate, broader exam that builds on Integration Foundations concepts and adds hands-on Mule 4 development skills. Holding Integration Foundations does, however, demonstrate foundational knowledge that can help in Developer I preparation.',
+    answer: 'Integration Foundations is a standalone credential. It does not reduce the scope of Developer I or waive any exam sections. Developer I is a separate, broader exam that builds on integration concepts and adds hands-on Mule 4 development skills. Foundations can still help you prepare by introducing core concepts.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Two MuleSoft certifications at very different levels. One is conceptual and entry-level, the other is hands-on and professional. Here’s which to choose.
+          Compare two MuleSoft certifications at different levels: one covers entry-level concepts, while the other tests hands-on development. Use the guide to choose which one fits your goals.
         </p>
       </div>
 
@@ -90,8 +90,8 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
             badge: 'Entry Level',
             badgeColor: 'bg-green-100 text-green-800',
             fee: '$75', questions: '40', time: '70 min', passing: '70%',
-            level: 'Conceptual, no coding required',
-            best: 'Business analysts, architects, Salesforce admins new to MuleSoft',
+            level: 'Covers concepts; no coding required',
+            best: 'Business analysts, architects, and Salesforce admins who are new to MuleSoft',
             skills: ['API-led connectivity concepts', 'Anypoint Platform overview', 'Integration patterns (conceptual)', 'No Anypoint Studio required'],
           },
           {
@@ -100,8 +100,8 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
             badge: 'Professional',
             badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
             fee: '$200', questions: '60', time: '120 min', passing: '70%',
-            level: 'Hands-on: Anypoint Studio required',
-            best: 'Integration developers, Salesforce architects, API developers',
+            level: 'Hands-on development in Anypoint Studio',
+            best: 'Integration developers, Salesforce architects, and API developers',
             skills: ['Building Mule 4 flows', 'DataWeave transformations', 'Anypoint Connectors', 'Error handling & deployment'],
           },
         ].map((cert) => (
@@ -129,7 +129,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
               ))}
             </ul>
             <Link href={cert.href} className="inline-flex items-center text-salesforce-blue font-medium text-sm hover:underline">
-              Free Practice Questions →
+              Try free practice questions →
             </Link>
           </div>
         ))}
@@ -190,11 +190,11 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Non-technical stakeholder or project manager on a MuleSoft project</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations, awareness level, no coding</td></tr>
-              <tr><td className="py-2.5 pr-4">Building Mule flows, DataWeave transformations, or connector configs</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I, hands-on technical credential</td></tr>
-              <tr><td className="py-2.5 pr-4">Want to validate integration knowledge without Anypoint Studio experience</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations ($75, 40 questions, 70 min)</td></tr>
-              <tr><td className="py-2.5 pr-4">Integration developer or API developer role</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I, the industry-recognised dev cert</td></tr>
-              <tr><td className="py-2.5 pr-4">Starting MuleSoft with zero integration background</td><td className="py-2.5 font-semibold text-gray-700">Foundations first to grasp API-led concepts, then Dev I</td></tr>
+              <tr><td className="py-2.5 pr-4">You are a non-technical stakeholder or project manager on a MuleSoft project</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations for an overview, with no coding</td></tr>
+              <tr><td className="py-2.5 pr-4">You build Mule flows, DataWeave transformations, or connector configurations</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I for hands-on development</td></tr>
+              <tr><td className="py-2.5 pr-4">You want to check your integration knowledge without Anypoint Studio experience</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations ($75, 40 questions, 70 min)</td></tr>
+              <tr><td className="py-2.5 pr-4">You want an integration developer or API developer role</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I, a recognized developer credential</td></tr>
+              <tr><td className="py-2.5 pr-4">You are new to MuleSoft and integration</td><td className="py-2.5 font-semibold text-gray-700">Start with Foundations to learn API-led concepts, then consider Developer I</td></tr>
             </tbody>
           </table>
         </div>
@@ -203,8 +203,8 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
       <RelatedGuides links={getRelatedGuides('mulesoft-developer-i-vs-integration-foundations')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Start Practising Today</h2>
-        <p className="text-white mb-6">Free practice questions for both MuleSoft certifications.</p>
+        <h2 className="text-2xl font-bold mb-2">Start Practicing</h2>
+        <p className="text-white mb-6">Try free practice questions for either MuleSoft certification.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/mulesoft-developer-i" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Developer I Practice

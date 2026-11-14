@@ -1,51 +1,51 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Manufacturing Cloud Accredited Professional exam for?",
+    "heading": "Who should take the Manufacturing Cloud Accredited Professional exam?",
     "personas": [
       {
         "label": "Manufacturing implementation consultants",
-        "description": "You deliver Manufacturing Cloud projects for industrial manufacturers and need the credential to validate your expertise in sales agreements, forecasting, and rebate management."
+        "description": "You deliver Salesforce solutions for manufacturers and want to demonstrate knowledge of sales agreements, forecasts, and rebate processes."
       },
       {
-        "label": "Salesforce admins in manufacturing",
-        "description": "You manage a Manufacturing Cloud org and want to prove your knowledge of account-based forecasting, demand planning, and dealer visit management."
+        "label": "Salesforce administrators in manufacturing",
+        "description": "You support a Manufacturing Cloud org and want to validate your understanding of account forecasts, demand planning, and partner workflows."
       },
       {
         "label": "Supply chain and ERP integration partners",
-        "description": "You design integrations between Salesforce Manufacturing Cloud and ERP systems like SAP or Oracle and need to demonstrate your solution design skills."
+        "description": "You connect Manufacturing Cloud with ERP systems and need to understand how order, inventory, and pricing data move between platforms."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Manufacturing Cloud Accredited Professional Exam Hard?",
-    "summary": "The Manufacturing Cloud AP exam is moderately difficult. It tests manufacturing-specific workflows including sales agreements, account-based forecasting, rebate programs, and ERP integration patterns. Candidates without exposure to manufacturing sales operations and demand planning will find the domain concepts challenging.",
+    "heading": "How challenging is the Manufacturing Cloud AP exam?",
+    "summary": "The exam covers manufacturing sales operations, including sales agreements, account-based forecasting, rebates, partner management, and ERP integration. Candidates new to manufacturing demand planning may need time to learn these concepts and how they connect.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>no published passing score</strong>: roughly 39 correct answers needed.",
-      "<strong>Sales agreement complexity</strong>: you must understand agreement terms, attainment calculations, and how actuals from orders feed into agreement tracking.",
-      "<strong>Forecasting and demand planning</strong>: questions test account-based forecasting, run rate business, forecast adjustments, and how Manufacturing Cloud bridges sales planning with operations."
+      "<strong>50 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>68% to pass</strong>, which is 34 correct answers out of 50.",
+      "<strong>Sales agreements:</strong> Understand agreement terms, attainment, and how actual order data is compared with commitments.",
+      "<strong>Forecasting:</strong> Review account forecasts, run rate demand, adjustments, and the relationship between sales plans and operations."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and ensure you can explain how sales agreements drive account-based forecasts before booking. Hands-on experience with Manufacturing Cloud or familiarity with manufacturing demand planning and dealer/distributor management is strongly recommended."
+    "passRateGuidance": "Practice explaining how a sales agreement supports an account forecast and how actuals are populated. Review partner sales processes and common ERP data flows. Use the current exam guide to confirm exam requirements before booking."
   },
   "examFormat": {
-    "heading": "Manufacturing Cloud Accredited Professional Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring sales agreements for a distributor network, designing an account-based forecast that combines agreement-based and run-rate demand, and setting up a tiered rebate program for dealer incentives.",
+    "heading": "Manufacturing Cloud Accredited Professional exam format",
+    "intro": "The exam is proctored online or in person. Questions cover manufacturing sales and partner processes.",
+    "scenarioPercent": "Some questions describe distributor commitments, account forecasts, rebate programs, or ERP integrations and ask how Manufacturing Cloud should support the process.",
     "bestWayToPass": [
-      "<strong>Master sales agreements:</strong> Know agreement headers, agreement terms (product-level commitments), how actuals are calculated, and how attainment data flows from orders or opportunities.",
-      "<strong>Understand account-based forecasting:</strong> Study forecast periods, forecast metrics (planned vs. actual revenue), forecast adjustments, and how forecasts roll up across account hierarchies.",
-      "<strong>Learn rebate management:</strong> Know rebate program types (volume, growth, promotional), tiered payout structures, accrual calculations, and how payouts are processed at program end.",
-      "<strong>Study ERP integration patterns:</strong> Understand how order data, inventory levels, and pricing from SAP or Oracle flow into Manufacturing Cloud, and how MuleSoft is commonly used as integration middleware."
+      "<strong>Review sales agreements:</strong> Understand agreement records, terms, planned quantities, actuals, and attainment.",
+      "<strong>Study account forecasts:</strong> Learn forecast periods, metrics, adjustments, and rollups across account hierarchies.",
+      "<strong>Understand rebates:</strong> Review eligibility, tiers, accruals, and how final payouts are determined.",
+      "<strong>Map ERP integration needs:</strong> Identify data ownership, direction, timing, transformation, and failure handling for order and inventory data."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests your ability to configure Sales Agreements, Account-Based Forecasting, rebate programs, and ERP integrations in Manufacturing Cloud.",
+    "description": "This exam covers Manufacturing Cloud setup for sales agreements, account-based forecasting, rebate programs, partner management, and ERP integration. The exam is 50 scored questions in 75 minutes, with a 68% pass mark, weighted towards Configure and Build (38%) and Design (28%).",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
-      "duration": "90 min",
+      "passingScore": "68%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [
@@ -57,59 +57,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Manufacturing Cloud AP: Key Concepts for the Exam",
+    "h2": "Manufacturing Cloud AP: core concepts",
     "blocks": [
       {
-        "heading": "Account-Based Forecasting & Sales Agreements",
-        "body": "Manufacturing Cloud centers on the **Sales Agreement** object, a negotiated contract between a manufacturer and a distributor/dealer defining expected purchase volumes and prices over a period. Sales **Agreement Terms** define the monthly or quarterly expected volumes and net price for each product. Actuals (from Orders or Opportunities) are compared against agreement terms to show attainment. Account Forecasts roll up agreement actuals, open opportunities, and planned volumes into a single account-level demand forecast. Forecast Adjustments allow sales managers to manually override system-generated forecasts. The AP exam tests how Sales Agreements feed Account Forecasts, how actuals are calculated from order data, and how to configure forecast windows and adjustment permissions."
+        "heading": "Sales Agreements and Account Forecasts",
+        "body": "A sales agreement records a manufacturer’s negotiated commitments with a distributor or dealer over a defined term. Agreement terms can describe product-level planned quantities and prices for forecast periods. Actual order data can be compared with the planned values to show attainment. Account-based forecasts combine agreement information with other demand signals such as open opportunities and run rate business. Forecast adjustments let authorized users account for changes that are not reflected in the underlying data. Understand how orders link to agreements and how forecast periods roll up."
       },
       {
-        "heading": "Run Rate Business & Demand Planning",
-        "body": "**Run Rate Business** tracks recurring purchase patterns from existing customers who order the same products regularly without a formal sales agreement. Manufacturing Cloud captures this demand by analyzing historical order data and projecting forward consumption. Run Rate Accounts have predictable demand signals that feed into the aggregate forecast. **Demand Planning** integration connects Manufacturing Cloud forecasts to ERP or S&OP (Sales & Operations Planning) systems. Forecast Collaboration allows multiple stakeholders (sales, supply chain, finance) to view and adjust the forecast. The exam tests how run rate demand is captured, how it differs from agreement-based demand, and how combined forecasts are presented to stakeholders."
+        "heading": "Run Rate Business and Demand Planning",
+        "body": "Run rate business represents recurring purchases from customers without a formal sales agreement. Historical ordering patterns can help estimate future demand. A combined forecast may include agreement commitments, run rate demand, and other sales inputs. Forecast collaboration helps sales, supply chain, and finance stakeholders review assumptions and adjust plans. Know the difference between contracted agreement demand and recurring demand inferred from customer behavior."
       },
       {
-        "heading": "Partner Visit Management & Field Execution",
-        "body": "Manufacturing Cloud includes Partner Visit Management for field teams that visit dealer and distributor accounts. Visit Plans define visit schedules and objectives. During visits, reps review agreement attainment, discuss upcoming orders, capture competitive intelligence, and update account plans. Action Plans define repeatable activity checklists for common visit scenarios. Assessments capture structured data during visits (dealer satisfaction surveys, inventory counts). Mobile access via the Salesforce app enables reps to complete visit activities offline. The exam tests how to configure a visit plan, associate action plan templates, and surface agreement attainment data on the account page for use during dealer visits."
+        "heading": "Partner Visits and Field Execution",
+        "body": "Manufacturers may use partner visit processes to support dealer and distributor relationships. Visit plans can organize schedules and objectives. During a visit, a representative may review agreement attainment, discuss planned orders, capture inventory observations, or record competitive information. Action plans can provide repeatable checklists, and assessments can capture structured responses. Confirm how the selected product and licenses support mobile or offline work before designing the process."
       },
       {
-        "heading": "Pricing, Rebates & Incentive Management",
-        "body": "Rebate Management in Manufacturing Cloud handles volume-based, growth-based, and promotional rebates paid to distributors and dealers. Rebate Programs define the qualification criteria and payout rates. Rebate Tiers apply higher payout rates at higher volume thresholds. Accruals track the estimated rebate liability as transactions occur. Payouts settle the final rebate amount at the end of the program period. Price Books and contract-level pricing (Negotiated Pricing) define the net price terms in Sales Agreements. The AP exam tests how to configure a tiered rebate program, how accruals are calculated from sales data, and how payouts are processed at program end."
+        "heading": "Rebates, Incentives, and Pricing",
+        "body": "Rebate programs define the conditions under which a dealer or distributor earns an incentive. Tiers can set different payout rates at different volume thresholds. Accruals estimate the expected liability as eligible sales occur, while the final payout settles the amount due for the program period. Sales agreement prices may reflect negotiated terms. Keep rebate calculations, agreement pricing, and general price book records distinct when assessing a scenario."
       },
       {
-        "heading": "Integration with ERP & Supply Chain",
-        "body": "Manufacturing Cloud integrates with ERP systems (SAP, Oracle, Infor) to exchange order data, inventory levels, and financial actuals. MuleSoft is commonly used as the integration middleware for real-time or batch data exchange. Order data from ERP feeds the Sales Agreement attainment calculation. Inventory levels from ERP support demand planning accuracy. Product pricing maintained in ERP is synced to Salesforce Price Books. The AP exam tests the integration architecture for a Manufacturing Cloud + SAP scenario, which data flows in each direction, how to handle data transformation differences, and how to design for resiliency when the ERP is temporarily unavailable."
+        "heading": "ERP and Supply Chain Integration",
+        "body": "ERP systems may own order, inventory, and financial data that Manufacturing Cloud needs for agreement attainment or planning. Define the source of truth for each field and how data moves between systems. Product pricing may also need synchronization. Integration design should account for transformation, volume, timing, errors, and temporary outages. Middleware such as MuleSoft may be used, but the integration approach should be selected for the customer’s architecture and requirements."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Manufacturing Cloud Accredited Professional Exam",
-    "intro": "The Manufacturing Cloud AP exam tests Salesforce implementation for manufacturers. Focus on Sales Agreements, Account-Based Forecasting, and how Manufacturing Cloud bridges sales planning with operations.",
+    "h2": "How to prepare for the Manufacturing Cloud AP exam",
+    "intro": "For each scenario, identify whether it concerns a sales commitment, forecast, incentive, partner activity, or ERP data flow. Then determine which records or process support that need.",
     "blocks": [
       {
-        "heading": "Sales Agreements",
-        "body": "Know the Sales Agreement data model: Agreement Header, Agreement Terms (product-level commitments), and how actual order data flows from opportunities or orders to populate agreement actuals vs. planned quantities."
+        "heading": "Follow Agreement Terms and Actuals",
+        "body": "Know how planned product quantities and prices are recorded and how actual order data is compared with those commitments over time."
       },
       {
-        "heading": "Account-Based Forecasting",
-        "body": "Know how **Account-Based Forecasting** works: **forecast periods**, forecast metrics (planned revenue, actual revenue, adjustments), and how forecasts roll up from account to regional and global levels."
+        "heading": "Build an Account Forecast",
+        "body": "Understand forecast periods, agreement demand, run rate demand, adjustments, and rollups. Check how the forecast will be used by sales and operations."
       },
       {
-        "heading": "Rebate Management",
-        "body": "Know how Rebate Management tracks manufacturer incentive programs: Rebate Types (volume rebate, tiered discount), Payout definitions, and how the rebate calculation engine processes eligible transactions."
+        "heading": "Review Rebate Programs",
+        "body": "Know how eligibility and tier thresholds affect accruals and payouts. Distinguish an incentive from a change to product list price."
       },
       {
-        "heading": "Partner & Channel Management",
-        "body": "Know how Manufacturing Cloud supports channel partner management: partner onboarding, partner sales agreements, PRM (Partner Relationship Management) portal configuration for dealers and distributors."
+        "heading": "Support Dealer and Distributor Work",
+        "body": "Connect partner visits and account planning to the information representatives need, such as attainment, upcoming orders, and structured assessment results."
       },
       {
-        "heading": "Manufacturing Analytics",
-        "body": "Know the standard Manufacturing Cloud [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) dashboards: sales agreement compliance, forecast accuracy, rebate program performance, and how these dashboards help operations teams identify supply/demand mismatches."
+        "heading": "Plan ERP Data Exchange",
+        "body": "Define which system owns orders, inventory, and pricing, then specify data direction, transformation, refresh timing, and recovery behavior."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "heading": "Related credentials after Manufacturing Cloud AP",
+    "intro": "Build on manufacturing implementation work with a Salesforce consultant or integration credential.",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -165,243 +165,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A manufacturer agrees to supply 50,000 units over the next year at an agreed price. What records this commitment?",
+      "question": "A manufacturer and distributor agree on a product volume and price for the coming year. Which record tracks that commitment?",
       "options": [
-        "An opportunity that is left open for the whole of the twelve month period",
-        "A contract with the quantity written into its description field as text",
+        "An open opportunity kept active for the full year",
+        "A contract description containing the quantity as text",
         "A sales agreement",
-        "A quote that is regenerated each time the customer places a new order"
+        "A new quote for each order"
       ],
       "correctAnswer": 2,
-      "explanation": "Sales agreements hold the committed quantities and prices over a term, and they track actuals against that commitment.",
+      "explanation": "A sales agreement records planned commitments and terms for a distributor or dealer over a defined period.",
       "whyWrong": [
-        "An opportunity tracks a deal being won, not an ongoing supply commitment.",
-        "A quantity in free text cannot be measured against what was actually shipped.",
-        "Quotes price a proposal; they do not track delivery against a commitment."
+        "An opportunity represents potential sales rather than structured commitments over a term.",
+        "A description field cannot support product-level planned and actual quantities.",
+        "A sales agreement records the negotiated commitment over time."
       ]
     },
     {
-      "question": "What does a sales agreement let a manufacturer compare?",
+      "question": "What can a sales agreement help a manufacturer compare?",
       "options": [
-        "The forecast submitted by one sales region against that of another region",
-        "The number of open cases raised by the customer against the industry average",
-        "Planned quantities against actual orders",
-        "The list price of a product against the cost of manufacturing that product"
+        "Forecasts from separate sales regions",
+        "Open customer cases against industry averages",
+        "Planned quantities with actual orders",
+        "Product list price with manufacturing cost"
       ],
       "correctAnswer": 2,
-      "explanation": "The value of a sales agreement is the planned versus actual view, which shows whether a customer is buying at the committed rate.",
+      "explanation": "Agreement terms provide planned quantities that can be compared with actual order data over the term.",
       "whyWrong": [
-        "Regional comparison is a forecasting report rather than an agreement.",
-        "Case volume is a service measure.",
-        "Margin analysis is a pricing and costing exercise."
+        "Regional forecast comparison is a separate analysis.",
+        "Service cases track support work rather than purchase commitments.",
+        "Planned quantity compared with actual orders shows agreement attainment."
       ]
     },
     {
-      "question": "A customer is tracking well below their committed volume halfway through the term. What is the useful response?",
+      "question": "A distributor is tracking below its committed volume halfway through the agreement. What is a useful next step?",
       "options": [
-        "Immediately invoice the customer for the full shortfall against the commitment",
-        "Raise a case against the account so the service team can investigate it",
-        "Close the sales agreement and open a brand new one for the remaining period",
-        "Review the agreement with the customer and revise it"
+        "Invoice the distributor for the full shortfall immediately",
+        "Open a service case for the sales team",
+        "Close the agreement and create a replacement without discussion",
+        "Review the agreement with the customer and revise it if appropriate"
       ],
       "correctAnswer": 3,
-      "explanation": "A shortfall is a commercial conversation. The agreement can be revised, and the planned versus actual view is what surfaces the problem early.",
+      "explanation": "Reviewing the commitment and customer outlook helps determine whether the agreement or forecast assumptions need to change.",
       "whyWrong": [
-        "Invoicing a shortfall mid-term is rarely what the agreement provides for.",
-        "A service case does not address a commercial shortfall.",
-        "Closing and reopening loses the history of what was committed."
+        "A shortfall does not automatically mean the customer should be billed for the full variance.",
+        "A service case is not the usual record for reviewing a volume commitment.",
+        "Closing the agreement without review loses the opportunity to understand the variance."
       ]
     },
     {
-      "question": "What is account-based forecasting designed to show?",
+      "question": "What does account-based forecasting help a manufacturer understand?",
       "options": [
-        "The manufacturing capacity available at each plant for the coming quarter",
-        "The commission each individual sales representative is due to be paid",
-        "The total pipeline value across every open opportunity in the business",
-        "Expected volume and revenue per account over time"
+        "Production capacity at each plant",
+        "Sales commission owed to each representative",
+        "Total pipeline across all company opportunities",
+        "Expected volume and revenue for each account over time"
       ],
       "correctAnswer": 3,
-      "explanation": "Account-based forecasting projects volumes and revenue for each account across periods, which suits businesses supplying the same customers repeatedly.",
+      "explanation": "Account-based forecasting presents expected volume and revenue by account and forecast period.",
       "whyWrong": [
-        "Plant capacity is a supply-side planning concern.",
-        "Commission is a compensation calculation.",
-        "Pipeline value is standard opportunity forecasting."
+        "Plant capacity is an operations measure, not an account forecast.",
+        "Commission is not the purpose of an account forecast.",
+        "Total pipeline does not provide expected demand by account over time."
       ]
     },
     {
-      "question": "A manufacturer sells through distributors who then sell to end customers. What does this structure require?",
+      "question": "A manufacturer sells to distributors that then sell to end customers. What capability is important for understanding downstream demand?",
       "options": [
-        "Visibility of demand beyond the direct customer",
-        "The removal of all end customer data from the manufacturer's systems",
-        "Direct invoicing of every end customer rather than of the distributor",
-        "A separate Salesforce org for each of the distributors in the channel"
+        "Visibility into demand beyond the direct customer",
+        "Removing all end-customer information from systems",
+        "Invoicing every end customer directly",
+        "Creating a separate Salesforce org for every distributor"
       ],
       "correctAnswer": 0,
-      "explanation": "Selling through a channel means the manufacturer's direct customer is not the consumer, so understanding real demand needs data from further down the chain.",
+      "explanation": "Downstream demand visibility helps a manufacturer understand channel activity beyond its direct distributor orders.",
       "whyWrong": [
-        "End customer insight is exactly what a channel business needs.",
-        "The distributor is the party being invoiced in this model.",
-        "Separate orgs per distributor would make consolidated visibility impossible."
+        "Downstream demand visibility helps manufacturers understand channel sales.",
+        "Visibility supports understanding end-market demand rather than removing all related data.",
+        "Direct invoicing is not required to receive downstream demand information."
       ]
     },
     {
       "question": "What is the purpose of a program in Manufacturing Cloud?",
       "options": [
-        "To store the engineering drawings associated with each product variant",
-        "To group related agreements and activity for a customer initiative",
-        "To hold the training records of the staff working on the production line",
-        "To schedule the maintenance work carried out on equipment at each plant"
+        "Store engineering drawings for product variants",
+        "Group customer agreements",
+        "Maintain production-line employee training records",
+        "Schedule equipment maintenance at each plant"
       ],
       "correctAnswer": 1,
-      "explanation": "Programs group the agreements, partners and activity that belong to a single customer or market initiative.",
+      "explanation": "A program can organize related customer agreements and activities around a shared initiative.",
       "whyWrong": [
-        "Engineering documents sit in product data systems.",
-        "Training records are a human resources concern.",
-        "Maintenance scheduling is a field service or asset function."
+        "Engineering drawings belong in product lifecycle or document management.",
+        "A program can group related agreements and activities for an initiative.",
+        "Training and maintenance records are separate operations data."
       ]
     },
     {
-      "question": "Why would a manufacturer use rebates alongside sales agreements?",
+      "question": "Why might a manufacturer use rebates alongside sales agreements?",
       "options": [
-        "To reward volume once a threshold is reached",
-        "To invoice the customer monthly rather than at the end of the full term",
-        "To reduce the list price of the product for every customer in the market",
-        "To record the cost of shipping the goods to the customer's premises"
+        "To reward a dealer or distributor when volume thresholds are met",
+        "To invoice the customer monthly instead of annually",
+        "To reduce list price for every customer in the market",
+        "To record shipping cost"
       ],
       "correctAnswer": 0,
-      "explanation": "Rebates pay back value after the fact when agreed volumes are achieved, which is a common way to incentivise commitment.",
+      "explanation": "A rebate can reward qualifying volume or other defined performance during a program period.",
       "whyWrong": [
-        "Invoice frequency is a billing arrangement.",
-        "A market-wide price change is not a rebate.",
-        "Freight cost is a logistics charge."
+        "Rebates can reward qualifying volume or performance.",
+        "Invoice frequency is separate from rebate eligibility.",
+        "Rebates do not necessarily change general market list price."
       ]
     },
     {
-      "question": "A sales agreement needs to reflect a price increase from the start of next quarter. How is this handled?",
+      "question": "A sales agreement price should increase starting next quarter. What is an appropriate approach?",
       "options": [
-        "Change the price book entry so every historical period is also updated",
-        "Add a note to the account so the sales team remember the new price",
-        "Revise the agreement with the new price and effective date",
-        "Delete the existing agreement and recreate it with the updated pricing used"
+        "Change the general price book entry and rewrite all history",
+        "Add a note to the account for representatives",
+        "Update the agreement terms with the new price and effective period",
+        "Delete the agreement and recreate it without history"
       ],
       "correctAnswer": 2,
-      "explanation": "Agreements are revised, which keeps the record of what was previously agreed while applying the new terms from the effective date.",
+      "explanation": "Updating the relevant agreement terms with an effective date preserves the commitment history and applies the price when intended.",
       "whyWrong": [
-        "Changing the price book retrospectively misstates what was agreed before.",
-        "A note is not a term and cannot be reported on.",
-        "Deleting and recreating destroys the history of the original commitment."
+        "Changing the list price may affect other customers and obscure history.",
+        "A note does not update structured agreement pricing.",
+        "An effective-dated agreement term can record the new price while retaining history."
       ]
     },
     {
-      "question": "What does the planned versus actual view depend on to be meaningful?",
+      "question": "What is needed for a planned-versus-actual agreement view to be useful?",
       "options": [
-        "Every product in the catalogue having a published list price against it",
-        "Orders being linked to the agreement",
-        "The customer having at least one open case raised against their account",
-        "The sales representative updating the forecast manually once each week"
+        "Every catalog product has a published list price",
+        "Orders are linked to the agreement",
+        "The account has an open service case",
+        "The sales representative updates the forecast weekly"
       ],
       "correctAnswer": 1,
-      "explanation": "Actuals come from orders matched to the agreement, so without that link the comparison has nothing to measure against.",
+      "explanation": "Order data linked to the agreement can provide actuals for comparison with planned quantities.",
       "whyWrong": [
-        "List prices matter for pricing but not for matching actuals.",
-        "Cases are unrelated to order volume.",
-        "Manual forecast updates are not the source of actuals."
+        "Catalog list price does not supply actual order quantities.",
+        "Linking orders to the agreement lets the system compare actuals with plan.",
+        "Service cases do not populate agreement actuals."
       ]
     },
     {
-      "question": "A manufacturer wants partners to submit their own sales data. What supports this?",
+      "question": "A manufacturer wants partners to submit their sales data through Salesforce. What can support this?",
       "options": [
-        "A requirement that partners install the manufacturer's own internal systems",
-        "A phone call made to each partner by the account manager every month",
-        "A monthly spreadsheet emailed to each partner for completion and return",
-        "A partner community where they can enter it"
+        "Require partners to use the manufacturer’s internal systems",
+        "Ask the account manager to call each partner monthly",
+        "Send a spreadsheet by email for monthly completion",
+        "Provide a partner community where they can enter data"
       ],
       "correctAnswer": 3,
-      "explanation": "A partner community lets channel partners submit data directly into the manufacturer's org, where it can be used without rekeying.",
+      "explanation": "A configured partner community can provide a controlled place for partners to submit information.",
       "whyWrong": [
-        "Partners will not adopt a manufacturer's internal systems.",
-        "Phone collection does not scale and is not auditable.",
-        "Spreadsheets arrive in inconsistent formats and need manual consolidation."
+        "Partners may not be able to use the manufacturer’s internal systems.",
+        "Phone collection is difficult to scale and audit.",
+        "Email spreadsheets require manual handling and version control."
       ]
     },
     {
-      "question": "What distinguishes a sales agreement from a contract?",
+      "question": "What is a key difference between a sales agreement and a contract?",
       "options": [
-        "The agreement tracks volumes and actuals over a term",
-        "The contract is used for new customers and the agreement for existing ones",
-        "The agreement covers services while the contract covers physical products",
-        "The contract is signed by the customer whereas the agreement never is"
+        "A sales agreement tracks planned volumes and actuals over a term",
+        "Contracts are only for new customers",
+        "Agreements cover services while contracts cover products",
+        "Contracts are signed but agreements are never signed"
       ],
       "correctAnswer": 0,
-      "explanation": "Contracts record legal terms. Sales agreements add committed quantities, prices and the tracking of actual orders against them.",
+      "explanation": "A sales agreement focuses on planned and actual purchase volumes over time.",
       "whyWrong": [
-        "Either can apply to new or existing customers.",
-        "Agreements are typically used for product volumes.",
-        "Both can be legally agreed; signature is not the distinction."
+        "A sales agreement tracks planned volumes and actuals over a term.",
+        "The distinction is not based on whether a customer is new.",
+        "Agreements and contracts are not divided by service versus physical goods."
       ]
     },
     {
-      "question": "A customer orders more than their committed volume. What should the agreement show?",
+      "question": "A customer orders more than the planned quantity in its agreement. What should the agreement’s actuals show?",
       "options": [
-        "The excess recorded against a separate agreement created for the purpose",
-        "Actuals exceeding the planned quantity",
-        "The planned quantity automatically increased to match what was ordered",
-        "An error preventing the additional order from being accepted at all"
+        "The excess should be placed on a separate agreement automatically",
+        "Actuals can exceed the planned quantity",
+        "The planned quantity should automatically rise to equal the order",
+        "The extra order must be rejected"
       ],
       "correctAnswer": 1,
-      "explanation": "The planned versus actual view simply shows actuals above plan, which is useful information for the next negotiation.",
+      "explanation": "Actuals record what was ordered, so they can be greater than the planned amount.",
       "whyWrong": [
-        "Splitting the excess onto another agreement obscures the real picture.",
-        "Plan figures represent what was agreed and should not silently change.",
-        "Exceeding a commitment is good news, not an error to block."
+        "A separate agreement is not required merely to record actuals above plan.",
+        "Actuals can exceed planned quantities and show a variance.",
+        "Planned quantities should not automatically change to hide the variance."
       ]
     },
     {
-      "question": "Why is forecast accuracy particularly important in manufacturing?",
+      "question": "Why does forecast accuracy matter to manufacturers?",
       "options": [
-        "Production and raw materials are committed in advance",
-        "Customers are unable to place an order until a forecast has been approved",
-        "Sales representatives are paid entirely on the accuracy of their forecasts",
-        "Regulators require manufacturers to publish their forecasts each quarter"
+        "Production and materials may need to be committed in advance",
+        "Customers cannot order until a forecast is approved",
+        "Sales representatives are paid only on forecast accuracy",
+        "Regulators require public quarterly forecasts"
       ],
       "correctAnswer": 0,
-      "explanation": "Manufacturing commits capacity and materials ahead of demand, so a poor forecast means either unsold stock or unmet orders.",
+      "explanation": "Manufacturers use forecasts to plan production and materials before demand is fully realized.",
       "whyWrong": [
-        "Orders do not depend on forecast approval.",
-        "Compensation is not usually based on forecast accuracy alone.",
-        "Forecast publication is not a general regulatory requirement."
+        "Forecasts help manufacturers commit production and materials in advance.",
+        "Orders are not generally blocked until a forecast is approved.",
+        "Compensation is not universally determined only by forecast accuracy."
       ]
     },
     {
-      "question": "What is the benefit of holding agreements and orders in the same system?",
+      "question": "What is a benefit of storing agreements and orders in the same system?",
       "options": [
-        "The manufacturer no longer needs a separate finance or billing system",
-        "Every customer automatically gains access to their own agreement records",
-        "Actuals update against the commitment without rekeying",
-        "Prices are recalculated across the whole catalogue whenever one changes"
+        "It removes the need for finance or billing systems",
+        "It automatically gives every customer access to agreement records",
+        "Actuals can update against commitments without rekeying",
+        "It recalculates prices across the entire catalog"
       ],
       "correctAnswer": 2,
-      "explanation": "When orders and agreements live together, the planned versus actual picture stays current without anyone transferring figures by hand.",
+      "explanation": "When orders and agreements are connected, actuals can be compared with commitments without manually re-entering data.",
       "whyWrong": [
-        "Finance systems are still needed for accounting.",
-        "Customer access is a separate sharing decision.",
-        "Catalogue-wide repricing is not a consequence of this."
+        "CRM does not eliminate the need for separate finance or billing systems.",
+        "Customer access requires configuration and is not automatic.",
+        "Connected orders can update actuals against agreement commitments."
       ]
     },
     {
-      "question": "A sales agreement term is ending and the customer wants to continue. What is the appropriate step?",
+      "question": "An agreement term is ending and the customer wants to continue. What should the team do?",
       "options": [
-        "Create an opportunity and take the customer through the full sales cycle",
+        "Create an opportunity and repeat the entire sales cycle in every case",
         "Renew the agreement for a new term",
-        "Extend the original term indefinitely so that it never reaches an end date",
-        "Leave the expired agreement active so the existing orders keep matching it"
+        "Extend the original agreement indefinitely",
+        "Leave the expired agreement active for future orders"
       ],
       "correctAnswer": 1,
-      "explanation": "Renewal creates the next term with revised quantities and prices, keeping the previous term as a record of what was agreed.",
+      "explanation": "A new agreement term can continue the relationship while preserving period-specific commitments.",
       "whyWrong": [
-        "A full new sales cycle ignores the existing relationship and agreement.",
-        "An indefinite term removes the renegotiation point the term exists for.",
-        "An expired agreement should not continue accepting new actuals."
+        "An opportunity may be used in some renewal processes but is not always required.",
+        "Renewing the agreement creates a new term with updated commitments.",
+        "Leaving an expired agreement open can confuse future order and forecast tracking."
       ]
     }
   ]

@@ -1,12 +1,12 @@
 {
   "template": "associate",
-  "expertInsight": "Salesforce is transitioning nonprofits from the legacy Nonprofit Success Pack (NPSP) managed package to the new Nonprofit Cloud, built natively on Data Cloud and Flow. NPSP implementations are still widely deployed and this exam remains active, but if you're starting a new nonprofit project or credential in 2026, check the Nonprofit Cloud certification page first, new engagements increasingly default to that architecture.",
+  "expertInsight": "NPSP and the newer Nonprofit Cloud have different architectures. When planning a project or certification path, check the current Salesforce guidance and identify which product the organization uses.",
   "whoIsThisFor": {
     "heading": "Who is the Nonprofit Success Pack Consultant exam for?",
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with Nonprofit Cloud and NPSP features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You configure NPSP for a nonprofit’s donors, fundraising work, and programs."
       },
       {
         "label": "Consultants and admins",
@@ -14,30 +14,30 @@
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for consultant roles."
+        "description": "You want to show that you can design NPSP data and fundraising processes for nonprofit clients."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Nonprofit Success Pack Consultant Exam Hard?",
-    "summary": "The Nonprofit Success Pack Consultant exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "The NPSP Consultant exam asks you to apply product knowledge to practical configuration and troubleshooting scenarios.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>67% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>67% to pass</strong>, which is 41 correct answers out of 60.",
       "<strong>Scenario-based choices</strong>: expect questions that test when to use NPSP, Donations, or Households.",
-      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Nonprofit Cloud and NPSP in a real org are better prepared than candidates who only memorize notes."
+      "<strong>Applied design matters.</strong> Be ready to explain how data choices affect donor history, household reporting, and gift credit."
     ],
-    "passRateGuidance": "Aim for 80%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Before booking, work through examples for recurring gifts, household changes, soft credits, and gift allocations. Aim for at least 80% on timed sets and explain why each record choice fits the scenario."
   },
   "examFormat": {
     "heading": "Nonprofit Success Pack Consultant Exam Format Explained",
-    "intro": "The Nonprofit Success Pack Consultant exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Nonprofit Cloud and NPSP.",
+    "intro": "Use timed practice sets to review NPSP configuration and see which topics need more work.",
+    "scenarioPercent": "The scenarios focus on nonprofit data design: how to record a gift, connect it to the right donor or household, and preserve accurate reports and acknowledgements.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on NPSP, Donations, and Households because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Start with household structure:</strong> Model individual supporters, household Accounts, organizational Accounts, and affiliations.",
+      "<strong>Trace each gift:</strong> Follow an Opportunity through payments, allocations, soft credits, and acknowledgement.",
+      "<strong>Plan for change:</strong> Consider what happens when donors move, give jointly, change preferences, or update household membership.",
+      "<strong>Protect reporting accuracy:</strong> Check how campaign hierarchies and gift credits affect totals, retention, and finance reconciliation."
     ]
   },
   "certificationCard": {
@@ -67,55 +67,55 @@
     "blocks": [
       {
         "heading": "NPSP Installation and Configuration",
-        "body": "NPSP is a managed package installed from **AppExchange**. The NPSP Settings page (in Setup or via the NPSP tile) controls all key configurations: Account model (Household vs Individual vs Organisation), relationship settings, payment behaviour, and rollup configuration. The Household Account model creates one Account per person (their household), not the same as a standard person account. The 1-to-1 Account model creates one Account per Contact. The consultant selects and documents the correct model before implementation and understands that switching models after data entry is complex."
+        "body": "NPSP is a managed package. Its settings cover account models, relationships, payments and rollups. A household can contain multiple people, while the older one-to-one model uses an Account for each Contact. Document the organization’s model before importing data or changing settings."
       },
       {
         "heading": "Donation Processing and Gift Entry",
-        "body": "NPSP Batch Gift Entry enables high-volume gift processing with a grid-style interface optimised for data entry staff. Gift commitments (pledges with instalment schedules) are different from Recurring Donations (which auto-generate future Opportunities). Payment processing integrations (Stripe, PayPal, Elevate) handle online donations. The Gift Entry process typically includes: data entry, payment capture, acknowledgement letter generation, and tax receipt production. The consultant configures the Batch Gift Entry templates, defines required fields, and sets up payment matching rules."
+        "body": "Batch Gift Entry supports entering multiple gifts. A pledge with installments and a recurring donation serve different needs: recurring donations can create Opportunities on a schedule. Plan gift entry templates, payment matching and acknowledgements around the nonprofit’s process."
       },
       {
         "heading": "Customisable Rollups (CRLP)",
-        "body": "Customisable Rollups (CRLP) replaces the legacy NPSP rollup system with a flexible, admin-configurable framework. Rollup types: Soft Credit rollups, Opportunity rollups to Contact/Account/GAU. Each rollup definition specifies: the source object and field, the rollup operation (SUM, COUNT, AVERAGE, FIRST/LAST DATE), filter criteria (e.g., only Closed Won Opportunities), and the target field on the Contact or Account. CRLP calculates totals like Total Given, Largest Gift, Most Recent Gift Date. The consultant configures CRLP to match the organisation's donor KPI requirements."
+        "body": "Customizable Rollups let an admin choose a source, calculation, filter and target field for a giving measure. For example, a rollup can calculate a donor’s total or most recent gift using qualifying Opportunities. Test definitions against the organization’s reporting needs."
       },
       {
         "heading": "Engagement Plans and Levels",
-        "body": "Engagement Plans create task-based workflows for stewardship and donor cultivation. An Engagement Plan Template defines a sequence of tasks assigned to roles over time, e.g., 3 days after a major gift: send thank you note (task 1); 30 days: handwritten letter from ED (task 2); 60 days: phone call from program staff (task 3). Levels assign donors to stewardship tiers based on giving amounts: Bronze, Silver, Gold, Platinum. Level **Assignment rules** automatically categorise donors and can trigger Engagement Plans. The consultant configures Levels and Plans to match the organisation's major donor stewardship strategy."
+        "body": "Engagement Plan templates organize stewardship tasks over time. Levels group constituents into tiers using criteria such as giving totals. Together they can support a consistent follow-up plan for different donor groups."
       },
       {
         "heading": "Data Quality and Migration",
-        "body": "NPSP Data Importer is a tool specifically designed for importing constituent and donation data into NPSP, handling the household model logic, matching existing records, and creating correct relationships. It is preferred over Data Loader for initial NPSP data migration. Deduplication: NPSP includes merge tools for duplicate Contact and Account records. Data quality validation: using NPSP's built-in validation plus custom **Validation Rules** to enforce data completeness. The consultant designs the data migration strategy, mapping source system fields to NPSP objects, testing in sandbox, and validating results before production migration."
+        "body": "Map source data to NPSP records before migration. Test household matching, donations and relationships in a sandbox, then review the results. Use duplicate-management and validation tools to improve data quality before and after import."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Nonprofit Success Pack Consultant Exam",
-    "intro": "The NPSP Consultant exam focuses specifically on configuring NPSP features for fundraising, constituent management, and reporting. The exam emphasizes practical configuration knowledge over architectural design.",
+    "intro": "Focus on NPSP configuration for fundraising, constituent records, and reporting. Practice choosing settings for real nonprofit workflows.",
     "blocks": [
       {
         "heading": "Recurring Donations Configuration",
-        "body": "Know how to configure open-ended vs. fixed-length recurring donations, pause rules, and how recurring donation schedules generate Opportunities. Understand how Elevate (payment processor) integrates with recurring donations."
+        "body": "Compare open-ended and fixed-length recurring donations, including how schedules create Opportunities and how pauses are handled."
       },
       {
         "heading": "Soft Credits & Household Rollups",
-        "body": "Soft Credits track secondary donor credit (spouse, board member influence). Household Rollups aggregate giving totals at the household level. Know the rollup fields, their definitions, and how to customize them."
+        "body": "Separate credit given to another person from the totals calculated for a household. Review the rollup definitions before changing them."
       },
       {
         "heading": "Data Import Wizard for NPSP",
-        "body": "Understand how to use the NPSP Data Import Wizard vs. standard Data Import Wizard for migrating constituent and gift data. Know field mappings and how to handle duplicate matching."
+        "body": "Choose an import approach for constituent and gift data, map fields, and test matching for existing records."
       },
       {
         "heading": "Engagement Plans",
-        "body": "Engagement Plans automate constituent stewardship tasks (thank-you calls, acknowledgment letters) triggered by donation milestones. Know how to configure Engagement Plan Templates and the task **assignment rules**."
+        "body": "Use a template to organize stewardship tasks and check how each task is assigned."
       },
       {
         "heading": "Reports & Dashboards for Nonprofits",
-        "body": "Know key NPSP report types (NPSP Households, NPSP Soft Credits) and how to build fundraising dashboards tracking year-to-date giving, LYBUNT/SYBUNT donors, and retention rates."
+        "body": "Select report types that answer the fundraising question, such as recent giving, soft credits or donor retention."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Consider these credentials for adjacent Salesforce consulting work:",
     "links": [
       {
         "href": "/certifications/nonprofit-cloud",

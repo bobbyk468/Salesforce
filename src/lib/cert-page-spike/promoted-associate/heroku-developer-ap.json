@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Heroku developers",
-        "description": "You deploy and run apps on Heroku and want a credential that shows you know the platform well."
+        "description": "You deploy and maintain Heroku apps and want to validate your platform skills."
       },
       {
         "label": "Salesforce-adjacent developers",
-        "description": "You build apps that sit next to Salesforce, such as customer portals or data services, and run them on Heroku."
+        "description": "You build customer portals or services that run beside Salesforce on Heroku."
       },
       {
         "label": "Career builders",
-        "description": "You are a web developer adding Salesforce skills, and Heroku is the natural bridge."
+        "description": "You develop web applications and are adding Heroku and Salesforce integration skills."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Heroku Developer Accredited Professional Exam Hard?",
-    "summary": "It is a practical exam about building and running apps on Heroku. If you have deployed real apps, most topics will be familiar. The tricky parts are Heroku-specific details like release phase, dyno behaviour and Heroku Connect.",
+    "summary": "The exam covers building and operating Heroku apps, including dynos, Procfiles, config vars, add-ons, background work, logging and Heroku Connect.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>68% to pass</strong>, which is 41 correct answers.",
+      "<strong>60 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>68% to pass</strong>, which is 41 correct answers out of 60.",
       "<strong>Platform details.</strong> Dyno types, the Procfile, buildpacks, config vars and add-ons all come up.",
       "<strong>Salesforce link.</strong> Expect questions on Heroku Connect and calling Salesforce from a Heroku app."
     ],
-    "passRateGuidance": "Deploy a small app with a database, a worker and Heroku Connect before the exam. Before you book. Aim for 80% or more on practice tests."
+    "passRateGuidance": "Before the exam, deploy a small app with a database, worker, and Heroku Connect. Use practice tests to identify topics that need another review."
   },
   "examFormat": {
     "heading": "Heroku Developer Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a developer task, such as running a migration, adding a background job or fixing a failing deploy, and ask for the right Heroku feature or command.",
+    "intro": "Accredited Professional exams are taken online. Check the current exam guide for the latest format and requirements.",
+    "scenarioPercent": "Scenarios describe a developer task such as running a migration, handling long work or diagnosing a deploy. Choose the Heroku feature that addresses that task.",
     "bestWayToPass": [
-      "<strong>Know the Procfile:</strong> How web, worker and release process types are defined.",
-      "<strong>Keep config out of code:</strong> Config vars hold settings and secrets, and add-ons set their own config vars.",
-      "<strong>Learn Heroku Connect:</strong> How it maps Salesforce objects to Postgres tables, and read-only versus read-write sync.",
-      "<strong>Use logs and metrics:</strong> Know heroku logs, log drains and the main error codes."
+      "Know how Procfile process types and release commands work.",
+      "Keep configuration and credentials in config vars rather than source code.",
+      "Compare read-only and read-write Heroku Connect mappings.",
+      "Use logs, metrics and error codes to diagnose app behavior."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you build, deploy and run apps on Heroku: dynos, buildpacks, config vars, add-ons, background jobs, logging and Heroku Connect.",
+    "description": "This exam covers deploying and running Heroku apps, including process types, buildpacks, config vars, add-ons, background jobs, logs and Salesforce integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "68%",
@@ -63,49 +63,49 @@
     "blocks": [
       {
         "heading": "Buildpacks, Runtime & Procfile",
-        "body": "When you push code, Heroku uses a **buildpack** to detect the language and build it into a **slug**, or builds a Docker image if you use container deploys. The **Procfile** in the root of the app says which commands to run: `web` for the process that takes HTTP traffic and must listen on the port in the PORT variable, `worker` for background jobs, and `release` for tasks that run before each new release goes live, such as database migrations. If a release command fails, the new release isn't deployed."
+        "body": "A buildpack turns supported source code into a slug; container deployments use an image instead. A Procfile can define process types such as web, worker and release. The web process must listen on the port provided in the PORT environment variable. A release command runs before the new release’s dynos start, and a failure prevents that release from being activated."
       },
       {
         "heading": "Config Vars, Add-ons & Environment Management",
-        "body": "**Config vars** are environment variables for settings and secrets, so the same code runs in every environment. Changing a config var restarts the app with the new value. **Add-ons** are managed services such as Heroku Postgres, Key-Value Store, logging or monitoring tools. When you add one, it sets config vars like DATABASE_URL for you. Use separate apps for staging and production, grouped in a **pipeline**, each with its own config vars and add-ons."
+        "body": "Config vars hold environment-specific settings and secrets. Updating one restarts the app with the new value. Add-ons provide managed services, such as a database or logging, and may supply their own config vars. Separate staging and production apps in a pipeline so each can have its own settings and services."
       },
       {
         "heading": "Heroku Connect & Salesforce Integration",
-        "body": "**Heroku Connect** syncs Salesforce objects with tables in Heroku Postgres. You choose the objects and fields to map. **Read-only** mappings copy Salesforce changes into Postgres. **Read-write** mappings also send Postgres changes back to Salesforce. This lets a Heroku app read and write Salesforce data with plain SQL, without using API calls in the app. Sync isn't instant, so apps must allow a short delay. For direct, real-time work, a Heroku app can also call the Salesforce REST API using OAuth."
+        "body": "Heroku Connect maps Salesforce objects and fields to Heroku Postgres tables. A read-only mapping sends Salesforce changes to Postgres; a read-write mapping can also send changes back. Synchronization can be delayed. An app can use the Salesforce REST API with OAuth when it needs a direct request instead."
       },
       {
         "heading": "Async Jobs, Workers & Message Queues",
-        "body": "Web requests that take longer than 30 seconds are cut off by the router, so slow work belongs on a **worker dyno**. The web dyno puts a job on a queue, often in Heroku Key-Value Store, and the worker picks it up. Scheduled tasks can run with **Heroku Scheduler**, which starts a one-off dyno at set times. For high-volume event streams between services, **Apache Kafka on Heroku** is an option. Workers should be safe to retry, because a dyno restart can stop a job halfway."
+        "body": "Move slow work out of a web request and into a worker dyno. The web process can place a job on a queue for the worker to process. Heroku Scheduler can start one-off dynos for scheduled jobs, and Apache Kafka on Heroku can support event streams. Make jobs safe to retry after interruptions."
       },
       {
         "heading": "Monitoring, Logging & Performance",
-        "body": "Heroku collects logs from the router, dynos and add-ons into one stream, called **Logplex**. View them with `heroku logs --tail`, or send them to an outside tool with a **log drain**. Error codes tell you what went wrong: for example, H10 means the app crashed and H12 means a request timed out. **Metrics** show response time, memory and load. Scale **horizontally** by adding dynos, or **vertically** with bigger dyno types. Memory errors (R14) usually mean the dyno type is too small or the app is leaking memory."
+        "body": "Heroku combines router, dyno, and add-on logs through Logplex. Inspect them with `heroku logs --tail` or send them to another service with a log drain. Learn common errors such as H10 and H12, then use metrics to investigate load and memory. You can scale by adding dynos or selecting a larger dyno type."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Heroku Developer Accredited Professional Exam",
-    "intro": "Most questions are everyday developer tasks on Heroku. Pick the Heroku-native way to do it.",
+    "intro": "Translate each developer task into the Heroku process type, add-on or integration feature that handles it.",
     "blocks": [
       {
-        "heading": "Heroku Deployment Workflow",
-        "body": "Push to Git or connect GitHub, use review apps for pull requests, and promote builds through a pipeline from staging to production."
+        "heading": "Define each process clearly",
+        "body": "Use web for HTTP, worker for background work and release for pre-deploy tasks."
       },
       {
-        "heading": "Dyno Configuration & Scaling",
-        "body": "Web for HTTP, worker for background jobs, one-off for admin tasks. Scale out with more dynos or up with bigger types."
+        "heading": "Configure each environment",
+        "body": "Use config vars for settings and secrets. Add-ons can provide values such as DATABASE_URL."
       },
       {
-        "heading": "Heroku Postgres",
-        "body": "Use followers for read-heavy work, forks for testing, and backups before risky changes. Run migrations in release phase."
+        "heading": "Choose the right Salesforce connection",
+        "body": "Heroku Connect syncs mapped records with Postgres; use an API when the app needs a direct operation."
       },
       {
-        "heading": "Heroku Connect Setup",
-        "body": "Read-only to copy Salesforce data into Postgres. Read-write to also send changes back. Allow for a short sync delay."
+        "heading": "Design jobs for restarts",
+        "body": "A worker job should be safe to retry and should avoid duplicate effects."
       },
       {
-        "heading": "Config Vars & Add-ons",
-        "body": "Settings and secrets go in config vars. Add-ons set their own config vars, like DATABASE_URL."
+        "heading": "Follow logs to the source",
+        "body": "Use app logs and log drains to investigate errors such as memory warnings or request timeouts."
       }
     ]
   },
@@ -167,243 +167,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Database migrations must run each time a new version is deployed, before the new code takes traffic. Where should the migration command go?",
+      "question": "Which process type runs database migrations before a new Heroku release goes live?",
       "options": [
-        "The release process type",
-        "A worker dyno that runs forever",
-        "A comment in the README",
-        "The web process type"
+        "Release process",
+        "A long-running worker",
+        "A README comment",
+        "The web process"
       ],
       "correctAnswer": 0,
-      "explanation": "The release process runs after the build and before the new release goes live. If it fails, the release is stopped.",
+      "explanation": "Release process is the best fit because the release process runs after the build and before the new release goes live. If it fails, the release is stopped.",
       "whyWrong": [
-        "A worker isn't tied to the release timing.",
-        "A README doesn't run anything.",
-        "Running migrations in the web process can cause errors while dynos start."
+        "A long-running worker is not the best choice because a worker isn't tied to the release timing.",
+        "A README comment is not the best choice because a README doesn't run anything.",
+        "The web process is not the best choice because running migrations in the web process can cause errors while dynos start."
       ]
     },
     {
-      "question": "A web process starts but Heroku reports error H10, and the app crashes on boot. The app listens on port 3000. What is the likely cause?",
+      "question": "How should the app choose its listening port when Heroku assigns one at runtime?",
       "options": [
-        "The database is full",
-        "The app must listen on the PORT variable",
-        "The application simply needs a bigger dyno",
-        "The buildpack is too new"
+        "Increase database capacity",
+        "Bind to the PORT variable",
+        "Choose a larger dyno",
+        "Use an older buildpack"
       ],
       "correctAnswer": 1,
-      "explanation": "Heroku assigns the port at run time through the PORT variable. An app that listens on a fixed port can't receive traffic.",
+      "explanation": "Bind to the PORT variable is the best fit because heroku assigns the port at run time through the PORT variable. An app that listens on a fixed port can't receive traffic.",
       "whyWrong": [
-        "A full database causes different errors.",
-        "Dyno size doesn't affect which port the app uses.",
-        "Buildpack version isn't the issue here."
+        "Increase database capacity is not the best choice because it does not meet the scenario as directly as Bind to the runtime PORT environment variable.",
+        "Choose a larger dyno is not the best choice because dyno size doesn't affect which port the app uses.",
+        "Use an older buildpack is not the best choice because buildpack version isn't the issue here."
       ]
     },
     {
-      "question": "Where should an app's API keys and database URL be stored on Heroku?",
+      "question": "An app needs its API endpoint and database URL to vary across environments without a code edit. Where should the developer configure them?",
       "options": [
-        "In the app's public folder",
-        "In the Procfile",
-        "In the source code",
-        "In config vars"
+        "The public app folder",
+        "The Procfile",
+        "Heroku config vars",
+        "Source code"
       ],
-      "correctAnswer": 3,
-      "explanation": "Config vars keep settings and secrets out of the code, and each app or environment has its own values.",
+      "correctAnswer": 2,
+      "explanation": "Set them as Heroku config vars so the running app receives environment-specific values without embedding secrets or endpoints in source code.",
       "whyWrong": [
-        "A public folder can be downloaded by anyone.",
-        "The Procfile lists commands, not secrets.",
-        "Secrets in code end up in Git history."
+        "The public app folder is not the best choice because the Procfile lists commands, not secrets.",
+        "The Procfile is not the best choice because secrets in code end up in Git history.",
+        "Source code is not the best choice because it does not meet the scenario as directly as Heroku config vars."
       ]
     },
     {
-      "question": "A request that sends 5,000 emails takes over a minute, and users see H12 timeout errors. What should the developer do?",
+      "question": "How should a developer handle an email job that exceeds the router request window?",
       "options": [
         "Use a larger web dyno",
-        "Increase the router's request timeout",
-        "Tell users to wait longer",
-        "Queue the job and use a worker dyno"
+        "Increase the router timeout",
+        "Ask users to wait",
+        "Queue email work on a worker"
       ],
       "correctAnswer": 3,
-      "explanation": "The router stops requests after 30 seconds. Long jobs should run on a worker dyno in the background.",
+      "explanation": "Queue email work on a worker is the best fit because the router stops requests after 30 seconds. Long jobs should run on a worker dyno in the background.",
       "whyWrong": [
-        "A larger dyno may still take more than 30 seconds.",
-        "The router timeout can't be raised.",
-        "The router cuts the request no matter how long users wait."
+        "Use a larger web dyno is not the best choice because the router timeout can't be raised.",
+        "Increase the router timeout is not the best choice because the router cuts the request no matter how long users wait.",
+        "Ask users to wait is not the best choice because it does not meet the scenario as directly as Put the email task on a worker queue."
       ]
     },
     {
-      "question": "A Heroku app needs to read Salesforce Contact data with fast SQL queries, without using Salesforce API calls on every request. What should be used?",
+      "question": "How can an app query Salesforce Contacts in Postgres without calling Salesforce on every request?",
       "options": [
-        "A REST API call on every request",
-        "Heroku Connect, read-only on Contact",
-        "Config vars holding the contacts",
-        "A CSV file uploaded each week"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Heroku Connect copies Salesforce records into Postgres, so the app can query them with SQL.",
-      "whyWrong": [
-        "API calls on every request are slower and use up limits.",
-        "Config vars are for settings, not records.",
-        "A weekly file goes out of date."
-      ]
-    },
-    {
-      "question": "Users update their contact details in a Heroku app, and the changes must flow back to Salesforce. What mapping type is needed?",
-      "options": [
-        "A log drain",
-        "A follower database",
-        "A read-write Connect mapping",
-        "A read-only Connect mapping"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Read-write mappings send changes made in Postgres back to Salesforce.",
-      "whyWrong": [
-        "Log drains send logs, not data.",
-        "Followers are read copies of a database.",
-        "Read-only mappings only copy data from Salesforce."
-      ]
-    },
-    {
-      "question": "A cleanup task must run every night at 2 a.m. What is the simplest option?",
-      "options": [
-        "A release phase command",
-        "Running the task by hand every single night",
-        "Heroku Scheduler running a one-off dyno",
-        "A web dyno that sleeps until 2 a.m."
-      ],
-      "correctAnswer": 2,
-      "explanation": "Heroku Scheduler starts a one-off dyno on a schedule to run the task.",
-      "whyWrong": [
-        "Release phase runs only on deploys.",
-        "Manual work is easy to forget.",
-        "A sleeping web dyno is wasteful and restarts can lose the timer."
-      ]
-    },
-    {
-      "question": "The team wants all app logs sent to an outside logging service for search and alerts. What should they set up?",
-      "options": [
-        "A log drain",
-        "A review app",
-        "A follower database",
-        "A larger dyno"
+        "Read-only Connect mapping",
+        "Call Salesforce on every request",
+        "Store Contacts in config vars",
+        "Upload a weekly CSV"
       ],
       "correctAnswer": 0,
-      "explanation": "Log drains forward the app's log stream to an outside service.",
+      "explanation": "Read-only Connect mapping is the best fit because heroku Connect copies Salesforce records into Postgres, so the app can query them with SQL.",
       "whyWrong": [
-        "Review apps are for testing pull requests.",
-        "Followers copy database data.",
-        "Dyno size doesn't affect where logs go."
+        "Call Salesforce on every request is not the best choice because it does not meet the scenario as directly as Use a read-only Heroku Connect mapping to Postgres.",
+        "Store Contacts in config vars is not the best choice because config vars are for settings, not records.",
+        "Upload a weekly CSV is not the best choice because a weekly file goes out of date."
       ]
     },
     {
-      "question": "Metrics show frequent R14 errors on a web dyno. What do they mean?",
+      "question": "Which Heroku Connect mapping lets Postgres edits sync back to Salesforce?",
       "options": [
-        "The application crashed during boot",
-        "The dyno has exceeded its memory limit",
+        "A log drain",
+        "Read-write mapping",
+        "A database follower",
+        "A read-only mapping"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Read-write mapping is the best fit because read-write mappings send changes made in Postgres back to Salesforce.",
+      "whyWrong": [
+        "A log drain is not the best choice because followers are read copies of a database.",
+        "A database follower is not the best choice because it does not meet the scenario as directly as A read-write Heroku Connect mapping.",
+        "A read-only mapping is not the best choice because read-only mappings only copy data from Salesforce."
+      ]
+    },
+    {
+      "question": "What is a simple way to run a cleanup task every night at 2 a.m.?",
+      "options": [
+        "Add a release command",
+        "Run it manually each night",
+        "Scheduled one-off dyno",
+        "Keep a web dyno awake until 2 a.m."
+      ],
+      "correctAnswer": 2,
+      "explanation": "Scheduled one-off dyno is the best fit because heroku Scheduler starts a one-off dyno on a schedule to run the task.",
+      "whyWrong": [
+        "Add a release command is not the best choice because manual work is easy to forget.",
+        "Run it manually each night is not the best choice because it does not meet the scenario as directly as Use Heroku Scheduler to start a one-off dyno.",
+        "Keep a web dyno awake until 2 a.m. is not the best choice because a sleeping web dyno is wasteful and restarts can lose the timer."
+      ]
+    },
+    {
+      "question": "What sends Heroku app logs to an external search and alerting service?",
+      "options": [
+        "Create a Review App",
+        "Add a database follower",
+        "Use a larger dyno",
+        "Configure a log drain"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Configure a log drain is the best fit because log drains forward the app's log stream to an outside service.",
+      "whyWrong": [
+        "Create a Review App is not the best choice because review apps are for testing pull requests.",
+        "Add a database follower is not the best choice because followers copy database data.",
+        "Use a larger dyno is not the best choice because dyno size doesn't affect where logs go."
+      ]
+    },
+    {
+      "question": "What does a Heroku R14 warning indicate?",
+      "options": [
+        "R14 memory limit",
+        "The app crashed during boot",
         "The database is down",
         "A request timed out"
       ],
-      "correctAnswer": 1,
-      "explanation": "R14 means memory quota exceeded. The fix is to reduce memory use or move to a larger dyno type.",
-      "whyWrong": [
-        "A boot crash is H10.",
-        "Database problems show different errors.",
-        "A request timeout is H12."
-      ]
-    },
-    {
-      "question": "After adding Heroku Postgres to an app, how does the app find the database?",
-      "options": [
-        "The developer types the password into the code",
-        "The add-on sets the DATABASE_URL config var",
-        "The app scans the network for databases",
-        "Heroku emails the connection string"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Add-ons set config vars automatically. The app reads DATABASE_URL to connect.",
-      "whyWrong": [
-        "Typing secrets into code is unsafe and unnecessary.",
-        "Apps don't need to search for the database.",
-        "Heroku doesn't send connection details by email."
-      ]
-    },
-    {
-      "question": "A tested build in staging should go to production exactly as it is. How should it be done?",
-      "options": [
-        "Promote it through the pipeline",
-        "Push the code again to production",
-        "Rebuild it with a new buildpack",
-        "Copy files by FTP"
-      ],
       "correctAnswer": 0,
-      "explanation": "Promotion copies the same slug to production, so what was tested is what goes live.",
+      "explanation": "R14 memory limit is the best fit because r14 means memory quota exceeded. The fix is to reduce memory use or move to a larger dyno type.",
       "whyWrong": [
-        "Pushing again creates a new build that might differ.",
-        "A new buildpack produces a different build.",
-        "Heroku doesn't deploy by FTP."
+        "The app crashed during boot is not the best choice because it does not meet the scenario as directly as The dyno exceeded its memory quota.",
+        "The database is down is not the best choice because database problems show different errors.",
+        "A request timed out is not the best choice because a request timeout is H12."
       ]
     },
     {
-      "question": "A background worker is restarted halfway through a job. What should the developer design for?",
+      "question": "How does an app learn the connection URL after Heroku Postgres is added?",
       "options": [
-        "Jobs that must never be interrupted at all",
-        "Running all jobs in the web dyno",
-        "Jobs that can be retried without duplicate effects",
-        "Turning off dyno restarts"
+        "Put the password in source code",
+        "DATABASE_URL config var",
+        "Scan the network for a database",
+        "Retrieve the URL from email"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DATABASE_URL config var is the best fit because add-ons set config vars automatically. The app reads DATABASE_URL to connect.",
+      "whyWrong": [
+        "Put the password in source code is not the best choice because it does not meet the scenario as directly as Read the DATABASE_URL config var set by the add-on.",
+        "Scan the network for a database is not the best choice because apps don't need to search for the database.",
+        "Retrieve the URL from email is not the best choice because heroku doesn't send connection details by email."
+      ]
+    },
+    {
+      "question": "The app is working in staging. Which Heroku Pipeline action releases that same build to production?",
+      "options": [
+        "Push source code to production again",
+        "Build a new slug with a different buildpack",
+        "Promote the Pipeline build",
+        "Copy the files to production over FTP"
       ],
       "correctAnswer": 2,
-      "explanation": "Dynos restart regularly, so jobs should be safe to run again, for example by checking whether the work is already done.",
+      "explanation": "Use Pipeline promotion to carry the already-built slug forward; production does not need a second build from source.",
       "whyWrong": [
-        "No job can be guaranteed to finish without interruption.",
-        "Web dynos have the 30-second limit and the same restarts.",
-        "You can't turn off the daily restart."
+        "Push source code to production again is not the best choice because pushing again creates a new build that might differ.",
+        "Build a new slug with a different buildpack is not the best choice because a new buildpack produces a different build.",
+        "Copy the files to production over FTP is not the best choice because heroku doesn't deploy by FTP."
       ]
     },
     {
-      "question": "A Heroku app needs to create Salesforce Cases in real time when a user submits a form. Heroku Connect isn't set up. What should it do?",
+      "question": "How should a background job behave if its dyno restarts before the job finishes?",
       "options": [
-        "Post the Case to Chatter",
-        "Write it to a local file and then email it",
-        "Wait for a nightly batch",
-        "Call the Salesforce REST API using OAuth"
+        "Assume jobs cannot be interrupted",
+        "Run every job in a web dyno",
+        "Disable dyno restarts",
+        "Retry-safe job design"
       ],
       "correctAnswer": 3,
-      "explanation": "The REST API lets the app create records straight away, using an OAuth token for access.",
+      "explanation": "Retry-safe job design is the best fit because dynos restart regularly, so jobs should be safe to run again, for example by checking whether the work is already done.",
       "whyWrong": [
-        "Chatter posts aren't Cases.",
-        "A local file is lost on restart and isn't an integration.",
-        "A nightly batch isn't real time."
+        "Assume jobs cannot be interrupted is not the best choice because web dynos have the 30-second limit and the same restarts.",
+        "Run every job in a web dyno is not the best choice because it does not meet the scenario as directly as Make the job safe to retry without duplicate effects.",
+        "Disable dyno restarts is not the best choice because you can't turn off the daily restart."
       ]
     },
     {
-      "question": "Traffic doubles during a sale and response times rise. The app is stateless. What is the quickest fix?",
+      "question": "Without Heroku Connect, how can the app create a Salesforce Case as soon as a form is submitted?",
       "options": [
-        "Turn off logging",
-        "Remove the database",
-        "Add more web dynos",
-        "Restart the app every hour"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Stateless apps scale out easily: more web dynos share the extra traffic.",
-      "whyWrong": [
-        "Logging has little effect on response time.",
-        "Removing the database breaks the app.",
-        "Restarts don't add capacity."
-      ]
-    },
-    {
-      "question": "The team wants a temporary app created for every GitHub pull request so reviewers can test it. What should they use?",
-      "options": [
-        "Review apps in the pipeline",
-        "Heroku Scheduler",
-        "One-off dynos",
-        "A second separate production app"
+        "Salesforce REST API with OAuth",
+        "Post the Case to Chatter",
+        "Write to local disk and email it",
+        "Wait for the nightly batch"
       ],
       "correctAnswer": 0,
-      "explanation": "Review apps create a short-lived app per pull request and remove it when the pull request closes.",
+      "explanation": "Salesforce REST API with OAuth is the best fit because the REST API lets the app create records straight away, using an OAuth token for access.",
       "whyWrong": [
-        "Scheduler runs tasks on a timer.",
-        "One-off dynos run single commands.",
-        "A second production app isn't tied to pull requests."
+        "Post the Case to Chatter is not the best choice because a local file is lost on restart and isn't an integration.",
+        "Write to local disk and email it is not the best choice because a nightly batch isn't real time.",
+        "Wait for the nightly batch is not the best choice because it does not meet the scenario as directly as Call the Salesforce REST API with OAuth."
+      ]
+    },
+    {
+      "question": "What is a quick scaling response when a stateless app’s traffic doubles?",
+      "options": [
+        "Turn off logging",
+        "Add web dynos",
+        "Remove the database",
+        "Restart hourly"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Add web dynos is the best fit because stateless apps scale out easily: more web dynos share the extra traffic.",
+      "whyWrong": [
+        "Turn off logging is not the best choice because removing the database breaks the app.",
+        "Remove the database is not the best choice because it does not meet the scenario as directly as Scale out by adding web dynos.",
+        "Restart hourly is not the best choice because restarts don't add capacity."
+      ]
+    },
+    {
+      "question": "Which pipeline feature gives reviewers a short-lived app for each pull request?",
+      "options": [
+        "Use Heroku Scheduler",
+        "Start one-off dynos",
+        "Review Apps",
+        "Create another production app"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Review Apps is the best fit because review apps create a short-lived app per pull request and remove it when the pull request closes.",
+      "whyWrong": [
+        "Use Heroku Scheduler is not the best choice because scheduler runs tasks on a timer.",
+        "Start one-off dynos is not the best choice because one-off dynos run single commands.",
+        "Create another production app is not the best choice because a second production app isn't tied to pull requests."
       ]
     }
   ]

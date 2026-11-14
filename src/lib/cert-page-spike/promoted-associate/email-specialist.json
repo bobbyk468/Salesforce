@@ -1,10 +1,10 @@
 {
   "template": "associate",
-  "expertInsight": "Salesforce's current credential name is Salesforce Certified Marketing Cloud Engagement Specialist. The exam guide covers email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
+  "expertInsight": "The current credential name is Salesforce Certified Marketing Cloud Engagement Specialist. Its official guide covers email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
   "introLead": [
     {
       "type": "text",
-      "text": "This free guide focuses on Marketing Cloud email content, subscriber data, delivery, automation, and reporting. Its 15 sample questions check personalization, Data Extensions, send timing, delivery metrics, and related core concepts. Compare the scope with Salesforce's"
+      "text": "This guide covers Marketing Cloud email content, subscriber data, delivery, automation, and reporting. Its sample questions review personalization, Data Extensions, send decisions, and tracking. Compare these study notes with the official "
     },
     {
       "type": "link",
@@ -13,7 +13,7 @@
     },
     {
       "type": "text",
-      "text": ". For a study schedule, see our"
+      "text": ". For a study schedule, see the "
     },
     {
       "type": "link",
@@ -25,93 +25,93 @@
       "text": "."
     }
   ],
-  "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "practiceQuestionsIntroSuffix": "Choose an answer, then check it to see whether it is correct and review the explanation.",
   "whoIsThisFor": {
-    "heading": "Who is the Email Specialist exam for?",
+    "heading": "Who should take the Marketing Cloud Engagement Email Specialist exam?",
     "personas": [
       {
         "label": "Marketing Cloud email practitioners",
-        "description": "You build and send email campaigns in Marketing Cloud and want to validate your skills in subscriber management, AMPscript, and deliverability."
+        "description": "You build and send campaigns and want to validate your skills in subscriber data, personalization, and deliverability."
       },
       {
         "label": "Digital marketers moving to Salesforce",
-        "description": "You have email marketing experience with other platforms and want to prove your Marketing Cloud Email Studio expertise."
+        "description": "You understand email marketing and want to apply that experience to Marketing Cloud Engagement."
       },
       {
-        "label": "Marketing ops professionals",
-        "description": "You manage data extensions, automation workflows, and deliverability settings and need a credential to demonstrate your technical email marketing skills."
+        "label": "Marketing operations professionals",
+        "description": "You manage audiences, automations, and send settings and want to demonstrate your technical email marketing knowledge."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Email Specialist Exam Hard?",
-    "summary": "The official exam guide covers email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
+    "heading": "How challenging is the Email Specialist exam?",
+    "summary": "The exam guide covers email planning, content creation and delivery, automation, subscriber and data management, and analytics. It tests practical choices across the Marketing Cloud email workflow.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> and up to five unscored questions in 90 minutes.",
-      "<strong>67% passing score.</strong>",
-      "<strong>Core scope:</strong> Email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
-      "<strong>Preparation:</strong> Salesforce recommends basic understanding of AMPscript, GTL, SSJS, HTML, and CSS; in-depth development knowledge is not required."
+      "<strong>60 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>67% to pass</strong>, which is 41 correct answers out of 60.",
+      "<strong>Core scope:</strong> Review email best practices, content, automation, subscriber data, and reporting.",
+      "<strong>Technical preparation:</strong> Salesforce recommends basic familiarity with AMPscript, GTL, SSJS, HTML, and CSS; in-depth development knowledge is not required."
     ],
-    "passRateGuidance": "Use timed practice to identify gaps, then review the official objectives and explain why each answer is correct."
+    "passRateGuidance": "Use timed practice to find gaps, then return to the official exam objectives. For each question, explain why the correct feature fits and why the alternatives do not."
   },
   "examFormat": {
-    "heading": "Email Specialist Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "The official guide does not publish a percentage of scenario-based questions. Practice applying the stated objectives to realistic email, data, automation, and reporting requirements.",
+    "heading": "Marketing Cloud Email Specialist exam format",
+    "intro": "The exam is proctored online or in person. The official guide covers five areas of email marketing practice.",
+    "scenarioPercent": "The guide does not state a scenario-question percentage. Prepare by applying the objectives to realistic audience, content, automation, deliverability, and analytics needs.",
     "bestWayToPass": [
-      "<strong>Know the subscriber data model:</strong> All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and how global unsubscribes override everything else.",
-      "<strong>Learn core AMPscript functions:</strong> Lookup(), LookupRows(), AttributeValue(), and IIF() cover most exam scenarios, practice reading code snippets and predicting output.",
-      "<strong>Distinguish Journey Builder from Automation Studio:</strong> Journey Builder is customer-behavior-driven; Automation Studio is schedule/event-driven. Know which activities are exclusive to each tool.",
-      "<strong>Understand email authentication:</strong> Know what SPF, DKIM, and DMARC each do, how the Sender Authentication Package bundles them, and how IP warming protects sender reputation."
+      "<strong>Know how subscriber data works:</strong> Review All Subscribers, Publication Lists, Suppression Lists, and Data Extensions, including how unsubscribes affect eligibility.",
+      "<strong>Read basic AMPscript:</strong> Practice Lookup, LookupRows, AttributeValue, and IIF examples and predict the output.",
+      "<strong>Choose the right automation:</strong> Distinguish Journey Builder’s customer journeys from Automation Studio’s scheduled and event-based processes.",
+      "<strong>Review authentication and reputation:</strong> Learn the roles of SPF, DKIM, DMARC, the Sender Authentication Package, and IP warming."
     ]
   },
   "differentiation": {
-    "heading": "Email Specialist Traps & Readiness Checklist",
-    "intro": "Preparation should cover how Marketing Cloud behaves in real sends, not just what each feature is called.",
+    "heading": "Email Specialist readiness and common traps",
+    "intro": "Prepare for how Marketing Cloud behaves during real sends, not just the names of the features.",
     "commonTraps": [
       {
-        "trap": "Confusing All Subscribers, Publication Lists, Suppression Lists, and Data Extensions",
-        "fix": "Remember that All Subscribers controls global status, Publication Lists manage topic-level opt-ins, Suppression Lists exclude, and Data Extensions store relational audience data."
+        "trap": "Mixing up All Subscribers, Publication Lists, Suppression Lists, and Data Extensions",
+        "fix": "All Subscribers tracks subscriber-level status; Publication Lists manage topic preferences; Suppression Lists exclude addresses; Data Extensions store structured audience data."
       },
       {
-        "trap": "Choosing Journey Builder for every automation scenario",
-        "fix": "Journey Builder is behavior and lifecycle orchestration. Automation Studio is better for scheduled imports, SQL activities, extracts, and operational batch processes."
+        "trap": "Using Journey Builder for every automation",
+        "fix": "Journey Builder coordinates customer journeys. Automation Studio handles scheduled or event-based batch work such as imports, SQL, and extracts."
       },
       {
-        "trap": "Reading AMPscript by keyword instead of output",
-        "fix": "Practice predicting the result of Lookup(), LookupRows(), AttributeValue(), IIF(), and empty-value handling in short snippets."
+        "trap": "Guessing at AMPscript output",
+        "fix": "Trace Lookup, LookupRows, AttributeValue, IIF, and empty-value behavior in short examples."
       },
       {
-        "trap": "Treating deliverability as a vocabulary topic",
-        "fix": "Know the practical purpose of SAP, SPF, DKIM, DMARC, IP warming, soft bounces, hard bounces, and subscriber reputation."
+        "trap": "Treating deliverability as definitions only",
+        "fix": "Connect SAP, SPF, DKIM, DMARC, IP warming, bounces, complaints, and subscriber reputation to actual sending decisions."
       }
     ],
     "readinessBenchmarks": [
-      "You can design the right list or data-extension model for promotional, transactional, and preference-center scenarios.",
-      "You can read basic AMPscript snippets and explain the output without running the code.",
-      "You know when to use Journey Builder, Automation Studio, Email Studio, and Contact Builder.",
-      "You can explain the official objectives and review why each practice answer is correct."
+      "You can choose an audience model for promotional, transactional, and preference-center scenarios.",
+      "You can read a short AMPscript example and explain what it returns.",
+      "You can distinguish Journey Builder, Automation Studio, Email Studio, and Contact Builder use cases.",
+      "You can identify the official exam objectives and explain each practice answer."
     ],
     "whoShouldSkip": [
-      "You have never worked inside Marketing Cloud Engagement or Email Studio.",
-      "Your focus is B2B Account Engagement/Pardot rather than Marketing Cloud Engagement."
+      "You have not yet worked with Marketing Cloud Engagement or Email Studio.",
+      "Your main platform is Account Engagement rather than Marketing Cloud Engagement."
     ],
     "adjacentCerts": [
       {
         "href": "/certifications/marketing-cloud-engagement-admin",
-        "label": "Marketing Cloud Administrator",
-        "guidance": "Better if you own setup, permissions, data extensions, and business-unit configuration."
+        "label": "Marketing Cloud Engagement Administrator",
+        "guidance": "Consider this if you own account setup, access, data extensions, and business-unit configuration."
       },
       {
         "href": "/certifications/pardot-specialist",
         "label": "Account Engagement Specialist",
-        "guidance": "Better if your marketing stack is Pardot forms, scoring, grading, and Salesforce connector sync."
+        "guidance": "Consider this if your work focuses on Account Engagement forms, scoring, grading, and connector synchronization."
       }
     ]
   },
   "certificationCard": {
     "code": "Marketing Cloud Engagement Specialist",
-    "description": "The Marketing Cloud Email Specialist certification validates your skills in email marketing, including content creation, data management, and email deliverability. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Marketing Automation and Subscriber and Data Management (26% each).",
+    "description": "The Salesforce Certified Marketing Cloud Engagement Specialist exam covers email content and delivery, subscriber and data management, automation, and analytics. The guide also allows up to five unscored questions. The exam is 60 scored questions in 90 minutes, with a 67% pass mark, weighted towards Marketing Automation and Subscriber and Data Management (26% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
@@ -127,59 +127,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Email Specialist: Key Concepts for the Exam",
+    "h2": "Email Specialist: core concepts",
     "blocks": [
       {
-        "heading": "Email Deliverability: SPF, DKIM, and DMARC",
-        "body": "SPF lists authorised sending IPs in DNS. DKIM adds a cryptographic signature to email headers, receiving servers verify authenticity using the domain's public key. DMARC defines policy (none, quarantine, reject) when SPF or DKIM fails. All three are included in Marketing Cloud's Sender Authentication Package (SAP). The exam tests what each does and which threat each addresses."
+        "heading": "Email Authentication and Deliverability",
+        "body": "SPF identifies which sending servers are authorized for a domain. DKIM adds a cryptographic signature that receiving systems can verify with the domain’s public key. DMARC tells receivers how to handle messages that fail SPF or DKIM checks, using a policy such as none, quarantine, or reject. The Sender Authentication Package bundles key domain and sending configuration. Understand what each mechanism verifies and how reputation, complaints, and bounce handling affect delivery."
       },
       {
-        "heading": "Subscriber Management and List Types",
-        "body": "**All Subscribers list** is the master subscriber list, it controls global unsubscribes. Publication Lists are opt-in lists for specific content types. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends. **Data Extensions** store relational data and support segmentation with SQL queries and Data Filters. Know the precedence: global unsubscribes override everything."
+        "heading": "Subscribers, Lists, and Data Extensions",
+        "body": "All Subscribers holds subscriber status used across sends. Publication Lists manage preferences for particular content types. Suppression Lists exclude addresses from sends, and Auto-Suppression Lists can apply exclusions across sends. Data Extensions store structured records and custom fields for segmentation and personalization. Subscriber keys identify contacts consistently. Global unsubscribes take precedence over more specific audience selections."
       },
       {
-        "heading": "Send Classification and Commercial vs Transactional",
-        "body": "Commercial emails are marketing messages, require the CAN-SPAM unsubscribe footer. Transactional emails (order confirmations, receipts) can bypass commercial unsubscribe rules but must be genuinely transactional. In Marketing Cloud, Send Classifications define whether a send is commercial or transactional, misclassifying marketing emails as transactional violates CAN-SPAM."
+        "heading": "Send Classifications and Message Type",
+        "body": "Send classifications combine sender and delivery settings with the commercial or transactional treatment of a send. Commercial messages require the relevant unsubscribe handling. Transactional messages must be genuinely tied to a transaction and should not be used to bypass marketing consent. Select the classification that matches the message purpose and the organization’s compliance requirements."
       },
       {
-        "heading": "AMPscript Key Functions",
-        "body": "Lookup() retrieves a single value from a Data Extension. LookupRows() returns a full row set. AttributeValue() accesses subscriber attribute values. IIF() is the inline conditional. These four functions cover most **AMPscript** personalisation scenarios tested in the exam."
+        "heading": "AMPscript for Personalization",
+        "body": "Lookup retrieves a value from a Data Extension, while LookupRows returns matching rows. AttributeValue reads a subscriber or send-context attribute, and IIF provides a conditional expression. These functions can personalize content when used with the correct data and keys. Practice following short snippets and checking how missing values are handled."
       },
       {
-        "heading": "Tracking Metrics to Know",
-        "body": "Delivered Rate = (Sent &minus; Bounces) / Sent. Open Rate = Unique Opens / Delivered. Click-to-Open Rate (CTOR) = Clicks / Opens, measures content relevance. Hard bounces = permanent failures (invalid address). Soft bounces = temporary failures (mailbox full). Marketing Cloud auto-unsubscribes hard-bounced addresses. Match the metric to the business question asked in each scenario."
+        "heading": "Tracking and Email Metrics",
+        "body": "Tracking reports include sends, deliveries, opens, clicks, bounces, unsubscribes, and complaints. Delivered messages are generally calculated after bounce handling. Open rate and click-to-open rate answer different questions; CTOR compares clicks with opens. Hard bounces are permanent failures and soft bounces are temporary failures. Match each metric to the business question and interpret tracking data with its known limitations."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Marketing Cloud Email Specialist Exam",
-    "intro": "The Email Specialist exam tests deep knowledge of Marketing Cloud email features, from subscriber management to advanced personalization. Questions are scenario-based and focus on solving deliverability, segmentation, and automation problems.",
+    "h2": "How to prepare for the Email Specialist exam",
+    "intro": "The exam spans the full send workflow, from audience and content through delivery and reporting. Focus on the data model and the reason each send setting exists.",
     "blocks": [
       {
-        "heading": "Email Studio Data Model",
-        "body": "Know All Subscribers, Publication Lists, Suppression Lists, **Data Extensions**, and Filtered Data Extensions. Understand how subscriber status (Active, Bounced, Unsubscribed, Held) affects send eligibility."
+        "heading": "Review Subscriber and Audience Data",
+        "body": "Understand All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and how status affects eligibility. Choose the audience structure that fits the data and consent needs."
       },
       {
-        "heading": "AMPscript for Personalization",
-        "body": "Know core **AMPscript** functions: Lookup, LookupRows, AttributeValue, Format, IIf, and how to use FOR loops for dynamic content blocks. Practice reading short snippets and predicting their output."
+        "heading": "Practice Personalization",
+        "body": "Read AMPscript examples using lookups, subscriber attributes, conditions, and fallback behavior. Explain the rendered result rather than memorizing function names."
       },
       {
-        "heading": "Journey Builder vs. Automation Studio",
-        "body": "**Journey Builder** is customer-driven (triggered by individual behavior). **Automation Studio** is time/event-driven (runs on a schedule or file drop). Know when to use each and what activities are exclusive to each tool."
+        "heading": "Choose Between Automation Tools",
+        "body": "Use Journey Builder for customer journeys and Automation Studio for scheduled or event-driven operational work. Check which activities fit each process."
       },
       {
-        "heading": "Deliverability Best Practices",
-        "body": "Understand SPF, DKIM, DMARC, and how IP warming works. Know what causes spam complaints and bounces (hard vs. soft), and how Marketing Cloud handles deliverability automatically vs. what requires configuration."
+        "heading": "Protect Deliverability",
+        "body": "Know how authentication, IP warming, bounces, complaints, and unsubscribe handling affect delivery and reputation."
       },
       {
-        "heading": "A/B Testing & Reporting",
-        "body": "Know how to configure A/B tests (subject line, from name, content, send time), how to set the winner criteria, and which send-level metrics (Delivery Rate, Open Rate, Click Rate, Bounce Rate) measure what."
+        "heading": "Interpret Tests and Reports",
+        "body": "Review A/B testing choices and delivery, open, click, and bounce metrics. Select measures that answer the specific campaign question."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Marketing Certifications",
-    "intro": "After this marketing certification, consider these related credentials:",
+    "heading": "Related marketing credentials",
+    "intro": "After Email Specialist, consider a related Marketing Cloud Engagement or Account Engagement credential.",
     "links": [
       {
         "href": "/certifications/marketing-cloud-consultant",
@@ -227,87 +227,87 @@
   ],
   "sampleQuestions": [
     {
-      "question": "AMPscript is a scripting language inside Marketing Cloud. Which job is it suited to?",
+      "question": "AMPscript is a scripting language in Marketing Cloud. What is it useful for?",
       "options": [
-        "Scheduling the nightly automation that imports the subscriber file from FTP",
-        "Varying content per subscriber from stored data",
-        "Deciding which sending domain and dedicated IP address a given send will use",
-        "Setting the retention period that applies to rows inside a data extension"
+        "Scheduling a nightly automation to import subscriber files from FTP",
+        "Changing content for each subscriber using stored data",
+        "Choosing the sending domain and dedicated IP for a send",
+        "Setting how long rows stay in a data extension"
       ],
       "correctAnswer": 1,
-      "explanation": "AMPscript runs at send time and can look values up, test them and vary the content each subscriber receives. That is what makes it a scripting language rather than a set of merge fields.",
+      "explanation": "AMPscript runs when an email is sent. It can look up and check data, then change the content for each subscriber.",
       "whyWrong": [
-        "Scheduling is configured in Automation Studio, not in email content.",
-        "Sending domain and IP come from the sender and delivery profiles.",
-        "Retention is a setting on the data extension itself."
+        "Automation Studio schedules automations; AMPscript is used in email content.",
+        "The sending and delivery profiles determine the sending domain and IP.",
+        "The data extension has its own retention setting."
       ]
     },
     {
-      "question": "A team's emails are filtered as spam at one mailbox provider. DNS has SPF but no DKIM. What comes first?",
+      "question": "A team’s emails go to spam at one email provider. The DNS has SPF but no DKIM record. What should they do first?",
       "options": [
-        "Remove the unsubscribe link so that fewer complaints are registered overall",
+        "Remove the unsubscribe link to reduce complaints",
         "Publish a DKIM record for the sending domain",
-        "Switch every single send across to a transactional classification instead",
-        "Increase the overall send volume in order to build a stronger reputation"
+        "Mark every send as transactional",
+        "Increase sending volume to build a stronger reputation"
       ],
       "correctAnswer": 1,
-      "explanation": "DKIM signs the message so a receiver can confirm it was not altered in transit and came from an authorised sender. Missing DKIM is a common cause of filtering even where SPF passes.",
+      "explanation": "DKIM signs the message so the receiving provider can check that it came from an approved sender and was not changed in transit. Missing DKIM can cause filtering, even when SPF passes.",
       "whyWrong": [
-        "Removing the unsubscribe link breaches anti-spam law and drives complaints up.",
-        "Misclassifying commercial mail as transactional is a compliance problem, not a fix.",
-        "Raising volume on a poor reputation makes filtering worse, not better."
+        "Removing the unsubscribe link breaks anti-spam rules and can lead to more complaints.",
+        "Marking commercial email as transactional is a compliance problem, not a solution.",
+        "Sending more email when reputation is poor can lead to more filtering."
       ]
     },
     {
-      "question": "A marketer wants to pick the best send time for a brand new list with almost no history. What should they do?",
+      "question": "A marketer wants to choose the best send time for a new list with little history. What should they do?",
       "options": [
-        "Copy the send time that performs best for a completely different brand's audience",
-        "Delay the campaign for several months until a full year of history has built up",
-        "Apply the send-time optimisation feature immediately to the whole of the new list",
-        "Send at a sensible default and gather data first"
+        "Copy the best send time from a different brand’s audience",
+        "Wait several months until there is a full year of history",
+        "Use send-time optimization right away for the entire list",
+        "Choose a reasonable time and gather data first"
       ],
       "correctAnswer": 3,
-      "explanation": "Send-time optimisation relies on engagement data for the individual subscriber. On a new list that data is insufficient, so you start with a reasonable default and let real behaviour accumulate.",
+      "explanation": "Send-time optimization uses each subscriber’s engagement data. For a new list, the data is insufficient, so start with a reasonable default and gather real engagement first.",
       "whyWrong": [
-        "Another brand's audience behaves differently and tells you little.",
-        "Waiting months to send anything forfeits the campaign entirely.",
-        "Optimisation has nothing to work from when engagement data does not yet exist."
+        "A different brand’s audience may behave differently.",
+        "Waiting months to send a campaign delays it without a good reason.",
+        "There is not enough engagement history for optimization to use."
       ]
     },
     {
-      "question": "A client points to their sender authentication package and asks whether their email will now reach the inbox. What is the accurate answer?",
+      "question": "A client asks whether sender authentication means their email will reach the inbox. What is the accurate answer?",
       "options": [
-        "No, because authentication has no bearing at all on how receivers treat mail",
-        "Yes, because a dedicated sending domain and IP guarantee delivery to the inbox",
-        "Yes, provided that every single one of the sends is classified as transactional",
-        "It helps, but placement still depends on engagement"
+        "No. Authentication has no effect on how providers handle email.",
+        "Yes. A dedicated sending domain and IP guarantee inbox delivery.",
+        "Yes, as long as every send is marked transactional.",
+        "Authentication helps, but inbox placement also depends on engagement."
       ],
       "correctAnswer": 3,
-      "explanation": "Authentication proves who sent the message and is necessary, but it does not establish inbox placement. Receivers still weigh complaints, bounces and how recipients engage.",
+      "explanation": "Authentication helps prove who sent a message, but it does not establish inbox placement. Providers also consider complaints, bounces, and how recipients engage.",
       "whyWrong": [
-        "Authentication does matter, so dismissing it entirely is wrong.",
-        "Authentication removes a reason to filter; it does not guarantee placement.",
-        "Classification governs opt-out handling, not inbox placement."
+        "Authentication can affect how providers handle email.",
+        "Authentication does not guarantee inbox placement.",
+        "The send classification controls opt-out handling, not inbox placement."
       ]
     },
     {
-      "question": "Which list stores subscriber status for the whole Marketing Cloud account?",
+      "question": "Which list stores subscriber status across the whole Marketing Cloud account?",
       "options": [
-        "The sendable data extension that was used for the most recent campaign",
-        "The publication list that was most recently created inside the account",
+        "The data extension used for the latest campaign",
+        "The publication list most recently created",
         "All Subscribers",
-        "The suppression list attached to the send classification being used"
+        "The suppression list used for the send classification"
       ],
       "correctAnswer": 2,
-      "explanation": "All Subscribers holds the account-level status for every subscriber. When someone unsubscribes their record remains in the list with an unsubscribed status rather than being deleted.",
+      "explanation": "All Subscribers stores account-level status. When someone unsubscribes, their record remains in the list with an unsubscribed status; it is not deleted.",
       "whyWrong": [
-        "A data extension is an audience, not the account's status record.",
-        "Publication lists manage opt-out by category, not account-level status.",
-        "Suppression lists hold addresses to exclude from a particular send."
+        "A data extension stores an audience, not account-level subscriber status.",
+        "Publication Lists manage opt-outs for a category, not the whole account.",
+        "Suppression Lists contain addresses to leave out of a particular send."
       ]
     },
     {
-      "question": "Which AMPscript function would retrieve a single value from a data extension for personalisation?",
+      "question": "Which AMPscript function retrieves one value from a data extension for personalization?",
       "options": [
         "Lookup",
         "DateAdd",
@@ -315,171 +315,171 @@
         "RaiseError"
       ],
       "correctAnswer": 0,
-      "explanation": "Lookup returns one field value from a data extension row matching the criteria supplied.",
+      "explanation": "Lookup returns one field value from a data extension row that matches the criteria you provide.",
       "whyWrong": [
-        "DateAdd performs date arithmetic.",
-        "Concat joins strings together.",
+        "DateAdd does date calculations.",
+        "Concat joins text values.",
         "RaiseError stops the send for that subscriber and reports a problem."
       ]
     },
     {
-      "question": "What is the purpose of wrapping personalisation in a default value, for example with AMPscript conditional logic?",
+      "question": "Why set a default value for personalization, such as with AMPscript conditions?",
       "options": [
         "To bypass the send classification",
-        "To reduce the size of the data extension",
-        "To avoid a blank greeting when the field is empty",
+        "To make the data extension smaller",
+        "Avoid a blank greeting",
         "To improve the sender reputation score"
       ],
       "correctAnswer": 2,
-      "explanation": "Missing data is normal, and a fallback prevents visible gaps such as a greeting addressed to nobody.",
+      "explanation": "Some records may not have the data you need. A default prevents a blank space in the email, such as a greeting with no name.",
       "whyWrong": [
-        "Send classification is unrelated to content logic.",
-        "Defaults are evaluated at send time and do not change stored data.",
-        "Reputation is driven by engagement and complaints, not by personalisation defaults."
+        "Send classification is separate from email content.",
+        "A default does not change the data stored in the data extension.",
+        "A default does not change sender reputation."
       ]
     },
     {
-      "question": "A hard bounce is recorded for a subscriber. What does this indicate?",
+      "question": "What does a hard bounce mean?",
       "options": [
-        "The address is permanently undeliverable",
-        "The mailbox was temporarily full",
-        "The send was throttled by the provider",
-        "The subscriber marked the message as spam"
+        "The email address cannot receive mail permanently",
+        "The mailbox is temporarily full",
+        "The provider delayed the send",
+        "The subscriber reported the message as spam"
       ],
       "correctAnswer": 0,
-      "explanation": "Hard bounces mean the address does not exist or has permanently rejected mail.",
+      "explanation": "A hard bounce means the address does not exist or has permanently rejected the email.",
       "whyWrong": [
-        "A temporarily full mailbox produces a soft bounce.",
-        "Throttling delays delivery rather than bouncing it.",
-        "A spam complaint is a separate event from a bounce."
+        "A full mailbox may cause a soft bounce.",
+        "Provider throttling delays delivery; it is not a bounce.",
+        "A spam complaint is different from a bounce."
       ]
     },
     {
-      "question": "Which figure should a team watch to judge whether their list hygiene is deteriorating?",
+      "question": "Which number can show that list hygiene is getting worse?",
       "options": [
-        "The number of data extensions in the account",
-        "The count of available templates",
-        "The total number of emails created",
-        "The bounce rate over successive sends"
+        "Number of data extensions in the account",
+        "Number of available templates",
+        "Total number of emails created",
+        "Bounce rate across several sends"
       ],
       "correctAnswer": 3,
-      "explanation": "A rising bounce rate is the clearest signal that a list contains stale or invalid addresses.",
+      "explanation": "A rising bounce rate can show that the list has old or invalid addresses.",
       "whyWrong": [
-        "The number of data extensions is a structural detail, not a hygiene measure.",
-        "Template count has no bearing on deliverability.",
-        "Email volume produced says nothing about list quality."
+        "The number of data extensions does not measure list quality.",
+        "The number of templates does not affect delivery.",
+        "The number of emails created does not show whether the addresses are valid."
       ]
     },
     {
-      "question": "Click-through rate on a send is calculated against which figure?",
+      "question": "Click-through rate for a send is measured against which number?",
       "options": [
         "Unique opens",
         "Emails sent",
         "Delivered emails",
-        "Total subscribers in the account"
+        "All subscribers in the account"
       ],
       "correctAnswer": 2,
-      "explanation": "Engagement rates are measured against what actually reached the mailbox, which is the delivered count.",
+      "explanation": "Click-through rate is based on emails that reached recipients, so it uses delivered emails as the total.",
       "whyWrong": [
-        "Click-to-open rate uses opens; click-through rate uses delivered.",
-        "Sent includes bounces; which never reached anyone.",
-        "Account-wide subscriber counts are unrelated to one send."
+        "Click-to-open rate uses opens; click-through rate uses delivered emails.",
+        "Sent email counts can include messages that bounced.",
+        "The account-wide subscriber count is not related to one send."
       ]
     },
     {
-      "question": "A/B testing an email subject line requires what to produce a usable result?",
+      "question": "What helps an A/B subject-line test produce a useful result?",
       "options": [
-        "Testing on the smallest segment available",
-        "A random split with only the subject line differing",
-        "Two completely different emails sent to the same people",
-        "Sending version A one week and version B the next"
+        "Test the smallest segment available",
+        "Randomly split the audience and change only the subject line",
+        "Send two very different emails to the same people",
+        "Send version A one week and version B the next"
       ],
       "correctAnswer": 1,
-      "explanation": "Isolating one variable across randomly split, sufficiently large groups is what makes the difference attributable to the subject line.",
+      "explanation": "Use randomly selected groups that are large enough, and change only one thing. Then you can tell whether the subject line caused the difference.",
       "whyWrong": [
-        "A small sample produces differences that are indistinguishable from noise.",
-        "Changing several things at once means the result cannot be attributed to any one of them.",
-        "Sending at different times introduces timing as a confounding factor."
+        "A very small group can produce results caused by chance.",
+        "If several things change, you cannot tell what caused the result.",
+        "Different send times can affect the result."
       ]
     },
     {
-      "question": "What distinguishes a data extension from a subscriber list?",
+      "question": "What is one difference between a data extension and a subscriber list?",
       "options": [
         "A subscriber list supports more fields",
-        "A data extension cannot be used for sending",
-        "Columns and a primary key that you define",
-        "They are identical with different names"
+        "A data extension cannot be used for sends",
+        "Custom columns and primary key",
+        "They are the same thing with different names"
       ],
       "correctAnswer": 2,
-      "explanation": "Data extensions are tables you define, which is why they are used wherever custom fields or relationships are needed.",
+      "explanation": "A data extension is a table that you define. Use it when you need custom fields or relationships.",
       "whyWrong": [
-        "Lists are limited to account-level profile and preference attributes.",
-        "Data extensions are a standard sendable audience.",
-        "They are genuinely different storage models."
+        "Subscriber lists do not support more fields than data extensions.",
+        "Data extensions can be set up as sendable audiences.",
+        "They are different ways to store data."
       ]
     },
     {
-      "question": "An unsubscribe recorded through the standard profile centre takes effect at which level by default?",
+      "question": "By default, what happens when someone unsubscribes through the standard profile center?",
       "options": [
-        "The business unit's sender profile",
-        "All Subscribers, across the whole account",
-        "The data extension used for that send",
-        "The single email that was sent"
+        "The sender profile for that business unit is changed",
+        "They are unsubscribed from All Subscribers across the account",
+        "They are removed from the data extension used for the send",
+        "They are unsubscribed from only that email"
       ],
       "correctAnswer": 1,
-      "explanation": "Without publication lists in play, an unsubscribe is recorded against All Subscribers and applies account-wide.",
+      "explanation": "If publication lists are not used, the unsubscribe is recorded in All Subscribers and applies across the account.",
       "whyWrong": [
-        "Sender profiles govern the from address, not subscription status.",
-        "Opt-out status lives on the subscriber record, not the sending audience.",
-        "Single-email opt-out is not the default behaviour."
+        "Sender profiles set the from address, not subscription status.",
+        "The unsubscribe status is stored on the subscriber record, not the send audience.",
+        "Unsubscribing from only one email is not the default behavior."
       ]
     },
     {
       "question": "Why does a sender profile matter for deliverability?",
       "options": [
-        "It determines the tracking retention period",
-        "It controls how many emails can be built",
-        "It stores the subscriber's preferences",
-        "It sets the from address used in authentication"
+        "It sets how long tracking data is kept",
+        "It controls how many emails you can build",
+        "It stores subscriber preferences",
+        "Set an authenticated from address"
       ],
       "correctAnswer": 3,
-      "explanation": "Authentication checks compare the sending domain with published DNS records, so the from address must align with what is authenticated.",
+      "explanation": "Receiving providers check the sending domain against published DNS records, so the from address should match the authenticated domain.",
       "whyWrong": [
-        "Tracking retention is an account setting.",
-        "Content creation limits are unrelated to the sender profile.",
-        "Preferences sit on the subscriber record."
+        "Tracking retention is a separate setting.",
+        "The sender profile does not set email creation limits.",
+        "Subscriber preferences are stored on the subscriber record."
       ]
     },
     {
-      "question": "A send is scheduled but a large portion of the audience never receives it, and the tracking shows them excluded before sending. What is the most likely cause?",
+      "question": "A send is scheduled, but many subscribers do not receive it. Tracking shows they were excluded before the send. What is the likely cause?",
       "options": [
-        "They are on a suppression list applied to the send",
+        "They are on a suppression list for the send",
         "The subject line was too long",
         "The send classification was transactional",
         "The email template was too large"
       ],
       "correctAnswer": 0,
-      "explanation": "Exclusions and suppressions are applied before sending, which is why those subscribers appear removed rather than bounced.",
+      "explanation": "Suppression rules remove subscribers before sending, so they appear as excluded rather than bounced.",
       "whyWrong": [
-        "Subject length has no effect on who is sent to.",
-        "A transactional classification widens rather than narrows the audience.",
-        "Template size affects rendering, not audience exclusion."
+        "Subject length does not decide who receives the email.",
+        "The classification does not explain these pre-send exclusions.",
+        "Template size may affect display, not audience exclusions."
       ]
     },
     {
-      "question": "Which practice most directly reduces spam complaints over time?",
+      "question": "Which practice can most directly reduce spam complaints over time?",
       "options": [
-        "Relevant content, sensible frequency",
-        "Using a new sending domain for each campaign",
-        "Increasing the volume of sends",
-        "Removing the preference centre link"
+        "Send relevant content at a reasonable frequency",
+        "Use a new sending domain for every campaign",
+        "Send more email",
+        "Remove the preference center link"
       ],
       "correctAnswer": 0,
-      "explanation": "Complaints come from unwanted mail, so relevance, consent and frequency are what reduce them.",
+      "explanation": "People are less likely to complain when they have agreed to receive messages, the content is relevant, and the send frequency is reasonable.",
       "whyWrong": [
-        "Rotating domains destroys accumulated reputation and looks evasive to receivers.",
-        "More mail to an uninterested audience produces more complaints.",
-        "Taking away the preference centre pushes people towards the spam button instead."
+        "Changing domains repeatedly can hurt reputation and may look suspicious.",
+        "Sending more to an uninterested audience can increase complaints.",
+        "Without a preference center, people may report the email as spam instead."
       ]
     }
   ]

@@ -5,37 +5,37 @@
     "personas": [
       {
         "label": "Trade promotion management consultants",
-        "description": "You set up how consumer goods companies plan, fund and pay for promotions with retailers."
+        "description": "You configure how consumer goods companies plan promotions, allocate funds, and settle payments with retailers."
       },
       {
         "label": "Revenue growth management analysts",
-        "description": "You look at which promotions actually make money and want to understand how the system calculates it."
+        "description": "You assess promotion profitability and want to understand how the system calculates results."
       },
       {
         "label": "CPG implementation partners",
-        "description": "You deliver Consumer Goods Cloud projects and need to show you know the trade promotion side."
+        "description": "You implement Consumer Goods Cloud and want to demonstrate your knowledge of trade promotion management."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Consumer Goods Cloud TPM Accredited Professional Exam Hard?",
-    "summary": "It is a moderate exam, but it needs business knowledge as well as Salesforce skills. You have to understand how trade promotions work in the consumer goods industry: funds, tactics, baselines, lift and claims.",
+    "summary": "This exam combines Salesforce configuration with consumer goods business concepts. Be ready to explain funds, tactics, baselines, sales lift, claims, and how each fits into the promotion cycle.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 66% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>62 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>66% to pass</strong>, which is 41 correct answers out of 62.",
       "<strong>Business terms.</strong> Baseline volume, incremental volume, trade spend, ROI and deductions all come up.",
       "<strong>The full cycle.</strong> Plan, fund, run, settle and review promotions."
     ],
-    "passRateGuidance": "People who have worked on promotion planning for a consumer goods brand do best. Before you book. Aim for 80% or more on practice tests and be able to explain how a promotion's ROI is worked out."
+    "passRateGuidance": "Practice explaining a promotion from planning through settlement and review. Use practice questions to check your understanding of promotion ROI."
   },
   "examFormat": {
     "heading": "Consumer Goods Cloud TPM Accredited Professional Exam Format Explained",
     "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a step in the promotion cycle, such as setting a budget, planning a price cut or paying a retailer's claim, and ask how the system handles it.",
+    "scenarioPercent": "Questions commonly focus on a stage of the promotion cycle, such as setting a budget, planning a price reduction, or settling a retailer claim.",
     "bestWayToPass": [
-      "<strong>Follow one promotion end to end:</strong> Account plan, promotion, tactics, funding, execution, claims and post-event review.",
-      "<strong>Learn the money side:</strong> Funds, budgets, accruals, payments and how claims are matched to promotions.",
-      "<strong>Understand baselines:</strong> Baseline volume is what would sell anyway. Incremental volume is the extra the promotion drives.",
+      "<strong>Trace a promotion:</strong> Follow account planning, tactics, funding, execution, claims, and the final review.",
+      "<strong>Review funding:</strong> Connect budgets and accruals with payments and claims for a promotion.",
+      "<strong>Compare volumes:</strong> Baseline volume estimates ordinary sales; incremental volume is the extra attributed to the promotion.",
       "<strong>Know where data comes from:</strong> Shipments from the ERP and sell-out from retailer data."
     ]
   },
@@ -62,49 +62,49 @@
     "blocks": [
       {
         "heading": "Trade Promotion Planning & Fund Management",
-        "body": "Consumer goods companies pay retailers to promote their products, and this **trade spend** is often one of their biggest costs. Planning starts with an **account plan** for each retailer, showing targets for volume, revenue and spend. Money comes from **funds**, which hold budgets for a period, a customer or a product group. Some funds are fixed amounts. Others grow with sales, for example a few cents per case shipped. Promotions draw on these funds, so the system can show how much is planned, committed and spent."
+        "body": "Retailers and consumer goods companies use trade funds to pay for promotions. An account plan sets volume, revenue and spending goals. A fixed fund has a set budget; a variable fund can increase with sales. Track planned, committed and actual spending against the fund."
       },
       {
         "heading": "Promotion Execution & Tactics",
-        "body": "A **promotion** covers a time period, a retailer and a set of products. Inside it, **tactics** describe what will happen, such as a temporary price reduction, an in-store display or a feature in the retailer's flyer. Each tactic has a cost and an expected effect on sales. Promotions move through statuses like planning, approved and completed, and approval rules can check that spend stays within the fund. Templates help teams create common promotion types quickly and consistently."
+        "body": "A promotion defines the retailer, products and dates. Its tactics describe activities such as a price reduction, display or flyer placement. Each tactic has an expected cost and sales effect. Teams can use approval rules and templates to manage promotion spending."
       },
       {
         "heading": "Settlement & Claims Processing",
-        "body": "After a promotion, the retailer asks to be paid, either by sending a **claim** or by taking a **deduction** off the next invoice. Settlement means matching that claim or deduction to the right promotion and tactic, checking the amount, and approving the **payment**. If the claim is higher than what was agreed, the difference needs to be checked before paying. Good settlement keeps trade spend accurate and stops paying twice for the same activity."
+        "body": "A retailer may request payment through a claim or subtract an amount from an invoice as a deduction. Match the request to the promotion and tactic, check the amount, and investigate differences before approving payment. This helps prevent duplicate payment and inaccurate spend."
       },
       {
         "heading": "Forecasting & Baseline Analytics",
-        "body": "**Baseline volume** is what would have sold without the promotion. **Incremental volume** is the extra volume the promotion drives. The promotion's value is worked out from the incremental profit compared with its cost, giving its **ROI**. Planners use history to forecast how a new promotion will perform, and **post-event analysis** compares the forecast with what really happened. Over time, this shows which tactics and retailers give the best return."
+        "body": "Baseline volume is the estimated sales without a promotion. Incremental volume is the additional sales attributed to it. Compare incremental profit with promotion costs to assess return, then compare forecast and actual results after the event."
       },
       {
         "heading": "Integration with ERP & Retailer Data",
-        "body": "TPM depends on good data. **Shipments** (sell-in) and invoices usually come from the ERP. **Point-of-sale** data (sell-out) comes from retailers or data providers. Product and account hierarchies are loaded so promotions can be planned at the right level, such as a brand or a retailer group. Payments and deductions often flow back to the ERP for finance. Keeping product and customer IDs consistent across systems is key to matching all this data."
+        "body": "TPM uses shipment and invoice data from ERP systems and point-of-sale data from retailers or providers. Product and account hierarchies support planning at the right level. Consistent customer and product IDs help connect transactions and send settlement information back to finance."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Consumer Goods Trade Promotion Management Accredited Professional Exam",
-    "intro": "Most questions place you at one step of the promotion cycle. Work out which record or number matters at that step.",
+    "intro": "Questions usually describe one step in the promotion cycle. Identify the record or measure that applies at that point.",
     "blocks": [
       {
         "heading": "Trade Promotion Planning",
-        "body": "Plans start at the account level, with targets for volume, revenue and spend. Promotions and tactics sit under them."
+        "body": "Start with account targets for sales and spending, then connect the relevant promotion and tactics."
       },
       {
         "heading": "Fund Management",
-        "body": "Funds hold budgets. Fixed funds have a set amount. Variable funds grow with sales. Promotions draw down funds."
+        "body": "Check whether the budget is fixed or grows with sales, and identify which fund the promotion uses."
       },
       {
         "heading": "Account Planning",
-        "body": "Account plans compare targets with planned promotions, so key account managers can see gaps early."
+        "body": "Compare the account plan with planned promotions to find gaps against targets."
       },
       {
         "heading": "Promotion Settlement & Claims",
-        "body": "Match each claim or deduction to the right promotion and tactic before paying. Check differences first."
+        "body": "Connect the claim or deduction to the correct activity and investigate any amount that differs from the agreement."
       },
       {
         "heading": "Analytics for TPM",
-        "body": "ROI depends on incremental volume, not total volume. Compare forecast with actual after every promotion."
+        "body": "Use incremental sales when assessing a promotion, then compare the forecast with actual results."
       }
     ]
   },
@@ -166,7 +166,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A promotion sold 12,000 cases. Without it, the product would have sold about 9,000 cases. What is the incremental volume?",
+      "question": "A retailer sold 12,000 cases during a promotion. Sales without the promotion were expected to be 9,000. How many cases were incremental?",
       "options": [
         "12,000 cases",
         "3,000 cases",
@@ -182,12 +182,12 @@
       ]
     },
     {
-      "question": "A brand gives each retailer 5 cents for every case shipped, to be spent on promotions. What kind of fund is this?",
+      "question": "A brand sets aside five cents per shipped case for retailer promotions. Which fund type fits?",
       "options": [
-        "A variable fund that grows with shipments",
-        "A deduction",
-        "A fixed fund holding a set amount of money",
-        "A claim"
+        "A variable fund that grows as eligible shipment volume increases",
+        "A deduction taken from the retailer invoice after a sale",
+        "A fixed fund with a balance agreed before the period starts",
+        "A retailer claim requesting payment for a promotion"
       ],
       "correctAnswer": 0,
       "explanation": "The amount depends on how many cases are shipped, so the fund grows with volume.",
@@ -198,12 +198,12 @@
       ]
     },
     {
-      "question": "A retailer runs a temporary price cut and an in-store display during the same two-week promotion. How should these be recorded?",
+      "question": "A retailer uses both a temporary price cut and an in-store display during one two-week campaign. How should these be represented?",
       "options": [
-        "As two entirely separate account plans",
-        "As two funds",
-        "As two claims",
-        "As two tactics within one promotion"
+        "As separate promotions managed in different planning periods",
+        "As separate funds",
+        "As one activity split into two separate claim records",
+        "As two tactics in one promotion"
       ],
       "correctAnswer": 3,
       "explanation": "Tactics describe the activities within a promotion, each with its own cost and effect.",
@@ -214,12 +214,12 @@
       ]
     },
     {
-      "question": "After a promotion, a retailer takes $8,000 off their next invoice. What is this called?",
+      "question": "After a promotion, a retailer reduces its next invoice by $8,000. What is this amount?",
       "options": [
-        "A deduction matched to the promotion",
-        "A tactic",
-        "A sales baseline for comparison",
-        "A fund"
+        "A deduction linked to the promotion and taken off an invoice",
+        "A tactic that describes one planned promotional activity",
+        "A sales baseline used to estimate expected volume without promotion",
+        "A fund that holds the budget available for promotional spending"
       ],
       "correctAnswer": 0,
       "explanation": "Deductions are amounts the retailer takes off an invoice, which must be matched and checked against what was agreed.",
@@ -230,12 +230,12 @@
       ]
     },
     {
-      "question": "A claim is $2,000 higher than the agreed tactic cost. What should happen?",
+      "question": "A retailer submits a claim that is $2,000 above the agreed tactic cost. What should the team do?",
       "options": [
-        "Raise the budget on the fund automatically each time",
-        "Investigate the difference before approving payment",
+        "Automatically increase the fund budget",
+        "Review the difference before approving payment",
         "Delete the promotion",
-        "Pay the full claim straight away"
+        "Pay the entire claim immediately"
       ],
       "correctAnswer": 1,
       "explanation": "Differences should be checked before paying, so the company doesn't overpay.",
@@ -246,12 +246,12 @@
       ]
     },
     {
-      "question": "Which number best shows whether a promotion was worth the money?",
+      "question": "Which measure best indicates whether a promotion delivered value for its cost?",
       "options": [
-        "Total volume sold",
-        "Number of tactics",
-        "ROI from incremental profit against cost",
-        "The overall length of the promotion"
+        "Total units sold, including volume that may have occurred anyway",
+        "The number of tactics used to carry out the promotion",
+        "ROI comparing incremental profit with the cost of the promotion",
+        "The length of time the promotion remained active"
       ],
       "correctAnswer": 2,
       "explanation": "ROI looks at the extra profit the promotion created against what it cost.",
@@ -262,11 +262,11 @@
       ]
     },
     {
-      "question": "Where does shipment (sell-in) data usually come from?",
+      "question": "Where does a company's shipment, or sell-in, data usually originate?",
       "options": [
         "The fund record",
         "The account plan",
-        "The retailer's flyer",
+        "The retailer's promotional flyer",
         "The company's ERP"
       ],
       "correctAnswer": 3,
@@ -278,12 +278,12 @@
       ]
     },
     {
-      "question": "Planners want to see how a promotion actually performed against its forecast. What should they run?",
+      "question": "Planners need to compare a promotion's actual results with its forecast. Which analysis should they use?",
       "options": [
         "A fund transfer",
         "Post-event analysis",
-        "A claim",
-        "A brand new account plan"
+        "A retailer claim",
+        "A new account plan"
       ],
       "correctAnswer": 1,
       "explanation": "Post-event analysis compares forecast with actual results, which improves future planning.",
@@ -294,12 +294,12 @@
       ]
     },
     {
-      "question": "A key account manager wants to check whether planned promotions will meet the year's volume target for a retailer. Where should they look?",
+      "question": "A key account manager needs to check whether planned promotions will meet a retailer's annual volume target. Which record should they review?",
       "options": [
-        "The retailer's account plan",
-        "The product's price",
-        "A single claim",
-        "The invoice list held in the ERP"
+        "The retailer's account plan with its annual targets and planned activity",
+        "The product price used to calculate the retailer order value",
+        "An individual claim submitted after a promotion has ended",
+        "The ERP invoice list showing past shipments and customer charges"
       ],
       "correctAnswer": 0,
       "explanation": "Account plans compare targets with planned promotions, showing gaps early.",
@@ -310,12 +310,12 @@
       ]
     },
     {
-      "question": "A promotion's planned spend would go over what is left in its fund. What should the process do?",
+      "question": "A proposed promotion would spend more than the fund's remaining balance. What should happen?",
       "options": [
-        "Ignore the fund",
-        "Delete the fund",
-        "Flag it through approval rules beforehand",
-        "Approve the claim automatically without review"
+        "Proceed without checking whether the planned spend fits the available budget",
+        "Delete the fund record so the promotion can be approved without a limit",
+        "Send the plan through approval rules before committing the promotion spend",
+        "Automatically approve the related claim before checking the fund balance"
       ],
       "correctAnswer": 2,
       "explanation": "Approval rules can check spend against available funds before a promotion goes ahead.",
@@ -326,12 +326,12 @@
       ]
     },
     {
-      "question": "Retailer point-of-sale data arrives weekly from a data provider. Why is it useful in TPM?",
+      "question": "A data provider sends weekly retailer point-of-sale data. What does this data help TPM measure?",
       "options": [
-        "It creates tactics",
-        "It replaces the ERP",
-        "It shows what consumers actually bought",
-        "It sets the budgets held on each fund"
+        "The tactics planned for the promotion and retailer account",
+        "A replacement for the ERP",
+        "What consumers actually purchased",
+        "The budget assigned to each fund"
       ],
       "correctAnswer": 2,
       "explanation": "Sell-out data shows real consumer purchases, which helps measure promotion effect.",
@@ -342,12 +342,12 @@
       ]
     },
     {
-      "question": "Promotions should be planned at the brand level for a retailer group, not item by item. What must be in place?",
+      "question": "A team wants to plan retailer-group promotions at the brand level instead of for each item. What data structure supports this?",
       "options": [
-        "A separate org",
-        "Manual spreadsheets",
+        "A separate Salesforce org for each brand and retailer group",
+        "Manual spreadsheets used to plan each brand and customer group",
         "Product and account hierarchies",
-        "A separate new fund for each of the items"
+        "A separate fund for every item"
       ],
       "correctAnswer": 2,
       "explanation": "Hierarchies let users plan at higher levels, like brand and retailer group, and roll numbers up and down.",
@@ -358,11 +358,11 @@
       ]
     },
     {
-      "question": "Teams keep setting up the same kind of promotion from scratch. What would save time and keep them consistent?",
+      "question": "Teams repeatedly create the same promotion type from scratch. What can make setup faster and more consistent?",
       "options": [
-        "Considerably longer promotions",
+        "Longer promotion periods",
         "Fewer tactics",
-        "More funds",
+        "Additional funds",
         "Promotion templates"
       ],
       "correctAnswer": 3,
@@ -374,12 +374,12 @@
       ]
     },
     {
-      "question": "Why must product and customer IDs match across TPM, the ERP and retailer data?",
+      "question": "Why should product and customer identifiers align across TPM, the ERP, and retailer data?",
       "options": [
-        "So shipments, sell-out and claims can be matched",
-        "So tactics are cheaper",
-        "So funds never run out",
-        "So that the company's website loads a little faster"
+        "To match shipment, sell-out, and claim records for the right products and customers",
+        "To lower the amount paid for promotional tactics across all retailers",
+        "To stop a fund from reaching its approved spending limit during the period",
+        "To improve the speed of pages on the company website for retail users"
       ],
       "correctAnswer": 0,
       "explanation": "Consistent IDs let the system tie each piece of data to the right product, customer and promotion.",
@@ -390,12 +390,12 @@
       ]
     },
     {
-      "question": "A promotion lifted volume a lot, but the price cut was so deep that profit fell. What does this show?",
+      "question": "A promotion increased sales volume, but its deep price cut reduced profit. What does this result show?",
       "options": [
-        "Every promotion that shows a sales lift is also profitable",
-        "High volume lift doesn't always mean a good ROI",
-        "Baselines don't matter",
-        "Funds were too small"
+        "Any promotion that raises sales is profitable",
+        "A large volume lift does not guarantee a positive ROI",
+        "Baselines are irrelevant",
+        "The fund balance was too small"
       ],
       "correctAnswer": 1,
       "explanation": "ROI depends on profit, not just volume. A deep discount can drive volume while losing money.",

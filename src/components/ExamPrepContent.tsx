@@ -2,7 +2,7 @@ import Link from '@/components/AppLink'
 import { Lightbulb, Target, BookOpen, Zap, Award } from 'lucide-react'
 import { getExamPrepContent } from '@/lib/exam-prep-content-data'
 import { slugToDisplayName, getExamLogistics, getMockExamTargetLabel } from '@/lib/cert-seo-data'
-import { getExamWeightage } from '@/lib/exam-weightage-data'
+import { getTopSections } from '@/lib/exam-weightage-data'
 
 interface ExamPrepContentProps {
   slug: string
@@ -18,13 +18,15 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
   // mark leaves no headroom, and it contradicted the target stated elsewhere on
   // the same page.
   const mockTarget = getMockExamTargetLabel(slug)
-  const weightage = getExamWeightage(slug)
-  const topSections = weightage ? [...weightage].sort((a, b) => b.percentage - a.percentage).slice(0, 2) : []
-  const topSectionShare = topSections.reduce((sum, s) => sum + s.percentage, 0)
+  // Same helper as Exam Tip 1 and the FAQ, so every statement of "the top
+  // sections carry N%" on the page names the same sections and the same total.
+  const top = getTopSections(slug)
+  const topSectionShare = top?.total ?? 0
+  const topNames = top?.sections.map((section) => section.name) ?? []
   const topSectionNames =
-    topSections.length === 2
-      ? `${topSections[0].name} and ${topSections[1].name}`
-      : topSections[0]?.name
+    topNames.length > 2
+      ? `${topNames.slice(0, -1).join(', ')}, and ${topNames[topNames.length - 1]}`
+      : topNames.join(' and ')
 
   return (
     <div className="mt-10 sm:mt-12 lg:mt-16 space-y-6 sm:space-y-8">
@@ -136,8 +138,7 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
             <ul className="space-y-2 text-xs sm:text-sm text-gray-700 list-disc list-inside">
               {topSectionNames ? (
                 <li>
-                  Study <strong className="text-gray-900">{topSectionNames}</strong> first, together they carry {topSectionShare}% of
-                  the exam.
+                  Study <strong className="text-gray-900">{topSectionNames}</strong> first{topNames.length > 1 ? `; together they carry ${topSectionShare}% of the exam.` : `; it carries ${topSectionShare}% of the exam.`}
                 </li>
               ) : (
                 <li>Study high-weight topics first. Then close gaps.</li>

@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between CPQ Administrator and CPQ & Billing AP?',
-    answer: 'Salesforce CPQ Administrator is a full certification ($200, 60 questions, 105 min, 65%) validating expert-level CPQ configuration: complex product rules, pricing waterfall mastery, quote templates, and advanced contracting. CPQ & Billing AP is an Accredited Professional credential ($150, 40 questions, 60 min, Pass/Fail) with a broader but shallower scope that also includes Salesforce Billing, invoice generation, payment processing, and billing amendments. The AP is faster to achieve; the Administrator credential signals deeper CPQ expertise.',
+    answer: 'CPQ Administrator is a full certification: $200, 60 questions, 105 minutes, and a 65% pass mark. It tests advanced CPQ setup, including product rules, pricing, quote templates, and contracts. CPQ & Billing AP is an Accredited Professional credential: $150, 40 questions, 60 minutes, and a Pass/Fail result. It covers CPQ plus Salesforce Billing, invoices, payments, and billing amendments. The AP exam is shorter; CPQ Administrator goes deeper into CPQ.',
   },
   {
     question: 'Should I take CPQ Administrator or CPQ & Billing AP first?',
-    answer: 'CPQ & Billing AP is faster to prepare for (40 questions, 60 min, lower investment) and is a good entry point if you are new to CPQ or if your role requires billing knowledge alongside CPQ. CPQ Administrator validates deeper, CPQ-only expertise and is more valuable if you are a specialist CPQ consultant. Many professionals take the AP first to get a credential quickly, then study for the full Administrator exam for career advancement.',
+    answer: 'The AP has 40 questions and takes 60 minutes, so it may be a quicker starting point if you are new to CPQ or need billing knowledge too. CPQ Administrator tests CPQ in greater depth and may suit a CPQ specialist. Some people take the AP first, then prepare for the full Administrator exam.',
   },
   {
     question: 'Does CPQ & Billing AP cover the same material as CPQ Administrator?',
-    answer: 'There is significant overlap in CPQ content (pricing waterfall, product bundles, quoting, contracting) but CPQ Administrator goes much deeper on advanced topics: complex product rules with multiple conditions, advanced discount schedule logic, SBQQ custom actions, and quote template styling. CPQ & Billing AP adds Billing content (invoice generation, payment processing) that CPQ Administrator does not cover at all.',
+    answer: 'Both cover CPQ topics such as pricing, product bundles, quotes, and contracts. CPQ Administrator goes further into complex product rules, discount schedules, SBQQ custom actions, and quote template styling. CPQ & Billing AP also covers Billing topics such as invoices and payments.',
   },
   {
     question: 'Which CPQ certification is better for a Revenue Cloud consultant?',
-    answer: 'For a Revenue Cloud consultant, CPQ & Billing AP is more aligned to the full Revenue Cloud scope (which includes both CPQ and Billing). CPQ Administrator focuses exclusively on the CPQ product. As Salesforce migrates to Revenue Cloud Advanced (RCA) in 2025–2026, both certifications have some exposure to this transition, but for practitioners working on end-to-end quote-to-cash implementations, CPQ & Billing AP better reflects the full scope of the role.',
+    answer: 'CPQ & Billing AP includes both CPQ and Billing, while CPQ Administrator focuses on CPQ. For work that spans the full quote-to-cash process, the broader AP scope may be a closer fit. Both credentials have some exposure to the Revenue Cloud Advanced transition described for 2025–2026.',
   },
 ]
 
@@ -78,8 +78,7 @@ export default function CpqAdminVsCpqBillingApPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both CPQ certifications validate Revenue Cloud skills, but they differ in scope, depth, exam format, and cost.
-          Here’s how to choose the right credential for your role and timeline.
+          Both credentials cover CPQ, but they differ in depth, exam format, and whether they include Billing. Compare their scope and choose the one that matches your work.
         </p>
       </header>
 
@@ -111,7 +110,7 @@ export default function CpqAdminVsCpqBillingApPage() {
           certName: "CPQ Administrator",
           certSlug: "cpq-administrator",
           examTipsSlug: "certifications/cpq-administrator",
-          reason: "CPQ Administrator is the essential foundation. Billing AP builds directly on CPQ knowledge, attempting it without CPQ Administrator experience is one of the most common reasons candidates struggle. Take CPQ Admin first, then specialise into Billing AP once you have real CPQ project experience.",
+          reason: "Start with CPQ Administrator to build your CPQ foundation. CPQ & Billing AP adds Billing topics. After gaining CPQ project experience, consider the AP if your work also involves billing.",
           
         }}
       />
@@ -169,14 +168,14 @@ export default function CpqAdminVsCpqBillingApPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">The CPQ Pricing Waterfall (Both Exams Test This)</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How Both Exams Cover the CPQ Pricing Waterfall</h2>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>List Price</strong> → base price from price book, set at product level</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Customer / Partner Price</strong> → customer-specific or channel partner pricing</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Regular Price</strong> → after Discount Schedules (volume-based automatic discounts)</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special / Net Price</strong> → after manual rep discount and additional discount; final price paid</li>
         </ul>
-        <p className="text-xs text-gray-600 mt-2">CPQ Administrator tests advanced scenarios where multiple discount types interact. CPQ &amp; Billing AP tests the waterfall at a conceptual level alongside billing invoice generation.</p>
+        <p className="text-xs text-gray-600 mt-2">CPQ Administrator covers scenarios where discount types interact. CPQ &amp; Billing AP tests pricing concepts alongside billing and invoice generation.</p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -192,7 +191,7 @@ export default function CpqAdminVsCpqBillingApPage() {
       </section>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: CPQ Admin or CPQ Billing AP?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between CPQ Administrator and CPQ &amp; Billing AP</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
@@ -228,7 +227,7 @@ export default function CpqAdminVsCpqBillingApPage() {
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Choose a Credential and Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/certifications/cpq-administrator#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             CPQ Admin Practice Questions <ArrowRight className="h-4 w-4" />

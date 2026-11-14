@@ -41,23 +41,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Do Salesforce certifications expire?',
-    answer: 'Salesforce certifications do not permanently expire, but they can become Inactive if you fail to complete maintenance modules. Salesforce releases three platform updates per year (Spring, Summer, Winter), and each release brings a short maintenance module on Trailhead. If you miss a maintenance deadline, your certification status changes from Active to Inactive. Inactive certifications are not revoked; they can be reactivated at any time by completing the overdue maintenance modules.',
+    answer: 'Salesforce certifications do not have a permanent expiry date, but they can become Inactive if you miss required maintenance. Salesforce releases platform updates three times a year (Spring, Summer, and Winter) and publishes related Trailhead maintenance modules. If you miss a deadline, your status changes from Active to Inactive. Complete the overdue modules to reactivate your certification.',
   },
   {
     question: 'How long is a Salesforce certification valid?',
-    answer: 'There is no fixed expiry date on Salesforce certifications. Unlike certifications from some other vendors that expire after 2–3 years and require a full re-examination, Salesforce certifications remain valid indefinitely as long as you complete the ongoing maintenance modules (3 per year, approximately 20–60 minutes each, free). The certification date on your Trailhead profile updates with each maintenance completion to reflect the most recent platform release.',
+    answer: 'Salesforce certifications have no fixed expiry date. They remain valid as long as you complete the required maintenance modules. Modules are free and usually take 20–60 minutes each. Your certification date on Trailhead updates when you complete maintenance for a release.',
   },
   {
     question: 'What is the difference between Active and Inactive certification status?',
-    answer: 'Active status means your certification is current; you have completed all required maintenance modules for the most recent Salesforce release. Inactive status means one or more maintenance modules are overdue. During inactive status, you should not represent yourself as actively certified on your resume, LinkedIn, or to clients, the Inactive status is visible on the public Trailhead credential verification page that employers and clients can check.',
+    answer: 'Active means you have completed the required maintenance for your certification. Inactive means one or more modules are overdue. While your certification is Inactive, do not describe it as currently active on your resume, LinkedIn profile, or to clients. Employers and clients can see the status on the public Trailhead credential verification page.',
   },
   {
     question: 'How do I reactivate an Inactive Salesforce certification?',
-    answer: 'Log in to Trailhead (trailhead.salesforce.com), go to your profile, and click Credentials. Certifications with Inactive status will show the pending maintenance modules. Complete all overdue modules, typically 20–60 minutes each, and your certification status returns to Active immediately. There is no fee for reactivation. If you have multiple releases of overdue maintenance, you must complete them all to restore Active status.',
+    answer: 'Sign in to Trailhead (trailhead.salesforce.com), open your profile, and select Credentials. Inactive certifications show the outstanding maintenance modules. Complete all overdue modules, which usually take 20–60 minutes each, to restore Active status. Reactivation is free. If maintenance is overdue for several releases, complete every outstanding module.',
   },
   {
     question: 'Do I need to retake the full exam to maintain my certification?',
-    answer: 'No; Salesforce does not require retaking the full certification exam for maintenance. The maintenance requirement is completion of short Trailhead modules (multiple-choice quizzes covering new features in the latest release). This is fundamentally different from certifications like AWS or PMP that require periodic full re-examination or continuing education credits. Salesforce maintenance is lightweight by design, approximately 1–3 hours per year per certification category.',
+    answer: 'No. You do not need to retake the full exam. Maintenance means completing short Trailhead modules with quizzes about new features in the latest release. Plan for about 1–3 hours of maintenance per year for each certification category.',
   },
 ]
 
@@ -82,8 +82,8 @@ export default function SalesforceCertificationValidityPage() {
       </div>
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-10">
-        <h2 className="text-lg font-bold text-green-900 mb-2">Short answer: Certifications never permanently expire</h2>
-        <p className="text-sm text-green-800">Salesforce certifications have no fixed expiry date. They stay Active as long as you complete one short maintenance badge per year. The badge is released with a Spring, Summer or Winter cycle depending on the credential, and is due one year from the date it becomes available.</p>
+        <h2 className="text-lg font-bold text-green-900 mb-2">Short answer: Certifications have no fixed expiry date</h2>
+        <p className="text-sm text-green-800">Salesforce certifications stay Active when you complete the required maintenance badge each year. The badge is released in the Spring, Summer, or Winter cycle assigned to that credential and is due one year after it becomes available.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -103,10 +103,10 @@ export default function SalesforceCertificationValidityPage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">How Certification Validity Works</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p>When you pass a Salesforce certification exam, your credential appears on your Trailhead profile with <strong>Active</strong> status. There is no expiry date stamped on the certification itself.</p>
-          <p>Salesforce releases three major platform updates per year: <strong>Spring</strong> (Jan/Feb), <strong>Summer</strong> (May/Jun), and <strong>Winter</strong> (Sep/Oct). For each release, Salesforce publishes maintenance modules on Trailhead that cover new features and changes relevant to your certification area.</p>
-          <p>You must complete the maintenance module within approximately <strong>30 days</strong> of its publication. If you complete it on time, your certification date updates and your status remains Active. If you miss the deadline, your certification transitions to <strong>Inactive</strong>.</p>
-          <p>Certifications in the same role category (e.g., all Administrator certifications) typically share one maintenance module; you do not need to complete one module per certification. This keeps the maintenance burden low even for professionals with multiple certifications.</p>
+          <p>After you pass a Salesforce certification exam, your Trailhead profile shows the credential as <strong>Active</strong>. The certification itself has no expiry date.</p>
+          <p>Salesforce releases three major platform updates each year: <strong>Spring</strong> (Jan/Feb), <strong>Summer</strong> (May/Jun), and <strong>Winter</strong> (Sep/Oct). Trailhead maintenance modules cover changes related to each certification area.</p>
+          <p>Complete the required maintenance module within about <strong>30 days</strong> of publication. If you meet the deadline, your status stays Active and your certification date updates. If you miss it, your status changes to <strong>Inactive</strong>.</p>
+          <p>Certifications in the same role category, such as Administrator credentials, usually share one maintenance module. You do not need a separate module for every certification you hold.</p>
         </div>
       </div>
 
@@ -116,21 +116,21 @@ export default function SalesforceCertificationValidityPage() {
           <div className="bg-green-50 rounded-xl p-5 border border-green-100">
             <h3 className="font-bold text-green-900 mb-3">Active Status</h3>
             <ul className="space-y-2 text-green-800">
-              <li>✓ All maintenance modules completed for the current release</li>
-              <li>✓ Certification appears on public Trailhead verification page</li>
-              <li>✓ Can claim certification on resume and LinkedIn</li>
-              <li>✓ Counts toward Salesforce partner certification requirements</li>
-              <li>✓ Badge displayed on Trailhead profile</li>
+              <li>✓ Required maintenance modules are complete for the current release</li>
+              <li>✓ Certification appears on the public Trailhead verification page</li>
+              <li>✓ You can list it as active on your resume and LinkedIn</li>
+              <li>✓ It counts toward Salesforce partner certification requirements</li>
+              <li>✓ Trailhead displays the certification badge on your profile</li>
             </ul>
           </div>
           <div className="bg-amber-50 rounded-xl p-5 border border-amber-100">
             <h3 className="font-bold text-amber-900 mb-3">Inactive Status</h3>
             <ul className="space-y-2 text-amber-800">
-              <li>⚠ One or more maintenance modules overdue</li>
-              <li>⚠ Shows as Inactive on public Trailhead verification</li>
-              <li>⚠ Should not be claimed as currently active on resume</li>
-              <li>⚠ Does not count toward partner certification headcounts</li>
-              <li>✓ Can be reactivated at any time for free</li>
+              <li>⚠ One or more maintenance modules are overdue</li>
+              <li>⚠ Public Trailhead verification shows it as Inactive</li>
+              <li>⚠ Do not list it as currently active on your resume</li>
+              <li>⚠ It does not count toward partner certification requirements</li>
+              <li>✓ You can reactivate it for free at any time</li>
             </ul>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function SalesforceCertificationValidityPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-600 mt-3">Salesforce’s maintenance model is one of the most candidate-friendly in enterprise technology certification.</p>
+        <p className="text-xs text-gray-600 mt-3">Salesforce maintenance does not require a full exam retake.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
@@ -183,7 +183,7 @@ export default function SalesforceCertificationValidityPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Your Certification Journey</h2>
-        <p className="text-white mb-6">Free practice questions for every Salesforce certification, earn a cert that lasts a career.</p>
+        <p className="text-white mb-6">Prepare with free practice questions for your next Salesforce certification.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse All Certifications
         </Link>

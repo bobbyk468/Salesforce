@@ -50,19 +50,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Marketing Cloud Engagement Admin and Developer?',
-    answer: 'Marketing Cloud Engagement Administrator validates that you can configure and manage an SFMC account: data extensions, subscriber management, email deliverability, sendable relationships, automations, and account administration. Marketing Cloud Engagement Developer validates that you can build custom Marketing Cloud solutions using AMPscript, SSJS (Server-Side JavaScript), REST API, and custom landing pages. Admin is for platform operators; Developer is for those building custom solutions on top of the platform.',
+    answer: 'Marketing Cloud Engagement Administrator covers configuring an SFMC account, including data extensions, subscribers, email deliverability, sendable relationships, automations, and account settings. Marketing Cloud Engagement Developer focuses on custom solutions built with AMPscript, SSJS (Server-Side JavaScript), REST API, and custom landing pages. The first exam is for platform operators; the second is for people who build on the platform.',
   },
   {
     question: 'Do you need Marketing Cloud Admin before taking MC Developer?',
-    answer: 'There is no official prerequisite, but taking Admin first is strongly recommended. The Admin exam covers platform fundamentals that the Developer exam assumes you already know: data structures (data extensions, sendable relationships), subscriber management, automation basics, and account configuration. Developer exam questions assume familiarity with the platform architecture before testing coding solutions.',
+    answer: 'There is no formal prerequisite, but Admin is a useful first step. It covers platform basics that support Developer topics, including data extensions, sendable relationships, subscriber management, automation, and account configuration. The Developer exam expects you to understand the platform before applying code.',
   },
   {
     question: 'Is Marketing Cloud Developer harder than MC Admin?',
-    answer: 'Marketing Cloud Developer is generally harder for candidates without marketing technology coding experience. It requires proficiency in AMPscript (SFMC’s scripting language for personalisation), SSJS for complex server-side logic, REST/SOAP API for external system integration, and Guide Template Language (GTL) for dynamic content. Admin is harder for pure developers who lack marketing operations knowledge, it tests configuration, deliverability, and data management topics that require platform familiarity.',
+    answer: 'Marketing Cloud Developer may be harder if you have not coded for marketing technology. It covers AMPscript for personalization, SSJS for server-side logic, REST/SOAP API integrations, and Guide Template Language (GTL) for dynamic content. Admin may feel harder if you have a development background but little marketing operations experience, because it tests configuration, deliverability, and data management.',
   },
   {
     question: 'What is AMPscript and is it tested heavily in MC Developer?',
-    answer: 'AMPscript is Salesforce Marketing Cloud’s proprietary scripting language used in email content, landing pages, and SMS messages to create dynamic, personalised content. It is the most heavily tested technical skill in the Marketing Cloud Developer exam, expect questions on AMPscript syntax, lookuprows functions, IF/ELSE logic, FOR loops for iterating rows, and SET/OUTPUT block patterns for rendering personalised content in emails.',
+    answer: 'AMPscript is Salesforce Marketing Cloud’s scripting language for creating dynamic, personalized email, landing page, and SMS content. It is a major technical topic in the Developer exam. Study its syntax, lookuprows functions, IF/ELSE logic, FOR loops, and SET/OUTPUT patterns for rendering personalized email content.',
   },
 ]
 
@@ -80,8 +80,8 @@ export default function MarketingCloudAdminVsDeveloperPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both Marketing Cloud certifications validate SFMC expertise, but Admin focuses on platform configuration
-          and operations while Developer tests custom code and API skills. Here’s how to choose.
+          These Marketing Cloud credentials cover different kinds of work. Admin focuses on account configuration and
+          operations; Developer focuses on code and API integrations. Use your day-to-day tasks to decide which matches you.
         </p>
       </header>
 
@@ -92,10 +92,10 @@ export default function MarketingCloudAdminVsDeveloperPage() {
           certSlug: "marketing-cloud-engagement-admin",
           examTipsSlug: "certifications/marketing-cloud-engagement-admin",
           conditions: [
-          "You configure Marketing Cloud: Business Units, users, and deliverability",
-          "You work in a platform admin or operations role within Marketing Cloud",
-          "You do not write AMPscript or SSJS",
-          "You want a foundational Marketing Cloud credential",
+          "You configure Marketing Cloud business units, users, or deliverability",
+          "Your role covers platform administration or marketing operations",
+          "You do not write AMPscript or SSJS at work",
+          "You want to build a foundation in Marketing Cloud",
           ],
         }}
         certB={{
@@ -104,16 +104,16 @@ export default function MarketingCloudAdminVsDeveloperPage() {
           examTipsSlug: "certifications/marketing-cloud-engagement-developer",
           conditions: [
           "You write AMPscript, SSJS, or custom content blocks",
-          "You build API integrations with Marketing Cloud",
-          "You come from a developer or technical consultant background",
-          "You want the higher-salary Marketing Cloud credential",
+          "You create API integrations with Marketing Cloud",
+          "You work as a developer or technical consultant",
+          "You want to focus on technical Marketing Cloud solutions",
           ],
         }}
         recommendation={{
           certName: "Marketing Cloud Engagement Admin",
           certSlug: "marketing-cloud-engagement-admin",
           examTipsSlug: "certifications/marketing-cloud-engagement-admin",
-          reason: "Admin is the foundational credential. Take it first to understand the platform architecture before adding Developer-level complexity. The exception: if you are already a developer with AMPscript experience, Developer is a better direct investment.",
+          reason: "Admin covers the account and data concepts behind many Marketing Cloud tasks. Take it first if you are new to the platform. If you already write AMPscript and build integrations, the Developer exam may better match your experience.",
           
         }}
       />
@@ -167,9 +167,9 @@ export default function MarketingCloudAdminVsDeveloperPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Technical Skills: Developer Exam Focus</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong>: Variable declaration (VAR, SET), data retrieval (LOOKUP, LOOKUPROWS), conditional logic (IF/ELSEIF/ENDIF), loops (FOR/NEXT), and output functions (OUTPUT). Used in email body, subject lines, and landing pages.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SSJS (Server-Side JavaScript)</strong>: Interacts with Marketing Cloud APIs and data extensions server-side; used for complex logic that AMPscript cannot handle, such as multi-step data manipulation on landing page submission.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>REST API</strong>: Triggering sends, managing subscribers, pulling campaign data into external systems. Key endpoints: /messaging/v1/messageDefinitionSends, /contacts/v1/contacts, /data/v1/async.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong>: Review variable declaration (VAR, SET), data retrieval (LOOKUP, LOOKUPROWS), conditional logic (IF/ELSEIF/ENDIF), loops (FOR/NEXT), and output functions (OUTPUT). These functions can personalize email bodies, subject lines, and landing pages.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SSJS (Server-Side JavaScript)</strong>: Use it to work with Marketing Cloud APIs and data extensions on the server. It can handle complex logic, such as multi-step data changes when a landing page is submitted.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>REST API</strong>: Learn how to trigger sends, manage subscribers, and send campaign data to external systems. Key endpoints: /messaging/v1/messageDefinitionSends, /contacts/v1/contacts, /data/v1/async.</li>
         </ul>
       </section>
 

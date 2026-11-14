@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Data Cloud and CRM Analytics in Salesforce?',
-    answer: 'Salesforce Data Cloud (formerly Customer Data Platform) is a real-time data platform that unifies customer data from multiple sources into a single customer profile, focusing on data ingestion, identity resolution, segmentation, and activation. CRM Analytics (formerly Einstein Analytics / Tableau CRM) is a business intelligence and analytics platform for building dashboards, reports, and AI predictions on Salesforce data. Data Cloud is about unified data; CRM Analytics is about analysing and visualising it.',
+    answer: 'Salesforce Data Cloud (formerly Customer Data Platform) brings customer data from different sources together in a unified profile. It focuses on data ingestion, identity resolution, segmentation, and activation. CRM Analytics (formerly Einstein Analytics / Tableau CRM) helps teams explore Salesforce data with dashboards, reports, and AI predictions. Data Cloud prepares and activates data; CRM Analytics analyzes and presents it.',
   },
   {
     question: 'Which is more valuable: Data Cloud Consultant or CRM Analytics Consultant?',
-    answer: 'Data Cloud Consultant is higher demand in 2026 due to the strategic focus on AI and unified customer data. Data Cloud underpins Agentforce, Einstein AI, and Marketing Cloud Personalisation, making it central to enterprise Salesforce strategy. CRM Analytics Consultant is valuable for analytics-heavy roles and industries with strong BI requirements. If you work on enterprise data strategy or AI activation, prioritise Data Cloud.',
+    answer: 'Data Cloud Consultant has higher demand in 2026 as companies focus on AI and unified customer data. Data Cloud supports Agentforce, Einstein AI, and Marketing Cloud Personalisation, so it is part of many enterprise Salesforce strategies. CRM Analytics Consultant is useful in analytics-focused roles and industries with strong business intelligence needs. If you work on data strategy or AI activation, consider Data Cloud first.',
   },
   {
     question: 'Do Data Cloud and CRM Analytics overlap?',
-    answer: 'There is some conceptual overlap, both involve data, and Data Cloud data can be used to fuel CRM Analytics dashboards. However, the exam content is very different. Data Cloud Consultant focuses on data streams, identity resolution, segmentation, calculated insights, and data model unification. CRM Analytics Consultant focuses on datasets, recipes, dashboards, lenses, SAQL queries, and Einstein Discovery predictions.',
+    answer: 'Both certifications involve data, and Data Cloud data can feed CRM Analytics dashboards. Their exam topics differ. Data Cloud Consultant covers data streams, identity resolution, segmentation, calculated insights, and unified data models. CRM Analytics Consultant covers datasets, recipes, dashboards, lenses, SAQL queries, and Einstein Discovery predictions.',
   },
   {
     question: 'Is Data Cloud Consultant harder than CRM Analytics Consultant?',
-    answer: 'Both exams are comparable in difficulty (60 questions, 105 min, 65%, $200). Data Cloud is often considered more conceptually challenging because the technology is newer and the data architecture concepts (identity resolution, streaming ingestion, calculated insights) are less familiar to most consultants. CRM Analytics is harder in terms of technical tooling depth: SAQL queries and recipe-level data transformations require hands-on platform experience.',
+    answer: 'Both exams have 60 questions, 105 minutes, a 65% passing score, and a $200 fee. Some candidates find Data Cloud more conceptually challenging because its technology is newer and its architecture topics, such as identity resolution, streaming ingestion, and calculated insights, may be unfamiliar. CRM Analytics can be challenging because it requires hands-on work with SAQL queries and recipe-level data transformations.',
   },
 ]
 
@@ -78,8 +78,8 @@ export default function DataCloudVsCrmAnalyticsPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both certifications involve data, but they serve very different purposes. Data Cloud unifies customer data
-          for AI and activation. CRM Analytics builds BI dashboards and predictions. Here’s how to choose.
+          Both certifications involve data, but the products solve different problems. Data Cloud unifies customer data
+          for activation and AI; CRM Analytics helps teams explore data with dashboards and predictions. Compare the work each covers.
         </p>
       </header>
 
@@ -90,10 +90,10 @@ export default function DataCloudVsCrmAnalyticsPage() {
           certSlug: "data-360-consultant",
           examTipsSlug: "certifications/data-360-consultant",
           conditions: [
-          "Your clients are unifying customer data across channels",
-          "You work with Salesforce CDP, Data Cloud, or real-time data activation",
-          "You want the fastest-growing and most in-demand cert of 2026",
-          "You are comfortable with data pipelines and identity resolution concepts",
+          "Your projects bring customer data together from several systems",
+          "You work with Salesforce CDP, Data Cloud, or real-time activation",
+          "You want to build skills in a growing area of Salesforce in 2026",
+          "You understand data pipelines and identity resolution concepts",
           ],
         }}
         certB={{
@@ -101,17 +101,17 @@ export default function DataCloudVsCrmAnalyticsPage() {
           certSlug: "crm-analytics-einstein-discovery-consultant",
           examTipsSlug: "certifications/crm-analytics-einstein-discovery-consultant",
           conditions: [
-          "You build dashboards, SAQL queries, and Einstein Discovery models",
-          "Your work is analytics and reporting within Salesforce CRM",
-          "You work with Tableau CRM or Einstein Analytics regularly",
-          "You are in a BI or data analyst role inside a Salesforce org",
+          "You build dashboards, query data with SAQL, or create Einstein Discovery models",
+          "Your work focuses on Salesforce analytics and reporting",
+          "You regularly use Tableau CRM or Einstein Analytics",
+          "You work as a BI or data analyst in a Salesforce organization",
           ],
         }}
         recommendation={{
           certName: "Data Cloud Consultant",
           certSlug: "data-360-consultant",
           examTipsSlug: "certifications/data-360-consultant",
-          reason: "Data Cloud Consultant is the higher-growth investment; demand is accelerating and certified talent is genuinely scarce. CRM Analytics is a strong credential for analytics-focused roles, but Data Cloud commands a higher salary premium and broader client demand in 2026.",
+          reason: "Choose Data Cloud if your projects center on joining and activating customer data or supporting AI use cases. Choose CRM Analytics if your work is to build dashboards, reports, and predictions from Salesforce data. The product you use at work is a strong guide to which exam to take first.",
           
         }}
       />
@@ -166,9 +166,9 @@ export default function DataCloudVsCrmAnalyticsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Should You Take?</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>Data Cloud Consultant</strong> if your work involves customer data unification, Marketing Cloud, AI/Agentforce implementations, or enterprise data strategy.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>CRM Analytics Consultant</strong> if your work involves building dashboards, operationalising BI for sales teams, or using Einstein Discovery for embedded predictions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />If you are unsure, <strong>Data Cloud</strong> has higher strategic value in 2026 as it underpins Agentforce, real-time personalisation, and enterprise AI; demand is growing faster than CRM Analytics roles.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>Data Cloud Consultant</strong> when your projects connect customer data across systems or activate it for Marketing Cloud, AI, or Agentforce.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>CRM Analytics Consultant</strong> when you build dashboards, bring business intelligence into sales workflows, or use Einstein Discovery for predictions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />If you are unsure, compare the projects available to you. Data Cloud has a stronger role in 2026 AI and personalization work; CRM Analytics fits reporting and analytics work.</li>
         </ul>
       </section>
 

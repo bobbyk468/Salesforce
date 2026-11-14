@@ -18,7 +18,7 @@ const slug = 'tableau-consultant'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Tableau Business Intelligence Analyst exam tips for ${RELEASE_CURRENT}: Tableau Desktop, data connections, calculations, dashboards.`
+  `Salesforce Certified Tableau Consultant exam tips for ${RELEASE_CURRENT}: solution design, data connections, calculations, workbooks, and governance.`
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
@@ -27,12 +27,12 @@ const breadcrumbItems = [
 
 export const faqItems = [
   {
-    question: 'What is the Tableau Business Intelligence Analyst exam format?',
-    answer: 'The Tableau Business Intelligence Analyst exam has 45 multiple-choice questions, a 60-minute time limit, a 63% passing score, and a $250 fee. It tests Tableau Desktop skills: connecting to data, building visualisations, using calculations, and creating dashboards. It is Tableau’s practitioner-level certification.',
+    question: 'What is the Salesforce Certified Tableau Consultant exam format?',
+    answer: 'The Salesforce Certified Tableau Consultant exam has 60 scored items plus up to five unscored items, 105 minutes, a 63% passing score, and a US$200 fee. Salesforce currently lists exam content for Tableau 2024.2.',
   },
   {
-    question: 'What are the highest-weight Tableau BI Analyst exam sections?',
-    answer: 'Connect and Prepare Data and Explore and Analyse Data are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Connecting to data sources, creating joins and blends, building calculated fields, using LOD expressions, and creating interactive dashboards are the most heavily tested skills.',
+    question: 'What are the Tableau Consultant exam domains and weights?',
+    answer: 'The official guide lists Evaluate Current State (22%), Plan and Prepare Data Connections (22%), Design and Troubleshoot Calculations and Workbooks (40%), and Establish Governance and Support Published Content (16%).',
   },
   {
     question: 'What are LOD expressions and why are they important for this exam?',
@@ -70,22 +70,22 @@ export default function TableauConsultantExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Explore and Analyse Data</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Connect and Prepare Data</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Share and Publish Dashboards</span>
+            <span className="font-medium text-gray-900">Evaluate Current State</span>
             <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Understand Tableau Concepts</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Plan and Prepare Data Connections</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Analyse + Connect + Share = 77%. LOD expressions and dashboard actions are tested on every Tableau exam.</p>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Design and Troubleshoot Calculations and Workbooks</span>
+            <span className="font-bold text-salesforce-blue ml-4">40%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Establish Governance and Support Published Content</span>
+            <span className="font-bold text-salesforce-blue ml-4">16%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">The 2024.2 guide weights calculation and workbook design most heavily. Confirm the current guide before booking.</p>
         </div>
       </section>
 

@@ -5,47 +5,47 @@
     "personas": [
       {
         "label": "Sustainability implementers",
-        "description": "You configure Net Zero Cloud's carbon accounting, emissions data pipelines, and ESG reporting and want to validate your setup skills."
+        "description": "You set up Net Zero Cloud data collection, emissions tracking, and sustainability reports, and want to demonstrate implementation knowledge."
       },
       {
         "label": "Consultants and admins",
-        "description": "You advise clients on emissions calculation methodologies (Scope 1/2/3) and how Net Zero Cloud aggregates data for sustainability reporting."
+        "description": "You advise on Scope 1, 2, and 3 accounting and how emissions data is organized for reporting."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that positions you in the growing ESG and sustainability technology space."
+        "description": "You are building experience in sustainability technology and want to validate your understanding of Salesforce ESG tools."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Net Zero Cloud Accredited Professional Exam Hard?",
-    "summary": "The Net Zero Cloud AP exam is moderately difficult because it tests carbon accounting concepts: Scope 1/2/3 emissions, data pipeline configuration, and reporting frameworks; that require domain knowledge beyond standard Salesforce admin skills.",
+    "summary": "This exam combines Salesforce configuration with sustainability concepts. Review emissions scopes, data collection, and reporting as well as the platform features.",
     "bullets": [
-      "<strong>60 questions</strong> in 90 min.",
-      "<strong>no published passing score</strong>: build a margin above the minimum before booking.",
-      "<strong>Emissions accounting</strong>: expect questions on Scope 1/2/3 classification and how Net Zero Cloud's data pipelines aggregate emissions data for reporting.",
-      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Net Zero Cloud in a real org are better prepared than candidates who only memorize notes."
+      "<strong>55 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>61% to pass</strong>, which is 34 correct answers out of 55.",
+      "<strong>Emissions accounting:</strong> Compare Scope 1, 2, and 3 and review how data feeds sustainability reporting.",
+      "<strong>Practical experience helps:</strong> Work through a Net Zero Cloud implementation or configuration example."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Before booking, aim for at least 75% on timed sets and check that you can classify an emissions source, choose a suitable factor, and explain the result. Review Scope 1, 2, and 3 mistakes separately."
   },
   "examFormat": {
     "heading": "Net Zero Cloud Accredited Professional Exam Format Explained",
-    "intro": "The Net Zero Cloud Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Net Zero Cloud.",
+    "intro": "Use the listed exam format to plan a timed practice session, and check the official guide before booking.",
+    "scenarioPercent": "For a scenario, identify the sustainability reporting need and the data available, then compare the proposed Net Zero Cloud solutions.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Net Zero Cloud, Sustainability, and Carbon because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Classify emission sources:</strong> Sort examples into Scope 1, Scope 2, or Scope 3 before choosing a reporting setup.",
+      "<strong>Work through the calculation:</strong> Practice multiplying activity data by the right emission factor and compare location-based with market-based Scope 2.",
+      "<strong>Trace a disclosure report:</strong> Know how facility, supplier, and period data flow into the report and how approvals support review.",
+      "<strong>Check reduction plans:</strong> Connect baseline years, targets, reduction actions, and progress measures in a sample scenario."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests your ability to configure Net Zero Cloud for carbon accounting, including emissions data collection, Scope 1/2/3 tracking, sustainability reporting, and goal management.",
+    "description": "This exam covers using Net Zero Cloud for carbon accounting, including emissions data collection, Scope 1, 2, and 3 tracking, sustainability reporting, and reduction goals. Check Salesforce’s current exam guide for the latest exam logistics.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
-      "duration": "90 min",
+      "passingScore": "61%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [
@@ -62,55 +62,55 @@
     "blocks": [
       {
         "heading": "Carbon Footprint Data Model",
-        "body": "**Net Zero Cloud** (NZC) stores sustainability data in a specialized data model. Footprint records track greenhouse gas (GHG) emissions, energy consumption, water usage, and waste data. Energy Use records capture electricity, natural gas, and fuel consumption by facility and period. Stationary Combustion, Mobile Combustion, Fugitive Emissions, and Purchased Electricity represent Scope 1 and 2 emission sources. Scope 3 categories (business travel, employee commuting, supply chain) require integration with travel management systems and supplier data. The AP exam tests how NZC objects relate to each other, how to input energy data, and how scope classifications are assigned to emission sources."
+        "body": "Net Zero Cloud uses a data model to store sustainability information. Footprint records can track greenhouse gas emissions, energy, water, and waste. Energy Use records track electricity, gas, and fuel by facility and period. Stationary Combustion and Mobile Combustion are Scope 1 sources; Purchased Electricity is a Scope 2 source. Scope 3 data can include business travel, employee commuting, and suppliers. Know how the records connect and how each source is assigned to a scope."
       },
       {
         "heading": "Emissions Calculations & Emission Factors",
-        "body": "**Net Zero Cloud** calculates GHG emissions by multiplying activity data by an Emission Factor, a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments: RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC."
+        "body": "Net Zero Cloud calculates emissions by multiplying activity data by an **emissions factor**. For example, a factor converts kilowatt-hours, liters, or miles into kilograms of CO2 equivalent. Factor libraries can provide values from sources such as EPA, IEA, and DEFRA. Companies can use custom factors for measured or supplier data. For Scope 2, location-based reporting uses a local grid average; market-based reporting uses eligible contracts or instruments such as RECs and PPAs."
       },
       {
         "heading": "Sustainability Reporting & Disclosures",
-        "body": "**Net Zero Cloud** generates reports aligned with major sustainability frameworks: GRI (Global Reporting Initiative), TCFD (Task Force on Climate-related Financial Disclosures), CDP, and emerging SEC climate disclosure rules. Disclosure Reports aggregate footprint data by business unit, facility, or reporting period. Audit Trail captures every data submission and approval for assurance purposes. Supplier Scorecards rate suppliers on their emissions intensity and sustainability commitments. Targets & **Milestones** track progress toward net zero goals (e.g., 50% reduction by 2030, net zero by 2040). The exam tests how to configure a disclosure report, how targets are defined and monitored, and what data flows into supplier scorecards."
+        "body": "Net Zero Cloud can organize data for sustainability disclosures such as GRI, TCFD, and CDP. Disclosure reports can group footprint data by business unit, facility, or period. Audit trails record submissions and approvals for review. Supplier scorecards summarize supplier emissions and commitments. Targets and milestones track progress toward goals, such as cutting emissions by 50% by 2030. Know how target settings and supplier data feed into reports."
       },
       {
         "heading": "Data Collection & Integration",
-        "body": "NZC data can be entered manually, uploaded via CSV template, or integrated automatically from utility billing systems, travel management platforms, and ERP systems. Utility Data Connections (partnered utility providers) automate energy data ingestion. Data Quality indicators flag anomalies and missing data for review. Approval Workflows route submitted data through a validation and sign-off process before it is included in reports. MuleSoft and Salesforce Connect are common integration patterns for automating data flows from meters, building management systems, and fleet telematics. The exam tests how to configure a utility data connection, set up an approval workflow, and identify data quality issues in submitted footprint data."
+        "body": "Organizations can enter data by hand, upload a CSV, or connect utility, travel, or ERP systems. Utility Data Connections can automate energy data collection. Data quality indicators can flag missing or unusual values. Approval workflows route submissions for review before reports use them. MuleSoft and Salesforce Connect can link data from meters, building systems, and fleet tools. Be able to recognize when data is incomplete or an integration is needed."
       },
       {
         "heading": "Goals, Targets & Climate Action Plans",
-        "body": "Organizations set emissions reduction targets in NZC at the company, business unit, or asset level. Science-Based Targets (SBTs) require alignment with the 1.5°C or well-below-2°C pathway defined by the SBTi. Baseline Year establishes the reference point for reduction measurement. Reduction Lever tracking records the planned and actual contribution of each initiative (renewable energy procurement, fleet electrification, building efficiency). Progress dashboards show attainment against targets over time. Recalculation logic adjusts baselines for acquisitions, divestitures, and methodology changes. The exam tests how to configure a Science-Based Target, how to link reduction levers to the target, and how recalculation policies affect historical data."
+        "body": "Companies can set reduction targets at the organization, business-unit, or asset level. A **baseline year** gives a reference point for measuring progress. Science-based targets align with the 1.5°C or well-below-2°C pathways set by SBTi. Reduction levers record planned and actual actions, such as renewable energy, electric vehicles, or building upgrades. Recalculation rules can adjust baselines after acquisitions, divestitures, or method changes."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Net Zero Cloud Accredited Professional Exam",
-    "intro": "The Net Zero Cloud AP exam tests implementation of Salesforce's sustainability platform. Focus on carbon accounting, emissions tracking, supply chain data collection, and sustainability reporting.",
+    "intro": "Practise matching carbon accounting, emissions data, supplier information, and reporting needs to the relevant Net Zero Cloud features.",
     "blocks": [
       {
-        "heading": "Emissions Data Model",
-        "body": "Know the **Net Zero Cloud** data model: Stationary Assets (facilities), Mobile Assets (fleet), Purchased Electricity, Business Travel, and how each emission source category maps to Scope 1, 2, and 3 emissions."
+        "heading": "Classify Emissions Sources",
+        "body": "Map each activity to Scope 1, 2, or 3. Use who owns or controls the source and where the emissions occur."
       },
       {
-        "heading": "Carbon Calculation Methodology",
-        "body": "Know how **Net Zero Cloud** calculates emissions: emission factors (IPCC, EPA, IEA), activity data (kWh, fuel gallons, miles traveled), and how the calculation engine applies factors to produce CO2e metrics."
+        "heading": "Apply Emission Factors",
+        "body": "Match each activity unit to the right factor. Compare location-based and market-based Scope 2 methods."
       },
       {
-        "heading": "Supply Chain Reporting",
-        "body": "Know how **Net Zero Cloud** collects Scope 3 supply chain emissions: supplier surveys, supplier data entry portal configuration, and how supplier emissions roll up into the customer's total Scope 3 footprint."
+        "heading": "Check Supplier Data",
+        "body": "Scope 3 data may come from suppliers and business travel. Review its source and quality before reporting."
       },
       {
-        "heading": "Sustainability Goals & Targets",
-        "body": "Know how to configure sustainability goals (net zero by year X, renewable energy percentage), track progress against targets using Progress Records, and how SBTi (Science Based Targets initiative) targets are represented."
+        "heading": "Track Targets and Actions",
+        "body": "Connect the baseline year, target, reduction levers, and progress records so the team can see what is changing."
       },
       {
-        "heading": "Regulatory Reporting",
-        "body": "Know which reporting frameworks **Net Zero Cloud** supports: GRI, CDP, TCFD, and how to generate reports aligned to these standards. Understand how audit trails and data lineage support third-party verification."
+        "heading": "Prepare Disclosures",
+        "body": "Know how reports group data by site, business unit, and period, and how review records support an audit."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Build on your sustainability knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/sales-cloud",
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A company burns gas in its own boilers and buys electricity from the grid. How are these classified?",
+      "question": "A company burns gas in its boilers and buys electricity from the grid. Which scopes apply?",
       "options": [
-        "Gas as Scope 1, purchased electricity as Scope 2",
-        "Both as Scope 2, since each of them is bought in from an external supplier",
-        "Both as Scope 1, because the company chooses to consume each of them directly",
-        "Gas as Scope 2 and the purchased electricity as Scope 1 emissions instead"
+        "Gas is Scope 1; purchased electricity is Scope 2.",
+        "Both are Scope 2 because the company buys both energy sources.",
+        "Both are Scope 1 because the company uses the energy itself.",
+        "Gas is Scope 2; purchased electricity is Scope 1."
       ],
       "correctAnswer": 0,
-      "explanation": "Scope 1 is emissions from sources the company owns or controls. Scope 2 is the indirect emissions from the energy it buys.",
+      "explanation": "Gas burned in company equipment is a direct Scope 1 emission. Electricity generated elsewhere is indirect Scope 2.",
       "whyWrong": [
-        "Gas burned on site is a direct emission from the company's own equipment.",
-        "Purchased electricity is generated elsewhere, so it is not Scope 1.",
-        "This reverses the two definitions."
+        "This correctly classifies the direct gas emissions and purchased electricity.",
+        "Scope depends on where the emissions happen, not only whether the energy was purchased.",
+        "Purchased grid electricity is Scope 2, not Scope 1."
       ]
     },
     {
-      "question": "Which emissions fall under Scope 3?",
+      "question": "Which activities create Scope 3 emissions?",
       "options": [
-        "The natural gas burned in the boilers the company owns at its head office",
-        "The diesel used in the delivery vans that the company owns and operates",
-        "Business travel and purchased goods",
-        "The electricity the company purchases from the grid for its own buildings"
+        "Burning gas in a company-owned boiler.",
+        "Using diesel in company-owned delivery vans.",
+        "Business travel and purchased goods.",
+        "Using electricity bought for company buildings."
       ],
       "correctAnswer": 2,
-      "explanation": "Scope 3 covers the value chain: suppliers, business travel, commuting, waste, and the use of sold products.",
+      "explanation": "Scope 3 covers value-chain emissions, including business travel and purchased goods.",
       "whyWrong": [
-        "On-site gas is Scope 1.",
-        "Fuel in company-owned vehicles is Scope 1.",
+        "Gas burned in company equipment is Scope 1.",
+        "Fuel burned in company-owned vehicles is Scope 1.",
         "Purchased electricity is Scope 2."
       ]
     },
     {
-      "question": "Why is Scope 3 usually the hardest to measure?",
+      "question": "Why can Scope 3 emissions be difficult to measure?",
       "options": [
-        "It can only be calculated once Scope 1 and Scope 2 have been fully audited",
-        "The data sits with suppliers and customers",
-        "Regulators have never published any methodology for calculating these figures",
-        "The emissions involved are far too small to be measured with any accuracy"
+        "Companies must finish Scope 1 and 2 audits first.",
+        "Much of the data is held by suppliers and customers.",
+        "There are no methods for measuring Scope 3.",
+        "Scope 3 emissions are too small to measure."
       ],
       "correctAnswer": 1,
-      "explanation": "Scope 3 depends on activity outside the company's own operations, so it relies on supplier data, industry averages and estimation.",
+      "explanation": "Scope 3 depends on activity outside the company’s own operations, so supplier and customer data may be hard to collect.",
       "whyWrong": [
-        "There is no such sequencing requirement.",
-        "Methodologies for Scope 3 categories are well established.",
-        "Scope 3 is typically the largest share of a company's footprint."
+        "There is no rule requiring Scope 1 and 2 audits before Scope 3 work.",
+        "This is a common challenge when collecting value-chain data.",
+        "Methods exist for calculating many Scope 3 categories."
       ]
     },
     {
-      "question": "What does an emissions factor do?",
+      "question": "How is an emissions factor used when calculating greenhouse gas output?",
       "options": [
-        "It converts activity data into emissions",
-        "It identifies which of the three reporting scopes an activity belongs to",
-        "It sets the reduction target a company has formally committed to achieving",
-        "It records the price the company paid for the energy it consumed that year"
+        "Converts activity data into an emissions estimate.",
+        "Decides which scope an activity belongs to.",
+        "Sets the company’s emissions reduction target.",
+        "Records what the company paid for its energy."
       ],
       "correctAnswer": 0,
-      "explanation": "An emissions factor turns a quantity of activity, such as kilowatt hours or litres of fuel, into a figure for greenhouse gas emitted.",
+      "explanation": "An emissions factor converts activity, such as kilowatt-hours or fuel use, into estimated greenhouse gas emissions.",
       "whyWrong": [
-        "Scope classification is a judgement about the source of the emission.",
-        "Targets are a commitment, not a conversion factor.",
-        "Cost is financial data and is separate from emissions."
+        "This describes the purpose of an emissions factor.",
+        "Scope classification depends on the activity and its source.",
+        "Targets set a goal; they do not convert activity into emissions."
       ]
     },
     {
-      "question": "A company changes its electricity supplier to one using only renewable generation. What happens to its reported figures?",
+      "question": "A company switches to a supplier that provides renewable electricity. Which reported figure may change?",
       "options": [
-        "Scope 3 emissions fall because the supplier is part of its own value chain",
-        "Nothing changes at all, because the electricity comes from the same grid",
-        "Scope 1 emissions fall because the company now generates its own power",
-        "Scope 2 emissions fall under market-based reporting"
+        "Scope 3 falls because the supplier is in the value chain.",
+        "Nothing changes because the electricity still comes through the grid.",
+        "Scope 1 falls because the company now generates electricity.",
+        "Market-based Scope 2 emissions may fall."
       ],
       "correctAnswer": 3,
-      "explanation": "Market-based Scope 2 reporting reflects the contracts a company holds, so a renewable supply contract reduces the reported figure.",
+      "explanation": "A renewable electricity contract can lower market-based Scope 2 emissions when the matching requirements are met.",
       "whyWrong": [
-        "Purchased electricity sits in Scope 2, not Scope 3.",
-        "Location-based reporting would be unchanged, but market-based would not.",
-        "The company's own combustion has not changed."
+        "A change in electricity supply is not automatically a Scope 3 reduction.",
+        "The supplier and contract can affect market-based reporting.",
+        "The company still buys electricity; it has not started generating it."
       ]
     },
     {
-      "question": "What is the difference between location-based and market-based Scope 2 reporting?",
+      "question": "How do location-based and market-based Scope 2 methods differ?",
       "options": [
-        "One uses the local grid average, the other uses contracts",
-        "One covers electricity while the other one covers gas and other fuels burned",
-        "One is used for the current year and the other for historical comparisons",
-        "One applies to offices and the other applies to manufacturing facilities"
+        "Local grid average vs eligible contract data.",
+        "One covers electricity; the other covers gas and other fuels.",
+        "One reports the current year; the other reports past years.",
+        "One applies to offices; the other to factories."
       ],
       "correctAnswer": 0,
-      "explanation": "Location-based uses the average emissions intensity of the grid you draw from. Market-based uses what you actually contracted to buy.",
+      "explanation": "Location-based reporting uses the local grid average. Market-based reporting uses eligible contracts or instruments.",
       "whyWrong": [
-        "Both methods concern purchased energy, chiefly electricity.",
-        "Both are reported for the same period, side by side.",
-        "Neither is restricted to a building type."
+        "This describes the two Scope 2 calculation methods.",
+        "Both methods apply to purchased electricity, not different fuel types.",
+        "They are two methods for calculating the same reporting period."
       ]
     },
     {
-      "question": "A company offsets some emissions by buying carbon credits. How should this be presented?",
+      "question": "A company buys carbon credits to offset some emissions. How should it report them?",
       "options": [
-        "Offsets excluded from the report entirely because they are purchased",
-        "Offsets subtracted from gross emissions so only the net figure is reported",
-        "Gross emissions reported, with offsets shown separately",
-        "Offsets recorded as a reduction in the company's own Scope 1 emissions"
+        "Leave the offsets out of its sustainability report.",
+        "Subtract them from gross emissions and report only the net figure.",
+        "Report gross emissions and show offsets separately.",
+        "Count them as a reduction in Scope 1 emissions."
       ],
       "correctAnswer": 2,
-      "explanation": "Credible reporting shows what was emitted and what was offset as separate figures, so readers can see the actual footprint.",
+      "explanation": "Report gross emissions and disclose offsets separately so readers can see both figures.",
       "whyWrong": [
-        "Offsets are material information and should be disclosed.",
-        "Netting hides the real emissions and is widely criticised.",
-        "An offset does not change what the company itself emitted."
+        "Offsets should be disclosed even when they are purchased.",
+        "Reporting only net emissions hides the gross footprint.",
+        "Buying credits does not reduce the company’s own Scope 1 emissions."
       ]
     },
     {
-      "question": "What is a baseline year used for?",
+      "question": "Why does an organization choose a baseline year for its emissions targets?",
       "options": [
-        "Setting the emissions factors that will be applied in all subsequent years",
-        "Measuring progress against a fixed starting point",
-        "Determining the price the company will pay for its carbon credits later",
-        "Deciding which of the three emissions scopes each activity should sit within"
+        "Choosing emission factors for every later year.",
+        "Comparing future emissions with a fixed starting point.",
+        "Setting the future price of carbon credits.",
+        "Assigning activities to Scope 1, 2, or 3."
       ],
       "correctAnswer": 1,
-      "explanation": "A baseline year gives a fixed reference so reductions can be measured consistently over time.",
+      "explanation": "A baseline year gives the company a starting point for measuring changes in emissions over time.",
       "whyWrong": [
-        "Factors are updated as better data becomes available.",
-        "Credit pricing is a market matter.",
-        "Scope classification does not depend on the year chosen."
+        "Emission factors are selected based on the activity and source.",
+        "This is the purpose of a baseline year.",
+        "Credit prices are set separately from the baseline year."
       ]
     },
     {
-      "question": "A company acquires another business halfway through the reporting year. What does this affect?",
+      "question": "A company acquires another business partway through the year. What may need to change in its emissions report?",
       "options": [
-        "The organisational boundary of the report",
-        "The requirement to report on business travel within the Scope 3 categories",
-        "The emissions factors that apply to the acquiring company's own activities",
-        "The classification of purchased electricity between Scope 1 and Scope 2"
+        "The organizational boundary used for reporting.",
+        "Whether business travel counts as Scope 3.",
+        "The factors used for the company’s existing activities.",
+        "Whether purchased electricity is Scope 1 or Scope 2."
       ],
       "correctAnswer": 0,
-      "explanation": "Acquisitions change what is inside the reporting entity, which is why the organisational boundary and often the baseline must be restated.",
+      "explanation": "An acquisition can change which operations are included in the reporting boundary.",
       "whyWrong": [
-        "Travel remains reportable regardless.",
-        "Factors depend on the activity and location, not on ownership changes.",
-        "Scope definitions are unaffected by corporate structure."
+        "The reporting boundary may need to include the acquired business.",
+        "Business travel remains a Scope 3 category.",
+        "Existing activity factors do not change only because of an acquisition."
       ]
     },
     {
-      "question": "Why would a company track emissions per unit of revenue as well as in absolute terms?",
+      "question": "Why track emissions per unit of revenue as well as total emissions?",
       "options": [
-        "It is the only figure that external auditors are permitted to verify formally",
-        "It removes the need to report absolute emissions figures to any regulator",
-        "It converts the emissions total into the company's reporting currency",
-        "It shows whether efficiency is improving as the business grows"
+        "Auditors can verify only an intensity figure.",
+        "It replaces the need to report total emissions.",
+        "It converts emissions into the company’s currency.",
+        "Shows emissions intensity as revenue grows."
       ],
       "correctAnswer": 3,
-      "explanation": "A growing company can cut emissions per unit of output while its total still rises, and both facts matter.",
+      "explanation": "An emissions intensity measure helps compare efficiency as revenue or business size changes; absolute emissions still matter.",
       "whyWrong": [
-        "Auditors verify absolute figures as well as intensity measures.",
-        "Absolute reporting remains the primary requirement.",
-        "Intensity is a ratio, not a currency conversion."
+        "Auditors can review both absolute and intensity measures.",
+        "Intensity does not replace absolute emissions reporting.",
+        "An intensity measure is not a currency conversion."
       ]
     },
     {
-      "question": "What does a science-based target mean?",
+      "question": "What is a science-based emissions target?",
       "options": [
-        "A target calculated solely from the company's own historical emissions trend",
-        "A reduction target aligned to a warming limit",
-        "A target that has been independently audited after the reporting year closed",
-        "A target covering Scope 1 emissions only, with the other scopes excluded"
+        "A goal based only on the company’s past trend.",
+        "A reduction goal aligned with a climate pathway.",
+        "A goal audited after the reporting year.",
+        "A goal that covers Scope 1 only."
       ],
       "correctAnswer": 1,
-      "explanation": "Science-based targets are set so that the company's reductions are consistent with limiting global warming to an agreed level.",
+      "explanation": "A science-based target aligns a company’s emissions reductions with a climate pathway, such as limiting warming.",
       "whyWrong": [
-        "Extrapolating your own trend is not the same as aligning to a climate limit.",
-        "Audit is assurance of reported figures, not what makes a target science-based.",
-        "Science-based targets normally include Scope 3 where it is material."
+        "Past performance alone does not define whether a target is science-based.",
+        "This describes a target aligned with climate science.",
+        "An audit is not what makes a target science-based."
       ]
     },
     {
-      "question": "A company has activity data in kilowatt hours but no emissions figure. What is needed?",
+      "question": "A company knows its electricity use in kilowatt-hours but has no emissions value. What does it need?",
       "options": [
-        "The financial cost of the electricity consumed over the reporting period",
-        "An emissions factor for that energy source",
-        "A restatement of the baseline year before any calculation can be made",
-        "A full physical audit of every piece of equipment installed on the site"
+        "The electricity bill amount.",
+        "An emissions factor for the electricity source.",
+        "A new baseline year before any calculation.",
+        "A full equipment audit before estimating emissions."
       ],
       "correctAnswer": 1,
-      "explanation": "Activity data multiplied by the appropriate emissions factor gives the emissions figure.",
+      "explanation": "The company needs an emissions factor to convert kilowatt-hours into estimated emissions.",
       "whyWrong": [
-        "Cost does not convert into emissions.",
-        "Restating the baseline is unrelated to this calculation.",
-        "An equipment audit is not required to apply a factor to consumption."
+        "Cost alone does not convert energy use into emissions.",
+        "A baseline year is not required for this calculation.",
+        "A full equipment audit is not needed to apply a factor to known electricity use."
       ]
     },
     {
-      "question": "Why is data quality a recurring theme in carbon accounting?",
+      "question": "Why do carbon accounting teams review data quality so often?",
       "options": [
-        "Measured data is always available for every category that must be reported",
-        "Companies are prohibited from using any industry average in their reporting",
-        "Emissions data is legally required to be accurate to three decimal places",
-        "Much of the data is estimated rather than measured"
+        "Measured data is available for every emissions category.",
+        "Industry averages are never allowed.",
+        "The law requires every value to be accurate to three decimals.",
+        "Many activity values are estimated rather than directly measured."
       ],
       "correctAnswer": 3,
-      "explanation": "Especially in Scope 3, figures often come from averages and estimates, so stating how good the data is matters as much as the number.",
+      "explanation": "Some activity data is estimated or incomplete, so teams need to check its quality and document assumptions.",
       "whyWrong": [
-        "Measured data is frequently unavailable in the value chain.",
-        "Industry averages are an accepted method where primary data is absent.",
-        "No such precision requirement exists."
+        "Measured data is not available for every category.",
+        "Industry averages may be used where appropriate.",
+        "There is no universal three-decimal accuracy rule."
       ]
     },
     {
-      "question": "A company wants to reduce emissions from employee commuting. Which scope does this sit in?",
+      "question": "Employee commuting emissions usually belong to which scope?",
       "options": [
-        "None of the scopes, as commuting is a private matter for each employee",
-        "Scope 2, because commuting depends on purchased energy such as electricity",
-        "Scope 3",
-        "Scope 1, because the employees are working for the company at the time"
+        "None; commuting is a private activity.",
+        "Scope 2 because it involves purchased energy.",
+        "Scope 3 as part of the value chain.",
+        "Scope 1 because employees work for the company."
       ],
       "correctAnswer": 2,
-      "explanation": "Commuting is a Scope 3 category: the company does not own the vehicles but the travel results from its activity.",
+      "explanation": "Employee commuting is an indirect value-chain activity and is reported in Scope 3.",
       "whyWrong": [
-        "Commuting is an established Scope 3 category.",
-        "Scope 2 is specifically purchased energy for the company's own use.",
-        "The company does not own or control employees' own vehicles."
+        "Commuting can be included in Scope 3 accounting.",
+        "Scope 2 covers indirect emissions from purchased energy used by the company.",
+        "Employees commuting in their own vehicles are not company-owned sources."
       ]
     },
     {
-      "question": "What is the first practical step for a company beginning to report its footprint?",
+      "question": "A company is starting to measure its carbon footprint. What should it do first?",
       "options": [
-        "Appoint external auditors to verify figures that have not yet been produced",
-        "Purchase carbon credits sufficient to offset an initial estimate of emissions",
-        "Define the boundary and gather activity data",
-        "Announce a public net zero target before any measurement has been carried out"
+        "Hire auditors before collecting any data.",
+        "Buy credits to offset an initial estimate.",
+        "Set its reporting boundary and gather activity data.",
+        "Announce a net-zero target before measuring emissions."
       ],
       "correctAnswer": 2,
-      "explanation": "You cannot report or reduce what you have not scoped and measured, so the boundary and the activity data come first.",
+      "explanation": "Set the organizational boundary and gather activity data before calculating and reporting emissions.",
       "whyWrong": [
-        "There is nothing to assure until figures exist.",
-        "Offsetting before measuring means you do not know what you are offsetting.",
-        "A target announced without data is not credible and may have to be revised."
+        "Auditors can review later; the company first needs data to measure.",
+        "Credits do not replace measuring the company’s emissions.",
+        "The company needs a measured baseline before setting a credible plan."
       ]
     }
   ]

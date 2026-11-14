@@ -33,6 +33,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'ai-associate': {
     slug: 'ai-associate',
+    noPrerequisite: true,
     recommendedPrerequisite: 'platform-foundations',
     notes: 'AI fundamentals; platform-foundations recommended',
   },
@@ -41,6 +42,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'administrator': {
     slug: 'administrator',
+    noPrerequisite: true,
     recommendedPrerequisite: 'platform-foundations',
     notes: 'Most popular entry-level certification',
   },
@@ -53,6 +55,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'app-builder': {
     slug: 'app-builder',
+    noPrerequisite: true,
     recommendedPrerequisite: 'platform-foundations',
     notes: 'Good path parallel to Admin or after Platform Foundations',
   },
@@ -65,12 +68,14 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'cpq-administrator': {
     slug: 'cpq-administrator',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'CPQ admin; Salesforce admin foundation recommended',
   },
 
   'marketing-cloud-engagement-admin': {
     slug: 'marketing-cloud-engagement-admin',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Marketing Cloud platform administration',
   },
@@ -83,6 +88,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'business-analyst': {
     slug: 'business-analyst',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Business analysis and requirements in Salesforce context',
   },
@@ -91,6 +97,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'developer-1': {
     slug: 'developer-1',
+    noPrerequisite: true,
     recommendedPrerequisite: 'platform-foundations',
     notes: 'Apex and Visualforce fundamentals; platform-foundations recommended',
   },
@@ -103,30 +110,34 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'javascript-developer-i': {
     slug: 'javascript-developer-i',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'Modern JavaScript and LWC; developer experience recommended',
   },
 
   'b2c-commerce-developer': {
     slug: 'b2c-commerce-developer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'B2C Commerce (SFCC) e-commerce development',
   },
 
   'industries-cpq-developer': {
     slug: 'industries-cpq-developer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Industries CPQ configuration and development',
   },
 
   'marketing-cloud-engagement-developer': {
     slug: 'marketing-cloud-engagement-developer',
-    recommendedPrerequisite: 'marketing-cloud-engagement-admin',
-    notes: 'Marketing Cloud technical development; admin knowledge recommended',
+    requiredPrerequisite: 'email-specialist',
+    notes: 'Requires Marketing Cloud Engagement Specialist (guide 005298954, read 14 November 2026)',
   },
 
   'mulesoft-developer-i': {
     slug: 'mulesoft-developer-i',
+    noPrerequisite: true,
     recommendedPrerequisite: 'mulesoft-integration-foundations',
     notes: 'API-led connectivity; MuleSoft foundations recommended',
   },
@@ -139,18 +150,21 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'mulesoft-hyperautomation-developer': {
     slug: 'mulesoft-hyperautomation-developer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'mulesoft-developer-i',
     notes: 'Automation and AI-powered integration',
   },
 
   'omnistudio-developer': {
     slug: 'omnistudio-developer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'OmniStudio technical development for industry clouds',
   },
 
   'slack-developer': {
     slug: 'slack-developer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'Slack app development; platform developer skills recommended',
   },
@@ -202,32 +216,32 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'pardot-consultant': {
     slug: 'pardot-consultant',
-    recommendedPrerequisite: 'email-specialist',
-    notes: 'B2B marketing automation consulting (Pardot/Account Engagement)',
+    requiredPrerequisite: 'pardot-specialist',
+    notes: 'Requires Marketing Cloud Account Engagement Specialist (guide 005298951, read 14 November 2026)',
   },
 
   'pardot-specialist': {
     slug: 'pardot-specialist',
-    recommendedPrerequisite: 'pardot-consultant',
-    notes: 'Advanced Pardot/Account Engagement specialization',
+    noPrerequisite: true,
+    notes: 'Entry-level Account Engagement exam; no prerequisite',
   },
 
   'marketing-cloud-consultant': {
     slug: 'marketing-cloud-consultant',
-    recommendedPrerequisite: 'email-specialist',
-    notes: 'Advanced Marketing Cloud platform certification',
+    requiredPrerequisite: 'marketing-cloud-engagement-admin',
+    notes: 'Requires Marketing Cloud Engagement Administrator (guide 005298946, read 14 November 2026)',
   },
 
   'nonprofit-cloud': {
     slug: 'nonprofit-cloud',
-    recommendedPrerequisite: 'administrator',
-    notes: 'Nonprofit Cloud CRM implementation',
+    requiredPrerequisite: 'administrator',
+    notes: 'Requires Platform Administrator (guide 005298958, read 14 November 2026)',
   },
 
   'nonprofit-success-pack-consultant': {
     slug: 'nonprofit-success-pack-consultant',
-    recommendedPrerequisite: 'administrator',
-    notes: 'NPSP configuration and nonprofit CRM',
+    requiredPrerequisite: 'administrator',
+    notes: 'Required Platform Administrator (guide 005298973, read 14 November 2026)',
   },
 
   'omnistudio-consultant': {
@@ -239,6 +253,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'revenue-cloud-consultant': {
     slug: 'revenue-cloud-consultant',
+    noPrerequisite: true,
     recommendedPrerequisite: 'cpq-administrator',
     notes: 'Revenue Cloud (CPQ + Billing) consulting',
   },
@@ -259,6 +274,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'email-specialist': {
     slug: 'email-specialist',
+    noPrerequisite: true,
     recommendedPrerequisite: 'marketing-cloud-engagement-admin',
     notes: 'Email marketing automation; MC admin knowledge recommended',
   },
@@ -277,86 +293,92 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'technical-architect': {
     slug: 'technical-architect',
-    recommendedPrerequisite: 'developer-2',
-    notes: 'Expert-level technical architecture certification',
+    requiredPrerequisites: ['application-architect', 'system-architect'],
+    notes: 'Requires both Application Architect and System Architect (guide 005299002)',
   },
 
   'sharing-visibility-architect': {
     slug: 'sharing-visibility-architect',
+    noPrerequisite: true,
     recommendedPrerequisite: 'advanced-administrator',
     notes: 'Specialized architect track for security & sharing',
   },
 
   'data-architect': {
     slug: 'data-architect',
+    noPrerequisite: true,
     recommendedPrerequisite: 'app-builder',
     notes: 'The issuer recommends Platform App Builder, Platform Developer, and Platform Developer II; no prerequisite certification is required.',
   },
 
   'integration-architect': {
     slug: 'integration-architect',
-    recommendedPrerequisite: 'system-architect',
-    notes: 'Enterprise integration patterns and API design',
+    noPrerequisite: true,
+    notes: 'No prerequisite; this exam is a component of System Architect',
   },
 
   'identity-access-management-architect': {
     slug: 'identity-access-management-architect',
-    recommendedPrerequisite: 'system-architect',
-    notes: 'IAM, SSO, and identity federation architecture',
+    noPrerequisite: true,
+    notes: 'No prerequisite; this exam is a component of System Architect',
   },
 
   'dev-lifecycle-deployment-architect': {
     slug: 'dev-lifecycle-deployment-architect',
-    recommendedPrerequisite: 'system-architect',
-    notes: 'CI/CD, release management, and DevOps',
+    noPrerequisite: true,
+    notes: 'No prerequisite; this exam is a component of System Architect',
   },
 
   'b2b-solution-architect': {
     slug: 'b2b-solution-architect',
-    recommendedPrerequisite: 'application-architect',
-    notes: 'B2B cross-cloud solution architecture',
+    requiredPrerequisite: 'application-architect',
+    notes: 'Required Application Architect (guide 005299472, read 14 November 2026)',
   },
 
   'b2c-commerce-architect': {
     slug: 'b2c-commerce-architect',
-    recommendedPrerequisite: 'b2c-commerce-developer',
-    notes: 'B2C e-commerce architecture and best practices',
+    requiredPrerequisite: 'b2c-commerce-developer',
+    notes: 'Required B2C Commerce Developer (guide 005298936, read 14 November 2026)',
   },
 
   'b2c-solution-architect': {
     slug: 'b2c-solution-architect',
-    recommendedPrerequisite: 'application-architect',
-    notes: 'B2C cross-cloud solution design',
+    requiredPrerequisites: ['app-builder', 'data-architect', 'integration-architect'],
+    notes: 'Requires Platform App Builder, Platform Data Architect and Platform Integration Architect (guide 005298942, read 14 November 2026)',
   },
 
   'heroku-architect': {
     slug: 'heroku-architect',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'Heroku platform architecture and advanced patterns',
   },
 
   'mulesoft-catalyst-consultant': {
     slug: 'mulesoft-catalyst-consultant',
+    noPrerequisite: true,
     recommendedPrerequisite: 'mulesoft-developer-i',
     notes: 'MuleSoft consulting methodology',
   },
 
   'mulesoft-platform-architect': {
     slug: 'mulesoft-platform-architect',
+    noPrerequisite: true,
     recommendedPrerequisite: 'mulesoft-developer-ii',
     notes: 'MuleSoft platform design and governance',
   },
 
   'mulesoft-integration-architect': {
     slug: 'mulesoft-integration-architect',
-    requiredPrerequisite: 'mulesoft-platform-architect',
-    notes: 'Advanced MuleSoft integration architecture',
+    recommendedPrerequisite: 'mulesoft-developer-i',
+    noPrerequisite: true,
+    notes: 'No prerequisite; MuleSoft Developer is recommended (guide 005298957, read 14 November 2026)',
   },
 
   'technical-architect-evaluation': {
     slug: 'technical-architect-evaluation',
-    requiredPrerequisite: 'application-architect',
-    notes: 'CTA evaluation; requires Application Architect',
+    requiredPrerequisites: ['application-architect', 'system-architect'],
+    notes: 'Requires both Application Architect and System Architect (guide 005299002, read 14 November 2026)',
   },
 
   'technical-architect-review-board': {
@@ -369,12 +391,14 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'strategy-designer': {
     slug: 'strategy-designer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'UX strategy and design thinking on Salesforce',
   },
 
   'ux-designer': {
     slug: 'ux-designer',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'UX design principles for Salesforce platform',
   },
@@ -383,28 +407,32 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'tableau-data-analyst': {
     slug: 'tableau-data-analyst',
+    noPrerequisite: true,
     notes: 'Analytics and data visualization fundamentals; good starting point',
   },
 
   'tableau-desktop-foundations': {
     slug: 'tableau-desktop-foundations',
+    noPrerequisite: true,
     notes: 'Tableau desktop fundamentals; beginner starting point',
   },
 
   'tableau-consultant': {
     slug: 'tableau-consultant',
+    noPrerequisite: true,
     recommendedPrerequisite: 'tableau-data-analyst',
     notes: 'Tableau consulting and implementation',
   },
 
   'tableau-architect': {
     slug: 'tableau-architect',
-    requiredPrerequisite: 'tableau-consultant',
-    notes: 'Tableau advanced architecture; requires Tableau Consultant',
+    noPrerequisite: true,
+    notes: 'No prerequisite (guide 005298985, read 14 November 2026)',
   },
 
   'tableau-server-administrator': {
     slug: 'tableau-server-administrator',
+    noPrerequisite: true,
     recommendedPrerequisite: 'tableau-desktop-foundations',
     notes: 'Tableau server administration and deployment',
   },
@@ -413,140 +441,198 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'advanced-field-service-ap': {
     slug: 'advanced-field-service-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'field-service',
     notes: 'Advanced field service; Field Service Consultant recommended',
   },
 
   'b2b-commerce-admin-ap': {
     slug: 'b2b-commerce-admin-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'B2B e-commerce administration',
   },
 
   'b2b-commerce-developer-ap': {
     slug: 'b2b-commerce-developer-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'B2B e-commerce development',
   },
 
   'communications-cloud-ap': {
     slug: 'communications-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Telecom and communications industry cloud',
   },
 
   'consumer-goods-cloud-ap': {
     slug: 'consumer-goods-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Consumer goods industry cloud',
   },
 
   'consumer-goods-tpm-ap': {
     slug: 'consumer-goods-tpm-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'consumer-goods-cloud-ap',
     notes: 'Trade Promotion Management; Consumer Goods Cloud recommended',
   },
 
   'contact-center-ap': {
     slug: 'contact-center-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'service-cloud',
     notes: 'Contact center solutions; Service Cloud knowledge recommended',
   },
 
   'cpq-billing-ap': {
     slug: 'cpq-billing-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'cpq-administrator',
     notes: 'CPQ + Billing; CPQ Administrator recommended',
   },
 
   'energy-utilities-ap': {
     slug: 'energy-utilities-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Energy sector cloud solutions',
   },
 
   'financial-services-cloud-ap': {
     slug: 'financial-services-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Financial services industry cloud',
   },
 
   'health-cloud-ap': {
     slug: 'health-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Healthcare industry cloud',
   },
 
   'heroku-developer-ap': {
     slug: 'heroku-developer-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'Heroku application development',
   },
 
   'loyalty-management-ap': {
     slug: 'loyalty-management-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Loyalty programs and management',
   },
 
   'manufacturing-cloud-ap': {
     slug: 'manufacturing-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Manufacturing industry cloud',
   },
 
   'marketing-cloud-advanced-cross-channel-ap': {
     slug: 'marketing-cloud-advanced-cross-channel-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'marketing-cloud-consultant',
     notes: 'Advanced cross-channel marketing automation',
   },
 
   'marketing-cloud-intelligence-ap': {
     slug: 'marketing-cloud-intelligence-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'marketing-cloud-consultant',
     notes: 'Marketing analytics and intelligence',
   },
 
   'marketing-cloud-personalization-ap': {
     slug: 'marketing-cloud-personalization-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'marketing-cloud-consultant',
     notes: 'Real-time personalization engine',
   },
 
   'media-cloud-ap': {
     slug: 'media-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Media and entertainment industry cloud',
   },
 
   'net-zero-cloud-ap': {
     slug: 'net-zero-cloud-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Sustainability and carbon accounting',
   },
 
   'order-management-admin-ap': {
     slug: 'order-management-admin-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Order management administration',
   },
 
   'order-management-developer-ap': {
     slug: 'order-management-developer-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'developer-1',
     notes: 'Order management development',
   },
 
   'process-automation-ap': {
     slug: 'process-automation-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Business process automation design',
   },
 
   'public-sector-solutions-ap': {
     slug: 'public-sector-solutions-ap',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'Government and public sector cloud',
+  },
+
+  'platform-foundations': {
+    slug: 'platform-foundations',
+    noPrerequisite: true,
+  },
+
+  'marketing-cloud-engagement-foundations': {
+    slug: 'marketing-cloud-engagement-foundations',
+    noPrerequisite: true,
+  },
+
+  'mulesoft-integration-foundations': {
+    slug: 'mulesoft-integration-foundations',
+    noPrerequisite: true,
+  },
+
+  'public-sector-solutions-consultant': {
+    slug: 'public-sector-solutions-consultant',
+    noPrerequisite: true,
+  },
+
+  'marketing-cloud-next-consultant': {
+    slug: 'marketing-cloud-next-consultant',
+    noPrerequisite: true,
+  },
+
+  'sales-foundations': {
+    slug: 'sales-foundations',
+    noPrerequisite: true,
+  },
+
+  'tableau-next-consultant': {
+    slug: 'tableau-next-consultant',
+    noPrerequisite: true,
   },
 }
 

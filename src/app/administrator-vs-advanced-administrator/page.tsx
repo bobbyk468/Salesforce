@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Do you need ADM-201 before taking Advanced Administrator?',
-    answer: 'Yes. The Salesforce Advanced Administrator certification requires the Salesforce Administrator (ADM-201) certification as a prerequisite. You cannot sit the Advanced Administrator exam without first passing ADM-201.',
+    answer: 'Yes. You must pass Salesforce Administrator (ADM-201) before taking the Advanced Administrator exam.',
   },
   {
     question: 'Is the Advanced Administrator exam harder than ADM-201?',
-    answer: 'Yes: Advanced Administrator is widely considered significantly harder. It assumes you already know everything in ADM-201 and tests deeper configuration skills: complex automation (multi-step Flows, scheduled triggers), advanced sharing and security, change sets and deployment, and complex reporting with cross-object formulas. Most candidates recommend 1–2 years of hands-on admin experience before attempting it.',
+    answer: 'Yes. Advanced Administrator is widely considered harder. It assumes ADM-201 knowledge and tests more advanced configuration, including multi-step Flows, scheduled triggers, sharing and security, change sets, deployments, and reports with cross-object formulas. Many candidates recommend 1–2 years of hands-on admin experience before taking it.',
   },
   {
     question: 'How long should I wait between ADM-201 and Advanced Administrator?',
-    answer: 'Salesforce recommends having at least 1–2 years of Salesforce administration experience before taking the Advanced Administrator exam. Rushing to the Advanced Administrator immediately after ADM-201 is generally not advisable, the exam tests practical depth that comes from real org administration experience, not just study.',
+    answer: 'Salesforce recommends at least 1–2 years of admin experience before taking Advanced Administrator. Avoid rushing to it right after ADM-201; the exam tests practical knowledge gained from managing a real Salesforce org, not study alone.',
   },
   {
     question: 'Which certification is worth more: Administrator or Advanced Administrator?',
-    answer: 'Both are valuable, but Advanced Administrator commands higher salaries and is often required for senior admin roles. In 2026, having both certifications (or ADM-201 + a specialist certification like Sales Cloud or Service Cloud Consultant) significantly increases hiring competitiveness compared to ADM-201 alone.',
+    answer: 'Both can be useful. Advanced Administrator may support applications for senior admin roles and is associated with higher salaries. In 2026, holding both certifications, or ADM-201 plus a specialist certification such as Sales Cloud or Service Cloud Consultant, may make you more competitive than ADM-201 alone.',
   },
 ]
 
@@ -78,8 +78,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          ADM-201 gets you into Salesforce admin roles. Advanced Administrator (ADM-211) signals senior-level mastery.
-          This guide explains the difference, the right timing to upgrade, and what extra depth the Advanced exam requires.
+          ADM-201 can help you qualify for Salesforce admin roles. Advanced Administrator (ADM-211) covers more advanced skills. Compare the exams and see when to consider the next credential.
         </p>
       </header>
 
@@ -111,7 +110,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
           certName: "Salesforce Administrator",
           certSlug: "administrator",
           examTipsSlug: "certifications/administrator",
-          reason: "Administrator is the mandatory first step: Advanced Administrator explicitly tests you on Admin concepts plus additional depth. You cannot reasonably attempt Advanced Admin without first having mastered the Admin credential.",
+          reason: "Administrator is the first step. Advanced Administrator builds on the admin concepts covered by ADM-201, so learn those topics before taking the advanced exam.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin Certification Path",
         }}
@@ -172,10 +171,10 @@ export default function AdministratorVsAdvancedAdministratorPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Advanced Administrator Tests That ADM-201 Doesn’t</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Complex automation</strong>: Multi-step Flows with decision elements, fault paths, loops, and scheduled triggers. ADM-201 tests basic Flow creation; Advanced Admin tests Flow architecture for complex business processes.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced sharing and security</strong>: Sharing rules, manual sharing, team-based access, territory management, and field-level security at scale. ADM-201 covers OWD; Advanced Admin tests complex sharing scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Change sets and deployment</strong>: Deploying metadata between sandboxes and production using change sets, understanding deployment dependencies, and validating deployments before going live.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced analytics</strong>: Complex reports with cross-object formulas, joined reports, exception reports, and CRM Analytics (Einstein) dashboards beyond basic report builder.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Complex automation</strong>: Multi-step Flows with decisions, fault paths, loops, and scheduled triggers. ADM-201 covers basic Flow creation; Advanced Administrator covers how to design Flows for complex business processes.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced sharing and security</strong>: Sharing rules, manual sharing, team access, territory management, and field-level security at scale. ADM-201 covers OWD, while Advanced Administrator tests more complex sharing scenarios.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Change sets and deployment</strong>: Move metadata between sandboxes and production with change sets. Understand dependencies and validate a deployment before it goes live.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced analytics</strong>: Build reports with cross-object formulas, joined reports, and exceptions, and work with CRM Analytics (Einstein) dashboards beyond the basic report builder.</li>
         </ul>
       </section>
 
@@ -203,19 +202,19 @@ export default function AdministratorVsAdvancedAdministratorPage() {
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
-                <td className="py-2.5 pr-4">New to Salesforce or admin role &lt; 6 months</td>
+                <td className="py-2.5 pr-4">You are new to Salesforce or have been an admin for less than 6 months</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201, required first</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Certified ADM-201 with 2+ years of admin experience</td>
+                <td className="py-2.5 pr-4">You hold ADM-201 and have 2+ years of admin experience</td>
                 <td className="py-2.5 font-semibold text-purple-700">Advanced Admin, natural next step</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Manage complex security models, Territory Management, or sharing rules</td>
+                <td className="py-2.5 pr-4">You manage complex security, Territory Management, or sharing rules</td>
                 <td className="py-2.5 font-semibold text-purple-700">Advanced Admin; these are core topics</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Want to target Senior Admin or Lead Admin roles</td>
+                <td className="py-2.5 pr-4">You want a Senior Admin or Lead Admin role</td>
                 <td className="py-2.5 font-semibold text-purple-700">Advanced Admin, the credential employers look for at senior level</td>
               </tr>
               <tr>

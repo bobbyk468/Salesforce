@@ -10,6 +10,9 @@ import CareerRoadmapDiagram from '@/components/CareerRoadmapDiagram'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
 import LastUpdated from '@/components/LastUpdated'
+import { getCredentialCardNote } from '@/lib/credential-status'
+import { getCertAlias } from '@/lib/cert-alias-registry'
+import { getCertificationGrid } from '@/lib/certification-grid-data'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -301,18 +304,18 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
     { question: 'Do Salesforce developers need ADM-201 before PD1?', answer: 'ADM-201 is not a formal prerequisite for PD1, but it is strongly recommended. PD1 assumes knowledge of the Salesforce data model, sharing model, and deployment process, all ADM-201 topics. Candidates who skip ADM-201 typically struggle with the Salesforce Fundamentals section of PD1.' },
   ],
   consultant: [
-    { question: 'What Salesforce certification do consultants need first?', answer: 'Salesforce recommends ADM-201 before any consultant certification. After ADM-201, the most common first consultant cert is Sales Cloud Consultant or Service Cloud Consultant, depending on your specialisation. Both have the same exam format: 60 questions, 105 minutes, 65% passing score, $200 fee.' },
+    { question: 'What Salesforce certification do consultants need first?', answer: 'Salesforce recommends ADM-201 before any consultant certification. After ADM-201, the most common first consultant cert is Sales Cloud Consultant or Service Cloud Consultant, depending on your specialisation. Both are 60 scored questions in 105 minutes for a $200 fee, and both require the Platform Administrator credential. The pass marks differ: 73% for Agentforce Sales Consultant (formerly Sales Cloud Consultant) and 78% for Agentforce Service Consultant (formerly Service Cloud Consultant).' },
     { question: 'Is the Sales Cloud or Service Cloud Consultant exam harder?', answer: 'Both are similarly difficult and test scenario-based application of Salesforce features to business requirements. Sales Cloud Consultant is slightly broader (territory management, forecasting, CPQ basics); Service Cloud Consultant is more technical in places (Omni-Channel routing, entitlements, CTI integration). Your background determines which feels harder.' },
     { question: 'How many consultant certifications should I aim for?', answer: 'Most Salesforce consultants hold 2–4 certifications. A common combination is ADM-201 + Sales Cloud Consultant + Service Cloud Consultant, which covers most CRM implementations. Adding Experience Cloud Consultant or Field Service Consultant expands your scope for specialist projects.' },
   ],
   architect: [
-    { question: 'What is the path to Salesforce Certified Technical Architect (CTA)?', answer: 'The CTA path requires: Application Architect (4 certs: Data Architect, Sharing and Visibility Architect, Integration Architect, Dev Lifecycle Architect) + System Architect (4 certs: Identity and Access Management, Heroku Architect, Integration Architect, Dev Lifecycle Architect). After completing both, you sit a two-part CTA evaluation, a written exam and a live board review.' },
+    { question: 'What is the path to Salesforce Certified Technical Architect (CTA)?', answer: 'The CTA path requires both Application Architect (Platform App Builder, Platform Developer, Platform Data Architect, Platform Sharing and Visibility Architect) and System Architect (Platform Developer, Platform Integration Architect, Platform Identity and Access Management Architect, Platform Development Lifecycle and Deployment Architect). Platform Developer counts for both, so that is seven unique exams. You then take the Architect Evaluation ($1,500), a 135-minute live scenario session with a CTA judge, followed by the Architect Review Board ($4,500).' },
     { question: 'Which Salesforce architect certification should I take first?', answer: 'Most candidates start with Integration Architect or Data Architect, both test skills that complement consultant or developer experience. Integration Architect covers API design, middleware, and data synchronisation patterns. Data Architect covers MDM, data modelling, and ETL strategies. Both require strong ADM-201 and PD1 knowledge.' },
-    { question: 'How long does the Salesforce architect path take?', answer: 'Completing all 8 architect credentials and the CTA evaluation typically takes 3–6 years of dedicated study alongside active project experience. Most successful CTA candidates have 8–10 years of Salesforce experience. The written CTA exam and board review are considered among the most difficult credentialling processes in the enterprise software industry.' },
+    { question: 'How long does the Salesforce architect path take?', answer: 'Completing the seven component exams and both CTA stages typically takes 3–6 years of dedicated study alongside active project experience. Most successful CTA candidates have 8–10 years of Salesforce experience. The Architect Evaluation and Review Board are considered among the most difficult credentialling processes in the enterprise software industry.' },
   ],
   marketing: [
     { question: 'Which Marketing Cloud certification should I take first?', answer: 'For Marketing Cloud Engagement (formerly ExactTarget). Start with the Marketing Cloud Email Specialist, it tests core Journey Builder, Email Studio, Content Builder, and Automation Studio knowledge. For Marketing Cloud Account Engagement (formerly Pardot), the Pardot Specialist is the entry point.' },
-    { question: 'Is the Marketing Cloud Email Specialist hard?', answer: 'The Email Specialist exam (60 questions, 105 minutes, 65% passing) is considered moderately difficult. The highest-weight sections are Email Sending and Delivery (24%) and Journey Building (20%). Candidates without hands-on Marketing Cloud Engagement experience find it significantly harder, lab practice in a sandbox is essential.' },
+    { question: 'Is the Marketing Cloud Engagement Specialist (Email Specialist) exam hard?', answer: 'The Marketing Cloud Engagement Specialist exam (60 questions, 90 minutes, 67% passing) is considered moderately difficult. The highest-weight sections are Marketing Automation (26%) and Subscriber and Data Management (26%). Candidates without hands-on Marketing Cloud Engagement experience find it significantly harder, lab practice in a sandbox is essential.' },
   ],
   associate: [
     { question: 'Which Salesforce associate certification should I take first?', answer: 'Platform Foundations ($75, 40 questions, 62%) is the easiest Salesforce certification available, no Salesforce experience required. For those who want a broader platform foundation, the Salesforce Platform Foundations associate cert covers core CRM, flow, and app-building concepts at an introductory level.' },
@@ -320,14 +323,14 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
   ],
   tableau: [
     { question: 'Which Tableau certification should I take first?', answer: 'Tableau Desktop Specialist (now Desktop Foundations) is the entry-level Tableau certification. It tests core Tableau Desktop skills: connecting to data, building charts (bar, line, scatter, maps), calculated fields, and basic dashboard design. The Tableau Certified Data Analyst is the next step, testing more advanced analysis and Prep Builder.' },
-    { question: 'Is the Tableau Data Analyst exam difficult?', answer: 'The Tableau Certified Data Analyst exam (60 questions, 120 minutes, 75% passing score) is considered moderately difficult. The higher passing score (75% vs 65% for most Salesforce certs) makes it more demanding. Hands-on practice building dashboards in Tableau Desktop is essential; theoretical knowledge alone is insufficient.' },
+    { question: 'Is the Tableau Data Analyst exam difficult?', answer: 'The Tableau Data Analyst exam (60 scored questions, 105 minutes, 65% passing score, $200) is considered moderately difficult. Explore and Analyze Data is 41% of the exam, so most of the marks come from analysis rather than setup. Hands-on practice building dashboards in Tableau Desktop is essential; theoretical knowledge alone is insufficient.' },
   ],
   'accredited-professional': [
     { question: 'What is a Salesforce Accredited Professional (AP) certification?', answer: 'Salesforce Accredited Professional certifications validate implementation expertise in specific Salesforce industry clouds or add-on products. Examples include Field Service AP, Health Cloud AP, Financial Services Cloud AP, and B2B Commerce AP. APs are typically add-on credentials for consultants who already hold a relevant core certification.' },
     { question: 'Do I need ADM-201 before an Accredited Professional cert?', answer: 'Most Accredited Professional certifications do not formally require ADM-201, but they assume advanced Salesforce configuration knowledge. Field Service AP, for example, assumes deep familiarity with Service Cloud. Health Cloud AP requires Service Cloud or Sales Cloud knowledge. In practice, most AP candidates have 2+ years of hands-on Salesforce experience.' },
   ],
   claude: [
-    { question: 'Which Claude certification should I take first?', answer: 'The Claude Certified Associate – Foundations (CCAO-F, $99) is the recommended starting point. It tests practical Claude skills, prompt writing, output evaluation, model selection, and responsible AI, with no coding required. Business professionals, consultants, and non-technical users should start here.' },
+    { question: 'Which Claude certification should I take first?', answer: 'The Claude Certified Associate – Foundations (CCAO-F) is the natural starting point; its fee is not published by the issuer. It tests practical Claude skills, prompt writing, output evaluation, model selection, and responsible AI, with no coding required. Business professionals, consultants, and non-technical users should start here.' },
     { question: 'What is the difference between Claude Developer and Architect certifications?', answer: 'The Developer certification (CCDV-F) tests hands-on engineering skills: building with the Claude API, tool use, MCP servers, and shipping AI applications. The Architect certifications (CCAR-F and CCAR-P) test system design: multi-agent orchestration, Claude Code configuration, reliability patterns, and enterprise-scale architecture. Developers build; architects design.' },
     { question: 'Do I need a prerequisite for the Claude Architect Professional (CCAR-P)?', answer: 'Yes, the Claude Certified Architect – Foundations (CCAR-F) is a prerequisite for CCAR-P. The Professional exam builds on Foundations concepts and tests advanced topics: enterprise architecture, multi-agent orchestration, security, compliance, and cost optimization at scale.' },
   ],
@@ -405,11 +408,17 @@ export default async function RoleCertificationsPage({ params }: Props) {
   const category = getCategoryBySlug(slug)
 
   if (!category) notFound()
+  const gridCertBySlug = new Map(getCertificationGrid().flatMap((group) => group.certs.map((cert) => [cert.slug, cert] as const)))
   const roleCerts = category.items.map((item) => {
     const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
-    const examCode = getRecognizedExamCode(certSlug)
-    const name = examCode && !item.name.includes(examCode) ? `${item.name} (${examCode})` : item.name
-    return { ...item, name }
+    const alias = getCertAlias(certSlug)
+    const examCode = alias
+      ? [alias.code, ...(alias.legacy ?? [])].filter(Boolean).join(' / ')
+      : getRecognizedExamCode(certSlug)
+    const baseName = alias?.bare ?? item.name
+    const name = examCode && !baseName.includes(examCode) ? `${baseName} (${examCode})` : baseName
+    const facts = gridCertBySlug.get(certSlug)
+    return { ...item, name, statusNote: getCredentialCardNote(certSlug), facts }
   })
   const title = fitRoleTitle(
     ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`,
@@ -544,8 +553,21 @@ export default async function RoleCertificationsPage({ params }: Props) {
               <div className="flex-shrink-0 w-10 h-10 bg-salesforce-blue/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-salesforce-blue/20 transition-colors duration-200">
                 <Award className="h-6 w-6 text-salesforce-blue group-hover:scale-110 transition-transform duration-200" aria-label={`${item.name} certification badge icon`} />
               </div>
-              <span className="font-medium text-gray-900 group-hover:text-salesforce-blue transition-colors duration-200 truncate">
-                {item.name}
+              <span className="min-w-0">
+                <span className="block font-medium text-gray-900 group-hover:text-salesforce-blue transition-colors duration-200 truncate">
+                  {item.name}
+                </span>
+                {item.statusNote && (
+                  <span className="mt-1 inline-block rounded bg-amber-50 px-2 py-1 text-xs font-semibold text-amber-900">{item.statusNote}</span>
+                )}
+                {item.facts && (
+                  <span className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-gray-600">
+                    {item.facts.questions && <span>{item.facts.questions} questions</span>}
+                    {item.facts.duration && <span>{item.facts.duration}</span>}
+                    {item.facts.passingScore && <span>{item.facts.passingScore} pass</span>}
+                    {item.facts.cost && <span>{item.facts.cost}</span>}
+                  </span>
+                )}
               </span>
             </div>
             <ArrowRight className="h-5 w-5 text-gray-600 group-hover:text-salesforce-blue group-hover:translate-x-1 flex-shrink-0 ml-2 transition-all duration-200" />

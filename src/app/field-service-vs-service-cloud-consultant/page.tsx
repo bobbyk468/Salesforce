@@ -46,23 +46,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Should I study Service Cloud before Field Service?',
-    answer: 'There is no universal order established here. Compare the current official guides and begin with the workflows relevant to your project. Field Service includes core features and optional managed-package and mobile components that can be added as needed.',
+    answer: 'There is no single order for everyone. Read the current official guides and start with the workflow closest to your project. Field Service includes core features, with managed-package and mobile components that organizations can add when needed.',
   },
   {
     question: 'Does Field Service require the managed package?',
-    answer: 'Salesforce describes Field Service as core features, a managed package, and a mobile app. Organizations can start with core Field Service and add the managed package and mobile app as needed; requirements depend on the workflow and components in use.',
+    answer: 'Salesforce describes Field Service as core features, a managed package, and a mobile app. An organization can begin with the core features and add the other components when its workflows require them.',
   },
   {
     question: 'Which workflows distinguish Field Service from Service Cloud?',
-    answer: 'Service Cloud commonly centers on customer service work such as cases. Field Service coordinates in-person work through work orders, appointments, scheduling, dispatch, and mobile workers. Salesforce documents both cases and work orders as supported in Field Service.',
+    answer: 'Service Cloud often focuses on customer support, including case handling. Field Service coordinates work at customer sites through work orders, appointments, schedules, dispatch, and mobile workers. Salesforce supports both cases and work orders in Field Service.',
   },
   {
     question: 'Can I hold both Field Service Consultant and Service Cloud Consultant?',
-    answer: 'A person can pursue both credentials. Whether both are relevant depends on the work they plan to do; compare each current guide and the project requirements.',
+    answer: 'Yes. You can pursue both credentials. Decide whether both fit your goals by comparing the current exam guides with the work your projects require.',
   },
   {
     question: 'What is the difference in what each exam covers?',
-    answer: 'Use the current official certification guides for exam objectives. At the product level, Service Cloud workflows can include case handling, while Field Service coordinates in-person work using work orders, appointments, dispatch, and mobile workers. Field Service supports cases as well as work orders.',
+    answer: 'Check the current official certification guides for exam objectives. At the product level, Service Cloud can support case handling, while Field Service coordinates on-site work with work orders, appointments, dispatch, and mobile workers. Field Service also supports cases.',
   },
 ]
 
@@ -80,14 +80,14 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Compare the customer-support and in-person service workflows in each current official guide; there is no universal certification order.
+          Compare each current guide against the work your team does, from customer support to on-site service. There is no universal certification order.
         </p>
       </div>
 
       <ContentPageAuthor />
       <section className="my-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Choose study material by workflow</h2>
-        <p className="text-sm text-gray-700">Compare current official guide objectives with the work you need to do. Case handling points toward Service Cloud topics; dispatching technicians to appointments points toward Field Service topics. No credential order or prerequisite is asserted.</p>
+        <p className="text-sm text-gray-700">Match the exam guide to your project. Case handling points to Service Cloud topics; scheduling technicians for on-site appointments points to Field Service. This page does not set a required order or prerequisite.</p>
       </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
@@ -191,14 +191,14 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Learning example: choose by workflow</h2>
-        <p className="text-sm text-gray-700">A customer reports a product issue. If the team must classify and resolve the support case. Study the Service Cloud workflow. If a technician must visit the site, schedule an appointment, and record completed work. Study the Field Service workflow. This example distinguishes product tasks; it is not a claim about exam frequency. See Salesforce’s <a className="text-salesforce-blue hover:underline" href="https://trailhead.salesforce.com/content/learn/modules/field_service_basics/field_service_basics_intro" target="_blank" rel="noreferrer nofollow noopener">Field Service overview</a>.</p>
+        <p className="text-sm text-gray-700">Suppose a customer reports a product issue. If the team needs to classify and resolve the support case, review the Service Cloud workflow. If a technician needs to visit the site, schedule an appointment, and record the work, review Field Service. This example compares product tasks; it does not claim how often either topic appears on an exam. Read Salesforce’s <a className="text-salesforce-blue hover:underline" href="https://trailhead.salesforce.com/content/learn/modules/field_service_basics/field_service_basics_intro" target="_blank" rel="noreferrer nofollow noopener">Field Service overview</a>.</p>
       </section>
 
       <RelatedGuides links={getRelatedGuides('field-service-vs-service-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Compare service workflows</h2>
-        <p className="text-white mb-6">Explore practice questions for either workflow.</p>
+        <p className="text-white mb-6">Practice questions are available for both service workflows.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/service-cloud" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Service Cloud Practice

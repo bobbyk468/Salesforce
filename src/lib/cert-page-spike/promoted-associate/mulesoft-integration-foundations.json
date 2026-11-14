@@ -16,47 +16,47 @@
     }
   ],
   "whoIsThisFor": {
-    "heading": "Who is the MuleSoft Integration Foundations exam for?",
+    "heading": "Who should take the MuleSoft Integration Foundations exam?",
     "personas": [
       {
         "label": "New MuleSoft team members",
-        "description": "You are joining a MuleSoft project and want to show you understand the basics."
+        "description": "You are joining an integration project and want to learn the core MuleSoft concepts and platform tools."
       },
       {
         "label": "Business analysts on integration projects",
-        "description": "You work with MuleSoft developers and need to follow what they are building."
+        "description": "You work with developers and need to follow how APIs connect systems and support business processes."
       },
       {
         "label": "IT professionals exploring MuleSoft",
-        "description": "You are weighing MuleSoft up for your company and want a grounding in it."
+        "description": "You are evaluating MuleSoft and want a practical introduction to API-led integration."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the MuleSoft Integration Foundations Exam Hard?",
-    "summary": "This is the gentlest MuleSoft exam. It tests whether you understand the ideas and the vocabulary, not whether you can build. If you have done the Trailhead material and can explain what each part of Anypoint Platform is for, you are most of the way there.",
+    "heading": "How challenging is the MuleSoft Integration Foundations exam?",
+    "summary": "This entry-level exam focuses on integration concepts and terminology rather than building a complete Mule application. Learn what each part of Anypoint Platform does and how APIs can be organized for reuse.",
     "bullets": [
-      "<strong>40 multiple-choice questions</strong> in 70 minutes, which is a comfortable pace.",
-      "<strong>70% to pass</strong>, which is 28 correct answers.",
-      "<strong>Concepts, not code.</strong> You need to recognise what things do, not write DataWeave from scratch.",
-      "<strong>No experience required.</strong> General IT background plus the Trailhead trail is enough for most people."
+      "<strong>40 scored questions</strong> in 70 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 28 correct answers out of 40.",
+      "<strong>Concepts before coding:</strong> Recognize the purpose of API-led layers, platform tools, and basic Mule application parts.",
+      "<strong>No prior MuleSoft experience is required.</strong> General IT knowledge and the recommended learning materials provide a starting point."
     ],
-    "passRateGuidance": "Work through the MuleSoft Integration Foundations trail on Trailhead and make sure you can explain API-led connectivity in your own words. Aim for 80% or more on practice tests, since the questions are short and the pass mark is 70%."
+    "passRateGuidance": "Complete the MuleSoft Integration Foundations Trailhead learning and explain API-led connectivity in your own words. Aim for at least 80% on practice questions and review any terms you cannot define clearly."
   },
   "examFormat": {
-    "heading": "MuleSoft Integration Foundations Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "About a third of the questions are short scenarios. The most common one describes an integration need and asks which API-led layer it belongs to, or which Anypoint Platform tool you would use.",
+    "heading": "MuleSoft Integration Foundations exam format",
+    "intro": "The exam is proctored online or at a test center. It tests basic integration concepts and Anypoint Platform tools.",
+    "scenarioPercent": "Some questions describe an integration requirement and ask which API-led layer or Anypoint tool would fit.",
     "bestWayToPass": [
-      "<strong>Learn the three layers:</strong> System APIs talk to back-end systems, Process APIs combine data and apply rules, Experience APIs shape data for one app or channel.",
-      "<strong>Know what each tool is for:</strong> Anypoint Studio to build, Exchange to share and discover, API Manager to secure and control, Runtime Manager to deploy and monitor.",
-      "<strong>Understand the integration styles:</strong> Point-to-point, hub and spoke, ESB, and API-led, and why point-to-point gets messy as systems are added.",
-      "<strong>Recognise the basics of a Mule app:</strong> A flow starts with a source, then processors act on the message as it passes through."
+      "<strong>Learn the API-led layers:</strong> System APIs connect to systems of record, Process APIs combine data or apply business logic, and Experience APIs tailor data for a consumer.",
+      "<strong>Match platform tools to their jobs:</strong> Studio builds Mule applications, Exchange catalogs assets, API Manager applies API policies, and Runtime Manager deploys and monitors applications.",
+      "<strong>Compare integration patterns:</strong> Understand point-to-point, hub and spoke, ESB, and API-led approaches and their trade-offs.",
+      "<strong>Review Mule app basics:</strong> Learn how a flow starts, how messages move, and where DataWeave transformations fit."
     ]
   },
   "certificationCard": {
     "code": "MuleSoft Associate",
-    "description": "This entry-level exam covers the basics of API-led connectivity, what each part of Anypoint Platform does, and the integration vocabulary you need to work on a MuleSoft project.",
+    "description": "This entry-level exam covers the basics of API-led connectivity, what each part of Anypoint Platform does, and the integration vocabulary you need to work on a MuleSoft project. The exam is 40 scored questions in 70 minutes, with a 70% pass mark, weighted towards Essential integration concepts and terminology (20%) and Technical complexities and patterns in integration development (18%).",
     "examDetails": {
       "questions": 40,
       "passingScore": "70%",
@@ -75,59 +75,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "MuleSoft Integration Foundations: Key Concepts for the Exam",
+    "h2": "MuleSoft Integration Foundations: core concepts",
     "blocks": [
       {
         "heading": "API-Led Connectivity and Anypoint Platform",
-        "body": "**API-led connectivity** is MuleSoft's way of organising integrations so they can be reused. **System APIs** sit in front of one back-end system, such as SAP or a database, and hide its details. **Process APIs** combine data from several System APIs and apply business rules, for example building a full customer view. **Experience APIs** shape that data for one consumer, such as a mobile app or a partner portal. The point is reuse: the next project calls the existing API instead of building a new connection. On Anypoint Platform, **Anypoint Studio** is where developers build, **Exchange** is the catalogue where APIs and connectors are published and found, **API Manager** applies security and traffic rules, and **Runtime Manager** deploys and monitors the running apps."
+        "body": "API-led connectivity organizes integrations into reusable layers. A System API provides controlled access to a system of record. A Process API combines data or applies business rules. An Experience API presents data for a particular user experience or channel. Reuse means teams can build new solutions on existing APIs instead of creating a separate point-to-point connection each time. Anypoint Studio is used to build Mule applications, Exchange catalogs reusable assets, API Manager manages API policies, and Runtime Manager deploys and monitors applications."
       },
       {
-        "heading": "Mule Applications: Flows and Messages",
-        "body": "A Mule application is made of **flows**. Each flow begins with a **source**, which is the thing that starts it, such as an HTTP listener receiving a request or a scheduler firing on a timer. After the source come **processors**, which act on the message in order: transform it, route it, call another system, or log something. The data travelling through is the **Mule event**, which carries the **payload** (the content), **attributes** (information about it, like HTTP headers) and **variables** you set along the way. You do not need to write this from memory for the exam, but you should recognise the parts when you see them."
+        "heading": "Mule Applications, Flows, and Messages",
+        "body": "A Mule application contains flows that process messages. A source starts a flow, for example an HTTP listener or a scheduler. Processors then transform or route the message and may call connectors to reach other systems. A Mule event includes a payload and attributes. The payload holds the message content; attributes hold contextual information such as HTTP headers. Variables can hold additional values during processing."
       },
       {
-        "heading": "DataWeave Basics",
-        "body": "**DataWeave** is the language used to transform data in Mule, for example turning JSON into XML or renaming fields. A script starts with a header that sets the output type, then a body that builds the result. You should recognise that DataWeave is for mapping and transformation rather than for business logic, and be able to spot a simple transformation when it is shown to you. The exam does not expect you to write complex scripts."
+        "heading": "DataWeave and Connectors",
+        "body": "DataWeave is MuleSoft’s language for transforming and mapping data between formats and structures. Connectors provide configured operations for specific systems and services. Teams can discover reusable connectors and other assets in Exchange. Use a connector to communicate with a supported system; use DataWeave to shape the data being exchanged."
       },
       {
-        "heading": "Connectors and Integration Patterns",
-        "body": "**Connectors** are prebuilt components for talking to a particular system, such as HTTP, Database, Salesforce, SAP or Workday. They are published in **Exchange**, where teams also publish their own reusable assets. Know the common integration styles and their trade-offs. **Point-to-point** connects two systems directly, which is quick at first but becomes unmanageable as systems multiply. **Hub and spoke** and **ESB** route through a central component. **API-led** uses layered, reusable APIs, which is the approach MuleSoft recommends."
+        "heading": "API Management and Deployment",
+        "body": "API Manager applies policies and manages API access, such as requiring client credentials or setting usage limits. Runtime Manager deploys and monitors Mule applications. Applications can run in MuleSoft-managed cloud environments or in customer-managed infrastructure, depending on the deployment architecture. Runtime Fabric is an option for running Mule applications on customer-managed infrastructure while managing them through Anypoint Platform."
       },
       {
-        "heading": "Deployment and API Management",
-        "body": "A Mule application has to run somewhere. **CloudHub** is MuleSoft's managed cloud, where Salesforce runs the infrastructure for you. **Runtime Fabric** runs applications on your own infrastructure while still being managed centrally. A **customer-hosted** runtime means you install and manage everything. Once an API is running, **API Manager** sits in front of it and applies **policies** such as requiring a client ID, enforcing OAuth, or limiting how many calls a consumer may make. Those limits can be grouped into **SLA tiers** so different consumers get different allowances."
+        "heading": "Integration Patterns and Reuse",
+        "body": "Point-to-point integrations connect systems directly and can become difficult to maintain as the number of systems and connections grows. Hub-and-spoke and ESB approaches centralize some integration functions. API-led connectivity organizes reusable APIs in layers so teams can expose system capabilities, compose processes, and serve different consumers. Choose a pattern based on reuse, governance, and the organization’s operating needs."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the MuleSoft Integration Foundations Exam",
-    "intro": "Most questions ask what something is for. If you can say which layer an integration belongs to and which tool does which job, most answers follow.",
+    "h2": "How to prepare for the MuleSoft Integration Foundations exam",
+    "intro": "Most questions ask what a platform component or integration pattern is used for. Identify the task, then select the API layer or tool that owns it.",
     "blocks": [
       {
-        "heading": "Integration Styles",
-        "body": "Point-to-point, hub and spoke, ESB and API-led. Know why point-to-point stops scaling once several systems share data."
+        "heading": "Compare Integration Patterns",
+        "body": "Review point-to-point, hub and spoke, ESB, and API-led connectivity. Understand why direct connections become harder to maintain as systems are added."
       },
       {
-        "heading": "Anypoint Platform Tools",
-        "body": "Studio builds, Exchange shares, API Manager secures and limits, Runtime Manager deploys and monitors."
+        "heading": "Know Each Anypoint Tool",
+        "body": "Studio is for building, Exchange for discovering and sharing assets, API Manager for policies, and Runtime Manager for deployment and monitoring."
       },
       {
-        "heading": "API Basics",
-        "body": "Know what an API is, how REST and SOAP differ, and that a specification describes an API before it is built."
+        "heading": "Review API Basics",
+        "body": "Understand what an API exposes, the broad difference between REST and SOAP, and how an API specification describes an interface."
       },
       {
-        "heading": "DataWeave",
-        "body": "Recognise simple transformations and remember that DataWeave maps and reshapes data."
+        "heading": "Recognize DataWeave",
+        "body": "DataWeave transforms and maps data between structures and formats. Practice recognizing when data must be reshaped before it reaches a destination."
       },
       {
-        "heading": "Connectors and Exchange",
-        "body": "Connectors talk to specific systems and live in Exchange alongside reusable assets other teams can use."
+        "heading": "Use Connectors and Exchange",
+        "body": "Connectors provide operations for particular systems. Exchange helps teams discover and reuse connectors, APIs, and other assets."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After Associate",
-    "intro": "Good next steps after MuleSoft Integration Foundations:",
+    "heading": "Related credentials after MuleSoft Integration Foundations",
+    "intro": "Build on integration fundamentals with a role-focused MuleSoft developer or architect credential.",
     "links": [
       {
         "href": "/certifications/mulesoft-developer-i",
@@ -183,199 +183,199 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A company needs one API that reads customer data straight out of its SAP system and hides SAP's complexity from everyone else. Which API-led layer does this belong to?",
+      "question": "A team needs an API that reads customer records from SAP and hides SAP-specific details from other teams. Which API-led layer fits?",
       "options": [
         "A Process API",
         "No API is needed",
-        "An Experience layer API",
+        "An Experience API",
         "A System API"
       ],
       "correctAnswer": 3,
-      "explanation": "System APIs sit in front of a single back-end system and present its data in a simpler, reusable form.",
+      "explanation": "A System API provides a managed interface to a system of record such as SAP.",
       "whyWrong": [
-        "Process APIs combine data from several systems and apply business rules.",
-        "The point of the layer is to provide a reusable API over SAP.",
-        "Experience APIs shape data for one app or channel."
+        "A Process API composes data or applies business rules across systems.",
+        "A reusable API provides a stable interface rather than requiring direct access.",
+        "An Experience API shapes data for a particular consumer or channel."
       ]
     },
     {
-      "question": "A mobile app needs customer data formatted specifically for small screens, drawing on data that existing APIs already provide. Which layer fits?",
+      "question": "A mobile client needs a consumer-specific response while internal System and Process APIs remain behind the API boundary. Which API layer should shape that response?",
       "options": [
         "A System API",
-        "An Experience layer API",
-        "A brand new database instance",
+        "An Experience API",
+        "A new database instance",
         "A Process API"
       ],
       "correctAnswer": 1,
-      "explanation": "Experience APIs shape existing data for one particular consumer, such as a mobile app.",
+      "explanation": "An Experience API presents data in a form suited to one consumer, such as the mobile application, while using existing APIs behind it.",
       "whyWrong": [
-        "System APIs front a single back-end system.",
-        "A new database would duplicate data that already exists.",
-        "Process APIs combine and apply rules, rather than tailoring output per channel."
+        "A System API provides access to a system of record rather than shaping the mobile experience.",
+        "A new database is unnecessary when existing APIs expose the required data.",
+        "A Process API combines data or applies business logic across systems."
       ]
     },
     {
-      "question": "Where do teams publish and discover reusable APIs and connectors?",
+      "question": "Where can a team publish and discover reusable APIs and connectors?",
       "options": [
-        "The Anypoint Studio IDE",
+        "Anypoint Studio",
         "API Manager",
         "Anypoint Exchange",
         "Runtime Manager"
       ],
       "correctAnswer": 2,
-      "explanation": "Exchange is the catalogue where APIs, connectors, templates and examples are published so others can find and reuse them.",
+      "explanation": "Anypoint Exchange is the catalog for publishing and discovering reusable APIs, connectors, and other assets.",
       "whyWrong": [
-        "Studio is the development environment where applications are built.",
-        "API Manager applies security and traffic policies.",
-        "Runtime Manager deploys and monitors running applications."
+        "Studio is the development environment for Mule applications.",
+        "API Manager applies policies and manages API access.",
+        "Runtime Manager deploys and monitors applications."
       ]
     },
     {
-      "question": "Which tool would you use to require a client ID and limit how many calls a consumer can make to an API?",
+      "question": "Which tool can require a client ID and set API call limits?",
       "options": [
         "API Manager",
-        "The Anypoint Studio IDE",
+        "Anypoint Studio",
         "Anypoint Exchange",
         "DataWeave"
       ],
       "correctAnswer": 0,
-      "explanation": "API Manager applies policies such as client ID enforcement, OAuth checks and rate limiting.",
+      "explanation": "API Manager applies policies such as client access requirements and usage limits.",
       "whyWrong": [
-        "Studio is for building applications, not applying runtime policies.",
-        "Exchange shares assets, it does not enforce traffic rules.",
-        "DataWeave transforms data."
+        "This is the platform tool for API policies and controls.",
+        "Studio is used to build Mule applications.",
+        "Exchange catalogs assets rather than enforcing runtime policies."
       ]
     },
     {
-      "question": "Six systems each connect directly to every other system, and every change breaks something. What is this pattern called, and what does MuleSoft recommend instead?",
+      "question": "Many systems connect directly to each other, so changes frequently break integrations. What pattern is this, and what approach can improve reuse?",
       "options": [
         "API-led, replaced by point-to-point",
-        "Point-to-point, replaced by API-led",
+        "Point-to-point, replaced by API-led connectivity",
         "ESB, replaced by file transfers",
         "Hub and spoke, replaced by direct calls"
       ],
       "correctAnswer": 1,
-      "explanation": "Direct links between every pair of systems is point-to-point. It grows unmanageable, which is the problem API-led connectivity addresses with reusable layered APIs.",
+      "explanation": "Point-to-point links can multiply as systems are added; API-led connectivity can create reusable interfaces in layers.",
       "whyWrong": [
-        "That reverses the two: API-led is the recommended approach, not the problem.",
-        "An ESB is a central routing approach, and file transfers are not the recommended replacement.",
-        "Hub and spoke routes through a central point, and direct calls would make things worse."
+        "API-led is the recommended reusable approach, not the problematic pattern described.",
+        "Direct connections do not address the growing number of dependencies.",
+        "Hub and spoke centralizes connections but is not the pattern identified here."
       ]
     },
     {
       "question": "What starts a Mule flow?",
       "options": [
         "A DataWeave script",
-        "A policy applied in API Manager",
+        "An API policy",
         "A source such as an HTTP listener",
-        "A connector in Exchange"
+        "A connector entry in Exchange"
       ],
       "correctAnswer": 2,
-      "explanation": "Every flow begins with a source: the component that receives a request or fires on a schedule.",
+      "explanation": "A source, such as an HTTP listener or scheduler, receives or generates an event that starts the flow.",
       "whyWrong": [
-        "DataWeave transforms data inside the flow.",
-        "Policies control access to a running API.",
-        "Connectors talk to systems, but the flow is started by its source."
+        "DataWeave transforms data after a flow starts.",
+        "An API policy controls access rather than creating the event that starts a flow.",
+        "A source such as a listener or scheduler starts the flow."
       ]
     },
     {
       "question": "What is DataWeave used for?",
       "options": [
-        "Transforming data from one shape to another",
-        "Monitoring running applications",
+        "Map data between formats",
+        "Monitoring deployed applications",
         "Publishing APIs to Exchange",
-        "Deploying the applications out to CloudHub"
+        "Deploying applications to CloudHub"
       ],
       "correctAnswer": 0,
-      "explanation": "DataWeave is MuleSoft's transformation language, used to map and reshape data such as JSON to XML.",
+      "explanation": "DataWeave maps and transforms data between formats and structures.",
       "whyWrong": [
-        "Monitoring is Runtime Manager's job.",
-        "Publishing to Exchange is a separate step.",
-        "Deployment is handled by Runtime Manager or the deployment tooling."
+        "DataWeave maps and transforms data between structures and formats.",
+        "Runtime Manager deploys and monitors applications.",
+        "Exchange catalogs APIs and reusable assets."
       ]
     },
     {
-      "question": "A company wants MuleSoft to run its applications in a managed cloud without maintaining servers. Which deployment option fits?",
+      "question": "A company wants to run Mule applications in a MuleSoft-managed cloud environment. Which option fits?",
       "options": [
-        "The Anypoint Studio IDE",
+        "Anypoint Studio",
         "Anypoint Exchange",
         "CloudHub",
         "A customer-hosted runtime"
       ],
       "correctAnswer": 2,
-      "explanation": "CloudHub is the managed cloud runtime, where the infrastructure is run for you.",
+      "explanation": "CloudHub is MuleSoft’s managed cloud deployment option for Mule applications.",
       "whyWrong": [
-        "Studio is a development tool, not a runtime.",
-        "Exchange is a catalogue of assets.",
-        "A customer-hosted runtime means the company installs and manages it themselves."
+        "Studio is used to build the application, not to host it.",
+        "Exchange catalogs assets rather than running applications.",
+        "CloudHub is the managed deployment option described."
       ]
     },
     {
-      "question": "Which part of a Mule event carries information about the message, such as HTTP headers?",
+      "question": "Which part of a Mule event carries context such as HTTP headers?",
       "options": [
         "Attributes",
-        "The payload",
-        "A variable you set",
+        "Payload",
+        "A variable set in the flow",
         "The flow name"
       ],
       "correctAnswer": 0,
-      "explanation": "Attributes hold metadata about the message, such as headers and query parameters, while the payload holds the content.",
+      "explanation": "Event attributes contain contextual information such as transport metadata and HTTP headers.",
       "whyWrong": [
-        "The payload is the content itself.",
-        "Variables hold values you set during the flow.",
-        "The flow name identifies the flow, not the message."
+        "Attributes hold contextual information such as HTTP headers.",
+        "The payload contains the main message content.",
+        "Variables store flow values but are separate from event attributes."
       ]
     },
     {
-      "question": "A bank must run Mule applications inside its own data centre but still manage them centrally through Anypoint Platform. Which option fits?",
+      "question": "A company wants its Mule runtime to run on infrastructure it operates and still be managed through Anypoint Platform. Which deployment option supports this?",
       "options": [
         "Runtime Fabric",
-        "Anypoint Studio running on a local machine",
-        "Exchange",
+        "Anypoint Studio on a developer laptop",
+        "Anypoint Exchange",
         "CloudHub"
       ],
       "correctAnswer": 0,
-      "explanation": "Runtime Fabric runs applications on the customer's own infrastructure while keeping central management.",
+      "explanation": "Runtime Fabric connects a customer-managed runtime environment to Anypoint Platform management.",
       "whyWrong": [
-        "Studio is for building, not running production applications.",
-        "Exchange stores and shares assets.",
-        "CloudHub runs in MuleSoft's cloud, not the bank's data centre."
+        "Runtime Fabric supports customer-managed environments connected to Anypoint management.",
+        "Studio is a development tool, not the production runtime.",
+        "Exchange catalogs assets rather than hosting running applications."
       ]
     },
     {
       "question": "Why does API-led connectivity encourage reuse?",
       "options": [
-        "It stops teams from building APIs",
-        "New projects call existing APIs instead",
+        "It prevents teams from creating APIs",
+        "New projects can call existing APIs",
         "It replaces every system with MuleSoft",
-        "It stores all data in one database"
+        "It stores all enterprise data in one database"
       ],
       "correctAnswer": 1,
-      "explanation": "Because APIs are layered and published, the next project consumes what exists rather than integrating from scratch.",
+      "explanation": "Teams can reuse existing APIs instead of rebuilding a separate connection for each new project.",
       "whyWrong": [
-        "It encourages building reusable APIs, not fewer of them.",
-        "MuleSoft connects systems rather than replacing them.",
-        "API-led does not consolidate data into a single database."
+        "API-led connectivity promotes reuse and does not forbid new APIs.",
+        "The approach connects systems rather than replacing them all.",
+        "It does not consolidate all enterprise data into one database."
       ]
     },
     {
-      "question": "What is the difference between REST and SOAP APIs, at the level this exam expects?",
+      "question": "At a high level, how do REST and SOAP commonly differ?",
       "options": [
-        "They are the same thing",
+        "They are the same protocol",
         "SOAP is newer than REST",
-        "REST is only for databases; SOAP is only for files",
-        "REST uses JSON; SOAP uses XML and a WSDL"
+        "REST is only for databases and SOAP only for files",
+        "REST uses resources; SOAP uses XML and WSDL"
       ],
       "correctAnswer": 3,
-      "explanation": "REST is the lighter, JSON-based style used by most modern APIs. SOAP uses XML with a WSDL contract and is common in older enterprise systems.",
+      "explanation": "REST commonly uses HTTP methods and resource representations; SOAP uses XML-based messages and commonly a WSDL service description.",
       "whyWrong": [
-        "They are different styles with different formats and contracts.",
-        "SOAP is the older of the two.",
-        "Neither is limited to databases or files."
+        "REST and SOAP are distinct approaches to APIs.",
+        "SOAP is not newer than REST in this comparison.",
+        "Neither approach is limited to those data sources."
       ]
     },
     {
-      "question": "A scheduled job must pull new orders from a database every 15 minutes. What starts that flow?",
+      "question": "A flow should check a database for new orders every 15 minutes. What can start it on that schedule?",
       "options": [
         "An HTTP listener",
         "An API policy",
@@ -383,43 +383,43 @@
         "A DataWeave transform"
       ],
       "correctAnswer": 2,
-      "explanation": "A scheduler fires on a timer, which is how flows run on a schedule rather than on request.",
+      "explanation": "A scheduler source can trigger a flow on a configured schedule.",
       "whyWrong": [
-        "An HTTP listener waits for an incoming request.",
-        "Policies protect APIs, they do not start flows.",
-        "DataWeave transforms data once the flow is running."
+        "An HTTP listener responds to inbound requests rather than a timer.",
+        "API policies govern access and do not trigger scheduled work.",
+        "A scheduler source can start the flow on the configured interval."
       ]
     },
     {
-      "question": "Which statement about connectors is correct?",
+      "question": "Which statement about MuleSoft connectors is correct?",
       "options": [
-        "They replace the need for APIs",
-        "They only work with Salesforce",
-        "They have to be written fresh for every single project",
-        "Prebuilt components for specific systems, in Exchange"
+        "They remove the need for APIs",
+        "They work only with Salesforce",
+        "A connector must be written from scratch for each project",
+        "Reusable operations for specific systems"
       ],
       "correctAnswer": 3,
-      "explanation": "Connectors handle the details of communicating with a particular system and are distributed through Exchange.",
+      "explanation": "Connectors provide reusable operations for particular systems, and teams can discover them through Exchange.",
       "whyWrong": [
-        "Connectors are how APIs reach systems, not a replacement for them.",
-        "There are connectors for many systems, including databases, SAP and Workday.",
-        "Prebuilt connectors exist precisely so teams do not start from scratch."
+        "Connectors can work with APIs and do not remove the need to design them.",
+        "MuleSoft connectors support many systems, not only Salesforce.",
+        "Prebuilt connectors can be reused rather than rebuilt for every project."
       ]
     },
     {
-      "question": "A company wants different call limits for its free and paying API consumers. What should be used?",
+      "question": "A company wants different call limits for free and paid API consumers. What should it configure?",
       "options": [
-        "A DataWeave script",
-        "SLA tiers in API Manager",
+        "A DataWeave transformation",
+        "SLA tiers or policies in API Manager",
         "A new Exchange asset",
-        "Separate Mule applications per consumer"
+        "A separate Mule application for each consumer"
       ],
       "correctAnswer": 1,
-      "explanation": "SLA tiers let you define different allowances and assign consumers to them, enforced by API Manager.",
+      "explanation": "API Manager can apply policies or service-level tiers to set different access and usage limits.",
       "whyWrong": [
-        "DataWeave transforms data, it does not limit traffic.",
-        "Exchange shares assets rather than enforcing limits.",
-        "Duplicating the application per consumer is unnecessary and hard to maintain."
+        "DataWeave transforms data but does not enforce consumer call limits.",
+        "Exchange catalogs assets and does not enforce runtime usage limits.",
+        "Separate applications are unnecessary for this kind of access policy."
       ]
     }
   ]

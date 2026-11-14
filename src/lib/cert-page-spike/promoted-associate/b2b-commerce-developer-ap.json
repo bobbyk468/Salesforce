@@ -21,8 +21,8 @@
     "heading": "Is the B2B Commerce Developer AP exam hard?",
     "summary": "This is a technical exam. Learn where B2B Commerce supports custom code, how storefront components work, and how to use the Commerce APIs. The questions go into detail.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 75 minutes.",
-      "<strong>About 68% to pass</strong>, or roughly 41 correct answers. Check the official guide for the current score.",
+      "<strong>60 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>68% to pass</strong>, which is 41 correct answers out of 60.",
       "<strong>Extension points:</strong> Learn how custom pricing, inventory, shipping, and tax connect to checkout.",
       "<strong>Components and APIs:</strong> Expect questions about custom store components and Commerce APIs."
     ],

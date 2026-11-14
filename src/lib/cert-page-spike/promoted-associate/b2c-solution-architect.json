@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with B2C Commerce features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You design consumer commerce solutions and want to validate your Salesforce architecture skills."
       },
       {
         "label": "Solution designers",
-        "description": "You support Salesforce projects where B2C Commerce, Multi-Cloud, and Solution Design decisions affect the final design."
+        "description": "You advise on how Commerce and related Salesforce products work together."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+        "description": "You are preparing for architecture work that spans storefront, marketing and service needs."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the B2C Solution Architect Exam Hard?",
-    "summary": "The B2C Solution Architect exam is hard. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "This exam page covers B2C solution design across commerce, customer engagement and service. Expect to reason about how the parts of a customer journey fit together.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>63% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>63% to pass</strong>, which is 38 correct answers out of 60.",
       "<strong>Scenario-based choices</strong>: expect questions that test when to use B2C Commerce, Multi-Cloud, or Solution Design.",
       "<strong>Hands-on context matters</strong>: candidates who have configured or supported B2C Commerce in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Use the published objectives to build a study checklist. Practice tracing customer needs across commerce, marketing, service and order handling, then review why each design choice fits."
   },
   "examFormat": {
     "heading": "B2C Solution Architect Exam Format Explained",
     "intro": "The B2C Solution Architect exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for B2C Commerce.",
+    "scenarioPercent": "Scenarios describe a retailer’s goal and ask which design best supports the customer journey, operations or non-functional needs.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on B2C Commerce, Multi-Cloud, and Solution Design because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Trace the shopping journey:</strong> Map how a customer discovers products, checks out, and gets help after the sale. Note which cloud owns each step.",
+      "<strong>Design the commerce and order flow:</strong> Review catalogs, promotions, carts, order capture, fulfillment routing, returns, and refunds as one connected solution.",
+      "<strong>Plan for peak shopping periods:</strong> Use scale, caching, and recovery plans to support traffic spikes, global storefronts, and service uptime.",
+      "<strong>Coordinate releases across clouds:</strong> Plan changes to Commerce, Marketing Cloud, and Salesforce metadata together, and identify where testing or rollback is needed."
     ]
   },
   "certificationCard": {
     "code": "B2C Solution Architect",
-    "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management into one customer journey. The exam is 60 scored questions in 120 minutes, with a 63% pass mark, weighted towards Discovery and Customer Success (27%) and Data Models and Management (25%).",
+    "description": "This exam page reviews B2C solution architecture across Commerce Cloud, Marketing Cloud, Service Cloud and order management. Use the exam details shown on the card to plan your preparation. The exam is 60 scored questions in 120 minutes, with a 63% pass mark, weighted towards Discovery and Customer Success (27%) and Data Models and Management (25%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
@@ -60,50 +60,46 @@
     "h2": "B2C Solution Architect: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Solution Design for B2C Retail",
-        "body": "B2C Solution Architects design solutions spanning Commerce Cloud (**storefront**), Marketing Cloud (email/journey), Service Cloud (support), and Order Management (fulfillment). The architect balances business requirements (conversion, retention, support cost) against technical constraints (API limits, data residency, licensing). Salesforce Customer 360 provides a unified identity across clouds via Marketing Cloud Personalization and Data Cloud. The exam presents complex multi-cloud business scenarios and tests which combination of products, connectors, and configuration choices best meets the requirements. Know the capabilities and limits of each cloud."
+        "heading": "B2C Solution Design",
+        "body": "Start with the customer journey and business goals. Map each step to the Salesforce product or service that supports it, and document the boundaries between systems."
       },
       {
-        "heading": "Multi-Cloud Integration Patterns",
-        "body": "Key B2C connectors: Commerce to Marketing Cloud Connector (syncs shopper data and triggers journeys), Commerce to Service Cloud Connector (links shopper profiles to cases), Order Management Connector (syncs orders to Salesforce OMS). Data flows: purchase events → Marketing Cloud → re-engagement journeys; support cases → Service Cloud → order lookup. Marketing Cloud Connect links core Salesforce objects to Marketing Cloud **Data Extensions**. Salesforce CDP/Data Cloud unifies identity across all clouds. The architect must know which connector to use, its data latency, and what to do when a connector doesn't support a required use case (custom integration via API)."
+        "heading": "Multi-Cloud Data Flow",
+        "body": "Decide which system owns each customer or order record and how updates move between products. Keep identity matching, consent and error handling in the design."
       },
       {
-        "heading": "Data Architecture & Customer Identity",
-        "body": "B2C data architecture centers on the shopper profile: anonymous browser → registered account → unified customer identity. Commerce Cloud Customer record (online profile) maps to Marketing Cloud subscriber and Service Cloud Contact. Duplicate management prevents fragmented profiles when the same customer shops across channels. External ID fields align records across systems. Data Cloud resolves identity using deterministic (email match) and probabilistic rules. GDPR and CCPA compliance requires consent management, preference centers, and Right to Be Forgotten across all connected clouds. The exam tests how identity flows across clouds and what an architect designs to ensure a single coherent customer view."
+        "heading": "Customer Identity",
+        "body": "Shoppers may browse anonymously before creating an account. Plan how the solution recognizes a returning customer, handles duplicate profiles and respects consent."
       },
       {
-        "heading": "Order Management & Fulfillment Architecture",
-        "body": "Salesforce Order Management (SOM) handles post-purchase orchestration: order capture, payment settlement, fulfillment routing, returns, and refunds. The Order Summary object is the central record in SOM. Fulfillment flows route orders to the correct warehouse or drop-shipper based on inventory availability and shipping cost. Change Orders handle post-purchase modifications. Distributed Order Management (DOM) optimizes fulfillment location selection. Integration with WMS (Warehouse Management Systems) and ERP happens via API or MuleSoft. The exam tests how an architect designs the order-to-fulfillment flow, handles partial fulfillment scenarios, and integrates SOM with external warehouse systems."
+        "heading": "Orders and Fulfillment",
+        "body": "Commerce captures the purchase. Order-management and fulfillment processes handle what happens next, such as routing, delivery, returns and status updates."
       },
       {
-        "heading": "Non-Functional Requirements & Governance",
-        "body": "B2C solutions must be designed for scale: peak traffic (Black Friday), global reach (multi-language, multi-currency, multi-region), and high availability (99.99% uptime SLA). Caching strategy across CDN, application, and browser layers reduces load time and infrastructure cost. Disaster recovery design defines RPO (Recovery Point Objective) and RTO (Recovery Time Objective). Release management for B2C spans multiple clouds; changes must be coordinated across Commerce Cloud code deployments, Marketing Cloud journey updates, and Salesforce metadata deployments. The exam tests how an architect balances speed to market against risk, and how to structure a release governance model for a multi-cloud B2C platform."
+        "heading": "Scale and Resilience",
+        "body": "Plan for busy shopping periods, response time, recovery and safe releases. Choose caching and scaling approaches that fit the actual traffic and service requirements."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce B2C Solution Architect Exam",
-    "intro": "The B2C Solution Architect exam tests multi-cloud architecture for B2C customer experiences. Focus on designing solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and CDP/Data Cloud into one customer journey.",
+    "intro": "Map each requirement to the customer journey and the Salesforce products that support it.",
     "blocks": [
       {
-        "heading": "Multi-Cloud B2C Journeys",
-        "body": "Know how to design customer journeys that span SFCC (shopping), Marketing Cloud (engagement), Service Cloud (support), and Data Cloud (unified profile). Understand the data flows and integration touchpoints between each cloud."
+        "heading": "Follow the customer journey",
+        "body": "Identify what the shopper is doing, which system owns the step and what information the next step needs."
       },
       {
-        "heading": "Identity & Profile Unification",
-        "body": "Know how Customer 360 identity unification works across B2C channels: matching on email, mobile, cookie, and loyalty ID. Understand how Data Cloud resolves identity across SFCC, Marketing Cloud, and Service Cloud."
+        "heading": "Check identity and data ownership",
+        "body": "Look for duplicate profiles, consent rules and unclear ownership between connected clouds."
       },
       {
-        "heading": "Commerce-to-Marketing Integration",
-        "body": "Know the integration between SFCC and Marketing Cloud: abandoned cart triggers, post-purchase confirmation emails, and how SFCC transaction data flows to Marketing Cloud for segmentation and retargeting."
+        "heading": "Design for order completion",
+        "body": "Follow the order through fulfillment and customer support, including failure and return paths."
       },
       {
-        "heading": "Order Management Integration",
-        "body": "Know how SFCC orders integrate with Salesforce Order Management: the Order On Behalf Of (OBO) pattern, order status sync, return/refund flows, and how Service Cloud agents access order data."
-      },
-      {
-        "heading": "Architecture Trade-off Decisions",
-        "body": "Solution Architect questions test trade-off reasoning: when to use a shared Salesforce org vs. separate, when to use Data Cloud vs. Marketing Cloud audiences for segmentation, and how to balance performance vs. data freshness."
+        "heading": "Use constraints to compare options",
+        "body": "Choose a design that meets the stated scale, availability, mobile and release needs without adding unrelated components."
       }
     ]
   },
@@ -165,243 +161,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does a B2C Solution Architect do?",
+      "question": "A retailer wants one design that ties its consumer storefront to supporting Salesforce services. What should the architect lead?",
       "options": [
-        "Only Slack",
-        "Only reporting",
-        "Architect and drive multi-cloud solutions that deliver business value for the customer (B2C focus)",
-        "Only coding"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer.",
-      "whyWrong": [
-        "'Only Slack' is unrelated to what a B2C Solution Architect does.",
-        "'Only reporting' misrepresents the role, which spans full solution architecture, not just reports.",
-        "'Only coding' undersells the role, which is business-value-focused cross-cloud design, not just writing code."
-      ]
-    },
-    {
-      "question": "What does B2C stand for?",
-      "options": [
-        "Business to Consumer",
-        "Brand to Consumer",
-        "Build to Order",
-        "Back to Customer"
+        "Cross-cloud customer solution",
+        "A list of storefront page changes only",
+        "A service-desk process without commerce data",
+        "A product catalogue migration with no customer journey"
       ],
       "correctAnswer": 0,
-      "explanation": "B2C stands for Business to Consumer.",
+      "explanation": "The architect should shape the end-to-end customer solution across the clouds the business needs, rather than focus on one isolated component.",
       "whyWrong": [
-        "'Brand to Consumer' isn't the actual expansion of B2C.",
-        "'Build to Order' is a manufacturing term, not what B2C stands for.",
-        "'Back to Customer' isn't the actual expansion of B2C."
+        "A list of storefront page changes only does not fit because it addresses a different need than A customer-focused design across the relevant Salesforce clouds.",
+        "A service-desk process without commerce data does not fit because it addresses a different need than A customer-focused design across the relevant Salesforce clouds.",
+        "A product catalogue migration with no customer journey does not fit because it addresses a different need than A customer-focused design across the relevant Salesforce clouds."
       ]
     },
     {
-      "question": "Which Salesforce products are often part of B2C solutions?",
+      "question": "A team is planning a direct-to-consumer online store. What does B2C mean?",
       "options": [
-        "Only Slack",
-        "B2C Commerce, Marketing Cloud, Service Cloud, and more",
-        "Only Service Cloud",
-        "Only Marketing Cloud"
+        "Business-to-Channel",
+        "Business-to-Consumer",
+        "Brand-to-Customer",
+        "Buyer-to-Commerce"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C solutions often include B2C Commerce, Marketing Cloud, Service Cloud, and more.",
+      "explanation": "B2C means Business-to-Consumer: a business sells products or services directly to consumers.",
       "whyWrong": [
-        "'Only Slack' is unrelated to the core products involved in B2C solutions.",
-        "'Only Service Cloud' undersells the broader multi-product B2C landscape.",
-        "'Only Marketing Cloud' undersells the broader set of products (Commerce, Service Cloud) typically involved."
+        "Business-to-Channel does not fit because it addresses a different need than Business-to-Consumer.",
+        "Brand-to-Customer does not fit because it addresses a different need than Business-to-Consumer.",
+        "Buyer-to-Commerce does not fit because it addresses a different need than Business-to-Consumer."
       ]
     },
     {
-      "question": "What does 'drive multi-cloud solutions' mean?",
+      "question": "A company needs a consumer storefront, campaign engagement and customer support. Which Salesforce capabilities best match those needs?",
       "options": [
-        "Only one product",
-        "Only Heroku",
-        "Leading and architecting solutions across multiple Salesforce products",
-        "Only MuleSoft"
+        "Sales Cloud, Tableau and Slack",
+        "Service Cloud and Heroku alone",
+        "Commerce, Marketing and Service",
+        "Experience Cloud and Revenue Cloud only"
       ],
       "correctAnswer": 2,
-      "explanation": "It means leading and architecting solutions across multiple Salesforce products.",
+      "explanation": "Commerce supports the storefront, Marketing Cloud supports customer engagement, and Service Cloud supports service.",
       "whyWrong": [
-        "'Only one product' is the opposite of what driving multi-cloud solutions means.",
-        "'Only Heroku' narrows the concept incorrectly to a single specific product.",
-        "'Only MuleSoft' narrows the concept incorrectly to a single specific product."
+        "Sales Cloud, Tableau and Slack does not fit because it addresses a different need than B2C Commerce, Marketing Cloud and Service Cloud.",
+        "Service Cloud and Heroku alone does not fit because it addresses a different need than B2C Commerce, Marketing Cloud and Service Cloud.",
+        "Experience Cloud and Revenue Cloud only does not fit because it addresses a different need than B2C Commerce, Marketing Cloud and Service Cloud."
       ]
     },
     {
-      "question": "Which role typically pursues B2C Solution Architect?",
+      "question": "A customer journey spans shopping, marketing messages and post-purchase support. What does a multi-cloud design require?",
       "options": [
-        "Architects and senior consultants designing B2C solutions",
-        "Marketers",
-        "Sales only",
-        "Designers only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Architects and senior consultants designing B2C solutions pursue this credential.",
-      "whyWrong": [
-        "Marketers aren't the typical role pursuing this architecture-focused credential.",
-        "Sales roles aren't the typical audience for this technical architecture credential.",
-        "Designers aren't the typical audience, this targets architects and senior consultants."
-      ]
-    },
-    {
-      "question": "What does B2C Commerce storefront provide?",
-      "options": [
-        "Consumer-facing storefront for e-commerce",
-        "Partner portal only",
-        "Service portal only",
-        "B2B only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "B2C Commerce provides consumer-facing e-commerce storefronts.",
-      "whyWrong": [
-        "A partner portal is a different Experience Cloud use case, unrelated to consumer e-commerce.",
-        "A service portal is a different Experience Cloud use case, not the e-commerce storefront being described.",
-        "'B2B only' misrepresents the topic, which is specifically about the B2C consumer-facing storefront."
-      ]
-    },
-    {
-      "question": "Which integration connects B2C Commerce to Marketing Cloud?",
-      "options": [
-        "Service Cloud only",
-        "No integration",
-        "Slack only",
-        "Einstein Personalization, Email, and CDP"
+        "Keeping each cloud isolated from the others",
+        "Using one product for every business process",
+        "Sending all customer data into a spreadsheet",
+        "Coordinate data and interactions across clouds"
       ],
       "correctAnswer": 3,
-      "explanation": "B2C integrates with Marketing Cloud for personalization and email.",
+      "explanation": "A multi-cloud solution coordinates the data and customer experience across the products used in the journey.",
       "whyWrong": [
-        "Service Cloud alone is unrelated to this specific Commerce-to-Marketing-Cloud integration.",
-        "'No integration' contradicts the fact that real, documented Marketing Cloud integrations exist.",
-        "Slack alone is unrelated to the Marketing Cloud/CDP integration being described."
+        "Keeping each cloud isolated from the others does not fit because it addresses a different need than Coordinating data and interactions across the products involved.",
+        "Using one product for every business process does not fit because it addresses a different need than Coordinating data and interactions across the products involved.",
+        "Sending all customer data into a spreadsheet does not fit because it addresses a different need than Coordinating data and interactions across the products involved."
       ]
     },
     {
-      "question": "What does headless commerce enable for B2C?",
+      "question": "Who is most likely to pursue a B2C Solution Architect role?",
       "options": [
-        "Only monolith",
-        "API-driven storefront with flexible front-end (e.g., PWA)",
-        "Only backend",
-        "Only full-stack"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Headless commerce separates front-end from commerce APIs.",
-      "whyWrong": [
-        "'Only monolith' is the opposite of what headless architecture enables.",
-        "'Only backend' undersells headless, which is specifically about flexible front-end delivery.",
-        "'Only full-stack' misrepresents headless, which specifically decouples the front-end from a monolithic stack."
-      ]
-    },
-    {
-      "question": "Which B2C Commerce feature supports product recommendations?",
-      "options": [
-        "Manual only",
-        "No recommendations",
-        "Einstein Personalization and rules-based recommendations",
-        "Static only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Einstein and rules support product recommendations.",
-      "whyWrong": [
-        "'Manual only' contradicts the fact that automated recommendation features exist.",
-        "'No recommendations' contradicts the existence of real personalization features.",
-        "'Static only' contradicts the dynamic, AI-driven nature of Einstein Personalization."
-      ]
-    },
-    {
-      "question": "What is the purpose of B2C Commerce order management integration?",
-      "options": [
-        "Only display",
-        "Only capture",
-        "Only email",
-        "Fulfillment, inventory, and order status sync"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Order management integration handles fulfillment and sync.",
-      "whyWrong": [
-        "'Only display' is unrelated to the backend fulfillment/inventory purpose of order management integration.",
-        "'Only capture' undersells order management integration, which spans fulfillment and inventory sync too.",
-        "'Only email' is unrelated to order management integration's fulfillment purpose."
-      ]
-    },
-    {
-      "question": "Which consideration applies to B2C multi-cloud architecture?",
-      "options": [
-        "No consistency",
-        "Ignore identity",
-        "Customer data flow, identity, and experience consistency",
-        "Single product only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Multi-cloud requires data flow, identity, and experience consistency.",
-      "whyWrong": [
-        "'No consistency' contradicts the actual goal of experience consistency across a multi-cloud architecture.",
-        "Ignoring identity contradicts the core consideration of maintaining consistent customer identity across clouds.",
-        "Focusing on a single product ignores the cross-cloud identity/data consistency this consideration calls for."
-      ]
-    },
-    {
-      "question": "What does B2C Solution Architect drive?",
-      "options": [
-        "Only reports",
-        "Only UI",
-        "Only development",
-        "End-to-end B2C solution design across Commerce, Marketing, Service"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Architects drive end-to-end B2C solution design.",
-      "whyWrong": [
-        "'Only reports' undersells the broader cross-cloud design scope of the role.",
-        "'Only UI' undersells the broader cross-cloud design scope of the role.",
-        "'Only development' undersells the role, which drives end-to-end solution design, not just development."
-      ]
-    },
-    {
-      "question": "Which B2C Commerce deployment model supports scalability?",
-      "options": [
-        "On-prem only",
-        "Cloud-hosted with auto-scaling",
-        "Single instance only",
-        "No scaling"
-      ],
-      "correctAnswer": 1,
-      "explanation": "B2C Commerce cloud supports auto-scaling.",
-      "whyWrong": [
-        "'On-prem only' contradicts the cloud-hosted, scalable deployment model B2C Commerce actually uses.",
-        "'Single instance only' is the opposite of the cloud-hosted, auto-scaling deployment model that supports scalability.",
-        "'No scaling' contradicts the fact that auto-scaling is a real deployment capability."
-      ]
-    },
-    {
-      "question": "What is the role of Service Cloud in B2C solutions?",
-      "options": [
-        "Commerce only",
-        "Customer service, case management, and order support",
-        "No role",
-        "Marketing only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Service Cloud supports post-purchase service and support.",
-      "whyWrong": [
-        "'Commerce only' misattributes Service Cloud's role, which is about service and support, not commerce.",
-        "'No role' contradicts the fact that Service Cloud plays a defined role in B2C solutions.",
-        "'Marketing only' undersells Service Cloud's actual role, which is customer service and case management."
-      ]
-    },
-    {
-      "question": "Which best practice applies to B2C solution design?",
-      "options": [
-        "Customer journey alignment, performance, and mobile-first",
-        "Ignore performance",
-        "Desktop only",
-        "No mobile"
+        "B2C solution architects and consultants",
+        "Campaign writers focused only on creative copy",
+        "Retail store associates with no platform responsibilities",
+        "Product designers focused only on visual assets"
       ],
       "correctAnswer": 0,
-      "explanation": "Design for customer journey, performance, and mobile.",
+      "explanation": "The role suits architects and senior consultants who design B2C solutions across business and Salesforce requirements.",
       "whyWrong": [
-        "Ignoring performance contradicts a core best practice for B2C solution design.",
-        "'Desktop only' contradicts the mobile-first best practice for B2C design.",
-        "'No mobile' contradicts the fact that mobile-first is a real, important best practice."
+        "Campaign writers focused only on creative copy does not fit because it addresses a different need than Architects and senior consultants designing consumer commerce solutions.",
+        "Retail store associates with no platform responsibilities does not fit because it addresses a different need than Architects and senior consultants designing consumer commerce solutions.",
+        "Product designers focused only on visual assets does not fit because it addresses a different need than Architects and senior consultants designing consumer commerce solutions."
+      ]
+    },
+    {
+      "question": "What does a B2C Commerce storefront give a retailer?",
+      "options": [
+        "A partner-only account portal",
+        "Consumer shopping storefront",
+        "A field-service dispatch console",
+        "A back-office finance ledger"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The storefront is the consumer-facing channel where shoppers browse and purchase.",
+      "whyWrong": [
+        "A partner-only account portal does not fit because it addresses a different need than A consumer-facing online shopping experience.",
+        "A field-service dispatch console does not fit because it addresses a different need than A consumer-facing online shopping experience.",
+        "A back-office finance ledger does not fit because it addresses a different need than A consumer-facing online shopping experience."
+      ]
+    },
+    {
+      "question": "A retailer wants Commerce shopping activity to inform Marketing Cloud engagement. Which integration should it evaluate?",
+      "options": [
+        "A Service Cloud case queue",
+        "A Slack workspace connection",
+        "Commerce-to-Marketing integration",
+        "A Tableau extract with no customer linkage"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Commerce and Marketing Cloud integration can share relevant commerce data for marketing use cases; the exact connector and design depend on the implementation.",
+      "whyWrong": [
+        "A Service Cloud case queue does not fit because it addresses a different need than The Commerce-to-Marketing Cloud integration.",
+        "A Slack workspace connection does not fit because it addresses a different need than The Commerce-to-Marketing Cloud integration.",
+        "A Tableau extract with no customer linkage does not fit because it addresses a different need than The Commerce-to-Marketing Cloud integration."
+      ]
+    },
+    {
+      "question": "A brand wants to build its own web or mobile interface while using commerce services behind it. Which approach fits?",
+      "options": [
+        "A fixed storefront theme with no external interface",
+        "A single server-rendered page tied to the commerce UI",
+        "A monolithic application with no commerce APIs",
+        "Headless commerce with APIs"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Headless commerce separates the presentation layer from commerce services exposed through APIs.",
+      "whyWrong": [
+        "A fixed storefront theme with no external interface does not fit because it addresses a different need than Headless commerce using APIs and a separate front end.",
+        "A single server-rendered page tied to the commerce UI does not fit because it addresses a different need than Headless commerce using APIs and a separate front end.",
+        "A monolithic application with no commerce APIs does not fit because it addresses a different need than Headless commerce using APIs and a separate front end."
+      ]
+    },
+    {
+      "question": "A retailer wants recommendations on product pages based on shopper context. Which capability should it consider?",
+      "options": [
+        "Product recommendations",
+        "A static product list with no shopper signals",
+        "A service case assignment rule",
+        "A manual spreadsheet sent to shoppers"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Personalization and recommendation capabilities can tailor product suggestions using available shopper context and configured rules.",
+      "whyWrong": [
+        "A static product list with no shopper signals does not fit because it addresses a different need than Personalization and recommendation features.",
+        "A service case assignment rule does not fit because it addresses a different need than Personalization and recommendation features.",
+        "A manual spreadsheet sent to shoppers does not fit because it addresses a different need than Personalization and recommendation features."
+      ]
+    },
+    {
+      "question": "After checkout, a retailer needs to coordinate fulfillment and keep order status visible. Which integration area matters?",
+      "options": [
+        "Storefront page analytics",
+        "Post-purchase order fulfillment",
+        "Marketing email templates",
+        "Product image storage"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Post-purchase order fulfillment supports post-purchase processing such as fulfillment and order status updates.",
+      "whyWrong": [
+        "Storefront page analytics does not fit because it addresses a different need than Order Management integration.",
+        "Marketing email templates does not fit because it addresses a different need than Order Management integration.",
+        "Product image storage does not fit because it addresses a different need than Order Management integration."
+      ]
+    },
+    {
+      "question": "What should an architect check when several Salesforce clouds share customer data?",
+      "options": [
+        "Whether each cloud can use a different identity for the same person",
+        "Whether the customer profile can be omitted from the design",
+        "Data flow, identity and consistency",
+        "Whether all customer interactions can be moved to one report"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A multi-cloud architecture needs clear data flows, identity matching and a consistent customer experience.",
+      "whyWrong": [
+        "Whether each cloud can use a different identity for the same person does not fit because it addresses a different need than How data flows, identity is matched and experiences remain consistent.",
+        "Whether the customer profile can be omitted from the design does not fit because it addresses a different need than How data flows, identity is matched and experiences remain consistent.",
+        "Whether all customer interactions can be moved to one report does not fit because it addresses a different need than How data flows, identity is matched and experiences remain consistent."
+      ]
+    },
+    {
+      "question": "What is the architect’s role in a B2C Commerce program?",
+      "options": [
+        "Write every storefront component alone",
+        "Manage only the campaign calendar",
+        "Own only the service team’s case queue",
+        "End-to-end B2C design"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The architect aligns the solution across Commerce and the other products required to meet the customer and business needs.",
+      "whyWrong": [
+        "Write every storefront component alone does not fit because it addresses a different need than Guide the end-to-end design across commerce and related services.",
+        "Manage only the campaign calendar does not fit because it addresses a different need than Guide the end-to-end design across commerce and related services.",
+        "Own only the service team’s case queue does not fit because it addresses a different need than Guide the end-to-end design across commerce and related services."
+      ]
+    },
+    {
+      "question": "A retailer expects seasonal traffic spikes and does not want to manage storefront servers. Which deployment model fits?",
+      "options": [
+        "Cloud-hosted scalable service",
+        "A single on-premises server sized for average traffic",
+        "A fixed local instance with no scale plan",
+        "A desktop application installed for each shopper"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A cloud-hosted service avoids customer-managed storefront servers and supports scale according to the service design and plan.",
+      "whyWrong": [
+        "A single on-premises server sized for average traffic does not fit because it addresses a different need than A cloud-hosted commerce service sized for variable demand.",
+        "A fixed local instance with no scale plan does not fit because it addresses a different need than A cloud-hosted commerce service sized for variable demand.",
+        "A desktop application installed for each shopper does not fit because it addresses a different need than A cloud-hosted commerce service sized for variable demand."
+      ]
+    },
+    {
+      "question": "A shopper needs help with an order after purchase. Which Salesforce capability is most relevant?",
+      "options": [
+        "Marketing Cloud audience segmentation",
+        "Customer support and order cases",
+        "Commerce product catalogue management",
+        "Tableau dashboard authoring"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Service Cloud supports customer service workflows, including cases and order-related support.",
+      "whyWrong": [
+        "Marketing Cloud audience segmentation does not fit because it addresses a different need than Service Cloud case and customer support.",
+        "Commerce product catalogue management does not fit because it addresses a different need than Service Cloud case and customer support.",
+        "Tableau dashboard authoring does not fit because it addresses a different need than Service Cloud case and customer support."
+      ]
+    },
+    {
+      "question": "Which design principle should guide a consumer commerce solution?",
+      "options": [
+        "Optimize internal reporting before customer needs",
+        "Build desktop pages first and defer mobile behavior",
+        "Customer journey, performance and mobile",
+        "Treat each cloud as a separate customer experience"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A B2C solution should follow the customer journey and account for performance and mobile use.",
+      "whyWrong": [
+        "Optimize internal reporting before customer needs does not fit because it addresses a different need than Align the journey with performance and mobile use.",
+        "Build desktop pages first and defer mobile behavior does not fit because it addresses a different need than Align the journey with performance and mobile use.",
+        "Treat each cloud as a separate customer experience does not fit because it addresses a different need than Align the journey with performance and mobile use."
       ]
     }
   ]

@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the MuleSoft Platform Architect exam for?",
+    "heading": "Who should take the MuleSoft Platform Architect exam?",
     "personas": [
       {
         "label": "Platform architects",
-        "description": "You decide where Mule applications run and how the platform is governed across teams."
+        "description": "You decide where Mule applications run and how Anypoint Platform is structured and governed across teams."
       },
       {
         "label": "Infrastructure engineers",
-        "description": "You handle the networking, isolation and uptime side of Anypoint Platform."
+        "description": "You design networking, runtime isolation, availability, and operational support for integration platforms."
       },
       {
         "label": "IT directors and technical leads",
-        "description": "You set the standards other teams build to, and own the platform budget."
+        "description": "You set platform standards, help teams work within them, and own platform planning and budgets."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the MuleSoft Platform Architect Exam Hard?",
-    "summary": "This is one of the harder MuleSoft exams. It is less about building integrations and more about where they run: deployment models, networking, availability and the rules teams follow. You need some infrastructure knowledge, not just Mule development.",
+    "heading": "How challenging is the MuleSoft Platform Architect exam?",
+    "summary": "The exam focuses on platform design more than writing integrations. You need to choose deployment, networking, availability, and governance designs that meet organizational constraints.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>About 70% to pass</strong>, roughly 41 correct answers out of 60. Confirm it in the official exam guide before you book.",
-      "<strong>Infrastructure depth.</strong> Expect detailed questions on VPCs, load balancers, clustering and failover.",
-      "<strong>Several disciplines at once.</strong> Networking, security, operations and governance all appear."
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
+      "<strong>Infrastructure topics:</strong> Review VPCs, load balancing, clustering, and failover.",
+      "<strong>Several disciplines:</strong> Networking, security, operations, and governance all affect the architecture."
     ],
-    "passRateGuidance": "You are ready when you can pick a deployment model from a set of constraints and justify it, and explain how traffic reaches a Mule app from the internet. Aim for 80% or more on practice tests."
+    "passRateGuidance": "Practice selecting a deployment model from constraints and explaining how traffic reaches the application. Also explain what happens to data and scheduled work when a node or region fails. Aim for at least 80% on practice questions."
   },
   "examFormat": {
-    "heading": "MuleSoft Platform Architect Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe an organisation's constraints, such as data that must stay on site, a required uptime level or a fixed IP for a partner, and ask which platform design meets them.",
+    "heading": "MuleSoft Platform Architect exam format",
+    "intro": "The exam is proctored online or at a test center. Questions describe platform constraints and ask which architecture meets them.",
+    "scenarioPercent": "Scenarios may require on-premises data residency, fixed IP addresses, high availability, or delegated access across business units.",
     "bestWayToPass": [
-      "<strong>Know the deployment models apart:</strong> CloudHub 2.0, Runtime Fabric and customer-hosted runtimes, and which constraint pushes you to each.",
-      "<strong>Learn the network path:</strong> How a request reaches a Mule app through a load balancer and a VPC, and where TLS ends.",
-      "<strong>Understand availability:</strong> Multiple replicas, clustering, persistent queues and what actually survives a node failure.",
-      "<strong>Study governance:</strong> Business groups, environments, roles and how API policies are applied consistently."
+      "<strong>Compare deployment options:</strong> Review CloudHub, Runtime Fabric, and customer-hosted runtimes and how they place control and runtime responsibilities.",
+      "<strong>Trace the network path:</strong> Understand VPCs, VPN or peering, load balancers, custom domains, and TLS termination.",
+      "<strong>Plan for availability:</strong> Consider replicas, clustering, persistent queues, and what survives a node failure.",
+      "<strong>Apply governance:</strong> Learn how business groups, environments, roles, and API policies support separate teams and consistent standards."
     ]
   },
   "certificationCard": {
     "code": "MuleSoft Architect",
-    "description": "This exam tests how you design and run Anypoint Platform for an organisation: where applications are deployed, how the network is arranged, how uptime is achieved, and how teams are governed. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Governing web APIs on Anypoint Platform (17%) and Designing APIs using System, Process, and Experience Layers (12%).",
+    "description": "This exam covers Anypoint Platform architecture, including deployment models, network design, availability, API governance, and team administration. The guide allows up to five non-scored questions. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Governing web APIs on Anypoint Platform (17%) and Designing APIs using System, Process, and Experience Layers (12%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",
@@ -58,59 +58,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "MuleSoft Platform Architect: Key Concepts for the Exam",
+    "h2": "MuleSoft Platform Architect: core concepts",
     "blocks": [
       {
         "heading": "Control Plane and Runtime Plane",
-        "body": "Anypoint Platform splits in two. The **control plane** is where you design, manage and monitor: Design Center, Exchange, API Manager, Runtime Manager and Anypoint Monitoring. The **runtime plane** is where applications actually run. The important consequence is that the two can live in different places. With **CloudHub** both are managed by MuleSoft. With **Runtime Fabric** the control plane stays with MuleSoft while the runtime plane runs on your own infrastructure. With a **customer-hosted** runtime you run everything yourself and connect it back for management. Questions about data residency and control usually come down to which plane sits where."
+        "body": "The control plane provides tools to design, manage, and monitor APIs and applications. The runtime plane is where Mule applications execute. In managed cloud deployments, MuleSoft operates both planes. With Runtime Fabric, the control plane can remain in Anypoint while the runtime plane runs in customer-managed infrastructure. A customer-hosted runtime gives the customer more operational responsibility. For data residency and control questions, identify where each plane and the application data will reside."
       },
       {
         "heading": "Choosing a Deployment Model",
-        "body": "**CloudHub 2.0** is the managed option: applications run in MuleSoft's cloud as containers, with replicas for scale and little infrastructure work for you. **Runtime Fabric** runs Mule applications on Kubernetes that you own, in your data centre or your own cloud account, which suits strict data residency or network rules while keeping central management. **Customer-hosted runtimes** give full control and full responsibility, and suit organisations with existing server estates. Match the model to the constraint in the question: data that may not leave the country points away from shared cloud, while a small team with no infrastructure staff points toward CloudHub."
+        "body": "CloudHub provides a managed runtime option. Runtime Fabric supports deployments to customer-managed infrastructure such as Kubernetes while retaining Anypoint Platform management. Customer-hosted runtimes suit organizations that need to manage the runtime environment themselves. Choose based on network access, data residency, operational skills, availability, and the required management model."
       },
       {
-        "heading": "Networking: VPCs, Load Balancers and Connectivity",
-        "body": "An **Anypoint VPC** gives your applications a private network inside CloudHub, isolated from other customers. Connect it to your own network with **VPN** for a site-to-site tunnel or **VPC peering** inside the same cloud provider, so Mule apps can reach internal systems that are not on the public internet. A **dedicated load balancer** gives you static IP addresses, your own domain and certificates, and control over TLS termination, which is what partners need when they must allow-list an address. Without one, applications use the shared load balancer with MuleSoft's domain."
+        "heading": "Networking and Ingress",
+        "body": "Anypoint VPC provides an isolated network for CloudHub applications and can connect to private infrastructure through supported VPN or peering arrangements. A load balancer can provide ingress and, depending on the option, fixed IP addresses, custom domains, and TLS configuration. Trace how requests enter the network and how the application reaches back-end systems. Avoid exposing private databases directly to the public internet."
       },
       {
-        "heading": "Availability and Resilience",
-        "body": "Uptime comes from having more than one of everything. On CloudHub, run **several replicas** of an application so one failure does not stop the service. On Runtime Fabric and customer-hosted runtimes, **clustering** shares work and state across nodes, and some components, such as schedulers; run only on the primary node so a job does not fire twice. For messages that must not be lost, use **persistent queues** or Anypoint MQ rather than in-memory handling. Plan for a region failing as well as a node: that means a second deployment and a way to move traffic. Know your recovery targets and design to them rather than to a general wish for high availability."
+        "heading": "Availability and Disaster Recovery",
+        "body": "Availability design may use replicas, clustering, redundant infrastructure, and persistent messaging. Persistent queues or Anypoint MQ can protect messages when a consumer restarts. Clustered runtimes can coordinate work such as scheduled tasks so it runs once where configured. Disaster recovery starts by setting recovery time and recovery point objectives: acceptable downtime and data loss. A second region or traffic switching plan may be needed in addition to backups."
       },
       {
-        "heading": "Governance, Environments and Monitoring",
-        "body": "A platform used by many teams needs structure. **Business groups** divide the platform by department or business unit, each with its own environments and permissions. **Environments** separate design, test and production, and deployments are promoted between them. **Roles and permissions** decide who may deploy or change policies. **API Manager** applies consistent policies such as client ID enforcement and rate limits, and **API Governance** checks specifications against standards before they are published. **Anypoint Monitoring** provides dashboards, alerts and log search, and **Visualizer** shows which applications call which, which is how you spot unexpected dependencies."
+        "heading": "Governance, Security, and Monitoring",
+        "body": "Business groups organize platform assets and access for teams. Environments separate lifecycle stages such as development and production. Roles and permissions control who can administer or deploy to each area. API Manager policies can enforce client identity consistently, while API Governance checks specifications against standards. Anypoint Visualizer helps show application and API dependencies, and Anypoint Monitoring supports operational dashboards and alerts."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the MuleSoft Platform Architect Exam",
-    "intro": "Most questions give you constraints and several designs that would all run. Pick the one that satisfies the stated limit on data, network or uptime with the least extra machinery.",
+    "h2": "How to prepare for the MuleSoft Platform Architect exam",
+    "intro": "Start with the non-negotiable constraints: data location, network access, uptime, recovery, team separation, and deployment approvals. Choose the simplest platform design that meets them.",
     "blocks": [
       {
-        "heading": "Deployment Model Selection",
-        "body": "Managed cloud and a small team: CloudHub 2.0. Data or network rules that keep workloads on your own infrastructure: Runtime Fabric. Full control and an existing estate: customer-hosted."
+        "heading": "Select a Deployment Model",
+        "body": "Use managed cloud when it meets requirements; consider Runtime Fabric when workloads must run on customer-managed infrastructure; use customer-hosted runtimes when the customer operates the runtime."
       },
       {
-        "heading": "High Availability Design",
-        "body": "Several replicas on CloudHub, clustering on Runtime Fabric and customer-hosted. Persistent queues for messages that must not be lost."
+        "heading": "Design High Availability",
+        "body": "Consider replicas or clusters, persistent messaging, and how scheduled work is coordinated. A backup alone does not provide a complete recovery design."
       },
       {
-        "heading": "Disaster Recovery",
-        "body": "Decide how much downtime and data loss is acceptable, then design to it. A second region and a traffic-switching plan, not just backups."
+        "heading": "Set Disaster Recovery Targets",
+        "body": "Define acceptable downtime and data loss, then design failover and recovery procedures to meet those targets."
       },
       {
-        "heading": "Platform Security",
-        "body": "Anypoint VPC for isolation, VPN or peering to reach internal systems, dedicated load balancer for static IPs and your own certificates."
+        "heading": "Apply Platform Governance",
+        "body": "Use business groups and environments for organizational separation, roles for access control, and API Governance for consistent specification standards."
       },
       {
-        "heading": "Capacity Planning",
-        "body": "Size by throughput and payload, scale out with replicas, and watch the monitoring dashboards before adding capacity blindly."
+        "heading": "Monitor and Scale",
+        "body": "Use monitoring alerts to detect error-rate or performance changes. For stateless workloads, scaling out with additional replicas may be a simple first step."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "Good next steps after MuleSoft Platform Architect:",
+    "heading": "Related credentials for MuleSoft platform architects",
+    "intro": "Continue with a MuleSoft integration architecture or platform operations credential.",
     "links": [
       {
         "href": "/certifications/mulesoft-integration-architect",
@@ -166,7 +166,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A bank must keep all customer data inside its own data centre; but still wants to manage APIs centrally through Anypoint Platform. Which deployment model fits?",
+      "question": "A regulated integration must keep its data plane inside the customer network while Anypoint Platform manages its lifecycle. Which deployment model fits?",
       "options": [
         "A shared load balancer",
         "Design Center",
@@ -174,143 +174,143 @@
         "CloudHub 2.0"
       ],
       "correctAnswer": 2,
-      "explanation": "Runtime Fabric runs the applications on infrastructure the bank owns, while the control plane stays with MuleSoft for central management.",
+      "explanation": "Runtime Fabric keeps the runtime on customer-managed infrastructure and connects it to Anypoint Platform for management.",
       "whyWrong": [
-        "A load balancer routes traffic, it is not a deployment model.",
-        "Design Center is where APIs are designed, not run.",
-        "CloudHub runs applications in MuleSoft's cloud, which the data residency rule rules out."
+        "A load balancer handles traffic but does not host the runtime.",
+        "Design Center is for API design rather than customer-managed execution.",
+        "Runtime Fabric runs applications on customer infrastructure with Anypoint management."
       ]
     },
     {
-      "question": "A partner's firewall only allows traffic from fixed IP addresses, and the API must be served on the company's own domain with its own certificate. What is needed?",
+      "question": "A partner requires a fixed source IP and a custom API domain with the company’s certificate. What platform component should the architect consider?",
       "options": [
         "A larger vCore size",
         "A dedicated load balancer",
-        "An extra replica",
+        "An additional application replica",
         "The shared CloudHub load balancer"
       ],
       "correctAnswer": 1,
-      "explanation": "A dedicated load balancer provides static IPs, custom domains and your own TLS certificates.",
+      "explanation": "A dedicated load balancer can support custom domains, certificates, and fixed IP requirements.",
       "whyWrong": [
-        "Size affects performance, not addressing.",
-        "Replicas add capacity and resilience, not fixed addresses.",
-        "The shared load balancer uses MuleSoft domains and addresses you cannot rely on."
+        "vCore size changes compute, not the required network ingress features.",
+        "A dedicated load balancer can support fixed IPs, custom domains, and certificates.",
+        "An additional replica improves capacity or availability but not ingress identity."
       ]
     },
     {
-      "question": "Mule applications on CloudHub need to reach a database that is only available on the company's internal network. What should the architect set up?",
+      "question": "CloudHub applications must access a database on the company’s private network. What should be configured?",
       "options": [
-        "A public network endpoint on the database",
-        "An Anypoint VPC with VPN or peering",
+        "A public database endpoint",
+        "VPC with VPN or peering",
         "A larger worker",
-        "An extra environment"
+        "Another environment"
       ],
       "correctAnswer": 1,
-      "explanation": "A VPC with a VPN tunnel or peering connection lets CloudHub applications reach internal systems privately.",
+      "explanation": "An Anypoint VPC with a supported VPN or peering connection provides private network access to the database.",
       "whyWrong": [
-        "Exposing a database to the internet is a serious security risk.",
-        "Worker size does not create network connectivity.",
-        "Environments separate deployments, they do not connect networks."
+        "A public endpoint would expose the database rather than provide private connectivity.",
+        "A VPC with VPN or peering can connect CloudHub to the private network.",
+        "A worker size does not create a network route to the database."
       ]
     },
     {
-      "question": "An application must keep serving traffic if one node fails, and a scheduled job inside it must run only once per schedule. What design fits a customer-hosted runtime?",
+      "question": "A two-node Mule deployment must remain available during a node outage and run its scheduled job only once. What design addresses both needs?",
       "options": [
-        "Running the scheduler on every node",
-        "A cluster with the scheduler on the primary",
-        "A single larger server",
-        "Two standalone runtimes with no connection"
+        "Run the scheduler on every node",
+        "Cluster with coordinated scheduling",
+        "Use one larger standalone server",
+        "Run two unrelated runtimes"
       ],
       "correctAnswer": 1,
-      "explanation": "Clustering keeps the service available, and schedulers run on the primary node by default so the job fires once.",
+      "explanation": "A cluster can provide node resilience, and coordinated primary-node scheduling prevents every node from running the same scheduled task.",
       "whyWrong": [
-        "Running it everywhere causes the job to run several times.",
-        "One server is a single point of failure.",
-        "Unconnected runtimes would each run the schedule, causing duplicates."
+        "Running the scheduler on all nodes may duplicate the job.",
+        "A cluster can coordinate redundancy and primary-node scheduling.",
+        "A single server remains a point of failure."
       ]
     },
     {
-      "question": "Which statement about the control plane and the runtime plane is correct?",
+      "question": "Which statement distinguishes the control plane from the runtime plane?",
       "options": [
-        "Both always run in MuleSoft's cloud",
-        "The runtime plane designs APIs",
-        "The control plane manages; the runtime plane runs",
-        "They are simply two different names for the very same thing"
+        "Both always run in MuleSoft’s cloud",
+        "The runtime plane is where APIs are designed",
+        "Control manages; runtime runs apps",
+        "They are two names for the same component"
       ],
       "correctAnswer": 2,
-      "explanation": "Design, management and monitoring sit in the control plane, while applications execute in the runtime plane, and the two can be hosted differently.",
+      "explanation": "The control plane manages platform assets and operations; the runtime plane executes Mule applications.",
       "whyWrong": [
-        "Runtime Fabric and customer-hosted runtimes put the runtime plane on your own infrastructure.",
-        "API design happens in the control plane.",
-        "They are distinct, which is what makes hybrid deployments possible."
+        "The control and runtime planes can be separated and placed according to the deployment model.",
+        "The runtime plane executes applications; it does not design APIs.",
+        "The control and runtime planes have different responsibilities."
       ]
     },
     {
-      "question": "A platform serves five business units, each needing its own environments and access control, under one company agreement. What should be used?",
+      "question": "Five business units need separate environments and access control under one company platform agreement. What should be used?",
       "options": [
-        "A separate Anypoint account per unit",
+        "A separate Anypoint account for each unit",
         "One shared environment for everyone",
         "Business groups",
         "Separate load balancers"
       ],
       "correctAnswer": 2,
-      "explanation": "Business groups divide the platform by unit, each with its own environments, permissions and resources.",
+      "explanation": "Business groups organize platform assets and access for different teams or units.",
       "whyWrong": [
-        "Separate accounts lose central governance and complicate licensing.",
-        "One shared environment gives no separation at all.",
-        "Load balancers route traffic, they do not govern access."
+        "Business groups can separate teams under one platform agreement.",
+        "One shared environment does not provide the requested team separation.",
+        "Load balancers route network traffic rather than organize platform permissions."
       ]
     },
     {
-      "question": "Orders must not be lost if the receiving application restarts mid-processing. What should the design include?",
+      "question": "Orders must remain available for processing if the receiving application restarts. What should the design include?",
       "options": [
-        "Simply adding more replicas",
+        "More application replicas only",
         "A larger heap",
         "In-memory queues",
-        "Persistent queues or MQ"
+        "Persistent queues or Anypoint MQ"
       ],
       "correctAnswer": 3,
-      "explanation": "Persistent messaging stores the message outside the application, so a restart does not lose it.",
+      "explanation": "Persistent queues or Anypoint MQ can retain messages across application restarts for later processing.",
       "whyWrong": [
-        "Replicas help availability but do not by themselves preserve in-flight messages.",
-        "More memory does not make messages durable.",
-        "In-memory queues are lost when the process restarts."
+        "Replicas alone do not preserve in-flight messages across restarts.",
+        "Heap size does not persist messages when an application restarts.",
+        "In-memory queues may lose messages on restart."
       ]
     },
     {
-      "question": "An architect needs to see which applications call which APIs across the estate, to find unexpected dependencies. Which tool shows this?",
+      "question": "An architect needs to see which applications call which APIs across the estate. Which tool helps visualize these dependencies?",
       "options": [
-        "The Anypoint Exchange",
+        "Anypoint Exchange",
         "Anypoint Visualizer",
         "Design Center",
         "Business groups"
       ],
       "correctAnswer": 1,
-      "explanation": "Visualizer maps the live dependencies between applications and APIs.",
+      "explanation": "Anypoint Visualizer shows relationships and dependencies among APIs and applications.",
       "whyWrong": [
-        "Exchange is the catalogue of published assets.",
-        "Design Center is for designing APIs and applications.",
-        "Business groups organise the platform, they do not show call paths."
+        "Exchange catalogs assets but does not visualize application dependencies.",
+        "Visualizer shows API and application relationships.",
+        "Design Center is used for design work rather than estate visualization."
       ]
     },
     {
-      "question": "All APIs published by every team must require a client ID before they can be called. How should this be enforced consistently?",
+      "question": "Every API must require a client ID before consumers can call it. How can this be enforced consistently?",
       "options": [
-        "Client ID enforcement through API Manager",
-        "Ask each of the teams to add their own checks in code",
-        "Review each API by hand before release",
-        "Rely on the dedicated load balancer"
+        "Apply Client ID Enforcement through API Manager",
+        "Ask each team to add a separate code check",
+        "Review every API manually before release",
+        "Rely on the load balancer"
       ],
       "correctAnswer": 0,
-      "explanation": "API Manager applies policies centrally and consistently, without each team writing their own checks.",
+      "explanation": "API Manager can apply a Client ID Enforcement policy consistently to managed APIs.",
       "whyWrong": [
-        "Per-team code produces inconsistent results and is hard to audit.",
-        "Manual review does not enforce anything at run time.",
-        "A load balancer routes traffic, it does not enforce client identity."
+        "API Manager can enforce registered client credentials at runtime.",
+        "Code checks vary by team and are harder to govern consistently.",
+        "Manual review does not enforce authentication on each call."
       ]
     },
     {
-      "question": "A company wants to check that every new API specification follows naming and security standards before it is published. What fits?",
+      "question": "New API specifications must meet naming and security standards before publication. What should the organization use?",
       "options": [
         "VPC peering",
         "A dedicated load balancer",
@@ -318,91 +318,91 @@
         "Anypoint Monitoring alerts"
       ],
       "correctAnswer": 2,
-      "explanation": "API Governance validates specifications against rulesets, so standards are applied before publication.",
+      "explanation": "API Governance rulesets can check specifications against organizational standards.",
       "whyWrong": [
-        "Peering is a network connection.",
-        "A load balancer handles traffic.",
-        "Monitoring watches running applications."
+        "VPC peering connects networks, not specification standards.",
+        "Load balancers manage traffic rather than API design rules.",
+        "Governance rulesets can check API specifications against standards."
       ]
     },
     {
-      "question": "Which pair of numbers should drive a disaster recovery design?",
+      "question": "Which pair of targets should drive a disaster recovery design?",
       "options": [
-        "How much downtime and data loss are acceptable",
-        "The total number of developers and APIs involved",
-        "The count of business groups",
-        "The vCore size and heap size"
+        "RTO and RPO",
+        "Number of developers and APIs",
+        "Number of business groups",
+        "Worker size and heap size"
       ],
       "correctAnswer": 0,
-      "explanation": "Recovery time and recovery point objectives set how fast you must be back and how much data you can afford to lose, which determines the design.",
+      "explanation": "Recovery time and recovery point objectives express acceptable downtime and data loss.",
       "whyWrong": [
-        "Team and API counts do not define recovery needs.",
-        "Governance structure is unrelated to recovery.",
-        "Sizing affects performance, not recovery targets."
+        "Recovery objectives describe acceptable downtime and data loss.",
+        "Team size and API count do not define recovery targets.",
+        "Business group count does not specify failover expectations."
       ]
     },
     {
       "question": "What does an Anypoint VPC provide?",
       "options": [
-        "A private network for your CloudHub apps",
-        "Somewhere to store the API specifications",
-        "Automatic code deployment",
+        "Private network for apps",
+        "A catalog for API specifications",
+        "Automatic application deployment",
         "A monitoring dashboard"
       ],
       "correctAnswer": 0,
-      "explanation": "A VPC isolates your applications on their own network, which can then be connected to your own infrastructure.",
+      "explanation": "Anypoint VPC provides network isolation and private connectivity for CloudHub applications.",
       "whyWrong": [
-        "Specifications live in Design Center and Exchange.",
-        "Deployment is handled by Runtime Manager and your pipeline.",
-        "Dashboards come from Anypoint Monitoring."
+        "An Anypoint VPC provides private network isolation and connectivity for CloudHub applications.",
+        "Exchange stores and shares assets rather than providing a network.",
+        "Monitoring dashboards display operations data but do not provide private networking."
       ]
     },
     {
-      "question": "Traffic to an API has doubled and response times are rising on CloudHub. The application is stateless. What is the simplest first step?",
+      "question": "A stateless CloudHub application is under heavier traffic and response time is rising. What is a straightforward first step?",
       "options": [
-        "Add more replicas",
+        "Add application replicas",
         "Switch to a shared load balancer",
-        "Move to a customer-hosted runtime",
-        "Create a new business group"
+        "Move immediately to customer-hosted runtime",
+        "Create another business group"
       ],
       "correctAnswer": 0,
-      "explanation": "Stateless applications scale out: more replicas share the load without redesign.",
+      "explanation": "Adding replicas can scale a stateless application horizontally to handle more traffic.",
       "whyWrong": [
-        "The load balancer type does not add capacity.",
-        "Moving the runtime is a large change that does not address load directly.",
-        "Business groups organise teams, not capacity."
+        "Replicas can add capacity for a stateless application.",
+        "A shared load balancer does not add application compute capacity alone.",
+        "Changing to customer-hosted runtime is a larger change than scaling replicas."
       ]
     },
     {
-      "question": "Where should a team be prevented from deploying straight to production without review?",
+      "question": "Where should an organization prevent teams from deploying directly to production without review?",
       "options": [
-        "By using a rather smaller vCore size in production",
-        "By turning off monitoring",
-        "By deleting the production environment",
-        "Through environment permissions and roles"
+        "Reduce the production vCore size",
+        "Turn off monitoring",
+        "Delete the production environment",
+        "Use environment permissions and roles"
       ],
       "correctAnswer": 3,
-      "explanation": "Roles and environment permissions control who can deploy where, which is how promotion gates are enforced.",
+      "explanation": "Environment permissions and roles can restrict who is allowed to deploy to production.",
       "whyWrong": [
-        "Sizing does not control access.",
-        "Turning off monitoring hides problems rather than preventing deployments.",
-        "Deleting production is not an option."
+        "Compute sizing does not grant deployment permission.",
+        "Monitoring does not control who can deploy.",
+        "Deleting the environment is not a workable approval control."
       ]
     },
     {
-      "question": "A company runs Mule applications on Kubernetes clusters it already owns, and wants MuleSoft to manage deployment and monitoring. Which option is this?",
+      "question": "A platform team needs Anypoint-managed deployments and monitoring for Mule apps running on its Kubernetes clusters. Which option provides that integration?",
       "options": [
-        "The Anypoint Exchange",
+        "Anypoint Exchange",
         "CloudHub 1.0",
         "Anypoint Studio",
         "Runtime Fabric"
       ],
       "correctAnswer": 3,
-      "explanation": "Runtime Fabric deploys and manages Mule applications on Kubernetes infrastructure owned by the customer.",
+      "explanation": "Runtime Fabric links customer-operated Kubernetes infrastructure with Anypoint Platform deployment and monitoring capabilities.",
       "whyWrong": [
-        "Exchange is the asset catalogue.",
-        "CloudHub runs in MuleSoft's own cloud.",
-        "Studio is the development tool."
+        "Exchange catalogs assets rather than deploying to customer Kubernetes.",
+        "CloudHub runs in MuleSoft-managed infrastructure.",
+        "Studio is a development environment rather than a runtime deployment option."
       ]
     }
   ]

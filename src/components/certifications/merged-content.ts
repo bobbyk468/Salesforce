@@ -30,7 +30,9 @@ export const MERGED_CERT_CONTENT: Record<string, Array<() => Promise<{ default: 
   'data-360-consultant': [() => import('./merged/data-360-consultant-study-guide'), () => import('./merged/data-360-consultant-exam-tips')],
   'data-architect': [() => import('./merged/data-architect-study-guide'), () => import('./merged/data-architect-exam-tips')],
   'dev-lifecycle-deployment-architect': [() => import('./merged/dev-lifecycle-deployment-architect-study-guide'), () => import('./merged/dev-lifecycle-deployment-architect-exam-tips')],
-  'developer-1': [() => import('./merged/pd1-study-guide'), () => import('./merged/pd1-exam-tips')],
+  // The exam tips module repeated the weightage table, study plan and FAQ that
+  // the hub and the study guide already carry, so only the study guide renders.
+  'developer-1': [() => import('./merged/pd1-study-guide')],
   'developer-2': [() => import('./merged/pd2-study-guide'), () => import('./merged/pd2-exam-tips')],
   'education-cloud-consultant': [() => import('./merged/education-cloud-consultant-study-guide'), () => import('./merged/education-cloud-consultant-exam-tips')],
   'email-specialist': [() => import('./merged/email-specialist-study-guide'), () => import('./merged/email-specialist-exam-tips')],

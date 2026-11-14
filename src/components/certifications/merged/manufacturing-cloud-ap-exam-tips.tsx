@@ -31,7 +31,7 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'How hard is the Manufacturing Cloud Accredited Professional exam?',
-    answer: 'Manufacturing Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150). It tests Manufacturing Cloud’s specialised capabilities: account-based forecasting, sales agreements, rebate management, and the Manufacturing Cloud data model for complex B2B relationships. Practitioners with hands-on Manufacturing Cloud experience typically pass in 3–4 weeks. Sales agreements, including agreement terms, actuals calculation, and renewal workflows, are the most tested and most commonly missed topic.',
+    answer: 'Manufacturing Cloud AP is a Pass/Fail accredited professional exam with 50 questions and a 75-minute time limit, and costs $150. It tests Manufacturing Cloud’s specialised capabilities: account-based forecasting, sales agreements, rebate management, and the Manufacturing Cloud data model for complex B2B relationships. Practitioners with hands-on Manufacturing Cloud experience typically pass in 3–4 weeks. Sales agreements, including agreement terms, actuals calculation, and renewal workflows, are the most tested and most commonly missed topic.',
   },
   {
     question: 'What are the highest-weight Manufacturing Cloud AP exam sections?',
@@ -88,7 +88,7 @@ export default function ManufacturingCloudApExamTipsContent() {
             <span className="font-medium text-gray-900">Partner Network Management</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Sales Agreements + ABF = 55%, these two topics are the core of Manufacturing Cloud.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 50 questions, 75 minutes, Pass/Fail, $150. Sales Agreements + ABF = 55%, these two topics are the core of Manufacturing Cloud.</p>
         </div>
       </section>
 
@@ -110,7 +110,7 @@ export default function ManufacturingCloudApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">AP Readiness Check</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+          Pass 3 timed 50-question mocks before booking (Pass/Fail scoring)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Manufacturing Cloud AP is for implementation partners and Salesforce employees delivering

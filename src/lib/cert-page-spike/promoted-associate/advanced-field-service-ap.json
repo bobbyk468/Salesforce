@@ -1,51 +1,51 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Advanced Field Service Accredited Professional exam for?",
+    "heading": "Who should take the Advanced Field Service AP exam?",
     "personas": [
       {
-        "label": "Field Service leads",
-        "description": "You run Field Service for a company with many technicians and want to show you can set up scheduling and optimisation well."
+        "label": "Field Service leaders",
+        "description": "You manage a large technician organization and want to validate your knowledge of scheduling policies and optimization."
       },
       {
-        "label": "Consultants and admins",
-        "description": "You already hold the Agentforce Field Service Consultant credential or have built Field Service, and want to prove deeper skills."
+        "label": "Field Service consultants and administrators",
+        "description": "You already configure Salesforce Field Service and want to demonstrate deeper skills in complex scheduling, crews, inventory, and mobile work."
       },
       {
-        "label": "Career builders",
-        "description": "You specialise in Field Service projects and want a credential beyond the consultant exam."
+        "label": "Field Service specialists",
+        "description": "You focus on service operations projects and want an advanced credential beyond the consultant-level exam."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Advanced Field Service Accredited Professional Exam Hard?",
-    "summary": "It goes deeper than the Agentforce Field Service Consultant exam. Most questions are about scheduling: how policies, work rules and objectives shape the schedule, and which optimisation option fits a situation.",
+    "heading": "How challenging is the Advanced Field Service AP exam?",
+    "summary": "The exam goes deeper into scheduling design and optimization than the consultant-level credential. Be ready to explain how policies, work rules, service objectives, and optimization options affect a schedule.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
-      "<strong>Scheduling depth.</strong> Scheduling policies, work rules, service objectives and the types of optimisation.",
-      "<strong>Real setups.</strong> Crews, multi-day work, shifts, inventory and the mobile app all come up."
+      "<strong>46 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>73% to pass</strong>, which is 34 correct answers out of 46.",
+      "<strong>Scheduling detail:</strong> Review work rules, service objectives, policies, and optimization modes.",
+      "<strong>Complex service operations:</strong> Study crews, multi-day work, shifts, inventory, and mobile workflows."
     ],
-    "passRateGuidance": "People who have tuned scheduling in a live Field Service org do best. Before you book. Aim for 75% or more on practice tests and make sure you can explain why a given appointment was or wasn't scheduled."
+    "passRateGuidance": "Practice troubleshooting schedules in a Field Service org. For each unscheduled appointment, identify the applicable rule, resource constraint, or objective. Confirm current exam requirements in the official guide before registering."
   },
   "examFormat": {
-    "heading": "Advanced Field Service Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a scheduling or field problem, such as too much travel time or jobs needing two technicians, and ask what to change.",
+    "heading": "Advanced Field Service AP exam format",
+    "intro": "The exam is proctored online. Questions focus on advanced scheduling and field operations.",
+    "scenarioPercent": "Many questions describe a scheduling or service problem, such as excessive travel or a job that needs multiple technicians, and ask which configuration should change.",
     "bestWayToPass": [
-      "<strong>Know scheduling policies inside out:</strong> Work rules filter out technicians. Service objectives rank the ones that are left.",
-      "<strong>Learn the optimisation types:</strong> Global, in-day and resource schedule optimisation, and when to run each.",
-      "<strong>Understand crews and multi-day work:</strong> How jobs needing several people or several days are scheduled.",
-      "<strong>Know the mobile app:</strong> Offline use, data priming and what technicians can do in the field."
+      "<strong>Separate constraints from preferences:</strong> Work rules filter out unavailable or unqualified resources; service objectives rank the remaining options.",
+      "<strong>Choose the optimization mode:</strong> Know when to optimize several days, repair today’s schedule, or improve one resource’s schedule.",
+      "<strong>Plan complex work:</strong> Review service crews, appointment dependencies, and multi-day scheduling.",
+      "<strong>Understand mobile operations:</strong> Study offline priming, technician updates, inventory, and the information available in the field."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests advanced Field Service setup: scheduling policies and optimisation, complex appointments, crews, inventory, maintenance plans and the mobile app.",
+    "description": "This exam covers advanced Salesforce Field Service setup, including scheduling policies, optimization, complex appointments, crews, inventory, maintenance plans, and mobile work.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "Not published",
-      "duration": "90 min",
+      "passingScore": "73%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [
@@ -58,59 +58,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Advanced Field Service AP: Key Concepts for the Exam",
+    "h2": "Advanced Field Service AP: core concepts",
     "blocks": [
       {
-        "heading": "Scheduling & Optimization Engine",
-        "body": "A **scheduling policy** tells the system how to choose a technician. **Work rules** are hard filters: the technician must have the right skills, work in the right territory and be available. **Service objectives** are soft goals that rank the remaining options, such as least travel, earliest arrival or preferred technician. You can weight objectives to show what matters most. **Optimisation** reruns scheduling across many appointments to improve the whole plan. **Global optimisation** usually runs overnight for the coming days. **In-day optimisation** fixes today's schedule after changes. **Resource schedule optimisation** improves one technician's day."
+        "heading": "Scheduling Policies and Optimization",
+        "body": "A scheduling policy combines work rules and service objectives. Work rules define constraints, such as required skills, territory, or availability. Service objectives rank the resources that meet those constraints, for example by travel time or arrival window. Optimization can improve schedules across appointments. Global optimization can plan a broader set of upcoming appointments, in-day optimization can respond to changes during the day, and resource schedule optimization can improve an individual technician’s schedule. Choose the mode that matches the scope and timing of the problem."
       },
       {
-        "heading": "Work Orders, Work Types & Service Appointments",
-        "body": "A **work order** describes the job. A **work type** is a template that sets duration, required skills and whether a service appointment is created automatically. The **service appointment** is what gets scheduled on the calendar. Complex jobs can need **dependencies** between appointments, such as job B must start after job A ends. Long jobs can be scheduled as **multi-day work**. Jobs needing several people can use **service crews**, or several resources assigned to one appointment."
+        "heading": "Work Orders, Work Types, and Appointments",
+        "body": "A work order describes the service job. A work type can provide a reusable configuration such as duration, required skills, or whether an appointment is created. The service appointment is the scheduled visit. Dependencies can order multiple appointments, while multi-day work supports jobs that span several days. A service crew or multiple assigned resources can support work that requires more than one person."
       },
       {
-        "heading": "Asset Management & Maintenance Plans",
-        "body": "**Assets** are the products installed at a customer's site. **Maintenance plans** create work orders on a schedule, for example a check every six months, for one or many assets. You can set how far ahead work orders are generated and whether they are grouped. Asset history shows every visit and part used, which helps spot repeat failures. Warranty terms and entitlements can show what service the customer is owed."
+        "heading": "Assets and Maintenance Plans",
+        "body": "Assets represent products installed at customer locations. A maintenance plan can generate work orders on a recurring schedule for one or more assets. Plan settings can control the generation horizon and grouping. Asset history helps teams review prior visits and parts used. Warranty and entitlement information can help determine which service is covered."
       },
       {
-        "heading": "Inventory & Parts Management",
-        "body": "**Locations** include warehouses and technicians' vans. **Product items** record how much of each part is at a location. Technicians use **product requests** to ask for parts, and **product transfers** move parts between locations. When a part is used on a job, it is logged as **product consumed**, which lowers stock. Required parts can be set on a work type, so the scheduler can favour technicians who already carry them."
+        "heading": "Inventory and Parts",
+        "body": "Locations can represent warehouses, depots, or technician vehicles. Product items track stock at a location. Product requests ask for parts, transfers move them between locations, and product consumed records parts used on a job. Where configuration supports it, required parts on a work type can help scheduling account for technician inventory."
       },
       {
-        "heading": "Mobile Worker Experience & Offline",
-        "body": "The **Field Service mobile app** lets technicians see their schedule, update work orders, capture signatures and log parts and time. It works **offline**: data is downloaded (primed) to the device ahead of time, and changes sync when the connection returns. Admins choose what data is primed so the app stays fast. Mobile flows and app extensions add custom steps, such as safety checklists. Technicians can also update their status, which keeps the dispatcher console accurate."
+        "heading": "Mobile Work and Offline Access",
+        "body": "The Field Service mobile app lets technicians review assignments, update work orders, capture signatures, and record time or parts. Offline work depends on downloading the required data to the device ahead of time, then syncing changes when connectivity returns. Administrators control what is primed. Mobile flows can add guided steps such as checklists, and status updates help dispatchers see current field progress."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Advanced Field Service Accredited Professional Exam",
-    "intro": "Most questions are about why the schedule looks the way it does, or how to set up a tricky job. Separate the hard rules from the soft goals.",
+    "h2": "How to prepare for the Advanced Field Service AP exam",
+    "intro": "First decide whether the issue is a hard scheduling constraint, a preference, a complex appointment, or a field execution need. Then select the configuration that owns it.",
     "blocks": [
       {
-        "heading": "Optimization Engine Architecture",
-        "body": "Global optimisation for the next few days, usually overnight. In-day optimisation to repair today. Resource schedule optimisation for one person's day."
+        "heading": "Select an Optimization Scope",
+        "body": "Use broad optimization for a set of upcoming appointments, in-day optimization to respond to changes today, and resource schedule optimization for one technician’s schedule."
       },
       {
-        "heading": "Complex Scheduling Scenarios",
-        "body": "Jobs in a fixed order use dependencies. Long jobs use multi-day work. Jobs needing several people use crews or multiple resources."
+        "heading": "Model Complex Appointments",
+        "body": "Use dependencies for work that must happen in sequence, multi-day scheduling for jobs spanning days, and crews or multiple resources for work requiring several people."
       },
       {
-        "heading": "Resource Capacity Planning",
-        "body": "Capacity-based resources, such as contractors, are scheduled by hours or jobs per period, not by exact slots."
+        "heading": "Plan Resource Capacity",
+        "body": "Capacity-based resources can be scheduled by a quantity such as hours or jobs within a period, rather than only by a specific appointment slot."
       },
       {
-        "heading": "Field Service Analytics",
-        "body": "Track first-time fix rate, travel time, utilisation and on-time arrival to see where scheduling can improve."
+        "heading": "Measure Field Service Results",
+        "body": "Use measures such as first-time fix, travel time, utilization, and on-time arrival to understand service performance and scheduling outcomes."
       },
       {
-        "heading": "Mobile App Advanced Configuration",
-        "body": "Control offline priming, add mobile flows for checklists, and keep technician status updated for dispatchers."
+        "heading": "Configure the Mobile Experience",
+        "body": "Choose offline data priming deliberately, use mobile flows for guided tasks, and keep technician status current for dispatchers."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After This AP",
-    "intro": "Good next steps after Advanced Field Service:",
+    "heading": "Related credentials after Advanced Field Service AP",
+    "intro": "Continue with a Field Service, service operations, or Salesforce architecture credential.",
     "links": [
       {
         "href": "/certifications/field-service",
@@ -166,167 +166,167 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A technician without the right certification keeps being suggested for electrical jobs. What should be changed?",
+      "question": "A technician without the required certification keeps appearing in suggestions for electrical jobs. What should you change?",
       "options": [
-        "Increase the job's duration",
-        "Add a service objective covering the preferred technician for the account",
-        "A required skill on the work type, plus a skill work rule",
-        "Turn off optimisation"
+        "Increase the job duration",
+        "Add a service objective to prefer the account’s technician",
+        "Required work type skill and skill rule",
+        "Turn off optimization"
       ],
       "correctAnswer": 2,
-      "explanation": "Work rules are hard filters. A skill work rule removes technicians who don't have the required skill.",
+      "explanation": "Work Rules act as filters. A skill work rule removes technicians who do not have the required skill.",
       "whyWrong": [
-        "Duration doesn't affect skills.",
-        "Objectives only rank candidates. They can't rule someone out.",
-        "Turning off optimisation doesn't stop wrong suggestions."
+        "Job duration does not affect technician skills.",
+        "Objectives rank candidates but do not exclude them.",
+        "Turning off optimization does not filter out unqualified technicians."
       ]
     },
     {
-      "question": "The business wants schedules that cut down on driving time; while still meeting all the rules. What should be adjusted?",
+      "question": "The business wants to reduce driving time while still following all scheduling rules. What should be adjusted?",
       "options": [
-        "The minimise travel objective weight",
+        "Minimize Travel objective weight",
         "The number of work types",
         "The page layout",
-        "The serial numbers held on the assets"
+        "The serial numbers on the assets"
       ],
       "correctAnswer": 0,
-      "explanation": "Service objectives rank options. Giving more weight to minimise travel makes the scheduler prefer shorter trips.",
+      "explanation": "Service Objectives rank schedule options. A higher weight for Minimize Travel tells the scheduler to prefer shorter trips.",
       "whyWrong": [
-        "Work type count doesn't shape travel.",
-        "Layouts don't affect scheduling.",
-        "Serial numbers have no effect on travel."
+        "The number of work types does not control travel time.",
+        "Page layouts do not affect scheduling.",
+        "Asset serial numbers do not affect travel time."
       ]
     },
     {
-      "question": "Several technicians called in sick this morning and today's schedule is now full of gaps and conflicts. Which optimisation fits?",
+      "question": "Several technicians called in sick, leaving gaps and conflicts in today’s schedule. Which optimization should you use?",
       "options": [
-        "Resource schedule optimisation for one technician",
-        "No optimisation, just wait",
-        "Global optimisation for the next two weeks",
-        "In-day optimisation"
+        "Resource schedule optimization for one technician",
+        "No optimization; wait for the schedule to fix itself",
+        "Global optimization for the next two weeks",
+        "In-Day Optimization"
       ],
       "correctAnswer": 3,
-      "explanation": "In-day optimisation is meant to repair today's schedule after changes like absences or emergencies.",
+      "explanation": "In-Day Optimization repairs today’s schedule after changes such as absences or emergencies.",
       "whyWrong": [
-        "Fixing one technician doesn't solve the wider problem.",
-        "Waiting leaves customers without visits.",
-        "Global optimisation looks further ahead and usually runs overnight."
+        "Optimizing one technician will not fix the wider schedule.",
+        "Waiting does not fill the gaps or resolve conflicts.",
+        "Global optimization plans further ahead and often runs overnight."
       ]
     },
     {
-      "question": "A job needs two technicians to work together at the same time. What is a good way to schedule it?",
+      "question": "A job requires two technicians to work together at the same time. How should you schedule it?",
       "options": [
-        "Make the job twice as long",
-        "Create one appointment and hope two people turn up",
-        "A service crew, or several resources on it",
-        "Schedule it twice on different days"
+        "Double the job duration",
+        "Create one appointment and expect two people to arrive",
+        "Service crew or multiple resources",
+        "Schedule two appointments on different days"
       ],
       "correctAnswer": 2,
-      "explanation": "Crews and multiple-resource scheduling let one appointment be served by more than one person at once.",
+      "explanation": "Service crews and multiple-resource scheduling let more than one person work on one appointment at the same time.",
       "whyWrong": [
-        "A longer job is still one person.",
-        "Hoping doesn't schedule anyone.",
-        "Two different days means they aren't working together."
+        "A longer job still has only one assigned person.",
+        "An appointment must be assigned to the needed resources.",
+        "Appointments on different days do not let the technicians work together."
       ]
     },
     {
-      "question": "Installing a pump must finish before the electrical connection job can start. How should this be set up?",
+      "question": "Installing a pump must finish before an electrical connection job can start. How should you set this up?",
       "options": [
-        "A note in the description",
-        "One very long appointment",
-        "A dependency on the appointments",
-        "Two unrelated appointments"
+        "Add a note to the description",
+        "Create one very long appointment",
+        "Appointment dependency",
+        "Create two unrelated appointments"
       ],
       "correctAnswer": 2,
-      "explanation": "Appointment dependencies tell the scheduler that one job must finish before the other starts.",
+      "explanation": "Appointment dependencies tell the scheduler that one job must finish before another can start.",
       "whyWrong": [
-        "A note doesn't affect scheduling.",
-        "One long job can't use two different skill sets well.",
-        "Unrelated appointments might be scheduled in the wrong order."
+        "A note does not affect scheduling.",
+        "One long appointment cannot represent two jobs that need different skills.",
+        "Unrelated appointments may be scheduled in the wrong order."
       ]
     },
     {
-      "question": "A building's lifts must be inspected every 3 months. How should the work orders be created?",
+      "question": "A building’s lifts need an inspection every three months. How should the work orders be created?",
       "options": [
-        "Creating each of them by hand every quarter",
-        "A maintenance plan for the lift assets",
-        "A report emailed to the team",
-        "A Case for each inspection"
+        "Create each work order by hand every quarter",
+        "Maintenance Plan for lift assets",
+        "Email the team a report",
+        "Create a Case for each inspection"
       ],
       "correctAnswer": 1,
-      "explanation": "Maintenance plans create work orders on a schedule for the assets they cover.",
+      "explanation": "Maintenance Plans create work orders on a schedule for the assets they cover.",
       "whyWrong": [
         "Manual creation is easy to forget.",
-        "A report doesn't create the work.",
-        "Cases are for issues; and still need manual creation."
+        "A report does not create work orders.",
+        "Cases track issues, and each inspection would still need to be created by hand."
       ]
     },
     {
-      "question": "A technician uses a spare part on a job. How should this be recorded so stock stays correct?",
+      "question": "A technician uses a spare part on a job. How should they record it so inventory stays accurate?",
       "options": [
-        "Log it as a product consumed on the work order",
+        "Record it as a Product Consumed item on the work order",
         "Delete the product item",
-        "Add the part to the work type's required products",
-        "Create a product request"
+        "Add the part to the work type’s required products",
+        "Create a Product Request"
       ],
       "correctAnswer": 0,
-      "explanation": "Product consumed records the part used and reduces the stock at the technician's location.",
+      "explanation": "A Product Consumed record tracks the part used and reduces the stock at the technician’s location.",
       "whyWrong": [
-        "Deleting the product item removes all stock records.",
-        "Required products describe what a job needs, they don't record usage.",
-        "A product request asks for more stock, it doesn't record what was used."
+        "Deleting the product item removes its inventory records.",
+        "Required Products say what a job needs; they do not record what was used.",
+        "A Product Request asks for more stock; it does not record usage."
       ]
     },
     {
-      "question": "A technician's van is low on a part. How should they ask for more?",
+      "question": "A technician’s van is low on a part. How should they request more?",
       "options": [
         "Add the part as a required product on the work type",
-        "Log a product consumed with a negative amount",
-        "Create a product transfer back to the warehouse",
-        "Create a product request"
+        "Record a Product Consumed item with a negative quantity",
+        "Transfer the part back to the warehouse",
+        "Create a Product Request"
       ],
       "correctAnswer": 3,
-      "explanation": "Product requests are how technicians ask for parts to be sent to their location.",
+      "explanation": "Technicians use Product Requests to ask for parts to be sent to their location.",
       "whyWrong": [
-        "Required products describe what a job needs, they don't order stock.",
-        "Product consumed records parts used, not parts needed.",
-        "A transfer moves parts that are already approved. The request comes first."
+        "Required Products say what a job needs; they do not order stock.",
+        "Product Consumed records parts used, not parts needed.",
+        "A transfer moves stock that has already been approved. Request the stock first."
       ]
     },
     {
-      "question": "Technicians often work in basements with no signal. What must be set up so the mobile app still works?",
+      "question": "Technicians often work in basements without a signal. What should be set up so the mobile app can still work?",
       "options": [
         "Offline data priming for the records they need",
-        "Moving the jobs to a different service territory",
-        "A mobile flow that saves data to a custom object",
-        "Shorter appointment durations"
+        "Move the jobs to a different service territory",
+        "Create a mobile flow that saves data to a custom object",
+        "Shorten the appointment durations"
       ],
       "correctAnswer": 0,
-      "explanation": "The app downloads needed records ahead of time and syncs changes once the connection is back.",
+      "explanation": "The app downloads needed records before a technician goes offline, then syncs changes after the connection returns.",
       "whyWrong": [
-        "Territory changes don't give the device any data offline.",
-        "A flow still needs data on the device, and the data must be primed first.",
-        "Duration has nothing to do with connectivity."
+        "Changing a territory does not put data on the device.",
+        "A flow still needs the required data on the device, so prime the data first.",
+        "Appointment duration does not affect connectivity."
       ]
     },
     {
-      "question": "Technicians must complete a safety checklist before starting each job in the mobile app. What should be added?",
+      "question": "Technicians must complete a safety checklist in the mobile app before each job. What should you add?",
       "options": [
         "A dashboard",
         "A new scheduling policy",
-        "A mobile flow on the work order",
-        "A newly created service territory"
+        "Mobile Flow on work order",
+        "A new service territory"
       ],
       "correctAnswer": 2,
-      "explanation": "Mobile flows add guided steps, like checklists, inside the mobile app.",
+      "explanation": "Mobile Flows guide users through steps such as a checklist in the mobile app.",
       "whyWrong": [
-        "Dashboards show data, not steps.",
-        "Scheduling policies choose technicians, not job steps.",
-        "Territories group areas, not tasks."
+        "Dashboards show data; they do not guide job steps.",
+        "Scheduling policies choose technicians; they do not provide checklist steps.",
+        "Service territories group work by area; they do not provide task steps."
       ]
     },
     {
-      "question": "A contractor company should get up to 40 hours of work per week, without exact time slots. How should they be set up?",
+      "question": "A contractor should receive up to 40 hours of work each week, without fixed appointment times. How should they be set up?",
       "options": [
         "As a location",
         "As a capacity-based resource",
@@ -334,75 +334,75 @@
         "As an asset"
       ],
       "correctAnswer": 1,
-      "explanation": "Capacity-based resources are scheduled by hours or job count per period, which fits contractors.",
+      "explanation": "Capacity-based resources are scheduled by hours or job count within a period, which suits this contractor arrangement.",
       "whyWrong": [
-        "Locations are places, not people.",
-        "Regular resources are scheduled into exact slots.",
+        "A location is a place, not a person or contractor.",
+        "Regular resources are scheduled into specific time slots.",
         "Assets are equipment at customer sites."
       ]
     },
     {
-      "question": "A scheduling policy has work rules and service objectives. What is the difference?",
+      "question": "A scheduling policy includes Work Rules and Service Objectives. How do they differ?",
       "options": [
-        "Objectives remove the candidates and then the work rules rank them",
-        "Work rules exclude; objectives rank what is left",
-        "Both only apply to mobile users",
-        "They are the same thing"
+        "Objectives remove candidates, then Work Rules rank those left",
+        "Rules filter; Objectives rank",
+        "Both apply only to mobile users",
+        "They do the same thing"
       ],
       "correctAnswer": 1,
-      "explanation": "Rules are pass or fail filters. Objectives score the remaining options.",
+      "explanation": "Work Rules are pass-or-fail filters. Service Objectives score the options that remain.",
       "whyWrong": [
-        "That has them the wrong way round.",
-        "Both apply to all scheduling.",
-        "They do different jobs in the policy."
+        "This reverses the roles of Work Rules and Objectives.",
+        "Both can apply to scheduling, not only to mobile users.",
+        "They have different roles in a scheduling policy."
       ]
     },
     {
-      "question": "Customers keep booking slots that technicians can't reach in time. What should be checked?",
+      "question": "Customers keep booking appointment slots that technicians cannot reach in time. What should you check?",
       "options": [
         "Travel time settings, such as street-level routing",
-        "The work order priority field",
-        "The appointment booking slot length only",
-        "The scheduling policy's preferred resource objective"
+        "The work order priority",
+        "The appointment slot length only",
+        "The scheduling policy’s preferred-resource objective"
       ],
       "correctAnswer": 0,
-      "explanation": "Accurate travel time depends on routing settings and territories. Poor estimates lead to impossible slots.",
+      "explanation": "Accurate travel times depend on routing settings and territories. Poor travel estimates can lead to impossible appointment slots.",
       "whyWrong": [
-        "Priority changes order, not travel time.",
-        "Slot length doesn't fix wrong travel estimates.",
-        "Preferring a technician doesn't make travel times accurate."
+        "Priority changes the order of work, not travel time.",
+        "Changing slot length does not correct inaccurate travel estimates.",
+        "Preferring a technician does not make travel estimates more accurate."
       ]
     },
     {
-      "question": "A new hire should only get simple jobs for their first month. How can this be done?",
+      "question": "A new hire should get only simple jobs during their first month. How can you do this?",
       "options": [
-        "Give them no territory",
-        "Basic skills at the right levels",
+        "Do not assign them to a territory",
+        "Assign suitable skills and levels",
         "Turn off their user account",
         "Put them in a separate org"
       ],
       "correctAnswer": 1,
-      "explanation": "Skills and skill levels let the scheduler match only suitable jobs to each person.",
+      "explanation": "Skills and skill levels help the scheduler match each technician only to suitable jobs.",
       "whyWrong": [
-        "No territory means no jobs at all.",
-        "A turned-off user can't work at all.",
-        "A separate org cuts them off from the rest."
+        "Without a territory, the technician will not get jobs.",
+        "A disabled user cannot do any work.",
+        "A separate org would cut the hire off from the rest of the team."
       ]
     },
     {
-      "question": "A manager wants to know how often technicians fix the problem on the first visit. Which measure fits?",
+      "question": "A manager wants to know how often technicians solve an issue on the first visit. Which measure should they use?",
       "options": [
         "Average travel time",
         "On-time arrival rate",
-        "Resource utilisation",
+        "Resource utilization",
         "First-time fix rate"
       ],
       "correctAnswer": 3,
-      "explanation": "First-time fix rate shows how often jobs are finished without a return visit, which is key for service quality.",
+      "explanation": "First-time fix rate shows how often a job is completed without a return visit. It is a key measure of service quality.",
       "whyWrong": [
-        "Travel time measures driving, not fix quality.",
-        "On-time arrival measures punctuality, not whether a return visit was needed.",
-        "Utilisation shows how busy technicians are, not whether jobs were fixed first time."
+        "Travel time measures driving, not whether the issue was fixed.",
+        "On-time arrival measures punctuality, not whether another visit was needed.",
+        "Utilization shows how busy technicians are, not whether they fixed the issue on the first visit."
       ]
     }
   ]

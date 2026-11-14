@@ -48,7 +48,7 @@ export const faqItems = [
   },
   {
     question: 'What is the difference between Integration Foundations and MuleSoft Developer I?',
-    answer: 'Integration Foundations ($75, 40 questions) is conceptual, no coding required. MuleSoft Developer I ($200, 60 questions) is hands-on, it tests building real Mule 4 flows in Anypoint Studio, writing DataWeave transformations, configuring connectors, and deploying to CloudHub. Integration Foundations is significantly easier and serves as an introduction. Developers should target Developer I for job market value.',
+    answer: 'Integration Foundations ($75, 40 questions) is conceptual, with no coding required. MuleSoft Developer I is hands-on: it tests building Mule 4 flows in Anypoint Studio, writing DataWeave transformations, configuring connectors, and deploying to CloudHub. Integration Foundations serves as an introduction for candidates who need API and Anypoint Platform concepts.',
   },
   {
     question: 'What are the three layers of API-led connectivity?',
@@ -126,7 +126,7 @@ export default function MulesoftIntegrationFoundationsStudyGuideContent() {
             { week: 'Week 1', focus: 'API-led connectivity, understand the three-layer model (System, Process, Experience APIs) deeply. Draw diagrams mapping a real business scenario (e.g., order processing) to the three layers.' },
             { week: 'Week 2', focus: 'Anypoint Platform components. Learn the purpose of Design Center, Exchange, Runtime Manager, API Manager, and Anypoint Studio. Understand CloudHub vs on-premise deployment and when to use each.' },
             { week: 'Week 3', focus: 'Integration patterns and concepts, study point-to-point vs hub-and-spoke vs ESB vs API-led. Review REST vs SOAP trade-offs. Understand async vs sync integration and when each applies.' },
-            { week: 'Week 4', focus: 'Mule 4 fundamentals + mock exams. Review flow, sub-flow, event source, event processor concepts. The 70% passing score requires solid coverage of all 4 sections. Aim for 80%+ on practice questions before booking.' },
+            { week: 'Week 4', focus: 'Mule 4 fundamentals + mock exams. Review flow, sub-flow, event source, and event processor concepts. The 70% passing score requires coverage across all six official exam domains. Aim for 80%+ on practice questions before booking.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -198,7 +198,7 @@ export default function MulesoftIntegrationFoundationsStudyGuideContent() {
       <DifficultyHeatmap slug="mulesoft-integration-foundations" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
-        <p className="text-white mb-6">Free MuleSoft Integration Foundations practice questions covering all 4 exam sections.</p>
+        <p className="text-white mb-6">Free MuleSoft Integration Foundations practice questions covering all six exam domains.</p>
         <Link
           href="#practice-questions"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"

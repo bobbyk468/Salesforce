@@ -39,19 +39,19 @@ const becomeCtaBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Become a CTA',
 const faqItems = [
   {
     question: 'What certifications do you need to become a Salesforce CTA?',
-    answer: 'The CTA path requires completing the Application Architect credential (granted on holding Platform App Builder, Platform Developer I, Data Architect and Sharing and Visibility Architect) and the System Architect credential (granted on holding Platform Developer I, Integration Architect, Identity and Access Management Architect and Development Lifecycle and Deployment Architect). Neither composite has an exam of its own.',
+    answer: 'You need both Application Architect and System Architect. Salesforce grants Application Architect when you hold Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. System Architect requires Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. Neither credential has its own exam.',
   },
   {
     question: 'How long does it take to become a Salesforce CTA?',
-    answer: 'Most CTAs have 8–15 years of Salesforce experience before attempting the review board. The minimum realistic timeline with intensive focus is 4–6 years: 1–2 years building Admin/Developer credentials, then 2–4 years earning the domain architect certifications and accumulating the breadth of enterprise project experience the review board evaluates.',
+    answer: 'Many CTAs have 8–15 years of Salesforce experience before attempting the review board. With intensive focus, a minimum realistic timeline is 4–6 years: 1–2 years to build Admin/Developer credentials, followed by 2–4 years earning domain architect certifications and gaining the broad enterprise experience assessed by the board.',
   },
   {
     question: 'What is the Salesforce CTA review board?',
-    answer: 'The CTA review board is a 2-hour panel evaluation where candidates present a solution architecture to a panel of existing Certified Technical Architects. Candidates receive a hypothetical business scenario and must defend architectural decisions covering integration, security, data architecture, and scalability. Passing requires broad expertise across the entire Salesforce platform.',
+    answer: 'The CTA review board is a 2-hour panel evaluation. You present an architecture for a hypothetical business scenario to current Certified Technical Architects and defend decisions about integration, security, data architecture, and scalability. Passing requires broad knowledge of the Salesforce platform.',
   },
   {
     question: 'Where do you start on the path to becoming a Salesforce CTA?',
-    answer: 'Start with the Salesforce Administrator (ADM-201) certification to build platform fundamentals, then progress to Platform Developer I (PD1) for Apex and automation depth. From there, pursue the domain architect credentials (Data Architect, Integration Architect, Sharing and Visibility Architect, etc.) in order of your project experience.',
+    answer: 'Begin with Salesforce Administrator (ADM-201) to learn platform fundamentals, then take Platform Developer I (PD1) to build Apex and automation knowledge. After that, pursue domain architect credentials such as Data Architect, Integration Architect, and Sharing and Visibility Architect in an order that fits your project experience.',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function BecomeCtaPage() {
         </h1>
         <LastUpdated />
         <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
-          Flow from zero experience to CTA. Follow the path below, each box is a certification you can study.
+          Follow the stages from platform basics to the CTA review board. Each box shows a certification in the path.
         </p>
         <div className="flex flex-wrap justify-center gap-4 text-sm">
           <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-gray-200 text-gray-700">
@@ -111,27 +111,24 @@ export default function BecomeCtaPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">What This CTA Roadmap Is For</h2>
         <div className="space-y-3 text-sm leading-6 text-gray-700">
           <p>
-            The Salesforce Certified Technical Architect path is not a single exam path. It is a long progression through
-            platform fundamentals, developer depth, domain architect credentials, solution design practice, and finally the
-            CTA evaluation and review board. This page gives you the sequence so you can see where each certification fits.
+            The Salesforce Certified Technical Architect path involves more than a single exam. It moves through platform
+            fundamentals, development, domain architect credentials, solution design, and the CTA evaluation and review board.
+            Use this roadmap to see where each certification fits.
           </p>
           <p>
-            If you are early in your career. Use the first two phases to build a realistic foundation. If you are already
-            leading implementations. Use the architect phases to identify missing domains such as identity, integration, data,
-            sharing, deployment lifecycle, and application architecture. The goal is to prevent random certification chasing
-            and turn the CTA journey into a staged plan.
+            If you are early in your career, use the first phases to build a foundation. If you already lead implementations,
+            review the architect phases to find gaps in identity, integration, data, sharing, deployment, or application design.
+            Plan each step around your experience instead of collecting certifications without a clear purpose.
           </p>
           <p>
-            A useful rule of thumb: do not treat the next box as a checklist item until you have used that skill on a real
-            project. CTA reviewers expect trade-off thinking, not certificate collecting. The strongest candidates can explain
-            why they chose a sharing model, integration pattern, identity flow, data strategy, and deployment approach under
-            business constraints.
+            Before moving to the next credential, try to apply its skills on a real project. CTA reviewers assess how you
+            weigh trade-offs. Strong candidates can explain why they chose a sharing model, integration pattern, identity flow,
+            data strategy, or deployment approach for a particular business need.
           </p>
           <p>
-            For most learners, the right immediate move is not the CTA board itself. It is choosing the next credential that
-            expands your current blind spot, then pairing that study with implementation practice. Admins usually need developer
-            and data-model depth. Developers often need sharing, identity, and stakeholder communication. Consultants usually
-            need architecture vocabulary and sharper non-functional requirement discovery.
+            Choose a next credential that builds a skill you need, then pair study with implementation practice. Admins may
+            want more development and data-model experience; developers may need to deepen sharing, identity, and stakeholder
+            communication; consultants may benefit from architecture concepts and better discovery of non-functional needs.
           </p>
         </div>
       </section>
@@ -198,11 +195,11 @@ export default function BecomeCtaPage() {
         <ul className="text-sm text-gray-600 space-y-1">
           <li className="flex items-center gap-2">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
-            Left to right = order: first, then second, then third
+            Left to right shows sequence: complete the first item, then the second, then the third
           </li>
           <li className="flex items-center gap-2">
             <span className="text-salesforce-blue">↓</span>
-            Down = next phase (complete row above, then go to next row)
+            Down points to the next phase; finish the row above first
           </li>
           <li className="flex items-center gap-2">
             <span className="w-4 h-4 rounded border-2 border-emerald-200 bg-white flex-shrink-0" />
@@ -223,13 +220,13 @@ export default function BecomeCtaPage() {
             Minimum path to CTA
           </h3>
           <p className="text-gray-600 text-sm">
-            Follow the required certs in order: Platform Foundations → Administrator → App Builder → Developer I → Developer II → all four Domain Architects → Application Architect + System Architect → Technical Architect (CTA) → Evaluation → Review Board.
+            Complete the required certifications in order: Platform Foundations → Administrator → App Builder → Developer I → Developer II → all four Domain Architects → Application Architect + System Architect → Technical Architect (CTA) → Evaluation → Review Board.
           </p>
         </div>
         <div className="p-6 rounded-2xl bg-salesforce-blue/10 border border-salesforce-blue/20">
           <h3 className="text-lg font-bold text-gray-900 mb-2">Start the flow</h3>
           <p className="text-gray-700 text-sm mb-4">
-            Begin with Platform Foundations or see all certification paths.
+            Start with Platform Foundations or browse the other certification paths.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link

@@ -144,7 +144,7 @@ export default function SalesforceCertificationRoiCalculatorPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Certification ROI Calculator ({RELEASE_CURRENT})</h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Use this guide to estimate whether a Salesforce certification is worth the exam fee, study time, and retake risk for your current role.
+          Estimate how an exam fee, study time, and possible retake compare with a potential salary increase in your current role.
         </p>
       </header>
 
@@ -161,7 +161,7 @@ export default function SalesforceCertificationRoiCalculatorPage() {
               <strong>Payback period in months = total certification cost / expected annual salary uplift x 12.</strong>
             </p>
             <p className="text-sm text-gray-600">
-              Example: if ADM-201 costs $200 and helps unlock a $10,000 annual salary uplift, the fee pays back in roughly 0.24 months. Study time, experience, and location matter more than the exam fee itself.
+              For example, if ADM-201 costs $200 and is linked to a $10,000 annual salary increase, the fee alone equals about 0.24 months of that increase. Study time, experience, and location also affect the decision.
             </p>
           </div>
         </div>
@@ -200,22 +200,22 @@ export default function SalesforceCertificationRoiCalculatorPage() {
           </table>
         </div>
         <p className="text-xs text-gray-600 mt-3">
-          Uplift ranges are directional, not guarantees. Use them with the salary guide, job descriptions in your market, and your current experience level.
+          Salary ranges are estimates, not guarantees. Compare them with local job postings, the salary guide, and your experience.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to use this before choosing a cert</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Use These Estimates</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Pick the cert that maps to your next role, not just the easiest exam.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Check the full exam fee and retake fee before booking.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Estimate study time honestly. Eight weeks of focused study has an opportunity cost even if the exam fee is low.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Prioritize certs with job-description demand in your target geography.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose a credential that fits your next role, not only the easiest exam.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Check the exam and retake fees before booking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Estimate your study time. Eight weeks of focused study has an opportunity cost, even when the exam fee is low.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Look for credentials requested in job postings in your target area.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">ROI Scenarios by Candidate Type</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Examples by Candidate Type</h2>
         <div className="space-y-5 text-sm text-gray-700">
           {scenarios.map((scenario) => (
             <div key={scenario.profile} className="border-b border-gray-100 pb-5 last:border-0 last:pb-0">
@@ -228,12 +228,12 @@ export default function SalesforceCertificationRoiCalculatorPage() {
       </section>
 
       <section className="rounded-xl border border-amber-100 bg-amber-50/40 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Methodology: What This Calculator Includes</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How These Estimates Are Made</h2>
         <p className="text-sm text-gray-700 mb-3">
-          This page estimates ROI using public exam fee tiers, typical retake-risk assumptions, realistic study windows, and directional salary-uplift ranges from Salesforce ecosystem hiring patterns. It is designed for certification planning, not compensation negotiation.
+          These estimates use published exam fees, assumed retake risk, typical study windows, and directional salary ranges from Salesforce hiring patterns. Use them to plan certification study, not for salary negotiation.
         </p>
         <p className="text-sm text-gray-700">
-          The most important adjustment is experience. A certification without project evidence may help you get screened, but the largest salary gains happen when the credential confirms skills you can already demonstrate in interviews, portfolio examples, or client work.
+          Experience matters. A certification may help you get noticed, but it has more value when you can also show the skills through project work, portfolio examples, or client work.
         </p>
       </section>
 

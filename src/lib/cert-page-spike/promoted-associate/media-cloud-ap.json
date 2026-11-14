@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Media & advertising implementers",
-        "description": "You configure Media Cloud's ad sales, subscription management, and rights/entitlement objects and want to validate your setup skills."
+        "description": "You configure advertising sales or subscription workflows for a media company."
       },
       {
         "label": "Consultants and admins",
-        "description": "You advise media and publishing clients on Media Cloud's order management and cross-channel ad inventory configuration."
+        "description": "You advise media clients on ad inventory, rights, subscriptions or campaign delivery."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that differentiates you in the media, publishing, and advertising implementation space."
+        "description": "You work with Salesforce Media Cloud and want to build your product knowledge."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Media Cloud Accredited Professional Exam Hard?",
-    "summary": "The Media Cloud AP exam is moderately difficult because it tests industry-specific concepts, ad inventory, rights management, and subscription billing, that don't overlap with general Salesforce configuration.",
+    "summary": "This page reviews Media Cloud workflows for ad sales, inventory, subscriptions, rights and campaign delivery.",
     "bullets": [
-      "<strong>60 questions</strong> in 75 min.",
-      "<strong>66% passing score</strong>: build a margin above the minimum before booking.",
+      "<strong>60 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>66% to pass</strong>, which is 40 correct answers out of 60.",
       "<strong>Rights & inventory</strong>: expect questions on how ad sales, content rights, and subscription entitlements are modeled and enforced in Media Cloud.",
       "<strong>Hands-on context matters</strong>: candidates who have configured or supported Media Cloud in a real org are better prepared than candidates who only memorize notes."
     ],
-    "passRateGuidance": "Aim for 80%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Review the official objectives and practice distinguishing advertising workflows from subscriptions. For each case, identify the inventory, buyer, audience or billing record the process needs."
   },
   "examFormat": {
     "heading": "Media Cloud Accredited Professional Exam Format Explained",
     "intro": "The Media Cloud Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Media Cloud.",
+    "scenarioPercent": "Scenarios describe an advertising or subscription need and ask which record or workflow best represents it.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Media Cloud, Ad Sales, and Rights because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Check content rights first:</strong> Match each asset to the licensee, territory, channel, and time period before proposing or selling it.",
+      "<strong>Confirm ad inventory:</strong> Check available placements and capacity before promising airtime or digital space to a client.",
+      "<strong>Follow the proposal-to-order path:</strong> Practice how media plans, proposals, orders, and fulfillment records connect.",
+      "<strong>Test rights conflicts:</strong> Use scenarios with overlapping exclusivity, channels, and dates to see when a booking should be blocked or flagged."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers Salesforce Media Cloud for broadcasters, publishers, and digital media companies, ad sales workflows, rights and entitlements management, campaign delivery, and revenue billing.",
+    "description": "This page covers Media Cloud use cases for media companies, including advertising sales, rights and entitlements, campaign delivery and subscription revenue.",
     "examDetails": {
       "questions": 60,
       "passingScore": "66%",
@@ -60,50 +60,46 @@
     "h2": "Media Cloud AP: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Advertising Sales & Order Management",
-        "body": "Media Cloud provides a purpose-built Advertising Sales Management solution for broadcasters, publishers, and digital media companies. Advertising Orders capture the commitment to deliver a campaign, specifying advertiser, agency, flight dates, placements, and rates. Rate Cards define standard pricing for ad inventory (CPM, flat rate, sponsorship). Avails Management shows available inventory for a given time period and placement. The AP exam tests how to configure an advertising order workflow, how rate cards interact with order line pricing, and how avails are checked during the proposal process."
+        "heading": "Advertising Orders and Inventory",
+        "body": "An advertising order can include placements with dates, inventory and prices. Because available airtime or space is limited, check availability before confirming a booking."
       },
       {
-        "heading": "Rights & Entitlements Management",
-        "body": "Media companies manage complex rights hierarchies; who has licensed what content, for which territories, channels, and time windows. Rights Records capture the license terms: content asset, licensee, territory, channel type (linear, digital, streaming), exclusivity, and validity period. Rights Conflicts detection flags when proposed usage violates an existing exclusive license. Rights Availabilities show what rights are free for a given asset, territory, and window. The exam tests how to configure rights records, how conflict detection rules work, and how rights availability feeds into proposal and ordering workflows."
+        "heading": "Rights and Entitlements",
+        "body": "Rights describe how content may be used, including territory, period and permitted distribution. Keep the entitlement details tied to the content and agreement they govern."
       },
       {
-        "heading": "Revenue Management & Billing",
-        "body": "Media Cloud integrates with **Revenue Cloud** (**CPQ** Billing) for subscription and ad revenue management. Recurring subscription billing handles streaming services and digital subscriptions, with proration for mid-period changes. Advertising revenue uses milestone billing tied to campaign delivery and performance. Revenue Recognition (ASC 606) distributes subscription revenue ratably over the service period. Credit and adjustment workflows handle make-goods (compensation for under-delivery of ad campaigns). The exam tests how media-specific billing scenarios map to Revenue Cloud configuration and how make-good credits are processed."
+        "heading": "Revenue and Billing",
+        "body": "Media revenue can come from advertising and subscriptions. These models use different customers, terms and billing events, so represent the streams clearly."
       },
       {
-        "heading": "Partner & Agency Management",
-        "body": "Media companies work through advertising agencies and content distribution partners. Partner portals (Experience Cloud) give agencies self-service access to propose, book, and track campaigns. Agency hierarchies model holding companies and their subsidiary agencies. Partner Accounts and Contact roles define the relationship between the media company, agency, and end advertiser. Commission structures track agency fees. The AP exam tests how to configure the agency portal for campaign proposal and booking, how agency commission is calculated and tracked, and how partner visibility into campaign performance data is controlled."
+        "heading": "Agencies and Partners",
+        "body": "Agencies may buy advertising on behalf of advertisers, while distribution partners may deliver content. Model each party according to its role in the transaction."
       },
       {
-        "heading": "Analytics & Campaign Performance",
-        "body": "Media Cloud reporting tracks advertising campaign delivery, pacing, and performance. Delivery Reports compare contracted impressions/spots against actual delivered figures. Pacing dashboards alert sales ops when a campaign is at risk of under-delivery. Post-Campaign Analysis reports provide the final performance summary for advertiser billing and make-good decisions. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) Media Cloud apps provide pre-built revenue and inventory dashboards. Integration with ad servers (DFP, FreeWheel, Operative) pulls in actual delivery data. The exam tests how campaign performance data flows from ad servers into Media Cloud, which standard reports are available, and how under-delivery triggers a make-good workflow."
+        "heading": "Campaign Delivery and Reporting",
+        "body": "Compare booked delivery with actual campaign results. Reports can show pacing and performance; shortfalls may require an agreed make-good or other remedy."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Media Cloud Accredited Professional Exam",
-    "intro": "The Media Cloud AP exam tests Salesforce implementation for media and advertising companies. Focus on deal management, campaign execution, revenue management, and the media-specific data model.",
+    "intro": "Identify whether a scenario concerns advertising inventory, subscriber relationships, rights or revenue.",
     "blocks": [
       {
-        "heading": "Media Cloud Data Model",
-        "body": "Know media-specific objects: Advertising Deals (linear and digital), Ad Products (ad slots, digital placements), Campaign Budgets, and how they relate to standard Opportunity and Order objects."
+        "heading": "Identify the revenue stream",
+        "body": "Decide whether the scenario concerns advertising, subscriptions or both before choosing records."
       },
       {
-        "heading": "Deal Management",
-        "body": "Know how to configure the deal lifecycle in Media Cloud: proposal generation, rate card pricing for media inventory, deal approval workflows, and how deals activate into campaign execution."
+        "heading": "Treat inventory as limited",
+        "body": "Check availability and delivery timing when an advertiser books placements."
       },
       {
-        "heading": "Campaign Execution",
-        "body": "Know how campaigns are activated: trafficking (sending orders to ad servers), pacing management, and how delivery data flows back from ad servers to update actuals against booked inventory."
+        "heading": "Track rights precisely",
+        "body": "Use territory, time period and permitted-use details to determine what distribution is allowed."
       },
       {
-        "heading": "Revenue Management & Billing",
-        "body": "Know how Media Cloud integrates with **Revenue Cloud** for billing: invoice generation from delivered campaign data, makegoods for underdelivery, and how revenue recognition handles media-specific scenarios."
-      },
-      {
-        "heading": "Programmatic & Digital Integration",
-        "body": "Know how Media Cloud handles programmatic advertising: integration with DSPs/SSPs, private marketplace deals, and how digital campaign data from Google Ad Manager or FreeWheel integrates with Media Cloud."
+        "heading": "Compare booked and delivered results",
+        "body": "Use campaign reporting to identify pacing problems and determine the agreed response."
       }
     ]
   },
@@ -165,243 +161,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A broadcaster sells advertising airtime and also runs a subscription streaming service. What does this mean for the data model?",
+      "question": "A broadcaster sells ad placements and streaming subscriptions. How should the data model treat those revenues?",
       "options": [
-        "Two revenue streams needing different objects",
-        "A single product record covering both the airtime and the subscription together",
-        "Separate Salesforce orgs, one for advertising and one for the streaming side",
-        "A requirement to treat all of the streaming revenue as advertising revenue"
+        "As separate commercial streams with the records each requires",
+        "As one product that combines advertising and subscription terms",
+        "As two Salesforce orgs in every implementation",
+        "As subscription revenue only"
       ],
       "correctAnswer": 0,
-      "explanation": "Advertising sales and consumer subscriptions behave differently, with different buyers, pricing and lifecycle, so they are modelled separately.",
+      "explanation": "Advertising and subscriptions have different buyers, pricing and lifecycles, so model them as distinct commercial streams.",
       "whyWrong": [
-        "One product record cannot express two unrelated commercial models.",
-        "Separate orgs would prevent any consolidated view of the customer.",
-        "Reporting one revenue type as another misstates the business."
+        "As one product that combines advertising and subscription terms is not the best choice because the scenario calls for As separate commercial streams with the records each requires.",
+        "As two Salesforce orgs in every implementation is not the best choice because the scenario calls for As separate commercial streams with the records each requires.",
+        "As subscription revenue only is not the best choice because the scenario calls for As separate commercial streams with the records each requires."
       ]
     },
     {
-      "question": "What does an advertising order typically contain?",
+      "question": "What does an advertising order usually specify?",
       "options": [
-        "Line items for placements across a campaign",
-        "The subscription tier each individual consumer has signed up to receive",
-        "The editorial schedule showing which programmes will be broadcast and when",
-        "A single charge covering the entire year of advertising bought by the client"
-      ],
-      "correctAnswer": 0,
-      "explanation": "An advertising order breaks down into line items for the specific placements, each with its own timing, inventory and rate.",
-      "whyWrong": [
-        "Consumer subscriptions are a separate revenue stream.",
-        "Programme scheduling is an editorial function.",
-        "A single annual charge gives no detail about what was actually booked."
-      ]
-    },
-    {
-      "question": "Why does advertising inventory need to be tracked as a finite resource?",
-      "options": [
-        "Regulators require broadcasters to publish their remaining inventory weekly",
-        "Inventory levels determine the subscription price charged to consumers",
-        "There is a fixed amount of airtime or space to sell",
-        "Advertisers are only permitted to buy inventory in one single transaction"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Airtime and ad space are limited, so overselling is a real risk and availability has to be checked before a booking is confirmed.",
-      "whyWrong": [
-        "No such publication requirement exists.",
-        "Consumer pricing is unrelated to advertising inventory.",
-        "Advertisers routinely buy across multiple bookings."
-      ]
-    },
-    {
-      "question": "A subscriber downgrades from the premium tier to the standard tier mid-month. What should happen?",
-      "options": [
-        "The subscriber is charged the premium rate until their next renewal date",
-        "The downgrade takes effect only once the full annual term has been completed",
-        "The subscription is cancelled entirely and a brand new one is created instead",
-        "The change is prorated across the remaining period"
-      ],
-      "correctAnswer": 3,
-      "explanation": "A mid-term change is prorated so the subscriber pays the premium rate only for the part of the period they actually had it.",
-      "whyWrong": [
-        "Charging premium for a standard service overcharges the customer.",
-        "Forcing the customer to wait a year is poor service and rarely contractual.",
-        "Cancelling and recreating loses the continuity of the subscription."
-      ]
-    },
-    {
-      "question": "What is churn in a subscription media business?",
-      "options": [
-        "The rate at which subscribers cancel",
-        "The number of advertising campaigns that fail to deliver their booked spots",
-        "The volume of inventory that remains unsold at the end of each quarter",
-        "The proportion of programmes that are repeated rather than newly produced"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Churn measures subscribers leaving, and for a subscription business it is the single most important number to understand and reduce.",
-      "whyWrong": [
-        "Under-delivery on campaigns is an advertising fulfilment problem.",
-        "Unsold inventory is an advertising yield issue.",
-        "Repeat programming is an editorial decision."
-      ]
-    },
-    {
-      "question": "A media company wants to know which content keeps subscribers paying. What data is needed?",
-      "options": [
-        "The advertising rate card that applies to each of the available time slots",
-        "Viewing behaviour linked to subscriber records",
-        "The total production cost of each programme commissioned during the year",
-        "The number of press reviews each programme received after it was broadcast"
+        "A consumer’s subscription tier",
+        "Campaign placement line items",
+        "The editorial schedule for every program",
+        "One annual charge with no placement details"
       ],
       "correctAnswer": 1,
-      "explanation": "Linking what people watch to whether they stay is what tells you which content is actually retaining subscribers.",
+      "explanation": "Order line items describe the placements being purchased, including details such as timing and inventory.",
       "whyWrong": [
-        "Rate cards concern advertising pricing.",
-        "Production cost tells you what content cost, not what it retains.",
-        "Reviews are a reputational signal, not a retention measure."
+        "A consumer’s subscription tier is not the best choice because the scenario calls for Campaign placements with timing and inventory details.",
+        "The editorial schedule for every program is not the best choice because the scenario calls for Campaign placements with timing and inventory details.",
+        "One annual charge with no placement details is not the best choice because the scenario calls for Campaign placements with timing and inventory details."
       ]
     },
     {
-      "question": "What is the purpose of a rate card?",
+      "question": "Why must available ad inventory be checked before confirming a booking?",
       "options": [
-        "It schedules the order in which advertisements will be broadcast each day",
-        "It records which advertisers have outstanding invoices still to be settled",
-        "It lists the subscription tiers available to consumers and what each includes",
-        "It sets the published prices for advertising inventory"
-      ],
-      "correctAnswer": 3,
-      "explanation": "A rate card is the price list for inventory, usually varying by time, audience and placement, and it is the starting point for negotiation.",
-      "whyWrong": [
-        "Broadcast ordering is a traffic and scheduling function.",
-        "Outstanding invoices are a finance record.",
-        "Consumer tiers are a separate product catalogue."
-      ]
-    },
-    {
-      "question": "An advertiser's campaign under-delivers on booked impressions. What is the usual remedy?",
-      "options": [
-        "A permanent reduction in the rate card price for every other advertiser",
-        "An immediate cancellation of the whole of the advertiser's annual contract",
-        "Make-good inventory offered to the advertiser",
-        "A requirement that the advertiser books the same campaign again at full price"
+        "Regulators require weekly public inventory reports",
+        "It determines subscription prices",
+        "Airtime and ad space are limited",
+        "Advertisers can buy inventory only once"
       ],
       "correctAnswer": 2,
-      "explanation": "Where a campaign fails to deliver what was booked, the shortfall is typically made good with additional inventory or a credit.",
+      "explanation": "The amount of airtime or space available is finite, so bookings must not exceed it.",
       "whyWrong": [
-        "A shortfall for one advertiser does not change published pricing for all.",
-        "Cancelling the relationship over one shortfall is disproportionate.",
-        "Charging again for undelivered inventory is not a remedy."
+        "Regulators require weekly public inventory reports is not the best choice because the scenario calls for Airtime and ad space are limited.",
+        "It determines subscription prices is not the best choice because the scenario calls for Airtime and ad space are limited.",
+        "Advertisers can buy inventory only once is not the best choice because the scenario calls for Airtime and ad space are limited."
       ]
     },
     {
-      "question": "Why would a media company model households as well as individuals?",
+      "question": "A subscriber changes to a lower tier mid-month. How should the billing change be handled?",
       "options": [
-        "Advertising inventory is sold to households rather than to advertisers",
-        "A subscription is often shared across a household",
-        "Individual subscriber records cannot store viewing behaviour at all",
-        "Regulators require every household in the country to be recorded separately"
+        "Keep charging the higher tier until the annual term ends",
+        "Cancel the subscription and create an unrelated new one",
+        "Charge the lower tier retroactively for the full month",
+        "Prorate the change over the remaining period"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Proration accounts for the time the subscriber had each tier during the billing period.",
+      "whyWrong": [
+        "Keep charging the higher tier until the annual term ends is not the best choice because the scenario calls for Prorate the change over the remaining period.",
+        "Cancel the subscription and create an unrelated new one is not the best choice because the scenario calls for Prorate the change over the remaining period.",
+        "Charge the lower tier retroactively for the full month is not the best choice because the scenario calls for Prorate the change over the remaining period."
+      ]
+    },
+    {
+      "question": "What does churn measure in a subscription business?",
+      "options": [
+        "The share or rate of subscribers who cancel",
+        "Campaign impressions that were not delivered",
+        "Unsold advertising inventory",
+        "Repeated programs in a broadcast schedule"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Churn tracks subscribers leaving the service over a defined period.",
+      "whyWrong": [
+        "Campaign impressions that were not delivered is not the best choice because the scenario calls for The share or rate of subscribers who cancel.",
+        "Unsold advertising inventory is not the best choice because the scenario calls for The share or rate of subscribers who cancel.",
+        "Repeated programs in a broadcast schedule is not the best choice because the scenario calls for The share or rate of subscribers who cancel."
+      ]
+    },
+    {
+      "question": "A media company wants to know what content helps retain subscribers. Which information is useful?",
+      "options": [
+        "Advertising prices by time slot",
+        "Subscriber-linked viewing",
+        "Production budgets alone",
+        "Press reviews after a program airs"
       ],
       "correctAnswer": 1,
-      "explanation": "One paying account can cover several viewers with different profiles, so the household and the individual are both meaningful.",
+      "explanation": "Linking viewing activity to subscriber records helps compare content use with retention.",
       "whyWrong": [
-        "Inventory is sold to advertisers and agencies.",
-        "Individual records can perfectly well hold viewing data.",
-        "No such regulatory requirement applies."
+        "Advertising prices by time slot is not the best choice because the scenario calls for Viewing behavior linked to subscriber records.",
+        "Production budgets alone is not the best choice because the scenario calls for Viewing behavior linked to subscriber records.",
+        "Press reviews after a program airs is not the best choice because the scenario calls for Viewing behavior linked to subscriber records."
       ]
     },
     {
-      "question": "What does yield management mean for an advertising business?",
+      "question": "What information does an advertising rate card provide?",
       "options": [
-        "Increasing the number of subscribers signing up during a promotional period",
-        "Reducing the cost of producing each hour of original programming broadcast",
-        "Shortening the time taken to invoice advertisers after a campaign finishes",
-        "Maximising revenue from limited inventory"
-      ],
-      "correctAnswer": 3,
-      "explanation": "With a fixed supply of airtime, the commercial skill is selling it at the best achievable price rather than simply selling it all.",
-      "whyWrong": [
-        "Subscriber acquisition is the consumer side of the business.",
-        "Production cost control is an editorial and operations matter.",
-        "Invoicing speed is a finance process improvement."
-      ]
-    },
-    {
-      "question": "A subscriber's payment fails. What should a well-designed process do first?",
-      "options": [
-        "Write the amount off and continue providing the service free of charge",
-        "Cancel the subscription immediately and remove all access to the service",
-        "Retry the payment and notify the subscriber",
-        "Transfer the subscriber onto the most expensive available tier instead"
+        "The daily order of commercials",
+        "A list of unpaid advertiser invoices",
+        "Available consumer subscription tiers",
+        "Published prices for advertising inventory"
       ],
       "correctAnswer": 2,
-      "explanation": "Failed payments are often temporary, so retrying and telling the subscriber recovers far more revenue than cancelling straight away.",
+      "explanation": "A rate card lists the published prices for the inventory being sold.",
       "whyWrong": [
-        "Writing off revenue without attempting recovery is not sustainable.",
-        "Instant cancellation loses subscribers who would have paid.",
-        "Raising the price of a failed payment makes recovery less likely."
+        "The daily order of commercials is not the best choice because the scenario calls for Available consumer subscription tiers.",
+        "A list of unpaid advertiser invoices is not the best choice because the scenario calls for Available consumer subscription tiers.",
+        "Published prices for advertising inventory is not the best choice because the scenario calls for Available consumer subscription tiers."
       ]
     },
     {
-      "question": "What distinguishes an agency from an advertiser in this model?",
+      "question": "A campaign misses its booked impressions. What remedy may the company offer?",
       "options": [
-        "The agency pays for subscriptions whereas the advertiser pays for airtime",
+        "Lower the rate card for every advertiser",
+        "Cancel all of the advertiser’s future contracts",
+        "Offer make-good inventory for the shortfall",
+        "Require a second full-price booking"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A make-good can provide additional inventory to address an agreed delivery shortfall.",
+      "whyWrong": [
+        "Lower the rate card for every advertiser is not the best choice because the scenario calls for Require a second full-price booking.",
+        "Cancel all of the advertiser’s future contracts is not the best choice because the scenario calls for Require a second full-price booking.",
+        "Offer make-good inventory for the shortfall is not the best choice because the scenario calls for Require a second full-price booking."
+      ]
+    },
+    {
+      "question": "Why represent households as well as individual subscribers?",
+      "options": [
+        "Advertising placements are sold to households",
+        "A household subscription may be used by several people",
+        "Individuals cannot have viewing records",
+        "Every household must be recorded by regulation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A shared subscription can cover several viewers, while individual records can represent their separate profiles.",
+      "whyWrong": [
+        "A household subscription may be used by several people is not the best choice because the scenario calls for Advertising placements are sold to households.",
+        "Individuals cannot have viewing records is not the best choice because the scenario calls for Advertising placements are sold to households.",
+        "Every household must be recorded by regulation is not the best choice because the scenario calls for Advertising placements are sold to households."
+      ]
+    },
+    {
+      "question": "What does yield management seek to do with limited advertising inventory?",
+      "options": [
+        "Increase subscribers during a promotion",
+        "Maximize inventory revenue",
+        "Reduce program production costs",
+        "Invoice advertisers more quickly"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Yield management aims to maximize revenue from inventory that has limited availability.",
+      "whyWrong": [
+        "Increase subscribers during a promotion is not the best choice because the scenario calls for Earn the best available revenue from the inventory.",
+        "Reduce program production costs is not the best choice because the scenario calls for Earn the best available revenue from the inventory.",
+        "Invoice advertisers more quickly is not the best choice because the scenario calls for Earn the best available revenue from the inventory."
+      ]
+    },
+    {
+      "question": "A subscriber’s payment fails. What should a well-designed process do?",
+      "options": [
+        "Cancel every subscription immediately",
+        "Ignore the failed payment until renewal",
+        "Retry and notify",
+        "Delete the subscriber’s account"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A payment-failure process should follow the configured retry policy and communicate the issue to the subscriber.",
+      "whyWrong": [
+        "Cancel every subscription immediately is not the best choice because the scenario calls for Retry according to policy and notify the subscriber.",
+        "Ignore the failed payment until renewal is not the best choice because the scenario calls for Retry according to policy and notify the subscriber.",
+        "Delete the subscriber’s account is not the best choice because the scenario calls for Retry according to policy and notify the subscriber."
+      ]
+    },
+    {
+      "question": "How does an advertising agency differ from an advertiser?",
+      "options": [
+        "The agency owns the media company",
         "The agency buys on behalf of advertisers",
-        "The agency produces the programmes while the advertiser broadcasts them",
-        "The agency is an internal department and the advertiser an external client"
+        "The advertiser represents the broadcaster",
+        "Agency buys for advertiser"
       ],
-      "correctAnswer": 1,
-      "explanation": "Agencies place business for their clients, so the relationship, the negotiation and often the invoicing sit with the agency rather than the brand.",
+      "correctAnswer": 3,
+      "explanation": "An agency can place or manage buys on behalf of an advertiser.",
       "whyWrong": [
-        "Both relate to advertising, not consumer subscriptions.",
-        "Programme production is unrelated to the buying relationship.",
-        "Agencies are external organisations."
+        "The agency owns the media company is not the best choice because the scenario calls for There is no difference in the commercial model.",
+        "The agency buys on behalf of advertisers is not the best choice because the scenario calls for There is no difference in the commercial model.",
+        "The advertiser represents the broadcaster is not the best choice because the scenario calls for There is no difference in the commercial model."
       ]
     },
     {
-      "question": "Why is bundling common in media subscriptions?",
+      "question": "Why do media companies bundle subscription content?",
       "options": [
-        "It removes the need to track viewing behaviour for individual subscribers",
-        "It raises perceived value and reduces churn",
-        "Regulators require that every service is sold together with another service",
-        "It allows the company to charge advertisers a higher rate for inventory"
-      ],
-      "correctAnswer": 1,
-      "explanation": "A bundle gives subscribers more reasons to stay and makes the subscription harder to give up, which is why it tends to reduce churn.",
-      "whyWrong": [
-        "Behaviour tracking remains just as useful with a bundle.",
-        "There is no such regulatory requirement.",
-        "Consumer bundling does not set advertising rates."
-      ]
-    },
-    {
-      "question": "A campaign must reach a specific audience demographic. What does the booking depend on?",
-      "options": [
-        "The total number of advertisements the client has booked in previous years",
-        "The number of subscribers who have cancelled during the preceding month",
-        "Audience data for the available inventory",
-        "The production budget allocated to the programmes surrounding the slots"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Selling to a demographic requires knowing who watches which inventory, which is what audience measurement provides.",
-      "whyWrong": [
-        "Past booking volume does not establish who will see the campaign.",
-        "Churn is a subscription measure, not an advertising one.",
-        "Programme budgets do not describe the audience."
-      ]
-    },
-    {
-      "question": "Which best describes what Media Cloud is intended to support?",
-      "options": [
-        "Advertising sales and subscriber management together",
-        "The editorial process of commissioning and scheduling original programming",
-        "The technical delivery of video streams to each subscriber's own device",
-        "The payroll and contracting of the on-screen talent appearing in programmes"
+        "Value and retention",
+        "To eliminate the need to track subscribers",
+        "To make all content rights universal",
+        "To replace campaign delivery reporting"
       ],
       "correctAnswer": 0,
-      "explanation": "It covers the commercial side of a media business: selling advertising against finite inventory, and acquiring and retaining subscribers.",
+      "explanation": "Bundling combines offerings to give subscribers more value and can support retention.",
       "whyWrong": [
-        "Commissioning and scheduling are editorial systems.",
-        "Stream delivery is handled by video infrastructure.",
-        "Talent contracting is a production and HR function."
+        "To eliminate the need to track subscribers is not the best choice because the scenario calls for To raise perceived value and support retention.",
+        "To make all content rights universal is not the best choice because the scenario calls for To raise perceived value and support retention.",
+        "To replace campaign delivery reporting is not the best choice because the scenario calls for To raise perceived value and support retention."
+      ]
+    },
+    {
+      "question": "A campaign targets a particular audience group. What should the booking consider?",
+      "options": [
+        "Past booking volume alone",
+        "Audience match to inventory",
+        "The editorial budget only",
+        "The billing address of the agency"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Targeting depends on matching audience needs with the attributes of available inventory.",
+      "whyWrong": [
+        "Past booking volume alone is not the best choice because the scenario calls for Audience data for the inventory available.",
+        "The editorial budget only is not the best choice because the scenario calls for Audience data for the inventory available.",
+        "The billing address of the agency is not the best choice because the scenario calls for Audience data for the inventory available."
+      ]
+    },
+    {
+      "question": "Which business area does Media Cloud support?",
+      "options": [
+        "Only editorial commissioning",
+        "Only video streaming technology",
+        "Ads and subscriptions",
+        "Only payroll for media talent"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Media Cloud supports commercial media workflows such as advertising sales and subscriber management.",
+      "whyWrong": [
+        "Only editorial commissioning is not the best choice because the scenario calls for Advertising sales and subscriber management.",
+        "Only video streaming technology is not the best choice because the scenario calls for Advertising sales and subscriber management.",
+        "Only payroll for media talent is not the best choice because the scenario calls for Advertising sales and subscriber management."
       ]
     }
   ]

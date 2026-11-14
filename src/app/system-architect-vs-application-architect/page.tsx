@@ -42,23 +42,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between System Architect and Application Architect?',
-    answer: 'Application Architect is auto-awarded once you pass four component exams: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect, no separate proctored exam. System Architect requires Platform Developer I plus Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. It is also auto-awarded, with no separate exam. Application Architect is more application-layer-and-declarative-focused; System Architect is more infrastructure, integration, and platform-focused.',
+    answer: 'Salesforce awards Application Architect after you pass Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There is no separate exam. System Architect requires Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect, and is also awarded automatically. Application Architect focuses on application design and declarative tools; System Architect focuses on infrastructure, integration, and the platform.',
   },
   {
     question: 'Which should I pursue first: System Architect or Application Architect?',
-    answer: 'Most candidates start with Application Architect, three of its four component exams (App Builder, Data Architect, Sharing & Visibility) cost $200–$400 each and are more accessible than System Architect’s infrastructure-heavy domains. Application Architect also builds the foundation before tackling System Architect’s deeper integration and identity topics. Candidates with strong integration or security backgrounds may find System Architect’s domain exams more natural to start with.',
+    answer: 'Many candidates start with Application Architect because its App Builder, Data Architect, and Sharing & Visibility exams cost $200–$400 each and may be a more accessible entry point than the infrastructure-heavy System Architect exams. This path also introduces application architecture before deeper work in integration and identity. If you already work in integration or security, you may prefer to begin with System Architect components.',
   },
   {
     question: 'How much does it cost to earn both credentials?',
-    answer: 'Application Architect: App Builder $200 + PD1 $200 + Data Architect $400 + Sharing & Visibility Architect $400 = $1,200. System Architect adds: Integration Architect $400 + IAM Architect $400 + Dev Lifecycle Architect $400 = $1,200 (PD1 is already covered from the Application Architect side). Combined total: approximately $2,600 for both credentials.',
+    answer: 'Application Architect costs: App Builder $200 + PD1 $200 + Data Architect $400 + Sharing & Visibility Architect $400 = $1,200. For System Architect, add Integration Architect $400 + IAM Architect $400 + Dev Lifecycle Architect $400 = $1,200 (PD1 is already counted under Application Architect). The stated combined estimate is approximately $2,600 for both credentials.',
   },
   {
     question: 'Are both credentials required for the CTA?',
-    answer: 'Yes, both the System Architect credential AND the Application Architect credential must be held before applying for the Salesforce Certified Technical Architect (CTA) Board Review. You cannot apply for CTA with only one of the two credentials. Both must be in Active status at the time of CTA application.',
+    answer: 'Yes. You must hold both System Architect and Application Architect before applying for the Salesforce Certified Technical Architect (CTA) Board Review. One credential alone is not enough, and both must be in Active status when you apply.',
   },
   {
     question: 'Do overlapping exams count toward both credentials?',
-    answer: 'Platform Developer I is the only exam shared between the two credentials, pass it once and it counts toward both Application Architect and System Architect. Data Architect and Sharing and Visibility Architect count only toward Application Architect; Integration Architect, IAM Architect, and Dev Lifecycle Architect count only toward System Architect. This overlap reduces the total unique exams needed from nine to eight for candidates pursuing both credentials plus CTA.',
+    answer: 'Platform Developer I is the only shared exam. Passing it once counts toward both credentials. Data Architect and Sharing and Visibility Architect count only toward Application Architect, while Integration Architect, IAM Architect, and Dev Lifecycle Architect count only toward System Architect. This reduces the number of unique exams from nine to eight for candidates pursuing both credentials and CTA.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both are multi-exam Salesforce architect credentials required for CTA, but they cover different domains and have different entry points. Here is how they compare and which to pursue first.
+          Both credentials are part of the CTA path, but they cover different architecture domains and have different component exams. Compare their focus, cost, and shared requirement to decide where to begin.
         </p>
       </div>
 
@@ -180,11 +180,11 @@ export default function SystemArchitectVsApplicationArchitectPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This First</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Strong in declarative development (Flows, App Builder, data modelling)</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
-              <tr><td className="py-2.5 pr-4">Strong in integrations, identity, deployment, and multi-org architecture</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
-              <tr><td className="py-2.5 pr-4">Targeting CTA (Certified Technical Architect), need both</td><td className="py-2.5 font-semibold text-gray-700">Application Architect first (shared exams reduce total effort)</td></tr>
-              <tr><td className="py-2.5 pr-4">Solution architect role focused on org design and data architecture</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
-              <tr><td className="py-2.5 pr-4">Technical architect role focused on SSO, APIs, and deployment pipelines</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Your strengths are declarative development, Flows, App Builder, and data modeling</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Your work centers on integrations, identity, deployment, and multiple orgs</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">You are pursuing CTA and need both credentials</td><td className="py-2.5 font-semibold text-gray-700">Application Architect first (shared exams reduce total effort)</td></tr>
+              <tr><td className="py-2.5 pr-4">You design orgs and data structures as a solution architect</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">You focus on SSO, APIs, and deployment pipelines as a technical architect</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
             </tbody>
           </table>
         </div>
@@ -194,7 +194,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start the Architect Path</h2>
-        <p className="text-white mb-6">Free practice questions for every domain exam in both architect credentials.</p>
+        <p className="text-white mb-6">Practice with free questions for domain exams in both architect credentials.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/application-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Application Architect Guide

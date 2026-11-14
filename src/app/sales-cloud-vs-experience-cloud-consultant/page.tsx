@@ -42,19 +42,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Which is harder, Sales Cloud or Experience Cloud Consultant?',
-    answer: 'Both have a 65% passing score and 60 questions in 105 minutes. Experience Cloud Consultant is considered harder by most candidates because digital experience design, community configuration, sharing model for external users, and Salesforce CMS are niche topics that require specific hands-on project experience. Sales Cloud Consultant has more overlap with ADM-201 content, making it more accessible to admins transitioning to consultant roles.',
+    answer: 'Both exams have 60 questions, a 105-minute limit, and a 65% passing score. Some candidates find Experience Cloud Consultant harder because it covers portal design, external-user sharing, and Salesforce CMS. Sales Cloud Consultant overlaps more with ADM-201 topics, which may make it a more familiar next step for admins.',
   },
   {
     question: 'Who is the Experience Cloud Consultant exam designed for?',
-    answer: 'Experience Cloud Consultant is designed for professionals who implement Salesforce Experience Cloud (formerly Community Cloud) portals, customer portals, partner portals, employee intranets, and digital experience sites. Typical candidates include Salesforce developers or senior admins who have built at least one Experience Cloud site with external user sharing, template configuration, and CMS content management.',
+    answer: 'The exam is for people who build Experience Cloud sites such as customer or partner portals, employee intranets, and other digital experiences. It may suit developers or experienced admins who have worked with external-user sharing, site templates, and CMS content.',
   },
   {
     question: 'Do I need ADM-201 before Sales Cloud or Experience Cloud Consultant?',
-    answer: 'ADM-201 is strongly recommended but not a hard prerequisite for either exam. Both consultant exams test foundational platform knowledge (security model, data model, automation) that ADM-201 covers. Sales Cloud Consultant has more direct ADM-201 overlap. Experience Cloud Consultant additionally assumes knowledge of Salesforce sharing rules for external users, which is a more advanced topic covered briefly in ADM-201 but in depth in the Experience Cloud setup guide.',
+    answer: 'ADM-201 is recommended, but it is not a formal prerequisite for either exam. Both cover platform fundamentals such as security, the data model, and automation. Sales Cloud Consultant overlaps more directly with ADM-201; Experience Cloud Consultant also expects knowledge of sharing for external users.',
   },
   {
     question: 'Can I hold both Sales Cloud and Experience Cloud Consultant certifications?',
-    answer: 'Yes, many consultants hold both. They are complementary: Sales Cloud Consultant demonstrates expertise in CRM implementation for sales teams, while Experience Cloud Consultant demonstrates expertise in building digital engagement portals. Together they make you a highly versatile CRM consultant capable of delivering both internal and external-facing Salesforce solutions.',
+    answer: 'Yes. The credentials cover different work: Sales Cloud Consultant focuses on CRM implementation for sales teams, while Experience Cloud Consultant focuses on digital portals. Holding both can support work on internal and external Salesforce solutions.',
   },
 ]
 
@@ -68,14 +68,11 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
           Certification Comparison · {RELEASE_CURRENT}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Salesforce Sales Cloud vs Experience Cloud Consultant: Which to Take First?
+          Salesforce Sales Cloud vs Experience Cloud Consultant: Which Exam Should You Take First?
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Sales Cloud Consultant and Experience Cloud Consultant are both mid-level Salesforce specialist
-          certifications. Sales Cloud focuses on sales process implementation and CRM optimisation.
-          Experience Cloud focuses on building external-facing digital portals and communities.
-          Here is how they compare and how to choose.
+          Both are mid-level Salesforce specialist certifications. Sales Cloud Consultant focuses on sales processes and CRM. Experience Cloud Consultant focuses on external-facing portals and communities. Compare the work each covers to choose.
         </p>
       </header>
 
@@ -146,7 +143,7 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
 
       {/* What's different */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Key Content Differences</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Topics Unique to Each Exam</h2>
         <div className="grid sm:grid-cols-2 gap-6 text-sm">
           <div>
             <p className="font-semibold text-salesforce-blue mb-2">Sales Cloud: Unique Topics</p>
@@ -175,12 +172,11 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which to Take First?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Choose based on the type of Salesforce projects you are implementing. Both are valuable,
-          but they serve very different client needs.
+          Choose based on the Salesforce projects you work on. Each credential supports a different set of client needs.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
-            <p className="text-sm font-semibold text-salesforce-dark mb-2">Take Sales Cloud Consultant First If:</p>
+            <p className="text-sm font-semibold text-salesforce-dark mb-2">Sales Cloud Consultant may fit if:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>Your clients are primarily in sales or revenue operations</li>
               <li>You implement Opportunities, Leads, and Forecasting</li>
@@ -189,7 +185,7 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
             </ul>
           </div>
           <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-4">
-            <p className="text-sm font-semibold text-emerald-700 mb-2">Take Experience Cloud Consultant First If:</p>
+            <p className="text-sm font-semibold text-emerald-700 mb-2">Experience Cloud Consultant may fit if:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>You have built at least one Experience Cloud portal</li>
               <li>Your projects involve partner portals or customer communities</li>
@@ -202,7 +198,7 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
 
       {/* CTA */}
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Sales Cloud or Experience Cloud Consultant?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between Sales Cloud and Experience Cloud Consultant</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
@@ -238,7 +234,7 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Practice for Both</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Practise for Both Exams</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/certifications/sales-cloud#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Sales Cloud Practice Questions <ArrowRight className="h-4 w-4" />

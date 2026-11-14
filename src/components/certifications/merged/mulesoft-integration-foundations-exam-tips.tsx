@@ -33,11 +33,11 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the MuleSoft Integration Foundations exam format?',
-    answer: 'The MuleSoft Integration Foundations exam has 60 multiple-choice questions, a 90-minute time limit, a 70% passing score, and a $200 fee.',
+    answer: 'The MuleSoft Integration Foundations exam has 40 scored questions plus up to five unscored questions, a 70-minute time limit, a 70% passing score, and a $75 fee. Salesforce lists a free retake.',
   },
   {
     question: 'What are the highest-weight MuleSoft Foundations topics?',
-    answer: 'API-led connectivity and MuleSoft Anypoint Platform fundamentals are the core focus areas. Understanding the System, Process, and Experience API layers is essential.',
+    answer: 'The six official domains cover essential integration concepts and terminology (20%), technical complexities and patterns (18%), Anypoint Platform for system integration (18%), integration project roles and lifecycle (17%), integration problems and solutions (17%), and Anypoint Platform for API management (10%).',
   },
   {
     question: 'Is MuleSoft Foundations a prerequisite for other MuleSoft certs?',
@@ -49,7 +49,7 @@ export const faqItems = [
   },
   {
     question: 'What concepts do most MuleSoft Integration Foundations candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Foundations exam are: (1) API-Led Connectivity Layers: Which Layer Handles Which Scenario; (2) Anypoint Platform Components: Which Tool Does What; (3) DataWeave: Output Directives and Basic Transformation Syntax. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'Candidates often confuse the API-led connectivity layers, Anypoint Platform tools, and the difference between Anypoint Platform for system integration and API management. Review the six official domains and their scope before you study.',
   },
   ...getConceptFaqs('mulesoft-integration-foundations-exam-tips'),
 ]

@@ -40,23 +40,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the most popular first Salesforce certification?',
-    answer: 'The Salesforce Administrator (ADM-201) is the most popular first Salesforce certification. It is the foundational professional credential that opens the most career paths, admin roles, consultant roles, and BA roles all commonly require or prefer it. For complete beginners who want the lowest-cost entry point, Platform Foundations ($75) is the lowest-cost starting credential before committing to the full Administrator study programme.',
+    answer: 'Salesforce Administrator (ADM-201) is the most common first certification. It is a core professional credential, and many admin, consultant, and business analyst roles require or prefer it. If you are new to Salesforce and want a lower-cost introduction, start with Platform Foundations ($75) before taking on the full Administrator study plan.',
   },
   {
     question: 'Can I get a Salesforce certification with no experience?',
-    answer: 'Yes, the three associate-level certifications ($75 each) are designed for beginners with no prior experience: Salesforce Platform Foundations, and MuleSoft Integration Foundations. Platform Foundations is the most widely recommended beginner certification; AI Associate retired in February 2026 and can no longer be booked. The Administrator certification ($200) also accepts candidates with no formal Salesforce work experience, though it requires 3–4 months of dedicated study including hands-on practice in a sandbox.',
+    answer: 'Yes. The associate-level certifications cost $75 each and are designed for beginners. Salesforce Platform Foundations and MuleSoft Integration Foundations are available; AI Associate retired in February 2026 and can no longer be booked. Platform Foundations is a common first choice. You can also take Administrator ($200) without Salesforce work experience, but plan for 3–4 months of study and hands-on sandbox practice.',
   },
   {
     question: 'Is the Salesforce Administrator certification the best first cert?',
-    answer: 'Administrator is the best first certification for most people pursuing a full Salesforce career. It is the most recognised entry-level professional credential, required or preferred for admin, junior consultant, BA, and CRM analyst roles. The only scenario where Administrator is not the best first cert: if you are unsure about committing to Salesforce and want a low-cost preview, in which case Platform Foundations ($75) is a better starting point.',
+    answer: 'Administrator is a strong first certification for most people pursuing a Salesforce career. Many admin, junior consultant, business analyst, and CRM analyst roles require or prefer it. If you are unsure whether Salesforce is right for you, Platform Foundations ($75) offers a lower-cost introduction.',
   },
   {
     question: 'Should a developer start with Administrator or Platform Developer I?',
-    answer: 'Developers with a software engineering background should still start with Administrator (ADM-201). It builds the declarative Salesforce knowledge that underpins good Apex development, understanding the platform deeply before coding on it. Platform Developer I (PD1) is significantly harder without Administrator-level platform knowledge. Most Salesforce developers recommend Admin → PD1 as the standard developer entry path, even for experienced software engineers.',
+    answer: 'Developers with software engineering experience can still benefit from starting with Administrator (ADM-201). It teaches declarative Salesforce features and how the platform works before you write Apex. Platform Developer I (PD1) is harder without that platform knowledge. A common path is Administrator, then PD1.',
   },
   {
     question: 'How long does it take to get the first Salesforce certification?',
-    answer: 'For Platform Foundations ($75): 2–4 weeks of part-time Trailhead study. For Administrator ($200): 2–4 months of part-time study (40–80 hours) with hands-on practice. For Platform Developer I ($200): 3–5 months for developers with programming experience. The timeline depends heavily on your starting knowledge. Complete beginners to Salesforce need more time than professionals who already use Salesforce daily at work.',
+    answer: 'As a rough guide, allow 2–4 weeks of part-time Trailhead study for Platform Foundations ($75), 2–4 months (40–80 hours) for Administrator ($200), and 3–5 months for Platform Developer I ($200) if you already know how to program. Your starting knowledge matters: people new to Salesforce usually need more time than those who use it at work.',
   },
 ]
 
@@ -76,13 +76,13 @@ export default function WhichSalesforceCertificationFirstPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          The right first certification depends on your background and career goal. Here is a clear, practical guide to choosing the best starting point, no fluff.
+          Choose a first certification based on your experience and career goal. Use these paths to compare where to start and what to take next.
         </p>
       </div>
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-1">The short answer</h2>
-        <p className="text-sm text-gray-700">For most people: <strong>Start with Platform Foundations ($75)</strong> to confirm Salesforce is right for you, then pursue <strong>Administrator ($200)</strong> as your primary professional credential. If you are already certain about Salesforce, skip the associate tier and go straight to Administrator.</p>
+        <p className="text-sm text-gray-700">If you are new to Salesforce, start with <strong>Platform Foundations ($75)</strong> to learn the basics. Then consider <strong>Administrator ($200)</strong> as your main professional credential. If you already know Salesforce is the right path, you can start with Administrator.</p>
       </div>
 
       <div className="space-y-5 mb-10">
@@ -93,7 +93,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             first: 'Salesforce Administrator (ADM-201)',
             fee: '$200',
             time: '2–4 months',
-            why: 'Administrator is the foundational credential for every admin role. It opens doors to junior admin, CRM analyst, and business analyst positions. Everything in Salesforce admin work connects back to this certification.',
+            why: 'Administrator covers core skills for admin work and can support applications for junior admin, CRM analyst, and business analyst roles. Many Salesforce admin tasks build on these skills.',
             next: 'Advanced Administrator, then specialist certs (CPQ, Field Service, Experience Cloud)',
             href: '/certifications/administrator',
           },
@@ -103,7 +103,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             first: 'Salesforce Administrator (ADM-201)',
             fee: '$200',
             time: '2–4 months',
-            why: 'Even for developers, Administrator comes first. Understanding declarative platform capabilities makes you a much better Apex developer. Platform Developer I is significantly easier after building strong admin knowledge.',
+            why: 'Administrator teaches declarative Salesforce features that developers also use. Learning the platform first can make it easier to prepare for Platform Developer I and Apex work.',
             next: 'Platform Developer I, then Platform Developer II',
             href: '/certifications/administrator',
           },
@@ -113,7 +113,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             first: 'Salesforce Administrator (ADM-201)',
             fee: '$200',
             time: '2–4 months',
-            why: 'Consultant roles require deep platform knowledge starting with administration. Administrator certification is the non-negotiable entry point. Specialist certs (Sales Cloud, Service Cloud, CPQ) follow after.',
+            why: 'Consultants need a solid understanding of the platform and its administration tools. Start with Administrator, then pursue a specialist certification in an area such as Sales Cloud, Service Cloud, or CPQ.',
             next: 'Sales Cloud Consultant or Service Cloud Consultant, based on specialisation',
             href: '/certifications/administrator',
           },
@@ -123,7 +123,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             first: 'Platform Foundations',
             fee: '$75',
             time: '2–4 weeks',
-            why: 'Platform Foundations is the lowest-cost, lowest-risk entry point. It validates that Salesforce interests you and gives you a credential while deciding your path. No platform experience required.',
+            why: 'Platform Foundations is a lower-cost introduction that does not require prior platform experience. It can help you decide whether you want to continue with Salesforce.',
             next: 'Administrator (ADM-201) after confirming Salesforce is your direction',
             href: '/certifications/platform-foundations',
           },
@@ -133,7 +133,7 @@ export default function WhichSalesforceCertificationFirstPage() {
             first: 'Marketing Cloud Email Specialist',
             fee: '$200',
             time: '4–8 weeks (with MC experience)',
-            why: 'For professionals already working in Marketing Cloud Engagement, Email Specialist is the most accessible marketing-track cert. For B2B marketers using Pardot/Account Engagement, Pardot Specialist is the equivalent entry point.',
+            why: 'For people who use Marketing Cloud Engagement, Email Specialist is an accessible marketing-track option. B2B marketers who use Pardot, also called Account Engagement, can start with Pardot Specialist.',
             next: 'Marketing Cloud Consultant or Pardot Consultant',
             href: '/certifications/email-specialist',
           },
@@ -170,11 +170,11 @@ export default function WhichSalesforceCertificationFirstPage() {
             <tbody className="divide-y divide-gray-50">
               {[
                 { cert: 'AI Associate (retired Feb 2026)', fee: '$75', for: 'Retired; listed for historical reference only' },
-                { cert: 'Platform Foundations', fee: '$75', for: 'Beginners building toward Administrator credential' },
-                { cert: 'MuleSoft Integration Foundations', fee: '$75', for: 'Integration and API beginners' },
-                { cert: 'Salesforce Administrator (ADM-201)', fee: '$200', for: 'Admin, consultant, BA career paths' },
-                { cert: 'Marketing Cloud Email Specialist', fee: '$200', for: 'Marketing professionals using MC Engagement' },
-                { cert: 'Pardot Specialist', fee: '$200', for: 'B2B marketers using Account Engagement (Pardot)' },
+                { cert: 'Platform Foundations', fee: '$75', for: 'Beginners preparing for Administrator' },
+                { cert: 'MuleSoft Integration Foundations', fee: '$75', for: 'Beginners learning about integration and APIs' },
+                { cert: 'Salesforce Administrator (ADM-201)', fee: '$200', for: 'Admin, consultant, and business analyst careers' },
+                { cert: 'Marketing Cloud Email Specialist', fee: '$200', for: 'Marketing professionals who use Marketing Cloud Engagement' },
+                { cert: 'Pardot Specialist', fee: '$200', for: 'B2B marketers who use Account Engagement (Pardot)' },
               ].map((row) => (
                 <tr key={row.cert}>
                   <td className="py-2 pr-4 text-gray-900 font-medium">{row.cert}</td>
@@ -201,7 +201,7 @@ export default function WhichSalesforceCertificationFirstPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it?, honest analysis</Link></li>
+          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it? An honest analysis</Link></li>
           <li><Link href="/salesforce-free-certification" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to get a free Salesforce certification</Link></li>
         </ul>
       </div>
@@ -209,7 +209,7 @@ export default function WhichSalesforceCertificationFirstPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Free Practice Questions</h2>
-        <p className="text-white mb-6">Free practice questions for every Salesforce certification, no signup required.</p>
+        <p className="text-white mb-6">Try free practice questions for any Salesforce certification. No sign-up is required.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/platform-foundations" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Platform Foundations Practice

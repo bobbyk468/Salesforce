@@ -1,48 +1,48 @@
 {
   "template": "associate",
-  "expertInsight": "System Architect is earned by holding four credentials: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no extra System Architect exam. Once the fourth one is passed, the credential is added to your profile. Platform Developer I is the only one that also counts toward Application Architect, so the other three are new work even if you already hold Application Architect.",
+  "expertInsight": "System Architect is awarded after you earn four credentials: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate System Architect exam. Platform Developer I also counts toward Application Architect, so three credentials in this path are additional if you already hold Application Architect.",
   "whoIsThisFor": {
-    "heading": "Who is the System Architect exam for?",
+    "heading": "Who should pursue System Architect?",
     "personas": [
       {
-        "label": "Enterprise Architects",
-        "description": "You design how Salesforce fits with the rest of the company's systems, logins and release process."
+        "label": "Enterprise solution architects",
+        "description": "You plan how Salesforce connects to company systems, identity providers, and release processes."
       },
       {
-        "label": "Integration Specialists",
-        "description": "You already work on APIs and middleware and want the wider architect credential that covers identity and deployment too."
+        "label": "Integration specialists",
+        "description": "You work with APIs or middleware and want broader expertise in identity and deployment."
       },
       {
-        "label": "IT Leaders",
-        "description": "You want your team to have a recognised path toward Technical Architect (CTA)."
+        "label": "Technology leaders",
+        "description": "You want a credential path that can lead toward Technical Architect (CTA)."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the System Architect Exam Hard?",
-    "summary": "System Architect has no exam of its own. You earn it automatically once you hold four credentials: Platform Developer I, Platform Integration Architect, Platform Development Lifecycle and Deployment Architect, and Identity and Access Management Architect. The hard part is the breadth, since those exams cover integration, logins and release management.",
+    "heading": "How challenging is the System Architect path?",
+    "summary": "System Architect has no stand-alone exam. Salesforce awards it once you hold four certifications: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. The challenge is preparing across development, integration, identity, and release management.",
     "bullets": [
-      "<strong>No separate exam.</strong> The credential is granted when you hold all four required certifications.",
-      "<strong>Four exams to pass.</strong> Platform Developer I, Integration Architect, Development Lifecycle and Deployment Architect, and Identity and Access Management Architect.",
-      "<strong>Wide scope.</strong> Together they cover integration patterns, OAuth and single sign-on, sandbox strategy and release management.",
-      "<strong>Check each exam's guide.</strong> Each of the four exams has its own format, pass mark and fee, listed in its official exam guide."
+      "<strong>No separate System Architect exam.</strong> The credential is granted when all four required certifications are active.",
+      "<strong>Four exams in the path.</strong> Complete Platform Developer I and the three architect exams.",
+      "<strong>Broad subject coverage.</strong> Study integration, OAuth and SSO, sandbox planning, and release management.",
+      "<strong>Check each exam guide.</strong> Each certification has its own format, passing score, and fee."
     ],
-    "passRateGuidance": "Most people take Platform Developer I first, then the three architect exams in whatever order matches their work. Plan each one on its own and use that exam's practice tests."
+    "passRateGuidance": "Many candidates complete Platform Developer I first, then schedule the architect exams in an order that fits their experience. Plan and practise for each exam on its own."
   },
   "examFormat": {
-    "heading": "System Architect Exam Format Explained",
-    "intro": "There is no System Architect exam to book. Here is how the credential works:",
-    "scenarioPercent": "Each of the four exams uses short business scenarios. You read a requirement, such as a new partner portal login or a nightly data sync, and choose the best design.",
+    "heading": "How the System Architect credential works",
+    "intro": "There is no exam to book specifically for System Architect. You earn the credential by completing four certifications:",
+    "scenarioPercent": "Each exam includes short business scenarios. You may need to choose an identity setup for a partner portal or an approach for a scheduled data transfer.",
     "bestWayToPass": [
-      "<strong>Start with Platform Developer I:</strong> It gives you the Apex and data model basics that the architect exams assume.",
-      "<strong>Take Integration Architect next if you work with APIs:</strong> It covers patterns, APIs and error handling. See the Integration Architect guide.",
-      "<strong>Then Identity and Access Management:</strong> Learn SAML, OAuth flows, My Domain and how users are provisioned.",
-      "<strong>Finish with Development Lifecycle and Deployment:</strong> Sandboxes, source control, testing and release planning."
+      "<strong>Start with Platform Developer I:</strong> Build the Apex and data-model knowledge used by the architect exams.",
+      "<strong>Study integration patterns:</strong> Integration Architect covers APIs, error handling, and integration choices.",
+      "<strong>Learn identity and access management:</strong> Review SAML, OAuth, My Domain, and user provisioning.",
+      "<strong>Prepare for deployment and lifecycle topics:</strong> Study sandboxes, source control, testing, and releases."
     ]
   },
   "certificationCard": {
     "code": "System Architect",
-    "description": "System Architect is earned, not tested. You get it when you hold Platform Developer I, Integration Architect, Development Lifecycle and Deployment Architect, and Identity and Access Management Architect.",
+    "description": "System Architect is a credential earned by completing four certifications: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate System Architect exam. Platform Developer I also counts toward Application Architect, so the two paths share one exam.",
     "examDetails": {
       "questions": "No exam",
       "passingScore": "N/A",
@@ -90,53 +90,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "System Architect: Key Concepts for the Exam",
+    "h2": "System Architect: areas covered by the credentials",
     "blocks": [
       {
-        "heading": "Integration Patterns: Choosing the Right Approach",
-        "body": "From the Integration Architect exam. Pick the pattern from three facts in the scenario: does a user wait for an answer, how much data is there, and which system starts the exchange. **Request and Reply** when the user waits. **Fire and Forget** with Platform Events or outbound messages when nobody waits. **Batch** with Bulk API for large scheduled loads. **Data Virtualization** with Salesforce Connect when data should stay in the other system. Callout limits matter: 100 callouts per transaction and 120 seconds in total."
+        "heading": "Select the right integration pattern",
+        "body": "Integration Architect scenarios often turn on whether a user waits for a response, how much data moves, and which system starts the exchange. Use a request-and-reply approach when a user needs an immediate answer. Use asynchronous events or outbound messages when no immediate response is required. Bulk API supports large data loads. Salesforce Connect can expose remote data without copying it into Salesforce. Also understand callout limits: up to 100 callouts per transaction and 120 seconds total."
       },
       {
-        "heading": "Authentication Patterns: OAuth 2.0 Flows",
-        "body": "From the Identity and Access Management exam. **Web server flow** when a person logs in through a browser and the app can keep a secret on its server. **User-agent flow** for apps that run in a browser or on a phone. **JWT bearer flow** for server-to-server access with no person present. **Device flow** for things like TVs or command-line tools with no proper keyboard. **Refresh tokens** let an app get a new access token without asking the user again. Each flow is set up in a Connected App or External Client App; which also controls scopes and policies."
+        "heading": "Match OAuth flows to the client",
+        "body": "Identity and Access Management covers OAuth flows. The web server flow suits a user signing in through a browser when the app server can protect a secret. The user-agent flow serves browser or mobile apps. JWT bearer supports server-to-server access without an interactive user. Device flow fits devices with limited input, such as a TV or command-line client. Refresh tokens let an app obtain new access tokens without prompting the user each time. Connected Apps and External Client Apps define scopes and policies."
       },
       {
-        "heading": "API-Led Connectivity and Middleware (MuleSoft)",
-        "body": "Once several systems share data, direct point-to-point links become hard to manage. Middleware sits in the middle. MuleSoft's model has three layers. **System APIs** talk to back-end systems. **Process APIs** combine data and apply business rules. **Experience APIs** shape data for one app or channel. This lets teams reuse the same APIs instead of building new connections for every project. In Salesforce, **Named Credentials** hold endpoints and login details so code never contains secrets."
+        "heading": "Use APIs and middleware to simplify integrations",
+        "body": "As the number of connected systems grows, direct point-to-point links become difficult to maintain. MuleSoft’s API-led model uses System APIs to connect to back-end systems, Process APIs to combine data and apply rules, and Experience APIs to tailor data for an app or channel. Reusable APIs reduce duplicate connections. In Salesforce, Named Credentials store endpoint and authentication details so secrets are not embedded in Apex."
       },
       {
-        "heading": "Sandbox Strategy and Release Management",
-        "body": "From the Development Lifecycle and Deployment exam. Developer sandboxes for each developer, Partial Copy for QA, Full for performance and final user testing. Keep source in Git and deploy with the Salesforce CLI or DevOps Center. Production deployments with Apex need 75% test coverage. Validate early and quick deploy within 10 days. There is no rollback button, so keep the last good version in source control and use feature flags."
+        "heading": "Plan sandbox and release processes",
+        "body": "Use Developer sandboxes for individual work, Partial Copy sandboxes for QA, and Full sandboxes for performance or final user testing. Track metadata in Git and deploy with Salesforce CLI or DevOps Center. Apex deployments to production require at least 75% overall test coverage, and each trigger must be covered. Validate before release and use quick deploy within the permitted 10-day window. Salesforce has no rollback button, so preserve a known-good version and consider feature flags."
       },
       {
-        "heading": "Identity, SSO, and My Domain",
-        "body": "Single sign-on lets users log in to Salesforce with the company's existing identity provider. With **SAML**, the company's provider (such as Okta or Entra ID) is the identity provider and Salesforce is the service provider. Salesforce can also be the identity provider for other apps. **My Domain** gives your org its own login URL and is required for SSO. **Just-in-time provisioning** creates or updates a Salesforce user the first time they log in through SSO. For customers, Experience Cloud supports social sign-on and self-registration."
+        "heading": "Configure SSO and identity",
+        "body": "Single sign-on lets employees use an existing company identity provider. With SAML, a service such as Okta or Entra ID authenticates the person and Salesforce acts as the service provider. Salesforce can also act as an identity provider for other apps. My Domain supplies the organization-specific login URL needed for SSO. Just-in-time provisioning creates or updates a Salesforce user at first SSO login. Experience Cloud can also support customer social sign-on and self-registration."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce System Architect Exam",
-    "intro": "Because the credential is made up of four exams, prepare for each one separately. These are the themes that show up across them.",
+    "h2": "How to prepare across the System Architect exams",
+    "intro": "The credential requires four exams, so plan study and practice for each certification. These themes recur across the path.",
     "blocks": [
       {
-        "heading": "Enterprise Integration Patterns",
-        "body": "If the user waits, it is synchronous. If not, prefer asynchronous. If the data is huge, use Bulk API. If it shouldn't be copied, use Salesforce Connect."
+        "heading": "Choose an integration pattern",
+        "body": "Use synchronous calls when the user needs a response, asynchronous methods when they do not, Bulk API for large transfers, and Salesforce Connect when data should remain remote."
       },
       {
-        "heading": "Data Migration Strategy",
-        "body": "Load parent records before children, use external IDs to link them, turn off automation that isn't needed during the load, and use Bulk API for large volumes."
+        "heading": "Plan data migration",
+        "body": "Load parent records before child records, use external IDs for relationships, limit unnecessary automation during the load, and use Bulk API for large volumes."
       },
       {
-        "heading": "Multi-Org Architecture",
-        "body": "One org is simpler and is usually the default answer. Several orgs make sense for strict legal separation or very different business units, but they need integration between them."
+        "heading": "Decide whether to use one or several orgs",
+        "body": "One org is usually simpler. Separate orgs may be justified by legal separation or very different business needs, but they then require integrations."
       },
       {
-        "heading": "Governor Limits at Scale",
-        "body": "Design for bulk from the start. Move callouts and heavy work to Queueable or Batch Apex, and keep queries selective on large objects."
+        "heading": "Design for platform limits",
+        "body": "Make processing bulk-safe. Move lengthy work to Queueable or Batch Apex and use selective queries on large datasets."
       },
       {
-        "heading": "Salesforce Connect & External Objects",
-        "body": "Use these when users need to see outside data that changes often and shouldn't be stored in Salesforce."
+        "heading": "Expose remote data when needed",
+        "body": "Salesforce Connect and external objects fit data that changes often and should not be stored in Salesforce."
       }
     ]
   },
@@ -198,103 +198,103 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which set of credentials earns you System Architect?",
+      "question": "Which certifications are required to earn System Architect?",
       "options": [
-        "A single System Architect exam",
-        "Platform Developer I plus the three architect exams",
-        "Administrator, Platform App Builder, Data Architect, Sharing and Visibility Architect",
-        "Administrator, Advanced Administrator, Platform Developer II"
+        "Pass a single System Architect exam",
+        "Pass Platform Developer I and the three System Architect architect exams",
+        "Pass Administrator, Platform App Builder, Data Architect, and Sharing and Visibility Architect",
+        "Pass Administrator, Advanced Administrator, and Platform Developer II"
       ],
       "correctAnswer": 1,
-      "explanation": "System Architect is granted when you hold these four credentials. There is no separate exam.",
+      "explanation": "System Architect is awarded when the candidate holds Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect.",
       "whyWrong": [
         "There is no stand-alone System Architect exam.",
-        "That list is close to the Application Architect requirements, not System Architect.",
-        "Those credentials don't make up any architect credential."
+        "That list is the Application Architect path, not System Architect.",
+        "Those exams do not make up a Salesforce architect credential."
       ]
     },
     {
-      "question": "A partner's server needs to call the Salesforce API every hour with no person logging in. Which OAuth flow fits best?",
+      "question": "A partner’s scheduled backend service must call Salesforce APIs without prompting an employee to sign in. Which OAuth flow should the integration use?",
       "options": [
         "Device flow",
-        "The web server flow",
+        "Web server flow",
         "JWT bearer flow",
         "User-agent flow"
       ],
       "correctAnswer": 2,
-      "explanation": "The JWT bearer flow is meant for server-to-server access. The server signs a token with a certificate, and no password or user is needed.",
+      "explanation": "JWT bearer lets the partner service authenticate as a configured integration identity using a signed assertion rather than an interactive login.",
       "whyWrong": [
-        "The device flow is for devices with limited input, such as TVs; and still needs a person.",
-        "The web server flow needs a person to log in through a browser.",
-        "The user-agent flow is for browser or mobile apps with a user present."
+        "Device flow is designed for devices with limited input and includes user authorization.",
+        "Web server flow requires a user to sign in through a browser.",
+        "User-agent flow is intended for a browser or mobile app with a user present."
       ]
     },
     {
-      "question": "Employees log in to many company apps with Okta. They should log in to Salesforce the same way. What roles do Okta and Salesforce play?",
+      "question": "Employees use Okta to sign in to company applications and should use it for Salesforce too. Which roles do the systems play?",
       "options": [
-        "Both are identity providers",
-        "Salesforce is the identity provider and Okta the service provider instead",
+        "Both systems are identity providers",
+        "Salesforce is the identity provider and Okta is the service provider",
         "Okta is the identity provider and Salesforce is the service provider",
-        "Neither, because this needs OAuth only"
+        "Neither; this setup uses OAuth only"
       ],
       "correctAnswer": 2,
-      "explanation": "The system that checks the user's identity is the identity provider, here Okta. The app the user logs in to is the service provider, here Salesforce.",
+      "explanation": "Okta authenticates the employee as the identity provider. Salesforce is the service provider the employee wants to access.",
       "whyWrong": [
-        "Only one system authenticates the user in this setup.",
-        "That reverses the roles. Okta is checking the login, not Salesforce.",
-        "SSO for employees is usually SAML. OAuth is about granting apps access to data."
+        "In this arrangement, Okta is the identity provider and Salesforce is the service provider.",
+        "This reverses the roles: Okta handles authentication and Salesforce receives it.",
+        "Employee SSO commonly uses SAML; OAuth serves a different access-granting purpose."
       ]
     },
     {
-      "question": "When a new employee logs in to Salesforce through SSO for the first time, a user account should be created for them automatically. What feature does this?",
+      "question": "A new employee should receive a Salesforce user account during their first SSO login. What feature supports this?",
       "options": [
-        "Login flows",
+        "A login flow",
         "Just-in-time provisioning",
-        "Delegated authentication instead",
-        "Permission set groups"
+        "Delegated authentication",
+        "A permission set group"
       ],
       "correctAnswer": 1,
-      "explanation": "Just-in-time provisioning uses details in the SAML assertion to create or update the Salesforce user during their first SSO login.",
+      "explanation": "Just-in-time provisioning uses identity information in the SAML assertion to create or update a user on first login.",
       "whyWrong": [
-        "Login flows add steps after login, such as a terms page. They are not built for creating users.",
-        "Delegated authentication checks a password against another system. It doesn't create users.",
-        "Permission set groups grant access to existing users."
+        "Login flows add steps after authentication; they do not create the user account.",
+        "Delegated authentication checks credentials against another system but does not provision users.",
+        "Permission set groups grant permissions to users who already exist."
       ]
     },
     {
-      "question": "A company must load 3 million Contacts linked to 400,000 Accounts from an old CRM. What is the right approach?",
+      "question": "A migration must load three million Contacts related to 400,000 Accounts. Which order and method should the architect use?",
       "options": [
-        "Use the REST API one record at a time",
-        "Enter the records by hand in batches",
-        "Load Contacts first, then Accounts",
-        "Load Accounts with external IDs, then Contacts"
+        "Load records one by one through REST API",
+        "Enter the data manually in separate batches",
+        "Load Contacts before the related Accounts",
+        "Load Accounts first; link each Contact by external ID"
       ],
       "correctAnswer": 3,
-      "explanation": "Parents must exist before children. External IDs let you link Contacts to Accounts without looking up Salesforce IDs, and Bulk API handles the volume.",
+      "explanation": "Load parent Accounts first, then Contacts. External IDs support the relationships, and Bulk API handles the large volume.",
       "whyWrong": [
-        "Millions of single REST calls would be slow and hit API limits.",
-        "Manual entry is impossible at this scale.",
-        "Contacts can't link to Accounts that don't exist yet."
+        "Millions of individual calls would be slow and may hit API limits.",
+        "Manual entry is not practical at this scale.",
+        "The parent Accounts must exist before Contacts can reference them."
       ]
     },
     {
-      "question": "Two business units have very different processes, and a regulator requires their customer data to be kept fully separate. What org strategy fits?",
+      "question": "Two business units have very different processes and regulations require their customer records to be fully separated. What architecture is appropriate?",
       "options": [
         "One org with different record types",
-        "One org with different apps in the App Launcher",
+        "One org with separate apps in the App Launcher",
         "One org with different page layouts",
-        "Separate orgs for each business unit"
+        "Separate orgs for the business units"
       ],
       "correctAnswer": 3,
-      "explanation": "Strict legal separation is one of the few strong reasons for multiple orgs. Record types and apps don't separate the data itself.",
+      "explanation": "A legal requirement for data separation can justify multiple orgs. The design must also account for integrations between them.",
       "whyWrong": [
-        "Record types change processes but keep data in the same org.",
-        "Apps change navigation, not who can reach the data.",
-        "Page layouts only change how records look."
+        "Record types distinguish processes but do not create separate orgs or data stores.",
+        "Apps change navigation, not access to data at the org boundary.",
+        "Page layouts change the user interface, not data separation."
       ]
     },
     {
-      "question": "What is required before you can set up SAML single sign-on for a Salesforce org?",
+      "question": "What Salesforce feature is required for configuring SAML single sign-on?",
       "options": [
         "Shield Platform Encryption",
         "My Domain",
@@ -302,139 +302,219 @@
         "A Full sandbox"
       ],
       "correctAnswer": 1,
-      "explanation": "My Domain gives the org its own login URL, which SSO needs. It is turned on for all orgs today.",
+      "explanation": "My Domain gives an org its own login URL and is required for SSO configuration.",
       "whyWrong": [
-        "Encryption is not needed for SSO.",
-        "Experience Cloud is for external sites. Employee SSO doesn't need it.",
-        "SSO can be set up in any org. A Full sandbox is for testing."
+        "Encryption is not a prerequisite for setting up SSO.",
+        "Experience Cloud supports external sites but is not required for employee SSO.",
+        "SSO can be configured without a Full sandbox."
       ]
     },
     {
-      "question": "Order data from a warehouse system must be visible to service agents in Salesforce. It changes every few minutes and must not be stored in Salesforce. What fits?",
+      "question": "Service agents need to view warehouse orders that change every few minutes and must remain in the warehouse system. What should the architect choose?",
       "options": [
-        "A custom object that is updated once every hour",
-        "Salesforce Connect with External Objects",
-        "A nightly Bulk API load",
-        "Outbound messages"
+        "A custom Salesforce object refreshed hourly",
+        "Salesforce Connect with external objects",
+        "A nightly Bulk API data load",
+        "Outbound messages from Salesforce"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce Connect reads the data live from the other system each time it is viewed. Nothing is copied into Salesforce.",
+      "explanation": "Salesforce Connect can display live external data without storing a copy in Salesforce.",
       "whyWrong": [
-        "An hourly copy stores the data and can be an hour old.",
-        "A nightly load copies the data and is up to a day old.",
-        "Outbound messages send data out of Salesforce, not in."
+        "An hourly copy would be stored and may be stale.",
+        "A nightly load stores a copy that can be nearly a day out of date.",
+        "Outbound messages send information from Salesforce to another system."
       ]
     },
     {
-      "question": "A trigger needs to send each new Order to an ERP. Calls to the ERP take several seconds. What is the best design?",
+      "question": "A trigger must send each new Order to an ERP, where each call takes several seconds. What is a sound design?",
       "options": [
-        "Have the trigger queue Apex for the callout",
-        "Ask users to click a button to send each Order",
-        "A synchronous callout in the trigger",
-        "A nightly batch job that sends the orders"
+        "Queue the callout for asynchronous Apex processing",
+        "Require the user to click a send button for every Order",
+        "Make a synchronous callout directly from the trigger",
+        "Wait for a nightly job to transmit every Order"
       ],
       "correctAnswer": 0,
-      "explanation": "Triggers can't make synchronous callouts. Queueable Apex runs the callout in the background and can be chained or retried.",
+      "explanation": "Queueable Apex can perform the callout asynchronously without making the user wait.",
       "whyWrong": [
-        "A manual button depends on people remembering to click it.",
-        "Triggers aren't allowed to make synchronous callouts, and the user would wait.",
-        "A nightly job delays every Order by up to a day, which may be too late."
+        "Manual steps can be missed and do not reliably send every Order.",
+        "Triggers cannot make synchronous callouts, and synchronous work would delay the user.",
+        "A nightly job may delay orders for many hours."
       ]
     },
     {
-      "question": "Five systems need customer data from SAP. Today each one has its own direct connection to SAP, and every change breaks something. What should the architect recommend?",
+      "question": "Five systems need customer data from SAP. Each currently has a separate direct connection, and changes repeatedly break integrations. What should the architect recommend?",
       "options": [
-        "Reusable APIs through middleware",
-        "Add a sixth direct connection",
-        "Copy SAP data into every system each night",
-        "Stop sharing the data"
+        "Create reusable APIs through middleware",
+        "Add another direct SAP connection",
+        "Copy the SAP data into every system nightly",
+        "Stop sharing customer data between systems"
       ],
       "correctAnswer": 0,
-      "explanation": "A single System API in front of SAP, reused by everyone; means only one connection to change when SAP changes.",
+      "explanation": "A reusable System API in front of SAP reduces duplicate connections and means an SAP change can be handled centrally.",
       "whyWrong": [
-        "Another direct link adds to the mess.",
-        "Nightly copies are stale and still need five integrations.",
-        "The business still needs the data."
+        "A new direct connection increases the number of integrations to maintain.",
+        "Nightly copies can be stale and still require separate integrations.",
+        "The business still needs the data, so removing access does not meet the need."
       ]
     },
     {
-      "question": "Code is being deployed to production. What test coverage rule applies to Apex?",
+      "question": "What Apex test coverage is required for production deployment?",
       "options": [
-        "Only managed packages need tests",
-        "No tests are needed",
-        "100% coverage on every class",
-        "At least 75% overall coverage"
+        "Tests are needed only for managed packages",
+        "No tests are required",
+        "Every Apex class must have exactly 100% coverage",
+        "At least 75% overall coverage, with every trigger covered"
       ],
       "correctAnswer": 3,
-      "explanation": "Production deployments that include Apex need at least 75% overall coverage, and every trigger must be covered.",
+      "explanation": "Apex in a production deployment needs at least 75% overall coverage, and each trigger must be covered.",
       "whyWrong": [
-        "All Apex in production needs coverage, not just packages.",
-        "Tests are required for Apex in production.",
-        "100% is a goal, not the rule."
+        "All Apex deployed to production is subject to test requirements.",
+        "Apex tests are required.",
+        "One hundred percent is a useful goal but not the minimum rule."
       ]
     },
     {
-      "question": "The release team wants to check that a deployment will pass in production on Monday, then deploy it fast during a short window on Wednesday. What should they use?",
+      "question": "The team wants to validate a deployment on Monday and release quickly during a short window on Wednesday. What should it do?",
       "options": [
-        "Validate Monday, quick deploy Wednesday",
-        "A change set uploaded on Wednesday",
-        "Deploy on Monday and roll back if needed",
-        "Run all tests on Wednesday"
+        "Validate Monday, then quick deploy Wednesday",
+        "Upload a new change set during Wednesday’s window",
+        "Deploy Monday and roll back if there is a problem",
+        "Wait to run all tests on Wednesday"
       ],
       "correctAnswer": 0,
-      "explanation": "A validated deployment can be quick deployed within 10 days without running tests again.",
+      "explanation": "A validated deployment can be quick deployed within 10 days without rerunning tests.",
       "whyWrong": [
-        "A new change set on Wednesday would run tests during the short window.",
-        "There is no rollback button in Salesforce.",
-        "Running all tests makes the window longer, not shorter."
+        "A new deployment would require tests during the short window.",
+        "Salesforce does not provide a general rollback button.",
+        "Running tests during the window takes longer than a quick deploy."
       ]
     },
     {
-      "question": "A mobile app used by customers needs to call Salesforce on behalf of the logged-in customer and keep them logged in for weeks. What should be used?",
+      "question": "A customer mobile app must access Salesforce as the signed-in customer and keep the session usable for weeks. What should it use?",
       "options": [
-        "An API key in the app",
-        "The username and password flow",
+        "An API key embedded in the mobile app",
+        "The username-password OAuth flow",
         "An OAuth flow with a refresh token",
-        "A shared integration user for all customers"
+        "One shared integration user for every customer"
       ],
       "correctAnswer": 2,
-      "explanation": "A refresh token lets the app get new access tokens without asking the user to log in again, and access stays tied to that customer.",
+      "explanation": "A refresh token lets the app obtain new access tokens without repeatedly asking the customer to sign in, while preserving the customer identity.",
       "whyWrong": [
-        "Salesforce doesn't use API keys this way, and a key in an app can be extracted.",
-        "The username and password flow stores real passwords and is not recommended.",
-        "A shared user loses the link between actions and the real customer."
+        "A secret embedded in an app can be extracted and is not used this way.",
+        "The username-password flow requires handling the customer’s password and is discouraged.",
+        "A shared account would hide which customer performed each action."
       ]
     },
     {
-      "question": "Where should an Apex callout get the endpoint URL and login details for an outside system?",
+      "question": "Where should Apex retrieve an external endpoint and its authentication details?",
       "options": [
         "A Named Credential",
         "A Custom Label",
-        "A text field on a custom object",
-        "Hard-coded in the Apex class"
+        "A text field on a custom record",
+        "Hard-coded values in the Apex class"
       ],
       "correctAnswer": 0,
-      "explanation": "Named Credentials store the URL and authentication securely, and Salesforce adds the login details to each call for you.",
+      "explanation": "Named Credentials securely store the endpoint and authentication configuration for callouts.",
       "whyWrong": [
-        "Custom Labels are for translations, not secrets.",
-        "A text field exposes the secret to anyone who can read the record.",
-        "Hard-coded secrets can be read by anyone with code access and need a deployment to change."
+        "Custom Labels are for translated text, not credentials.",
+        "A record field could expose the secret to users with access.",
+        "Secrets in source code are visible to code readers and require code changes to update."
       ]
     },
     {
-      "question": "Which tool should a team use as the source of truth for their org's metadata?",
+      "question": "What should be the source of truth for Salesforce metadata in a source-driven development process?",
       "options": [
         "A shared Full sandbox",
-        "The production org",
-        "A version control system like Git",
-        "A spreadsheet listing the changes"
+        "Use production as the only copy and track changes in release notes",
+        "A version control system such as Git",
+        "A spreadsheet of requested changes"
       ],
       "correctAnswer": 2,
-      "explanation": "In source-driven development, Git holds the real version of the metadata. Orgs are built and updated from it.",
+      "explanation": "Git tracks the metadata history and serves as the source from which orgs are deployed and updated.",
       "whyWrong": [
-        "Sandboxes get refreshed and lose work.",
-        "Production changes all the time and has no history of who changed what.",
-        "A spreadsheet isn't the metadata and quickly goes out of date."
+        "Sandboxes can be refreshed and lose work.",
+        "Direct production changes are difficult to track and reproduce.",
+        "A spreadsheet is not the metadata and can quickly become stale."
+      ]
+    },
+    {
+      "question": "A payroll provider can handle temporary API failures but must never create a duplicate reimbursement. What should the integration include?",
+      "options": [
+        "A fresh request identifier for each retry attempt",
+        "An immediate retry for every timeout response",
+        "A longer timeout before the first API request",
+        "A stable request key with duplicate detection"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Reusing a stable key lets the receiver recognize a repeated operation even if the earlier response was lost.",
+      "whyWrong": [
+        "A new identifier makes two attempts look like distinct operations.",
+        "Immediate retries can increase load and still create a duplicate.",
+        "A longer timeout cannot prove whether an operation was applied."
+      ]
+    },
+    {
+      "question": "Two people change the same Salesforce flow in separate feature branches. When should the team resolve the overlap?",
+      "options": [
+        "After both branches have been deployed to production",
+        "When retrieving the resulting metadata from production",
+        "When refreshing the developer sandboxes after the release",
+        "While merging and validating the changes in version control"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Resolve the flow change in source, then validate the combined configuration before promoting it.",
+      "whyWrong": [
+        "Each deployment can overwrite part of the other change.",
+        "Retrieving metadata later does not prevent a production regression.",
+        "A sandbox refresh propagates the released state without resolving the original conflict."
+      ]
+    },
+    {
+      "question": "External staff use SSO. Removing an employee in the identity provider must also remove their Salesforce access. What should be designed?",
+      "options": [
+        "A deprovisioning integration with account and session controls",
+        "A login page with a generic error for inactive staff",
+        "Just-in-time provisioning for new employee sign-ins",
+        "A second login policy in each employee’s browser"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Deprovisioning handles account removal and active Salesforce sessions as well as future sign-ins.",
+      "whyWrong": [
+        "A login error does not revoke active access.",
+        "Just-in-time provisioning creates accounts at login.",
+        "A browser policy cannot reliably manage a Salesforce account or sessions."
+      ]
+    },
+    {
+      "question": "An inbound status update can arrive before the corresponding order reaches Salesforce. How should the integration handle the race?",
+      "options": [
+        "Insert a new order record for each incoming status update",
+        "Buffer the status and replay it after the order is created",
+        "Discard the status whenever its order is missing",
+        "Ask the source to turn off all asynchronous status events"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A durable buffer preserves the update and allows it to be reconciled using the order’s external identifier.",
+      "whyWrong": [
+        "Creating orders from every status can duplicate the source order.",
+        "Discarding statuses can leave orders in an incorrect state.",
+        "Synchronous delivery alone would not guarantee correct timing."
+      ]
+    },
+    {
+      "question": "An Apex deployment is valid, but the release introduces a new configuration that support must turn off quickly if needed. What should the design include?",
+      "options": [
+        "A manual edit to the installed Apex code",
+        "A sandbox refresh during the release window",
+        "A configuration flag tested in both states",
+        "A higher coverage target for the existing tests"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A tested flag gives support a way to disable the new behavior without a code deployment.",
+      "whyWrong": [
+        "Editing deployed code is slower and creates source drift.",
+        "Refreshing a sandbox does not change released behavior.",
+        "A coverage target does not provide an operational control."
       ]
     }
   ]

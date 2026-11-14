@@ -41,19 +41,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Do Salesforce certifications increase salary?',
-    answer: 'Yes: Salesforce certifications are directly linked to higher compensation. According to Mason Frank\'s annual Salesforce salary survey, certified professionals earn 15–25% more than non-certified peers in equivalent roles. Multiple certifications compound the effect, with professionals holding 3+ certifications commanding the highest salaries.',
+    answer: 'Mason Frank\'s annual Salesforce salary survey reports that certified professionals earn 15–25% more than non-certified peers in similar roles. The survey also reports higher salaries among professionals with three or more certifications.',
   },
   {
     question: 'Which Salesforce certification pays the most?',
-    answer: 'Salesforce Technical Architect (CTA) is the highest-paying Salesforce credential, with average salaries exceeding $180,000 USD for full-time roles. Application Architect and System Architect holders earn $140,000–$170,000 on average. Among consultant certifications, Marketing Cloud Consultant and Revenue Cloud Consultant command the highest premiums due to demand and supply imbalance.',
+    answer: 'Salesforce Technical Architect (CTA) is the highest-paying credential in this comparison, with average full-time salaries above $180,000 USD. Application Architect and System Architect holders earn $140,000–$170,000 on average. Marketing Cloud Consultant and Revenue Cloud Consultant certifications also carry high salary premiums, which the page attributes to demand and supply.',
   },
   {
     question: 'What is the average Salesforce Administrator salary with ADM-201?',
-    answer: 'Certified Salesforce Administrators (ADM-201) earn $70,000–$100,000 USD annually in the United States at the entry to mid level. With 3-5 years of experience and additional certifications (Advanced Administrator, App Builder), salaries typically reach $95,000–$130,000.',
+    answer: 'In the United States, Salesforce Administrators with ADM-201 earn $70,000–$100,000 USD per year at entry to mid level. With 3–5 years of experience and additional certifications, such as Advanced Administrator or App Builder, salaries typically reach $95,000–$130,000.',
   },
   {
     question: 'What is the average Salesforce developer salary with PD1?',
-    answer: 'Salesforce Platform Developer I (PD1) certified developers earn $90,000–$125,000 USD annually for mid-level roles in the United States. Adding Platform Developer II (PD2) increases this to $120,000–$155,000. Developers who progress to the architect track (Application or System Architect) earn $140,000–$170,000+.',
+    answer: 'In the United States, mid-level developers with Platform Developer I (PD1) earn $90,000–$125,000 USD per year. With Platform Developer II (PD2), the range rises to $120,000–$155,000. Developers who move into the Application or System Architect track earn $140,000–$170,000 or more.',
   },
 ]
 
@@ -73,15 +73,13 @@ export default function SalesforceCertificationSalaryPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Salesforce certifications are among the highest-ROI professional credentials in enterprise technology.
-          Here is what certified Salesforce professionals earn across roles, experience levels, and certification tracks,
-          and which certifications deliver the largest salary uplift.
+          Explore reported Salesforce salaries by role, experience level, and certification track, along with the certifications linked to higher pay.
         </p>
       </header>
 
       {/* Key data */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Salary by Certification Track (United States)</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Salary by Certification Track: United States</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
@@ -142,13 +140,13 @@ export default function SalesforceCertificationSalaryPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-600 mt-3">Salary ranges reflect United States market data. UK, Australia, and European markets typically run 20–35% lower in absolute terms. Consultant/contractor day rates can be significantly higher than employment salaries.</p>
+        <p className="text-xs text-gray-600 mt-3">These ranges reflect United States market data. UK, Australian, and European salaries are often 20–35% lower in absolute terms. Consultant and contractor day rates can exceed employee salaries.</p>
       </section>
 
       <section className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Estimate Your Certification ROI</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Salary uplift depends on experience, geography, and role scope. To compare the exam fee, study time, likely salary uplift, and payback period by track. Use the Salesforce certification ROI calculator.
+          Salary growth depends on experience, location, and the scope of your role. Use the Salesforce certification ROI calculator to compare exam fees, study time, estimated salary gains, and payback periods by track.
         </p>
         <Link
           href="/salesforce-certification-roi-calculator"
@@ -162,7 +160,7 @@ export default function SalesforceCertificationSalaryPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-1">Salesforce Salary by Region</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Salary ranges vary significantly by geography. The table below shows typical mid-level certified professional salaries for the same role across key markets.
+          Salaries vary by location. This table compares typical mid-level salaries for certified professionals in the same role across several markets.
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
@@ -222,21 +220,21 @@ export default function SalesforceCertificationSalaryPage() {
           </table>
         </div>
         <p className="text-xs text-gray-600 mt-3">
-          Figures are annual base salary (excluding bonus and equity). UK and Australian salaries are lower in absolute terms but comparable in purchasing power. India figures reflect demand from global SIs and captive centres. L = Lakhs, Cr = Crores.
+          Figures show annual base salary before bonus and equity. UK and Australian salaries are lower in absolute terms but may be similar in purchasing power. India figures reflect demand from global system integrators and captive centres. L means lakhs; Cr means crores.
         </p>
       </section>
 
       {/* What drives salary */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Actually Drives Salesforce Salary?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Drives Salesforce Salaries?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Certifications are a signal, but they are not the primary salary driver. These factors matter more:
+          Certifications can help signal your skills, but they are not the only factor employers consider. These factors also affect pay:
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Years of hands-on experience</strong>: Employers pay for real implementations, not exam passes. Certified professionals with 5+ years consistently earn at the top of salary ranges.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Certification stack (multiple certs)</strong>: The largest salary premiums come from 3+ certifications. Each additional certification signals both breadth and commitment to the platform.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Industry and cloud specialisation</strong>: Marketing Cloud, Revenue Cloud, and Health Cloud specialists command premiums due to lower supply of certified professionals.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Consulting vs. in-house</strong>: Consultant/contractor roles at System Integrators (SIs) like Accenture, Deloitte, and Slalom typically pay more than equivalent in-house roles, especially in the United States.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Hands-on experience</strong>: Employers value experience delivering real implementations. Professionals with more than five years of experience often earn near the top of the listed ranges.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Several certifications</strong>: The largest premiums in this analysis are linked to three or more certifications. A broader set of credentials can show experience across the platform.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Industry and cloud focus</strong>: Marketing Cloud, Revenue Cloud, and Health Cloud specialists may earn more because fewer certified professionals work in these areas.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Consulting or in-house work</strong>: Consultant and contractor roles at system integrators such as Accenture, Deloitte, and Slalom may pay more than similar in-house roles, especially in the United States.</li>
         </ul>
       </section>
 
@@ -247,43 +245,43 @@ export default function SalesforceCertificationSalaryPage() {
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Platform Developer II (PD2)</span>
-              <p className="text-xs text-gray-600">Best uplift from admin/developer level to senior developer</p>
+              <p className="text-xs text-gray-600">Potential increase when moving from an admin or developer role to senior developer</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$20–35k</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Application Architect (role credential)</span>
-              <p className="text-xs text-gray-600">Biggest single jump for developer-to-architect transition</p>
+              <p className="text-xs text-gray-600">Potential increase when moving from developer to architect</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$30–50k</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Marketing Cloud Consultant</span>
-              <p className="text-xs text-gray-600">High demand, relatively low supply of certified specialists</p>
+              <p className="text-xs text-gray-600">Demand is high and relatively few specialists hold this credential</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$15–30k</span>
           </div>
           <div className="flex justify-between items-start">
             <div>
               <span className="font-medium text-gray-900">Advanced Administrator (ADM-211)</span>
-              <p className="text-xs text-gray-600">Best uplift from admin level without switching to developer track</p>
+              <p className="text-xs text-gray-600">Potential increase for administrators who stay on the admin track</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$15–25k</span>
           </div>
         </div>
-        <p className="text-xs text-gray-600 pt-3">Salary uplift estimates are approximate and market/experience-dependent. Your mileage will vary based on employer, location, and existing experience.</p>
+        <p className="text-xs text-gray-600 pt-3">These salary increase estimates are approximate and depend on the market, employer, location, and your experience.</p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Salary Methodology &amp; Caveats</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <p>
-            These ranges are directional benchmarks for certified Salesforce professionals, not guaranteed compensation. We use public salary-survey ranges, common hiring-market patterns, job-description demand, and certification difficulty/role alignment to estimate practical bands.
+            These ranges are general benchmarks, not guaranteed salaries. They draw on public salary surveys, hiring patterns, job postings, and how each certification relates to the role.
           </p>
           <p>
-            The biggest drivers are hands-on implementation experience, geography, cloud specialization, consulting vs in-house role type, and whether the certification matches the job responsibilities. A credential improves hiring signal, but it does not replace project evidence.
+            Pay also depends on implementation experience, location, cloud specialization, and whether you work in consulting or in-house. A certification can help with hiring, but it does not replace evidence of project work.
           </p>
           <p>
             For cost-side planning, compare this salary guide with the{' '}
@@ -301,7 +299,7 @@ export default function SalesforceCertificationSalaryPage() {
 
       {/* Start */}
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Earning Your Next Certification</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Plan Your Cert Path <ArrowRight className="h-4 w-4" />

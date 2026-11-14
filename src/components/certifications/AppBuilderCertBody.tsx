@@ -15,7 +15,7 @@ import ExamFeesSection from '@/components/ExamFeesSection'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import FlowVsApexDiagram from '@/components/certifications/FlowVsApexDiagram'
@@ -82,7 +82,7 @@ export default function AppBuilderCertBody({ slug }: { slug: string }) {
             Independent study resource &bull; Check the current Salesforce exam guide before booking
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Salesforce Certified Platform App Builder (Plat-Admn-202 / DEV-402) Exam Questions &amp; Study Guide
+            {getCertH1Text(slug)}
           </h1>
           <LastUpdated />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">

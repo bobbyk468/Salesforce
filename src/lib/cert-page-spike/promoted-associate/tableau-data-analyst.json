@@ -36,8 +36,8 @@
     "heading": "How challenging is the Tableau Data Analyst exam?",
     "summary": "This exam goes beyond the Desktop Foundations credential. It checks whether you can answer questions with data, including choosing the right level of detail for calculations, applying filters in the right order, and selecting a suitable chart.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 minutes.",
-      "<strong>65% passing score</strong>, about 39 correct answers out of 60. Check the official guide for current details.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>65% to pass</strong>, which is 39 correct answers out of 60.",
       "<strong>Level of detail expressions.</strong> Know how FIXED, INCLUDE, and EXCLUDE change calculation granularity.",
       "<strong>Hands-on practice helps.</strong> Build calculations and investigate results that do not match expectations."
     ],

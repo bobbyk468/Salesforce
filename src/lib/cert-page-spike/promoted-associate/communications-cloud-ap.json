@@ -1,42 +1,42 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Communications Cloud Accredited Professional exam for?",
+    "heading": "Who should take the Communications Cloud Accredited Professional exam?",
     "personas": [
       {
-        "label": "Telecom implementers",
-        "description": "You build Communications Cloud for mobile, broadband or media providers and want to prove you know the industry setup."
+        "label": "Telecom delivery teams",
+        "description": "You implement Communications Cloud for mobile, broadband, or media providers and want to validate your industry solution skills."
       },
       {
-        "label": "Consultants and admins",
-        "description": "You work on the product catalog, quoting or ordering side of a telecom project."
+        "label": "Telecom consultants and admins",
+        "description": "You configure product offers, quoting, or order processing for communications projects."
       },
       {
-        "label": "Career builders",
-        "description": "You know core Salesforce and want to specialise in the communications industry."
+        "label": "Salesforce professionals entering telecom",
+        "description": "You know core Salesforce and want to apply it to communications service provider workflows."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Communications Cloud Accredited Professional Exam Hard?",
-    "summary": "The pass mark is low, but the exam isn't easy. Communications Cloud has its own catalog, quoting and ordering tools that work very differently from standard Salesforce products and orders.",
+    "heading": "How challenging is the Communications Cloud Accredited Professional exam?",
+    "summary": "The exam covers telecom-specific catalog, quoting, and order processes. Learn how Communications Cloud handles products and offers, validates a customer’s cart, and fulfills service changes.",
     "bullets": [
-      "<strong>55 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>56% to pass</strong>, about 31 correct answers.",
-      "<strong>Industry tools.</strong> Enterprise Product Catalog, Industries CPQ, Industries Order Management and OmniStudio.",
-      "<strong>Telecom processes.</strong> Move, add, change and disconnect orders, contracts and assets come up often."
+      "<strong>55 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>56% to pass</strong>, which is 31 correct answers out of 55.",
+      "<strong>Industry tools:</strong> Review Enterprise Product Catalog, Industries CPQ, Industries Order Management, and OmniStudio.",
+      "<strong>Telecom service changes:</strong> Be able to follow move, add, change, and disconnect requests, along with the customer’s contracts and assets."
     ],
-    "passRateGuidance": "People who have configured offers in the product catalog and pushed an order through decomposition do best. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Practice creating an offer in the product catalog and following an order through decomposition and fulfillment. Aim for 75% or more on practice questions and explain why each tool fits the task."
   },
   "examFormat": {
-    "heading": "Communications Cloud Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a telecom task, such as building a bundle, pricing an offer or changing a customer's existing service, and ask which tool or setting handles it.",
+    "heading": "Communications Cloud Accredited Professional exam format",
+    "intro": "Accredited Professional exams are taken online. Questions focus on common communications provider workflows.",
+    "scenarioPercent": "Many questions describe a telecom task, such as packaging broadband with a router, pricing a service, or changing a customer’s existing plan. Choose the catalog feature, rule, or order capability that handles it.",
     "bestWayToPass": [
-      "<strong>Learn the catalog building blocks:</strong> Products, attributes, offers, bundles, promotions and price lists.",
-      "<strong>Understand rules:</strong> Eligibility, compatibility and context rules decide who can buy what and in which combinations.",
-      "<strong>Follow an order through Industries Order Management:</strong> Decomposition into technical orders, then orchestration of fulfilment steps.",
-      "<strong>Know OmniStudio basics:</strong> OmniScripts, FlexCards, Integration Procedures and Data Mappers."
+      "<strong>Learn the catalog parts:</strong> Understand products, attributes, offers, bundles, promotions, and price lists.",
+      "<strong>Know the cart rules:</strong> Eligibility determines who can buy an offer; compatibility prevents invalid combinations; context rules use customer or location details.",
+      "<strong>Trace an order:</strong> Learn how Industries Order Management decomposes an order and orchestrates the steps needed to fulfill it.",
+      "<strong>Review OmniStudio:</strong> Know what OmniScripts, FlexCards, Integration Procedures, and Data Mappers do."
     ]
   },
   "certificationCard": {
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Communications Cloud AP: Key Concepts for the Exam",
+    "h2": "Communications Cloud AP: core exam concepts",
     "blocks": [
       {
         "heading": "Product Catalog & Offer Management",
-        "body": "The **Enterprise Product Catalog (EPC)** holds everything the provider sells. **Products** describe a service or device. **Attributes** describe options like speed or colour. **Offers** are what customers can actually buy, often **bundles** of several products, such as broadband plus TV. **Promotions** add time-limited discounts. **Price lists** hold prices and can differ by channel or market. Building offers from reusable products means a change to one product, like a new router, flows to every offer that uses it."
+        "body": "The **Enterprise Product Catalog (EPC)** stores the products and offers a provider sells. A **product** describes a service or device; its **attributes** capture choices such as speed or color. An **offer** is what a customer can buy and may combine several products into a **bundle**, such as broadband and TV. **Promotions** apply limited-time discounts, while **price lists** hold prices that may vary by market or channel. Reusable products let a change, such as replacing a router model, carry through to every offer that uses it."
       },
       {
-        "heading": "Industries CPQ for Telco",
-        "body": "**Industries CPQ** uses a cart. Agents or customers add offers, choose attributes and see the price straight away. **Rules** keep the cart valid: **eligibility** rules decide whether a customer can see an offer, for example by region, and **compatibility** rules stop invalid combinations, such as two broadband plans on one line. **Context rules** use details about the customer or location to change what is shown. The same cart logic can be used in agent screens and in **Digital Commerce** for online channels, through APIs."
+        "heading": "Industries CPQ for Telecom",
+        "body": "**Industries CPQ** provides a cart where an agent or customer selects offers, chooses attributes, and sees the price. Rules keep choices valid. **Eligibility rules** decide whether a customer can buy an offer, perhaps based on service location. **Compatibility rules** prevent combinations that cannot work together, such as two broadband plans on one line. **Context rules** use customer or location information to change what appears. The cart can support agent workflows and **Digital Commerce** channels through APIs."
       },
       {
         "heading": "Order Management & Orchestration",
-        "body": "When an order is submitted, **Industries Order Management** breaks the commercial order into the technical pieces needed to deliver it. This is called **decomposition**. An **orchestration plan** then runs the steps in the right order, such as reserve a number, ship a router, then activate the line, calling outside systems as needed. If a step fails, the plan can retry, wait or alert someone. Customers see one order, while the back office handles many technical tasks."
+        "body": "When a customer submits an order, **Industries Order Management** uses **decomposition** to break the commercial request into the technical work needed to deliver it. An **orchestration plan** runs the work in the required sequence. For example, the plan may reserve a phone number, ship a router, and then activate a line, while communicating with external systems. If a task fails, the plan can retry, wait, or alert an operator. The customer sees one order even when several back-office tasks are required."
       },
       {
         "heading": "Contract & Subscription Lifecycle",
-        "body": "Once an order is fulfilled, the services become **assets** on the customer's account. Later changes are known as **MACD**: move, add, change and disconnect. For example, upgrading a broadband speed is a change to an existing asset, not a brand-new order. **Contracts** record terms like length and early-exit fees, and can be renewed. Keeping assets accurate is important because every future change starts from them."
+        "body": "After fulfillment, the customer’s services are recorded as **assets** on the account. Later service requests often use **MACD**: move, add, change, or disconnect. Upgrading a broadband speed changes an existing asset rather than starting an unrelated service. **Contracts** record terms such as commitment length and early termination fees, and may be renewed. Accurate assets give future service changes a reliable starting point."
       },
       {
         "heading": "Partner Ecosystem & Channel Management",
-        "body": "Providers often sell through retail shops, partners and online. Experience Cloud sites can give partners their own sales tools, using the same catalog and cart as internal agents, with partner-specific price lists or offers. **OmniStudio** tools power many of these screens: **OmniScripts** guide users through steps, **FlexCards** show key customer details at a glance, **Integration Procedures** fetch data from several systems in one call, and **Data Mappers** read, change and save data."
+        "body": "Communications providers may sell through retail shops, partners, and online channels. An Experience Cloud site can give partners sales tools that use the same catalog and cart as internal agents, with channel-specific prices or offers. **OmniStudio** supports many guided experiences: **OmniScripts** guide users through steps, **FlexCards** summarize customer information, **Integration Procedures** gather data from systems, and **Data Mappers** read, transform, and save records."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Communications Cloud Accredited Professional Exam",
-    "intro": "Most questions name a telecom task and ask which tool handles it. Learn where each job lives: catalog, cart, order management or assets.",
+    "h2": "How to prepare for the Communications Cloud AP exam",
+    "intro": "For each telecom scenario, identify whether the task belongs to the catalog, quoting cart, order fulfillment, or service assets. Then choose the feature that owns that part of the workflow.",
     "blocks": [
       {
-        "heading": "Communications Cloud Data Model",
-        "body": "Accounts are often split into consumer, billing and service accounts. Assets on the service account show what the customer has."
+        "heading": "Telecom Customer and Asset Data",
+        "body": "Know how customer, billing, and service accounts can represent different parts of a relationship. Service assets show which products and services the customer currently has."
       },
       {
-        "heading": "Industries CPQ for Telecom",
-        "body": "The cart applies eligibility and compatibility rules. If an offer doesn't appear, check eligibility first."
+        "heading": "Offer Rules in Industries CPQ",
+        "body": "Use eligibility to decide whether a customer can buy an offer and compatibility to block combinations that do not work together. If an offer is missing, check eligibility and context."
       },
       {
-        "heading": "Order Management for CSPs",
-        "body": "Decomposition turns a commercial order into technical orders. Orchestration runs the fulfilment steps."
+        "heading": "Order Decomposition and Fulfillment",
+        "body": "Decomposition turns the customer’s commercial order into technical work. Orchestration plans run the fulfillment steps and handle failures."
       },
       {
-        "heading": "Customer 360 for Telecom",
-        "body": "FlexCards give agents a quick view of the customer's services, bills and open orders."
+        "heading": "Agent Views with OmniStudio",
+        "body": "FlexCards summarize services, bills, and open orders for an agent. Use OmniScripts for guided tasks and Integration Procedures for server-side calls across systems."
       },
       {
-        "heading": "OmniStudio in Communications Cloud",
-        "body": "OmniScripts for guided steps, Integration Procedures for server-side data calls, Data Mappers for reading and writing data."
+        "heading": "OmniStudio Data Handling",
+        "body": "Data Mappers read, transform, and save data for OmniStudio flows. Learn which data operation is needed at each point in a guided process."
       }
     ]
   },
@@ -166,119 +166,119 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A provider wants to sell broadband, a router and TV together as one package at a special price. How should this be set up in the catalog?",
+      "question": "A provider wants one offer that includes broadband, a router, and TV at a package price. How should it model the offer?",
       "options": [
-        "As a price list with one product",
-        "As a bundle offer of the three products",
-        "As a contract with three line items only",
-        "As three separate orders"
+        "Create one price list entry for a single product",
+        "Create a bundle offer from the three products",
+        "Put the three products on a contract without an offer",
+        "Submit three separate customer orders"
       ],
       "correctAnswer": 1,
-      "explanation": "Bundles let you sell several products together as one offer, with their own pricing.",
+      "explanation": "A bundle lets the provider sell several products together as one offer with a package price.",
       "whyWrong": [
-        "A price list holds prices. It doesn't group products into a package.",
-        "A contract records terms after the sale. It isn't how products are packaged.",
-        "Three orders lose the package price and are harder for customers."
+        "A price list stores prices; it does not combine three products into one customer offer.",
+        "A contract records customer terms, but it does not replace the offer and bundle structure.",
+        "Separate orders would not present the requested single package to the customer."
       ]
     },
     {
-      "question": "A new fibre plan should only be offered to customers in areas where fibre is available. What should be used?",
+      "question": "A fiber plan should be available only at addresses where fiber service is ready. Which rule should control access to the offer?",
       "options": [
-        "A compatibility rule",
-        "A product price list on the catalogue",
+        "A rule that blocks incompatible products from being ordered together",
+        "A price list that sets the amount charged for the offer",
         "An eligibility rule for the offer",
-        "A promotion"
+        "A promotion that applies a temporary discount to the offer"
       ],
       "correctAnswer": 2,
-      "explanation": "Eligibility rules decide whether a customer can see an offer, for example based on location.",
+      "explanation": "Eligibility rules decide whether a customer can see or select an offer based on factors such as service location.",
       "whyWrong": [
-        "Compatibility rules stop invalid combinations in the cart, not who can see an offer.",
-        "A price list sets prices, not availability.",
-        "A promotion gives a discount, it doesn't limit availability."
+        "Compatibility rules prevent invalid combinations, rather than deciding whether a customer qualifies for one offer.",
+        "A price list sets prices; it does not check service availability.",
+        "A promotion changes an offer or price for a period but does not determine network eligibility."
       ]
     },
     {
-      "question": "Customers must not be able to add two broadband plans to the same line. What enforces this?",
+      "question": "Customers must not add two broadband plans to the same service line. What should prevent that combination?",
       "options": [
         "A Data Mapper",
         "A compatibility rule",
         "A FlexCard",
-        "An eligibility rule for the offer"
+        "An offer eligibility rule"
       ],
       "correctAnswer": 1,
-      "explanation": "Compatibility rules stop combinations that don't make sense in the cart.",
+      "explanation": "A compatibility rule blocks combinations that cannot be used together in the cart.",
       "whyWrong": [
-        "A Data Mapper moves data, it doesn't validate the cart.",
-        "A FlexCard displays information.",
-        "Eligibility controls who sees an offer, not combinations."
+        "Data Mappers handle data operations in OmniStudio, not cart validation.",
+        "FlexCards display information and actions; they do not validate product combinations.",
+        "Eligibility determines whether an offer is available, not whether it conflicts with another selected offer."
       ]
     },
     {
-      "question": "A customer orders broadband. The back office needs to reserve a port, ship a router and activate the line. What breaks the order into these technical steps?",
+      "question": "A broadband order requires a port reservation, router shipment, and line activation. What feature breaks the customer order into this technical work?",
       "options": [
-        "Decomposition in Order Management",
+        "Order decomposition",
         "A promotion",
-        "A product price list on the catalogue",
-        "An eligibility rule for the offer"
+        "The catalog price list",
+        "An offer eligibility rule"
       ],
       "correctAnswer": 0,
-      "explanation": "Decomposition turns the commercial order into the technical orders needed for fulfilment.",
+      "explanation": "Order Management decomposition turns the commercial request into the technical orders or tasks needed for fulfillment.",
       "whyWrong": [
-        "Promotions affect price.",
-        "Price lists hold prices.",
-        "Eligibility rules affect which offers show."
+        "A promotion changes price or offer terms; it does not split an order for delivery.",
+        "A price list stores product prices and does not create technical fulfillment work.",
+        "Eligibility decides whether an offer can be purchased, not how it is fulfilled."
       ]
     },
     {
-      "question": "After decomposition, which feature runs the fulfilment steps in the right order and calls outside systems?",
+      "question": "After decomposition, what runs fulfillment tasks in sequence and can call external systems?",
       "options": [
-        "Orchestration plans",
-        "The eligibility rules",
-        "Contracts",
-        "FlexCards"
+        "An orchestration plan",
+        "Offer eligibility rules",
+        "The customer contract",
+        "A FlexCard"
       ],
       "correctAnswer": 0,
-      "explanation": "Orchestration plans run fulfilment tasks in sequence, handle dependencies and call outside systems.",
+      "explanation": "An orchestration plan coordinates fulfillment steps, dependencies, and interactions with other systems.",
       "whyWrong": [
-        "Eligibility rules control what can be sold.",
-        "Contracts record terms.",
-        "FlexCards show data to users."
+        "Eligibility rules determine offer access before purchase.",
+        "A contract records terms but does not coordinate fulfillment tasks.",
+        "A FlexCard presents information in a user interface."
       ]
     },
     {
-      "question": "A customer wants to upgrade their existing broadband from 100 Mbps to 500 Mbps. How should this be handled?",
+      "question": "A customer asks to raise an existing broadband service from 100 Mbps to 500 Mbps. How should the request be recorded?",
       "options": [
-        "As an entirely brand-new order for the broadband product",
-        "By editing the price list",
-        "As a change order on the existing asset",
-        "By deleting the old asset"
+        "As a second, unrelated broadband order",
+        "By changing the catalog price list",
+        "As a change order for the existing asset",
+        "By deleting the current asset before placing a new order"
       ],
       "correctAnswer": 2,
-      "explanation": "Upgrades are changes (the C in MACD) to an existing asset, which keeps history and avoids duplicate services.",
+      "explanation": "An upgrade is a change to the customer’s existing asset, preserving the service history and avoiding duplicate services.",
       "whyWrong": [
-        "A new order would create a second broadband service.",
-        "The price list sets prices for everyone.",
-        "Deleting the asset loses history and breaks billing."
+        "A new unrelated order may create a second service instead of changing the existing one.",
+        "The price list controls prices, not changes to a customer’s installed service.",
+        "Deleting the asset would remove useful history and is not the right way to manage a service change."
       ]
     },
     {
-      "question": "Which tool guides a service agent step by step through a complex process, such as moving a customer to a new address?",
+      "question": "An agent must follow a guided set of steps to move a customer’s service to a new address. Which tool fits?",
       "options": [
         "A compatibility rule",
-        "A product price list on the catalogue",
+        "A price list",
         "An OmniScript",
         "A Data Mapper"
       ],
       "correctAnswer": 2,
-      "explanation": "OmniScripts are guided, step-by-step processes for users.",
+      "explanation": "OmniScripts guide users through a multi-step task such as a service move.",
       "whyWrong": [
-        "Compatibility rules check the cart.",
-        "Price lists hold prices.",
-        "Data Mappers read and write data, they don't guide users."
+        "Compatibility rules validate product combinations in a cart.",
+        "Price lists hold product prices, not agent workflow steps.",
+        "Data Mappers move and transform data; they do not guide the user through the process."
       ]
     },
     {
-      "question": "Agents need to see a customer's services, last bill and open orders at a glance on one screen. What fits?",
+      "question": "An agent needs a compact view of a customer’s services, latest bill, and open orders. What should the page use?",
       "options": [
         "An orchestration plan",
         "A FlexCard",
@@ -286,47 +286,47 @@
         "A decomposition rule"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexCards show key information in a compact, actionable card.",
+      "explanation": "A FlexCard presents key customer details and actions in a compact view.",
       "whyWrong": [
-        "Orchestration runs fulfilment steps.",
-        "Promotions are discounts.",
-        "Decomposition breaks down orders."
+        "An orchestration plan coordinates order fulfillment steps.",
+        "Promotions define limited-time offer or price changes.",
+        "Decomposition breaks an order into work; it does not display the customer summary."
       ]
     },
     {
-      "question": "A screen needs data from billing, network inventory and Salesforce in one fast server-side call. What should be used?",
+      "question": "A screen must gather information from billing, network inventory, and Salesforce in one server-side operation. What should it use?",
       "options": [
         "An Integration Procedure",
-        "A FlexCard used on its own",
+        "A FlexCard by itself",
         "A promotion",
-        "A product price list on the catalogue"
+        "A catalog price list"
       ],
       "correctAnswer": 0,
-      "explanation": "Integration Procedures run several data actions on the server in one call, which keeps screens fast.",
+      "explanation": "An Integration Procedure can run multiple data operations on the server and return the results to the screen.",
       "whyWrong": [
-        "A FlexCard displays data, but it needs a data source like an Integration Procedure.",
-        "Promotions are discounts.",
-        "Price lists hold prices."
+        "A FlexCard displays information, but by itself it does not perform all the needed cross-system data calls.",
+        "A promotion defines an offer or discount, not an integration flow.",
+        "A price list holds product prices and does not retrieve billing or network data."
       ]
     },
     {
-      "question": "A new router model replaces the old one in 20 different offers. What is the benefit of building offers from reusable products?",
+      "question": "A new router replaces an older model used in 20 offers. Why build those offers from reusable products?",
       "options": [
-        "Customers have to reorder",
-        "Each one of the offers must be edited by hand",
-        "Offers stop working",
-        "One update to the router reaches every offer"
+        "Customers must place every order again",
+        "The team must edit every offer separately",
+        "All offers stop working when the router changes",
+        "One product update can flow to every offer that uses it"
       ],
       "correctAnswer": 3,
-      "explanation": "Reusable products mean a change in one place flows to every offer that includes it.",
+      "explanation": "Reusable catalog products reduce repeated changes because offers can use the updated product definition.",
       "whyWrong": [
-        "Existing customers don't need to reorder.",
-        "The point of reuse is to avoid editing every offer.",
-        "Offers keep working with the updated product."
+        "Changing a product definition does not require customers to reorder existing services.",
+        "Reusable products reduce the need to edit each offer independently.",
+        "A product update does not automatically disable offers that reference it."
       ]
     },
     {
-      "question": "A three-month 20% discount for new customers should be added to a mobile plan. What should be used?",
+      "question": "A provider wants a 20% discount for new mobile customers for three months. What should represent the limited-time discount?",
       "options": [
         "A new product",
         "A promotion",
@@ -334,75 +334,75 @@
         "An orchestration plan"
       ],
       "correctAnswer": 1,
-      "explanation": "Promotions add time-limited discounts or changes to offers.",
+      "explanation": "A promotion applies a discount or other offer change for a defined period or customer group.",
       "whyWrong": [
-        "A new product isn't needed for a discount.",
-        "Compatibility rules check combinations.",
-        "Orchestration runs fulfilment."
+        "A new product would represent a different service or device, not a temporary discount.",
+        "Compatibility rules block invalid combinations rather than apply discounts.",
+        "Orchestration plans coordinate fulfillment steps after an order is placed."
       ]
     },
     {
-      "question": "Why is it important to keep customer assets accurate in Communications Cloud?",
+      "question": "Why must customer service assets stay accurate?",
       "options": [
-        "The assets end up controlling the website's theme",
-        "Assets set the price list",
-        "Assets are only used for reports",
-        "Moves, changes and disconnects start from assets"
+        "Assets control the website theme",
+        "Assets determine which price list appears in the catalog",
+        "Assets are used only for reports",
+        "Future moves, changes, and disconnects start from the current assets"
       ],
       "correctAnswer": 3,
-      "explanation": "MACD orders change existing assets. If the assets are wrong, every later change is wrong too.",
+      "explanation": "MACD requests act on existing service assets. If those records are wrong, later changes may also be wrong.",
       "whyWrong": [
-        "Assets don't control the website.",
-        "Prices come from price lists.",
-        "They are used in orders, not just reports."
+        "Website appearance is controlled through design and content settings.",
+        "Price lists define prices; service assets do not set catalog pricing.",
+        "Assets support service operations, not reporting alone."
       ]
     },
     {
-      "question": "A partner shop should sell from the same catalog as internal agents, but with its own prices. What should be set up?",
+      "question": "A retail partner should use the same product catalog as internal agents but have different prices. What should the provider configure?",
       "options": [
-        "A copy of the whole catalog for the partner",
-        "Manual price changes on each order",
-        "A separate org for the partner",
-        "A partner-specific price list"
+        "Copy the entire catalog for the partner",
+        "Change prices by hand on each order",
+        "Create a separate Salesforce org for the partner",
+        "Use a partner-specific price list"
       ],
       "correctAnswer": 3,
-      "explanation": "Price lists can differ by channel, so partners use the same catalog with their own prices.",
+      "explanation": "A separate price list can provide channel-specific prices while the partner continues to use the shared catalog.",
       "whyWrong": [
-        "Copying the catalog doubles the upkeep.",
-        "Manual changes are slow and error-prone.",
-        "A separate org is far more than needed."
+        "Duplicating the catalog adds maintenance and risks differences in product definitions.",
+        "Manual order changes are inconsistent and difficult to govern.",
+        "A separate org is not needed just to set different channel prices."
       ]
     },
     {
-      "question": "A fulfilment step fails because the network activation system is down. What should the orchestration plan do?",
+      "question": "A fulfillment step fails because the network activation system is unavailable. What should the orchestration plan do?",
       "options": [
-        "Retry or pause the step and alert someone",
-        "Simply mark the whole of the order as complete",
-        "Delete the order",
-        "Start a new order"
+        "Retry or pause the step and notify an operator",
+        "Mark the order complete even though activation failed",
+        "Delete the customer order",
+        "Start a duplicate order"
       ],
       "correctAnswer": 0,
-      "explanation": "Orchestration can retry, wait or raise an alert on failed steps, so the order can continue once the problem is fixed.",
+      "explanation": "The plan can retry, wait, or raise an alert so the failed step can resume when the external system is available.",
       "whyWrong": [
-        "Marking it complete would leave the customer without service.",
-        "Deleting loses the sale.",
-        "A new order duplicates work."
+        "Completing the order despite failed activation would leave service undelivered.",
+        "Deleting the order loses the customer request and its progress.",
+        "A duplicate order can cause conflicting fulfillment work."
       ]
     },
     {
-      "question": "Which tool should read data from Salesforce, transform it and save it back as part of an OmniScript?",
+      "question": "An OmniScript needs to read Salesforce data, transform it, and save the result. Which OmniStudio tool is designed for that?",
       "options": [
         "A promotion",
-        "A product price list on the catalogue",
+        "A catalog price list",
         "A Data Mapper",
         "A FlexCard"
       ],
       "correctAnswer": 2,
-      "explanation": "Data Mappers (formerly DataRaptors) read, transform and save data for OmniStudio tools.",
+      "explanation": "Data Mappers read, transform, and write data for OmniStudio workflows.",
       "whyWrong": [
-        "Promotions are discounts.",
-        "Price lists hold prices.",
-        "FlexCards display data."
+        "Promotions manage offers and discounts rather than data mapping.",
+        "Price lists define product pricing and do not transform Salesforce records.",
+        "FlexCards display information and actions; they do not perform the data transformation."
       ]
     }
   ]

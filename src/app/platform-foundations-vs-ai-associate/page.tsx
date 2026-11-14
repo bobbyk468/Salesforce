@@ -6,7 +6,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const title = 'Platform Foundations vs AI Associate (Retired)'
 const metadataTitle = 'Platform Foundations vs Retired AI Associate Guide'
-const description = 'Platform Foundations covers current platform basics; AI Associate is retired. Compare learning goals and current study options.'
+const description = 'Compare the learning goals of Platform Foundations and retired AI Associate, and find current study options.'
 const path = '/platform-foundations-vs-ai-associate'
 const url = `https://www.trailblazeprep.com${path}`
 const faqItems = [{'question': 'Can I still take AI Associate?', 'answer': 'Salesforce retired AI Associate in February 2026. Check the issuer retirement notice and current learning catalog.'}, {'question': 'Is AI Associate a current prerequisite?', 'answer': 'Do not plan to earn a retired credential as a prerequisite. Check the current guide for the credential you intend to take.'}]
@@ -30,18 +30,18 @@ export default function ComparisonPage() {
       <CredentialStatusNotice slug="ai-associate" />
       <section className="mt-8 space-y-5">
         <h2 className="text-2xl font-bold">Compare learning goals</h2>
-        <p>AI Associate retired in February 2026. It is not a current alternative exam to Platform Foundations. Treat older two-exam recommendations and price comparisons as historical information.</p>
-        <p>Platform Foundations learning introduces Salesforce platform concepts. If your goal is to understand how the platform supports business processes. Start with the current issuer objectives and identify the features and terminology you need to learn.</p>
-        <p>Historical AI Associate materials can help with introductory AI reasoning: prediction versus generation, responsible use, data quality, and human oversight. Studying those concepts does not mean a retired credential is available to book.</p>
-        <p>Salesforce directs AI Associate learners to Agentblazer Status for current AI and Agentforce learning. A learning program, a platform credential, and a specialist exam serve different purposes; choose based on your work rather than an assumed certification ladder.</p>
-        <p>For a practical exercise, describe how a sales or support team uses records, permissions, and automation. Then identify where AI could help and which data, review, and escalation safeguards it would need. Platform understanding gives context for evaluating the AI use case.</p>
+        <p>Salesforce retired AI Associate in February 2026, so it is no longer an exam option alongside Platform Foundations. Older comparisons of exam fees or recommendations to take both are now historical.</p>
+        <p>Platform Foundations introduces Salesforce platform concepts. Start with the current exam objectives and note the features and terms you need to learn.</p>
+        <p>Older AI Associate materials can still introduce AI concepts such as prediction, generation, responsible use, data quality, and human review. The exam itself is retired and cannot be booked.</p>
+        <p>Salesforce points AI Associate learners to Agentblazer Status for current AI and Agentforce learning. This learning program, a platform credential, and a specialist exam have different purposes. Choose the option that fits your work.</p>
+        <p>To practice, describe how a sales or support team uses records, permissions, and automation. Then consider where AI could help and what data, review, and escalation safeguards the use case needs. Platform knowledge can help you evaluate those choices.</p>
       </section>
       <section className="mt-8 space-y-4">
         <h2 className="text-2xl font-bold">Questions about retirement</h2>
         {faqItems.map(item => <div key={item.question}><h3 className="font-semibold">{item.question}</h3><p>{item.answer}</p></div>)}
         <p><a className="text-salesforce-dark underline" href="https://trailhead.salesforce.com/en/credentials/aiassociate" target="_blank" rel="nofollow noopener noreferrer">Salesforce AI Associate retirement notice</a></p>
         <p><Link className="text-salesforce-dark underline" href="/certifications/platform-foundations">Explore Platform Foundations resources</Link></p>
-        <p><Link className="text-salesforce-dark underline" href="/certifications/ai-associate">Historical AI fundamentals guide</Link></p>
+        <p><Link className="text-salesforce-dark underline" href="/certifications/ai-associate">View the historical AI fundamentals guide</Link></p>
       </section>
     </article>
   )

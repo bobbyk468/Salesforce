@@ -31,11 +31,11 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the Salesforce CPQ & Billing Accredited Professional exam format?',
-    answer: 'The CPQ & Billing AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce CPQ (Configure, Price, Quote) and Billing: product configuration, pricing waterfall, quote templates, contracts, amendments, renewals, invoicing, and payment processing.',
+    answer: 'The retired CPQ & Billing AP guide (Summer ’24) lists 35 scored questions plus up to five unscored questions, 60 minutes, a 74% passing score, and a $150 fee. Its outline covers CPQ and Billing technical design, implementation management, and new release capabilities.',
   },
   {
     question: 'What are the highest-weight CPQ & Billing AP exam sections?',
-    answer: 'Product and Pricing Configuration and Quoting and Contracting are the two heaviest areas of the exam. Check the current section weightings in the official exam guide before you plan your study time, since they move between releases. Understanding product rules, option constraints, discount schedules, the CPQ pricing waterfall, and how quotes convert to contracts and then to invoices are the most heavily tested areas.',
+    answer: 'The official Summer ’24 guide weights Revenue Cloud Technical Design at 68%, Revenue Cloud Implementation Management at 29%, and New Release Capabilities at 3%. The exam is retired; use these only as historical outline weights.',
   },
   {
     question: 'What is the CPQ pricing waterfall and why does the exam test it?',
@@ -73,22 +73,18 @@ export default function CpqBillingApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Product and Pricing Configuration</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+            <span className="font-medium text-gray-900">Revenue Cloud Technical Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">68%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Quoting and Contracting</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+            <span className="font-medium text-gray-900">Revenue Cloud Implementation Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">29%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Billing and Invoicing</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+            <span className="font-medium text-gray-900">New Release Capabilities</span>
+            <span className="font-bold text-salesforce-blue ml-4">3%</span>
           </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Amendments and Renewals</span>
-            <span className="font-bold text-salesforce-blue ml-4">15%</span>
-          </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. The pricing waterfall is the most consistently tested concept. Know every price field and what affects it.</p>
+          <p className="text-xs text-gray-600 pt-1">These are the historical Summer ’24 guide weights. The exam retired on February 1, 2027; do not use them to plan a current booking.</p>
         </div>
       </section>
 
@@ -110,7 +106,7 @@ export default function CpqBillingApExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">AP Readiness Check</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+          Review three timed mock sets using the historical 35-question format (74% passing score)
         </p>
         <p className="text-sm text-gray-700 mt-3">
           CPQ &amp; Billing AP is for implementation partners and in-house admins running Salesforce CPQ

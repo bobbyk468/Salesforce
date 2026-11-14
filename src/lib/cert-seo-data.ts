@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+import { getCertAlias } from './cert-alias-registry'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
 import { RELEASE_YEAR } from './release-data'
-import { getExamWeightage } from './exam-weightage-data'
-import { hasUnverifiedClaudeExamDetails, isRetiredCredential, isUnavailableCredentialExam } from './credential-status'
+import { getExamWeightage, getTopSectionsSummary } from './exam-weightage-data'
+import { getCredentialStatus, hasUnverifiedClaudeExamDetails, isComponentOnlyCredential, isRetiredCredential, isUnavailableCredentialExam, RETIREMENT_NEXT_STEPS } from './credential-status'
 import { getExamCodeTitleLabel, getRecognizedExamCode, SLUG_TO_EXAM_CODE } from './certification-exam-codes'
 import { completeSeoTitle } from './seo-title-helpers'
 export { SLUG_TO_EXAM_CODE } from './certification-exam-codes'
@@ -103,7 +104,6 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'marketing-cloud-consultant': '$200',
   'marketing-cloud-next-consultant': '$200',
   'agentforce-life-sciences-consultant': '$200',
-  'public-sector-solutions-consultant': '$200',
   'nonprofit-cloud': '$200',
   'nonprofit-success-pack-consultant': '$200',
   'omnistudio-consultant': '$200',
@@ -117,7 +117,8 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'tableau-next-consultant': '$200',
   'tableau-data-analyst': '$200',
   'tableau-server-administrator': '$200',
-  'ai-associate': '$75',
+  // Guide 005298930 (read 14 November 2026): registration was free, retake $50.
+  'ai-associate': 'Free',
   'marketing-cloud-engagement-foundations': '$75',
   'mulesoft-integration-foundations': '$75',
   // $150 (Accredited Professional)
@@ -143,6 +144,8 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'order-management-admin-ap': '$150',
   'order-management-developer-ap': '$150',
   'process-automation-ap': '$150',
+  // Introductory pricing is published through April 27, 2027.
+  'public-sector-solutions-consultant': '$150',
   'public-sector-solutions-ap': '$150',
   // $400 (Architect certs)
   'application-architect': '$400',
@@ -180,6 +183,8 @@ export function getExamCost(slug: string): string {
 /** Retake cost per official Salesforce pricing. Associate tier: Free; AP: same as fee ($150); most certs: half fee; Tableau Foundations: $50; CTA: half fee. */
 export function getRetakeCost(slug: string): string {
   const cost = getExamCost(slug)
+  if (slug === 'ai-associate') return '$50'
+  if (slug === 'public-sector-solutions-consultant') return '$75'
   if (cost === '$4,500') return '$2,250'
   if (cost === '$1,500') return '$750'
   if (cost === '$400') return '$200'
@@ -230,7 +235,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'marketing-cloud-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
   'marketing-cloud-next-consultant': { questions: 60, passingScore: '72%', duration: '105 min' },
   'agentforce-life-sciences-consultant': { questions: 60, passingScore: '62%', duration: '105 min' },
-  'public-sector-solutions-consultant': { questions: 60, passingScore: 'Not published', duration: '105 min' },
+  'public-sector-solutions-consultant': { questions: 60, passingScore: '72%', duration: '105 min' },
   'nonprofit-cloud': { questions: 60, passingScore: '65%', duration: '105 min' },
   'nonprofit-success-pack-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
   'omnistudio-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
@@ -244,33 +249,35 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'mulesoft-integration-foundations': { questions: 40, passingScore: '70%', duration: '70 min' },
   'ux-designer': { questions: 60, passingScore: '65%', duration: '105 min' },
   'platform-foundations': { questions: 40, passingScore: '62%', duration: '70 min' },
-  'sales-foundations': { questions: 60, passingScore: '70%', duration: '105 min' },
+  'sales-foundations': { questions: 40, passingScore: '70%', duration: '105 min' },
   'administrator-practice-test': { questions: 60, passingScore: '68%', duration: '105 min' },
-  'email-specialist-practice-test': { questions: 60, passingScore: 'Not published', duration: '105 min' },
+  'email-specialist-practice-test': { questions: 60, passingScore: '67%', duration: '90 min' },
   // $150 AP
-  'advanced-field-service-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'advanced-field-service-ap': { questions: 46, passingScore: '73%', duration: '75 min' },
   'b2b-commerce-admin-ap': { questions: 60, passingScore: '75%', duration: '90 min' },
   'b2b-commerce-developer-ap': { questions: 60, passingScore: '68%', duration: '75 min' },
   'communications-cloud-ap': { questions: 55, passingScore: '56%', duration: '90 min' },
   'consumer-goods-cloud-ap': { questions: 33, passingScore: '64%', duration: '60 min' },
   'consumer-goods-tpm-ap': { questions: 62, passingScore: '66%', duration: '75 min' },
   'contact-center-ap': { questions: 60, passingScore: '66%', duration: '75 min' },
-  'cpq-billing-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  // Retired CPQ & Billing AP, official Summer '24 guide: 35 scored questions,
+  // up to five unscored, 60 minutes, 74% passing score, US$150 fee.
+  'cpq-billing-ap': { questions: 35, passingScore: '74%', duration: '60 min' },
   'energy-utilities-ap': { questions: 50, passingScore: '60%', duration: '75 min' },
   'financial-services-cloud-ap': { questions: 50, passingScore: '56%', duration: '75 min' },
-  'health-cloud-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'health-cloud-ap': { questions: 60, passingScore: '63%', duration: '90 min' },
   'heroku-developer-ap': { questions: 60, passingScore: '68%', duration: '90 min' },
   'loyalty-management-ap': { questions: 50, passingScore: '69%', duration: '75 min' },
-  'manufacturing-cloud-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
-  'marketing-cloud-advanced-cross-channel-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
-  'marketing-cloud-intelligence-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'manufacturing-cloud-ap': { questions: 50, passingScore: '68%', duration: '75 min' },
+  'marketing-cloud-advanced-cross-channel-ap': { questions: 40, passingScore: '67%', duration: '60 min' },
+  'marketing-cloud-intelligence-ap': { questions: 40, passingScore: '60%', duration: '90 min' },
   'marketing-cloud-personalization-ap': { questions: 50, passingScore: '70%', duration: '75 min' },
   'media-cloud-ap': { questions: 60, passingScore: '66%', duration: '75 min' },
-  'net-zero-cloud-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
-  'order-management-admin-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
-  'order-management-developer-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
-  'process-automation-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
-  'public-sector-solutions-ap': { questions: 60, passingScore: 'Not published', duration: '90 min' },
+  'net-zero-cloud-ap': { questions: 55, passingScore: '61%', duration: '75 min' },
+  'order-management-admin-ap': { questions: 60, passingScore: '67%', duration: '90 min' },
+  'order-management-developer-ap': { questions: 60, passingScore: '70%', duration: '90 min' },
+  'process-automation-ap': { questions: 60, passingScore: '68%', duration: '90 min' },
+  'public-sector-solutions-ap': { questions: 50, passingScore: '70%', duration: '75 min' },
   // $400 Architects
   'data-architect': { questions: 60, passingScore: '58%', duration: '105 min' },
   'integration-architect': { questions: 60, passingScore: '67%', duration: '105 min' },
@@ -288,7 +295,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'tableau-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
   'tableau-next-consultant': { questions: 60, passingScore: '65%', duration: '105 min' },
   'tableau-data-analyst': { questions: 60, passingScore: '65%', duration: '105 min' },
-  'tableau-server-administrator': { questions: 55, passingScore: 'Not published', duration: '90 min' },
+  'tableau-server-administrator': { questions: 50, passingScore: '64%', duration: '90 min' },
   // Tableau Foundations ($75 tier)
   'tableau-desktop-foundations': { questions: 40, passingScore: '48%', duration: '70 min' },
   // Consultant ($200 tier)
@@ -308,6 +315,19 @@ export function getExamLogistics(slug: string): (ExamLogisticsDetail & { fee: st
   const detail = SLUG_TO_EXAM_LOGISTICS[slug]
   if (!detail) return null
   return { ...detail, fee: cost, retake }
+}
+
+/**
+ * The published exam facts for a credential whether or not the exam can still
+ * be booked. Retiring pages show these as historical figures; getExamLogistics
+ * stays null for them so nothing presents a closed exam as bookable.
+ * Null for the Claude credentials, whose issuer publishes none.
+ */
+export function getPublishedExamFacts(slug: string): (ExamLogisticsDetail & { fee: string; retake: string }) | null {
+  if (hasUnverifiedClaudeExamDetails(slug)) return null
+  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  if (!detail) return null
+  return { ...detail, fee: getExamCost(slug), retake: getRetakeCost(slug) }
 }
 
 /**
@@ -343,6 +363,8 @@ export function getMockExamTargetLabel(slug: string): string | null {
 export const EXAM_PRICING_URL = 'https://help.salesforce.com/s/articleView?id=005298916&type=1&language=en_US'
 
 export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
+  'public-sector-solutions-consultant': 'https://help.salesforce.com/s/articleView?id=005460902&language=en_US&type=1',
+  'public-sector-solutions-ap': 'https://help.salesforce.com/s/articleView?id=005298864&language=en_US&type=1',
   administrator: 'https://help.salesforce.com/s/articleView?id=005298966&language=en_US&type=1',
   'advanced-administrator': 'https://help.salesforce.com/s/articleView?id=005298969&language=en_US&type=1',
   'app-builder': 'https://help.salesforce.com/s/articleView?id=005298964&language=en_US&type=1',
@@ -368,7 +390,8 @@ export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
   'data-architect': 'https://help.salesforce.com/s/articleView?id=005298972&language=en_US&type=1',
   'integration-architect': 'https://help.salesforce.com/s/articleView?id=005298980&language=en_US&type=1',
   'sharing-visibility-architect': 'https://help.salesforce.com/s/articleView?id=005298977&language=en_US&type=1',
-  'mulesoft-platform-architect': 'https://help.salesforce.com/s/articleView?id=005298957&language=en_US&type=1',
+  'mulesoft-platform-architect': 'https://help.salesforce.com/s/articleView?id=005298956&language=en_US&type=1',
+  'mulesoft-integration-architect': 'https://help.salesforce.com/s/articleView?id=005298957&language=en_US&type=1',
   'b2c-solution-architect': 'https://help.salesforce.com/s/articleView?id=005298942&language=en_US&type=1',
   'b2c-commerce-architect': 'https://help.salesforce.com/s/articleView?id=005298936&language=en_US&type=1',
   'platform-foundations': 'https://help.salesforce.com/s/articleView?id=005298979&language=en_US&type=1',
@@ -377,6 +400,20 @@ export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
   'tableau-data-analyst': 'https://help.salesforce.com/s/articleView?id=005298984&language=en_US&type=1',
   'tableau-desktop-foundations': 'https://help.salesforce.com/s/articleView?id=005298988&language=en_US&type=1',
   'ai-associate': 'https://help.salesforce.com/s/articleView?id=005298930&type=1&language=en_US',
+  'tableau-next-consultant': 'https://help.salesforce.com/s/articleView?id=005387158&language=en_US&type=1',
+  'tableau-server-administrator': 'https://help.salesforce.com/s/articleView?id=005298998&language=en_US&type=1',
+  'marketing-cloud-next-consultant': 'https://help.salesforce.com/s/articleView?id=005387657&language=en_US&type=1',
+  'mulesoft-integration-foundations': 'https://help.salesforce.com/s/articleView?id=005298961&language=en_US&type=1',
+  'sales-foundations': 'https://help.salesforce.com/s/articleView?id=005298982&language=en_US&type=1',
+  'health-cloud-ap': 'https://help.salesforce.com/s/articleView?id=005298821&language=en_US&type=1',
+  'manufacturing-cloud-ap': 'https://help.salesforce.com/s/articleView?id=005298843&language=en_US&type=1',
+  'advanced-field-service-ap': 'https://help.salesforce.com/s/articleView?id=005298764&language=en_US&type=1',
+  'marketing-cloud-advanced-cross-channel-ap': 'https://help.salesforce.com/s/articleView?id=005298837&language=en_US&type=1',
+  'marketing-cloud-intelligence-ap': 'https://help.salesforce.com/s/articleView?id=005298839&language=en_US&type=1',
+  'net-zero-cloud-ap': 'https://help.salesforce.com/s/articleView?id=005298845&language=en_US&type=1',
+  'order-management-admin-ap': 'https://help.salesforce.com/s/articleView?id=005298855&language=en_US&type=1',
+  'order-management-developer-ap': 'https://help.salesforce.com/s/articleView?id=005298860&language=en_US&type=1',
+  'process-automation-ap': 'https://help.salesforce.com/s/articleView?id=005298867&language=en_US&type=1',
 }
 
 /** Occupation role-proxy data for Occupation schema. Maps cert slug to parent role job title and mid-level salary range. */
@@ -829,6 +866,11 @@ function makePracticeExamTitle(label: string, code?: string, dualIntent = false)
 
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
+  // The alias registry is the single source for titles it defines, so the
+  // title, H1, lead and JSON-LD stay in step. Only credentials it leaves out
+  // fall through to the generated titles below.
+  const registryTitle = getCertAlias(slug)?.title
+  if (registryTitle) return registryTitle
   const legacyTitle = getLegacyCertMetaTitle(slug)
   // Include both the current and legacy exam codes in the Administrator search title.
   if (slug === 'administrator') return 'Salesforce Platform Administrator (ADM-201) Practice & Guide'
@@ -879,9 +921,9 @@ export function getCertMetaDescription(slug: string): string {
 
   // Hand-written for the bespoke pages: lead with the bare exam name and codes.
   const bespoke: Record<string, string> = {
-    'platform-foundations': 'Platform Foundations (Plat-101, formerly Salesforce Associate): 20 free practice questions, weightage (Ecosystem 32%, Navigation 28%), $75 fee, study guide.',
-    'app-builder': "Platform App Builder (Plat-Admn-202 / DEV-402): 20 free practice questions, Summer '26 weightage (Automation 32%, Data Modeling 20%), 73% pass mark, guide.",
-    'agentforce-specialist': 'Agentforce Specialist (AI-201 / Agent Force): 20 free practice questions, weightage (AI Agents 35%, Prompt Engineering 20%, Data 360 20%), study guide.',
+    'platform-foundations': 'Platform Foundations (Plat-101) study guide with 20 free practice questions, exam weights, a 62% pass mark, and the $75 fee.',
+    'app-builder': "Platform App Builder (Plat-Admn-202 / DEV-402) study guide with 20 free practice questions, exam weights, and the 73% pass mark.",
+    'agentforce-specialist': 'Agentforce Specialist (AI-201) study guide with 20 free practice questions on AI agents, Prompt Engineering, and Data 360.',
   }
   if (bespoke[slug]) return bespoke[slug]
 
@@ -1304,12 +1346,20 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'technical-architect': [
     {
-      question: 'What is the difference between Technical Architect Evaluation and Review Board?',
-      answer: 'The Technical Architect Evaluation is a written exam with scenario-based and multiple-choice questions. The Review Board is a presentation where you design a solution for a scenario and defend it before a board of CTAs. You must pass the Evaluation before taking the Review Board.',
+      question: "What are the prerequisites for the Certified Technical Architect (CTA)?",
+      answer: "You must hold both Salesforce Certified Application Architect and Salesforce Certified System Architect. Each is earned through four component exams, and Platform Developer counts toward both, so the two credentials together are seven unique exams.",
     },
     {
-      question: 'How long does it take to become a Certified Technical Architect (CTA)?',
-      answer: 'Most candidates take 1-2 years after earning Application Architect and System Architect. The CTA path requires extensive experience, multiple certifications, and significant preparation for both the Evaluation and Review Board.',
+      question: "What is the difference between the Architect Evaluation and the Architect Review Board?",
+      answer: "They are the two CTA stages. The Architect Evaluation is a 135-minute live session with one CTA judge: 60 minutes to read and solve a scenario, 30 to present, 30 for questions and 15 for feedback. The Architect Review Board is the final stage, where you present and defend a larger scenario before a panel of CTA judges. You must pass the Evaluation before the Review Board.",
+    },
+    {
+      question: "How much does the CTA cost?",
+      answer: "The Architect Evaluation is $1,500 (retake $750) and the Architect Review Board is $4,500 (retake $2,250), so $6,000 in total if you pass each stage first time. Taxes are extra, and the seven component exams are paid for separately.",
+    },
+    {
+      question: "How long does it take to become a Certified Technical Architect?",
+      answer: "Most candidates take one to two years after earning Application Architect and System Architect, on top of several years of implementation experience. Neither CTA stage is a multiple-choice test, so preparation is mostly timed scenario practice.",
     },
   ],
   'ai-associate': [
@@ -1424,7 +1474,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'javascript-developer-i': [
     {
       question: 'Do I need Platform Developer I before JavaScript Developer I?',
-      answer: 'While not required, Platform Developer I is highly recommended. JavaScript Developer I focuses specifically on JavaScript, LWC, and Aura, so having PD1 knowledge helps, but you can take it independently if you have strong JavaScript skills.',
+      answer: 'While not required, Platform Developer I is highly recommended. The exam is framework-agnostic JavaScript: objects, functions and classes, variables, types and collections, browser events, asynchronous code, server-side JavaScript, debugging and testing. It does not test Lightning Web Components or Aura, so you can take it independently if you have strong JavaScript skills.',
     },
     {
       question: 'What JavaScript concepts are most important for JavaScript Developer I?',
@@ -1542,7 +1592,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What experience do I need for Marketing Cloud Consultant?',
-      answer: 'You need Platform Administrator certification and hands-on Marketing Cloud experience. You should understand email marketing, journey builder, subscriber management, and cross-channel marketing strategies.',
+      answer: 'Salesforce Certified Marketing Cloud Engagement Administrator (MCE-Admn-201) is a mandatory prerequisite. Hands-on Marketing Cloud Engagement implementation experience is also recommended.',
     },
   ],
   'nonprofit-cloud': [
@@ -1552,7 +1602,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need nonprofit experience for Nonprofit Cloud Consultant?',
-      answer: 'While helpful, it\'s not required. You need Platform Administrator certification and should understand nonprofit operations. Hands-on experience with Nonprofit Cloud or NPSP is recommended.',
+      answer: 'While helpful, it\'s not required. You need the Platform Administrator certification and should understand nonprofit operations. Hands-on experience with Agentforce Nonprofit (formerly Nonprofit Cloud) is recommended. The exam covers the integrated platform solution only and does not address the managed-package products such as NPSP.',
     },
   ],
   'nonprofit-success-pack-consultant': [
@@ -1656,11 +1706,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'marketing-cloud-engagement-foundations': [
     {
       question: 'Is Marketing Cloud Engagement Foundations a good starting point?',
-      answer: 'Yes, it\'s an entry-level certification for Marketing Cloud. It covers basics like Marketing Cloud overview, subscriber management, and content creation. No prior Marketing Cloud experience required.',
+      answer: 'Yes. It is an entry-level certification for people building foundational Marketing Cloud Engagement knowledge. The exam covers five published domains; no prior Marketing Cloud experience is required.',
     },
     {
       question: 'What topics are covered in Marketing Cloud Engagement Foundations?',
-      answer: 'The exam covers Marketing Cloud overview (30%), subscriber and data management (35%), and content and sends (35%). It\'s a broad introduction to Marketing Cloud concepts.',
+      answer: 'The official outline has five sections: Marketing Concepts (28%), Marketing Cloud Engagement Basics (22%), Email Sending and Journeys (22%), Data Management (18%), and Reporting and Analytics (10%). It is a broad introduction to Marketing Cloud Engagement rather than a configuration exam.',
     },
   ],
   'mulesoft-integration-foundations': [
@@ -1674,7 +1724,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How many questions are on the MuleSoft Certified Integration Foundations exam?',
-      answer: 'The exam consists of 40 multiple-choice questions, and you have 70 minutes to complete it. It is a proctored, closed-book exam that can be taken online or at a testing center.',
+      answer: 'The official guide lists 40 scored questions plus up to five unscored questions in 70 minutes. The exam is proctored and available online or at a testing center.',
     },
     {
       question: 'Is MuleSoft Integration Foundations a good starting point?',
@@ -1682,7 +1732,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What topics are covered in MuleSoft Integration Foundations?',
-      answer: 'The exam covers integration concepts (35%), Anypoint Platform basics (35%), and APIs and design (30%). It focuses on concepts rather than deep technical implementation.',
+      answer: 'The six official domains are Essential integration concepts and terminology (20%), Technical complexities and patterns in integration development (18%), Anypoint Platform for system integration (18%), Roles, responsibilities, and lifecycle of an integration project (17%), Common integration problems, use cases, and technical solutions (17%), and Anypoint Platform for API management (10%).',
     },
     {
       question: 'What is the difference between MuleSoft Integration Foundations and MuleSoft Developer I?',
@@ -1718,7 +1768,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need MuleSoft Developer I before Developer II?',
-      answer: 'While not strictly required, Developer I is highly recommended. Developer II assumes you have Developer I knowledge and builds on it with advanced concepts.',
+      answer: 'Yes. The Salesforce Certified MuleSoft Developer credential (Mule-Dev-201, formerly MuleSoft Developer I) is a required prerequisite. Developer II builds on it with production topics: performance and reliability, Maven builds, security in transit and at rest, and monitoring.',
     },
   ],
   'mulesoft-hyperautomation-developer': [
@@ -1758,7 +1808,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Platform Architect before Integration Architect?',
-      answer: 'Yes, MuleSoft Platform Architect is typically required. Integration Architect builds on platform knowledge with deeper focus on integration solution design.',
+      answer: 'No. The official guide lists no prerequisite for MuleSoft Platform Integration Architect. It names the MuleSoft Developer certification as recommended preparation, and MuleSoft Platform Architect is a separate exam, not a requirement.',
     },
   ],
   'b2c-commerce-developer': [
@@ -1852,7 +1902,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the passing score and exam format for the Salesforce Slack Developer certification?',
-      answer: 'The Salesforce Slack Developer exam has 60 multiple-choice questions, 105 minutes, and a passing score of approximately 68%. The exam fee is $200 USD (retake $100 USD). No formal prerequisite, but hands-on Slack app development experience using the Slack API and Bolt Framework is strongly recommended.',
+      answer: 'The Salesforce Slack Developer exam (Slack-Dev-201) has 60 scored multiple-choice questions, plus up to five unscored, a 90-minute time limit, and a passing score of 67% (41 of 60). The exam fee is $200 USD (retake $100 USD). No formal prerequisite, but hands-on Slack app development experience using the Slack API and Bolt Framework is strongly recommended.',
     },
     {
       question: 'What topics are covered in the Salesforce Slack Developer exam?',
@@ -1918,7 +1968,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What are the main topic areas in the Salesforce Business Analyst exam?',
-      answer: 'The main sections are: Collaboration with Stakeholders (25%), Customer Discovery (17%), Business Analysis Planning (15%), and User Stories (18%). These four areas account for 75% of the exam. Focus on user story formats (As a... I want... So that...), acceptance criteria, process mapping, and eliciting requirements from stakeholders.',
+      answer: 'The official outline has six sections: Collaboration with Stakeholders (23%), Requirements (18%), User Stories (18%), Customer Discovery (17%), Business Process Mapping (12%), and Development Support and User Acceptance (12%). The first three account for 59% of the exam. Focus on user story formats (As a... I want... So that...), acceptance criteria, process mapping, and eliciting requirements from stakeholders.',
     },
     {
       question: 'What makes the Business Analyst exam harder than expected?',
@@ -1978,12 +2028,20 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'application-architect': [
     {
-      question: 'What is Application Architect?',
-      answer: 'Application Architect is part of the Technical Architect path. It focuses on data architecture, integration architecture, identity and access management, and development lifecycle.',
+      question: "What is the Salesforce Certified Application Architect credential?",
+      answer: "It is a composite credential with no exam of its own. Salesforce awards it automatically when you hold four certifications: Platform App Builder, Platform Developer, Platform Data Architect and Platform Sharing and Visibility Architect.",
     },
     {
-      question: 'What certifications do I need before Application Architect?',
-      answer: 'You typically need multiple intermediate certifications (Administrator, Developer I, etc.) and years of implementation experience. Application Architect is advanced-level.',
+      question: "How much does Application Architect cost?",
+      answer: "There is no fee for the credential itself. The four component exams cost $1,200 in total: Platform App Builder $200, Platform Developer $200, Platform Data Architect $400 and Platform Sharing and Visibility Architect $400, plus taxes.",
+    },
+    {
+      question: "Which certifications do I need for Application Architect?",
+      answer: "Exactly four: Platform App Builder, Platform Developer, Platform Data Architect and Platform Sharing and Visibility Architect. No other certification is required, and you can take them in any order.",
+    },
+    {
+      question: "What comes after Application Architect?",
+      answer: "Application Architect and System Architect together are the prerequisites for the Certified Technical Architect (CTA) stages. Platform Developer counts toward both, so System Architect needs three more exams.",
     },
   ],
   'integration-architect': [
@@ -1993,7 +2051,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Application Architect before Integration Architect?',
-      answer: 'Yes, Application Architect is typically required. Integration Architect is part of the Technical Architect path and requires deep integration expertise.',
+      answer: 'No. Salesforce lists no prerequisite for the Platform Integration Architect exam (Plat-Arch-204). It is one of the four component exams of the System Architect credential, so passing it counts toward System Architect rather than requiring it.',
     },
   ],
   'sharing-visibility-architect': [
@@ -2003,17 +2061,25 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Application Architect before Sharing and Visibility Architect?',
-      answer: 'Yes, Application Architect is typically required. Sharing and Visibility Architect requires deep understanding of Salesforce security and sharing models.',
+      answer: 'No. Salesforce lists no prerequisite for the Platform Sharing and Visibility Architect exam (Plat-Arch-205). It is one of the four component exams of the Application Architect credential, so passing it counts toward Application Architect rather than requiring it.',
     },
   ],
   'system-architect': [
     {
-      question: 'What is System Architect?',
-      answer: 'System Architect is part of the Technical Architect path. It focuses on data architecture, integration architecture, sharing and visibility, and development lifecycle.',
+      question: "What is the Salesforce Certified System Architect credential?",
+      answer: "It is a composite credential with no exam of its own. Salesforce awards it automatically when you hold four certifications: Platform Developer, Platform Integration Architect, Platform Identity and Access Management Architect and Platform Development Lifecycle and Deployment Architect.",
     },
     {
-      question: 'What certifications do I need before System Architect?',
-      answer: 'You need Application Architect and multiple other certifications. System Architect is advanced-level and requires years of complex implementation experience.',
+      question: "How much does System Architect cost?",
+      answer: "There is no fee for the credential itself. The four component exams cost $1,400 in total: Platform Developer $200, Platform Integration Architect $400, Platform Identity and Access Management Architect $400 and Platform Development Lifecycle and Deployment Architect $400, plus taxes.",
+    },
+    {
+      question: "Which certifications do I need for System Architect?",
+      answer: "Exactly four: Platform Developer, Platform Integration Architect, Platform Identity and Access Management Architect and Platform Development Lifecycle and Deployment Architect. Application Architect is not a prerequisite, and you can take the four exams in any order.",
+    },
+    {
+      question: "What comes after System Architect?",
+      answer: "System Architect and Application Architect together are the prerequisites for the Certified Technical Architect (CTA) stages. Platform Developer counts toward both credentials.",
     },
   ],
   'identity-access-management-architect': [
@@ -2023,7 +2089,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Application Architect before Identity Architect?',
-      answer: 'Yes, Application Architect and System Architect are typically required. Identity Architect requires deep understanding of identity, SSO, and security.',
+      answer: 'No. Salesforce lists no prerequisite for the Platform Identity and Access Management Architect exam (Plat-Arch-203). It is one of the four component exams of the System Architect credential, so passing it counts toward System Architect rather than requiring it.',
     },
   ],
   'dev-lifecycle-deployment-architect': [
@@ -2033,27 +2099,43 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Application Architect before Dev Lifecycle Architect?',
-      answer: 'Yes, Application Architect and System Architect are typically required. Dev Lifecycle Architect requires deep understanding of DevOps, CI/CD, and deployment.',
+      answer: 'No. Salesforce lists no prerequisite for the Platform Development Lifecycle and Deployment Architect exam (Plat-Arch-202). It is one of the four component exams of the System Architect credential, so passing it counts toward System Architect rather than requiring it.',
     },
   ],
   'technical-architect-evaluation': [
     {
-      question: 'What is Technical Architect Evaluation?',
-      answer: 'Technical Architect Evaluation is the first step to becoming a CTA. It\'s a written exam with scenario-based questions testing your ability to design secure, scalable solutions.',
+      question: "What is the Technical Architect - Architect Evaluation?",
+      answer: "It is the first of the two CTA stages: a 135-minute live session with a single CTA judge. You get 60 minutes to read a hypothetical scenario and design a solution, 30 minutes to present it, 30 minutes of questions and answers, and 15 minutes of feedback and discussion.",
     },
     {
-      question: 'What certifications do I need before Technical Architect Evaluation?',
-      answer: 'You need Application Architect and System Architect. The Evaluation tests your ability to design solutions for complex scenarios under time pressure.',
+      question: "Is the Architect Evaluation a multiple-choice exam?",
+      answer: "No. There are no multiple-choice questions. You are assessed on the architecture you design for the scenario, how clearly you present it, and how well you justify your decisions under questioning.",
+    },
+    {
+      question: "What certifications do I need before the Architect Evaluation?",
+      answer: "Both Salesforce Certified Application Architect and Salesforce Certified System Architect are required. System Architect is not part of Application Architect; they are separate credentials with four component exams each, sharing Platform Developer.",
+    },
+    {
+      question: "How much does the Architect Evaluation cost?",
+      answer: "The fee is $1,500 and a retake is $750, plus applicable taxes. Passing it makes you eligible to book the Architect Review Board, which is $4,500.",
     },
   ],
   'technical-architect-review-board': [
     {
-      question: 'What is Technical Architect Review Board?',
-      answer: 'Technical Architect Review Board is the final step to become a CTA. You present and defend a solution design before a board of Certified Technical Architects.',
+      question: "What is the Technical Architect - Architect Review Board?",
+      answer: "It is the final CTA stage. You are given a hypothetical enterprise scenario, design a solution, present it, and defend it in a question-and-answer session with a panel of CTA judges.",
     },
     {
-      question: 'Do I need to pass Technical Architect Evaluation before Review Board?',
-      answer: 'Yes, you must pass the Technical Architect Evaluation first. The Review Board tests your communication skills and ability to defend architectural decisions.',
+      question: "Do I need to pass the Architect Evaluation before the Review Board?",
+      answer: "Yes. Passing the Technical Architect - Architect Evaluation is the prerequisite for the Review Board.",
+    },
+    {
+      question: "How much does the Architect Review Board cost?",
+      answer: "The fee is $4,500 and a retake is $2,250, plus applicable taxes.",
+    },
+    {
+      question: "How should I prepare for the Review Board?",
+      answer: "Run full mock boards with experienced architects acting as judges. Practise presenting a complete solution within the time allowed and answering challenges to your security, data, integration and governance decisions.",
     },
   ],
   'heroku-architect': [
@@ -2133,7 +2215,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the passing score for the Tableau Desktop Foundations exam?',
-      answer: 'Tableau certification exams typically use a scaled scoring system, often around 70–75%. It is recommended to consistently score above 80% on practice exams before attempting the official test.',
+      answer: 'The official guide lists a 48% passing score for the English exam, with 40 scored items in 70 minutes. The fee is $75 and the retake is free.',
     },
     {
       question: 'How do I prepare for the Tableau Desktop Foundations exam?',
@@ -2242,11 +2324,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'cpq-billing-ap': [
     {
       question: 'What is CPQ and Billing Accredited Professional?',
-      answer: 'CPQ and Billing AP validates skills in configuring both CPQ and Billing solutions, including quoting, contracts, billing processes, and revenue recognition.',
+      answer: 'CPQ and Billing AP validated CPQ and Billing implementation skills. The retired Summer ’24 guide listed 35 scored questions plus up to five unscored questions, 60 minutes, a 74% passing score, and a $150 fee.',
     },
     {
       question: 'Do I need CPQ Administrator before CPQ and Billing AP?',
-      answer: 'Yes, CPQ Administrator knowledge is essential. You should also have Billing experience and understand the quote-to-cash process.',
+      answer: 'No. The official CPQ and Billing AP guide listed no prerequisite. CPQ and Billing experience was recommended preparation, not an eligibility requirement.',
     },
   ],
   'energy-utilities-ap': [
@@ -2266,7 +2348,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'Do I need Platform Administrator before Financial Services Cloud AP?',
-      answer: 'Yes, Platform Administrator is required. You should have Financial Services Cloud experience and understand financial services industry processes.',
+      answer: 'No. The official guide lists no prerequisite for the Agentforce Financial Services Professional exam. Platform Administrator knowledge and hands-on Financial Services Cloud experience are useful preparation, not requirements.',
     },
   ],
   'health-cloud-ap': [
@@ -2513,6 +2595,58 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   const formerName = getCertFormerName(slug)
   const formerlyPhrase = formerName ? ` (formerly ${formerName})` : ''
   const baseOverrides = CERT_BASE_FAQ_OVERRIDES[slug]
+  const topSections = getTopSectionsSummary(slug)
+  const sectionCount = getExamWeightage(slug)?.length ?? 0
+
+  // Exams that can no longer be booked get one generated, historical FAQ set.
+  // The hand-written FAQs for these pages were written while the exams were
+  // live and told readers to schedule them; several also carried figures that
+  // contradicted the official outline.
+  if (isUnavailableCredentialExam(slug)) {
+    const status = getCredentialStatus(slug)
+    const facts = getPublishedExamFacts(slug)
+    const retiredAlready = status?.kind === 'retired'
+    const nextSteps = RETIREMENT_NEXT_STEPS[slug] ?? []
+    const nextStepNames = nextSteps.map((step) => step.label)
+    const nextStepText =
+      nextStepNames.length === 0
+        ? ''
+        : nextStepNames.length === 1
+          ? nextStepNames[0]
+          : `${nextStepNames.slice(0, -1).join(', ')} and ${nextStepNames[nextStepNames.length - 1]}`
+    const factText =
+      facts && typeof facts.questions === 'number'
+        ? ` The exam had ${facts.questions} scored questions in ${facts.duration.replace(' min', ' minutes')}${/^\d/.test(facts.passingScore) ? ` with a ${facts.passingScore} passing score` : ''}, and the fee was ${facts.fee === 'Free' ? 'free' : facts.fee}.`
+        : ''
+    return [
+      {
+        question: `What did the ${faqName} exam cover?`,
+        answer: topSections
+          ? `The official outline had ${sectionCount} sections, shown in the historical weightage table on this page. ${topSections}.${factText}`
+          : `This page keeps the published exam topics for reference.${factText}`,
+      },
+      {
+        question: `Can I still take the ${faqName} exam?`,
+        answer: retiredAlready
+          ? `No. Salesforce retired the ${faqName} certification on February 2, 2026, and the exam can no longer be taken.`
+          : `No. Registration closed on July 24, 2026 and August 31, 2026 was the last day to take the exam. The credential officially retires on February 1, 2027.`,
+      },
+      {
+        question: `What happens to my ${faqName} credential?`,
+        answer: `Existing holders keep the credential on their Trailblazer Profile, where it is marked Retired. Maintenance is no longer required for it.`,
+      },
+      {
+        question: `What should I study instead of ${faqName}?`,
+        answer: nextStepText
+          ? `Active credentials that cover related ground are ${nextStepText}. Each has a study guide and free practice questions on this site.`
+          : `Check the Salesforce retirement notice linked at the top of this page for current learning options.`,
+      },
+      {
+        question: `Are the ${faqName} practice questions still useful?`,
+        answer: `They are kept as a historical reference and for learning the product area. They are not preparation for a current exam, because this exam is no longer delivered.`,
+      },
+    ]
+  }
 
   // Get cert-specific FAQs if available
   const certSpecificFaqs = CERT_SPECIFIC_FAQS[slug] || []
@@ -2520,9 +2654,13 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   // Base FAQs (always included), also used for FAQPage schema
   const baseCoverage: FaqItem = {
     question: `What is covered on the ${faqName} exam?`,
-    answer: formerName
-      ? `The ${faqName} exam${formerlyPhrase} covers section-wise weightage as shown above. Use the exam topics and practice questions on this page to align your study with the official outline.`
-      : `This page shows the section-wise exam weightage so you know exactly which topics carry the most weight. Use the exam topics and practice questions above to align your study with the official outline.`,
+    answer: topSections
+      ? `The ${faqName} exam${formerlyPhrase} has ${sectionCount} sections. ${topSections}. The full section-by-section weightage is in the table on this page.`
+      : isComponentOnlyCredential(slug)
+        ? `${faqName}${formerlyPhrase} has no exam of its own. It is awarded automatically once you hold its component certifications, which are listed on this page with links to each exam's own guide.`
+        : formerName
+          ? `This page lists the exam topics for ${faqName}${formerlyPhrase}. Use them with the practice questions to align your study with the official outline.`
+          : `This page lists the exam topics. Use them with the practice questions to align your study with the official outline.`,
   }
   const baseFree: FaqItem = {
     question: `Are there free practice questions for the ${faqName} exam?`,
@@ -2530,13 +2668,15 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   }
   const basePrepare: FaqItem = {
     question: `How do I prepare for the ${faqName} certification?`,
-    answer: formerName
+    answer: isComponentOnlyCredential(slug)
+      ? `Prepare for each component exam separately, using that exam's own guide and practice questions. There is nothing to book for ${faqName} itself: the credential is added to your profile once the last component certification is earned.`
+      : formerName
       ? `Use the exam tips, prerequisites, and study strategy on this ${faqName} study guide${formerlyPhrase}. Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`
       : `Use the exam tips, prerequisites, and study strategy on this page. Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`,
   }
   const baseOfficial: FaqItem = {
     question: `Where can I find the official exam outline for ${faqName}?`,
-    answer: `Salesforce publishes exam guides and outlines on Trailhead (trailhead.salesforce.com). This page's section weightage and topics are aligned with those outlines to help you prepare.`,
+    answer: `Salesforce publishes exam guides on Salesforce Help and lists each exam on Trailhead Academy (trailheadacademy.salesforce.com), where you also register. Exams are delivered by Pearson VUE, online through OnVUE or at a test center. This page's section weightage and topics follow the official guide.`,
   }
 
   const baseFaqs: FaqItem[] = [
@@ -2606,7 +2746,7 @@ export function getCertHowToJsonLd(slug: string, certTitle: string) {
       { '@type': 'HowToStep', name: 'Review the exam outline and section weightage', text: 'Check the official exam guide and use the section-wise weightage on this page to prioritize topics.' },
       { '@type': 'HowToStep', name: 'Study by section', text: 'Use the study plan and exam prep content to cover each section. Focus on high-weight areas first.' },
       { '@type': 'HowToStep', name: 'Practice with sample questions', text: 'Answer the free practice questions and read the explanations to reinforce your understanding.' },
-      { '@type': 'HowToStep', name: 'Book your exam', text: 'When you feel ready, schedule your certification exam on Trailhead or the Salesforce Certification portal.' },
+      { '@type': 'HowToStep', name: 'Book your exam', text: 'When you feel ready, register on Trailhead Academy and take the exam with Pearson VUE, online through OnVUE or at a test center.' },
     ],
   }
 }
@@ -2637,6 +2777,8 @@ export function getExamWeightageTableJsonLd(
 
 /** Single H1 per cert page: aligned with query intent (Complete ${RELEASE_YEAR} Guide) for CTR. */
 export function getCertH1Text(slug: string): string {
+  const registryH1 = getCertAlias(slug)?.h1
+  if (registryH1) return registryH1
   if (slug === 'education-cloud-consultant') return 'Salesforce Education Cloud Consultant: Archived Exam Notes'
   if (isRetiredCredential(slug)) return 'Salesforce AI Associate: Historical AI Learning Notes'
   if (hasUnverifiedClaudeExamDetails(slug)) return `${slugToDisplayName(slug)}: Learning Topics and Practice Questions`

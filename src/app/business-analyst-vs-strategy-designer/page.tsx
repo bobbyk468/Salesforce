@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Business Analyst and Strategy Designer?',
-    answer: 'The Salesforce Business Analyst certification focuses on requirements gathering, process mapping, user story writing, Agile collaboration, and translating business needs into Salesforce solutions. The Strategy Designer certification focuses on human-centred design thinking: stakeholder research, journey mapping, ideation, prototyping, and designing experiences that create business value. BA is about capturing and communicating requirements; Strategy Designer is about designing the user experience and strategic direction of a Salesforce implementation.',
+    answer: 'The Business Analyst certification covers requirements gathering, process mapping, user stories, Agile collaboration, and turning business needs into Salesforce solutions. Strategy Designer focuses on human-centred design, including stakeholder research, journey mapping, ideation, prototyping, and experience design. Business Analysts capture and communicate requirements; Strategy Designers shape the user experience and direction of an implementation.',
   },
   {
     question: 'Which should I take first: Business Analyst or Strategy Designer?',
-    answer: 'Both are standalone certifications with no prerequisites, but Business Analyst is more widely requested by employers for typical consultant and BA roles. Strategy Designer is a more specialised credential; it is highly valued at design-led consultancies and for roles that blend product design with Salesforce delivery. If you work primarily on requirement gathering and Agile delivery, take Business Analyst first. If your role involves CX strategy, design thinking workshops, and experience design, Strategy Designer is the right credential.',
+    answer: 'Neither certification has prerequisites. Employers more often request Business Analyst for analyst and consultant roles. Strategy Designer is more specialized and may suit design-led consultancies and roles that combine product design with Salesforce delivery. Choose Business Analyst if you focus on requirements and Agile delivery. Choose Strategy Designer if you work on customer experience strategy, design workshops, or experience design.',
   },
   {
     question: 'Is the Strategy Designer exam harder than Business Analyst?',
-    answer: 'Strategy Designer is generally considered harder due to its focus on design methodology, a topic area that is more abstract and less familiar to typical Salesforce professionals. Business Analyst tests more familiar territory (requirements gathering, user stories, process flows) and aligns closely with what most consultants already do in practice. Strategy Designer requires understanding of design research methods, facilitation techniques, and design sprint frameworks that many candidates need to study from scratch.',
+    answer: 'Strategy Designer may feel harder because design methods can be abstract and unfamiliar to Salesforce professionals. Business Analyst covers requirements, user stories, and process flows, which may be closer to a consultant\'s daily work. Strategy Designer also requires knowledge of design research, facilitation, and design sprints.',
   },
   {
     question: 'Can you take both Business Analyst and Strategy Designer?',
-    answer: 'Yes; both certifications are complementary and often pursued together. A professional who holds both credentials demonstrates a full spectrum of skills: from stakeholder engagement and requirements analysis (BA) through to experience design and CX strategy (Strategy Designer). This combination is increasingly valued on large transformation programmes where user experience is as important as technical delivery.',
+    answer: 'Yes. The certifications complement each other. Together, they show skills in stakeholder engagement and requirements analysis as well as experience design and customer experience strategy. This combination may be useful on large transformation programmes where user experience matters alongside technical delivery.',
   },
 ]
 
@@ -78,8 +78,7 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both certifications sit between business and technology, but they test fundamentally different skills.
-          Business Analyst is about requirements and delivery; Strategy Designer is about human-centred design and experience strategy.
+          Both certifications connect business and technology, but cover different skills. Business Analyst focuses on requirements and delivery; Strategy Designer focuses on human-centred design and experience strategy.
         </p>
       </header>
 
@@ -166,9 +165,9 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Certification Should You Take?</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>Business Analyst</strong> if you spend most of your time gathering requirements, writing user stories, facilitating workshops to elicit business needs, or managing UAT on Salesforce projects.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>Strategy Designer</strong> if your work involves defining the experience strategy, running design thinking workshops, creating journey maps, or shaping what a Salesforce solution should achieve for end users.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Note: Business Analyst has a <strong>higher passing score (72%)</strong> than most Salesforce certs, budget extra study time for scenario-based questions on requirements management and stakeholder communication.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>Business Analyst</strong> if you gather requirements, write user stories, run workshops, or manage UAT on Salesforce projects.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>Strategy Designer</strong> if you set experience strategy, run design workshops, map customer journeys, or define what a Salesforce solution should do for users.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Business Analyst has a <strong>higher passing score (72%)</strong> than most Salesforce certifications. Allow extra study time for scenario questions about requirements and stakeholder communication.</li>
         </ul>
       </section>
 
@@ -196,15 +195,15 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
-                <td className="py-2.5 pr-4">Gathering requirements, writing user stories, facilitating sprint planning</td>
+                <td className="py-2.5 pr-4">You gather requirements, write user stories, and help plan sprints</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">Business Analyst</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Designing customer experience strategies, service blueprints, or journey maps</td>
+                <td className="py-2.5 pr-4">You design customer experiences, service blueprints, or journey maps</td>
                 <td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Working as a Salesforce BA or functional analyst on implementation projects</td>
+                <td className="py-2.5 pr-4">You work as a Salesforce BA or functional analyst on implementation projects</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">Business Analyst, directly maps to your role</td>
               </tr>
               <tr>

@@ -51,19 +51,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Should I take App Builder or Platform Developer I after ADM-201?',
-    answer: 'It depends on your role. If you work primarily as a Salesforce admin or no-code/low-code builder (flows, process automation, custom objects, Lightning pages), take App Builder first. If you write or want to write Apex code and work with LWC or Visualforce, take Platform Developer I. Many professionals take App Builder first because it builds directly on ADM-201 content and requires no coding background.',
+    answer: 'Choose based on the work you want to do. App Builder suits people who configure Salesforce with flows, custom objects, and Lightning pages. Platform Developer I (PD1) is for people who build with Apex and Lightning Web Components (LWC). App Builder does not require coding experience; PD1 requires dedicated programming study.',
   },
   {
     question: 'Is App Builder easier than Platform Developer I?',
-    answer: 'Yes: App Builder is generally considered easier than Platform Developer I. App Builder tests declarative (no-code) platform knowledge and shares significant overlap with ADM-201 content. Platform Developer I requires Apex programming, Salesforce Object Query Language (SOQL), SOSL, triggers, test classes, and LWC fundamentals, a coding skill set that requires dedicated technical preparation.',
+    answer: 'Many candidates find App Builder more approachable because it focuses on configuration and shares topics with ADM-201. PD1 requires programming skills in Apex, SOQL, SOSL, triggers, test classes, and LWC. Your experience with these topics will affect how difficult the exam feels.',
   },
   {
     question: 'Do I need to know how to code for the App Builder exam?',
-    answer: 'No. The App Builder exam tests declarative development: Lightning App Builder, Lightning pages, custom objects and fields, validation rules, formula fields, flows, process automation, and AppExchange. No Apex code or LWC JavaScript is required. However, the exam does test understanding of when to use declarative vs programmatic approaches (i.e., recognising scenarios where code is needed vs not).',
+    answer: 'No. The exam covers declarative tools such as Lightning App Builder, custom objects and fields, validation and formula fields, flows, process automation, and AppExchange. It also asks you to recognize when a declarative solution is suitable and when code is needed.',
   },
   {
     question: 'What coding skills does Platform Developer I require?',
-    answer: 'Platform Developer I (PD1) requires proficiency in: Apex (classes, triggers, governor limits, asynchronous Apex, future, queueable, batch, scheduled), SOQL and SOSL queries, Visualforce pages (basics), Lightning Web Components (LWC fundamentals: HTML, CSS, JavaScript), and Salesforce testing framework (writing test classes, assert methods, achieving 75%+ code coverage). Apex triggers and governor limits are the most heavily tested topics.',
+    answer: 'PD1 covers Apex classes and triggers, governor limits, asynchronous Apex (future, queueable, batch, and scheduled), SOQL and SOSL, basic Visualforce, and LWC fundamentals (HTML, CSS, and JavaScript). You also need to understand Salesforce test classes, assertions, and the 75%+ code coverage requirement. Triggers and governor limits receive substantial attention.',
   },
 ]
 
@@ -81,9 +81,9 @@ export default function AppBuilderVsDeveloperIPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          App Builder and Platform Developer I are the two most common second certifications after ADM-201.
-          App Builder tests declarative (no-code) development; PD1 tests programmatic (Apex, LWC) development.
-          The right choice depends on your current role, coding ability, and career direction.
+          App Builder and Platform Developer I (PD1) show two different ways to build on Salesforce.
+          App Builder covers configuration with declarative tools; PD1 covers development with Apex and LWC.
+          Compare the work each exam reflects, then choose based on your coding experience and goals.
         </p>
       </header>
 
@@ -94,10 +94,10 @@ export default function AppBuilderVsDeveloperIPage() {
           certSlug: "app-builder",
           examTipsSlug: "certifications/app-builder",
           conditions: [
-          "You work in a non-developer, admin, or BA role",
-          "You have no Apex or LWC coding experience",
-          "You want to build toward the Architect path",
-          "You are looking for the fastest cert after Admin",
+          "Your role focuses on Salesforce administration, analysis, or configuration",
+          "You have not yet worked with Apex or LWC",
+          "You want to design apps with Salesforce's declarative tools",
+          "You are considering an Architect certification path",
           ],
         }}
         certB={{
@@ -105,17 +105,17 @@ export default function AppBuilderVsDeveloperIPage() {
           certSlug: "developer-1",
           examTipsSlug: "certifications/developer-1",
           conditions: [
-          "You write, or plan to write: Apex code",
-          "You work in a developer role and need the credential to match",
-          "You want the highest salary ceiling among non-architect certs",
-          "You already understand SOQL, triggers, and governor limits",
+          "You write or plan to write Apex code",
+          "Your current role involves software development",
+          "You want to build custom Salesforce behavior in code",
+          "You already know SOQL, triggers, and governor limits",
           ],
         }}
         recommendation={{
           certName: "Platform App Builder",
           certSlug: "app-builder",
           examTipsSlug: "certifications/app-builder",
-          reason: "App Builder is the natural next step after Admin for most Salesforce professionals, no coding required, strong salary bump, and it opens the architect path. Only pivot to Platform Developer I first if you are actively writing Apex code in your current role.",
+          reason: "App Builder is a useful next step if you want to deepen your configuration and app design skills without writing code. Choose PD1 first if your current work already involves Apex or if you are preparing for a Salesforce developer role.",
           careerPathSlug: "admin-certification-path",
           careerPathLabel: "Admin & Builder Certification Path",
         }}
@@ -215,26 +215,25 @@ export default function AppBuilderVsDeveloperIPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which to Take First?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Choose based on your current role and whether you write code in your Salesforce work.
-          You can hold both certifications; they are complementary, not competing.
+          Think about how you solve Salesforce requirements today. App Builder tests when and how to configure the platform; PD1 tests whether you can implement behavior in code. You can earn both as your work expands.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
             <p className="text-sm font-semibold text-salesforce-dark mb-2">Take App Builder First If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>You are a Salesforce Admin looking to expand platform skills</li>
-              <li>You work with flows, Lightning pages, and custom objects daily</li>
-              <li>You have no Apex programming background</li>
-              <li>Your role is non-technical (consultant, analyst, BA)</li>
+              <li>You configure Salesforce as an administrator</li>
+              <li>You regularly build flows, Lightning pages, or custom objects</li>
+              <li>You want to improve your app design skills before learning Apex</li>
+              <li>Your work is focused on consulting, analysis, or business processes</li>
             </ul>
           </div>
           <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-4">
             <p className="text-sm font-semibold text-emerald-700 mb-2">Take Platform Developer I First If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>You write Apex code or LWC components in your current role</li>
-              <li>You are a software developer transitioning to Salesforce</li>
-              <li>Your goal is a developer or architect career track</li>
-              <li>You already have a coding background (Java, Python, JavaScript)</li>
+              <li>You already build Apex or LWC features at work</li>
+              <li>You are bringing software development experience to Salesforce</li>
+              <li>You want a Salesforce developer role</li>
+              <li>You have programming experience in Java, Python, or JavaScript</li>
             </ul>
           </div>
         </div>
@@ -252,27 +251,27 @@ export default function AppBuilderVsDeveloperIPage() {
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
-                <td className="py-2.5 pr-4">No coding experience, declarative-only background</td>
+                <td className="py-2.5 pr-4">You mainly use clicks, flows, and configuration</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">App Builder, no Apex required</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Java, Python, or any OOP programming experience</td>
+                <td className="py-2.5 pr-4">You have experience with Java, Python, or object-oriented programming</td>
                 <td className="py-2.5 font-semibold text-purple-700">PD1, your coding skills transfer directly to Apex</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Want to stay in declarative/no-code Salesforce roles</td>
+                <td className="py-2.5 pr-4">You plan to focus on Salesforce configuration and declarative solutions</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">App Builder</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Want to write Apex triggers, classes, or LWC components</td>
+                <td className="py-2.5 pr-4">You plan to write Apex triggers, classes, or LWC components</td>
                 <td className="py-2.5 font-semibold text-purple-700">PD1</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Pursuing the Architect certification track</td>
+                <td className="py-2.5 pr-4">You are pursuing the Architect certification track</td>
                 <td className="py-2.5 font-semibold text-salesforce-blue">App Builder, required prerequisite for Architect path</td>
               </tr>
               <tr>
-                <td className="py-2.5 pr-4">Admin background, now adding development skills</td>
+                <td className="py-2.5 pr-4">You have admin experience and want to add development skills</td>
                 <td className="py-2.5 font-semibold text-gray-700">App Builder first, then PD1, builds naturally</td>
               </tr>
             </tbody>

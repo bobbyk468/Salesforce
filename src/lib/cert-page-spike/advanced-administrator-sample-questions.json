@@ -1,6 +1,6 @@
 [
   {
-    "question": "An organization wants to automatically share records with users based on criteria. Which feature should be used?",
+    "question": "A company wants records to be shared automatically based on set conditions. Which feature should it use?",
     "options": [
       "Manual Sharing",
       "Role Hierarchy",
@@ -8,21 +8,21 @@
       "Public Groups"
     ],
     "correctAnswer": 2,
-    "explanation": "Sharing Rules allow you to automatically share records with users or groups based on record ownership or criteria."
+    "explanation": "Sharing Rules automatically share records with users or groups based on record ownership or specified criteria."
   },
   {
-    "question": "What is required before creating a roll-up summary field on a custom object?",
+    "question": "What relationship must exist before you can add a roll-up summary field to a custom object?",
     "options": [
       "A lookup relationship to the parent object",
-      "A master-detail relationship where the custom object is the detail",
+      "A master-detail relationship where the custom object is the master",
       "An external ID field",
       "A formula field"
     ],
     "correctAnswer": 1,
-    "explanation": "Roll-up summary fields can only be created on objects that are the master in a master-detail relationship."
+    "explanation": "A roll-up summary field can be added to the master object in a master-detail relationship."
   },
   {
-    "question": "Which feature allows administrators to track changes to setup configuration?",
+    "question": "Which feature shows administrators changes made to Salesforce setup?",
     "options": [
       "Debug Log",
       "Setup Audit Trail",
@@ -30,76 +30,76 @@
       "Event Monitoring"
     ],
     "correctAnswer": 1,
-    "explanation": "Setup Audit Trail tracks the last 180 days of setup changes made by administrators in your organization."
+    "explanation": "Setup Audit Trail shows setup changes made by administrators during the past 180 days."
   },
   {
-    "question": "A company needs to ensure that duplicate leads are not created. Which feature should be implemented?",
+    "question": "A company wants to stop users from creating duplicate leads. Which features should it use?",
     "options": [
-      "Duplicate Rules with Matching Rules",
+      "Matching Rules and Duplicate Rules",
       "Validation Rules",
-      "Unique Field",
-      "Apex Trigger"
+      "A unique field",
+      "An Apex trigger"
     ],
     "correctAnswer": 0,
-    "explanation": "Duplicate Rules combined with Matching Rules allow you to detect and prevent duplicate records from being created."
+    "explanation": "Matching Rules identify possible duplicates, and Duplicate Rules can alert users or block duplicate records."
   },
   {
-    "question": "What is the purpose of a Permission Set Group?",
+    "question": "Why would an admin create a Permission Set Group?",
     "options": [
-      "To assign multiple profiles to a user",
-      "To create a hierarchy of permissions",
-      "To restrict access to objects",
-      "To bundle permission sets together for easier assignment"
+      "Assign multiple profiles to one user",
+      "Set up a permission hierarchy",
+      "Restrict access to objects",
+      "Group permission sets for easier assignment"
     ],
     "correctAnswer": 3,
-    "explanation": "Permission Set Groups allow you to bundle multiple permission sets together, making it easier to assign a collection of permissions to users."
+    "explanation": "A Permission Set Group bundles several permission sets so an admin can assign them together."
   },
   {
-    "question": "Which of the following correctly describes how Salesforce record access is layered?",
+    "question": "How do Salesforce record access settings work together?",
     "options": [
-      "Sharing Rules set the baseline; profiles expand access above that",
-      "Profiles set the ceiling; OWD cannot exceed profile permissions",
-      "OWD sets the baseline record access, which is then expanded by role hierarchy, sharing rules, and manual sharing, never restricted below OWD",
-      "OWD and profiles are evaluated simultaneously and the most restrictive setting wins"
+      "Sharing Rules set the baseline, and profiles add more access",
+      "Profiles set the access limit, and OWD cannot go beyond it",
+      "OWD sets baseline record access; the role hierarchy, sharing rules, and manual sharing can expand it, but not reduce it",
+      "OWD and profiles are checked together, and the more restrictive setting applies"
     ],
     "correctAnswer": 2,
-    "explanation": "OWD defines the minimum access to records. Role hierarchy, sharing rules, and manual sharing can only open access further. Object and field permissions are controlled separately by profiles and permission sets."
+    "explanation": "Organization-Wide Defaults (OWD) set the baseline record access. The role hierarchy, sharing rules, and manual sharing can open access further, but do not reduce access below that baseline. Profiles and permission sets control object and field permissions separately."
   },
   {
-    "question": "What is the key difference between Custom Metadata Types and Custom Settings?",
+    "question": "How do Custom Metadata Types differ from Custom Settings?",
     "options": [
       "Custom Settings support more field types than Custom Metadata Types",
-      "Custom Metadata Types can be included in packages and deployed via Change Sets; Custom Settings data records cannot be packaged",
-      "Custom Metadata Types are instance-specific and not portable between orgs",
-      "There is no practical difference between the two"
+      "Custom Metadata Types and their records can be packaged and deployed with Change Sets; Custom Settings records cannot",
+      "Custom Metadata Types belong to one org and cannot be moved to another",
+      "There is no practical difference"
     ],
     "correctAnswer": 1,
-    "explanation": "Custom Metadata Types are metadata, their records deploy with Change Sets and packages. Custom Settings data records must be recreated manually in each target org, making Custom Metadata the preferred choice for deployable, org-portable configuration."
+    "explanation": "Custom Metadata Types and their records can be deployed in packages and Change Sets. Custom Setting records are not packaged and must be recreated in each target org, so Custom Metadata Types suit portable configuration."
   },
   {
-    "question": "An admin wants to allow an HR manager to create and deactivate users without granting full System Administrator access. What should the admin configure?",
+    "question": "An admin wants an HR manager to create and deactivate some users without giving them full System Administrator access. What should the admin set up?",
     "options": [
-      "Set up Delegated Administration and define the HR manager as a Delegated Administrator with user management scope",
-      "Grant the HR manager the 'Manage Users' system permission via a permission set",
+      "Set up Delegated Administration and give the HR manager a defined scope for managing users",
+      "Give the HR manager the Manage Users system permission through a permission set",
       "Assign the HR manager the System Administrator profile",
-      "Add the HR manager to a Public Group with user management access"
+      "Add the HR manager to a Public Group with user-management access"
     ],
     "correctAnswer": 0,
-    "explanation": "Delegated Administration allows non-admin users to perform limited admin tasks, such as creating and deactivating users within defined profiles and roles, without requiring full System Administrator access."
+    "explanation": "Delegated Administration lets designated non-admin users perform limited tasks, such as creating or deactivating users within specified profiles and roles."
   },
   {
-    "question": "What is the purpose of Territory Management in Salesforce?",
+    "question": "What does Territory Management let a Salesforce admin do?",
     "options": [
-      "To define geographic boundaries for Experience Cloud sites",
-      "To set OWD for accounts based on postal code",
-      "To allow accounts and opportunities to be assigned to multiple sales territories based on rules, enabling flexible rep assignments across business units or regions",
-      "To restrict lead assignment to specific regions using assignment rules"
+      "Set geographic boundaries for Experience Cloud sites",
+      "Set account OWD based on postal code",
+      "Assign accounts and opportunities to multiple sales territories by rules, for flexible coverage across teams or regions",
+      "Limit lead assignment to regions with assignment rules"
     ],
     "correctAnswer": 2,
-    "explanation": "Enterprise Territory Management lets admins define territory types, build territory hierarchies, and assign accounts/opportunities to multiple territories simultaneously, enabling complex, matrix-style sales coverage models."
+    "explanation": "Enterprise Territory Management lets admins define territory types and hierarchies, then assign accounts and opportunities to multiple territories for flexible sales coverage."
   },
   {
-    "question": "Which report type allows combining data from unrelated report types in a single view with up to 5 report blocks?",
+    "question": "Which report type can show up to five report blocks from different report types in one view?",
     "options": [
       "Summary",
       "Matrix",
@@ -107,54 +107,54 @@
       "Joined"
     ],
     "correctAnswer": 3,
-    "explanation": "Joined Reports combine up to 5 report blocks, each from a different report type, in a single view. This is useful for presenting side-by-side comparisons such as Opportunities vs. Cases for the same accounts."
+    "explanation": "Joined Reports can place up to five report blocks, each based on a different report type, in one view. They are useful for side-by-side comparisons, such as opportunities and cases for the same accounts."
   },
   {
-    "question": "A company requires that any Opportunity discount greater than 30% must be approved by two different managers in sequence. Which feature handles this?",
+    "question": "A company wants discounts over 30% approved by two managers, one after the other. Which feature should it use?",
     "options": [
-      "Approval Process with multiple sequential approval steps and entry criteria",
-      "Validation Rule preventing save if discount exceeds 30%",
-      "Workflow Rule with an email alert to managers",
-      "Flow with a Pause element and record update"
+      "An Approval Process with entry criteria and multiple approval steps in sequence",
+      "A Validation Rule that blocks saving when the discount exceeds 30%",
+      "A Workflow Rule that emails the managers",
+      "A Flow with a Pause element and a record update"
     ],
     "correctAnswer": 0,
-    "explanation": "Approval Processes support multiple sequential steps, each with its own approver, criteria, and actions. They are the correct tool for structured, multi-level sign-off workflows like discount approvals."
+    "explanation": "Approval Processes support multiple sequential steps, each with its own approver, criteria, and actions. They are designed for workflows such as multi-level discount approval."
   },
   {
-    "question": "What is the function of a Muting Permission Set in a Permission Set Group?",
+    "question": "What does a Muting Permission Set do inside a Permission Set Group?",
     "options": [
-      "To silence Chatter notifications for all users in a permission set group",
-      "To hide custom objects from a permission set group",
-      "To restrict field-level security on sensitive fields for a group of users",
-      "To suppress specific permissions within a Permission Set Group without removing the entire permission set"
+      "Silence Chatter notifications for everyone in a permission set group",
+      "Hide custom objects from a permission set group",
+      "Restrict field access to sensitive fields for a group of users",
+      "Remove selected permissions from a Permission Set Group without removing the permission set"
     ],
     "correctAnswer": 3,
-    "explanation": "Muting Permission Sets allow admins to selectively suppress specific permissions included in one of the permission sets within a group, without removing the entire permission set. This provides fine-grained control over bundled permissions."
+    "explanation": "A Muting Permission Set suppresses selected permissions from the permission sets in a group without removing those permission sets."
   },
   {
-    "question": "Data imported via Data Loader is creating duplicate Account records. Which combination of features prevents this going forward?",
+    "question": "Data Loader imports are creating duplicate Account records. Which features can help prevent this?",
     "options": [
-      "Validation Rules on the Account object",
-      "Unique Field constraint on the Account Name field",
-      "Matching Rules and Duplicate Rules configured on the Account object",
-      "Process Builder set to check for existing records before inserting"
+      "Validation Rules on Account",
+      "A unique constraint on the Account Name field",
+      "Matching Rules and Duplicate Rules on Account",
+      "A Process Builder process that checks for existing records before inserting"
     ],
     "correctAnswer": 2,
-    "explanation": "Matching Rules define how Salesforce identifies potential duplicates (by comparing fields like name, email, phone). Duplicate Rules then control what happens when a match is found, blocking the save, alerting the user, or logging the duplicate."
+    "explanation": "Matching Rules identify possible duplicates by comparing fields such as name, email, or phone. Duplicate Rules decide whether to block, alert on, or log a possible match."
   },
   {
-    "question": "An admin needs to import 200,000 records and later update them using an external system's unique identifier. Which field type should be added before the initial import?",
+    "question": "A company needs to import 200,000 records and later match updates using an external system’s unique ID. What field should it add before importing?",
     "options": [
       "Auto-Number field",
       "External ID field",
-      "Text field with unique constraint",
-      "Formula field returning the record ID"
+      "Text field with a unique constraint",
+      "Formula field that returns the record ID"
     ],
     "correctAnswer": 1,
-    "explanation": "External ID fields store a unique identifier from an external system. Data Loader and the API can use External IDs to upsert records, matching on the external ID to update existing records or insert new ones without knowing the Salesforce record ID."
+    "explanation": "An External ID stores an identifier from another system. Data Loader and the API can use it to upsert records, updating matches or inserting new records without the Salesforce record ID."
   },
   {
-    "question": "Which feature allows an admin to grant additional permissions without modifying a user's profile?",
+    "question": "Which feature adds permissions for a user without changing their profile?",
     "options": [
       "Permission Set",
       "Profile only",
@@ -162,6 +162,86 @@
       "Sharing Rule"
     ],
     "correctAnswer": 0,
-    "explanation": "Permission Sets grant additional access without changing the profile. Users can have one profile and multiple permission sets."
+    "explanation": "Permission Sets add access without changing a user’s profile. Each user has one profile and can have multiple permission sets."
+  },
+  {
+    "question": "A regional administrator should reset passwords for one group of users. Which feature grants that scope?",
+    "options": [
+      "Delegated administration",
+      "A territory assignment rule",
+      "A public group membership",
+      "A criteria-based sharing rule"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A delegated administration group can grant specific user management tasks for selected roles and subordinate roles.",
+    "whyWrong": [
+      "Territory rules group records and support territory assignment.",
+      "A public group alone grants no user administration privileges.",
+      "A sharing rule governs access to records."
+    ]
+  },
+  {
+    "question": "A sales leader needs account access assigned by product line and geography rather than by reporting hierarchy. What should the team evaluate?",
+    "options": [
+      "A new Salesforce role hierarchy",
+      "Enterprise Territory Management",
+      "An Account field-level security rule",
+      "A permission set for the sales app"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A territory model can assign accounts and users along sales coverage lines that differ from the reporting hierarchy.",
+    "whyWrong": [
+      "The reporting hierarchy may not match overlapping coverage rules.",
+      "Field-level security cannot assign accounts to a coverage group.",
+      "An app permission does not determine territory-level record access."
+    ]
+  },
+  {
+    "question": "A new stage should be set before an Opportunity is saved. The automation changes only that Opportunity. What should the admin use?",
+    "options": [
+      "An auto-launched Flow run daily",
+      "An after-save Flow with a record update",
+      "A before-save record-triggered Flow",
+      "A screen Flow from a custom action"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A before-save flow can update fields on the triggering record in the original save.",
+    "whyWrong": [
+      "A daily flow would set the stage later.",
+      "An after-save update adds a write for a change that can happen before save.",
+      "A screen flow requires a user interaction."
+    ]
+  },
+  {
+    "question": "A release manager wants to validate a change set in production ahead of the scheduled release. What should the manager do?",
+    "options": [
+      "Activate the new components in production first",
+      "Refresh the source sandbox after uploading it",
+      "Deploy it during a peak production window",
+      "Run the target validation before deployment"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Validation checks metadata and applicable tests in the target without deploying the change set.",
+    "whyWrong": [
+      "Activation would change production without a validation pass.",
+      "A sandbox refresh does not validate metadata against production.",
+      "A production deployment applies changes rather than performing a validation-only run."
+    ]
+  },
+  {
+    "question": "Sales managers need one dashboard that shows each manager their own team’s opportunities according to their record access. What should the admin use?",
+    "options": [
+      "A single dashboard subscription",
+      "A dashboard folder with public access",
+      "A dynamic dashboard running as the viewer",
+      "A static dashboard running as the system admin"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A dynamic dashboard shows each viewer the records they are allowed to see, which can include team opportunities shared through the role hierarchy.",
+    "whyWrong": [
+      "A subscription schedules delivery without choosing record visibility.",
+      "Folder access determines who can open the dashboard, not which rows should appear.",
+      "A static administrator context can show records outside a manager’s access."
+    ]
   }
 ]

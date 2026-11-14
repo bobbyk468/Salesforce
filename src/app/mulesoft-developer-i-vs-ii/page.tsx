@@ -48,19 +48,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Is MuleSoft Developer I a prerequisite for Developer II?',
-    answer: 'Yes. MuleSoft Certified Developer - Level 2 requires passing Level 1 first. Level 1 is the entry point for MuleSoft developer certification and tests core Anypoint Platform skills. Level 2 builds on this foundation with advanced API design patterns, performance tuning, error handling architecture, and complex Mule 4 application design.',
+    answer: 'Yes. MuleSoft Certified Developer Level 2 requires passing Level 1 first. Level 1 covers core Anypoint Platform skills. Level 2 builds on that foundation with advanced API design, performance tuning, error handling, and complex Mule 4 applications.',
   },
   {
     question: 'How much harder is MuleSoft Developer II than Developer I?',
-    answer: 'MuleSoft Developer II is significantly harder. Developer I tests whether you can build and deploy basic integrations using Anypoint Studio and Anypoint Platform. Developer II tests whether you can architect production-grade integrations: choosing between synchronous and asynchronous patterns, designing for high availability and fault tolerance, optimising DataWeave transformations, and managing API security at scale. Most candidates study 3–6 months for Level 2.',
+    answer: 'Developer II is a larger step up. Developer I covers building and deploying basic integrations with Anypoint Studio and Anypoint Platform. Developer II covers production integrations, including synchronous and asynchronous patterns, availability and fault tolerance, DataWeave performance, and API security. The page estimates that many candidates study 3–6 months for Level 2.',
   },
   {
     question: 'What is the difference in passing score between MuleSoft Developer I and II?',
-    answer: 'Both MuleSoft Developer I and Developer II use a 70% passing score threshold, which is higher than most Salesforce certifications (65%). Both exams have 60 questions and a 120-minute time limit. The $200 fee applies to both. The higher passing score reflects the technical depth expected of MuleSoft-certified developers.',
+    answer: 'Both exams use a 70% passing score. Each has 60 questions, a 120-minute limit, and a $200 fee. The passing score is higher than the 65% used by many Salesforce certifications.',
   },
   {
     question: 'Should I take MuleSoft Integration Foundations before Developer I?',
-    answer: 'MuleSoft Integration Foundations is a beginner-level credential ($75, 45 questions, Pass/Fail) designed for people new to integration concepts. If you have no prior integration or API experience, starting with Foundations builds useful conceptual grounding. If you already have programming experience and understand API/REST concepts, you can skip Foundations and go directly to Developer I.',
+    answer: 'MuleSoft Integration Foundations is an introductory credential ($75, 45 questions, Pass/Fail) for people who are new to integration. It can help you learn the basic concepts. If you already program and understand APIs and REST, you may be ready to start with Developer I.',
   },
 ]
 
@@ -78,9 +78,7 @@ export default function MulesoftDeveloperIVsIIPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          MuleSoft certification follows a structured progression: Developer I is the entry point and
-          Developer II validates advanced integration architecture skills. Here’s exactly what separates
-          the two exams and what you need to know to progress.
+          MuleSoft Developer I is the starting point; Developer II covers more advanced integration skills. Compare the exam topics and experience expectations before choosing your next step.
         </p>
       </header>
 
@@ -112,7 +110,7 @@ export default function MulesoftDeveloperIVsIIPage() {
           certName: "MuleSoft Developer I",
           certSlug: "mulesoft-developer-i",
           examTipsSlug: "certifications/mulesoft-developer-i",
-          reason: "MuleSoft Developer I is the required foundation, both in terms of knowledge and employer expectations. Developer II content assumes full mastery of Developer I concepts. Most candidates take 6–12 months between the two.",
+          reason: "Developer I is the required foundation, and Developer II assumes you know its topics. The suggested gap between exams is 6–12 months.",
           
         }}
       />
@@ -170,7 +168,7 @@ export default function MulesoftDeveloperIVsIIPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Developer II Tests Beyond Developer I</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Developer II Adds</h2>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced DataWeave</strong>: Complex transformations, reduce/map/filter functions, custom modules, format conversion at production scale, and performance-optimised transformation patterns.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling architecture</strong>: On-error-continue vs. on-error-propagate, global vs. flow-scoped error handlers, designing for idempotency and retry logic in production integrations.</li>
@@ -192,7 +190,7 @@ export default function MulesoftDeveloperIVsIIPage() {
       </section>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: MuleSoft Developer I or II?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between MuleSoft Developer I and II</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>

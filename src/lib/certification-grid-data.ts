@@ -1,14 +1,17 @@
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { OFFICIAL_CERT_NAMES } from '@/lib/cert-official-names'
 import { OFFICIAL_CREDENTIAL_URLS } from '@/lib/official-credential-urls'
+import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
+import { getCertAlias } from '@/lib/cert-alias-registry'
 import {
   SLUG_TO_DIFFICULTY,
   SLUG_TO_EXAM_COST,
   SLUG_TO_EXAM_GUIDE_URL,
   SLUG_TO_STUDY_GUIDE,
-  getExamLogistics,
+  getPublishedExamFacts,
   getCertMetaDescription,
 } from '@/lib/cert-seo-data'
+import { getCredentialCardNote, isComponentOnlyCredential } from '@/lib/credential-status'
 import {
   getCertPrerequisites,
   getRecommendedPrerequisite,
@@ -19,6 +22,7 @@ export type GridCert = {
   slug: string
   /** Official "Salesforce Certified ..." name, trimmed of the common prefix. */
   name: string
+  examCode: string | null
   href: string
   /** Distinct short exam summary shared with this credential's metadata. */
   description: string
@@ -28,6 +32,8 @@ export type GridCert = {
   questions: string | null
   passingScore: string | null
   duration: string | null
+  /** Short retirement status, e.g. "Exam closed Aug 31, 2026; retires Feb 1, 2027". */
+  statusNote: string | null
   /** "None required", or the prerequisite cert names. */
   prerequisites: string
   studyGuideHref: string | null
@@ -49,7 +55,7 @@ const LEVEL_LABEL: Record<string, string> = {
 
 /** Drop the shared prefix so card titles are scannable rather than uniform. */
 function shortName(slug: string, fallback: string): string {
-  const official = OFFICIAL_CERT_NAMES[slug]
+  const official = getCertAlias(slug)?.bare ?? OFFICIAL_CERT_NAMES[slug]
   if (!official) return fallback
   return official.replace(/^Salesforce Certified\s+/i, '').trim() || official
 }
@@ -60,6 +66,9 @@ function prerequisiteLabel(slug: string): string {
     return required.map((s) => shortName(s, s.replace(/-/g, ' '))).join(' + ')
   }
   const recommended = getRecommendedPrerequisite(slug)
+  // The guide says "Prerequisite: None". Say so first; a recommendation is
+  // secondary and must not read as a requirement.
+  if (getCertPrerequisites(slug)?.noPrerequisite) return 'None required'
   if (recommended) return `${shortName(recommended, recommended.replace(/-/g, ' '))} recommended`
   // Application Architect and System Architect are awarded for passing four
   // component exams rather than one of their own, so "None required" would be
@@ -70,6 +79,20 @@ function prerequisiteLabel(slug: string): string {
     return 'See component exams'
   }
   return 'None required'
+}
+
+/**
+ * Fee as shown on a card. Application Architect and System Architect have no
+ * exam of their own, so a single-exam price would be wrong; the Technical
+ * Architect card shows both stages because a candidate pays for both.
+ */
+function gridCost(slug: string): string | null {
+  if (isComponentOnlyCredential(slug)) return 'Composite ($0; 4 component exams)'
+  if (slug === 'technical-architect') return '$6,000 ($1,500 Eval + $4,500 Board)'
+  const cost = SLUG_TO_EXAM_COST[slug]
+  if (!cost) return null
+  const retake = getPublishedExamFacts(slug)?.retake
+  return retake ? `${cost} (${retake === 'Free' ? 'free retake' : `Retake ${retake}`})` : cost
 }
 
 /**
@@ -93,15 +116,22 @@ export function getCertificationGrid(): GridCategory[] {
       if (seen.has(slug)) continue
       seen.add(slug)
 
-      const logistics = getExamLogistics(slug)
+      const logistics = getPublishedExamFacts(slug)
       const difficulty = SLUG_TO_DIFFICULTY[slug]
       certs.push({
         slug,
         name: shortName(slug, item.name),
+        examCode: (() => {
+          const alias = getCertAlias(slug)
+          return alias
+            ? [alias.code, ...(alias.legacy ?? [])].filter(Boolean).join(' / ')
+            : getRecognizedExamCode(slug) ?? null
+        })(),
         href: item.href,
         description: getCertMetaDescription(slug),
         level: difficulty ? LEVEL_LABEL[difficulty] : null,
-        cost: SLUG_TO_EXAM_COST[slug] ?? null,
+        cost: gridCost(slug),
+        statusNote: getCredentialCardNote(slug) ?? null,
         questions: logistics ? String(logistics.questions) : null,
         passingScore: logistics?.passingScore ?? null,
         duration: logistics?.duration ?? null,

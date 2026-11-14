@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Strategy Designer exam for?",
+    "heading": "Who should take the Strategy Designer exam?",
     "personas": [
       {
-        "label": "UX strategists and service designers",
-        "description": "You run research and design work on Salesforce projects and want a credential that shows it."
+        "label": "UX and service design practitioners",
+        "description": "You research users and shape service experiences on Salesforce projects, and want a credential for that work."
       },
       {
-        "label": "Consultants leading discovery workshops",
-        "description": "You lead discovery with clients and turn what you learn into a clear direction for the solution."
+        "label": "Discovery workshop consultants",
+        "description": "You work with clients to understand their needs and turn findings into a practical solution direction."
       },
       {
-        "label": "Product owners bridging design and business",
-        "description": "You need to connect user needs to business goals and help teams decide what to build first."
+        "label": "Product owners connecting users and business",
+        "description": "You balance user needs with business outcomes and help teams choose what to tackle first."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Strategy Designer Exam Hard?",
-    "summary": "It is a moderate exam, but it isn't about Salesforce features. It tests how you research users, frame the right problem, run workshops and connect design work to business value. People from a pure admin or developer background often find it unfamiliar.",
+    "heading": "How challenging is the Strategy Designer exam?",
+    "summary": "This is a mid-level exam about design practice rather than Salesforce features. It checks how you learn about users, define the real problem, guide workshops, and connect design choices to business outcomes. Admins and developers may find the research methods less familiar.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>70% to pass</strong>, per Salesforce's Trailhead prep module. That is 42 correct answers.",
-      "<strong>Method focus.</strong> Research, synthesis, problem framing, facilitation and measuring value.",
-      "<strong>Judgement questions.</strong> Many questions ask what you should do next in a project, not what a tool does."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
+      "<strong>Design methods.</strong> Expect research, synthesis, problem framing, facilitation, and outcome measurement.",
+      "<strong>Project judgement.</strong> Many items ask for the best next step in a situation rather than a product feature."
     ],
-    "passRateGuidance": "People who have run discovery and research on real projects do best. Before you book. Aim for 80% or more on practice tests, since the pass mark is higher than most."
+    "passRateGuidance": "Hands-on discovery and research experience helps. Because the pass threshold is higher than many exams, target at least 80% on practice sets before booking."
   },
   "examFormat": {
-    "heading": "Strategy Designer Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a moment in a project, such as a vague client request, conflicting stakeholders or research results that don't match the brief, and ask what the designer should do.",
+    "heading": "What to expect on the Strategy Designer exam",
+    "intro": "You may sit the proctored exam online or at a test centre. The questions commonly cover these situations:",
+    "scenarioPercent": "Many items place you in a project situation: a vague request, stakeholders who disagree, or research that challenges the original brief. You must choose the designer’s next move.",
     "bestWayToPass": [
-      "<strong>Know your research methods:</strong> Interviews, observation, surveys and analytics, and when each fits.",
-      "<strong>Practise synthesis:</strong> Affinity mapping, personas, journey maps and service blueprints.",
-      "<strong>Frame problems well:</strong> Turn findings into clear problem statements and How Might We questions.",
-      "<strong>Tie work to value:</strong> Link design decisions to business goals and measures of success."
+      "<strong>Choose research methods:</strong> Know when interviews, observation, surveys, or analytics answer the question.",
+      "<strong>Make sense of findings:</strong> Practise affinity mapping, personas, journey maps, and service blueprints.",
+      "<strong>Define the problem:</strong> Turn evidence into a clear problem statement and useful How Might We questions.",
+      "<strong>Connect design to outcomes:</strong> Tie decisions to business goals and measurable results."
     ]
   },
   "certificationCard": {
     "code": "Strategy Designer",
-    "description": "This exam tests how you shape the direction of a Salesforce solution through research, problem framing, facilitation and business value, before and during design. The exam is 60 scored questions in 105 minutes, with a 70% pass mark, weighted towards Value Design (32%) and Intangible Deliverables (26%).",
+    "description": "This credential covers how to set the direction for a Salesforce solution through research, problem framing, facilitation, and business value. The exam is 60 scored questions in 105 minutes, with a 70% pass mark, weighted towards Value Design (32%) and Intangible Deliverables (26%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Strategy Designer: Key Concepts for the Exam",
+    "h2": "Strategy Designer exam concepts to know",
     "blocks": [
       {
-        "heading": "Human-Centered Design Strategy",
-        "body": "Human-centred design starts with the people who will use a solution. Before suggesting features. Learn about their goals, tasks and frustrations. **Research methods** include interviews, watching people at work (contextual inquiry), surveys and looking at usage data. Pick the method that fits the question: interviews and observation for why people do things, surveys and data for how many. Plan research with a clear goal, recruit the right participants, and avoid leading questions."
+        "heading": "Start with people and evidence",
+        "body": "Human-centred design begins with the people who will use the solution. Learn their goals, tasks, and frustrations before proposing features. Interviews and contextual observation can explain why people behave a certain way; surveys and usage data can show how common a pattern is. Set a research objective, recruit people who represent the users, and use neutral questions."
       },
       {
-        "heading": "Service Design and Journey Mapping",
-        "body": "After research comes **synthesis**: making sense of what you learned. **Affinity mapping** groups notes into themes. **Personas** summarise types of users and their needs. **Journey maps** show the steps a person goes through, what they feel and where it goes wrong. **Service blueprints** add what happens behind the scenes: the staff, systems and processes that support each step. These tools help teams see the whole experience, not just one screen."
+        "heading": "Turn findings into a service picture",
+        "body": "Synthesis helps the team find meaning in research. Affinity maps cluster observations into themes; personas describe user needs; journey maps show steps, feelings, and pain points. A service blueprint adds the staff, systems, and processes that support each step. Together, these tools reveal the wider experience beyond a single screen."
       },
       {
-        "heading": "Business Value Framing",
-        "body": "Good design has to make sense for the business too. Link each proposed change to a **business goal**, such as faster case resolution or higher conversion, and agree how success will be measured. Map **stakeholders** and understand what each cares about. Use simple prioritisation, like value versus effort, to decide what to do first. A clear **experience vision** gives everyone a shared picture of where the solution is heading and why."
+        "heading": "Show the business value",
+        "body": "A design proposal should support a business goal, such as resolving cases faster or improving conversion, with an agreed way to measure success. Identify stakeholders and what matters to them. Compare value with effort to decide what to address first. An experience vision gives the team a common direction and explains why it matters."
       },
       {
-        "heading": "Agile UX: Design Sprints and Dual-Track",
-        "body": "Design work fits into agile delivery. **Design sprints** take a team from problem to tested prototype in a few days. In **dual-track** agile, a discovery track explores and tests ideas while a delivery track builds what has been validated. **Prototypes** can be rough sketches or clickable mock-ups, as long as they let you test ideas with users early. Testing early saves time, because changing a sketch is much cheaper than changing built software."
+        "heading": "Explore and deliver in agile",
+        "body": "Design is part of agile delivery. A design sprint takes a team from a defined problem to a tested prototype in a short period. In dual-track agile, discovery explores and tests ideas while delivery builds work that has been validated. Prototypes may be sketches or clickable models; early user feedback is cheaper to act on than feedback after software is built."
       },
       {
-        "heading": "Ethics, Inclusion, and Responsible Design",
-        "body": "Design choices affect people, so think about who might be left out or harmed. **Inclusive design** means involving many kinds of user, including people with disabilities, and following accessibility standards. Be open about how data is collected and used. Watch for bias in research, such as only talking to the easiest users to reach. With AI features. Think about trust, transparency and what happens when the AI gets it wrong."
+        "heading": "Design with care and inclusion",
+        "body": "Consider who could be excluded or harmed by a design. Include people with different needs and abilities, and follow accessibility standards. Explain how you collect and use data, and avoid research bias such as speaking only with easy-to-reach users. For AI features, plan for transparency, trust, human oversight, and errors."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Strategy Designer Exam",
-    "intro": "Most questions ask what to do next. The right answer usually moves the team toward a better understanding of the problem before jumping to a solution.",
+    "h2": "Ways to prepare for the Strategy Designer exam",
+    "intro": "When a question asks what to do next, look for the step that improves understanding of the problem before the team commits to a solution.",
     "blocks": [
       {
-        "heading": "Design Thinking Process",
-        "body": "Understand, define, ideate, prototype and test. It is a loop, so going back to research is often the right move."
+        "heading": "Use the design thinking cycle",
+        "body": "Understand, define, ideate, prototype, and test. The process can loop back; new evidence may call for more research."
       },
       {
-        "heading": "Research Methods",
-        "body": "Interviews and observation for why. Surveys and analytics for how many. Pick the method that fits the question."
+        "heading": "Match the method to the question",
+        "body": "Use interviews and observation to learn why. Use surveys and analytics to measure how many. Select the method that fits the information needed."
       },
       {
-        "heading": "Journey Mapping",
-        "body": "Map the steps, feelings and pain points. Add a service blueprint to show the people and systems behind each step."
+        "heading": "Map the whole journey",
+        "body": "Show user steps, emotions, and pain points. Add a service blueprint to reveal the people and systems supporting each step."
       },
       {
-        "heading": "Problem Framing & HMW Statements",
-        "body": "Turn findings into a clear problem statement, then How Might We questions that open up ideas without fixing a solution."
+        "heading": "Frame an open problem",
+        "body": "Write a problem statement grounded in findings, then ask How Might We questions that invite ideas without prescribing a fix."
       },
       {
-        "heading": "Facilitation Techniques",
-        "body": "Plan workshop goals and activities, give everyone a voice, and end with clear decisions and next steps."
+        "heading": "Make workshops inclusive",
+        "body": "Set a clear goal and activities, make room for every participant, then close with decisions and owners for next steps."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Designer Certifications",
-    "intro": "Good next steps after Platform Strategy Designer:",
+    "heading": "Related credentials for designers",
+    "intro": "Build on your strategy design knowledge with these related Salesforce credentials:",
     "links": [
       {
         "href": "/certifications/ux-designer",
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A client asks for a new dashboard because 'sales reps aren't hitting targets'. What should the strategy designer do first?",
+      "question": "A client asks for a dashboard, saying sales staff are missing quota. What should the designer do before choosing a solution?",
       "options": [
-        "Ask the development team which option would be easiest for them to build",
-        "Build the dashboard straight away",
-        "Research why reps are missing targets before agreeing on a solution",
-        "Copy a dashboard from another client"
+        "Ask developers which dashboard is quickest to build",
+        "Create the requested dashboard immediately",
+        "Investigate why sales staff are missing quota",
+        "Reuse a dashboard from another client"
       ],
       "correctAnswer": 2,
-      "explanation": "The request is a solution. Research shows whether a dashboard would actually solve the real problem.",
+      "explanation": "The dashboard is a proposed fix. Research the cause first to see whether a dashboard would address the underlying issue.",
       "whyWrong": [
-        "Ease of build doesn't tell you what users need.",
-        "Building first risks solving the wrong problem.",
-        "Another client's context is different."
+        "Build effort does not establish what users need.",
+        "Starting with the proposed fix may solve the wrong issue.",
+        "Another client’s needs and context may differ."
       ]
     },
     {
-      "question": "The team needs to understand why service agents keep switching between screens during calls. Which research method fits best?",
+      "question": "A team wants to learn why service agents move between several screens during calls. Which research approach is most useful?",
       "options": [
-        "Looking closely at the org's current user licence count",
-        "A competitor review",
-        "Watching agents at work (contextual inquiry)",
-        "A large online survey"
+        "Review the organization’s user license count",
+        "Compare a competitor’s product",
+        "Observe agents doing their work",
+        "Send a broad online survey"
       ],
       "correctAnswer": 2,
-      "explanation": "Observing agents in their real setting shows what they actually do and why.",
+      "explanation": "Watching agents in their normal setting can reveal the steps they take and why.",
       "whyWrong": [
-        "Licence count says nothing about behaviour.",
-        "Competitors don't explain your agents' behaviour.",
-        "Surveys tell you how many, but miss the detail of how and why."
+        "License totals do not explain how agents work.",
+        "Competitor research cannot show what causes this team’s behavior.",
+        "A survey can measure frequency but may miss the detail behind the behavior."
       ]
     },
     {
-      "question": "After 15 interviews, the team has hundreds of sticky notes. What should they do next?",
+      "question": "The team has completed 15 interviews and collected many notes. What should it do next?",
       "options": [
-        "Group the notes into themes with affinity mapping",
-        "Start building features from the first note",
-        "Throw away any research notes that do not match the original brief",
-        "Run 15 more interviews straight away"
+        "Cluster the notes into themes with affinity mapping",
+        "Build a feature based on the first note",
+        "Remove findings that do not support the original brief",
+        "Schedule 15 more interviews before reviewing the notes"
       ],
       "correctAnswer": 0,
-      "explanation": "Affinity mapping turns raw notes into themes the team can act on.",
+      "explanation": "Affinity mapping helps the team organize individual observations into patterns it can discuss.",
       "whyWrong": [
-        "Acting on one note ignores the bigger picture.",
-        "Discarding inconvenient notes adds bias.",
-        "More interviews before synthesis just adds more notes."
+        "One note may not represent the broader evidence.",
+        "Discarding conflicting findings introduces bias.",
+        "More research before synthesis adds data without making sense of what is already known."
       ]
     },
     {
-      "question": "Which artefact shows the steps a customer takes, how they feel at each step, and where problems happen?",
+      "question": "Which artefact records a customer’s steps, feelings, and difficulties during an experience?",
       "options": [
         "A data model diagram",
         "A journey map",
-        "A release schedule",
+        "A release calendar",
         "A test plan"
       ],
       "correctAnswer": 1,
-      "explanation": "Journey maps show steps, emotions and pain points across an experience.",
+      "explanation": "A journey map lays out the stages of an experience and can show emotions and pain points at each stage.",
       "whyWrong": [
-        "A data model shows objects and fields.",
-        "A release schedule shows delivery dates.",
-        "A test plan lists tests."
+        "A data model describes data entities and relationships.",
+        "A release calendar shows planned delivery dates.",
+        "A test plan lists checks to perform."
       ]
     },
     {
-      "question": "The team wants to show both the customer's steps and the staff, systems and processes behind each step. What should they create?",
+      "question": "The team needs to show customer steps as well as the staff, systems, and processes supporting them. Which artefact fits?",
       "options": [
         "A service blueprint",
-        "A mood board of visual references",
+        "A collection of visual style references",
         "A persona",
         "A wireframe"
       ],
       "correctAnswer": 0,
-      "explanation": "Service blueprints add the behind-the-scenes layers to a journey.",
+      "explanation": "A service blueprint maps the customer experience and the behind-the-scenes work that supports it.",
       "whyWrong": [
-        "A mood board shows visual style.",
-        "A persona describes a type of user.",
-        "A wireframe shows one screen's layout."
+        "A mood board communicates visual direction.",
+        "A persona summarizes a user type and its needs.",
+        "A wireframe outlines a screen, not the service behind it."
       ]
     },
     {
-      "question": "Which is the best example of a How Might We question?",
+      "question": "Which prompt is the strongest How Might We question?",
       "options": [
-        "Why are agents so slow?",
-        "How might we help new agents find answers without asking a colleague?",
-        "How might we build a new Lightning page?",
-        "Can we go ahead and add three more fields onto the existing case page layout?"
+        "Why do agents take so long to complete this work?",
+        "How might we help new agents find answers on their own?",
+        "How might we create a new Lightning page for this process?",
+        "Should we add three fields to the current case layout?"
       ],
       "correctAnswer": 1,
-      "explanation": "A good How Might We question frames the need and leaves room for many ideas.",
+      "explanation": "This question describes a user need while leaving room for several possible solutions.",
       "whyWrong": [
-        "It blames users and doesn't open up ideas.",
-        "It names a solution, not a need.",
-        "It is a yes or no question about a specific change."
+        "This wording blames users instead of opening up exploration.",
+        "This prompt already chooses a particular implementation.",
+        "This yes-or-no question asks about a specific change."
       ]
     },
     {
-      "question": "Two senior stakeholders want opposite things from the project. What should the strategy designer do?",
+      "question": "Two senior stakeholders have different priorities for the project. What is the best next step for the designer?",
       "options": [
-        "Simply do whatever the louder of the two stakeholders happens to want",
-        "Bring them together around shared goals and the research findings",
-        "Build both versions",
-        "Ignore both and decide alone"
+        "Let the stakeholder with the strongest opinion choose the direction",
+        "Bring both stakeholders together to review shared goals and research",
+        "Build both proposals so neither stakeholder has to compromise",
+        "Make the decision alone and inform both stakeholders afterward"
       ],
       "correctAnswer": 1,
-      "explanation": "Aligning stakeholders on goals and evidence helps reach a decision both can support.",
+      "explanation": "Shared goals and evidence give stakeholders a basis for reaching a supported decision.",
       "whyWrong": [
-        "Following the loudest voice ignores evidence.",
-        "Building both wastes effort.",
-        "Deciding alone loses support for the project."
+        "The loudest opinion may not reflect user needs or project goals.",
+        "Building both can waste time before a direction is agreed.",
+        "A decision made without stakeholders can lose their support."
       ]
     },
     {
-      "question": "The team has 20 ideas and time for 5. How should they choose?",
+      "question": "The team has 20 ideas but can pursue only five. How should it select them?",
       "options": [
-        "Pick the most technically complex",
-        "Pick the first five suggested",
-        "Pick out whichever of the ideas the project team finds the most fun",
-        "Prioritise by value to users and the business against effort"
+        "Choose the ideas with the most technical complexity",
+        "Take the first five suggestions",
+        "Pick the ideas the team finds most entertaining",
+        "Compare user and business value with the effort required"
       ],
       "correctAnswer": 3,
-      "explanation": "A value versus effort view helps pick the ideas with the best return.",
+      "explanation": "Comparing value and effort helps the team focus on ideas with a worthwhile return.",
       "whyWrong": [
-        "Complexity isn't a goal.",
-        "Order of suggestion is random.",
-        "Fun doesn't mean valuable."
+        "Complexity alone does not show whether an idea is useful.",
+        "The order ideas were suggested is not a meaningful selection method.",
+        "Enjoyment does not establish value for users or the business."
       ]
     },
     {
-      "question": "The team wants to test a new case flow idea with agents next week, before any building. What should they make?",
+      "question": "The team wants agent feedback on a new case flow next week, before development begins. What should it prepare?",
       "options": [
-        "A release note",
-        "A full production build of the proposed solution",
-        "A simple prototype to test with real agents",
-        "A 50-page specification"
+        "Release notes",
+        "A complete production version",
+        "A simple prototype for agents to try",
+        "A lengthy specification document"
       ],
       "correctAnswer": 2,
-      "explanation": "Early prototypes let you learn from users quickly and cheaply.",
+      "explanation": "A small prototype lets the team test the idea with users before investing in a full build.",
       "whyWrong": [
-        "Release notes come after building.",
-        "A full build is slow and costly to change.",
-        "A long spec can't be tested with users."
+        "Release notes describe changes after they are made.",
+        "A production build is costly to change if testing reveals problems.",
+        "A document does not let agents try the interaction."
       ]
     },
     {
-      "question": "In dual-track agile, what does the discovery track do?",
+      "question": "In dual-track agile, what is the discovery track responsible for?",
       "options": [
-        "Explores and tests ideas so the delivery track builds validated work",
-        "Runs only right at the very end of the whole delivery project, after build",
-        "Writes all the code",
-        "Handles production support"
+        "Exploring and testing ideas so delivery can build validated work",
+        "Set business-linked measures before launch, then track them",
+        "Writing all production code",
+        "Providing ongoing production support"
       ],
       "correctAnswer": 0,
-      "explanation": "Discovery runs alongside delivery, testing ideas before they are built.",
+      "explanation": "Discovery runs alongside delivery and tests ideas before the team builds them.",
       "whyWrong": [
-        "Discovery runs throughout, not just at the end.",
-        "Delivery writes the code.",
-        "Support is separate."
+        "Discovery continues during delivery rather than waiting until the end.",
+        "Implementation work belongs to the delivery track.",
+        "Production support is a separate responsibility."
       ]
     },
     {
-      "question": "How should the team show that a redesign was worth it?",
+      "question": "How can a team assess whether a redesign delivered value?",
       "options": [
-        "Ask each of the members of the project team whether they personally like the result",
-        "Agree success measures linked to business goals before launch, then track them",
-        "Measure how long the project took",
-        "Count the number of new screens"
+        "Ask each project member whether they like the new design",
+        "Include field workers in research to learn their needs",
+        "Record how long the project took",
+        "Count how many screens were added"
       ],
       "correctAnswer": 1,
-      "explanation": "Measures tied to goals, set before launch, show whether the change made a difference.",
+      "explanation": "Measures tied to goals and defined before release show whether the change had the intended effect.",
       "whyWrong": [
-        "The team's opinion isn't evidence of impact.",
-        "Project length doesn't measure value.",
-        "Screen count isn't value."
+        "Team preference alone does not measure impact.",
+        "Project duration does not show whether business outcomes improved.",
+        "The number of screens does not indicate value."
       ]
     },
     {
-      "question": "Research so far has only included office staff, but the solution will also be used by field workers. What is the risk?",
+      "question": "Research included office staff, but field workers will also use the solution. What concern should the team address?",
       "options": [
-        "There is no risk",
-        "The project will cost less",
-        "The design may not meet field workers' needs because they weren't included",
-        "Field workers will eventually adapt themselves to almost anything they are given"
+        "There is no concern because both groups work for the company",
+        "Including field workers will only increase project cost",
+        "The design may miss field workers’ needs if they are not included",
+        "Field workers can be expected to adapt to any design"
       ],
       "correctAnswer": 2,
-      "explanation": "Leaving out a user group is a common bias that leads to designs that don't work for them.",
+      "explanation": "Leaving out a user group can produce a solution that does not fit its work or environment.",
       "whyWrong": [
-        "Missing a key group is a real risk.",
-        "Cost isn't the issue here.",
-        "Assuming people will adapt usually fails."
+        "The missing group creates a risk that should be explored.",
+        "The question is about representation and fit, not simply research cost.",
+        "Assuming users will adapt does not establish that the design works for them."
       ]
     },
     {
-      "question": "What is the main purpose of an experience vision?",
+      "question": "What does an experience vision provide to a project team?",
       "options": [
-        "To replace research",
-        "To list out every single field that appears on each and every one of the pages",
-        "To set the project budget",
-        "To give everyone a shared picture of the future experience and why it matters"
+        "Replace research with a single statement of the intended design",
+        "List every field that will appear on each page in the final product",
+        "Set the amount of money available for the project",
+        "Give the team a common picture of the intended future experience"
       ],
       "correctAnswer": 3,
-      "explanation": "An experience vision aligns the team and stakeholders on direction.",
+      "explanation": "The vision aligns the team and stakeholders on the direction and reason for the work.",
       "whyWrong": [
-        "A vision comes from research, it doesn't replace it.",
-        "Field lists are detailed design.",
-        "Budget is set separately."
+        "A vision should be informed by research, not replace it.",
+        "A page-by-page field list is implementation detail.",
+        "Budget planning is a separate activity."
       ]
     },
     {
-      "question": "A workshop with 12 stakeholders keeps being dominated by two people. What should the facilitator do?",
+      "question": "In a 12-person workshop, two participants dominate the discussion. What should the facilitator try?",
       "options": [
-        "Use activities like silent idea writing so everyone contributes",
-        "Remove the quieter people",
-        "Let the two people involved simply carry on exactly as they are now",
-        "End the workshop early"
+        "Use a structured activity so every participant can contribute ideas",
+        "Ask the quieter participants to leave the meeting",
+        "Let the same two participants continue to lead the discussion",
+        "End the workshop early instead of continuing the conversation"
       ],
       "correctAnswer": 0,
-      "explanation": "Structured activities give everyone a voice and reduce the effect of dominant people.",
+      "explanation": "Structured participation gives each person time to contribute and reduces the effect of dominant voices.",
       "whyWrong": [
-        "Removing people is the opposite of the goal.",
-        "Letting it continue loses everyone else's input.",
-        "Ending early wastes the session."
+        "Removing participants reduces inclusion rather than improving it.",
+        "Continuing unchanged prevents other perspectives from being heard.",
+        "Ending early wastes the opportunity to make progress together."
       ]
     },
     {
-      "question": "A new AI feature will suggest replies to customers. What should the strategy designer consider?",
+      "question": "A proposed AI feature will suggest replies to customers. What should the designer plan for?",
       "options": [
-        "Nothing, because AI is always right",
-        "Only how fast it runs",
-        "Only the background colour of the on-screen suggestion box",
-        "Trust and transparency, and what happens when the AI gets it wrong"
+        "No review is needed because AI responses are always correct",
+        "Only the speed of the feature",
+        "Only the color of the suggestion panel",
+        "Plan for trust, transparency, and AI mistakes"
       ],
       "correctAnswer": 3,
-      "explanation": "Responsible design for AI includes clear disclosure, human oversight and handling mistakes.",
+      "explanation": "Responsible AI design makes the feature understandable, provides appropriate oversight, and accounts for mistakes.",
       "whyWrong": [
-        "AI can be wrong, so plan for it.",
-        "Speed matters but isn't the main concern.",
-        "Visual style is a detail."
+        "AI can make errors, so a plan for handling them is needed.",
+        "Performance matters but does not cover trust or error handling.",
+        "Visual styling does not address the key risks of AI suggestions."
       ]
     }
   ]

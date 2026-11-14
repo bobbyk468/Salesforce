@@ -22,8 +22,8 @@
     "heading": "Is the Business Analyst exam hard?",
     "summary": "This is a moderately difficult exam with a high passing score. About half the exam covers business analysis, such as discovery and user stories. The other half tests Salesforce knowledge, including what the platform can do.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>72% to pass</strong>, or about 44 correct answers out of 60. This is higher than many consultant exams, so check the official exam guide before booking.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>72% to pass</strong>, which is 44 correct answers out of 60.",
       "<strong>Business analysis methods matter.</strong> Expect questions on elicitation, process mapping, and user stories.",
       "<strong>Use Salesforce wisely.</strong> Know when configuration can meet a need and when it requires custom development."
     ],

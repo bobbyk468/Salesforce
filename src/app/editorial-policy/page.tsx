@@ -82,7 +82,7 @@ export default function EditorialPolicyPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Editorial Policy &amp; Exam Data Review</h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Trailblaze Prep is built as an independent Salesforce certification preparation resource. This page explains how we review exam data, write practice questions, cite official sources, and correct mistakes.
+          Trailblaze Prep is an independent Salesforce certification study resource. This page explains how we review exam details, write practice questions, use sources, and correct errors.
         </p>
       </header>
 
@@ -103,16 +103,16 @@ export default function EditorialPolicyPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Source hierarchy</h2>
         <div className="space-y-3 text-sm text-gray-700">
-          <p><strong className="text-gray-900">Primary sources:</strong> Salesforce public certification pages, official exam guides, official pricing pages, and release documentation.</p>
-          <p><strong className="text-gray-900">Secondary context:</strong> Candidate feedback, implementation experience, public Trailhead learning paths, and Search Console query data.</p>
-          <p><strong className="text-gray-900">Not accepted:</strong> Braindumps, leaked exams, memory-based real exam questions, or copied copyrighted question banks.</p>
+          <p><strong className="text-gray-900">Primary sources:</strong> We use Salesforce certification pages, exam guides, pricing pages, and release documentation as primary sources.</p>
+          <p><strong className="text-gray-900">Secondary context:</strong> For context, we may use candidate feedback, implementation experience, public Trailhead learning paths, and Search Console query data.</p>
+          <p><strong className="text-gray-900">Not accepted:</strong> We do not use braindumps, leaked exams, memory-based real exam questions, or copied copyrighted question banks.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Corrections and update process</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Certification data can change when Salesforce refreshes exam guides, retires credentials, renames exams, or changes pricing. When a mismatch is found, we prioritize the official Salesforce source and update the affected metadata, page copy, FAQ, schema, and internal cards together.
+          Exam details can change when Salesforce updates guides, retires or renames credentials, or changes prices. When we find a mismatch, we check the official source and update the related page details, FAQ, schema, and internal cards.
         </p>
         <p className="text-sm text-gray-700">
           To report an issue, use the{' '}

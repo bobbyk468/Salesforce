@@ -5,38 +5,38 @@
     "personas": [
       {
         "label": "Tableau beginners",
-        "description": "You are learning Tableau Desktop and want a first credential to show for it."
+        "description": "You are learning Tableau Desktop and want to prove your foundation in connecting to data and building views."
       },
       {
         "label": "Business users",
-        "description": "You build reports in spreadsheets today and want to move that work into Tableau."
+        "description": "You work with reports and want to turn spreadsheet analysis into interactive Tableau views."
       },
       {
         "label": "Students and career changers",
-        "description": "You are building a base in analytics and want proof you can use the tool."
+        "description": "You are building analytics skills and want a first Tableau credential."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Tableau Desktop Foundations Exam Hard?",
-    "summary": "This is the gentlest Tableau exam. It asks what the tool does and where things live, rather than making you design a data model or write complex calculations. If you have built a few dashboards yourself, most of it will look familiar.",
+    "summary": "This exam checks foundational Tableau Desktop skills, such as connecting to data, creating views, using common calculations, and building dashboards. Salesforce describes the audience as people with foundational skills and recommends at least three months of experience using Tableau Desktop.",
     "bullets": [
-      "<strong>40 questions</strong> in 70 minutes, which is a comfortable pace.",
-      "<strong>48% to pass</strong>, about 20 correct answers out of 40. Confirm it in the official exam guide before you book, since Salesforce updates these.",
-      "<strong>Wide but shallow.</strong> Connecting to data, chart types, the Marks card, filters, simple calculations and dashboards.",
-      "<strong>Practice beats reading.</strong> Two to four weeks of building in Tableau Desktop is usually enough."
+      "<strong>Format:</strong> The official guide lists 40 scored multiple-choice or multiple-select questions, up to five unscored questions, and 70 minutes.",
+      "<strong>48% to pass</strong>, which is 20 correct answers out of 40.",
+      "<strong>Core skills:</strong> Prepare data, create views, use filters and calculations, and share findings through dashboards.",
+      "<strong>Practice:</strong> Build and explore views in Tableau Desktop, then check each skill against the current exam outline."
     ],
-    "passRateGuidance": "You are ready when you can connect to a spreadsheet. Build a bar and a line chart, add a filter. Write a simple calculated field and put two sheets on a dashboard without looking anything up. Aim for 75% or more on practice tests."
+    "passRateGuidance": "Practice connecting to data, choosing a view, adding filters, creating a simple calculation, and arranging sheets on a dashboard. Use the official exam outline to find any skills you still need to practice."
   },
   "examFormat": {
     "heading": "Tableau Desktop Foundations Exam Format Explained",
-    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
-    "scenarioPercent": "Many questions describe a small task, such as showing sales by region or highlighting the top five products, and ask which feature does it.",
+    "intro": "The exam is proctored online or at a test center. Salesforce lists 40 scored questions, up to five unscored questions, and 70 minutes.",
+    "scenarioPercent": "Questions may describe a small analysis task, such as comparing sales across regions or showing the top products, and ask which Tableau feature fits.",
     "bestWayToPass": [
-      "<strong>Know dimensions from measures:</strong> Dimensions describe things and slice the view. Measures are numbers that get added up.",
-      "<strong>Learn the Marks card:</strong> Colour, Size, Label, Detail and Tooltip each change the view differently. Dragging a field to Detail splits the marks without changing colour.",
-      "<strong>Practise filters and sorting:</strong> Filter on a dimension, filter on a measure, and sort by a field rather than by hand.",
-      "<strong>Build one real dashboard:</strong> Put two sheets together, add a filter, and make the filter apply to both."
+      "<strong>Know dimensions and measures:</strong> Dimensions describe categories or dates. Measures contain values that Tableau can summarize.",
+      "<strong>Learn the Marks card:</strong> Colour, Size, Label, Detail, and Tooltip control how a view displays its data.",
+      "<strong>Practice filters and sorting:</strong> Filter categories or values, sort by a measure, and choose whether a filter applies to one sheet or several.",
+      "<strong>Build a small dashboard:</strong> Combine sheets, add a filter, and test how a selection in one view affects the others."
     ]
   },
   "certificationCard": {
@@ -61,50 +61,50 @@
     "h2": "Tableau Desktop Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Connecting to Data",
-        "body": "Tableau Desktop connects to files such as Excel and CSV, to databases, and to published sources on Tableau Server or Tableau Cloud. Once connected, you can join tables, which combines columns from two tables on a matching field, or union them, which stacks rows from tables with the same columns. A **live connection** queries the source each time, so the view always shows current data. An **extract** takes a copy into Tableau's own fast format, which helps with slow sources and lets you work offline. In the data pane, fields arrive as **dimensions** (things to slice by, like Region or Order Date) or **measures** (numbers to aggregate, like Sales). You can change a field's data type and rename it without touching the source."
+        "heading": "Connect and prepare data",
+        "body": "Tableau Desktop can connect to files, databases, and published data sources. A join combines columns from related tables; a union stacks rows from tables with a similar structure. A live connection queries the source as you work. An extract stores a copy in Tableau’s format and can support faster analysis or offline work. Tableau classifies fields as dimensions, which describe categories, and measures, which contain values to summarize."
       },
       {
-        "heading": "Building Views: Rows, Columns and the Marks Card",
-        "body": "A view is built by putting fields on **Rows** and **Columns**. Tableau decides the chart type from what you drop, and the **Show Me** panel suggests charts that fit the fields you have selected, greying out the ones that need different fields. The **Marks card** controls how the marks look: **Colour** splits and colours them, **Size** scales them, **Label** writes values on them, **Tooltip** sets what appears on hover, and **Detail** splits marks into more pieces without changing their appearance. Measures are aggregated by default, usually as a sum, and you can change that to average, count or minimum from the field's menu."
+        "heading": "Build a view",
+        "body": "Place fields on Rows and Columns to build a view. Show Me suggests charts that fit the selected fields. The Marks card controls how the data appears: use Colour, Size, Label, Detail, or Tooltip to change the marks. Measures are summarized by default, often as a sum, but you can choose another aggregation when needed."
       },
       {
-        "heading": "Filtering, Sorting and Grouping",
-        "body": "**Dimension filters** keep or exclude categories. **Measure filters** keep rows inside a numeric range. A **Top N filter** keeps, say, the five best products by sales. You can show a filter on screen as a **quick filter** so viewers change it themselves, and decide whether it applies to one sheet or to every sheet using that data source. **Sorting** can be alphabetical, by a measure, or manual. **Groups** combine several members into one, for example rolling small categories into Other, while **sets** are a saved selection you can use in calculations and filters. **Hierarchies** let viewers drill from Country to State to City."
+        "heading": "Filter, sort, and group data",
+        "body": "Dimension filters keep or remove categories; measure filters keep values that meet a numeric condition. A Top N filter can show the leading products by sales. You can display a filter for viewers and set which sheets it affects. Sort data by a field or value. Groups combine field members, sets save selected members, and hierarchies let viewers move from a broader level to a more detailed one."
       },
       {
-        "heading": "Calculated Fields",
-        "body": "A **calculated field** makes a new field from existing ones. The common kinds are arithmetic (Profit divided by Sales for a margin), string functions such as LEFT or CONTAINS, date functions such as DATEDIFF or DATEPART, and logic with IF or CASE, for example flagging orders above a value as High. **Aggregate** functions like SUM and AVG work on the whole group of rows behind a mark, so you cannot mix an aggregated and a non-aggregated field in the same expression. Tableau also offers quick **table calculations** such as running total, percent of total and difference, which compute on what is already in the view rather than in the source data."
+        "heading": "Create calculations",
+        "body": "A calculated field combines existing fields or values. You can use arithmetic, text and date functions, or IF and CASE logic. Aggregate functions such as SUM and AVG summarize rows for a mark. Table calculations, such as running total or percent of total, work with the values already shown in the view."
       },
       {
-        "heading": "Dashboards and Stories",
-        "body": "A **dashboard** brings several sheets into one screen. Objects can be **tiled**, which snaps them into a layout that resizes neatly, or **floating**, which you position freely. **Dashboard actions** make the dashboard interactive: a **filter action** uses a selection in one sheet to filter another, a **highlight action** emphasises matching marks, and a **URL action** opens a link. A **story** is a sequence of sheets or dashboards with captions, used to walk an audience through a finding step by step. Finished work is shared by publishing it to Tableau Cloud or Tableau Server."
+        "heading": "Create dashboards and stories",
+        "body": "A dashboard places multiple sheets on one canvas. Tiled objects fit into the layout; floating objects can be positioned freely. Dashboard actions make views interactive, for example by filtering one sheet from a selection in another. A story arranges sheets or dashboards into a sequence with captions. You can share finished work by publishing it to Tableau Cloud or Tableau Server."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Tableau Desktop Foundations Exam",
-    "intro": "Most questions name a small task and ask which feature does it. Learn where each control lives and what it changes in the view.",
+    "intro": "These questions focus on everyday Tableau Desktop tasks. Identify what should change in the view or data, then select the feature designed for that task.",
     "blocks": [
       {
-        "heading": "Connecting to Data",
-        "body": "Joins add columns, unions add rows. Live connections stay current, extracts are faster and work offline."
+        "heading": "Connect and combine data",
+        "body": "Joins add related columns; unions add rows from similarly structured tables. Choose a live connection for current source data or an extract when a stored copy better fits the task."
       },
       {
-        "heading": "Building Views",
-        "body": "Show Me suggests charts for the fields you picked. Measures aggregate by default, usually as a sum."
+        "heading": "Build and refine views",
+        "body": "Use Show Me to explore chart options. Put fields on the Marks card to change how data appears, and choose the right aggregation for a measure."
       },
       {
-        "heading": "Sorting and Grouping",
-        "body": "Sort by a measure rather than by hand. Groups combine members, sets save a selection, hierarchies allow drilling."
+        "heading": "Filter and organize",
+        "body": "Use Top N filters for ranked results. Groups combine field members, sets save a selection, and hierarchies support drill-down."
       },
       {
-        "heading": "Calculations",
-        "body": "Simple arithmetic, string, date and IF logic cover most of the exam. Table calculations work on what is in the view."
+        "heading": "Use calculations",
+        "body": "Use calculated fields for new values such as profit margin. Use table calculations for summaries based on marks already in the view."
       },
       {
-        "heading": "Dashboards and Sharing",
-        "body": "Use a filter action to make one sheet filter another, and publish to Tableau Cloud or Server to share."
+        "heading": "Share an analysis",
+        "body": "Use a dashboard action to make sheets interact. Use a story when viewers need a sequence of views and captions."
       }
     ]
   },
@@ -166,183 +166,183 @@
   ],
   "sampleQuestions": [
     {
-      "question": "You need to combine a sales table and a returns table that share an Order ID column, so the returns information appears alongside each order. What should you use?",
+      "question": "A sales table and a returns table share an Order ID. You want return details beside each matching sale. Which data operation fits?",
       "options": [
-        "A dashboard filter action",
-        "A calculated field",
-        "A join on Order ID",
-        "A union of the two tables"
+        "A dashboard action that filters the sales view",
+        "A calculated field that combines the two IDs",
+        "A join that matches the tables on Order ID",
+        "A union that adds the return rows below sales"
       ],
       "correctAnswer": 2,
-      "explanation": "A join matches rows using a shared field and brings the other table's columns alongside, which is what is needed here.",
+      "explanation": "A join matches rows on a shared field and brings columns from both tables into the data model.",
       "whyWrong": [
-        "A filter action links sheets in a dashboard, not tables in a data source.",
-        "A calculated field works with data you already have.",
-        "A union stacks rows from tables with the same columns. It does not add columns."
+        "A dashboard action filters views; it does not combine source tables.",
+        "A calculated field creates a value from fields but does not combine tables.",
+        "A union stacks rows rather than matching related records."
       ]
     },
     {
-      "question": "Monthly sales files all have identical columns, and you want them all in one data source as additional rows. What should you use?",
+      "question": "You have several monthly files with the same columns and want their records in one table. What should you use?",
       "options": [
-        "A group of members",
-        "A set",
-        "A union",
-        "A join"
+        "A group to combine category labels",
+        "A set to save selected records",
+        "A union to stack the rows",
+        "A join to match records by a shared field"
       ],
       "correctAnswer": 2,
-      "explanation": "A union stacks rows from tables with the same structure, which is what you want for repeated monthly files.",
+      "explanation": "A union stacks rows from similarly structured tables, which fits monthly files with the same columns.",
       "whyWrong": [
-        "Groups combine members of a field, not tables.",
-        "Sets save a selection of members.",
-        "A join would add columns rather than stack rows."
+        "A group combines members of a field, not table rows.",
+        "A set saves a selection of members.",
+        "A join matches rows across tables and adds columns."
       ]
     },
     {
-      "question": "Which statement about dimensions and measures is correct?",
+      "question": "How do dimensions and measures usually differ in a Tableau view?",
       "options": [
-        "Dimensions are always dates; measures are always text",
-        "Dimensions slice; measures aggregate",
-        "Measures slice the view; dimensions are aggregated",
-        "They are interchangeable and behave identically"
+        "Dimensions are always dates, while measures are always text",
+        "Dimensions break data into categories; measures are summarized values",
+        "Measures create categories, while dimensions are summed",
+        "Both types are interchangeable and behave the same way"
       ],
       "correctAnswer": 1,
-      "explanation": "Dimensions are the descriptive fields you break the view down by. Measures are numeric fields that Tableau aggregates, usually by summing them.",
+      "explanation": "Dimensions describe categories to compare; measures hold values that Tableau can aggregate.",
       "whyWrong": [
-        "Dimensions can be text, dates or numbers, and measures are numeric, not text.",
-        "That reverses the two roles.",
-        "They behave differently, which is why Tableau separates them."
+        "Dimensions can be text, dates, geographic fields, or other categories.",
+        "This reverses the usual roles of dimensions and measures.",
+        "The two field types are used differently in views."
       ]
     },
     {
-      "question": "A scatter plot shows one mark per region, but you want one mark per customer while keeping the colour as it is. Where should you drag the Customer field?",
+      "question": "A scatter plot shows one mark for each region. You want one mark per customer but want to keep the same colours. Where should you place Customer?",
       "options": [
-        "The Filters shelf",
-        "Detail on the Marks card",
-        "The Colour shelf on the Marks card",
-        "The Columns shelf"
+        "On the Filters shelf",
+        "On Detail in the Marks card",
+        "On Colour in the Marks card",
+        "On Columns beside the region field"
       ],
       "correctAnswer": 1,
-      "explanation": "Detail splits the marks into more pieces without changing how they look, which is exactly the requirement.",
+      "explanation": "Detail adds information that can split marks without changing their visual colour.",
       "whyWrong": [
-        "Filters would remove data rather than split marks.",
-        "Colour would split the marks and recolour them, changing the appearance.",
-        "Columns would change the chart's structure."
+        "A filter limits which records appear; it does not define the mark detail.",
+        "Colour would change the colour encoding.",
+        "Columns changes the view structure and may create a different layout."
       ]
     },
     {
-      "question": "You want the view to show only the five products with the highest sales. What is the simplest way?",
+      "question": "A manager wants to show only the five products with the highest sales. What is the simplest approach?",
       "options": [
-        "A Top N filter on Product by sum of Sales",
-        "Manually hiding the other products",
-        "Sorting the products and leaving the rest visible",
-        "A measure filter on Sales above a guessed value"
+        "Use a Top N filter on Product, ranked by Sales",
+        "Hide the other products manually after sorting",
+        "Sort the products and leave every product in the view",
+        "Filter Sales above a guessed value"
       ],
       "correctAnswer": 0,
-      "explanation": "A Top N filter keeps the highest five by the measure you choose, and it updates as the data changes.",
+      "explanation": "A Top N filter keeps the leading members based on the selected measure.",
       "whyWrong": [
-        "Hiding by hand breaks as soon as the data changes.",
-        "Sorting changes the order but still shows every product.",
-        "A guessed threshold may return more or fewer than five."
+        "Manual hiding must be repeated and may not update as data changes.",
+        "Sorting changes order but does not remove the other products.",
+        "A guessed threshold may return more or fewer than five products."
       ]
     },
     {
-      "question": "A viewer should be able to change the Region shown on a published dashboard. What should you add?",
+      "question": "Dashboard viewers need to choose which Region appears in the view. What should you add?",
       "options": [
-        "A separate calculated field for each region",
-        "A quick filter shown on the dashboard",
-        "A group containing all regions",
-        "A separate dashboard per region"
+        "A calculated field for every region",
+        "A visible filter control for Region",
+        "A group that contains all regions",
+        "A separate dashboard for each region"
       ],
       "correctAnswer": 1,
-      "explanation": "Showing the filter puts a control on screen so viewers pick the region themselves.",
+      "explanation": "A visible filter lets viewers choose the region themselves.",
       "whyWrong": [
-        "Calculated fields do not give the viewer a control.",
-        "A group combines members rather than offering a choice.",
-        "One dashboard per region is unnecessary duplication."
+        "A calculated field is unnecessary for choosing a region.",
+        "A group combines values but does not provide the required viewer control.",
+        "Separate dashboards are harder to maintain when a filter can do the job."
       ]
     },
     {
-      "question": "One filter should apply to every sheet built on the same data source, not just the current sheet. What should you do?",
+      "question": "A Region filter should affect every worksheet that uses the same data source. What should you set?",
       "options": [
-        "Apply it to all sheets using that source",
-        "Copy the filter onto each sheet by hand",
-        "Put the filter on the Detail shelf",
+        "Apply the filter to all worksheets that use that data source",
+        "Copy the filter to each sheet as a separate field",
+        "Place the filter on Detail in the Marks card",
         "Convert the filter into a set"
       ],
       "correctAnswer": 0,
-      "explanation": "A filter's scope can be widened so it applies to all worksheets using that data source, keeping sheets in step.",
+      "explanation": "A filter can be configured to apply to all worksheets that use the same data source.",
       "whyWrong": [
-        "Copying by hand works but has to be repeated and drifts out of step.",
-        "Detail splits marks and has nothing to do with filter scope.",
-        "A set saves a selection but does not apply a filter everywhere."
+        "Duplicating the filter is harder to maintain and may lead to inconsistent settings.",
+        "Detail changes mark granularity; it does not set filter scope.",
+        "A set is a saved group of members, not a setting for filter scope."
       ]
     },
     {
-      "question": "You need a field that shows profit as a percentage of sales. What should you create?",
+      "question": "Which calculation returns profit as a share of sales at the level shown in the view?",
       "options": [
-        "A Top N filter on Profit",
-        "A union joined to the profit table",
-        "A group of profit values",
-        "A field dividing SUM(Profit) by SUM(Sales)"
+        "Use a Top N filter to rank products by profit and keep the leaders",
+        "Union a second source table that stores each product’s precomputed profit-to-sales ratio",
+        "Group the profit values into categories such as low, medium, and high",
+        "Divide aggregated profit by aggregated sales in a calculated field"
       ],
       "correctAnswer": 3,
-      "explanation": "A calculated field with aggregated measures gives the ratio correctly for whatever level the view shows.",
+      "explanation": "The calculation SUM(Profit) / SUM(Sales) returns the ratio using the aggregation level of the current view.",
       "whyWrong": [
-        "A Top N filter selects members rather than calculating.",
-        "A union stacks rows and does not compute a ratio.",
-        "Groups combine members of a dimension."
+        "A Top N filter selects ranked members; it does not compute a ratio.",
+        "A union stacks rows and does not calculate a ratio for the current view.",
+        "A group combines field members instead of calculating a ratio."
       ]
     },
     {
-      "question": "Several small product categories should be reported together as Other. What feature fits?",
+      "question": "Several low-volume product categories should appear as one “Other” category. Which feature should you use?",
       "options": [
-        "A set",
-        "A field hierarchy",
-        "A group of members",
-        "An extract"
+        "A set that saves a selection for analysis",
+        "A hierarchy that adds drill-down levels",
+        "A group that combines category members",
+        "An extract that stores a data copy"
       ],
       "correctAnswer": 2,
-      "explanation": "Groups combine several members of a field into one, which is how you roll small categories into Other.",
+      "explanation": "A group combines selected members of a field into one category.",
       "whyWrong": [
-        "A set is a saved selection used in filters and calculations.",
-        "A hierarchy lets viewers drill between levels.",
-        "An extract is a copy of the data for speed."
+        "A set saves a selection but does not merge members into one label.",
+        "A hierarchy supports drill-down between levels.",
+        "An extract stores data; it does not regroup categories."
       ]
     },
     {
-      "question": "A database is slow and you also want to work on the dashboard while travelling without a connection. What should you use?",
+      "question": "A source database is slow, and analysts need to work offline while travelling. Which connection type fits?",
       "options": [
-        "An extract",
-        "A live connection",
-        "A story",
-        "A union"
+        "An extract stored in Tableau",
+        "A live connection to the database",
+        "A story made from the current worksheet",
+        "A union of the database tables"
       ],
       "correctAnswer": 0,
-      "explanation": "An extract copies the data into Tableau's own format, which is faster and works offline.",
+      "explanation": "An extract stores a copy of the data in Tableau’s format and can be used offline.",
       "whyWrong": [
-        "A live connection queries the source every time and needs the connection.",
-        "A story sequences sheets for presenting.",
-        "A union combines rows and does not change performance this way."
+        "A live connection queries the source and requires access to it.",
+        "A story presents views; it does not store the source data.",
+        "A union combines rows from tables but does not provide offline access."
       ]
     },
     {
-      "question": "What does a filter action on a dashboard do?",
+      "question": "A user selects a mark in one dashboard sheet, and another sheet should show only related records. What should you configure?",
       "options": [
-        "Permanently removes the rows from the data source",
-        "Uses a selection in one sheet to filter another sheet",
-        "Publishes the dashboard to Tableau Cloud",
-        "Creates a calculated field from the selection"
+        "A data source filter that permanently removes records",
+        "A filter action between the sheets",
+        "A publish command for Tableau Cloud",
+        "A calculated field based on the selected mark"
       ],
       "correctAnswer": 1,
-      "explanation": "Filter actions make dashboards interactive: clicking a mark in one sheet filters the others.",
+      "explanation": "A filter action uses a selection in one view to filter another view.",
       "whyWrong": [
-        "Nothing is removed from the underlying data.",
-        "Publishing is a separate step.",
-        "No calculated field is created."
+        "A dashboard selection should not permanently remove source records.",
+        "Publishing shares the workbook but does not create the interaction.",
+        "A calculated field is not the dashboard interaction mechanism."
       ]
     },
     {
-      "question": "You want to walk an audience through a finding one step at a time, with a caption on each step. What should you build?",
+      "question": "You want to guide viewers through a finding in a sequence, with a caption for each step. What should you create?",
       "options": [
         "A story",
         "A set",
@@ -350,59 +350,59 @@
         "A dashboard with floating objects"
       ],
       "correctAnswer": 0,
-      "explanation": "A story is a sequence of sheets or dashboards with captions, designed for presenting a narrative.",
+      "explanation": "A story presents sheets or dashboards in sequence and can include captions.",
       "whyWrong": [
-        "Sets save selections.",
-        "Hierarchies are for drilling into levels of detail.",
-        "A dashboard shows views together rather than in sequence."
+        "A set saves selected field members.",
+        "A hierarchy organizes levels for drilling into data.",
+        "A dashboard combines views but does not provide the same narrative sequence."
       ]
     },
     {
-      "question": "Viewers should be able to drill from Country down to State and then City in one click. What should you create?",
+      "question": "Viewers need to drill from Country to State and then City within one view. What should you create?",
       "options": [
-        "Three separate sheets",
-        "A group of countries",
-        "A hierarchy of the fields",
-        "A measure filter"
+        "Three unrelated worksheets",
+        "A group that combines the countries",
+        "A hierarchy of the geographic fields",
+        "A measure filter on sales"
       ],
       "correctAnswer": 2,
-      "explanation": "A hierarchy nests the fields so viewers can expand from one level to the next in the view.",
+      "explanation": "A hierarchy lets viewers move through related fields from broad to detailed levels.",
       "whyWrong": [
-        "Separate sheets make the viewer navigate manually.",
-        "A group combines members rather than nesting levels.",
-        "A measure filter limits numeric ranges."
+        "Separate sheets do not provide drill-down in one view.",
+        "A group combines members instead of creating levels.",
+        "A measure filter limits values; it does not create geographic levels."
       ]
     },
     {
-      "question": "Sales is showing as a sum, but you need the average order value in the view instead. What should you change?",
+      "question": "A view shows total sales, but the user needs the average sales value for each order. Which setting should change?",
       "options": [
-        "The mark type to a line",
-        "The data type of the field",
-        "The dashboard layout to floating",
-        "The field's aggregation"
+        "Change the mark type from bars to lines",
+        "Change the field’s data type to a different kind of value",
+        "Rearrange the objects on the dashboard",
+        "Change the measure aggregation from SUM to AVG"
       ],
       "correctAnswer": 3,
-      "explanation": "A measure's aggregation can be changed from the field's menu, which switches the view from total to average.",
+      "explanation": "Switching the measure aggregation from SUM to AVG changes the displayed value from a total to an average.",
       "whyWrong": [
-        "Mark type changes the chart's appearance.",
-        "The data type controls how the field is interpreted, not how it is aggregated.",
-        "Layout affects positioning on a dashboard."
+        "Mark type changes how data is drawn, not how it is summarized.",
+        "The data type defines the kind of value, not the aggregation.",
+        "Dashboard layout affects placement, not the value calculation."
       ]
     },
     {
-      "question": "What does the Show Me panel do?",
+      "question": "You select several fields and want Tableau to suggest chart types that fit them. Which feature should you open?",
       "options": [
-        "Creates an extract of the data source",
-        "Publishes the workbook for others to view",
-        "Writes a calculated field for you",
-        "Suggests charts suited to the selected fields"
+        "The data source page to create an extract",
+        "The publish dialog to share the workbook",
+        "The calculation editor to write a formula",
+        "Show Me to review suitable chart types"
       ],
       "correctAnswer": 3,
-      "explanation": "Show Me offers chart types that work with the fields you picked, and greys out those that need different fields.",
+      "explanation": "Show Me suggests chart types based on the selected fields.",
       "whyWrong": [
-        "Extracts are created from the data source menu.",
-        "Publishing is done separately to Tableau Cloud or Server.",
-        "Calculations are written by you in the calculation editor."
+        "The data source page manages connections and data preparation.",
+        "The publish dialog shares the workbook.",
+        "The calculation editor is for creating fields, not suggesting chart types."
       ]
     }
   ]

@@ -1,43 +1,43 @@
 {
   "template": "associate",
-  "expertInsight": "Pardot is now officially Marketing Cloud Account Engagement (MCAE): Salesforce made the rename in 2022. The exam code (CRT-302) and 'Pardot Consultant' title haven't changed, so that's still what you'll search for and what shows up on your credential. Just don't be thrown when every screenshot in Trailhead or the product itself says Account Engagement instead of Pardot.",
+  "expertInsight": "Salesforce now calls Pardot Marketing Cloud Account Engagement. The product name changed in 2022; the certification may still use the Pardot name. In study materials, look for both names.",
   "whoIsThisFor": {
     "heading": "Who is the Account Engagement Consultant exam for?",
     "personas": [
       {
         "label": "B2B marketing automation consultants",
-        "description": "You design and implement Account Engagement (Pardot) solutions for clients and want to certify your consulting-level expertise."
+        "description": "You plan and set up Account Engagement for B2B clients, and want to show that you can guide an implementation."
       },
       {
         "label": "Marketing operations managers",
-        "description": "You own the Pardot instance at your company and want to validate your ability to architect scoring models, nurture programs, and CRM integrations."
+        "description": "You lead your company’s marketing operations and need to plan scoring, nurture programs, and Salesforce data sync."
       },
       {
         "label": "Salesforce consultants adding B2B marketing skills",
-        "description": "You hold a core Salesforce credential and want to expand into B2B marketing automation solution design with Account Engagement."
+        "description": "You already work with Salesforce and want to add B2B marketing solution design to your consulting skills."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Account Engagement Consultant Exam Hard?",
-    "summary": "The Account Engagement Consultant exam is challenging. It tests strategic solution design for B2B marketing automation, including lead scoring and grading models, Engagement Studio program architecture, Salesforce sync configuration, and campaign attribution. Hands-on implementation experience is essential.",
+    "summary": "The Account Engagement Consultant exam tests how you design a B2B marketing solution for a client. Be ready to connect scoring, grading, nurture programs, Salesforce sync, and campaign reporting to the client’s goals. Hands-on implementation experience helps you judge which design fits.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>68% passing score</strong>: slightly higher than some consultant exams, reflecting the depth of B2B marketing automation knowledge required.",
-      "<strong>Solution design focus</strong>: expect scenario questions asking you to design scoring models, multi-path Engagement Studio programs, and Salesforce sync architectures for specific business requirements.",
-      "<strong>CRM alignment tested</strong>: you must understand Pardot-Salesforce campaign alignment, the connector user’s permissions, and how B2B Marketing Analytics extends attribution reporting."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>68% to pass</strong>, which is 41 correct answers out of 60.",
+      "<strong>Solution design:</strong> Questions may ask you to choose a scoring approach, build a nurture path, or plan Salesforce sync for a stated need.",
+      "<strong>Marketing and sales alignment:</strong> Know how prospect data, campaign tracking, user permissions, and reporting support both teams."
     ],
-    "passRateGuidance": "Complete at least two full Pardot implementations covering scoring, Engagement Studio, and Salesforce sync before booking. Score 80%+ on practice exams to account for the higher passing threshold."
+    "passRateGuidance": "Use Salesforce’s current exam guide as your checklist. For each topic, practice explaining why a design fits the client’s goals and what trade-offs it creates."
   },
   "examFormat": {
     "heading": "Account Engagement Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 55-65% of questions are scenario-based. You’ll be given a B2B marketing requirement and asked to design a scoring model, recommend an Engagement Studio program structure, or configure the Salesforce sync architecture.",
+    "intro": "The exam is proctored online or at a test center. It uses multiple-choice questions about Account Engagement consulting work.",
+    "scenarioPercent": "Many questions describe a B2B marketing goal and ask how to design the related scoring, nurture, Salesforce sync, or reporting approach.",
     "bestWayToPass": [
-      "<strong>Master scoring and grading design:</strong> Know how to configure scoring categories, custom scoring rules, and grading profiles that align with a client’s sales qualification criteria.",
-      "<strong>Design Engagement Studio programs:</strong> Practice building multi-branch nurture programs with conditional logic, re-engagement paths, and entry/exit criteria for complex B2B scenarios.",
-      "<strong>Understand Salesforce sync deeply:</strong> Know the connector user’s required permissions, field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), and how to troubleshoot sync errors.",
-      "<strong>Study campaign attribution:</strong> Know the difference between Pardot first-touch campaigns and Salesforce multi-touch campaigns, and how Connected Campaigns and B2B Marketing Analytics extend reporting."
+      "<strong>Connect scoring and grading to sales criteria:</strong> Use engagement to measure interest and profile details to measure fit. Agree with sales on what makes a prospect ready.",
+      "<strong>Plan nurture programs:</strong> Map the prospect’s goal, entry conditions, decision points, and exit conditions before building branches and waits.",
+      "<strong>Plan Salesforce sync:</strong> Check the connector user’s access, choose which system controls each shared field, and learn how to investigate sync errors.",
+      "<strong>Make campaign reporting useful:</strong> Understand which campaign and opportunity measures answer the client’s questions about pipeline and revenue."
     ]
   },
   "certificationCard": {
@@ -63,53 +63,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Pardot Consultant: Key Concepts for the Exam",
+    "h2": "Account Engagement Consultant: Key Exam Concepts",
     "blocks": [
       {
-        "heading": "Implementation and Configuration",
-        "body": "The [Pardot Consultant](/certifications/pardot-consultant) exam focuses on strategic configuration beyond the Specialist level. Implementation includes Business Unit setup, connector configuration (Pardot-Salesforce sync settings), user management across roles (Admin, Marketing, Sales), and account-level settings. The consultant designs the overall marketing automation architecture, single vs multi-business unit strategy, campaign attribution model, and integration with Salesforce CRM campaigns. Know the difference between Pardot Admin permissions and Salesforce Connected User permissions."
+        "heading": "Plan the implementation",
+        "body": "Start with the client’s marketing goals, teams, Salesforce setup, and data. Then decide how Account Engagement business units, user access, connector settings, and campaigns should be organized. Match the design to the client’s structure instead of adding complexity without a need."
       },
       {
-        "heading": "Advanced Lead Nurturing Strategy",
-        "body": "Consultant-level Engagement Studio design covers multi-path programmes, re-engagement campaigns, and cross-business-unit nurturing. Advanced scenarios include pause/resume logic, entry source management (lists, segments, dynamic entry), and Engagement Studio reporting (completions, active, stopped). The consultant selects between Engagement Studio, Automation Rules, and Segmentation Rules for complex nurturing requirements. Know when Salesforce Flow (triggered from Pardot via the connector) is more appropriate than Pardot-native automation."
+        "heading": "Choose the right automation",
+        "body": "Engagement Studio is for nurturing prospects through a planned series of steps. Automation Rules evaluate criteria and can take ongoing actions. Segmentation Rules create a list based on criteria at a point in time. Choose the tool that fits the job and the timing the client needs."
       },
       {
-        "heading": "Pardot-Salesforce Campaign Alignment",
-        "body": "Pardot Campaigns track first-touch attribution. Salesforce Campaigns track multi-touch attribution and enable influence reporting. Pardot Campaign Influence connects Pardot prospect activity to Salesforce Opportunities, configured via Campaign Influence settings. B2B Marketing Analytics (built on [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant)) provides advanced attribution dashboards. The consultant designs the campaign data model: Campaign Hierarchy, campaign member statuses, and attribution window settings, to align marketing and sales reporting."
+        "heading": "Align marketing and sales campaigns",
+        "body": "Account Engagement campaigns commonly show a prospect’s first marketing touch. Salesforce campaigns and campaign influence support broader campaign tracking and opportunity reporting. Plan campaign hierarchy and member statuses so the teams can interpret the results consistently."
       },
       {
-        "heading": "Advanced Scoring, Grading, and Segmentation",
-        "body": "Scoring Categories maintain separate score totals per product or business unit. Custom scoring rules allow point adjustments for specific activities beyond defaults. Profile criteria drive grading, the consultant designs the grade thresholds (A through F) and profile attributes that match the ideal customer profile. Segmentation Rules create static lists from criteria at a point in time (unlike Dynamic Lists which are ongoing). The consultant architects the scoring and grading model to align with sales qualification criteria."
+        "heading": "Design scoring, grading, and segments",
+        "body": "Scoring reflects a prospect’s activity, such as visits and email engagement. Grading reflects how well the prospect matches the client’s target profile. Scoring categories can separate interest in different products. Segmentation Rules create a list at a point in time, while Dynamic Lists keep matching records up to date."
       },
       {
-        "heading": "Reporting, ROI, and B2B Marketing Analytics",
-        "body": "The Pipeline Report connects Pardot activities to Salesforce Opportunities, showing which campaigns generated pipeline. Engagement History embedded on Salesforce records shows individual prospect activity timelines. B2B Marketing Analytics (**Einstein Analytics** for B2B) provides pre-built dashboards for engagement, pipeline influence, and campaign performance. The consultant designs the reporting strategy to demonstrate marketing ROI to leadership and aligns metrics to business outcomes (MQL-to-SQL rate, campaign attribution, pipeline influence %)."
+        "heading": "Report on business results",
+        "body": "Choose reports that answer the client’s questions. Teams may need to see prospect activity, campaign performance, or how marketing relates to pipeline and revenue. Agree on the measures and data definitions before building dashboards."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Account Engagement Consultant Exam",
-    "intro": "The Account Engagement (Pardot) Consultant exam tests solution design for B2B marketing automation. Scenarios ask you to design nurture programs, lead scoring models, and Salesforce sync configurations for specific business requirements.",
+    "intro": "The consultant exam focuses on designing Account Engagement around a client’s marketing and sales process. Start with the business goal, then choose the configuration and automation that support it.",
     "blocks": [
       {
-        "heading": "Lead Scoring & Grading Design",
-        "body": "Scoring measures prospect engagement (activity-based); Grading measures fit (demographic-based). Know how to configure scoring categories, custom scoring rules, and grading profiles to align sales and marketing on lead quality."
+        "heading": "Scoring and grading",
+        "body": "Scoring estimates interest from activity; grading estimates fit with the client’s target profile. Agree on useful thresholds with sales before automating handoff."
       },
       {
-        "heading": "Engagement Studio (Nurture Programs)",
-        "body": "Know all Engagement Studio trigger, rule, and action types. Understand how to design multi-branch programs, set wait times, and use rules to route prospects based on behavior or CRM data."
+        "heading": "Nurture programs",
+        "body": "Plan the prospect’s journey first. Set clear entry and exit conditions, then choose where behavior or CRM data should change the path."
       },
       {
-        "heading": "Salesforce Sync Architecture",
-        "body": "Understand the sync between Pardot (Prospects) and Salesforce (Leads/Contacts), sync triggers (Salesforce Connector user, **assignment rules**), and how to troubleshoot sync errors. Know the connector user's required permissions."
+        "heading": "Salesforce sync",
+        "body": "Check which Salesforce user connects the systems and what access that user needs. For each shared field, know which system should control updates."
       },
       {
-        "heading": "Forms, Landing Pages & Tracking",
-        "body": "Know how to configure Pardot forms vs. form handlers (for external forms), landing page redirects, custom redirects for tracking links, and how the Pardot tracking pixel works across sites."
+        "heading": "Forms and tracking",
+        "body": "Choose a native form when the client can use Account Engagement’s page components. Use a form handler when an existing external form must remain in place. Configure tracking with the client’s domains and privacy requirements in mind."
       },
       {
-        "heading": "Campaign Reporting & Attribution",
-        "body": "Understand Pardot campaign metrics, the Engagement History component, and how B2B Marketing Analytics extends reporting. Know the difference between first-touch and multi-touch attribution models."
+        "heading": "Campaign reporting",
+        "body": "Set up campaign structure and member statuses so marketing and sales use the same definitions. Use measures tied to pipeline or revenue when reporting business value."
       }
     ]
   },
@@ -163,243 +163,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A client's sales team ignores the lead scores entirely. What should the consultant investigate first?",
+      "question": "A sales team ignores prospect scores because many high-scoring prospects are poor fits. What should the consultant review first?",
       "options": [
-        "Whether the sales team has been given enough training on the Account Engagement interface",
-        "Whether the scoring model matches how sales qualifies",
-        "Whether the client has purchased sufficient Engagement Studio licences for the team",
-        "Whether the scoring rules are being recalculated often enough to stay current"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Scores get ignored when they do not predict anything sales recognises, so the model has to reflect what actually signals a real opportunity.",
-      "whyWrong": [
-        "Training does not help if the numbers are not useful.",
-        "Licensing does not affect whether scores are credible.",
-        "Recalculation frequency is rarely the reason a model is distrusted."
-      ]
-    },
-    {
-      "question": "What should drive the design of a grading profile?",
-      "options": [
-        "The volume of prospects the client expects to generate each month",
-        "The order in which the client's sales regions were established",
-        "The attributes of the client's best existing customers",
-        "The number of fields the client currently captures on its web forms"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Grading measures fit, so it is built from the characteristics that distinguish the customers the business actually wants more of.",
-      "whyWrong": [
-        "Volume is a capacity question rather than a fit question.",
-        "Regional history has no bearing on customer fit.",
-        "Form fields are a means of capture, not a definition of fit."
-      ]
-    },
-    {
-      "question": "A client wants marketing-qualified leads passed to sales automatically. What is the cleanest mechanism?",
-      "options": [
-        "A manual review meeting held each week to agree which leads to hand over",
-        "An automation rule assigning on score and grade",
-        "A segmentation rule run each morning to build a static list for the team",
-        "A completion action on every form the client has published on its website"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Automation rules continually evaluate prospects and can assign them once they cross the agreed score and grade threshold.",
-      "whyWrong": [
-        "A weekly meeting delays the handover and does not scale.",
-        "A static list does not react as prospects qualify through the day.",
-        "Completion actions fire per asset and cannot express a combined threshold."
-      ]
-    },
-    {
-      "question": "What is the risk of syncing every Account Engagement field back to Salesforce?",
-      "options": [
-        "The connector being disabled automatically once a field limit is reached",
-        "Noise in the CRM and avoidable sync volume",
-        "Account Engagement losing the ability to score any of the prospects involved",
-        "Salesforce refusing to accept records that contain marketing-specific fields"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Sales users need the few fields that help them act, and syncing everything buries those among data nobody uses.",
-      "whyWrong": [
-        "No automatic disabling occurs.",
-        "Scoring continues regardless of what is synced.",
-        "Salesforce accepts the fields; the problem is their usefulness."
-      ]
-    },
-    {
-      "question": "A client has one Account Engagement instance and three business units with different brands. What should the consultant check?",
-      "options": [
-        "Whether each brand has been given its own separate Salesforce organisation",
-        "Whether the client has enough custom fields remaining for all three brands",
-        "Whether business units are configured to separate them",
-        "Whether the three brands can share a single tracker domain between them"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Business units separate prospects, assets and permissions, which is what distinct brands with distinct audiences require.",
-      "whyWrong": [
-        "Separate orgs would fragment the client's CRM unnecessarily.",
-        "Field capacity is not the structural concern here.",
-        "Tracker domains matter but are not the separation mechanism."
-      ]
-    },
-    {
-      "question": "Why would a consultant recommend progressive profiling on a client's forms?",
-      "options": [
-        "Short forms convert better while still building the record",
-        "It allows the client to capture data without recording any consent at all",
-        "It removes the need to score or grade any of the prospects who submit",
-        "It guarantees that every prospect record will be complete after one visit"
+        "Check whether the scoring model matches sales qualification",
+        "Whether sales users have completed a product navigation course",
+        "Whether the client needs more nurture-program licenses",
+        "How often the connector checks for new prospect activity"
       ],
       "correctAnswer": 0,
-      "explanation": "Asking for a few new fields each visit keeps conversion high while the profile fills out over time.",
+      "explanation": "The scoring and grading design should reflect the signals sales uses to qualify prospects.",
       "whyWrong": [
-        "Consent requirements apply however the data is gathered.",
-        "Scoring and grading are unaffected by how fields are collected.",
-        "The whole point is that the profile completes gradually."
+        "Training on navigation does not fix scores that fail to identify useful prospects.",
+        "The issue is whether the qualification model is useful, not the number of licenses.",
+        "A sync schedule does not make the scoring criteria more relevant."
       ]
     },
     {
-      "question": "A client reports that prospects are being assigned to sales users who have left. What should be reviewed?",
+      "question": "A client wants its grading profile to identify prospects who resemble its best customers. What should shape the profile?",
       "options": [
-        "The scoring thresholds that determine when a prospect is assigned at all",
-        "The tracker domain configuration used across the client's landing pages",
-        "The assignment rules and the user records behind them",
-        "The frequency with which the Salesforce connector performs its sync"
+        "The client’s expected number of new prospects per month",
+        "The order in which the client opened its sales regions",
+        "The traits shared by its strongest existing customers",
+        "The number of questions on its lead capture form"
       ],
       "correctAnswer": 2,
-      "explanation": "Assignment points at specific users or queues, so departures have to be reflected there or prospects go nowhere useful.",
+      "explanation": "Grading measures fit, so use attributes that describe the client’s target customers.",
       "whyWrong": [
-        "Thresholds decide when to assign, not to whom.",
-        "Tracker domains concern tracking rather than ownership.",
-        "Sync frequency does not determine assignment targets."
+        "Monthly prospect volume does not describe who is a good fit.",
+        "Region launch dates do not define the target profile.",
+        "The form’s field count does not determine which traits matter."
       ]
     },
     {
-      "question": "What does a consultant need to establish before designing an Engagement Studio programme?",
+      "question": "Marketing wants qualified prospects assigned to sales once they meet agreed score and grade thresholds. What should the consultant use?",
       "options": [
-        "The number of emails the client would like to send each month",
-        "The total number of prospects currently held in the database",
-        "The colour scheme the client uses across its marketing templates",
-        "The decision the prospect is being helped to make"
+        "A weekly meeting where staff select prospects by hand",
+        "Automation rule using score and grade thresholds",
+        "A static segmentation list that is rebuilt each morning",
+        "A completion action added to every form in the account"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An automation rule can keep evaluating prospects and assign those who meet the agreed criteria.",
+      "whyWrong": [
+        "Manual review adds delay and does not automate the handoff.",
+        "A static list is a point-in-time group, not ongoing threshold evaluation.",
+        "A form completion action runs on a form event, not when a prospect later qualifies."
+      ]
+    },
+    {
+      "question": "A client plans to sync many fields that marketing and sales do not use. What concern should the consultant raise?",
+      "options": [
+        "The connector will automatically turn off after a field limit is reached",
+        "Unneeded data can add noise in Salesforce and create extra sync work",
+        "Account Engagement will stop calculating prospect scores",
+        "Salesforce will reject every record with marketing fields"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sync only useful fields to keep CRM records clear and limit unnecessary sync activity.",
+      "whyWrong": [
+        "A field count does not by itself mean the connector will turn off.",
+        "Field sync does not stop the scoring feature.",
+        "Salesforce can store custom fields; the concern is whether the data is useful."
+      ]
+    },
+    {
+      "question": "A company has three brands with separate audiences and marketing teams. What should the consultant evaluate?",
+      "options": [
+        "Giving each brand a separate Salesforce org by default",
+        "Whether enough custom fields exist for each brand",
+        "Use business units to separate brand teams and prospect data",
+        "Sharing one tracking domain across every brand"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Business units can separate marketing assets, prospects, and access when the organization needs that structure.",
+      "whyWrong": [
+        "Separate Salesforce orgs are not automatically required for separate brands.",
+        "Custom-field count does not answer how to organize brands and access.",
+        "A shared tracking domain may not suit every brand’s needs."
+      ]
+    },
+    {
+      "question": "A client wants to learn more about returning prospects without making the first form longer. What should the consultant recommend?",
+      "options": [
+        "Requiring every profile field on the first visit",
+        "Progressive profiling on later visits",
+        "Removing the consent language from the form",
+        "Turning off scoring for people who submit the form"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Progressive profiling asks for a few new details on later visits, keeping the first form shorter.",
+      "whyWrong": [
+        "Requiring every field at once can make the first form longer.",
+        "Progressive profiling does not remove consent requirements.",
+        "Scoring is separate from how a form gathers profile details."
+      ]
+    },
+    {
+      "question": "Prospects are being assigned to sales users who have left the company. What should the consultant inspect?",
+      "options": [
+        "The score needed before a prospect can be assigned",
+        "The tracking domain used on the company’s landing pages",
+        "Review assignment rules and the users they assign prospects to",
+        "How often the connector syncs records"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Assignment rules may still point to inactive users or outdated queues.",
+      "whyWrong": [
+        "The threshold does not explain why assignments go to former employees.",
+        "Tracking domains do not choose the assignment owner.",
+        "Sync timing is separate from the owner selected by assignment rules."
+      ]
+    },
+    {
+      "question": "Before building a nurture program, what should the consultant clarify with the client?",
+      "options": [
+        "The planned email volume for each calendar month",
+        "The total size of the prospect database",
+        "The approved colors for email templates",
+        "The next decision the program should help prospects reach"
       ],
       "correctAnswer": 3,
-      "explanation": "A nurture programme exists to move someone towards a decision, so the content and branching follow from what that decision is.",
+      "explanation": "The program should support a clear prospect goal; that goal guides the messages and branches.",
       "whyWrong": [
-        "Send volume is an output of the design rather than an input.",
-        "Database size does not determine the programme's purpose.",
-        "Visual design is a separate concern from programme logic."
+        "Email volume alone does not explain what the program should achieve.",
+        "Database size does not define the journey or decision.",
+        "Brand colors do not determine the nurture path."
       ]
     },
     {
-      "question": "A client's unsubscribe rate rises sharply after a new nurture programme launches. What is the likely cause?",
+      "question": "A new nurture program causes a sharp rise in unsubscribes. What should the consultant investigate first?",
       "options": [
-        "Frequency or relevance has moved in the wrong direction",
-        "The tracker domain has not been verified for the client's sending domain",
-        "The programme was built without using any wait steps between the emails",
-        "The prospects involved were graded before the programme was activated"
+        "Emails sent too often or without relevant content",
+        "Whether the tracking domain is verified for email sending",
+        "Whether the program includes a wait step between every email",
+        "Whether prospects had a grade before entering the program"
       ],
       "correctAnswer": 0,
-      "explanation": "People opt out when they get too much mail or mail that does not match their interest, and a new programme changes both.",
+      "explanation": "Too many messages or irrelevant content can lead prospects to unsubscribe.",
       "whyWrong": [
-        "A tracker domain issue would affect link tracking, not opt-out volume.",
-        "Missing waits could contribute, but frequency and relevance is the broader cause.",
-        "Grading has no bearing on unsubscribe behaviour."
+        "A tracking domain can matter for tracking, but it does not explain message relevance or frequency.",
+        "Wait steps alone do not ensure that the program suits its audience.",
+        "Having a grade is not required for every nurture program."
       ]
     },
     {
-      "question": "What is the purpose of a suppression list on a client's email send?",
+      "question": "A marketer needs to keep certain prospects out of one email send. What is a suppression list for?",
       "options": [
-        "To hold the prospects who have not yet been assigned to a sales user",
-        "To group the prospects who have the highest scores in the database",
-        "To exclude prospects who should not receive it",
-        "To record which prospects have already opened a previous send"
+        "To store prospects who have not yet been assigned to sales",
+        "To collect the highest-scoring prospects for a special send",
+        "To exclude selected prospects from that send",
+        "To track which prospects opened an earlier email"
       ],
       "correctAnswer": 2,
-      "explanation": "Suppression lists keep specific prospects out of a send, whether for consent, recency or relevance reasons.",
+      "explanation": "A suppression list excludes its members from an email send.",
       "whyWrong": [
-        "Unassigned prospects are not inherently excluded from sends.",
-        "High scorers would be a segment rather than a suppression.",
-        "Engagement history is tracked separately."
+        "Assignment status is a separate prospect attribute.",
+        "A suppression list does not select recipients for priority.",
+        "Opens are tracked as email activity, not by a suppression list."
       ]
     },
     {
-      "question": "A client asks whether to use a form or a form handler on their new campaign landing page. What should decide it?",
+      "question": "A client has an external web form whose design and markup cannot change. Which Account Engagement option fits?",
       "options": [
-        "Who controls the page and whether its markup must stay",
-        "Whether the campaign is being run for new or for existing prospects",
-        "Which of the two options the client's developers prefer to work with",
-        "The number of fields the client intends to capture on the page itself"
+        "Use a form handler with the existing external form",
+        "A native form that replaces the external form",
+        "A segmentation rule that collects the submitted fields",
+        "A completion action added to the existing web page"
       ],
       "correctAnswer": 0,
-      "explanation": "If the page is yours to change, the native form gives you progressive profiling and validation. If the markup must stay, a handler is the way in.",
+      "explanation": "A form handler can receive submissions while the client keeps the external form markup.",
       "whyWrong": [
-        "Prospect status does not determine the capture mechanism.",
-        "Developer preference is secondary to the actual constraint.",
-        "Field count works either way."
+        "A native form would replace the form the client needs to keep.",
+        "A segmentation rule groups records; it does not accept form submissions.",
+        "A completion action runs after an Account Engagement action and does not receive the external form data by itself."
       ]
     },
     {
-      "question": "Why does a consultant care about the tracker domain being set up with the client's own domain?",
+      "question": "Why configure an Account Engagement tracking domain with the client’s own domain?",
       "options": [
-        "It determines how many landing pages the client is permitted to publish",
-        "It is the only way for the client to record any prospect activity at all",
-        "It allows the client to bypass the consent requirements in their market",
-        "Cookies and links then come from a domain prospects trust"
+        "It sets the number of landing pages the account can publish",
+        "It is required to record any prospect activity at all",
+        "It removes the need to follow consent rules",
+        "Use a tracking domain branded for the client"
       ],
       "correctAnswer": 3,
-      "explanation": "A first-party tracker domain means tracking and links appear under the client's own name, which helps both trust and cookie handling.",
+      "explanation": "A branded tracking domain lets tracked links and pages use the client’s domain.",
       "whyWrong": [
-        "Page limits are a licensing matter.",
-        "Activity can be tracked on the default domain too, just less well.",
-        "Consent requirements apply regardless of the domain."
+        "The domain does not set the landing-page limit.",
+        "Tracking can work with other configured domains as well.",
+        "A branded domain does not replace consent obligations."
       ]
     },
     {
-      "question": "A client has 200,000 prospects, most of whom have never engaged. What should the consultant propose?",
+      "question": "A client has many inactive prospects and wants to protect email deliverability. What is a sensible plan?",
       "options": [
-        "A single large send to the whole database to see who responds to it",
-        "An increase in the client's send frequency to improve overall engagement",
-        "An immediate deletion of every prospect who has not engaged recently",
-        "A re-engagement programme, then suppression of the rest"
+        "Send the same large campaign to all prospects to find active people",
+        "Increase send frequency across the full database",
+        "Delete all prospects who have not engaged recently",
+        "Re-engage inactive prospects, then suppress nonresponders"
       ],
       "correctAnswer": 3,
-      "explanation": "Give dormant prospects a defined chance to re-engage, then stop mailing those who do not, which protects deliverability.",
+      "explanation": "Give inactive prospects a clear chance to re-engage, then reduce sends to those who do not respond.",
       "whyWrong": [
-        "A blanket send to a cold database invites complaints and bounces.",
-        "Sending more to disengaged people makes deliverability worse.",
-        "Deleting without attempting re-engagement discards recoverable value."
+        "A large blast to everyone may harm deliverability.",
+        "More frequent messages can worsen engagement and deliverability.",
+        "Immediate deletion may discard records before the client confirms its retention needs."
       ]
     },
     {
-      "question": "What should a consultant measure to show the value of marketing automation to a client's board?",
+      "question": "A client’s board asks whether marketing automation contributes to business results. Which measures best answer the question?",
       "options": [
-        "The number of emails and landing pages the team produced in the period",
-        "Pipeline and revenue influenced by marketing activity",
-        "The size of the prospect database compared with the previous year",
-        "The count of automation rules and programmes currently running"
+        "How many emails and landing pages the team created",
+        "Pipeline and revenue linked to marketing",
+        "How much the prospect database grew",
+        "How many automation rules and programs are active"
       ],
       "correctAnswer": 1,
-      "explanation": "A board cares about pipeline and revenue, so the measures that matter connect marketing activity to opportunities created and won.",
+      "explanation": "Pipeline and revenue measures connect marketing activity to business outcomes.",
       "whyWrong": [
-        "Asset production is output rather than outcome.",
-        "A larger database is not inherently valuable.",
-        "Rule counts describe configuration, not results."
+        "Content volume measures output, not its business result.",
+        "Database growth does not show whether marketing influenced sales.",
+        "The number of automations does not show the value they create."
       ]
     },
     {
-      "question": "Which best describes the consultant's role on an Account Engagement implementation?",
+      "question": "What is the consultant’s main responsibility during an Account Engagement implementation?",
       "options": [
-        "Translating how the client sells into how the tool works",
-        "Writing the email and landing page content the client will publish",
-        "Managing the client's sending reputation on their behalf after go-live",
-        "Configuring every automation rule the client's marketing team requests"
+        "Design how the platform supports the client’s process",
+        "Write every email and landing page the client will publish",
+        "Manage the client’s sending reputation after launch",
+        "Build every automation rule requested without review"
       ],
       "correctAnswer": 0,
-      "explanation": "The work is understanding the client's buying and selling process and expressing it in scoring, grading, automation and nurture.",
+      "explanation": "The consultant learns how the client works and designs how Account Engagement will support that process.",
       "whyWrong": [
-        "Content creation usually remains with the client's marketing team.",
-        "Reputation management is an ongoing operational responsibility.",
-        "Building whatever is asked for without challenge is order-taking."
+        "The consultant’s role is solution design, not necessarily writing every piece of campaign content.",
+        "Ongoing deliverability operations are not the main implementation role.",
+        "The consultant should assess requests against requirements rather than implement them without review."
       ]
     }
   ]

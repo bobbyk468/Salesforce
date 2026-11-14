@@ -14,16 +14,16 @@
 export type TopCertLink = { label: string; href: string }
 
 export const TOP_CERTIFICATIONS: TopCertLink[] = [
-  { label: 'Platform Administrator (Plat-Admn-201 / ADM-201) Practice Questions', href: '/certifications/administrator' },
+  { label: 'Salesforce Platform Administrator (Plat-Admn-201 / ADM-201) Practice Questions', href: '/certifications/administrator' },
   { label: 'Platform App Builder (Plat-Admn-202 / DEV-402) Study Guide', href: '/certifications/app-builder' },
-  { label: 'Salesforce Platform Developer I (PD1) Practice Test', href: '/certifications/developer-1' },
-  { label: 'Salesforce Business Analyst Exam Questions', href: '/certifications/business-analyst' },
-  { label: 'Agentforce Specialist (AI-201) Practice Test', href: '/certifications/agentforce-specialist' },
-  { label: 'Salesforce Data 360 Consultant Study Guide', href: '/certifications/data-360-consultant' },
-  { label: 'Salesforce Agentforce Sales Consultant Practice Questions', href: '/certifications/sales-cloud' },
-  { label: 'Salesforce Agentforce Service Consultant Study Guide', href: '/certifications/service-cloud' },
-  { label: 'Salesforce Experience Cloud Consultant Practice Test', href: '/certifications/experience-cloud' },
-  { label: 'Salesforce Data Architect Study Guide', href: '/certifications/data-architect' },
-  { label: 'Salesforce Integration Architect Practice Questions', href: '/certifications/integration-architect' },
-  { label: 'Salesforce Marketing Cloud Engagement Foundations', href: '/certifications/marketing-cloud-engagement-foundations' },
+  { label: 'Platform Developer I (Plat-Dev-201 / PD1) Practice Test', href: '/certifications/developer-1' },
+  { label: 'Salesforce Agentforce Specialist (AI-201) Practice Test', href: '/certifications/agentforce-specialist' },
+  { label: 'Salesforce Agentforce Sales Consultant (Sales-Con-201) Practice Questions', href: '/certifications/sales-cloud' },
+  { label: 'Salesforce Agentforce Service Consultant (Service-Con-201) Study Guide', href: '/certifications/service-cloud' },
+  { label: 'Salesforce Data 360 Consultant (Data-Con-101) Study Guide', href: '/certifications/data-360-consultant' },
+  { label: 'Platform Integration Architect (Plat-Arch-204) Practice Questions', href: '/certifications/integration-architect' },
+  { label: 'Platform Data Architect (Plat-Arch-201) Study Guide', href: '/certifications/data-architect' },
+  { label: 'System Architect Certification', href: '/certifications/system-architect' },
+  { label: 'Application Architect Certification', href: '/certifications/application-architect' },
+  { label: 'Salesforce Technical Architect (CTA) Guide', href: '/certifications/technical-architect' },
 ]

@@ -1,45 +1,45 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the MuleSoft Developer I exam for?",
+    "heading": "Who should take the MuleSoft Developer I exam?",
     "personas": [
       {
         "label": "Integration developers",
-        "description": "You build Mule applications in Anypoint Studio and want to validate your foundational MuleSoft development skills."
+        "description": "You create Mule apps in Anypoint Studio and want to validate your foundational development skills."
       },
       {
         "label": "Java and backend developers",
-        "description": "You’re transitioning into integration development and want a credential that proves your Mule 4 and DataWeave proficiency."
+        "description": "You are moving into integration work and want to demonstrate Mule 4 and DataWeave knowledge."
       },
       {
         "label": "Salesforce developers",
-        "description": "You work on the Salesforce platform and want to add MuleSoft integration skills to connect enterprise systems through Anypoint."
+        "description": "You build on Salesforce and want to connect enterprise systems using MuleSoft and Anypoint."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the MuleSoft Developer I Exam Hard?",
-    "summary": "The Salesforce Certified MuleSoft Developer exam covers basic Mule 4 projects, Anypoint Platform and Studio, integrations, DataWeave, event flow, error handling, and batch processing.",
+    "heading": "How challenging is the MuleSoft Developer I exam?",
+    "summary": "The Salesforce Certified MuleSoft Developer exam covers introductory Mule 4 projects, Anypoint Platform and Studio, integrations, DataWeave, event flow, error handling, and batch processing.",
     "bullets": [
-      "<strong>60 multiple-choice questions, plus up to five unscored questions</strong> in 120 minutes.",
-      "<strong>70% passing score.</strong>",
-      "The official guide describes experience with basic Mule 4 projects under guidance and supervision; it does not specify a minimum number of projects or a required prior certification."
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
+      "The official guide expects experience building basic Mule 4 projects with guidance; it does not require a set number of projects or a prior certification."
     ],
-    "passRateGuidance": "Use the official objective list to plan practice in Anypoint Studio, DataWeave, integration design, error handling, and deployment."
+    "passRateGuidance": "Use the official exam objectives to plan hands-on practice in Anypoint Studio, DataWeave, integration patterns, error handling, and deployment."
   },
   "examFormat": {
-    "heading": "MuleSoft Developer I Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "heading": "MuleSoft Developer I exam format",
+    "intro": "The proctored exam is available online or at a test centre. Prepare for questions across these topics:",
     "bestWayToPass": [
-      "<strong>Master DataWeave 2.0:</strong> Practice map, filter, reduce, and pluck functions until you can read and write scripts fluently.",
-      "<strong>Build flows in Anypoint Studio:</strong> Create HTTP-triggered flows with database and Salesforce connectors, error handling, and deployment to CloudHub.",
-      "<strong>Know your connectors:</strong> Understand HTTP Listener vs Request, Database operations, and how to configure the Salesforce connector for CRUD.",
-      "<strong>Understand error handling:</strong> Know when to use On Error Continue vs On Error Propagate and how the error type hierarchy works."
+      "<strong>Practise DataWeave 2.0:</strong> Work with map, filter, reduce, and pluck until you can read and write common scripts.",
+      "<strong>Build Mule flows:</strong> Create HTTP-triggered flows with connectors, error handlers, and deployment configuration.",
+      "<strong>Know the connectors:</strong> Review HTTP Listener and Request, database operations, and Salesforce CRUD configuration.",
+      "<strong>Choose error handlers carefully:</strong> Understand On Error Continue, On Error Propagate, and how error types relate."
     ]
   },
   "certificationCard": {
     "code": "Salesforce Certified MuleSoft Developer",
-    "description": "This credential validates skills to design, build, test, debug, deploy, and manage basic APIs and integrations using Mule 4 and Anypoint Platform. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Accessing and Modifying Mule Events and Structuring Mule Applications (10% each).",
+    "description": "This credential validates foundational Mule 4 development skills, including Anypoint Platform and Studio, integrations, DataWeave transformations, event handling, errors, and batch work. The guide notes that up to five questions may be unscored. The exam is 60 scored questions in 120 minutes, with a 70% pass mark, weighted towards Accessing and Modifying Mule Events and Structuring Mule Applications (10% each).",
     "examDetails": {
       "questions": "60 multiple-choice + up to 5 unscored",
       "passingScore": "70%",
@@ -62,75 +62,75 @@
     ]
   },
   "keyConcepts": {
-    "h2": "MuleSoft Developer I: Key Concepts for the Exam",
+    "h2": "MuleSoft Developer I: concepts to review",
     "blocks": [
       {
-        "heading": "Official credential and exam details",
-        "body": "Salesforce currently lists the credential as [Salesforce Certified MuleSoft Developer](https://trailhead.salesforce.com/credentials/mulesoftdeveloperi). The available [official exam guide](https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1) lists 60 multiple-choice questions and up to five unscored questions, 120 minutes, a 70% passing score, USD 200 registration, USD 100 retake, and no prerequisite; however, its stated exam alignment is Spring ’24. Confirm the current outline before booking, and check [Salesforce certification pricing](https://help.salesforce.com/s/articleView?id=005298916&language=en_US&type=1). The credential is a prerequisite for MuleSoft Developer II."
+        "heading": "Credential and exam information",
+        "body": "Salesforce lists the credential as [Salesforce Certified MuleSoft Developer](https://trailhead.salesforce.com/credentials/mulesoftdeveloperi). The [official exam guide](https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1) lists 60 multiple-choice questions plus up to five unscored items, a 120-minute limit, 70% passing score, a US$200 registration fee, a US$100 retake fee, and no prerequisite. The guide is aligned to Spring ’24, so verify the current exam outline and [certification pricing](https://help.salesforce.com/s/articleView?id=005298916&language=en_US&type=1) before booking. MuleSoft Developer I is a prerequisite for Developer II."
       },
       {
-        "heading": "Anypoint Platform and Development Lifecycle",
-        "body": "**Anypoint Platform** is MuleSoft's integration platform: Design, Develop, Deploy, Manage. **Anypoint Studio** is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. **CloudHub** is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
+        "heading": "Anypoint Platform and the development lifecycle",
+        "body": "Anypoint Platform supports the integration lifecycle: design, develop, deploy, and manage. Anypoint Studio is the Eclipse-based environment for building Mule apps. Exchange is a catalog for APIs, connectors, templates, and examples. CloudHub hosts deployed Mule applications as an integration platform service. A common lifecycle is to design an API in API Designer, publish it to Exchange, implement it in Studio, deploy it to CloudHub, and manage it in Runtime Manager."
       },
       {
-        "heading": "Mule Events, Flows, and Core Concepts",
-        "body": "A Mule Event carries the message through the flow: Payload (the message data), Attributes (metadata about the source, like HTTP headers), Variables (flow-level storage), Error (in error handling context). A Flow has a Source (event trigger: HTTP listener, file listener, scheduler), Processors (transform, route, call), and Target (destination system). Sub-flows are reusable flow fragments without a source. Private flows can be called but not directly triggered. The developer exam tests Mule event structure and when to use each flow type."
+        "heading": "Mule events, flows, and messages",
+        "body": "A Mule event carries a message through an application. The message contains a payload and attributes; the event can also hold variables and an error when handling a failure. A flow starts with a source such as an HTTP Listener, file listener, or scheduler, then runs processors that transform, route, or call services. A subflow has no source and is called from another flow. Private flows are callable components rather than event sources. Know how the event and message change as processors run."
       },
       {
-        "heading": "DataWeave 2.0 Transformations",
-        "body": "**DataWeave** is MuleSoft's transformation language, used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios."
+        "heading": "DataWeave 2.0 transformations",
+        "body": "DataWeave transforms, filters, and maps data. Common functions include map to transform array elements, filter to select elements, reduce to aggregate, pluck to process object entries, and groupBy to organize values by a key. Data types include String, Number, Boolean, Array, Object, Null, and Any. The header declares input and output MIME types. For example, `%dw 2.0 output application/json ---` identifies DataWeave 2 and produces JSON. Practise reading and writing common transformation scripts."
       },
       {
-        "heading": "API Design with RAML and API-First",
-        "body": "RAML 1.0 (RESTful API Modeling Language) defines API contracts. Structure: baseUri, version, mediaType, types (data types), traits (reusable method fragments), resourceTypes (reusable resource patterns). API Fragment types in Exchange: data types, traits, resource types, security schemes, examples. API-first development: design and mock the API spec, share with consumers for feedback, then implement. Mocking Service in Exchange lets consumers test against the spec before implementation is complete. The exam tests RAML syntax and API-first methodology."
+        "heading": "API-first design with RAML",
+        "body": "RAML 1.0 describes REST API contracts. Common parts include baseUri, version, mediaType, data types, traits, and resource types. Exchange API fragments can hold data types, traits, resource types, security schemes, and examples. In API-first work, design and mock the contract, share it for consumer feedback, and then implement it. Exchange’s Mocking Service lets consumers try the contract before implementation is complete."
       },
       {
-        "heading": "Error Handling: On Error Continue vs Propagate",
-        "body": "Error handling in Mule uses Try scope, On Error Continue, and On Error Propagate. On Error Continue: catches the error, executes the handler, and resumes the flow after the error scope, the client receives the handler's response. On Error Propagate: catches the error, executes the handler, and re-throws the error, the client receives an error response. Error types follow a hierarchy: ANY (catch all), CONNECTIVITY, EXPRESSION, ROUTING, SECURITY. The exam tests which handler type is appropriate and how error types are matched."
+        "heading": "Error handling in Mule",
+        "body": "Mule error handling uses Try scopes and On Error Continue or On Error Propagate handlers. On Error Continue runs the handler and lets the owning flow finish successfully with the handler’s result. On Error Propagate runs the handler and passes the error to the caller. Error types follow a hierarchy that includes ANY, CONNECTIVITY, EXPRESSION, ROUTING, and SECURITY. Choose a handler based on the error and whether the flow should succeed or return an error."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the MuleSoft Developer I Exam",
-    "intro": "The MuleSoft Developer I exam tests foundational Anypoint Platform skills: building integrations in Anypoint Studio, using connectors, transforming data with DataWeave, and deploying to CloudHub. Focus on practical flow design and DataWeave syntax.",
+    "h2": "How to prepare for the MuleSoft Developer I exam",
+    "intro": "The exam checks foundational Anypoint skills: building integrations in Studio, using connectors, transforming data with DataWeave, and deploying applications. Practise complete flows and syntax.",
     "blocks": [
       {
-        "heading": "Mule 4 Flow Design",
-        "body": "Know the three flow types: Flow (with message source), Sub-Flow (no source, called by reference), and Private Flow. Understand the flow lifecycle and how the Mule Message (payload, attributes, variables) changes through processors."
+        "heading": "Design Mule 4 flows",
+        "body": "Understand flows with event sources, subflows called by reference, and private flows. Track how payload, attributes, and variables change as processors run."
       },
       {
-        "heading": "DataWeave 2.0 Fundamentals",
-        "body": "**DataWeave** is the transformation language at the core of Mule 4. Know how to map, filter, transform, and coerce data types. Key functions: map, filter, mapObject, reduce, pluck, flatten, and type coercion operators."
+        "heading": "Work with DataWeave",
+        "body": "Practise mapping, filtering, object transformations, reductions, plucking, flattening, and type coercion."
       },
       {
-        "heading": "Core Connectors",
-        "body": "Know the key connectors: HTTP Listener/Request, Database, File/FTP, JMS/AMQP, Salesforce, and how to configure each. Understand connection pooling, reconnection strategies, and connection testing."
+        "heading": "Configure connectors",
+        "body": "Review HTTP Listener and Request, Database, File/FTP, JMS/AMQP, and Salesforce connectors. Learn connection testing, pooling, and reconnection settings."
       },
       {
-        "heading": "Error Handling",
-        "body": "Know the error handling mechanisms: Try/Catch scope, On Error Continue vs. On Error Propagate, and Global Error Handlers. Understand error type hierarchy (MULE:CONNECTIVITY, HTTP:UNAUTHORIZED, etc.) and how to handle them."
+        "heading": "Handle errors",
+        "body": "Compare Try, On Error Continue, On Error Propagate, and global handlers. Recognize error types such as MULE:CONNECTIVITY and HTTP:UNAUTHORIZED."
       },
       {
-        "heading": "Deployment to CloudHub",
-        "body": "Know how to deploy a Mule application to **CloudHub** 1.0: environment selection, worker configuration (size and count), deployment properties, and how to monitor deployed applications."
+        "heading": "Deploy to CloudHub",
+        "body": "Review CloudHub 1.0 environment selection, worker size and count, deployment properties, and application monitoring."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After Developer",
-    "intro": "After this certification, common next steps in the developer track:",
+    "intro": "Build on your MuleSoft development knowledge with these related Salesforce credentials:",
     "links": [
       {
-        "href": "/certifications/developer-2",
-        "label": "Platform Developer II"
+        "href": "/certifications/mulesoft-developer-ii",
+        "label": "MuleSoft Developer II (Mule-Dev-301)"
       },
       {
-        "href": "/certifications/app-builder",
-        "label": "Platform App Builder"
+        "href": "/certifications/mulesoft-integration-architect",
+        "label": "MuleSoft Platform Integration Architect (Mule-Arch-202)"
       },
       {
-        "href": "/certifications/javascript-developer-i",
-        "label": "JavaScript Developer I"
+        "href": "/certifications/mulesoft-platform-architect",
+        "label": "MuleSoft Platform Architect (Mule-Arch-201)"
       },
       {
         "href": "/certifications/role/developer",
@@ -174,55 +174,55 @@
   ],
   "sampleQuestions": [
     {
-      "question": "An error occurs in a flow and the developer wants the flow to recover and return a successful result to the caller. Which scope should be used?",
+      "question": "A flow encounters an error but should still return a successful response to its caller. Which handler should be used?",
       "options": [
         "Until Successful",
         "On Error Continue",
-        "Try with no handler",
+        "Try without an error handler",
         "On Error Propagate"
       ],
       "correctAnswer": 1,
-      "explanation": "On Error Continue handles the error and lets the owning flow complete successfully, returning the handler's result.",
+      "explanation": "On Error Continue runs its handler and lets the owning flow finish successfully with the handler result.",
       "whyWrong": [
-        "Until Successful retries an operation rather than shaping the error outcome.",
-        "A Try scope without a handler does not change the outcome.",
-        "On Error Propagate re-throws to the caller after handling, so the caller sees a failure."
+        "Until Successful retries an operation; it does not define the flow’s error response.",
+        "A Try scope without a handler does not change the error outcome.",
+        "On Error Propagate passes the error to the caller, which receives a failure."
       ]
     },
     {
-      "question": "What does a Mule event consist of?",
+      "question": "What information travels in a Mule event?",
       "options": [
-        "Only the payload and nothing else",
-        "The connectors configured in the project",
-        "A message with payload and attributes",
-        "A payload plus a reference to the flow"
+        "Only the payload",
+        "The connector settings from the project",
+        "A Mule message with event variables",
+        "A payload and a flow reference"
       ],
       "correctAnswer": 2,
-      "explanation": "The event carries the message, which holds payload and attributes, alongside any variables set in the flow.",
+      "explanation": "The event carries a message with payload and attributes, and it can also contain variables.",
       "whyWrong": [
-        "Attributes and variables are part of the event as well as the payload.",
-        "Connectors are configuration, not event content.",
-        "Flow references are components, not parts of the event."
+        "The message also includes attributes, and the event can hold variables.",
+        "Connectors are configuration, not event data.",
+        "Flow references are application components, not event content."
       ]
     },
     {
-      "question": "A DataWeave script must output JSON from an incoming XML payload. Which directive sets the output type?",
+      "question": "A DataWeave script receives XML but must write JSON. Where is the output format declared?",
       "options": [
-        "A setPayload transformer only",
-        "output application/json in the header",
-        "The connector's reconnection strategy",
-        "input application/xml in the body"
+        "Only in a Set Payload operation",
+        "In the DataWeave header as output application/json",
+        "In the connector reconnection settings",
+        "In the input declaration as application/xml"
       ],
       "correctAnswer": 1,
-      "explanation": "The DataWeave header declares the output MIME type, which determines how the result is written.",
+      "explanation": "The DataWeave header declares the output MIME type used to serialize the result.",
       "whyWrong": [
-        "Setting the payload does not declare a MIME type for serialisation.",
-        "Reconnection strategies deal with connectivity failures.",
-        "Input type is usually inferred and does not control output."
+        "Set Payload does not declare the output MIME type.",
+        "Reconnection settings handle connectivity problems.",
+        "The input type does not set the output format."
       ]
     },
     {
-      "question": "Which DataWeave operator applies a transformation to every item in an array?",
+      "question": "Which DataWeave function transforms every element in an array?",
       "options": [
         "map",
         "filter",
@@ -230,63 +230,63 @@
         "groupBy"
       ],
       "correctAnswer": 0,
-      "explanation": "map returns a new array with the transformation applied to each element.",
+      "explanation": "map applies a transformation to each item and returns an array of the results.",
       "whyWrong": [
-        "filter selects a subset without transforming the items.",
-        "reduce collapses the array to a single accumulated value.",
-        "groupBy reorganises items into an object keyed by an expression."
+        "filter selects items but does not transform every item.",
+        "reduce combines the items into an accumulated result.",
+        "groupBy organizes items under keys."
       ]
     },
     {
-      "question": "What distinguishes attributes from variables in a Mule event?",
+      "question": "In a Mule event, how do attributes differ from variables?",
       "options": [
-        "They are interchangeable",
-        "Attributes survive across flows but variables do not",
-        "Attributes are set by each operation; variables persist",
-        "Variables are read-only"
+        "They have the same role and lifetime",
+        "Attributes persist across all flows while variables do not",
+        "Source metadata versus flow-set values",
+        "Variables cannot be changed"
       ],
       "correctAnswer": 2,
-      "explanation": "Attributes are metadata produced by the source or operation and are overwritten by each one. Variables are set deliberately and persist through the flow.",
+      "explanation": "Attributes are metadata supplied by a source or operation. Variables are set deliberately and can persist through the flow.",
       "whyWrong": [
-        "They have different lifecycles and uses.",
-        "Variables propagate through flow references, so this is the wrong way round.",
-        "Variables are writable; that is their purpose."
+        "They have different purposes and lifecycles.",
+        "Variables can propagate through flow references; the statement reverses their behavior.",
+        "Variables are writable values."
       ]
     },
     {
-      "question": "An API specification should be designed and agreed before implementation begins. Which approach and artefact support this?",
+      "question": "A team wants to agree on the API contract before implementation. Which approach supports this?",
       "options": [
-        "API-first design using a RAML or OAS specification",
-        "Starting from a database schema",
-        "Writing the Mule flows first and documenting afterwards",
-        "Deploying to CloudHub and iterating in production"
+        "API-first design with a RAML or OAS specification",
+        "Start with a database schema",
+        "Build flows first and document them later",
+        "Deploy to production and refine the contract"
       ],
       "correctAnswer": 0,
-      "explanation": "API-first means the specification is written and agreed first, then used to generate the implementation scaffolding.",
+      "explanation": "API-first design defines and reviews the API specification before implementation begins.",
       "whyWrong": [
-        "A database schema describes storage rather than the API contract.",
-        "Documenting after the fact is the opposite of API-first.",
-        "Iterating in production is not a design approach."
+        "A database schema does not define the full API contract.",
+        "Documenting after implementation is not API-first.",
+        "Production deployment is not a substitute for agreeing on the contract."
       ]
     },
     {
-      "question": "Which component processes a large input in configurable chunks with per-record error tracking?",
+      "question": "Which component processes large inputs in chunks and tracks errors by record?",
       "options": [
         "For Each",
         "Batch Job",
-        "Choice",
-        "Scatter-Gather"
+        "Choice router",
+        "Scatter-Gather router"
       ],
       "correctAnswer": 1,
-      "explanation": "Batch jobs are designed for large datasets, splitting records into blocks and recording success and failure per record.",
+      "explanation": "Batch Job processes records in blocks and tracks success or failure for individual records.",
       "whyWrong": [
-        "For Each iterates a collection within a single flow without batch-level record tracking.",
-        "Choice routes conditionally between paths.",
-        "Scatter-Gather sends the same event down multiple routes in parallel."
+        "For Each loops through a collection within a flow without batch job tracking.",
+        "Choice routes an event based on conditions.",
+        "Scatter-Gather sends an event to multiple routes and combines their results."
       ]
     },
     {
-      "question": "A flow must call three independent services at the same time and combine their responses. Which router fits?",
+      "question": "Which Mule router invokes every configured route, waits for each route to finish, and combines the returned results?",
       "options": [
         "Scatter-Gather",
         "First Successful",
@@ -294,31 +294,31 @@
         "Round Robin"
       ],
       "correctAnswer": 0,
-      "explanation": "Scatter-Gather executes routes concurrently and aggregates the results.",
+      "explanation": "Scatter-Gather fans the message out to its routes in parallel, waits for their outcomes, and aggregates the route results.",
       "whyWrong": [
-        "First Successful tries routes in order until one succeeds.",
-        "Choice selects a single route based on a condition.",
-        "Round Robin sends each event to one route in turn."
+        "First Successful tries routes until one succeeds.",
+        "Choice selects a route based on a condition.",
+        "Round Robin sends events to routes in sequence."
       ]
     },
     {
-      "question": "What is the purpose of the Anypoint Exchange?",
+      "question": "What is Anypoint Exchange used for?",
       "options": [
-        "To store runtime logs",
-        "To monitor CPU usage on CloudHub workers",
-        "To define error handling strategies",
-        "To publish and discover reusable assets"
+        "Store runtime log files",
+        "Monitor worker CPU usage",
+        "Define application error handlers",
+        "Publish and find reusable assets"
       ],
       "correctAnswer": 3,
-      "explanation": "Exchange is the catalogue where reusable assets are published and found.",
+      "explanation": "Exchange is a catalog where teams publish and discover APIs, connectors, templates, and other assets.",
       "whyWrong": [
-        "Logs are accessed through Runtime Manager and Monitoring.",
-        "Runtime metrics are shown in Anypoint Monitoring.",
-        "Error handling is defined in the application, not in Exchange."
+        "Runtime logs are accessed through management and monitoring tools.",
+        "Worker metrics are viewed through monitoring tools.",
+        "Error handlers are defined in Mule applications."
       ]
     },
     {
-      "question": "Which tool is used to apply policies such as rate limiting and client ID enforcement to a deployed API?",
+      "question": "Where does an administrator apply runtime API policies such as rate limits or client ID enforcement?",
       "options": [
         "Design Center",
         "Anypoint Studio",
@@ -326,91 +326,91 @@
         "API Manager"
       ],
       "correctAnswer": 3,
-      "explanation": "API Manager is where an API is managed at runtime, including applying policies through the gateway.",
+      "explanation": "API Manager administers deployed APIs and applies policies through the gateway.",
       "whyWrong": [
-        "Design Center is for designing specifications.",
-        "Studio is the development environment.",
-        "MUnit is the testing framework."
+        "Design Center is used to design APIs.",
+        "Studio is the Mule development environment.",
+        "MUnit is used to test Mule applications."
       ]
     },
     {
-      "question": "A developer needs to write automated tests for a Mule flow, including mocking an outbound connector. What should they use?",
+      "question": "A developer needs automated tests for a Mule flow and wants to mock an outbound connector. Which tool should be used?",
       "options": [
         "Anypoint Monitoring",
         "A Batch Job",
         "MUnit",
-        "A Logger component"
+        "A Logger processor"
       ],
       "correctAnswer": 2,
-      "explanation": "MUnit is the testing framework for Mule applications and supports mocking processors.",
+      "explanation": "MUnit is the Mule application testing framework and supports processor mocking.",
       "whyWrong": [
-        "Monitoring observes a running application rather than testing it.",
-        "Batch jobs process data; they are not a test harness.",
-        "A Logger writes diagnostic output and does not assert behaviour."
+        "Monitoring observes a running application rather than testing its behavior.",
+        "Batch jobs process data, not test flows.",
+        "A Logger writes diagnostic messages but does not assert behavior."
       ]
     },
     {
-      "question": "Where should an environment-specific value such as a host name be held?",
+      "question": "Where should a host name that changes between environments be stored?",
       "options": [
-        "Hard-coded in the connector configuration",
-        "In a property file referenced by the configuration",
-        "In the payload at runtime",
-        "In a flow variable set at deployment"
+        "Hard-code it in the connector",
+        "Put it in an externalized property file",
+        "Put it in the business payload",
+        "Create a flow variable during deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Externalising values into properties lets the same application move between environments without code changes.",
+      "explanation": "Externalized properties let the same application use different values in each environment without code edits.",
       "whyWrong": [
-        "Hard-coding forces a code change for each environment.",
-        "The payload carries business data, not configuration.",
-        "A flow variable is set per event and is not deployment configuration."
+        "Hard-coding requires a change for each environment.",
+        "Payloads hold business data, not deployment configuration.",
+        "Flow variables are event data rather than deployment properties."
       ]
     },
     {
-      "question": "What does the Transform Message component produce?",
+      "question": "What can a Transform Message component produce?",
       "options": [
-        "A RAML specification for the API",
-        "A deployment artefact for the application",
-        "A reconnection strategy for the connector",
+        "A RAML API specification",
+        "A packaged deployment artifact",
+        "A connector reconnection policy",
         "A payload or variable value"
       ],
       "correctAnswer": 3,
-      "explanation": "Transform Message runs DataWeave and writes the result to the payload or to a target variable.",
+      "explanation": "Transform Message runs DataWeave and writes its result to the payload or a target variable.",
       "whyWrong": [
-        "Specifications are authored in Design Center or a text editor.",
-        "Deployment artefacts are produced by the build.",
-        "Reconnection strategies are connector configuration."
+        "API specifications are authored in API design tools or source files.",
+        "The build process creates deployment artifacts.",
+        "Reconnection policies are connector configuration."
       ]
     },
     {
-      "question": "A connector intermittently fails because the downstream service is briefly unavailable. Which configuration addresses this directly?",
+      "question": "A downstream service is briefly unavailable and connector calls fail intermittently. Which setting addresses this?",
       "options": [
         "A Batch Job",
-        "An increase to the payload size limit",
-        "A reconnection strategy with retries",
+        "A larger payload size limit",
+        "Retry the connection",
         "A Choice router"
       ],
       "correctAnswer": 2,
-      "explanation": "Reconnection strategies retry connectivity failures, which suits a service that is only briefly unavailable.",
+      "explanation": "A reconnection strategy retries connectivity failures when a service is temporarily unavailable.",
       "whyWrong": [
-        "Batch processing changes how records are handled, not connection reliability.",
-        "Payload size is unrelated to availability.",
-        "Routing does not address a connectivity failure."
+        "Batching changes record processing, not connection recovery.",
+        "Payload size does not affect service availability.",
+        "Routing does not resolve connection failures."
       ]
     },
     {
-      "question": "In which order does a Mule application handle an error raised inside a Try scope that has an On Error Propagate handler?",
+      "question": "A Try scope uses an On Error Propagate handler. What happens after the handler runs?",
       "options": [
-        "The handler runs, then the error is re-thrown",
+        "The error is propagated to the enclosing flow or caller",
         "The error is logged and ignored",
-        "The application shuts down",
-        "The error is swallowed and the flow continues normally"
+        "The Mule application shuts down",
+        "The flow continues as if the operation succeeded"
       ],
       "correctAnswer": 0,
-      "explanation": "On Error Propagate executes its handler and then passes the error up, so the enclosing scope also fails.",
+      "explanation": "On Error Propagate runs the handler and then passes the error upward so the enclosing scope fails.",
       "whyWrong": [
-        "Propagation is more than logging; the error continues upward.",
-        "A handled error does not stop the application.",
-        "Swallowing the error is On Error Continue behaviour."
+        "The error is passed onward rather than only logged.",
+        "Handling a flow error does not automatically stop the application.",
+        "Continuing successfully is On Error Continue behavior."
       ]
     }
   ]

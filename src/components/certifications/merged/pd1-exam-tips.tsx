@@ -30,23 +30,23 @@ const breadcrumbItems = [
 export const faqItems = [
   {
     question: 'What is the PD1 exam format?',
-    answer: 'The Salesforce Platform Developer I exam (CRT-450) has 60 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 exam fee.',
+    answer: 'The Platform Developer exam has 60 questions, up to five additional unscored questions, 105 minutes, and a 68% passing score. The fee is $200 plus applicable taxes.',
   },
   {
     question: 'What are the highest-weight PD1 topics?',
-    answer: 'Logic and Process Automation (38%) is the largest section on PD1, followed by Data Management and Integration (11%). Focus on governor limits, trigger best practices, Apex patterns, and bulkification.',
+    answer: 'Process Automation and Logic accounts for 28% and Developer Fundamentals for 27%. Review the data model, Apex, triggers, and platform limits.',
   },
   {
     question: 'How long does it take to prepare for PD1?',
-    answer: '6–8 weeks with daily coding practice. Writing Apex code hands-on is essential, candidates who only read Trailhead without practising tend to struggle with scenario questions.',
+    answer: 'Preparation time depends on your experience. Set aside time to write and test Apex as well as review the exam guide.',
   },
   {
     question: 'What is the hardest part of the PD1 exam?',
-    answer: 'Governor limits and bulkification. Every Apex scenario expects bulk-safe code, no SOQL or DML inside loops, use of Maps and Sets for batch operations, and correct trigger context variable usage.',
+    answer: 'The difficult areas depend on your experience. Practise governor limits, bulk processing, collections, and trigger context variables.',
   },
   {
     question: 'What concepts do most PD1 candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the PD1 exam are: (1) SOQL Inside For-Loops: The Governor Limit That Kills Your Score; (2) @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer; (3) Test Classes: Coverage Is Not Enough: Assertions Are Required. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    answer: 'Review queries inside loops, the uses of @wire, @api, and @track, and how tests use assertions to check behavior.',
   },
   ...getConceptFaqs('pd1-exam-tips'),
 ]
@@ -62,24 +62,23 @@ export default function Pd1ExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass PD1</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Logic and Process Automation is 28% of the exam, master Apex triggers, governor limits, and async patterns first.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Write real Apex code every day. PD1 scenarios require you to identify bugs and select correct patterns, not just recall facts.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take timed mocks (60 questions / 105 minutes). You are ready when you consistently score 80%+, the passing score is 68%.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Process Automation and Logic is 28% of the exam. Practise Apex, triggers, limits, and asynchronous work.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Write and test Apex in a Developer Edition org. Trace examples to understand why each pattern works.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Use timed practice sets to find gaps. The listed exam passing score is 68%.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">PD1 Exam Weightage at a Glance</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Focus time proportionally. The top three sections cover 73% of the exam.
+          Focus time proportionally. Process Automation and Logic and Developer Fundamentals together represent 55% of the exam.
         </p>
         <div className="space-y-3">
           {[
-            { section: 'Logic and Process Automation', weight: 28, note: 'Apex, triggers, async (Future, Batch, Queueable)' },
-            { section: 'Salesforce Fundamentals', weight: 23, note: 'Platform concepts, data model, security model' },
-            { section: 'Data Modeling and Management', weight: 22, note: 'SOQL, SOSL, DML, relationships, schema' },
-            { section: 'Testing, Debugging, and Deployment', weight: 14, note: '75% coverage rule, Test.runAs(), debugging tools' },
-            { section: 'User Interface', weight: 13, note: 'LWC basics, @AuraEnabled, Lightning Data Service' },
+            { section: 'Process Automation and Logic', weight: 28, note: 'Apex, triggers, Flow, and asynchronous work' },
+            { section: 'Developer Fundamentals', weight: 27, note: 'Platform concepts, data models, and design choices' },
+            { section: 'User Interface', weight: 25, note: 'Lightning components and Visualforce' },
+            { section: 'Testing, Debugging, and Deployment', weight: 20, note: 'Tests, debugging, and deployment' },
           ].map(({ section, weight, note }) => (
             <div key={section}>
               <div className="flex justify-between text-sm mb-1">
@@ -112,23 +111,23 @@ export default function Pd1ExamTipsContent() {
             <tbody className="divide-y divide-gray-100 text-gray-600">
               <tr><td className="py-2 pr-4">SOQL queries per transaction</td><td className="py-2 pr-4 font-medium text-salesforce-blue">100</td><td className="py-2">200</td></tr>
               <tr><td className="py-2 pr-4">DML statements per transaction</td><td className="py-2 pr-4 font-medium text-salesforce-blue">150</td><td className="py-2">150</td></tr>
-              <tr><td className="py-2 pr-4">Records per DML operation</td><td className="py-2 pr-4 font-medium text-salesforce-blue">10,000</td><td className="py-2">10,000</td></tr>
+              <tr><td className="py-2 pr-4">Records processed by DML per transaction</td><td className="py-2 pr-4 font-medium text-salesforce-blue">10,000</td><td className="py-2">10,000</td></tr>
               <tr><td className="py-2 pr-4">Total records retrieved by SOQL</td><td className="py-2 pr-4 font-medium text-salesforce-blue">50,000</td><td className="py-2">50,000</td></tr>
               <tr><td className="py-2 pr-4">Apex CPU time</td><td className="py-2 pr-4 font-medium text-salesforce-blue">10,000 ms</td><td className="py-2">60,000 ms</td></tr>
             </tbody>
           </table>
         </div>
         <p className="text-xs text-gray-600 mt-3">
-          The exam will ask you to identify code that violates these limits, especially SOQL/DML inside for loops.
+          Practise applying these limits to code, including queries and DML in loops. Check the execution context and documented exceptions.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week PD1 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Salesforce Fundamentals &amp; Data Modeling (45%):</strong> Platform data model, object relationships (lookup vs master-detail), field types, schema builder, SOQL (relationship queries, aggregate functions, dynamic SOQL), SOSL, and DML operations.</p>
+          <p><strong>Week 1: Salesforce Fundamentals &amp; Data Modeling:</strong> Platform data model, object relationships (lookup vs master-detail), field types, schema builder, SOQL (relationship queries, aggregate functions, dynamic SOQL), SOSL, and DML operations.</p>
           <p><strong>Week 2: Logic and Process Automation (28%):</strong> Apex fundamentals, trigger events (before/after, isNew, isUpdate, isDelete), bulkification patterns, governor limits, async Apex (Future, Batch, Queueable, Scheduled), and error handling.</p>
-          <p><strong>Week 3: Testing, Deployment &amp; UI (27%):</strong> Writing @isTest classes, Test.startTest()/stopTest(), Test.runAs(), mock data, 75% coverage requirement, debugging logs, changeset/metadata deployment, and LWC fundamentals (@api, @wire, @AuraEnabled).</p>
+          <p><strong>Week 3: Testing, Deployment &amp; UI:</strong> Writing @isTest classes, Test.startTest()/stopTest(), Test.runAs(), mock data, 75% coverage requirement, debugging logs, changeset/metadata deployment, and LWC fundamentals (@api, @wire, @AuraEnabled).</p>
           <p><strong>Week 4:</strong> Full timed mock exams (60 Q / 105 min), weak-area targeted revision, and final review of governor limit scenarios before booking.</p>
         </div>
       </section>
@@ -136,21 +135,20 @@ export default function Pd1ExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Handle PD1 Scenario Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Most PD1 questions give you a code snippet or business requirement and ask you to identify the problem or select the best implementation.
-          Two strategies work here:
+          Practise reading both code snippets and business requirements. Identify the execution context, constraints, and the behavior each answer would produce.
         </p>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Code review questions:</strong> Look for DML or SOQL inside a loop first; that is the most common governor limit trap. If you see it, the answer involves moving operations outside the loop.</span>
+            <span><strong>Code review questions:</strong> Check whether queries or DML run repeatedly inside loops. Consider collecting records and doing the operation in bulk.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Requirement questions:</strong> Map the requirement to the right async tool. Use Future for single-record callouts, Batch for large data volumes, Queueable for chaining jobs, and Scheduled for time-based execution.</span>
+            <span><strong>Requirement questions:</strong> Match the requirement to an asynchronous tool. Consider Batch for large datasets, Queueable for chaining, and Scheduled Apex for timed work.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Testing questions:</strong> If the scenario asks about code coverage or test data, remember: 75% overall is required, @TestVisible exposes private members, and Test.runAs() tests user-context behaviour.</span>
+            <span><strong>Testing questions:</strong> Review overall coverage requirements, test data setup, @TestVisible, and how Test.runAs() changes the user context.</span>
           </li>
         </ul>
       </section>
@@ -165,27 +163,26 @@ export default function Pd1ExamTipsContent() {
           80%+ on 3 timed full mocks (60 Q / 105 min), one week apart
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The 10-point buffer above the passing score accounts for first-attempt nerves and unfamiliar question phrasing.
-          If you are failing the Logic &amp; Process Automation questions consistently, spend another week on triggers and async Apex before booking.
+          Use practice results as feedback, not a guarantee. If triggers or asynchronous Apex remain difficult, build and test examples before booking.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most PD1 Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics; they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <p className="text-sm text-gray-600 mb-5">Review these distinctions while working through your practice code.</p>
         <div className="space-y-5">
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">1. SOQL Inside For-Loops: The Governor Limit That Kills Your Score</h3>
-            <p className="text-sm text-gray-700">The 101-query governor limit means any SOQL statement inside a loop will fail at runtime when processing more than 100 records. Exam scenarios show code snippets and ask you to identify the bug. The wrong-answer trap is selecting &ldquo;reduce batch size&rdquo; the correct fix is always &ldquo;move the SOQL outside the loop and use a Map or List.&rdquo; Train yourself to scan every for-loop in a code snippet and ask: is there a SOQL or DML statement inside?</p>
+            <p className="text-sm text-gray-700">A query inside a loop can exceed the limit when it runs repeatedly. Look at the execution context and number of iterations; where appropriate, query once outside the loop and use a map or list.</p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">2. @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer</h3>
-            <p className="text-sm text-gray-700">LWC decorator questions are a guaranteed exam topic. <code className="bg-amber-100 px-1 rounded text-xs">@wire</code> connects a property to a Salesforce data service (Apex or UI API) reactively. <code className="bg-amber-100 px-1 rounded text-xs">@api</code> exposes a property or method to a parent component; it is public. <code className="bg-amber-100 px-1 rounded text-xs">@track</code> is largely deprecated in modern LWC; plain properties are now reactive by default. The trap: candidates use @track thinking it makes a property &ldquo;reactive&rdquo; when @wire is what actually connects to the server.</p>
+            <p className="text-sm text-gray-700">Review how Lightning Web Component decorators serve different purposes. <code className="bg-amber-100 px-1 rounded text-xs">@wire</code> connects a property to a Salesforce data service (Apex or UI API) reactively. <code className="bg-amber-100 px-1 rounded text-xs">@api</code> exposes a property or method to a parent component; it is public. <code className="bg-amber-100 px-1 rounded text-xs">@track</code> can observe changes to supported object and array properties. Ordinary fields are reactive when their assigned values change.</p>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough: Assertions Are Required</h3>
-            <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong; the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation, and calling a real endpoint in a test will throw an exception, not just fail silently.</p>
+            <p className="text-sm text-gray-700">Coverage shows which lines ran; assertions check whether the result is correct. Include meaningful assertions, and use <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> for HTTP callout tests.</p>
           </div>
         </div>
       </section>

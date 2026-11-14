@@ -14,9 +14,9 @@ import { getBreadcrumbListJsonLd, getWebPageJsonLd } from '@/lib/schema-data'
 
 const siteUrl = 'https://www.trailblazeprep.com'
 const path = '/salesforce-certification-report-2026'
-const shareTitle = '2026 Salesforce Certification Benchmark Report'
+const shareTitle = '2026 Salesforce Certification Exam Benchmark Report'
 const shareDescription =
-  'Exam costs, question counts, durations and prerequisites across all Salesforce certification tracks, with a free CC BY 4.0 dataset and the 2026 rename and retirement tracker.'
+  'Compare Salesforce exam costs, durations, and prerequisites using the 2026 benchmark, retirement tracker, and CC BY 4.0 dataset.'
 const shareImage = `${siteUrl}/og?t=${encodeURIComponent(shareTitle)}`
 
 export const metadata: Metadata = {
@@ -99,16 +99,15 @@ export default function BenchmarkReportPage() {
         </h1>
         <LastUpdated />
         <p className="mt-2 text-lg text-gray-700">
-          What it costs, in money and hours, to complete each Salesforce certification
-          track in 2026 — compiled from the published exam details for{' '}
+          This report estimates the exam fees and time for each Salesforce certification
+          track in 2026. It uses published exam details for{' '}
           {summary.totalCertifications} certifications across {summary.trackCount} role
           tracks, and free to reuse.
         </p>
         <p className="mt-3 text-sm text-gray-600">
-          Salesforce credentials only. Trailblaze Prep also covers{' '}
-          {nonSalesforce} non-Salesforce certifications; counting them here would
-          put the wrong number in a figure people are invited to cite, so they are
-          excluded from every total on this page and from the dataset.
+          This report covers Salesforce credentials only. Trailblaze Prep also covers{' '}
+          {nonSalesforce} non-Salesforce certifications, which are excluded from all
+          totals on this page and from the dataset.
         </p>
 
         {/* Headline figures */}
@@ -129,10 +128,9 @@ export default function BenchmarkReportPage() {
 
         <h2 className="mt-12 text-2xl font-bold text-gray-900">Cost and time by role track</h2>
         <p className="mt-2 text-gray-700">
-          Sitting every exam in a track, at first-attempt prices before local taxes.
-          Where Salesforce does not publish a figure the certification is excluded from
-          that column rather than estimated, so each total says how many certifications
-          it is based on.
+          These totals assume one first attempt per exam and exclude local taxes.
+          If Salesforce does not publish a figure, we leave it out rather than estimate it.
+          Each total shows how many credentials it includes.
         </p>
         <div className="mt-5 overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">
@@ -176,12 +174,10 @@ export default function BenchmarkReportPage() {
           What a typical exam in each track costs and runs
         </h2>
         <p className="mt-2 text-gray-700">
-          Totals answer &ldquo;what would all of it cost&rdquo;. This answers the
-          question people actually have. Median rather than mean throughout,
-          because the $4,500 Technical Architect Review Board drags an Architect
-          mean into fiction. {totalRetired} of the {summary.totalCertifications}{' '}
-          credentials have a retired or closed exam, so the active count is the one
-          to plan against.
+          These figures show the typical exam fee, duration, and question count in each track.
+          We use medians because the $4,500 Technical Architect Review Board would skew
+          the Architect average. {totalRetired} of {summary.totalCertifications}{' '}
+          credentials have a retired or closed exam; use the active count when planning.
         </p>
         <div className="mt-5 overflow-x-auto">
           <table className="w-full min-w-[720px] border-collapse text-sm">
@@ -220,9 +216,9 @@ export default function BenchmarkReportPage() {
 
         <h2 className="mt-12 text-2xl font-bold text-gray-900">How complete the published data is</h2>
         <p className="mt-2 text-gray-700">
-          Salesforce does not publish every figure for every credential. This is what is
-          actually available, which is itself a finding: pass marks in particular are no
-          longer on the certification pages at all.
+          Salesforce does not publish every detail for every credential. The figures below
+          show what information is available. Pass marks are not listed on the
+          certification pages.
         </p>
         <ul className="mt-4 space-y-2 text-gray-700">
           <li><strong>{summary.withPublishedFee}</strong> of {summary.totalCertifications} have a published exam fee.</li>
@@ -235,8 +231,7 @@ export default function BenchmarkReportPage() {
         <h2 className="mt-12 text-2xl font-bold text-gray-900">2026 rename and retirement tracker</h2>
         <p className="mt-2 text-gray-700">
           Salesforce renamed <strong>{renamed.length}</strong> credentials, and{' '}
-          <strong>{statusChanges.length}</strong> have a changed exam status. The former
-          names are what most people still search for, so both are listed.
+          <strong>{statusChanges.length}</strong> have a changed exam status. We list former names as well, so readers can find credentials they know by an older name.
         </p>
 
         {statusChanges.length > 0 && (
@@ -287,8 +282,8 @@ export default function BenchmarkReportPage() {
 
         <h2 className="mt-12 text-2xl font-bold text-gray-900">Download the dataset</h2>
         <p className="mt-2 text-gray-700">
-          Every figure above, as {summary.totalCertifications} rows. Empty cells mean
-          Salesforce does not publish that figure — they are not zeroes.
+          The dataset includes {summary.totalCertifications} rows. An empty cell means
+          Salesforce does not publish that figure; it does not mean zero.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <a href="/datasets/salesforce-certifications-2026.json" className="inline-flex min-h-11 items-center rounded-lg bg-salesforce-blue px-5 text-sm font-semibold text-white hover:bg-salesforce-dark">
@@ -303,13 +298,12 @@ export default function BenchmarkReportPage() {
 
         <h2 className="mt-12 text-2xl font-bold text-gray-900">Method</h2>
         <p className="mt-2 text-gray-700">
-          Figures come from each credential&apos;s own Salesforce page, verified by
-          fetching every URL rather than deriving it from a name. Two errors found during
-          that check have been corrected — Tableau Architect&apos;s question count and
-          Tableau Server Administrator&apos;s question count and duration. Pass marks are
-          the weakest data here: Salesforce publishes them on none of the certification
-          pages checked, so ours come from exam guides and should be treated as
-          secondary. Work out your own score from section percentages with the{' '}
+          We collected figures from each credential&apos;s Salesforce page and checked every URL.
+          That review corrected two errors: the Tableau Architect question count, and the
+          Tableau Server Administrator question count and duration. Salesforce did not
+          list pass marks on the certification pages we checked, so those figures come
+          from exam guides and are secondary sources. Work out your score from section
+          percentages with the{' '}
           <Link href="/tools/score-calculator" className="font-semibold text-salesforce-blue hover:underline">
             exam score calculator
           </Link>

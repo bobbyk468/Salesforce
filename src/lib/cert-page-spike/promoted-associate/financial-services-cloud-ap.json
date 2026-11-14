@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Banking and wealth management consultants",
-        "description": "You set up Financial Services Cloud for banks, advisers or wealth firms and want to prove you know its data model."
+        "description": "You configure Salesforce for a bank, wealth manager or financial adviser."
       },
       {
         "label": "Salesforce admins at financial firms",
-        "description": "You run FSC day to day and want to understand households, financial accounts and rollups properly."
+        "description": "You administer Financial Services Cloud and work with households, accounts and rollups."
       },
       {
         "label": "Insurance and fintech implementation partners",
-        "description": "You deliver FSC projects and need a credential clients recognise."
+        "description": "You implement FSC and need to understand relationships, referrals and client workflows."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Financial Services Cloud Accredited Professional Exam Hard?",
-    "summary": "It is a moderate exam, but FSC's data model is quite different from standard Salesforce. Once you understand how people, households and financial accounts link together, most questions get easier.",
+    "summary": "The exam covers Financial Services Cloud records and workflows, including people, households, financial accounts, relationships, rollups, referrals and action plans.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>About 56% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>50 scored questions</strong> in 75 minutes, plus up to five unscored questions that do not count.",
+      "<strong>56% to pass</strong>, which is 28 correct answers out of 50.",
       "<strong>Data model focus.</strong> Person accounts, households, financial accounts, roles and relationships.",
       "<strong>Industry features.</strong> Rollups, referrals, action plans, interaction summaries and compliant data sharing."
     ],
-    "passRateGuidance": "Set up a household with several members and financial accounts in a trial org, and check how the totals roll up. Before you book. Aim for 75% or more on practice tests."
+    "passRateGuidance": "In a trial org, create a household with members and financial accounts. Check how balances roll up, then use practice questions to find areas for review."
   },
   "examFormat": {
     "heading": "Financial Services Cloud Accredited Professional Exam Format Explained",
-    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
-    "scenarioPercent": "Most questions describe a client or adviser need, such as showing a family's total assets or passing a referral to a mortgage specialist, and ask which FSC feature fits.",
+    "intro": "Accredited Professional exams are taken online. Use the current official guide for the latest format and registration details.",
+    "scenarioPercent": "Scenarios describe a client or adviser need. Identify the people and accounts involved, then choose the relationship, workflow or access control that fits.",
     "bestWayToPass": [
-      "<strong>Draw the data model:</strong> Person account, household, account-contact relationship, financial account and financial account role.",
-      "<strong>Understand rollups:</strong> How balances roll up from financial accounts to people and households.",
-      "<strong>Learn the adviser tools:</strong> Referrals, action plans, goals and interaction summaries.",
-      "<strong>Know the privacy features:</strong> Compliant data sharing and how it limits who sees client data."
+      "Identify the people, household, financial account and role records in each scenario.",
+      "Check how household membership and rollups are configured in the org.",
+      "Use relationship records to connect people or businesses, and referrals to route client needs.",
+      "Review sharing and permissions before treating a record as confidential."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests how you set up Financial Services Cloud: the client and household data model, financial accounts and rollups, referrals, action plans and compliance features. The exam is 50 scored questions in 75 minutes, with a 56% pass mark, weighted towards Delivery (46%) and Define/Design (42%).",
+    "description": "This exam covers the FSC client model, household relationships, financial accounts and rollups, referrals, action plans and data access. The exam is 50 scored questions in 75 minutes, with a 56% pass mark, weighted towards Delivery (46%) and Define/Design (42%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "56%",
@@ -62,49 +62,45 @@
     "blocks": [
       {
         "heading": "FSC Data Model: Households, Individuals, and Financial Accounts",
-        "body": "Individual clients are usually **person accounts**. A **household** is an account that groups people who manage money together, such as a family. People join a household through **account-contact relationships**, with one marked as the primary member. **Financial accounts** hold bank accounts, investments, loans and so on. **Financial account roles** link each financial account to the people involved, such as primary owner or joint owner. **Financial holdings** record what is inside an investment account, and **assets and liabilities** record things like a house or a mortgage held elsewhere."
+        "body": "Financial Services Cloud adds financial records and relationship features to Salesforce. Financial Accounts represent accounts such as deposits or investments; Financial Account Roles connect people to those accounts and describe their roles. Financial Holdings can represent positions within investment accounts. Assets, liabilities and goals capture other parts of a client’s financial picture. Household and rollup behavior depends on the configured data model and rollup settings."
       },
       {
         "heading": "Relationship Management and Referrals",
-        "body": "Advisers need to see who is connected to whom. **Relationship groups** (such as households) group clients. **Contact-contact relationships** link people, like a client and their accountant. **Account-account relationships** link businesses, like a company and its subsidiary. **Referrals** let staff pass a lead to the right expert, for example a teller passing a mortgage lead to a lender. **Intelligent need-based referrals** route referrals to the right person or queue based on the client's need, and referral scoring helps prioritise them."
+        "body": "Households and other relationship groups help advisers understand connected clients. Contact-to-contact relationships link people, while account-to-account relationships link businesses. Referrals can route a client need to another employee or team. Use the relationship type that matches the parties involved."
       },
       {
         "heading": "Action Plans for Client Lifecycle Management",
-        "body": "**Action plans** are reusable checklists of tasks, built from **action plan templates**. They make sure common processes, like opening an account or onboarding a new client, are done the same way every time. Each task can have a due date based on the plan's start date and can be assigned to a role or user. Action plans can be attached to accounts, opportunities and other records, and progress can be tracked as tasks are completed."
+        "body": "An action plan turns a template into a repeatable set of tasks, such as client onboarding. Tasks can have due dates and assignments, and the plan can be linked to records such as accounts or opportunities. Teams can follow progress as the work is completed."
       },
       {
         "heading": "Rollup Summaries and Financial Aggregations",
-        "body": "Advisers want to see totals, such as a client's total assets or a household's total deposits. FSC **rollups** add up balances from financial accounts to the people who own them and then to their households. Settings control whether joint accounts count for the primary owner only or for all owners. **Rollup by lookup (RBL)** rules define which fields and records are added up. Rollups can be recalculated in bulk after data loads. Without them, advisers would have to add up accounts by hand."
+        "body": "FSC rollups can summarize financial account balances for a person or household. Rollup by lookup rules identify the records and fields to include. Review how ownership and joint-account settings affect totals, and how recalculation works after a data load."
       },
       {
         "heading": "Compliance, KYC, and Document Management",
-        "body": "Financial firms must control who sees client data. **Compliant data sharing** lets you share financial accounts, opportunities and interactions only with the people who should see them, based on roles in a deal or client team, rather than opening up whole objects. **Interaction summaries** record meetings with clients and can be marked confidential. Firms also track identity checks for **Know Your Customer** rules and store required documents with clear review dates. Field audit history and event monitoring help show regulators who did what."
+        "body": "Financial firms need to limit access to sensitive client information. Compliant data sharing can grant access based on a person’s role in a client or deal team. Review confidentiality for interaction summaries, identity-check records, document reviews, audit history, and event monitoring."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Financial Services Cloud Accredited Professional Exam",
-    "intro": "Most questions start with a client situation. Work out which records represent the people and money involved, then which feature acts on them.",
+    "intro": "Read the client situation first, then select the record or process that represents it.",
     "blocks": [
       {
-        "heading": "FSC Data Model Extensions",
-        "body": "Use the standard FSC objects first. Financial account, role, holding, goal and asset or liability cover most needs."
+        "heading": "Represent people separately",
+        "body": "Use individual client records and connect them to a household where the implementation calls for one."
       },
       {
-        "heading": "Client 360 & Relationship Manager",
-        "body": "The client profile shows financial accounts, goals and relationships in one place, with rollup totals."
+        "heading": "Link owners to accounts",
+        "body": "Financial Account Roles describe each person’s connection to a financial account."
       },
       {
-        "heading": "Household & Relationship Management",
-        "body": "Households group people through account-contact relationships. One member is primary."
+        "heading": "Treat totals as configured rollups",
+        "body": "Verify the rollup setup and recalculate totals when a data load requires it."
       },
       {
-        "heading": "Insurance-Specific Features",
-        "body": "Insurance policies, coverages and claims can be tracked for clients alongside their other financial accounts."
-      },
-      {
-        "heading": "Compliance & Audit Trail",
-        "body": "Compliant data sharing limits access by role. Confidential interaction summaries hide meeting notes from others."
+        "heading": "Protect sensitive information",
+        "body": "Use configured sharing and permissions; a label or summary alone does not restrict access."
       }
     ]
   },
@@ -166,243 +162,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A married couple and their adult son share some bank accounts. How should they be represented in FSC?",
+      "question": "How should FSC represent three family members who share some bank accounts?",
       "options": [
-        "One Opportunity with three contacts",
-        "One single person account covering the whole of the family",
-        "Three person accounts linked to a household",
-        "Three Leads"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Each person is a person account, and the household groups them while keeping each one's details separate.",
-      "whyWrong": [
-        "An Opportunity is a deal, not a family.",
-        "One account for three people loses individual details.",
-        "Leads are for prospects, not clients."
-      ]
-    },
-    {
-      "question": "A joint savings account is owned by two clients. What links the account to both people?",
-      "options": [
-        "Financial account roles for each owner",
-        "A contact-to-contact relationship and nothing else",
-        "A standard action plan",
-        "Two copies of the financial account"
+        "Separate person accounts grouped in one household",
+        "One Opportunity with three linked Contacts",
+        "One shared person account for the entire family",
+        "Three separate lead records"
       ],
       "correctAnswer": 0,
-      "explanation": "Financial account roles connect one financial account to each person, with their role such as joint owner.",
+      "explanation": "Separate person accounts grouped in one household is the best fit because each person is a person account, and the household groups them while keeping each one's details separate.",
       "whyWrong": [
-        "Contact relationships link people, not accounts.",
-        "Action plans are task lists.",
-        "Copies would double-count the balance."
+        "One Opportunity with three linked Contacts is not the best choice because an Opportunity is a deal, not a family.",
+        "One shared person account for the entire family is not the best choice because one account for three people loses individual details.",
+        "Three separate lead records is not the best choice because leads are for prospects, not clients."
       ]
     },
     {
-      "question": "An adviser wants to see the total of all deposits for a family in one number. What feature provides this?",
+      "question": "What connects two joint owners to the same financial account?",
       "options": [
-        "Rollups from financial accounts to the household",
-        "A custom formula field placed on each person record",
-        "A report emailed weekly",
-        "A manual sum in a spreadsheet"
-      ],
-      "correctAnswer": 0,
-      "explanation": "FSC rollups add up balances from financial accounts to people and their household.",
-      "whyWrong": [
-        "Formulas can't sum across related financial accounts.",
-        "A weekly email is not live data.",
-        "Spreadsheets go out of date."
-      ]
-    },
-    {
-      "question": "A bank teller learns a client wants a mortgage. How should the lead reach a mortgage specialist?",
-      "options": [
-        "Create an action plan",
-        "Send a Chatter post out to everyone in the whole bank",
-        "Update the client's address",
-        "Create a referral that is routed to the mortgage team"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Referrals pass leads to the right expert, and need-based routing sends them to the right person or queue.",
-      "whyWrong": [
-        "Action plans are checklists, not referrals.",
-        "A broad post may be missed and isn't tracked.",
-        "Updating the address doesn't pass the lead."
-      ]
-    },
-    {
-      "question": "Every new client must go through the same 12 onboarding steps. What should be used?",
-      "options": [
-        "A financial goal",
-        "A report",
-        "A newly created household for each step",
-        "An action plan template per new client"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Action plan templates create the same set of tasks each time, with due dates and owners.",
-      "whyWrong": [
-        "Goals track a client's savings targets.",
-        "Reports show data.",
-        "Households group people."
-      ]
-    },
-    {
-      "question": "A client's investment account holds shares in several funds. Where are the individual funds recorded?",
-      "options": [
-        "As recorded interaction summaries",
-        "As referrals",
-        "As separate households",
-        "Financial holdings on the account"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Financial holdings record the securities or funds within an investment account.",
-      "whyWrong": [
-        "Interaction summaries record meetings.",
-        "Referrals pass leads.",
-        "Households group people."
-      ]
-    },
-    {
-      "question": "A client owns a house and has a mortgage with another bank. How can the adviser record these?",
-      "options": [
-        "As Cases",
-        "As recorded financial holdings",
-        "As assets and liabilities",
-        "As Leads"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Assets and liabilities record things owned or owed that aren't financial accounts at the firm.",
-      "whyWrong": [
-        "Cases are for service issues.",
-        "Holdings are investments inside an account.",
-        "Leads are prospects."
-      ]
-    },
-    {
-      "question": "Only the advisers on a client's deal team should see that client's opportunities, without opening the object to everyone. What fits?",
-      "options": [
-        "Giving everyone View All",
-        "Compliant data sharing based on the team roles",
-        "Removing the opportunities",
-        "Setting the org-wide default to Public Read/Write"
+        "A Contact relationship with no account role",
+        "Financial Account Roles for both owners",
+        "An Action Plan for the account",
+        "Two copies of the same account"
       ],
       "correctAnswer": 1,
-      "explanation": "Compliant data sharing grants access based on roles in the relationship or deal, which meets privacy needs.",
+      "explanation": "Financial Account Roles for both owners is the best fit because financial account roles connect one financial account to each person, with their role such as joint owner.",
       "whyWrong": [
-        "View All also shows everything.",
-        "Removing data isn't a solution.",
-        "Public access shows the data to everyone."
+        "A Contact relationship with no account role is not the best choice because contact relationships link people, not accounts.",
+        "An Action Plan for the account is not the best choice because action plans are task lists.",
+        "Two copies of the same account is not the best choice because copies would double-count the balance."
       ]
     },
     {
-      "question": "An adviser records notes from a sensitive meeting that other staff must not see. What should they use?",
+      "question": "Which capability can show a household total derived from its financial accounts?",
       "options": [
-        "A confidential interaction summary",
-        "A field on the Account visible to all",
-        "A public Chatter post",
-        "An email to the whole branch"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Interaction summaries record meetings and can be marked confidential to limit who can see them.",
-      "whyWrong": [
-        "A field visible to all defeats the point.",
-        "A public post is visible to many people.",
-        "Emailing the branch spreads the notes."
-      ]
-    },
-    {
-      "question": "A client's accountant should be linked to the client so advisers can see the connection. What should be used?",
-      "options": [
-        "A household",
-        "A financial holding",
-        "A contact-to-contact relationship",
-        "A financial account role record"
+        "Add a formula field to each person record",
+        "Email a report every week",
+        "Configured household rollups",
+        "Add the balances by hand in a spreadsheet"
       ],
       "correctAnswer": 2,
-      "explanation": "Contact-contact relationships link people, such as a client and their adviser or accountant.",
+      "explanation": "Configured household rollups is the best fit because fSC rollups add up balances from financial accounts to people and their household.",
       "whyWrong": [
-        "Households are for people managing money together.",
-        "Holdings are investments.",
-        "Financial account roles link people to accounts."
+        "Add a formula field to each person record is not the best choice because formulas can't sum across related financial accounts.",
+        "Email a report every week is not the best choice because a weekly email is not live data.",
+        "Add the balances by hand in a spreadsheet is not the best choice because spreadsheets go out of date."
       ]
     },
     {
-      "question": "After loading 50,000 financial accounts, household totals look wrong. What should the admin do?",
+      "question": "How can a teller route a client’s mortgage interest to a lending specialist?",
+      "options": [
+        "Create an Action Plan",
+        "Post to the entire bank in Chatter",
+        "Change the client address",
+        "Referral to the mortgage team"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Referral to the mortgage team is the best fit because referrals pass leads to the right expert, and need-based routing sends them to the right person or queue.",
+      "whyWrong": [
+        "Create an Action Plan is not the best choice because a broad post may be missed and isn't tracked.",
+        "Post to the entire bank in Chatter is not the best choice because updating the address doesn't pass the lead.",
+        "Change the client address is not the best choice because it does not meet the scenario as directly as Create and route a referral to the mortgage team."
+      ]
+    },
+    {
+      "question": "Which feature can give each new client the same twelve onboarding tasks?",
+      "options": [
+        "An Action Plan Template for each client onboarding",
+        "A Financial Goal for the onboarding process",
+        "A report listing the twelve steps",
+        "A separate household record for each step"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An Action Plan Template for each client onboarding is the best fit because action plan templates create the same set of tasks each time, with due dates and owners.",
+      "whyWrong": [
+        "A Financial Goal for the onboarding process is not the best choice because reports show data.",
+        "A report listing the twelve steps is not the best choice because households group people.",
+        "A separate household record for each step is not the best choice because it does not meet the scenario as directly as An Action Plan Template for each client onboarding."
+      ]
+    },
+    {
+      "question": "Where can an adviser record funds held inside a client’s investment account?",
+      "options": [
+        "Interaction summaries",
+        "Financial Holdings",
+        "Referrals",
+        "Separate household records"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Financial Holdings is the best fit because financial holdings record the securities or funds within an investment account.",
+      "whyWrong": [
+        "Interaction summaries is not the best choice because referrals pass leads.",
+        "Referrals is not the best choice because households group people.",
+        "Separate household records is not the best choice because it does not meet the scenario as directly as Financial Holdings related to the investment account."
+      ]
+    },
+    {
+      "question": "How should an adviser record a house and a mortgage held at another bank?",
+      "options": [
+        "Cases recorded for property or debt",
+        "Financial holdings for investment positions",
+        "Assets and liabilities",
+        "Leads for external obligations"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Assets and liabilities is the best fit because assets and liabilities record things owned or owed that aren't financial accounts at the firm.",
+      "whyWrong": [
+        "Cases recorded for property or debt is not the best choice because holdings are investments inside an account.",
+        "Financial holdings for investment positions is not the best choice because it does not meet the scenario as directly as Assets and liabilities.",
+        "Leads for external obligations is not the best choice because leads are prospects."
+      ]
+    },
+    {
+      "question": "Which access approach limits an Opportunity to members of the client’s deal team?",
+      "options": [
+        "Give all users View All",
+        "Delete the Opportunities",
+        "Set organization-wide access to Public Read/Write",
+        "Restrict sharing to the relevant deal-team roles"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Restrict sharing to the relevant deal-team roles is the best fit because compliant data sharing grants access based on roles in the relationship or deal, which meets privacy needs.",
+      "whyWrong": [
+        "Give all users View All is not the best choice because it does not meet the scenario as directly as Restrict sharing to the relevant deal-team roles.",
+        "Delete the Opportunities is not the best choice because removing data isn't a solution.",
+        "Set organization-wide access to Public Read/Write is not the best choice because public access shows the data to everyone."
+      ]
+    },
+    {
+      "question": "How should an adviser record a sensitive meeting when visibility must be restricted?",
+      "options": [
+        "Restricted interaction summary",
+        "An Account field visible to every employee",
+        "A Chatter post visible to the branch",
+        "An email sent to the whole branch"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Restricted interaction summary is the best fit because interaction summaries record meetings and can be marked confidential to limit who can see them.",
+      "whyWrong": [
+        "An Account field visible to every employee is not the best choice because a field visible to all defeats the point.",
+        "A Chatter post visible to the branch is not the best choice because a public post is visible to many people.",
+        "An email sent to the whole branch is not the best choice because emailing the branch spreads the notes."
+      ]
+    },
+    {
+      "question": "Which relationship record can link a client with their accountant?",
+      "options": [
+        "A household",
+        "Contact relationship",
+        "A Financial Holding",
+        "A Financial Account Role"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Contact relationship is the best fit because contact-contact relationships link people, such as a client and their adviser or accountant.",
+      "whyWrong": [
+        "A household is not the best choice because holdings are investments.",
+        "A Financial Holding is not the best choice because it does not meet the scenario as directly as A Contact-to-Contact Relationship.",
+        "A Financial Account Role is not the best choice because financial account roles link people to accounts."
+      ]
+    },
+    {
+      "question": "What can an admin run if household totals need refreshing after a large data load?",
       "options": [
         "Delete the households",
-        "Run a bulk rollup recalculation",
         "Change the page layout",
+        "Bulk rollup recalculation",
         "Ask advisers to edit each account"
       ],
-      "correctAnswer": 1,
-      "explanation": "Bulk recalculation updates rollup totals after large data loads.",
+      "correctAnswer": 2,
+      "explanation": "Bulk rollup recalculation is the best fit because bulk recalculation updates rollup totals after large data loads.",
       "whyWrong": [
-        "Deleting households loses data.",
-        "Layouts don't affect totals.",
-        "Editing accounts one by one isn't practical."
+        "Delete the households is not the best choice because it does not meet the scenario as directly as Run the configured bulk rollup recalculation.",
+        "Change the page layout is not the best choice because layouts don't affect totals.",
+        "Ask advisers to edit each account is not the best choice because editing accounts one by one isn't practical."
       ]
     },
     {
-      "question": "A client wants to save for their child's university fees over ten years. Which FSC record tracks this?",
+      "question": "Which FSC record tracks a long-term savings target for university costs?",
       "options": [
         "A liability",
-        "A financial goal",
-        "A standard action plan",
-        "A referral"
+        "An Action Plan",
+        "A referral",
+        "A Financial Goal"
       ],
-      "correctAnswer": 1,
-      "explanation": "Financial goals track targets like education or retirement savings and progress toward them.",
+      "correctAnswer": 3,
+      "explanation": "A Financial Goal is the best fit because financial goals track targets like education or retirement savings and progress toward them.",
       "whyWrong": [
-        "Liabilities record money owed.",
-        "Action plans list tasks.",
-        "Referrals pass leads."
+        "A liability is not the best choice because it does not meet the scenario as directly as A Financial Goal.",
+        "An Action Plan is not the best choice because action plans list tasks.",
+        "A referral is not the best choice because referrals pass leads."
       ]
     },
     {
-      "question": "A subsidiary company should be linked to its parent company in FSC. What should be used?",
+      "question": "How can FSC show that a subsidiary business is related to its parent?",
       "options": [
+        "An Account-to-Account Relationship",
         "A household",
-        "An account-account relationship",
-        "A contact-to-contact relationship",
-        "A financial account role record"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Account-account relationships link businesses, such as a parent and subsidiary.",
-      "whyWrong": [
-        "Households group individuals.",
-        "Contact relationships link people.",
-        "Roles link people to financial accounts."
-      ]
-    },
-    {
-      "question": "The firm must show it checked each client's identity under Know Your Customer rules. What should be recorded?",
-      "options": [
-        "Identity checks and documents with dates and outcomes on the client record",
-        "Nothing at all, because KYC sits entirely outside Salesforce",
-        "A financial goal",
-        "A Chatter post saying checked"
+        "A Contact-to-Contact Relationship",
+        "A Financial Account Role"
       ],
       "correctAnswer": 0,
-      "explanation": "Recording identity checks and documents with dates gives a clear audit trail for KYC.",
+      "explanation": "An Account-to-Account Relationship is the best fit because account-account relationships link businesses, such as a parent and subsidiary.",
       "whyWrong": [
-        "Firms need evidence, wherever the check is done.",
-        "Goals are savings targets.",
-        "A post isn't a reliable record."
+        "A household is not the best choice because it does not meet the scenario as directly as An Account-to-Account Relationship.",
+        "A Contact-to-Contact Relationship is not the best choice because contact relationships link people.",
+        "A Financial Account Role is not the best choice because roles link people to financial accounts."
       ]
     },
     {
-      "question": "Which statement about households in FSC is correct?",
+      "question": "What evidence can the firm record to document a client identity check for KYC?",
       "options": [
-        "A household can only have one member",
-        "Households replace financial accounts",
-        "A household groups people",
-        "A household is a type of Lead"
+        "Record nothing because KYC happens outside Salesforce",
+        "Keep dated identity-check records, documents and outcomes",
+        "Add a Financial Goal to the profile",
+        "Post a Chatter note that the check is complete"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Keep dated identity-check records, documents and outcomes is the best fit because recording identity checks and documents with dates gives a clear audit trail for KYC.",
+      "whyWrong": [
+        "Record nothing because KYC happens outside Salesforce is not the best choice because firms need evidence, wherever the check is done.",
+        "Add a Financial Goal to the profile is not the best choice because goals are savings targets.",
+        "Post a Chatter note that the check is complete is not the best choice because a post isn't a reliable record."
+      ]
+    },
+    {
+      "question": "What does an FSC household represent?",
+      "options": [
+        "A single-member-only record",
+        "A replacement for Financial Accounts",
+        "Household group",
+        "A Lead type"
       ],
       "correctAnswer": 2,
-      "explanation": "Households group people through account-contact relationships, with a primary member.",
+      "explanation": "Household group is the best fit because households group people through account-contact relationships, with a primary member.",
       "whyWrong": [
-        "Households usually have several members.",
-        "Financial accounts are still needed to hold balances.",
-        "Households are accounts, not leads."
+        "A single-member-only record is not the best choice because financial accounts are still needed to hold balances.",
+        "A replacement for Financial Accounts is not the best choice because it does not meet the scenario as directly as A group of people represented through the FSC relationship model.",
+        "A Lead type is not the best choice because households are accounts, not leads."
       ]
     }
   ]

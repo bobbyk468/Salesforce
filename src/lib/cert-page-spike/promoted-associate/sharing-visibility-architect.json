@@ -21,8 +21,8 @@
     "heading": "How challenging is the Sharing and Visibility Architect exam?",
     "summary": "Questions ask you to diagnose why a person can or cannot access a record. You must identify the responsible layer, such as object permissions, org-wide defaults, the role hierarchy, sharing rules, teams, or Apex sharing.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>58% passing score</strong>, about 41 correct answers. Some options differ by one sharing setting.",
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>58% to pass</strong>, which is 35 correct answers out of 60.",
       "<strong>External sharing matters.</strong> Review Experience Cloud sharing sets, external defaults, and guest-user rules.",
       "<strong>Performance is tested.</strong> Learn how data skew, deep role hierarchies, and recalculations affect sharing."
     ],

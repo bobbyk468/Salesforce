@@ -1,48 +1,48 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Data Architect exam for?",
+    "heading": "Who should take the Platform Data Architect exam?",
     "personas": [
       {
-        "label": "Data Engineers",
-        "description": "Professionals who manage large-scale data pipelines, ETL processes, and data quality initiatives on the Salesforce Platform."
+        "label": "Data engineers",
+        "description": "You design data pipelines and migration processes and are responsible for data quality at scale on Salesforce."
       },
       {
-        "label": "Enterprise Architects",
-        "description": "Architects responsible for master data management strategies, data governance, and cross-system data consistency."
+        "label": "Enterprise architects",
+        "description": "You plan master data management, governance, and consistent data models across systems."
       },
       {
-        "label": "Senior Developers",
-        "description": "Developers who design data models, write Bulk API integrations, and optimize SOQL queries for high-volume orgs."
+        "label": "Senior Salesforce developers",
+        "description": "You build integrations and data models and need to make sound choices for high-volume orgs."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Data Architect Exam Hard?",
-    "summary": "The Platform Data Architect exam covers data modeling, master data management, Salesforce data management, governance, large data volumes, and migration. Preparation should include the official objectives and the design trade-offs relevant to each domain.",
+    "heading": "How challenging is the Platform Data Architect exam?",
+    "summary": "The exam spans data modeling, master data management, Salesforce data management, governance, large data volumes, and migration. Preparation means learning the published objectives and explaining the trade-offs among design choices.",
     "bullets": [
-      "<strong>60 scored questions</strong> plus up to five unscored questions.",
-      "<strong>105 minutes</strong> and a <strong>58% passing score</strong>, according to Salesforce's exam guide.",
-      "<strong>Six weighted domains</strong> cover data modeling, MDM, Salesforce data management, governance, large data volumes, and migration.",
-      "<strong>Exam fee</strong>: US$400; retake fee: US$200, plus applicable taxes. Prerequisite: none."
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>58% to pass</strong>, which is 35 correct answers out of 60.",
+      "<strong>Six weighted domains:</strong> data modeling, MDM, Salesforce data management, governance, large data volumes, and migration.",
+      "<strong>Exam fee:</strong> US$400; retake fee: US$200, plus applicable taxes. Prerequisite: none."
     ],
-    "passRateGuidance": "Book the exam when you can explain skinny tables vs. custom indexes from memory, diagram a multi-system migration load order, and choose the right MDM pattern for a given scenario."
+    "passRateGuidance": "Practice explaining when a custom index, skinny table, or archive strategy fits. Also plan a parent-to-child migration and choose an MDM approach for records with conflicting values."
   },
   "examFormat": {
-    "heading": "Data Architect Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Use the published exam objectives to guide preparation across the six weighted domains; practice explaining the trade-offs among appropriate data architecture options.",
+    "heading": "Platform Data Architect exam format",
+    "intro": "The exam is proctored online or in person. Use the published objectives to guide preparation across all six domains.",
+    "scenarioPercent": "Questions ask you to choose an architecture for a data model, migration, governance, or performance requirement. Be ready to compare options and explain the trade-offs.",
     "bestWayToPass": [
-      "<strong>Know your LDV toolkit:</strong> Skinny tables, custom indexes, Async SOQL, Big Objects, and archiving strategies, know exactly when each applies and what it costs.",
-      "<strong>Master the migration sequence:</strong> Understand parent-before-child load order, external ID upsert, Bulk API 2.0 limits, and rollback strategies for failed loads.",
-      "<strong>Study MDM patterns:</strong> Compare approaches for golden records, attribute survivorship, data consolidation, and traceability.",
-      "<strong>Review data governance:</strong> Consider privacy, classification, protection, stewardship, and enterprise governance requirements."
+      "<strong>Review the large data volume tools:</strong> Understand custom indexes, skinny tables, Async SOQL, Big Objects, and archiving, including each option’s limits.",
+      "<strong>Plan migrations carefully:</strong> Review parent-first loading, external ID upserts, Bulk API 2.0, and recovery plans for failed loads.",
+      "<strong>Compare MDM patterns:</strong> Study golden records, field survivorship, consolidation, and traceability.",
+      "<strong>Include governance:</strong> Consider privacy, classification, protection, stewardship, and enterprise policy in each design."
     ]
   },
   "expertInsight": "Use Salesforce's published exam objectives as the study scope. For large-data-volume and migration topics, compare design options against the stated access patterns, operational needs, and data-management requirements; do not assume one technique fits every scenario.",
   "certificationCard": {
     "code": "Data Architect",
-    "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You’ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs. The exam is 60 scored questions in 105 minutes, with a 58% pass mark, weighted towards Data Modeling/Database Design and Salesforce Data Management (25% each).",
+    "description": "This exam covers Salesforce data modeling, data management, governance, migration, and large data volume design. Review when Big Objects, skinny tables, custom indexes, and MDM patterns fit. The guide also allows up to five unscored questions. The exam is 60 scored questions in 105 minutes, with a 58% pass mark, weighted towards Data Modeling/Database Design and Salesforce Data Management (25% each).",
     "examDetails": {
       "questions": 60,
       "passingScore": "58%",
@@ -59,59 +59,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Data Architect: Key Concepts for the Exam",
+    "h2": "Platform Data Architect: core concepts",
     "blocks": [
       {
-        "heading": "Data Modeling: Objects, Relationships, and Big Objects",
-        "body": "Compare standard and custom objects, external objects, and big objects against the required data model and access patterns. Big Object SOQL queries are constrained by the big object's index fields. Platform Events provide a schema-defined event mechanism. These topics align with the published data-model and large-data-volume objectives."
+        "heading": "Data Models, Relationships, and Big Objects",
+        "body": "Choose standard or custom objects, external objects, and Big Objects based on the data and access pattern. Relationship types affect how records relate and how users access them. Big Objects support high-volume historical data, and queries are constrained by the configured index fields. Platform Events provide a schema-defined way to publish event messages. Evaluate each choice against the workload and published platform limits."
       },
       {
-        "heading": "Master Data Management and Deduplication",
-        "body": "MDM design considers golden records, attribute survivorship, consolidation of source data, and traceability. Salesforce Matching Rules identify possible duplicates; Duplicate Rules specify how matching records are handled. External IDs can support upsert and cross-system record matching. These topics align with the published MDM objectives."
+        "heading": "Master Data Management and Duplicate Control",
+        "body": "Master data management defines how systems identify important entities, resolve duplicates, and maintain trusted values. A golden record can be assembled using survivorship rules that select values by source trust or recency. Salesforce Matching Rules find records that may be duplicates; Duplicate Rules control what happens when a match is found. External IDs can support upserts and cross-system references. Design for traceability so teams can understand where values came from."
       },
       {
-        "heading": "Data Migration: Bulk API and Integration Patterns",
-        "body": "Bulk API 2.0 is an asynchronous option for ingesting and querying large data sets; it manages ingest batches automatically. Data Loader supports SOAP, Bulk API, and Bulk API 2.0, with the API selected through its settings rather than a fixed 200-record automatic threshold. Choose a loading approach based on data volume, transformations, latency, and operational requirements."
+        "heading": "Migration and Integration",
+        "body": "Choose a migration method based on data volume, transformation needs, latency, and operations. Bulk API 2.0 supports asynchronous processing of large data loads and manages batches. External IDs support upsert and relationships across systems. Load parent records before dependent children when relationships require them. Plan validation, error handling, retries, and rollback or recovery before the migration begins."
       },
       {
         "heading": "Data Quality and Governance",
-        "body": "Data governance covers identifying, classifying, and protecting personal and sensitive information, as well as enterprise governance practices. Validation Rules, Duplicate Rules, Matching Rules, and field-history features are platform tools to evaluate against the organization's data-quality, privacy, and audit requirements."
+        "body": "Governance sets expectations for data ownership, quality, privacy, classification, and protection. Validation Rules can reject values that fail business checks. Matching and Duplicate Rules help manage duplicate records, while field history features can support audit needs when configured. Select the controls that meet the organization’s policies and make ongoing stewardship part of the design."
       },
       {
-        "heading": "Large Data Volumes: Performance and Archiving",
-        "body": "Large Data Volume (LDV) design weighs model scalability and query performance against archiving, purging, and virtualized data options. Salesforce's query optimizer decides whether an index is useful for a query; custom indexes and skinny tables address different performance needs. Use Salesforce's current platform guidance when assessing a specific workload."
+        "heading": "Large Data Volumes and Performance",
+        "body": "At large scale, query selectivity, indexing, data growth, and archive strategy all affect performance. The query optimizer decides whether an available index is useful for a particular query. Custom indexes can support selective filters; skinny tables address certain query performance needs. Big Objects and external data options can support some historical or high-volume use cases. Follow current Salesforce guidance for the specific workload rather than assuming one tool fits every query."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Data Architect Exam",
-    "intro": "The Data Architect exam tests expertise in designing Salesforce data models, managing data quality, and planning data migration. Focus on relationship types, storage limits, archiving strategies, and master data management.",
+    "h2": "How to prepare for the Platform Data Architect exam",
+    "intro": "Start with the requirement and constraints: record relationships, data volume, latency, ownership, privacy, and recovery. Use them to narrow the architecture choices.",
     "blocks": [
       {
-        "heading": "Advanced Data Modeling",
-        "body": "Know when to use lookup, **master-detail**, hierarchical (self-referential), and external relationships. Understand **junction objects**, indirect lookup fields, and how relationship type affects roll-up summaries, cascade delete, and record access."
+        "heading": "Select the Relationship Type",
+        "body": "Compare lookup, master-detail, self-referential, and external relationships. Consider required parentage, roll-up needs, deletion behavior, and access implications."
       },
       {
-        "heading": "Large Data Volume (LDV) Strategies",
-        "body": "Know how to handle LDV: skinny tables, custom indexes, selective queries, division archiving, and big objects. Understand what causes a full table scan and how to prevent query timeouts."
+        "heading": "Design for Growth",
+        "body": "Review query selectivity, indexes, skinny tables, Big Objects, and archiving. Choose based on the access pattern and platform limits."
       },
       {
-        "heading": "Data Quality & Duplicate Management",
-        "body": "Know **Duplicate Rules**, Matching Rules, and how they interact. Understand how to use Data.com clean rules (legacy knowledge), field validation, and data stewardship processes for ongoing data quality."
+        "heading": "Build Data Quality Controls",
+        "body": "Use matching and duplicate controls to detect and handle repeats. Combine validation and stewardship processes with governance requirements."
       },
       {
-        "heading": "Data Migration Architecture",
-        "body": "Plan migration using **external IDs** (upsert strategy), parent-before-child load order, and the appropriate API (**Bulk API** for volume, REST for real-time). Understand data validation and rollback strategies."
+        "heading": "Plan the Migration",
+        "body": "Use external IDs where needed, load parent records before dependent children, and select an API that matches volume and latency. Include validation, error handling, and recovery."
       },
       {
-        "heading": "Master Data Management",
-        "body": "Know MDM patterns: Registry, Consolidation, and Coexistence. Understand how to implement a golden record strategy, handle conflicting records, and synchronize master data across systems."
+        "heading": "Resolve Master Data",
+        "body": "Compare registry, consolidation, and coexistence patterns. Define how a golden record is chosen, how conflicting attributes are resolved, and how source history is retained."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "heading": "Related credentials for Platform Data Architects",
+    "intro": "Continue with a Salesforce architecture credential or a role-focused data and integration specialization.",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -167,243 +167,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "An org is querying a custom object with 40 million records through a SOQL query that filters on a non-indexed custom field, and the query is timing out. What is the most appropriate fix?",
+      "question": "A custom object with tens of millions of rows is timing out because its query filters on a non-indexed field. What should the architect evaluate first?",
       "options": [
-        "Add a custom index on the filtered field so the query optimizer can use selective filtering",
-        "Switch the object to a Big Object, since Big Objects remove all query timeout limits",
-        "Enable a skinny table on the object, since skinny tables accelerate filtered WHERE-clause lookups",
-        "Increase the org's API request limit to give the query more time to complete"
+        "Index the filter field when the query is selective",
+        "Increase the API request limit so the query can run longer",
+        "Move the object to a Big Object to remove query time limits",
+        "Enable a skinny table because it indexes every filtered field"
       ],
       "correctAnswer": 0,
-      "explanation": "A custom index on the filtered field lets the query optimizer treat the filter as selective, avoiding a full table scan. Skinny tables help reporting/read-heavy joins by excluding soft-deleted rows and reducing columns, not WHERE-clause selectivity, and Big Objects don't eliminate timeouts, they trade standard query capability for scale. API limits are unrelated to query execution time.",
+      "explanation": "A custom index may help the optimizer use a selective filter, provided the query and field meet platform requirements.",
       "whyWrong": [
-        "Big Objects support only indexed-field queries themselves and are a different storage tier, not a drop-in timeout fix for a standard custom object.",
-        "Skinny tables improve reporting and list-view style reads by denormalizing and excluding soft-deletes; they don't make an unindexed WHERE-clause filter selective.",
-        "API request limits govern call volume, not how long a single SOQL query is allowed to scan before timing out."
+        "API request limits do not make an unselective database query faster.",
+        "Big Objects have query constraints and do not remove all time limits.",
+        "Skinny tables are not a general-purpose index for every filtered field."
       ]
     },
     {
-      "question": "Which consideration is critical when designing for large data volumes?",
+      "question": "Which set of concerns matters when designing for large data volumes?",
       "options": [
-        "Only field count",
-        "Governor limits, indexing, and query optimization",
-        "Only page layout",
-        "Only reports"
+        "Only the number of fields on the object",
+        "Governor limits, indexing, and query selectivity",
+        "Page layout complexity alone",
+        "The number of reports, without considering query patterns"
       ],
       "correctAnswer": 1,
-      "explanation": "Large data volumes require attention to governor limits, indexing, and query optimization.",
+      "explanation": "Large-volume designs must account for platform limits, indexes, and how selective the queries will be.",
       "whyWrong": [
-        "'Only field count' oversimplifies LDV design, which centers on governor limits, indexing, and query optimization, not just field count.",
-        "'Only page layout' is a UI concern, unrelated to large data volume performance design.",
-        "'Only reports' is a display concern, unrelated to the underlying data volume performance strategy."
+        "This combines key performance and scale considerations.",
+        "Field count alone does not determine whether a large-volume query will perform well.",
+        "Page layouts do not address query selectivity or data volume."
       ]
     },
     {
-      "question": "A team needs to load 15 million new records into a custom object overnight using Bulk API 2.0, and batches are failing with lock contention on a shared parent account record. What should the data architect recommend?",
+      "question": "A large Bulk API 2.0 load is causing row locks because many child records update the same parent. What should the team try?",
       "options": [
-        "Switch to PK Chunking so Salesforce splits the job into parallel batches by record ID ranges",
-        "Sort the load file by the parent lookup field so related child records are grouped into the same batch",
-        "Disable all validation rules on the object for the duration of the load",
-        "Reduce the batch size to 1 to avoid any possibility of row locking"
+        "Enable PK Chunking so updates to the shared parent run in parallel",
+        "Disable all validation rules for the whole migration",
+        "Group load rows by parent lookup",
+        "Reduce every batch to one record"
       ],
-      "correctAnswer": 1,
-      "explanation": "Lock contention during a bulk load typically comes from multiple parallel batches updating child records under the same parent at once. Grouping related child records so they land in the same batch (or serializing the load) avoids concurrent writes under one parent. PK Chunking is for extracting/querying large existing datasets, not for solving lock contention on inserts, and it doesn't control which records land in which batch by parent.",
+      "correctAnswer": 2,
+      "explanation": "Grouping records by parent can help organize processing and reduce concurrent updates to the same parent, subject to the load design.",
       "whyWrong": [
-        "PK Chunking splits large SOQL query jobs by record-ID range for extraction, it does not control batch composition on an insert job or resolve parent-record lock contention.",
-        "Disabling validation rules changes data quality enforcement, not the parallel-batch locking behavior causing the failures.",
-        "A batch size of 1 avoids locking at the cost of making the 15-million-record load far too slow to be practical; it isn't the recommended fix for this scenario."
+        "PK Chunking splits work by record ranges and may not solve contention on a shared parent.",
+        "This helps keep related updates together and can reduce locking contention.",
+        "Disabling every validation rule may undermine data quality and does not directly resolve parent locks."
       ]
     },
     {
-      "question": "Which relationship type should be used when the child must always belong to a parent?",
+      "question": "A child record must always have a parent, and it should inherit key access and lifecycle behavior from that parent. Which relationship is appropriate?",
       "options": [
         "Lookup",
-        "Master-Detail",
-        "External Lookup",
-        "Indirect Lookup"
+        "External lookup",
+        "Indirect lookup",
+        "Master-detail"
       ],
-      "correctAnswer": 1,
-      "explanation": "Master-Detail enforces ownership and cascade delete; child cannot exist without parent.",
+      "correctAnswer": 3,
+      "explanation": "A master-detail relationship requires a parent and ties key access and lifecycle behavior to that parent.",
       "whyWrong": [
-        "Lookup relationships allow the child to exist without a parent, the opposite of what's needed here.",
-        "External Lookup connects to external system data, not a strict parent-child requirement.",
-        "Indirect Lookup is used for external objects matching on specific fields, not enforcing a required parent."
+        "A lookup can allow a child record to exist without a parent.",
+        "This relationship type fits the required parent dependency.",
+        "External and indirect lookups link to external records rather than enforcing this standard parent relationship."
       ]
     },
     {
-      "question": "What does data archiving strategy involve?",
+      "question": "What does an archiving strategy address?",
       "options": [
-        "Only backup",
-        "Moving historical data off-platform or to Big Objects while keeping access patterns in mind",
-        "Only delete",
-        "Only export"
+        "Move historical data off-platform and retain required access",
+        "Keeping a second backup in the same object",
+        "Deleting historical data immediately without review",
+        "Exporting records once without defining future retrieval"
       ],
-      "correctAnswer": 1,
-      "explanation": "Archiving involves moving historical data while preserving access and compliance.",
+      "correctAnswer": 0,
+      "explanation": "Archiving moves older data from active storage while considering how it may need to be accessed later.",
       "whyWrong": [
-        "'Only backup' undersells archiving strategy; which also considers ongoing access patterns, not just backup.",
-        "'Only delete' misrepresents archiving, which is about retaining accessible historical data, not deleting it outright.",
-        "'Only export' undersells archiving strategy, which is broader than simple export."
+        "A backup alone does not reduce active data volume or define archive access.",
+        "Immediate deletion may violate retention or business needs.",
+        "A one-time export does not define ongoing retention or retrieval."
       ]
     },
     {
-      "question": "What is a Big Object in Salesforce?",
+      "question": "What is a Salesforce Big Object designed to support?",
       "options": [
-        "A standard object",
-        "A custom object optimized for high-volume, append-only historical data",
-        "A report type",
-        "A dashboard"
+        "A standard CRM record with a large set of page layouts",
+        "High-volume, append-oriented historical data",
+        "A report type for joined dashboard data",
+        "A dashboard with very many widgets"
       ],
       "correctAnswer": 1,
-      "explanation": "Big Objects store high-volume historical data with optimized query patterns.",
+      "explanation": "Big Objects support large volumes of data, commonly for historical or archival use cases.",
       "whyWrong": [
-        "A standard object doesn't have Big Object's specific high-volume, append-only optimization.",
-        "A report type is a display configuration, not a data storage mechanism like Big Objects.",
-        "A dashboard visualizes data, it isn't itself a storage mechanism."
+        "Big Objects are not standard CRM objects configured with page layouts.",
+        "Report types are a separate reporting feature.",
+        "Dashboard size is unrelated to Big Objects."
       ]
     },
     {
-      "question": "Which indexing strategy improves SOQL performance?",
+      "question": "Which indexing approach can improve a selective SOQL query?",
       "options": [
-        "No indexing",
-        "Custom indexes on frequently filtered fields and standard indexed fields",
-        "Index all fields",
-        "Only on formula fields"
+        "Avoid indexes on fields used in filters",
+        "Use suitable indexes to support selective filtered queries",
+        "Index filtered fields selectively",
+        "Index formula fields only"
       ],
-      "correctAnswer": 1,
-      "explanation": "Custom indexes on filtered fields improve query performance.",
+      "correctAnswer": 2,
+      "explanation": "Standard and custom indexes can help when the query filters are selective and the index is appropriate.",
       "whyWrong": [
-        "'No indexing' contradicts the fact that indexing strategy directly improves SOQL performance.",
-        "Indexing every field is impractical and doesn't reflect the targeted, selective indexing approach that's actually recommended.",
-        "Limiting indexing only to formula fields ignores the broader set of frequently-filtered fields that benefit from indexing."
+        "Avoiding indexes may leave a selective query without useful access paths.",
+        "This is the appropriate approach, subject to selectivity and platform guidance.",
+        "Indexing every field is not supported or useful as a general strategy."
       ]
     },
     {
-      "question": "Two legacy systems are being consolidated into Salesforce, and the same customer record exists in both with conflicting phone numbers and different last-modified dates. Which MDM approach correctly resolves the golden record?",
+      "question": "Two source systems contain the same customer but disagree on the phone number. How should an MDM design choose the golden record value?",
       "options": [
-        "Always keep the record from whichever system was migrated first",
-        "Apply a survivorship rule, such as most-recently-modified or source-system trust ranking, to pick the winning field value",
-        "Merge both records and leave both phone numbers populated on separate custom fields permanently",
-        "Discard both records and require the customer to re-enter their data"
+        "Keep the value from whichever system was loaded first",
+        "Store both values permanently without selecting a trusted value",
+        "Discard both values and ask the customer to re-enter them",
+        "Apply a survivorship rule using source trust or recency"
       ],
-      "correctAnswer": 1,
-      "explanation": "MDM survivorship rules (most-recent-wins, source trust ranking, or field-level survivorship) are the standard mechanism for deterministically resolving conflicting attribute values into a single golden record.",
+      "correctAnswer": 3,
+      "explanation": "A survivorship rule defines which source value wins, using criteria such as source trust or most recent update.",
       "whyWrong": [
-        "Migration order has no bearing on which source system's data is more trustworthy or current; it isn't a survivorship strategy.",
-        "Permanently storing both conflicting values defeats the purpose of a golden record and pushes the conflict onto downstream consumers instead of resolving it.",
-        "Discarding verified data and re-collecting it from the customer is not a data migration or MDM technique."
+        "Load order is not a reliable business rule for choosing an attribute.",
+        "Keeping both values without a resolution policy does not establish a usable golden record.",
+        "Requiring re-entry discards available source data and does not define MDM behavior."
       ]
     },
     {
-      "question": "Which relationship type allows a child to exist without a parent?",
+      "question": "Which relationship can allow a child record to exist without a parent record?",
       "options": [
-        "Master-Detail",
         "Lookup",
-        "Junction (many-to-many)",
-        "External Lookup"
+        "A junction record may use two parent relationships",
+        "A junction object commonly links two records through relationships",
+        "Indirect lookup"
       ],
-      "correctAnswer": 1,
-      "explanation": "Lookup allows optional parent; child can exist independently.",
+      "correctAnswer": 0,
+      "explanation": "A lookup relationship can be optional, allowing the child record to exist without a linked parent.",
       "whyWrong": [
-        "Master-Detail relationships require the parent to exist, the opposite of what's being asked.",
-        "Junction objects use two master-detail relationships, so children still require parents in that structure.",
-        "External Lookup connects to external system records, which is a different scenario from a standard child-without-parent case."
+        "Master-detail requires a parent record.",
+        "A junction object commonly uses master-detail relationships and is not the general answer here.",
+        "Indirect lookup links external records and does not describe the standard optional parent relationship."
       ]
     },
     {
-      "question": "What is the purpose of a soft delete strategy?",
+      "question": "What is the purpose of a soft-delete approach?",
       "options": [
-        "To permanently remove data",
-        "To mark records as deleted while retaining for compliance or recovery",
-        "To export data only",
-        "To archive only"
+        "Permanently erase data immediately",
+        "Mark deleted but retain for recovery or compliance",
+        "Export records without changing their status",
+        "Move records to an archive and remove all references"
       ],
       "correctAnswer": 1,
-      "explanation": "Soft delete preserves data with a deleted flag for compliance.",
+      "explanation": "Soft deletion marks records as deleted while retaining them for a defined recovery or retention period.",
       "whyWrong": [
-        "Permanently removing data is the opposite of a soft delete, which retains records.",
-        "'To export data only' misrepresents the purpose of soft delete, which is about retention, not export.",
-        "'To archive only' undersells soft delete's specific purpose around compliance and recovery."
+        "Permanent erasure is a hard delete, not a soft delete.",
+        "Exporting data does not change its deletion status.",
+        "Archiving may be part of retention but is not the definition of soft delete."
       ]
     },
     {
-      "question": "Which governor limit affects bulk SOQL in triggers?",
+      "question": "Which synchronous SOQL query limit applies to Apex transactions?",
       "options": [
-        "No limit",
-        "100 SOQL queries per transaction (sync)",
-        "Unlimited",
-        "50 queries"
+        "There is no per-transaction SOQL query limit",
+        "Unlimited queries when using Bulk API",
+        "100 SOQL queries per transaction",
+        "50 SOQL queries per transaction"
       ],
-      "correctAnswer": 1,
-      "explanation": "Synchronous limit is 100 SOQL queries per transaction.",
+      "correctAnswer": 2,
+      "explanation": "A synchronous Apex transaction is subject to a limit of 100 SOQL queries.",
       "whyWrong": [
-        "'No limit' contradicts the fact that Salesforce enforces a specific SOQL governor limit.",
-        "'Unlimited' contradicts the fact that a specific limit (100 for synchronous) exists.",
-        "'50 queries' understates the actual synchronous SOQL limit of 100."
+        "Salesforce enforces a per-transaction query limit.",
+        "Bulk API does not remove Apex transaction governor limits.",
+        "The synchronous limit is not 50 queries."
       ]
     },
     {
-      "question": "What does master data management (MDM) address?",
+      "question": "What problem does master data management address?",
       "options": [
-        "Only reporting",
-        "Single source of truth, deduplication, and data quality",
-        "Only archiving",
-        "Only migration"
+        "Reporting and dashboard layout",
+        "Archiving old records only",
+        "Migrating data without resolving duplicates",
+        "Deduplicate and improve data quality"
       ],
-      "correctAnswer": 1,
-      "explanation": "MDM ensures consistent, clean master data across systems.",
+      "correctAnswer": 3,
+      "explanation": "MDM establishes trusted data through practices such as deduplication, survivorship, and ongoing quality management.",
       "whyWrong": [
-        "'Only reporting' undersells MDM, which is about data quality and single source of truth, not just reporting.",
-        "'Only archiving' misrepresents MDM's actual focus on deduplication and data quality.",
-        "'Only migration' misrepresents MDM's actual focus on ongoing data quality, not just migration."
+        "Reporting layout is not the core purpose of MDM.",
+        "Archiving may support data management but does not establish trusted master records.",
+        "Migration alone does not resolve duplicate or conflicting data."
       ]
     },
     {
-      "question": "Which data type supports high-volume, append-only use cases?",
+      "question": "Which Salesforce data store is suited to high-volume append-oriented historical data?",
       "options": [
-        "Standard object only",
-        "Big Object",
-        "Custom object with triggers",
-        "External object"
+        "A standard CRM object for ordinary transactional records",
+        "A Big Object is intended for very high volumes of historical data",
+        "A custom object with triggers on every insert",
+        "An external object"
       ],
-      "correctAnswer": 1,
-      "explanation": "Big Objects are designed for append-only, high-volume data.",
+      "correctAnswer": 0,
+      "explanation": "Big Objects are designed for very large volumes of data, including append-oriented historical data.",
       "whyWrong": [
-        "A standard object doesn't have the append-only, high-volume optimization Big Objects provide.",
-        "A custom object with triggers doesn't scale the same way as the purpose-built Big Object architecture.",
-        "External objects connect to external data, they aren't the native high-volume append-only storage type being asked about."
+        "Standard objects are not designed specifically for this high-volume archive pattern.",
+        "Custom triggers add processing and do not make a custom object a Big Object.",
+        "External objects expose data stored outside Salesforce rather than storing it in a Big Object."
       ]
     },
     {
-      "question": "What is the benefit of using External Objects?",
+      "question": "What is a benefit of using an external object?",
       "options": [
-        "To replace custom objects",
-        "To query external data without replicating it into Salesforce",
-        "To archive data",
-        "To create reports only"
+        "It replaces all custom objects in the org",
+        "Query external records without copying them",
+        "It archives Salesforce records automatically",
+        "It creates reports without requiring a data source"
       ],
       "correctAnswer": 1,
-      "explanation": "External Objects enable querying external systems in real time.",
+      "explanation": "External objects let users work with data stored outside Salesforce without replicating it into the org.",
       "whyWrong": [
-        "External Objects don't replace custom objects, they serve a different purpose (querying without replication).",
-        "External Objects aren't specifically an archiving mechanism, that's a different, distinct use case.",
-        "External Objects aren't a reporting tool, their benefit is querying live external data without replication."
+        "External objects complement rather than replace custom objects.",
+        "Archiving Salesforce records requires a separate archive design.",
+        "Reports still require an underlying data source."
       ]
     },
     {
-      "question": "Which consideration applies when designing for data volume growth?",
+      "question": "Which design choice helps prepare for growth in data volume?",
       "options": [
-        "Ignore limits",
-        "Archiving strategy, indexing, and query selectivity",
-        "Only backup",
-        "Only export"
+        "Ignore platform limits until performance declines",
+        "Rely only on backups",
+        "Archive data, add useful indexes, and keep queries selective",
+        "Export all data without defining retrieval needs"
       ],
-      "correctAnswer": 1,
-      "explanation": "Data growth requires archiving, indexing, and selective queries.",
+      "correctAnswer": 2,
+      "explanation": "Archiving and selective query design help manage growth while preserving the access the business needs.",
       "whyWrong": [
-        "Ignoring limits contradicts the core consideration needed when designing for data volume growth.",
-        "'Only backup' undersells the broader set of considerations (archiving, indexing, query selectivity) needed for growth planning.",
-        "'Only export' undersells the broader set of considerations needed for data volume growth planning."
+        "Waiting until a problem appears can leave little time to correct architecture.",
+        "Backups do not reduce active data volume or improve query selectivity.",
+        "Exports without a retrieval plan do not form a complete data strategy."
       ]
     }
   ],

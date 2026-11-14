@@ -40,11 +40,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Where do I register for a Salesforce certification exam?',
-    answer: 'Register for Salesforce certification exams through Trailhead Academy (trailheadacademy.salesforce.com). Sign in with your Trailhead account, find your exam, and book either an online proctored session or a testing centre appointment, both delivered via Pearson VUE (OnVUE). Salesforce retired Webassessor/Kryterion registration and delivery in mid-2025. Trailhead Academy stores your exam history, retake vouchers, and score reports.',
+    answer: 'Register through Trailhead Academy (trailheadacademy.salesforce.com). Sign in with your Trailblazer account, find your exam, and book either an online-proctored session through Pearson VUE OnVUE or an onsite appointment at a Pearson VUE testing centre.',
   },
   {
     question: 'Can I take a Salesforce exam online from home?',
-    answer: 'Yes. Salesforce offers online proctored exams delivered through Pearson VUE\'s OnVUE system, booked via Trailhead Academy. You take the exam on your computer with a webcam while the system checks your identity and exam environment. You need a quiet, private room, a working webcam and microphone, a stable internet connection, and government-issued photo ID. Online appointments are available 24/7.',
+    answer: 'Yes. Salesforce offers online-proctored exams through Pearson VUE OnVUE, booked via Trailhead Academy. You take the exam on your computer with a webcam while the system checks your identity and exam environment. You need a quiet, private room, a working webcam and microphone, a stable internet connection, and government-issued photo ID. Check Trailhead Academy for available appointment times.',
   },
   {
     question: 'What ID do I need for a Salesforce exam?',
@@ -52,11 +52,11 @@ const faqItems = [
   },
   {
     question: 'How far in advance should I book my Salesforce exam?',
-    answer: 'Book 1–2 weeks ahead if you want a better choice of date, time, and format. Online appointments are available 24/7 and may be easier to find than testing centre slots. Some candidates book before they finish studying to give themselves a firm deadline. Pearson VUE allows rescheduling up to 24 hours before the exam without a penalty.',
+    answer: 'Book early if you want a broader choice of date, time, and format. Appointment availability varies by location and delivery type. Review Salesforce’s reschedule and cancellation rules before booking: online appointments require at least 24 hours’ notice, and onsite appointments require at least 48 hours’ notice for free changes.',
   },
   {
     question: 'Can I reschedule or cancel my Salesforce exam?',
-    answer: 'Yes. You can reschedule or cancel through Trailhead Academy up to 24 hours before your appointment without a penalty. Changes made within 24 hours may result in the loss of your exam fee. Check the current Trailhead Academy and Pearson VUE terms when you book, because policies can vary.',
+    answer: 'Yes. Salesforce requires at least 24 hours’ notice for online-proctored exams and 48 hours’ notice for testing-centre exams. Changes made within those windows may result in the loss of your exam fee. See the current Salesforce reschedule and cancellation policy for exceptions and CTA-specific rules.',
   },
 ]
 
@@ -87,9 +87,9 @@ export default function HowToRegisterSalesforceExamPage() {
             { step: '1', title: 'Sign in to Trailhead Academy', desc: 'Go to trailheadacademy.salesforce.com and sign in with your Trailhead account, or create a free one if you don\'t have it yet. Make sure your name matches your government-issued photo ID exactly, to avoid problems on exam day, and use an email address you check often for confirmations and reminders.' },
             { step: '2', title: 'Find your target exam', desc: 'From your Trailhead Academy dashboard, search for your certification, such as Administrator or Platform Developer I. Check that you choose the right exam; some certifications have similarly named options, such as maintenance and initial certification.' },
             { step: '3', title: 'Choose an exam format', desc: 'Choose Online Proctored to take the exam at home or a Testing Centre to take it in person. Online exams require a webcam and a quiet room. Both formats use the same exam content, passing score, and result rules.' },
-            { step: '4', title: 'Select your date and time', desc: 'Choose an appointment that leaves enough time to study. Online appointments are available around the clock, while testing centre availability depends on location. Book at least one week ahead to improve your chance of getting your preferred slot.' },
+            { step: '4', title: 'Select your date and time', desc: 'Choose an available appointment that leaves enough time to study. Testing-centre availability depends on location. Book early if you want a wider choice of slots.' },
             { step: '5', title: 'Complete payment', desc: 'Pay by credit or debit card. If you have a voucher code, such as a retake discount or event voucher, enter it at checkout to adjust the fee. Keep your payment and exam confirmation emails.' },
-            { step: '6', title: 'Prepare for exam day', desc: 'For an online exam, run Pearson VUE\'s OnVUE system check at least 24 hours ahead and prepare a quiet, private room. Have your government-issued photo ID ready. At a testing centre, arrive 15 minutes early and bring two forms of ID. Personal items are not allowed in the exam room.' },
+            { step: '6', title: 'Prepare for exam day', desc: 'For an online exam, run Pearson VUE’s OnVUE system check and prepare a quiet, private room. Have a valid government-issued photo ID that matches your booking. At a testing centre, arrive early and follow the confirmation instructions. Personal items are not allowed in the exam room.' },
           ].map((item) => (
             <div key={item.step} className="flex gap-4">
               <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">{item.step}</div>
@@ -107,7 +107,6 @@ export default function HowToRegisterSalesforceExamPage() {
           <h2 className="text-lg font-bold text-gray-900 mb-3">Online Proctored Exam</h2>
           <ul className="space-y-2 text-sm text-gray-700">
             <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> Take it at home or at work</li>
-            <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> Appointments available 24 hours a day</li>
             <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> More flexible scheduling</li>
             <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> You need a webcam and microphone</li>
             <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> You need a private room without other people or pets</li>
@@ -133,7 +132,7 @@ export default function HowToRegisterSalesforceExamPage() {
           <li>⚠ <strong>Name mismatch:</strong> Your Trailhead Academy account name must exactly match your ID. A difference in your middle name may cause a problem.</li>
           <li>⚠ <strong>Registering through a third-party site:</strong> Book only through trailheadacademy.salesforce.com. Third-party "registration help" sites are not official.</li>
           <li>⚠ <strong>Skipping the system check:</strong> Run Pearson VUE's OnVUE system check at least 24 hours before an online exam.</li>
-          <li>⚠ <strong>Forgetting the retake voucher:</strong> After a failed attempt, check Trailhead Academy for the approximately 50% retake discount before paying full price again.</li>
+          <li>⚠ <strong>Assuming every retake is discounted:</strong> Check the current retake price for your credential. Foundations retakes are free, while Accredited Professional retakes cost the same as the first attempt.</li>
         </ul>
       </div>
 

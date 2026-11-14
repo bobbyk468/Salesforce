@@ -1,47 +1,47 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the MuleSoft Catalyst Consultant exam for?",
+    "heading": "Who should take the MuleSoft Catalyst Consultant exam?",
     "personas": [
       {
         "label": "MuleSoft consultants",
-        "description": "You deliver integration projects using the Catalyst methodology and want the credential to validate your advisory and delivery expertise."
+        "description": "You advise on integration programs and want to validate your skills using Catalyst methods to guide delivery."
       },
       {
-        "label": "Delivery leads and programme managers",
-        "description": "You manage MuleSoft engagements and want to demonstrate mastery of the Land-Expand-Engage maturity model."
+        "label": "Delivery leads and program managers",
+        "description": "You coordinate MuleSoft engagements and want to assess adoption and organizational maturity."
       },
       {
         "label": "Solution architects",
-        "description": "You bridge the gap between business requirements and MuleSoft platform capabilities and need to certify your Catalyst methodology skills."
+        "description": "You connect business goals to integration architecture and want to demonstrate your consulting approach."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the MuleSoft Catalyst Consultant Exam Hard?",
-    "summary": "MuleSoft Catalyst Consultant is moderately difficult. Unlike the developer or architect exams, this certification focuses on methodology, business outcomes, and organizational change, topics that require consulting experience rather than purely technical knowledge.",
+    "heading": "How challenging is the MuleSoft Catalyst Consultant exam?",
+    "summary": "The exam focuses on consulting method, business outcomes, and organizational change. It tests whether you can assess an integration program and recommend practical next steps, as well as whether you understand MuleSoft technology.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>70% passing score</strong>: roughly 41 correct answers needed.",
-      "<strong>Methodology focus</strong>: the exam tests the four Catalyst pillars (Organization, Technology, Delivery, Engagement) and the Land-Expand-Engage maturity model rather than deep technical implementation.",
-      "<strong>Business context</strong>: candidates must know how to measure integration ROI, present value to executives, and design C4E operating models."
+      "<strong>45 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 32 correct answers out of 45.",
+      "<strong>Methodology focus:</strong> Study the Catalyst pillars and the Land, Expand, Engage progression.",
+      "<strong>Business context:</strong> Be able to connect reuse, enablement, and delivery to measurable outcomes."
     ],
-    "passRateGuidance": "Complete MuleSoft’s Catalyst methodology training and gain experience on at least one Catalyst-style engagement before booking. Score 80%+ on practice exams to account for methodology-specific nuances."
+    "passRateGuidance": "Study the Catalyst learning materials and practice explaining how a specific integration initiative supports a business outcome. Aim for at least 80% on practice questions and be ready to assess a customer’s current maturity and propose a next step."
   },
   "examFormat": {
-    "heading": "MuleSoft Catalyst Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 45–55% of questions are scenario-based. Common patterns include assessing an organization’s integration maturity, recommending the next Catalyst phase, designing a C4E operating model, and calculating API reuse metrics to justify platform investment.",
+    "heading": "MuleSoft Catalyst Consultant exam format",
+    "intro": "The exam is proctored online or in person. Questions cover consulting and program design for integration initiatives.",
+    "scenarioPercent": "Some questions describe an organization’s integration maturity, delivery approach, or adoption challenge and ask which Catalyst action would best help.",
     "bestWayToPass": [
-      "<strong>Learn the four Catalyst pillars:</strong> Know Organization (C4E, governance), Technology (platform architecture, reuse), Delivery (agile sprints, definition of done), and Engagement (stakeholder alignment, value communication) in detail.",
-      "<strong>Master the Land-Expand-Engage model:</strong> Understand what success looks like in each phase and how to guide an organization from pilot to self-sustaining API economy.",
-      "<strong>Study C4E design:</strong> Know how to establish a Center for Enablement, team structure, funding model, success metrics (reuse rate, time-to-first-API, developer NPS).",
-      "<strong>Quantify business value:</strong> Practice measuring integration ROI, time saved through reuse, reduced integration costs, and faster time-to-market, and presenting these metrics to executive stakeholders."
+      "<strong>Learn the Catalyst pillars:</strong> Understand Organization, Technology, Delivery, and Engagement and how they support a successful program.",
+      "<strong>Use the maturity model:</strong> Know how Land, Expand, and Engage can guide a customer from an initial outcome to broader adoption.",
+      "<strong>Design a Center for Enablement:</strong> Review operating models, governance, asset reuse, and measures of enablement.",
+      "<strong>Connect activity to value:</strong> Measure outcomes such as reuse, reduced delivery time, and adoption rather than counting APIs alone."
     ]
   },
   "certificationCard": {
     "code": "Catalyst",
-    "description": "This exam tests the MuleSoft Catalyst methodology: standing up a Center for Enablement, driving API reuse across teams, measuring integration ROI, and guiding organizations through the Land-Expand-Engage maturity model.",
+    "description": "This exam covers the MuleSoft Catalyst methodology, including Centers for Enablement, API reuse, integration outcomes, and the Land, Expand, Engage maturity model. The listed exam details include a 70% passing score; confirm current timing and exam availability in official materials.",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",
@@ -57,59 +57,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "MuleSoft Catalyst Consultant: Key Concepts for the Exam",
+    "h2": "MuleSoft Catalyst Consultant: core concepts",
     "blocks": [
       {
-        "heading": "Catalyst Methodology: Land, Expand, Engage",
-        "body": "Catalyst is MuleSoft's customer success methodology for driving API-led adoption. Land phase: establish the platform, deliver a pilot integration, demonstrate value. Expand phase: increase the number of teams using the platform, publish reusable assets to Exchange, grow the API portfolio. Engage phase: measure adoption metrics, demonstrate ROI, build a self-sustaining API economy. The Catalyst Consultant guides customers through this maturity model, assessing where they are and what the next expansion step looks like."
+        "heading": "Catalyst and the Land, Expand, Engage Model",
+        "body": "Catalyst is a methodology for helping organizations adopt API-led connectivity and deliver business outcomes. Land establishes the platform and proves value through an initial use case. Expand grows adoption, reusable assets, and the API portfolio across teams. Engage measures results and supports a sustainable integration program. A consultant assesses where the organization is and recommends a realistic next step."
       },
       {
-        "heading": "Enterprise Architecture Assessment",
-        "body": "The Catalyst Consultant conducts a current-state assessment of the customer's integration landscape, existing tools (ESB, custom code, point-to-point), API maturity, team structure. The target architecture defines the future state, which integration patterns, which deployment model, which governance model. Gap analysis identifies the roadmap: what to retire, migrate, or build. The consultant aligns the technical architecture with the customer's business strategy, not just solving integration problems but enabling new digital products and business models."
+        "heading": "Assess the Current and Target Architecture",
+        "body": "Start with the current integration landscape: systems, point-to-point links, existing middleware, data flows, team responsibilities, and pain points. Define a target architecture that supports the desired outcomes and technical constraints. The recommendation should address migration steps, governance, reuse, security, and how teams will operate the platform."
       },
       {
-        "heading": "API Programme Strategy",
-        "body": "API product management treats APIs as products, with versioning strategy, lifecycle management, deprecation policies, and consumer engagement. The consultant helps the customer define: who the API consumers are (internal teams, partners, developers), how APIs are discovered (developer portal), and how they are monetised or governed. Versioning strategy: URI versioning (/v1/, /v2/) vs header versioning. Breaking vs non-breaking changes, the consultant defines the breaking change policy and communication plan."
+        "heading": "The Four Catalyst Pillars",
+        "body": "Organization covers team structure, sponsorship, operating models, and governance. Technology covers platform architecture, APIs, and reusable assets. Delivery covers how teams plan, build, test, and release work. Engagement covers stakeholder alignment, communication, and adoption. A balanced program considers all four pillars rather than treating integration as a technology-only effort."
       },
       {
-        "heading": "Centre for Enablement Operating Model",
-        "body": "The Centre for Enablement (C4E) is the internal team that drives platform adoption. C4E responsibilities: create and publish reusable API templates and connector patterns, provide training and office hours, measure adoption, and enforce governance. The Catalyst Consultant helps establish the C4E, defining the team structure, funding model (platform team budget vs project team allocation), success metrics (asset reuse rate, time-to-first-API, developer NPS). The exam tests C4E design principles and adoption success metrics."
+        "heading": "Center for Enablement",
+        "body": "A Center for Enablement (C4E) helps teams adopt shared practices and reusable APIs. Its operating model may include enablement roles, governance, platform support, and a way for teams to contribute assets. Measure effectiveness through whether teams use and improve shared assets, how quickly solutions are delivered, and how well the program supports business goals. The C4E should enable teams rather than become a bottleneck that builds every API."
       },
       {
-        "heading": "Delivery Playbook and Success Metrics",
-        "body": "The Catalyst Delivery Playbook defines: sprint cadence for API development (2-week sprints), definition of done (API spec, implementation, tests, documentation, Exchange publication), and team roles (API product owner, integration developer, platform administrator). Success metrics: Number of APIs published, reuse rate (what % of new APIs reuse existing assets), time-to-market for new integrations, integration incidents (reliability). The Catalyst Consultant uses these metrics to demonstrate programme value and justify platform investment."
+        "heading": "Business Outcomes and Value",
+        "body": "Define outcomes with stakeholders before selecting technical work. Possible measures include reduced delivery time, reuse of existing APIs, integration cost, adoption, and time to market. API counts and training attendance can describe activity, but they do not alone show that the program delivered value. Track indicators tied to the agreed business objective and review them over time."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the MuleSoft Catalyst Consultant Exam",
-    "intro": "The MuleSoft Catalyst Consultant exam tests expertise in using the MuleSoft Catalyst methodology to drive integration program success. Focus on the four pillars: Organization, Technology, Delivery, and Engagement.",
+    "h2": "How to prepare for the MuleSoft Catalyst Consultant exam",
+    "intro": "When a question describes a program challenge, identify whether it concerns organization, technology, delivery, or engagement. Then recommend a measurable next step that supports the customer’s goals.",
     "blocks": [
       {
-        "heading": "Catalyst Methodology Framework",
-        "body": "Know the four Catalyst pillars: Organization (C4E setup, governance), Technology (platform architecture, reuse), Delivery (project delivery, **Agile**), and Engagement (stakeholder alignment, value communication)."
+        "heading": "Apply the Catalyst Pillars",
+        "body": "Assess organization, technology, delivery, and engagement together. A platform change will not succeed without ownership, stakeholder support, and adoption."
       },
       {
-        "heading": "C4E Establishment",
-        "body": "Know how to establish a Center for Enablement: define the operating model, set up Anypoint Exchange for asset sharing, measure reuse metrics (reuse rate, time-to-market improvement), and grow C4E maturity over time."
+        "heading": "Establish a C4E",
+        "body": "Define how the Center for Enablement supports teams, shares assets, governs APIs, and measures reuse without becoming a central delivery bottleneck."
       },
       {
-        "heading": "Value Realization",
-        "body": "Understand how to measure integration ROI: time saved through reuse, reduced integration costs, faster time-to-market, and how to present these metrics to executive stakeholders."
+        "heading": "Measure Outcomes",
+        "body": "Connect KPIs to customer goals, such as time saved through reuse or faster delivery. Do not treat API counts as a substitute for business value."
       },
       {
-        "heading": "Delivery Best Practices",
-        "body": "Know how Catalyst recommends delivering integration projects: discovery workshops, platform health assessment, phased rollout, and how to prioritize use cases using a value/complexity matrix."
+        "heading": "Assess Maturity Before Recommending",
+        "body": "Use the current state to determine whether the next step is to land an initial capability, expand adoption, or engage teams around sustained outcomes."
       },
       {
-        "heading": "Stakeholder Engagement",
-        "body": "Catalyst programs succeed through executive sponsorship and business unit engagement. Know how to identify champions, run enablement sessions, and build the internal community of API practitioners."
+        "heading": "Communicate Trade-offs",
+        "body": "If a customer makes a time-sensitive point-to-point choice, document the decision, its risks, and a path to improve or reuse it later."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "heading": "Related credentials for MuleSoft Catalyst consultants",
+    "intro": "Build on consulting and enablement skills with a MuleSoft developer or architecture credential.",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -165,243 +165,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A client has delivered 40 APIs but teams keep building their own versions of the same thing. What does Catalyst address this with?",
+      "question": "A client has built many APIs, but teams keep creating duplicate versions. What should the Catalyst consultant recommend?",
       "options": [
-        "A single large API that covers every one of the organisation's use cases",
-        "A policy requiring all new projects to be approved by the architecture board",
-        "A Centre for Enablement that curates reusable assets",
-        "A central integration team that builds every API on behalf of the other teams"
+        "Build one large API for every use case",
+        "Require an architecture-board approval for every project",
+        "Create a C4E to curate shared assets",
+        "Have one central team build every API for all other teams"
       ],
       "correctAnswer": 2,
-      "explanation": "A C4E publishes and promotes reusable assets so teams find and use what exists instead of rebuilding it.",
+      "explanation": "A C4E can make useful assets discoverable, support reuse, and help teams adopt shared practices.",
       "whyWrong": [
-        "One monolithic API recreates the problem it was meant to solve.",
-        "Approval gates slow delivery without making assets discoverable.",
-        "A central build team becomes a bottleneck, which is what C4E avoids."
+        "A single API for every use case can become difficult to change and reuse.",
+        "Board approval may govern designs but does not make reusable assets discoverable.",
+        "A C4E curates assets and helps teams find and reuse them."
       ]
     },
     {
-      "question": "What is the purpose of defining business outcomes at the start of a Catalyst engagement?",
+      "question": "Why define business outcomes at the start of a Catalyst engagement?",
       "options": [
-        "They establish which members of staff will sit on the delivery team",
-        "They give the programme a measurable definition of success",
-        "They set the order in which each of the APIs will be built and released",
-        "They determine how many MuleSoft licences the client will need to buy"
+        "To assign delivery team members",
+        "To set measurable criteria for success",
+        "To determine the API build sequence",
+        "To calculate the number of MuleSoft licenses"
       ],
       "correctAnswer": 1,
-      "explanation": "Without agreed outcomes the programme cannot show value, and technical delivery becomes an end in itself.",
+      "explanation": "Clear business outcomes provide measurable goals for the program and guide solution choices.",
       "whyWrong": [
-        "Team composition is a staffing decision.",
-        "Build sequencing is a delivery planning activity.",
-        "Licensing follows from scope rather than from outcome definitions."
+        "Staffing follows the work needed to achieve the outcome.",
+        "This provides measurable criteria for judging program success.",
+        "Build sequence and licensing are implementation decisions, not the purpose of defining outcomes."
       ]
     },
     {
-      "question": "A client measures success purely by the number of APIs built. What is wrong with this?",
+      "question": "A client measures success only by the number of APIs delivered. What is the main weakness of this measure?",
       "options": [
-        "It cannot be reported on without additional Anypoint Platform licensing",
-        "It counts output rather than value delivered",
-        "It excludes the RPA processes the organisation has also built alongside them",
-        "It is impossible to count APIs accurately once there are more than fifty"
+        "It requires additional platform licenses to report",
+        "It counts delivery output rather than business value",
+        "It omits unrelated RPA processes",
+        "It becomes impossible to count after fifty APIs"
       ],
       "correctAnswer": 1,
-      "explanation": "An API that nobody reuses has delivered nothing, so the meaningful measures are consumption, reuse and the business outcome behind them.",
+      "explanation": "API count measures output but does not show whether the APIs improved reuse, cost, speed, or another business outcome.",
       "whyWrong": [
-        "Reporting capability is not the issue.",
-        "Including RPA would still be counting output.",
-        "Counting APIs is easy; it is just the wrong measure."
+        "Licensing does not prevent counting the APIs delivered.",
+        "API count is output, not evidence of value.",
+        "RPA scope is separate from whether API count measures business value."
       ]
     },
     {
-      "question": "What does API-led connectivity propose as the layering of APIs?",
+      "question": "How does API-led connectivity organize API layers?",
       "options": [
-        "Development, testing and production layers aligned to the environments",
-        "Synchronous, asynchronous and batch layers based on how each API behaves",
-        "Internal, external and partner layers divided by who consumes each API",
-        "System, process and experience layers"
+        "Development, test, and production environments",
+        "Synchronous, asynchronous, and batch behaviors",
+        "Internal, external, and partner consumers",
+        "System, Process, and Experience APIs"
       ],
       "correctAnswer": 3,
-      "explanation": "System APIs expose underlying systems, process APIs orchestrate business logic, and experience APIs serve specific consumers.",
+      "explanation": "API-led connectivity uses System, Process, and Experience layers to separate access to systems, business processes, and consumer experiences.",
       "whyWrong": [
-        "Environments are a deployment concern, not an architectural layer.",
-        "Interaction style does not define the layers.",
-        "Audience is a consideration but is not the layering model."
+        "Environments describe deployment stages, not API-led layers.",
+        "These are interaction styles rather than the API-led layers.",
+        "Consumer types do not define the System, Process, Experience model."
       ]
     },
     {
-      "question": "Why does the system layer matter most for reuse?",
+      "question": "Why are System APIs important for reuse?",
       "options": [
-        "It hides the underlying system so consumers are insulated",
-        "It is the layer that business users are able to configure themselves",
-        "It performs better than the other layers because it is closest to the data",
-        "It is the only layer that is permitted to apply any security policies"
+        "They hide underlying system details from consumers",
+        "Business users configure them directly",
+        "They are faster because they run closest to the data",
+        "They are the only APIs allowed to apply security"
       ],
       "correctAnswer": 0,
-      "explanation": "A well-designed system API means a change in the backend does not ripple out to every consumer, which is what makes it genuinely reusable.",
+      "explanation": "System APIs provide a stable interface to a system of record and insulate consumers from its details.",
       "whyWrong": [
-        "System APIs are developer artefacts.",
-        "Performance is not what makes the layer valuable.",
-        "Policies can be applied at any layer."
+        "System APIs insulate consumers from the underlying system.",
+        "Business users do not generally configure System APIs directly.",
+        "Performance depends on implementation; proximity to data is not why this layer supports reuse."
       ]
     },
     {
-      "question": "A consultant finds that the client's APIs are documented only in a wiki nobody reads. What should they recommend?",
+      "question": "A client documents APIs in a wiki that teams rarely use. What should the consultant recommend?",
       "options": [
-        "Appointing someone whose job is to keep the existing wiki up to date",
-        "Moving the documentation into the comments inside each API's source code",
-        "Requiring every developer to read the wiki before starting a new project",
-        "Publishing the assets to Exchange with usable documentation"
+        "Assign someone to keep the same wiki updated",
+        "Put all documentation in source code comments",
+        "Require developers to read the wiki before each project",
+        "Publish the assets in Exchange"
       ],
       "correctAnswer": 3,
-      "explanation": "Discoverability is the point: assets published in Exchange with working examples get found and reused, which a separate wiki does not achieve.",
+      "explanation": "Publishing reusable assets in Exchange with useful documentation makes them easier for teams to discover and adopt.",
       "whyWrong": [
-        "A dedicated editor does not solve discoverability at the point of need.",
-        "Documentation inside source code is invisible to potential consumers.",
-        "Mandating reading does not make the content findable or current."
+        "Updating an unused wiki does not improve discovery.",
+        "Code comments are not a shared, searchable asset catalog.",
+        "Exchange can make reusable APIs easier to discover and use."
       ]
     },
     {
-      "question": "What does a maturity assessment in Catalyst establish?",
+      "question": "What does a Catalyst maturity assessment establish?",
       "options": [
-        "How many integration developers the organisation will need to recruit",
-        "Which release of the Anypoint Platform the client should be running",
-        "Where the organisation is now and what to improve next",
-        "Which of the client's existing systems should be decommissioned first"
+        "How many integration developers to hire",
+        "Which Anypoint Platform release to install",
+        "The current state and the next areas to improve",
+        "Which existing system to decommission first"
       ],
       "correctAnswer": 2,
-      "explanation": "The assessment gives a baseline across capability areas so improvement can be targeted and progress demonstrated.",
+      "explanation": "The assessment identifies where the organization is today and what capabilities or practices should improve next.",
       "whyWrong": [
-        "Headcount follows from the delivery plan.",
-        "Platform versioning is an operational matter.",
-        "System decommissioning is a separate architectural decision."
+        "Hiring is a staffing decision, not the purpose of a maturity assessment.",
+        "The assessment focuses on program capabilities, not only platform version.",
+        "It identifies current maturity and practical next improvements."
       ]
     },
     {
-      "question": "Why is executive sponsorship emphasised in a Catalyst programme?",
+      "question": "Why is executive sponsorship important in a Catalyst program?",
       "options": [
-        "Executives are required to attend each of the delivery team's ceremonies",
-        "Reuse requires behaviour change across teams",
-        "Platform licensing cannot be purchased without an executive signature",
-        "Executives are the people who write the API specifications themselves"
+        "Executives must attend every delivery ceremony",
+        "Reuse depends on teams changing how they work",
+        "Licenses cannot be purchased without an executive signature",
+        "Executives write the API specifications"
       ],
       "correctAnswer": 1,
-      "explanation": "Asking teams to build for reuse rather than for their own immediate deadline is an organisational change, and that needs authority behind it.",
+      "explanation": "Executive support helps teams align priorities and adopt reusable practices across organizational boundaries.",
       "whyWrong": [
-        "Attendance at ceremonies is not the point of sponsorship.",
-        "Procurement is a process detail rather than the reason for sponsorship.",
-        "Specifications are written by architects and developers."
+        "Executives need not attend every delivery ceremony.",
+        "Sponsorship helps teams change practices and reuse assets across boundaries.",
+        "Licensing signatures are not the main reason sponsorship matters."
       ]
     },
     {
-      "question": "A client wants to know the return on their integration investment. What evidence is most convincing?",
+      "question": "A client wants to measure the return on its integration investment. Which evidence is most useful?",
       "options": [
-        "The number of environments the organisation has provisioned to date",
-        "The count of developers who have been trained on the platform so far",
-        "Delivery time saved through reuse of existing assets",
-        "The total number of lines of configuration the team has produced"
+        "The number of environments provisioned",
+        "The number of developers trained",
+        "Time saved through reuse of existing assets",
+        "The number of configuration lines delivered"
       ],
       "correctAnswer": 2,
-      "explanation": "Reuse shortens delivery, and the time and cost avoided on each subsequent project is the clearest financial argument.",
+      "explanation": "Time saved through reuse connects integration work to efficiency and business value.",
       "whyWrong": [
-        "Environment counts are infrastructure, not value.",
-        "Training counts measure investment rather than return.",
-        "Volume of configuration is effort, not return."
+        "Environment count does not show business return.",
+        "Training numbers show activity rather than the value delivered.",
+        "Reuse time savings connect platform investment to efficiency."
       ]
     },
     {
       "question": "What is the role of a KPI in the Catalyst approach?",
       "options": [
-        "It determines the sequence in which the APIs will be decommissioned",
-        "It records the number of defects found during each testing cycle",
-        "It links technical delivery to the agreed business outcome",
-        "It sets the maximum response time permitted for each published API"
+        "Choose the order for decommissioning APIs",
+        "Count defects during each test cycle",
+        "Measure progress toward a business outcome",
+        "Set a maximum API response time"
       ],
       "correctAnswer": 2,
-      "explanation": "KPIs are what connect the work being done to the outcome that justified it, so progress can be shown in business terms.",
+      "explanation": "A KPI tracks progress toward an agreed outcome and helps evaluate whether the program is delivering value.",
       "whyWrong": [
-        "Decommissioning order is a lifecycle decision.",
-        "Defect counts are a quality measure within delivery.",
-        "Response time targets are service level agreements."
+        "KPI measures do not decide API retirement sequence.",
+        "Defect counts alone do not link delivery to a business outcome.",
+        "A KPI tracks progress toward an agreed outcome."
       ]
     },
     {
-      "question": "A team builds an experience API that talks directly to three databases. What is the design problem?",
+      "question": "An Experience API directly accesses three databases. What is the main architectural concern?",
       "options": [
-        "It skips the system layer and couples to the backends",
-        "Experience APIs are technically unable to connect to a database at all",
-        "Three databases exceed the number an API is permitted to connect to",
-        "Experience APIs must always be built before the process APIs are built"
+        "Measure whether teams reuse its assets",
+        "Experience APIs cannot connect to databases under any design",
+        "Three databases exceed a fixed API connection limit",
+        "Experience APIs must always be built before Process APIs"
       ],
       "correctAnswer": 0,
-      "explanation": "Bypassing the system layer means the experience API is tied to backend detail, so every backend change breaks the consumer.",
+      "explanation": "Direct database access couples the Experience API to back-end implementation details and bypasses reusable System APIs.",
       "whyWrong": [
-        "There is no technical bar on database connectivity.",
-        "No such connection limit exists.",
-        "Build order is not the issue; the coupling is."
+        "This avoids coupling the experience directly to back-end details.",
+        "The issue is coupling, not an absolute inability to connect to a database.",
+        "The concern is not a fixed maximum of three connections."
       ]
     },
     {
-      "question": "How should a C4E measure its own effectiveness?",
+      "question": "How should a C4E measure its effectiveness?",
       "options": [
-        "By the size of the team it has managed to build up over time",
-        "By how much its assets are consumed by other teams",
-        "By the number of assets it has published to Exchange in total",
-        "By the number of governance policies it has written and approved"
+        "By the number of staff it employs",
+        "By the use and reuse of its assets by other teams",
+        "By the total number of assets published",
+        "By the number of governance policies approved"
       ],
       "correctAnswer": 1,
-      "explanation": "A C4E exists to enable others, so the measure is whether its assets are actually being used, not how many it has produced.",
+      "explanation": "Adoption and reuse show whether the C4E’s assets help other teams deliver solutions.",
       "whyWrong": [
-        "Team size is an input to the function.",
-        "Publishing volume is output rather than impact.",
-        "Policy count measures bureaucracy rather than enablement."
+        "Team size is not a direct measure of enablement impact.",
+        "Adoption and reuse indicate whether other teams benefit.",
+        "Asset count alone does not show whether assets are used."
       ]
     },
     {
-      "question": "What should a consultant do when a client insists on building a point-to-point integration under time pressure?",
+      "question": "A client insists on a quick point-to-point integration. What should the consultant do?",
       "options": [
-        "Agree it as a conscious trade-off and record the debt",
-        "Refuse to proceed until the client agrees to build it as a system API",
-        "Build it quietly as a system API without telling the client about it",
-        "Escalate to the executive sponsor so the deadline is formally moved"
+        "Record the trade-off and technical debt",
+        "Refuse to proceed until it is redesigned as a System API",
+        "Build a System API without telling the client",
+        "Escalate to executives to move the deadline"
       ],
       "correctAnswer": 0,
-      "explanation": "Deadlines are real, and the honest approach is to name the cost, get it acknowledged, and plan to address it rather than pretending it is free.",
+      "explanation": "Acknowledge the time constraint, document the trade-off and future risks, and identify a path to address them.",
       "whyWrong": [
-        "Blocking delivery over architecture purity damages the relationship.",
-        "Building something other than what was agreed is not transparent.",
-        "Escalating every trade-off exhausts the sponsor's attention."
+        "Documenting the compromise is transparent and preserves a path to address the debt.",
+        "A consultant can record the risk without blocking all delivery.",
+        "Changing the design without telling the client violates the agreed scope."
       ]
     },
     {
-      "question": "Why does Catalyst treat enablement as a continuing activity rather than a one-off?",
+      "question": "Why is enablement a continuing activity rather than a one-time event?",
       "options": [
-        "New teams and people keep arriving and needing support",
-        "The Anypoint Platform changes so often that training expires each quarter",
-        "Assets published to Exchange expire unless they are republished regularly",
-        "Licensing terms require that training is repeated at regular intervals"
+        "New teams and people join and need ongoing support",
+        "Anypoint Platform changes so often that training expires quarterly",
+        "Exchange assets expire unless republished",
+        "Licenses require regular training"
       ],
       "correctAnswer": 0,
-      "explanation": "Capability leaks away as people move and teams form, so enablement has to be ongoing for reuse to persist.",
+      "explanation": "Teams and staff change over time, so ongoing enablement helps people find and use shared practices and assets.",
       "whyWrong": [
-        "Platform change is real but is not the main reason.",
-        "Published assets do not expire on their own.",
-        "Licensing does not mandate recurring training."
+        "Ongoing support helps new teams and staff adopt shared practices.",
+        "Training frequency should reflect real needs, not a fixed quarterly expiry.",
+        "Assets do not expire merely because they were not republished."
       ]
     },
     {
-      "question": "Which best describes what MuleSoft Catalyst is?",
+      "question": "Which statement best describes MuleSoft Catalyst?",
       "options": [
-        "A licensing model that charges according to the number of API calls made",
-        "A set of prebuilt connectors supplied for common enterprise systems",
-        "A testing framework used to validate Mule applications before release",
-        "A delivery approach linking outcomes to capability"
+        "A pricing model based on API calls",
+        "A catalog of prebuilt enterprise connectors",
+        "A test framework for Mule applications",
+        "Outcome-focused delivery methodology"
       ],
       "correctAnswer": 3,
-      "explanation": "Catalyst is the methodology for running an integration programme: establish outcomes, build capability, deliver with reuse, and measure the result.",
+      "explanation": "Catalyst is a methodology for guiding organizations as they build integration capabilities and achieve business outcomes.",
       "whyWrong": [
-        "Catalyst is not a commercial pricing model.",
-        "Connectors are platform components, not a methodology.",
-        "Testing is handled by MUnit."
+        "Catalyst is not a usage-based licensing model.",
+        "Connectors are assets, not the overall methodology.",
+        "MUnit and other tools test applications but are not Catalyst."
       ]
     }
   ]

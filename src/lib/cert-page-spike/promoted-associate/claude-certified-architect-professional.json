@@ -5,41 +5,41 @@
     "personas": [
       {
         "label": "Enterprise AI Architects",
-        "description": "Senior architects who design AI platforms serving multiple teams across geographies, handling multi-region deployments, regulatory compliance, and cross-team cost governance."
+        "description": "You design AI services used by several teams or regions."
       },
       {
         "label": "Security and Compliance Architects",
-        "description": "Architects responsible for end-to-end security design in AI systems, data classification, prompt-injection defense layers, credential management for tool-calling agents, and audit trails for SOC 2, GDPR, and HIPAA."
+        "description": "You work on security, compliance and oversight for agent systems."
       },
       {
         "label": "Platform Engineering Directors",
-        "description": "Technical leaders who own the AI infrastructure budget, set model-routing policies, design observability stacks for multi-agent pipelines, and build self-healing workflows that operate without human intervention."
+        "description": "You lead platform architecture and need to reason about reliability and operating cost."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Claude Certified Architect Professional Exam Hard?",
-    "summary": "The CCAR-P is the hardest exam in Anthropic’s certification program. It is built for senior architects who have designed and operated enterprise-scale AI platforms, not prototypes or single-team deployments. Every question assumes you are balancing competing organizational constraints: compliance requirements that vary by geography, SLAs that differ by use case, six-figure monthly budgets, and multi-agent systems that must self-heal without human intervention. Candidates without genuine enterprise AI architecture experience will find this exam extremely challenging.",
+    "summary": "This page contains independent practice material about enterprise AI architecture, agent orchestration, security, observability and cost controls. The credential details have not been independently confirmed.",
     "bullets": [
-      "<strong>720/1000 passing score</strong>: strong performance across all five domains is required, with no single section easy enough to carry a weak area.",
-      "<strong>Production-scale experience is non-negotiable</strong>: the exam tests decisions that only arise when AI systems serve thousands of users across multiple compliance jurisdictions with real financial consequences."
+      "<strong>Exam details:</strong> Check Anthropic’s current information for availability, eligibility, format, and passing score.",
+      "<strong>Practical experience:</strong> Use production design examples to explore security, scale, costs, and operational trade-offs."
     ],
-    "passRateGuidance": "If you can design a multi-region AI platform with per-team cost attribution. Build a defense-in-depth security architecture for regulated data, and explain when to use competitive evaluation vs. hierarchical agent teams, you are ready to book."
+    "passRateGuidance": "Use these independent notes to practice comparing architecture choices against security, reliability, observability and cost needs. Credential details are unverified; confirm any official requirements independently."
   },
   "examFormat": {
     "heading": "Claude Certified Architect Professional Exam Format Explained",
     "intro": "The exam is proctored online. Here is the format:",
-    "scenarioPercent": "Every question presents an enterprise scenario with specific organizational constraints, regulatory requirements, team structures, budget limits, uptime SLAs, and multi-agent system behaviors. The exam tests strategic architectural judgment: which design serves the organization, not just the immediate technical need.",
+    "scenarioPercent": "The practice scenarios set organizational constraints such as data handling, availability, review and budget; compare designs against those constraints.",
     "bestWayToPass": [
-      "<strong>Think in platforms, not features:</strong> Every answer should serve the enterprise, multiple teams, varying compliance requirements, different SLAs, and fiscal-year budgets, not just the immediate technical problem.",
-      "<strong>Study enterprise security frameworks deeply:</strong> Know how SOC 2 controls apply to AI pipelines, what GDPR means for model inputs and outputs, how HIPAA governs AI-processed health data, and what shared-responsibility looks like with Anthropic.",
-      "<strong>Practice cost modeling with real numbers:</strong> Break down usage by model tier and request type, then calculate savings from intelligent routing, prompt caching, and batch processing, the exam presents similar scenarios with specific dollar amounts.",
-      "<strong>Design monitoring before you need it:</strong> Sketch dashboards for multi-agent production systems, task completion rate, tool-call success ratio, output quality scores, context utilization, and escalation-rate trends, the exam rewards proactive observability thinking."
+      "<strong>Think across teams:</strong> Consider how a design meets different service, governance, and budget needs.",
+      "<strong>Review security and privacy:</strong> Learn how relevant requirements apply to data, model inputs, outputs, and shared responsibilities.",
+      "<strong>Practise cost estimates:</strong> Compare model selection, caching, and batch processing for different workloads.",
+      "<strong>Plan monitoring:</strong> Choose measures for task completion, tool failures, output quality, and escalation."
     ]
   },
   "certificationCard": {
     "code": "CCAR-P",
-    "description": "Independent learning notes and practice questions about Claude Certified Architect – Professional. Credential availability and exam details have not been verified with Anthropic.",
+    "description": "Independent practice material for Claude Certified Architect – Professional. This is not an official Anthropic exam guide; the availability and details of this credential remain unverified.",
     "examDetails": {
       "questions": 65,
       "passingScore": "720/1000",
@@ -58,50 +58,46 @@
     "h2": "Claude Certified Architect Professional: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Architecting AI Platforms for Enterprise Scale",
-        "body": "You need to make decisions about multi-region deployment topology, high-availability patterns, disaster recovery for AI services, and capacity planning for token-based workloads."
+        "heading": "Enterprise Platform Design",
+        "body": "Choose a deployment and data-handling design that meets each team’s regional and availability requirements. Define which policies are common and where controlled differences are allowed."
       },
       {
-        "heading": "Advanced Agent Orchestration",
-        "body": "You may need to spawn agents on the fly based on incoming workload, run competing agents against the same input and pick the best result, manage shared memory across long-running agent sessions, or design hierarchical teams where a senior agent delegates to a squad of specialists."
+        "heading": "Agent Orchestration",
+        "body": "Use parallel or delegated agents when their work can be separated and evaluated. Make state, deadlines and completion conditions explicit so the workflow can recover."
       },
       {
-        "heading": "Security Architecture for AI-Driven Decisions",
-        "body": "Enterprise AI touches regulated data and makes decisions that affect real people. Expect scenario questions where you must choose between architectures that trade off capability for compliance."
+        "heading": "Security and Approval",
+        "body": "Treat retrieved content as untrusted input. Enforce permissions, spending limits and consequential approvals in controls outside the model."
       },
       {
-        "heading": "Observability and Incident Response",
-        "body": "AI systems degrade silently, outputs get worse without throwing errors. You also need to understand chaos engineering applied to AI, deliberately testing what happens when a tool is unavailable, a model returns nonsense, or context corruption occurs mid-conversation."
+        "heading": "Observability and Response",
+        "body": "Trace inputs, tool calls, outputs and termination reasons across steps. Define signals and rollback criteria before deploying changes."
       },
       {
-        "heading": "Cost Governance at Scale",
-        "body": "When AI costs reach six figures per month, governance becomes an architecture concern. Expect questions that ask you to evaluate a current architecture and recommend the optimization that produces the highest cost reduction without degrading quality."
+        "heading": "Cost Governance",
+        "body": "Attribute spend to models, teams or workflows. Use model routing and limits only when evaluation shows quality remains acceptable."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Architect Professional Exam",
-    "intro": "The CCAR-P is designed for architects who have built and operated AI systems in production at enterprise scale. If your experience is limited to prototypes or single-team deployments, earn the CCAR-F first and gain more production exposure before attempting this exam.",
+    "intro": "Separate requirements that must be enforced by the platform from choices that can vary by team or workflow.",
     "blocks": [
       {
-        "heading": "Think in Platforms, Not Features",
-        "body": "Every CCAR-P question assumes enterprise constraints: multiple teams sharing infrastructure, compliance requirements that vary by geography, SLAs that differ by use case, and cost budgets that span fiscal years. When evaluating answers, always ask which option serves the organization, not just the immediate technical need."
+        "heading": "Map non-negotiable controls",
+        "body": "Identify data-residency, access, approval and retention requirements before selecting infrastructure."
       },
       {
-        "heading": "Study Enterprise Security Frameworks",
-        "body": "The security domain goes beyond prompt injection. Study how SOC 2 controls apply to AI pipelines, what GDPR means for model inputs and outputs, how HIPAA governs AI-processed health data, and what a shared-responsibility model looks like when Anthropic hosts the model but you own the data. These compliance questions reward specific knowledge, not general principles."
+        "heading": "Protect consequential actions",
+        "body": "Place authorization checks on the execution path and require human review where the impact warrants it."
       },
       {
-        "heading": "Practice Cost Modeling on Real Numbers",
-        "body": "Take your current or projected AI usage, break it down by model tier and request type, and calculate what intelligent routing, prompt caching, and batch processing would save. The exam presents similar scenarios with specific dollar amounts and asks which optimization has the largest impact. Real arithmetic practice makes these questions fast."
+        "heading": "Instrument each workflow step",
+        "body": "Use traces and evaluation metrics that show where a run stopped or quality changed."
       },
       {
-        "heading": "Design Monitoring Before You Need It",
-        "body": "Sketch the dashboard you would build for a multi-agent production system. What metrics would you track? What thresholds would trigger alerts? What does your incident-response runbook look like when output quality drops 10%? The exam tests this kind of proactive observability thinking, and candidates who have actually built monitoring systems recognize the right answers immediately."
-      },
-      {
-        "heading": "Know Advanced Orchestration Patterns Cold",
-        "body": "Competitive evaluation (two agents. Pick the better result), dynamic agent pools (spawn agents based on load), hierarchical teams (lead agent delegates to specialists), and self-healing loops (detect stalls, diagnose, retry with a new strategy). For each pattern. Know when it applies, what failure modes it introduces, and how to monitor it. The exam tests pattern selection, not implementation syntax."
+        "heading": "Measure cost with quality",
+        "body": "Attribute cost by workflow and test cheaper model routes against the task’s quality bar."
       }
     ]
   },
@@ -155,170 +151,250 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A bank processes 80,000 mortgage applications a month and must satisfy SOC 2 and regional data-residency rules. Which architecture suits it?",
+      "question": "A bank must meet regional data-residency requirements and audit decisions across many applications. Which design addresses both?",
       "options": [
-        "A single model tier, with residency met by contract clause",
-        "Per-team deployments, each setting its own retention policy",
-        "One central endpoint processing applications in sequence",
-        "Regional nodes, task-based model routing"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Residency requires processing inside the region, SOC 2 requires per-decision auditability, and routing by task keeps cost proportionate. All three constraints have to be met at once.",
-      "whyWrong": [
-        "Residency is a technical placement requirement; a contract clause does not satisfy it.",
-        "Letting each team set its own controls makes a consistent compliance claim impossible.",
-        "A single sequential endpoint neither scales to that volume nor keeps data in region."
-      ]
-    },
-    {
-      "question": "What is the main architectural argument for routing simpler steps to a smaller, faster model?",
-      "options": [
-        "Identical inputs are guaranteed identical outputs",
-        "Quality evaluation is no longer needed on those steps",
-        "Smaller models are inherently more secure",
-        "Cost and latency fall while quality stays acceptable"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Routing by task difficulty is the standard lever for cost and latency. It only works if each step is still measured against its own quality bar.",
-      "whyWrong": [
-        "Determinism is not a property you gain by choosing a smaller model.",
-        "Evaluation matters more when you downgrade a step, not less.",
-        "Model size does not determine security posture."
-      ]
-    },
-    {
-      "question": "An agent can approve refunds up to a limit. What is the most important control to design in?",
-      "options": [
-        "A second model confirming the first one's decision",
-        "A check outside the model, on the execution path",
-        "A clearly worded limit in the system prompt",
-        "A daily report of refunds over the limit"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Authorisation limits belong in deterministic code that runs before the refund executes, because that is the only place they cannot be argued around or injected past.",
-      "whyWrong": [
-        "A second model is still a model, with the same class of failure.",
-        "A prompt instruction is guidance and can be overridden by context or by an injection.",
-        "A daily report detects breaches only after money has moved."
-      ]
-    },
-    {
-      "question": "Content inside a customer's uploaded document tells the agent to email its context to an external address. What should the architecture ensure?",
-      "options": [
-        "Documents containing instructions are always refused",
-        "Retrieved content is data; authority comes from elsewhere",
-        "Instructions are honoured if the uploader was authenticated",
-        "The model judges whether the instruction is legitimate"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Tool and document output is untrusted input. Authority has to come from the system and the user, never from the content being processed.",
-      "whyWrong": [
-        "Refusing every document containing imperative text is unworkable and misses the real boundary.",
-        "Authentication proves who uploaded the file, not that its contents carry authority.",
-        "Asking the model to adjudicate trust puts the decision back inside the vulnerable component."
-      ]
-    },
-    {
-      "question": "Which signal best diagnoses a multi-agent workflow that intermittently produces incomplete output?",
-      "options": [
-        "Per-step traces with inputs and termination reasons",
-        "The total count of workflow runs returning an error status",
-        "Aggregate token consumption per day",
-        "Average end-to-end workflow latency"
+        "Regional processing nodes with task-based model routing",
+        "One shared endpoint that processes all applications in sequence",
+        "Separate team deployments with uncoordinated retention",
+        "A single model tier with a residency promise in a contract"
       ],
       "correctAnswer": 0,
-      "explanation": "Intermittent incompleteness is a per-step problem, so you need to see where a step stopped and why it stopped there.",
+      "explanation": "Regional processing supports data-location constraints; task-based routing can select an appropriate model for each stage.",
       "whyWrong": [
-        "Incomplete output often returns success, so error counts will not surface it.",
-        "Daily token totals are a cost signal and will not localise a fault.",
-        "An average hides exactly the intermittent cases you are looking for."
+        "One shared endpoint that processes all applications in sequence is not the best choice because the scenario calls for Regional processing nodes with task-based model routing.",
+        "Separate team deployments with uncoordinated retention is not the best choice because the scenario calls for Regional processing nodes with task-based model routing.",
+        "A single model tier with a residency promise in a contract is not the best choice because the scenario calls for Regional processing nodes with task-based model routing."
       ]
     },
     {
-      "question": "What should trigger a rollback of a prompt change deployed to production?",
+      "question": "Why route simpler tasks to a smaller, faster model?",
       "options": [
-        "An increase in average response length",
-        "Any single user complaint after the change",
-        "A measured regression against the gating evaluation set",
-        "The change having been shipped more than a single sprint ago"
+        "It guarantees identical outputs",
+        "Lower cost and latency",
+        "It removes the need for evaluations",
+        "Smaller models are always more secure"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Routing can reduce cost and latency, but each task still needs a quality bar and evaluation.",
+      "whyWrong": [
+        "It guarantees identical outputs is not the best choice because the scenario calls for It can reduce cost and latency if quality remains acceptable.",
+        "It removes the need for evaluations is not the best choice because the scenario calls for It can reduce cost and latency if quality remains acceptable.",
+        "Smaller models are always more secure is not the best choice because the scenario calls for It can reduce cost and latency if quality remains acceptable."
+      ]
+    },
+    {
+      "question": "An agent can issue refunds up to a limit. Where should the limit be enforced?",
+      "options": [
+        "In a second model’s opinion",
+        "In the system prompt only",
+        "In deterministic code on the execution path",
+        "In a daily report after refunds are issued"
       ],
       "correctAnswer": 2,
-      "explanation": "Prompt changes need the same gating as code: a defined evaluation before deployment, and a rollback when the measurement regresses against it.",
+      "explanation": "A deterministic check before execution prevents a model decision from bypassing the limit.",
       "whyWrong": [
-        "Longer responses are not inherently worse.",
-        "A single complaint is a reason to investigate, not sufficient evidence of regression.",
-        "Elapsed time is not a quality measure."
+        "In a second model’s opinion is not the best choice because the scenario calls for In deterministic code on the execution path.",
+        "In the system prompt only is not the best choice because the scenario calls for In deterministic code on the execution path.",
+        "In a daily report after refunds are issued is not the best choice because the scenario calls for In deterministic code on the execution path."
       ]
     },
     {
-      "question": "A platform serves several teams with different compliance needs. How should model and retention policy be managed?",
+      "question": "An uploaded document tells an agent to send its context to an outside address. What boundary should the architecture enforce?",
       "options": [
-        "Central policy, platform-enforced",
-        "One strictest policy applied to every use case",
-        "Each team sets policy and attests annually",
-        "Policy chosen per request by the calling application"
+        "Refuse every document that contains imperative language",
+        "Trust the instruction if the uploader signed in",
+        "Let the model decide whether the instruction is safe",
+        "Treat document content as data, not as authority"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Retrieved document text is untrusted input; system and user policy determine what actions are authorized.",
+      "whyWrong": [
+        "Refuse every document that contains imperative language is not the best choice because the scenario calls for Treat document content as data, not as authority.",
+        "Trust the instruction if the uploader signed in is not the best choice because the scenario calls for Treat document content as data, not as authority.",
+        "Let the model decide whether the instruction is safe is not the best choice because the scenario calls for Treat document content as data, not as authority."
+      ]
+    },
+    {
+      "question": "A multi-agent workflow sometimes returns incomplete results without an error. What evidence best helps find the failing stage?",
+      "options": [
+        "Step-level traces",
+        "Daily token totals",
+        "Average end-to-end latency",
+        "Count of runs with error status only"
       ],
       "correctAnswer": 0,
-      "explanation": "Central enforcement with bounded per-team configuration is what lets one platform make a consistent compliance claim while staying useful to teams.",
+      "explanation": "Step-level traces show where a run stopped and why, even when the overall run reports success.",
       "whyWrong": [
-        "A uniformly strictest policy makes lower-risk work needlessly slow and expensive.",
-        "Self-attestation gives you neither enforcement nor consistent evidence.",
-        "Per-request policy chosen by callers is unenforceable by definition."
+        "Daily token totals is not the best choice because the scenario calls for Per-step traces with inputs and termination reasons.",
+        "Average end-to-end latency is not the best choice because the scenario calls for Per-step traces with inputs and termination reasons.",
+        "Count of runs with error status only is not the best choice because the scenario calls for Per-step traces with inputs and termination reasons."
       ]
     },
     {
-      "question": "Which approach best controls spend on a platform whose cost is growing faster than usage?",
+      "question": "What should trigger rollback of a prompt update?",
       "options": [
-        "Apply the same flat token cap to every team",
-        "Attribute cost per workflow",
-        "Move all workloads to the smallest available model",
-        "Cap how many workflows each team may run"
+        "Any increase in response length",
+        "Measured evaluation regression",
+        "One user comment regardless of evidence",
+        "The change being older than one sprint"
       ],
       "correctAnswer": 1,
-      "explanation": "Cost outpacing usage points to specific inefficient workflows, which you can only identify once cost is attributed to them.",
+      "explanation": "A defined evaluation can reveal a quality regression and provide a consistent rollback criterion.",
       "whyWrong": [
-        "A flat cap penalises efficient teams and starves legitimate heavy use.",
-        "Downgrading everything trades quality for cost indiscriminately.",
-        "Limiting workflow count does nothing about per-workflow inefficiency."
+        "Any increase in response length is not the best choice because the scenario calls for A measured regression against the gating evaluation set.",
+        "One user comment regardless of evidence is not the best choice because the scenario calls for A measured regression against the gating evaluation set.",
+        "The change being older than one sprint is not the best choice because the scenario calls for A measured regression against the gating evaluation set."
       ]
     },
     {
-      "question": "A long-running agent must survive the loss of the process it runs in. What does the design need?",
+      "question": "Several teams have different compliance needs on one platform. How should policies be managed?",
       "options": [
-        "A duplicate agent running the same task alongside",
-        "More aggressive retries on each tool call",
+        "Let the calling app choose policy on each request",
+        "Let teams set policy without platform controls",
+        "Platform-enforced policy",
+        "Apply the strictest rule to every workflow"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Central enforcement supports consistent controls while allowing only approved differences across teams.",
+      "whyWrong": [
+        "Let the calling app choose policy on each request is not the best choice because the scenario calls for Use central, platform-enforced rules with bounded configuration.",
+        "Let teams set policy without platform controls is not the best choice because the scenario calls for Use central, platform-enforced rules with bounded configuration.",
+        "Apply the strictest rule to every workflow is not the best choice because the scenario calls for Use central, platform-enforced rules with bounded configuration."
+      ]
+    },
+    {
+      "question": "Costs are increasing faster than usage. What should the platform team do first?",
+      "options": [
+        "Set the same token cap for every team",
+        "Move all work to the smallest model",
+        "Limit each team to a fixed workflow count",
+        "Workflow-level cost attribution"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Workflow-level cost attribution helps identify which use cases drive the increase.",
+      "whyWrong": [
+        "Set the same token cap for every team is not the best choice because the scenario calls for Attribute costs by workflow to find the source.",
+        "Move all work to the smallest model is not the best choice because the scenario calls for Attribute costs by workflow to find the source.",
+        "Limit each team to a fixed workflow count is not the best choice because the scenario calls for Attribute costs by workflow to find the source."
+      ]
+    },
+    {
+      "question": "A long-running agent must resume after its process is lost. What does the design need?",
+      "options": [
         "Checkpointed state in durable storage",
-        "A larger context window for the whole task"
+        "More retries on every tool call",
+        "A second identical agent running in parallel",
+        "A larger context window"
       ],
-      "correctAnswer": 2,
-      "explanation": "Surviving process loss requires state held outside the process and steps that can resume from the last completed one.",
+      "correctAnswer": 0,
+      "explanation": "Durable checkpoints let a replacement process resume from completed work rather than start over.",
       "whyWrong": [
-        "A duplicate run doubles cost and creates conflicting side effects.",
-        "Retries handle call failures, not loss of the process itself.",
-        "Context size does not help if the process holding it disappears."
+        "More retries on every tool call is not the best choice because the scenario calls for Checkpointed state in durable storage.",
+        "A second identical agent running in parallel is not the best choice because the scenario calls for Checkpointed state in durable storage.",
+        "A larger context window is not the best choice because the scenario calls for Checkpointed state in durable storage."
       ]
     },
     {
-      "question": "What is the strongest reason to require human approval on a specific agent action?",
+      "question": "When is human approval especially useful for an agent action?",
       "options": [
-        "It is hard to reverse and lands outside the system",
-        "It takes longer to complete than other steps",
-        "It calls more than one tool in a single sequence",
-        "The model reports below-average confidence on it"
+        "When the action takes longer than other steps",
+        "Irreversible external impact",
+        "When it uses several tools",
+        "When model confidence is below average, regardless of impact"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Irreversible actions with external impact justify a human checkpoint before execution.",
+      "whyWrong": [
+        "When the action takes longer than other steps is not the best choice because the scenario calls for When it is difficult to reverse and affects something outside the system.",
+        "When it uses several tools is not the best choice because the scenario calls for When it is difficult to reverse and affects something outside the system.",
+        "When model confidence is below average, regardless of impact is not the best choice because the scenario calls for When it is difficult to reverse and affects something outside the system."
+      ]
+    },
+    {
+      "question": "Failures rise after a tool deployment. What should the operations team inspect first?",
+      "options": [
+        "Increase model randomness and wait to see if the failures disappear",
+        "Disable alerts so operators are not distracted by transient errors",
+        "Review traces and metrics, then compare the failures with deployment changes",
+        "Delete failed request records before reviewing the deployment"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Use traces and metrics to locate the failing component and compare deployment changes.",
+      "whyWrong": [
+        "Randomness does not identify whether the tool deployment caused the failures.",
+        "Disabling alerts hides signals needed to diagnose production impact.",
+        "Removing failure records discards evidence needed for diagnosis."
+      ]
+    },
+    {
+      "question": "A regulated workflow moves data through several services. What architecture practice is appropriate?",
+      "options": [
+        "Map data flows, apply least privilege, and audit service boundaries",
+        "Share one broad credential across services to simplify operations",
+        "Log every sensitive payload in full across all services",
+        "Assume each downstream service applies the same access policy"
       ],
       "correctAnswer": 0,
-      "explanation": "Reversibility and external consequence are what determine whether a human should sit between the decision and its effect.",
+      "explanation": "Map data flows, scope access, and audit controls at service boundaries.",
       "whyWrong": [
-        "Duration has no bearing on how damaging a mistake would be.",
-        "Tool count is unrelated to how consequential an action is.",
-        "Confidence scores are a weak and poorly calibrated basis for such a control."
+        "Broad shared credentials weaken least privilege and accountability.",
+        "Full sensitive payload logs can create unnecessary exposure.",
+        "Services need verified controls; policy consistency cannot be assumed."
+      ]
+    },
+    {
+      "question": "Workflow costs rise sharply with volume. What should the team do?",
+      "options": [
+        "Use the highest-capability model for every workflow step",
+        "Measure costs by stage and optimize the largest contributors",
+        "Disable cost monitoring and wait for monthly billing",
+        "Retry failed work without a limit to avoid losing requests"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Measure token, tool, and retry costs by stage, then optimize the largest drivers.",
+      "whyWrong": [
+        "That may raise cost further without evidence that each step needs it.",
+        "Delayed visibility makes it harder to find the cause of rising spend.",
+        "Unbounded retries can increase costs and create additional load."
+      ]
+    },
+    {
+      "question": "A production workflow must keep serving when one model endpoint is unavailable. What should it include?",
+      "options": [
+        "A hidden alternate endpoint that has never been exercised",
+        "Unbounded synchronous retries against the unavailable endpoint",
+        "A promise to users that service outages cannot happen",
+        "A tested fallback or degraded mode with clearly defined limits"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A tested fallback or graceful-degradation path with explicit limits.",
+      "whyWrong": [
+        "An untested fallback may fail when the primary endpoint is unavailable.",
+        "Repeated synchronous retries can worsen latency and still fail.",
+        "A promise does not provide a technical continuity strategy."
+      ]
+    },
+    {
+      "question": "An agent workflow is moving from pilot to production. What should readiness include?",
+      "options": [
+        "Remove evaluation cases to reduce launch preparation time",
+        "Rely on informal approval without operational ownership",
+        "Define evaluation, monitoring, rollback conditions, and owners",
+        "Grant every component unrestricted access to avoid launch delays"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Evaluation criteria, monitoring, rollback conditions, and named operational owners.",
+      "whyWrong": [
+        "Removing evaluation weakens evidence about quality and regressions.",
+        "Informal approval does not define who monitors or responds to incidents.",
+        "Unrestricted access increases risk and does not establish readiness."
       ]
     }
   ],
   "introLead": [
     {
       "type": "text",
-      "text": "Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified."
+      "text": "This page provides independent architect-level practice. The certification program has been announced, but details for this specific professional exam are not verified."
     }
   ]
 }

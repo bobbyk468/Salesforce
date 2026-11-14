@@ -21,8 +21,8 @@
     "heading": "How to Prepare for the Exam",
     "summary": "The exam covers the Field Service and Operations consultant role. The largest listed domains are Managing Scheduling and Optimization (28%) and Managing Work Orders (23%). Review every domain in the current guide.",
     "bullets": [
-      "<strong>Exam format:</strong> 60 scored multiple-choice or multiple-select questions in 105 minutes; up to five unscored questions may also appear.",
-      "<strong>Passing score:</strong> 63%; No pass-rate figure is stated in the exam guide reviewed.",
+      "<strong>60 scored questions</strong> in 105 minutes, plus up to five unscored questions that do not count.",
+      "<strong>63% to pass</strong>, which is 38 correct answers out of 60.",
       "<strong>Prerequisites:</strong> Hold both Platform Administrator and Agentforce Service Consultant credentials.",
       "<strong>Topics to review:</strong> Work orders, resources, scheduling, mobile work, inventory, assets, maintenance, and access."
     ],

@@ -44,19 +44,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How much does a Salesforce certification cost?',
-    answer: 'Most Salesforce certifications cost $200 for the exam and $100 for a retake. Foundations certs (Platform Foundations, MuleSoft Integration Foundations) cost $75. Accredited Professional (AP) certs cost $150 and typically do not have a discounted retake. Domain Architect exams cost $400, and the Certified Technical Architect (CTA) path is priced separately.',
+    answer: 'Most Salesforce exams cost $200, with a $100 retake fee. Foundations exams, such as Platform Foundations and MuleSoft Integration Foundations, cost $75. Accredited Professional (AP) exams cost $150 and usually have no discounted retake. Domain Architect exams cost $400. The Certified Technical Architect (CTA) path is priced separately.',
   },
   {
     question: 'What is the Salesforce certification retake fee?',
-    answer: 'Retake fees are approximately 50% of the exam fee for most standard credentials. Most $200 certs have a $100 retake fee. Foundations certs ($75 exam) have a $37.50 retake fee. AP certs are $150 and typically require the same fee for each attempt. There is a 1-day wait for the first retake and a 14-day wait for subsequent attempts.',
+    answer: 'Most standard retakes cost about half the original exam fee. A $200 exam usually has a $100 retake fee; a $75 Foundations exam has a $37.50 retake fee. AP exams cost $150 and usually charge the same fee for each attempt. The first retake requires a one-day wait; later attempts require a 14-day wait.',
   },
   {
     question: 'How many times can you retake a Salesforce certification?',
-    answer: 'Salesforce allows 3 attempts at the same exam per release cycle. After a first failure you wait 24 hours, after a second you wait 14 days, and after a third you wait until the next release cycle begins, when your attempts reset. Retakes cost 50% of the original price, and Foundations exams have no retake fee.',
+    answer: 'You can make three attempts at the same exam during each release cycle. After the first failure, wait 24 hours. After the second, wait 14 days. After the third, wait until the next release cycle, when your attempts reset. Retakes cost 50% of the original price, and Foundations exams have no retake fee.',
   },
   {
     question: 'Is there a free Salesforce certification option?',
-    answer: 'Salesforce does not offer free certifications, but some employers, partner programmes, and Trailhead GO subscriptions cover exam vouchers. Foundations certs start at $75 and are the lowest-cost entry point on the certification path.',
+    answer: 'Salesforce exams are not free, but some employers, partner programmes, and Trailhead GO subscriptions provide vouchers. Foundations exams start at $75 and are the lowest-cost entry point on this certification path.',
   },
 ]
 
@@ -65,7 +65,7 @@ const priceTiers = [
     tier: 'Foundations',
     fee: '$75',
     retake: '$37.50',
-    note: 'Entry-level credentials: Platform Foundations, MuleSoft Integration Foundations',
+    note: 'Entry-level exams include Platform Foundations and MuleSoft Integration Foundations.',
     certs: [
       { name: 'Platform Foundations', href: '/certifications/platform-foundations' },
       { name: 'MuleSoft Integration Foundations', href: '/certifications/mulesoft-integration-foundations' },
@@ -76,7 +76,7 @@ const priceTiers = [
     tier: 'Accredited Professional (AP)',
     fee: '$150',
     retake: '$150',
-    note: 'Product-specific credentials (B2B Commerce, Health Cloud, Manufacturing Cloud, and more)',
+    note: 'Product-specific exams include B2B Commerce, Health Cloud, and Manufacturing Cloud.',
     certs: [
       { name: 'B2B Commerce Admin AP', href: '/certifications/b2b-commerce-admin-ap' },
       { name: 'Health Cloud AP', href: '/certifications/health-cloud-ap' },
@@ -89,7 +89,7 @@ const priceTiers = [
     tier: 'Core Certifications',
     fee: '$200',
     retake: '$100',
-    note: 'Admin, Developer, Consultant, and most Specialist certs, the largest group',
+    note: 'Includes most Administrator, Developer, Consultant, and Specialist exams.',
     certs: [
       { name: 'Platform Administrator (ADM-201)', href: '/certifications/administrator' },
       { name: 'Platform Developer I (PD1)', href: '/certifications/developer-1' },
@@ -102,7 +102,7 @@ const priceTiers = [
     tier: 'Tableau',
     fee: '$250',
     retake: '$125',
-    note: 'Tableau-specific certifications (Data Analyst, Consultant, Server Admin, Architect)',
+    note: 'Tableau exams include Data Analyst, Consultant, Server Administrator, and Architect.',
     certs: [
       { name: 'Tableau Data Analyst', href: '/certifications/tableau-data-analyst' },
       { name: 'Tableau Consultant', href: '/certifications/tableau-consultant' },
@@ -114,7 +114,7 @@ const priceTiers = [
     tier: 'Architect Credentials',
     fee: '$400',
     retake: '$200',
-    note: 'Domain architect certs: Data, Integration, Sharing & Visibility, System, Application, and more',
+    note: 'Domain Architect exams include Data, Integration, Sharing and Visibility, System, and Application.',
     certs: [
       { name: 'Data Architect', href: '/certifications/data-architect' },
       { name: 'Integration Architect', href: '/certifications/integration-architect' },
@@ -127,7 +127,7 @@ const priceTiers = [
     tier: 'Certified Technical Architect (CTA)',
     fee: '$6,000',
     retake: '$3,000',
-    note: 'Salesforce\'s highest credential. Includes a review board presentation evaluated by a panel of CTAs.',
+    note: 'Salesforce\'s highest credential includes a board presentation evaluated by a panel of CTAs.',
     certs: [
       { name: 'Certified Technical Architect', href: '/certifications/technical-architect' },
     ],
@@ -160,8 +160,7 @@ export default function SalesforceCertificationCostPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Salesforce exam fees range from $75 to $6,000 depending on the credential tier.
-          Most admin, developer, and consultant certs cost $200. Here is the full breakdown with retake prices and savings tips.
+          Salesforce exam fees range from $75 to $6,000, depending on the credential. Most Administrator, Developer, and Consultant exams cost $200. See exam and retake fees, regional pricing, and ways to reduce costs.
         </p>
       </header>
 
@@ -190,7 +189,7 @@ export default function SalesforceCertificationCostPage() {
         </div>
         <p className="text-xs text-gray-600 mt-3 flex gap-1.5">
           <Info className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" />
-          Fees are in USD. Regional taxes may apply. Always confirm the final amount in your Salesforce certification account before booking.
+          Fees are in USD and regional taxes may apply. Confirm the final amount in your Salesforce certification account before booking.
         </p>
       </section>
 
@@ -198,7 +197,7 @@ export default function SalesforceCertificationCostPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-10">
         <h2 className="text-xl font-bold text-gray-900 mb-1">Regional Pricing: USD vs INR</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Pearson VUE pricing in India is typically lower than the USD list price. The table below shows approximate INR equivalents at current exchange rates. Always confirm the final price in your Salesforce certification account before booking, regional pricing can change.
+          Pearson VUE exam prices in India are usually lower than the USD list price. This table gives approximate INR equivalents based on current exchange rates. Regional prices can change, so confirm the final amount in your Salesforce certification account before booking.
         </p>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
@@ -303,10 +302,10 @@ export default function SalesforceCertificationCostPage() {
           Retake Policy
         </h2>
         <ul className="space-y-2.5 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can retake after a <strong>{RETAKE_POLICY.waitAfterFirstFail}</strong> wait for the first retake.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />A second retake requires a <strong>{RETAKE_POLICY.waitAfterSecondFail}</strong> wait.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You get <strong>{RETAKE_POLICY.attemptsPerCycle} attempts per release cycle</strong>; after a third failure you wait for {RETAKE_POLICY.afterThirdFail}.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Retake fees are roughly <strong>50% of the exam fee</strong> for most tiers.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Wait <strong>{RETAKE_POLICY.waitAfterFirstFail}</strong> before your first retake.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Wait <strong>{RETAKE_POLICY.waitAfterSecondFail}</strong> before your second retake.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can make <strong>{RETAKE_POLICY.attemptsPerCycle} attempts per release cycle</strong>. After a third failure, wait {RETAKE_POLICY.afterThirdFail}.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Most retakes cost about <strong>50% of the original exam fee</strong>.</li>
         </ul>
       </section>
 
@@ -319,19 +318,19 @@ export default function SalesforceCertificationCostPage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Pass first attempt:</strong> The single best cost reduction. Use free practice questions on each cert page to benchmark readiness before booking.</span>
+            <span><strong>Pass on your first attempt:</strong> This is the biggest way to reduce costs. Use the free practice questions on each certification page to check your readiness before booking.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Trailhead GO / employer vouchers:</strong> Some employers and Salesforce partner programmes cover exam fees. Check your company’s L&D budget before paying out of pocket.</span>
+            <span><strong>Trailhead GO or employer vouchers:</strong> Some employers and Salesforce partner programmes cover exam fees. Check your company’s learning budget before paying yourself.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Start with lower-cost tiers:</strong> Foundations certs ($75) are the lowest-cost entry point. AP certs ($150) are useful when you already work with a specific Salesforce product cloud.</span>
+            <span><strong>Consider lower-cost tiers:</strong> Foundations exams ($75) are the least expensive entry point. AP exams ($150) may suit people who already work with a specific Salesforce product cloud.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Architect track sequence:</strong> Domain architect exams ($400) count toward the CTA path. Plan the sequence to avoid re-covering the same material in separate sittings.</span>
+            <span><strong>Plan your architect path:</strong> Domain Architect exams ($400) count toward the CTA path. Plan your exam sequence to avoid repeating material.</span>
           </li>
         </ul>
       </section>
@@ -340,7 +339,7 @@ export default function SalesforceCertificationCostPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Prepare Before You Pay</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Free practice questions and exam weightage for every cert, no sign-up required.
+          Review free practice questions and exam weightings for every certification. No sign-up is required.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

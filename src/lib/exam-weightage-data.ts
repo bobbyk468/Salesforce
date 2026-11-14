@@ -17,7 +17,7 @@ export interface ExamSection {
 
 export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   // Verified 9 November 2026 against the official exam guide:
-  // help.salesforce.com/s/articleView?id=005298966 - eight sections, 60 scored
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298966 - eight sections, 60 scored
   // questions, 105 minutes, 68% to pass (English). These weights took effect
   // with the 15 December 2025 outline refresh; the previous set
   // (Config 20 / Object Manager 17 / Workflow 14 / Sales 11 / Service 9 /
@@ -44,7 +44,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Process Automation', percentage: 20 },
   ],
   // Verified 4 November 2026 against the official exam guide:
-  // help.salesforce.com/s/articleView?id=005298966 — eight sections.
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298966 — eight sections.
   // The previous five summed to 90 and did not match the outline.
   'administrator-practice-test': [
     { name: 'Configuration and Setup', percentage: 15 },
@@ -168,7 +168,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Permissions and Sharing', percentage: 5 },
   ],
   // Verified 4 November 2026 against the official exam guide:
-  // help.salesforce.com/s/articleView?id=005298940 — six sections, not four.
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298940 — six sections, not four.
   // 60 scored questions plus up to 5 unscored, 70% to pass, 105 minutes.
   'data-360-consultant': [
     { name: 'Solution Positioning', percentage: 14 },
@@ -295,7 +295,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Learning and Enablement', percentage: 18 },
   ],
   // Verified 4 November 2026 against the official exam guide:
-  // help.salesforce.com/s/articleView?id=005298965 — four sections, not five.
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298965 — four sections, not five.
   // 60 scored questions, 68% to pass, 105 minutes.
   'developer-1': [
     { name: 'Developer Fundamentals', percentage: 27 },
@@ -679,7 +679,9 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Implement', percentage: 20 },
   ],
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298982
-  // Agentforce Sales Foundations: six sections, 60 scored questions, 70% to pass, 105 minutes.
+  // Agentforce Sales Foundations: six sections, 40 scored questions (plus up to five unscored),
+  // 70% to pass, 105 minutes, $75 with a free retake. Re-read 14 November 2026: the earlier
+  // note here said 60 questions, which was wrong.
   'sales-foundations': [
     { name: 'Planning', percentage: 21 },
     { name: 'Customer Engagement', percentage: 15 },
@@ -739,7 +741,170 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'User Lifecycle Management', percentage: 13 },
     { name: 'Enabling Slack Success (Analytics and Adoption)', percentage: 10 },
   ],
+  // The entries below were added 14 November 2026. Each was read directly from
+  // the official exam guide named in its comment on that date.
+  //
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298764 - 46 scored questions (plus
+  // up to 5 unscored), 73% to pass, 75 minutes. Retires 1 February 2027.
+  'advanced-field-service-ap': [
+    { name: 'Implementation Strategies and Design', percentage: 7 },
+    { name: 'Resource Management', percentage: 31 },
+    { name: 'Foundation', percentage: 16 },
+    { name: 'Mobile', percentage: 13 },
+    { name: 'Assets', percentage: 11 },
+    { name: 'Optimization', percentage: 22 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298821 - Salesforce Accredited
+  // Agentforce Health Professional: 60 scored questions, 63% to pass, 90 minutes.
+  'health-cloud-ap': [
+    { name: 'Discovery', percentage: 11 },
+    { name: 'Design', percentage: 42 },
+    { name: 'Implement', percentage: 42 },
+    { name: 'Deploy', percentage: 5 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298843 - Salesforce Accredited
+  // Agentforce Manufacturing Professional: 50 scored questions, 68% to pass, 75 minutes.
+  'manufacturing-cloud-ap': [
+    { name: 'Discovery', percentage: 18 },
+    { name: 'Design', percentage: 28 },
+    { name: 'Configure and Build', percentage: 38 },
+    { name: 'Validate and Deploy', percentage: 16 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298837 - 40 scored questions,
+  // 67% to pass, 60 minutes. Retires 1 February 2027.
+  'marketing-cloud-advanced-cross-channel-ap': [
+    { name: 'Mobile (SMS and Push)', percentage: 13 },
+    { name: 'Ad Studio', percentage: 10 },
+    { name: 'Social Studio', percentage: 12 },
+    { name: 'Distributed Marketing', percentage: 2 },
+    { name: 'Einstein for Marketing Cloud', percentage: 23 },
+    { name: 'Journey Orchestration', percentage: 25 },
+    { name: 'Triggers', percentage: 7 },
+    { name: 'Interaction Studio', percentage: 8 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298839 - 40 scored questions,
+  // 60% to pass, 90 minutes. Retires 1 February 2027.
+  'marketing-cloud-intelligence-ap': [
+    { name: 'General Functionalities', percentage: 13 },
+    { name: 'Data Integration Code Ability', percentage: 12 },
+    { name: 'Mapping', percentage: 5 },
+    { name: 'Data Update Permissions', percentage: 5 },
+    { name: 'Harmonization Best Practices', percentage: 3 },
+    { name: 'Vlookup', percentage: 5 },
+    { name: 'Overarching Entities', percentage: 3 },
+    { name: 'Data Fusion', percentage: 3 },
+    { name: 'Calculated Dimensions & Measurements', percentage: 7 },
+    { name: 'Harmonization Center', percentage: 13 },
+    { name: 'CRM', percentage: 12 },
+    { name: 'QA Ability', percentage: 9 },
+    { name: 'Data Model', percentage: 5 },
+    { name: 'Design Feasibility', percentage: 5 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298845 - 55 scored questions,
+  // 61% to pass, 75 minutes. Retires 1 February 2027.
+  'net-zero-cloud-ap': [
+    { name: 'Discovery', percentage: 24 },
+    { name: 'Design', percentage: 31 },
+    { name: 'Implementation', percentage: 45 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298855 - 60 scored questions,
+  // 67% to pass, 90 minutes. Retires 1 February 2027.
+  'order-management-admin-ap': [
+    { name: 'Order Management Basics', percentage: 17 },
+    { name: 'Process Automation and Integrations', percentage: 27 },
+    { name: 'Deployment and Debugging', percentage: 17 },
+    { name: 'Data Model', percentage: 25 },
+    { name: 'User Experience and Customization', percentage: 8 },
+    { name: 'Advanced Topics', percentage: 6 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298860 - 60 scored questions,
+  // 70% to pass, 90 minutes. Retires 1 February 2027.
+  'order-management-developer-ap': [
+    { name: 'Data Management', percentage: 17 },
+    { name: 'Order Management Domain Knowledge', percentage: 17 },
+    { name: 'Platform Integration', percentage: 13 },
+    { name: 'Platform Development', percentage: 23 },
+    { name: 'Data Reference Implementations & Frameworks', percentage: 10 },
+    { name: 'Omnichannel Inventory', percentage: 13 },
+    { name: 'Advanced Use Cases', percentage: 7 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298867 - 60 scored questions,
+  // 68% to pass, 90 minutes. Retires 1 February 2027.
+  'process-automation-ap': [
+    { name: 'Automation Basics', percentage: 27 },
+    { name: 'Tools and Best Practices', percentage: 32 },
+    { name: 'Testing, Distribution, and Monitoring', percentage: 18 },
+    { name: 'Integration', percentage: 23 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298961 - 40 scored questions,
+  // 70% to pass, 70 minutes, $75 with a free retake.
+  'mulesoft-integration-foundations': [
+    { name: 'Roles, responsibilities, and lifecycle of an integration project', percentage: 17 },
+    { name: 'Essential integration concepts and terminology', percentage: 20 },
+    { name: 'Common integration problems, use cases, and technical solutions', percentage: 17 },
+    { name: 'Technical complexities and patterns in integration development', percentage: 18 },
+    { name: 'Anypoint Platform for system integration', percentage: 18 },
+    { name: 'Anypoint Platform for API management', percentage: 10 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005387657 - 60 scored questions,
+  // 72% to pass, 105 minutes.
+  'marketing-cloud-next-consultant': [
+    { name: 'Platform Setup & Governance', percentage: 13 },
+    { name: 'Consent', percentage: 13 },
+    { name: 'Data Modeling, Identity Resolution & Segmentation', percentage: 25 },
+    { name: 'Campaign Design, Flow Orchestration & Content', percentage: 30 },
+    { name: 'Agentforce & AI Innovation', percentage: 11 },
+    { name: 'Analytics & Performance Insights', percentage: 8 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298993 - 60 scored questions,
+  // 63% to pass, 105 minutes, $200.
+  'tableau-consultant': [
+    { name: 'Evaluate Current State', percentage: 22 },
+    { name: 'Plan and Prepare Data Connections', percentage: 22 },
+    { name: 'Design and Troubleshoot Calculations and Workbooks', percentage: 40 },
+    { name: 'Establish Governance and Support Published Content', percentage: 16 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005387158 - six sections, 60 scored
+  // questions, 65% to pass, 105 minutes.
+  'tableau-next-consultant': [
+    { name: 'Data Setup', percentage: 20 },
+    { name: 'Agentic Experiences', percentage: 25 },
+    { name: 'Embedding, Cross-Cloud, & Interoperability', percentage: 20 },
+    { name: 'Basic Setup & Admin', percentage: 10 },
+    { name: 'Visualizations & Dashboards', percentage: 15 },
+    { name: 'Managing Workspaces & Orgs', percentage: 10 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298998 - Salesforce Certified
+  // Tableau Server Administrator: 50 scored items (plus up to 5 unscored),
+  // 64% to pass, 90 minutes, $200.
+  'tableau-server-administrator': [
+    { name: 'Preparation', percentage: 20 },
+    { name: 'Install & Configure', percentage: 26 },
+    { name: 'Administration', percentage: 36 },
+    { name: 'Troubleshooting', percentage: 12 },
+    { name: 'Migration & Upgrade', percentage: 6 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005460902
+  'public-sector-solutions-consultant': [
+    { name: 'Foundational Knowledge of the Product', percentage: 36 },
+    { name: 'Product Configuration', percentage: 32 },
+    { name: 'Implementation Strategies and Best Practices', percentage: 32 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298864
+  'public-sector-solutions-ap': [
+    { name: 'Product-Specific Systems Knowledge', percentage: 45 },
+    { name: 'Product Configuration', percentage: 36 },
+    { name: 'Implementation Strategies and Best Practices', percentage: 19 },
+  ],
+  // Verified 14 November 2026: help.salesforce.com/s/articleView?id=005298796.
+  // Historical CPQ and Billing AP guide (Summer '24); this credential is retired.
+  'cpq-billing-ap': [
+    { name: 'Revenue Cloud Technical Design', percentage: 68 },
+    { name: 'Revenue Cloud Implementation Management', percentage: 29 },
+    { name: 'New Release Capabilities', percentage: 3 },
+  ],
   // Removed 4 November 2026 because no official outline could be found.
+  // (Entries later restored above, with their guide IDs, are no longer missing.)
   //
   // The weightings here were invented — round numbers summing to 100 that
   // matched no published guide. Unlike the entries above, these are ordinary
@@ -751,9 +916,9 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   // weightage table. Add each one back when its guide turns up, with the
   // article ID in a comment as everywhere else here.
   //
-  //   Eleven Accredited Professional credentials, all of which retire on
+  //   Ten Accredited Professional credentials, all of which retire on
   //   1 February 2027 and whose exams closed on 31 August 2026:
-  //     advanced-field-service-ap, cpq-billing-ap, health-cloud-ap,
+  //     advanced-field-service-ap, health-cloud-ap,
   //     manufacturing-cloud-ap, marketing-cloud-advanced-cross-channel-ap,
   //     marketing-cloud-intelligence-ap, net-zero-cloud-ap,
   //     order-management-admin-ap, order-management-developer-ap,
@@ -792,4 +957,43 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
 
 export function getExamWeightage(slug: string): ExamSection[] | undefined {
   return EXAM_WEIGHTAGE[slug]
+}
+
+/**
+ * The heaviest sections of an exam as one sentence fragment, read from the
+ * same table the weightage chart renders, so prose can never contradict it.
+ *
+ * Takes the top two sections, adds a third when the first two cover less than
+ * 55% of the exam, and a fourth only when it ties with the third. Returns
+ * null when the credential has no published outline.
+ *
+ *   "Setup (38%) and Subscriber Data Management (18%) together make up 56% of the exam"
+ */
+export function getTopSections(slug: string): { sections: ExamSection[]; total: number } | null {
+  const weightage = EXAM_WEIGHTAGE[slug]
+  if (!weightage?.length) return null
+  const sorted = [...weightage].sort((a, b) => b.percentage - a.percentage)
+  let count = Math.min(2, sorted.length)
+  const sum = (n: number) => sorted.slice(0, n).reduce((t, s) => t + s.percentage, 0)
+  if (sorted.length > 2 && sum(2) < 55) count = 3
+  if (count === 3 && sorted.length > 3 && sorted[3].percentage === sorted[2].percentage) count = 4
+  // A long run of equal weights (five sections at 10% each) is not a "top" group.
+  while (count < sorted.length && sorted[count].percentage === sorted[count - 1].percentage && count < 5) count++
+  const sections = sorted.slice(0, count)
+  return { sections, total: sum(count) }
+}
+
+function joinList(items: string[]): string {
+  if (items.length <= 1) return items[0] ?? ''
+  if (items.length === 2) return `${items[0]} and ${items[1]}`
+  return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`
+}
+
+export function getTopSectionsSummary(slug: string): string | null {
+  const top = getTopSections(slug)
+  if (!top) return null
+  const names = joinList(top.sections.map((s) => `${s.name} (${s.percentage}%)`))
+  return top.sections.length === 1
+    ? `${names} is the largest section of the exam`
+    : `${names} together make up ${top.total}% of the exam`
 }

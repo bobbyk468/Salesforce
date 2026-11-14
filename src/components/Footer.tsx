@@ -115,12 +115,12 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link prefetch={false} href="/certifications/administrator" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Platform Administrator (Plat-Admn-201) study guide
+                  Salesforce Platform Administrator (Plat-Admn-201 / ADM-201) study guide
                 </Link>
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/developer-1" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  PD1 study guide
+                  Platform Developer I (Plat-Dev-201 / PD1) study guide
                 </Link>
               </li>
               <li>
@@ -130,12 +130,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/service-cloud" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Service Cloud study guide
+                  Salesforce Agentforce Service Consultant (Service-Con-201) study guide
                 </Link>
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/agentforce-specialist#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Agentforce Specialist (AI-201) study guide &amp; practice test
+                  Salesforce Agentforce Specialist (AI-201) study guide &amp; practice test
                 </Link>
               </li>
               <li>
@@ -145,12 +145,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/sales-cloud#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Agentforce Sales Consultant practice questions
+                  Salesforce Agentforce Sales Consultant (Sales-Con-201) practice questions
                 </Link>
               </li>
               <li>
                 <Link prefetch={false} href="/certifications/data-360-consultant#practice-questions" className="inline-block py-1 text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Data 360 Consultant practice questions
+                  Salesforce Data 360 Consultant (Data-Con-101) practice questions
                 </Link>
               </li>
             </ul>
@@ -221,6 +221,36 @@ export default function Footer() {
           */}
           <TopCertifications variant="footer" />
         </div>
+
+        <nav aria-labelledby="footer-role-hubs" className="mt-10 border-t border-gray-700 pt-6">
+          <h2 id="footer-role-hubs" className="mb-3 text-sm font-semibold uppercase tracking-wider text-white">
+            Salesforce certification role hubs
+          </h2>
+          <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            {[
+              ['Consultant', 'consultant'],
+              ['Administrator', 'administrator'],
+              ['Developer', 'developer'],
+              ['Architect', 'architect'],
+              ['Marketing', 'marketing'],
+              ['Accredited Professional', 'accredited-professional'],
+              ['Associate', 'associate'],
+              ['Sales', 'sales'],
+              ['Designer', 'designer'],
+              ['Tableau', 'tableau'],
+            ].map(([label, slug]) => (
+              <li key={slug}>
+                <Link
+                  prefetch={false}
+                  href={`/certifications/role/${slug}`}
+                  className="inline-block py-1 text-gray-300 hover:text-salesforce-light"
+                >
+                  {label} certifications
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         {/* Disclaimer */}
         <div className="border-t border-gray-700 mt-8 pt-6">

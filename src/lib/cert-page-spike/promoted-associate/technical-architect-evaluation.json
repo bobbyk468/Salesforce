@@ -1,41 +1,41 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Technical Architect Evaluation exam for?",
+    "heading": "Who should consider the Technical Architect Evaluation?",
     "personas": [
       {
-        "label": "CTA candidates preparing to apply",
-        "description": "You hold both architect credentials and need to clear this stage before the review board opens."
+        "label": "CTA candidates ready for the first stage",
+        "description": "You hold both architect credentials and need to pass this assessment before booking the review board."
       },
       {
-        "label": "Senior architects testing readiness",
-        "description": "You want an honest signal on whether your design and defence skills are board standard."
+        "label": "Senior architects checking readiness",
+        "description": "You want to know whether your architecture and presentation skills meet the board’s expectations."
       },
       {
-        "label": "Practice leads coaching candidates",
-        "description": "You prepare others for CTA and need to know what this stage actually assesses."
+        "label": "CTA mentors and practice leads",
+        "description": "You coach candidates and want a clear picture of what this assessment measures."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Technical Architect Evaluation Exam Hard?",
-    "summary": "This is stage one of the CTA assessment, not a standard exam. You work through a scenario with a Salesforce evaluator, produce a design and discuss it. Its job is to confirm you are ready for the review board before you commit to the larger fee.",
+    "heading": "How challenging is the Technical Architect Evaluation?",
+    "summary": "This is the first part of the CTA assessment, not a standard multiple-choice exam. You review a scenario, develop an architecture, and discuss it with a Salesforce evaluator. The assessment checks readiness before you commit to the larger review-board fee.",
     "bullets": [
-      "<strong>Not a multiple-choice exam.</strong> You are assessed on a scenario-based design and how you explain it.",
-      "<strong>Prerequisites first.</strong> Application Architect and System Architect must both be active.",
-      "<strong>It gates the board.</strong> Passing this stage is what gives you access to the review board.",
-      "<strong>Fee:</strong> third-party sources put this stage at around US$1,500, with the board separate. Confirm current fees with Salesforce."
+      "<strong>No multiple-choice paper.</strong> You explain a solution to a scenario and defend your design.",
+      "<strong>Earn the prerequisites first.</strong> Both Application Architect and System Architect must be active.",
+      "<strong>It is a gate to the board.</strong> Passing allows you to proceed to the review board.",
+      "<strong>Fee:</strong> External sources report a fee of about US$1,500 for this stage, with the board charged separately. Confirm current pricing with Salesforce."
     ],
-    "passRateGuidance": "You are ready when you can read a scenario, produce a defensible design inside the time given, and explain each choice without notes. If you have never been challenged on a design out loud. Practise that before booking."
+    "passRateGuidance": "You are ready when you can read a scenario, produce a sound design within the available time, and explain your decisions without notes. If you have not practised defending a design aloud, do so before booking."
   },
   "examFormat": {
-    "heading": "Technical Architect Evaluation Exam Format Explained",
-    "intro": "This stage is a scenario-based assessment with an evaluator, not a question paper. Here is what to expect:",
+    "heading": "Technical Architect Evaluation format",
+    "intro": "This is a scenario discussion with an evaluator, not a written question paper. Prepare for the following:",
     "bestWayToPass": [
-      "<strong>Read the scenario twice before designing:</strong> Most lost marks come from solving a slightly different problem from the one described.",
-      "<strong>Work to a structure:</strong> Cover data, security, integration, development lifecycle and licensing every time, so nothing is forgotten under time pressure.",
-      "<strong>Say what you rejected:</strong> Naming the alternative and why you did not take it is what demonstrates judgement.",
-      "<strong>Practise with a timer:</strong> The constraint is time, not knowledge. Produce complete designs under the clock before you book."
+      "<strong>Read carefully before designing:</strong> Many errors come from solving a different problem than the scenario describes.",
+      "<strong>Use a repeatable structure:</strong> Cover data, security, integration, release lifecycle, and licensing so you do not skip an area under pressure.",
+      "<strong>Explain alternatives:</strong> State what else you considered and why you chose your approach.",
+      "<strong>Practise under a time limit:</strong> Rehearse completing and presenting designs within the time available."
     ]
   },
   "practiceQuestionsIntroSuffix": ", practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.",
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "CTA Evaluation: Key Concepts for Success",
+    "h2": "Technical Architect Evaluation: concepts to prepare",
     "blocks": [
       {
-        "heading": "What This Stage Is For",
-        "body": "The architect evaluation exists so that neither you nor Salesforce spends the time and cost of a full review board before you are ready. It uses the same raw material as the board, a hypothetical company with goals, systems and constraints, but on a smaller scale and with a single evaluator rather than a panel. Passing it is the gate to booking the board. Treat it as a genuine attempt: the skills it checks, reading requirements accurately and justifying design choices, are the same ones the board will test more harshly."
+        "heading": "Purpose of the evaluation",
+        "body": "The evaluation is a smaller readiness stage before the full review board. It uses a hypothetical company, its goals, systems, and constraints, and one evaluator rather than a panel. Passing lets you book the board. Take it seriously: the ability to understand requirements and defend architecture decisions is tested again at the board."
       },
       {
-        "heading": "Reading the Scenario Properly",
-        "body": "Scenarios are written with detail that matters and detail that does not. Pull out the actual requirements, the constraints such as data residency, existing systems or budget, and the things that are merely background. The most common failure in this format is designing for the problem you expected rather than the one in front of you. Write the requirements down as a list and tick them off against your design before you present it, so you can show coverage rather than hope for it."
+        "heading": "Read the scenario closely",
+        "body": "Separate requirements and constraints—such as residency rules, existing systems, or budget—from background details. A common mistake is designing for an expected problem rather than the one described. List each requirement and check it against your design before presenting so you can show how it is covered."
       },
       {
-        "heading": "Producing a Defensible Design",
-        "body": "A good answer is complete, not clever. Cover the data model, how records are secured and shared, how systems integrate, how changes are released, and what licences the solution implies. Prefer standard platform capability over custom build, and be explicit when you are choosing custom and why. Keep the design proportionate: an enterprise scenario does not require every Salesforce product, and adding components you cannot justify creates questions you will have to answer."
+        "heading": "Build a complete design",
+        "body": "A strong design covers the data model, record access, integrations, release approach, and required licences. Prefer standard platform features when they fit. If you choose custom work, explain what requirement makes it necessary. Keep the solution proportionate: extra products or components create cost and questions that need a reason."
       },
       {
-        "heading": "Explaining and Defending Choices",
-        "body": "The discussion matters as much as the diagram. For each significant decision, be able to state the requirement it serves, the alternative you considered, and the trade-off you accepted. Acknowledge weaknesses before they are pointed out, which reads as analysis rather than defensiveness. If the evaluator challenges a choice, do not abandon it immediately, but do not dig in against a good argument either. Reasoned adjustment is a positive signal; capitulation and stubbornness are both negative ones."
+        "heading": "Explain and defend decisions",
+        "body": "For each major choice, identify the requirement it meets, another option you considered, and the trade-off you accepted. Acknowledge limitations and respond to challenges with evidence. Adjust when an objection is sound, while explaining your reasoning when you retain a choice. Neither reflexively giving in nor refusing to reconsider shows good judgement."
       },
       {
-        "heading": "Preparing for This Stage",
-        "body": "Work from full scenarios rather than topic revision. Set a timer, produce a complete design, then present it to someone who will ask why. Build a repeatable running order so coverage is automatic. Record yourself and listen for the places where you talk around a decision rather than making one. Candidates who clear this stage comfortably have usually rehearsed the full cycle, reading, designing and defending, several times before booking."
+        "heading": "Prepare with complete practice scenarios",
+        "body": "Practise with full scenarios rather than reviewing topics in isolation. Set a timer, create a complete design, and present it to someone who will ask you to explain your choices. Use a consistent outline, record yourself, and notice where you avoid making a clear decision. Rehearse reading, designing, and defending several times before booking."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Technical Architect Evaluation Exam",
-    "intro": "This stage rewards accuracy and structure more than ambition. Solve exactly the problem described, and show your reasoning as you go.",
+    "h2": "How to prepare for the Technical Architect Evaluation",
+    "intro": "A clear and accurate design matters more than adding complexity. Solve the scenario as written and explain your reasoning.",
     "blocks": [
       {
-        "heading": "Requirement Coverage",
-        "body": "List the stated requirements and map each to part of your design. Missing one is the most common and most avoidable failure."
+        "heading": "Show requirement coverage",
+        "body": "List the stated requirements and connect each one to part of the design. This prevents avoidable gaps."
       },
       {
-        "heading": "Handling Ambiguity",
-        "body": "If something is unclear, state the assumption you are making and carry on. An explicit assumption is acceptable; a silent one is not."
+        "heading": "State assumptions",
+        "body": "When a detail is unclear, say what assumption you are using and continue. Make assumptions visible."
       },
       {
-        "heading": "Clear Diagrams",
-        "body": "A readable diagram you can talk through beats a dense one you cannot. Label the integrations and the data flows."
+        "heading": "Draw for clarity",
+        "body": "Use a readable diagram that you can explain. Label integrations and data flows."
       },
       {
-        "heading": "Justification Framework",
-        "body": "Requirement, decision, alternative considered, trade-off accepted. Apply it to every significant choice."
+        "heading": "Explain each major choice",
+        "body": "Cover the need, your decision, the alternative, and the trade-off for each significant design choice."
       },
       {
-        "heading": "Timed Practice",
-        "body": "Knowledge is rarely the limit. Practise producing a complete design inside the time allowed."
+        "heading": "Rehearse with a timer",
+        "body": "Practise producing and explaining a complete design within the time allowed."
       }
     ]
   },
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the main purpose of the architect evaluation stage?",
+      "question": "A candidate is preparing to book the Technical Architect review board. What does the Evaluation stage confirm first?",
       "options": [
-        "To replace the System Architect credential entirely for candidates",
-        "To award the CTA credential",
-        "To confirm a candidate is ready before they book the full review board",
-        "To test Apex coding under time pressure"
+        "To replace one of the two required architect credentials",
+        "To issue the CTA credential before the final board stage",
+        "To verify readiness before the candidate commits to the review board",
+        "To evaluate Apex coding skill under a fixed time limit"
       ],
       "correctAnswer": 2,
-      "explanation": "It is a readiness assessment that gates access to the board, so neither side commits to the larger stage too early.",
+      "explanation": "It is the readiness gate the candidate must clear before scheduling the board; passing it does not itself award the CTA credential.",
       "whyWrong": [
-        "It does not replace any prerequisite credential.",
-        "The credential is awarded after the board, not here.",
-        "There is no coding component."
+        "It does not replace a prerequisite credential.",
+        "The CTA credential is awarded after the review board, not at this stage.",
+        "The assessment is not an Apex coding test."
       ]
     },
     {
-      "question": "A scenario states that customer data must remain in the EU. A candidate's design stores it in a US-hosted system without comment. What is the problem?",
+      "question": "A scenario requires customer data to remain in the EU. The proposed design puts it in a US-hosted system and does not address the requirement. What is the main issue?",
       "options": [
-        "It affects cost but not the assessment",
-        "A stated constraint has been ignored",
-        "It only matters if the evaluator asks about it",
-        "Nothing, as data location is an infrastructure concern"
+        "Only the project cost may change",
+        "The design ignores a stated constraint",
+        "The evaluator must ask before it matters",
+        "Data location is solely an infrastructure team concern"
       ],
       "correctAnswer": 1,
-      "explanation": "Constraints in the scenario are requirements. Ignoring one, especially a regulatory one, is a serious failure.",
+      "explanation": "Scenario constraints are requirements. Ignoring a data-residency requirement is a serious design gap.",
       "whyWrong": [
-        "It is a compliance failure, not a cost question.",
-        "The candidate is expected to address it unprompted.",
-        "Data residency is an architecture decision, not someone else's problem."
+        "The issue is compliance and requirement coverage, not just cost.",
+        "The candidate should address stated constraints without waiting for a prompt.",
+        "Data residency is an architecture decision that must be handled in the design."
       ]
     },
     {
-      "question": "Partway through, a candidate realises a requirement is ambiguous. What is the best approach?",
+      "question": "A candidate discovers that one requirement is ambiguous. What should they do?",
       "options": [
-        "Stop and wait for clarification",
-        "State the assumption being made and design on that basis",
-        "Ignore the requirement entirely",
-        "Design separately for every possible interpretation of the requirement"
+        "Stop the assessment until someone clarifies it",
+        "State a reasonable assumption and continue the design",
+        "Leave the requirement out of the solution",
+        "Design a separate solution for every possible interpretation"
       ],
       "correctAnswer": 1,
-      "explanation": "Making an assumption explicit shows judgement and lets the evaluator follow the reasoning.",
+      "explanation": "An explicit assumption lets the evaluator understand the basis for the design and shows how the candidate handles uncertainty.",
       "whyWrong": [
-        "Candidates are expected to proceed, not stall.",
-        "Ignoring a requirement loses coverage.",
-        "Designing for every interpretation produces a bloated, unfocused solution."
+        "The candidate is expected to proceed rather than stop.",
+        "Omitting a requirement leaves a gap in the design.",
+        "Covering every interpretation can create an unnecessarily broad solution."
       ]
     },
     {
-      "question": "Which approach to a design decision demonstrates the judgement being assessed?",
+      "question": "Which explanation best demonstrates sound architectural judgement?",
       "options": [
-        "Deferring every decision to the client's preference",
-        "Choosing the most technically advanced option available",
-        "Using as many Salesforce products as possible",
-        "Naming the requirement, the option chosen"
+        "Defer every design choice to the client without analysis",
+        "Select the most advanced available technology without comparing fit",
+        "Add many Salesforce products to demonstrate platform breadth",
+        "Explain the requirement, chosen approach, and trade-off"
       ],
       "correctAnswer": 3,
-      "explanation": "The assessment is about reasoning: what you chose, against what, and at what cost.",
+      "explanation": "The assessment looks for the reasoning behind a choice, including the need it serves and the trade-off it creates.",
       "whyWrong": [
-        "An unexplained client preference is not architecture.",
-        "Advanced is not the same as appropriate.",
-        "Unjustified components invite questions you cannot answer."
+        "The architect still needs to explain the design rather than defer every decision.",
+        "Technical sophistication does not make an option appropriate by itself.",
+        "Unneeded components add complexity and need justification."
       ]
     },
     {
-      "question": "A candidate designs a custom solution for something a standard Salesforce feature already does. How is this likely to be viewed?",
+      "question": "A candidate proposes custom work for a need that a standard Salesforce feature appears to meet. How may this be assessed?",
       "options": [
-        "Neutrally, since both work",
-        "Positively, as it shows technical depth",
-        "Negatively, unless the candidate can justify why the standard feature was unsuitable",
-        "Positively, because custom code is a good deal more flexible in practice than configuration"
+        "As acceptable whenever the custom solution works",
+        "As a sign of strong engineering in every situation",
+        "As a concern unless a specific requirement makes the standard feature unsuitable",
+        "As the better choice because custom code is always easier to change"
       ],
       "correctAnswer": 2,
-      "explanation": "Standard capability is preferred. Custom build needs a reason, such as a requirement the standard feature genuinely cannot meet.",
+      "explanation": "Standard capabilities are preferred when they meet the need. Custom work requires a clear justification.",
       "whyWrong": [
-        "They are not equivalent: custom build carries maintenance cost.",
-        "Depth is shown by judgement, not by building more.",
-        "Flexibility does not outweigh the cost without a reason."
+        "Custom work carries maintenance costs that should be considered.",
+        "Judgement is more important than adding technical complexity.",
+        "Flexibility alone does not justify the extra cost and support burden."
       ]
     },
     {
-      "question": "What must be in place before taking this stage?",
+      "question": "Which credentials must be active before a candidate takes this stage?",
       "options": [
-        "A completed Trailhead superbadge",
+        "A completed Trailhead superbadge and project portfolio",
         "Active Application Architect and System Architect credentials",
-        "Three full years of continuous Salesforce employment in an architect role",
-        "Only the Administrator credential"
+        "Three years of continuous employment in a Salesforce architect role",
+        "Administrator and Platform Developer I credentials"
       ],
       "correctAnswer": 1,
-      "explanation": "Both role-based architect credentials are prerequisites for the CTA path.",
+      "explanation": "Both Application Architect and System Architect are prerequisites for the CTA path.",
       "whyWrong": [
-        "Superbadges are not a CTA prerequisite.",
-        "There is no employment-length rule.",
-        "Administrator alone is far short of the requirement."
+        "A superbadge is not one of the CTA prerequisites.",
+        "There is no stated three-year employment requirement.",
+        "Administrator by itself does not meet the prerequisites."
       ]
     },
     {
-      "question": "Why is timed practice more useful than further reading for this stage?",
+      "question": "Why should candidates practise producing a design under time pressure?",
       "options": [
-        "The constraint is producing a complete design in the time given, not knowledge",
-        "Reading is discouraged by Salesforce",
-        "The scenario and its requirements are published to candidates well in advance",
-        "Timed practice guarantees a pass"
+        "It checks whether candidates can finish a sound design on time",
+        "Salesforce recommends skipping product documentation",
+        "Candidates receive the scenario and its requirements before booking",
+        "Timed practice guarantees a passing score"
       ],
       "correctAnswer": 0,
-      "explanation": "Candidates at this level usually know the platform. What they lack is speed and structure under pressure.",
+      "explanation": "Candidates at this level are expected to know the platform. They need to organize and explain a complete design within the available time.",
       "whyWrong": [
-        "Reading is useful, just not the binding constraint.",
-        "The scenario is not published beforehand.",
-        "Nothing guarantees a pass."
+        "Reading remains useful, but timing and structure are also part of the assessment.",
+        "The scenario is not provided in advance.",
+        "Practice can improve readiness but cannot guarantee a result."
       ]
     },
     {
-      "question": "An evaluator challenges a candidate's integration choice with a reasonable objection. What is the best response?",
+      "question": "An evaluator raises a reasonable concern about an integration choice. How should the candidate respond?",
       "options": [
-        "Engage with the objection and adjust if the argument is sound",
-        "Change the stated requirement so that it fits the design already produced",
-        "Abandon the choice immediately",
-        "Refuse to discuss it further"
+        "Discuss the concern and revise the design if the reasoning supports a change",
+        "Rewrite the scenario requirement so that the original choice appears correct",
+        "Withdraw the choice immediately without considering the objection",
+        "End the discussion and refuse to revisit the decision"
       ],
       "correctAnswer": 0,
-      "explanation": "Reasoned adjustment shows judgement. Both instant capitulation and stubbornness read badly.",
+      "explanation": "Thoughtful adjustment shows that the candidate can evaluate new information. Stubbornness and immediate capitulation both weaken the defence.",
       "whyWrong": [
-        "The requirements are fixed.",
-        "Dropping a decision at the first challenge suggests it was never reasoned.",
-        "Refusing to engage fails the communication element."
+        "The scenario requirements do not change during the discussion.",
+        "A decision should be reconsidered, not abandoned without thought.",
+        "The candidate is expected to communicate and defend the architecture."
       ]
     },
     {
-      "question": "Which set of areas should a complete design cover?",
+      "question": "Which set of topics belongs in a complete architecture design?",
       "options": [
-        "Only the integration diagram and the systems that appear on it",
-        "Only the user interface",
-        "Only the data model",
-        "Data, security and sharing, integration, development lifecycle and licensing"
+        "Cover only the integrations and systems shown in the architecture diagram",
+        "Address only the screens and user interactions",
+        "Describe only the data objects, fields, and relationships",
+        "Cover data, access, integration, delivery lifecycle, and licensing"
       ],
       "correctAnswer": 3,
-      "explanation": "A complete answer addresses all of these, which is why a repeatable structure helps under time pressure.",
+      "explanation": "A complete design considers all of these areas, so a consistent outline helps prevent omissions.",
       "whyWrong": [
-        "Integration is one area among several.",
-        "User interface is a small part of an enterprise design.",
-        "A data model alone leaves most of the scenario unanswered."
+        "Integration is one part of the architecture, not the whole design.",
+        "An enterprise design covers more than the interface.",
+        "A data model alone does not address security, integration, delivery, or licensing."
       ]
     },
     {
-      "question": "How does this stage relate to the review board?",
+      "question": "How does the evaluation fit into the CTA process?",
       "options": [
-        "It is an alternative route to the credential that skips the board entirely",
-        "It is taken after the review board",
-        "They are the same assessment under two names",
-        "Passing it gives access to book the review board"
+        "It removes the review board from the CTA process",
+        "It is scheduled only after a candidate passes the review board",
+        "It is another name for the same board assessment",
+        "Passing the evaluation allows the candidate to book the review board"
       ],
       "correctAnswer": 3,
-      "explanation": "The evaluation comes first and gates the board, which is the final stage.",
+      "explanation": "The evaluation comes first and gates the final review board; they are separate stages.",
       "whyWrong": [
-        "There is no route to CTA that skips the board.",
-        "The order is evaluation first, then board.",
-        "They are separate stages with separate fees."
+        "Candidates still need to complete the board.",
+        "The required order is evaluation followed by the board.",
+        "They are distinct assessments with separate fees."
       ]
     },
     {
-      "question": "A candidate produces an excellent design but cannot finish explaining it in the time available. What does this suggest?",
+      "question": "A candidate has a strong design but cannot explain all of it before time runs out. What should they practise?",
       "options": [
-        "They need a repeatable presentation structure and timed rehearsal",
-        "Design quality on its own will be enough to carry the final result",
-        "The scenario was unfair",
-        "They should add more detail next time"
+        "A consistent presentation outline and timed rehearsal",
+        "Relying on design quality without explaining it",
+        "Arguing that the scenario was unfair",
+        "Adding more detail to the design"
       ],
       "correctAnswer": 0,
-      "explanation": "Covering the required ground in the time given is part of the skill, and a set running order is how candidates achieve it.",
+      "explanation": "Candidates must communicate the design within the allotted time. A repeatable structure helps cover the necessary areas.",
       "whyWrong": [
-        "An unexplained design cannot be assessed.",
-        "Time pressure is a deliberate part of the format.",
-        "More detail makes the time problem worse."
+        "An unexplained design cannot be evaluated fully.",
+        "Time limits are part of the assessment.",
+        "More detail can make it harder to finish on time."
       ]
     },
     {
-      "question": "What should a candidate do with the stated requirements before presenting?",
+      "question": "What should a candidate do with the scenario requirements before presenting?",
       "options": [
-        "Check each one against the design and be ready to show where it is met",
-        "Prioritise only the technical ones",
-        "Summarise them back verbatim",
-        "Assume the evaluator already remembers every requirement in the scenario"
+        "Map every stated requirement to the design and show where it is met",
+        "Address only the technical requirements and leave business needs aside",
+        "Repeat the requirement list without connecting it to the design",
+        "Assume the evaluator will remember all scenario requirements"
       ],
       "correctAnswer": 0,
-      "explanation": "Demonstrating coverage requirement by requirement is the most direct way to show the design answers the scenario.",
+      "explanation": "Mapping each requirement to the design shows directly that the solution addresses the scenario.",
       "whyWrong": [
-        "Business requirements matter as much as technical ones.",
-        "Repeating them without mapping shows nothing.",
-        "The candidate must show coverage, not assume it."
+        "Business requirements matter as well as technical ones.",
+        "Restating requirements without showing coverage does not demonstrate a solution.",
+        "The candidate is responsible for showing how the design meets the requirements."
       ]
     },
     {
-      "question": "Which is the best description of the material used in this stage?",
+      "question": "What kind of scenario is used in this stage?",
       "options": [
-        "A live Salesforce org to configure",
-        "A hypothetical company with goals",
-        "The candidate's own employer",
-        "A bank of multiple-choice questions"
+        "A live Salesforce org that the candidate must configure",
+        "A hypothetical company with goals and constraints",
+        "The candidate’s current employer",
+        "A set of multiple-choice questions"
       ],
       "correctAnswer": 1,
-      "explanation": "Both CTA stages are built on hypothetical enterprise scenarios.",
+      "explanation": "CTA assessments use hypothetical enterprise scenarios to evaluate architecture decisions.",
       "whyWrong": [
-        "There is no hands-on configuration.",
-        "Your own projects are not the basis of the assessment.",
-        "There are no multiple-choice questions."
+        "This is not a hands-on configuration exercise.",
+        "The candidate’s employer is not the basis of the scenario.",
+        "The stage is scenario-based, not multiple choice."
       ]
     },
     {
-      "question": "A design includes middleware that the scenario does not obviously need. What is the risk?",
+      "question": "A design adds middleware that the scenario may not need. What should the candidate be prepared to do?",
       "options": [
-        "It automatically fails the attempt",
-        "It shortens the discussion",
-        "The candidate must justify it, and cannot",
-        "None, as middleware is always good practice"
+        "Treat it as an automatic failure whenever middleware appears",
+        "Say the middleware will reduce time spent discussing the design",
+        "Explain the need for the component and its cost or complexity",
+        "Claim middleware is required for every enterprise integration"
       ],
       "correctAnswer": 2,
-      "explanation": "Every component invites a question. Anything you cannot justify weakens the overall defence.",
+      "explanation": "Every component should serve a requirement. The candidate should justify its purpose and account for its costs or complexity.",
       "whyWrong": [
-        "One unjustified component is not an automatic failure, but it does damage.",
-        "It lengthens the discussion, in the wrong way.",
-        "Middleware is a choice with costs, not a default."
+        "An unnecessary component is a concern, but one choice is not automatically a failure.",
+        "The addition may create more questions rather than shorten the discussion.",
+        "Middleware is an architectural option, not a universal requirement."
       ]
     },
     {
-      "question": "What is the most useful form of rehearsal before this stage?",
+      "question": "Which rehearsal is most useful before the evaluation?",
       "options": [
-        "Reviewing other people's architecture diagrams quietly on your own",
-        "Re-reading the architect exam guides",
-        "Producing timed designs and presenting them to someone who challenges you",
-        "Memorising Salesforce limits"
+        "Review architecture diagrams without presenting or discussing them",
+        "Re-read prerequisite exam guides without practising a scenario",
+        "Create a timed design and explain it to someone who asks questions",
+        "Memorize platform limits without rehearsing design decisions"
       ],
       "correctAnswer": 2,
-      "explanation": "The format tests designing and defending under time pressure; which only live practice develops.",
+      "explanation": "The assessment requires designing and defending a solution under time pressure, so practise the full activity aloud.",
       "whyWrong": [
-        "Passive review does not build the defence skill.",
-        "Those guides cover the prerequisite exams.",
-        "Limits are assumed knowledge at this level."
+        "Passive review does not practise the presentation and defence.",
+        "Those guides prepare candidates for prerequisite exams, not the full scenario discussion.",
+        "Platform limits matter, but memorizing them does not practise architecture defence."
       ]
     }
   ]

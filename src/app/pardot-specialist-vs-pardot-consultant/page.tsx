@@ -45,23 +45,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Pardot Specialist and Pardot Consultant?',
-    answer: 'Pardot Specialist tests hands-on practitioner skills: building lead scoring models, creating emails and landing pages, configuring Engagement Studio programs, and managing prospects. Pardot Consultant tests strategic consulting skills: designing multi-business-unit Pardot architectures, advising clients on implementation strategy, troubleshooting complex sync issues, and designing governance frameworks. Specialist = doing; Consultant = advising and architecting.',
+    answer: 'Pardot Specialist focuses on hands-on work such as lead scoring, emails, landing pages, Engagement Studio, and prospect management. Pardot Consultant focuses on planning and advising, including multi-business-unit design, implementation choices, sync problems, and governance.',
   },
   {
     question: 'Should I take Pardot Specialist before Pardot Consultant?',
-    answer: 'Yes: Pardot Specialist is strongly recommended before Pardot Consultant. The Consultant exam assumes deep Specialist-level knowledge of all Pardot features and adds a consulting/architecture layer on top. Salesforce recommends holding Pardot Specialist before attempting Pardot Consultant. Most candidates who skip Specialist and go directly to Consultant find the exam significantly harder than expected.',
+    answer: 'Yes. Pardot Specialist is strongly recommended first. Pardot Consultant assumes a strong grasp of Pardot features and adds consulting and architecture topics. Candidates who skip Specialist may find the Consultant exam harder.',
   },
   {
     question: 'Which Pardot certification has more job market value?',
-    answer: 'Pardot Consultant has more job market value for consulting career tracks and senior marketing ops roles. Pardot Specialist is the entry credential that opens doors to marketing automation roles and is sufficient for in-house marketing team positions. For Salesforce partner consulting firms, Pardot Consultant is typically the baseline expectation. For an internal marketing operations manager role, Pardot Specialist is usually sufficient.',
+    answer: 'Pardot Consultant has more job market value for consulting roles and senior marketing operations work. Pardot Specialist is an entry credential for marketing automation and is usually enough for in-house marketing team roles. For Salesforce partner consulting firms, Pardot Consultant is typically the baseline expectation.',
   },
   {
     question: 'What is the Pardot Consultant exam format?',
-    answer: 'The Pardot Consultant exam has 60 questions, 105-minute time limit, 68% passing score, and a $200 fee. It is scenario-based, questions describe business requirements and client situations and ask which Pardot configuration, architecture, or approach best solves them. It covers Pardot across all features plus consulting topics: requirements gathering, solution design, data migration, and implementation strategy.',
+    answer: 'The Pardot Consultant exam has 60 questions, a 105-minute limit, a 68% passing score, and a $200 fee. Its scenarios ask you to choose a Pardot setup or approach for a business need. Topics include Pardot features, requirements gathering, solution design, data migration, and implementation strategy.',
   },
   {
     question: 'Do I need Salesforce Admin (ADM-201) before Pardot Consultant?',
-    answer: 'ADM-201 is not formally required, but it is strongly recommended. Pardot Consultant tests Salesforce-Pardot integration deeply: connector sync behaviour, campaign alignment, lead routing from Pardot to Salesforce, and Salesforce Engage configuration. Understanding the Salesforce CRM data model (leads, contacts, campaigns) is essential for these topics. Most Pardot Consultant candidates hold ADM-201 or equivalent experience.',
+    answer: 'ADM-201 is not a formal prerequisite, but it is strongly recommended. The Pardot Consultant exam covers Salesforce integration, including connector sync, campaign alignment, lead routing, and Salesforce Engage. Familiarity with leads, contacts, and campaigns helps with these topics.',
   },
 ]
 
@@ -79,7 +79,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both Pardot certifications test the same platform, but at very different levels. Here’s which to take first and when to go for the Consultant credential.
+          Both credentials cover Account Engagement, but at different levels. Start with Specialist for hands-on platform work; consider Consultant when your work includes implementation planning and client advice.
         </p>
       </div>
 
@@ -111,7 +111,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           certName: "Pardot Specialist",
           certSlug: "pardot-specialist",
           examTipsSlug: "certifications/pardot-specialist",
-          reason: "Pardot Specialist is the required foundation. Consultant content assumes Specialist-level mastery plus additional implementation strategy depth. Take Specialist first, then progress to Consultant after 12+ months of platform experience.",
+          reason: "Pardot Specialist is the foundation for Consultant. Take Specialist first, then progress to Consultant after 12+ months of platform experience.",
           
         }}
       />
@@ -170,7 +170,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Key Differences</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Credentials Differ</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -215,7 +215,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Pardot Specialist or Pardot Consultant?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Choose Between Pardot Specialist and Pardot Consultant</h2>
         <div className="overflow-x-auto">
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead><tr className="border-b-2 border-gray-200">
@@ -237,7 +237,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with Pardot Specialist</h2>
-        <p className="text-white mb-6">Free practice questions for both Pardot certifications.</p>
+        <p className="text-white mb-6">Review free practice questions for both Pardot credentials.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/pardot-specialist" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Pardot Specialist Practice

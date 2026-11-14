@@ -1,42 +1,42 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the MuleSoft Developer II exam for?",
+    "heading": "Who should take the MuleSoft Developer II exam?",
     "personas": [
       {
         "label": "Experienced MuleSoft developers",
-        "description": "You’ve passed Developer I and want to validate your ability to build production-grade Mule applications independently."
+        "description": "You have built Mule applications and want to validate your ability to deliver and support production integrations."
       },
       {
-        "label": "DevOps-focused integration engineers",
-        "description": "You manage CI/CD pipelines for Mule apps and want to certify your Maven, MUnit, and CloudHub deployment expertise."
+        "label": "Integration engineers focused on DevOps",
+        "description": "You manage build and deployment pipelines and want to demonstrate your skills with Maven, MUnit, and runtime deployment."
       },
       {
-        "label": "Lead developers",
-        "description": "You design advanced integration patterns and want the credential to back your architectural decisions on MuleSoft projects."
+        "label": "Lead MuleSoft developers",
+        "description": "You guide implementation choices and need to deepen your knowledge of data transformation, security, performance, and reliability."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the MuleSoft Developer II Exam Hard?",
-    "summary": "MuleSoft Developer II is a hard exam. It assumes you already hold Developer I knowledge and tests advanced topics like batch processing, custom policies, CI/CD pipeline design, and production deployment strategies that require real project experience.",
+    "heading": "How challenging is the MuleSoft Developer II exam?",
+    "summary": "This advanced exam assumes familiarity with Mule development and focuses on complex transformations, batch processing, security policies, automated deployments, and production performance. Hands-on experience helps connect the configuration choices to operational behavior.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>70% passing score</strong>: the same threshold as Developer I, but the content is significantly more complex.",
-      "<strong>Advanced DataWeave</strong>: expect pattern matching, custom modules, recursive functions, and complex nested transformations.",
-      "<strong>Production experience matters</strong>: candidates with at least 6–12 months of hands-on Mule development in a production environment pass at significantly higher rates."
+      "<strong>60 scored questions</strong> in 120 minutes, plus up to five unscored questions that do not count.",
+      "<strong>70% to pass</strong>, which is 42 correct answers out of 60.",
+      "<strong>Advanced DataWeave:</strong> Practice modules, pattern matching, recursion, and nested data transformations.",
+      "<strong>Production design:</strong> Review batch processing, API policies, CI/CD, runtime deployment, and performance patterns."
     ],
-    "passRateGuidance": "Complete at least one production MuleSoft project with CI/CD before booking. Score 80%+ on practice exams since the real exam questions are more nuanced."
+    "passRateGuidance": "Build and deploy at least one Mule application through an automated pipeline. Practice MUnit, Object Store caching, VM and Anypoint MQ queues, TLS configuration, and policy configuration. Aim for at least 80% on practice questions and review why each design fits the workload."
   },
   "examFormat": {
-    "heading": "MuleSoft Developer II Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50–60% of questions are scenario-based. Common patterns include designing batch processing jobs for high-volume data, choosing the right API security policy combination, configuring CI/CD pipelines with Maven, and troubleshooting production deployment issues.",
+    "heading": "MuleSoft Developer II exam format",
+    "intro": "The exam is proctored online or in person. Questions cover advanced development and production operations.",
+    "scenarioPercent": "Some questions describe high-volume processing, an API security requirement, a deployment pipeline, or a production issue and ask which Mule capability fits.",
     "bestWayToPass": [
-      "<strong>Go deep on DataWeave:</strong> Practice pattern matching, custom modules, and recursive transformations, the exam tests advanced syntax beyond basic map and filter.",
-      "<strong>Build CI/CD pipelines:</strong> Configure Maven-based automated deployments to CloudHub and write MUnit tests with at least 80% coverage.",
-      "<strong>Master batch processing:</strong> Know Batch Job phases, Batch Aggregator commit sizes, and how to handle failed records in high-volume data scenarios.",
-      "<strong>Learn API security policies:</strong> Practice applying OAuth 2.0, JWT validation, rate limiting, and custom policies through API Manager."
+      "<strong>Practice advanced DataWeave:</strong> Use functions, modules, pattern matching, and collection operators on nested data.",
+      "<strong>Build a batch job:</strong> Review job phases, record processing, aggregators, and handling for failed records.",
+      "<strong>Apply API policies:</strong> Combine authentication, client access, IP restrictions, and rate limits based on the requirement.",
+      "<strong>Automate delivery:</strong> Understand how Maven, MUnit, API Autodiscovery, and deployment targets fit in CI/CD."
     ]
   },
   "certificationCard": {
@@ -62,59 +62,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "MuleSoft Developer II: Key Concepts for the Exam",
+    "h2": "MuleSoft Developer II: core concepts",
     "blocks": [
       {
-        "heading": "Advanced DataWeave: Functions and Modules",
-        "body": "DataWeave II advanced features: pattern matching (match/case for type-based branching), named functions (fun myFunc(arg) = ...), lambda functions (vars), and custom modules (import from external .dwl files). Complex scenarios: transforming nested arrays, handling nulls with default and orElse, type coercion. The exam presents complex transformation requirements and tests whether the developer can write efficient, readable DataWeave code, understanding when to use map vs reduce vs mapObject is critical."
+        "heading": "Advanced DataWeave",
+        "body": "DataWeave supports reusable functions and modules as well as mappings between nested structures. Pattern matching can select behavior based on a value or type. Functions can be named, passed as values, or reused across transformations. Choose map when transforming each array item, reduce when accumulating a result, and mapObject when transforming object key-value pairs. Handle missing and null values intentionally with defaults or conditional logic, and keep complex transformations readable."
       },
       {
-        "heading": "Batch Processing in Mule",
-        "body": "Batch Job scope processes large datasets in records. Phases: On Complete (runs after all records processed), On Input (optional pre-processing), Batch Steps (process each record). Batch Aggregator accumulates records before processing, commit size defines how many records are committed together. Failed records can be routed separately. Database.Stateful equivalent: use Batch Job Record Variables to carry state. The exam tests Batch Job configuration for high-volume data processing scenarios."
+        "heading": "Batch Processing",
+        "body": "Batch Jobs process large datasets as individual records through configured steps. The job can include input handling, record-processing steps, and an On Complete phase. A Batch Aggregator groups records for a downstream operation; commit size controls how many records are sent together. Failed records can be tracked and handled separately. Use batch processing for large record sets that do not need one synchronous response, and design for recoverability and operational monitoring."
       },
       {
-        "heading": "API Security: Policies and OAuth",
-        "body": "Anypoint API Manager applies security policies to deployed APIs. Common policies: Client ID Enforcement (all clients must register and send client ID), **OAuth** 2.0 Token Enforcement (validate Bearer tokens), IP Allowlist, Rate Limiting (throttle by client or overall). Policies are applied through API Manager and injected into the runtime automatically, no code changes needed. The exam tests which policy combination to use for a given security requirement (authentication + authorisation + throttling)."
+        "heading": "API Security Policies",
+        "body": "API Manager can apply policies to deployed APIs without embedding the policy logic in the Mule application. Client ID enforcement identifies registered consumers. OAuth or JWT validation checks tokens. IP restrictions limit network sources, and rate limiting controls request volume. Select policy combinations based on authentication, authorization, and traffic requirements, and verify how the policies apply in the target runtime."
       },
       {
-        "heading": "Performance: Scatter-Gather and Cache Scope",
-        "body": "Scatter-Gather executes multiple routes in parallel and aggregates responses, ideal for fan-out calls where all responses are needed. Each route runs concurrently; Scatter-Gather waits for all routes to complete before aggregating. Cache Scope stores responses for a configurable TTL, reduces redundant external calls. Reconnection strategies handle transient connectivity failures. Async processing (VM connector, queues) decouples processing speed from response time. The exam tests when each performance pattern is appropriate."
+        "heading": "Performance and Resilience Patterns",
+        "body": "Scatter-Gather runs routes in parallel and combines their results; it is useful when several independent calls must all complete before responding. A cache can avoid repeated expensive calls for data that remains valid for a configured time. Queues and asynchronous processing can separate the caller’s response time from downstream work. Reconnection strategies address transient connection failures. Choose a pattern based on latency, consistency, and recovery needs."
       },
       {
-        "heading": "CI/CD with Anypoint: Maven and CloudHub Deployment",
-        "body": "Anypoint Maven Plugin enables automated deployment in CI/CD pipelines. pom.xml configuration includes CloudHub credentials, region, and worker configuration. Anypoint CLI provides command-line deployment and management. API Autodiscovery links a deployed Mule app to an API definition in API Manager, enables policy enforcement. The deployment pipeline: unit tests (MUnit) → build JAR → deploy to CloudHub → run integration tests → promote to production. The exam tests CI/CD pipeline design and Maven plugin configuration."
+        "heading": "CI/CD and Runtime Deployment",
+        "body": "A CI/CD pipeline can run MUnit tests, package a Mule application, deploy it to a test environment, and promote it after validation. The Anypoint Maven Plugin and CLI support automated build and deployment workflows. API Autodiscovery links an application to its API definition so API Manager policies can be applied. Configure runtime region, workers, and other deployment settings for the target platform. Design stages and approvals to prevent untested changes reaching production."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the MuleSoft Developer II Exam",
-    "intro": "The MuleSoft Developer II exam tests advanced development skills: complex DataWeave transformations, async patterns, API security implementation, and advanced deployment strategies. Expect deep technical questions on Anypoint Platform internals.",
+    "h2": "How to prepare for the MuleSoft Developer II exam",
+    "intro": "For each scenario, identify whether the main concern is transformation, volume, security, latency, or deployment. Choose the Mule capability that addresses it and consider its operational trade-offs.",
     "blocks": [
       {
-        "heading": "Advanced DataWeave",
-        "body": "Go beyond basic mappings: know how to use modules (Arrays, Strings, Math), pattern matching, recursive functions, and how to write reusable DataWeave modules. Know how to handle complex nested JSON and XML transformations."
+        "heading": "Write Reusable DataWeave",
+        "body": "Practice modules, functions, pattern matching, recursion, and transformations of nested JSON and XML. Choose collection functions by the output needed."
       },
       {
-        "heading": "Async & Batch Processing",
-        "body": "Know Batch Jobs in Mule 4: Batch Job scope, Batch Step, Batch Aggregator, and On Complete phases. Understand when to use batch processing vs. scatter-gather for parallel processing of large data sets."
+        "heading": "Choose Batch or Parallel Processing",
+        "body": "Use batch jobs for large record sets processed through steps. Use Scatter-Gather when independent routes can run in parallel and their responses must be combined."
       },
       {
-        "heading": "API Security Policies",
-        "body": "Know how to apply policies in API Manager: Rate Limiting, **JWT** Validation, **OAuth** 2.0 (client credentials, authorization code), CORS, and IP whitelist. Understand policy ordering and how custom policies are built."
+        "heading": "Combine API Policies",
+        "body": "Map the requirement to client identification, token validation, IP access, and rate limiting. Apply policy controls through API Manager where appropriate."
       },
       {
-        "heading": "Advanced Deployment Strategies",
-        "body": "Know the difference between CloudHub 1.0, CloudHub 2.0, and Runtime Fabric deployment models. Understand zero-downtime deployments, persistent queues, and how to configure multiple workers for HA."
+        "heading": "Plan Runtime Deployment",
+        "body": "Compare CloudHub and Runtime Fabric options for the workload. Design deployment, worker sizing, high availability, and rollback or recovery procedures."
       },
       {
-        "heading": "Performance Tuning",
-        "body": "Know how to tune thread pools (Grizzly, CPU intensive, CPU lite, I/O), configure watermark-based polling, and use caching (Object Store) to reduce redundant API calls in Mule applications."
+        "heading": "Tune and Protect Performance",
+        "body": "Use caching for repeatable results, queues for decoupling, and appropriate polling or thread settings for the workload. Measure changes in the runtime rather than guessing."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Certifications After Developer",
-    "intro": "After this certification, common next steps in the developer track:",
+    "heading": "Related credentials for MuleSoft Developer II",
+    "intro": "Continue with a MuleSoft architecture, integration, or platform operations credential.",
     "links": [
       {
         "href": "/certifications/developer-2",
@@ -170,23 +170,23 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the focus of MuleSoft Developer II certification?",
+      "question": "What is the focus of MuleSoft Developer II?",
       "options": [
-        "Independently working on production-ready Mule applications in a DevOps environment",
-        "Basic APIs only",
-        "UI design",
-        "Email development"
+        "Production Mule application development",
+        "Learning basic API terminology only",
+        "Designing user interfaces",
+        "Developing email campaigns"
       ],
       "correctAnswer": 0,
-      "explanation": "MuleSoft Developer II validates ability to work on production-ready Mule applications and DevOps practices.",
+      "explanation": "Developer II focuses on advanced Mule application development and production deployment practices.",
       "whyWrong": [
-        "Developer II goes beyond basic APIs, it targets production-grade, DevOps-ready development.",
-        "UI design is unrelated to MuleSoft Developer II's backend integration focus.",
-        "Email development is unrelated to MuleSoft Developer II's integration focus."
+        "This certification covers production Mule application development.",
+        "Basic API terms alone do not cover the advanced developer objectives.",
+        "User interface design is not Mule application development."
       ]
     },
     {
-      "question": "Which MuleSoft capability is used for complex data transformations?",
+      "question": "Which language is used for complex data transformations in Mule applications?",
       "options": [
         "Apex",
         "AMPscript",
@@ -194,219 +194,219 @@
         "DataWeave"
       ],
       "correctAnswer": 3,
-      "explanation": "DataWeave is MuleSoft's transformation language for mapping and transforming data.",
+      "explanation": "DataWeave is MuleSoft’s language for mapping and transforming data.",
       "whyWrong": [
-        "Apex is a Salesforce Core language, unrelated to MuleSoft data transformation.",
-        "AMPscript is a Marketing Cloud personalization language, unrelated to MuleSoft.",
-        "Visualforce is a Salesforce UI framework, unrelated to MuleSoft transformations."
+        "Apex is Salesforce’s programming language.",
+        "AMPscript is used in Marketing Cloud content.",
+        "Visualforce is a Salesforce UI framework, not the Mule transformation language."
       ]
     },
     {
-      "question": "What is a best practice for error handling in Mule flows?",
+      "question": "Which approach is a sound way to handle errors across Mule flows?",
       "options": [
-        "Use error handling scope and global error handler with appropriate strategies",
-        "Use only try/catch in Apex",
-        "Ignore errors",
-        "Delete the flow"
+        "Use error handlers with appropriate continue or propagate behavior",
+        "Use Apex try/catch for all Mule errors",
+        "Ignore errors and allow the flow to continue silently",
+        "Delete the flow when an error occurs"
       ],
       "correctAnswer": 0,
-      "explanation": "Error handling scope and global error handlers provide consistent error handling and recovery.",
+      "explanation": "Mule error handling scopes and handlers let developers define how failures are logged, recovered, or propagated.",
       "whyWrong": [
-        "Apex try/catch is a Salesforce Core concept, not how Mule flows handle errors.",
-        "Ignoring errors is the opposite of a best practice, it leads to unhandled failures in production.",
-        "Deleting the flow doesn't address error handling at all."
+        "This is the recommended approach for handling Mule flow errors.",
+        "Apex try/catch applies to Apex code, not Mule flow error handling.",
+        "Ignoring errors can hide failed processing."
       ]
     },
     {
-      "question": "Which deployment target is commonly used for Mule applications in production?",
+      "question": "Which deployment target can host Mule applications in a managed MuleSoft cloud environment?",
       "options": [
         "CPQ",
         "Slack",
-        "CloudHub or Runtime Manager",
+        "CloudHub",
         "Email Studio"
       ],
       "correctAnswer": 2,
-      "explanation": "CloudHub and Runtime Manager (on-prem / hybrid) are used to deploy and manage Mule applications.",
+      "explanation": "CloudHub is a MuleSoft-managed deployment environment for Mule applications.",
       "whyWrong": [
-        "CPQ is a pricing/quoting tool, unrelated to Mule deployment targets.",
-        "Slack isn't a deployment target for Mule applications.",
-        "Email Studio is a Marketing Cloud tool, unrelated to Mule application deployment."
+        "CPQ is for Salesforce product configuration.",
+        "Slack is a collaboration service.",
+        "CloudHub is a managed runtime target for Mule applications."
       ]
     },
     {
-      "question": "What does reusable asset mean in API-led connectivity?",
+      "question": "What does a reusable asset mean in API-led connectivity?",
       "options": [
-        "Single consumer only",
-        "One-time use",
-        "Physical hardware",
-        "APIs designed to be reused across multiple projects and consumers"
+        "An API intended for only one consumer",
+        "An asset used once and then discarded",
+        "A physical server component",
+        "APIs designed for reuse across consumers"
       ],
       "correctAnswer": 3,
-      "explanation": "Reusable assets are APIs and integrations designed for reuse across the organization.",
+      "explanation": "A reusable API or asset can support more than one consumer, reducing repeated integration work.",
       "whyWrong": [
-        "Reusable assets are meant to serve multiple consumers, not just one.",
-        "Reusable assets are designed for repeated use, not one-time use.",
-        "Reusable APIs are software artifacts, not physical hardware."
+        "A single-consumer asset does not provide the intended reuse.",
+        "An asset used once and discarded is not reusable.",
+        "Reusable assets are software artifacts, not physical hardware."
       ]
     },
     {
-      "question": "Which on-error strategy continues flow execution after an error?",
+      "question": "Which Mule error strategy handles an error and allows the flow to continue?",
       "options": [
-        "on-error-continue",
-        "No strategy",
-        "on-error-propagate only",
-        "on-error-delete"
+        "On Error Continue",
+        "No error handler",
+        "On Error Propagate to fail the flow",
+        "On Error Delete"
       ],
       "correctAnswer": 0,
-      "explanation": "on-error-continue allows flow to continue after handling the error.",
+      "explanation": "On Error Continue handles the error and lets processing continue after the handler completes.",
       "whyWrong": [
-        "Having no error strategy leaves failures unhandled, which isn't a valid Mule pattern.",
-        "on-error-propagate stops flow execution and passes the error up, the opposite of continuing.",
-        "'on-error-delete' isn't a real Mule error-handling strategy."
+        "On Error Continue handles the error and allows the flow to keep running.",
+        "Without a handler, the error is not explicitly managed.",
+        "On Error Propagate returns the error to the calling flow or runtime rather than continuing."
       ]
     },
     {
-      "question": "What is the purpose of batch processing in Mule?",
+      "question": "Why use batch processing in Mule?",
       "options": [
-        "To send emails only",
-        "To create APIs only",
-        "To replace flows",
-        "To process large datasets in chunks"
+        "To send marketing emails only",
+        "To create API definitions only",
+        "To replace all flow logic",
+        "Process large datasets"
       ],
       "correctAnswer": 3,
-      "explanation": "Batch processing handles large datasets in manageable chunks.",
+      "explanation": "Batch Jobs process large datasets as individual records through configured steps.",
       "whyWrong": [
-        "Batch processing works with structured data, not specifically emails.",
-        "Batch processing is about data volume, not API creation.",
-        "Batch processing complements flows, it doesn't replace them."
+        "Email delivery is unrelated to processing a data set.",
+        "API creation is separate from processing records.",
+        "Batch processing handles large data sets through configured record steps."
       ]
     },
     {
-      "question": "Which DataWeave function transforms an array?",
+      "question": "Which DataWeave functions can transform or select array content?",
       "options": [
-        "get only",
-        "map, filter, pluck, and reduce",
-        "set only",
-        "map only"
+        "Read a value by key",
+        "map, filter, pluck, reduce",
+        "Join strings together",
+        "Write one value to a variable"
       ],
       "correctAnswer": 1,
-      "explanation": "map, filter, pluck, and reduce transform arrays in DataWeave.",
+      "explanation": "map, filter, pluck, and reduce support common collection transformations and selection tasks.",
       "whyWrong": [
-        "get is not a DataWeave array transformation function.",
-        "set is not a DataWeave array transformation function.",
-        "map alone doesn't cover the full range of array transformation functions DataWeave provides."
+        "A key lookup is not the set of collection transformations asked about.",
+        "These functions support common array mapping, filtering, and aggregation.",
+        "Joining strings is a narrower task than transforming array collections."
       ]
     },
     {
-      "question": "What does API versioning support in MuleSoft?",
+      "question": "What does API versioning help support?",
       "options": [
-        "No support",
-        "Backward compatibility and gradual client migration",
-        "Breaking changes only",
-        "Deprecation only"
+        "Avoiding any API changes",
+        "Safe migration of clients between versions",
+        "Breaking all existing clients immediately",
+        "Deprecation without notice"
       ],
       "correctAnswer": 1,
-      "explanation": "Versioning supports backward compatibility and migration.",
+      "explanation": "Versioning lets API providers introduce changes while maintaining a transition path for existing consumers.",
       "whyWrong": [
-        "Versioning specifically supports backward compatibility, so 'no support' is incorrect.",
-        "Versioning is designed to avoid forcing breaking changes on all clients at once.",
-        "Versioning supports gradual migration, not deprecation as its sole purpose."
+        "Versioning does not prevent all changes.",
+        "Versions let clients migrate while maintaining a compatible path.",
+        "Breaking all clients immediately is not a safe version strategy."
       ]
     },
     {
-      "question": "Which Mule component supports scheduled execution?",
+      "question": "Which Mule component starts a flow on a configured schedule?",
       "options": [
-        "On Error only",
+        "On Error handler",
         "Scheduler",
-        "HTTP Listener only",
-        "Logger only"
+        "An HTTP Listener responding to requests",
+        "Logger"
       ],
       "correctAnswer": 1,
-      "explanation": "Scheduler triggers flows on a schedule.",
+      "explanation": "Scheduler starts a flow at configured times or intervals.",
       "whyWrong": [
-        "'On Error' handles exceptions, not scheduled execution.",
-        "HTTP Listener responds to incoming requests, not scheduled triggers.",
-        "Logger records messages, it doesn't trigger scheduled execution."
+        "An error handler responds to failures rather than starting scheduled work.",
+        "A Scheduler starts flows at configured times or intervals.",
+        "An HTTP Listener responds to inbound requests rather than running on a timer."
       ]
     },
     {
-      "question": "What is the purpose of a custom policy in API Manager?",
+      "question": "What is a custom policy in API Manager used for?",
       "options": [
-        "To enforce custom logic (e.g., rate limiting, validation)",
-        "To delete only",
-        "To create only",
-        "To replace APIs"
+        "Enforce custom API controls",
+        "Deleting APIs automatically",
+        "Creating APIs from scratch",
+        "Replacing the API implementation"
       ],
       "correctAnswer": 0,
-      "explanation": "Custom policies enforce custom logic on API requests.",
+      "explanation": "A custom policy applies organization-specific checks or controls to API requests.",
       "whyWrong": [
-        "Policies enforce behavior; they aren't a deletion mechanism.",
-        "Policies aren't limited to creation actions, they enforce ongoing rules like rate limiting and validation.",
-        "Custom policies extend API Manager's capabilities, they don't replace APIs themselves."
+        "A custom API policy enforces organization-specific request controls.",
+        "Automatic deletion is not the purpose of a policy.",
+        "Policies govern API behavior rather than create the API implementation."
       ]
     },
     {
-      "question": "Which Mule scope supports transactions?",
+      "question": "Which Mule scope can manage a transaction when the connector and resource support it?",
       "options": [
-        "Flow only",
-        "Try only",
+        "Flow scope in every case",
+        "Try scope in every case",
         "Transactional scope",
-        "No scope"
+        "No scope can support transactions"
       ],
       "correctAnswer": 2,
-      "explanation": "Transactional scope ensures atomic processing.",
+      "explanation": "A transactional scope can coordinate operations when the participating connector and resource support transactions.",
       "whyWrong": [
-        "Transactions can span more than a single flow's local processing.",
-        "'Try' scope handles errors but doesn't provide transactional guarantees across multiple operations.",
-        "Mule does support transactional scope; 'no scope' is incorrect."
+        "A flow is not inherently transactional for every operation.",
+        "A Try scope handles errors but does not make every operation transactional.",
+        "A transactional scope coordinates operations when resources support it."
       ]
     },
     {
-      "question": "What does idempotency support in integration?",
+      "question": "What does idempotency help prevent in an integration?",
       "options": [
-        "No support",
-        "Preventing duplicate processing from retries",
-        "Slower only",
-        "Faster only"
+        "All retries from occurring",
+        "Avoid duplicate effects on retry",
+        "Any possible processing delay",
+        "All application errors"
       ],
       "correctAnswer": 1,
-      "explanation": "Idempotency prevents duplicate processing on retries.",
+      "explanation": "Idempotent processing lets a retry of the same request avoid creating duplicate business effects.",
       "whyWrong": [
-        "Idempotency specifically addresses duplicate processing; 'no support' misstates its purpose.",
-        "Idempotency is about correctness, not intentionally slowing down processing.",
-        "Idempotency is about correctness (avoiding duplicates), not raw execution speed."
+        "Retries may still occur; idempotency prevents duplicate effects.",
+        "Idempotency helps avoid duplicate business effects when a request is repeated.",
+        "It does not remove processing delay or all possible failures."
       ]
     },
     {
-      "question": "Which deployment strategy supports zero-downtime on CloudHub?",
+      "question": "Which strategy can reduce downtime during a Mule application release?",
       "options": [
-        "Manual only",
-        "Full restart only",
-        "Blue-green or rolling deployment",
-        "No strategy"
+        "Manual replacement without health checks",
+        "Stop the old deployment before preparing the new one",
+        "Deploy without testing",
+        "A rolling or blue-green deployment"
       ],
-      "correctAnswer": 2,
-      "explanation": "Blue-green and rolling deployments support zero-downtime.",
+      "correctAnswer": 3,
+      "explanation": "A supported rolling or blue-green release can shift traffic while maintaining availability during deployment.",
       "whyWrong": [
-        "Manual-only deployment doesn't inherently provide zero-downtime guarantees.",
-        "A full restart causes downtime, the opposite of the zero-downtime goal.",
-        "Having no deployment strategy risks downtime, which contradicts the goal of zero-downtime releases."
+        "Manual replacement without health checks can create downtime.",
+        "A full stop before deployment creates an outage window.",
+        "A supported rolling or blue-green strategy can keep service available during deployment."
       ]
     },
     {
-      "question": "What is the purpose of MUnit?",
+      "question": "What is MUnit used for?",
       "options": [
-        "To monitor only",
-        "To deploy only",
-        "To unit test Mule flows and applications",
-        "To replace Mule"
+        "Monitoring runtime metrics only",
+        "Deploying applications only",
+        "MUnit tests Mule applications",
+        "Replacing Mule runtime"
       ],
       "correctAnswer": 2,
-      "explanation": "MUnit is the testing framework for Mule applications.",
+      "explanation": "MUnit provides tests for Mule applications and flows.",
       "whyWrong": [
-        "MUnit is for testing, not ongoing monitoring of running applications.",
-        "MUnit specifically supports testing, not deployment.",
-        "MUnit is a testing framework, not a replacement for Mule itself."
+        "MUnit is for testing, not only monitoring.",
+        "Deployment is a separate lifecycle step.",
+        "MUnit tests Mule flows and applications."
       ]
     }
   ]

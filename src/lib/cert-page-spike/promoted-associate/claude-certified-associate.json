@@ -315,6 +315,86 @@
         "One occasional user may not need a custom API tool.",
         "A custom API tool needs development and maintenance."
       ]
+    },
+    {
+      "question": "A launch team needs a message tailored to three distinct audiences. What should the prompt provide?",
+      "options": [
+        "Ask for one generic draft without describing the readers",
+        "Send separate prompts without shared product details or constraints",
+        "Give product facts and audiences, then request a tailored draft for each group",
+        "Request a launch email but provide no goal, audience, or product context"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Provide product details, describe each audience, and request one tailored message for each group.",
+      "whyWrong": [
+        "A generic draft lacks audience context needed to tailor the message.",
+        "Separate prompts can produce inconsistent facts and omit shared requirements.",
+        "The request omits the information Claude needs to produce a useful draft."
+      ]
+    },
+    {
+      "question": "Claude cites a statistic from a report, but the number matters to a decision. What should the user do?",
+      "options": [
+        "Check the original report and confirm the statistic before relying on it",
+        "Keep the citation because named sources make claims reliable",
+        "Ask Claude to repeat the claim and accept it if the wording is clear",
+        "Remove the number but keep the unverified report citation in the draft"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Verify the statistic in the original report before relying on or sharing the claim.",
+      "whyWrong": [
+        "A named citation does not show that the source or statistic is accurate.",
+        "A second answer from the same system is not independent verification.",
+        "An unverified citation can still mislead readers about the evidence."
+      ]
+    },
+    {
+      "question": "A team classifies routine requests at high volume and needs low latency. Which model-selection approach fits?",
+      "options": [
+        "Choose the most capable model for every request, regardless of need",
+        "Evaluate a fast, lower-cost model against the required quality threshold",
+        "Rotate model tiers randomly so requests receive varied responses",
+        "Use the slowest available tier to reduce the number of requests sent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Choose a fast, lower-cost model that meets the task’s quality threshold.",
+      "whyWrong": [
+        "Using the highest-capability tier for a routine task may add needless cost or delay.",
+        "Random tier selection makes quality, latency, and cost less predictable.",
+        "A slower tier does not address the stated latency requirement."
+      ]
+    },
+    {
+      "question": "A Project contains an outdated procedure, but a user asks for current guidance. What should the user do?",
+      "options": [
+        "Assume the saved Project file is current because it is reusable",
+        "Ask Claude to infer the latest procedure from the old reference",
+        "Ignore the date and use the first matching paragraph in the file",
+        "Check an authoritative source, then refresh the Project reference"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Check an authoritative current source and update or replace the outdated Project reference.",
+      "whyWrong": [
+        "Reusable files can become stale and still need date and source checks.",
+        "An outdated reference cannot establish what the current procedure requires.",
+        "A matching paragraph may still describe a superseded process."
+      ]
+    },
+    {
+      "question": "A team wants Claude to review confidential customer documents. What is the responsible first step?",
+      "options": [
+        "Paste the documents into any available account to see what Claude finds",
+        "Remove customer names but ignore other identifying details and policy",
+        "Confirm policy and use an approved product with appropriate data controls",
+        "Assume business documents are safe to share because they are not public"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Check company policy and use an approved product with the required data controls.",
+      "whyWrong": [
+        "An unapproved account may not provide the organization’s required protections.",
+        "Other details can still identify people, and company rules still apply.",
+        "Confidential business documents can contain sensitive information."
+      ]
     }
   ],
   "introLead": [

@@ -42,23 +42,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Does Salesforce certification increase salary?',
-    answer: 'Yes, consistently. Salesforce’s own research and third-party salary surveys show certified professionals earn 20–30% more than non-certified peers in equivalent roles. Entry-level ADM-201 certified admins earn $60,000–$80,000 vs $45,000–$60,000 without certification. Senior developers and architects with multiple certifications earn $130,000–$180,000+. The ROI on a $200 exam fee against a $15,000–$30,000 salary increase makes certification one of the highest-return professional investments available.',
+    answer: 'Certification can support salary growth, though it does not guarantee a raise. Salesforce research and third-party surveys report that certified professionals earn 20–30% more than peers in similar roles. Entry-level ADM-201 certified admins earn $60,000–$80,000 vs $45,000–$60,000 without certification. Senior developers and architects with multiple certifications earn $130,000–$180,000+. Compare the $200 exam fee with a possible $15,000–$30,000 salary increase when considering the return.',
   },
   {
     question: 'How many Salesforce certifications do you need?',
-    answer: 'For most career stages, 2–4 targeted certifications deliver the highest ROI. One primary certification (ADM-201, PD1, or Sales Cloud Consultant) opens the door. A second complementary certification (e.g., ADM-201 + App Builder, or PD1 + Service Cloud Consultant) significantly increases value. Beyond 4–5 certifications, diminishing returns set in, employers value breadth and depth of real project experience more than certification quantity.',
+    answer: 'For many people, 2–4 certifications chosen for a clear career goal are enough. Start with a credential for your role, such as ADM-201, PD1, or Sales Cloud Consultant. A complementary credential, such as ADM-201 + App Builder or PD1 + Service Cloud Consultant, can broaden your skills. After 4–5 certifications, hands-on project experience may matter more than adding another credential.',
   },
   {
     question: 'How long does it take to get Salesforce certified?',
-    answer: 'ADM-201 (the most common starting point): 8–12 weeks for complete beginners, 4–6 weeks with prior CRM experience. Platform Developer I: 12–16 weeks with programming experience. Consultant certifications (Sales Cloud, Service Cloud): 8–12 weeks after ADM-201. The investment is real, but so is the payoff. Most candidates recoup their study time investment within months of a salary increase or new job offer.',
+    answer: 'Study time depends on your experience. A common estimate for ADM-201 is 8–12 weeks for beginners and 4–6 weeks for people with CRM experience. Platform Developer I may take 12–16 weeks if you already know programming. Consultant certifications such as Sales Cloud and Service Cloud may take 8–12 weeks after ADM-201. Your results will depend on your preparation and job opportunities.',
   },
   {
     question: 'Is Salesforce certification hard?',
-    answer: 'Difficulty varies by certification and background. ADM-201 is achievable for motivated beginners in 8–12 weeks without prior tech experience. PD1 and consultant certifications require deeper knowledge and scenario-based thinking. Architect certifications (Integration Architect, Data Architect) require 2–4 years of project experience. The CTA Board Review is considered one of the most rigorous certification processes in enterprise software. Most people who commit 10–15 hours per week and use practice questions pass on their first or second attempt.',
+    answer: 'Difficulty depends on the certification and what you already know. A beginner may prepare for ADM-201 in 8–12 weeks without prior tech experience. PD1 and consultant exams require deeper knowledge and scenario-based reasoning. Integration Architect and Data Architect typically call for 2–4 years of project experience. The CTA Board Review is one of the most demanding certification processes in enterprise software. Candidates who study 10–15 hours per week and use practice questions may pass on their first or second attempt.',
   },
   {
     question: 'Is Salesforce certification worth it for career changers?',
-    answer: 'Yes: Salesforce certifications are one of the most effective tools for career changers entering tech. Unlike software engineering roles that require computer science degrees or years of coding experience, Salesforce Administration (ADM-201) is accessible to motivated candidates from any background. Former teachers, healthcare workers, accountants, and salespeople successfully transition into Salesforce roles. The $200 exam fee and 8–12 weeks of study is a low-cost, low-risk path into a $70,000–$100,000+ career.',
+    answer: 'A certification can help career changers show what they have learned about Salesforce. ADM-201 does not require a computer science degree or years of coding experience, and people from fields such as teaching, healthcare, accounting, and sales have moved into Salesforce roles. The exam costs $200, and a typical study plan may take 8–12 weeks. A $70,000–$100,000+ career is possible, but a credential alone cannot guarantee a job or salary.',
   },
 ]
 
@@ -78,14 +78,14 @@ export default function IsSalesforceCertificationWorthItPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          An honest answer, salary data, job market demand, real costs, and who should (and shouldn’t) invest in Salesforce certification.
+          A practical look at the time and cost involved, the potential career benefits, and who may benefit most from certification.
         </p>
       </div>
 
       {/* Quick verdict */}
       <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-10">
         <h2 className="text-lg font-bold text-green-900 mb-2">Short answer: Yes, for most people</h2>
-        <p className="text-sm text-green-800">Salesforce certifications have one of the best ROI profiles of any professional credential. A $200 exam fee + 8–12 weeks of study can unlock a $15,000–$30,000 salary increase. Salesforce has 150,000+ customers globally and consistently reports more job openings than certified professionals to fill them.</p>
+        <p className="text-sm text-green-800">A certification can help show employers what you know, but its value depends on your experience, target role, and ability to apply the skills. A $200 exam fee and 8–12 weeks of study may support a $15,000–$30,000 salary increase. Salesforce has 150,000+ customers globally and reports more job openings than certified professionals to fill them.</p>
       </div>
 
       {/* ROI Numbers */}
@@ -117,12 +117,12 @@ export default function IsSalesforceCertificationWorthItPage() {
           <h2 className="text-lg font-bold text-gray-900 mb-3">Certification IS worth it if&hellip;</h2>
           <ul className="space-y-2 text-sm text-gray-700">
             {[
-              'You are entering or transitioning into the Salesforce ecosystem',
-              'You are already using Salesforce daily and want a salary increase',
-              'You want to move from an internal admin role to a consulting career',
+              'You are entering the Salesforce ecosystem or changing careers',
+              'You use Salesforce at work and want to demonstrate your skills',
+              'You want to move from an internal admin role into consulting',
               'Your employer reimburses exam fees (common at Salesforce partners)',
-              'You want to advance from developer to architect track',
-              'You are a career changer seeking a stable, high-demand tech career',
+              'You are moving from a developer role toward architecture',
+              'You want to explore a career in a high-demand technology field',
             ].map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -135,11 +135,11 @@ export default function IsSalesforceCertificationWorthItPage() {
           <h2 className="text-lg font-bold text-gray-900 mb-3">Certification is LESS worth it if&hellip;</h2>
           <ul className="space-y-2 text-sm text-gray-700">
             {[
-              'You have 10+ years of Salesforce experience, project portfolio matters more',
-              'You are stacking certifications without hands-on project experience',
-              'You are pursuing 8+ certifications at once without career progression',
-              'Your target role (e.g., CTA) values architecture experience over cert count',
-              'You only need Salesforce for one narrow admin task at your company',
+              'You have 10+ years of Salesforce experience and need to strengthen your project portfolio',
+              'You are adding certifications without gaining hands-on project experience',
+              'You are pursuing 8+ certifications without a clear career progression plan',
+              'Your target role (such as CTA) values architecture experience over certification count',
+              'You only use Salesforce for one narrow task at your company',
             ].map((item) => (
               <li key={item} className="flex items-start gap-2">
                 <span className="text-red-400 font-bold flex-shrink-0 mt-0.5">✗</span>
@@ -159,24 +159,24 @@ export default function IsSalesforceCertificationWorthItPage() {
             <ul className="space-y-2 text-gray-700">
               <li>Exam fee: $75–$400 (most certs $200)</li>
               <li>Study time: 40–120 hours (8–12 weeks part-time)</li>
-              <li>Retake fee: $100–$200 if you fail first attempt</li>
-              <li>Maintenance: 3 Trailhead modules per release (free)</li>
-              <li>Optional: study courses $50–$300</li>
+              <li>Retake fee: $100–$200 after a failed first attempt</li>
+              <li>Maintenance: 3 free Trailhead modules per release</li>
+              <li>Optional study courses: $50–$300</li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-3 text-green-700">Benefits</h3>
             <ul className="space-y-2 text-gray-700">
-              <li>Salary increase: $15,000–$30,000 for first cert</li>
-              <li>New job opportunities opened immediately</li>
-              <li>Salesforce partner status (for employers) requires cert counts</li>
-              <li>Higher hourly rates for contractors/freelancers</li>
-              <li>Trailhead profile boost, visible to recruiters</li>
+              <li>Potential salary increase: $15,000–$30,000 for a first certification</li>
+              <li>Access to new job opportunities</li>
+              <li>Certification counts support Salesforce partner status for employers</li>
+              <li>Potential for higher hourly rates as a contractor or freelancer</li>
+              <li>A stronger Trailhead profile that recruiters can view</li>
             </ul>
           </div>
         </div>
         <div className="mt-4 p-4 bg-salesforce-blue/5 rounded-lg">
-          <p className="text-sm text-gray-700"><strong>ROI example:</strong> ADM-201 costs $200 (exam) + ~60 hours of study. If it leads to a $15,000 salary increase, the ROI payback period is under 1 week of new salary. Even with failed attempts and a retake, the financial math strongly favours getting certified.</p>
+          <p className="text-sm text-gray-700"><strong>ROI example:</strong> ADM-201 costs $200 (exam) and takes about 60 hours of study. If it leads to a $15,000 salary increase, the exam fee equals less than 1 week of that additional salary. Include study time and any retake in your own calculation.</p>
         </div>
       </div>
 
@@ -184,9 +184,9 @@ export default function IsSalesforceCertificationWorthItPage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Job Market Demand ({RELEASE_CURRENT})</h2>
         <div className="space-y-3 text-sm text-gray-700">
-          <p>Salesforce has over <strong>150,000 customers globally</strong> and continues to grow, especially with Agentforce AI features driving new implementation waves in 2025–2026.</p>
-          <p>The Salesforce ecosystem is projected to create <strong>9.3 million jobs</strong> by 2026 according to IDC research. Supply of certified professionals consistently lags demand, which keeps salaries elevated.</p>
-          <p>Entry-level admin roles (ADM-201) are the most accessible entry point with the fastest time-to-hire. Developer and consultant roles have higher salaries but require more experience. Architect-level roles command premium compensation with 5–10 year wait lists at top firms.</p>
+          <p>Salesforce has over <strong>150,000 customers globally</strong>. Agentforce AI features are driving new implementation work in 2025–2026.</p>
+          <p>IDC research projects that the Salesforce ecosystem will create <strong>9.3 million jobs</strong> by 2026. The number of certified professionals has not kept pace with demand, which supports higher salaries.</p>
+          <p>ADM-201 can provide an entry point to admin roles. Developer and consultant roles tend to pay more and ask for more experience. Architect roles offer higher compensation, and some top firms have 5–10 year wait lists.</p>
         </div>
       </div>
 
@@ -207,7 +207,7 @@ export default function IsSalesforceCertificationWorthItPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Your Certification Journey</h2>
-        <p className="text-white mb-6">Free practice questions for every Salesforce certification, no account required.</p>
+        <p className="text-white mb-6">Try free practice questions for Salesforce certifications without creating an account.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/administrator" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             ADM-201 Practice <ArrowRight className="ml-2 h-4 w-4" />

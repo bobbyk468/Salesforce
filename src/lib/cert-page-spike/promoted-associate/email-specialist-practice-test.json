@@ -1,42 +1,42 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Email Specialist exam for?",
+    "heading": "Who should use this Email Specialist practice test?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with Email Specialist features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "Email practitioners",
+        "description": "You work with Marketing Cloud email features and want to practice applying them to realistic business needs."
       },
       {
-        "label": "Consultants and admins",
-        "description": "You support Salesforce projects where Email Studio & Content, Data Extensions & Subscribers, and Send Management decisions affect the final design."
+        "label": "Consultants and administrators",
+        "description": "You support Marketing Cloud projects and need to make sound choices about content, subscriber data, and sending."
       },
       {
-        "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for specialist roles."
+        "label": "Candidates preparing for the credential",
+        "description": "You want a timed review that helps identify which Email Specialist topics need more study."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Email Specialist Exam Hard?",
-    "summary": "This practice-test page supports Email Specialist readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "heading": "How challenging is this Email Specialist practice test?",
+    "summary": "The questions focus on practical decisions across email content, subscriber data, delivery, automation, and reporting. They are designed to test how you apply features in a scenario, not just whether you remember definitions.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>no published passing score</strong>: build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong>: expect questions that test when to use Email Studio & Content, Data Extensions & Subscribers, or Send Management.",
-      "<strong>Hands-on context matters</strong>: candidates who have configured or supported Email Specialist in a real org are better prepared than candidates who only memorize notes."
+      "<strong>Practice timing:</strong> This page provides a 60-question set with a 105-minute practice window.",
+      "<strong>Practice score:</strong> This test does not set or represent an official passing score. Use your results to find study gaps.",
+      "<strong>Scenario choices:</strong> Questions ask you to select an appropriate feature, configuration, or troubleshooting step.",
+      "<strong>Hands-on knowledge helps:</strong> Experience with Marketing Cloud makes it easier to understand how email, subscriber data, and sending settings work together."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that. Review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Try a timed attempt, then review each missed answer and explain why the other options do not fit. Repeat mixed-topic sets until your results are consistently strong; check the official exam guide for current exam requirements before booking."
   },
   "examFormat": {
-    "heading": "Email Specialist Exam Format Explained",
-    "intro": "The Email Specialist exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Email Specialist.",
+    "heading": "Email Specialist practice-test format",
+    "intro": "Use this timed question set to rehearse pacing and review how you make decisions across Marketing Cloud Email topics.",
+    "scenarioPercent": "Questions use short business situations and several plausible choices. Look for the option that meets the requirement while respecting subscriber status, compliance, and the way the platform is configured.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Email Studio & Content, Data Extensions & Subscribers, and Send Management because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Check audience rules:</strong> Review how subscriber status, publication and suppression lists, and send classifications affect eligibility.",
+      "<strong>Design usable email content:</strong> Practice accessible, mobile-friendly messages, reusable content, and sensible fallbacks for missing data.",
+      "<strong>Match the tool to the work:</strong> Know when a customer journey, scheduled automation, or triggered send fits the scenario, and review basic AMPscript use.",
+      "<strong>Read performance signals:</strong> Compare delivery, bounces, opens, clicks, and unsubscribes to identify an audience, content, or delivery issue."
     ]
   },
   "certificationCard": {
@@ -57,59 +57,59 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Email Specialist Practice Test: Key Concepts to Review",
+    "h2": "Email Specialist practice test: topics to review",
     "blocks": [
       {
-        "heading": "Email Delivery, Compliance & Subscriber Management",
-        "body": "CAN-SPAM requires a physical mailing address, an unsubscribe mechanism honored within 10 days, and honest subject lines. GDPR requires explicit opt-in consent for EU subscribers and the right to erasure. CASL applies to Canadian recipients. Suppression Lists (global unsubscribes, bounces, complaints) prevent sending to opted-out addresses. **Data Extensions** store subscriber data with custom attributes for segmentation. Subscriber keys uniquely identify a contact across channels. Double opt-in sends a confirmation email before adding a subscriber to a **Sendable** list. The practice exam frequently tests which compliance rule applies to a given scenario and how suppression lists interact with send classification."
+        "heading": "Subscriber Data, Consent, and Compliance",
+        "body": "Know how subscriber records, subscriber keys, data extensions, and sendable audiences relate. Review how publication and suppression lists affect a send, and distinguish a commercial message from a transactional one. Apply the relevant privacy or anti-spam requirement to the situation described; do not assume that one rule applies to every country or audience."
       },
       {
-        "heading": "Journey Builder & Triggered Sends",
-        "body": "**Journey Builder** orchestrates multi-step, multi-channel customer journeys. Entry Sources include **Data Extensions** (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation, good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ."
+        "heading": "Journeys and Triggered Sends",
+        "body": "Journey Builder coordinates a customer experience across steps, waits, decisions, and channels. Entry sources determine how contacts enter a journey, such as a data extension or an API event. A triggered send is a better fit for a single message that must be sent in response to an event, such as a confirmation. Choose the tool based on whether the requirement calls for a multi-step journey or one event-driven email."
       },
       {
-        "heading": "Content Builder & Personalization",
-        "body": "**Content Builder** is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with **AMPscript** or **SSJS** for dynamic content. AMPscript is the scripting language for personalization; `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content."
+        "heading": "Email Content and Personalization",
+        "body": "Content Builder stores email assets, templates, images, and reusable blocks. AMPscript can personalize messages using subscriber or data extension values and conditional logic. Dynamic content and personalization strings can tailor what a recipient sees. Check syntax and data availability when reviewing a personalization scenario."
       },
       {
-        "heading": "Send Classifications & Deliverability",
-        "body": "Send Classifications define the unsubscribe behavior for a send: Commercial (subscriber can unsubscribe), Transactional (not subject to commercial opt-out rules). Sender Profiles, Delivery Profiles, and Send Classifications combine to control From address, reply-to, and unsubscribe handling. IP Warming is required when using a new dedicated IP, gradually increase send volume to build sender reputation. SPF, DKIM, and DMARC records authenticate sending domains and improve deliverability. Bounce handling: Soft Bounces (temporary, retry) vs. Hard Bounces (permanent, suppress). Spam complaints trigger suppression and affect sender reputation. The exam tests how to configure send classifications for a mixed transactional/commercial sender."
+        "heading": "Send Setup and Deliverability",
+        "body": "Sender profiles, delivery profiles, and send classifications control different parts of a send, including sender details, delivery settings, and unsubscribe behavior. Review how SPF, DKIM, and DMARC support domain authentication, and how a new dedicated IP is gradually warmed. Soft bounces are temporary; hard bounces indicate a more permanent delivery problem."
       },
       {
-        "heading": "Analytics & Reporting",
-        "body": "Marketing Cloud Email reporting tracks: Sent, Delivered, Opens (unique + total), Clicks (unique + total), Bounces (hard + soft), Unsubscribes, and Spam Complaints. Click Rate = Clicks / Delivered. Open Rate = Opens / Delivered. The Tracking workspace in **Email Studio** shows send-level metrics. Data Views (hidden **Data Extensions**: _Sent, _Open, _Click, _Bounce, _Unsubscribe) allow SQL queries in **Automation Studio** for custom reporting. Einstein Engagement Scoring predicts which subscribers are likely to engage. Send Throttling limits the number of emails sent per hour to protect deliverability. The exam tests how to calculate email KPIs from raw numbers and which reporting tool to use for a given analysis need."
+        "heading": "Email Metrics and Reporting",
+        "body": "Review sent and delivered counts, opens, clicks, bounces, unsubscribes, and complaints. Email Studio tracking provides send-level results, while Data Views can support SQL-based analysis in Automation Studio. Use the metric or reporting source that answers the business question; confirm the denominator when calculating a rate."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to pass this Email Specialist practice test",
-    "intro": "This certification is heavy on send architecture, compliance, Journey Builder vs triggered sends, AMPscript, and reporting. Use these questions to stress-test recall under time limits, then use the heatmap to see whether misses cluster on content, data extensions, deliverability, or analytics, and revisit only those key concept blocks before the next run.",
+    "h2": "How to use this Email Specialist practice test",
+    "intro": "Use the questions to check your decisions across compliance, audience setup, content, automation, deliverability, and analytics. After each attempt, look for patterns in the topics you missed and return to those sections for focused review.",
     "blocks": [
       {
-        "heading": "Simulate real exam pacing",
-        "body": "Work through a full set without opening **Email Studio** docs or saved **AMPscript** snippets. The exam expects you to pick the right feature or rule quickly (send classifications, suppression, entry sources), not to look up syntax."
+        "heading": "Practice under timed conditions",
+        "body": "Complete a set without notes or documentation so you can see how quickly you recognize the right feature or rule. Treat the timing here as a practice setting, and use the current official guide for the live exam format."
       },
       {
-        "heading": "Review every explanation",
-        "body": "Wrong answers often differ by one compliance or architecture nuance, transactional vs commercial classification, REST vs SOAP for a given task, or when **Journey Builder** is required over a simple triggered send. Read each explanation as a mini flashcard for those distinctions."
+        "heading": "Study the reasoning behind each answer",
+        "body": "Review every explanation, including questions you answered correctly. Pay attention to distinctions such as commercial versus transactional sends, journey entry versus triggered sends, and which settings affect suppression."
       },
       {
-        "heading": "Turn heatmap reds into targeted study",
-        "body": "If **Data Extensions** and subscriber model questions dominate errors, re-read that key concept block and sketch a small DE schema on paper before the next practice round. Same for Journey activities or CAN-SPAM/GDPR scenarios."
+        "heading": "Use missed questions to guide review",
+        "body": "If subscriber data questions are difficult, revisit data extensions and subscriber status. For automation misses, compare journey activities with scheduled and event-driven sends. For delivery questions, review classifications, authentication, and bounce handling."
       },
       {
-        "heading": "Cross-check with the full Email Specialist page",
-        "body": "Use the main [Marketing Cloud Email Specialist](/certifications/email-specialist) certification page for official scope, weightage, and study sequencing when a whole topic feels weak, then return here to confirm the heatmap improves on that topic."
+        "heading": "Compare with the certification outline",
+        "body": "Use the [Marketing Cloud Email Specialist](/certifications/email-specialist) page and the official exam guide to check exam scope and current requirements. Then return to the practice set to see whether your understanding has improved."
       },
       {
-        "heading": "Confirm readiness before scheduling",
-        "body": "Schedule the proctored exam only after several timed runs where you are clearly and repeatedly above the practice passing bar, including on mixed-topic sets that mimic the real blueprint mix."
+        "heading": "Check readiness across topics",
+        "body": "A strong result on one set is only one signal. Try several mixed-topic attempts and make sure you can explain the correct choice before scheduling the official exam."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Marketing Certifications",
-    "intro": "After this marketing certification, consider these related credentials:",
+    "heading": "Related Marketing Cloud credentials",
+    "intro": "After studying email marketing, these credentials may help you broaden your Marketing Cloud or marketing automation skills:",
     "links": [
       {
         "href": "/certifications/marketing-cloud-consultant",
@@ -157,243 +157,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A marketer needs the same footer on 40 emails and expects to change the address in it next month. How should it be built?",
+      "question": "A marketer needs the same footer in 40 emails and plans to change its address next month. How should the footer be set up?",
       "options": [
-        "As a shared content block used by each email",
-        "As text pasted directly into each of the forty individual email templates",
-        "As an image file containing the address, uploaded once and linked everywhere",
-        "As an AMPscript lookup that retrieves the address from a data extension"
+        "Use one shared content block in each email",
+        "Paste the text into each of the 40 email templates",
+        "Upload one image with the address and link to it from each email",
+        "Use AMPscript to look up the address in a data extension"
       ],
       "correctAnswer": 0,
-      "explanation": "A shared block is referenced rather than copied, so editing it once updates every email that uses it.",
+      "explanation": "A shared block is reused rather than copied. Change it once, and every email that uses it is updated.",
       "whyWrong": [
-        "Pasted text means forty separate edits and forty chances to miss one.",
-        "Text inside an image cannot be read by screen readers or when images are blocked.",
-        "A lookup per send is unnecessary work for a value that rarely changes."
+        "Pasted text needs 40 separate edits, so it is easy to miss one.",
+        "Text in an image is not available to screen readers and may not appear when images are blocked.",
+        "Looking up a value for every send is unnecessary when it rarely changes."
       ]
     },
     {
-      "question": "What is the effect of a double opt-in process?",
+      "question": "What happens during double opt-in?",
       "options": [
-        "The subscriber receives each campaign twice to improve the chance of an open",
-        "The subscriber's record is created in both the list and a data extension",
-        "The subscriber confirms their address before receiving mail",
-        "The subscriber is added to two separate publication lists within the account"
+        "The subscriber gets every campaign twice to encourage opens",
+        "The subscriber’s record is added to both a list and a data extension",
+        "The subscriber confirms their email address before they receive messages",
+        "The subscriber is added to two publication lists"
       ],
       "correctAnswer": 2,
-      "explanation": "Double opt-in sends a confirmation message and only subscribes the person once they act on it, which proves the address is valid and wanted.",
+      "explanation": "The person receives a confirmation message and must act on it before they are subscribed. This confirms that the address works and that they want the email.",
       "whyWrong": [
-        "Sending everything twice would increase complaints sharply.",
-        "It is about consent rather than where the record is stored.",
-        "It concerns confirmation, not list membership."
+        "Sending each campaign twice would lead to more complaints.",
+        "Double opt-in is about consent, not where the record is stored.",
+        "It confirms consent; it does not require membership in two lists."
       ]
     },
     {
-      "question": "An email renders correctly in most clients but breaks in one older desktop client. What is the usual cause?",
+      "question": "An email looks correct in most email apps but breaks in an older desktop app. What is the likely cause?",
       "options": [
-        "The send classification being set to commercial rather than transactional",
-        "Unsupported CSS in that client",
-        "The sending domain not having a published DKIM record configured for it",
-        "The data extension used for the send containing more columns than needed"
+        "The send is marked as commercial instead of transactional",
+        "That app does not support some of the CSS",
+        "The sending domain has no DKIM record",
+        "The send data extension has more columns than needed"
       ],
       "correctAnswer": 1,
-      "explanation": "Email clients support very different subsets of CSS, which is why table-based layouts and inline styles remain common in email.",
+      "explanation": "Email apps support different CSS features. This is why email designs often use tables and inline styles.",
       "whyWrong": [
-        "Classification governs opt-out handling, not layout.",
-        "Authentication affects delivery, not how markup is rendered.",
-        "Audience structure has no bearing on rendering."
+        "The send classification controls opt-out handling, not layout.",
+        "Authentication affects delivery, not how the email is displayed.",
+        "The audience data structure does not affect email layout."
       ]
     },
     {
-      "question": "Why would a marketer segment a large list before sending rather than mailing everyone?",
+      "question": "Why segment a large mailing list instead of sending to everyone?",
       "options": [
-        "Unsegmented sends cannot be reported on within the standard tracking views",
-        "Segmented sends are delivered more quickly than a single large send would be",
-        "The platform imposes a hard limit on how many subscribers one send may include",
-        "Relevance raises engagement and lowers complaints"
+        "You cannot report on a send to the full list in standard tracking views",
+        "Segmented sends arrive faster than one large send",
+        "The platform has a strict limit on the number of subscribers in a send",
+        "More relevant email can increase engagement and reduce complaints"
       ],
       "correctAnswer": 3,
-      "explanation": "Mail that matches what someone cares about gets opened and clicked more and reported as spam less, which protects the sending reputation.",
+      "explanation": "People are more likely to open and click messages that match their interests. They are also less likely to report them as spam, which helps protect your sending reputation.",
       "whyWrong": [
-        "Tracking works the same either way.",
-        "Delivery speed is not the reason to segment.",
-        "There is no practical subscriber limit of this kind."
+        "Standard tracking works for both segmented and full-list sends.",
+        "Delivery speed is not the reason to segment a list.",
+        "There is no practical subscriber limit like this."
       ]
     },
     {
       "question": "A send uses a data extension that is not marked as sendable. What happens?",
       "options": [
-        "It cannot be selected as the send audience",
-        "The platform converts the data extension into a subscriber list automatically",
-        "The send proceeds and the subscribers are added to All Subscribers first",
-        "The send proceeds but every subscriber receives the same default content"
+        "You cannot choose it as the send audience",
+        "The platform automatically changes it into a subscriber list",
+        "The send runs and first adds everyone to All Subscribers",
+        "The send runs but gives everyone the same default content"
       ],
       "correctAnswer": 0,
-      "explanation": "A data extension must be sendable and related to subscribers before it can be used as an audience for a send.",
+      "explanation": "A data extension must be sendable and linked to subscribers before it can be used as a send audience.",
       "whyWrong": [
-        "There is no automatic conversion to a list.",
-        "No automatic subscriber creation takes place.",
-        "An unsendable extension is not offered as an audience at all."
+        "The platform does not automatically turn it into a list.",
+        "The platform does not automatically create subscriber records.",
+        "You cannot select a data extension that is not sendable."
       ]
     },
     {
-      "question": "What does the term list hygiene refer to?",
+      "question": "What does list hygiene mean?",
       "options": [
-        "Ensuring every email includes a physical address and unsubscribe footer",
-        "Keeping the folder structure of the account tidy and consistently named",
-        "Removing invalid and inactive addresses over time",
-        "Checking that each send is classified correctly before it is scheduled"
+        "Making sure every email has a mailing address and unsubscribe link",
+        "Keeping account folders tidy and consistently named",
+        "Removing invalid and inactive email addresses over time",
+        "Checking the send classification before scheduling each send"
       ],
       "correctAnswer": 2,
-      "explanation": "Hygiene is the ongoing work of removing addresses that bounce or never engage, which keeps bounce rates and reputation healthy.",
+      "explanation": "List hygiene means removing addresses that bounce or never engage. This helps keep bounce rates low and protects your sending reputation.",
       "whyWrong": [
-        "Footer content is a compliance requirement.",
-        "Folder organisation is housekeeping of content, not of the list.",
-        "Classification is a configuration step per send."
+        "A mailing address and unsubscribe link are compliance items.",
+        "Folder organization is not list hygiene.",
+        "Checking the classification is a send setup task."
       ]
     },
     {
-      "question": "A subscriber opens an email on a phone and clicks a link that leads to a desktop-only page. What is the problem?",
+      "question": "A subscriber opens an email on a phone and clicks a link to a page that only works on a desktop. What is the problem?",
       "options": [
-        "The email was sent with a commercial rather than transactional classification",
-        "The landing experience is not responsive",
-        "The subscriber's record is missing the mobile number needed for the journey",
-        "The link was tracked, which prevents it opening correctly on a mobile device"
+        "The email is marked as commercial instead of transactional",
+        "The page does not work well on mobile screens",
+        "The subscriber’s record is missing a mobile number for the journey",
+        "Link tracking prevents the page from opening on a phone"
       ],
       "correctAnswer": 1,
-      "explanation": "Most email is opened on a phone, so a link that leads somewhere unusable on mobile wastes the engagement the email earned.",
+      "explanation": "Most email is opened on phones. A page that does not work on a phone wastes the interest the email created.",
       "whyWrong": [
-        "Classification has no effect on the destination page.",
-        "A mobile number is irrelevant to opening a web page.",
-        "Link tracking works normally on mobile devices."
+        "The classification does not affect the linked page.",
+        "A mobile number is not needed to open a web page.",
+        "Tracked links work on phones."
       ]
     },
     {
-      "question": "What is the purpose of a seed list?",
+      "question": "What is a seed list used for?",
       "options": [
-        "Test addresses that receive the send for checking",
-        "The initial subscribers loaded when a new business unit is first configured",
-        "A set of addresses reserved for transactional messages only within the account",
-        "A list of the subscribers who engage most often with the brand's email"
+        "Test addresses that receive a send so you can check it",
+        "The first subscribers added when a new business unit is set up",
+        "Addresses reserved for transactional messages",
+        "A list of subscribers who engage most with the brand"
       ],
       "correctAnswer": 0,
-      "explanation": "Seed addresses sit across different mailbox providers and receive the send so you can check rendering and placement in real inboxes.",
+      "explanation": "Seed addresses at different email providers receive the message so you can check how it looks and whether it reaches real inboxes.",
       "whyWrong": [
-        "They are not an onboarding artefact.",
-        "Seed lists are for testing rather than transactional sending.",
-        "Most engaged subscribers are a segment, not a seed list."
+        "Seed lists are for testing, not onboarding.",
+        "Seed lists are for testing, not transactional sends.",
+        "A group of highly engaged subscribers is a segment, not a seed list."
       ]
     },
     {
-      "question": "A campaign shows a high open rate and a high unsubscribe rate together. What does this suggest?",
+      "question": "A campaign has both a high open rate and a high unsubscribe rate. What might this mean?",
       "options": [
-        "The sending domain has lost its authentication records in the DNS zone",
-        "The audience was too small for the figures to carry any real meaning",
-        "The subject line promised more than the content gave",
-        "The emails were delivered to the spam folder for most of the recipients"
+        "The sending domain lost its authentication records",
+        "The audience was too small for the results to mean anything",
+        "The subject line promised something the email did not deliver",
+        "Most emails went to spam"
       ],
       "correctAnswer": 2,
-      "explanation": "People opened, so the subject line worked, and then chose to leave, which points at a mismatch between the promise and the content.",
+      "explanation": "People opened the email but then chose to unsubscribe. This may mean the email content did not match the subject line’s promise.",
       "whyWrong": [
-        "Authentication problems reduce delivery rather than driving opt-outs.",
-        "A high rate on a small audience is possible but is not what this pattern shows.",
-        "Mail in the spam folder produces low opens, not high ones."
+        "Authentication problems can reduce delivery; they do not explain this pattern.",
+        "A small audience can still have high rates, but that alone does not explain these results.",
+        "Spam placement usually lowers opens rather than producing a high open rate."
       ]
     },
     {
-      "question": "Which AMPscript construct would you use to show different content depending on a field value?",
+      "question": "Which AMPscript feature can show different content based on a field value?",
       "options": [
-        "An IF block evaluating the attribute",
-        "A RaiseError call that stops the send when the field has no value at all",
-        "A Lookup call that retrieves the value from a related data extension row",
-        "A Concat call that joins the field value onto the end of the greeting text"
+        "An IF block that checks the field",
+        "A RaiseError call that stops sending when the field is empty",
+        "A Lookup call that gets a value from a related data extension",
+        "A Concat call that adds the field value to the greeting"
       ],
       "correctAnswer": 0,
-      "explanation": "Conditional logic with IF is what varies the content, which is the heart of personalising beyond simple merge fields.",
+      "explanation": "An IF block checks a condition and chooses which content to show. It lets you personalize beyond simple merge fields.",
       "whyWrong": [
-        "RaiseError halts processing for that subscriber.",
-        "Lookup retrieves a value but does not itself branch on it.",
-        "Concat joins strings together."
+        "RaiseError stops processing for that subscriber.",
+        "Lookup retrieves a value but does not choose between content options by itself.",
+        "Concat joins text values."
       ]
     },
     {
-      "question": "What should happen to a subscriber who hard bounces twice?",
+      "question": "What should you do with a subscriber who has two hard bounces?",
       "options": [
-        "They should be re-imported from the original source file to refresh the record",
-        "They should be moved onto a publication list for less frequent contact",
-        "They should be sent a confirmation email asking them to verify the address",
-        "They should be excluded from future sends"
+        "Re-import the address from the original file to refresh the record",
+        "Move the subscriber to a publication list with fewer emails",
+        "Send a confirmation email to verify the address",
+        "Exclude the subscriber from future sends"
       ],
       "correctAnswer": 3,
-      "explanation": "A hard bounce means the address is permanently bad, so continuing to send to it damages the sending reputation.",
+      "explanation": "A hard bounce means the address cannot receive email. Continuing to send to it can harm your sending reputation.",
       "whyWrong": [
-        "Re-importing the same bad address changes nothing.",
-        "Reducing frequency does not help an address that does not exist.",
-        "A confirmation message to a dead address cannot be received."
+        "Re-importing the same invalid address does not fix it.",
+        "Fewer emails will not help an address that cannot receive mail.",
+        "An invalid address cannot receive a confirmation email."
       ]
     },
     {
-      "question": "Why does a dedicated IP address suit a high-volume sender more than a shared one?",
+      "question": "Why can a dedicated IP suit a high-volume sender better than a shared IP?",
       "options": [
-        "It removes the need to publish SPF and DKIM records for the sending domain",
-        "It guarantees that the sender's mail is placed in the inbox rather than spam",
-        "Its reputation reflects only that sender's own behaviour",
-        "It allows the sender to bypass the authentication checks made by receivers"
+        "It removes the need for SPF and DKIM records",
+        "It guarantees inbox delivery instead of spam placement",
+        "Its reputation is based on that sender’s own behavior",
+        "It bypasses the authentication checks made by receiving servers"
       ],
       "correctAnswer": 2,
-      "explanation": "On a dedicated IP your reputation is yours alone, which is an advantage at volume and a liability if you send carelessly.",
+      "explanation": "With a dedicated IP, the sending reputation belongs to one sender. This can help at high volume, but careless sending can harm that reputation.",
       "whyWrong": [
-        "SPF and DKIM are still required.",
-        "No IP arrangement guarantees inbox placement.",
-        "Authentication applies regardless of the IP arrangement."
+        "You still need SPF and DKIM.",
+        "No IP setup guarantees that email reaches the inbox.",
+        "Receiving servers still check authentication."
       ]
     },
     {
-      "question": "A client wants to know which link in an email drove the most clicks. Where is this found?",
+      "question": "A client wants to know which email link got the most clicks. Where should they look?",
       "options": [
-        "In the automation that was used to schedule and execute the send overnight",
+        "In the automation used to schedule the send",
         "In the click activity for that send",
-        "In the All Subscribers list filtered to the subscribers who opened the email",
-        "In the data extension that supplied the audience for the campaign in question"
+        "In All Subscribers, filtered to people who opened the email",
+        "In the data extension used as the send audience"
       ],
       "correctAnswer": 1,
-      "explanation": "Tracking records clicks per link, which is what lets you compare the performance of different calls to action.",
+      "explanation": "Tracking shows clicks for each link, so you can compare how different calls to action performed.",
       "whyWrong": [
-        "The automation records execution, not click detail.",
-        "All Subscribers holds status, not per-link engagement.",
-        "The audience extension holds who was sent to, not what they clicked."
+        "Automation records the run, not click details.",
+        "All Subscribers shows subscriber status, not clicks on each link.",
+        "The audience data extension shows who was sent the email, not which links they clicked."
       ]
     },
     {
-      "question": "What is the risk of using a purchased email list?",
+      "question": "What is a risk of using a purchased email list?",
       "options": [
-        "Tracking data is unavailable for any send to an imported audience",
-        "The platform charges a higher rate per message for imported addresses",
-        "Purchased addresses cannot be stored inside a sendable data extension",
-        "Complaints and bounces damage the sending reputation"
+        "Tracking is not available for sends to imported addresses",
+        "The platform charges more for messages to imported addresses",
+        "Purchased addresses cannot be stored in a sendable data extension",
+        "Complaints and bounces can damage your sending reputation"
       ],
       "correctAnswer": 3,
-      "explanation": "People who never asked to hear from you complain and the lists are full of dead addresses, which harms deliverability for everything you send.",
+      "explanation": "People who did not ask to hear from you may complain, and purchased lists often contain invalid addresses. This can hurt delivery for all your email.",
       "whyWrong": [
-        "Tracking works regardless of the audience's origin.",
-        "Pricing does not vary by how the address was obtained.",
-        "The addresses can be stored; the problem is the consequence of mailing them."
+        "Tracking works no matter where the addresses came from.",
+        "Pricing does not depend on how you got the addresses.",
+        "The addresses can be stored; the risk comes from sending to them."
       ]
     },
     {
-      "question": "A send must go out at 8am in each recipient's own local time. What supports this?",
+      "question": "A send must arrive at 8 a.m. in each recipient’s local time. What should you use?",
       "options": [
-        "A separate email created and scheduled by hand for each time zone involved",
-        "A time-zone aware send configuration",
-        "An automation that runs once every hour throughout the whole of the day",
-        "A single send scheduled for 8am in the account's own configured time zone"
+        "Create and schedule a separate email by hand for each time zone",
+        "Use a send setting that accounts for recipient time zones",
+        "Run an automation every hour all day",
+        "Schedule one send for 8 a.m. in the account’s time zone"
       ],
       "correctAnswer": 1,
-      "explanation": "Sending by the recipient's local time requires the platform to stagger delivery against each subscriber's time zone.",
+      "explanation": "To send at each person’s local 8 a.m., the platform must schedule delivery using each subscriber’s time zone.",
       "whyWrong": [
-        "Building an email per time zone multiplies the maintenance.",
-        "An hourly automation without time-zone logic does not target 8am locally.",
-        "One fixed time means most recipients get it at the wrong hour."
+        "One email per time zone creates extra work to manage.",
+        "An hourly automation without time-zone logic does not target 8 a.m. locally.",
+        "One fixed send time means many recipients get the email at a different local time."
       ]
     }
   ]

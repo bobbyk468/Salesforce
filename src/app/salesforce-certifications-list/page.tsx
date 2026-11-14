@@ -43,19 +43,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How many Salesforce certifications are there in 2026?',
-    answer: 'Salesforce offers over 40 certifications across role tracks including Administrator, Developer, Architect, Consultant, Marketer, and Specialist. The catalog includes foundational credentials, role-based certifications, and Accredited Professional (AP) product-specific credentials.',
+    answer: 'Salesforce offers over 40 certifications for roles such as Administrator, Developer, Architect, Consultant, Marketer, and Specialist. The catalog includes foundational, role-based, and product-specific Accredited Professional (AP) credentials.',
   },
   {
     question: 'Which Salesforce certification should I get first?',
-    answer: 'Most people start with the Salesforce Administrator (ADM-201) certification. It covers core platform concepts used in all other certifications and is the most widely recognised entry-level credential. Developers typically start with Platform Developer I (PD1) instead.',
+    answer: 'Many people start with Salesforce Administrator (ADM-201), which covers platform concepts used across other certifications. Developers often begin with Platform Developer I (PD1).',
   },
   {
     question: 'Are Salesforce certifications worth it in 2026?',
-    answer: 'Yes. Salesforce certifications remain highly valued in the job market. Certified professionals typically command higher salaries, and certifications are commonly listed in job postings as requirements or preferred qualifications.',
+    answer: 'Salesforce certifications can help in the job market. Employers often list them as required or preferred qualifications, and certified professionals may earn higher salaries.',
   },
   {
     question: 'Do Salesforce certifications expire?',
-    answer: 'Salesforce certifications require periodic maintenance. When a new Salesforce release introduces exam-relevant changes, certified professionals must pass a maintenance module on Trailhead to keep their certification active. Most certifications require maintenance twice a year.',
+    answer: 'Salesforce certifications require periodic maintenance. When a new release includes relevant changes, complete the required Trailhead maintenance module to keep your credential active. Most certifications require maintenance twice a year.',
   },
 ]
 
@@ -100,8 +100,8 @@ export default function SalesforceListPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Salesforce offers <strong>{totalCerts} certifications</strong> across {CERTIFICATION_CATEGORIES.length} role tracks.
-          Each certification below links to a free study guide with exam weightage, practice questions, and prep tips.
+          Browse <strong>{totalCerts} certifications</strong> across {CERTIFICATION_CATEGORIES.length} role tracks.
+          Each one links to a free study guide with exam topics, practice questions, and preparation tips.
         </p>
       </header>
 
@@ -110,14 +110,10 @@ export default function SalesforceListPage() {
       <section className="mb-10 rounded-xl border border-gray-100 bg-white p-5 text-gray-700">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Use This Certification List</h2>
         <p className="mb-3">
-          Treat this page as a map, not a ranking. Start by choosing the role track closest to your current job goal:
-          Administrator for platform setup, Developer for Apex and Lightning work, Consultant for cloud implementation,
-          and Architect for long-term solution design.
+          Use this page to explore certifications by role, not to rank them. Start with the track that matches your career goal: Administrator for platform setup, Developer for Apex and Lightning work, Consultant for cloud implementation, or Architect for solution design.
         </p>
         <p>
-          If you are new to Salesforce, compare the Associate, Administrator, and Platform App Builder options first.
-          If you already work on Salesforce projects. Use the role groups below to find the next credential that matches
-          your product area, exam budget, and practical experience.
+          If you are new to Salesforce, compare Associate, Administrator, and Platform App Builder options. If you already work on Salesforce projects, use the role groups below to find a credential that fits your product area, budget, and experience.
         </p>
       </section>
 
@@ -183,7 +179,7 @@ export default function SalesforceListPage() {
       <section className="mt-12 rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-2">Not sure which cert to take first?</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Use the certification path planner to find the right sequence based on your role and experience.
+          Use the certification path planner to choose an exam sequence that fits your role and experience.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

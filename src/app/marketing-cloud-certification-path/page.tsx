@@ -34,9 +34,9 @@ const breadcrumbItems = [
 ]
 
 const faqItems = [
-  { question: 'Which Salesforce Marketing Cloud certification should I take first?', answer: 'For Marketing Cloud Engagement. Start with Email Specialist. For Account Engagement. Start with Pardot Specialist. For implementation consulting, move to Marketing Cloud Consultant after hands-on experience.' },
-  { question: 'Do I need coding for Marketing Cloud certification?', answer: 'Email Specialist does not require heavy coding, but AMPscript and data extension knowledge help. Marketing Cloud Developer requires stronger technical skills with APIs, scripting, and custom integrations.' },
-  { question: 'Is Marketing Cloud Consultant harder than Email Specialist?', answer: 'Yes. Marketing Cloud Consultant is more scenario-based and tests solution design, implementation judgment, data architecture, and governance.' },
+  { question: 'Which Salesforce Marketing Cloud certification should I take first?', answer: 'For Marketing Cloud Engagement, start with Email Specialist. For Account Engagement, start with Pardot Specialist. If you want to work in implementation consulting, consider Marketing Cloud Consultant after gaining hands-on experience.' },
+  { question: 'Do I need coding for Marketing Cloud certification?', answer: 'Email Specialist does not require much coding, but AMPscript and data extension knowledge can help. Marketing Cloud Developer requires stronger technical skills, including APIs, scripting, and custom integrations.' },
+  { question: 'Is Marketing Cloud Consultant harder than Email Specialist?', answer: 'Yes. Marketing Cloud Consultant uses more scenarios and tests solution design, implementation decisions, data architecture, and governance.' },
 ]
 
 const paths = [
@@ -48,28 +48,28 @@ const paths = [
 const pathDetails = [
   {
     heading: 'If you work in Email Studio and Journey Builder',
-    body: 'Start with Email Specialist because it validates the day-to-day mechanics of subscriber data, send classifications, deliverability, content, AMPscript basics, and reporting. After that, Marketing Cloud Engagement Admin makes sense if you manage setup, users, business units, data extensions, and platform configuration.',
+    body: 'Start with Email Specialist to learn about subscriber data, send classifications, deliverability, content, AMPscript basics, and reports. Next, consider Marketing Cloud Engagement Admin if you manage setup, users, business units, data extensions, or platform configuration.',
     href: '/certifications/email-specialist',
     cta: 'Study Email Specialist',
   },
   {
     heading: 'If you work in Account Engagement / Pardot',
-    body: 'Start with Pardot Specialist. It is the clearest entry credential for B2B marketing automation users who build forms, automation rules, Engagement Studio programs, scoring, grading, and Salesforce connector workflows. Move to Pardot Consultant when you design full implementations.',
+    body: 'Start with Pardot Specialist if you work with B2B marketing automation. It covers forms, automation rules, Engagement Studio programs, scoring, grading, and Salesforce connector workflows. Consider Pardot Consultant when you are ready to design full implementations.',
     href: '/pardot-certification',
     cta: 'Compare Pardot certs',
   },
   {
     heading: 'If you implement Marketing Cloud technically',
-    body: 'A technical path usually combines Email Specialist fundamentals with Marketing Cloud Developer topics such as APIs, data extensions, scripting, triggered sends, and integration patterns. This path is harder but more differentiated for developers and technical consultants.',
+    body: 'A technical path can combine Email Specialist fundamentals with Marketing Cloud Developer topics such as APIs, data extensions, scripting, triggered sends, and integrations. This path is more advanced and may suit developers and technical consultants.',
     href: '/marketing-cloud-admin-vs-developer',
     cta: 'Compare admin vs developer',
   },
 ]
 
 const decisionRules = [
-  'Choose Email Specialist first if your daily work is campaign execution, segmentation, deliverability, and Journey Builder.',
-  'Choose Pardot Specialist first if your stack is B2B Account Engagement rather than Marketing Cloud Engagement.',
-  'Choose Marketing Cloud Consultant only after hands-on implementation experience; it is not just an entry-level memorization exam.',
+  'Start with Email Specialist if your daily work involves campaigns, segmentation, deliverability, and Journey Builder.',
+  'Start with Pardot Specialist if you use Account Engagement for B2B marketing instead of Marketing Cloud Engagement.',
+  'Consider Marketing Cloud Consultant after you have hands-on implementation experience. The exam tests more than memorized facts.',
   'Choose Marketing Cloud Developer if you are comfortable with APIs, scripting, custom integrations, and technical troubleshooting.',
 ]
 
@@ -81,7 +81,7 @@ export default function MarketingCloudCertificationPathPage() {
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Marketing Cloud Path</p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Marketing Cloud Certification Path</h1>
         <LastUpdated />
-        <p className="text-lg text-gray-600">Marketing Cloud has multiple tracks. Pick your path based on whether you work in Email Studio/Journey Builder, Account Engagement, or technical SFMC implementation.</p>
+        <p className="text-lg text-gray-600">Choose a Marketing Cloud path based on whether you work in Email Studio or Journey Builder, Account Engagement, or technical Marketing Cloud implementation.</p>
       </header>
       <ContentPageAuthor />
       <section className="space-y-4 mb-8">
@@ -93,8 +93,8 @@ export default function MarketingCloudCertificationPathPage() {
         ))}
       </section>
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Best First Marketing Cloud Cert</h2>
-        <p className="text-sm text-gray-700">If you use Marketing Cloud Engagement. Start with <Link href="/certifications/email-specialist" className="text-salesforce-blue hover:underline">Email Specialist</Link>. If you use Account Engagement/Pardot. Start with <Link href="/certifications/pardot-specialist" className="text-salesforce-blue hover:underline">Pardot Specialist</Link>.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Choose Your First Marketing Cloud Certification</h2>
+        <p className="text-sm text-gray-700">If you use Marketing Cloud Engagement, start with <Link href="/certifications/email-specialist" className="text-salesforce-blue hover:underline">Email Specialist</Link>. If you use Account Engagement or Pardot, start with <Link href="/certifications/pardot-specialist" className="text-salesforce-blue hover:underline">Pardot Specialist</Link>.</p>
       </section>
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Choose the Right Marketing Cloud Path</h2>
@@ -118,7 +118,7 @@ export default function MarketingCloudCertificationPathPage() {
           ))}
         </ul>
         <p className="text-sm text-gray-700 mt-4">
-          The biggest mistake is choosing a certification because the name sounds senior. Pick the exam that matches your current toolset and the next role you want employers to recognize.
+          Choose a certification based on the tools you use and the role you want next, not only on how senior its title sounds.
         </p>
       </section>
       <RelatedGuides links={getRelatedGuides('marketing-cloud-certification-path')} />

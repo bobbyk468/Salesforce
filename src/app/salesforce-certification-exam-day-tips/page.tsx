@@ -49,11 +49,11 @@ const faqItems = [
   },
   {
     question: 'Can I take notes during the Salesforce exam?',
-    answer: 'At a testing centre, you will receive a whiteboard or scratch paper and a pen or marker. You cannot bring your own notes or paper into the exam room. For an online proctored exam, you may use one blank sheet of paper and a pen, which you must show the proctor before the exam. Prepared notes are not allowed in either format.',
+    answer: 'At a testing centre, use only the writing materials provided by the centre. For an online-proctored exam, Salesforce provides a digital whiteboard; physical paper, pens, and whiteboards are not allowed. Follow the instructions shown by your proctor.',
   },
   {
     question: 'What happens if my internet disconnects during an online proctored exam?',
-    answer: 'If your internet disconnects during an online proctored exam, try to reconnect right away. Contact Pearson VUE OnVUE support if you cannot reconnect. A brief interruption that is quickly resolved may not cancel the exam. A longer technical failure may lead to a rescheduled exam at no extra cost, depending on the circumstances. Test your system and internet connection 24 hours before the exam.',
+    answer: 'If your internet disconnects during an online-proctored exam, follow the OnVUE instructions to reconnect and contact support if the problem persists. A technical issue does not guarantee a free reschedule; report it to Salesforce Help and follow the current exception process. Run the OnVUE system check before exam day.',
   },
   {
     question: 'Should I answer all questions or skip and return to hard ones?',
@@ -96,8 +96,8 @@ export default function SalesforceCertificationExamDayTipsPage() {
               { done: true, text: 'On exam day: Have your government-issued photo ID ready' },
               { done: true, text: 'On exam day: Use a quiet, private room' },
               { done: true, text: 'On exam day: Close other apps and browser tabs' },
-              { done: true, text: 'Keep one blank sheet of paper and a pen ready to show the proctor' },
-              { done: true, text: 'Sign in 15 minutes early for identity verification' },
+              { done: true, text: 'Use the OnVUE digital whiteboard; do not bring paper, pens, or a physical whiteboard' },
+              { done: true, text: 'Begin OnVUE check-in 30 minutes before your appointment' },
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
                 <span className="text-green-500 font-bold flex-shrink-0">✓</span>
@@ -112,7 +112,6 @@ export default function SalesforceCertificationExamDayTipsPage() {
           <ul className="space-y-3 text-sm text-gray-700">
             {[
               { text: 'Bring a government-issued photo ID that exactly matches your Trailhead Academy account name' },
-              { text: 'Bring a second form of ID, such as a credit card or health card' },
               { text: 'Arrive 15 minutes before your appointment' },
               { text: 'Leave bags, phones, and notes at home or in your car' },
               { text: 'Check the centre address and parking before you leave' },
@@ -133,8 +132,8 @@ export default function SalesforceCertificationExamDayTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Time Management During the Exam</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <div className="bg-gray-50 rounded-xl p-4">
-            <p className="font-semibold text-gray-900 mb-2">Standard Professional Exam: 60 questions, 105 minutes</p>
-            <p>You have about <strong>1 minute 45 seconds per question</strong>. Spend less than two minutes on a question before flagging it and moving on. Use the final 15 minutes to review flagged questions.</p>
+            <p className="font-semibold text-gray-900 mb-2">Many professional exams: 60 questions, 105 minutes</p>
+            <p>Check your exam guide for its exact format. For a 60-question, 105-minute exam, you have about <strong>1 minute 45 seconds per question</strong>. Spend less than two minutes on a question before flagging it and moving on. Use any remaining time to review flagged questions.</p>
           </div>
           <div className="bg-gray-50 rounded-xl p-4">
             <p className="font-semibold text-gray-900 mb-2">The Flag-and-Return Strategy</p>

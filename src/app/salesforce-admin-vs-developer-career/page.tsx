@@ -43,23 +43,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Is it better to be a Salesforce Admin or Developer?',
-    answer: 'Neither path is objectively better, it depends on your strengths and interests. Admins focus on configuration, process design, and user adoption; they work more with business stakeholders. Developers focus on custom code (Apex, LWC), integrations, and complex automations; they work more with technical architecture. Developers typically earn 10–20% more at equivalent experience levels, but admin roles are more abundant and often easier to enter without a programming background.',
+    answer: 'The right path depends on the work you enjoy. Admins configure Salesforce, shape processes, and support users. Developers build with Apex and LWC, connect systems, and handle complex automation. Developers typically earn 10–20% more at equivalent experience levels, while admin roles are more common and may be easier to enter without programming experience.',
   },
   {
     question: 'What does a Salesforce Administrator do day to day?',
-    answer: 'A Salesforce Administrator typically manages user access, customizes objects and page layouts, builds automation (flows, process builder), creates reports and dashboards, troubleshoots user issues, and implements change requests from the business. Day-to-day work is a mix of configuration in Setup, building declarative solutions, training users, and documenting processes. Most time is spent in the Salesforce UI rather than writing code.',
+    answer: 'A Salesforce Administrator manages access, customizes objects and page layouts, builds automation with tools such as flows, creates reports, troubleshoots user issues, and responds to business requests. The work includes configuring Salesforce, training users, and documenting processes. Most time is spent in the Salesforce interface rather than writing code.',
   },
   {
     question: 'What does a Salesforce Developer do day to day?',
-    answer: 'A Salesforce Developer writes and maintains Apex code, builds Lightning Web Components (LWC), integrates Salesforce with external systems via APIs, performs code reviews, and debugs complex technical issues. Day-to-day work involves an IDE (VS Code), the Developer Console, sandbox deployments, and working with version control. Developers typically spend 60–70% of their time coding or reviewing code.',
+    answer: 'A Salesforce Developer writes and maintains Apex, builds Lightning Web Components (LWC), connects Salesforce to other systems through APIs, reviews code, and investigates technical issues. Developers work with tools such as VS Code, Developer Console, sandboxes, and version control. They typically spend 60–70% of their time coding or reviewing code.',
   },
   {
     question: 'Can I switch from Salesforce Admin to Developer?',
-    answer: 'Yes. Many Salesforce Developers start as Admins. The transition path: earn Platform Developer I certification after Administrator, build hands-on Apex and LWC projects in a sandbox, and seek roles that blend admin and developer work (e.g. "Salesforce Consultant" or "Platform Developer" at smaller firms). Strong admin knowledge makes you a better developer, you understand what you are building for.',
+    answer: 'Yes. Many developers begin as admins. Earn Platform Developer I after Administrator, build Apex and LWC projects in a sandbox, and look for roles that combine configuration and development, such as Salesforce Consultant or Platform Developer at a smaller firm. Admin experience can help you understand the business needs behind the code.',
   },
   {
     question: 'Which certifications do I need for Admin vs Developer careers?',
-    answer: 'Admin path: Salesforce Administrator (ADM-201) is the foundation; Advanced Administrator and specialist certs (CPQ, Service Cloud) follow. Developer path: Administrator first, then Platform Developer I (PD1), then Platform Developer II (PD2). Do not skip Administrator for the developer path, platform knowledge from the Admin cert is essential for good development work.',
+    answer: 'For an admin career, start with Salesforce Administrator (ADM-201), then consider Advanced Administrator or a specialization such as CPQ or Service Cloud. For development, build on Administrator with Platform Developer I (PD1), then Platform Developer II (PD2). Admin knowledge is useful for developers because it covers the platform they build on.',
   },
 ]
 
@@ -77,7 +77,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Admin and Developer are two of the most common Salesforce career paths. Here is how they differ in day-to-day work, salary, progression, and who each path suits.
+          Salesforce admins and developers solve different problems on the same platform. Compare their daily work, technical requirements, and likely progression to see which path better fits your interests.
         </p>
       </div>
 
@@ -88,10 +88,10 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
           certSlug: "administrator",
           examTipsSlug: "certifications/administrator",
           conditions: [
-          "You prefer configuration, automation, and business process work over coding",
-          "You want the broadest range of job opportunities from a single certification",
-          "You come from a non-technical, operations, or project management background",
-          "You want a faster path to employment: Admin roles are the highest volume",
+          "You prefer configuring Salesforce and improving business processes",
+          "You want to start with a credential used for many admin roles",
+          "Your background is in operations, project management, or another non-technical field",
+          "You want to explore a common entry point into the Salesforce job market",
           ],
         }}
         certB={{
@@ -99,17 +99,17 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
           certSlug: "developer-1",
           examTipsSlug: "certifications/developer-1",
           conditions: [
-          "You enjoy writing code and want to build Apex classes and LWC components",
-          "You come from a software development or computer science background",
-          "You want the highest salary ceiling in the Salesforce non-architect track",
-          "You are willing to invest 3–6 months in technical preparation",
+          "You enjoy writing code and want to build Apex and LWC features",
+          "You have experience in software development or computer science",
+          "You want to pursue technical roles on the Salesforce platform",
+          "You can spend 3–6 months preparing for the technical exam",
           ],
         }}
         recommendation={{
           certName: "Salesforce Administrator",
           certSlug: "administrator",
           examTipsSlug: "certifications/administrator",
-          reason: "Administrator is the better starting point for most career switchers, higher job volume, faster time to employment, and it remains useful even if you pivot to developer later. Only start with Developer I if you have an existing coding background and are certain about the technical path.",
+          reason: "Administrator helps you learn the platform and is useful in both admin and development roles. Start there if you are new to Salesforce. If you already have a programming background and want to build features in code, Platform Developer I may be a closer match.",
           careerPathSlug: "which-salesforce-certification-first",
           careerPathLabel: "Which Certification First Guide",
         }}
@@ -176,7 +176,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Hybrid Roles</h2>
-        <p className="text-sm text-gray-700 mb-2">Many roles blend admin and developer work, "Salesforce Consultant," "Technical Consultant," or "Platform Developer" at consultancies and mid-size firms. These roles often require both Administrator and Platform Developer I certifications. Starting as an Admin and adding PD1 is a common path into these hybrid positions.</p>
+        <p className="text-sm text-gray-700 mb-2">Some roles combine configuration and development. Consultancies and mid-size firms may hire Salesforce Consultants, Technical Consultants, or Platform Developers who can work across both areas. These positions often ask for Administrator and Platform Developer I, making an admin foundation followed by PD1 one possible route into hybrid work.</p>
         <Link href="/certification-path" className="text-sm font-semibold text-salesforce-blue hover:underline">View Certification Paths →</Link>
       </div>
 
@@ -214,7 +214,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice for Your Path</h2>
-        <p className="text-white mb-6">Free practice questions for Administrator and Platform Developer certifications.</p>
+        <p className="text-white mb-6">Use free practice questions to prepare for Administrator or Platform Developer certifications.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/administrator" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Administrator Practice

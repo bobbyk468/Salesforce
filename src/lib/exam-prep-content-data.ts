@@ -9,6 +9,10 @@
  * Differentiator: actionable, exam-focused content you won't find in one place elsewhere.
  */
 
+import { getExamWeightage, getTopSectionsSummary } from './exam-weightage-data'
+import { getCertPrerequisites, getRequiredPrerequisites } from './cert-prerequisites'
+import { getCertPrimaryName } from './cert-name-aliases'
+
 export interface ExamPrepContent {
   examTips: string[]
   prerequisites: string[]
@@ -59,10 +63,12 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'app-builder': {
     ...DEFAULT_PREP,
     examTips: [
-      'Data Modeling and User Interface are ~42% combined, master relationships, page layouts, record types.',
-      'Business Logic and Process Automation is the largest section; know Flow and validation rules well.',
+      'Business Logic and Process Automation (32%) and Data Modeling and Management (20%) make up 52% of the exam.',
+      'Know Flow, Flow Approval Processes, validation rules, and where Agentforce can automate a business process.',
       'Understand when to use Master-Detail vs Lookup and cascade delete behavior.',
+      'Compare AgentExchange with AppExchange when extending an org instead of building a solution.',
       'Practice creating apps with Lightning App Builder and assigning to profiles.',
+      'Review Agentforce capabilities and the licensing options that apply to your use case.',
     ],
     prerequisites: ['Platform experience', 'Administrator cert recommended'],
     focusAreas: ['Data Modeling', 'User Interface (Lightning)', 'Business Logic and Process Automation', 'Reports and Dashboards'],
@@ -133,10 +139,10 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'platform-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'Salesforce Ecosystem (32%) and Navigation (28%) together make up 60% of the exam; Data Model (25%) and Reports & Dashboards (15%) make up the rest.',
-      'Know standard objects and the basic data model (Account, Contact, Lead, Opportunity).',
+      'Review Salesforce Ecosystem, Navigation, AppExchange, AgentExchange, Lightning App Builder, and Dynamic Forms.',
+      'Know standard objects and the basic data model (Account, Contact, Lead, and Opportunity).',
       'Understand navigation: App Launcher, list views, and basic reports.',
-      'No coding; focus on concepts and “what is this used for?”',
+      'No coding or ongoing maintenance module is required; focus on concepts and “what is this used for?”',
     ],
     prerequisites: ['Trailhead or introductory Salesforce experience'],
     focusAreas: ['Salesforce Ecosystem', 'Navigation', 'Data Model', 'Reports and Dashboards'],
@@ -158,26 +164,26 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'data-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four domains are 25%. Study the full outline evenly.',
-      'Data Modeling: normalization, LDV, big objects, external objects.',
-      'Know Identity and Access Management architect concepts (SSO, SAML, OAuth).',
-      'Integration and Development Lifecycle: when to use what, and governance.',
+      'Data modeling: choose between lookup, master-detail, junction and external objects, and know how each affects sharing, roll-ups and ownership.',
+      'Large data volumes: skinny tables, indexes and selective filters, data skew, PK chunking, Bulk API and archiving with big objects.',
+      'Know master data management and governance terms: golden record, survivorship rules, data stewardship, classification and retention.',
+      'Data migration: load order, external IDs, upsert, deferring sharing calculations and bypassing automation safely during a load.',
     ],
-    prerequisites: ['Application Architect', 'System Architect', 'Strong data and integration experience'],
-    focusAreas: ['Data Architecture', 'Integration Architecture', 'Identity and Access Management', 'Development Lifecycle'],
-    studyStrategy: 'The Data Architect cert covers data modeling, LDV, identity, integration, and development lifecycle. Study each domain separately, then practice cross-domain scenario questions. Review sample scenarios from CTA prep materials.',
+    prerequisites: ['Experience designing data models on the Salesforce Platform', 'Familiarity with Bulk API, Data Loader and large data volume behaviour'],
+    focusAreas: [],
+    studyStrategy: 'Work through the outline in weight order: data modeling and Salesforce data management first, then large data volumes and migration, then governance and master data management. For each scenario, practise stating the data volume, the access pattern and the constraint before choosing a design.',
   },
   'application-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Each of the four pillars is 25%. No section can be skipped.',
-      'Data Architecture: data model, LDV, integration patterns for data.',
-      'Identity and Access: SSO, federation, user lifecycle.',
-      'Be ready for “design a solution that meets X and Y requirements.”',
+      'There is no Application Architect exam. The credential is awarded when you hold Platform App Builder, Platform Developer, Platform Data Architect and Platform Sharing and Visibility Architect.',
+      'Plan the order: Platform App Builder and Platform Developer I are $200 exams, and the two architect exams are $400 each.',
+      'Data Architect and Sharing and Visibility Architect overlap on ownership, data skew and record access, so studying them back to back saves time.',
+      'Use each component exam page for its own weightage, practice questions and readiness target.',
     ],
-    prerequisites: ['Multiple architect-level certs', 'Years of implementation experience'],
-    focusAreas: ['Data Architecture', 'Integration Architecture', 'Identity and Access Management', 'Development Lifecycle'],
-    studyStrategy: 'Treat each pillar as a mini-exam. Use CTA scenario practice to get used to open-ended design questions. Time management is critical.',
+    prerequisites: ['Platform App Builder, Platform Developer, Platform Data Architect and Platform Sharing and Visibility Architect (all four are required)'],
+    focusAreas: [],
+    studyStrategy: 'Treat this page as a route map rather than an exam guide. Prepare for one component exam at a time using that exam page, starting with whichever matches your current project work. The credential appears on your profile once the fourth certification is earned.',
   },
   'experience-cloud': {
     ...DEFAULT_PREP,
@@ -219,7 +225,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     ...DEFAULT_PREP,
     examTips: [
       'Connecting to Data and Dimensions/Measures are 50%. Know data types and the shelf.',
-      'Views and Dashboards are 35%. Build charts and dashboards from scratch.',
+      'Build charts and dashboards from scratch, then practise sharing and exporting them.',
       'Understand filters: context, dimensions, measures, and filter order.',
       'No LOD or advanced calcs; focus on basics.',
     ],
@@ -230,15 +236,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'technical-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Solution Design is 30%. Practice whiteboarding end-to-end solutions.',
-      'Know security, integration, and data architecture deeply.',
-      'The Review Board is presentation and Q&A, practice explaining and defending designs.',
-      'Review past CTA scenario examples and time yourself.',
+      'The CTA has two stages after the prerequisites: the Architect Evaluation ($1,500) and the Architect Review Board ($4,500).',
+      'Know security, integration, data and solution architecture deeply enough to defend a choice against alternatives.',
+      'Both stages are a scenario, a presentation and questions. Practise presenting a complete design aloud and on time.',
+      'Hold both Application Architect and System Architect first; together they are seven unique exams because Platform Developer counts for both.',
     ],
-    prerequisites: ['Application Architect', 'System Architect', 'Years of complex implementation experience'],
-    focusAreas: ['Solution Design', 'Security and Integration', 'Data and Performance', 'Governance and Presentation'],
-    studyStrategy: 'The CTA is a two-step process: Evaluation (scenario + MC) and Review Board (present and defend). Practice designing under time pressure and answering “why did you choose X?”',
-    whyItMatters: 'The CTA is the highest Salesforce credential and signals expert-level architecture and communication skills.',
+    prerequisites: ['Several years designing complex, multi-cloud Salesforce solutions'],
+    focusAreas: [],
+    studyStrategy: 'Practise full scenarios under time pressure: read, design, present and take questions. After each one, write down every question you could not answer and study that domain before the next attempt.',
   },
   'agentforce-specialist': {
     ...DEFAULT_PREP,
@@ -255,14 +260,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'business-analyst': {
     ...DEFAULT_PREP,
     examTips: [
-      'Requirements and Solution Design are 50%. Practice discovery and documentation.',
-      'Know stakeholder collaboration and how to translate business needs into Salesforce.',
-      'Understand success metrics and analytics for solution validation.',
-      'Be ready for “how would you gather requirements?” and “what would you recommend?”',
+      'Stakeholder collaboration: identify stakeholders, manage conflicting priorities and choose the right elicitation technique.',
+      'Requirements and user stories: write stories with clear acceptance criteria and know how to prioritise a backlog.',
+      'Business process mapping: capture the current and future state and find the gap between them.',
+      'Know your role in user acceptance testing and in supporting the development team after requirements are signed off.',
     ],
-    prerequisites: ['Business analysis or product experience', 'Salesforce basics'],
-    focusAreas: ['Requirements and Discovery', 'Stakeholder Collaboration', 'Solution Design', 'Analytics'],
-    studyStrategy: 'Think like a BA: discovery, documentation, and recommendation. Practice writing user stories and mapping them to Salesforce features. Review the exam outline for deliverables.',
+    prerequisites: ['Business analysis or product experience'],
+    focusAreas: [],
+    studyStrategy: 'Think like a business analyst: discovery, documentation and recommendation. Practise writing user stories with acceptance criteria and mapping a process before and after a change.',
   },
   'cpq-administrator': {
     ...DEFAULT_PREP,
@@ -279,8 +284,9 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'data-360-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'Data Source Connection and Ingestion plus Harmonization and Unification are 35% combined. Know data streams, DLOs/DMOs, and identity resolution well.',
+      'Data Source Connection and Ingestion plus Harmonization and Unification carry substantial weight. Know data streams, DLOs/DMOs, and identity resolution.',
       'Understand activation (Marketing, Advertising, Service, Agentforce grounding) and segments, the single largest section at 20%.',
+      'Understand Zero-Copy data collaboration, including when supported sources can share data without copying it into Data 360.',
       'Know governance: data quality, consent, and retention.',
       'Review Data 360 setup and connector types.',
     ],
@@ -291,26 +297,27 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'javascript-developer-i': {
     ...DEFAULT_PREP,
     examTips: [
-      'LWC and Aura are 30%. Know component lifecycle, decorators, and events.',
-      'JavaScript fundamentals: ES6+, async, DOM, and debugging.',
-      'Understand when to use LWC vs Aura and migration considerations.',
-      'Testing: Jest for LWC, and debugging in browser and VS Code.',
+      'This is a framework-agnostic JavaScript exam. It does not test Lightning Web Components or Aura.',
+      'Objects, functions and classes: prototypes, closures, the value of this, arrow functions, modules and class inheritance.',
+      'Variables, types and collections: let, const and var scoping, type coercion, array methods, Map and Set, and JSON handling.',
+      'Asynchronous code: promises, async and await, the event loop, and the order in which microtasks and timers run.',
+      'Know browser events (bubbling, capturing, delegation), Node.js basics, the debugger and console, and unit-test assertions.',
     ],
-    prerequisites: ['JavaScript experience', 'Platform Developer I recommended'],
-    focusAreas: ['JavaScript Fundamentals', 'LWC and Aura', 'Debugging and Testing', 'Performance'],
-    studyStrategy: 'Build at least two LWCs (one with Apex). Practice debugging and unit testing. Memorize key decorators and lifecycle hooks.',
+    prerequisites: ['Hands-on JavaScript experience (ES6 and later)'],
+    focusAreas: [],
+    studyStrategy: 'Write and run small JavaScript snippets every day rather than only reading. Predict the output of a snippet before running it, especially for scope, coercion, this binding and asynchronous ordering, because many questions are "what does this code log?"',
   },
   'marketing-cloud-engagement-admin': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%. Cover Setup, Subscriber/Data, Content/Journey, Analytics.',
-      'Know subscriber data model, data extensions, and sendable DEs.',
-      'Understand Journey Builder, Email Studio, and Automation Studio.',
-      'Review Setup: business units, users, and permissions.',
+      'Setup: business units, users, roles and permissions, security settings, sender authentication and account-level configuration.',
+      'Subscriber data management: All Subscribers, publication lists, data extensions, subscriber key strategy and unsubscribe handling.',
+      'Channel management: email, mobile and advertising settings, send classifications, sender profiles and delivery profiles.',
+      'Maintenance: monitoring sends and automations, auditing, and troubleshooting failed imports or activities.',
     ],
-    prerequisites: ['Marketing Cloud access', 'Email or marketing experience'],
-    focusAreas: ['Marketing Cloud Setup', 'Subscriber and Data', 'Content and Journey Builder', 'Analytics'],
-    studyStrategy: 'Use a Marketing Cloud account. Configure a journey, an email with dynamic content, and reports. Align with the exam outline.',
+    prerequisites: ['Hands-on access to a Marketing Cloud Engagement account'],
+    focusAreas: [],
+    studyStrategy: 'Work through Setup screen by screen in a Marketing Cloud Engagement account, since Setup alone is more than a third of the exam. Then practise subscriber data tasks and channel configuration.',
   },
   'mulesoft-developer-i': {
     ...DEFAULT_PREP,
@@ -327,26 +334,26 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-integration-foundations': {
     ...DEFAULT_PREP,
     examTips: [
-      'Integration Concepts and Anypoint Platform are 70%. Know APIs and design.',
-      'Understand REST, API design, and basic security (OAuth).',
-      'No heavy coding; focus on concepts and “what is this used for?”',
-      'Complete the MuleSoft Integration Fundamentals trail on Trailhead.',
+      'Know integration vocabulary: API, interface, protocol, message, synchronous versus asynchronous, and system of record.',
+      'Understand API-led connectivity and the System, Process and Experience layers, and the problem it solves compared with point-to-point.',
+      'Know what each Anypoint Platform component is for: Design Center, Exchange, Studio, Runtime Manager, API Manager and Monitoring.',
+      'This is a concepts exam with no coding. Expect "which role does this?" and "which component is used for that?" questions.',
     ],
-    prerequisites: ['Basic IT or developer background', 'Interest in integration'],
-    focusAreas: ['Integration Concepts', 'Anypoint Platform Basics', 'APIs and Design'],
-    studyStrategy: 'Complete the official Trailhead trailmix. Use Anypoint Platform to explore design center and runtime. Breadth over depth for this entry-level cert.',
+    prerequisites: ['Basic IT or integration awareness'],
+    focusAreas: [],
+    studyStrategy: 'Complete the official Trailhead trailmix, then explain each outline topic aloud in plain language. If you can say what a role, pattern or Anypoint Platform component is for and when it is used, you are ready for this exam.',
   },
   'nonprofit-cloud': {
     ...DEFAULT_PREP,
     examTips: [
-      'Nonprofit Cloud Data Model and Program/Case are 50%. Know NPSP and NPC objects.',
-      'Understand donations, households, and program management.',
-      'Know reporting: roll-ups, dashboards, and common nonprofit metrics.',
-      'Review NPC release notes and implementation guides.',
+      'This exam covers Agentforce Nonprofit, the integrated platform solution. It does not address the managed-package products such as NPSP.',
+      'Feature configuration: fundraising (gift entry, gift commitments, campaigns), program and case management, and outcome management.',
+      'Solution design: map a nonprofit requirement to person accounts, party relationship groups and the right fundraising or program object.',
+      'Setup and implementation strategy: permission sets and data model choices, and how to plan a move from an existing system.',
     ],
-    prerequisites: ['Salesforce Administrator', 'Nonprofit or NPSP experience'],
-    focusAreas: ['Nonprofit Cloud Data Model', 'Program and Case Management', 'Donations and Engagement', 'Reporting'],
-    studyStrategy: 'Use a Nonprofit Cloud or NPSP org. Configure programs, cases, and donations. Align with the exam outline.',
+    prerequisites: ['Experience with nonprofit fundraising or program operations'],
+    focusAreas: [],
+    studyStrategy: 'Use an org with Agentforce Nonprofit enabled. Configure a donor record, a gift commitment, a program with a benefit, and a case plan, then explain why each object was the right choice. Feature configuration and solution design together carry two thirds of the exam.',
   },
   'pardot-consultant': {
     ...DEFAULT_PREP,
@@ -376,7 +383,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     ...DEFAULT_PREP,
     examTips: [
       'Data Connection/Prep and Calculations are 50%. Know LOD and table calcs.',
-      'Visualization and Dashboards are 35%. Build various chart types and dashboards.',
+      'Build a range of chart types and interactive dashboards; most of the exam is analysis and content creation.',
       'Understand dimensions vs measures and the shelf (Rows, Columns, Marks).',
       'Practice building a dashboard with filters and actions.',
     ],
@@ -400,14 +407,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'integration-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'Integration Architecture and Patterns are 55%. Know when to use REST, SOAP, and event-driven patterns.',
-      'Understand identity and access management for integrations (OAuth, SAML, certificates).',
-      'Know integration patterns: point-to-point, hub-and-spoke, publish-subscribe.',
-      'Be ready for "how would you integrate X with Y?" scenario questions.',
+      'Know the integration patterns and when each fits: request and reply, fire and forget, batch data synchronisation, remote call-in and data virtualisation.',
+      'Choose the right API: REST, SOAP, Bulk, Pub/Sub, Platform Events and Change Data Capture, with their limits and delivery guarantees.',
+      'Translate requirements into integration needs: volume, timing, error handling, security and who is the system of record.',
+      'Securing integrations: OAuth flows, connected apps, named credentials and certificates.',
     ],
-    prerequisites: ['Application Architect', 'System Architect', 'Strong integration experience'],
-    focusAreas: ['Integration Architecture', 'Integration Patterns', 'Identity and Access', 'Development Lifecycle'],
-    studyStrategy: 'Study integration patterns and when to use each. Practice designing end-to-end integration solutions. Review CTA prep materials for complex scenarios.',
+    prerequisites: ['Experience designing and building Salesforce integrations'],
+    focusAreas: [],
+    studyStrategy: 'For every practice scenario, write down the volume, the timing, the direction and the failure handling before choosing a pattern. Designing and building the solution carry about half the exam between them.',
   },
   'sharing-visibility-architect': {
     ...DEFAULT_PREP,
@@ -424,14 +431,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'system-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four pillars are 25%. No section can be skipped.',
-      'Data Architecture: LDV, data modeling, integration patterns for data.',
-      'Integration Architecture: APIs, middleware, event-driven architecture.',
-      'Be ready for "design a solution that meets X and Y requirements."',
+      'There is no System Architect exam. The credential is awarded when you hold Platform Developer, Platform Integration Architect, Platform Identity and Access Management Architect and Platform Development Lifecycle and Deployment Architect.',
+      'Platform Developer also counts toward Application Architect, so it is the natural first component if you want both.',
+      'Integration Architect and Identity and Access Management Architect share OAuth flows, connected apps and named credentials; study them close together.',
+      'Use each component exam page for its own weightage, practice questions and readiness target.',
     ],
-    prerequisites: ['Application Architect', 'Years of complex implementation experience'],
-    focusAreas: ['Data Architecture', 'Integration Architecture', 'Sharing and Visibility', 'Development Lifecycle'],
-    studyStrategy: 'Treat each pillar as a mini-exam. Use CTA scenario practice to get used to open-ended design questions. Time management is critical.',
+    prerequisites: ['Platform Developer, Platform Integration Architect, Platform Identity and Access Management Architect and Platform Development Lifecycle and Deployment Architect (all four are required)'],
+    focusAreas: [],
+    studyStrategy: 'Treat this page as a route map rather than an exam guide. Prepare for one component exam at a time using that exam page. The credential appears on your profile once the fourth certification is earned.',
   },
   'identity-access-management-architect': {
     ...DEFAULT_PREP,
@@ -460,14 +467,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'technical-architect-evaluation': {
     ...DEFAULT_PREP,
     examTips: [
-      'Scenario Analysis is 40%. Practice reading complex scenarios and identifying requirements.',
-      'Solution Design is 35%. Know how to design secure, scalable, integrated solutions.',
-      'Time management is critical, you have limited time for scenario analysis and design.',
-      'Review past CTA evaluation scenarios and practice under time pressure.',
+      'The format is 135 minutes with one CTA judge: 60 minutes to read and solve the scenario, 30 to present, 30 for questions and 15 for feedback.',
+      'It is a live scenario exercise, not a multiple-choice test. Nothing in it is scored by question count.',
+      'Use the 60 minutes deliberately: requirements and constraints first, then the system landscape, data model, security, integrations and trade-offs.',
+      'In the question session, state the alternative you rejected and why. Judges are assessing your reasoning as much as the design.',
     ],
-    prerequisites: ['Application Architect', 'System Architect', 'Years of complex implementation experience'],
-    focusAreas: ['Scenario Analysis', 'Solution Design', 'Technical Knowledge'],
-    studyStrategy: 'Practice analyzing scenarios quickly. Design solutions under time pressure. Review CTA prep materials and past scenario examples.',
+    prerequisites: ['Several years designing complex Salesforce solutions'],
+    focusAreas: [],
+    studyStrategy: 'Run timed mock scenarios with a peer acting as judge. Keep to the 60-30-30 split every time so pacing becomes automatic, and review the feedback before the next mock.',
   },
   'technical-architect-review-board': {
     ...DEFAULT_PREP,
@@ -508,14 +515,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'b2c-solution-architect': {
     ...DEFAULT_PREP,
     examTips: [
-      'B2C Solution Design and Commerce/Experience are 60%. Know how to design end-to-end B2C solutions.',
-      'Understand integration patterns: CRM, marketing, payment, fulfillment.',
-      'Know governance: how to manage multiple sites, brands, and regions.',
-      'Be ready for "how would you design X solution?" questions.',
+      'This is a multi-cloud exam: B2C Commerce, Marketing Cloud Engagement, Service Cloud, Experience Cloud and Data 360 working together.',
+      'Know how customer identity and profiles are reconciled across clouds, and which system is the source of truth for each data set.',
+      'Integration: the standard connectors between the clouds, MuleSoft, and when a point-to-point connection is acceptable.',
+      'Be ready to justify a design against business value and total cost, not only technical fit.',
     ],
-    prerequisites: ['B2C Commerce Architect', 'Experience Cloud knowledge'],
-    focusAreas: ['B2C Solution Design', 'Commerce and Experience', 'Integration', 'Governance'],
-    studyStrategy: 'Design end-to-end B2C solutions combining Commerce and Experience Cloud. Understand multi-site governance and integration patterns.',
+    prerequisites: ['Experience on multi-cloud B2C implementations'],
+    focusAreas: [],
+    studyStrategy: 'Draw one customer journey across Commerce, Marketing and Service, marking where each piece of data is created, where it is mastered and how it moves. Discovery, data models and integration carry three quarters of the exam.',
   },
   'heroku-architect': {
     ...DEFAULT_PREP,
@@ -605,14 +612,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'communications-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Channels and Flows are 35%. Know SMS, voice, email, and messaging channels.',
-      'Understand Communications Cloud setup: org configuration, channels, and flows.',
-      'Know analytics and best practices: reporting, monitoring, and optimization.',
-      'Be ready for "how do you configure X?" questions.',
+      'Know the Enterprise Product Catalog (EPC): product specifications, offers, bundles, attributes and how a commercial offer maps to technical products.',
+      'Understand Industries CPQ and order capture for telecom: carts, pricing, promotions, and multi-site or multi-play orders.',
+      'Order management: order decomposition, orchestration plans, fulfilment requests and handling in-flight changes.',
+      'Be ready to map a telecom business requirement to the Communications Cloud data model and TM Forum-aligned concepts during discovery.',
     ],
-    prerequisites: ['Communications Cloud experience', 'Salesforce Administrator'],
-    focusAreas: ['Communications Cloud Setup', 'Channels and Flows', 'Analytics and Best Practices'],
-    studyStrategy: 'Use a Communications Cloud org. Configure channels, flows, and analytics. Align with the exam outline.',
+    prerequisites: ['Experience on a Communications Cloud (telecom) implementation', 'Working knowledge of OmniStudio and Industries CPQ'],
+    focusAreas: [],
+    studyStrategy: 'Trace one telecom offer end to end: model it in the Enterprise Product Catalog, sell it through Industries CPQ, then follow the order through decomposition and orchestration. Planning and Design carries most of the exam, so practise choosing a design and justifying it.',
   },
   'consumer-goods-cloud-ap': {
     ...DEFAULT_PREP,
@@ -653,7 +660,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'cpq-billing-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'CPQ and Billing + Quoting and Contracts are 70%. Know CPQ configuration, quoting, and billing.',
+      'The historical outline covers Revenue Cloud Technical Design, Revenue Cloud Implementation Management, and New Release Capabilities.',
       'Understand CPQ and Billing: product rules, price rules, quotes, and contracts.',
       'Know billing and revenue: billing processes, revenue recognition, and invoicing.',
       'Be ready for "how do you configure X?" questions.',
@@ -725,14 +732,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'manufacturing-cloud-ap': {
     ...DEFAULT_PREP,
     examTips: [
-      'Manufacturing Cloud is 40%. Know the Manufacturing Cloud data model, work orders, and production.',
-      'Understand configuration: work orders, production, and inventory.',
-      'Know best practices: implementation patterns, reporting, and optimization.',
-      'Be ready for "how do you configure X?" questions.',
+      'Know sales agreements: terms, schedules, planned versus actual quantities and how actuals are updated from orders.',
+      'Account-based forecasting and advanced account forecasts: forecast sets, dimensions, measures and recalculation.',
+      'Understand rebate management, warranty and the partner-facing experience, and where each fits a manufacturer scenario.',
+      'Be ready to map a discovery finding to configuration: which object, which data source and which integration with the ERP.',
     ],
-    prerequisites: ['Manufacturing Cloud experience', 'Salesforce Administrator'],
-    focusAreas: ['Manufacturing Cloud', 'Configuration', 'Best Practices'],
-    studyStrategy: 'Use a Manufacturing Cloud org. Configure work orders, production, and inventory. Align with the exam outline.',
+    prerequisites: ['Experience on a Manufacturing Cloud implementation'],
+    focusAreas: [],
+    studyStrategy: 'Configure a sales agreement, link it to orders so actuals flow in, and build an account forecast from it. Configure and Build is the largest section, so most of your time should be hands-on.',
   },
   'marketing-cloud-advanced-cross-channel-ap': {
     ...DEFAULT_PREP,
@@ -882,14 +889,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'marketing-cloud-consultant': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%. Cover Strategy, Subscriber/Data, Email/Journey, and Analytics.',
-      'Know Marketing Cloud strategy: multi-channel marketing and campaign design.',
-      'Understand subscriber and data management: data extensions, lists, and segmentation.',
-      'Be ready for "how would you implement X?" consultant-style questions.',
+      'Data modeling: data extensions and relationships, contact model, send relationships, and import and retention design.',
+      'Integration: Marketing Cloud Connect, the REST and SOAP APIs, and passing data to and from Sales or Service Cloud.',
+      'Automation: Automation Studio activities, Journey Builder entry sources and decisions, and when to use each tool.',
+      'Discovery and account configuration: business units, roles and permissions, sender authentication and reply mail management.',
     ],
-    prerequisites: ['Marketing Cloud experience', 'Salesforce Certified Administrator'],
-    focusAreas: ['Marketing Cloud Strategy', 'Subscriber and Data Management', 'Email and Journey Builder', 'Analytics and Integration'],
-    studyStrategy: 'Think like a consultant. Design Marketing Cloud solutions for various scenarios. Practice explaining recommendations and trade-offs.',
+    prerequisites: ['Salesforce Certified Marketing Cloud Engagement Administrator (MCE-Admn-201) is required; implementation experience is recommended.'],
+    focusAreas: [],
+    studyStrategy: 'Think like a consultant: for a given client scenario, design the data model first, then the integration, then the automation. Those three areas carry about three fifths of the exam.',
   },
   'nonprofit-success-pack-consultant': {
     ...DEFAULT_PREP,
@@ -966,14 +973,15 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'mulesoft-developer-ii': {
     ...DEFAULT_PREP,
     examTips: [
-      'Advanced Mule Development is 30%. Know advanced Mule concepts, patterns, and best practices.',
-      'Understand API Design and Security: RESTful APIs, OAuth, and API security.',
-      'Know error handling and performance: error handling strategies and performance optimization.',
-      'Be ready for "how do you develop X?" questions.',
+      'Performance and reliability: caching with Object Store, VM and Anypoint MQ queues, reconnection strategies, and until-successful versus retries.',
+      'Maintainable builds: Maven POM structure, the Mule Maven plugin, shared libraries, custom API policies and MUnit in a CI pipeline.',
+      'Security: TLS and mutual TLS, secure configuration properties, and validating payloads with XML and JSON schema validation.',
+      'Monitoring: structured logging, correlation IDs across flows, custom health-check endpoints and Anypoint Monitoring.',
+      'Production-ready APIs: API Manager autodiscovery, policies, HTTP callbacks and extending Mule with the Mule SDK.',
     ],
-    prerequisites: ['MuleSoft Developer I', 'Advanced Mule development experience'],
-    focusAreas: ['Advanced Mule Development', 'API Design and Security', 'Error Handling and Performance', 'Deployment and Operations'],
-    studyStrategy: 'Develop advanced Mule applications. Design APIs, handle errors, optimize performance. Align with the exam outline.',
+    prerequisites: ['Hands-on Mule 4 development experience'],
+    focusAreas: [],
+    studyStrategy: 'Take a working Mule application and harden it for production: add a Maven build with MUnit, externalise and encrypt its properties, secure it with TLS, add correlation IDs and a health check, then deploy it behind API Manager. Each of those steps maps to an exam section.',
   },
   'mulesoft-hyperautomation-developer': {
     ...DEFAULT_PREP,
@@ -990,14 +998,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'slack-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Slack API/Events and Apps/Workflows are 60%. Know Slack development and app creation.',
-      'Understand Slack API and Events: Events API, Web API, and event handling.',
-      'Know apps and workflows: Slack apps, Workflow Builder, and automation.',
-      'Be ready for "how do you develop X?" questions.',
+      'Interactive flow: Block Kit, modals, shortcuts, slash commands and how interaction payloads are acknowledged.',
+      'Security: verifying request signatures, token types and rotation, and requesting the smallest set of OAuth scopes.',
+      'APIs: the Web API, Events API and Socket Mode, plus rate limits and pagination.',
+      'Know the admin and SCIM APIs for managing a workspace, and what is involved in distributing an app.',
     ],
-    prerequisites: ['Slack development experience', 'API knowledge'],
-    focusAreas: ['Slack API and Events', 'Apps and Workflows', 'Integration with Salesforce', 'Security and Deployment'],
-    studyStrategy: 'Develop Slack apps. Use Slack APIs, create workflows, and integrate with Salesforce. Align with the exam outline.',
+    prerequisites: ['Hands-on Slack app development experience'],
+    focusAreas: [],
+    studyStrategy: 'Build a small app with the Bolt framework that uses a slash command, a modal and an event subscription, then secure it properly. Interactive flow and security are the two largest sections.',
   },
   'slack-consultant': {
     ...DEFAULT_PREP,
@@ -1026,14 +1034,15 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'omnistudio-developer': {
     ...DEFAULT_PREP,
     examTips: [
-      'OmniStudio Development and FlexCards/Digital Flows are 60%. Know OmniStudio development.',
-      'Understand OmniStudio development: OmniScript customization, FlexCard development, and scripting.',
-      'Know integration and scripting: DataRaptors, integration procedures, and JavaScript.',
-      'Be ready for "how do you develop X?" questions.',
+      'Omniscripts: step and element types, conditional views, set values, navigation actions and passing data between steps.',
+      'Data Mappers (formerly DataRaptors): Extract, Turbo Extract, Transform and Load, and when each one fits.',
+      'Integration Procedures: when to use one instead of several Data Mapper calls, caching, chaining and error handling.',
+      'Flexcards: data sources, states, actions and embedding child cards.',
+      'Troubleshooting: the Omniscript preview debug panel, Integration Procedure preview, and reading the data JSON at each step.',
     ],
-    prerequisites: ['OmniStudio development experience', 'JavaScript knowledge'],
-    focusAreas: ['OmniStudio Development', 'FlexCards and Digital Flows', 'Integration and Scripting', 'Testing and Deployment'],
-    studyStrategy: 'Develop OmniStudio features. Customize OmniScripts, develop FlexCards, and write scripts. Align with the exam outline.',
+    prerequisites: ['Hands-on OmniStudio build experience'],
+    focusAreas: [],
+    studyStrategy: 'Build one guided process end to end: a Flexcard that launches an Omniscript, which calls an Integration Procedure that uses Data Mappers. Then break it on purpose and practise finding the fault with the debug and preview tools, since troubleshooting is its own section.',
   },
   'sales-foundations': {
     ...DEFAULT_PREP,
@@ -1050,14 +1059,14 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'strategy-designer': {
     ...DEFAULT_PREP,
     examTips: [
-      'Strategy and Discovery + Solution Design are 65%. Know strategy design and discovery methods.',
-      'Understand strategy and discovery: discovery methods, stakeholder engagement, and requirements gathering.',
-      'Know solution design: experience strategy, solution design, and delivery.',
-      'Be ready for "how would you design X?" questions.',
+      'Value design: tie a design decision to a measurable business outcome and to what the user actually needs.',
+      'Tools and artifacts: journey maps, service blueprints, personas, problem statements and when each one is the right deliverable.',
+      'Intangible deliverables: alignment, shared vision and facilitation skills count as outcomes in this exam.',
+      'Know how a strategy designer works with UX designers, architects, business analysts and admins.',
     ],
-    prerequisites: ['Strategy and design experience', 'Salesforce knowledge'],
-    focusAreas: ['Strategy and Discovery', 'Solution Design', 'Stakeholder and Delivery'],
-    studyStrategy: 'Practice strategy design. Use discovery methods, design solutions, and engage stakeholders. Align with the exam outline.',
+    prerequisites: ['Experience with design thinking or strategy work'],
+    focusAreas: [],
+    studyStrategy: 'For each practice scenario, name the outcome first, then the artifact that would move the team toward it. Value Design and Intangible Deliverables together are well over half the exam.',
   },
   'tableau-architect': {
     ...DEFAULT_PREP,
@@ -1086,20 +1095,95 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
   'tableau-server-administrator': {
     ...DEFAULT_PREP,
     examTips: [
-      'All four sections are 25%. Cover Installation, Security, User/Content Management, and Performance.',
-      'Know installation and deployment: Tableau Server installation, configuration, and deployment.',
-      'Understand security and authentication: authentication methods, SSL, and security best practices.',
-      'Be ready for "how do you configure X?" questions.',
+      'Administration: users, groups, site roles, projects and permissions, schedules, subscriptions and extract refreshes.',
+      'Install and configure: Tableau Services Manager (TSM), topology, identity stores, authentication and SSL.',
+      'Preparation: sizing, hardware and network requirements, and licensing before an installation.',
+      'Troubleshooting and upgrades: log files and tsm maintenance commands, backup and restore, and the upgrade sequence.',
     ],
-    prerequisites: ['Tableau Server experience', 'System administration knowledge'],
-    focusAreas: ['Installation and Deployment', 'Security and Authentication', 'User and Content Management', 'Performance and Monitoring'],
-    studyStrategy: 'Administer Tableau Server. Install, configure security, manage users, and monitor performance. Align with the exam outline.',
+    prerequisites: ['Hands-on Tableau Server administration experience'],
+    focusAreas: [],
+    studyStrategy: 'Install Tableau Server in a test environment and work through the tasks in the outline: configure authentication, create sites and projects, set permissions, schedule a backup and perform a restore. Administration is the largest section.',
   },
 }
 
 
+/** True when a hand-written tip states section weights or shares of the exam. */
+function statesWeighting(tip: string): boolean {
+  return /\d\s*%|heavily weighted|highest[- ]weight|largest section|most weight|carry the most/i.test(tip)
+}
+
+/**
+ * Exam Tip 1 is always generated from the published outline. Hand-written
+ * first tips used to carry their own percentages ("All four sections are
+ * 25%"), which went stale whenever Salesforce revised an outline and then sat
+ * directly under a weightage table that contradicted them.
+ */
+function withGeneratedWeightingTip(slug: string, content: ExamPrepContent): ExamPrepContent {
+  const summary = getTopSectionsSummary(slug)
+  const weights = getExamWeightage(slug)?.map((section) => section.percentage) ?? []
+  const allowed = new Set<number>(weights)
+  ;[...weights].sort((a, b) => b - a).reduce((total, weight) => {
+    allowed.add(total + weight)
+    return total + weight
+  }, 0)
+  // Drop any hand-written tip whose percentages are not in the published
+  // outline (as a section weight or a running total of the largest sections).
+  // Percentages about something else, such as code coverage, are left alone.
+  const consistent = (tip: string) => {
+    if (/coverage|practice|mock|score/i.test(tip)) return true
+    const percentages = [...tip.matchAll(/(\d{1,3})\s*%/g)].map((match) => Number(match[1]))
+    return percentages.every((value) => allowed.has(value))
+  }
+  const kept = content.examTips.filter(
+    (tip, i) =>
+      consistent(tip) &&
+      !(summary && i === 0 && statesWeighting(tip)) &&
+      !(summary && /^Study the highest-weight sections first/i.test(tip)),
+  )
+  const examTips = summary ? [`${summary}, so study those sections first.`, ...kept] : kept
+
+  // Focus areas are the published sections, heaviest first.
+  const focusAreas = weights.length
+    ? [...(getExamWeightage(slug) ?? [])].sort((a, b) => b.percentage - a.percentage).slice(0, 5).map((section) => section.name)
+    : content.focusAreas.length
+      ? content.focusAreas
+      : DEFAULT_PREP.focusAreas
+
+  return { ...content, examTips, focusAreas, prerequisites: buildPrerequisites(slug, content.prerequisites) }
+}
+
+/** Hand-written lines that name a certification, which only the prerequisite data may state. */
+const NAMES_A_CERTIFICATION = /Certified|Administrator|Architect|Developer I|Developer II|Platform Developer|App Builder|cert\b|certification|Specialist knowledge|Passed /i
+
+/**
+ * Prerequisite lines come from cert-prerequisites.ts, which follows the
+ * official guides. Hand-written lines are kept only when they describe
+ * experience, because several of them named certifications as requirements
+ * that Salesforce does not require.
+ */
+function buildPrerequisites(slug: string, handWritten: string[]): string[] {
+  const data = getCertPrerequisites(slug)
+  const required = getRequiredPrerequisites(slug)
+  const lines: string[] = []
+  if (required.length) {
+    lines.push(`Required: ${required.map((s) => getCertPrimaryName(s, s)).join(' and ')}`)
+  } else if (data?.noPrerequisite) {
+    lines.push('No prerequisite certification is required')
+  }
+  if (data?.recommendedPrerequisite && !required.length) {
+    lines.push(`Recommended preparation: ${getCertPrimaryName(data.recommendedPrerequisite, data.recommendedPrerequisite)}`)
+  }
+  const experience = handWritten.filter((line) => !NAMES_A_CERTIFICATION.test(line) && !/^None required/i.test(line))
+  const combined = [...lines, ...experience]
+  return combined.length ? combined : handWritten
+}
+
 // Fill in defaults for any cert not in the map above
 export function getExamPrepContent(slug: string): ExamPrepContent {
+  return withGeneratedWeightingTip(slug, getRawExamPrepContent(slug))
+}
+
+function getRawExamPrepContent(slug: string): ExamPrepContent {
   const custom = EXAM_PREP_CONTENT[slug]
   if (custom) return custom
   return {

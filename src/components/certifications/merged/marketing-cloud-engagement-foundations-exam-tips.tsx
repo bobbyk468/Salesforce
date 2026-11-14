@@ -75,22 +75,26 @@ export default function MarketingCloudEngagementFoundationsExamTipsContent() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Email Studio Basics</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+            <span className="font-medium text-gray-900">Marketing Concepts</span>
+            <span className="font-bold text-salesforce-blue ml-4">28%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Subscriber and Data Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Marketing Cloud Platform Basics</span>
+            <span className="font-medium text-gray-900">Marketing Cloud Engagement Basics</span>
             <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Compliance and Deliverability Basics</span>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Email Sending and Journeys</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Data Management</span>
             <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Email Studio + Subscriber Management + Platform = 77%. CAN-SPAM compliance and subscriber statuses are frequently tested in compliance questions.</p>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Reporting and Analytics</span>
+            <span className="font-bold text-salesforce-blue ml-4">10%</span>
+          </div>
+          <p className="text-xs text-gray-600 pt-1">Marketing Concepts, Engagement Basics, and Email Sending and Journeys together make up 72%.</p>
         </div>
       </section>
 

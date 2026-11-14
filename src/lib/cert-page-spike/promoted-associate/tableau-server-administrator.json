@@ -1,52 +1,52 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Tableau Server Administrator exam for?",
+    "heading": "Who should take the Tableau Server Administrator exam?",
     "personas": [
       {
-        "label": "IT Administrators",
-        "description": "Professionals responsible for deploying, configuring, and maintaining Tableau Server or Tableau Cloud environments for their organization."
+        "label": "IT administrators",
+        "description": "You deploy, configure, and maintain Tableau Server or Tableau Cloud for an organization."
       },
       {
-        "label": "System Administrators",
-        "description": "Admins managing user provisioning, authentication (SAML, LDAP, Active Directory), and security policies for Tableau Server."
+        "label": "Identity and system administrators",
+        "description": "You manage users, SAML or directory authentication, and security settings for Tableau Server."
       },
       {
-        "label": "Operations Teams",
-        "description": "Teams monitoring server health, managing extract refresh schedules, troubleshooting failures, and performing backup and recovery."
+        "label": "Platform operations teams",
+        "description": "You monitor service health, schedule extracts, investigate failures, and manage backup and recovery."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Tableau Server Administrator Exam Hard?",
-    "summary": "The Tableau Server Administrator exam is moderately difficult. It requires fluency with TSM commands, server process architecture, and real troubleshooting scenarios, studying documentation without hands-on server management experience leaves significant gaps.",
+    "heading": "How challenging is the Tableau Server Administrator exam?",
+    "summary": "This exam tests Tableau administration, including TSM commands, server processes, and troubleshooting. Hands-on experience with server operations is important; reading documentation alone may leave gaps.",
     "bullets": [
-      "<strong>45 questions</strong> in 90 minutes, roughly two minutes per question, which is manageable for candidates familiar with the admin interface.",
-      "<strong>no published pass mark</strong>: you need approximately 32 correct answers out of 45 to pass.",
-      "<strong>TSM command-line fluency is essential</strong>: the exam tests specific TSM operations for configuration, backup, restore, and maintenance.",
-      "<strong>Hands-on server administration helps most</strong>: candidates who have managed extract refreshes, configured authentication, and used Admin Views pass at higher rates."
+      "<strong>50 scored questions</strong> in 90 minutes, plus up to five unscored questions that do not count.",
+      "<strong>64% to pass</strong>, which is 32 correct answers out of 50.",
+      "<strong>TSM knowledge.</strong> Review configuration, backup, restore, and maintenance operations.",
+      "<strong>Practical administration.</strong> Practise refresh troubleshooting, authentication setup, and Admin Views."
     ],
-    "passRateGuidance": "Book when you can confidently run TSM commands, troubleshoot failed extract refreshes, configure SAML SSO, and interpret Admin Views without looking up steps."
+    "passRateGuidance": "Before booking, practise common TSM operations, troubleshoot a failed extract refresh, configure SAML SSO, and read Admin Views without relying on step-by-step notes."
   },
   "examFormat": {
-    "heading": "Tableau Server Administrator Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe server issues, failed extract refreshes, slow dashboard loads, authentication errors, and ask you to identify the correct diagnostic or resolution step.",
+    "heading": "Tableau Server Administrator exam format",
+    "intro": "The exam is proctored online or at a test centre. Questions describe administrative tasks and server issues:",
+    "scenarioPercent": "Scenarios may cover failed refreshes, slow dashboards, authentication errors, or server maintenance and ask for the right diagnostic or corrective action.",
     "bestWayToPass": [
-      "<strong>TSM commands:</strong> Memorize key TSM operations, tsm status, tsm configuration set/get, tsm maintenance backup/restore, and tsm restart.",
-      "<strong>Process architecture:</strong> Know what each Tableau Server process does (VizQL, Backgrounder, Data Server, Repository) and which logs to check when it fails.",
-      "<strong>Authentication configuration:</strong> Understand SAML SSO, Active Directory sync, OpenID Connect, and Kerberos setup, including common troubleshooting steps.",
-      "<strong>Admin Views:</strong> Practice using built-in monitoring dashboards (Background Tasks, Traffic to Views, Stats for Space Used) for proactive maintenance."
+      "<strong>Practise TSM:</strong> Review status, configuration, restart, backup, and restore commands.",
+      "<strong>Learn server processes:</strong> Know the roles of VizQL, Backgrounder, Data Server, and Repository, and which logs help diagnose failures.",
+      "<strong>Review authentication:</strong> Study SAML, directory synchronization, OpenID Connect, and Kerberos, plus common troubleshooting steps.",
+      "<strong>Use Admin Views:</strong> Practise Background Tasks, Traffic to Views, and Stats for Space Used to monitor the platform."
     ]
   },
   "certificationCard": {
     "code": "Tableau Server Admin",
-    "description": "Tableau Server Administrators deploy, configure, and manage Tableau Server and Tableau Cloud. They handle installation, security, user management, sites, and performance.",
+    "description": "This exam covers Tableau Server administration, including installation, configuration, process architecture, user and content management, authentication, monitoring, maintenance, and troubleshooting. The exam is 50 scored questions in 90 minutes, with a 64% pass mark, weighted towards Administration (36%) and Install & Configure (26%).",
     "examDetails": {
-      "questions": 45,
-      "passingScore": "Not published",
+      "questions": 50,
+      "passingScore": "64%",
       "duration": "90 min",
-      "cost": "$250"
+      "cost": "$200"
     },
     "topics": [
       "Installation & Deployment",
@@ -58,53 +58,53 @@
     ]
   },
   "keyConcepts": {
-    "h2": "Tableau Server Administrator: Key Concepts for the Exam",
+    "h2": "Tableau Server Administrator: concepts to review",
     "blocks": [
       {
-        "heading": "Tableau Server Architecture and Processes",
-        "body": "Tableau Server runs as a set of processes that can be distributed across multiple nodes. Key processes: VizQL Server (renders views), Application Server (handles web requests, API calls), Data Server (manages data connections and caching), Backgrounder (runs extract refreshes, subscriptions, flows), Data Engine (stores and queries Hyper extract files), Repository (PostgreSQL, stores user, content, and workgroup metadata). Single-node deployments run all processes on one machine. Multi-node clusters distribute processes for scale and redundancy."
+        "heading": "Server architecture and processes",
+        "body": "Tableau Server uses processes that can run on one or more nodes. VizQL renders views; Application Server handles web requests and API calls; Data Server manages data connections and caching; Backgrounder runs tasks such as refreshes and subscriptions; Data Engine stores and queries Hyper extracts; and Repository (PostgreSQL) stores users, content, and workgroup metadata. A single-node installation runs processes on one machine; a multi-node cluster distributes them for scale and resilience."
       },
       {
-        "heading": "Installation, Configuration, and TSM",
-        "body": "Tableau Services Manager (TSM) is the command-line and web UI administration tool for Tableau Server. tsm configuration set changes server settings. tsm maintenance backup/restore handles server backup and recovery. TSM web UI provides a graphical interface for common admin tasks. Installation: requires a dedicated server, admin user, and product key. Initial configuration: server admin account, authentication mode (local, Active Directory, **SAML**), SSL/TLS certificate upload. Identity store: Local (Tableau manages users), Active Directory (sync from AD), or LDAP."
+        "heading": "Installation, configuration, and TSM",
+        "body": "Tableau Services Manager (TSM) provides command-line and web-based administration for Tableau Server. TSM commands change configuration and manage backups and restores. The web interface supports common administrative tasks. Installation requires a supported server, an administrator account, and a product key. Initial setup includes an administrator, authentication mode, and SSL/TLS certificates as needed. Identity stores can be local, Active Directory, or LDAP."
       },
       {
-        "heading": "User Management and Licensing",
-        "body": "Site Roles determine what users can do: Creator (can create and publish workbooks, edit in web), Explorer (can view and interact, limited edit), Viewer (view only). User limit is set by the licence type. Active Directory group sync automates user management: AD group membership maps to Tableau site roles. Multi-site Tableau Server can have users assigned to multiple sites with different roles per site. Licensing compliance: the admin monitors licence usage and usage reports to ensure the organisation stays within licence limits."
+        "heading": "Users and licenses",
+        "body": "Site roles define user capabilities: Creator users can create and publish; Explorers can interact and have limited editing; Viewers can view content. License limits depend on the license agreement. Active Directory group synchronization can automate user provisioning and map groups to site roles. Users may belong to multiple sites with different roles. Monitor licence use and reports to stay within the organization’s entitlements."
       },
       {
-        "heading": "Content Management: Projects and Permissions",
-        "body": "Projects organise content (workbooks, data sources, flows) in a hierarchy. Top-level projects and nested projects support complex permission models. Permission capabilities: View, Download, Edit, Publish, Connect, Move, Delete; each can be Allowed, Denied, or Inherited. Permissions inherit from the project to its content, child projects inherit from parent unless overridden. Locking project permissions prevents users from changing content permissions. The admin designs the project hierarchy to match organisational structure and governance requirements."
+        "heading": "Projects, content, and permissions",
+        "body": "Projects organize workbooks, data sources, and flows in a hierarchy. Permission capabilities include View, Download, Edit, Publish, Connect, Move, and Delete. Permissions may be allowed, denied, or inherited from a project. Child projects normally inherit from their parent unless configured otherwise. Locked permissions enforce the project’s permission model and prevent content owners from changing permissions on individual items. Design the project structure around governance and business needs."
       },
       {
-        "heading": "Monitoring, Maintenance, and Troubleshooting",
-        "body": "Admin Views are built-in dashboards for monitoring server health: Background Tasks, User Activity, Traffic to Views, Disk Space. tsm jobs commands manage and monitor background tasks. Log files in ProgramData/Tableau capture detailed process activity, useful for troubleshooting failed extract refreshes, slow view rendering, and authentication issues. Tableau Server repository (PostgreSQL) can be queried for advanced analytics on server usage. Scheduled extract refreshes: the admin monitors success rates and investigates failures (data source credentials, network issues, query timeouts)."
+        "heading": "Monitoring and troubleshooting",
+        "body": "Admin Views show server activity such as background tasks, user activity, traffic to views, and disk use. TSM jobs commands help manage background work. Tableau Server logs provide detail about process activity and can help investigate refresh, rendering, and authentication issues. The repository can support advanced usage analysis. Monitor refresh outcomes and investigate common causes such as credentials, network problems, and query timeouts."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Tableau Server Certified Administrator Exam",
-    "intro": "The Tableau Server Administrator exam tests server administration skills: installation, configuration, performance monitoring, and troubleshooting. Focus on TSM commands, backup/restore, and user management at scale.",
+    "h2": "How to prepare for the Tableau Server Administrator exam",
+    "intro": "Review installation, configuration, performance monitoring, and troubleshooting. Practise TSM, backup and restore, and user management at scale.",
     "blocks": [
       {
-        "heading": "TSM Command-Line Interface",
-        "body": "Know key TSM commands: tsm status, tsm configuration set/get, tsm restart, tsm maintenance backup/restore, and tsm sites export/import. Administrators need command-line fluency for the exam."
+        "heading": "Use TSM confidently",
+        "body": "Practise status, configuration, restart, backup, restore, and site export or import commands."
       },
       {
-        "heading": "User & Content Management",
-        "body": "Know how to manage users (local vs. Active Directory), site roles and their capabilities, groups, and how to bulk-import users with CSV. Understand how to configure site limits (storage, user counts)."
+        "heading": "Manage users and content",
+        "body": "Review local and directory users, site roles, groups, CSV imports, project permissions, and site limits."
       },
       {
-        "heading": "Performance Monitoring",
-        "body": "Know how to use Tableau Server's built-in monitoring: the Admin views (Background Tasks, Stats for Space Used, Traffic to Views), Resource Monitoring Tool (RMT), and PostgreSQL repository queries."
+        "heading": "Monitor platform activity",
+        "body": "Use Admin Views for background tasks, space use, and view traffic. Learn when the Resource Monitoring Tool and repository data help."
       },
       {
-        "heading": "Backup & Recovery",
-        "body": "Know how to configure backup schedules using TSM, what is included in a TSM backup (content, configuration, PostgreSQL), and how to restore from backup including the recovery process for failed nodes."
+        "heading": "Plan backup and recovery",
+        "body": "Know what a TSM backup contains and how to restore it, including what to do after a node failure."
       },
       {
-        "heading": "Authentication Configuration",
-        "body": "Know how to configure local authentication, Active Directory/LDAP, **SAML** **SSO**, OpenID Connect, and Kerberos. Understand how authentication method affects user provisioning and session management."
+        "heading": "Configure authentication",
+        "body": "Study local, Active Directory or LDAP, SAML SSO, OpenID Connect, and Kerberos, including their effects on provisioning and sessions."
       }
     ]
   },
@@ -162,39 +162,39 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which command-line tool is used to change Tableau Server configuration and restart services?",
+      "question": "Which command-line tool manages Tableau Server settings and services?",
       "options": [
-        "tsm",
+        "TSM",
         "psql",
-        "tableau-desktop",
+        "Tableau Desktop",
         "tabcmd"
       ],
       "correctAnswer": 0,
-      "explanation": "TSM manages the server platform itself, including configuration, topology and service control.",
+      "explanation": "TSM manages Tableau Server configuration, topology, and service operations.",
       "whyWrong": [
-        "psql is a PostgreSQL client and is not the supported administration tool.",
-        "Tableau Desktop is the authoring client.",
-        "tabcmd automates content tasks such as publishing and exporting, not platform configuration."
+        "psql is a PostgreSQL client, not Tableau’s supported server administration tool.",
+        "Tableau Desktop is used to author workbooks.",
+        "tabcmd automates content actions such as publishing or exporting."
       ]
     },
     {
-      "question": "Which tool would an administrator script to publish a workbook or export a view to PDF on a schedule?",
+      "question": "Which tool can script publishing a workbook or exporting a view to PDF?",
       "options": [
         "tabcmd",
-        "tsm",
+        "TSM",
         "The Backgrounder process directly",
-        "The repository database"
+        "The Repository database"
       ],
       "correctAnswer": 0,
-      "explanation": "tabcmd performs content-level operations and is the usual choice for scripting them.",
+      "explanation": "tabcmd supports scripted content operations such as publishing and exporting views.",
       "whyWrong": [
-        "TSM configures the platform rather than manipulating content.",
-        "Processes are not invoked directly by administrators.",
-        "Writing to the repository directly is unsupported."
+        "TSM configures and manages the Tableau Server platform.",
+        "Administrators manage tasks through supported interfaces rather than invoking a process directly.",
+        "Direct repository writes are not a supported way to manage content."
       ]
     },
     {
-      "question": "Which Tableau Server process executes scheduled extract refreshes and subscriptions?",
+      "question": "Which Tableau Server process runs scheduled extract refreshes and subscriptions?",
       "options": [
         "VizQL Server",
         "Backgrounder",
@@ -202,79 +202,79 @@
         "Gateway"
       ],
       "correctAnswer": 1,
-      "explanation": "Backgrounder runs background tasks, which is where extract refreshes and subscription deliveries happen.",
+      "explanation": "Backgrounder executes scheduled work such as extract refreshes and subscription delivery.",
       "whyWrong": [
-        "VizQL Server renders views for interactive users.",
-        "The Repository stores metadata and does not execute tasks.",
-        "Gateway handles incoming requests and routing."
+        "VizQL renders views for interactive use.",
+        "Repository stores metadata rather than running scheduled jobs.",
+        "Gateway routes incoming requests."
       ]
     },
     {
-      "question": "Users report that dashboards are slow to load interactively, while scheduled refreshes complete on time. Which process is the first place to look?",
+      "question": "Dashboards are slow during interactive use, but scheduled refreshes finish normally. Which process should the administrator investigate first?",
       "options": [
         "Backgrounder",
         "VizQL Server",
-        "The TSM controller",
-        "The licensing service"
+        "TSM Controller",
+        "Licensing service"
       ],
       "correctAnswer": 1,
-      "explanation": "Interactive rendering is VizQL Server's work, and healthy scheduled refreshes point away from Backgrounder.",
+      "explanation": "VizQL renders interactive views, while refresh jobs are already completing normally.",
       "whyWrong": [
-        "Backgrounder handles the scheduled work that is already completing normally.",
-        "The TSM controller manages administration, not view rendering.",
-        "Licensing affects access rather than render speed."
+        "Backgrounder handles the scheduled jobs that are working as expected.",
+        "TSM Controller manages administration, not view rendering.",
+        "Licensing affects access rather than dashboard rendering speed."
       ]
     },
     {
-      "question": "Extract refreshes are queuing and finishing late, while interactive performance is fine. What is the most appropriate response?",
+      "question": "Extract refreshes are delayed, but interactive performance is fine. What is a suitable response?",
       "options": [
-        "Add more VizQL Server processes to the node",
-        "Switch the server to a different authentication method",
-        "Reduce the number of sites on the installation",
-        "Add Backgrounder capacity or spread the schedules"
+        "Add VizQL processes",
+        "Change the authentication method",
+        "Reduce the number of sites",
+        "Add Backgrounder capacity"
       ],
       "correctAnswer": 3,
-      "explanation": "Late background work with healthy interactive performance indicates Backgrounder capacity or scheduling is the constraint.",
+      "explanation": "The symptom points to Backgrounder capacity or schedule contention rather than interactive rendering.",
       "whyWrong": [
-        "VizQL Server affects interactive rendering, which is not the problem described.",
-        "Authentication is unrelated to refresh capacity.",
-        "Site count does not govern refresh throughput."
+        "VizQL handles interactive views, which are not slow here.",
+        "Authentication is unrelated to refresh queue length.",
+        "Site count alone does not determine refresh throughput."
       ]
     },
     {
-      "question": "A user must publish workbooks and control permissions on their own projects, but must not administer the site. What should be granted?",
+      "question": "A user must publish workbooks and manage permissions for selected projects, but should not administer the whole site. What access fits?",
       "options": [
-        "The Server Administrator role for the installation",
-        "A publishing site role plus project leader on those projects",
-        "No licence, with access granted by group",
-        "The Viewer role on every project"
+        "Server Administrator role for the entire Tableau installation",
+        "Publishing role plus project leader rights",
+        "No license, with group access only",
+        "Viewer role on each project"
       ],
       "correctAnswer": 1,
-      "explanation": "Publishing comes from the site role, and authority over specific projects comes from being project leader on them.",
+      "explanation": "The site role grants publishing capability, and project leader rights apply to the specified projects.",
       "whyWrong": [
-        "Server Administrator grants control of the whole installation, far more than required.",
-        "An unlicensed user cannot sign in to work with content.",
-        "Viewer cannot publish content."
+        "Server Administrator grants broad control of the installation.",
+        "A user needs an appropriate license to sign in and publish.",
+        "Viewers cannot publish or manage project permissions."
       ]
     },
     {
-      "question": "What is the effect of locking permissions to a project?",
+      "question": "What happens when project permissions are locked?",
       "options": [
-        "Content inherits the project's permissions",
-        "The project is hidden from all search results",
-        "Extract refreshes for content in the project pause",
-        "The project becomes read-only for every user"
+        "Enforce project permissions",
+        "The project disappears from search",
+        "Extract refreshes stop",
+        "Every user becomes a viewer"
       ],
       "correctAnswer": 0,
-      "explanation": "Locking enforces the project's permission model on everything inside it, preventing per-workbook divergence.",
+      "explanation": "Locked permissions enforce the project’s model on its content and prevent item-level permission changes.",
       "whyWrong": [
-        "Visibility is controlled by permissions, not by the lock setting.",
-        "Scheduling is unaffected by permission locking.",
-        "Locking governs who sets permissions, not whether content can be edited."
+        "Visibility still depends on the configured permissions.",
+        "Refresh scheduling is not changed by permission locking.",
+        "The lock does not change every user’s site role."
       ]
     },
     {
-      "question": "An administrator must take a full backup that can restore the server's content and metadata. Which TSM operation produces it?",
+      "question": "Which TSM command creates a full server backup for recovery?",
       "options": [
         "tsm maintenance backup",
         "tabcmd get",
@@ -282,123 +282,123 @@
         "tsm maintenance cleanup"
       ],
       "correctAnswer": 0,
-      "explanation": "The maintenance backup command produces the archive containing the repository and extract data.",
+      "explanation": "The maintenance backup operation creates a backup archive containing server data needed for recovery.",
       "whyWrong": [
-        "tabcmd get downloads a single piece of content.",
-        "tsm status reports service state.",
-        "Cleanup removes logs and temporary files rather than creating a backup."
+        "tabcmd get retrieves content rather than creating a server backup.",
+        "tsm status reports process and service state.",
+        "Cleanup removes logs and temporary files; it does not create a backup."
       ]
     },
     {
-      "question": "What does tsm maintenance cleanup do?",
+      "question": "What does `tsm maintenance cleanup` do?",
       "options": [
-        "Creates a restore point for the installation",
-        "Rebuilds the server's content search index",
-        "Reassigns site roles across every site",
+        "Creates a restorable server backup",
+        "Rebuilds the content search index",
+        "Changes site roles for all users",
         "Removes old logs and temporary files"
       ],
       "correctAnswer": 3,
-      "explanation": "Cleanup reclaims disk space by deleting logs and temporary files.",
+      "explanation": "Cleanup frees disk space by removing older logs and temporary files.",
       "whyWrong": [
-        "Restore points come from a backup, not from cleanup.",
-        "Index rebuilding is a separate maintenance action.",
-        "Site roles are managed through the web interface or the API."
+        "Use a backup command to create recovery data.",
+        "Search-index maintenance is a separate task.",
+        "Site roles are managed through user administration tools."
       ]
     },
     {
-      "question": "After configuring an external identity provider, users can reach the sign-in page but authentication fails. Where should the administrator look first?",
+      "question": "Users can reach the sign-in page, but authentication fails after an external identity provider was configured. What should be checked first?",
       "options": [
-        "The Backgrounder queue",
-        "Workbook permissions for the affected users",
-        "The identity provider and certificate trust settings",
-        "The extract refresh schedule for the source"
+        "The Backgrounder job queue",
+        "Workbook permissions",
+        "Verify identity provider settings",
+        "The extract refresh schedule"
       ],
       "correctAnswer": 2,
-      "explanation": "Authentication failures at sign-in point to the identity provider configuration and the certificate trust between it and the server.",
+      "explanation": "A sign-in failure after identity-provider configuration points to the authentication settings or certificate trust.",
       "whyWrong": [
-        "The Backgrounder queue concerns scheduled tasks rather than sign-in.",
-        "Permissions apply after a user has authenticated.",
-        "Refresh schedules are unrelated to authentication."
+        "Backgrounder processes scheduled jobs, not sign-in.",
+        "Workbook permissions apply after a user authenticates.",
+        "Refresh schedules do not control authentication."
       ]
     },
     {
-      "question": "What is the purpose of creating multiple sites on one Tableau Server installation?",
+      "question": "Why create multiple sites on one Tableau Server installation?",
       "options": [
-        "To provide a backup of the content",
-        "To increase extract refresh throughput per node",
-        "To separate content and users on shared hardware",
+        "To back up the same content automatically",
+        "To increase refresh throughput per node",
+        "Separate user and content areas by site",
         "To enable multi-factor authentication"
       ],
       "correctAnswer": 2,
-      "explanation": "Sites partition content and user access within a single installation.",
+      "explanation": "Sites provide separate content and user areas within a single Tableau Server installation.",
       "whyWrong": [
         "Sites are not a backup mechanism.",
-        "Throughput depends on process capacity rather than site count.",
-        "Authentication methods are configured at the server level."
+        "Refresh throughput depends on process capacity and scheduling.",
+        "Authentication settings are not enabled by creating multiple sites."
       ]
     },
     {
-      "question": "Which statement about licensing is correct?",
+      "question": "How does Tableau licensing relate to site roles?",
       "options": [
-        "All site roles consume the same licence tier",
-        "Viewers do not require a licence",
-        "Licences are tiered by site role",
-        "Licensing is configured per project"
+        "Every role uses the same license tier",
+        "Viewers do not need a license",
+        "Role determines license tier",
+        "Licenses are assigned to projects"
       ],
       "correctAnswer": 2,
-      "explanation": "Licences are tiered, and the role assigned determines which tier a user consumes.",
+      "explanation": "The user’s site role determines the license tier they consume, subject to the organization’s license agreement.",
       "whyWrong": [
-        "Roles consume different licence tiers.",
-        "Viewers require a Viewer licence.",
-        "Licensing is an installation-level concern, not per project."
+        "Different roles can require different license tiers.",
+        "Viewers require a Viewer license.",
+        "Licenses are not assigned to projects."
       ]
     },
     {
-      "question": "An administrator needs to see which views are used least often, to plan content cleanup. Where should they look?",
+      "question": "Where can an administrator review which views are used least often?",
       "options": [
-        "The workbook XML of each published workbook",
-        "The gateway request log entries only",
-        "The TSM configuration file on each node",
-        "The built-in administrative views"
+        "Workbook XML for every item",
+        "Gateway logs alone",
+        "TSM configuration files",
+        "Built-in administrative views"
       ],
       "correctAnswer": 3,
-      "explanation": "Administrative views report usage, performance and content activity, which is what usage analysis needs.",
+      "explanation": "Administrative views provide usage and content activity data for planning cleanup.",
       "whyWrong": [
-        "Workbook XML describes a single workbook's definition.",
-        "Gateway logs record requests but are not a usage report.",
-        "Configuration files describe setup, not usage."
+        "Workbook XML defines content rather than reporting its usage.",
+        "Gateway logs are not a convenient usage summary.",
+        "Configuration files describe setup, not view activity."
       ]
     },
     {
-      "question": "A published data source needs credentials so scheduled refreshes can run without a user present. What should be configured?",
+      "question": "A published data source needs to refresh on schedule without a user signed in. What should be configured?",
       "options": [
-        "A new site for the data source",
-        "Embedded credentials on the data source",
-        "A higher site role for all viewers",
-        "Prompting the user at refresh time"
+        "A new site for that data source",
+        "Store credentials with the data source",
+        "A higher role for all viewers",
+        "A prompt at refresh time"
       ],
       "correctAnswer": 1,
-      "explanation": "Scheduled refreshes run with no user present, so the connection credentials must be stored with the data source.",
+      "explanation": "Embedded credentials allow scheduled refreshes to authenticate when no user is present.",
       "whyWrong": [
-        "Creating a site does not supply credentials.",
-        "Raising site roles does not authenticate to the underlying database.",
-        "Prompting cannot work when no user is present."
+        "Creating a site does not provide a database login.",
+        "A higher Tableau site role does not authenticate to the source database.",
+        "A prompt cannot be answered when no user is present."
       ]
     },
     {
-      "question": "What should an administrator do before applying a configuration change that requires a service restart in production?",
+      "question": "A production configuration change requires a service restart. What should the administrator do first?",
       "options": [
-        "Apply it immediately during peak hours",
-        "Delete old workbooks first",
-        "Back up, then apply it in a maintenance window",
-        "Switch all users to Viewer"
+        "Apply the change during peak traffic",
+        "Delete older workbooks",
+        "Back up, then use a maintenance window",
+        "Change all users to the Viewer role"
       ],
       "correctAnswer": 2,
-      "explanation": "Changes that restart services interrupt users, so a backup and a planned window are the standard precautions.",
+      "explanation": "A planned maintenance window reduces disruption, and a backup provides a recovery point before the change.",
       "whyWrong": [
-        "Restarting during peak hours causes avoidable disruption.",
-        "Content deletion is unrelated to applying a configuration change.",
-        "Changing site roles does not reduce restart impact."
+        "Restarting during peak use creates avoidable disruption.",
+        "Deleting workbooks is unrelated to configuration changes.",
+        "Changing roles does not reduce the effect of a service restart."
       ]
     }
   ]

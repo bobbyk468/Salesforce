@@ -12,7 +12,7 @@ const path = '/tools/score-calculator'
 export const metadata: Metadata = {
   title: { absolute: 'Salesforce Exam Score Calculator (2026) by Section' },
   description:
-    'Work out your overall Salesforce exam score from the section percentages in your result email, compare it to the pass mark, and see your weakest section.',
+    'Estimate your Salesforce exam score from the section percentages in your results email and compare it with the pass mark.',
   alternates: {
     canonical: `${siteUrl}${path}`,
     languages: { 'en-US': `${siteUrl}${path}`, 'x-default': `${siteUrl}${path}` },

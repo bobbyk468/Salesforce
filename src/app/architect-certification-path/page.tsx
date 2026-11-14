@@ -46,19 +46,19 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce architect certification path?',
-    answer: 'The Salesforce architect path has two role-based credentials below CTA: Application Architect (auto-awarded after App Builder + PD1 + Data Architect + Sharing & Visibility Architect, no separate exam) and System Architect (requires PD1 + Integration Architect + IAM Architect + Dev Lifecycle & Deployment Architect, also auto-awarded, no separate exam). Platform Developer I is the only exam shared between the two. Both credentials are prerequisites for the Certified Technical Architect (CTA).',
+    answer: 'The architect path has two role-based credentials before CTA. Salesforce awards Application Architect when you hold App Builder, PD1, Data Architect, and Sharing & Visibility Architect. System Architect requires PD1, Integration Architect, IAM Architect, and Dev Lifecycle & Deployment Architect, and is also awarded without a separate exam. PD1 is the only exam shared by both credentials. You need both credentials before the Certified Technical Architect (CTA).',
   },
   {
     question: 'What is the first certification for the Salesforce architect track?',
-    answer: 'The recommended starting point for the architect track is the Salesforce Administrator (ADM-201) followed by Platform App Builder (DEV-402). App Builder is the first component of the Application Architect credential and establishes the declarative foundation that all architect component exams build on.',
+    answer: 'Start with Salesforce Administrator (ADM-201), then take Platform App Builder (DEV-402). App Builder is the first Application Architect component and builds the declarative skills used across the architect exams.',
   },
   {
     question: 'How long does it take to become a Salesforce Application Architect?',
-    answer: 'Most candidates take 18–36 months from ADM-201 to completing all four Application Architect components. The timeline depends heavily on how much real Salesforce project experience you have. Data Architect and Sharing & Visibility Architect typically require the most preparation time.',
+    answer: 'Many candidates take 18–36 months from ADM-201 to finish the four Application Architect components. Your timeline depends on your Salesforce project experience. Data Architect and Sharing & Visibility Architect often need the most preparation.',
   },
   {
     question: 'Do I need Application Architect before System Architect?',
-    answer: 'Application Architect and System Architect are independent role-based credentials; you do not need one to pursue the other. However, both are typically required for the Certified Technical Architect (CTA). Most candidates earn Application Architect first since its components (App Builder, PD1) are more accessible entry points.',
+    answer: 'You can pursue Application Architect and System Architect independently; neither is a prerequisite for the other. Both are typically required for Certified Technical Architect (CTA). Many candidates start with Application Architect because App Builder and PD1 are familiar entry points.',
   },
 ]
 
@@ -76,9 +76,8 @@ export default function ArchitectCertificationPathPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          The Salesforce architect track has two role-based credentials: Application Architect and System Architect,
-          each earned by passing a set of component exams. Both lead to the Certified Technical Architect (CTA),
-          the highest Salesforce credential. Here is the full roadmap.
+          Plan your certification sequence from the component exams through Application Architect and System Architect,
+          then toward Certified Technical Architect (CTA), Salesforce’s highest credential.
         </p>
       </header>
 
@@ -125,14 +124,14 @@ export default function ArchitectCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Application Architect Path (Recommended Order)</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Start with the two most accessible components first. Each exam builds on the previous.
+          Begin with the platform foundation, then work through the four component exams. The suggested sequence starts with the more familiar credentials.
         </p>
         <div className="space-y-4">
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
               <p className="font-semibold text-gray-900">Salesforce Administrator (ADM-201): Foundation</p>
-              <p className="text-sm text-gray-600 mt-0.5">Not a component exam but required knowledge base. Platform security model, object relationships, and declarative automation are tested across all architect components.</p>
+              <p className="text-sm text-gray-600 mt-0.5">ADM-201 is not a component exam. It provides platform knowledge used across the architect components, including security, object relationships, and declarative automation.</p>
               <Link href="/certifications/administrator" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">ADM-201 exam tips →</Link>
             </div>
           </div>
@@ -140,7 +139,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
               <p className="font-semibold text-gray-900">Platform App Builder (DEV-402): Component 1</p>
-              <p className="text-sm text-gray-600 mt-0.5">Data modelling, Flow automation, Lightning App Builder, and security model. 73% passing score. Most candidates take 4-6 weeks to prepare.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Study data modeling, Flow automation, Lightning App Builder, and the security model. The passing score is 73%, and many candidates prepare for 4-6 weeks.</p>
               <Link href="/certifications/app-builder" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">App Builder exam tips →</Link>
             </div>
           </div>
@@ -148,7 +147,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">3</span>
             <div>
               <p className="font-semibold text-gray-900">Platform Developer I (PD1): Component 2</p>
-              <p className="text-sm text-gray-600 mt-0.5">Apex fundamentals, SOQL/DML, governor limits, triggers, and LWC. 68% passing score. Requires hands-on Apex coding practice.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Review Apex fundamentals, SOQL/DML, governor limits, triggers, and LWC. The passing score is 68%; prepare with hands-on Apex coding practice.</p>
               <Link href="/certifications/developer-1" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
           </div>
@@ -156,7 +155,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">4</span>
             <div>
               <p className="font-semibold text-gray-900">Data Architect: Component 3</p>
-              <p className="text-sm text-gray-600 mt-0.5">Data modelling at scale, large data volumes, master data management, and migration strategy. 58% passing score. Requires real LDV project experience.</p>
+              <p className="text-sm text-gray-600 mt-0.5">This exam covers data modeling at scale, large data volumes, master data management, and migration strategy. The passing score is 58%, and real LDV project experience is useful.</p>
               <Link href="/certifications/data-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Data Architect exam tips →</Link>
             </div>
           </div>
@@ -164,7 +163,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-salesforce-blue text-white text-sm font-bold flex items-center justify-center">5</span>
             <div>
               <p className="font-semibold text-gray-900">Sharing &amp; Visibility Architect: Component 4</p>
-              <p className="text-sm text-gray-600 mt-0.5">OWD design, sharing rule strategy, performance implications, and Apex managed sharing. 58% passing score. Highest retry rate of the four components.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Study OWD design, sharing rule strategy, performance implications, and Apex managed sharing. The passing score is 58%; this component has the highest retry rate of the four.</p>
               <Link href="/certifications/sharing-visibility-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Sharing &amp; Visibility exam tips →</Link>
             </div>
           </div>
@@ -179,7 +178,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">1</span>
             <div>
               <p className="font-semibold text-gray-900">Platform Developer I (PD1)</p>
-              <p className="text-sm text-gray-600 mt-0.5">The only exam shared with Application Architect, if you've already earned Application Architect, this is already done. Apex, triggers, LWC, and governor limits.</p>
+              <p className="text-sm text-gray-600 mt-0.5">PD1 is the only exam shared with Application Architect, so you have already completed it if you hold that credential. It covers Apex, triggers, LWC, and governor limits.</p>
               <Link href="/certifications/developer-1" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
           </div>
@@ -187,7 +186,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">2</span>
             <div>
               <p className="font-semibold text-gray-900">Integration Architect</p>
-              <p className="text-sm text-gray-600 mt-0.5">API selection, integration patterns, middleware architecture, OAuth flows, and Platform Events. 67% passing score.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Study API selection, integration patterns, middleware architecture, OAuth flows, and Platform Events. The passing score is 67%.</p>
               <Link href="/certifications/integration-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Integration Architect exam tips →</Link>
             </div>
           </div>
@@ -195,7 +194,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">3</span>
             <div>
               <p className="font-semibold text-gray-900">Identity &amp; Access Management (IAM) Architect</p>
-              <p className="text-sm text-gray-600 mt-0.5">SSO, OAuth, SAML, Connected Apps, and identity federation. 65% passing score. Requires real SSO/OAuth implementation experience.</p>
+              <p className="text-sm text-gray-600 mt-0.5">This exam covers SSO, OAuth, SAML, Connected Apps, and identity federation. The passing score is 65%; real SSO/OAuth implementation experience is useful.</p>
               <Link href="/certifications/identity-access-management-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">IAM Architect exam tips →</Link>
             </div>
           </div>
@@ -203,7 +202,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">4</span>
             <div>
               <p className="font-semibold text-gray-900">Dev Lifecycle &amp; Deployment Architect</p>
-              <p className="text-sm text-gray-600 mt-0.5">Environment strategy, sandbox hierarchy, release management, SFDX, CI/CD pipelines. 65% passing score.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Review environment strategy, sandbox hierarchy, release management, SFDX, and CI/CD pipelines. The passing score is 65%.</p>
               <Link href="/certifications/dev-lifecycle-deployment-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Dev Lifecycle Architect exam tips →</Link>
             </div>
           </div>
@@ -211,7 +210,7 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">5</span>
             <div>
               <p className="font-semibold text-gray-900">System Architect credential granted</p>
-              <p className="text-sm text-gray-600 mt-0.5">There is no extra exam. Like Application Architect, System Architect is added to your profile once you hold the four credentials above.</p>
+              <p className="text-sm text-gray-600 mt-0.5">There is no additional exam. Salesforce adds System Architect to your profile when you hold the four credentials listed above.</p>
               <Link href="/certifications/system-architect" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">System Architect exam tips →</Link>
             </div>
           </div>
@@ -230,12 +229,12 @@ export default function ArchitectCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">After Both Architect Credentials: The CTA Path</h2>
         <p className="text-sm text-gray-700 mb-3">
-          The Certified Technical Architect (CTA) is the highest Salesforce credential. It requires both Application Architect
-          and System Architect credentials, then involves a written submission (Architect Evaluation) and a live review board presentation.
+          Certified Technical Architect (CTA) is Salesforce’s highest credential. You need both Application Architect
+          and System Architect first, then complete the Architect Evaluation and a live review board presentation.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The CTA Review Board is a live scenario presentation to a panel of existing CTAs, preparation takes months and requires deep, cross-domain architectural knowledge.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Less than 1% of Salesforce professionals hold the CTA credential. It is the pinnacle of the Salesforce certification hierarchy.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />At the CTA Review Board, present a solution to a panel of current CTAs. Preparation takes months and calls for broad architecture knowledge.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Less than 1% of Salesforce professionals hold the CTA credential, the top level in the certification hierarchy.</li>
         </ul>
         <Link href="/become-cta" className="inline-flex items-center gap-2 mt-3 text-sm text-salesforce-blue font-medium hover:underline">
           Full CTA preparation guide <ArrowRight className="h-3 w-3" />

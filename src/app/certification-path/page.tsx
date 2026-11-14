@@ -56,19 +56,19 @@ const pathSummaries = [
 const faqItems = [
   {
     question: 'What is the recommended Salesforce certification order?',
-    answer: 'Start with Salesforce Administrator (ADM-201) to learn core platform concepts. Developers should pursue Platform Developer I (PD1) next. From there, branch into Consultant, Architect, or Specialist tracks based on your career goal. The Certified Technical Architect (CTA) path requires multiple domain architect certifications.',
+    answer: 'Start with Salesforce Administrator (ADM-201) to learn the platform basics. Developers can start with Platform Developer I (PD1). Then choose a Consultant, Architect, or Specialist path based on your career goal. The Certified Technical Architect (CTA) path requires several domain architect certifications.',
   },
   {
     question: 'How long does the full Salesforce certification path take?',
-    answer: 'The entry-level Administrator or Developer certification takes 2–3 months of dedicated study. Reaching senior credentials like PD2 or Service Cloud Consultant typically takes 1–2 years. The full CTA path requires 4–6 years of broad experience and a substantial certification portfolio.',
+    answer: 'With focused study, an entry-level Administrator or Developer certification takes 2–3 months. Reaching a senior credential such as PD2 or Service Cloud Consultant usually takes 1–2 years. The full CTA path requires 4–6 years of broad experience and a substantial set of certifications.',
   },
   {
     question: 'Do I need prerequisites to start Salesforce certifications?',
-    answer: 'Most Salesforce certifications have no hard prerequisites. The main exception is Platform Developer II (PD2), which requires PD1. However, practical experience is strongly recommended; many certification exams are scenario-based and reward hands-on platform knowledge over memorisation.',
+    answer: 'Most Salesforce certifications have no formal prerequisites. One exception is Platform Developer II (PD2), which requires PD1. Hands-on experience is still useful because many exams use scenarios that test applied platform knowledge.',
   },
   {
     question: 'What is the Salesforce CTA certification path?',
-    answer: 'The Certified Technical Architect (CTA) path requires passing multiple domain architect exams including Application Architect and System Architect (and their component certifications). After completing these, candidates present a solution architecture to a review board of existing CTAs.',
+    answer: 'The Certified Technical Architect (CTA) path includes multiple domain architect exams, including Application Architect and System Architect and their component certifications. Candidates who complete them present a solution architecture to a review board of current CTAs.',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function CertificationPathPage() {
         </h1>
         <LastUpdated />
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          From foundational to advanced, see all possible paths and scenarios for every role. Choose a track and follow the steps. Use this page to plan your next exam.
+          Explore Salesforce certification paths for different roles, from foundational credentials to advanced options. Choose a track and use its steps to plan your next exam.
         </p>
       </div>
 
@@ -103,15 +103,10 @@ export default function CertificationPathPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Choose the Right Salesforce Certification Path</h2>
         <div className="space-y-3 text-sm leading-6 text-gray-700">
           <p>
-            The best Salesforce certification path depends on the work you want to do next; not only on exam difficulty.
-            Administrators should build platform fundamentals first, developers should validate Apex and Lightning skills,
-            consultants should specialize by cloud, and architects should sequence credentials around real enterprise project
-            experience.
+            Choose a Salesforce certification path based on the work you want to do, not only on exam difficulty. Administrators can start with platform fundamentals, developers can build Apex and Lightning skills, consultants can specialize by cloud, and architects can plan credentials around their enterprise project experience.
           </p>
           <p>
-            Use this page as the map, then open the role-specific path pages for a tighter plan. Each path links into
-            individual certification pages with exam weightage, format, difficulty guidance, official source references, and
-            practice questions so your next step is based on role fit and readiness rather than guesswork.
+            Use this overview to explore the role-specific path pages. Each page links to certification guides with exam topics, format, difficulty, official sources, and practice questions. Use these details to choose a next step that fits your role and readiness.
           </p>
         </div>
       </section>
@@ -146,8 +141,8 @@ export default function CertificationPathPage() {
       <section className="mb-12 rounded-xl border border-gray-100 bg-white p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Recommended Starting Points</h2>
         <p className="text-gray-700 mb-4">
-          New to Salesforce? Start with Platform Foundations or ADM-201. Already coding? Start with PD1.
-          Already implementing clouds for clients? Choose the consultant exam that matches your project work.
+          New to Salesforce? Start with Platform Foundations or ADM-201. Already writing code? Consider PD1.
+          Already implementing Salesforce clouds for clients? Choose a consultant exam that matches your project work.
         </p>
         <div className="grid gap-3 sm:grid-cols-2">
           <Link href="/certifications/platform-foundations" className="text-salesforce-dark font-medium hover:underline">Platform Foundations</Link>
@@ -183,7 +178,7 @@ export default function CertificationPathPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8 mt-10">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it?, honest analysis</Link></li>
+          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it? An honest analysis</Link></li>
           <li><Link href="/salesforce-free-certification" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to get a free Salesforce certification</Link></li>
         </ul>
       </div>
@@ -191,7 +186,7 @@ export default function CertificationPathPage() {
       {/* CTA */}
       <div className="mt-16 text-center p-8 rounded-2xl bg-salesforce-blue/10 border border-salesforce-blue/20">
         <p className="text-gray-700 font-medium mb-4">
-          Ready to start? Pick a certification and use our practice questions and exam weightage.
+          Ready to begin? Choose a certification and prepare with practice questions and exam weightings.
         </p>
         <Link
           href="/certifications"
