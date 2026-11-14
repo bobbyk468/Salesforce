@@ -2679,17 +2679,47 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
     answer: `Salesforce publishes exam guides on Salesforce Help and lists each exam on Trailhead Academy (trailheadacademy.salesforce.com), where you also register. Exams are delivered by Pearson VUE, online through OnVUE or at a test center. This page's section weightage and topics follow the official guide.`,
   }
 
+  // "How many questions / what is the passing score" is the highest-volume
+  // factual query for every exam, and no page stated all four numbers in one
+  // answer. The lead sentence is kept under 45 words and leads with the
+  // figures so Google can lift it whole into a featured snippet or a People
+  // Also Ask box. Every number comes from getPublishedExamFacts, the same
+  // source as the Quick Facts table, so the two cannot disagree.
+  const facts = getPublishedExamFacts(slug)
+  // A non-numeric question count means the credential is not a scored
+  // multiple-choice exam (the CTA board and evaluation formats), and a
+  // component-only credential has no exam of its own; both skip this FAQ
+  // rather than state a figure that does not exist.
+  const hasScoredExam = Boolean(facts) && typeof facts?.questions === 'number' && !isComponentOnlyCredential(slug)
+  const baseFormat: FaqItem | null = hasScoredExam && facts
+    ? {
+        question: `How many questions is the ${faqName} exam and what is the passing score?`,
+        answer:
+          `The ${faqName} exam is ${facts.questions} scored questions in ${facts.duration.replace(' min', ' minutes')}` +
+          `${/^\d/.test(facts.passingScore) ? `, with a ${facts.passingScore} passing score` : ''}` +
+          `, and the registration fee is ${facts.fee === 'Free' ? 'free' : `${facts.fee} USD`}. ` +
+          `A retake is ${facts.retake === 'Free' ? 'free' : `${facts.retake} USD`}. You register on Trailhead Academy ` +
+          `and take the exam with Pearson VUE, online through OnVUE or at a test center.`,
+      }
+    : null
+  // Several credentials already carry a hand-written FAQ on the same ground.
+  // Theirs wins, so the list never shows two near-identical questions.
+  const formatCoveredBySpecific = certSpecificFaqs.some((item) =>
+    /how many questions|passing score/i.test(item.question),
+  )
+
   const baseFaqs: FaqItem[] = [
     { ...baseCoverage, ...baseOverrides?.coverage },
     { ...baseFree, ...baseOverrides?.freeQuestions },
     { ...basePrepare, ...baseOverrides?.prepare },
     { ...baseOfficial, ...baseOverrides?.officialOutline },
   ]
-  
+
   // Combine cert-specific FAQs with base FAQs
   // Insert cert-specific FAQs after the first base FAQ for better SEO
   return [
     baseFaqs[0],
+    ...(baseFormat && !formatCoveredBySpecific ? [baseFormat] : []),
     ...certSpecificFaqs,
     baseFaqs[1],
     baseFaqs[2],

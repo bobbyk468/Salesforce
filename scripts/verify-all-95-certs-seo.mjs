@@ -19,6 +19,13 @@ function content(selector, document) {
 }
 let failures = 0;
 let passed = 0;
+// Pages rendering the generated "how many questions / passing score" FAQ.
+// Pages with a hand-written FAQ on the same ground, retired exams, the two
+// component-only architect credentials, the three CTA board formats and the
+// four unverified Claude credentials all skip it by design; the exact count is
+// asserted at the end so a change that silently drops it everywhere fails.
+const formatFaqPages = [];
+const EXPECTED_FORMAT_FAQ_PAGES = 45;
 
 function assertCheck(condition, label, detail = "") {
   if (condition) {
@@ -350,6 +357,32 @@ async function verifySingleCertPage(slug) {
   const namingLead = content("[data-cert-naming-lead]", document).toLowerCase();
   assertCheck(namingLead.includes(`${vendor} ${bare} certification`),
     `[${slug}] Naming lead states "${cluster.vendor} ${cluster.bare} certification"`);
+
+  // 6. The generated exam-format FAQ: a snippet-shaped answer stating scored
+  // questions, duration, passing score and fee in one sentence.
+  const visibleFaq = content("#faq", document);
+  if (visibleFaq.includes("How many questions is the")) {
+    formatFaqPages.push(slug);
+    const stated = visibleFaq.match(
+      /exam is (\d+) scored questions in (\d+) minutes(?:, with a (\d+%) passing score)?, and the registration fee is (free|\$[\d,]+ USD)/,
+    );
+    assertCheck(Boolean(stated), `[${slug}] Format FAQ states questions, duration and fee`,
+      `Answer: ${visibleFaq.slice(visibleFaq.indexOf("How many questions is the"), visibleFaq.indexOf("How many questions is the") + 260)}`);
+    if (stated) {
+      // Every figure must already appear elsewhere on the page (Quick Facts,
+      // the fees section), so the FAQ can never drift from the tables above it.
+      const main = content("main", document);
+      const occurrences = (needle) => main.split(needle).length - 1;
+      if (stated[3]) {
+        assertCheck(occurrences(stated[3]) >= 2,
+          `[${slug}] Format FAQ pass mark ${stated[3]} agrees with the rest of the page`);
+      }
+      assertCheck(occurrences(`${stated[1]} `) >= 2,
+        `[${slug}] Format FAQ question count ${stated[1]} appears elsewhere on the page`);
+    }
+    assertCheck(faqSchema.includes("how many questions is the"),
+      `[${slug}] Format FAQ is in the FAQPage JSON-LD`);
+  }
 }
 
 async function verifyHomepageAndRedirects() {
@@ -485,6 +518,9 @@ async function verifyHomepageAndRedirects() {
   for (const slug of slugs) {
     await verifySingleCertPage(slug);
   }
+  assertCheck(formatFaqPages.length === EXPECTED_FORMAT_FAQ_PAGES,
+    `Generated exam-format FAQ renders on ${EXPECTED_FORMAT_FAQ_PAGES} pages`,
+    `Rendered on ${formatFaqPages.length}: ${formatFaqPages.join(", ")}`);
   await verifyHomepageAndRedirects();
   console.log("\n==========================================");
   console.log(`Checks passed: ${passed} | Checks failed: ${failures}`);
