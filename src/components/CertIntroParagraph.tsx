@@ -81,24 +81,29 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
   if (prereq) {
     const prereqName = slugToDisplayName(prereq)
     const prereqLabel = requiredPrereq ? 'required first step' : 'recommended first step'
+    // This used to open "New to this track? Our <prereq> exam prep is the
+    // recommended first step", which read as the same generic banner on all 35
+    // pages that have a prerequisite and said nothing about the exam itself.
+    // It now leads with this exam's own heaviest section and keeps every
+    // internal link it carried: the prerequisite, the certification path, and
+    // the study-guide and exam-tips pages where they exist.
     return (
       <p className="text-sm text-gray-600 mb-6">
-        New to this track? Our{' '}
+        {topSection ? (
+          <>
+            The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), and the full breakdown, study tips, and practice questions are below.{' '}
+          </>
+        ) : (
+          <>Exam weightage, study tips, and practice questions are below.{' '}</>
+        )}
         <Link href={`/certifications/${prereq}`} className="text-salesforce-blue font-medium hover:underline">
           {prereqName}
         </Link>{' '}
-        exam prep is the {prereqLabel}. See our{' '}
+        is the {prereqLabel} for this track, and our{' '}
         <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
           certification path
         </Link>{' '}
-        to understand where this certification fits.{' '}
-        {topSection ? (
-          <>
-            The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), see the full breakdown, study tips, and practice questions below.
-          </>
-        ) : (
-          <>Below you’ll find exam weightage, study tips, and practice questions.</>
-        )}
+        shows where this certification fits.
         {studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
       </p>
     )

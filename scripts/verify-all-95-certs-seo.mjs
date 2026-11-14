@@ -385,6 +385,26 @@ async function verifySingleCertPage(slug) {
     `[${slug}] Table of contents is in document order`,
     `TOC: ${positions.map((x) => x.id).join(" > ")} | DOM: ${inDocumentOrder.join(" > ")}`);
 
+  // 5b. The four universal-template checks: the same disambiguation intro,
+  // dumps section and dumps FAQ on every page, no generic track banner left,
+  // and no section heading repeated immediately by its own subheading.
+  const textOnly = content("main", document);
+  assertCheck(textOnly.includes("You are in the right place whether you searched for"),
+    `[${slug}] Renders the shared disambiguation intro`);
+  assertCheck(!textOnly.includes("New to this track? Our"),
+    `[${slug}] No generic "New to this track?" banner`);
+  assertCheck(textOnly.includes("Official Exam Code of Conduct: Practice Questions vs. Unofficial"),
+    `[${slug}] Renders the dumps code-of-conduct section`);
+  assertCheck(textOnly.includes("Why should I use practice questions instead of"),
+    `[${slug}] Renders the dumps FAQ question`);
+  const headings = selectAll("main h2, main h3", document)
+    .map((h) => DomUtils.textContent(h).replace(/\s+/g, " ").trim().toLowerCase())
+    .filter(Boolean);
+  const repeated = headings.filter((h, i) => i > 0 && h === headings[i - 1]);
+  assertCheck(repeated.length === 0,
+    `[${slug}] No heading repeated immediately by the next one`,
+    repeated.join(" | "));
+
   // 6. The generated exam-format FAQ: a snippet-shaped answer stating scored
   // questions, duration, passing score and fee in one sentence.
   const visibleFaq = content("#faq", document);

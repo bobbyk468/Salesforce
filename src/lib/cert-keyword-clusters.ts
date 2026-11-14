@@ -241,13 +241,12 @@ export function getDumpsFaqItem(slug: string): { question: string; answer: strin
 }
 
 /**
- * The one naming-variant sentence pair that sits directly under each page's H1.
+ * The naming-variant lead that sits directly under each page's H1.
  *
- * This used to be a separate block lower down the page, which pushed it past
- * the quick-facts and weightage tables and left it restating what the card's
- * own disambiguation line already said. Both jobs are done here, in the
- * strongest position, so a searcher who typed any variant sees their wording
- * in the first lines of the page.
+ * It states the five query forms a candidate actually types, in their own
+ * words, then every exam code and legacy alias. Naming all of them in the
+ * opening lines is what lets one URL answer all seven search-intent clusters,
+ * and placing it under the H1 keeps it in the copy a searcher reads first.
  *
  * Returns undefined for credentials with no cluster entry.
  */
@@ -255,18 +254,33 @@ export function getCertNamingLeadText(slug: string): string | undefined {
   const cluster = getCertKeywordCluster(slug)
   if (!cluster) return undefined
   const { bare, vendorName, certifiedName, aliases } = cluster
-  const variants = [
+  // certifiedName collapses to vendorName for credentials whose own name
+  // already says "Certified" or "Accredited", so the list is deduped rather
+  // than naming the same phrasing twice.
+  const searchedFor = [
     ...new Set([
+      bare,
       vendorName,
       certifiedName,
       `${bare} certification`,
       `${vendorName} certification`,
-      ...aliases,
     ]),
-  ].filter((v) => v !== bare)
-  const also = variants.length ? ` It is also searched as ${listNames(variants)}.` : ''
+  ]
+  // An alias already named among the five query forms is not repeated in the
+  // second sentence: sales-cloud carries "Salesforce Certified Agentforce
+  // Sales Consultant" in both lists otherwise.
+  const extraAliases = aliases.filter((alias) => !searchedFor.includes(alias))
+  const aliasSentence = extraAliases.length
+    ? ` The same exam is also listed and searched for as ${listNames(extraAliases)} \u2014 every one of ` +
+      `those names and codes points to this one ${bare} certification guide.`
+    : ''
+  const searchedForList =
+    searchedFor.length > 1
+      ? `${searchedFor.slice(0, -1).join(', ')} or ${searchedFor[searchedFor.length - 1]}`
+      : searchedFor[0]
   return (
     `${bare} is the exam behind the ${certifiedName} credential, and this page is the ` +
-    `${bare} certification study guide for it.${also}`
+    `${bare} certification study guide for it. You are in the right place whether you searched ` +
+    `for ${searchedForList}.${aliasSentence}`
   )
 }
