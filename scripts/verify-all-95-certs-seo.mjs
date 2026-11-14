@@ -357,6 +357,17 @@ async function verifySingleCertPage(slug) {
   const namingLead = content("[data-cert-naming-lead]", document).toLowerCase();
   assertCheck(namingLead.includes(`${vendor} ${bare} certification`),
     `[${slug}] Naming lead states "${cluster.vendor} ${cluster.bare} certification"`);
+  // The H1 leads the main content; the lead paragraph sits under it, never
+  // above it. Putting content before the H1 pushed the heading down the page
+  // and left the document outline starting below the fold.
+  const h1Index = html.search(/<h1[\s>]/);
+  const leadIndex = html.indexOf("data-cert-naming-lead");
+  assertCheck(h1Index !== -1 && leadIndex > h1Index,
+    `[${slug}] Naming lead renders after the H1`, `h1 at ${h1Index}, lead at ${leadIndex}`);
+  // Jump link for the dumps section, so it can earn a SERP sitelink and
+  // readers can reach it from the table of contents.
+  assertCheck(Boolean(selectOne('a[href="#practice-vs-dumps"]', document)),
+    `[${slug}] Table of contents links to #practice-vs-dumps`);
 
   // 6. The generated exam-format FAQ: a snippet-shaped answer stating scored
   // questions, duration, passing score and fee in one sentence.

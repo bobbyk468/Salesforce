@@ -359,7 +359,6 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-        <CertNamingLead slug={slug} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -423,6 +422,8 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           />
 
         <LastUpdated />
+
+        <CertNamingLead slug={slug} />
 
             {/* Who Is This Cert For */}
             <section className="mb-8 rounded-xl border border-gray-100 bg-gray-50/50 p-5 sm:p-6">

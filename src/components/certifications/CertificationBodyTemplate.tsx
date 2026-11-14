@@ -285,7 +285,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
     <>
       <CertPageSeo slug={slug} certTitle={title} />
       <div className="max-w-7xl mx-auto px-4"><CredentialStatusNotice slug={slug} /></div>
-      <div className="max-w-7xl mx-auto px-4"><CertNamingLead slug={slug} /></div>
       <CredentialSchema certSlug={slug} certName={title} description={card.description} pageUrl={`/certifications/${slug}`} />
       <script
         type="application/ld+json"
@@ -349,6 +348,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         />
 
         <LastUpdated />
+
+        <CertNamingLead slug={slug} />
 
         {body.whoIsThisFor && <WhoIsThisForSection data={hideExamDetails || retired ? { ...body.whoIsThisFor, heading: retired ? 'Who may use this historical learning reference?' : 'Who may find these learning topics useful?' } : body.whoIsThisFor} />}
 

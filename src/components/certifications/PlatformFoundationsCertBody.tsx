@@ -49,7 +49,6 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
     <div className="min-h-screen bg-pattern">
       <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={title} />
-        <CertNamingLead slug={slug} />
         <CredentialSchema
           certSlug={slug}
           certName={title}
@@ -100,6 +99,7 @@ export default function PlatformFoundationsCertBody({ slug }: { slug: string }) 
             <span>Use this material alongside the current official exam guide.</span>
           </div>
         </section>
+        <CertNamingLead slug={slug} />
 
         <CertPageIntro slug={slug} />
         <ContentPageAuthor />

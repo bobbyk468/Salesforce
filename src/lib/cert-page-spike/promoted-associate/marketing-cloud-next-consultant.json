@@ -42,7 +42,7 @@
   "expertInsight": "Use Salesforce’s official Marketing Cloud Next Consultant exam guide and Trailhead preparation trail to set your study scope. This 2026 credential is built on Data 360. Classic Marketing Cloud Engagement material may not cover its data model, consent, or Agentforce orchestration.",
   "certificationCard": {
     "code": "Marketing Cloud Next Consultant",
-    "description": "This exam tests how to design marketing solutions on Data 360, use Agentforce and Flow in campaigns, and advise on Marketing Cloud Next. It has 60 scored questions in 105 minutes and a 72% passing score. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Campaign Design, Flow Orchestration & Content (30%) and Data Modeling, Identity Resolution & Segmentation (25%).",
+    "description": "This exam tests how to design marketing solutions on Data 360, use Agentforce and Flow in campaigns, and advise on Marketing Cloud Next. The exam is 60 scored questions in 105 minutes, with a 72% pass mark, weighted towards Campaign Design, Flow Orchestration & Content (30%) and Data Modeling, Identity Resolution & Segmentation (25%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "72%",

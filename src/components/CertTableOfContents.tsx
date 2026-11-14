@@ -6,7 +6,26 @@ interface CertTableOfContentsProps {
   sections: Array<{ id: string; title: string }>
 }
 
-export default function CertTableOfContents({ sections }: CertTableOfContentsProps) {
+/**
+ * Every certification page renders the practice-vs-dumps section just above
+ * its FAQ, but no page's tocSections data listed it, so the jump link was
+ * missing sitewide. Inserting it here, immediately before the FAQ entry,
+ * keeps the one list in document order without editing 90 JSON files, and
+ * means a page added later cannot forget it. Retired and unverified
+ * credentials have their "Exam FAQs" entry filtered out upstream but still
+ * render both sections, so there the entry goes last rather than being
+ * dropped.
+ */
+function withDumpsSection(sections: Array<{ id: string; title: string }>) {
+  if (sections.length === 0 || sections.some((s) => s.id === 'practice-vs-dumps')) return sections
+  const entry = { id: 'practice-vs-dumps', title: 'Practice vs Dumps' }
+  const faqIndex = sections.findIndex((s) => s.id === 'faq')
+  if (faqIndex === -1) return [...sections, entry]
+  return [...sections.slice(0, faqIndex), entry, ...sections.slice(faqIndex)]
+}
+
+export default function CertTableOfContents({ sections: rawSections }: CertTableOfContentsProps) {
+  const sections = withDumpsSection(rawSections)
   const [activeId, setActiveId] = useState<string | null>(null)
 
   useEffect(() => {

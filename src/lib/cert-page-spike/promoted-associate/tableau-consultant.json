@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Tableau Consultant",
-    "description": "This exam covers the delivery of Tableau solutions, from discovery and data preparation to dashboard design, publishing, governance, and adoption. It has 60 questions in 105 minutes and a 63% passing score. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Design and Troubleshoot Calculations and Workbooks (40%) and Evaluate Current State (22%).",
+    "description": "This exam covers the delivery of Tableau solutions, from discovery and data preparation to dashboard design, publishing, governance, and adoption. The exam is 60 scored questions in 105 minutes, with a 63% pass mark, weighted towards Design and Troubleshoot Calculations and Workbooks (40%) and Evaluate Current State (22%).",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
