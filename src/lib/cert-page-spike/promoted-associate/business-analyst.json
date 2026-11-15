@@ -43,7 +43,7 @@
   "introLead": [
     {
       "type": "text",
-      "text": "New to Salesforce? Our"
+      "text": "The Salesforce Certified Business Analyst exam weights Collaboration with Stakeholders most heavily (23%), and the full breakdown, key concepts, and practice questions are below. Our"
     },
     {
       "type": "link",
@@ -52,7 +52,7 @@
     },
     {
       "type": "text",
-      "text": "exam prep is the recommended first step, it builds the platform knowledge BAs need. See our"
+      "text": "exam prep is the recommended first step, since it builds the platform knowledge BAs need, and our"
     },
     {
       "type": "link",
@@ -61,7 +61,7 @@
     },
     {
       "type": "text",
-      "text": "to understand where Business Analyst fits in your career. Below you'll find exam weightage, key concepts, and practice questions."
+      "text": "shows where Business Analyst fits in your career."
     }
   ],
   "certificationCard": {

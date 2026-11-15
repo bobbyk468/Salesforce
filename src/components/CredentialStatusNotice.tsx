@@ -12,6 +12,7 @@ export default function CredentialStatusNotice({ slug }: { slug: string }) {
 
   return (
     <aside
+      data-credential-status-notice
       className={`mx-4 mb-6 rounded-xl border px-4 py-4 sm:mx-auto sm:max-w-7xl sm:px-5 ${
         retired ? 'border-amber-300 bg-amber-50' : 'border-blue-200 bg-blue-50'
       }`}

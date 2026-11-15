@@ -269,7 +269,7 @@ async function verifySingleCertPage(slug) {
 
   const html = await res.text();
 
-  const document = parseDocument(html);
+  const document = parseDocument(html, { withStartIndices: true });
   const rawTitle = content("head > title", document);
   assertCheck(rawTitle.length > 10 && rawTitle.length <= 60,
     `[${slug}] <title> <= 60 chars`, `Found (${rawTitle.length} chars): "${rawTitle}"`);
@@ -404,6 +404,39 @@ async function verifySingleCertPage(slug) {
   assertCheck(repeated.length === 0,
     `[${slug}] No heading repeated immediately by the next one`,
     repeated.join(" | "));
+
+  // 5c. Intro copy above the H1 must open on this exam, not on another
+  // credential or on boilerplate. "New to this track? Our <other cert>..."
+  // put a different exam's name in the first sentence a reader sees.
+  const h1Node = selectOne("main h1", document);
+  const noticeNodes = selectAll("[data-credential-status-notice]", document);
+  const insideNotice = (node) => noticeNodes.some((notice) => {
+    let parent = node.parent;
+    while (parent) {
+      if (parent === notice) return true;
+      parent = parent.parent;
+    }
+    return false;
+  });
+  if (h1Node) {
+    const introAboveH1 = selectAll("main p", document)
+      .filter((node) => node.startIndex !== null && node.startIndex < h1Node.startIndex)
+      .filter((node) => !insideNotice(node))
+      .map((node) => DomUtils.textContent(node).replace(/\s+/g, " ").trim())
+      .filter((text) => text.length > 60);
+    for (const text of introAboveH1) {
+      assertCheck(!/^(New to |See our certification path|Looking for exam strategy)/i.test(text),
+        `[${slug}] Intro above the H1 opens on this exam`, `Starts: "${text.slice(0, 90)}"`);
+    }
+  }
+  // 5d. A credential renamed to "Agentforce ..." must carry that name in the
+  // lead as well as the H1, or the page ranks for one naming and reads as the
+  // other.
+  const h1Full = h1Node ? DomUtils.textContent(h1Node) : "";
+  if (/Agentforce/i.test(h1Full)) {
+    assertCheck(/Agentforce/i.test(content("[data-cert-naming-lead]", document)),
+      `[${slug}] H1 says Agentforce, so the lead does too`);
+  }
 
   // 6. The generated exam-format FAQ: a snippet-shaped answer stating scored
   // questions, duration, passing score and fee in one sentence.

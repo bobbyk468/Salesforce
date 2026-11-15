@@ -109,20 +109,24 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
     )
   }
 
+  // Same ordering rule as the prerequisite branch above: this exam's own name
+  // and heaviest section lead, and the certification-path link follows.
+  // Opening on "See our certification path ..." made the first sentence above
+  // the H1 identical on every page that has no prerequisite.
   return (
     <p className="text-sm text-gray-600 mb-6">
-      See our{' '}
+      {topSection ? (
+        <>
+          The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), and the full breakdown, study tips, and practice questions are below.{' '}
+        </>
+      ) : (
+        <>Exam weightage, study tips, and practice questions for {certName} are below.{' '}</>
+      )}
+      Our{' '}
       <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
         certification path
       </Link>{' '}
-      to understand where this certification fits in your career.{' '}
-      {topSection ? (
-        <>
-          The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%), see the full breakdown, study tips, and practice questions below.
-        </>
-      ) : (
-        <>Below you’ll find exam weightage, study tips, and practice questions.</>
-      )}
+      shows where this certification fits in your career.
       {studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
     </p>
   )

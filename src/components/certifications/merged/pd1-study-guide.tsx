@@ -131,19 +131,6 @@ export default function Pd1StudyGuideContent() {
         </div>
       </section>
 
-      {/* Study plan */}
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week PD1 Study Plan</h2>
-        <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1: Apex Fundamentals and Governor Limits:</strong> Review Apex syntax, SOQL, SOSL, DML, and governor limits. In a Developer Edition org, write a trigger that processes a collection without querying inside a loop.</p>
-          <p><strong>Week 2: Async Apex:</strong> Compare Future, Batch, Queueable, and Scheduled Apex. Write a small batch job, run it, and inspect the results and debug logs.</p>
-          <p><strong>Week 3: Testing and Deployment (20%):</strong> Practise test data setup, assertions, coverage, and callout mocks. Write tests for your batch job and review the results.</p>
-          <p><strong>Week 4: LWC and User Interface (25%):</strong> Build a simple Lightning Web Component. Review its files, public properties, data access, and events.</p>
-          <p><strong>Week 5: Integration and Fundamentals:</strong> Review callouts, Named Credentials, Salesforce APIs, sharing, and the model-view-controller pattern. Compare inbound and outbound integrations.</p>
-          <p><strong>Week 6:</strong> Take timed practice tests and review the topics you missed. Use the official exam guide to check the current format before booking.</p>
-        </div>
-      </section>
-
       {/* Scenario tips */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach PD1 Scenario Questions</h2>
@@ -254,16 +241,6 @@ export default function Pd1StudyGuideContent() {
       </section>
 
       <DifficultyHeatmap slug="developer-1" />
-      {/* Hub CTA */}
-      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
-        <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
-        <p className="text-white mb-6">Try the Platform Developer I (PD1) free practice exam, scored with full explanations.</p>
-        <Link href="#practice-questions"
-          className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-        >
-          Platform Developer I (PD1) Free Practice Exam &rarr;
-        </Link>
-      </div>
     </div>
   )
 }

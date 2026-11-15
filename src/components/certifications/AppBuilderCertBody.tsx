@@ -65,16 +65,21 @@ export default function AppBuilderCertBody({ slug }: { slug: string }) {
             ),
           }}
         />
+        {/* Opens on this exam rather than on ADM-201: the first sentence above
+            the H1 used to lead with another credential's name. Every internal
+            link it carried is kept. */}
         <p className="text-sm text-gray-600 mb-6">
-          New to Salesforce admin? Our{' '}
+          The Salesforce Certified Platform App Builder exam weights{' '}
+          <strong className="text-gray-900">Business Logic and Process Automation</strong> most heavily (32%),
+          and the full breakdown, study tips, and practice questions are below. Our{' '}
           <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">
             Salesforce Administrator (ADM-201) exam prep
           </Link>{' '}
-          is the usual first step. See our{' '}
+          is the usual first step, and our{' '}
           <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
             ADM-201 vs App Builder comparison
           </Link>{' '}
-          to choose the right certification order. Ready to book? The exam tips and study plan are further down this page.
+          helps you choose the right certification order. The exam tips and study plan are further down this page.
         </p>
 
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}
