@@ -8,9 +8,19 @@
  * Trailblazer profile.
  */
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+/**
+ * One @id for the reviewer, used by every Person node the site emits
+ * (homepage, /team, the editorial-credentials block, and the global
+ * Organization's founder/employee). Without a shared @id each block was a
+ * separate Person node describing the same human, which reads to a consumer
+ * as several different people rather than one authoritative author entity.
+ */
+export const REVIEWER_ID = `${SITE_URL}/#krishna-mohan`
+
 export const REVIEWER = {
   name: 'Krishna Mohan',
-  jobTitle: 'Lead Content Reviewer & Salesforce Certified Professional',
   profileUrl: 'https://trailblazer.me/id/krishnamohan',
   linkedInUrl: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
 } as const
@@ -43,3 +53,11 @@ export function getCredentialJsonLd() {
     recognizedBy: { '@type': 'Organization', name: 'Salesforce', url: 'https://www.salesforce.com' },
   }))
 }
+
+/**
+ * Job title for the reviewer's Person schema and the visible byline. The
+ * credential count is derived from EDITORIAL_CREDENTIALS so the number in the
+ * title can never contradict the list rendered right beside it.
+ */
+export const REVIEWER_JOB_TITLE =
+  `Lead Content Reviewer \u00b7 ${EDITORIAL_CREDENTIALS.length}x Salesforce Certified Professional`

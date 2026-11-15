@@ -5,6 +5,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from 'lucide-re
 import { WHATSAPP_LINK } from '@/lib/constants'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import LastUpdated from '@/components/LastUpdated'
+import { CONTACT_FAQS } from './faqs'
 
 // Get all unique certification names for autocomplete
 const getAllCertificationNames = (): string[] => {
@@ -513,18 +514,20 @@ function ContactPageContent() {
                 </div>
               </div>
 
-              {/* FAQ Link */}
-              <div className="mt-8 p-6 bg-salesforce-blue/10 rounded-xl">
+              {/* FAQ: visible answers, matching the FAQPage JSON-LD in contact/layout.tsx */}
+              <div id="contact-faq" className="mt-8 p-6 bg-salesforce-blue/10 rounded-xl">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Frequently Asked Questions</h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  See answers to common questions about our study materials and guides.
+                  Answers to the questions we are asked most often about our study materials and guides.
                 </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• How do I access the study materials?</li>
-                  <li>• Are the questions up to date?</li>
-                  <li>• What certifications do you cover?</li>
-                  <li>• Do you offer refunds?</li>
-                </ul>
+                <dl className="space-y-4 text-sm">
+                  {CONTACT_FAQS.map((faq) => (
+                    <div key={faq.question} className="border-b border-salesforce-blue/20 pb-4 last:border-0 last:pb-0">
+                      <dt className="font-semibold text-gray-900 mb-1">{faq.question}</dt>
+                      <dd className="text-gray-700 leading-6">{faq.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             </div>
 

@@ -5,6 +5,17 @@ export interface CertificationItem {
   href: string
 }
 
+/**
+ * Noindexed practice-test aliases. These duplicate the canonical exam pages
+ * (/certifications/administrator and /certifications/email-specialist), so no
+ * navigational surface should link them: every anchor spent here is anchor
+ * equity the canonical page does not get.
+ */
+export const NOINDEX_ALIAS_HREFS = new Set([
+  '/certifications/administrator-practice-test',
+  '/certifications/email-specialist-practice-test',
+])
+
 export interface CertificationCategory {
   slug: string
   name: string
@@ -151,6 +162,13 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
     name: 'Sales',
     items: [
       { name: 'Agentforce Sales Foundations', href: '/certifications/sales-foundations' },
+      // Cross-listed from the consultant and administrator tracks so the sales
+      // hub is a complete career path rather than a single-card thin page.
+      // Duplicate listings across role hubs are intentional (Business Analyst
+      // already appears under both Administrator and Consultant).
+      { name: 'Agentforce Sales Consultant', href: '/certifications/sales-cloud' },
+      { name: 'Revenue Management Consultant', href: '/certifications/revenue-cloud-consultant' },
+      { name: 'CPQ Administrator', href: '/certifications/cpq-administrator' },
     ],
   },
   {

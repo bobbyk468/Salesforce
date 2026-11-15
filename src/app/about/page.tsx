@@ -1,6 +1,6 @@
 import Link from '@/components/AppLink'
 import { Award, Mail, ExternalLink } from 'lucide-react'
-import { CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
+import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -113,6 +113,13 @@ export default function AboutPage() {
           <li><strong>Exam topic guidance</strong>: Exam weights come from official outlines; our study recommendations explain how to use them.</li>
         </ul>
         <p className="text-gray-700 mt-4">
+          All study guides, section weightage analyses, scenario strategies, and detailed answer explanations are
+          written and reviewed for Trailblaze Prep, supplemented where noted on specific exams by open-source
+          community question sets paired with our original editorial explanations. Where a practice question comes
+          from an imported community bank, the question block on that certification page says so and names the
+          source repository and commit.
+        </p>
+        <p className="text-gray-700 mt-4">
           Use these resources alongside hands-on practice and the official exam guide.
         </p>
       </section>
@@ -125,7 +132,7 @@ export default function AboutPage() {
           Salesforce exams and products change over time. We review our guides as exam outlines and product features change.
         </p>
         <p className="text-gray-700">
-          Key pages show a <strong>last updated</strong> date (currently {CONTENT_LAST_UPDATED}). Check the official exam guide on Trailhead before you book.
+          Key pages show a <strong>last updated</strong> date (currently November 2026 for the Winter &apos;27 release cycle). Check the official exam guide on Trailhead before you book.
         </p>
       </section>
 

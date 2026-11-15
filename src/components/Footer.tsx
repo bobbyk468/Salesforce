@@ -224,7 +224,7 @@ export default function Footer() {
 
         <nav aria-labelledby="footer-role-hubs" className="mt-10 border-t border-gray-700 pt-6">
           <h2 id="footer-role-hubs" className="mb-3 text-sm font-semibold uppercase tracking-wider text-white">
-            Salesforce certification role hubs
+            Salesforce &amp; Partner certification role hubs
           </h2>
           <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
             {[
@@ -238,6 +238,7 @@ export default function Footer() {
               ['Sales', 'sales'],
               ['Designer', 'designer'],
               ['Tableau', 'tableau'],
+              ['Claude', 'claude'],
             ].map(([label, slug]) => (
               <li key={slug}>
                 <Link

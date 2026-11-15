@@ -10,7 +10,7 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import LastUpdated from '@/components/LastUpdated'
 import EditorialCredentials from '@/components/EditorialCredentials'
 import TopCertifications from '@/components/TopCertifications'
-import { REVIEWER, getCredentialJsonLd } from '@/lib/editorial-credentials'
+import { REVIEWER, getCredentialJsonLd, REVIEWER_ID, REVIEWER_JOB_TITLE } from '@/lib/editorial-credentials'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -244,8 +244,9 @@ export default async function Home() {
     // /team render, so the structured and visible claims always match.
     founder: {
       '@type': 'Person',
+      '@id': REVIEWER_ID,
       name: REVIEWER.name,
-      jobTitle: REVIEWER.jobTitle,
+      jobTitle: REVIEWER_JOB_TITLE,
       url: `${siteUrl}/team`,
       sameAs: [REVIEWER.profileUrl, REVIEWER.linkedInUrl],
       hasCredential: getCredentialJsonLd(),

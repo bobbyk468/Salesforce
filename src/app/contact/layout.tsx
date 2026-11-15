@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { CONTACT_FAQS } from './faqs'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const contactTitle = 'Contact Trailblaze Prep | Salesforce Certification Prep'
@@ -39,10 +40,12 @@ export default function ContactLayout({ children }: { children: React.ReactNode 
     breadcrumbItems: contactBreadcrumb,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(contactBreadcrumb)
+  const faqJsonLd = getFaqPageJsonLd(CONTACT_FAQS)
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {children}
     </>
   )

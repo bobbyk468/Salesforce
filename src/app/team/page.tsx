@@ -4,7 +4,7 @@ import { ExternalLink, Award, CheckCircle } from 'lucide-react'
 import { SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import LastUpdated from '@/components/LastUpdated'
-import { EDITORIAL_CREDENTIALS } from '@/lib/editorial-credentials'
+import { EDITORIAL_CREDENTIALS, REVIEWER_ID, REVIEWER_JOB_TITLE } from '@/lib/editorial-credentials'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Editorial Team | ${SITE_NAME}`
@@ -52,6 +52,7 @@ export default function TeamPage() {
   const personJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': REVIEWER_ID,
     name: 'Krishna Mohan',
     url: `${baseUrl}/team`,
     sameAs: [
@@ -59,7 +60,7 @@ export default function TeamPage() {
       'https://www.salesforce.com/trailblazer/krishnamohan',
       'https://trailblazer.me/id/krishnamohan',
     ],
-    jobTitle: 'Lead Content Reviewer & Salesforce Certified Professional',
+    jobTitle: REVIEWER_JOB_TITLE,
     worksFor: {
       '@type': 'Organization',
       name: 'Trailblaze Prep',

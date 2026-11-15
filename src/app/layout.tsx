@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { REVIEWER_ID, REVIEWER_JOB_TITLE } from '@/lib/editorial-credentials'
 import { DeferredStickyContentCta, DeferredDesktopSidebarSlot, DeferredChatBot, DeferredFloatingContactButtons } from '@/components/DeferredSiteChrome'
 import ClientOnly from '@/components/ClientOnly'
 
@@ -136,6 +137,27 @@ export default function RootLayout({
       contactType: 'Customer Service',
       url: `${siteUrl}/contact`,
     },
+    // E-E-A-T signals Google's reviewer guidance looks for: who stands behind
+    // the content, the standards it is held to, and how to report an error.
+    publishingPrinciples: `${siteUrl}/editorial-policy`,
+    correctionsPolicy: `${siteUrl}/contact`,
+    founder: { '@id': REVIEWER_ID },
+    employee: { '@id': REVIEWER_ID },
+  }
+
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': REVIEWER_ID,
+    name: 'Krishna Mohan',
+    url: `${siteUrl}/team`,
+    jobTitle: REVIEWER_JOB_TITLE,
+    worksFor: { '@id': `${siteUrl}/#organization` },
+    sameAs: [
+      'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+      'https://www.salesforce.com/trailblazer/krishnamohan',
+      'https://trailblazer.me/id/krishnamohan',
+    ],
   }
 
   const websiteJsonLd = {
@@ -175,6 +197,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         <script
           type="application/ld+json"

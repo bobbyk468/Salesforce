@@ -2,12 +2,12 @@ import Link from '@/components/AppLink'
 import { notFound } from 'next/navigation'
 import { Award, ArrowRight, ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
-import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+import { getCategoryBySlug, CERTIFICATION_CATEGORIES, NOINDEX_ALIAS_HREFS } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RoleAggregationSchemas from '@/components/RoleAggregationSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CareerRoadmapDiagram from '@/components/CareerRoadmapDiagram'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
 import LastUpdated from '@/components/LastUpdated'
 import { getCredentialCardNote } from '@/lib/credential-status'
@@ -21,17 +21,17 @@ export async function generateStaticParams() {
 }
 
 const ROLE_TITLES: Record<string, string> = {
-  architect:              `Salesforce Architect Career Path & Salary (${RELEASE_CURRENT})`,
-  consultant:             `Salesforce Consultant Career Path & Salary (${RELEASE_CURRENT})`,
-  marketing:              `Marketing Cloud Career Path & Salary (${RELEASE_CURRENT})`,
-  associate:              `Salesforce Associate Career Path & Salary (${RELEASE_CURRENT})`,
-  administrator:          `Salesforce Admin Career Path & Salary Guide (${RELEASE_CURRENT})`,
-  developer:              `Salesforce Developer Career Path & Salary (${RELEASE_CURRENT})`,
-  tableau:                `Tableau Career Path & Salary Guide (${RELEASE_CURRENT})`,
-  'accredited-professional': `Accredited Professional Career & Salary (${RELEASE_CURRENT})`,
-  sales:                  `Salesforce Sales Career Path & Salary (${RELEASE_CURRENT})`,
-  designer:               `Salesforce Designer Career Path & Salary (${RELEASE_CURRENT})`,
-  claude:                 `Claude AI Career Path & Salary Guide (${RELEASE_CURRENT})`,
+  architect:              `Salesforce Architect Career Path & Salary Guide (${RELEASE_YEAR})`,
+  consultant:             `Salesforce Consultant Career Path & Salary Guide (${RELEASE_YEAR})`,
+  marketing:              `Salesforce Marketing Cloud Career Path & Salary (${RELEASE_YEAR})`,
+  associate:              `Salesforce Associate Career Path & Salary Guide (${RELEASE_YEAR})`,
+  administrator:          `Salesforce Administrator Career Path & Salary (${RELEASE_YEAR})`,
+  developer:              `Salesforce Developer Career Path & Salary Guide (${RELEASE_YEAR})`,
+  tableau:                `Salesforce Tableau Career Path & Salary Guide (${RELEASE_YEAR})`,
+  'accredited-professional': `Salesforce Accredited Professional Salary Guide (${RELEASE_YEAR})`,
+  sales:                  `Salesforce Sales Career Path & Salary Guide (${RELEASE_YEAR})`,
+  designer:               `Salesforce Designer Career Path & Salary Guide (${RELEASE_YEAR})`,
+  claude:                 `Anthropic Claude Career Path & Salary Guide (${RELEASE_YEAR})`,
 }
 
 /** Grammatical person-noun for "What Does a ___ Do Day-to-Day?", category.name alone reads
@@ -74,7 +74,7 @@ interface RoleResourceLink {
 
 const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
   administrator: {
-    salaryRange: '$65,000–$95,000',
+    salaryRange: '$65,000–$85,000',
     seniorSalaryRange: '$90,000–$130,000',
     yearsToFirst: '3–6 months',
     dailyResponsibilities: [
@@ -112,7 +112,7 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
       'Writing solution design documents and technical specifications',
       'Managing project scope, risks, and client expectations',
     ],
-    careerPath: 'ADM-201 → Sales Cloud or Service Cloud Consultant → Experience Cloud Consultant → Business Analyst → System Architect',
+    careerPath: 'ADM-201 → Agentforce Sales Consultant (Sales-Con-201) or Agentforce Service Consultant (Service-Con-201) → Experience Cloud Consultant → Business Analyst → System Architect',
     topSkills: ['Requirements gathering', 'Solution design', 'Stakeholder management', 'Flow Builder', 'Data migration', 'Presentation skills'],
   },
   architect: {
@@ -181,7 +181,7 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
       'Collaborating with admin and developer teams on Salesforce projects',
       'Documenting processes and supporting end-user adoption',
     ],
-    careerPath: 'Platform Foundations (AI Associate retired February 2026) → ADM-201 → App Builder → Specialist track of choice',
+    careerPath: 'Platform Foundations (Plat-101) → ADM-201 → App Builder → Specialist track of choice (AI Associate retired February 2026)',
     topSkills: ['Salesforce CRM navigation', 'AI literacy', 'Process documentation', 'Business analysis basics'],
   },
   'accredited-professional': {
@@ -207,7 +207,7 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
       'Designing reports and dashboards for pipeline visibility and quota tracking',
       'Integrating Salesforce with marketing and ERP systems',
     ],
-    careerPath: 'ADM-201 → Sales Cloud Consultant → Sales Foundations (optional) → Service Cloud Consultant or CPQ Admin',
+    careerPath: 'Agentforce Sales Foundations (Sales-101) → ADM-201 → Agentforce Sales Consultant (Sales-Con-201) → Revenue Management Consultant (Rev-Con-201) or CPQ Administrator (Sales-Admn-202)',
     topSkills: ['Sales Cloud configuration', 'Territory management', 'Forecasting', 'Pipeline reporting', 'Sales process automation'],
   },
   claude: {
@@ -243,13 +243,13 @@ const ROLE_DECISION_DATA: Record<string, RoleDecisionItem[]> = {
     { audience: 'Implementation consultant', certification: 'Marketing Cloud Consultant', href: '/certifications/marketing-cloud-consultant', why: 'Scenario-heavy credential for solution design, governance, integration, and client delivery.' },
   ],
   associate: [
-    { audience: 'Cheapest broad Salesforce start', certification: 'Platform Foundations', href: '/certifications/platform-foundations', why: 'Low-cost entry point for CRM, app building, flow, security, and platform vocabulary.' },
-    { audience: 'AI-focused beginner', certification: 'AI Associate', href: '/certifications/ai-associate', why: 'Good conceptual AI credential, but check the page for current retirement/replacement guidance.' },
+    { audience: 'Start here: best entry-level cert', certification: 'Platform Foundations (Plat-101)', href: '/certifications/platform-foundations', why: 'The #1 recommended first Salesforce credential: $75, 40 questions, 62% to pass, and a free retake. Covers CRM, app building, Flow, security, and platform vocabulary with no prior experience needed.' },
+    { audience: 'Researching AI Associate', certification: 'AI Associate (Retired Feb 2026 \u2013 Historical Guide)', href: '/certifications/ai-associate', why: 'Retired in February 2026 and no longer bookable. Kept as a historical guide only; take Platform Foundations (Plat-101) instead.' },
     { audience: 'Next practical step after associate', certification: 'Administrator (ADM-201)', href: '/certifications/administrator', why: 'Turns platform awareness into a job-relevant admin credential with stronger search demand.' },
   ],
   consultant: [
-    { audience: 'CRM implementation consultant', certification: 'Sales Cloud Consultant', href: '/certifications/sales-cloud', why: 'Best fit for lead-to-cash, opportunity management, forecasting, and sales process design.' },
-    { audience: 'Support/contact center consultant', certification: 'Service Cloud Consultant', href: '/certifications/service-cloud', why: 'Targets case management, Omni-Channel, Knowledge, entitlements, and service operations.' },
+    { audience: 'CRM implementation consultant', certification: 'Agentforce Sales Consultant (formerly Sales Cloud Consultant, Sales-Con-201)', href: '/certifications/sales-cloud', why: 'Best fit for lead-to-cash, opportunity management, forecasting, and sales process design. 60 scored questions, 105 minutes, 73% to pass.' },
+    { audience: 'Support/contact center consultant', certification: 'Agentforce Service Consultant (formerly Service Cloud Consultant, Service-Con-201)', href: '/certifications/service-cloud', why: 'Targets case management, Omni-Channel, Knowledge, entitlements, and service operations. 60 scored questions, 105 minutes, 78% to pass.' },
     { audience: 'Portal/community consultant', certification: 'Experience Cloud Consultant', href: '/certifications/experience-cloud', why: 'Useful for partner portals, customer communities, external identity, and self-service sites.' },
   ],
   architect: [
@@ -257,13 +257,38 @@ const ROLE_DECISION_DATA: Record<string, RoleDecisionItem[]> = {
     { audience: 'Data/modeling background', certification: 'Data Architect', href: '/certifications/data-architect', why: 'Best for LDV, MDM, data modeling, migration, governance, and enterprise data strategy.' },
     { audience: 'CTA path planning', certification: 'Application Architect', href: '/certifications/application-architect', why: 'A practical milestone toward CTA that bundles multiple domain architect credentials.' },
   ],
+  'accredited-professional': [
+    { audience: 'Banking, insurance, or wealth delivery', certification: 'Agentforce Financial Services Professional', why: 'Take this when your project work is Financial Services Cloud: householding and relationship data models, financial account and policy objects, referral and onboarding flows, and the compliance constraints banks and insurers put on a Salesforce org. Assumes a Sales or Service Cloud baseline.', href: '/certifications/financial-services-cloud-ap' },
+    { audience: 'Payer, provider, or life-sciences delivery', certification: 'Agentforce Health Professional', why: 'Take this when you implement Health Cloud: patient and member data models, care plans and care teams, utilisation management, HL7/FHIR-shaped integration, and the HIPAA handling rules that shape sharing and field-level security on health orgs.', href: '/certifications/health-cloud-ap' },
+    { audience: 'B2B commerce storefront delivery', certification: 'B2B Commerce Administrator Professional', why: 'Take this when you administer B2B Commerce: price lists and entitlement policies, account-specific catalogs, cart and checkout configuration, and the order flow between storefront, CPQ, and Order Management. The most product-specific of the three and the least dependent on an industry cloud.', href: '/certifications/b2b-commerce-admin-ap' },
+  ],
+  designer: [
+    { audience: 'Interface and interaction work', certification: 'Platform UX Designer (Plat-UX-101)', why: 'The hands-on craft credential. Tests Lightning Design System (SLDS) tokens and components, user research and usability testing methods, accessibility to WCAG, and declarative UX: page layouts, dynamic forms, and Lightning App Builder. Pick this if you design and ship the screens themselves.', href: '/certifications/ux-designer' },
+    { audience: 'Business value and roadmap work', certification: 'Platform Strategy Designer (Plat-UX-102)', why: 'The upstream credential. Tests business value design, experience roadmapping, stakeholder alignment, opportunity framing, and measuring design outcomes against business metrics. Pick this if you decide what gets built and in what order, rather than drawing the interface.', href: '/certifications/strategy-designer' },
+  ],
+  tableau: [
+    { audience: '1. Beginner / first Tableau cert', certification: 'Tableau Desktop Foundations (Analytics-101)', why: 'Start here with no analytics background. Connecting to data, building the core chart types, calculated fields, and basic dashboard assembly in Tableau Desktop.', href: '/certifications/tableau-desktop-foundations' },
+    { audience: '2. Core analyst role', certification: 'Tableau Certified Data Analyst (Analytics-DA-201)', why: 'The credential hiring managers actually screen for. Explore and Analyze Data alone is 41% of the exam: LOD expressions, table calculations, data blending, and Prep Builder flows.', href: '/certifications/tableau-data-analyst' },
+    { audience: '3. Data 360 & Agentforce analytics', certification: 'Tableau Next Consultant (Analytics-Con-202)', why: 'The consulting step. Tableau Next on the Salesforce platform: semantic models over Data 360, Agentforce-driven analytics, and delivering governed analytics to a client org.', href: '/certifications/tableau-next-consultant' },
+  ],
+  claude: [
+    { audience: 'Non-technical / first Claude cert', certification: 'Claude Certified Associate \u2013 Foundations (CCAO-F)', why: 'No coding. Prompt construction, evaluating and correcting model output, choosing between Claude models for a task, context handling, and responsible-AI limits. Built for business users, analysts, and consultants adopting Claude in day-to-day work.', href: '/certifications/claude-certified-associate' },
+    { audience: 'Engineers shipping on the API', certification: 'Claude Certified Developer \u2013 Foundations (CCDV-F)', why: 'Hands-on build skills. The Messages API and SDK, tool use and structured output, MCP servers, prompt caching and token budgeting, streaming, and taking a Claude application to production with evaluations and error handling.', href: '/certifications/claude-certified-developer' },
+    { audience: 'Architects designing AI systems', certification: 'Claude Certified Architect \u2013 Foundations (CCAR-F) then Professional (CCAR-P)', why: 'System design rather than implementation. CCAR-F covers multi-agent orchestration, Claude Code configuration, and reliability patterns. CCAR-P builds on it, and requires it, for enterprise architecture, security and compliance, and cost optimisation at scale.', href: '/certifications/claude-certified-architect-foundations' },
+  ],
+  sales: [
+    { audience: 'First sales-track credential', certification: 'Agentforce Sales Foundations (Sales-101)', why: 'The entry point. Core Sales Cloud objects, lead and opportunity handling, and Agentforce selling features, with no consultant-level scenario depth.', href: '/certifications/sales-foundations' },
+    { audience: 'Implementing Sales Cloud for clients', certification: 'Agentforce Sales Consultant (Sales-Con-201)', why: 'The main sales consulting credential. Lead-to-cash design, territory management, forecasting, and sales process configuration. 60 scored questions, 105 minutes, 73% to pass.', href: '/certifications/sales-cloud' },
+    { audience: 'Quoting, pricing, and billing work', certification: 'Revenue Management Consultant (Rev-Con-201)', why: 'For revenue lifecycle projects: product and pricing models, quoting, contracts, amendments, and renewals across Revenue Cloud.', href: '/certifications/revenue-cloud-consultant' },
+    { audience: 'CPQ administration', certification: 'CPQ Administrator (Sales-Admn-202)', why: 'The configuration-depth credential for Salesforce CPQ: product bundles, price rules, discount schedules, and quote templates. Pairs with the Sales Consultant cert on enterprise sales programmes.', href: '/certifications/cpq-administrator' },
+  ],
 }
 
 const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
   administrator: [
-    { label: 'Salesforce Admin Certification 201 Guide', href: '/salesforce-admin-certification-201', note: 'Targets ADM-201 search intent, cost, format, and first-cert questions.' },
-    { label: 'Platform Administrator (Plat-Admn-201 / ADM-201) Study Guide', href: '/certifications/administrator', note: 'Full study plan and section-by-section preparation.' },
-    { label: 'Admin vs App Builder', href: '/adm-201-vs-app-builder', note: 'Decision page for the most common second-cert question.' },
+    { label: 'Platform Administrator (Plat-Admn-201 / ADM-201) Study Guide', href: '/certifications/administrator', note: 'Canonical ADM-201 guide: full study plan, section weightage, and practice questions.' },
+    { label: 'ADM-201 Exam Tips & Trap Checklist', href: '/certifications/administrator#adm201-traps', note: 'Last-week revision traps, now on the canonical ADM-201 page rather than a separate URL.' },
+    { label: 'ADM-201 vs Platform App Builder', href: '/adm-201-vs-app-builder', note: 'Decision page for the most common second-cert question.' },
   ],
   marketing: [
     { label: 'Marketing Cloud Certification Path', href: '/marketing-cloud-certification-path', note: 'Role path for Email Specialist, Consultant, Pardot, and SFMC developer tracks.' },
@@ -309,7 +334,7 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
     { question: 'How many consultant certifications should I aim for?', answer: 'Most Salesforce consultants hold 2–4 certifications. A common combination is ADM-201 + Sales Cloud Consultant + Service Cloud Consultant, which covers most CRM implementations. Adding Experience Cloud Consultant or Field Service Consultant expands your scope for specialist projects.' },
   ],
   architect: [
-    { question: 'What is the path to Salesforce Certified Technical Architect (CTA)?', answer: 'The CTA path requires both Application Architect (Platform App Builder, Platform Developer, Platform Data Architect, Platform Sharing and Visibility Architect) and System Architect (Platform Developer, Platform Integration Architect, Platform Identity and Access Management Architect, Platform Development Lifecycle and Deployment Architect). Platform Developer counts for both, so that is seven unique exams. You then take the Architect Evaluation ($1,500), a 135-minute live scenario session with a CTA judge, followed by the Architect Review Board ($4,500).' },
+    { question: 'What is the path to Salesforce Certified Technical Architect (CTA)?', answer: 'CTA requires both of the composite architect credentials first. Application Architect requires four exams: Platform App Builder, Platform Developer I, Platform Data Architect, and Platform Sharing & Visibility Architect. System Architect requires four exams: Platform Developer I, Platform Integration Architect, Platform Identity & Access Management Architect, and Platform Dev Lifecycle & Deployment Architect. Platform Developer I counts toward both tracks, so the two composites together are seven unique exams rather than eight. You then take the Architect Evaluation ($1,500), a 135-minute live scenario session with a CTA judge, followed by the Architect Review Board ($4,500).' },
     { question: 'Which Salesforce architect certification should I take first?', answer: 'Most candidates start with Integration Architect or Data Architect, both test skills that complement consultant or developer experience. Integration Architect covers API design, middleware, and data synchronisation patterns. Data Architect covers MDM, data modelling, and ETL strategies. Both require strong ADM-201 and PD1 knowledge.' },
     { question: 'How long does the Salesforce architect path take?', answer: 'Completing the seven component exams and both CTA stages typically takes 3–6 years of dedicated study alongside active project experience. Most successful CTA candidates have 8–10 years of Salesforce experience. The Architect Evaluation and Review Board are considered among the most difficult credentialling processes in the enterprise software industry.' },
   ],
@@ -318,12 +343,17 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
     { question: 'Is the Marketing Cloud Engagement Specialist (Email Specialist) exam hard?', answer: 'The Marketing Cloud Engagement Specialist exam (60 questions, 90 minutes, 67% passing) is considered moderately difficult. The highest-weight sections are Marketing Automation (26%) and Subscriber and Data Management (26%). Candidates without hands-on Marketing Cloud Engagement experience find it significantly harder, lab practice in a sandbox is essential.' },
   ],
   associate: [
-    { question: 'Which Salesforce associate certification should I take first?', answer: 'Platform Foundations ($75, 40 questions, 62%) is the easiest Salesforce certification available, no Salesforce experience required. For those who want a broader platform foundation, the Salesforce Platform Foundations associate cert covers core CRM, flow, and app-building concepts at an introductory level.' },
+    { question: 'Which Salesforce associate certification should I take first?', answer: 'Platform Foundations (Plat-101) is the #1 recommended entry-level Salesforce certification: $75, 40 questions, a 62% passing score, and a free retake included. No Salesforce experience is required, and it covers core CRM, Flow, app building, security, and platform vocabulary. AI Associate retired in February 2026, so Platform Foundations is now the single entry point for the associate track.' },
     { question: 'Is the AI Associate a good first Salesforce certification?', answer: 'No, not any more: AI Associate retired in February 2026 and can no longer be booked. It was Salesforce\'s most accessible entry-level certification, testing conceptual AI knowledge with no coding. Platform Foundations is the current equivalent starting point, and this site keeps the AI Associate material as a historical reference.' },
   ],
   tableau: [
     { question: 'Which Tableau certification should I take first?', answer: 'Tableau Desktop Specialist (now Desktop Foundations) is the entry-level Tableau certification. It tests core Tableau Desktop skills: connecting to data, building charts (bar, line, scatter, maps), calculated fields, and basic dashboard design. The Tableau Certified Data Analyst is the next step, testing more advanced analysis and Prep Builder.' },
     { question: 'Is the Tableau Data Analyst exam difficult?', answer: 'The Tableau Data Analyst exam (60 scored questions, 105 minutes, 65% passing score, $200) is considered moderately difficult. Explore and Analyze Data is 41% of the exam, so most of the marks come from analysis rather than setup. Hands-on practice building dashboards in Tableau Desktop is essential; theoretical knowledge alone is insufficient.' },
+  ],
+  designer: [
+    { question: 'Should I take the Platform UX Designer or the Platform Strategy Designer first?', answer: 'Take Platform UX Designer (Plat-UX-101) first if you design and build the interface: it tests Lightning Design System (SLDS) components and tokens, user research and usability testing, accessibility to WCAG, and declarative UX through page layouts, dynamic forms, and Lightning App Builder. Take Platform Strategy Designer (Plat-UX-102) first if your work is upstream of the screens: business value design, experience roadmapping, stakeholder alignment, and measuring design outcomes against business metrics. Neither is a prerequisite for the other.' },
+    { question: 'Do Salesforce designer certifications require admin or developer experience?', answer: 'Neither designer credential formally requires ADM-201, but Platform UX Designer assumes you can navigate Setup and configure declarative UI: page layouts, record pages, dynamic forms, and the Lightning App Builder. Candidates from a pure Figma or agency background usually need hands-on time in a Developer Edition org before they pass. Platform Strategy Designer is lighter on platform mechanics and heavier on research, framing, and business-value reasoning.' },
+    { question: 'Are the Salesforce designer certifications worth it for a UX career?', answer: 'They are worth it if you work inside the Salesforce ecosystem, where they are the only recognised proof that a designer understands platform constraints. Designer roles in the ecosystem pay roughly $75,000 to $105,000 at entry and $100,000 to $135,000 at senior level. Outside Salesforce delivery work, a portfolio carries far more weight than either credential, so treat these as ecosystem signals rather than general UX qualifications.' },
   ],
   'accredited-professional': [
     { question: 'What is a Salesforce Accredited Professional (AP) certification?', answer: 'Salesforce Accredited Professional certifications validate implementation expertise in specific Salesforce industry clouds or add-on products. Examples include Field Service AP, Health Cloud AP, Financial Services Cloud AP, and B2B Commerce AP. APs are typically add-on credentials for consultants who already hold a relevant core certification.' },
@@ -340,7 +370,7 @@ function fitRoleTitle(title: string, roleName: string): string {
   const candidates = [
     title,
     /Guide/i.test(title) ? '' : `${title} Guide`,
-    title.replace(/\s*\(\d{4}\)$/, ` | Career Guide (${RELEASE_CURRENT})`),
+    title.replace(/\s*\(\d{4}\)$/, ` | Career Guide (${RELEASE_YEAR})`),
     `${roleName} Certifications: Career Path & Study Guide`,
     `Explore ${roleName} Certifications: Career and Study Guide`,
   ].filter(Boolean)
@@ -368,7 +398,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
   const title = fitRoleTitle(
-    ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`,
+    ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_YEAR})`,
     category.name,
   )
   const description = fitRoleDescription(category.name)
@@ -409,7 +439,13 @@ export default async function RoleCertificationsPage({ params }: Props) {
 
   if (!category) notFound()
   const gridCertBySlug = new Map(getCertificationGrid().flatMap((group) => group.certs.map((cert) => [cert.slug, cert] as const)))
-  const roleCerts = category.items.map((item) => {
+  // The two practice-test aliases are noindexed duplicates of the canonical
+  // exam pages; linking them from a role hub splits the anchor equity that
+  // should all land on /certifications/administrator and
+  // /certifications/email-specialist.
+  const roleCerts = category.items
+    .filter((item) => !NOINDEX_ALIAS_HREFS.has(item.href))
+    .map((item) => {
     const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
     const alias = getCertAlias(certSlug)
     const examCode = alias
@@ -421,7 +457,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
     return { ...item, name, statusNote: getCredentialCardNote(certSlug), facts }
   })
   const title = fitRoleTitle(
-    ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`,
+    ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_YEAR})`,
     category.name,
   )
   const description = fitRoleDescription(category.name)
@@ -433,11 +469,14 @@ export default async function RoleCertificationsPage({ params }: Props) {
   ]
   const roleFaqs = ROLE_FAQS[slug] ?? []
   const careerData = ROLE_CAREER_DATA[slug] ?? null
-  const decisionItems = ROLE_DECISION_DATA[slug] ?? category.items.slice(0, 3).map((item) => ({
-    audience: 'Most candidates in this role',
+  // Every role now has hand-written decision cards. The fallback stays as a
+  // guard for a newly added category, but it describes the actual credential
+  // instead of the old placeholder copy.
+  const decisionItems = ROLE_DECISION_DATA[slug] ?? roleCerts.slice(0, 3).map((item) => ({
+    audience: `${category.name} track`,
     certification: item.name,
     href: item.href,
-    why: 'Start here if this credential matches your current product, role, or project work.',
+    why: `Open the ${item.name} guide for exam weightage, format, official source references, and free practice questions.`,
   }))
   const resourceLinks = ROLE_RESOURCE_LINKS[slug] ?? []
 
@@ -469,10 +508,10 @@ export default async function RoleCertificationsPage({ params }: Props) {
         <h1 className="text-4xl font-bold text-gray-900 mb-2">{category.name} Certifications</h1>
         <LastUpdated />
         <p className="text-xl text-gray-600 mb-2">
-          {category.items.length} certification{category.items.length !== 1 ? 's' : ''} in this role. Pick one for practice questions and study materials.
+          {roleCerts.length} certification{roleCerts.length !== 1 ? 's' : ''} in this role. Pick one for practice questions and study materials.
         </p>
         <p className="text-gray-600">
-          Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal. Each cert page has exam weightage and practice questions.
+          Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal.
         </p>
       </div>
 
@@ -579,7 +618,11 @@ export default async function RoleCertificationsPage({ params }: Props) {
         <>
           {/* Salary & Career Overview */}
           <section className="mt-12 rounded-xl border border-gray-100 bg-white p-6 mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce {category.name} Career Overview</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              {slug === 'claude'
+                ? 'Anthropic Claude Partner Certification Overview'
+                : `Salesforce ${category.name} Career Overview`}
+            </h2>
             <div className="grid sm:grid-cols-3 gap-4 mb-6">
               <div className="rounded-lg bg-salesforce-blue/5 border border-salesforce-blue/20 p-4 text-center">
                 <p className="text-xs font-semibold text-salesforce-blue uppercase tracking-wide mb-1">Entry Salary</p>

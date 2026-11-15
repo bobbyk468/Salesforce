@@ -1,10 +1,6 @@
 import Link from '@/components/AppLink'
 import { BadgeCheck, ShieldCheck } from 'lucide-react'
-import {
-  EDITORIAL_CREDENTIALS,
-  REVIEWER,
-  getCredentialJsonLd,
-} from '@/lib/editorial-credentials'
+import { EDITORIAL_CREDENTIALS, REVIEWER, getCredentialJsonLd, REVIEWER_ID, REVIEWER_JOB_TITLE } from '@/lib/editorial-credentials'
 
 /**
  * Visible, crawlable statement of who reviews this content and what they
@@ -30,8 +26,9 @@ export default function EditorialCredentials() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Person',
+            '@id': REVIEWER_ID,
             name: REVIEWER.name,
-            jobTitle: REVIEWER.jobTitle,
+            jobTitle: REVIEWER_JOB_TITLE,
             url: 'https://www.trailblazeprep.com/team',
             sameAs: [REVIEWER.profileUrl, REVIEWER.linkedInUrl],
             hasCredential: getCredentialJsonLd(),
@@ -54,7 +51,7 @@ export default function EditorialCredentials() {
             <Link href="/team" className="font-medium text-salesforce-blue hover:underline">
               {REVIEWER.name}
             </Link>
-            , {REVIEWER.jobTitle}, who holds the {EDITORIAL_CREDENTIALS.length} Salesforce
+            , {REVIEWER_JOB_TITLE}, who holds the {EDITORIAL_CREDENTIALS.length} Salesforce
             certifications below. They are listed on a public{' '}
             <a
               href={REVIEWER.profileUrl}

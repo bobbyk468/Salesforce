@@ -115,10 +115,17 @@ export default function HeaderClient({ categories }: { categories: HeaderCategor
               </details>
             </li>
 
+              {/*
+                These two shared a single <li>, so the accessibility tree and
+                crawlers saw "Cert PathScore Calculator" as one run of text.
+                One link per <li>, with the list's gap providing the spacing.
+              */}
               <li>
                 <Link href="/certification-path" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
                   Cert Path
                 </Link>
+              </li>
+              <li>
                 <Link href="/tools/score-calculator" className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm">
                   Score Calculator
                 </Link>
@@ -136,8 +143,14 @@ export default function HeaderClient({ categories }: { categories: HeaderCategor
             </ul>
           </nav>
 
-          {/* Mobile hamburger; the panel is only mounted after the first tap */}
-          <div className="lg:hidden relative">
+          {/*
+            Mobile hamburger; the panel is only mounted after the first tap.
+            data-nosnippet here and on the panel keeps crawlers from reading the
+            nav labels as page text: the same links already sit in the desktop
+            nav, so without it the role and cert names were being picked up
+            twice at the very top of <main>.
+          */}
+          <div className="lg:hidden relative" data-nosnippet>
             <button
               onClick={() => setMobileOpen(o => !o)}
               className="min-h-11 min-w-11 p-2 text-gray-600 hover:text-salesforce-blue rounded-lg"
@@ -150,7 +163,7 @@ export default function HeaderClient({ categories }: { categories: HeaderCategor
             </button>
 
             {mobileOpen && (
-              <nav aria-label="Mobile navigation" className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 z-50">
+              <nav aria-label="Mobile navigation" data-nosnippet className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 z-50">
                 <div className="space-y-2">
                   <ul className="space-y-2">
                     {primaryLinks.map((link) => (

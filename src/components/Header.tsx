@@ -1,4 +1,4 @@
-import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+import { CERTIFICATION_CATEGORIES, NOINDEX_ALIAS_HREFS } from '@/lib/certifications-data'
 import HeaderClient from '@/components/HeaderClient'
 
 /**
@@ -24,7 +24,11 @@ export default function Header() {
   const categories: HeaderCategory[] = CERTIFICATION_CATEGORIES.map((category) => ({
     slug: category.slug,
     name: category.name,
-    items: category.items.map((item) => ({ name: item.name, href: item.href })),
+    // Drop the noindexed practice-test aliases: the nav shipped them on every
+    // page of the site, both as rendered links and in the RSC payload.
+    items: category.items
+      .filter((item) => !NOINDEX_ALIAS_HREFS.has(item.href))
+      .map((item) => ({ name: item.name, href: item.href })),
   }))
 
   return <HeaderClient categories={categories} />
