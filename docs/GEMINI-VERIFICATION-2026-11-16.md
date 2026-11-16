@@ -379,6 +379,65 @@ Each of these was checked against a local production build. None reproduced:
 
 ---
 
+## 7a. Live production verification, 16 Nov 2026
+
+Run against `https://www.trailblazeprep.com` after commit `046dcdf3` deployed
+(the deploy reached the edge about 3 minutes after the push):
+
+```
+### VERIFY_BASE_URL=https://www.trailblazeprep.com node scripts/verify-sitewide-audit.mjs
+All site-wide audit verification checks passed!
+
+### VERIFY_BASE_URL=https://www.trailblazeprep.com node scripts/verify-95-certs-accuracy-and-uniqueness.mjs
+Auditing all 95 certifications on https://www.trailblazeprep.com...
+========================================
+Audited 95 certification pages: 95/95 passed cleanly.
+All 95 certification pages passed mapping, uniqueness, and accuracy checks!
+```
+
+### Cloudflare edge cache on `/certifications/administrator`
+
+Not stale. The edge copy and a cache-busted origin fetch return identical
+content:
+
+| Fetch | `cf-cache-status` | `age` | `<title>` |
+|---|---|---|---|
+| plain URL | `HIT` | 12 | `Salesforce Certified Platform Administrator (ADM-201) Questions & Study Guide` |
+| `?cb=<random>` | (bypassed) | — | `Salesforce Certified Platform Administrator (ADM-201) Questions & Study Guide` |
+
+All nine phrase forms are present on the live page: the full credential name,
+and `dumps` + `questions` for the full name, the short name, `Plat-Admn-201`
+and `ADM-201`.
+
+Worth knowing for future audits: production sends
+`cache-control: max-age=14400, s-maxage=31536000, stale-while-revalidate=2592000`,
+so the edge TTL is nominally a year. It revalidated on this deploy, but if a
+future deploy ever looks stale, compare the plain URL against the same URL with
+a random query string before concluding the build is wrong — a differing title
+between those two is an edge-cache problem, an identical wrong title is a build
+problem.
+
+### The 10 new codes on production
+
+Each renders both phrase forms (`<code> dumps` and `<code> questions`):
+`AP-201`, `AP-209`, `AP-211`, `AP-212`, `AP-218`, `AP-220`, `AP-223`,
+`AP-225`, `ED-Con-101`, `EX-Con-101`.
+
+### Title truncation, live
+
+| Route | Length | "Questions" starts at |
+|---|---|---|
+| `administrator` | 77 | 54 |
+| `developer-1` | 71 | 48 |
+| `app-builder` | 75 | 52 |
+| `marketing-cloud-engagement-admin` | 79 | 56 |
+| `pardot-consultant` | 79 | 56 |
+| `identity-access-management-architect` | 73 | 50 |
+| `consumer-goods-tpm-ap` | 75 | 52 |
+| `tableau-data-analyst` | 63 | 40 |
+
+---
+
 ## 8. What to check on production
 
 Once the deploy lands, the useful re-audit is:
