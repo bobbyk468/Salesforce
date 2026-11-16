@@ -8,6 +8,9 @@ export default function CredentialStatusNotice({ slug }: { slug: string }) {
   const isClaudeCredential = slug.startsWith('claude-certified-')
 
   const retired = status.kind === 'retired'
+  // A transitioned credential's link is the same credential under its new
+  // name, not a related alternative, so the lead-in says so.
+  const transitioned = status.kind === 'transitioned'
   const nextSteps = RETIREMENT_NEXT_STEPS[slug]
 
   return (
@@ -28,7 +31,9 @@ export default function CredentialStatusNotice({ slug }: { slug: string }) {
       </p>
       {nextSteps?.length ? (
         <p className={`mt-2 text-sm ${retired ? 'text-amber-900' : 'text-blue-900'}`}>
-          <span className="font-semibold">Active credentials to consider instead:</span>{' '}
+          <span className="font-semibold">
+            {transitioned ? 'Register for this instead:' : 'Active credentials to consider instead:'}
+          </span>{' '}
           {nextSteps.map((step, i) => (
             <span key={step.href}>
               {i > 0 ? (i === nextSteps.length - 1 ? ' and ' : ', ') : ''}

@@ -254,7 +254,31 @@ check on the naming rule itself.
 `ED-Con-101` and `EX-Con-101` are the issuer's **current** codes, so
 `Edu-Con-201` and `CRT-271` moved to `legacy` rather than sitting alongside.
 
-**Still held: `AP-222` for `public-sector-solutions-ap`.** The cited URL renders
+**`AP-222` for `public-sector-solutions-ap`: held, and now explained.**
+
+Gemini supplied the reason, and it checks out against the issuer's own post
+(Rachel Pechacek, Salesforce, Trailhead Academy group, 20 October 2026): effective
+**27 October 2026** the Salesforce Accredited Agentforce 360 for Public Sector
+Professional credential became a mainline certification, the **Salesforce
+Certified Public Sector Solutions Consultant (PubSec-Con-201)**. Existing
+holders were migrated automatically with no retesting and their earn date
+preserved, first maintenance in the Winter '27 cycle; open AP registrations were
+cancelled. The `exam-public-sector-solutions-ap---AP-222` product page was
+deactivated in that transition, which is exactly why the browser render check
+failed on it.
+
+So the render check caught a real issuer change rather than a bad code. `AP-222`
+stays out of the registry, and the credential now carries a `transitioned`
+status (a fifth `CredentialStatusKind`): the page shows a notice naming the
+successor and links to `/certifications/public-sector-solutions-consultant`, and
+the card reads "Now a certification: PubSec-Con-201".
+
+`isUnavailableCredentialExam` deliberately does not cover `transitioned`, so the
+published exam format (50 questions, 70%, 75 minutes) is still shown — the
+outline still describes what the successor assesses. The Accredited Professional
+track count stays 23.
+
+**Earlier note, before the explanation was known:** The cited URL renders
 the same error state as the bogus control, on two attempts, and two plausible
 slug spellings (`exam-agentforce-360-public-sector---AP-222`,
 `exam-public-sector-ap---AP-222`) fail the same way. The credential itself is

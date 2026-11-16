@@ -1,4 +1,4 @@
-export type CredentialStatusKind = 'retired' | 'exam-closed' | 'details-unverified' | 'announced-details-unverified'
+export type CredentialStatusKind = 'retired' | 'exam-closed' | 'transitioned' | 'details-unverified' | 'announced-details-unverified'
 
 export interface CredentialStatusInfo {
   kind: CredentialStatusKind
@@ -38,6 +38,41 @@ const CLAUDE_ARCHITECT_FOUNDATIONS_STATUS: CredentialStatusInfo = {
   message: 'Anthropic announced Claude Certified Architect, Foundations as its first technical certification. Pearson, which delivers it, states that certification is open to organizations in the Claude Partner Network, so it is generally not available to individual candidates. Fees, question counts, durations and passing scores are not published by the issuer and are not listed here. Exam guides are being updated for exams taken on or after 7 December 2026.',
   sourceLabel: 'Pearson: Claude Certification Program by Anthropic',
   sourceUrl: 'https://www.pearsonvue.com/us/en/anthropic.html',
+}
+
+/**
+ * Public Sector: the Accredited Professional became a mainline certification
+ * rather than retiring, so neither 'retired' nor 'exam-closed' describes it.
+ *
+ * Salesforce (Rachel Pechacek, Trailhead Academy group, 20 October 2026)
+ * announced that effective 27 October 2026 the Salesforce Accredited
+ * Agentforce 360 for Public Sector Professional credential transitions to a
+ * Salesforce Certification, known as the Salesforce Certified Public Sector
+ * Solutions Consultant. Existing holders were migrated automatically with no
+ * retesting and their original earn date preserved, first maintenance falling
+ * in the Winter '27 cycle; open AP exam registrations were cancelled, and
+ * candidates were directed to the new exam from 27 October.
+ *
+ * This is also why trailheadacademy's exam-public-sector-solutions-ap---AP-222
+ * product page no longer resolves: it was deactivated in the transition. That
+ * is the reason AP-222 is not in the registry.
+ *
+ * The exam outline on this page still describes the content the successor
+ * certification assesses, so the published format is kept rather than hidden;
+ * `isUnavailableCredentialExam` deliberately does not cover this kind.
+ */
+const PUBLIC_SECTOR_AP_STATUS: CredentialStatusInfo = {
+  kind: 'transitioned',
+  label: 'Became a Salesforce Certification on October 27, 2026',
+  message:
+    'This Accredited Professional credential did not retire \u2014 it became a mainline Salesforce ' +
+    'Certification. Since October 27, 2026 it is the Salesforce Certified Public Sector Solutions ' +
+    'Consultant (PubSec-Con-201), and that is the exam to register for. Existing holders were ' +
+    'migrated automatically, with no retesting and their original earn date preserved; their first ' +
+    'maintenance falls in the Winter \u201927 cycle. Registrations for the old Accredited ' +
+    'Professional exam were cancelled.',
+  sourceLabel: 'Salesforce: Public Sector Accredited Professional \u2192 Salesforce Certification',
+  sourceUrl: 'https://trailhead.salesforce.com/trailblazer-community/feed/0D5KX00000jAVpQ0AW',
 }
 
 /**
@@ -98,16 +133,19 @@ const CREDENTIAL_STATUS: Record<string, CredentialStatusInfo> = {
   'claude-certified-developer': CLAUDE_STATUS,
   'claude-certified-architect-foundations': CLAUDE_ARCHITECT_FOUNDATIONS_STATUS,
   'claude-certified-architect-professional': CLAUDE_STATUS,
+  'public-sector-solutions-ap': PUBLIC_SECTOR_AP_STATUS,
 }
 
 /** Short status line for certification cards on the homepage and role hubs. */
 export const EXAM_CLOSED_CARD_NOTE = 'Exam closed Aug 31, 2026; retires Feb 1, 2027'
 export const AI_ASSOCIATE_CARD_NOTE = 'Retired Feb 2, 2026'
+export const TRANSITIONED_CARD_NOTE = 'Now a certification: PubSec-Con-201'
 
 export function getCredentialCardNote(slug: string): string | undefined {
   const kind = getCredentialStatus(slug)?.kind
   if (kind === 'exam-closed') return EXAM_CLOSED_CARD_NOTE
   if (kind === 'retired') return AI_ASSOCIATE_CARD_NOTE
+  if (kind === 'transitioned') return TRANSITIONED_CARD_NOTE
   return undefined
 }
 
@@ -210,6 +248,11 @@ export const RETIREMENT_NEXT_STEPS: Record<string, { href: string; label: string
   ],
   'nonprofit-success-pack-consultant': [
     { href: '/certifications/nonprofit-cloud', label: 'Agentforce Nonprofit Consultant (NP-Con-102)' },
+  ],
+  // Not an alternative but the same credential under its new name, which the
+  // notice wording distinguishes.
+  'public-sector-solutions-ap': [
+    { href: '/certifications/public-sector-solutions-consultant', label: 'Public Sector Solutions Consultant (PubSec-Con-201)' },
   ],
 }
 
