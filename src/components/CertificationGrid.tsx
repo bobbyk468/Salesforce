@@ -2,6 +2,7 @@ import Link from '@/components/AppLink'
 import { CardIcon, CardIconSprite } from '@/components/CardIconSprite'
 import type { GridCategory } from '@/lib/certification-grid-data'
 import { EDITORIAL_CREDENTIALS, REVIEWER } from '@/lib/editorial-credentials'
+import CertificationCatalogFilter from '@/components/CertificationCatalogFilter'
 
 /**
  * The full certification list, grouped by role. All category headings and
@@ -97,6 +98,14 @@ export default function CertificationGrid({
           </a>
         </p>
 
+        <CertificationCatalogFilter
+          tracks={categories.map((category) => ({
+            slug: category.slug,
+            name: category.name,
+            count: category.certs.length,
+          }))}
+        />
+
         {categories.map((category) => (
           /*
             Every track stays in the SSR DOM so crawlers see all 95 cards.
@@ -108,13 +117,29 @@ export default function CertificationGrid({
             id={`certification-track-${category.slug}`}
             className="mb-12 last:mb-0"
             aria-labelledby={`certification-track-${category.slug}-heading`}
+            data-cert-track={category.slug}
           >
             <h2 id={`certification-track-${category.slug}-heading`} className="mb-5 border-b border-gray-200 pb-3 text-2xl font-bold text-gray-900">
               Salesforce {category.name} Certifications
             </h2>
             <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {category.certs.map((cert) => (
-                <li key={cert.slug} className="h-full">
+                /*
+                  The filter above is a client component that hides and shows
+                  these same nodes. It reads each credential's searchable text
+                  from here rather than holding its own copy of the catalogue,
+                  so all 95 cards stay in the SSR DOM and the page still works
+                  with JavaScript off.
+                */
+                <li
+                  key={cert.slug}
+                  className="h-full"
+                  data-cert-card={cert.slug}
+                  data-cert-role={category.slug}
+                  data-cert-search={[cert.name, cert.examCode ?? '', category.name, cert.level ?? '']
+                    .join(' ')
+                    .toLowerCase()}
+                >
                   <div className="flex h-full flex-col rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-lg">
                     <div className="mb-3 flex items-start justify-between gap-3">
                       <CardHeading className="text-base font-bold leading-snug text-gray-900">

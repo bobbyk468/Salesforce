@@ -787,7 +787,7 @@ function joinNames(names: string[]): string {
  * so a searcher who typed any of them can see they are on the right page.
  * Returns undefined when there is nothing to disambiguate.
  *
- * Superseded on certification pages by getCertNamingLeadText in
+ * Superseded on certification pages by getCertNamingLeadParts in
  * cert-keyword-clusters, which covers the same ground plus the vendor-prefixed
  * and "... certification" phrasings. Kept for callers outside those pages.
  */

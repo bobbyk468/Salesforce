@@ -2,7 +2,8 @@ import Link from '@/components/AppLink'
 import { Award, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import { getRoleCertCounts } from '@/lib/certification-grid-data'
+import { getRoleCertCounts, getCertificationGrid } from '@/lib/certification-grid-data'
+import CertificationQuickFind from '@/components/CertificationQuickFind'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -77,7 +78,7 @@ const topCerts = [
   { name: 'App Builder', href: '/certifications/app-builder', desc: 'Builds on Admin knowledge. Tests Lightning App Builder, page layouts, and declarative automation.' },
   { name: 'Service Cloud Consultant', href: '/certifications/service-cloud', desc: 'Consultant-level cert for Service Cloud. Tests omni-channel, entitlements, and case management.' },
   { name: 'Sales Cloud Consultant', href: '/certifications/sales-cloud', desc: 'Consultant-level cert for Sales Cloud. Tests leads, opportunities, forecasting, and territory management.' },
-  { name: 'Data Cloud Consultant', href: '/certifications/data-360-consultant', desc: 'Covers Salesforce Data Cloud data unification, identity resolution, segmentation, and AI activation.' },
+  { name: 'Data 360 Consultant', href: '/certifications/data-360-consultant', desc: 'Formerly Data Cloud Consultant. Covers Salesforce Data Cloud data unification, identity resolution, segmentation, and AI activation.' },
 ]
 
 export default function CertificationsIndexPage() {
@@ -125,6 +126,23 @@ export default function CertificationsIndexPage() {
       </header>
 
       <ContentPageAuthor />
+
+      {/*
+        Find-by-code lookup. It reads the same grid the homepage renders, so
+        the codes and role names cannot drift from the cards.
+      */}
+      <CertificationQuickFind
+        certs={getCertificationGrid().flatMap((category) =>
+          category.certs.map((cert) => ({
+            slug: cert.slug,
+            name: cert.name,
+            href: cert.href,
+            examCode: cert.examCode,
+            level: cert.level,
+            roleName: category.name,
+          }))
+        )}
+      />
 
       <section className="mb-10 rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-5 sm:p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">Certification Decision Tools</h2>
@@ -210,7 +228,7 @@ export default function CertificationsIndexPage() {
           <p><strong className="text-gray-900">Developer track:</strong> <Link href="/certifications/developer-1" className="text-salesforce-blue underline hover:text-salesforce-dark">Platform Developer I (PD1)</Link>, <Link href="/certifications/developer-2" className="text-salesforce-blue underline hover:text-salesforce-dark">Platform Developer II (PD2)</Link>, <Link href="/certifications/javascript-developer-i" className="text-salesforce-blue underline hover:text-salesforce-dark">JavaScript Developer I</Link>, and <Link href="/certifications/omnistudio-developer" className="text-salesforce-blue underline hover:text-salesforce-dark">OmniStudio Developer</Link>. Best for software engineers building on the Salesforce platform.</p>
           <p><strong className="text-gray-900">Consultant track:</strong> <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline hover:text-salesforce-dark">Sales Cloud</Link>, <Link href="/certifications/service-cloud" className="text-salesforce-blue underline hover:text-salesforce-dark">Service Cloud</Link>, <Link href="/certifications/experience-cloud" className="text-salesforce-blue underline hover:text-salesforce-dark">Experience Cloud</Link>, <Link href="/certifications/marketing-cloud-engagement-admin" className="text-salesforce-blue underline hover:text-salesforce-dark">Marketing Cloud</Link>, and industry-specific credentials. Requires ADM-201 knowledge and real implementation experience. See the full <Link href="/consultant-certification-path" className="text-salesforce-blue underline hover:text-salesforce-dark">Consultant certification path</Link>.</p>
           <p><strong className="text-gray-900">Architect track:</strong> Application Architect (4 exams), System Architect (3 exams), and the <Link href="/certifications/technical-architect" className="text-salesforce-blue underline hover:text-salesforce-dark">Certified Technical Architect (CTA)</Link> at the pinnacle. The architect path is the longest and most demanding in the ecosystem. See the full <Link href="/architect-certification-path" className="text-salesforce-blue underline hover:text-salesforce-dark">Architect certification path</Link>.</p>
-          <p><strong className="text-gray-900">AI &amp; Data track:</strong> <Link href="/certifications/platform-foundations" className="text-salesforce-blue underline hover:text-salesforce-dark">Platform Foundations</Link> (foundational, $75), <Link href="/certifications/agentforce-specialist" className="text-salesforce-blue underline hover:text-salesforce-dark">Agentforce Specialist</Link>, and <Link href="/certifications/data-360-consultant" className="text-salesforce-blue underline hover:text-salesforce-dark">Data Cloud Consultant</Link> are the fastest-growing certifications in {RELEASE_CURRENT} with the strongest job market demand.</p>
+          <p><strong className="text-gray-900">AI &amp; Data track:</strong> <Link href="/certifications/platform-foundations" className="text-salesforce-blue underline hover:text-salesforce-dark">Platform Foundations</Link> (foundational, $75), <Link href="/certifications/agentforce-specialist" className="text-salesforce-blue underline hover:text-salesforce-dark">Agentforce Specialist</Link>, and <Link href="/certifications/data-360-consultant" className="text-salesforce-blue underline hover:text-salesforce-dark">Data 360 Consultant</Link> are the fastest-growing certifications in {RELEASE_CURRENT} with the strongest job market demand.</p>
         </div>
       </section>
 

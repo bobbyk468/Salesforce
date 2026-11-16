@@ -12,6 +12,13 @@ export interface CtaJourneyCert {
   prerequisites?: { name: string; href: string }[]
   /** Required for CTA vs recommended to broaden skills. */
   required?: boolean
+  /**
+   * Badge text for a cert that is not a CTA prerequisite but is still the
+   * sensible place to start. Neither composite architect credential lists
+   * Platform Foundations or Platform Administrator among its four exams, so
+   * badging them "Required" overstated the path.
+   */
+  requirementLabel?: string
   note?: string
 }
 
@@ -28,7 +35,7 @@ export const CTA_JOURNEY_PHASES: CtaJourneyPhase[] = [
     title: 'Start here – Foundations',
     description: 'Build core platform and CRM knowledge. No prior Salesforce experience needed.',
     certs: [
-      { name: 'Platform Foundations', href: base('platform-foundations'), required: true },
+      { name: 'Platform Foundations', href: base('platform-foundations'), requirementLabel: 'Recommended Foundation' },
       { name: 'Sales Foundations', href: base('sales-foundations'), note: 'Recommended for CRM context' },
       { name: 'AI Associate', href: base('ai-associate'), note: 'Optional; strengthens AI/Einstein knowledge' },
     ],
@@ -36,9 +43,9 @@ export const CTA_JOURNEY_PHASES: CtaJourneyPhase[] = [
   {
     phase: 2,
     title: 'Administrator & App Builder',
-    description: 'Admin and configuration skills. Required base for the architect path.',
+    description: 'Admin and configuration skills. The recommended base for the architect path; only App Builder is counted by a composite credential.',
     certs: [
-      { name: 'Platform Administrator (ADM-201)', href: base('administrator'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }], required: true },
+      { name: 'Platform Administrator (ADM-201)', href: base('administrator'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }], requirementLabel: 'Recommended Foundation' },
       { name: 'Platform App Builder', href: base('app-builder'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }], required: true },
     ],
   },
@@ -60,7 +67,7 @@ export const CTA_JOURNEY_PHASES: CtaJourneyPhase[] = [
       { name: 'Sales Cloud Consultant', href: base('sales-cloud'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }, { name: 'Platform Administrator', href: base('administrator') }] },
       { name: 'Service Cloud Consultant', href: base('service-cloud'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }, { name: 'Platform Administrator', href: base('administrator') }] },
       { name: 'Experience Cloud Consultant', href: base('experience-cloud'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Platform Developer I', href: base('developer-1') }] },
-      { name: 'Data Cloud Consultant', href: base('data-360-consultant'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Sales Cloud Consultant', href: base('sales-cloud') }], note: 'Helpful before Data Architect' },
+      { name: 'Data 360 Consultant', href: base('data-360-consultant'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Sales Cloud Consultant', href: base('sales-cloud') }], note: 'Helpful before Data Architect' },
     ],
   },
   {

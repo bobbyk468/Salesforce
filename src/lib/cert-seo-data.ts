@@ -3145,6 +3145,50 @@ export const SLUG_TO_DIFFICULTY: Record<string, CertDifficulty> = {
   'mulesoft-integration-architect': 'hard',
   'mulesoft-developer-ii': 'hard',
   'mulesoft-hyperautomation-developer': 'hard',
+
+  // The 32 credentials below carried no rating, so their cards rendered with
+  // no level badge at all. Ratings follow the same convention as the entries
+  // above: Foundations/Associate stage is easy, a role or product specialist
+  // credential is medium, an architect credential is hard.
+  'marketing-cloud-next-consultant': 'medium',
+  'agentforce-life-sciences-consultant': 'medium',
+  'public-sector-solutions-consultant': 'medium',
+
+  // Accredited Professionals are product specialist credentials, one tier
+  // above a Foundations exam and below the architect track.
+  'advanced-field-service-ap': 'medium',
+  'b2b-commerce-admin-ap': 'medium',
+  'b2b-commerce-developer-ap': 'medium',
+  'communications-cloud-ap': 'medium',
+  'consumer-goods-cloud-ap': 'medium',
+  'consumer-goods-tpm-ap': 'medium',
+  'contact-center-ap': 'medium',
+  'cpq-billing-ap': 'medium',
+  'energy-utilities-ap': 'medium',
+  'financial-services-cloud-ap': 'medium',
+  'health-cloud-ap': 'medium',
+  'heroku-developer-ap': 'medium',
+  'loyalty-management-ap': 'medium',
+  'manufacturing-cloud-ap': 'medium',
+  'marketing-cloud-advanced-cross-channel-ap': 'medium',
+  'marketing-cloud-intelligence-ap': 'medium',
+  'marketing-cloud-personalization-ap': 'medium',
+  'media-cloud-ap': 'medium',
+  'net-zero-cloud-ap': 'medium',
+  'order-management-admin-ap': 'medium',
+  'order-management-developer-ap': 'medium',
+  'process-automation-ap': 'medium',
+  'public-sector-solutions-ap': 'medium',
+
+  'tableau-architect': 'hard',
+  'tableau-next-consultant': 'medium',
+
+  // Anthropic publishes no question count or pass mark for these, so the
+  // rating comes from the stage in the credential's own name.
+  'claude-certified-associate': 'easy',
+  'claude-certified-developer': 'medium',
+  'claude-certified-architect-foundations': 'medium',
+  'claude-certified-architect-professional': 'hard',
 }
 
 export function getCertDifficulty(slug: string): CertDifficulty {

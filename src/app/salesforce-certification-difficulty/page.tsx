@@ -81,7 +81,7 @@ const tiers = [
       { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '68%', note: 'Covers a broad range of topics and is a common first certification.' },
       { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '73%', note: 'Tests declarative Salesforce skills and assumes Administrator knowledge.' },
       { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '72%', note: 'Covers AI and agent concepts that may be new to many candidates.' },
-      { name: 'Tableau Data Analyst', fee: '$250', questions: '55', passing: '75%', note: 'Requires hands-on Tableau experience and has the highest passing score here.' },
+      { name: 'Tableau Data Analyst', fee: '$200', questions: '60', passing: '65%', note: 'A moderate pass mark, but it assumes hands-on Tableau Desktop and Prep experience rather than Salesforce platform knowledge.' },
     ],
   },
   {

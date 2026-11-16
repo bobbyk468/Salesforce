@@ -5,6 +5,7 @@ import { SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import LastUpdated from '@/components/LastUpdated'
 import { EDITORIAL_CREDENTIALS, REVIEWER_ID, REVIEWER_JOB_TITLE } from '@/lib/editorial-credentials'
+import { getTotalCertCount } from '@/lib/certification-grid-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Editorial Team | ${SITE_NAME}`
@@ -189,7 +190,7 @@ export default function TeamPage() {
       <section className="space-y-3 mb-8">
         <h2 className="text-xl font-semibold text-gray-900">What we cover</h2>
         <p className="text-gray-700 text-sm">
-          We cover 90+ credentials across Administrator, Developer, Consultant, Architect, Marketing, Accredited Professional, Tableau, and MuleSoft tracks. Resources include exam weights, prerequisite guidance, exam-day tips, and free practice questions with explanations.
+          We cover all {getTotalCertCount()} Salesforce, Tableau, MuleSoft, and Slack certifications across Associate, Administrator, Developer, Consultant, Architect, Marketing, Accredited Professional, Designer, Tableau, and Claude tracks. Resources include exam weights, prerequisite guidance, exam-day tips, and free practice questions with explanations.
         </p>
       </section>
 

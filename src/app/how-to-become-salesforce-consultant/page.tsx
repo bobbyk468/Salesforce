@@ -176,7 +176,7 @@ export default function HowToBecomeSalesforceConsultantPage() {
             { combo: 'ADM-201 + Sales Cloud Consultant + Service Cloud Consultant', desc: 'Covers 80%+ of CRM implementations, the most in-demand combination globally.' },
             { combo: 'ADM-201 + Sales Cloud Consultant + Experience Cloud Consultant', desc: 'Strong for projects combining CRM with customer/partner portals.' },
             { combo: 'ADM-201 + Service Cloud Consultant + Field Service Consultant', desc: 'Ideal for field operations, utilities, and service-intensive industries.' },
-            { combo: 'ADM-201 + Sales Cloud + Data Cloud Consultant', desc: 'High-value combination as Data Cloud adoption grows in 2026.' },
+            { combo: 'ADM-201 + Sales Cloud + Data 360 Consultant', desc: 'High-value combination as Data Cloud adoption grows in 2026.' },
           ].map((item) => (
             <div key={item.combo} className="rounded-lg border border-gray-100 bg-gray-50 p-4">
               <div className="font-semibold text-gray-900 mb-1">{item.combo}</div>

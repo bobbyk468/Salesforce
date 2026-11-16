@@ -4,7 +4,7 @@ import { OFFICIAL_CREDENTIAL_URLS } from '@/lib/official-credential-urls'
 import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
 import { getCertAlias } from '@/lib/cert-alias-registry'
 import {
-  SLUG_TO_DIFFICULTY,
+  getCertDifficulty,
   SLUG_TO_EXAM_COST,
   SLUG_TO_EXAM_GUIDE_URL,
   SLUG_TO_STUDY_GUIDE,
@@ -117,7 +117,7 @@ export function getCertificationGrid(): GridCategory[] {
       seen.add(slug)
 
       const logistics = getPublishedExamFacts(slug)
-      const difficulty = SLUG_TO_DIFFICULTY[slug]
+      const difficulty = getCertDifficulty(slug)
       certs.push({
         slug,
         name: shortName(slug, item.name),

@@ -237,7 +237,7 @@ export function ArchitectCertRoadmap() {
         className="w-full max-w-[700px] h-auto"
       >
         <title>Salesforce Architect Certification Path Roadmap</title>
-        <desc>Architect path: Domain credentials (Data Architect, Integration Architect, Sharing and Visibility Architect, Dev Lifecycle Architect) converge to System Architect, then Application Architect, culminating in Certified Technical Architect (CTA).</desc>
+        <desc>Architect path: Domain credentials (Data Architect, Integration Architect, Sharing and Visibility Architect, Dev Lifecycle Architect) feed two parallel peer credentials, Application Architect and System Architect, which both feed Certified Technical Architect (CTA).</desc>
         <defs>
           <marker id="arrowAR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#7C3AED" />

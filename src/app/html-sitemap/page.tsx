@@ -1,6 +1,6 @@
 import Link from '@/components/AppLink'
 import type { Metadata } from 'next'
-import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+import { CERTIFICATION_CATEGORIES, NOINDEX_ALIAS_HREFS } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import LastUpdated from '@/components/LastUpdated'
 
@@ -214,7 +214,13 @@ export default function HtmlSitemapPage() {
                 </Link>
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
-                {category.items.map((item) => (
+                {/* The two practice-test aliases are noindex duplicates of
+                    their canonical exam pages, so the sitemap must not spend
+                    an anchor on them, the same rule the role hubs and the
+                    header already follow. */}
+                {category.items
+                  .filter((item) => !NOINDEX_ALIAS_HREFS.has(item.href))
+                  .map((item) => (
                   <li key={`${category.slug}-${item.href}`}>
                     <Link href={item.href} className="text-gray-700 hover:text-salesforce-blue hover:underline">
                       {item.name}

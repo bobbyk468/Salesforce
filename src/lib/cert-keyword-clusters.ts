@@ -369,42 +369,58 @@ export function getDumpsFaqItem(slug: string): { question: string; answer: strin
  *
  * Returns undefined for credentials with no cluster entry.
  */
-export function getCertNamingLeadText(slug: string): string | undefined {
+export interface CertNamingLeadParts {
+  /** Two-sentence disambiguation lead; the enumeration moved to the pills. */
+  lead: string
+  /** The issuer's own full credential name. */
+  officialCredential: string
+  /** The code the issuer books the exam under today, where there is one. */
+  currentCode?: string
+  /** Retired and alternate codes for the same exam. */
+  legacyCodes: string[]
+  /** Name forms a candidate types that the pills above do not already state. */
+  alsoSearchedAs: string[]
+}
+
+/**
+ * The naming-variant lead that sits directly under each page's H1.
+ *
+ * It used to be a single 75-word paragraph that spelled out every query form
+ * in prose. The same information is easier to scan, and far shorter on a
+ * phone, as two sentences plus a labelled strip: the official credential, the
+ * current code, the legacy codes and the names people search for. Every one of
+ * those strings still renders in SSR text, so the seven search-intent clusters
+ * are covered exactly as before.
+ *
+ * Returns undefined for credentials with no cluster entry.
+ */
+export function getCertNamingLeadParts(slug: string): CertNamingLeadParts | undefined {
   const cluster = getCertKeywordCluster(slug)
   if (!cluster) return undefined
-  const { bare, vendorName, certifiedName, aliases, searchedName, vendor } = cluster
+  const { bare, vendorName, certifiedName, fullTitle, aliases, searchedName, codes } = cluster
+  const [currentCode, ...legacyCodes] = codes
+  const codeSet = new Set(codes)
   // certifiedName collapses to vendorName for credentials whose own name
-  // already says "Certified" or "Accredited", so the list is deduped rather
-  // than naming the same phrasing twice.
-  const searchedFor = [
+  // already says "Certified" or "Accredited", and the official-credential pill
+  // already states the full title, so neither is repeated in the strip.
+  const alreadyStated = new Set([fullTitle, certifiedName])
+  const alsoSearchedAs = [
     ...new Set([
       bare,
       vendorName,
-      certifiedName,
       `${bare} certification`,
       `${vendorName} certification`,
       // Where Salesforce has renamed the credential, the old name is the one
-      // with the search volume, so the lead states its query shapes as well.
+      // with the search volume, so its query shapes are named too.
       ...(searchedName !== bare
-        ? [searchedName, `${searchedName} certification`, `${vendor} ${searchedName} certification`]
+        ? [searchedName, `${searchedName} certification`, `${cluster.vendor} ${searchedName} certification`]
         : []),
+      ...aliases.filter((alias) => !codeSet.has(alias)),
     ]),
-  ]
-  // An alias already named among the five query forms is not repeated in the
-  // second sentence: sales-cloud carries "Salesforce Certified Agentforce
-  // Sales Consultant" in both lists otherwise.
-  const extraAliases = aliases.filter((alias) => !searchedFor.includes(alias))
-  const aliasSentence = extraAliases.length
-    ? ` The same exam is also listed and searched for as ${listNames(extraAliases)} \u2014 every one of ` +
-      `those names and codes points to this one ${bare} certification guide.`
-    : ''
-  const searchedForList =
-    searchedFor.length > 1
-      ? `${searchedFor.slice(0, -1).join(', ')} or ${searchedFor[searchedFor.length - 1]}`
-      : searchedFor[0]
-  return (
+  ].filter((name) => !alreadyStated.has(name))
+  const lead =
     `${bare} is the exam behind the ${certifiedName} credential, and this page is the ` +
-    `${bare} certification study guide for it. You are in the right place whether you searched ` +
-    `for ${searchedForList}.${aliasSentence}`
-  )
+    `${vendorName} certification study guide for it. You are in the right place whether you searched ` +
+    `for ${bare}, ${vendorName} or any of the names and codes below.`
+  return { lead, officialCredential: fullTitle, currentCode, legacyCodes, alsoSearchedAs }
 }

@@ -142,7 +142,7 @@ export default function AppBuilderVsDeveloperIPage() {
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Passing Score</td>
                 <td className="py-2.5 pr-4">73%</td>
-                <td className="py-2.5">65%</td>
+                <td className="py-2.5">68%</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Exam Fee</td>

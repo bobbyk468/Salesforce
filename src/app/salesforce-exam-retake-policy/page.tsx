@@ -108,7 +108,7 @@ export default function SalesforceExamRetakePolicyPage() {
         <ul className="space-y-1 text-sm text-green-800">
           <li>✓ You can take the same exam {RETAKE_POLICY.attemptsPerCycle} times per release cycle. Attempts reset when the next cycle starts.</li>
           <li>✓ Wait {RETAKE_POLICY.waitAfterFirstFail} after your first failure and {RETAKE_POLICY.waitAfterSecondFail} after your second. After your third, wait {RETAKE_POLICY.afterThirdFail}.</li>
-          <li>✓ Retakes cost {RETAKE_POLICY.retakeFeeShare}. Foundations exams have a retake fee of {RETAKE_POLICY.foundationsRetakeFee}.</li>
+          <li>✓ Retakes cost {RETAKE_POLICY.retakeFeeShare}. Foundations exams carry {RETAKE_POLICY.foundationsRetakeFee}.</li>
           <li>✓ Failed attempts do not appear on your public Trailhead profile</li>
           <li>✓ Use your section score report to find areas that need more study.</li>
         </ul>

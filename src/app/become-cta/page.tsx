@@ -158,7 +158,9 @@ export default function BecomeCtaPage() {
                     className={`group flex flex-col min-w-[140px] max-w-[180px] md:min-w-[160px] md:max-w-[200px] p-4 rounded-xl border-2 transition-all shadow-sm hover:shadow-md hover:scale-[1.02] ${
                       cert.required
                         ? 'bg-white border-emerald-300 hover:border-emerald-500'
-                        : 'bg-white border-gray-200 hover:border-salesforce-blue/50'
+                        : cert.requirementLabel
+                          ? 'bg-white border-amber-300 hover:border-amber-500'
+                          : 'bg-white border-gray-200 hover:border-salesforce-blue/50'
                     }`}
                   >
                     <span className="font-semibold text-gray-900 group-hover:text-salesforce-blue transition-colors text-sm leading-tight">
@@ -170,7 +172,12 @@ export default function BecomeCtaPage() {
                         Required
                       </span>
                     )}
-                    {cert.note && !cert.required && (
+                    {cert.requirementLabel && !cert.required && (
+                      <span className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-amber-700">
+                        {cert.requirementLabel}
+                      </span>
+                    )}
+                    {cert.note && !cert.required && !cert.requirementLabel && (
                       <span className="mt-1 text-xs text-gray-600 line-clamp-2">{cert.note}</span>
                     )}
                     {cert.prerequisites && cert.prerequisites.length > 0 && (

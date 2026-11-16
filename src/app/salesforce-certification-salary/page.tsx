@@ -135,7 +135,9 @@ export default function SalesforceCertificationSalaryPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium text-red-700">Certified Technical Architect (CTA)</td>
-                <td className="py-2.5 pr-4 text-red-700 font-semibold" colSpan={3}>$180,000–$250,000+ (extremely rare credential)</td>
+                <td className="py-2.5 pr-4 text-gray-500">N/A (requires 5+ yrs)</td>
+                <td className="py-2.5 pr-4">$160,000–$190,000</td>
+                <td className="py-2.5 text-red-700 font-semibold">$180,000–$250,000+</td>
               </tr>
             </tbody>
           </table>

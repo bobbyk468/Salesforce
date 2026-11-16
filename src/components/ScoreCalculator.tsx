@@ -187,12 +187,48 @@ export default function ScoreCalculator({
         )}
       </div>
 
+      {/*
+        On a phone the section inputs fill the viewport, so the result card
+        above sits off-screen while you are still typing into them: you enter a
+        percentage and nothing appears to happen. This slim bar repeats just
+        the weighted score and the gap to the pass mark, pinned to the bottom
+        on small screens only, and clears any sticky CTA using the height that
+        component publishes as --sticky-cta-h.
+      */}
+      {score != null && (
+        <div
+          aria-hidden="true"
+          className={`fixed inset-x-0 z-30 border-t px-4 py-2.5 shadow-[0_-2px_8px_rgba(0,0,0,0.08)] sm:hidden ${
+            passed ? 'border-emerald-200 bg-emerald-50' : 'border-amber-200 bg-amber-50'
+          }`}
+          style={{ bottom: 'var(--sticky-cta-h, 0px)' }}
+        >
+          <p className="flex items-baseline justify-between gap-3">
+            <span className="text-xs font-semibold uppercase tracking-wide text-gray-600">
+              Weighted score
+            </span>
+            <span className="text-lg font-bold tabular-nums text-gray-900">
+              {score.toFixed(1)}%
+            </span>
+          </p>
+          <p className="mt-0.5 text-xs text-gray-700">
+            {delta! >= 0
+              ? `${delta!.toFixed(1)} pts above the ${exam.passMarkLabel} pass mark`
+              : `${Math.abs(delta!).toFixed(1)} pts below the ${exam.passMarkLabel} pass mark`}
+            {usedWeight < 99 ? ` \u00b7 ${usedWeight}% of the exam filled in` : ''}
+          </p>
+        </div>
+      )}
+
       <p className="mt-4 text-xs text-gray-500">
         An estimate. Salesforce reports section percentages but not an overall figure,
         and does not publish how it rounds or handles unscored questions, so treat this
         as close rather than exact. Section weightings come from each credential&apos;s
         published exam outline.
       </p>
+
+      {/* Room for the fixed mobile bar, so it never covers the disclaimer. */}
+      {score != null && <div aria-hidden="true" className="h-20 sm:hidden" />}
     </div>
   )
 }
