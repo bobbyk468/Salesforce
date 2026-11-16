@@ -16,7 +16,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 export const metadata: Metadata = {
   title: { absolute: 'Trailblaze Prep: Free Salesforce Practice Exams & Guides' },
-  description: '2026 Salesforce certification list with free practice questions, study guides, pass mark, exam fee, and prerequisites for all 91 Salesforce certifications.',
+  description: '2026 Salesforce certification list with free practice questions, study guides, pass mark, exam fee, and prerequisites for all 95 Salesforce certifications.',
   alternates: {
     canonical: siteUrl,
     languages: { 'en-US': siteUrl, 'x-default': siteUrl },
@@ -466,7 +466,12 @@ export default async function Home() {
           <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Frequently Asked Questions About Salesforce Certification Study Materials
           </h2>
-          <FaqAccordion items={faqItems} questionHeadingLevel="h3" />
+          <FaqAccordion
+            items={faqItems}
+            questionHeadingLevel="h3"
+            searchable
+            searchLabel="Search these questions"
+          />
         </div>
       </section>
 

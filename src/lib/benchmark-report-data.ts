@@ -28,9 +28,25 @@ export type TrackTotals = {
 export type RenamedCert = { slug: string; formerName: string; currentName: string; href: string }
 export type StatusChange = { slug: string; name: string; kind: string; message?: string; href: string }
 
+/**
+ * The first-attempt exam fee as a number.
+ *
+ * Card costs carry more than one figure: "$200 (Retake $100)",
+ * "$6,000 ($1,500 Eval + $4,500 Board)", "Composite ($0; 4 component exams)".
+ * Stripping every non-digit across the whole string concatenated them --
+ * "$200 (Retake $100)" became 200100 and the Technical Architect card became
+ * 600015004500, which is how the combined-fee KPI reached $600,078,583,258.
+ * Only the first currency amount is parsed, with its thousands separators
+ * removed; a fee-free credential ("Free", "Composite") counts as 0.
+ */
 const feeToNumber = (fee: string | null): number | null => {
   if (!fee) return null
-  const n = Number.parseFloat(fee.replace(/[^0-9.]/g, ''))
+  const match = fee.match(/\$\s*([0-9][0-9,]*(?:\.[0-9]+)?)/)
+  if (!match) {
+    // "Free" and "Composite" are published fee positions, not missing data.
+    return /\b(?:free|composite|no\s+(?:fee|cost))\b/i.test(fee) ? 0 : null
+  }
+  const n = Number.parseFloat(match[1].replace(/,/g, ''))
   return Number.isFinite(n) ? n : null
 }
 

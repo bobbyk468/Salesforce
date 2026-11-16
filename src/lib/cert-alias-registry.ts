@@ -28,7 +28,18 @@ export interface CertAlias {
   h1?: string
 }
 
-export const MAX_CERT_TITLE_LENGTH = 60
+/**
+ * Upper bound for a certification page <title>.
+ *
+ * This was 60, the width Google usually renders before truncating. The title
+ * now has to carry four things a candidate searches with -- the full official
+ * credential name (so "Certified" is in it), the name without its issuer
+ * prefix, the active and legacy exam codes, and "Questions & Study Guide" --
+ * and those do not fit in 60 characters for any credential. `buildCertTitle`
+ * spends the budget in that order and drops the least-searched part first, so
+ * a long Accredited Professional name still produces a complete phrase.
+ */
+export const MAX_CERT_TITLE_LENGTH = 80
 
 export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   // Associate and Foundations
@@ -800,4 +811,104 @@ export function getCertIdentifiers(slug: string): { propertyID: string; value: s
     ...(alias.code ? [{ propertyID: 'Exam Code', value: alias.code }] : []),
     ...(alias.legacy ?? []).map((value) => ({ propertyID: 'Legacy Exam Code', value })),
   ]
+}
+
+/**
+ * The certification page <title>, composed from the credential's own naming.
+ *
+ * Every one of the 95 certification pages has to answer the same query forms,
+ * so the title names all of them rather than one: the full official credential
+ * name (which carries "Certified" or "Accredited" where the issuer uses it),
+ * the active and legacy exam codes, and the "questions" intent. Candidates are
+ * tried longest-first and the first one inside MAX_CERT_TITLE_LENGTH wins, so
+ * the codes go before the word "Study" and the issuer prefix goes before the
+ * codes when a name is long.
+ *
+ * `fullTitle` and `shortTitle` are passed in rather than recomputed here:
+ * `cert-keyword-clusters` derives them, and the same two strings drive the
+ * visible copy, so a title cannot name a credential the body does not.
+ */
+export function buildCertTitle(options: {
+  fullTitle: string
+  shortTitle: string
+  codes: string[]
+  /**
+   * Trailing phrases, longest first. Retired and unverified credentials pass
+   * "Questions & Study Notes" so the title does not promise a bookable exam,
+   * while still answering the "... questions" query every page has to.
+   */
+  suffixes?: string[]
+}): string {
+  const { fullTitle, shortTitle, codes } = options
+  const suffixes = options.suffixes ?? ['Questions & Study Guide', 'Questions & Guide', 'Questions']
+  // The code a candidate types is usually the short legacy one (PD1, ADM-201),
+  // while the code the issuer lists is the long current one (Plat-Dev-201).
+  // Where only two fit, carry the searched code first and the official code
+  // second: "(PD1 / Plat-Dev-201)".
+  const shortestCode = [...codes].sort((a, b) => a.length - b.length)[0]
+  const searchedPair = [...new Set([shortestCode, codes[0]].filter(Boolean))]
+  // Code groups, widest first, with duplicates and the empty group removed.
+  // The empty group used to be generated whenever a credential had one code
+  // (so the "two codes" variant collapsed to nothing) and, sitting above the
+  // single-code variant, it won every time the all-codes variant was too
+  // long: "Salesforce Certified MuleSoft Developer II Questions & Study Guide"
+  // fitted and dropped Mule-Dev-301 from the title entirely.
+  const codeGroups = [
+    ...new Set(
+      [
+        codes.length > 1 ? codes.join(' / ') : '',
+        searchedPair.length > 1 ? searchedPair.join(' / ') : '',
+        codes[0] ?? '',
+      ].filter(Boolean),
+    ),
+  ].map((group) => ` (${group})`)
+  // Longest-first: full credential name with every code, then fewer codes,
+  // then the name alone, then the same again without the issuer prefix. The
+  // "questions" intent is in every candidate, so it is never what gets dropped.
+  /**
+   * Last-resort compaction for the few credential names that fill the budget
+   * on their own. "Consumer Goods Cloud: Trade Promotion Management Accredited
+   * Professional" is 71 characters, so even "<name> Questions" overflowed and
+   * the title shipped past the limit. "AP" is how the designation is written
+   * in the catalogue, and "&" for "and" is the site's own house style in
+   * titles.
+   */
+  const compactShortTitle = shortTitle
+    .replace(/\bAccredited Professional\b/i, 'AP')
+    .replace(/\s+and\s+/gi, ' & ')
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+  const stems = [
+    ...codeGroups.map((group) => `${fullTitle}${group}`),
+    // The exam code is worth more in a title than the "Salesforce Certified"
+    // prefix: a candidate types "MCE-Con-201", and the full credential name is
+    // in the H1 and the description either way. Credentials with names long
+    // enough to crowd out the code (the Marketing Cloud and Architect ones)
+    // keep the code and drop the prefix rather than the reverse.
+    ...codeGroups.map((group) => `${shortTitle}${group}`),
+    fullTitle,
+    shortTitle,
+    ...(compactShortTitle !== shortTitle
+      ? [...codeGroups.map((group) => `${compactShortTitle}${group}`), compactShortTitle]
+      : []),
+  ]
+  const candidates = [
+    ...new Set(stems.flatMap((stem) => suffixes.map((suffix) => `${stem} ${suffix}`))),
+  ]
+  // Sort longest-first so a shorter suffix on a richer stem beats a longer
+  // suffix on a bare name: the codes are worth more than the word "Study".
+  const ordered = stems.flatMap((stem) => suffixes.map((suffix) => `${stem} ${suffix}`))
+  const fits = ordered.filter((candidate) => candidate.length <= MAX_CERT_TITLE_LENGTH)
+  // For most credentials `fullTitle` contains `shortTitle` ("Salesforce
+  // Certified Platform Developer I" contains "Platform Developer I"), so this
+  // changes nothing. Where the issuer puts "Certified" in the middle of its
+  // own name -- "Tableau Certified Data Analyst", "Slack Certified
+  // Administrator" -- the full title does *not* contain the searched form, and
+  // the searched form is what has to be in the title.
+  return (
+    fits.find((candidate) => candidate.includes(shortTitle)) ??
+    fits.find((candidate) => candidate.includes(compactShortTitle)) ??
+    fits[0] ??
+    candidates[candidates.length - 1]
+  )
 }

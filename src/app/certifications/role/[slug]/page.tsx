@@ -12,7 +12,7 @@ import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
 import LastUpdated from '@/components/LastUpdated'
 import { getCredentialCardNote } from '@/lib/credential-status'
 import { getCertAlias } from '@/lib/cert-alias-registry'
-import { getCertificationGrid } from '@/lib/certification-grid-data'
+import { getCertificationGrid, getRoleCertCount, getCertRoleAssignment } from '@/lib/certification-grid-data'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -223,6 +223,95 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
     ],
     careerPath: 'CCAO-F (Associate) → CCDV-F (Developer) or CCAR-F (Architect Foundations) → CCAR-P (Architect Professional)',
     topSkills: ['Claude API', 'Prompt engineering', 'MCP server design', 'Agentic architecture', 'AI security', 'Production reliability'],
+  },
+}
+
+/**
+ * The opening two lines of each role hub.
+ *
+ * All 11 hubs used to open on the same two sentences ("Pick one for practice
+ * questions and study materials. Each certification has its own study guide,
+ * exam weightage, and practice questions."), which told a reader nothing about
+ * the track they had just clicked into and gave 11 pages the same lead copy.
+ * `lead` replaces the first line and `body` the second.
+ */
+const ROLE_INTRO_COPY: Record<string, { lead: string; body: string }> = {
+  associate: {
+    lead: 'The entry point to the platform, for candidates with no Salesforce experience yet.',
+    body:
+      'These are the cheapest and shortest exams on the platform, and Platform Foundations (Plat-101) carries a free retake. ' +
+      'They test vocabulary and platform concepts rather than configuration depth, so they are the credential to hold while ' +
+      'you build the hands-on hours a role-level exam assumes.',
+  },
+  administrator: {
+    lead: 'The configuration track: who can see what, what the platform does automatically, and what the business can report on.',
+    body:
+      'Platform Administrator (Plat-Admn-201 / ADM-201) is the first credential almost every Salesforce career runs through, ' +
+      'and the rest of this track splits from it by direction rather than by seniority: deeper security and troubleshooting, ' +
+      'declarative app design, revenue tooling, or AI agent configuration.',
+  },
+  developer: {
+    lead: 'The code track: Apex, SOQL, Lightning Web Components, and the integration work the declarative tools cannot reach.',
+    body:
+      'Platform Developer I (Plat-Dev-201 / PD1) is the gate the rest of the track sits behind, and it assumes you already ' +
+      'know the data model an administrator configures. Pick the second exam by what you actually build \u2014 enterprise Apex, ' +
+      'front-end JavaScript, commerce storefronts, or MuleSoft integrations.',
+  },
+  consultant: {
+    lead: 'The delivery track: scenario exams about designing a solution for a client, not about clicking through setup.',
+    body:
+      'Every exam here assumes administrator-level platform knowledge and adds one product or industry cloud on top, so the ' +
+      'questions read as project situations with trade-offs rather than feature recall. Choose by the cloud you are staffed ' +
+      'on; the exam blueprint follows the implementation lifecycle for that product.',
+  },
+  marketing: {
+    lead: 'The marketing operations track, split across the two platforms Salesforce sells into marketing teams.',
+    body:
+      'Marketing Cloud Engagement (formerly ExactTarget) and Marketing Cloud Account Engagement (formerly Pardot) are ' +
+      'separate products with separate exams, and the credential names changed while both kept their old search names. ' +
+      'Pick by the platform in your org, not by the newer-sounding title.',
+  },
+  architect: {
+    lead: 'The design track: exams about constraints, governance, and the trade-offs behind a decision rather than its implementation.',
+    body:
+      'Most of this track is made of single-domain exams. Application Architect and System Architect are not exams at all \u2014 ' +
+      'they are awarded for passing four component exams each \u2014 and Technical Architect (CTA) sits on top of both, with a ' +
+      'paid evaluation and a live review board rather than a multiple-choice paper.',
+  },
+  'accredited-professional': {
+    lead: 'Product and industry-cloud implementation depth, assessed as Accredited Professional designations rather than certifications.',
+    body:
+      'These are delivered through Partner Learning Camp rather than the certification catalog, so they are not listed with ' +
+      'exam codes, and they assume you already know the core platform. They are worth holding when a project or partner ' +
+      'requirement names the specific cloud; several in this track retire in February 2027.',
+  },
+  sales: {
+    lead: 'The selling track: pipeline, forecasting, and the quote-to-cash path through Sales Cloud and Agentforce.',
+    body:
+      'Agentforce Sales Foundations (Sales-101) is the entry credential here, and the consultant-level selling exams sit in ' +
+      'the Consultant track rather than this one. Read it as the starting point for a revenue-side career, not as a complete ' +
+      'certification path on its own.',
+  },
+  designer: {
+    lead: 'The experience track: two credentials that split designing the screens from deciding what gets built.',
+    body:
+      'Platform User Experience Designer (Plat-UX-101) is the craft exam \u2014 SLDS, accessibility, usability testing, and ' +
+      'declarative UX. Platform Strategy Designer (Plat-UX-102) is the upstream one, about business value design and ' +
+      'experience roadmaps. Neither assumes the other.',
+  },
+  tableau: {
+    lead: 'The analytics track, run as Tableau\u2019s own certification programme under the Salesforce umbrella.',
+    body:
+      'These credentials carry Tableau\u2019s naming ("Tableau Certified Data Analyst"), not the Salesforce Certified prefix, and ' +
+      'they are the only track here that tests a desktop product. Tableau Next Consultant is the exception: it covers ' +
+      'Tableau on the Salesforce platform, over Data 360 and Agentforce.',
+  },
+  claude: {
+    lead: 'Anthropic\u2019s own certification programme for building with Claude, tracked here alongside the Salesforce credentials.',
+    body:
+      'These are not Salesforce credentials and they are not scored or priced like one \u2014 Anthropic publishes no exam code, ' +
+      'fee or pass mark we have been able to verify, so every page in this track is marked as unverified learning notes. ' +
+      'Check Anthropic\u2019s own certification pages before planning around them.',
   },
 }
 
@@ -443,8 +532,17 @@ export default async function RoleCertificationsPage({ params }: Props) {
   // exam pages; linking them from a role hub splits the anchor equity that
   // should all land on /certifications/administrator and
   // /certifications/email-specialist.
+  // A certification listed under two role tracks is counted under the first
+  // one by the shared grid; the hub lists exactly what the grid assigns it, so
+  // the card list, this hub's count and the homepage pill cannot drift apart.
+  const certRoleAssignment = getCertRoleAssignment()
+  const roleCertCount = getRoleCertCount(slug)
   const roleCerts = category.items
     .filter((item) => !NOINDEX_ALIAS_HREFS.has(item.href))
+    .filter((item) => {
+      const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
+      return certRoleAssignment.get(certSlug) === slug
+    })
     .map((item) => {
     const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
     const alias = getCertAlias(certSlug)
@@ -479,6 +577,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
     why: `Open the ${item.name} guide for exam weightage, format, official source references, and free practice questions.`,
   }))
   const resourceLinks = ROLE_RESOURCE_LINKS[slug] ?? []
+  const introCopy = ROLE_INTRO_COPY[slug]
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -508,10 +607,12 @@ export default async function RoleCertificationsPage({ params }: Props) {
         <h1 className="text-4xl font-bold text-gray-900 mb-2">{category.name} Certifications</h1>
         <LastUpdated />
         <p className="text-xl text-gray-600 mb-2">
-          {roleCerts.length} certification{roleCerts.length !== 1 ? 's' : ''} in this role. Pick one for practice questions and study materials.
+          {roleCertCount} certification{roleCertCount !== 1 ? 's' : ''} in this role.{' '}
+          {introCopy?.lead ?? 'Pick one for practice questions and study materials.'}
         </p>
         <p className="text-gray-600">
-          Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal.
+          {introCopy?.body ??
+            'Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal.'}
         </p>
       </div>
 
@@ -525,7 +626,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
             weightage, format, official source references, and free practice questions.
           </p>
           <p>
-            If two certifications look similar. Use the decision cards below before committing study time. They point to the
+            If two certifications look similar, use the decision cards below before committing study time. They point to the
             best first exam for common candidate profiles and connect this role hub to deeper study guides, comparison pages,
             exam tips, and certification-path resources. That internal path helps you move from broad research to a specific
             exam plan without bouncing between unrelated pages.
@@ -546,7 +647,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
           Which {category.name} certification should you take first?
         </h2>
         <p className="text-sm text-gray-600 mb-5">
-          Use this quick decision table before opening every exam page. Google searchers usually want a next step, not just a catalog.
+          Use this quick decision table before opening every exam page.
         </p>
         <div className="grid md:grid-cols-3 gap-4">
           {decisionItems.map((item) => (
@@ -593,7 +694,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
                 <Award className="h-6 w-6 text-salesforce-blue group-hover:scale-110 transition-transform duration-200" aria-label={`${item.name} certification badge icon`} />
               </div>
               <span className="min-w-0">
-                <span className="block font-medium text-gray-900 group-hover:text-salesforce-blue transition-colors duration-200 truncate">
+                <span className="block font-medium text-gray-900 group-hover:text-salesforce-blue transition-colors duration-200 break-words">
                   {item.name}
                 </span>
                 {item.statusNote && (

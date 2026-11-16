@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
+import { usePathname } from 'next/navigation'
 
 const DesktopContactSidebar = dynamic(
   () => import('@/components/DesktopContactSidebar'),
@@ -13,7 +14,11 @@ const DesktopContactSidebar = dynamic(
  * chunk is not loaded on mobile, keeping the mobile bundle small and preserving
  * the mobile Lighthouse score.
  */
+/** Routes that are themselves a contact form, so the docked widget duplicates them. */
+const SUPPRESSED_ROUTES = new Set(['/contact'])
+
 export default function DesktopSidebarSlot() {
+  const pathname = usePathname()
   const [isDesktop, setIsDesktop] = useState(false)
 
   useEffect(() => {
@@ -25,5 +30,6 @@ export default function DesktopSidebarSlot() {
   }, [])
 
   if (!isDesktop) return null
+  if (pathname && SUPPRESSED_ROUTES.has(pathname.replace(/\/$/, '') || '/')) return null
   return <DesktopContactSidebar />
 }

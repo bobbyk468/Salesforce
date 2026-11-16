@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import LastUpdated from '@/components/LastUpdated'
+import RoiCalculatorWidget from '@/components/RoiCalculatorWidget'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification ROI Calculator (${RELEASE_CURRENT})`
@@ -166,6 +167,8 @@ export default function SalesforceCertificationRoiCalculatorPage() {
           </div>
         </div>
       </section>
+
+      <RoiCalculatorWidget />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Certification ROI by Track</h2>

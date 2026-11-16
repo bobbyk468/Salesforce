@@ -61,7 +61,7 @@ const reviewSteps = [
   'Flag older certification names and aliases such as ADM-201 or Pardot while also using the current official Salesforce naming where relevant.',
   'Write original practice questions from public objectives and common implementation scenarios, not from leaked or memorized exam content.',
   'Add visible official-source references on certification pages so readers can verify the latest exam guide before booking.',
-  'Update high-impression pages first when Search Console data shows CTR weakness, intent mismatch, or stale snippets.',
+  'Review every certification page each release cycle, and re-check exam facts against the issuer\u2019s current exam guide before republishing.',
 ]
 
 export default function EditorialPolicyPage() {

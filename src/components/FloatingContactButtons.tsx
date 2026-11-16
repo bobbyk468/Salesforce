@@ -32,7 +32,7 @@ export default function FloatingContactButtons() {
           offers WhatsApp/email; on mobile, held back until the hero has scrolled
           out of view so it doesn't cover the hero CTA and stats. */}
       <div
-        className={`fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`floats-above-sticky-cta fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         style={{ bottom: '9.5rem', right: '1.5rem' }}
       >
         <Tooltip text="Chat with us on WhatsApp" />
@@ -52,7 +52,7 @@ export default function FloatingContactButtons() {
 
       {/* Contact form */}
       <div
-        className={`fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`floats-above-sticky-cta fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         style={{ bottom: '5.5rem', right: '1.5rem' }}
       >
         <Tooltip text="Open contact form" />

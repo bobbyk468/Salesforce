@@ -6,7 +6,6 @@ import {
   certSpikeBodyBySlug,
   isSpikedCertSlug,
 } from '@/lib/cert-page-spike/registry'
-import { ADMINISTRATOR_SLUG, administratorMetadataDescription } from '@/lib/cert-page-spike/administrator-data'
 import { RELEASE_YEAR } from '@/lib/release-data'
 import type { Metadata } from 'next'
 import type { CertSpikeBodyData } from '@/lib/cert-page-spike/types'
@@ -44,22 +43,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       alternates: { canonical: base.alternates?.canonical },
     }
   }
-  if (slug === ADMINISTRATOR_SLUG) {
-    const baseMetadata = getCertMetadata(slug)
-    const descriptionText = administratorMetadataDescription
-    return {
-      ...baseMetadata,
-      description: descriptionText,
-      openGraph: {
-        ...baseMetadata.openGraph,
-        description: descriptionText,
-      },
-      twitter: {
-        ...baseMetadata.twitter,
-        description: descriptionText,
-      },
-    }
-  }
+  // The Administrator page used to override its description here. That is the
+  // one place a certification's metadata was written outside the registry, and
+  // it left this page as the only one of the 95 whose description did not name
+  // the "<name> questions" / "<code> questions" phrasings the others do.
+  // getCertMetadata composes it from the registry like every other page.
   return getCertMetadata(slug)
 }
 

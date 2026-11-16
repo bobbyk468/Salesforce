@@ -105,7 +105,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
             Salesforce Certified Platform Administrator (Plat-Admn-201 / ADM-201) Exam Questions &amp; Study Guide
           </h1>
           <CertNamingLead slug={slug} />
-        <LastUpdated />
+          <LastUpdated tone="on-dark" />
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             Prepare with Salesforce Certified Platform Administrator exam questions for Plat-Admn-201 (ADM-201), plus a study plan and topic weightage. Free practice, no sign-up required.
           </p>

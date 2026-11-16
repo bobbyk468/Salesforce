@@ -271,7 +271,7 @@ function ContactPageContent() {
       <section className="gradient-bg text-white py-10 md:py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">Contact Us</h1>
-        <LastUpdated />
+          <LastUpdated tone="on-dark" />
           <p className="text-base md:text-xl text-white">
             Have a question about our study materials? Send us a message.
           </p>

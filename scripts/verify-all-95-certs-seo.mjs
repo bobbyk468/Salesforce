@@ -84,7 +84,7 @@ const CLUSTER_MAP = {
   "marketing-cloud-next-consultant": { bare: "Marketing Cloud Next Consultant", vendor: "Salesforce", aliases: ["MC-Con-201"] },
   "pardot-specialist": { bare: "Marketing Cloud Account Engagement Specialist", vendor: "Salesforce", aliases: ["MC-201", "Pardot Specialist"] },
   "application-architect": { bare: "Application Architect", vendor: "Salesforce", aliases: [] },
-  "data-architect": { bare: "Data Architect", vendor: "Salesforce", aliases: ["Plat-Arch-201", "Platform Data Architect"] },
+  "data-architect": { bare: "Platform Data Architect", vendor: "Salesforce", aliases: ["Plat-Arch-201", "Data Architect"] },
   "integration-architect": { bare: "Integration Architect", vendor: "Salesforce", aliases: ["Plat-Arch-204", "Platform Integration Architect"] },
   "sharing-visibility-architect": { bare: "Sharing and Visibility Architect", vendor: "Salesforce", aliases: ["Plat-Arch-205", "Platform Sharing and Visibility Architect"] },
   "system-architect": { bare: "System Architect", vendor: "Salesforce", aliases: [] },
@@ -132,10 +132,10 @@ const CLUSTER_MAP = {
   "tableau-data-analyst": { bare: "Tableau Data Analyst", vendor: "Salesforce", aliases: ["Analytics-DA-201", "Tableau Certified Data Analyst"] },
   "tableau-desktop-foundations": { bare: "Tableau Desktop Foundations", vendor: "Salesforce", aliases: ["Analytics-101", "Tableau Desktop Specialist"] },
   "tableau-server-administrator": { bare: "Tableau Server Administrator", vendor: "Salesforce", aliases: ["Analytics-SA-201", "Tableau Server Certified Associate"] },
-  "claude-certified-associate": { bare: "Claude Certified Associate", vendor: "Anthropic", aliases: ["Claude Associate", "Claude Associate Foundations"] },
-  "claude-certified-developer": { bare: "Claude Certified Developer", vendor: "Anthropic", aliases: ["Claude Developer", "Claude Developer Foundations"] },
-  "claude-certified-architect-foundations": { bare: "Claude Certified Architect", vendor: "Anthropic", aliases: ["Claude Architect Foundations"] },
-  "claude-certified-architect-professional": { bare: "Claude Certified Architect", vendor: "Anthropic", aliases: ["Claude Architect Professional"] },
+  "claude-certified-associate": { bare: "Claude Certified Associate – Foundations", vendor: "Anthropic", aliases: ["Claude Certified Associate", "Claude Associate", "Claude Associate Foundations"] },
+  "claude-certified-developer": { bare: "Claude Certified Developer – Foundations", vendor: "Anthropic", aliases: ["Claude Certified Developer", "Claude Developer", "Claude Developer Foundations"] },
+  "claude-certified-architect-foundations": { bare: "Claude Certified Architect – Foundations", vendor: "Anthropic", aliases: ["Claude Certified Architect", "Claude Architect Foundations"] },
+  "claude-certified-architect-professional": { bare: "Claude Certified Architect – Professional", vendor: "Anthropic", aliases: ["Claude Certified Architect", "Claude Architect Professional"] },
 };
 
 // Explicit per-page verification spec for all 95 certification pages (#1 to #95)
@@ -147,7 +147,7 @@ const PAGE_SPECS = {
   "mulesoft-integration-foundations": { title: ["MuleSoft Integration Foundations", "Mule-101"], must: ["Mule-101", "70%", "$75", "20%", "18%"], forbid: ["Integration Concepts and Anypoint Platform are 70%", "$200 fee"] },
 
   // Track 2: Administrator (#5 - #12)
-  "administrator": { title: ["Salesforce Platform Administrator", "ADM-201"], must: ["Plat-Admn-201", "ADM-201", "68%", "Pearson VUE", "Trailhead Academy"], forbid: ["Webassessor/Kryterion"] },
+  "administrator": { title: ["Salesforce Certified Platform Administrator", "ADM-201"], must: ["Plat-Admn-201", "ADM-201", "68%", "Pearson VUE", "Trailhead Academy"], forbid: ["Webassessor/Kryterion"] },
   "advanced-administrator": { title: ["Platform Administrator II", "Plat-Admn-301"], must: ["Plat-Admn-301", "ADM-211", "65%", "Security and Access", "Process Automation"], forbid: ["Security and Organization Setup are heavily weighted"] },
   "app-builder": { title: ["Platform App Builder", "Plat-Admn-202"], must: ["Plat-Admn-202", "DEV-402", "73%", "32%", "Agentforce", "three times a year"], forbid: ["once a year on Trailhead"] },
   "agentforce-specialist": { title: ["Agentforce Specialist", "AI-201"], must: ["AI-201", "Agent Force Specialist", "72%", "35%", "Agent Script", "Model Context Protocol", "Agent-to-Agent"], forbid: ["3-Week Agentforce Specialist Study Plan"] },
@@ -188,7 +188,7 @@ const PAGE_SPECS = {
   "slack-consultant": { title: ["Slack Consultant", "Slack-Con-201"], must: ["Slack-Con-201", "67%", "90", "22%", "18%"], forbid: [] },
 
   // Track 5: Marketing (#40 - #42)
-  "email-specialist": { title: ["Marketing Cloud Engagement Specialist", "CRT-550"], must: ["MC-202", "CRT-550", "67%", "90", "26%", "24%"], forbid: ["Email Content and Send Management are 45%", "4-Week Email Specialist Study Plan"] },
+  "email-specialist": { title: ["Marketing Cloud Engagement Specialist", "MC-202"], must: ["MC-202", "CRT-550", "67%", "90", "26%", "24%"], forbid: ["Email Content and Send Management are 45%", "4-Week Email Specialist Study Plan"] },
   "marketing-cloud-next-consultant": { title: ["Marketing Cloud Next Consultant", "MC-Con-201"], must: ["MC-Con-201", "72%", "Campaign Design, Flow Orchestration", "30%", "25%"], forbid: [] },
   "pardot-specialist": { title: ["Marketing Cloud Account Engagement Specialist", "MC-201"], must: ["MC-201", "72%", "90", "Lead Management", "24%", "20%"], forbid: ["Account Engagement Basics and Lead/List Management are 55%"] },
 
@@ -196,10 +196,10 @@ const PAGE_SPECS = {
   "application-architect": { title: ["Application Architect"], must: ["Platform App Builder", "Platform Developer", "Platform Data Architect", "Platform Sharing and Visibility Architect"], forbid: ["Identity and Access: SSO, federation"] },
   "data-architect": { title: ["Platform Data Architect", "Plat-Arch-201"], must: ["Plat-Arch-201", "58%", "25%", "20%"], forbid: ["All four domains are 25%"] },
   "integration-architect": { title: ["Platform Integration Architect", "Plat-Arch-204"], must: ["Plat-Arch-204", "67%", "28%", "23%", "22%"], forbid: ["Yes, Application Architect is typically required", "Integration Architecture and Patterns are 55%"] },
-  "sharing-visibility-architect": { title: ["Platform Sharing & Visibility Architect", "Plat-Arch-205"], must: ["Plat-Arch-205", "58%", "39%", "27%"], forbid: ["(27%): 27%"] },
+  "sharing-visibility-architect": { title: ["Platform Sharing and Visibility Architect", "Plat-Arch-205"], must: ["Plat-Arch-205", "58%", "39%", "27%"], forbid: ["(27%): 27%"] },
   "system-architect": { title: ["System Architect"], must: ["Platform Developer", "Platform Integration Architect", "Platform Identity and Access Management Architect", "Platform Development Lifecycle and Deployment Architect"], forbid: [] },
-  "identity-access-management-architect": { title: ["Platform Identity & Access Architect", "Plat-Arch-203"], must: ["Plat-Arch-203", "65%", "21%", "18%", "17%"], forbid: [] },
-  "dev-lifecycle-deployment-architect": { title: ["Platform Dev Lifecycle & Deployment Architect"], must: ["Plat-Arch-202", "65%", "15%", "14%"], forbid: [] },
+  "identity-access-management-architect": { title: ["Platform Identity and Access Management Architect", "Plat-Arch-203"], must: ["Plat-Arch-203", "65%", "21%", "18%", "17%"], forbid: [] },
+  "dev-lifecycle-deployment-architect": { title: ["Platform Development Lifecycle and Deployment Architect"], must: ["Plat-Arch-202", "65%", "15%", "14%"], forbid: [] },
   "technical-architect": { title: ["Technical Architect (CTA)"], must: ["$6,000", "$1,500", "$4,500", "Application Architect", "System Architect"], forbid: ["5 domain exams (with 2 overlapping)"] },
   "technical-architect-evaluation": { title: ["Technical Architect - Architect Evaluation"], must: ["135", "$1,500", "Application Architect", "System Architect"], forbid: ["approximately 60 multiple-choice questions and a 120-minute time limit", "two proctored multiple-choice assessments"] },
   "technical-architect-review-board": { title: ["Technical Architect - Architect Review Board"], must: ["$4,500", "$2,250", "Technical Architect - Architect Evaluation"], forbid: [] },
@@ -217,7 +217,7 @@ const PAGE_SPECS = {
   "b2b-commerce-developer-ap": { title: ["B2B Commerce Developer"], must: ["68%", "30%", "20%"], forbid: ["B2B Development is 30%", "Pass/Fail result"] },
   "communications-cloud-ap": { title: ["Agentforce Communications"], must: ["56%", "60%", "24%"], forbid: ["Channels and Flows are 35%", "Standard Salesforce Pr...?"] },
   "consumer-goods-cloud-ap": { title: ["Agentforce Consumer Goods"], must: ["33", "60 min", "64%", "36%"], forbid: ["60 multiple-choice questions in 90 minutes", "Consumer Goods Cloud and Retail Execution are 70%"] },
-  "consumer-goods-tpm-ap": { title: ["Consumer Goods Cloud TPM Accredited Professional"], must: ["2027", "62", "75", "66%", "36%", "32%"], forbid: [] },
+  "consumer-goods-tpm-ap": { title: ["Consumer Goods Cloud: Trade Promotion Management"], must: ["2027", "62", "75", "66%", "36%", "32%"], forbid: [] },
   "contact-center-ap": { title: ["Contact Center Accredited Professional"], must: ["2027", "66%", "75", "41%", "29%"], forbid: [] },
   // Historical facts from Salesforce Help 005298796.
   "cpq-billing-ap": { title: ["CPQ and Billing Consultant Accredited Professional"], must: ["2027", "74%", "60 min", "Revenue Management Consultant"], forbid: [] },
@@ -227,7 +227,7 @@ const PAGE_SPECS = {
   "heroku-developer-ap": { title: ["Heroku Developer Accredited Professional"], must: ["2027", "68%", "13%", "12%"], forbid: ["Pass 3 timed 40-question mocks"] },
   "loyalty-management-ap": { title: ["Loyalty Management Accredited Professional"], must: ["2027", "50", "75", "69%", "52%", "22%"], forbid: [] },
   "manufacturing-cloud-ap": { title: ["Agentforce Manufacturing"], must: ["50", "75 min", "68%", "38%", "28%"], forbid: ["~65%", "Manufacturing Cloud is 40%"] },
-  "marketing-cloud-advanced-cross-channel-ap": { title: ["Marketing Cloud Advanced Cross Channel AP"], must: ["2027", "40", "60 min", "67%", "25%", "23%"], forbid: ["You&amp;apos;ll", "Cross-Channel Strategy"] },
+  "marketing-cloud-advanced-cross-channel-ap": { title: ["Marketing Cloud Advanced Cross Channel"], must: ["2027", "40", "60 min", "67%", "25%", "23%"], forbid: ["You&amp;apos;ll", "Cross-Channel Strategy"] },
   "marketing-cloud-intelligence-ap": { title: ["Marketing Cloud Intelligence Accredited Professional"], must: ["2027", "40", "60%", "13%", "12%"], forbid: [] },
   "marketing-cloud-personalization-ap": { title: ["Marketing Cloud Personalization Accredited Professional"], must: ["2027", "50", "75", "70%", "18%", "16%"], forbid: [] },
   "media-cloud-ap": { title: ["Media Cloud Accredited Professional"], must: ["2027", "75", "66%", "53%", "27%", "20%"], forbid: ["Passing score is 70%"] },
@@ -235,7 +235,7 @@ const PAGE_SPECS = {
   "order-management-admin-ap": { title: ["Order Management Administrator Accredited Professional"], must: ["2027", "67%", "27%", "25%"], forbid: ["Pass/Fail"] },
   "order-management-developer-ap": { title: ["Order Management Developer Accredited Professional"], must: ["2027", "70%", "23%", "17%"], forbid: ["Pass/Fail", "storefront-to-order creatio..."] },
   "process-automation-ap": { title: ["Process Automation Accredited Professional"], must: ["2027", "68%", "32%", "27%", "23%", "18%"], forbid: ["Passing score is 70%"] },
-  "public-sector-solutions-ap": { title: ["Agentforce 360 Public Sector"], must: ["50", "75 min", "70%", "45%", "36%", "19%"], forbid: ["Passing score: Not published"] },
+  "public-sector-solutions-ap": { title: ["Agentforce 360 for Public Sector Professional"], must: ["50", "75 min", "70%", "45%", "36%", "19%"], forbid: ["Passing score: Not published"] },
 
   // Track 8: Sales (#83)
   "sales-foundations": { title: ["Agentforce Sales Foundations", "Sales-101"], must: ["Sales-101", "40", "105", "70%", "$75", "37%", "21%"], forbid: ["Sales Fundamentals and Salesforce CRM Basics are 75%", "$150 fee", "about 25 correct answers"] },
@@ -247,7 +247,7 @@ const PAGE_SPECS = {
   // Track 10: Tableau (#86 - #91)
   "tableau-architect": { title: ["Tableau", "Architect", "Analytics-Arch-201"], must: ["Analytics-Arch-201", "$400", "63%", "41%", "37%", "22%"], forbid: ["$250", "Tableau Architecture is 30%"] },
   // Outline from Salesforce Help 005298993 (Tableau 2024.2).
-  "tableau-consultant": { title: ["Tableau Certified Consultant"], must: ["Analytics-Con-201", "$200", "63%", "22%", "40%", "16%"], forbid: ["$250"] },
+  "tableau-consultant": { title: ["Tableau Consultant", "Analytics-Con-201"], must: ["Analytics-Con-201", "$200", "63%", "22%", "40%", "16%"], forbid: ["$250"] },
   "tableau-next-consultant": { title: ["Tableau Next Consultant", "Analytics-Con-202"], must: ["Analytics-Con-202", "65%", "Agentic Experiences", "25%", "20%"], forbid: ["No section weightage table is published"] },
   "tableau-data-analyst": { title: ["Tableau Data Analyst", "Analytics-DA-201"], must: ["Analytics-DA-201", "$200", "65%", "41%", "26%", "24%"], forbid: ["$250", "Data Connection/Prep and Calculations are 50%"] },
   "tableau-desktop-foundations": { title: ["Tableau Desktop Foundations", "Analytics-101"], must: ["Analytics-101", "$75", "48%", "37%", "25%"], forbid: ["$100"] },
@@ -271,8 +271,12 @@ async function verifySingleCertPage(slug) {
 
   const document = parseDocument(html, { withStartIndices: true });
   const rawTitle = content("head > title", document);
-  assertCheck(rawTitle.length > 10 && rawTitle.length <= 60,
-    `[${slug}] <title> <= 60 chars`, `Found (${rawTitle.length} chars): "${rawTitle}"`);
+  // Certification <title>s carry the full official credential name (so
+  // "Certified" is in it), the exam codes and the "questions" intent, which
+  // does not fit the 60 characters the content routes keep. The bound matches
+  // MAX_CERT_TITLE_LENGTH in src/lib/cert-alias-registry.ts.
+  assertCheck(rawTitle.length > 10 && rawTitle.length <= 80,
+    `[${slug}] <title> <= 80 chars`, `Found (${rawTitle.length} chars): "${rawTitle}"`);
   assertCheck(selectAll("main h1", document).length === 1, `[${slug}] Exactly one H1`);
   const h2s = selectAll("main h2", document).map(DomUtils.textContent);
   assertCheck(h2s.length === new Set(h2s).size, `[${slug}] No duplicate H2s`);
@@ -318,6 +322,15 @@ async function verifySingleCertPage(slug) {
   }
   for (const f of spec.forbid) {
     assertCheck(!html.includes(f), `[${slug}] HTML excludes "${f}"`);
+  }
+
+  // Every exam code for the credential appears in the page HTML, whether or
+  // not the <title> had room for it: the H1, the quick facts, the naming lead
+  // and the dumps/questions phrase sets all carry them.
+  for (const alias of (CLUSTER_MAP[slug]?.aliases ?? [])) {
+    if (alias.includes(' ') || !/\d/.test(alias)) continue
+    assertCheck(html.toLowerCase().includes(alias.toLowerCase()),
+      `[${slug}] page carries exam code "${alias}"`);
   }
 
   // 5. Keyword-cluster coverage: the seven GSC search-intent patterns.
@@ -533,7 +546,6 @@ async function verifyHomepageAndRedirects() {
     }
     for (const slug of ({
       consultant: ["public-sector-solutions-consultant", "marketing-cloud-next-consultant"],
-      marketing: ["marketing-cloud-next-consultant"],
     }[role] ?? [])) {
       assertCheck(Boolean(selectOne(`main a[href="/certifications/${slug}"]`, hub)),
         `[Role hub] ${role} lists ${slug}`);

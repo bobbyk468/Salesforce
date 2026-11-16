@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { getCertAlias } from './cert-alias-registry'
+import { buildCertTitle, getCertAlias } from './cert-alias-registry'
+import { getCertKeywordCluster } from './cert-keyword-clusters'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
 import { RELEASE_YEAR } from './release-data'
@@ -864,11 +865,38 @@ function makePracticeExamTitle(label: string, code?: string, dualIntent = false)
   throw new Error(`No complete practice exam title fits ${label}`)
 }
 
+/** The two noindex practice-test aliases keep their distinct, readable titles. */
+const PRACTICE_TEST_TITLE_SLUGS = new Set([
+  'administrator-practice-test',
+  'email-specialist-practice-test',
+])
+
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
-  // The alias registry is the single source for titles it defines, so the
-  // title, H1, lead and JSON-LD stay in step. Only credentials it leaves out
-  // fall through to the generated titles below.
+  // Every certification title is composed from the credential's own naming so
+  // that all 95 answer the same query forms: the full official credential name
+  // (carrying "Certified" or "Accredited" where the issuer uses it), the name
+  // without that prefix, the active and legacy exam codes, and the "questions"
+  // intent. The titles used to come from a hand-written `title` per credential,
+  // none of which said "questions" -- the highest-volume modifier on these
+  // queries -- and several of which named a different form of the credential
+  // than the page body did.
+  const cluster = getCertKeywordCluster(slug)
+  if (cluster && !PRACTICE_TEST_TITLE_SLUGS.has(slug)) {
+    const provisional =
+      isRetiredCredential(slug) ||
+      isUnavailableCredentialExam(slug) ||
+      hasUnverifiedClaudeExamDetails(slug)
+    return buildCertTitle({
+      fullTitle: cluster.fullTitle,
+      shortTitle: cluster.shortTitle,
+      codes: cluster.examCodes,
+      // A closed or unverified exam must not be titled as one you can book.
+      suffixes: provisional
+        ? ['Questions & Study Notes', 'Questions & Notes', 'Questions']
+        : undefined,
+    })
+  }
   const registryTitle = getCertAlias(slug)?.title
   if (registryTitle) return registryTitle
   const legacyTitle = getLegacyCertMetaTitle(slug)
@@ -905,6 +933,62 @@ function getCertMetaTitle(slug: string): string {
   return makePracticeExamTitle(getReadablePracticeTitleLabel(legacyTitle), undefined, dualIntent)
 }
 
+/**
+ * Upper bound for a certification page description.
+ *
+ * Other routes keep the project's 130-character budget. Certification pages
+ * carry more: the full official credential name, the "<name> questions" and
+ * "<code> questions" phrasings, and the three facts a searcher is deciding on
+ * (question count, pass mark, fee). 160 is what Google renders.
+ */
+const CERT_DESC_MAX = 160
+
+/**
+ * The certification description, composed from the credential's own naming
+ * and the published exam facts.
+ *
+ * Candidates are tried richest-first and the first one inside CERT_DESC_MAX
+ * wins, so the fee is dropped before the pass mark and the "questions"
+ * phrasings are never what gets dropped. Figures come from
+ * SLUG_TO_EXAM_LOGISTICS and SLUG_TO_EXAM_COST, the same tables the page body
+ * reads, so the snippet cannot state a fee the page contradicts.
+ *
+ * Returns undefined for credentials with no cluster entry, and for the ones
+ * whose status notice has to lead instead (retired, closed, unverified).
+ */
+function buildCertClusterDescription(slug: string): string | undefined {
+  const cluster = getCertKeywordCluster(slug)
+  if (!cluster) return undefined
+  const { fullTitle, shortTitle, examCodes } = cluster
+  const primaryCode = examCodes[0]
+  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  const cost = SLUG_TO_EXAM_COST[slug]
+  const num = (v: unknown) => (v === undefined || v === null ? false : /^\d/.test(String(v)))
+  const questionPart = num(detail?.questions) ? `${detail.questions} questions` : null
+  const passPart = num(detail?.passingScore) ? `${detail.passingScore} to pass` : null
+  const feePart = cost && /^\$/.test(cost) ? `${cost} fee` : null
+  const facts = (parts: (string | null)[]) => parts.filter(Boolean).join(', ')
+  const askFull = `${shortTitle} questions`
+  const askCode = primaryCode ? `${primaryCode} questions` : null
+  const asks = askCode ? `${askFull} and ${askCode}` : askFull
+  const withFacts = facts([questionPart, passPart, feePart])
+  const withoutFee = facts([questionPart, passPart])
+  const candidates = [
+    withFacts && `${fullTitle}: free ${asks}. ${withFacts}, with worked explanations.`,
+    withFacts && `${fullTitle}: free ${asks}. ${withFacts}.`,
+    withoutFee && `${fullTitle}: free ${asks}. ${withoutFee}.`,
+    withFacts && `${fullTitle}: ${asks}. ${withFacts}.`,
+    withFacts && askCode && `${fullTitle}: free ${askCode}. ${withFacts}.`,
+    withFacts && `${shortTitle}: free ${asks}. ${withFacts}.`,
+    withFacts && `${shortTitle}: free ${askFull}. ${withFacts}.`,
+    `${fullTitle}: free ${asks}, exam topics and worked explanations.`,
+    `${fullTitle}: free ${askFull} with worked explanations.`,
+    `${shortTitle}: free ${askFull} with worked explanations and exam topics.`,
+    `${shortTitle}: free ${askFull} with worked explanations.`,
+  ].filter((candidate): candidate is string => Boolean(candidate))
+  return candidates.find((candidate) => candidate.length <= CERT_DESC_MAX)
+}
+
 /** Complete descriptions that avoid unverified exam logistics and preserve status notices. */
 export function getCertMetaDescription(slug: string): string {
   const certName = getCertPrimaryName(slug, slugToDisplayName(slug))
@@ -917,6 +1001,15 @@ export function getCertMetaDescription(slug: string): string {
   }
   if (isRetiredCredential(slug)) {
     return 'AI Associate retired February 2026. Review historical exam notes, or explore Agentblazer for current Salesforce AI learning.'
+  }
+
+  // The composed description names the credential and both halves of the
+  // "... questions" query cluster alongside the published format. It replaces
+  // the hand-written map below, which named neither the full credential title
+  // nor the "<code> questions" phrasing.
+  if (!PRACTICE_TEST_TITLE_SLUGS.has(slug)) {
+    const composed = buildCertClusterDescription(slug)
+    if (composed) return composed
   }
 
   // Hand-written for the bespoke pages: lead with the bare exam name and codes.
@@ -2882,10 +2975,24 @@ export function getCertPracticeQuestionsHeading(slug: string): string {
   return `${primaryName} Practice Questions (With Explanations)`
 }
 
-/** Practice intro text with dynamic question count. Use for consistent, accurate messaging. */
+/**
+ * Practice intro text with dynamic question count.
+ *
+ * Callers pass the follow-on sentence as `suffix`. Joining it with a space
+ * unconditionally produced "20 sample questions . Select the requested ..."
+ * wherever the suffix began with its own punctuation, so a leading `.`, `,`,
+ * `;` or `:` is closed up against the count instead of spaced off it.
+ */
 export function getPracticeQuestionsIntro(count: number, suffix = ''): string {
   const base = `Test your knowledge with these ${count} sample questions`
-  return suffix ? `${base} ${suffix}` : `${base}.`
+  const trimmed = suffix.trim()
+  if (!trimmed) return `${base}.`
+  const leadingPunctuation = trimmed.match(/^[.,;:!?]+/)?.[0]
+  if (leadingPunctuation) {
+    const rest = trimmed.slice(leadingPunctuation.length).trimStart()
+    return rest ? `${base}${leadingPunctuation} ${rest}` : `${base}${leadingPunctuation}`
+  }
+  return `${base}. ${trimmed}`
 }
 
 /** H2 for FAQ section: [Cert Name] ([Exam Code]) Exam FAQs */

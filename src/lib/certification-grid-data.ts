@@ -145,3 +145,49 @@ export function getCertificationGrid(): GridCategory[] {
 
   return categories
 }
+
+/**
+ * Certification count per role track, from the one grid the homepage renders.
+ *
+ * `/`, `/certifications` and `/certifications/role/[slug]` used to count three
+ * different ways: the homepage read the grid (which drops the two noindex
+ * `-practice-test` aliases and assigns a cert listed under two roles to the
+ * first), while `/certifications` and the role hubs counted
+ * `CERTIFICATION_CATEGORIES.items` raw. Administrator read 8 on one page and 9
+ * on another, Developer 11 and 12, Consultant 17 and 18. Every count now comes
+ * through here.
+ */
+export function getRoleCertCounts(): Record<string, number> {
+  return Object.fromEntries(getCertificationGrid().map((c) => [c.slug, c.certs.length]))
+}
+
+/** Certifications in one role track, counted the same way everywhere. */
+export function getRoleCertCount(roleSlug: string): number {
+  return getCertificationGrid().find((c) => c.slug === roleSlug)?.certs.length ?? 0
+}
+
+/** Every certification the grid lists, de-duplicated: the site-wide headline count. */
+export function getTotalCertCount(): number {
+  return getCertificationGrid().reduce((sum, c) => sum + c.certs.length, 0)
+}
+
+/**
+ * The one role track a certification is counted under.
+ *
+ * A few credentials are listed in two `CERTIFICATION_CATEGORIES` groups (a
+ * developer exam that also belongs to a product track, say). The grid assigns
+ * each to the first group it appears in; role hubs have to use the same
+ * assignment or their card list and the homepage pill disagree.
+ */
+export function getCertRoleAssignment(): Map<string, string> {
+  return new Map(
+    getCertificationGrid().flatMap((category) =>
+      category.certs.map((cert) => [cert.slug, category.slug] as const),
+    ),
+  )
+}
+
+/** The certification slugs a role hub should list, in grid order. */
+export function getRoleCertSlugs(roleSlug: string): string[] {
+  return getCertificationGrid().find((c) => c.slug === roleSlug)?.certs.map((c) => c.slug) ?? []
+}

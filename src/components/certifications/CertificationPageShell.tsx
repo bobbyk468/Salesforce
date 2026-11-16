@@ -26,9 +26,9 @@ export default function CertificationPageShell({
 }: CertificationPageShellProps) {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <div className="min-w-0 lg:col-span-3">{children}</div>
-        <aside className="min-w-0 lg:col-span-1">
+      <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+        <div className="min-w-0 lg:col-span-3 xl:col-span-4">{children}</div>
+        <aside className="min-w-0 lg:col-span-1 xl:col-span-1">
           {/* The associate template renders CertPageFaq above Related Certifications. */}
           <CertTableOfContents sections={tocSections} faqAboveRelated />
         </aside>

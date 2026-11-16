@@ -18,7 +18,12 @@ import pageDatesSource from '../../public/page-dates.json'
  */
 const pageDates = pageDatesSource as Record<string, { published: string; modified: string }>
 
-export default function LastUpdated() {
+/**
+ * `tone="on-dark"` is for the blue hero cards, where the default
+ * `text-gray-500` sat dark-on-dark against the gradient and was close to
+ * unreadable. Everywhere else the line is on white and keeps the muted grey.
+ */
+export default function LastUpdated({ tone = 'default' }: { tone?: 'default' | 'on-dark' } = {}) {
   const pathname = usePathname()
   if (!pathname) return null
 
@@ -43,7 +48,7 @@ export default function LastUpdated() {
   })
 
   return (
-    <p className="text-sm text-gray-500 mb-4">
+    <p className={`text-sm mb-4 ${tone === 'on-dark' ? 'text-white/95' : 'text-gray-500'}`}>
       Last updated:{' '}
       <time dateTime={entry.modified.slice(0, 10)}>{label}</time>
     </p>

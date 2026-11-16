@@ -49,6 +49,9 @@ function createCardHarness() {
       if (specifier === 'react') return react
       if (specifier === 'react/jsx-runtime') return { jsx: node, jsxs: node }
       if (specifier === 'lucide-react') return { CheckCircle: 'check-icon', XCircle: 'x-icon' }
+      if (specifier === '@/lib/quiz-score-events') {
+        return { QUIZ_ANSWER_EVENT: 'cert-quiz-answer', QUIZ_RESET_EVENT: 'cert-quiz-reset' }
+      }
       throw new Error(`Unexpected import: ${specifier}`)
     },
   })
@@ -222,6 +225,9 @@ test('practice section forwards imported answer arrays and provenance to visible
       if (specifier === 'react') return { useMemo: (factory) => factory(), useState: (initial) => [initial, () => {}] }
       if (specifier === 'react/jsx-runtime') return { jsx, jsxs: jsx }
       if (specifier === '@/components/QuestionCard') return { __esModule: true, default: 'QuestionCard' }
+      // The running score bar sits above the cards; it takes the question
+      // count and nothing from the question data, so a marker is enough here.
+      if (specifier === '@/components/QuizScoreBar') return { __esModule: true, default: 'QuizScoreBar' }
       if (specifier === '@/lib/practice-question-lite') return { INITIAL_PRACTICE_QUESTION_COUNT: 5 }
       throw new Error(`Unexpected import: ${specifier}`)
     },

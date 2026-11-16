@@ -3,6 +3,7 @@
 import { memo, useState } from 'react'
 import { CheckCircle, XCircle } from 'lucide-react'
 import type { ImportedQuestionSource } from '@/lib/cert-page-spike/types'
+import { QUIZ_ANSWER_EVENT, QUIZ_RESET_EVENT } from '@/lib/quiz-score-events'
 
 interface QuestionCardProps {
   questionNumber: number
@@ -48,11 +49,23 @@ function QuestionCard({
   const handleCheckAnswer = () => {
     if (selectedAnswers.length !== answerKey.length || answerKey.length === 0) return
     setShowAnswer(true)
+    // The running score bar collects these rather than owning the cards'
+    // selection state, so each card stays independently interactive.
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent(QUIZ_ANSWER_EVENT, { detail: { questionNumber, correct: isCorrect } }),
+      )
+    }
   }
 
   const handleReset = () => {
     setSelectedAnswers([])
     setShowAnswer(false)
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(
+        new CustomEvent(QUIZ_RESET_EVENT, { detail: { questionNumber, correct: false } }),
+      )
+    }
   }
 
   return (

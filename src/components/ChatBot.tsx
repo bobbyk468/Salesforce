@@ -180,7 +180,7 @@ export default function ChatBot() {
       {/* Floating toggle button, held back on mobile until the hero has scrolled
           out of view so it doesn't cover the hero CTA and stats. */}
       <div
-        className={`fixed bottom-6 right-6 z-50 group transition-opacity duration-200 ${pastHero || open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`floats-above-sticky-cta fixed bottom-6 right-6 z-50 group transition-opacity duration-200 ${pastHero || open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
       >
         {!open && (
           <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -218,7 +218,7 @@ export default function ChatBot() {
       {/* Chat panel */}
       {open && (
         <div
-          className="fixed bottom-24 right-6 z-50 flex flex-col rounded-2xl border border-gray-200 bg-white shadow-2xl"
+          className="floats-above-sticky-cta-panel fixed bottom-24 right-6 z-50 flex flex-col rounded-2xl border border-gray-200 bg-white shadow-2xl"
           style={{ width: '380px', maxWidth: 'calc(100vw - 2rem)', height: '560px' }}
           role="dialog"
           aria-label="Salesforce certification assistant"

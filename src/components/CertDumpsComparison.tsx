@@ -2,37 +2,61 @@ import { ShieldCheck } from 'lucide-react'
 import { getCertKeywordCluster } from '@/lib/cert-keyword-clusters'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
+/** "a", "b" or "c", each in typographic quotes. */
+function QuotedPhrases({ phrases }: { phrases: string[] }) {
+  return (
+    <>
+      {phrases.map((phrase, i) => (
+        <span key={phrase}>
+          {i > 0 ? (i === phrases.length - 1 ? ' or ' : ', ') : ''}
+          &ldquo;{phrase}&rdquo;
+        </span>
+      ))}
+    </>
+  )
+}
+
 /**
  * The NDA-compliant "practice questions vs unofficial dumps" section.
  *
- * "<exam> dumps" is one of the highest-volume queries for every credential and
- * the results are almost entirely braindump sites. This section answers the
- * query honestly on-page: it names the exact phrasings candidates type, then
- * sets out why original scenario questions are the safer buy. Every
- * certification page renders it, parameterised from the keyword cluster.
+ * "<exam> dumps" and "<exam> questions" are two of the highest-volume queries
+ * for every credential, and the dumps results are almost entirely braindump
+ * sites. This section answers both queries honestly on-page: it names the
+ * exact phrasings candidates type -- the full official credential name, the
+ * name without its issuer prefix, and every active and legacy exam code, each
+ * paired with "dumps" and with "questions" -- then sets out why original
+ * scenario questions are the safer buy. All 95 certification pages render it,
+ * parameterised from the keyword cluster.
+ *
+ * Long credential names (the Accredited Professional designations run past 50
+ * characters) are referred to as "this credential" in the table and closing
+ * line rather than spelled out again, so the section reads as prose instead of
+ * repeating one name seven times in three sentences.
  */
 export default function CertDumpsComparison({ slug }: { slug: string }) {
   const cluster = getCertKeywordCluster(slug)
   if (!cluster) return null
-  const { bare, vendorName, codes, legacyNames } = cluster
-  const primaryCode = codes[0]
+  const { shortTitle, fullTitle, examCodes, dumpPhrases, questionPhrases, vendor } = cluster
+  const primaryCode = examCodes[0]
+  const isAnthropic = vendor === 'Anthropic'
+  const issuer = isAnthropic ? 'Anthropic' : 'Salesforce'
+  // "Salesforce Accredited Marketing Cloud Advanced Cross Channel Professional"
+  // in every table cell is unreadable; short names stay spelled out.
+  const ref = shortTitle.length > 32 ? 'this credential' : shortTitle
+  const refThe = shortTitle.length > 32 ? 'this credential' : `the ${shortTitle}`
 
-  const searchPhrases = [...new Set([
-    `${bare} dumps`,
-    `${vendorName} dumps`,
-    ...codes.map((code) => `${code} dumps`),
-    ...legacyNames.map((name) => `${name} dumps`),
-  ])]
+  const searchPhrases = [...new Set(dumpPhrases)]
+  const askPhrases = [...new Set(questionPhrases)]
 
   const rows: [string, string, string][] = [
     [
       'Credential compliance',
       '100% legitimate and NDA-compliant',
-      'Violates the issuer NDA; risks credential revocation',
+      `Violates the ${issuer} certification agreement; risks credential revocation`,
     ],
     [
       'Blueprint accuracy',
-      `Aligned with the current ${bare} exam outline`,
+      `Aligned with the current ${ref} exam outline`,
       'Frequently stale, pre-refresh questions with wrong answers',
     ],
     [
@@ -42,12 +66,16 @@ export default function CertDumpsComparison({ slug }: { slug: string }) {
     ],
     [
       'On-the-job readiness',
-      `Builds real ${bare} implementation skills`,
+      isAnthropic
+        ? 'Builds real prompt, tool-use and agent design skills'
+        : `Builds real ${ref} implementation skills`,
       'Zero transferable project or technical interview skill',
     ],
     [
       'Release currency',
-      `Rewritten each release cycle, currently ${RELEASE_CURRENT}`,
+      isAnthropic
+        ? 'Rewritten as the model and API surface change'
+        : `Rewritten each release cycle, currently ${RELEASE_CURRENT}`,
       'Frozen at whichever release the leak came from',
     ],
     [
@@ -66,34 +94,35 @@ export default function CertDumpsComparison({ slug }: { slug: string }) {
       <div className="flex items-start gap-3 mb-3">
         <ShieldCheck className="h-5 w-5 text-green-600 mt-0.5 shrink-0" aria-hidden="true" />
         <h2 id="dumps-comparison-heading" className="text-xl font-bold text-gray-900">
-          Official Exam Code of Conduct: Practice Questions vs. Unofficial {bare}
+          Official Exam Code of Conduct: Practice Questions vs. Unofficial {shortTitle}
           {primaryCode ? ` (${primaryCode})` : ''} Dumps
         </h2>
       </div>
+      <p className="text-sm text-gray-700 mb-3">
+        Many candidates search for <QuotedPhrases phrases={searchPhrases} /> hoping for a shortcut
+        past {refThe} exam. There is no safe version of that shortcut:{' '}
+        {isAnthropic
+          ? 'Anthropic publishes its certification terms, and recalled exam content breaches them.'
+          : 'recalled exam content breaches the certification agreement you accept when you register.'}
+      </p>
       <p className="text-sm text-gray-700 mb-4">
-        Many candidates search for{' '}
-        {searchPhrases.map((phrase, i) => (
-          <span key={phrase}>
-            {i > 0 ? (i === searchPhrases.length - 1 ? ' or ' : ', ') : ''}
-            &ldquo;{phrase}&rdquo;
-          </span>
-        ))}{' '}
-        hoping for a shortcut to pass the {bare} certification. Here is why original, scenario-based{' '}
-        {bare} practice questions are a safer and higher-ROI investment than braindumps:
+        If what you actually wanted was <QuotedPhrases phrases={askPhrases} />, that is what this
+        page provides: original, scenario-based items written from the published {fullTitle} exam
+        outline, each with a worked explanation. Here is how they compare with braindumps:
       </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm text-left border-collapse">
           <caption className="sr-only">
-            {bare} practice questions compared with unofficial {bare} dumps
+            {fullTitle} practice questions compared with unofficial {shortTitle} dumps
           </caption>
           <thead>
             <tr className="border-b-2 border-gray-200">
               <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
               <th scope="col" className="py-2.5 pr-4 font-semibold text-emerald-700">
-                Verified {bare} practice questions
+                Verified practice questions
               </th>
               <th scope="col" className="py-2.5 font-semibold text-red-700">
-                Unofficial {bare} dumps
+                Unofficial dumps
               </th>
             </tr>
           </thead>
@@ -109,9 +138,9 @@ export default function CertDumpsComparison({ slug }: { slug: string }) {
         </table>
       </div>
       <p className="text-xs text-gray-600 mt-3">
-        Credential issuers monitor for dump usage and can revoke a certification after it has been awarded.
-        Every {bare} question on this page is written from the published exam outline, never copied from a
-        live exam.
+        Credential issuers monitor for dump usage and can revoke a certification after it has been
+        awarded. Every question on this page is written from the published exam outline, never
+        copied from a live exam.
       </p>
     </section>
   )

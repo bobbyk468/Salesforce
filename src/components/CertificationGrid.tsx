@@ -60,15 +60,22 @@ export default function CertificationGrid({
               <li key={category.slug}>
                 <a
                   href={`#certification-track-${category.slug}`}
-                  className="flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 text-center text-sm font-medium text-gray-700 transition-colors hover:border-salesforce-blue hover:text-salesforce-blue"
+                  className="flex min-h-11 w-full items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-center text-sm font-medium text-gray-700 transition-colors hover:border-salesforce-blue hover:text-salesforce-blue"
                 >
-                  {category.name}
+                  {/*
+                    "Accredited Professional" is long enough to wrap in a
+                    two-column grid at 375px. Letting the label wrap on its
+                    own keeps the count badge beside the last line instead of
+                    being pushed onto a line of its own, and the vertical
+                    padding above gives the second line room inside min-h-11.
+                  */}
+                  <span className="min-w-0 break-words leading-snug">{category.name}</span>
                   {/*
                     Reserved width and tabular figures: this count was the
                     only thing shifting on the page, because its width
                     changed when the webfont swapped in.
                   */}
-                  <span className="inline-block min-w-[1.5rem] rounded-full bg-gray-100 px-1.5 py-0.5 text-center text-xs tabular-nums text-gray-600">
+                  <span className="inline-block min-w-[1.5rem] shrink-0 self-center rounded-full bg-gray-100 px-1.5 py-0.5 text-center text-xs tabular-nums text-gray-600">
                     {category.certs.length}
                   </span>
                 </a>
@@ -92,7 +99,7 @@ export default function CertificationGrid({
 
         {categories.map((category) => (
           /*
-            Every track stays in the SSR DOM so crawlers see all 91 cards.
+            Every track stays in the SSR DOM so crawlers see all 95 cards.
             Keep every track normally rendered as well: headless audit tools
             use rendered text extraction and skip content-visibility subtrees.
           */

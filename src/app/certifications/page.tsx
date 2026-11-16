@@ -2,6 +2,7 @@ import Link from '@/components/AppLink'
 import { Award, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+import { getRoleCertCounts } from '@/lib/certification-grid-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -81,6 +82,9 @@ const topCerts = [
 
 export default function CertificationsIndexPage() {
   const allCerts = CERTIFICATION_CATEGORIES.flatMap((cat) => cat.items)
+  // Role card counts come from the shared grid so this page, the homepage and
+  // every role hub agree.
+  const roleCertCounts = getRoleCertCounts()
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -188,7 +192,7 @@ export default function CertificationsIndexPage() {
                     {category.name}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    {category.items.length} certification{category.items.length !== 1 ? 's' : ''}
+                    {roleCertCounts[category.slug] ?? 0} certification{(roleCertCounts[category.slug] ?? 0) !== 1 ? 's' : ''}
                   </p>
                 </div>
               </div>

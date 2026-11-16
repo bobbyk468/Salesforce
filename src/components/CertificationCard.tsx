@@ -18,6 +18,10 @@ export interface ComponentExam {
 
 interface CertificationCardProps {
   title: string
+  /**
+   * Retained for the page-data contract. The rendered code comes from the
+   * alias registry instead; see `codeLabel` below.
+   */
   code: string
   description: string
   slug: string
@@ -47,7 +51,6 @@ interface CertificationCardProps {
 
 export default function CertificationCard({
   title,
-  code,
   description,
   slug,
   examDetails,
@@ -68,7 +71,19 @@ export default function CertificationCard({
     published && typeof published.questions === 'number'
       ? { questions: published.questions, passingScore: published.passingScore, duration: published.duration, cost: published.fee }
       : examDetails
-  const codeLabel = hideExamDetails ? '' : getCertCodeLabel(slug) ?? code
+  /**
+   * The exam code shown on the card comes only from the alias registry, which
+   * holds the codes we have verified against the issuer.
+   *
+   * The `code` prop falls back to a hand-written label in the page data, and
+   * for credentials whose issuer publishes no exam code that label was a
+   * placeholder rendered in the code's position: all 23 Accredited
+   * Professional cards read "AP", and the composite Architect, Designer and
+   * Business Analyst cards repeated their own name ("Business Analyst",
+   * "Strategy Designer", "Application Architect") as though it were a code.
+   * Where the registry has no code, the card now shows none.
+   */
+  const codeLabel = hideExamDetails ? '' : getCertCodeLabel(slug) ?? ''
   const status = getCredentialStatus(slug)
   const prerequisites = CERT_PREREQUISITES[slug]
   const required = prerequisites?.requiredPrerequisites ?? (prerequisites?.requiredPrerequisite ? [prerequisites.requiredPrerequisite] : [])

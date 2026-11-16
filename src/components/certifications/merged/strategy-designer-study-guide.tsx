@@ -42,7 +42,7 @@ export const faqItems = [
   },
   {
     question: 'What is the Strategy Designer exam format?',
-    answer: 'The Strategy Designer exam consists of 60 multiple-choice and multiple-select questions with a 105-minute time limit. The passing score is approximately 70%. The exam costs $200 (first attempt) with a 70% discount retake voucher after a failed attempt. It can be taken online or at a Pearson VUE testing centre.',
+    answer: 'The Strategy Designer exam consists of 60 multiple-choice and multiple-select questions with a 105-minute time limit. The passing score is approximately 70%. The exam costs $200 for the first attempt, and a retake is $100 — 50% of the first-attempt fee, not a discount voucher. Registration is through Trailhead Academy, and the exam is delivered by Pearson VUE either online with a proctor or at a Pearson VUE test centre.',
   },
   {
     question: 'What frameworks should I know for the Strategy Designer exam?',

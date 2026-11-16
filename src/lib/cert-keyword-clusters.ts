@@ -22,6 +22,12 @@ export interface CertKeywordCluster {
   bare: string
   vendor: string
   aliases: string[]
+  /**
+   * Optional override for the full official credential name, when the
+   * issuer's own wording is not what the prefix rule in `deriveFullTitle`
+   * produces. Leave unset for every credential the rule names correctly.
+   */
+  fullTitle?: string
 }
 
 export const CERT_KEYWORD_CLUSTERS: Record<string, CertKeywordCluster> = {
@@ -68,7 +74,7 @@ export const CERT_KEYWORD_CLUSTERS: Record<string, CertKeywordCluster> = {
   'marketing-cloud-next-consultant': { bare: "Marketing Cloud Next Consultant", vendor: 'Salesforce', aliases: ["MC-Con-201"] },
   'pardot-specialist': { bare: "Marketing Cloud Account Engagement Specialist", vendor: 'Salesforce', aliases: ["MC-201", "Pardot Specialist"] },
   'application-architect': { bare: "Application Architect", vendor: 'Salesforce', aliases: [] },
-  'data-architect': { bare: "Data Architect", vendor: 'Salesforce', aliases: ["Plat-Arch-201", "Platform Data Architect"] },
+  'data-architect': { bare: "Platform Data Architect", vendor: 'Salesforce', aliases: ["Plat-Arch-201", "Data Architect"] },
   'integration-architect': { bare: "Integration Architect", vendor: 'Salesforce', aliases: ["Plat-Arch-204", "Platform Integration Architect"] },
   'sharing-visibility-architect': { bare: "Sharing and Visibility Architect", vendor: 'Salesforce', aliases: ["Plat-Arch-205", "Platform Sharing and Visibility Architect"] },
   'system-architect': { bare: "System Architect", vendor: 'Salesforce', aliases: [] },
@@ -116,17 +122,68 @@ export const CERT_KEYWORD_CLUSTERS: Record<string, CertKeywordCluster> = {
   'tableau-data-analyst': { bare: "Tableau Data Analyst", vendor: 'Salesforce', aliases: ["Analytics-DA-201", "Tableau Certified Data Analyst"] },
   'tableau-desktop-foundations': { bare: "Tableau Desktop Foundations", vendor: 'Salesforce', aliases: ["Analytics-101", "Tableau Desktop Specialist"] },
   'tableau-server-administrator': { bare: "Tableau Server Administrator", vendor: 'Salesforce', aliases: ["Analytics-SA-201", "Tableau Server Certified Associate"] },
-  'claude-certified-associate': { bare: "Claude Certified Associate", vendor: 'Anthropic', aliases: ["Claude Associate", "Claude Associate Foundations"] },
-  'claude-certified-developer': { bare: "Claude Certified Developer", vendor: 'Anthropic', aliases: ["Claude Developer", "Claude Developer Foundations"] },
-  'claude-certified-architect-foundations': { bare: "Claude Certified Architect", vendor: 'Anthropic', aliases: ["Claude Architect Foundations"] },
-  'claude-certified-architect-professional': { bare: "Claude Certified Architect", vendor: 'Anthropic', aliases: ["Claude Architect Professional"] },}
+  'claude-certified-associate': { bare: "Claude Certified Associate \u2013 Foundations", vendor: 'Anthropic', aliases: ["Claude Certified Associate", "Claude Associate", "Claude Associate Foundations"] },
+  'claude-certified-developer': { bare: "Claude Certified Developer \u2013 Foundations", vendor: 'Anthropic', aliases: ["Claude Certified Developer", "Claude Developer", "Claude Developer Foundations"] },
+  'claude-certified-architect-foundations': { bare: "Claude Certified Architect \u2013 Foundations", vendor: 'Anthropic', aliases: ["Claude Certified Architect", "Claude Architect Foundations"] },
+  'claude-certified-architect-professional': { bare: "Claude Certified Architect \u2013 Professional", vendor: 'Anthropic', aliases: ["Claude Certified Architect", "Claude Architect Professional"] },}
 
 /** An alias is an exam code when it has no spaces and carries a digit: "Plat-Admn-201", "PD1". */
 function isExamCode(alias: string): boolean {
   return !alias.includes(' ') && /\d/.test(alias)
 }
 
+/**
+ * The full official credential name for a bare exam name.
+ *
+ * Tableau, Slack and Anthropic run their own certification programmes, so
+ * "Salesforce Certified Tableau Data Analyst" is the wrong credential name
+ * even though Salesforce owns Tableau. Accredited Professional designations
+ * are not "Certified" either, and their own name already ends in "Accredited
+ * Professional", so the issuer prefix carries the "Accredited" and the
+ * duplicated word is dropped from the tail.
+ *
+ * The inverse of this function is the prefix-stripping rule that produces
+ * `shortTitle`, so the two can never name different credentials.
+ */
+function deriveFullTitle(bare: string): string {
+  if (/^Claude\b/i.test(bare)) return bare
+  if (/^Tableau\s+/i.test(bare)) return `Tableau Certified ${bare.replace(/^Tableau\s+/i, '')}`
+  if (/^Slack\s+/i.test(bare)) return `Slack Certified ${bare.replace(/^Slack\s+/i, '')}`
+  if (/\bAccredited Professional$/i.test(bare)) {
+    return `Salesforce Accredited ${bare.replace(/\s*Accredited Professional$/i, ' Professional').trim()}`
+  }
+  if (/\bProfessional$/i.test(bare) && /\bAgentforce\b/i.test(bare)) {
+    return `Salesforce Accredited ${bare}`
+  }
+  if (/\bcertified\b|\baccredited\b/i.test(bare)) return `Salesforce ${bare}`
+  return `Salesforce Certified ${bare}`
+}
+
 export interface ResolvedCertCluster {
+  /**
+   * The full official credential name, issuer prefix included:
+   * "Salesforce Certified Platform Developer I", "Tableau Certified Data
+   * Analyst", "Slack Certified Administrator",
+   * "Salesforce Accredited B2B Commerce Administrator Professional".
+   */
+  fullTitle: string
+  /**
+   * The credential name without its issuer/credential prefix, which is the
+   * form a candidate types: "Platform Developer I", "Tableau Data Analyst",
+   * "Slack Administrator". Same string as `bare`.
+   */
+  shortTitle: string
+  /** Every active and legacy exam code: ["Plat-Dev-201", "PD1", "CRT-450"]. */
+  examCodes: string[]
+  /** The exact "... questions" phrases a searcher types. */
+  questionPhrases: string[]
+  /**
+   * The name people still SEARCH for where the issuer has renamed the
+   * credential: "Advanced Administrator" for Platform Administrator II,
+   * "Field Service Consultant" for Agentforce Field Service and Operations
+   * Consultant. Equal to `shortTitle` for the credentials never renamed.
+   */
+  searchedName: string
   /** Bare exam name, e.g. "Platform Administrator". */
   bare: string
   /** Vendor prefix, e.g. "Salesforce". */
@@ -156,15 +213,30 @@ export interface ResolvedCertCluster {
 export function getCertKeywordCluster(slug: string): ResolvedCertCluster | undefined {
   const cluster = CERT_KEYWORD_CLUSTERS[slug]
   if (!cluster) return undefined
-  const { bare, vendor } = cluster
+  const { vendor } = cluster
   const registry = getCertAlias(slug)
+
+  /*
+   * `shortTitle` is the credential's CURRENT official name without its issuer
+   * prefix, which is what the alias registry holds and what the <title>, H1
+   * and credential JSON-LD already used. The cluster table's own `bare` is the
+   * name people still SEARCH for, and for 19 credentials the two differ --
+   * Salesforce renamed Field Service Consultant to Agentforce Field Service
+   * and Operations Consultant, Data Architect to Platform Data Architect,
+   * Health Cloud AP to Agentforce Health Professional. Titling a page with the
+   * old name contradicted its own H1, so the registry name wins here and the
+   * searched name is folded into `legacyNames`, where it still renders in the
+   * naming lead, the dumps/questions phrase sets and the JSON-LD aliases.
+   */
+  const bare = registry?.bare ?? cluster.bare
+  const searchedName = cluster.bare
 
   const codes = [...new Set([...getCertCodes(slug), ...cluster.aliases.filter(isExamCode)])]
   const legacyNames = [
     ...new Set(
       [
         ...cluster.aliases.filter((alias) => !isExamCode(alias)),
-        ...(registry?.bare && registry.bare !== bare ? [registry.bare] : []),
+        ...(searchedName !== bare ? [searchedName] : []),
         ...(registry?.former ?? []),
         ...(registry?.searchAliases ?? []),
       ].filter((name) => name !== bare && name !== `${vendor} ${bare}`),
@@ -176,19 +248,48 @@ export function getCertKeywordCluster(slug: string): ResolvedCertCluster | undef
     ? vendorName
     : `${vendor} Certified ${bare}`
 
+  const fullTitle = cluster.fullTitle ?? deriveFullTitle(bare)
+
+  // Every naming form a candidate pairs with "dumps" or "questions". The full
+  // official credential name is included: "Salesforce Certified Platform
+  // Developer I dumps" is its own query, distinct from "PD1 dumps".
+  const nameForms = [
+    ...new Set([
+      bare,
+      vendorName,
+      certifiedName,
+      fullTitle,
+      ...legacyNames,
+      // A renamed credential is searched for under its old name far more than
+      // its new one, and under the vendor-prefixed old name as well
+      // ("Salesforce Advanced Administrator dumps"). Those forms get the same
+      // treatment as the current name rather than appearing only as a bare
+      // alias.
+      ...legacyNames.map((name) => `${vendor} ${name}`),
+    ]),
+  ].filter((name) => !/^salesforce salesforce/i.test(name))
+
   const dumpPhrases = [
-    `${bare} dumps`,
-    `${vendorName} dumps`,
+    ...nameForms.map((name) => `${name} dumps`),
     ...codes.map((code) => `${code} dumps`),
-    ...legacyNames.map((name) => `${name} dumps`),
   ]
 
-  const alternateNames = [...new Set([bare, vendorName, certifiedName, ...legacyNames, ...codes])]
+  const questionPhrases = [
+    ...nameForms.map((name) => `${name} questions`),
+    ...codes.map((code) => `${code} questions`),
+  ]
+
+  const alternateNames = [...new Set([bare, vendorName, certifiedName, fullTitle, ...legacyNames, ...codes])]
 
   const keywords = [...new Set([
+    ...nameForms,
+    ...nameForms.map((name) => `${name} certification`),
     bare,
     vendorName,
     certifiedName,
+    fullTitle,
+    `${bare} questions`,
+    `${fullTitle} questions`,
     `${bare} certification`,
     `${vendorName} certification`,
     `${bare} study guide`,
@@ -200,6 +301,11 @@ export function getCertKeywordCluster(slug: string): ResolvedCertCluster | undef
   ])]
 
   return {
+    fullTitle,
+    shortTitle: bare,
+    searchedName,
+    examCodes: codes,
+    questionPhrases,
     bare,
     vendor,
     vendorName,
@@ -227,16 +333,29 @@ export function listNames(names: string[]): string {
 export function getDumpsFaqItem(slug: string): { question: string; answer: string } | undefined {
   const cluster = getCertKeywordCluster(slug)
   if (!cluster) return undefined
-  const { bare, vendorName, codes } = cluster
-  const codeSuffix = codes.length ? ` (${codes[0]} dumps)` : ''
+  const { shortTitle, fullTitle, examCodes, vendor, searchedName } = cluster
+  const issuer = vendor === 'Anthropic' ? 'Anthropic' : 'Salesforce'
+  // Both halves of the query cluster, named once each: "<name> dumps" and
+  // "<name> questions", for the short name, the full official credential name
+  // and every active and legacy exam code.
+  const codeDumps = examCodes.map((code) => `${code} dumps`)
+  const codeQuestions = examCodes.map((code) => `${code} questions`)
+  const dumpList = listNames([
+    ...new Set([`${searchedName} dumps`, `${shortTitle} dumps`, `${fullTitle} dumps`, ...codeDumps]),
+  ])
+  const questionList = listNames([
+    ...new Set([`${shortTitle} questions`, `${fullTitle} questions`, ...codeQuestions]),
+  ])
   return {
-    question: `Why should I use practice questions instead of ${bare} dumps or ${vendorName} dumps?`,
+    question: `Why should I use practice questions instead of ${searchedName} dumps or ${fullTitle} dumps?`,
     answer:
-      `Using ${bare} dumps or ${vendorName} dumps${codeSuffix} violates the certification ` +
-      `non-disclosure agreement (NDA) and can result in permanent credential revocation. In addition, ` +
-      `braindumps often contain outdated answers from older release cycles. Practicing with original, ` +
-      `scenario-based ${bare} practice questions and worked explanations prepares you for the live ` +
-      `proctored exam safely.`,
+      `Searches for ${dumpList} lead to recalled exam content. Using it violates the ` +
+      `certification non-disclosure agreement (NDA) you accept with ${issuer} when you register, and ` +
+      `can result in permanent credential revocation; braindumps also carry outdated answers from ` +
+      `older release cycles. Searches for ${questionList} are a different thing entirely, and they ` +
+      `are what this page answers: original, scenario-based items written from the published exam ` +
+      `outline, each with a worked explanation, which is what prepares you for the live proctored ` +
+      `exam safely.`,
   }
 }
 
@@ -253,7 +372,7 @@ export function getDumpsFaqItem(slug: string): { question: string; answer: strin
 export function getCertNamingLeadText(slug: string): string | undefined {
   const cluster = getCertKeywordCluster(slug)
   if (!cluster) return undefined
-  const { bare, vendorName, certifiedName, aliases } = cluster
+  const { bare, vendorName, certifiedName, aliases, searchedName, vendor } = cluster
   // certifiedName collapses to vendorName for credentials whose own name
   // already says "Certified" or "Accredited", so the list is deduped rather
   // than naming the same phrasing twice.
@@ -264,6 +383,11 @@ export function getCertNamingLeadText(slug: string): string | undefined {
       certifiedName,
       `${bare} certification`,
       `${vendorName} certification`,
+      // Where Salesforce has renamed the credential, the old name is the one
+      // with the search volume, so the lead states its query shapes as well.
+      ...(searchedName !== bare
+        ? [searchedName, `${searchedName} certification`, `${vendor} ${searchedName} certification`]
+        : []),
     ]),
   ]
   // An alias already named among the five query forms is not repeated in the

@@ -1,4 +1,5 @@
 import QuestionCard from '@/components/QuestionCard'
+import QuizScoreBar from '@/components/QuizScoreBar'
 import type { ImportedQuestionSource } from '@/lib/cert-page-spike/types'
 
 export interface SampleQuestion {
@@ -42,6 +43,7 @@ export default function PracticeQuestionsSection({
           this sample does not predict an exam result.
         </p>
       )}
+      <QuizScoreBar total={visibleQuestions.length} />
       <div className="space-y-6 sm:space-y-8">
         {(() => {
           const domainOrder = [

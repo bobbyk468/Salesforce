@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Validate 50–60 character titles and route-specific description ranges. */
+/** Validate route-specific title and description length ranges (content routes 50–60 / ≤130; certification pages 50–80 / ≤160). */
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { parseDocument } from 'htmlparser2'
@@ -12,6 +12,16 @@ const DESC_MIN = 100
 const DESC_MAX = 130
 const HUB_DESC_MIN = 135
 const HUB_DESC_MAX = 158
+// Certification pages carry a wider budget than the rest of the site. Their
+// <title> has to name the full official credential name (so "Certified" is in
+// it), the exam codes and the "questions" intent, and their description has to
+// name the credential, the "<name> questions" and "<code> questions"
+// phrasings, and the question count, pass mark and fee. Neither fits the
+// 60/130 budget the content routes keep. 80 and 160 are what Google renders.
+const CERT_TITLE_MIN = 50
+const CERT_TITLE_MAX = 80
+const CERT_DESC_MIN = 100
+const CERT_DESC_MAX = 160
 const reportPath = process.argv.find((arg) => arg.startsWith('--report='))?.slice('--report='.length)
 
 function* walkHtml(dir) {
@@ -46,11 +56,14 @@ for (const file of walkHtml(BUILD_DIR)) {
   const titleLength = Array.from(title).length
   const descriptionLength = Array.from(description).length
   const hub = route === '/' || route === '/certifications'
-  const descMin = hub ? HUB_DESC_MIN : DESC_MIN
-  const descMax = hub ? HUB_DESC_MAX : DESC_MAX
+  const cert = /^\/certifications\/(?!role(?:\/|$))[^/]+$/.test(route)
+  const descMin = cert ? CERT_DESC_MIN : hub ? HUB_DESC_MIN : DESC_MIN
+  const descMax = cert ? CERT_DESC_MAX : hub ? HUB_DESC_MAX : DESC_MAX
+  const titleMin = cert ? CERT_TITLE_MIN : TITLE_MIN
+  const titleMax = cert ? CERT_TITLE_MAX : TITLE_MAX
   const issues = []
   for (const [label, value, length, min, max] of [
-    ['TITLE', title, titleLength, TITLE_MIN, TITLE_MAX],
+    ['TITLE', title, titleLength, titleMin, titleMax],
     ['DESC', description, descriptionLength, descMin, descMax],
   ]) {
     if (!value) issues.push(`MISSING ${label}`)
@@ -67,7 +80,13 @@ if (pages.length === 0) {
   process.exit(1)
 }
 const report = {
-  ranges: { title: [TITLE_MIN, TITLE_MAX], description: [DESC_MIN, DESC_MAX], hubDescription: [HUB_DESC_MIN, HUB_DESC_MAX] },
+  ranges: {
+    title: [TITLE_MIN, TITLE_MAX],
+    description: [DESC_MIN, DESC_MAX],
+    hubDescription: [HUB_DESC_MIN, HUB_DESC_MAX],
+    certTitle: [CERT_TITLE_MIN, CERT_TITLE_MAX],
+    certDescription: [CERT_DESC_MIN, CERT_DESC_MAX],
+  },
   checked: pages.length,
   violations,
   pages,
@@ -75,4 +94,4 @@ const report = {
 if (reportPath) writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`)
 console.log(`\nChecked ${pages.length} pages. Violations: ${violations}`)
 if (violations > 0) process.exitCode = 1
-else console.log('All titles 50–60 chars and descriptions match route-specific ranges. ✓')
+else console.log('All titles and descriptions match route-specific ranges. ✓')

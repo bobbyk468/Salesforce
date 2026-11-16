@@ -4,9 +4,6 @@ import administratorSampleQuestionsJson from './administrator-sample-questions.j
 export const ADMINISTRATOR_SLUG = 'administrator' as const
 
 /** Administrator page description includes the current and legacy exam codes. */
-export const administratorMetadataDescription =
-  'Platform Administrator (Plat-Admn-201 / ADM-201) study guide with 20 free practice questions, exam weights, and a 68% pass mark.'
-
 /** ADM-201 section subtopics (compact for smaller HTML). */
 export const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
   'Configuration and Setup': ['Company settings', 'UI and accessibility', 'Login policies'],
