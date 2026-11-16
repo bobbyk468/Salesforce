@@ -209,44 +209,70 @@ sets.
 
 ## 4. Not done, and why
 
-### The ~45 exam codes in the brief were not added
+### Exam codes: 10 of the 11 re-submitted codes verified and added
 
-The brief assigned exam codes the repo has never carried, none of which could be
-verified against Trailhead Academy. Per the standing rule to diff any
-outside-drafted cert figures against `SLUG_TO_EXAM_LOGISTICS` before publishing
-(a drafted README previously carried 32 wrong passing scores), these were held:
+**Update, 16 Nov (follow-up).** Gemini re-submitted 11 codes with
+`trailheadacademy.salesforce.com/certificate/exam-...---CODE` URLs. Those URLs
+are real, and the first round of checking against them was wrong in a way worth
+recording so it is not repeated:
 
-`AP-201`–`AP-226` (all 23 Accredited Professionals), `App-Arch`, `Sys-Arch`,
-`CTA-Eval`, `CTA-Board`, `CCAO-F`, `CCDV-F`, `CCAR-F`, `CCAR-P`, `CRT-101`,
-`CRT-403`, `DEV-450`, `MC-101-BC`, `MCD - Level 1`, `CRMA-Con-201`,
-`Edu-Con-201`, `EX-Con-101`, `MCAE-Con-201`, `MCPA`, `MCIA`.
+- `curl` returns HTTP **200 with a byte-identical 84,588-byte SPA shell for any
+  path**, including `exam-this-does-not-exist---ZZ-000`. HTTP status proves
+  nothing on this route.
+- The route is **not in the sitemap**. `sitemap-view-1.xml` has 35 URLs and zero
+  `/certificate/` entries, so absence from the sitemap proves nothing either.
+- The pattern differs from the `trailhead.salesforce.com/credentials/<name>`
+  URLs this repo already stores, which made it look invented. It is a second,
+  parallel URL space.
 
-**If Gemini can cite an issuer page for any of these, they go straight in** —
-`examCodes` is one registry field and the title, description, Quick Facts, schema
-and phrase sets all follow from it.
+The method that does work: **render the URL in a browser.** A real code loads the
+credential page (name, fee, question count, duration, prerequisite); a wrong one
+renders an error with the title stuck at "Certification Product Detail" and no
+credential name. Verified against the bogus control `---AP-999` before trusting
+any result.
 
-Instead, the 31 credentials whose issuer publishes no exam code carry
-`examCodes: []` and render **no** code, which fixed a real defect the brief
-flagged: `CertificationCard` was falling back to the page-data `code` field,
-which held `"AP"` on all 23 AP cards and the credential's own name
-(`"Business Analyst"`, `"Strategy Designer"`, `"Application Architect"`,
-`"Data Architect"`) in the exam code's position. The card now reads the code only
-from the registry.
+Added, each confirmed by a rendered issuer page:
 
-The 31: `application-architect`, `system-architect`,
-`technical-architect-evaluation`, `technical-architect-review-board`,
-`advanced-field-service-ap`, `b2b-commerce-admin-ap`,
-`b2b-commerce-developer-ap`, `communications-cloud-ap`,
-`consumer-goods-cloud-ap`, `consumer-goods-tpm-ap`, `contact-center-ap`,
-`cpq-billing-ap`, `energy-utilities-ap`, `financial-services-cloud-ap`,
-`health-cloud-ap`, `heroku-developer-ap`, `loyalty-management-ap`,
-`manufacturing-cloud-ap`, `marketing-cloud-advanced-cross-channel-ap`,
-`marketing-cloud-intelligence-ap`, `marketing-cloud-personalization-ap`,
-`media-cloud-ap`, `net-zero-cloud-ap`, `order-management-admin-ap`,
-`order-management-developer-ap`, `process-automation-ap`,
-`public-sector-solutions-ap`, `claude-certified-associate`,
-`claude-certified-developer`, `claude-certified-architect-foundations`,
-`claude-certified-architect-professional`.
+| Slug | Code | Issuer page title rendered |
+|---|---|---|
+| `b2b-commerce-admin-ap` | `AP-201` | Salesforce Accredited B2B Commerce Administrator Professional |
+| `advanced-field-service-ap` | `AP-209` | Advanced Field Service Accredited Professional |
+| `health-cloud-ap` | `AP-211` | Salesforce Accredited Agentforce Health Professional |
+| `loyalty-management-ap` | `AP-212` | Loyalty Management Accredited Professional |
+| `net-zero-cloud-ap` | `AP-218` | Net Zero Cloud Accredited Professional |
+| `order-management-developer-ap` | `AP-220` | Order Management Developer Accredited Professional |
+| `cpq-billing-ap` | `AP-223` | CPQ and Billing Consultant Accredited Professional |
+| `heroku-developer-ap` | `AP-225` | Heroku Developer Accredited Professional |
+| `education-cloud-consultant` | `ED-Con-101` | Salesforce Certified Education Cloud Consultant |
+| `experience-cloud` | `EX-Con-101` | Salesforce Certified Experience Cloud Consultant |
+
+The Health Cloud page also corroborated our stored facts independently: $150 fee,
+$150 retake, 60 questions, 90 minutes, Prerequisite None. And every AP page's
+credential name matched the `deriveFullTitle` output exactly, which is a useful
+check on the naming rule itself.
+
+`ED-Con-101` and `EX-Con-101` are the issuer's **current** codes, so
+`Edu-Con-201` and `CRT-271` moved to `legacy` rather than sitting alongside.
+
+**Still held: `AP-222` for `public-sector-solutions-ap`.** The cited URL renders
+the same error state as the bogus control, on two attempts, and two plausible
+slug spellings (`exam-agentforce-360-public-sector---AP-222`,
+`exam-public-sector-ap---AP-222`) fail the same way. The credential itself is
+real — `trailhead.salesforce.com/credentials/publicsectorsolutionsaccreditedprofessional`
+renders "Salesforce Accredited Agentforce 360 for Public Sector Professional" —
+but no page could be found that ties it to AP-222. If Gemini has the working
+URL, that is the last one to add.
+
+Code count is now **72 of 95 credentials with a verified code, 23 without**
+(down from 31). The 23 remaining: the 2 composite Architect credentials, the 2
+CTA stages, 15 Accredited Professionals including `public-sector-solutions-ap`,
+and the 4 Claude credentials.
+
+The other codes from the original brief (`App-Arch`, `Sys-Arch`, `CTA-Eval`,
+`CTA-Board`, `CCAO-F`, `CCDV-F`, `CCAR-F`, `CCAR-P`, `CRT-101`, `CRT-403`,
+`DEV-450`, `MC-101-BC`, `MCD - Level 1`, `CRMA-Con-201`, `MCAE-Con-201`) remain
+held — no issuer page has been found for any of them. The browser method above
+is cheap to run, so a working URL is all that is needed for each.
 
 ### Issuer prefix for Tableau, Slack and Claude
 
@@ -361,7 +387,27 @@ Once the deploy lands, the useful re-audit is:
    `VERIFY_BASE_URL=https://www.trailblazeprep.com node scripts/verify-sitewide-audit.mjs`
    and the same for `verify-95-certs-accuracy-and-uniqueness.mjs`.
 2. Confirm the combined-fee KPI reads `$29,625` and fits its card.
-3. Spot-check the 80-character titles as Google renders them — if truncation in
-   the SERP is worse than the lexical gain, the budget is one constant
-   (`MAX_CERT_TITLE_LENGTH`) to turn back down.
-4. Cite issuer sources for any of the §4 exam codes that are real.
+3. **Done (16 Nov follow-up).** Titles now keep the word "Questions" inside the
+   visible window. `MAX_CERT_TITLE_LENGTH` stays 80, but `buildCertTitle` gained
+   a second, tighter limit: `MULTI_CODE_TITLE_LIMIT = 65`. A two-code title is
+   only taken while it stays inside 65 characters; past that the title carries
+   the single most-searched code and spends the room on the credential name.
+   Selection then prefers, among the candidates that fit, one whose "Questions"
+   starts at or before character 65 and which still carries an exam code.
+
+   | | Before | After |
+   |---|---|---|
+   | `administrator` | `… (Plat-Admn-201 / ADM-201) Questions` — "Questions" at 71 | `Salesforce Certified Platform Administrator (ADM-201) Questions & Study Guide` — at 54 |
+   | `developer-1` | `… (PD1 / Plat-Dev-201) Questions & Guide` — at 63 | `Salesforce Certified Platform Developer I (PD1) Questions & Study Guide` — at 48 |
+
+   Across all 95: **0 titles** now start "Questions" past character 65 (was 15),
+   and only 2 credentials carry no code in the title (was 8) —
+   `identity-access-management-architect` and
+   `dev-lifecycle-deployment-architect`, whose names alone are 49 and 55
+   characters. Every code remains in the H1, the description, Quick Facts and
+   the phrase sets.
+
+   The rule lives in `buildCertTitle` in `src/lib/cert-alias-registry.ts`, not
+   in `seo-title-helpers.ts` — the latter builds titles for the non-certification
+   content routes.
+4. Cite a working issuer URL for `AP-222`, and for any of the other held codes in §4. The browser-render check is the test each has to pass.

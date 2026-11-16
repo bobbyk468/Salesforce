@@ -278,7 +278,8 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'education-cloud-consultant': {
     bare: 'Education Cloud Consultant',
-    code: 'Edu-Con-201',
+    code: 'ED-Con-101',
+    legacy: ['Edu-Con-201'],
     searchAliases: ['Salesforce Education Cloud Consultant', 'Salesforce Certified Education Cloud Consultant'],
     title: 'Education Cloud Consultant Historical Exam Guide & Notes',
     h1: 'Salesforce Certified Education Cloud Consultant: Archived Exam Notes & Practice Questions (Retiring Feb 2027)',
@@ -293,7 +294,8 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'experience-cloud': {
     bare: 'Experience Cloud Consultant',
-    code: 'CRT-271',
+    code: 'EX-Con-101',
+    legacy: ['CRT-271'],
     former: ['Community Cloud Consultant'],
     searchAliases: ['Salesforce Experience Cloud Consultant', 'Salesforce Certified Experience Cloud Consultant', 'Salesforce Certified Community Cloud Consultant'],
     title: 'Salesforce Experience Cloud Consultant (CRT-271) Exam Guide',
@@ -611,6 +613,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   // Active Accredited Professional
   'b2b-commerce-admin-ap': {
     bare: 'B2B Commerce Administrator Accredited Professional',
+    code: 'AP-201',
     former: ['B2B Commerce Admin Accredited Professional'],
     searchAliases: ['Salesforce Accredited B2B Commerce Administrator Professional', 'B2B Commerce for Administrators Accredited Professional', 'B2B Commerce Admin AP'],
     title: 'Salesforce Accredited B2B Commerce Administrator AP Guide',
@@ -645,6 +648,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'health-cloud-ap': {
     bare: 'Agentforce Health Professional',
+    code: 'AP-211',
     former: ['Health Cloud Accredited Professional'],
     searchAliases: ['Salesforce Accredited Agentforce Health Professional', 'Agentforce Health Accredited Professional', 'Health Cloud AP'],
     title: 'Salesforce Accredited Agentforce Health AP Study Guide',
@@ -668,6 +672,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   // Retiring Accredited Professional (exams closed August 31, 2026)
   'advanced-field-service-ap': {
     bare: 'Advanced Field Service Accredited Professional',
+    code: 'AP-209',
     title: 'Advanced Field Service Accredited Professional Guide',
     h1: 'Advanced Field Service Accredited Professional Study Guide & Practice Questions (Retiring Feb 2027)',
   },
@@ -683,6 +688,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'cpq-billing-ap': {
     bare: 'CPQ and Billing Consultant Accredited Professional',
+    code: 'AP-223',
     title: 'CPQ and Billing Consultant Accredited Professional Guide',
     h1: 'CPQ and Billing Consultant Accredited Professional Study Guide & Practice Questions (Retiring Feb 2027)',
   },
@@ -693,11 +699,13 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'heroku-developer-ap': {
     bare: 'Heroku Developer Accredited Professional',
+    code: 'AP-225',
     title: 'Heroku Developer Accredited Professional Study Guide',
     h1: 'Heroku Developer Accredited Professional Study Guide & Practice Questions (Retiring Feb 2027)',
   },
   'loyalty-management-ap': {
     bare: 'Loyalty Management Accredited Professional',
+    code: 'AP-212',
     title: 'Loyalty Management Accredited Professional Study Guide',
     h1: 'Loyalty Management Accredited Professional Study Guide & Practice Questions (Retiring Feb 2027)',
   },
@@ -723,6 +731,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'net-zero-cloud-ap': {
     bare: 'Net Zero Cloud Accredited Professional',
+    code: 'AP-218',
     title: 'Net Zero Cloud Accredited Professional Study Guide',
     h1: 'Net Zero Cloud Accredited Professional Study Guide & Practice Questions (Retiring Feb 2027)',
   },
@@ -733,6 +742,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   },
   'order-management-developer-ap': {
     bare: 'Order Management Developer Accredited Professional',
+    code: 'AP-220',
     title: 'Order Management Developer Accredited Professional',
     h1: 'Order Management Developer Accredited Professional Study Guide & Practice Questions (Retiring Feb 2027)',
   },
@@ -841,30 +851,42 @@ export function buildCertTitle(options: {
 }): string {
   const { fullTitle, shortTitle, codes } = options
   const suffixes = options.suffixes ?? ['Questions & Study Guide', 'Questions & Guide', 'Questions']
-  // The code a candidate types is usually the short legacy one (PD1, ADM-201),
-  // while the code the issuer lists is the long current one (Plat-Dev-201).
-  // Where only two fit, carry the searched code first and the official code
-  // second: "(PD1 / Plat-Dev-201)".
-  const shortestCode = [...codes].sort((a, b) => a.length - b.length)[0]
-  const searchedPair = [...new Set([shortestCode, codes[0]].filter(Boolean))]
-  // Code groups, widest first, with duplicates and the empty group removed.
-  // The empty group used to be generated whenever a credential had one code
-  // (so the "two codes" variant collapsed to nothing) and, sitting above the
-  // single-code variant, it won every time the all-codes variant was too
-  // long: "Salesforce Certified MuleSoft Developer II Questions & Study Guide"
-  // fitted and dropped Mule-Dev-301 from the title entirely.
-  const codeGroups = [
+
+  /*
+   * Two exam codes are worth carrying, but not at the cost of pushing
+   * "Questions" past where Google stops drawing the title (about 600px, call
+   * it 65 characters). A multi-code title is therefore only taken while it
+   * stays inside MULTI_CODE_TITLE_LIMIT; past that the title falls back to a
+   * single code and spends the room on the credential name instead, so
+   * "Salesforce Certified Platform Administrator (Plat-Admn-201 / ADM-201)
+   * Questions" becomes "Salesforce Certified Platform Administrator (ADM-201)
+   * Questions & Study Guide" -- same intent, "Questions" 20 characters
+   * earlier. Every code stays in the H1, the description and Quick Facts.
+   */
+  const MULTI_CODE_TITLE_LIMIT = 65
+
+  // The code a candidate types is usually the short legacy one (PD1,
+  // ADM-201), while the code the issuer lists is the long current one
+  // (Plat-Dev-201). Length is the proxy for "most searched" here, and it holds
+  // across the registry: the legacy codes are the short ones.
+  const mostSearchedCode = [...codes].sort((a, b) => a.length - b.length)[0]
+  const searchedPair = [...new Set([mostSearchedCode, codes[0]].filter(Boolean))]
+
+  // Multi-code groups, widest first, deduplicated and with the empty group
+  // dropped. The empty group used to be generated whenever a credential had a
+  // single code (so the "two codes" variant collapsed to nothing) and, sitting
+  // above the single-code variant, it won whenever the all-codes variant was
+  // too long -- dropping the code from the title altogether.
+  const multiCodeGroups = [
     ...new Set(
       [
         codes.length > 1 ? codes.join(' / ') : '',
         searchedPair.length > 1 ? searchedPair.join(' / ') : '',
-        codes[0] ?? '',
       ].filter(Boolean),
     ),
   ].map((group) => ` (${group})`)
-  // Longest-first: full credential name with every code, then fewer codes,
-  // then the name alone, then the same again without the issuer prefix. The
-  // "questions" intent is in every candidate, so it is never what gets dropped.
+  const singleCodeGroup = mostSearchedCode ? [` (${mostSearchedCode})`] : []
+
   /**
    * Last-resort compaction for the few credential names that fill the budget
    * on their own. "Consumer Goods Cloud: Trade Promotion Management Accredited
@@ -878,37 +900,67 @@ export function buildCertTitle(options: {
     .replace(/\s+and\s+/gi, ' & ')
     .replace(/\s{2,}/g, ' ')
     .trim()
-  const stems = [
-    ...codeGroups.map((group) => `${fullTitle}${group}`),
-    // The exam code is worth more in a title than the "Salesforce Certified"
-    // prefix: a candidate types "MCE-Con-201", and the full credential name is
-    // in the H1 and the description either way. Credentials with names long
-    // enough to crowd out the code (the Marketing Cloud and Architect ones)
-    // keep the code and drop the prefix rather than the reverse.
-    ...codeGroups.map((group) => `${shortTitle}${group}`),
-    fullTitle,
-    shortTitle,
-    ...(compactShortTitle !== shortTitle
-      ? [...codeGroups.map((group) => `${compactShortTitle}${group}`), compactShortTitle]
-      : []),
-  ]
-  const candidates = [
-    ...new Set(stems.flatMap((stem) => suffixes.map((suffix) => `${stem} ${suffix}`))),
-  ]
-  // Sort longest-first so a shorter suffix on a richer stem beats a longer
-  // suffix on a bare name: the codes are worth more than the word "Study".
-  const ordered = stems.flatMap((stem) => suffixes.map((suffix) => `${stem} ${suffix}`))
-  const fits = ordered.filter((candidate) => candidate.length <= MAX_CERT_TITLE_LENGTH)
-  // For most credentials `fullTitle` contains `shortTitle` ("Salesforce
-  // Certified Platform Developer I" contains "Platform Developer I"), so this
-  // changes nothing. Where the issuer puts "Certified" in the middle of its
-  // own name -- "Tableau Certified Data Analyst", "Slack Certified
-  // Administrator" -- the full title does *not* contain the searched form, and
-  // the searched form is what has to be in the title.
+
+  /*
+   * Candidates in preference order, each with the limit that applies to it.
+   * The full credential name is tried before the bare one at every step, so
+   * "Certified" is only dropped once the name plus a single code no longer
+   * fits; a multi-code variant carries the tighter limit.
+   */
+  const names = [...new Set([fullTitle, shortTitle, compactShortTitle])]
+  const candidates: { title: string; limit: number }[] = []
+  for (const name of names) {
+    for (const group of multiCodeGroups) {
+      for (const suffix of suffixes) {
+        candidates.push({ title: `${name}${group} ${suffix}`, limit: MULTI_CODE_TITLE_LIMIT })
+      }
+    }
+    for (const group of singleCodeGroup) {
+      for (const suffix of suffixes) {
+        candidates.push({ title: `${name}${group} ${suffix}`, limit: MAX_CERT_TITLE_LENGTH })
+      }
+    }
+    for (const suffix of suffixes) {
+      candidates.push({ title: `${name} ${suffix}`, limit: MAX_CERT_TITLE_LENGTH })
+    }
+  }
+
+  const fits = candidates
+    .filter(({ title, limit }) => title.length <= limit)
+    .map(({ title }) => title)
+
+  /*
+   * Preference over the candidates that fit.
+   *
+   * `shortTitle` has to be present: for most credentials `fullTitle` contains
+   * it anyway, but where the issuer puts "Certified" inside its own name
+   * ("Tableau Certified Data Analyst", "Slack Certified Administrator") the
+   * full title does not contain the form a candidate types.
+   *
+   * Beyond that, two things are worth more than the "Salesforce Certified"
+   * prefix, because the full credential name is in the H1, the description and
+   * Quick Facts either way:
+   *
+   *  - "Questions" starting inside the visible window. A title whose
+   *    credential name alone runs 55 characters pushes the word past where
+   *    Google stops drawing, which is the whole point of the limit above.
+   *  - An exam code. The longest names crowd the code out of every
+   *    prefixed variant while the bare name still has room for it.
+   */
+  const carriesCode = (title: string) =>
+    codes.length === 0 || codes.some((code) => title.includes(code))
+  const questionsVisible = (title: string) => {
+    const at = title.indexOf('Questions')
+    return at >= 0 && at <= MULTI_CODE_TITLE_LIMIT
+  }
+  const named = fits.filter((candidate) => candidate.includes(shortTitle))
   return (
-    fits.find((candidate) => candidate.includes(shortTitle)) ??
+    named.find((candidate) => questionsVisible(candidate) && carriesCode(candidate)) ??
+    named.find((candidate) => questionsVisible(candidate)) ??
+    named.find((candidate) => carriesCode(candidate)) ??
+    named[0] ??
     fits.find((candidate) => candidate.includes(compactShortTitle)) ??
     fits[0] ??
-    candidates[candidates.length - 1]
+    `${compactShortTitle} ${suffixes[suffixes.length - 1]}`
   )
 }

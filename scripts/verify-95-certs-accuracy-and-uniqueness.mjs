@@ -233,6 +233,7 @@ const ALL_95_CERTS = [
       "full": "Salesforce Certified Education Cloud Consultant",
       "short": "Education Cloud Consultant",
       "codes": [
+        "ED-Con-101",
         "Edu-Con-201"
       ]
     },
@@ -241,6 +242,7 @@ const ALL_95_CERTS = [
       "full": "Salesforce Certified Experience Cloud Consultant",
       "short": "Experience Cloud Consultant",
       "codes": [
+        "EX-Con-101",
         "CRT-271"
       ]
     },
@@ -502,13 +504,17 @@ const ALL_95_CERTS = [
       "slug": "advanced-field-service-ap",
       "full": "Salesforce Accredited Advanced Field Service Professional",
       "short": "Advanced Field Service Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-209"
+      ]
     },
     {
       "slug": "b2b-commerce-admin-ap",
       "full": "Salesforce Accredited B2B Commerce Administrator Professional",
       "short": "B2B Commerce Administrator Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-201"
+      ]
     },
     {
       "slug": "b2b-commerce-developer-ap",
@@ -544,7 +550,9 @@ const ALL_95_CERTS = [
       "slug": "cpq-billing-ap",
       "full": "Salesforce Accredited CPQ and Billing Consultant Professional",
       "short": "CPQ and Billing Consultant Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-223"
+      ]
     },
     {
       "slug": "energy-utilities-ap",
@@ -562,19 +570,25 @@ const ALL_95_CERTS = [
       "slug": "health-cloud-ap",
       "full": "Salesforce Accredited Agentforce Health Professional",
       "short": "Agentforce Health Professional",
-      "codes": []
+      "codes": [
+        "AP-211"
+      ]
     },
     {
       "slug": "heroku-developer-ap",
       "full": "Salesforce Accredited Heroku Developer Professional",
       "short": "Heroku Developer Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-225"
+      ]
     },
     {
       "slug": "loyalty-management-ap",
       "full": "Salesforce Accredited Loyalty Management Professional",
       "short": "Loyalty Management Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-212"
+      ]
     },
     {
       "slug": "manufacturing-cloud-ap",
@@ -610,7 +624,9 @@ const ALL_95_CERTS = [
       "slug": "net-zero-cloud-ap",
       "full": "Salesforce Accredited Net Zero Cloud Professional",
       "short": "Net Zero Cloud Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-218"
+      ]
     },
     {
       "slug": "order-management-admin-ap",
@@ -622,7 +638,9 @@ const ALL_95_CERTS = [
       "slug": "order-management-developer-ap",
       "full": "Salesforce Accredited Order Management Developer Professional",
       "short": "Order Management Developer Accredited Professional",
-      "codes": []
+      "codes": [
+        "AP-220"
+      ]
     },
     {
       "slug": "process-automation-ap",

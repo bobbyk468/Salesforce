@@ -148,18 +148,18 @@ const PAGE_SPECS = {
 
   // Track 2: Administrator (#5 - #12)
   "administrator": { title: ["Salesforce Certified Platform Administrator", "ADM-201"], must: ["Plat-Admn-201", "ADM-201", "68%", "Pearson VUE", "Trailhead Academy"], forbid: ["Webassessor/Kryterion"] },
-  "advanced-administrator": { title: ["Platform Administrator II", "Plat-Admn-301"], must: ["Plat-Admn-301", "ADM-211", "65%", "Security and Access", "Process Automation"], forbid: ["Security and Organization Setup are heavily weighted"] },
-  "app-builder": { title: ["Platform App Builder", "Plat-Admn-202"], must: ["Plat-Admn-202", "DEV-402", "73%", "32%", "Agentforce", "three times a year"], forbid: ["once a year on Trailhead"] },
+  "advanced-administrator": { title: ["Platform Administrator II", "ADM-211"], must: ["Plat-Admn-301", "ADM-211", "65%", "Security and Access", "Process Automation"], forbid: ["Security and Organization Setup are heavily weighted"] },
+  "app-builder": { title: ["Platform App Builder", "DEV-402"], must: ["Plat-Admn-202", "DEV-402", "73%", "32%", "Agentforce", "three times a year"], forbid: ["once a year on Trailhead"] },
   "agentforce-specialist": { title: ["Agentforce Specialist", "AI-201"], must: ["AI-201", "Agent Force Specialist", "72%", "35%", "Agent Script", "Model Context Protocol", "Agent-to-Agent"], forbid: ["3-Week Agentforce Specialist Study Plan"] },
   "business-analyst": { title: ["Business Analyst", "BA-201"], must: ["BA-201", "72%", "Collaboration with Stakeholders", "23%"], forbid: ["Requirements and Solution Design are 50%", "anu suipe ana choose"] },
-  "cpq-administrator": { title: ["CPQ Administrator", "Sales-Admn-202"], must: ["Sales-Admn-202", "CPQ-211", "2027", "CPQ Platform", "23%", "17%"], forbid: ["Bundle Configurations (25%), Pricing (20%), and Quote Templates (15%)"] },
+  "cpq-administrator": { title: ["CPQ Administrator", "CPQ-211"], must: ["Sales-Admn-202", "CPQ-211", "2027", "CPQ Platform", "23%", "17%"], forbid: ["Bundle Configurations (25%), Pricing (20%), and Quote Templates (15%)"] },
   "marketing-cloud-engagement-admin": { title: ["Marketing Cloud Engagement Administrator", "MCE-Admn-201"], must: ["MCE-Admn-201", "67%", "Setup", "38%"], forbid: ["All four sections are 25%", "90-minute time limit"] },
   "slack-administrator": { title: ["Slack Administrator", "Slack-Admn-201"], must: ["Slack-Admn-201", "65%", "Governance, Security and Compliance", "22%"], forbid: ["no published pass markdiscount"] },
 
   // Track 3: Developer (#13 - #23)
-  "developer-1": { title: ["Platform Developer", "Plat-Dev-201"], must: ["Plat-Dev-201", "PD1", "68%", "28%", "27%", "Agentforce for Developers"], forbid: ["Logic and User Interface are 50% combined", "Logic and Process Automation (38%)"] },
-  "developer-2": { title: ["Platform Developer II", "Plat-Dev-301"], must: ["Plat-Dev-301", "PD2", "70%", "$200", "27%"], forbid: ["Exam fee: $400", "Design Patterns (25%)"] },
-  "javascript-developer-i": { title: ["JavaScript Developer", "JS-Dev-101"], must: ["JS-Dev-101", "CRT-600", "65%", "Objects, Functions, and Classes", "25%", "23%"], forbid: ["LWC and Aura are 30%"] },
+  "developer-1": { title: ["Platform Developer", "PD1"], must: ["Plat-Dev-201", "PD1", "68%", "28%", "27%", "Agentforce for Developers"], forbid: ["Logic and User Interface are 50% combined", "Logic and Process Automation (38%)"] },
+  "developer-2": { title: ["Platform Developer II", "PD2"], must: ["Plat-Dev-301", "PD2", "70%", "$200", "27%"], forbid: ["Exam fee: $400", "Design Patterns (25%)"] },
+  "javascript-developer-i": { title: ["JavaScript Developer", "CRT-600"], must: ["JS-Dev-101", "CRT-600", "65%", "Objects, Functions, and Classes", "25%", "23%"], forbid: ["LWC and Aura are 30%"] },
   "b2c-commerce-developer": { title: ["B2C Commerce Developer", "CRT-500"], must: ["Comm-Dev-101", "CRT-500", "65%", "Application Development", "53%"], forbid: ["B2C Commerce Architecture and Storefront/Scripts are 55%", "SFRA Architecture & Cartridges"] },
   "industries-cpq-developer": { title: ["Industries CPQ Developer", "Ind-Dev-201"], must: ["Ind-Dev-201", "2027", "63%", "Products", "Troubleshooting", "20%"], forbid: ["Product Catalogue Management"] },
   "marketing-cloud-engagement-developer": { title: ["Marketing Cloud Engagement Developer", "MCE-Dev-201"], must: ["MCE-Dev-201", "63%", "Programmatic Languages", "35%", "Marketing Cloud Engagement Specialist"], forbid: ["~67% passing score", "Marketing Cloud Development and AMPscript/SSJS are 55%"] },
@@ -183,8 +183,8 @@ const PAGE_SPECS = {
   "omnistudio-consultant": { title: ["OmniStudio Consultant", "Plat-Con-201"], must: ["Plat-Con-201", "67%", "Flexcards", "Data Mappers", "Omnistudio Fundamentals", "Best Fit Solutions", "18%", "17%"], forbid: ["OmniStudio Overview and Digital Flows/FlexCards are 55%"] },
   "public-sector-solutions-consultant": { title: ["Public Sector Solutions Consultant", "PubSec-Con-201"], must: ["PubSec-Con-201", "72%", "Foundational Knowledge of the Product", "36%", "32%"], forbid: ["Passing score: Not published"] },
   "revenue-cloud-consultant": { title: ["Revenue Management Consultant", "Rev-Con-201"], must: ["Rev-Con-201", "63%", "18%", "16%"], forbid: ["CPQ Configuration and Quoting/Contracts are 55%"] },
-  "sales-cloud": { title: ["Agentforce Sales Consultant", "Sales-Con-201"], must: ["Sales-Con-201", "CRT-251", "73%", "25%", "24%", "Predictive and Generative AI"], forbid: ["passing score of 65%"] },
-  "service-cloud": { title: ["Agentforce Service Consultant", "Service-Con-201"], must: ["Service-Con-201", "CRT-261", "78%", "15%", "13%"], forbid: [] },
+  "sales-cloud": { title: ["Agentforce Sales Consultant", "CRT-251"], must: ["Sales-Con-201", "CRT-251", "73%", "25%", "24%", "Predictive and Generative AI"], forbid: ["passing score of 65%"] },
+  "service-cloud": { title: ["Agentforce Service Consultant", "CRT-261"], must: ["Service-Con-201", "CRT-261", "78%", "15%", "13%"], forbid: [] },
   "slack-consultant": { title: ["Slack Consultant", "Slack-Con-201"], must: ["Slack-Con-201", "67%", "90", "22%", "18%"], forbid: [] },
 
   // Track 5: Marketing (#40 - #42)
@@ -198,7 +198,7 @@ const PAGE_SPECS = {
   "integration-architect": { title: ["Platform Integration Architect", "Plat-Arch-204"], must: ["Plat-Arch-204", "67%", "28%", "23%", "22%"], forbid: ["Yes, Application Architect is typically required", "Integration Architecture and Patterns are 55%"] },
   "sharing-visibility-architect": { title: ["Platform Sharing and Visibility Architect", "Plat-Arch-205"], must: ["Plat-Arch-205", "58%", "39%", "27%"], forbid: ["(27%): 27%"] },
   "system-architect": { title: ["System Architect"], must: ["Platform Developer", "Platform Integration Architect", "Platform Identity and Access Management Architect", "Platform Development Lifecycle and Deployment Architect"], forbid: [] },
-  "identity-access-management-architect": { title: ["Platform Identity and Access Management Architect", "Plat-Arch-203"], must: ["Plat-Arch-203", "65%", "21%", "18%", "17%"], forbid: [] },
+  "identity-access-management-architect": { title: ["Platform Identity and Access Management Architect"], must: ["Plat-Arch-203", "65%", "21%", "18%", "17%"], forbid: [] },
   "dev-lifecycle-deployment-architect": { title: ["Platform Development Lifecycle and Deployment Architect"], must: ["Plat-Arch-202", "65%", "15%", "14%"], forbid: [] },
   "technical-architect": { title: ["Technical Architect (CTA)"], must: ["$6,000", "$1,500", "$4,500", "Application Architect", "System Architect"], forbid: ["5 domain exams (with 2 overlapping)"] },
   "technical-architect-evaluation": { title: ["Technical Architect - Architect Evaluation"], must: ["135", "$1,500", "Application Architect", "System Architect"], forbid: ["approximately 60 multiple-choice questions and a 120-minute time limit", "two proctored multiple-choice assessments"] },
@@ -208,7 +208,7 @@ const PAGE_SPECS = {
   "b2c-solution-architect": { title: ["B2C Solution Architect", "Arch-302"], must: ["Arch-302", "63%", "27%", "25%", "23%", "Platform App Builder", "Data Architect", "Integration Architect"], forbid: [] },
   "heroku-architect": { title: ["Heroku Architect", "Plat-Arch-206"], must: ["Plat-Arch-206", "72%", "28%", "17%"], forbid: [] },
   "mulesoft-catalyst-consultant": { title: ["MuleSoft Catalyst Consultant", "Mule-Con-201"], must: ["Mule-Con-201", "2027", "45", "90", "70%"], forbid: ["60 questions, 120 mins"] },
-  "mulesoft-platform-architect": { title: ["MuleSoft Platform Architect", "Mule-Arch-201"], must: ["Mule-Arch-201", "70%", "17%", "12%"], forbid: ["58% passing score"] },
+  "mulesoft-platform-architect": { title: ["MuleSoft Platform Architect", "MCPA"], must: ["Mule-Arch-201", "70%", "17%", "12%"], forbid: ["58% passing score"] },
   "mulesoft-integration-architect": { title: ["MuleSoft Platform Integration Architect"], must: ["Mule-Arch-202", "70%", "15%", "14%"], forbid: ["Integration Architecture is 30%"] },
 
   // Track 7: Accredited Professional (#60 - #82)
