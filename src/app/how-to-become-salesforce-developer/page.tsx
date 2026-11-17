@@ -107,8 +107,6 @@ export default function HowToBecomeSalesforceDeveloperPage() {
       {/* Header */}
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Career Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -119,6 +117,8 @@ export default function HowToBecomeSalesforceDeveloperPage() {
           Follow the path from learning Salesforce development to PD1 certification and your first development role. Review the skills and study resources along the way.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

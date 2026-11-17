@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: 'Do all Salesforce exams have the same passing score?',
-    answer: 'No. Associate exams ($75) typically require about 70%. Specialist and Professional exams ($200) generally require 62–68%, depending on the exam. Architect exams ($400) often require about 67%. Salesforce does not disclose every exact threshold; some figures come from candidate reports and study guide publishers.',
+    answer: 'No. Associate exams ($75) typically require about 62–70%. Specialist, Professional, and Consultant exams ($200) span 62–73%: Platform App Builder needs 73% and Agentforce Specialist needs 72%, while others sit nearer 62–68%. Architect exams ($400) range from 58% to about 70%. Always check the official exam guide for your specific exam.',
   },
   {
     question: 'How is the Salesforce exam score calculated?',
@@ -62,8 +62,8 @@ const faqItems = [
 
 const passingScores = [
   { tier: 'Associate', fee: '$75', typicalScore: '62-70%', examples: 'Platform Foundations, MuleSoft Integration Foundations, AI Associate (retired Feb 2026)' },
-  { tier: 'Specialist', fee: '$200', typicalScore: '~62–65%', examples: 'Email Specialist, Pardot Specialist, Platform Developer I' },
-  { tier: 'Professional / Consultant', fee: '$200', typicalScore: '~63–68%', examples: 'Administrator, Sales Cloud Consultant, Service Cloud Consultant' },
+  { tier: 'Specialist', fee: '$200', typicalScore: '62–73%', examples: 'Email Specialist (67%), Platform Developer I (68%), Pardot Specialist (72%), Agentforce Specialist (72%)' },
+  { tier: 'Professional / Consultant', fee: '$200', typicalScore: '62–73%', examples: 'Administrator (68%), Sales Cloud Consultant, Service Cloud Consultant, Platform App Builder (73%)' },
   { tier: 'Architect', fee: '$400', typicalScore: '58-70%', examples: 'Integration Architect, Data Architect, Sharing & Visibility Architect' },
   { tier: 'Technical Architect (CTA)', fee: 'Board Review', typicalScore: 'N/A: Board evaluation', examples: 'Live presentation, no multiple-choice score' },
 ]
@@ -75,8 +75,6 @@ export default function SalesforceCertificationPassingScorePage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Exam Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -87,6 +85,8 @@ export default function SalesforceCertificationPassingScorePage() {
           Salesforce lists exact passing scores in official exam guides. This page shows verified scores where a guide is available. Scores range from 48% to 78%. Salesforce does not publish numerical cut scores for Accredited Professional and board-reviewed exams.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <p className="text-sm text-amber-800"><strong>Note:</strong> figures below come from official Salesforce exam guides rather than estimates. Salesforce does not publish a numerical passing score for Accredited Professional and board-reviewed exams. On practice tests, aim about ten points above the score required for your exam.</p>

@@ -79,7 +79,7 @@ export default function MarketingCloudCertificationPathPage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/marketing-cloud-certification-path" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
       <header data-lcp-header className="mb-10">
         <p className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">Marketing Cloud Path</p>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Marketing Cloud Certification Path</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Salesforce Marketing Cloud Certification Path ({RELEASE_CURRENT})</h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">Choose a Marketing Cloud path based on whether you work in Email Studio or Journey Builder, Account Engagement, or technical Marketing Cloud implementation.</p>
       </header>
@@ -88,7 +88,7 @@ export default function MarketingCloudCertificationPathPage() {
         {paths.map((path) => (
           <Link key={path.label} href={path.href} className="block rounded-xl border border-gray-100 bg-white p-6 shadow-sm hover:border-salesforce-blue/50">
             <h2 className="text-xl font-bold text-gray-900 mb-3">{path.label}</h2>
-            <p className="text-sm text-gray-700">{path.steps.join(' -> ')}</p>
+            <p className="text-sm text-gray-700">{path.steps.join(' → ')}</p>
           </Link>
         ))}
       </section>

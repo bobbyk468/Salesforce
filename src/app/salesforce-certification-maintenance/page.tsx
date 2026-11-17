@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How often do Salesforce certifications need to be maintained?',
-    answer: 'Salesforce has three major releases each year: Spring, Summer, and Winter. Maintenance is annual: each credential has one badge per year, released in the cycle Salesforce assigns to it. For most certifications, complete the maintenance module on Trailhead within about 30 days of publication. Certifications in the same role category usually share a module, so you do not need one for each certification.',
+    answer: 'Salesforce has three major releases each year: Spring, Summer, and Winter. Maintenance itself is annual: each credential has one badge per year, released in the cycle Salesforce assigns to it. You get roughly eight to twelve months to complete it, not 30 days. The Summer ’26 modules went live in August 2026 and are due April 16, 2027. Certifications in the same role category usually share a module, so you do not need one for each certification.',
   },
   {
     question: 'What happens if I miss the Salesforce certification maintenance deadline?',
@@ -84,8 +84,6 @@ export default function SalesforceCertificationMaintenancePage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Maintenance Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -96,6 +94,8 @@ export default function SalesforceCertificationMaintenancePage() {
           Learn when to complete maintenance, where to find Trailhead modules, and what happens if you miss a deadline. See the <Link href="/salesforce-certification-validity" className="text-salesforce-dark hover:underline font-medium">certification validity guide</Link> for more details.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* Key facts */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
@@ -117,7 +117,7 @@ export default function SalesforceCertificationMaintenancePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">How Salesforce Certification Maintenance Works</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <p>Salesforce releases three major platform updates each year: <strong>Spring</strong> (January/February), <strong>Summer</strong> (May/June), and <strong>Winter</strong> (September/October). Each release brings new features and changes.</p>
-          <p>Salesforce publishes <strong>maintenance modules on Trailhead</strong> for each release. A role category may have one or more short modules. Complete the required module within about <strong>30 days</strong> of publication to keep your certification Active.</p>
+          <p>Salesforce publishes <strong>maintenance modules on Trailhead</strong> for each release, but each credential only needs <strong>one badge per year</strong>, in the release cycle Salesforce assigns to it. The window is generous: roughly <strong>eight to twelve months</strong> from publication. The Summer ’26 modules published in August 2026 and are due <strong>April 16, 2027</strong>. Complete yours before its stated deadline to keep the certification Active.</p>
           <p>Certifications in the same role category usually share one maintenance module. For example, someone with both ADM-201 and Advanced Administrator usually completes one Administrator-category module, not two.</p>
         </div>
       </div>
@@ -160,19 +160,20 @@ export default function SalesforceCertificationMaintenancePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce Release Schedule ({RELEASE_CURRENT})</h2>
         <div className="space-y-3">
           {[
-            { release: 'Spring ’26', period: 'Jan–Feb 2026', maintenance: 'Feb–Mar 2026', status: 'Complete' },
-            { release: 'Summer ’26', period: 'May–Jun 2026', maintenance: 'Jun–Jul 2026', status: 'Current' },
-            { release: 'Winter ’27', period: 'Sep–Oct 2026', maintenance: 'Oct–Nov 2026', status: 'Upcoming' },
+            { release: 'Spring ’26', period: 'Jan–Feb 2026', published: 'Mar 2026', due: 'Deadline passed', status: 'Complete' },
+            { release: 'Summer ’26', period: 'May–Jun 2026', published: 'Aug 2026', due: 'April 16, 2027', status: 'Current' },
+            { release: 'Winter ’27', period: 'Sep–Oct 2026', published: 'Nov 2026', due: '~8–12 months after publication', status: 'Upcoming' },
           ].map((row) => (
             <div key={row.release} className="flex flex-wrap items-center justify-between gap-3 py-3 border-b border-gray-100 last:border-0 text-sm">
               <span className="font-semibold text-gray-900">{row.release}</span>
               <span className="text-gray-600">Release: {row.period}</span>
-              <span className="text-gray-600">Maintenance due: {row.maintenance}</span>
+              <span className="text-gray-600">Badges publish: {row.published}</span>
+              <span className="text-gray-600">Deadline: {row.due}</span>
               <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{row.status}</span>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-600 mt-3">Exact dates vary. Check release.salesforce.com for confirmed dates.</p>
+        <p className="text-xs text-gray-600 mt-3">Each credential needs one badge per year, in the single release cycle Salesforce assigns to it &mdash; not one per release. Exact dates vary; check your Trailhead credential page for the deadline tied to your own certification.</p>
       </div>
 
       {/* FAQ */}

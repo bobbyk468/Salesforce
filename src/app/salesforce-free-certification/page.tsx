@@ -67,8 +67,6 @@ export default function SalesforceFreeCertificationPage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Cost Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -79,6 +77,8 @@ export default function SalesforceFreeCertificationPage() {
           Find ways to earn a Salesforce certification for free, plus lower-cost options when no free exam voucher is available.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-amber-900 mb-1">Honest expectation</h2>

@@ -68,8 +68,6 @@ export default function SalesforceExamRetakePolicyPage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Exam Policy</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -80,6 +78,8 @@ export default function SalesforceExamRetakePolicyPage() {
           Find retake costs, waiting periods, attempt rules, and advice for preparing after a failed exam.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

@@ -134,7 +134,7 @@ export function DeveloperCertRoadmap() {
         <text x="530" y="190" textAnchor="middle" fill="white" fontSize="12" fontWeight="600">Platform Developer II (PD2)</text>
 
         {/* Arrows down to architect level */}
-        <line x1="140" y1="204" x2="250" y2="248" stroke="#7C3AED" strokeWidth="1.5" strokeDasharray="5,4" markerEnd="url(#arrowDG)" />
+        <path d="M140,204 L140,274 L372,274" fill="none" stroke="#7C3AED" strokeWidth="1.5" strokeDasharray="5,4" markerEnd="url(#arrowDG)" />
         <line x1="530" y1="204" x2="530" y2="248" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#arrowDG)" />
 
         {/* Integration Architect */}
@@ -167,7 +167,7 @@ export function ConsultantCertRoadmap() {
         className="w-full max-w-[780px] h-auto"
       >
         <title>Salesforce Consultant Certification Path Roadmap</title>
-        <desc>Consultant path: ADM-201 Administrator is the prerequisite, then specialise in Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, or Revenue Cloud Consultant, eventually leading to Application or System Architect.</desc>
+        <desc>Consultant path: ADM-201 Administrator is the prerequisite for the core cloud consultant exams, then specialise in Sales Cloud, Service Cloud, Experience Cloud, or Revenue Cloud Consultant. Marketing Cloud Engagement Consultant is the exception: its prerequisite is Marketing Cloud Engagement Administrator, not ADM-201. Multiple consultant credentials lead toward the Application or System Architect track.</desc>
         <defs>
           <marker id="arrowC" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#1589EE" />
@@ -203,7 +203,8 @@ export function ConsultantCertRoadmap() {
 
         <rect x="320" y="158" width="140" height="52" rx="8" fill="#059669" />
         <text x="390" y="178" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">CONSULTANT</text>
-        <text x="390" y="194" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Marketing Cloud</text>
+        <text x="390" y="194" textAnchor="middle" fill="white" fontSize="10" fontWeight="600">Marketing Cloud *</text>
+        <text x="390" y="222" textAnchor="middle" fill="#6B7280" fontSize="8">* requires MC Engagement Administrator, not ADM-201</text>
 
         <rect x="500" y="158" width="140" height="52" rx="8" fill="#059669" />
         <text x="570" y="178" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">CONSULTANT</text>
@@ -231,74 +232,78 @@ export function ArchitectCertRoadmap() {
       </figcaption>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 700 420"
+        viewBox="0 0 700 462"
         role="img"
-        aria-label="Salesforce Architect Certification Path: Domain Architect certs (Data, Integration, Sharing/Visibility, Dev Lifecycle), then System Architect, Application Architect, leading to Certified Technical Architect (CTA)"
+        aria-label="Salesforce Architect Certification Path: four component exams award Application Architect, four component exams award System Architect, and both credentials together lead to Certified Technical Architect (CTA)"
         className="w-full max-w-[700px] h-auto"
       >
         <title>Salesforce Architect Certification Path Roadmap</title>
-        <desc>Architect path: Domain credentials (Data Architect, Integration Architect, Sharing and Visibility Architect, Dev Lifecycle Architect) feed two parallel peer credentials, Application Architect and System Architect, which both feed Certified Technical Architect (CTA).</desc>
+        <desc>Architect path: Platform App Builder, Platform Developer I, Data Architect and Sharing and Visibility Architect award Application Architect. Platform Developer I, Integration Architect, Identity and Access Management Architect and Dev Lifecycle and Deployment Architect award System Architect. Platform Developer I counts toward both. The two composite credentials sit side by side and both feed Certified Technical Architect (CTA).</desc>
         <defs>
           <marker id="arrowAR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#7C3AED" />
           </marker>
+          <marker id="arrowARred" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L8,3 z" fill="#DC2626" />
+          </marker>
         </defs>
 
-        {/* Prerequisites */}
-        <rect x="150" y="10" width="180" height="46" rx="8" fill="#0070D2" />
-        <text x="240" y="28" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">PREREQUISITE</text>
-        <text x="240" y="44" textAnchor="middle" fill="white" fontSize="11">App Builder + ADM-201</text>
+        {/* ── Application Architect component group ── */}
+        <rect x="15" y="10" width="320" height="210" rx="12" fill="#F5F3FF" stroke="#7C3AED" strokeWidth="1" strokeDasharray="4,4" />
+        <text x="175" y="30" textAnchor="middle" fill="#5B21B6" fontSize="9" fontWeight="700">APPLICATION ARCHITECT &#183; 4 COMPONENT EXAMS</text>
 
-        <rect x="370" y="10" width="180" height="46" rx="8" fill="#0070D2" />
-        <text x="460" y="28" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">PREREQUISITE</text>
-        <text x="460" y="44" textAnchor="middle" fill="white" fontSize="11">PD1 (recommended)</text>
+        <rect x="30" y="40" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="175" y="60" textAnchor="middle" fill="white" fontSize="11">Platform App Builder</text>
 
-        {/* Arrows to domain level */}
-        <line x1="240" y1="56" x2="180" y2="105" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
-        <line x1="310" y1="56" x2="350" y2="105" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
-        <line x1="420" y1="56" x2="390" y2="105" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
-        <line x1="500" y1="56" x2="560" y2="105" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
+        <rect x="30" y="82" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="175" y="102" textAnchor="middle" fill="white" fontSize="11">Platform Developer I (PD1)</text>
 
-        {/* Domain architect boxes */}
-        <rect x="20"  y="105" width="155" height="50" rx="8" fill="#7C3AED" />
-        <text x="97"  y="124" textAnchor="middle" fill="white" fontSize="9" fontWeight="700">DOMAIN ARCHITECT</text>
-        <text x="97"  y="140" textAnchor="middle" fill="white" fontSize="10">Data Architect</text>
+        <rect x="30" y="124" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="175" y="144" textAnchor="middle" fill="white" fontSize="11">Data Architect</text>
 
-        <rect x="200" y="105" width="155" height="50" rx="8" fill="#7C3AED" />
-        <text x="277" y="124" textAnchor="middle" fill="white" fontSize="9" fontWeight="700">DOMAIN ARCHITECT</text>
-        <text x="277" y="140" textAnchor="middle" fill="white" fontSize="10">Integration Architect</text>
+        <rect x="30" y="166" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="175" y="186" textAnchor="middle" fill="white" fontSize="11">Sharing &amp; Visibility Architect</text>
 
-        <rect x="375" y="105" width="155" height="50" rx="8" fill="#7C3AED" />
-        <text x="452" y="124" textAnchor="middle" fill="white" fontSize="9" fontWeight="700">DOMAIN ARCHITECT</text>
-        <text x="452" y="140" textAnchor="middle" fill="white" fontSize="10">Sharing &amp; Visibility</text>
+        {/* ── System Architect component group ── */}
+        <rect x="365" y="10" width="320" height="210" rx="12" fill="#F5F3FF" stroke="#7C3AED" strokeWidth="1" strokeDasharray="4,4" />
+        <text x="525" y="30" textAnchor="middle" fill="#5B21B6" fontSize="9" fontWeight="700">SYSTEM ARCHITECT &#183; 4 COMPONENT EXAMS</text>
 
-        <rect x="550" y="105" width="135" height="50" rx="8" fill="#7C3AED" />
-        <text x="617" y="124" textAnchor="middle" fill="white" fontSize="9" fontWeight="700">DOMAIN ARCHITECT</text>
-        <text x="617" y="140" textAnchor="middle" fill="white" fontSize="10">Dev Lifecycle</text>
+        <rect x="380" y="40" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="525" y="60" textAnchor="middle" fill="white" fontSize="11">Platform Developer I (PD1)</text>
 
-        {/* Convergence lines to System Architect */}
-        <line x1="97"  y1="155" x2="250" y2="218" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
-        <line x1="277" y1="155" x2="300" y2="218" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
-        <line x1="452" y1="155" x2="390" y2="218" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
-        <line x1="617" y1="155" x2="440" y2="218" stroke="#7C3AED" strokeWidth="1.5" markerEnd="url(#arrowAR)" />
+        <rect x="380" y="82" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="525" y="102" textAnchor="middle" fill="white" fontSize="11">Integration Architect</text>
 
-        {/* System Architect */}
-        <rect x="200" y="218" width="200" height="52" rx="10" fill="#5B21B6" />
-        <text x="300" y="238" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">ROLE CREDENTIAL</text>
-        <text x="300" y="256" textAnchor="middle" fill="white" fontSize="12" fontWeight="700">System Architect</text>
+        <rect x="380" y="124" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="525" y="144" textAnchor="middle" fill="white" fontSize="11">Identity &amp; Access Management Architect</text>
 
-        <line x1="300" y1="270" x2="300" y2="308" stroke="#5B21B6" strokeWidth="2" markerEnd="url(#arrowAR)" />
+        <rect x="380" y="166" width="290" height="32" rx="6" fill="#7C3AED" />
+        <text x="525" y="186" textAnchor="middle" fill="white" fontSize="11">Dev Lifecycle &amp; Deployment Architect</text>
 
-        {/* Application Architect */}
-        <rect x="200" y="308" width="200" height="52" rx="10" fill="#4C1D95" />
-        <text x="300" y="328" textAnchor="middle" fill="white" fontSize="10" fontWeight="700">ROLE CREDENTIAL</text>
-        <text x="300" y="346" textAnchor="middle" fill="white" fontSize="12" fontWeight="700">Application Architect</text>
+        {/* Each group awards its composite credential */}
+        <line x1="175" y1="220" x2="175" y2="248" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#arrowAR)" />
+        <line x1="525" y1="220" x2="525" y2="248" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#arrowAR)" />
 
-        <line x1="300" y1="360" x2="300" y2="395" stroke="#4C1D95" strokeWidth="2" markerEnd="url(#arrowAR)" />
+        {/* ── Parallel composite credentials ── */}
+        <rect x="35" y="252" width="280" height="52" rx="10" fill="#4C1D95" />
+        <text x="175" y="272" textAnchor="middle" fill="white" fontSize="9" fontWeight="700">AUTO-AWARDED, NO EXAM OF ITS OWN</text>
+        <text x="175" y="291" textAnchor="middle" fill="white" fontSize="13" fontWeight="700">Application Architect</text>
 
-        {/* CTA */}
-        <rect x="175" y="395" width="250" height="20" rx="6" fill="#DC2626" />
-        <text x="300" y="409" textAnchor="middle" fill="white" fontSize="11" fontWeight="700">Certified Technical Architect (CTA)</text>
+        <rect x="385" y="252" width="280" height="52" rx="10" fill="#5B21B6" />
+        <text x="525" y="272" textAnchor="middle" fill="white" fontSize="9" fontWeight="700">AUTO-AWARDED, NO EXAM OF ITS OWN</text>
+        <text x="525" y="291" textAnchor="middle" fill="white" fontSize="13" fontWeight="700">System Architect</text>
+
+        <text x="350" y="324" textAnchor="middle" fill="#6B7280" fontSize="9">PD1 is the only exam that counts toward both credentials</text>
+
+        {/* ── Both feed CTA ── */}
+        <line x1="175" y1="304" x2="288" y2="372" stroke="#DC2626" strokeWidth="2" markerEnd="url(#arrowARred)" />
+        <line x1="525" y1="304" x2="412" y2="372" stroke="#DC2626" strokeWidth="2" markerEnd="url(#arrowARred)" />
+
+        <rect x="230" y="378" width="240" height="46" rx="10" fill="#DC2626" />
+        <text x="350" y="397" textAnchor="middle" fill="white" fontSize="8" fontWeight="700">ARCHITECT EVALUATION + REVIEW BOARD</text>
+        <text x="350" y="414" textAnchor="middle" fill="white" fontSize="12" fontWeight="700">Certified Technical Architect (CTA)</text>
+
+        <text x="350" y="446" textAnchor="middle" fill="#6B7280" fontSize="9">ADM-201 is recommended groundwork, not a component exam</text>
       </svg>
     </figure>
   )

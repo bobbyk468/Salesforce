@@ -100,7 +100,7 @@ export default function ConsultantCertificationPathPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Step 2: Choose a Cloud Specialization</h2>
         <p className="text-sm text-gray-700 mb-4">
-          Choose a Salesforce cloud that matches your current work or the area you want to enter. Many consultants focus on the products their employer implements most often.
+          Choose a Salesforce cloud that matches your current work or the area you want to enter. Many consultants focus on the products their employer implements most often. ADM-201 is the foundation for the core cloud exams below, with one exception: Marketing Cloud Engagement Consultant requires <strong>Marketing Cloud Engagement Administrator</strong> instead.
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 p-4">
@@ -140,8 +140,9 @@ export default function ConsultantCertificationPathPage() {
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 p-4">
-            <p className="font-semibold text-gray-900 mb-1">Marketing Cloud Consultant</p>
+            <p className="font-semibold text-gray-900 mb-1">Marketing Cloud Engagement Consultant</p>
             <p className="text-sm text-gray-600 mb-2">Covers discovery, solution design, account setup, business unit strategy, and data design.</p>
+            <p className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded px-2 py-1 mb-2">Prerequisite exception: this exam requires <strong>Marketing Cloud Engagement Administrator</strong>, not ADM-201.</p>
             <div className="flex gap-2 flex-wrap">
               <Link href="/certifications/marketing-cloud-engagement-admin#practice-questions" className="text-xs text-salesforce-blue hover:underline">Practice questions</Link>
               <span className="text-gray-300">·</span>

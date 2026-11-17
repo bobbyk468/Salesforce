@@ -66,7 +66,7 @@ const steps = [
     step: '1',
     title: 'Earn Your ADM-201 First',
     time: '8–12 weeks',
-    description: 'Start with Salesforce Administrator (ADM-201), the foundation for consultant certifications. It covers objects, fields, the data model, security (profiles, roles, and sharing rules), automation (Flow and Process Builder), reports, dashboards, and data management. Consultant exams build on this knowledge.',
+    description: 'Start with Salesforce Administrator (ADM-201), the foundation for consultant certifications. It covers objects, fields, the data model, security (profiles, roles, and sharing rules), automation (Flow; Process Builder reached end of support in December 2025 and is replaced by Flow), reports, dashboards, and data management. Consultant exams build on this knowledge.',
     resources: ['Trailhead: Salesforce Administrator trail', 'Free Salesforce Developer Edition org for hands-on practice', 'Trailblaze Prep ADM-201 free practice questions'],
   },
   {
@@ -107,8 +107,6 @@ export default function HowToBecomeSalesforceConsultantPage() {
       {/* Header */}
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Career Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -119,6 +117,8 @@ export default function HowToBecomeSalesforceConsultantPage() {
           Follow a step-by-step path from ADM-201 to your first Salesforce Consultant role. Compare certification options, salary ranges, and study resources.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

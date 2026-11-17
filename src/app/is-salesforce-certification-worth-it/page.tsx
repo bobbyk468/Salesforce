@@ -69,8 +69,6 @@ export default function IsSalesforceCertificationWorthItPage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Career Advice</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -81,6 +79,8 @@ export default function IsSalesforceCertificationWorthItPage() {
           A practical look at the time and cost involved, the potential career benefits, and who may benefit most from certification.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* Quick verdict */}
       <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-10">

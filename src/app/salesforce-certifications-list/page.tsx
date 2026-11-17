@@ -5,6 +5,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getExamCost } from '@/lib/cert-seo-data'
+import { getCredentialCardNote } from '@/lib/credential-status'
 import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -55,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'Do Salesforce certifications expire?',
-    answer: 'Salesforce certifications require periodic maintenance. When a new release includes relevant changes, complete the required Trailhead maintenance module to keep your credential active. Most certifications require maintenance twice a year.',
+    answer: 'Salesforce certifications require periodic maintenance. When a new release includes relevant changes, complete the required Trailhead maintenance module to keep your credential active. Each credential has one maintenance badge per year, in the release cycle Salesforce assigns to it.',
   },
 ]
 
@@ -157,14 +158,21 @@ export default function SalesforceListPage() {
                 {category.items.map((item) => {
                   const slug = item.href.replace('/certifications/', '').replace(/\/$/, '')
                   const fee = getExamCost(slug)
+                  const statusNote = getCredentialCardNote(slug)
                   return (
                     <li key={item.href} className="flex items-center gap-3 px-4 py-3 text-sm">
                       <Link href={item.href} className="inline-block py-1 font-medium text-gray-800 hover:text-salesforce-blue">
                         {item.name}
                       </Link>
-                      <span className={`ml-auto text-xs font-semibold px-2 py-0.5 rounded-full ${feeBadgeClass(fee)}`}>
-                        {fee}
-                      </span>
+                      {statusNote ? (
+                        <span className="ml-auto text-xs font-semibold px-2 py-0.5 rounded-full text-gray-700 bg-gray-100 border border-gray-200 text-right">
+                          {statusNote}
+                        </span>
+                      ) : (
+                        <span className={`ml-auto text-xs font-semibold px-2 py-0.5 rounded-full ${feeBadgeClass(fee)}`}>
+                          {fee}
+                        </span>
+                      )}
                       <span className="sr-only">.</span>
                     </li>
                   )

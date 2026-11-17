@@ -67,8 +67,6 @@ export default function WhichSalesforceCertificationFirstPage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Beginner Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -79,6 +77,8 @@ export default function WhichSalesforceCertificationFirstPage() {
           Choose a first certification based on your experience and career goal. Use these paths to compare where to start and what to take next.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-1">The short answer</h2>

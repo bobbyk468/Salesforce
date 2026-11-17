@@ -67,8 +67,6 @@ export default function HowToRegisterSalesforceExamPage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Exam Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -79,6 +77,8 @@ export default function HowToRegisterSalesforceExamPage() {
           A complete step-by-step guide to booking your Salesforce exam: Trailhead Academy registration, exam format selection, identity requirements, and exam day preparation.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Step-by-Step Registration Guide</h2>

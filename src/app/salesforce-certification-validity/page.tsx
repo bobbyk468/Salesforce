@@ -68,8 +68,6 @@ export default function SalesforceCertificationValidityPage() {
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
-
-      <ContentPageAuthor />
           <span>Certification Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -81,6 +79,8 @@ export default function SalesforceCertificationValidityPage() {
         </p>
       </div>
 
+      <ContentPageAuthor />
+
       <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-10">
         <h2 className="text-lg font-bold text-green-900 mb-2">Short answer: Certifications have no fixed expiry date</h2>
         <p className="text-sm text-green-800">Salesforce certifications stay Active when you complete the required maintenance badge each year. The badge is released in the Spring, Summer, or Winter cycle assigned to that credential and is due one year after it becomes available.</p>
@@ -89,7 +89,7 @@ export default function SalesforceCertificationValidityPage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Fixed Expiry?', value: 'No' },
-          { label: 'Maintenance/Year', value: '3×' },
+          { label: 'Maintenance', value: '1× / Year' },
           { label: 'Module Time', value: '20–60 min' },
           { label: 'Reactivation Cost', value: 'Free' },
         ].map((stat) => (
@@ -104,8 +104,8 @@ export default function SalesforceCertificationValidityPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">How Certification Validity Works</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <p>After you pass a Salesforce certification exam, your Trailhead profile shows the credential as <strong>Active</strong>. The certification itself has no expiry date.</p>
-          <p>Salesforce releases three major platform updates each year: <strong>Spring</strong> (Jan/Feb), <strong>Summer</strong> (May/Jun), and <strong>Winter</strong> (Sep/Oct). Trailhead maintenance modules cover changes related to each certification area.</p>
-          <p>Complete the required maintenance module within about <strong>30 days</strong> of publication. If you meet the deadline, your status stays Active and your certification date updates. If you miss it, your status changes to <strong>Inactive</strong>.</p>
+          <p>Salesforce releases three major platform updates each year: <strong>Spring</strong> (Jan/Feb), <strong>Summer</strong> (May/Jun), and <strong>Winter</strong> (Sep/Oct). Trailhead maintenance modules cover changes related to each certification area, but a given credential is tied to <strong>one</strong> of those cycles, so you complete <strong>one badge per year</strong>, not three.</p>
+          <p>The window is wide: roughly <strong>eight to twelve months</strong> from the day the badge publishes. The Summer ’26 modules went live in August 2026 and are due <strong>April 16, 2027</strong>. Meet the deadline and your status stays Active with an updated certification date. Miss it and your status changes to <strong>Inactive</strong>.</p>
           <p>Certifications in the same role category, such as Administrator credentials, usually share one maintenance module. You do not need a separate module for every certification you hold.</p>
         </div>
       </div>
