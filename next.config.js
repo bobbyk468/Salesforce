@@ -30,6 +30,10 @@ const nextConfig = {
   // Increase timeout for local builds (default 60s can fail on resource-constrained machines)
   staticPageGenerationTimeout: 180,
   experimental: {
+    // Keeps `next build` on the security-only upgrade track: it halts on a
+    // published advisory for the installed version, which is how the 16.4.4
+    // -> 16.4.6 bump was surfaced, and does not nudge for feature releases.
+    agentUpgrade: 'security',
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,
     /*

@@ -141,18 +141,23 @@ export default function HowToBecomeSalesforceArchitectPage() {
       <div className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">The Architect Path: Stage by Stage</h2>
         <div className="space-y-6">
-          {stages.map((item) => (
+          {stages.map((item, index) => (
             <div key={item.stage} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-xs text-center leading-tight">
-                  {item.stage}
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-base leading-none">
+                  {index + 1}
                 </div>
                 <div className="flex-1">
-                  <div className="flex flex-wrap items-center gap-3 mb-2">
-                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <span className="inline-flex items-center text-xs font-semibold uppercase tracking-wide text-salesforce-dark bg-salesforce-blue/10 px-2.5 py-1 rounded-full">
+                      {item.stage}
+                    </span>
                     <span className="inline-flex items-center gap-1 text-xs text-gray-700 bg-gray-100 px-2 py-1 rounded-full">
                       <Clock className="h-3 w-3" /> {item.time}
                     </span>
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">{item.description}</p>
                   <ul className="space-y-1">
