@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'Do overlapping exams count toward both credentials?',
-    answer: 'Platform Developer I is the only shared exam. Passing it once counts toward both credentials. Data Architect and Sharing and Visibility Architect count only toward Application Architect, while Integration Architect, IAM Architect, and Dev Lifecycle Architect count only toward System Architect. This reduces the number of unique exams from nine to eight for candidates pursuing both credentials and CTA.',
+    answer: 'Platform Developer I is the only shared exam. Passing it once counts toward both credentials. Data Architect and Sharing and Visibility Architect count only toward Application Architect, while Integration Architect, IAM Architect, and Dev Lifecycle Architect count only toward System Architect. Application Architect and System Architect each require four exams, so the shared Platform Developer I reduces the number of unique exams from eight to seven for candidates pursuing both credentials and CTA.',
   },
 ]
 
@@ -90,7 +90,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
           certSlug: "system-architect",
           conditions: [
           "Your background is integration, identity, or release management",
-          "You want Integration Architect, Identity &amp; Access Management Architect, and Development Lifecycle &amp; Deployment Architect",
+          "You want Integration Architect, Identity & Access Management Architect, and Development Lifecycle & Deployment Architect",
           "You already hold Platform Developer I, which counts toward both",
           "You design how systems talk to each other rather than what they store",
           ],
@@ -100,7 +100,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
           certSlug: "application-architect",
           conditions: [
           "Your background is data modelling, sharing, and declarative build",
-          "You want Platform App Builder, Data Architect, and Sharing &amp; Visibility Architect",
+          "You want Platform App Builder, Data Architect, and Sharing & Visibility Architect",
           "You already hold Platform Developer I, which counts toward both",
           "You design what the org stores and who can see it",
           ],

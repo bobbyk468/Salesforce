@@ -302,10 +302,10 @@ export default function SalesforceCertificationCostPage() {
           Retake Policy
         </h2>
         <ul className="space-y-2.5 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Wait <strong>{RETAKE_POLICY.waitAfterFirstFail}</strong> before your first retake.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Wait <strong>{RETAKE_POLICY.waitAfterSecondFail}</strong> before your second retake.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />You can make <strong>{RETAKE_POLICY.attemptsPerCycle} attempts per release cycle</strong>. After a third failure, wait {RETAKE_POLICY.afterThirdFail}.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Most retakes cost about <strong>50% of the original exam fee</strong>.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Wait <strong>{RETAKE_POLICY.waitAfterFirstFail}</strong> before your first retake.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Wait <strong>{RETAKE_POLICY.waitAfterSecondFail}</strong> before your second retake.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>You can make <strong>{RETAKE_POLICY.attemptsPerCycle} attempts per release cycle</strong>. After a third failure, wait {RETAKE_POLICY.afterThirdFail}.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Most retakes cost about <strong>50% of the original exam fee</strong>.</span></li>
         </ul>
       </section>
 

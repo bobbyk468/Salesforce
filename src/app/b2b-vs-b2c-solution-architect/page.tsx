@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import CredentialStatusNotice from '@/components/CredentialStatusNotice'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -50,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'Which should I take: B2B or B2C Solution Architect?',
-    answer: 'Choose based on the projects you know. If you work on enterprise sales cycles involving CPQ, Revenue Cloud, partner communities, or B2B Commerce, choose B2B Solution Architect. If you work on consumer ecommerce, retail, Salesforce Commerce Cloud, Marketing Cloud personalization, or loyalty, choose B2C Solution Architect. The credentials serve different industries.',
+    answer: 'B2C Solution Architect, because it is the only one of the two still open. Salesforce closed B2B Solution Architect registration on July 24, 2026, August 31, 2026 was the last day to sit it, and the credential retires on February 1, 2027. If your work is enterprise sales cycles involving CPQ, Revenue Cloud, partner communities, or B2B Commerce, the published B2B outline is still the best description of that architecture work, but it is no longer a credential you can earn.',
   },
   {
     question: 'What prerequisites are required for B2B Solution Architect?',
@@ -62,9 +64,28 @@ const faqItems = [
   },
   {
     question: 'Are B2B and B2C Solution Architect exams similar in format?',
-    answer: 'Both exams are scenario-based and test multi-cloud architecture decisions. Each has 60 questions, 120 minutes, an approximately 68% passing score, and a $400 fee. The product scope differs: B2B Commerce, CPQ, and Revenue Cloud for B2B; B2C Commerce, Marketing Cloud, and personalization for B2C.',
+    answer: 'Both exams are scenario-based and test multi-cloud architecture decisions. Each has 60 questions, 120 minutes, and a $400 fee. The passing scores differ: B2B Solution Architect is 58% and B2C Solution Architect is 63%. The product scope differs: B2B Commerce, CPQ, and Revenue Cloud for B2B; B2C Commerce, Marketing Cloud, and personalization for B2C.',
   },
 ]
+
+/**
+ * Exam facts come from the certification registry in cert-seo-data.ts rather
+ * than being written into this page, so a blueprint refresh cannot leave the
+ * comparison table, the spec cards and the FAQ disagreeing with each other or
+ * with the study guides. Both exams are closed to new registrations, so
+ * getPublishedExamFacts is the right reader: it keeps serving the published
+ * figures as history where getExamLogistics returns null.
+ */
+function facts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return { fee: f.fee, questions: String(f.questions), time: f.duration, passing: f.passingScore }
+}
+
+function format(slug: string) {
+  const f = facts(slug)
+  return `${f.questions} Q, ${f.time}, ${f.passing}`
+}
 
 export default function B2bVsB2cSolutionArchitectPage() {
   return (
@@ -84,17 +105,19 @@ export default function B2bVsB2cSolutionArchitectPage() {
         </p>
       </div>
 
+      <CredentialStatusNotice slug="b2b-solution-architect" />
+
       <ContentPageAuthor />
       <WhichFirstBlock
         certA={{
           name: "B2B Solution Architect",
           certSlug: "b2b-solution-architect",
-          examTipsSlug: "certifications/b2b-solution-architect",
+          unavailable: "exam closed August 2026",
           conditions: [
-          "Your enterprise clients use Sales, Service, or Revenue Cloud",
-          "You design solutions for business-to-business sales",
-          "Your projects include CRM, CPQ, or partner portals",
-          "You want a credential focused on B2B architecture",
+          "Multi-cloud architecture for enterprise clients on Sales, Service, or Revenue Cloud",
+          "Business-to-business sales solution design",
+          "CRM, CPQ, and partner portal integration",
+          "Credential retires 1 February 2027",
           ],
         }}
         certB={{
@@ -109,10 +132,10 @@ export default function B2bVsB2cSolutionArchitectPage() {
           ],
         }}
         recommendation={{
-          certName: "B2B Solution Architect",
-          certSlug: "b2b-solution-architect",
-          examTipsSlug: "certifications/b2b-solution-architect",
-          reason: "Choose the credential that matches your client base. B2B Solution Architect fits enterprise sales and partner commerce work; B2C Solution Architect fits consumer storefronts and marketing. Your project experience is the clearest guide to which exam to take first.",
+          certName: "B2C Solution Architect",
+          certSlug: "b2c-solution-architect",
+          examTipsSlug: "certifications/b2c-solution-architect",
+          reason: "Client base no longer decides this on its own. Salesforce closed B2B Solution Architect registration on 24 July 2026, 31 August 2026 was the last sitting, and the credential retires on 1 February 2027, so B2C Solution Architect is the only one of the two you can book. B2B architecture work is still worth studying from the published outline, and the multi-cloud design patterns carry across, but it is no longer a credential you can earn.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",
         }}
@@ -125,7 +148,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
             href: '/certifications/b2b-solution-architect',
             focus: 'Enterprise sales, commerce & revenue',
             industries: 'Manufacturing, distribution, wholesale, technology',
-            fee: '$400', questions: '60', time: '120 min', passing: '58%',
+            ...facts('b2b-solution-architect'),
             clouds: ['B2B Commerce', 'Sales Cloud + CPQ', 'Revenue Cloud', 'Experience Cloud (partner)', 'Service Cloud'],
           },
           {
@@ -133,7 +156,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
             href: '/certifications/b2c-solution-architect',
             focus: 'Consumer commerce & marketing',
             industries: 'Retail, consumer goods, fashion, hospitality',
-            fee: '$400', questions: '60', time: '120 min', passing: '63%',
+            ...facts('b2c-solution-architect'),
             clouds: ['B2C Commerce (Commerce Cloud)', 'Marketing Cloud Engagement', 'Marketing Cloud Personalisation', 'Service Cloud', 'Loyalty Management'],
           },
         ].map((cert) => (
@@ -183,8 +206,8 @@ export default function B2bVsB2cSolutionArchitectPage() {
                 { aspect: 'Key product', b2b: 'B2B Commerce + CPQ', b2c: 'Salesforce Commerce Cloud (B2C)' },
                 { aspect: 'Marketing focus', b2b: 'Account-based, partner channels', b2c: 'Personalisation, loyalty, email' },
                 { aspect: 'Typical project', b2b: 'Partner portal + CPQ + Revenue Cloud', b2c: 'Storefront + Marketing Cloud + Loyalty' },
-                { aspect: 'Fee', b2b: '$400', b2c: '$400' },
-                { aspect: 'Format', b2b: '60 Q, 120 min, 58%', b2c: '60 Q, 120 min, 63%' },
+                { aspect: 'Fee', b2b: facts('b2b-solution-architect').fee, b2c: facts('b2c-solution-architect').fee },
+                { aspect: 'Format', b2b: format('b2b-solution-architect'), b2c: format('b2c-solution-architect') },
                 { aspect: 'Avg Salary', b2b: '$130–165k (US)', b2c: '$125–160k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
@@ -219,11 +242,11 @@ export default function B2bVsB2cSolutionArchitectPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Delivering CPQ, Account hierarchies, or complex B2B sales processes</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Delivering CPQ, Account hierarchies, or complex B2B sales processes</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B outline for reference; exam closed August 2026</td></tr>
               <tr><td className="py-2.5 pr-4">Working with Commerce Cloud storefronts or high-volume consumer transactions</td><td className="py-2.5 font-semibold text-purple-700">B2C Solution Architect</td></tr>
-              <tr><td className="py-2.5 pr-4">Enterprise clients with complex quoting, contracts, and partner channels</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Enterprise clients with complex quoting, contracts, and partner channels</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B outline for reference; exam closed August 2026</td></tr>
               <tr><td className="py-2.5 pr-4">Retail or DTC brands needing personalised commerce experiences</td><td className="py-2.5 font-semibold text-purple-700">B2C Solution Architect</td></tr>
-              <tr><td className="py-2.5 pr-4">Background in Sales Cloud, Service Cloud, or CPQ implementations</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Background in Sales Cloud, Service Cloud, or CPQ implementations</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B outline for reference; exam closed August 2026</td></tr>
               <tr><td className="py-2.5 pr-4">Background in B2C Commerce, Marketing Cloud, or storefront development</td><td className="py-2.5 font-semibold text-purple-700">B2C Solution Architect</td></tr>
             </tbody>
           </table>
@@ -233,14 +256,14 @@ export default function B2bVsB2cSolutionArchitectPage() {
       <RelatedGuides links={getRelatedGuides('b2b-vs-b2c-solution-architect')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Explore Both Architect Paths</h2>
-        <p className="text-white mb-6">Practice questions are available for both Solution Architect exams.</p>
+        <h2 className="text-2xl font-bold mb-2">Start with B2C Solution Architect</h2>
+        <p className="text-white mb-6">B2C Solution Architect is the bookable exam of the two. The B2B question bank stays up as study material for the closed outline.</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/certifications/b2b-solution-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
-            B2B Architect Practice
-          </Link>
-          <Link href="/certifications/b2c-solution-architect" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+          <Link href="/certifications/b2c-solution-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             B2C Architect Practice
+          </Link>
+          <Link href="/certifications/b2b-solution-architect" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+            B2B Architect Practice (closed exam)
           </Link>
         </div>
       </div>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
@@ -42,6 +43,23 @@ const breadcrumbItems = [
   { name: 'Data Cloud vs Marketing Cloud', url: '/data-cloud-vs-marketing-cloud' },
 ]
 
+/**
+ * Exam facts read from the certification registry in cert-seo-data.ts. This
+ * page previously stated a 62% pass mark for Data Cloud in its table and FAQ
+ * while the comparison block above said 70%; reading one source removes the
+ * possibility.
+ */
+function examFacts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return f
+}
+
+const dataCloud = examFacts('data-360-consultant')
+const mcAdmin = examFacts('marketing-cloud-engagement-admin')
+const mcDeveloper = examFacts('marketing-cloud-engagement-developer')
+const mcConsultant = examFacts('marketing-cloud-consultant')
+
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Data Cloud and Marketing Cloud?',
@@ -53,7 +71,7 @@ const faqItems = [
   },
   {
     question: 'Is Data Cloud Consultant harder than Marketing Cloud certifications?',
-    answer: 'Data Cloud Consultant is considered harder than most Marketing Cloud certifications. It tests data modelling, identity resolution, data streams, calculated insights with SQL, and activation setup. Marketing Cloud exams range from moderate (Admin, Email Specialist) to hard (Developer, which requires AMPscript and SSJS). Data Cloud Consultant has a 62% passing score, lower than most exams.',
+    answer: `Data 360 Consultant (formerly Data Cloud Consultant) is considered harder than most Marketing Cloud certifications. It tests data modelling, identity resolution, data streams, calculated insights with SQL, and activation setup. Marketing Cloud exams range from moderate (Admin, Email Specialist) to hard (Developer, which requires AMPscript and SSJS). Data 360 Consultant also has the higher pass mark: ${dataCloud.passingScore}, against ${mcAdmin.passingScore} for Marketing Cloud Engagement Administrator and ${mcDeveloper.passingScore} for Marketing Cloud Engagement Developer.`,
   },
   {
     question: 'Which should I pursue first: Data Cloud or Marketing Cloud?',
@@ -90,7 +108,7 @@ export default function DataCloudVsMarketingCloudPage() {
           "You unify customer data across sources and resolve identities",
           "Your work is data models, ingestion, and segmentation upstream of any channel",
           "You want the credential that feeds analytics and Agentforce as well as marketing",
-          "You need 70% across 60 questions in 105 minutes, $200",
+          `You need ${dataCloud.passingScore} across ${dataCloud.questions} questions in ${dataCloud.duration}, ${dataCloud.fee}`,
           ],
         }}
         certB={{
@@ -101,7 +119,7 @@ export default function DataCloudVsMarketingCloudPage() {
           "You design and ship campaigns, journeys, and sends",
           "Your org already runs Marketing Cloud Engagement",
           "You want delivery-side depth rather than data architecture",
-          "You need 67% across 60 questions in 105 minutes, $200",
+          `You need ${mcConsultant.passingScore} across ${mcConsultant.questions} questions in ${mcConsultant.duration}, ${mcConsultant.fee}`,
           ],
         }}
         recommendation={{
@@ -156,18 +174,18 @@ export default function DataCloudVsMarketingCloudPage() {
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Questions / Time</td>
-                <td className="py-2.5 pr-4">60 questions · 105 min</td>
-                <td className="py-2.5">60 questions · 90-105 min</td>
+                <td className="py-2.5 pr-4">{dataCloud.questions} questions · {dataCloud.duration}</td>
+                <td className="py-2.5">{mcAdmin.questions} questions · {mcAdmin.duration}</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Passing Score</td>
-                <td className="py-2.5 pr-4">62%</td>
-                <td className="py-2.5">65-67%</td>
+                <td className="py-2.5 pr-4">{dataCloud.passingScore}</td>
+                <td className="py-2.5">Admin {mcAdmin.passingScore} · Developer {mcDeveloper.passingScore}</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Exam Fee</td>
-                <td className="py-2.5 pr-4">$200 (retake $100)</td>
-                <td className="py-2.5">$200 (retake $100)</td>
+                <td className="py-2.5 pr-4">{dataCloud.fee} (retake {dataCloud.retake})</td>
+                <td className="py-2.5">{mcAdmin.fee} (retake {mcAdmin.retake})</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Technical Depth</td>

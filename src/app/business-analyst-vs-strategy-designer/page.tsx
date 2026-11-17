@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
@@ -63,6 +63,26 @@ const faqItems = [
     answer: 'Yes. The certifications complement each other. Together, they show skills in stakeholder engagement and requirements analysis as well as experience design and customer experience strategy. This combination may be useful on large transformation programmes where user experience matters alongside technical delivery.',
   },
 ]
+
+/**
+ * Exam facts read from the certification registry in cert-seo-data.ts, so the
+ * comparison table and the prose below it cannot drift apart from each other
+ * or from the study guides when Salesforce refreshes a blueprint.
+ */
+function examFacts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return f
+}
+
+function passingScore(slug: string) {
+  return examFacts(slug).passingScore
+}
+
+function examFormat(slug: string) {
+  const f = examFacts(slug)
+  return `${f.questions} questions, ${f.duration}, ${f.passingScore}, ${f.fee}`
+}
 
 export default function BusinessAnalystVsStrategyDesignerPage() {
   return (
@@ -139,8 +159,8 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Exam Format</td>
-                <td className="py-2.5 pr-4">60 questions, 105 min, 72%, $200</td>
-                <td className="py-2.5">60 questions, 105 min, 65%, $200</td>
+                <td className="py-2.5 pr-4">{examFormat('business-analyst')}</td>
+                <td className="py-2.5">{examFormat('strategy-designer')}</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Demand Level</td>
@@ -165,9 +185,9 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Certification Should You Take?</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>Business Analyst</strong> if you gather requirements, write user stories, run workshops, or manage UAT on Salesforce projects.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>Strategy Designer</strong> if you set experience strategy, run design workshops, map customer journeys, or define what a Salesforce solution should do for users.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Business Analyst has a <strong>higher passing score (72%)</strong> than most Salesforce certifications. Allow extra study time for scenario questions about requirements and stakeholder communication.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Choose <strong>Business Analyst</strong> if you gather requirements, write user stories, run workshops, or manage UAT on Salesforce projects.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Choose <strong>Strategy Designer</strong> if you set experience strategy, run design workshops, map customer journeys, or define what a Salesforce solution should do for users.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Business Analyst has a <strong>higher passing score ({passingScore('business-analyst')})</strong> than most Salesforce certifications. Allow extra study time for scenario questions about requirements and stakeholder communication.</span></li>
         </ul>
       </section>
 
@@ -235,8 +255,8 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
           <Link href="/certifications/strategy-designer#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Strategy Designer Practice Questions
           </Link>
-          <Link href="/certifications/ux-designer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            UX Designer Exam Tips {RELEASE_CURRENT}
+          <Link href="/certifications/strategy-designer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Strategy Designer Study Guide
           </Link>
         </div>
       </section>

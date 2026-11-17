@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
@@ -45,6 +46,24 @@ const breadcrumbItems = [
   { name: 'Data Cloud vs CRM Analytics', url: '/data-cloud-vs-crm-analytics' },
 ]
 
+/**
+ * Exam facts read from the certification registry in cert-seo-data.ts, so the
+ * comparison table and the FAQ cannot state different formats for the same
+ * exam, which is how this page came to claim both exams shared one.
+ */
+function examFacts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return f
+}
+
+const dataCloud = examFacts('data-360-consultant')
+const crmAnalytics = examFacts('crm-analytics-einstein-discovery-consultant')
+
+function examFormat(f: ReturnType<typeof examFacts>) {
+  return `${f.questions} questions, ${f.duration}, ${f.passingScore}, ${f.fee}`
+}
+
 const faqItems = [
   {
     question: 'What is the difference between Data Cloud and CRM Analytics in Salesforce?',
@@ -60,7 +79,7 @@ const faqItems = [
   },
   {
     question: 'Is Data Cloud Consultant harder than CRM Analytics Consultant?',
-    answer: 'Both exams have 60 questions, 105 minutes, a 65% passing score, and a $200 fee. Some candidates find Data Cloud more conceptually challenging because its technology is newer and its architecture topics, such as identity resolution, streaming ingestion, and calculated insights, may be unfamiliar. CRM Analytics can be challenging because it requires hands-on work with SAQL queries and recipe-level data transformations.',
+    answer: `The formats differ. Data 360 Consultant is ${dataCloud.questions} questions in ${dataCloud.duration} with a ${dataCloud.passingScore} passing score; CRM Analytics and Einstein Discovery Consultant is ${crmAnalytics.questions} questions in ${crmAnalytics.duration} with a ${crmAnalytics.passingScore} passing score. Both cost ${dataCloud.fee}. Some candidates find Data Cloud more conceptually challenging because its technology is newer and its architecture topics, such as identity resolution, streaming ingestion, and calculated insights, may be unfamiliar. CRM Analytics can be challenging because it requires hands-on work with SAQL queries and recipe-level data transformations.`,
   },
 ]
 
@@ -140,8 +159,8 @@ export default function DataCloudVsCrmAnalyticsPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Exam Format</td>
-                <td className="py-2.5 pr-4">60 questions, 105 min, 65%, $200</td>
-                <td className="py-2.5">60 questions, 105 min, 65%, $200</td>
+                <td className="py-2.5 pr-4">{examFormat(dataCloud)}</td>
+                <td className="py-2.5">{examFormat(crmAnalytics)}</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Market Demand (2026)</td>
@@ -166,9 +185,9 @@ export default function DataCloudVsCrmAnalyticsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which Should You Take?</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>Data Cloud Consultant</strong> when your projects connect customer data across systems or activate it for Marketing Cloud, AI, or Agentforce.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Choose <strong>CRM Analytics Consultant</strong> when you build dashboards, bring business intelligence into sales workflows, or use Einstein Discovery for predictions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />If you are unsure, compare the projects available to you. Data Cloud has a stronger role in 2026 AI and personalization work; CRM Analytics fits reporting and analytics work.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Choose <strong>Data Cloud Consultant</strong> when your projects connect customer data across systems or activate it for Marketing Cloud, AI, or Agentforce.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Choose <strong>CRM Analytics Consultant</strong> when you build dashboards, bring business intelligence into sales workflows, or use Einstein Discovery for predictions.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>If you are unsure, compare the projects available to you. Data Cloud has a stronger role in 2026 AI and personalization work; CRM Analytics fits reporting and analytics work.</span></li>
         </ul>
       </section>
 

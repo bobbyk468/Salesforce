@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
@@ -236,7 +235,7 @@ export default function CpqAdminVsCpqBillingApPage() {
             CPQ &amp; Billing AP Practice Questions
           </Link>
           <Link href="/certifications/revenue-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Revenue Cloud Tips {RELEASE_CURRENT}
+            Revenue Management Consultant Study Guide
           </Link>
         </div>
       </section>

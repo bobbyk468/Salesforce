@@ -167,8 +167,8 @@ export default function Adm201VsAppBuilderPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Which One Should You Take First?</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Start with <strong>ADM-201</strong> if you are new to Salesforce or want an admin-focused role.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Take <strong>DEV-402 next</strong> if you want to build custom apps using declarative tools.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Start with <strong>ADM-201</strong> if you are new to Salesforce or want an admin-focused role.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span>Take <strong>DEV-402 next</strong> if you want to build custom apps using declarative tools.</span></li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />A common sequence is ADM-201, then DEV-402, followed by an Advanced Administrator or Consultant path.</li>
         </ul>
       </section>

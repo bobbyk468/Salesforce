@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import CredentialStatusNotice from '@/components/CredentialStatusNotice'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -34,6 +36,22 @@ export const metadata: Metadata = {
   },
 }
 
+/**
+ * Exam facts from the certification registry in cert-seo-data.ts and the
+ * closure banner from credential-status.ts. Account Engagement Consultant is
+ * closed, so every card, FAQ, matrix row and CTA on this page has to point at
+ * Marketing Cloud Engagement Consultant instead; reading one source is what
+ * keeps them from drifting back.
+ */
+function examFacts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return f
+}
+
+const mce = examFacts('marketing-cloud-consultant')
+const mcae = examFacts('pardot-consultant')
+
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'Certification Comparison', url: '/certification-comparison' },
@@ -47,19 +65,19 @@ const faqItems = [
   },
   {
     question: 'Which should I take: Pardot Consultant or Marketing Cloud Consultant?',
-    answer: 'Choose the credential that matches the platform you use. Account Engagement supports B2B lead nurturing and CRM-connected marketing; Marketing Cloud Engagement supports large email, SMS, and cross-channel campaigns for B2C brands. Neither is the right choice for everyone.',
+    answer: 'Marketing Cloud Engagement Consultant (MCE-Con-201), because Account Engagement Consultant can no longer be booked: registration closed on July 24, 2026, August 31, 2026 was the last sitting, and the credential retires on February 1, 2027. If your work is B2B lead nurturing on Account Engagement, Salesforce points candidates to Marketing Cloud Next Consultant (MC-Con-201) and Account Engagement Specialist (MC-201) instead.',
   },
   {
     question: 'Can I hold both Pardot Consultant and Marketing Cloud Consultant?',
-    answer: 'Yes. You can hold both credentials, and each is maintained separately. Some enterprise clients use Account Engagement for B2B work and Marketing Cloud Engagement for B2C campaigns, so consultants who support both platforms may find both useful.',
+    answer: 'Only if you already passed Account Engagement Consultant before it closed on August 31, 2026. Holders keep it on their Trailblazer Profile, marked Retired from February 1, 2027, with no maintenance required, and can add Marketing Cloud Engagement Consultant alongside it. It can no longer be earned, so a new combination has to be built from exams that are still open.',
   },
   {
     question: 'Which is more in demand: Pardot or Marketing Cloud Consultant?',
-    answer: 'Marketing Cloud Consultant may appear in more job postings because large enterprises use Marketing Cloud Engagement for high-volume consumer marketing. Pardot Consultant is valued in B2B SaaS, technology, financial services, and professional services, where marketing automation and Salesforce CRM integration matter. Demand varies by industry and employer.',
+    answer: 'Marketing Cloud Consultant, and it is also the only one of the two still awarded. It appears in more job postings because large enterprises use Marketing Cloud Engagement for high-volume consumer marketing. Account Engagement skills remain valued in B2B SaaS, technology, financial services, and professional services, but since August 31, 2026 they can no longer be evidenced with this certification.',
   },
   {
     question: 'What experience is needed before taking each consultant exam?',
-    answer: 'For Pardot Consultant, the page recommends Pardot Specialist first and 1–2 years of hands-on Pardot or Account Engagement implementation experience. For Marketing Cloud Consultant, it recommends Marketing Cloud Email Specialist first and 1–2 years of platform experience, including Journey Builder and audience management.',
+    answer: 'For Marketing Cloud Consultant, the exam that is still open, this page recommends Marketing Cloud Email Specialist first and 1–2 years of platform experience, including Journey Builder and audience management. Account Engagement Consultant recommended Account Engagement Specialist first and 1–2 years of hands-on implementation experience, which is now a guide to the skills rather than to an exam booking.',
   },
 ]
 
@@ -77,9 +95,11 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          These credentials cover different marketing platforms. Account Engagement supports B2B marketing, while Marketing Cloud Engagement supports B2C and cross-channel campaigns. Choose based on the platform used in your role.
+          These credentials cover different marketing platforms. Account Engagement supports B2B marketing, while Marketing Cloud Engagement supports B2C and cross-channel campaigns. Only one of them is still open: Salesforce closed Account Engagement Consultant on 31 August 2026, so Marketing Cloud Engagement Consultant (MCE-Con-201) is the exam to book.
         </p>
       </div>
+
+      <CredentialStatusNotice slug="pardot-consultant" />
 
       <ContentPageAuthor />
 
@@ -92,7 +112,7 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
           "Your org runs Marketing Cloud Engagement, formerly ExactTarget",
           "Your work is high-volume journeys, sends, and data extensions",
           "You build in Journey Builder and Automation Studio",
-          "You need 67% across 60 questions in 105 minutes, $200",
+          `You need ${mce.passingScore} across ${mce.questions} questions in ${mce.duration}, ${mce.fee}`,
           ],
         }}
         certB={{
@@ -119,32 +139,33 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-lg font-bold text-gray-900">Pardot Consultant</h2>
-            <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">B2B Marketing</span>
+            <h2 className="text-lg font-bold text-gray-900">Marketing Cloud Engagement Consultant</h2>
+            <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Open: B2C Marketing</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">68%</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">Account Engagement</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">{mce.fee}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">{mce.questions}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">{mce.duration}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">{mce.passingScore}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">MC Engagement</span></div>
           </div>
-          <Link href="/certifications/pardot-consultant" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <Link href="/certifications/marketing-cloud-consultant" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
 
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="text-lg font-bold text-gray-900">Marketing Cloud Consultant</h2>
-            <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">B2C Marketing</span>
+            <h2 className="text-lg font-bold text-gray-900">Account Engagement Consultant</h2>
+            <span className="text-xs font-semibold bg-amber-100 text-amber-900 px-2 py-0.5 rounded-full">Exam closed August 2026</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">67%</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">MC Engagement</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">{mcae.fee}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">{mcae.questions}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">{mcae.duration}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">{mcae.passingScore}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">Account Engagement</span></div>
           </div>
-          <Link href="/certifications/marketing-cloud-consultant" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
+          <p className="mb-2 text-xs text-gray-600">Published figures, kept for reference. Registration closed 24 July 2026; the credential retires 1 February 2027.</p>
+          <Link href="/certifications/pardot-consultant" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
       </div>
 
@@ -197,11 +218,11 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
               <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">B2B marketing automation, lead scoring, and CRM-synced campaigns</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot (MCAE) Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">High-volume B2C email campaigns, Journey Builder, or multi-channel marketing</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">Enterprise B2B company using Salesforce CRM for sales pipeline</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot, tight CRM integration is the core use case</td></tr>
-              <tr><td className="py-2.5 pr-4">Client sends millions of emails to consumers and needs personalised journeys</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">Want the higher-demand credential in the 2025 job market</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant, broader demand</td></tr>
+              <tr><td className="py-2.5 pr-4">B2B marketing automation, lead scoring, and CRM-synced campaigns</td><td className="py-2.5 font-semibold text-purple-700">Account Engagement Specialist (MC-201) or Marketing Cloud Next Consultant; the MCAE Consultant exam closed</td></tr>
+              <tr><td className="py-2.5 pr-4">High-volume B2C email campaigns, Journey Builder, or multi-channel marketing</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Engagement Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Enterprise B2B company using Salesforce CRM for sales pipeline</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Next Consultant, Salesforce&apos;s named successor for Account Engagement work</td></tr>
+              <tr><td className="py-2.5 pr-4">Client sends millions of emails to consumers and needs personalised journeys</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Engagement Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Want the credential that is still awarded</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Engagement Consultant, the bookable exam of the two</td></tr>
             </tbody>
           </table>
         </div>
@@ -211,13 +232,13 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practise with Marketing Certification Questions</h2>
-        <p className="text-white mb-6">Review free practice questions for both consultant exams.</p>
+        <p className="text-white mb-6">Marketing Cloud Engagement Consultant is the bookable exam. The Account Engagement bank stays up as study material for its closed outline.</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/certifications/pardot-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
-            Pardot Consultant Practice
+          <Link href="/certifications/marketing-cloud-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+            MC Engagement Consultant Practice
           </Link>
-          <Link href="/certifications/marketing-cloud-consultant" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
-            MC Consultant Practice
+          <Link href="/certifications/pardot-consultant" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+            Account Engagement Practice (closed exam)
           </Link>
         </div>
       </div>

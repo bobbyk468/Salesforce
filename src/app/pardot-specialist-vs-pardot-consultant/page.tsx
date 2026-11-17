@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import CredentialStatusNotice from '@/components/CredentialStatusNotice'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -36,6 +38,21 @@ export const metadata: Metadata = {
   },
 }
 
+/**
+ * Exam facts from the certification registry in cert-seo-data.ts and the
+ * closure banner from credential-status.ts. Account Engagement (Pardot)
+ * Consultant closed on 31 August 2026, so this page can recommend Specialist
+ * as the next exam but must not present Consultant as the step after it.
+ */
+function examFacts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return f
+}
+
+const specialist = examFacts('pardot-specialist')
+const consultant = examFacts('pardot-consultant')
+
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'Certification Comparison', url: '/certification-comparison' },
@@ -49,15 +66,15 @@ const faqItems = [
   },
   {
     question: 'Should I take Pardot Specialist before Pardot Consultant?',
-    answer: 'Yes. Pardot Specialist is strongly recommended first. Pardot Consultant assumes a strong grasp of Pardot features and adds consulting and architecture topics. Candidates who skip Specialist may find the Consultant exam harder.',
+    answer: 'Specialist is the only one of the two you can take: Pardot Consultant closed on August 31, 2026. It was always strongly recommended first, because Consultant assumed a strong grasp of Pardot features and added consulting and architecture topics. Candidates who skip Specialist may find the Consultant exam harder.',
   },
   {
     question: 'Which Pardot certification has more job market value?',
-    answer: 'Pardot Consultant has more job market value for consulting roles and senior marketing operations work. Pardot Specialist is an entry credential for marketing automation and is usually enough for in-house marketing team roles. For Salesforce partner consulting firms, Pardot Consultant is typically the baseline expectation.',
+    answer: 'Pardot Specialist, because it is the only one of the two still awarded. Pardot Consultant carried more weight for consulting and senior marketing operations roles, and partner consulting firms treated it as a baseline, but it closed on August 31, 2026 and retires on February 1, 2027. Specialist covers the entry-level marketing automation skills most in-house marketing roles ask for.',
   },
   {
     question: 'What is the Pardot Consultant exam format?',
-    answer: 'The Pardot Consultant exam has 60 questions, a 105-minute limit, a 68% passing score, and a $200 fee. Its scenarios ask you to choose a Pardot setup or approach for a business need. Topics include Pardot features, requirements gathering, solution design, data migration, and implementation strategy.',
+    answer: 'Account Engagement Consultant closed to new registrations on July 24, 2026 and the last sitting was August 31, 2026, so this is the published format rather than a bookable one: 60 questions, a 105-minute limit, a 68% passing score, and a $200 fee. Its scenarios ask you to choose a Pardot setup or approach for a business need. Topics include Pardot features, requirements gathering, solution design, data migration, and implementation strategy.',
   },
   {
     question: 'Do I need Salesforce Admin (ADM-201) before Pardot Consultant?',
@@ -79,9 +96,11 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
-          Both credentials cover Account Engagement, but at different levels. Start with Specialist for hands-on platform work; consider Consultant when your work includes implementation planning and client advice.
+          Both credentials cover Account Engagement, but at different levels. Specialist is the one you can still book, and it covers hands-on platform work. The Consultant exam closed on 31 August 2026, so its outline is now a description of implementation and advisory skills rather than a credential to plan for.
         </p>
       </div>
+
+      <CredentialStatusNotice slug="pardot-consultant" />
 
       <ContentPageAuthor />
       <WhichFirstBlock
@@ -99,19 +118,19 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         certB={{
           name: "Pardot Consultant",
           certSlug: "pardot-consultant",
-          examTipsSlug: "certifications/pardot-consultant",
+          unavailable: "exam closed August 2026",
           conditions: [
-          "You already hold Pardot Specialist",
-          "You design and implement full Account Engagement solutions for clients",
-          "You work at a consulting firm delivering B2B marketing implementations",
-          "You have 2+ years of hands-on Pardot/Account Engagement experience",
+          "Designing and implementing full Account Engagement solutions for clients",
+          "Multi-business-unit architecture and complex connector troubleshooting",
+          "Implementation strategy, data migration, and governance",
+          "Credential retires 1 February 2027",
           ],
         }}
         recommendation={{
           certName: "Pardot Specialist",
           certSlug: "pardot-specialist",
           examTipsSlug: "certifications/pardot-specialist",
-          reason: "Pardot Specialist is the foundation for Consultant. Take Specialist first, then progress to Consultant after 12+ months of platform experience.",
+          reason: "Pardot Specialist is the Account Engagement credential Salesforce still awards, so it is the one to sit. The progression this page used to describe no longer exists: Consultant registration closed on 24 July 2026, 31 August 2026 was the last sitting, and the credential retires on 1 February 2027. For advisory work beyond Specialist, Salesforce points candidates to Marketing Cloud Next Consultant (MC-Con-201).",
           
         }}
       />
@@ -121,9 +140,9 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           {
             name: 'Pardot Specialist',
             href: '/certifications/pardot-specialist',
-            badge: 'Take First',
+            badge: 'Take this one',
             badgeColor: 'bg-green-100 text-green-800',
-            fee: '$200', questions: '60', time: '90 min', passing: '72%',
+            fee: specialist.fee, questions: String(specialist.questions), time: specialist.duration, passing: specialist.passingScore,
             level: 'Practitioner, hands-on execution',
             best: 'Marketing automation specialists, email marketers, marketing ops professionals',
             skills: ['Lead scoring and grading models', 'Engagement Studio programs', 'Forms, landing pages, and automation rules', 'Email marketing and deliverability', 'Pardot-Salesforce connector basics'],
@@ -131,9 +150,9 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           {
             name: 'Pardot Consultant',
             href: '/certifications/pardot-consultant',
-            badge: 'Take Second',
-            badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
-            fee: '$200', questions: '60', time: '105 min', passing: '68%',
+            badge: 'Exam closed August 2026',
+            badgeColor: 'bg-amber-100 text-amber-900',
+            fee: consultant.fee, questions: String(consultant.questions), time: consultant.duration, passing: consultant.passingScore,
             level: 'Strategic, architecture and consulting',
             best: 'Salesforce consulting partners, senior marketing ops architects, solution architects',
             skills: ['Multi-business-unit Pardot architecture', 'Implementation strategy and requirements gathering', 'Complex connector sync troubleshooting', 'Data migration and cleansing strategy', 'Governance and change management'],
@@ -183,12 +202,13 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             <tbody className="divide-y divide-gray-50">
               {[
                 { aspect: 'Focus', s: 'Execution & daily use', c: 'Strategy & architecture' },
-                { aspect: 'Time limit', s: '90 minutes', c: '105 minutes' },
+                { aspect: 'Bookable now?', s: 'Yes', c: 'No, exam closed 31 August 2026; credential retires 1 February 2027' },
+                { aspect: 'Time limit', s: specialist.duration, c: consultant.duration },
                 { aspect: 'Question style', s: 'Feature-based scenarios', c: 'Client consulting scenarios' },
                 { aspect: 'Multi-BU tested?', s: 'Basic concepts', c: 'Advanced architecture' },
                 { aspect: 'Connector depth', s: 'Standard sync knowledge', c: 'Complex troubleshooting' },
-                { aspect: 'Fee', s: '$200', c: '$200' },
-                { aspect: 'Recommended prior cert', s: 'None required', c: 'Pardot Specialist + ADM-201' },
+                { aspect: 'Fee', s: specialist.fee, c: consultant.fee },
+                { aspect: 'Recommended prior cert', s: 'None required', c: 'Pardot Specialist + ADM-201, when the exam was open' },
                 { aspect: 'Avg Salary', s: '$70–95k (US)', c: '$85–115k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
@@ -224,10 +244,10 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr><td className="py-2.5 pr-4">Day-to-day Pardot user, running campaigns, managing prospects, using Engagement Studio</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot Specialist</td></tr>
-              <tr><td className="py-2.5 pr-4">Implementing Pardot for clients or designing the full marketing automation architecture</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant</td></tr>
-              <tr><td className="py-2.5 pr-4">New to Pardot/MCAE, no prior certification</td><td className="py-2.5 font-semibold text-salesforce-blue">Specialist first: Consultant builds on Specialist knowledge</td></tr>
-              <tr><td className="py-2.5 pr-4">Consultant or agency delivering Pardot implementations</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant, required for partner-level credibility</td></tr>
-              <tr><td className="py-2.5 pr-4">Both, what order?</td><td className="py-2.5 font-semibold text-gray-700">Specialist first, then Consultant after 6+ months of hands-on use</td></tr>
+              <tr><td className="py-2.5 pr-4">Implementing Pardot for clients or designing the full marketing automation architecture</td><td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Next Consultant (MC-Con-201); the MCAE Consultant exam closed</td></tr>
+              <tr><td className="py-2.5 pr-4">New to Pardot/MCAE, no prior certification</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot Specialist</td></tr>
+              <tr><td className="py-2.5 pr-4">Consultant or agency delivering Pardot implementations</td><td className="py-2.5 font-semibold text-purple-700">Pardot Specialist now, then Marketing Cloud Next Consultant for advisory depth</td></tr>
+              <tr><td className="py-2.5 pr-4">Already hold Pardot Consultant</td><td className="py-2.5 font-semibold text-gray-700">You keep it, marked Retired from 1 February 2027, with no maintenance required</td></tr>
             </tbody>
           </table>
         </div>
@@ -237,13 +257,13 @@ export default function PardotSpecialistVsPardotConsultantPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with Pardot Specialist</h2>
-        <p className="text-white mb-6">Review free practice questions for both Pardot credentials.</p>
+        <p className="text-white mb-6">Pardot Specialist is the bookable exam. The Consultant bank stays up as study material for its closed outline.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/pardot-specialist" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Pardot Specialist Practice
           </Link>
           <Link href="/certifications/pardot-consultant" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
-            Pardot Consultant Practice
+            Pardot Consultant Practice (closed exam)
           </Link>
         </div>
       </div>

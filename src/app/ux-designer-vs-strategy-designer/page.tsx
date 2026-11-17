@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import { getPublishedExamFacts } from '@/lib/cert-seo-data'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -42,6 +43,20 @@ const breadcrumbItems = [
   { name: 'UX Designer vs Strategy Designer', url: '/ux-designer-vs-strategy-designer' },
 ]
 
+/**
+ * Exam facts read from the certification registry in cert-seo-data.ts so the
+ * two spec cards and the FAQ below them cannot drift apart from each other or
+ * from the study guides.
+ */
+function examFacts(slug: string) {
+  const f = getPublishedExamFacts(slug)
+  if (!f) throw new Error(`No published exam facts for ${slug}`)
+  return f
+}
+
+const ux = examFacts('ux-designer')
+const strategy = examFacts('strategy-designer')
+
 const faqItems = [
   {
     question: 'Which should I take first: UX Designer or Strategy Designer?',
@@ -53,7 +68,7 @@ const faqItems = [
   },
   {
     question: 'Which certification is harder: UX Designer or Strategy Designer?',
-    answer: 'Candidates may find Strategy Designer more challenging because it asks them to apply abstract design frameworks to complex business situations. The passing scores are 70% for Strategy Designer and 65% for UX Designer. UX Designer focuses on practical skills such as research methods, wireframing, and SLDS, which some candidates find easier to prepare for.',
+    answer: `Candidates may find Strategy Designer more challenging because it asks them to apply abstract design frameworks to complex business situations. The passing scores are ${examFacts('strategy-designer').passingScore} for Strategy Designer and ${examFacts('ux-designer').passingScore} for UX Designer. UX Designer focuses on practical skills such as research methods, wireframing, and SLDS, which some candidates find easier to prepare for.`,
   },
   {
     question: 'What jobs require UX Designer vs Strategy Designer?',
@@ -120,13 +135,13 @@ export default function UxDesignerVsStrategyDesignerPage() {
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-bold text-gray-900">UX Designer</h2>
-            <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Take First (Designers)</span>
+            <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Best for UI/UX</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">65%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">{ux.fee}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">{ux.questions}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">{ux.duration}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">{ux.passingScore}</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Execution</span></div>
           </div>
           <Link href="/certifications/ux-designer" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
@@ -135,13 +150,13 @@ export default function UxDesignerVsStrategyDesignerPage() {
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-bold text-gray-900">Strategy Designer</h2>
-            <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Take First (Consultants)</span>
+            <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Best for Strategy</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">70%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">{strategy.fee}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">{strategy.questions}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">{strategy.duration}</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">{strategy.passingScore}</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Strategy</span></div>
           </div>
           <Link href="/certifications/strategy-designer" className="block py-1 text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
