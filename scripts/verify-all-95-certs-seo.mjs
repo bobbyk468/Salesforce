@@ -1,11 +1,16 @@
 // scripts/verify-all-95-certs-seo.mjs
-// Usage: Start production server on http://localhost:3000, then run:
-// node scripts/verify-all-95-certs-seo.mjs
+// Usage: PORT=3100 npm run start, then
+//   PORT=3100 node scripts/verify-all-95-certs-seo.mjs
+// VERIFY_BASE_URL or argv[2] override PORT; the default matches the other two
+// verify scripts, which also target :3100.
 
 import { parseDocument, DomUtils } from "htmlparser2";
 import { selectAll, selectOne } from "css-select";
 
-const BASE_URL = process.env.VERIFY_BASE_URL || process.argv[2] || "http://localhost:3000";
+const BASE_URL =
+  process.env.VERIFY_BASE_URL ||
+  process.argv[2] ||
+  `http://localhost:${process.env.PORT || 3100}`;
 const TWENTY_QUESTION_PAGES = new Set([
   "platform-foundations", "administrator", "advanced-administrator", "app-builder",
   "agentforce-specialist", "developer-1", "developer-2", "marketing-cloud-consultant",
