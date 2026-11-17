@@ -63,9 +63,9 @@ export default function SharingVisibilityArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Sharing & Visibility Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing model design</strong>: OWD strategy, role hierarchy depth trade-offs, implicit vs. explicit sharing, and when each sharing mechanism is the right architectural choice.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance implications</strong>: How sharing rule complexity affects query performance at large data volumes, and when to favour restrictive OWDs over permissive ones to maintain performance.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special sharing scenarios</strong>: Community/portal user access, territory management sharing, Apex managed sharing, and sharing for external users.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Sharing model design</strong>: OWD strategy, role hierarchy depth trade-offs, implicit vs. explicit sharing, and when each sharing mechanism is the right architectural choice.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Performance implications</strong>: How sharing rule complexity affects query performance at large data volumes, and when to favour restrictive OWDs over permissive ones to maintain performance.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Special sharing scenarios</strong>: Community/portal user access, territory management sharing, Apex managed sharing, and sharing for external users.</span></li>
         </ul>
       </section>
 

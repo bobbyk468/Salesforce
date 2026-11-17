@@ -62,9 +62,9 @@ export default function SystemArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: System Architect Actually Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Cross-domain thinking:</strong> The exam tests how identity, integrations, and deployment decisions interact, not each in isolation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Governance at scale:</strong> Org strategy, sandboxes, release management, and DevOps processes across large enterprise Salesforce implementations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security architecture:</strong> OAuth flows, SAML, SSO, Named Credentials, and connected app permissions, not just configuration, but architectural trade-offs.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Cross-domain thinking:</strong> The exam tests how identity, integrations, and deployment decisions interact, not each in isolation.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Governance at scale:</strong> Org strategy, sandboxes, release management, and DevOps processes across large enterprise Salesforce implementations.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Security architecture:</strong> OAuth flows, SAML, SSO, Named Credentials, and connected app permissions, not just configuration, but architectural trade-offs.</span></li>
         </ul>
       </section>
 
@@ -93,10 +93,10 @@ export default function SystemArchitectExamTipsContent() {
           For each topic, understand not just <em>what</em> it is but <em>when</em> to recommend it vs alternatives.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>OAuth and SAML flows:</strong> Web Server, User-Agent, JWT Bearer Token, SAML Assertion. Know which to recommend based on scenario constraints.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>CI/CD and DevOps:</strong> Sandbox strategy, scratch orgs, change sets vs SFDX vs metadata API deployments, release management governance.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Heroku architecture:</strong> When to use Heroku vs Salesforce platform, data residency decisions, Heroku Connect sync strategy.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Multi-org strategy:</strong> When to use one org vs multiple, sharing data across orgs, connected apps and external objects.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>OAuth and SAML flows:</strong> Web Server, User-Agent, JWT Bearer Token, SAML Assertion. Know which to recommend based on scenario constraints.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>CI/CD and DevOps:</strong> Sandbox strategy, scratch orgs, change sets vs SFDX vs metadata API deployments, release management governance.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Heroku architecture:</strong> When to use Heroku vs Salesforce platform, data residency decisions, Heroku Connect sync strategy.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Multi-org strategy:</strong> When to use one org vs multiple, sharing data across orgs, connected apps and external objects.</span></li>
         </ul>
       </section>
 

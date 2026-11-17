@@ -65,9 +65,9 @@ export default function IntegrationArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Integration Architect Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration pattern selection</strong>: When to use REST vs. SOAP vs. Bulk API vs. Streaming API vs. Platform Events, and the trade-offs of each for specific integration scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Middleware architecture</strong>: When to recommend point-to-point integration vs. middleware (MuleSoft, Dell Boomi) vs. a custom ESB, and the governance implications of each choice.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security for integrations</strong>: OAuth flows (User-Agent, Username-Password, JWT Bearer, Web Server), Named Credentials, and certificate management for secure system-to-system communication.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Integration pattern selection</strong>: When to use REST vs. SOAP vs. Bulk API vs. Streaming API vs. Platform Events, and the trade-offs of each for specific integration scenarios.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Middleware architecture</strong>: When to recommend point-to-point integration vs. middleware (MuleSoft, Dell Boomi) vs. a custom ESB, and the governance implications of each choice.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Security for integrations</strong>: OAuth flows (User-Agent, Username-Password, JWT Bearer, Web Server), Named Credentials, and certificate management for secure system-to-system communication.</span></li>
         </ul>
       </section>
 

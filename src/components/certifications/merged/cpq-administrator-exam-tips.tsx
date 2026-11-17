@@ -65,9 +65,9 @@ export default function CpqAdministratorExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: CPQ Specialist Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Products and bundles</strong>: Product options, feature categories, configuration attributes, option constraints, and product rules (validation, selection, filter, alert). Understanding nested bundles and dynamic options is essential.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pricing</strong>: Price waterfall (list price → best price → customer price → net price), discount schedules, block pricing, pricing rules, and price actions. Know the sequence and when each pricing mechanism applies.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Quotes and approvals</strong>: Quote templates, line columns, quote document generation, approval rules and conditions, and how approvals chain together. Also covers subscription products, amendments, and renewals.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Products and bundles</strong>: Product options, feature categories, configuration attributes, option constraints, and product rules (validation, selection, filter, alert). Understanding nested bundles and dynamic options is essential.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Pricing</strong>: Price waterfall (list price → best price → customer price → net price), discount schedules, block pricing, pricing rules, and price actions. Know the sequence and when each pricing mechanism applies.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Quotes and approvals</strong>: Quote templates, line columns, quote document generation, approval rules and conditions, and how approvals chain together. Also covers subscription products, amendments, and renewals.</span></li>
         </ul>
       </section>
 

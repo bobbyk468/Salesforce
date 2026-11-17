@@ -65,9 +65,9 @@ export default function DataArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Data Architect Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data modelling decisions</strong>: Object relationships, field strategy, external IDs, data normalisation vs. denormalisation trade-offs at scale.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Large data volume (LDV) strategy</strong>: When and how to use skinny tables, custom indexes, query optimisation, and the impact of record volume on performance.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Master data management</strong>: Duplicate management, data governance frameworks, external system integration patterns, and data quality strategy.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Data modelling decisions</strong>: Object relationships, field strategy, external IDs, data normalisation vs. denormalisation trade-offs at scale.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Large data volume (LDV) strategy</strong>: When and how to use skinny tables, custom indexes, query optimisation, and the impact of record volume on performance.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Master data management</strong>: Duplicate management, data governance frameworks, external system integration patterns, and data quality strategy.</span></li>
         </ul>
       </section>
 

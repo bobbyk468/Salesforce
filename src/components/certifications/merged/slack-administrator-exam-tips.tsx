@@ -63,9 +63,9 @@ export default function SlackAdministratorExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Slack Administrator Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Workspace management</strong>: Channel types (public, private, shared), message retention policies, workspace settings, admin and owner roles, and how to manage members across workspaces or an Enterprise Grid.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security and compliance</strong>: Data Loss Prevention (DLP), message retention, eDiscovery, two-factor authentication requirements, approved app lists, and workspace-level security settings for regulated industries.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Slack Connect and guests</strong>: External channel governance, guest type limitations (single vs. multi-channel), Slack Connect invitation controls, and how admins restrict external collaboration for compliance.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Workspace management</strong>: Channel types (public, private, shared), message retention policies, workspace settings, admin and owner roles, and how to manage members across workspaces or an Enterprise Grid.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Security and compliance</strong>: Data Loss Prevention (DLP), message retention, eDiscovery, two-factor authentication requirements, approved app lists, and workspace-level security settings for regulated industries.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Slack Connect and guests</strong>: External channel governance, guest type limitations (single vs. multi-channel), Slack Connect invitation controls, and how admins restrict external collaboration for compliance.</span></li>
         </ul>
       </section>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from '@/components/AppLink'
-import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
@@ -142,7 +142,7 @@ export default function IsSalesforceCertificationWorthItPage() {
               'You only use Salesforce for one narrow task at your company',
             ].map((item) => (
               <li key={item} className="flex items-start gap-2">
-                <span className="text-red-400 font-bold flex-shrink-0 mt-0.5">✗</span>
+                <XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
                 {item}
               </li>
             ))}

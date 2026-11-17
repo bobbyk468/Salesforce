@@ -65,9 +65,9 @@ export default function IdentityAccessManagementArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: IAM Architect Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OAuth flows</strong>: All five OAuth 2.0 flows, when each is appropriate, and the security trade-offs. JWT Bearer Token and Web Server flows are the most tested for enterprise scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SAML and SSO</strong>: SAML 2.0 configuration (IdP-initiated vs. SP-initiated), federation with external identity providers, and Just-in-Time (JIT) provisioning.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Connected Apps and scopes</strong>: Connected App design, OAuth scopes, IP restrictions, session policies, and when to use Named Credentials vs. Connected Apps for integrations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>OAuth flows</strong>: All five OAuth 2.0 flows, when each is appropriate, and the security trade-offs. JWT Bearer Token and Web Server flows are the most tested for enterprise scenarios.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>SAML and SSO</strong>: SAML 2.0 configuration (IdP-initiated vs. SP-initiated), federation with external identity providers, and Just-in-Time (JIT) provisioning.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Connected Apps and scopes</strong>: Connected App design, OAuth scopes, IP restrictions, session policies, and when to use Named Credentials vs. Connected Apps for integrations.</span></li>
         </ul>
       </section>
 

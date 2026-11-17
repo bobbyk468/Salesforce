@@ -64,9 +64,9 @@ export default function UxDesignerExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What UX Designer Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Human-centred design</strong>: The double-diamond process (discover, define, develop, deliver), design thinking methodology, and when to use each phase of the design process.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>User research methods</strong>: When to use interviews, surveys, card sorting, contextual inquiry, and usability testing, and how to synthesise findings into actionable insights.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Lightning Design System (SLDS)</strong>: Design tokens, component library usage, accessibility standards (WCAG), and how SLDS applies to Salesforce Experience Cloud and custom Lightning components.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Human-centred design</strong>: The double-diamond process (discover, define, develop, deliver), design thinking methodology, and when to use each phase of the design process.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>User research methods</strong>: When to use interviews, surveys, card sorting, contextual inquiry, and usability testing, and how to synthesise findings into actionable insights.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Salesforce Lightning Design System (SLDS)</strong>: Design tokens, component library usage, accessibility standards (WCAG), and how SLDS applies to Salesforce Experience Cloud and custom Lightning components.</span></li>
         </ul>
       </section>
 

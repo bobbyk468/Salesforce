@@ -63,9 +63,9 @@ export default function OmnistudioDeveloperExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What OmniStudio Developer Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong>: Building guided interaction flows with steps, elements, and conditional navigation. Understanding script reuse, error handling, and how OmniScripts call Integration Procedures and DataRaptors to load and save data.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong>: The four DataRaptor types: Extract (read Salesforce data), Transform (reshape data), Load (write to Salesforce), and Turbo Extract (optimised read without transformation). Know when to use each type.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FlexCards and Integration Procedures</strong>: FlexCards display contextual data in a card format, sourced via DataRaptors or Integration Procedures. Integration Procedures orchestrate multi-step server actions including HTTP callouts to external systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>OmniScripts</strong>: Building guided interaction flows with steps, elements, and conditional navigation. Understanding script reuse, error handling, and how OmniScripts call Integration Procedures and DataRaptors to load and save data.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>DataRaptors</strong>: The four DataRaptor types: Extract (read Salesforce data), Transform (reshape data), Load (write to Salesforce), and Turbo Extract (optimised read without transformation). Know when to use each type.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>FlexCards and Integration Procedures</strong>: FlexCards display contextual data in a card format, sourced via DataRaptors or Integration Procedures. Integration Procedures orchestrate multi-step server actions including HTTP callouts to external systems.</span></li>
         </ul>
       </section>
 

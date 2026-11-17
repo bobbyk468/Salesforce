@@ -5,6 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import { CheckCircle2 } from 'lucide-react'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Exam Day Tips (${RELEASE_CURRENT})`
@@ -100,7 +101,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
               { done: true, text: 'Begin OnVUE check-in 30 minutes before your appointment' },
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
-                <span className="text-green-500 font-bold flex-shrink-0">✓</span>
+                <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
                 {item.text}
               </li>
             ))}
@@ -120,7 +121,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
               { text: 'Have your Trailhead Academy / Pearson VUE booking confirmation available' },
             ].map((item, i) => (
               <li key={i} className="flex gap-2">
-                <span className="text-green-500 font-bold flex-shrink-0">✓</span>
+                <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" />
                 {item.text}
               </li>
             ))}

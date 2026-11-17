@@ -65,9 +65,9 @@ export default function ApplicationArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: How the Application Architect Credential Works</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>No single exam</strong>: Application Architect is a role-based credential earned automatically when you pass all four component exams. There is no separate Application Architect exam.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Four components</strong>: Platform App Builder (DEV-402), Platform Developer I (PD1), Data Architect, and Sharing &amp; Visibility Architect.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Recommended order</strong>: App Builder → PD1 → Data Architect → Sharing &amp; Visibility Architect. The first two build the foundation the latter two require.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>No single exam</strong>: Application Architect is a role-based credential earned automatically when you pass all four component exams. There is no separate Application Architect exam.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Four components</strong>: Platform App Builder (DEV-402), Platform Developer I (PD1), Data Architect, and Sharing &amp; Visibility Architect.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Recommended order</strong>: App Builder → PD1 → Data Architect → Sharing &amp; Visibility Architect. The first two build the foundation the latter two require.</span></li>
         </ul>
       </section>
 
@@ -113,10 +113,10 @@ export default function ApplicationArchitectExamTipsContent() {
           Salesforce feature for a given architectural constraint. The pattern is always: understand the constraint first, then select the solution.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>App Builder:</strong> Always prefer declarative over code. The exam tests your ability to solve requirements without Apex; Flow is the default answer for automation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>PD1:</strong> Governor limits are the key constraint. When a scenario involves bulk records, the answer always involves bulkification, SOQL outside loops, and proper test coverage.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Data Architect:</strong> Large data volume (LDV) questions test skinny tables, custom indexes, and query optimisation. Always consider the impact on query performance before recommending a data model.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Sharing &amp; Visibility:</strong> Read the sharing model in layers: OWD → role hierarchy → sharing rules → manual sharing. The answer is always the most restrictive configuration that still meets the stated requirement.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>App Builder:</strong> Always prefer declarative over code. The exam tests your ability to solve requirements without Apex; Flow is the default answer for automation.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>PD1:</strong> Governor limits are the key constraint. When a scenario involves bulk records, the answer always involves bulkification, SOQL outside loops, and proper test coverage.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Data Architect:</strong> Large data volume (LDV) questions test skinny tables, custom indexes, and query optimisation. Always consider the impact on query performance before recommending a data model.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Sharing &amp; Visibility:</strong> Read the sharing model in layers: OWD → role hierarchy → sharing rules → manual sharing. The answer is always the most restrictive configuration that still meets the stated requirement.</span></li>
         </ul>
       </section>
 

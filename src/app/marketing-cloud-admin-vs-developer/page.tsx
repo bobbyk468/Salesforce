@@ -167,9 +167,9 @@ export default function MarketingCloudAdminVsDeveloperPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Technical Skills: Developer Exam Focus</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AMPscript</strong>: Review variable declaration (VAR, SET), data retrieval (LOOKUP, LOOKUPROWS), conditional logic (IF/ELSEIF/ENDIF), loops (FOR/NEXT), and output functions (OUTPUT). These functions can personalize email bodies, subject lines, and landing pages.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>SSJS (Server-Side JavaScript)</strong>: Use it to work with Marketing Cloud APIs and data extensions on the server. It can handle complex logic, such as multi-step data changes when a landing page is submitted.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>REST API</strong>: Learn how to trigger sends, manage subscribers, and send campaign data to external systems. Key endpoints: /messaging/v1/messageDefinitionSends, /contacts/v1/contacts, /data/v1/async.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>AMPscript</strong>: Review variable declaration (VAR, SET), data retrieval (LOOKUP, LOOKUPROWS), conditional logic (IF/ELSEIF/ENDIF), loops (FOR/NEXT), and output functions (OUTPUT). These functions can personalize email bodies, subject lines, and landing pages.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>SSJS (Server-Side JavaScript)</strong>: Use it to work with Marketing Cloud APIs and data extensions on the server. It can handle complex logic, such as multi-step data changes when a landing page is submitted.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>REST API</strong>: Learn how to trigger sends, manage subscribers, and send campaign data to external systems. Key endpoints: /messaging/v1/messageDefinitionSends, /contacts/v1/contacts, /data/v1/async.</span></li>
         </ul>
       </section>
 

@@ -64,9 +64,9 @@ export default function Pd2ExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: PD2 Actually Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Not just Apex syntax</strong>: PD2 expects enterprise-grade design patterns: trigger frameworks, Separation of Concerns (SoC), and selector/domain/service layers.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration depth</strong>: REST and SOAP callouts with Named Credentials, HttpCalloutMock, WebServiceMock, and proper error handling patterns.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Async Apex mastery</strong>: Batch, Queueable, Schedulable, and Platform Events are tested at implementation depth, not just awareness level.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Not just Apex syntax</strong>: PD2 expects enterprise-grade design patterns: trigger frameworks, Separation of Concerns (SoC), and selector/domain/service layers.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Integration depth</strong>: REST and SOAP callouts with Named Credentials, HttpCalloutMock, WebServiceMock, and proper error handling patterns.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Async Apex mastery</strong>: Batch, Queueable, Schedulable, and Platform Events are tested at implementation depth, not just awareness level.</span></li>
         </ul>
       </section>
 
@@ -114,10 +114,10 @@ export default function Pd2ExamTipsContent() {
           For each pattern, know: when to use it, what problem it solves, and what the anti-pattern looks like.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Trigger framework (handler pattern):</strong> One trigger per object, logic in handler class, no business logic in trigger itself.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Selector / Domain / Service layers:</strong> Separation of Concerns for enterprise Apex. Know what each layer owns and why mixing them creates bulk API failures.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>HttpCalloutMock and WebServiceMock:</strong> Every integration test needs a mock. PD2 tests whether you mock correctly, not just whether tests pass.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><strong>Platform Events and CDC:</strong> Decoupled architecture for async integration. Know when to use PE vs Queueable vs Batch.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Trigger framework (handler pattern):</strong> One trigger per object, logic in handler class, no business logic in trigger itself.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Selector / Domain / Service layers:</strong> Separation of Concerns for enterprise Apex. Know what each layer owns and why mixing them creates bulk API failures.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>HttpCalloutMock and WebServiceMock:</strong> Every integration test needs a mock. PD2 tests whether you mock correctly, not just whether tests pass.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Platform Events and CDC:</strong> Decoupled architecture for async integration. Know when to use PE vs Queueable vs Batch.</span></li>
         </ul>
       </section>
 

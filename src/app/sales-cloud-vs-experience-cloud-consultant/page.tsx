@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -77,6 +78,39 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
       </header>
 
       <ContentPageAuthor />
+
+      <WhichFirstBlock
+        certA={{
+          name: "Agentforce Sales Consultant",
+          certSlug: "sales-cloud",
+          examTipsSlug: "certifications/sales-cloud",
+          conditions: [
+          "Your projects are lead-to-cash: pipeline, forecasting, opportunity management",
+          "You want the higher-demand consultant credential on most job listings",
+          "You already hold Platform Administrator and work on internal sales orgs",
+          "You are building toward a revenue-side consulting career",
+          ],
+        }}
+        certB={{
+          name: "Experience Cloud Consultant",
+          certSlug: "experience-cloud",
+          examTipsSlug: "certifications/experience-cloud",
+          conditions: [
+          "You build partner portals, customer communities, or self-service sites",
+          "External identity, sharing for guest users, and site builder are your daily work",
+          "You want the lowest pass mark of the two at 62%",
+          "You already deliver Sales or Service Cloud and want to widen your scope",
+          ],
+        }}
+        recommendation={{
+          certName: "Agentforce Sales Consultant",
+          certSlug: "sales-cloud",
+          examTipsSlug: "certifications/sales-cloud",
+          reason: "Neither is a prerequisite for the other, so pick by the work you are staffed on. Sales Consultant is the default when you have no strong pull toward portals: it appears on far more consultant job listings and its lead-to-cash scope overlaps with most CRM delivery. Expect it to be the harder sitting at 73% to pass against Experience Cloud's 62%.",
+          careerPathSlug: "consultant-certification-path",
+          careerPathLabel: "Consultant Certification Path",
+        }}
+      />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

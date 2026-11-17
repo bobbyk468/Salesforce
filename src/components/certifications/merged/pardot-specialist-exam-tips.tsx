@@ -65,10 +65,10 @@ export default function PardotSpecialistExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Pardot Specialist Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Exam format</strong>: 60 multiple-choice/multiple-select questions and up to five unscored questions; 90 minutes; 72% passing score.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lead management</strong>: Lead scoring, grading, prospect lifecycle stages, and how Account Engagement syncs with Salesforce CRM records.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Engagement Studio</strong>: Building nurture programs, setting wait steps, branching rules, and completion actions based on prospect behavior.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Forms and landing pages</strong>: Form handlers, progressive profiling, thank-you page redirects, and conversion tracking configuration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Exam format</strong>: 60 multiple-choice/multiple-select questions and up to five unscored questions; 90 minutes; 72% passing score.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Lead management</strong>: Lead scoring, grading, prospect lifecycle stages, and how Account Engagement syncs with Salesforce CRM records.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Engagement Studio</strong>: Building nurture programs, setting wait steps, branching rules, and completion actions based on prospect behavior.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Forms and landing pages</strong>: Form handlers, progressive profiling, thank-you page redirects, and conversion tracking configuration.</span></li>
         </ul>
       </section>
 

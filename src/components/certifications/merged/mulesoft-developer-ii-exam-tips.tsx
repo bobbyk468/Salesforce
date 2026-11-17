@@ -65,9 +65,9 @@ export default function MulesoftDeveloperIiExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What MuleSoft Developer II Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API-led connectivity</strong>: Three-tier architecture (Experience, Process, System APIs), how to correctly layer business logic, API specifications with RAML, and the trade-offs of each architecture decision.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform management</strong>: CloudHub deployment, API Manager, API policies (rate limiting, client ID enforcement, OAuth), API Analytics, and environment management across development, staging, and production.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Async messaging and batch</strong>: Anypoint MQ (queues, exchanges, message acknowledgement), batch processing (batch jobs, batch steps, on-complete phase), and when to use async patterns vs. synchronous flows.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>API-led connectivity</strong>: Three-tier architecture (Experience, Process, System APIs), how to correctly layer business logic, API specifications with RAML, and the trade-offs of each architecture decision.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Anypoint Platform management</strong>: CloudHub deployment, API Manager, API policies (rate limiting, client ID enforcement, OAuth), API Analytics, and environment management across development, staging, and production.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Async messaging and batch</strong>: Anypoint MQ (queues, exchanges, message acknowledgement), batch processing (batch jobs, batch steps, on-complete phase), and when to use async patterns vs. synchronous flows.</span></li>
         </ul>
       </section>
 

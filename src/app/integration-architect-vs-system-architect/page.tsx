@@ -124,25 +124,25 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
-                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">Integration Architect</th>
-                <th scope="col" className="py-2.5 font-semibold text-purple-700">System Architect</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">Integration Architect (Plat-Arch-204)</th>
+                <th scope="col" className="py-2.5 font-semibold text-purple-700">System Architect (composite)</th>
               </tr>
             </thead>
             <tbody className="text-gray-700">
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Type</td>
                 <td className="py-2.5 pr-4">Specialist architect cert (standalone)</td>
-                <td className="py-2.5">Consolidating credential (requires 3 prerequisites)</td>
+                <td className="py-2.5">Composite credential (awarded for 4 component exams)</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Prerequisites</td>
                 <td className="py-2.5 pr-4">None (any Salesforce cert recommended)</td>
-                <td className="py-2.5">Integration Architect + IAM Architect + Dev Lifecycle Architect</td>
+                <td className="py-2.5">Platform Developer I + Integration Architect + Identity &amp; Access Management Architect + Development Lifecycle &amp; Deployment Architect</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Exam Format</td>
-                <td className="py-2.5 pr-4">60 questions, 105 min, 62%, $200</td>
-                <td className="py-2.5">60 questions, 105 min, 65%, $200</td>
+                <td className="py-2.5 pr-4">60 scored questions, 105 min, 67% to pass, $400</td>
+                <td className="py-2.5">No standalone exam. $0, awarded on completing the 4 component exams</td>
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Core Topics</td>
@@ -167,9 +167,9 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Integration Architect: Core Topics to Master</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration patterns</strong>: Request/reply, fire-and-forget, batch sync, and publish/subscribe with Platform Events or Change Data Capture. Be able to choose between synchronous and asynchronous designs.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API management</strong>: MuleSoft API-led connectivity (System, Process, and Experience API layers), Salesforce Connect for external objects, concurrent and daily API limits, and API versioning.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data migration</strong>: Select Apex Data Loader, Data Import Wizard, or an ETL tool for the data volume. Plan the order for related objects, prevent duplicates, and validate the results after migration.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Integration patterns</strong>: Request/reply, fire-and-forget, batch sync, and publish/subscribe with Platform Events or Change Data Capture. Be able to choose between synchronous and asynchronous designs.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>API management</strong>: MuleSoft API-led connectivity (System, Process, and Experience API layers), Salesforce Connect for external objects, concurrent and daily API limits, and API versioning.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Data migration</strong>: Select Apex Data Loader, Data Import Wizard, or an ETL tool for the data volume. Plan the order for related objects, prevent duplicates, and validate the results after migration.</span></li>
         </ul>
       </section>
 

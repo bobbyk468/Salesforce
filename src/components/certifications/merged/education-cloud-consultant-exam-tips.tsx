@@ -65,9 +65,9 @@ export default function EducationCloudConsultantExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Selected Education Product Learning Themes</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education data model</strong>: Compare the institution’s chosen Education Cloud platform data model with the EDA managed package; map entities and relationships from documented requirements.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education processes</strong>: Recruitment and admissions, academic operations, student success, advancement, and alumni relations appear in Salesforce’s product documentation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration and data management</strong>: How Salesforce Education Cloud integrates with Student Information Systems (SIS), the importance of unique student IDs, and data migration from legacy systems.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Education data model</strong>: Compare the institution’s chosen Education Cloud platform data model with the EDA managed package; map entities and relationships from documented requirements.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Education processes</strong>: Recruitment and admissions, academic operations, student success, advancement, and alumni relations appear in Salesforce’s product documentation.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Integration and data management</strong>: How Salesforce Education Cloud integrates with Student Information Systems (SIS), the importance of unique student IDs, and data migration from legacy systems.</span></li>
         </ul>
       </section>
 

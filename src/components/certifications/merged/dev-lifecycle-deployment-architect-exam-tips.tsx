@@ -65,9 +65,9 @@ export default function DevLifecycleDeploymentArchitectExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Dev Lifecycle & Deployment Architect Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Environment strategy</strong>: Sandbox type selection (Developer, Developer Pro, Partial Copy, Full), environment hierarchy design for parallel development streams, and scratch org vs. sandbox decisions.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Release management</strong>: Source-driven development with SFDX, unlocked packages vs. change sets, CI/CD pipeline design, and branching strategy for Salesforce teams.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deployment strategy</strong>: When to use change sets vs. SFDX CLI vs. package-based deployment, metadata dependency management, and rollback strategy.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Environment strategy</strong>: Sandbox type selection (Developer, Developer Pro, Partial Copy, Full), environment hierarchy design for parallel development streams, and scratch org vs. sandbox decisions.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Release management</strong>: Source-driven development with SFDX, unlocked packages vs. change sets, CI/CD pipeline design, and branching strategy for Salesforce teams.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Deployment strategy</strong>: When to use change sets vs. SFDX CLI vs. package-based deployment, metadata dependency management, and rollback strategy.</span></li>
         </ul>
       </section>
 

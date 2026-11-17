@@ -124,19 +124,19 @@ export default function Pd1VsPd2Page() {
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Factor</th>
-                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">PD1: Platform Developer I</th>
-                <th scope="col" className="py-2.5 font-semibold text-purple-700">PD2: Platform Developer II</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">PD1: Platform Developer I (Plat-Dev-201)</th>
+                <th scope="col" className="py-2.5 font-semibold text-purple-700">PD2: Platform Developer II (Plat-Dev-301)</th>
               </tr>
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Exam Code</td>
-                <td className="py-2.5 pr-4">PD1</td>
-                <td className="py-2.5">PD2</td>
+                <td className="py-2.5 pr-4">Plat-Dev-201 (PD1 / CRT-450)</td>
+                <td className="py-2.5">Plat-Dev-301 (PD2)</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Questions / Time</td>
-                <td className="py-2.5 pr-4">60 questions · 110 min</td>
+                <td className="py-2.5 pr-4">60 questions · 105 min</td>
                 <td className="py-2.5">60 questions · 120 min</td>
               </tr>
               <tr>

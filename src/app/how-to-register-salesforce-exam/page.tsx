@@ -4,6 +4,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import { CheckCircle2, XCircle } from 'lucide-react'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Register for a Salesforce Cert Exam (${RELEASE_CURRENT})`
@@ -106,22 +107,22 @@ export default function HowToRegisterSalesforceExamPage() {
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-3">Online Proctored Exam</h2>
           <ul className="space-y-2 text-sm text-gray-700">
-            <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> Take it at home or at work</li>
-            <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> More flexible scheduling</li>
-            <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> You need a webcam and microphone</li>
-            <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> You need a private room without other people or pets</li>
-            <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> Technical problems may interrupt the exam</li>
+            <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" /> Take it at home or at work</li>
+            <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" /> More flexible scheduling</li>
+            <li className="flex gap-2"><XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" /> You need a webcam and microphone</li>
+            <li className="flex gap-2"><XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" /> You need a private room without other people or pets</li>
+            <li className="flex gap-2"><XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" /> Technical problems may interrupt the exam</li>
           </ul>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-3">Testing Centre Exam</h2>
           <ul className="space-y-2 text-sm text-gray-700">
-            <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> The centre provides the equipment</li>
-            <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> The exam room is controlled and quiet</li>
-            <li className="flex gap-2"><span className="text-green-500 font-bold">✓</span> Your own equipment cannot cause technical issues</li>
-            <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> You must travel to the centre</li>
-            <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> Appointment times may be less flexible</li>
-            <li className="flex gap-2"><span className="text-red-400 font-bold">✗</span> A centre may not be available nearby</li>
+            <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" /> The centre provides the equipment</li>
+            <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" /> The exam room is controlled and quiet</li>
+            <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0 mt-0.5" /> Your own equipment cannot cause technical issues</li>
+            <li className="flex gap-2"><XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" /> You must travel to the centre</li>
+            <li className="flex gap-2"><XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" /> Appointment times may be less flexible</li>
+            <li className="flex gap-2"><XCircle className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" /> A centre may not be available nearby</li>
           </ul>
         </div>
       </div>

@@ -58,9 +58,9 @@ export default function NonprofitCloudExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Nonprofit Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Fundraising and gift management</strong>: Gift transactions, gift commitments (recurring giving), payment schedules, soft credits, campaign management, and how NPC’s fundraising data model relates to contacts, accounts, and opportunities.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Programme management</strong>: Programme delivery tracking, service delivery records, beneficiary management, and outcome measurement. Understanding how programme data supports impact reporting for grant reporting and donor communications.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>NPC data model and configuration</strong>: NPC’s household model, relationship management between constituents, how NPC differs from NPSP, Salesforce Flows for nonprofit automation, and the Nonprofit Cloud setup and configuration process.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Fundraising and gift management</strong>: Gift transactions, gift commitments (recurring giving), payment schedules, soft credits, campaign management, and how NPC’s fundraising data model relates to contacts, accounts, and opportunities.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Programme management</strong>: Programme delivery tracking, service delivery records, beneficiary management, and outcome measurement. Understanding how programme data supports impact reporting for grant reporting and donor communications.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>NPC data model and configuration</strong>: NPC’s household model, relationship management between constituents, how NPC differs from NPSP, Salesforce Flows for nonprofit automation, and the Nonprofit Cloud setup and configuration process.</span></li>
         </ul>
       </section>
 

@@ -233,10 +233,10 @@ export default function SalesforceCertificationSalaryPage() {
           Certifications can help signal your skills, but they are not the only factor employers consider. These factors also affect pay:
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Hands-on experience</strong>: Employers value experience delivering real implementations. Professionals with more than five years of experience often earn near the top of the listed ranges.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Several certifications</strong>: The largest premiums in this analysis are linked to three or more certifications. A broader set of credentials can show experience across the platform.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Industry and cloud focus</strong>: Marketing Cloud, Revenue Cloud, and Health Cloud specialists may earn more because fewer certified professionals work in these areas.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Consulting or in-house work</strong>: Consultant and contractor roles at system integrators such as Accenture, Deloitte, and Slalom may pay more than similar in-house roles, especially in the United States.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Hands-on experience</strong>: Employers value experience delivering real implementations. Professionals with more than five years of experience often earn near the top of the listed ranges.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Several certifications</strong>: The largest premiums in this analysis are linked to three or more certifications. A broader set of credentials can show experience across the platform.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Industry and cloud focus</strong>: Marketing Cloud, Revenue Cloud, and Health Cloud specialists may earn more because fewer certified professionals work in these areas.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Consulting or in-house work</strong>: Consultant and contractor roles at system integrators such as Accenture, Deloitte, and Slalom may pay more than similar in-house roles, especially in the United States.</span></li>
         </ul>
       </section>
 

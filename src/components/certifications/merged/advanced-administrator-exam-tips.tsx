@@ -64,9 +64,9 @@ export default function AdvancedAdministratorExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What ADM-211 Actually Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Complex security architectures</strong>: Not just individual settings, but how OWDs, role hierarchy, sharing rules, profiles, permission sets, and field-level security interact in multi-team organisations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced automation</strong>: Complex multi-step Flows (screen flows, scheduled flows, autolaunched flows), Approval Processes with dynamic escalation and parallel approval paths.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Data management at scale</strong>: Duplicate management strategies, mass data operations, field history tracking limitations, and data archiving approaches.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Complex security architectures</strong>: Not just individual settings, but how OWDs, role hierarchy, sharing rules, profiles, permission sets, and field-level security interact in multi-team organisations.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Advanced automation</strong>: Complex multi-step Flows (screen flows, scheduled flows, autolaunched flows), Approval Processes with dynamic escalation and parallel approval paths.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Data management at scale</strong>: Duplicate management strategies, mass data operations, field history tracking limitations, and data archiving approaches.</span></li>
         </ul>
       </section>
 

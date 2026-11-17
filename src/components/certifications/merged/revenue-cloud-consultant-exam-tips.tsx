@@ -60,9 +60,9 @@ export default function RevenueCloudConsultantExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Revenue Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>CPQ configuration</strong>: Product catalogue, bundles, pricing rules, discounting, and quote templates. Revenue Cloud builds on CPQ as the quoting foundation, strong CPQ knowledge is assumed and tested.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Billing</strong>: Invoice generation triggers, payment processing, credit memos, billing rules, bill runs, and how billing integrates with the order management process. Understanding how quotes become orders and orders trigger invoices is critical.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriptions and revenue recognition</strong>: Subscription products, amendment billing (mid-term changes), renewal billing, proration rules, and revenue recognition schedules for deferred revenue compliance (ASC 606).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>CPQ configuration</strong>: Product catalogue, bundles, pricing rules, discounting, and quote templates. Revenue Cloud builds on CPQ as the quoting foundation, strong CPQ knowledge is assumed and tested.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Salesforce Billing</strong>: Invoice generation triggers, payment processing, credit memos, billing rules, bill runs, and how billing integrates with the order management process. Understanding how quotes become orders and orders trigger invoices is critical.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Subscriptions and revenue recognition</strong>: Subscription products, amendment billing (mid-term changes), renewal billing, proration rules, and revenue recognition schedules for deferred revenue compliance (ASC 606).</span></li>
         </ul>
       </section>
 

@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -78,6 +79,39 @@ export default function OmnistudioDeveloperVsConsultantPage() {
 
       <ContentPageAuthor />
 
+      <WhichFirstBlock
+        certA={{
+          name: "OmniStudio Developer",
+          certSlug: "omnistudio-developer",
+          examTipsSlug: "certifications/omnistudio-developer",
+          conditions: [
+          "You build OmniScripts, DataRaptors, and Integration Procedures yourself",
+          "You write Apex and custom LWC that extend OmniStudio components",
+          "Your role is implementation rather than solution shaping",
+          "You want the credential that proves hands-on configuration depth",
+          ],
+        }}
+        certB={{
+          name: "OmniStudio Consultant",
+          certSlug: "omnistudio-consultant",
+          examTipsSlug: "certifications/omnistudio-consultant",
+          conditions: [
+          "You gather requirements and design the OmniStudio solution others build",
+          "You run discovery workshops and map business processes to OmniScripts",
+          "You need the lower pass mark of the two at 67%",
+          "You advise clients on industry-cloud delivery rather than building it",
+          ],
+        }}
+        recommendation={{
+          certName: "OmniStudio Developer",
+          certSlug: "omnistudio-developer",
+          examTipsSlug: "certifications/omnistudio-developer",
+          reason: "Neither requires the other, so the choice is about which side of the handover you sit on. Developer is the more common starting point because the Consultant exam assumes you can already picture what the components do, and that understanding is easiest to build by configuring them. It is the harder sitting at 72% to pass against the Consultant's 67%.",
+          careerPathSlug: "consultant-certification-path",
+          careerPathLabel: "Consultant Certification Path",
+        }}
+      />
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>
         <div className="overflow-x-auto">
@@ -132,10 +166,10 @@ export default function OmnistudioDeveloperVsConsultantPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Four OmniStudio Components Covered by Both Exams</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OmniScripts</strong>: Guided multi-step processes (e.g., customer onboarding, quote creation). Developer exam adds TypeScript overrides and custom LWC steps.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataRaptors</strong>: Data extraction, transformation, and loading without code. Developer exam adds custom Apex integration patterns for DataRaptors.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration Procedures</strong>: Server-side, multi-step data orchestration. Developer exam tests Apex-callable Integration Procedures and performance optimisation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FlexCards</strong>: Contextual data display cards on Lightning pages. Developer exam adds custom LWC child actions and complex data binding patterns.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>OmniScripts</strong>: Guided multi-step processes (e.g., customer onboarding, quote creation). Developer exam adds TypeScript overrides and custom LWC steps.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>DataRaptors</strong>: Data extraction, transformation, and loading without code. Developer exam adds custom Apex integration patterns for DataRaptors.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Integration Procedures</strong>: Server-side, multi-step data orchestration. Developer exam tests Apex-callable Integration Procedures and performance optimisation.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>FlexCards</strong>: Contextual data display cards on Lightning pages. Developer exam adds custom LWC child actions and complex data binding patterns.</span></li>
         </ul>
       </section>
 

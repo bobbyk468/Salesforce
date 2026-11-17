@@ -60,9 +60,9 @@ export default function TableauServerAdministratorExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">At a Glance: What Tableau Server Administrator Covers</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Server installation and configuration</strong>: Installing Tableau Server with TSM, configuring server processes and ports, managing SSL certificates, configuring SMTP for email notifications, and basic multi-node server setup.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>User and content management</strong>: User and group management, site roles (Server Admin, Site Admin, Creator, Explorer, Viewer), projects and permissions, content governance, and using Active Directory or LDAP for user provisioning.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance and maintenance</strong>: Server health monitoring, background tasks, extract refresh scheduling, backup and restore procedures, log file management, and troubleshooting common server issues.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Server installation and configuration</strong>: Installing Tableau Server with TSM, configuring server processes and ports, managing SSL certificates, configuring SMTP for email notifications, and basic multi-node server setup.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>User and content management</strong>: User and group management, site roles (Server Admin, Site Admin, Creator, Explorer, Viewer), projects and permissions, content governance, and using Active Directory or LDAP for user provisioning.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Performance and maintenance</strong>: Server health monitoring, background tasks, extract refresh scheduling, backup and restore procedures, log file management, and troubleshooting common server issues.</span></li>
         </ul>
       </section>
 

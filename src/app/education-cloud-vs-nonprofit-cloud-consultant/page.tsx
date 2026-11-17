@@ -120,12 +120,17 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
             <thead>
               <tr className="border-b border-gray-100">
                 <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Area</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Education Cloud</th>
-                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Nonprofit Cloud</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Education Cloud Consultant (ED-Con-101)</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Nonprofit Cloud Consultant (NP-Con-102)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50 text-sm">
               {[
+                { area: 'Exam code', edu: 'ED-Con-101 (formerly Edu-Con-201)', npo: 'NP-Con-102' },
+                { area: 'Questions', edu: '60 scored questions', npo: '60 scored questions' },
+                { area: 'Time allotted', edu: '105 minutes', npo: '105 minutes' },
+                { area: 'Passing score', edu: '67%', npo: '65%' },
+                { area: 'Exam fee', edu: '$200 (retake $100) \u2014 registration closed', npo: '$200 (retake $100)' },
                 { area: 'Target sector', edu: 'Higher education, K-12', npo: 'Nonprofits, charities, foundations' },
                 { area: 'Guide scope', edu: 'Education product workflows; see current certification guide', npo: 'Nonprofit product workflows; see current certification guide' },
                 { area: 'Product/data model', edu: 'Confirm product and EDA use in target org', npo: 'Confirm product and NPSP use in target org' },

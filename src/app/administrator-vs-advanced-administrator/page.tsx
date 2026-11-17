@@ -135,7 +135,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
               </tr>
               <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Exam Questions</td>
-                <td className="py-2.5 pr-4">60 questions, 105 min, 65%</td>
+                <td className="py-2.5 pr-4">60 questions, 105 min, 68%</td>
                 <td className="py-2.5">60 questions, 105 min, 65%</td>
               </tr>
               <tr className="border-b border-gray-100">
@@ -171,10 +171,10 @@ export default function AdministratorVsAdvancedAdministratorPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Advanced Administrator Tests That ADM-201 Doesn’t</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Complex automation</strong>: Multi-step Flows with decisions, fault paths, loops, and scheduled triggers. ADM-201 covers basic Flow creation; Advanced Administrator covers how to design Flows for complex business processes.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced sharing and security</strong>: Sharing rules, manual sharing, team access, territory management, and field-level security at scale. ADM-201 covers OWD, while Advanced Administrator tests more complex sharing scenarios.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Change sets and deployment</strong>: Move metadata between sandboxes and production with change sets. Understand dependencies and validate a deployment before it goes live.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced analytics</strong>: Build reports with cross-object formulas, joined reports, and exceptions, and work with CRM Analytics (Einstein) dashboards beyond the basic report builder.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Complex automation</strong>: Multi-step Flows with decisions, fault paths, loops, and scheduled triggers. ADM-201 covers basic Flow creation; Advanced Administrator covers how to design Flows for complex business processes.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Advanced sharing and security</strong>: Sharing rules, manual sharing, team access, territory management, and field-level security at scale. ADM-201 covers OWD, while Advanced Administrator tests more complex sharing scenarios.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Change sets and deployment</strong>: Move metadata between sandboxes and production with change sets. Understand dependencies and validate a deployment before it goes live.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Advanced analytics</strong>: Build reports with cross-object formulas, joined reports, and exceptions, and work with CRM Analytics (Einstein) dashboards beyond the basic report builder.</span></li>
         </ul>
       </section>
 

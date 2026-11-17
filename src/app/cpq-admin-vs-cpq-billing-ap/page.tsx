@@ -170,10 +170,10 @@ export default function CpqAdminVsCpqBillingApPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How Both Exams Cover the CPQ Pricing Waterfall</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>List Price</strong> → base price from price book, set at product level</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Customer / Partner Price</strong> → customer-specific or channel partner pricing</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Regular Price</strong> → after Discount Schedules (volume-based automatic discounts)</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special / Net Price</strong> → after manual rep discount and additional discount; final price paid</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>List Price</strong> → base price from price book, set at product level</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Customer / Partner Price</strong> → customer-specific or channel partner pricing</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Regular Price</strong> → after Discount Schedules (volume-based automatic discounts)</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Special / Net Price</strong> → after manual rep discount and additional discount; final price paid</span></li>
         </ul>
         <p className="text-xs text-gray-600 mt-2">CPQ Administrator covers scenarios where discount types interact. CPQ &amp; Billing AP tests pricing concepts alongside billing and invoice generation.</p>
       </section>

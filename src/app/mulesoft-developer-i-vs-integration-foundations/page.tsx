@@ -85,16 +85,6 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[
           {
-            name: 'Integration Foundations',
-            href: '/certifications/mulesoft-integration-foundations',
-            badge: 'Entry Level',
-            badgeColor: 'bg-green-100 text-green-800',
-            fee: '$75', questions: '40', time: '70 min', passing: '70%',
-            level: 'Covers concepts; no coding required',
-            best: 'Business analysts, architects, and Salesforce admins who are new to MuleSoft',
-            skills: ['API-led connectivity concepts', 'Anypoint Platform overview', 'Integration patterns (conceptual)', 'No Anypoint Studio required'],
-          },
-          {
             name: 'MuleSoft Developer I',
             href: '/certifications/mulesoft-developer-i',
             badge: 'Professional',
@@ -103,6 +93,16 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
             level: 'Hands-on development in Anypoint Studio',
             best: 'Integration developers, Salesforce architects, and API developers',
             skills: ['Building Mule 4 flows', 'DataWeave transformations', 'Anypoint Connectors', 'Error handling & deployment'],
+          },
+          {
+            name: 'Integration Foundations',
+            href: '/certifications/mulesoft-integration-foundations',
+            badge: 'Entry Level',
+            badgeColor: 'bg-green-100 text-green-800',
+            fee: '$75', questions: '40', time: '70 min', passing: '70%',
+            level: 'Covers concepts; no coding required',
+            best: 'Business analysts, architects, and Salesforce admins who are new to MuleSoft',
+            skills: ['API-led connectivity concepts', 'Anypoint Platform overview', 'Integration patterns (conceptual)', 'No Anypoint Studio required'],
           },
         ].map((cert) => (
           <div key={cert.name} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">

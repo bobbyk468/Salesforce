@@ -65,9 +65,9 @@ export default function MarketingCloudConsultantExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Marketing Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Architecture decisions</strong>: Single vs multi-business-unit setup, account hierarchy, data extension design, and subscriber key strategy.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration patterns</strong>: How Marketing Cloud connects to Sales/Service Cloud via Marketing Cloud Connect, and API/FTP data ingestion strategies.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deliverability and compliance</strong>: IP warming, CAN-SPAM/GDPR considerations, send classification, and suppression list management.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Architecture decisions</strong>: Single vs multi-business-unit setup, account hierarchy, data extension design, and subscriber key strategy.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Integration patterns</strong>: How Marketing Cloud connects to Sales/Service Cloud via Marketing Cloud Connect, and API/FTP data ingestion strategies.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Deliverability and compliance</strong>: IP warming, CAN-SPAM/GDPR considerations, send classification, and suppression list management.</span></li>
         </ul>
       </section>
 

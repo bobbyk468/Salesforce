@@ -137,20 +137,25 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
             <thead>
               <tr className="border-b border-gray-100">
                 <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Aspect</th>
-                <th scope="col" className="text-left py-2 pr-4 text-salesforce-blue font-medium">Service Cloud Consultant</th>
-                <th scope="col" className="text-left py-2 text-salesforce-blue font-medium">Field Service Consultant</th>
+                <th scope="col" className="text-left py-2 pr-4 text-salesforce-blue font-medium">Field Service Consultant (FS-Con-101)</th>
+                <th scope="col" className="text-left py-2 text-purple-700 font-medium">Service Cloud Consultant (Service-Con-201)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
               {[
-                { aspect: 'Workflow focus', scc: 'Customer service and cases', fsc: 'In-person appointments and work orders; cases are also supported' },
-                { aspect: 'Field Service components', scc: 'Not applicable', fsc: 'Core features; managed package and mobile app can be added as needed' },
-                { aspect: 'Study sequence', scc: 'Choose based on current guide and project needs', fsc: 'Choose based on current guide and project needs' },
+                { aspect: 'Exam code', fsc: 'FS-Con-101', scc: 'Service-Con-201 (formerly CRT-261)' },
+                { aspect: 'Questions', fsc: '60 scored questions', scc: '60 scored questions' },
+                { aspect: 'Time allotted', fsc: '105 minutes', scc: '105 minutes' },
+                { aspect: 'Passing score', fsc: '63%', scc: '78%' },
+                { aspect: 'Exam fee', fsc: '$200 (retake $100)', scc: '$200 (retake $100)' },
+                { aspect: 'Workflow focus', fsc: 'In-person appointments and work orders; cases are also supported', scc: 'Customer service and cases' },
+                { aspect: 'Field Service components', fsc: 'Core features; managed package and mobile app can be added as needed', scc: 'Not applicable' },
+                { aspect: 'Study sequence', fsc: 'Choose based on current guide and project needs', scc: 'Choose based on current guide and project needs' },
               ].map((row) => (
                 <tr key={row.aspect}>
                   <td className="py-2 pr-4 text-gray-600">{row.aspect}</td>
-                  <td className="py-2 pr-4 text-gray-900">{row.scc}</td>
-                  <td className="py-2 text-gray-900">{row.fsc}</td>
+                  <td className="py-2 pr-4 text-gray-900">{row.fsc}</td>
+                  <td className="py-2 text-gray-900">{row.scc}</td>
                 </tr>
               ))}
             </tbody>

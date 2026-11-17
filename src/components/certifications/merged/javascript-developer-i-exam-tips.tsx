@@ -65,9 +65,9 @@ export default function JavascriptDeveloperIExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What JavaScript Developer I Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>JavaScript fundamentals</strong>: Variable scoping (var/let/const), closures, prototype chain, the event loop, promises, async/await, and error handling. The exam tests language behaviour, not just syntax.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Lightning Web Components (LWC)</strong>: Component lifecycle hooks (@api, @track, @wire), event communication between parent and child, wire adapters vs. imperative Apex calls, and reactive properties.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Browser and Node fundamentals</strong>: DOM manipulation, fetch API, modules (import/export), and Node.js basics (npm, module system). Testing concepts with Jest are also tested.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>JavaScript fundamentals</strong>: Variable scoping (var/let/const), closures, prototype chain, the event loop, promises, async/await, and error handling. The exam tests language behaviour, not just syntax.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Lightning Web Components (LWC)</strong>: Component lifecycle hooks (@api, @track, @wire), event communication between parent and child, wire adapters vs. imperative Apex calls, and reactive properties.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Browser and Node fundamentals</strong>: DOM manipulation, fetch API, modules (import/export), and Node.js basics (npm, module system). Testing concepts with Jest are also tested.</span></li>
         </ul>
       </section>
 

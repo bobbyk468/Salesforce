@@ -65,9 +65,9 @@ export default function ExperienceCloudExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Experience Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Licence types and access</strong>: Customer Community vs Customer Community Plus vs Partner Community licences, what each permits, and when to recommend each based on client requirements.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing and visibility</strong>: How external user sharing works with OWDs, sharing sets, sharing rules, and the impact of portal role hierarchy on data access.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Experience Builder configuration</strong>: Building pages, applying themes, configuring components, setting up navigation, and enabling Salesforce CMS content for communities.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Licence types and access</strong>: Customer Community vs Customer Community Plus vs Partner Community licences, what each permits, and when to recommend each based on client requirements.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Sharing and visibility</strong>: How external user sharing works with OWDs, sharing sets, sharing rules, and the impact of portal role hierarchy on data access.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Experience Builder configuration</strong>: Building pages, applying themes, configuring components, setting up navigation, and enabling Salesforce CMS content for communities.</span></li>
         </ul>
       </section>
 

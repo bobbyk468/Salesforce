@@ -60,9 +60,9 @@ export default function IndustriesCpqDeveloperExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Industries CPQ Developer Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product catalogue management</strong>: Industries CPQ product hierarchy (Offerings, Products, Product Components), attribute-based configuration, product specifications, and how the catalogue differs from standard Salesforce CPQ’s bundle model.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pricing and promotions</strong>: Price lists, price list entries, promotion types, eligibility rules, and how promotions override standard pricing. Understanding the Industries CPQ pricing engine sequence is critical.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Guided selling and OmniStudio integration</strong>: How Industries CPQ uses OmniScripts and FlexCards for the guided selling experience, Integration Procedures for catalogue data retrieval, and DataRaptors for order submission.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Product catalogue management</strong>: Industries CPQ product hierarchy (Offerings, Products, Product Components), attribute-based configuration, product specifications, and how the catalogue differs from standard Salesforce CPQ’s bundle model.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Pricing and promotions</strong>: Price lists, price list entries, promotion types, eligibility rules, and how promotions override standard pricing. Understanding the Industries CPQ pricing engine sequence is critical.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Guided selling and OmniStudio integration</strong>: How Industries CPQ uses OmniScripts and FlexCards for the guided selling experience, Integration Procedures for catalogue data retrieval, and DataRaptors for order submission.</span></li>
         </ul>
       </section>
 

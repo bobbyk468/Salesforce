@@ -76,9 +76,9 @@ export default function FieldServiceExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Key Topic Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FSL data model</strong>: Service territories, service resources, service appointments, work orders, work types, and how these objects relate to Cases and Assets in Service Cloud.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Scheduling and optimisation</strong>: Scheduling policies, work rules, service objectives, and the difference between manual scheduling, drip-feed scheduling, and global optimisation.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mobile workforce management</strong>: Field Service mobile app configuration, inventory and parts management, and how technicians interact with work orders in the field.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>FSL data model</strong>: Service territories, service resources, service appointments, work orders, work types, and how these objects relate to Cases and Assets in Service Cloud.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Scheduling and optimisation</strong>: Scheduling policies, work rules, service objectives, and the difference between manual scheduling, drip-feed scheduling, and global optimisation.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Mobile workforce management</strong>: Field Service mobile app configuration, inventory and parts management, and how technicians interact with work orders in the field.</span></li>
         </ul>
       </section>
 

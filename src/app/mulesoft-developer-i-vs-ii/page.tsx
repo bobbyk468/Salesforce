@@ -170,10 +170,10 @@ export default function MulesoftDeveloperIVsIIPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Developer II Adds</h2>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Advanced DataWeave</strong>: Complex transformations, reduce/map/filter functions, custom modules, format conversion at production scale, and performance-optimised transformation patterns.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling architecture</strong>: On-error-continue vs. on-error-propagate, global vs. flow-scoped error handlers, designing for idempotency and retry logic in production integrations.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API security at scale</strong>: OAuth 2.0 flows, client ID enforcement, rate limiting policies, JWT validation, and mTLS for inter-service communication in enterprise API layers.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>High availability design</strong>: Clustering, CloudHub worker sizing, persistent queues with Anypoint MQ, and designing integrations that tolerate downstream system failures gracefully.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Advanced DataWeave</strong>: Complex transformations, reduce/map/filter functions, custom modules, format conversion at production scale, and performance-optimised transformation patterns.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Error handling architecture</strong>: On-error-continue vs. on-error-propagate, global vs. flow-scoped error handlers, designing for idempotency and retry logic in production integrations.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>API security at scale</strong>: OAuth 2.0 flows, client ID enforcement, rate limiting policies, JWT validation, and mTLS for inter-service communication in enterprise API layers.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>High availability design</strong>: Clustering, CloudHub worker sizing, persistent queues with Anypoint MQ, and designing integrations that tolerate downstream system failures gracefully.</span></li>
         </ul>
       </section>
 

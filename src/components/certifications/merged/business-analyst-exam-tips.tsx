@@ -65,9 +65,9 @@ export default function BusinessAnalystExamTipsContent() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What the BA Exam Actually Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>BA methodology</strong>: Discovery workshops, requirements gathering, stakeholder management, and translating business needs into user stories with acceptance criteria.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Collaboration skills</strong>: How to run effective meetings, manage competing stakeholder priorities, and drive consensus on requirements.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce platform knowledge</strong>: Knowing which Salesforce features can meet specific business requirements, and how to document those decisions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>BA methodology</strong>: Discovery workshops, requirements gathering, stakeholder management, and translating business needs into user stories with acceptance criteria.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Collaboration skills</strong>: How to run effective meetings, manage competing stakeholder priorities, and drive consensus on requirements.</span></li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Salesforce platform knowledge</strong>: Knowing which Salesforce features can meet specific business requirements, and how to document those decisions.</span></li>
         </ul>
       </section>
 
