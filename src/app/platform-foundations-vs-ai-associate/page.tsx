@@ -3,6 +3,7 @@ import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import CredentialStatusNotice from '@/components/CredentialStatusNotice'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const title = 'Platform Foundations vs AI Associate (Retired)'
 const metadataTitle = 'Platform Foundations vs Retired AI Associate Guide'
@@ -28,6 +29,39 @@ export default function ComparisonPage() {
       <header data-lcp-header className="mb-8"><h1 className="text-3xl font-bold text-gray-900">{title}</h1>
         <LastUpdated /></header>
       <CredentialStatusNotice slug="ai-associate" />
+      <WhichFirstBlock
+        certA={{
+          name: "Platform Foundations",
+          certSlug: "platform-foundations",
+          examTipsSlug: "certifications/platform-foundations",
+          conditions: [
+          "You are new to Salesforce and want the cheapest way in at $75",
+          "You want a free retake included with the exam fee",
+          "You need 62% across 40 questions in 70 minutes",
+          "You want the current entry point to the associate track",
+          ],
+        }}
+        certB={{
+          name: "AI Associate",
+          certSlug: "ai-associate",
+          unavailable: "retired February 2026",
+          conditions: [
+          "Introductory AI vocabulary and use cases",
+          "Data quality, consent, and bias considerations",
+          "Human oversight and responsible-AI practice",
+          "No platform configuration content",
+          ],
+        }}
+        recommendation={{
+          certName: "Platform Foundations",
+          certSlug: "platform-foundations",
+          examTipsSlug: "certifications/platform-foundations",
+          reason: "Salesforce retired AI Associate on 2 February 2026, so Platform Foundations (Plat-101) is the entry-level exam, not one of two. At $75 with a free retake and a 62% pass mark it is the least expensive credential on the platform, and it covers CRM, Flow, app building and security rather than AI concepts alone.",
+          careerPathSlug: "certification-path",
+          careerPathLabel: "Salesforce Certification Path",
+        }}
+      />
+
       <section className="mt-8 space-y-5">
         <h2 className="text-2xl font-bold">Compare learning goals</h2>
         <p>Salesforce retired AI Associate in February 2026, so it is no longer an exam option alongside Platform Foundations. Older comparisons of exam fees or recommendations to take both are now historical.</p>

@@ -6,6 +6,7 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `CPQ Admin vs Revenue Cloud Consultant (${RELEASE_CURRENT})`
@@ -81,6 +82,39 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+
+      <WhichFirstBlock
+        certA={{
+          name: "Revenue Management Consultant",
+          certSlug: "revenue-cloud-consultant",
+          examTipsSlug: "certifications/revenue-cloud-consultant",
+          conditions: [
+          "You design quoting, contracts, amendments, and renewals",
+          "Your projects span the revenue lifecycle rather than one quoting tool",
+          "You want the one of the pair that is still bookable",
+          "You need 63% across 60 questions in 105 minutes, $200",
+          ],
+        }}
+        certB={{
+          name: "CPQ Administrator",
+          certSlug: "cpq-administrator",
+          unavailable: "exam closed August 2026",
+          conditions: [
+          "Product bundles, price rules, and discount schedules",
+          "Quote templates and CPQ-specific configuration depth",
+          "Still useful as reference if you administer an existing CPQ org",
+          "Credential retires 1 February 2027",
+          ],
+        }}
+        recommendation={{
+          certName: "Revenue Management Consultant",
+          certSlug: "revenue-cloud-consultant",
+          examTipsSlug: "certifications/revenue-cloud-consultant",
+          reason: "There is no longer a choice to weigh. Salesforce closed CPQ Administrator registration on 24 July 2026, 31 August 2026 was the last sitting, and the credential retires on 1 February 2027, so Revenue Management Consultant (Rev-Con-201) is the only quote-to-cash exam of the two you can book. It covers the lifecycle CPQ sits inside, so the study overlap is substantial if you already know CPQ.",
+          careerPathSlug: "consultant-certification-path",
+          careerPathLabel: "Consultant Certification Path",
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

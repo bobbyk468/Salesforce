@@ -6,6 +6,7 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `System vs Application Architect: Differences (${RELEASE_CURRENT})`
@@ -81,6 +82,37 @@ export default function SystemArchitectVsApplicationArchitectPage() {
       </div>
 
       <ContentPageAuthor />
+
+      <WhichFirstBlock
+        heading="Which should you complete first?"
+        certA={{
+          name: "System Architect",
+          certSlug: "system-architect",
+          conditions: [
+          "Your background is integration, identity, or release management",
+          "You want Integration Architect, Identity &amp; Access Management Architect, and Development Lifecycle &amp; Deployment Architect",
+          "You already hold Platform Developer I, which counts toward both",
+          "You design how systems talk to each other rather than what they store",
+          ],
+        }}
+        certB={{
+          name: "Application Architect",
+          certSlug: "application-architect",
+          conditions: [
+          "Your background is data modelling, sharing, and declarative build",
+          "You want Platform App Builder, Data Architect, and Sharing &amp; Visibility Architect",
+          "You already hold Platform Developer I, which counts toward both",
+          "You design what the org stores and who can see it",
+          ],
+        }}
+        recommendation={{
+          certName: "Application Architect",
+          certSlug: "application-architect",
+          reason: "Neither is an exam. Each is awarded automatically for passing four component exams, both cost $0 in themselves, and Platform Developer I counts toward both, so the two together are seven unique exams rather than eight. Most candidates finish Application Architect first because its components sit closest to admin and declarative work, but the honest answer is to complete whichever track your current project already has you doing.",
+          careerPathSlug: "architect-certification-path",
+          careerPathLabel: "Architect Certification Path",
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">

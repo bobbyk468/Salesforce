@@ -494,9 +494,11 @@ const ROLE_HUB_USAGE: Record<string, string> = {
     'to prepare for.',
   sales:
     'Read this hub as the revenue side of the platform rather than as a self-contained track. Agentforce Sales Foundations ' +
-    '(Sales-101) is the only credential counted under it; the three exams it leads to are counted under the Consultant and ' +
-    'Administrator tracks, so they are cross-listed in the cards below instead of being left off the page. The decision ' +
-    'cards sort them by where you sit in quote-to-cash: pipeline and forecasting, or pricing, quoting, and renewals.',
+    '(Sales-101) is the only credential counted under it; the exams it leads to are counted under the Consultant and ' +
+    'Administrator tracks, so they are cross-listed in the cards below instead of being left off the page. Two of those are ' +
+    'bookable, Agentforce Sales Consultant and Revenue Management Consultant; CPQ Administrator is listed for reference ' +
+    'because its exam closed in August 2026. The decision cards sort them by where you sit in quote-to-cash: pipeline and ' +
+    'forecasting, or pricing, quoting, and renewals.',
   designer:
     'There is one question to answer on this hub, and the decision cards are built around it: do you draw the interface, or ' +
     'do you decide what gets built? Platform User Experience Designer is the craft exam and Platform Strategy Designer is ' +

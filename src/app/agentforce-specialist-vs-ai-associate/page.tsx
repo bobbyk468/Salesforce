@@ -3,6 +3,7 @@ import Link from '@/components/AppLink'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import CredentialStatusNotice from '@/components/CredentialStatusNotice'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const title = 'Agentforce Specialist vs AI Associate (Retired)'
 const metadataTitle = 'Agentforce Specialist vs AI Associate (Retired) Guide'
@@ -28,6 +29,40 @@ export default function ComparisonPage() {
       <header data-lcp-header className="mb-8"><h1 className="text-3xl font-bold text-gray-900">{title}</h1>
         <LastUpdated /></header>
       <CredentialStatusNotice slug="ai-associate" />
+
+      <WhichFirstBlock
+        certA={{
+          name: "Agentforce Specialist",
+          certSlug: "agentforce-specialist",
+          examTipsSlug: "certifications/agentforce-specialist",
+          conditions: [
+          "You configure Agentforce agents, topics, and actions in a real org",
+          "You want the current AI credential Salesforce still issues",
+          "You already hold Platform Administrator or equivalent org experience",
+          "You need 72% across 60 questions in 105 minutes, $200",
+          ],
+        }}
+        certB={{
+          name: "AI Associate",
+          certSlug: "ai-associate",
+          unavailable: "retired February 2026",
+          conditions: [
+          "Introductory AI concepts: predictive and generative use cases",
+          "Data quality, consent, and bias considerations",
+          "Human oversight and responsible-AI practice",
+          "No configuration depth and no coding",
+          ],
+        }}
+        recommendation={{
+          certName: "Agentforce Specialist",
+          certSlug: "agentforce-specialist",
+          examTipsSlug: "certifications/agentforce-specialist",
+          reason: "There is no choice left to make: Salesforce retired AI Associate on 2 February 2026, so Agentforce Specialist is the only one of the two you can book. Holders keep AI Associate on their Trailblazer Profile marked Retired. Treat its topics as background reading rather than a prerequisite, because Agentforce Specialist assumes org configuration experience that AI Associate never tested.",
+          careerPathSlug: "certification-path",
+          careerPathLabel: "Salesforce Certification Path",
+        }}
+      />
+
       <section className="mt-8 space-y-5">
         <h2 className="text-2xl font-bold">Compare learning goals</h2>
         <p>Salesforce retired AI Associate in February 2026. It is no longer an exam to take before Agentforce Specialist. Older advice to earn both credentials or compare their booking fees is now outdated.</p>

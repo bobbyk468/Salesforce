@@ -5,11 +5,28 @@ interface CertOption {
   certSlug: string      // e.g. "app-builder" → links to /certifications/app-builder
   examTipsSlug?: string // e.g. "app-builder-exam-tips" → links to /app-builder-exam-tips
   conditions: string[]  // bullet list of "take this if..."
+  /**
+   * Short status for a credential that cannot be booked, e.g.
+   * "retired February 2026" or "registration closed".
+   *
+   * Some comparisons pair a live exam with one nobody can sit: AI Associate
+   * retired in February 2026 and Education Cloud Consultant has closed
+   * registration. "Take X if:" is false for those, so a column carrying this
+   * renders as a historical note and its bullets read as what the credential
+   * covered, not as a reason to book it.
+   */
+  unavailable?: string
 }
 
 interface Props {
   certA: CertOption
   certB: CertOption
+  /**
+   * Overrides the block heading. Application Architect and System Architect
+   * are awarded for passing four component exams rather than sat, so "take"
+   * is the wrong verb on that comparison.
+   */
+  heading?: string
   recommendation: {
     certName: string      // which cert is recommended
     certSlug: string      // for the practice questions link
@@ -20,13 +37,13 @@ interface Props {
   }
 }
 
-export default function WhichFirstBlock({ certA, certB, recommendation }: Props) {
+export default function WhichFirstBlock({ certA, certB, recommendation, heading }: Props) {
   return (
     <div className="my-10 rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-sm">
       {/* Header */}
       <div className="px-5 py-3 bg-gray-50 border-b border-gray-100">
         <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
-          Which should you take first?
+          {heading ?? 'Which should you take first?'}
         </p>
       </div>
 
@@ -34,20 +51,33 @@ export default function WhichFirstBlock({ certA, certB, recommendation }: Props)
       <div className="grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
         {[certA, certB].map((cert) => (
           <div key={cert.certSlug} className="px-5 py-5">
-            <p className="text-sm font-bold text-gray-900 mb-3">
-              Take{' '}
-              <Link
-                href={`/certifications/${cert.certSlug}`}
-                className="text-salesforce-blue hover:underline"
-              >
-                {cert.name}
-              </Link>{' '}
-              if:
-            </p>
+            {cert.unavailable ? (
+              <p className="text-sm font-bold text-gray-900 mb-3">
+                <Link
+                  href={`/certifications/${cert.certSlug}`}
+                  className="text-gray-700 hover:underline"
+                >
+                  {cert.name}
+                </Link>{' '}
+                <span className="font-semibold text-amber-800">({cert.unavailable})</span>{' '}
+                <span className="font-normal text-gray-600">covered:</span>
+              </p>
+            ) : (
+              <p className="text-sm font-bold text-gray-900 mb-3">
+                Take{' '}
+                <Link
+                  href={`/certifications/${cert.certSlug}`}
+                  className="text-salesforce-blue hover:underline"
+                >
+                  {cert.name}
+                </Link>{' '}
+                if:
+              </p>
+            )}
             <ul className="space-y-2">
               {cert.conditions.map((c) => (
                 <li key={c} className="flex items-start gap-2 text-sm text-gray-600">
-                  <svg className="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0176D3" strokeWidth="2.5" strokeLinecap="round">
+                  <svg className="shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={cert.unavailable ? '#92400e' : '#0176D3'} strokeWidth="2.5" strokeLinecap="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   {c}

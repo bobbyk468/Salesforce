@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -79,6 +80,39 @@ export default function DataCloudVsMarketingCloudPage() {
       </header>
 
       <ContentPageAuthor />
+
+      <WhichFirstBlock
+        certA={{
+          name: "Data 360 Consultant",
+          certSlug: "data-360-consultant",
+          examTipsSlug: "certifications/data-360-consultant",
+          conditions: [
+          "You unify customer data across sources and resolve identities",
+          "Your work is data models, ingestion, and segmentation upstream of any channel",
+          "You want the credential that feeds analytics and Agentforce as well as marketing",
+          "You need 70% across 60 questions in 105 minutes, $200",
+          ],
+        }}
+        certB={{
+          name: "Marketing Cloud Engagement Consultant",
+          certSlug: "marketing-cloud-consultant",
+          examTipsSlug: "certifications/marketing-cloud-consultant",
+          conditions: [
+          "You design and ship campaigns, journeys, and sends",
+          "Your org already runs Marketing Cloud Engagement",
+          "You want delivery-side depth rather than data architecture",
+          "You need 67% across 60 questions in 105 minutes, $200",
+          ],
+        }}
+        recommendation={{
+          certName: "Data 360 Consultant",
+          certSlug: "data-360-consultant",
+          examTipsSlug: "certifications/data-360-consultant",
+          reason: "These sit at different layers rather than competing, so pick by where your work starts. Data 360 is the broader bet when you are undecided: the unified data model it tests feeds marketing, analytics and Agentforce alike, while Marketing Cloud Engagement Consultant only pays off if your org actually runs that platform. Settle which marketing product you are on before choosing the second.",
+          careerPathSlug: "marketing-cloud-certification-path",
+          careerPathLabel: "Marketing Cloud Certification Path",
+        }}
+      />
 
       {/* Platform difference first */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

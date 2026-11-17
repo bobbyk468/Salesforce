@@ -7,6 +7,7 @@ import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import RelatedComparisons from '@/components/RelatedComparisons'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 
 
@@ -85,6 +86,39 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Field Service Consultant",
+          certSlug: "field-service",
+          examTipsSlug: "certifications/field-service",
+          conditions: [
+          "You schedule mobile workers, work orders, and on-site appointments",
+          "You configure service territories, resources, and the mobile app",
+          "Your projects involve the Field Service managed package",
+          "You need 63% across 60 questions in 105 minutes, the lower pass mark of the two",
+          ],
+        }}
+        certB={{
+          name: "Service Cloud Consultant",
+          certSlug: "service-cloud",
+          examTipsSlug: "certifications/service-cloud",
+          conditions: [
+          "Your work is cases, Omni-Channel routing, Knowledge, and entitlements",
+          "You design contact centres rather than field operations",
+          "You want the broader credential most service job listings name",
+          "You can clear 78%, the highest pass mark in the consultant track",
+          ],
+        }}
+        recommendation={{
+          certName: "Service Cloud Consultant",
+          certSlug: "service-cloud",
+          examTipsSlug: "certifications/service-cloud",
+          reason: "Field Service assumes the case and service-process knowledge that Service Cloud Consultant tests, so taking Service Cloud first is the usual order even though it is the harder sitting at 78% against 63%. Go straight to Field Service only if you are already staffed on a dispatch or mobile-workforce project, where the managed package and scheduling model are what you handle daily.",
+          careerPathSlug: "consultant-certification-path",
+          careerPathLabel: "Consultant Certification Path",
+        }}
+      />
+
       <section className="my-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Choose study material by workflow</h2>
         <p className="text-sm text-gray-700">Match the exam guide to your project. Case handling points to Service Cloud topics; scheduling technicians for on-site appointments points to Field Service. This page does not set a required order or prerequisite.</p>

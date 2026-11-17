@@ -6,6 +6,7 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Consultant vs Marketing Cloud Consultant (${RELEASE_CURRENT})`
@@ -81,6 +82,39 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+
+      <WhichFirstBlock
+        certA={{
+          name: "Marketing Cloud Engagement Consultant",
+          certSlug: "marketing-cloud-consultant",
+          examTipsSlug: "certifications/marketing-cloud-consultant",
+          conditions: [
+          "Your org runs Marketing Cloud Engagement, formerly ExactTarget",
+          "Your work is high-volume journeys, sends, and data extensions",
+          "You build in Journey Builder and Automation Studio",
+          "You need 67% across 60 questions in 105 minutes, $200",
+          ],
+        }}
+        certB={{
+          name: "Marketing Cloud Account Engagement Consultant",
+          certSlug: "pardot-consultant",
+          unavailable: "exam closed August 2026",
+          conditions: [
+          "B2B lead nurturing, scoring, grading, and automation rules",
+          "Account Engagement, formerly Pardot, implementation work",
+          "Still the reference if you deliver on that platform today",
+          "Credential retires 1 February 2027",
+          ],
+        }}
+        recommendation={{
+          certName: "Marketing Cloud Engagement Consultant",
+          certSlug: "marketing-cloud-consultant",
+          examTipsSlug: "certifications/marketing-cloud-consultant",
+          reason: "This stopped being a platform preference when Salesforce closed Account Engagement Consultant registration: 31 August 2026 was the last sitting and the credential retires on 1 February 2027, leaving Marketing Cloud Engagement Consultant (MCE-Con-201) as the bookable marketing consultant exam. If you deliver on Account Engagement, the retired outline is still the best description of that work, but it is no longer a credential you can earn.",
+          careerPathSlug: "marketing-cloud-certification-path",
+          careerPathLabel: "Marketing Cloud Certification Path",
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">

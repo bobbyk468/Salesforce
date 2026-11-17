@@ -6,6 +6,7 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Developer I vs Integration Foundations (${RELEASE_CURRENT})`
@@ -81,6 +82,39 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
       </div>
 
       <ContentPageAuthor />
+
+      <WhichFirstBlock
+        certA={{
+          name: "MuleSoft Developer I",
+          certSlug: "mulesoft-developer-i",
+          examTipsSlug: "certifications/mulesoft-developer-i",
+          conditions: [
+          "You build Mule 4 flows and write DataWeave transformations",
+          "You work hands-on in Anypoint Studio",
+          "You want the credential employers screen for in integration roles",
+          "You need 70% across 60 questions in 120 minutes, $200",
+          ],
+        }}
+        certB={{
+          name: "MuleSoft Integration Foundations",
+          certSlug: "mulesoft-integration-foundations",
+          examTipsSlug: "certifications/mulesoft-integration-foundations",
+          conditions: [
+          "You are new to MuleSoft and want concepts before code",
+          "You are an analyst, architect, or Salesforce admin rather than a developer",
+          "You want the cheaper entry at $75 with a free retake",
+          "You need 70% across 40 questions in 70 minutes",
+          ],
+        }}
+        recommendation={{
+          certName: "MuleSoft Developer I",
+          certSlug: "mulesoft-developer-i",
+          examTipsSlug: "certifications/mulesoft-developer-i",
+          reason: "Integration Foundations is not a prerequisite, and if you already write code you can skip it: Developer I is the credential integration roles actually ask for. Take Foundations first only if you have never opened Anypoint Studio, where its $75 fee and free retake make it a cheap way to learn the vocabulary before paying $200 for the hands-on exam.",
+          careerPathSlug: "developer-certification-path",
+          careerPathLabel: "Developer Certification Path",
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

@@ -7,6 +7,7 @@ import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import RelatedComparisons from '@/components/RelatedComparisons'
 import LastUpdated from '@/components/LastUpdated'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 
 
@@ -84,6 +85,39 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Nonprofit Cloud Consultant",
+          certSlug: "nonprofit-cloud",
+          examTipsSlug: "certifications/nonprofit-cloud",
+          conditions: [
+          "You deliver for nonprofits, charities, or foundations",
+          "You want the one of the two that is still bookable",
+          "You need 65% across 60 questions in 105 minutes, $200",
+          "You have confirmed whether the target org uses NPSP",
+          ],
+        }}
+        certB={{
+          name: "Education Cloud Consultant",
+          certSlug: "education-cloud-consultant",
+          unavailable: "registration closed",
+          conditions: [
+          "Higher education and K-12 product workflows",
+          "Education data models, including EDA where an org uses it",
+          "Learning and fundraising processes",
+          "Formal retirement scheduled for 1 February 2027",
+          ],
+        }}
+        recommendation={{
+          certName: "Nonprofit Cloud Consultant",
+          certSlug: "nonprofit-cloud",
+          examTipsSlug: "certifications/nonprofit-cloud",
+          reason: "Registration for Education Cloud Consultant (ED-Con-101) has closed and Salesforce has scheduled its retirement for 1 February 2027, so Nonprofit Cloud Consultant (NP-Con-102) is the only one of the pair you can plan around. Confirm its objectives match your target product before booking: EDA and NPSP are not supported together in one org.",
+          careerPathSlug: "consultant-certification-path",
+          careerPathLabel: "Consultant Certification Path",
+        }}
+      />
+
       <section className="my-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Choosing current study material</h2>
         <p className="text-sm text-gray-700">Registration for Education Cloud Consultant has closed, and Salesforce has scheduled formal retirement for February 1, 2027. Do not treat the exam as open for booking. Check eligibility and lifecycle details in the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer nofollow noopener">Salesforce issuer notice</a>. For current planning, review the Nonprofit Cloud Consultant guide and confirm that its objectives match your target product and data model.</p>
