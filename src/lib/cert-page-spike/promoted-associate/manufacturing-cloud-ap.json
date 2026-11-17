@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers Manufacturing Cloud setup for sales agreements, account-based forecasting, rebate programs, partner management, and ERP integration. The exam is 50 scored questions in 75 minutes, with a 68% pass mark, weighted towards Configure and Build (38%) and Design (28%).",
     "examDetails": {
-      "questions": 60,
+      "questions": 50,
       "passingScore": "68%",
       "duration": "75 min",
       "cost": "$150"

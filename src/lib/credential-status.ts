@@ -57,9 +57,8 @@ const CLAUDE_ARCHITECT_FOUNDATIONS_STATUS: CredentialStatusInfo = {
  * product page no longer resolves: it was deactivated in the transition. That
  * is the reason AP-222 is not in the registry.
  *
- * The exam outline on this page still describes the content the successor
- * certification assesses, so the published format is kept rather than hidden;
- * `isUnavailableCredentialExam` deliberately does not cover this kind.
+ * The old exam is closed. Its page keeps the historical outline and links to
+ * the successor credential for current exam details and registration.
  */
 const PUBLIC_SECTOR_AP_STATUS: CredentialStatusInfo = {
   kind: 'transitioned',
@@ -72,7 +71,7 @@ const PUBLIC_SECTOR_AP_STATUS: CredentialStatusInfo = {
     'maintenance falls in the Winter \u201927 cycle. Registrations for the old Accredited ' +
     'Professional exam were cancelled.',
   sourceLabel: 'Salesforce: Public Sector Accredited Professional \u2192 Salesforce Certification',
-  sourceUrl: 'https://trailhead.salesforce.com/trailblazer-community/feed/0D5KX00000jAVpQ0AW',
+  sourceUrl: 'https://help.salesforce.com/s/articleView?id=005460905&language=en_US&type=1',
 }
 
 /**
@@ -277,5 +276,5 @@ export function isRetiredCredential(slug: string): boolean {
 
 export function isUnavailableCredentialExam(slug: string): boolean {
   const kind = getCredentialStatus(slug)?.kind
-  return kind === 'retired' || kind === 'exam-closed'
+  return kind === 'retired' || kind === 'exam-closed' || kind === 'transitioned'
 }

@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers using Net Zero Cloud for carbon accounting, including emissions data collection, Scope 1, 2, and 3 tracking, sustainability reporting, and reduction goals. Check Salesforce’s current exam guide for the latest exam logistics.",
     "examDetails": {
-      "questions": 60,
+      "questions": 55,
       "passingScore": "61%",
       "duration": "75 min",
       "cost": "$150"

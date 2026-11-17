@@ -303,8 +303,8 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'mulesoft-catalyst-consultant': { questions: 45, passingScore: '70%', duration: '90 min' },
   // CTA / Board
   'technical-architect': { questions: 'Board exam', passingScore: 'Board review', duration: 'Board' },
-  'technical-architect-evaluation': { questions: 'Scenario + MC', passingScore: 'Per exam', duration: 'Timed' },
-  'technical-architect-review-board': { questions: 'Board scenario', passingScore: 'Board decision', duration: 'Board session' },
+  'technical-architect-evaluation': { questions: 'Architecture scenario', passingScore: 'Evaluator decision', duration: '135 min' },
+  'technical-architect-review-board': { questions: 'Architecture scenario', passingScore: 'Panel decision', duration: '265 min' },
   // Claude (Anthropic)
 }
 
@@ -365,7 +365,6 @@ export const EXAM_PRICING_URL = 'https://help.salesforce.com/s/articleView?id=00
 
 export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
   'public-sector-solutions-consultant': 'https://help.salesforce.com/s/articleView?id=005460902&language=en_US&type=1',
-  'public-sector-solutions-ap': 'https://help.salesforce.com/s/articleView?id=005298864&language=en_US&type=1',
   administrator: 'https://help.salesforce.com/s/articleView?id=005298966&language=en_US&type=1',
   'advanced-administrator': 'https://help.salesforce.com/s/articleView?id=005298969&language=en_US&type=1',
   'app-builder': 'https://help.salesforce.com/s/articleView?id=005298964&language=en_US&type=1',
@@ -415,6 +414,32 @@ export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
   'order-management-admin-ap': 'https://help.salesforce.com/s/articleView?id=005298855&language=en_US&type=1',
   'order-management-developer-ap': 'https://help.salesforce.com/s/articleView?id=005298860&language=en_US&type=1',
   'process-automation-ap': 'https://help.salesforce.com/s/articleView?id=005298867&language=en_US&type=1',
+  'agentforce-life-sciences-consultant': 'https://help.salesforce.com/s/articleView?id=005305357&language=en_US&type=1',
+  'b2b-commerce-admin-ap': 'https://help.salesforce.com/s/articleView?id=005298778&language=en_US&type=1',
+  'b2b-commerce-developer-ap': 'https://help.salesforce.com/s/articleView?id=005298777&language=en_US&type=1',
+  'b2c-commerce-developer': 'https://help.salesforce.com/s/articleView?id=005298941&language=en_US&type=1',
+  'communications-cloud-ap': 'https://help.salesforce.com/s/articleView?id=005298788&language=en_US&type=1',
+  'consumer-goods-cloud-ap': 'https://help.salesforce.com/s/articleView?id=005298797&language=en_US&type=1',
+  'crm-analytics-einstein-discovery-consultant': 'https://help.salesforce.com/s/articleView?id=005298935&language=en_US&type=1',
+  'dev-lifecycle-deployment-architect': 'https://help.salesforce.com/s/articleView?id=005298968&language=en_US&type=1',
+  'email-specialist': 'https://help.salesforce.com/s/articleView?id=005298950&language=en_US&type=1',
+  'experience-cloud': 'https://help.salesforce.com/s/articleView?id=005298944&language=en_US&type=1',
+  'financial-services-cloud-ap': 'https://help.salesforce.com/s/articleView?id=005298804&language=en_US&type=1',
+  'heroku-architect': 'https://help.salesforce.com/s/articleView?id=005298948&language=en_US&type=1',
+  'identity-access-management-architect': 'https://help.salesforce.com/s/articleView?id=005298975&language=en_US&type=1',
+  'marketing-cloud-consultant': 'https://help.salesforce.com/s/articleView?id=005298946&language=en_US&type=1',
+  'marketing-cloud-engagement-admin': 'https://help.salesforce.com/s/articleView?id=005298952&language=en_US&type=1',
+  'marketing-cloud-engagement-developer': 'https://help.salesforce.com/s/articleView?id=005298954&language=en_US&type=1',
+  'marketing-cloud-engagement-foundations': 'https://help.salesforce.com/s/articleView?id=005298962&language=en_US&type=1',
+  'nonprofit-cloud': 'https://help.salesforce.com/s/articleView?id=005298958&language=en_US&type=1',
+  'pardot-specialist': 'https://help.salesforce.com/s/articleView?id=005298953&language=en_US&type=1',
+  'slack-administrator': 'https://help.salesforce.com/s/articleView?id=005298990&language=en_US&type=1',
+  'slack-consultant': 'https://help.salesforce.com/s/articleView?id=005298991&language=en_US&type=1',
+  'strategy-designer': 'https://help.salesforce.com/s/articleView?id=005298981&language=en_US&type=1',
+  'technical-architect': 'https://help.salesforce.com/s/articleView?id=005299002&language=en_US&type=1',
+  'technical-architect-evaluation': 'https://help.salesforce.com/s/articleView?id=005299002&language=en_US&type=1',
+  'technical-architect-review-board': 'https://help.salesforce.com/s/articleView?id=005298996&language=en_US&type=1',
+  'ux-designer': 'https://help.salesforce.com/s/articleView?id=005298974&language=en_US&type=1',
 }
 
 /** Occupation role-proxy data for Occupation schema. Maps cert slug to parent role job title and mid-level salary range. */
@@ -2320,7 +2345,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What topics are covered in Tableau Desktop Foundations?',
-      answer: 'The exam covers connecting to data (25%), dimensions and measures (25%), views and dashboards (35%), and filters and sorting (15%).',
+      answer: 'The exam covers connecting to and preparing data (23%), exploring and analyzing data (37%), sharing insights (25%), and understanding Tableau concepts (15%).',
     },
   ],
   'tableau-server-administrator': [
@@ -2354,6 +2379,10 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
   ],
   'sales-foundations': [
+    {
+      question: 'How long is the Agentforce Sales Foundations exam?',
+      answer: 'The Salesforce exam guide lists 105 minutes. Trailhead Academy lists 70 minutes. Check the time shown when booking your exam.',
+    },
     {
       question: 'What is Sales Foundations?',
       answer: 'Sales Foundations validates foundational sales knowledge and Salesforce CRM basics, focusing on sales processes, customer-centric methodology, and using Salesforce for sales.',

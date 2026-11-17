@@ -43,10 +43,10 @@
     "code": "Sales Foundations",
     "description": "This entry-level exam covers everyday sales work in Salesforce: leads and opportunities, the pipeline, forecasting, activity tracking, and sales reports. The exam is 40 scored questions in 105 minutes, with a 70% pass mark, weighted towards Deal Management (37%) and Planning (21%).",
     "examDetails": {
-      "questions": 60,
+      "questions": 40,
       "passingScore": "70%",
       "duration": "105 min",
-      "cost": "$200"
+      "cost": "$75"
     },
     "topics": [
       "Sales Cloud",

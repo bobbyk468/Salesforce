@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers advanced cross-channel marketing in Marketing Cloud Engagement, including Journey Builder, MobileConnect, MobilePush, Advertising Studio, Contact Builder, and Einstein engagement tools. Check the current exam guide for the exam’s question count, time, and passing score.",
     "examDetails": {
-      "questions": 60,
+      "questions": 40,
       "passingScore": "67%",
       "duration": "60 min",
       "cost": "$150"

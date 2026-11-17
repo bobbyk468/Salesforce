@@ -24,13 +24,14 @@
       "<strong>No multiple-choice paper.</strong> You explain a solution to a scenario and defend your design.",
       "<strong>Earn the prerequisites first.</strong> Both Application Architect and System Architect must be active.",
       "<strong>It is a gate to the board.</strong> Passing allows you to proceed to the review board.",
-      "<strong>Fee:</strong> External sources report a fee of about US$1,500 for this stage, with the board charged separately. Confirm current pricing with Salesforce."
+      "<strong>Fee:</strong> Trailhead Academy lists a US$1,500 registration fee for this stage."
     ],
     "passRateGuidance": "You are ready when you can read a scenario, produce a sound design within the available time, and explain your decisions without notes. If you have not practised defending a design aloud, do so before booking."
   },
   "examFormat": {
     "heading": "Technical Architect Evaluation format",
     "intro": "This is a scenario discussion with an evaluator, not a written question paper. Prepare for the following:",
+    "scenarioPercent": "60 minutes to prepare, 30 minutes to present, 30 minutes for questions, and 15 minutes for feedback.",
     "bestWayToPass": [
       "<strong>Read carefully before designing:</strong> Many errors come from solving a different problem than the scenario describes.",
       "<strong>Use a repeatable structure:</strong> Cover data, security, integration, release lifecycle, and licensing so you do not skip an area under pressure.",
@@ -45,8 +46,8 @@
     "examDetails": {
       "questions": "Scenario-based",
       "passingScore": "Evaluator decision",
-      "duration": "Timed session",
-      "cost": "~$1,500"
+      "duration": "135 min",
+      "cost": "$1,500"
     },
     "topics": [
       "Solution Design",

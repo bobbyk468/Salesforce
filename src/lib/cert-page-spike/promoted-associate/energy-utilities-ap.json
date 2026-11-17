@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers the Energy & Utilities Cloud data model, customer journeys, outages and billing integrations. Review how premises, service points and meter-to-cash processes fit together.",
     "examDetails": {
-      "questions": 60,
+      "questions": 50,
       "passingScore": "60%",
       "duration": "75 min",
       "cost": "$150"

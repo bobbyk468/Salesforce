@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers Marketing Cloud Intelligence data integration and reporting, including workspaces, data streams, field mapping, harmonization, calculated measures, dashboards, and data monitoring. Check Salesforce’s current guide for the question count, time, and passing score.",
     "examDetails": {
-      "questions": 60,
+      "questions": 40,
       "passingScore": "60%",
       "duration": "90 min",
       "cost": "$150"

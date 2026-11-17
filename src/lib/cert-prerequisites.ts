@@ -62,6 +62,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'agentforce-specialist': {
     slug: 'agentforce-specialist',
+    noPrerequisite: true,
     recommendedPrerequisite: 'administrator',
     notes: 'The issuer recommends Platform Administrator and Platform App Builder; no prerequisite certification is required.',
   },

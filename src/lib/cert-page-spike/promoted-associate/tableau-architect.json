@@ -43,10 +43,10 @@
     "code": "Tableau Architect",
     "description": "This exam covers architecture for Tableau at scale: deployment, capacity, governed data sources, row-level security, performance, and content lifecycle. The exam is 54 scored questions in 105 minutes, with a 63% pass mark, weighted towards Monitor and Maintain a Tableau Deployment (41%) and Deploy Tableau Server (37%).",
     "examDetails": {
-      "questions": 59,
+      "questions": 54,
       "passingScore": "63%",
       "duration": "105 min",
-      "cost": "$250"
+      "cost": "$400"
     },
     "topics": [
       "Tableau Architecture & Deployment",

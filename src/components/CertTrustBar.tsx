@@ -1,12 +1,15 @@
 import Link from '@/components/AppLink'
 import { SLUG_TO_EXAM_GUIDE_URL } from '@/lib/cert-seo-data'
+import { getCredentialStatus } from '@/lib/credential-status'
 
 interface CertTrustBarProps {
   slug: string
 }
 
 export default function CertTrustBar({ slug }: CertTrustBarProps) {
-  const examGuideUrl = SLUG_TO_EXAM_GUIDE_URL[slug]
+  const status = getCredentialStatus(slug)
+  const transition = status?.kind === 'transitioned' ? status : undefined
+  const examGuideUrl = transition?.sourceUrl || SLUG_TO_EXAM_GUIDE_URL[slug]
     || (slug.startsWith('claude-certified-') ? undefined : 'https://trailhead.salesforce.com/credentials')
 
   return (
@@ -18,7 +21,7 @@ export default function CertTrustBar({ slug }: CertTrustBarProps) {
       </Link>
       {examGuideUrl ? (
         <a href={examGuideUrl} target="_blank" rel="nofollow noopener noreferrer" className="inline-block py-1 text-salesforce-blue hover:underline">
-          Confirm current details in the official guide
+          {transition ? 'Read the Salesforce credential transition notice' : 'Confirm current details in the official guide'}
         </a>
       ) : (
         <span>Confirm current details with the certification issuer</span>

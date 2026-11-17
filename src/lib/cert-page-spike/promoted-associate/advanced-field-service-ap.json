@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers advanced Salesforce Field Service setup, including scheduling policies, optimization, complex appointments, crews, inventory, maintenance plans, and mobile work.",
     "examDetails": {
-      "questions": 60,
+      "questions": 46,
       "passingScore": "73%",
       "duration": "75 min",
       "cost": "$150"

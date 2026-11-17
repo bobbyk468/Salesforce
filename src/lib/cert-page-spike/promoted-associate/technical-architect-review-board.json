@@ -24,13 +24,14 @@
       "<strong>Live presentation and defence.</strong> Explain your architecture and answer detailed questions.",
       "<strong>Practising CTA judges.</strong> The panel evaluates the areas required by the scenario.",
       "<strong>Prerequisites apply.</strong> Hold both architect credentials and pass the evaluation first.",
-      "<strong>Fee:</strong> External sources report about US$4,500 for the board, separate from the evaluation. Confirm current pricing with Salesforce."
+      "<strong>Fee:</strong> Trailhead Academy lists a US$4,500 registration fee for this stage."
     ],
     "passRateGuidance": "Candidates often prepare by completing several mock boards with practising CTAs. Practise presenting and defending a design aloud; platform knowledge by itself is not enough."
   },
   "examFormat": {
     "heading": "What happens at the Technical Architect Review Board?",
     "intro": "The board is a scenario-based presentation followed by a defence. Prepare for these parts of the day:",
+    "scenarioPercent": "Three hours to prepare, 45 minutes to present, and 40 minutes for questions.",
     "bestWayToPass": [
       "<strong>Follow the same outline:</strong> Cover data, security and sharing, integration, delivery lifecycle, and licensing each time.",
       "<strong>Start with the outcome:</strong> Explain the business result and overall solution before moving into technical details.",
@@ -45,8 +46,8 @@
     "examDetails": {
       "questions": "Scenario defence",
       "passingScore": "Panel decision",
-      "duration": "Board session",
-      "cost": "~$4,500"
+      "duration": "265 min",
+      "cost": "$4,500"
     },
     "topics": [
       "Scenario Analysis",

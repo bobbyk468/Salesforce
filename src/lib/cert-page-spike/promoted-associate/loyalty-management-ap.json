@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers Salesforce Loyalty Management program design and operations, including currencies, tiers, benefits, promotions, transaction journals, program processes, and point redemption. It has 60 questions in 90 minutes; confirm the current passing score in the official guide.",
     "examDetails": {
-      "questions": 60,
+      "questions": 50,
       "passingScore": "69%",
       "duration": "75 min",
       "cost": "$150"

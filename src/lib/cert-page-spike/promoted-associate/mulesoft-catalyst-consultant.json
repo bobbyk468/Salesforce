@@ -43,10 +43,10 @@
     "code": "Catalyst",
     "description": "This exam covers the MuleSoft Catalyst methodology, including Centers for Enablement, API reuse, integration outcomes, and the Land, Expand, Engage maturity model. The listed exam details include a 70% passing score; confirm current timing and exam availability in official materials.",
     "examDetails": {
-      "questions": 60,
+      "questions": 45,
       "passingScore": "70%",
       "duration": "90 min",
-      "cost": "$400"
+      "cost": "$200"
     },
     "topics": [
       "MuleSoft Catalyst",

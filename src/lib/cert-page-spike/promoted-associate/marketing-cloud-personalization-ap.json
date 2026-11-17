@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers Marketing Cloud Personalization setup, recommendations, campaigns, and testing. The certification details list 60 questions, a 75-minute limit, and a 70% passing score.",
     "examDetails": {
-      "questions": 60,
+      "questions": 50,
       "passingScore": "70%",
       "duration": "75 min",
       "cost": "$150"

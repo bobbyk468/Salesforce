@@ -43,7 +43,7 @@
     "code": "AP",
     "description": "This exam covers the FSC client model, household relationships, financial accounts and rollups, referrals, action plans and data access. The exam is 50 scored questions in 75 minutes, with a 56% pass mark, weighted towards Delivery (46%) and Define/Design (42%).",
     "examDetails": {
-      "questions": 60,
+      "questions": 50,
       "passingScore": "56%",
       "duration": "75 min",
       "cost": "$150"
