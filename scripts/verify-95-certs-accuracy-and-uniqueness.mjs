@@ -13,8 +13,12 @@
 // rather than a placeholder.
 //
 // Usage: PORT=3100 npm run start, then
-//   VERIFY_BASE_URL=http://localhost:3100 node scripts/verify-95-certs-accuracy-and-uniqueness.mjs
-const BASE_URL = process.env.VERIFY_BASE_URL || 'http://localhost:3100';
+//   PORT=3100 node scripts/verify-95-certs-accuracy-and-uniqueness.mjs
+// VERIFY_BASE_URL or argv[2] override PORT.
+const BASE_URL =
+  process.env.VERIFY_BASE_URL ||
+  process.argv[2] ||
+  `http://localhost:${process.env.PORT || 3100}`;
 
 const ALL_95_CERTS = [
     {

@@ -1,5 +1,11 @@
 // scripts/verify-sitewide-audit.mjs
-const BASE_URL = process.env.VERIFY_BASE_URL || 'http://localhost:3100';
+// Usage: PORT=3100 npm run start, then
+//   PORT=3100 node scripts/verify-sitewide-audit.mjs
+// VERIFY_BASE_URL or argv[2] override PORT.
+const BASE_URL =
+  process.env.VERIFY_BASE_URL ||
+  process.argv[2] ||
+  `http://localhost:${process.env.PORT || 3100}`;
 
 /**
  * Fetches a path, following permanent redirects.
