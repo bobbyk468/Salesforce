@@ -1,18 +1,41 @@
 /** Generic visual career roadmap: parses a "Step 1 → Step 2 → Step 3" string into a
  * connected flow diagram. Used across all role hub pages so each career path renders
- * as a scannable visual instead of a single line of plain text. */
+ * as a scannable visual instead of a single line of plain text.
+ *
+ * Rendered as a wrapping CSS grid rather than a fixed-width SVG row. The SVG version
+ * clamped each step to three wrapped lines of 22 characters and sized the canvas at
+ * 168px per step, so five-step paths (developer, consultant, architect) overflowed into
+ * a horizontal scroll container and multi-certification steps such as
+ * "Agentforce Sales Consultant (Sales-Con-201) or" clipped mid-sentence. A grid has no
+ * fixed track height and no fixed canvas width, so every step renders in full at any
+ * viewport width.
+ */
 interface CareerRoadmapDiagramProps {
   roleName: string
   path: string
 }
 
+/** Tailwind needs literal class names, so the per-length column counts are a lookup
+ *  rather than an interpolated `lg:grid-cols-${n}`. */
+const STEP_COLUMNS: Record<number, string> = {
+  1: 'lg:grid-cols-1',
+  2: 'sm:grid-cols-2',
+  3: 'sm:grid-cols-2 lg:grid-cols-3',
+  4: 'sm:grid-cols-2 lg:grid-cols-4',
+  5: 'sm:grid-cols-2 lg:grid-cols-5',
+}
+
+const STEP_ACCENTS = [
+  { border: 'border-[#0b5cab]', bg: 'bg-[#0b5cab]/[0.08]', text: 'text-[#0b5cab]' },
+  { border: 'border-[#059669]', bg: 'bg-[#059669]/[0.08]', text: 'text-[#047857]' },
+  { border: 'border-[#d97706]', bg: 'bg-[#d97706]/[0.08]', text: 'text-[#b45309]' },
+  { border: 'border-[#dc2626]', bg: 'bg-[#dc2626]/[0.08]', text: 'text-[#b91c1c]' },
+  { border: 'border-[#7c3aed]', bg: 'bg-[#7c3aed]/[0.08]', text: 'text-[#6d28d9]' },
+]
+
 export default function CareerRoadmapDiagram({ roleName, path }: CareerRoadmapDiagramProps) {
-  const steps = path.split('→').map((s) => s.trim())
-  const stepWidth = 168
-  const gap = 16
-  const boxHeight = 76
-  const width = steps.length * stepWidth + (steps.length - 1) * gap + 32
-  const colors = ['#0b5cab', '#059669', '#d97706', '#dc2626', '#7c3aed']
+  const steps = path.split('→').map((s) => s.trim()).filter(Boolean)
+  const columns = STEP_COLUMNS[steps.length] ?? 'sm:grid-cols-2 lg:grid-cols-3'
 
   return (
     <figure id="career-roadmap-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
@@ -20,70 +43,36 @@ export default function CareerRoadmapDiagram({ roleName, path }: CareerRoadmapDi
         {roleName} career roadmap (visual)
       </figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Each step below is a real credential or role milestone, most candidates spend 6–18 months at each stage
+        Each step below is a real credential or role milestone, most candidates spend 6&ndash;18 months at each stage
         before advancing to the next.
       </p>
-      <div className="overflow-x-auto">
-        <svg
-          role="img"
-          aria-labelledby="career-roadmap-title"
-          className="h-auto"
-          style={{ fontSize: '11px', minWidth: `${Math.min(width, 900)}px`, maxWidth: '100%' }}
-          viewBox={`0 0 ${width} ${boxHeight + 40}`}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title id="career-roadmap-title">
-            {roleName} career progression: {steps.join(' leading to ')}
-          </title>
-          <defs>
-            <marker id="crArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-              <path d="M0,0 L8,4 L0,8 Z" fill="#0b5cab" />
-            </marker>
-          </defs>
-          {steps.map((step, i) => {
-            const x = 16 + i * (stepWidth + gap)
-            const color = colors[i % colors.length]
-            return (
-              <g key={`${step}-${i}`}>
-                <rect
-                  x={x}
-                  y={16}
-                  width={stepWidth}
-                  height={boxHeight}
-                  rx={8}
-                  fill={`${color}15`}
-                  stroke={color}
-                  strokeWidth="1.5"
-                />
-                <text x={x + stepWidth / 2} y={38} textAnchor="middle" fill="#64748b" fontWeight="600" fontSize="9">
-                  Step {i + 1}
-                </text>
-                {step.split(' ').reduce<string[]>((lines, word) => {
-                  const last = lines[lines.length - 1]
-                  if (last && (last + ' ' + word).length <= 22) {
-                    lines[lines.length - 1] = last + ' ' + word
-                  } else {
-                    lines.push(word)
-                  }
-                  return lines
-                }, []).slice(0, 3).map((line, li) => (
-                  <text key={li} x={x + stepWidth / 2} y={56 + li * 15} textAnchor="middle" fill="#0f172a" fontWeight="600">
-                    {line}
-                  </text>
-                ))}
-                {i < steps.length - 1 && (
-                  <path
-                    d={`M ${x + stepWidth} ${16 + boxHeight / 2} L ${x + stepWidth + gap} ${16 + boxHeight / 2}`}
-                    stroke="#0b5cab"
-                    strokeWidth="2"
-                    markerEnd="url(#crArrow)"
-                  />
-                )}
-              </g>
-            )
-          })}
-        </svg>
-      </div>
+      <ol className={`grid grid-cols-1 ${columns} gap-3 list-none m-0 p-0`} aria-label={`${roleName} career progression: ${steps.join(' leading to ')}`}>
+        {steps.map((step, i) => {
+          const accent = STEP_ACCENTS[i % STEP_ACCENTS.length]
+          return (
+            <li
+              key={`${step}-${i}`}
+              className={`relative flex flex-col rounded-lg border ${accent.border} ${accent.bg} p-3`}
+            >
+              <span className={`text-[10px] font-bold uppercase tracking-wide ${accent.text} mb-1`}>
+                Step {i + 1}
+              </span>
+              <span className="text-[13px] font-semibold leading-snug text-gray-900 break-words">
+                {step}
+              </span>
+              {i < steps.length - 1 && (
+                <span aria-hidden="true" className="pointer-events-none absolute -bottom-2.5 left-1/2 -translate-x-1/2 text-[#0b5cab] text-xs leading-none sm:hidden">
+                  &#9660;
+                </span>
+              )}
+            </li>
+          )
+        })}
+      </ol>
+      <p className="mt-4 text-[11px] text-gray-500">
+        Steps run left to right, then wrap. A step naming two credentials with &quot;or&quot; is a choice, not two
+        exams you have to pass.
+      </p>
     </figure>
   )
 }

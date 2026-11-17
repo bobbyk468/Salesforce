@@ -404,6 +404,147 @@ const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
     { label: 'System vs Application Architect', href: '/system-architect-vs-application-architect', note: 'Helps candidates choose the next architect milestone.' },
     { label: 'Become a Salesforce CTA', href: '/become-cta', note: 'Long-term CTA roadmap and board-review guidance.' },
   ],
+  sales: [
+    { label: 'Agentforce Sales Consultant (Sales-Con-201) Study Guide', href: '/certifications/sales-cloud', note: 'The flagship selling credential: section weightage, pass mark, and practice questions.' },
+    { label: 'Sales Cloud vs Service Cloud', href: '/sales-cloud-vs-service-cloud', note: 'Decision page for the most common consultant-track fork on the revenue side.' },
+    { label: 'CPQ Administrator vs Revenue Management Consultant', href: '/cpq-admin-vs-revenue-cloud-consultant', note: 'Compares the two quote-to-cash credentials this hub recommends after Sales-Con-201.' },
+    { label: 'Consultant Certification Path', href: '/consultant-certification-path', note: 'Where the consultant-level selling exams sit once you are past Sales-101.' },
+  ],
+  designer: [
+    { label: 'Platform UX Designer (Plat-UX-101) Study Guide', href: '/certifications/ux-designer', note: 'The craft exam: SLDS, accessibility, usability testing, and declarative UX.' },
+    { label: 'UX Designer vs Strategy Designer', href: '/ux-designer-vs-strategy-designer', note: 'Decision page for the only real fork in this two-credential track.' },
+    { label: 'Business Analyst vs Strategy Designer', href: '/business-analyst-vs-strategy-designer', note: 'For candidates choosing between requirements work and experience strategy.' },
+  ],
+  tableau: [
+    { label: 'Tableau Certified Data Analyst (Analytics-DA-201) Study Guide', href: '/certifications/tableau-data-analyst', note: 'The credential hiring managers screen for: LOD expressions, table calcs, and Prep Builder.' },
+    { label: 'Tableau Desktop Foundations (Analytics-101) Study Guide', href: '/certifications/tableau-desktop-foundations', note: 'The entry exam if you have no analytics background yet.' },
+    { label: 'Data Cloud vs CRM Analytics', href: '/data-cloud-vs-crm-analytics', note: 'Clarifies where Tableau sits against the Salesforce-native analytics products.' },
+  ],
+  claude: [
+    { label: 'Claude Certified Associate \u2013 Foundations (CCAO-F) Notes', href: '/certifications/claude-certified-associate', note: 'The no-code entry point: prompt construction, output evaluation, and model selection.' },
+    { label: 'Claude Certified Developer \u2013 Foundations (CCDV-F) Notes', href: '/certifications/claude-certified-developer', note: 'The build track: Messages API, tool use, MCP servers, and production evaluations.' },
+    { label: 'Claude Certified Architect \u2013 Foundations (CCAR-F) Notes', href: '/certifications/claude-certified-architect-foundations', note: 'System design: multi-agent orchestration, Claude Code configuration, reliability patterns.' },
+  ],
+}
+
+/**
+ * Certifications a hub should surface even though the shared grid counts them
+ * under another role.
+ *
+ * `getCertRoleAssignment` gives every credential exactly one owning role so the
+ * hub count, the homepage pill and the card list cannot drift. That is right for
+ * counting and wrong for browsing: the marketing hub recommended two Marketing
+ * Cloud consultant exams in its own decision table and roadmap while showing only
+ * two cards, and the sales hub recommended three selling exams while showing one
+ * card in a two-column grid. These slugs are rendered as clearly-labelled
+ * cross-links underneath the owned cards, so the count stays truthful and the hub
+ * still lists everything it tells you to take.
+ */
+const ROLE_CROSS_LISTED_CERTS: Record<string, string[]> = {
+  marketing: ['marketing-cloud-consultant', 'pardot-consultant'],
+  sales: ['sales-cloud', 'revenue-cloud-consultant', 'cpq-administrator'],
+}
+
+/**
+ * The "How to Use This ___ Certification Hub" copy, per track.
+ *
+ * All 11 hubs shared one paragraph that listed every track on the site ("daily
+ * configuration, implementation consulting, custom development, architecture,
+ * marketing operations, analytics, or industry-cloud delivery") and described
+ * Salesforce org configuration, which is wrong on the Tableau hub and wrong twice
+ * over on the Claude hub, where none of the credentials are Salesforce ones.
+ * `ROLE_HUB_USAGE` replaces the first paragraph per role; the second paragraph
+ * about the decision cards is shared, because it describes this page rather than
+ * the track.
+ */
+const ROLE_HUB_USAGE: Record<string, string> = {
+  administrator:
+    'Read this hub in the order the work happens. The decision cards below sort the track by what you do in Setup today, ' +
+    'not by how long you have held the job: user and access management, automation, or data and reporting. Once a card ' +
+    'matches, open the certification page for section weightage, question count, pass mark, official source references, ' +
+    'and free practice questions, then come back for the career roadmap to see what the exam after it usually is.',
+  developer:
+    'Read this hub from your current codebase outward. The decision cards sort the track by what you actually ship \u2014 ' +
+    'Apex and triggers, front-end JavaScript, commerce storefronts, or MuleSoft integrations \u2014 rather than by exam ' +
+    'difficulty, because the second credential here is a specialisation rather than a promotion. Open a certification page ' +
+    'for section weightage, question count, pass mark, and free practice questions, and use the roadmap below to see which ' +
+    'architect domain each development path feeds into.',
+  consultant:
+    'Read this hub by the cloud you are staffed on, which is the single filter that matters here: the decision cards sort ' +
+    'the track by the product or industry you deliver, and each exam page then gives you the blueprint for that product\u2019s ' +
+    'implementation lifecycle, its pass mark (they differ by several points between clouds), and free practice questions. If ' +
+    'you have not passed Platform Administrator yet, start there instead; every exam on this page assumes it.',
+  architect:
+    'Read this hub by the domain you already defend in a design review. The decision cards sort the track by that domain \u2014 ' +
+    'integration, data, identity, or sharing and visibility \u2014 because the component exams are taken in any order and the ' +
+    'cheapest first exam is usually the one closest to your current work. The roadmap below shows how those components ' +
+    'combine into Application Architect and System Architect, neither of which is itself an exam, and where the CTA ' +
+    'evaluation and review board sit after them.',
+  marketing:
+    'Settle one thing before you read anything else on this page: which platform your org runs. Marketing Cloud Engagement ' +
+    'and Marketing Cloud Account Engagement have separate exams, and both were renamed while keeping their old search names, ' +
+    'so a credential title alone will not tell you. Once you know, the decision cards point you at the specialist exam for ' +
+    'that platform, and the consultant credential above it is listed in the cards below even though it is counted under the ' +
+    'consultant track.',
+  associate:
+    'Treat this hub as a starting line rather than a plan. There is effectively one exam to book here \u2014 Platform ' +
+    'Foundations (Plat-101), which includes a free retake \u2014 and the decision cards exist mainly to tell you when to skip ' +
+    'this track entirely and go straight to Platform Administrator. Open the certification page for the question count, pass ' +
+    'mark, and free practice questions, then use the roadmap below to pick the role-level exam this credential buys you time ' +
+    'to prepare for.',
+  sales:
+    'Read this hub as the revenue side of the platform rather than as a self-contained track. Agentforce Sales Foundations ' +
+    '(Sales-101) is the only credential counted under it; the three exams it leads to are counted under the Consultant and ' +
+    'Administrator tracks, so they are cross-listed in the cards below instead of being left off the page. The decision ' +
+    'cards sort them by where you sit in quote-to-cash: pipeline and forecasting, or pricing, quoting, and renewals.',
+  designer:
+    'There is one question to answer on this hub, and the decision cards are built around it: do you draw the interface, or ' +
+    'do you decide what gets built? Platform User Experience Designer is the craft exam and Platform Strategy Designer is ' +
+    'the upstream one, neither is a prerequisite for the other, and holding both is unusual. Open the exam page for section ' +
+    'weightage and free practice questions, and note that both assume enough Setup fluency to configure page layouts and ' +
+    'dynamic forms yourself.',
+  tableau:
+    'Read this hub as a Tableau programme that Salesforce distributes, not as a Salesforce track. Nothing here tests org ' +
+    'configuration, so judge your readiness on hours spent in Tableau Desktop rather than on Setup experience, and expect ' +
+    'the credential names to carry Tableau branding rather than the Salesforce Certified prefix. The decision cards are ' +
+    'numbered because this track really is sequential, with one exception: Tableau Next Consultant sits on the Salesforce ' +
+    'platform, over Data 360 and Agentforce, and can be taken out of order.',
+  claude:
+    'Read this hub with one caveat in front of everything else: these are Anthropic credentials, not Salesforce ones, and ' +
+    'Anthropic publishes no exam code, fee, or pass mark we have been able to verify, so every page in this track is marked ' +
+    'as unverified learning notes and you should check Anthropic\u2019s own certification pages before planning around them. ' +
+    'Nothing here tests org configuration. The decision cards sort the track by how you work with the model \u2014 using ' +
+    'Claude with no code, shipping on the API and MCP, or designing the systems and cost model around it \u2014 and only ' +
+    'CCAR-P has a stated prerequisite, CCAR-F.',
+  'accredited-professional':
+    'Read this hub as delivery credentials rather than career steps. These are Accredited Professional designations, issued ' +
+    'through Partner Learning Camp rather than the certification catalog, which is why they carry no exam codes and why the ' +
+    'cards below show learning topics instead of published exam facts. The right one is almost always whichever cloud your ' +
+    'current project runs on, and each assumes you already hold the platform, consultant, or admin credential underneath it. ' +
+    'Several in this track retire in February 2027, so check the status note on a card before booking study time.',
+}
+
+/**
+ * Anthropic’s shorthand for each Claude credential.
+ *
+ * These are not exam codes: Anthropic publishes none, and the exam-code registry
+ * must keep rendering nothing for this track. The Claude hub’s decision table
+ * already shows the shorthand, so the cards carry it from this local map to match,
+ * without it leaking into titles, H1s, or credential structured data.
+ */
+const CLAUDE_CARD_SHORTHAND: Record<string, string> = {
+  'claude-certified-associate': 'CCAO-F',
+  'claude-certified-developer': 'CCDV-F',
+  'claude-certified-architect-foundations': 'CCAR-F',
+  'claude-certified-architect-professional': 'CCAR-P',
+}
+
+/** Column count that leaves no empty trailing slot for a small card set. Three
+ *  columns only pay off at 3 or 6 cards; 2 and 4 read better as a 2-up grid. */
+function balancedGridColumns(count: number): string {
+  if (count % 3 === 0) return 'md:grid-cols-3'
+  if (count % 2 === 0) return 'md:grid-cols-2'
+  return 'md:grid-cols-3'
 }
 
 const ROLE_FAQS: Record<string, FaqItem[]> = {
@@ -537,23 +678,52 @@ export default async function RoleCertificationsPage({ params }: Props) {
   // the card list, this hub's count and the homepage pill cannot drift apart.
   const certRoleAssignment = getCertRoleAssignment()
   const roleCertCount = getRoleCertCount(slug)
-  const roleCerts = category.items
-    .filter((item) => !NOINDEX_ALIAS_HREFS.has(item.href))
-    .filter((item) => {
-      const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
-      return certRoleAssignment.get(certSlug) === slug
-    })
-    .map((item) => {
+  const toRoleCard = (item: { name: string; href: string }) => {
     const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
     const alias = getCertAlias(certSlug)
     const examCode = alias
       ? [alias.code, ...(alias.legacy ?? [])].filter(Boolean).join(' / ')
       : getRecognizedExamCode(certSlug)
     const baseName = alias?.bare ?? item.name
-    const name = examCode && !baseName.includes(examCode) ? `${baseName} (${examCode})` : baseName
+    // Anthropic publishes no exam code, so the Claude credentials fall through
+    // the exam-code path and would render bare while this hub's own decision
+    // table shows their shorthand. Append it here only.
+    const shorthand = CLAUDE_CARD_SHORTHAND[certSlug]
+    const name = examCode && !baseName.includes(examCode)
+      ? `${baseName} (${examCode})`
+      : shorthand && !baseName.includes(shorthand)
+        ? `${baseName} (${shorthand})`
+        : baseName
     const facts = gridCertBySlug.get(certSlug)
     return { ...item, name, statusNote: getCredentialCardNote(certSlug), facts }
-  })
+  }
+  const roleCerts = category.items
+    .filter((item) => !NOINDEX_ALIAS_HREFS.has(item.href))
+    .filter((item) => {
+      const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
+      return certRoleAssignment.get(certSlug) === slug
+    })
+    .map(toRoleCard)
+  // Credentials this hub recommends that the shared grid counts under another
+  // role. Listed after the owned cards and labelled with their owning track, so
+  // the hub count stays truthful while the card grid matches the decision table.
+  const crossListedSlugs = ROLE_CROSS_LISTED_CERTS[slug] ?? []
+  const crossListedCerts = crossListedSlugs
+    .map((certSlug) => {
+      const item = category.items.find((candidate) => candidate.href.endsWith(`/${certSlug}`))
+      if (!item || NOINDEX_ALIAS_HREFS.has(item.href)) return null
+      const ownerSlug = certRoleAssignment.get(certSlug)
+      if (!ownerSlug || ownerSlug === slug) return null
+      const ownerName = getCategoryBySlug(ownerSlug)?.name ?? ownerSlug
+      return { ...toRoleCard(item), ownerName }
+    })
+    .filter((cert): cert is NonNullable<typeof cert> => cert !== null)
+  /** Owned cards first, then the cross-listed ones, in one grid so a hub with a
+   *  single owned credential does not render a lone card beside an empty column. */
+  const hubCerts: Array<ReturnType<typeof toRoleCard> & { ownerName?: string }> = [
+    ...roleCerts,
+    ...crossListedCerts,
+  ]
   const title = fitRoleTitle(
     ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_YEAR})`,
     category.name,
@@ -620,10 +790,10 @@ export default async function RoleCertificationsPage({ params }: Props) {
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Use This {category.name} Certification Hub</h2>
         <div className="space-y-3 text-sm leading-6 text-gray-700">
           <p>
-            This page is designed as a role-level decision guide, not just a directory. Start by choosing the certification
-            that matches your current work: daily configuration, implementation consulting, custom development, architecture,
-            marketing operations, analytics, or industry-cloud delivery. Then open the certification page to review exam
-            weightage, format, official source references, and free practice questions.
+            {ROLE_HUB_USAGE[slug] ??
+              'This page is designed as a role-level decision guide, not just a directory. Start by choosing the certification ' +
+                'that matches your current work, then open the certification page to review exam weightage, format, official ' +
+                'source references, and free practice questions.'}
           </p>
           <p>
             If two certifications look similar, use the decision cards below before committing study time. They point to the
@@ -649,7 +819,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
         <p className="text-sm text-gray-600 mb-5">
           Use this quick decision table before opening every exam page.
         </p>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className={`grid ${balancedGridColumns(decisionItems.length)} gap-4`}>
           {decisionItems.map((item) => (
             <Link
               key={`${item.audience}-${item.href}`}
@@ -667,7 +837,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
       {resourceLinks.length > 0 && (
         <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">High-Intent {category.name} Resources</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className={`grid ${balancedGridColumns(resourceLinks.length)} gap-4`}>
             {resourceLinks.map((resource) => (
               <Link
                 key={resource.href}
@@ -683,11 +853,13 @@ export default async function RoleCertificationsPage({ params }: Props) {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {roleCerts.map((item) => (
+        {hubCerts.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="bg-white rounded-xl shadow-lg p-5 card-hover flex items-center justify-between group border border-gray-100 hover:border-salesforce-blue/50 transition-all duration-200"
+            className={`bg-white rounded-xl shadow-lg p-5 card-hover flex items-center justify-between group border transition-all duration-200 hover:border-salesforce-blue/50 ${
+              item.ownerName ? 'border-dashed border-gray-200' : 'border-gray-100'
+            }`}
           >
             <div className="flex items-center min-w-0">
               <div className="flex-shrink-0 w-10 h-10 bg-salesforce-blue/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-salesforce-blue/20 transition-colors duration-200">
@@ -697,6 +869,11 @@ export default async function RoleCertificationsPage({ params }: Props) {
                 <span className="block font-medium text-gray-900 group-hover:text-salesforce-blue transition-colors duration-200 break-words">
                   {item.name}
                 </span>
+                {item.ownerName && (
+                  <span className="mt-1 inline-block rounded bg-gray-100 px-2 py-1 text-xs font-semibold text-gray-700">
+                    Counted under {item.ownerName}
+                  </span>
+                )}
                 {item.statusNote && (
                   <span className="mt-1 inline-block rounded bg-amber-50 px-2 py-1 text-xs font-semibold text-amber-900">{item.statusNote}</span>
                 )}
@@ -714,6 +891,14 @@ export default async function RoleCertificationsPage({ params }: Props) {
           </Link>
         ))}
       </div>
+
+      {crossListedCerts.length > 0 && (
+        <p className="mt-4 text-sm text-gray-600">
+          The dashed cards are the next exams this hub recommends in its decision table and roadmap. Each is counted under
+          another track, so they sit outside the {roleCertCount} certification{roleCertCount !== 1 ? 's' : ''} this role is
+          credited with rather than being left off the page.
+        </p>
+      )}
 
       {careerData && (
         <>
