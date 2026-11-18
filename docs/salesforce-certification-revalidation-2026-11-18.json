@@ -1,0 +1,7760 @@
+{
+ "auditDate": "2026-11-18",
+ "auditType": "independent re-validation (second pass)",
+ "examLanguage": "English",
+ "website": "https://www.trailblazeprep.com",
+ "methodology": {
+  "enumeration": "Crawled all nine trailhead.salesforce.com/en/credentials/*overview role pages live and recorded the credential pages each lists. The Accredited Professional overview links Trailhead Academy certificate pages directly.",
+  "factSource": "For every repository credential, resolved the exam guide article from the repository itself (SLUG_TO_EXAM_GUIDE_URL, else the Verified comment in exam-weightage-data.ts) rather than from the earlier audit, then opened each help.salesforce.com guide one at a time and read the About the Exam block and full Exam Outline.",
+  "comparison": "Compared question count, duration, passing score, registration fee, retake fee and every section weight against the repository's own data. Section weights were compared both in order and as a multiset, because the site deliberately orders and shortens section titles for original presentation.",
+  "limits": "Section titles on the site are intentionally editorial and were not treated as errors when the percentages matched. Guides that publish no fee leave the fee unverified here; the site takes those from the published pricing article. Four Claude credentials and the two architect credentials earned by holding other certifications have no published exam facts to compare."
+ },
+ "summary": {
+  "rolePagesCrawled": 9,
+  "repositoryCredentials": 97,
+  "officialGuidesRead": 88,
+  "credentialsComparedAgainstAGuide": 90,
+  "sectionOutlinesVerified": 87,
+  "everyOutlineSumsTo100": true,
+  "numericMismatchesFound": 2,
+  "sectionPercentageMismatchesFound": 0,
+  "editorialSectionTitleDifferences": 19,
+  "credentialsWithNoPublishedExamFacts": 6
+ },
+ "rolePagesLive": {
+  "accreditedprofessionaloverview": [
+   "public-sector-solutions-ap",
+   "communications-cloud-ap",
+   "consumer-goods-cloud-ap",
+   "financial-services-cloud-ap",
+   "health-cloud-ap",
+   "manufacturing-cloud-ap",
+   "b2b-commerce-admin-ap",
+   "b2b-commerce-developer-ap"
+  ],
+  "associateoverview": [
+   "aiassociate",
+   "marketingassociate",
+   "integrationfoundations",
+   "platformfoundations",
+   "tableaudesktopfoundations"
+  ],
+  "administratoroverview": [
+   "agentforcespecialist",
+   "businessanalyst",
+   "marketingcloudengagementadministrator",
+   "platformadministrator",
+   "platformadministrator-ii",
+   "platformappbuilder",
+   "slackadministrator",
+   "tableaudataanalyst",
+   "tableauserveradministrator"
+  ],
+  "architectoverview": [
+   "agentforcespecialist",
+   "applicationarchitect",
+   "b2csolutionarchitect",
+   "herokuarchitect",
+   "mulesoftplatformarchitecti",
+   "mulesoftintegrationarchitecti",
+   "platformdataarchitect",
+   "platformdevelopmentlifecycledeploymentarchitect",
+   "platformidentityandaccessmanagementarchitect",
+   "platformintegrationarchitect",
+   "platformsharingandvisibilityarchitect",
+   "systemarchitect",
+   "tableauarchitect",
+   "technicalarchitect"
+  ],
+  "developeroverview": [
+   "agentforcespecialist",
+   "b2ccommercedeveloper",
+   "javascriptdeveloper",
+   "marketingcloudengagementdeveloper",
+   "mulesoftdeveloperi",
+   "mulesoftdeveloperii",
+   "omnistudiodeveloper",
+   "platformappbuilder",
+   "platformdeveloperi",
+   "platformdeveloperii",
+   "slackdeveloper"
+  ],
+  "salesprofessionaloverview": [
+   "agfsalesfoundations"
+  ],
+  "marketingoverview": [
+   "marketingcloudaccountengagementconsultant",
+   "marketingcloudaccountengagementspecialist",
+   "marketingcloudengagementadministrator",
+   "marketingcloudengagementconsultant",
+   "marketingcloudengagementdeveloper",
+   "marketingcloudengagementspecialist",
+   "marketingcloudnextconsultant"
+  ],
+  "consultantoverview": [
+   "agffieldserviceandoperationsconsultant",
+   "agentforcelifesciences",
+   "agfnonprofitconsultant",
+   "agfsalesconsultant",
+   "agfserviceconsultant",
+   "businessanalyst",
+   "crmanalyticsandeinsteindiscoveryconsultant",
+   "data360consultant",
+   "experiencecloudconsultant",
+   "marketingcloudengagementconsultant",
+   "marketingcloudnextconsultant",
+   "omnistudioconsultant",
+   "publicsectorsolutionsconsultant",
+   "revenuemanagementconsultant",
+   "slackconsultant",
+   "tableauconsultant",
+   "tableaunextconsultant"
+  ],
+  "designeroverview": [
+   "platformstrategydesigner",
+   "userexperiencedesigner"
+  ]
+ },
+ "corrections": [
+  {
+   "siteSlug": "email-specialist-practice-test",
+   "file": "src/lib/cert-page-spike/promoted-associate/email-specialist-practice-test.json",
+   "field": "certificationCard.examDetails.duration",
+   "before": "105 min",
+   "after": "90 min",
+   "source": "https://help.salesforce.com/s/articleView?id=005298950&type=1&language=en_US",
+   "note": "The Marketing Cloud Engagement Specialist exam is 90 minutes. The site's own published-facts entry for this slug already said 90 min; only the card disagreed."
+  },
+  {
+   "siteSlug": "public-sector-solutions-ap",
+   "file": "src/lib/cert-page-spike/promoted-associate/public-sector-solutions-ap.json",
+   "field": "certificationCard.examDetails",
+   "before": {
+    "questions": 60,
+    "passingScore": "Not published",
+    "duration": "90 min"
+   },
+   "after": {
+    "questions": 50,
+    "passingScore": "70%",
+    "duration": "75 min"
+   },
+   "source": "https://help.salesforce.com/s/articleView?id=005298864&language=en_US&type=1 (closed exam; guide no longer returns a public English article)",
+   "note": "The exam closed and its guide is gone, so neither figure could be re-read from Salesforce. The card carried the generic 60/90 placeholder while the page's own prose and published-facts entry said 50 scored questions in 75 minutes, sourced from that guide while it was still live. Aligned the card to the sourced figures."
+  }
+ ],
+ "observations": [
+  {
+   "topic": "credential renamed at the issuer",
+   "detail": "Guide 005298978 is titled Salesforce Certified Revenue Management Consultant and the Consultant role page links /credentials/revenuemanagementconsultant, while the site slug is revenue-cloud-consultant. The exam facts match; only the name is older."
+  },
+  {
+   "topic": "role page counts",
+   "detail": "Live counts matched the earlier audit for seven of nine role pages. The Associate overview now lists five credentials (earlier recorded as four) and the Designer overview two (earlier one). Both sets are already covered on the site."
+  },
+  {
+   "topic": "public-sector AP guide",
+   "detail": "Article 005298864 returns a not-found page, independently confirming the earlier decision to drop that guide link from SLUG_TO_EXAM_GUIDE_URL."
+  },
+  {
+   "topic": "two passing scores",
+   "detail": "Tableau Desktop Foundations publishes English 48% and Japanese 55%. Platform Administrator publishes 68% for both. The site states the English figure."
+  },
+  {
+   "topic": "Academy vs guide question counts",
+   "detail": "Trailhead Academy certificate pages often print scored plus unscored as one number (Tableau Architect 59 against the guide's 54). The guide is the figure the site uses."
+  }
+ ],
+ "credentials": [
+  {
+   "siteSlug": "administrator",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298966&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "Configuration and Setup",
+      "percentage": 15
+     },
+     {
+      "name": "Object Manager and Lightning App Builder",
+      "percentage": 15
+     },
+     {
+      "name": "Sales and Marketing Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Service and Support Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Productivity and Collaboration",
+      "percentage": 10
+     },
+     {
+      "name": "Data and Analytics Management",
+      "percentage": 17
+     },
+     {
+      "name": "Automation",
+      "percentage": 15
+     },
+     {
+      "name": "Agentforce",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Administrator Exam Guide",
+    "articleId": "005298966",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "68%",
+     "68%"
+    ],
+    "registrationFee": "US$200, JPY\u00a530,000",
+    "retakeFee": "US$100, JPY\u00a515,000",
+    "version": "Exam questions align to Summer '25.",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Configuration and Setup",
+      "percentage": 15
+     },
+     {
+      "name": "Object Manager and Lightning App Builder",
+      "percentage": 15
+     },
+     {
+      "name": "Sales and Marketing Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Service and Support Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Productivity and Collaboration",
+      "percentage": 10
+     },
+     {
+      "name": "Data and Analytics Management",
+      "percentage": 17
+     },
+     {
+      "name": "Automation",
+      "percentage": 15
+     },
+     {
+      "name": "Agentforce",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "administrator-practice-test",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298966&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "105 min",
+     "cost": "Practice only"
+    },
+    "sections": [
+     {
+      "name": "Configuration and Setup",
+      "percentage": 15
+     },
+     {
+      "name": "Object Manager and Lightning App Builder",
+      "percentage": 15
+     },
+     {
+      "name": "Sales and Marketing Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Service and Support Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Productivity and Collaboration",
+      "percentage": 10
+     },
+     {
+      "name": "Data and Analytics Management",
+      "percentage": 17
+     },
+     {
+      "name": "Automation",
+      "percentage": 15
+     },
+     {
+      "name": "Agentforce",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Administrator Exam Guide",
+    "articleId": "005298966",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "68%",
+     "68%"
+    ],
+    "registrationFee": "US$200, JPY\u00a530,000",
+    "retakeFee": "US$100, JPY\u00a515,000",
+    "version": "Exam questions align to Summer '25.",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Configuration and Setup",
+      "percentage": 15
+     },
+     {
+      "name": "Object Manager and Lightning App Builder",
+      "percentage": 15
+     },
+     {
+      "name": "Sales and Marketing Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Service and Support Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Productivity and Collaboration",
+      "percentage": 10
+     },
+     {
+      "name": "Data and Analytics Management",
+      "percentage": 17
+     },
+     {
+      "name": "Automation",
+      "percentage": 15
+     },
+     {
+      "name": "Agentforce",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "advanced-administrator",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298969&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "Security and Access",
+      "percentage": 20
+     },
+     {
+      "name": "Objects and Applications",
+      "percentage": 19
+     },
+     {
+      "name": "Auditing and Monitoring",
+      "percentage": 10
+     },
+     {
+      "name": "Cloud Applications",
+      "percentage": 11
+     },
+     {
+      "name": "Data and Analytics Management",
+      "percentage": 13
+     },
+     {
+      "name": "Environment Management and Deployment",
+      "percentage": 7
+     },
+     {
+      "name": "Process Automation",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Administrator II Exam Guide",
+    "articleId": "005298969",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200, JPY 30,000",
+    "retakeFee": "US$100, JPY 15,000",
+    "version": "Exam questions align to the Summer '22 release",
+    "prerequisite": "Salesforce Certified Platform Administrator Certification",
+    "sections": [
+     {
+      "name": "Security and Access",
+      "percentage": 20
+     },
+     {
+      "name": "Objects and Applications",
+      "percentage": 19
+     },
+     {
+      "name": "Auditing and Monitoring",
+      "percentage": 10
+     },
+     {
+      "name": "Cloud Applications",
+      "percentage": 11
+     },
+     {
+      "name": "Data and Analytics Management",
+      "percentage": 13
+     },
+     {
+      "name": "Environment Management and Deployment",
+      "percentage": 7
+     },
+     {
+      "name": "Process Automation",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "advanced-field-service-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298764&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 46,
+     "passingScore": "73%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 46,
+     "passingScore": "73%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Implementation Strategies and Design",
+      "percentage": 7
+     },
+     {
+      "name": "Resource Management",
+      "percentage": 31
+     },
+     {
+      "name": "Foundation",
+      "percentage": 16
+     },
+     {
+      "name": "Mobile",
+      "percentage": 13
+     },
+     {
+      "name": "Assets",
+      "percentage": 11
+     },
+     {
+      "name": "Optimization",
+      "percentage": 22
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Advanced Field Service Accredited Professional Exam Guide",
+    "articleId": "005298764",
+    "questions": 46,
+    "minutes": 75,
+    "passingScores": [
+     "73%"
+    ],
+    "registrationFee": "US$150 or JPY\u00a520,000",
+    "retakeFee": "US$150 or JPY\u00a520,000",
+    "version": "Exam questions align to the Summer '24 release",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Implementation Strategies and Design",
+      "percentage": 7
+     },
+     {
+      "name": "Resource Management",
+      "percentage": 31
+     },
+     {
+      "name": "Foundation",
+      "percentage": 16
+     },
+     {
+      "name": "Mobile",
+      "percentage": 13
+     },
+     {
+      "name": "Assets",
+      "percentage": 11
+     },
+     {
+      "name": "Optimization",
+      "percentage": 22
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "agentforce-life-sciences-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005305357&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "62%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "62%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Foundations and Administration",
+      "percentage": 36
+     },
+     {
+      "name": "Engagement Execution",
+      "percentage": 28
+     },
+     {
+      "name": "Engagement Planning",
+      "percentage": 21
+     },
+     {
+      "name": "Sampling Inventory Management",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Life Sciences Consultant Exam Guide",
+    "articleId": "005305357",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "62%"
+    ],
+    "registrationFee": "US$200, JPY\u00a530,000",
+    "retakeFee": "US$100, JPY\u00a515,000",
+    "version": "Exam questions align to the Spring '26 release",
+    "prerequisite": "Salesforce Certified Platform Administrator",
+    "sections": [
+     {
+      "name": "Foundations and Administration",
+      "percentage": 36
+     },
+     {
+      "name": "Engagement Planning",
+      "percentage": 21
+     },
+     {
+      "name": "Engagement Execution",
+      "percentage": 28
+     },
+     {
+      "name": "Sampling Inventory Management",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "agentforce-specialist",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298924&type=1&language=en_US",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "Prompt Engineering",
+      "percentage": 20
+     },
+     {
+      "name": "Data 360 Fundamentals",
+      "percentage": 20
+     },
+     {
+      "name": "AI Agents",
+      "percentage": 35
+     },
+     {
+      "name": "Testing, Deployment, and Maintenance",
+      "percentage": 10
+     },
+     {
+      "name": "Governance and Observability",
+      "percentage": 10
+     },
+     {
+      "name": "Multi-Agent Orchestration",
+      "percentage": 5
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Specialist Exam Guide",
+    "articleId": "005298924",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "Spring '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Prompt Engineering",
+      "percentage": 20
+     },
+     {
+      "name": "Data 360 Fundamentals",
+      "percentage": 20
+     },
+     {
+      "name": "AI Agents",
+      "percentage": 35
+     },
+     {
+      "name": "Testing, Deployment, and Maintenance",
+      "percentage": 10
+     },
+     {
+      "name": "Governance and Observability",
+      "percentage": 10
+     },
+     {
+      "name": "Multi-Agent Orchestration",
+      "percentage": 5
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "ai-associate",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298930&type=1&language=en_US",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "65%",
+     "duration": "70 min"
+    },
+    "fee": "Free",
+    "retake": "$50",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "AI Fundamentals",
+      "percentage": 17
+     },
+     {
+      "name": "AI Capabilities in CRM",
+      "percentage": 8
+     },
+     {
+      "name": "Ethical Considerations of AI",
+      "percentage": 39
+     },
+     {
+      "name": "Data for AI",
+      "percentage": 36
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified AI Associate Exam Guide",
+    "articleId": "005298930",
+    "questions": 40,
+    "minutes": 70,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "Free",
+    "retakeFee": null,
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "AI Fundamentals",
+      "percentage": 17
+     },
+     {
+      "name": "AI Capabilities in CRM",
+      "percentage": 8
+     },
+     {
+      "name": "Ethical Considerations of AI",
+      "percentage": 39
+     },
+     {
+      "name": "Data for AI",
+      "percentage": 36
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "app-builder",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298964&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "73%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "Salesforce Fundamentals",
+      "percentage": 18
+     },
+     {
+      "name": "Data Modeling and Management",
+      "percentage": 20
+     },
+     {
+      "name": "Business Logic and Process Automation",
+      "percentage": 32
+     },
+     {
+      "name": "User Interface",
+      "percentage": 17
+     },
+     {
+      "name": "App Deployment",
+      "percentage": 13
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform App Builder Exam Guide",
+    "articleId": "005298964",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "73%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "SU '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Salesforce Fundamentals",
+      "percentage": 18
+     },
+     {
+      "name": "Data Modeling and Management",
+      "percentage": 20
+     },
+     {
+      "name": "Business Logic and Process Automation",
+      "percentage": 32
+     },
+     {
+      "name": "User Interface",
+      "percentage": 17
+     },
+     {
+      "name": "App Deployment",
+      "percentage": 13
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "application-architect",
+   "guideUrl": null,
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": null,
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": "No exam",
+     "passingScore": "N/A",
+     "duration": "N/A",
+     "cost": "Fees of the 4 exams"
+    },
+    "sections": null
+   },
+   "officialGuide": null,
+   "verdict": "no-published-exam-facts"
+  },
+  {
+   "siteSlug": "b2b-commerce-admin-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298778&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "75%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "75%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Salesforce B2B Commerce Basics",
+      "percentage": 15
+     },
+     {
+      "name": "Salesforce B2B Commerce App",
+      "percentage": 20
+     },
+     {
+      "name": "Storefront Deployment",
+      "percentage": 20
+     },
+     {
+      "name": "Product Organization and Administration",
+      "percentage": 15
+     },
+     {
+      "name": "Content Integration",
+      "percentage": 7
+     },
+     {
+      "name": "Storefront Management",
+      "percentage": 17
+     },
+     {
+      "name": "Advanced Topics",
+      "percentage": 6
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited B2B Commerce Administrator Exam Guide",
+    "articleId": "005298778",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "75%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": null,
+    "sections": [
+     {
+      "name": "Salesforce B2B Commerce Basics",
+      "percentage": 15
+     },
+     {
+      "name": "Salesforce B2B Commerce App",
+      "percentage": 20
+     },
+     {
+      "name": "Storefront Deployment",
+      "percentage": 20
+     },
+     {
+      "name": "Product Organization and Administration",
+      "percentage": 15
+     },
+     {
+      "name": "Content Integration",
+      "percentage": 7
+     },
+     {
+      "name": "Storefront Management",
+      "percentage": 17
+     },
+     {
+      "name": "Advanced Topics",
+      "percentage": 6
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "b2b-commerce-developer-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298777&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Checkout Flow Development",
+      "percentage": 10
+     },
+     {
+      "name": "Reference Implementations",
+      "percentage": 15
+     },
+     {
+      "name": "Basic Lightning Web Component Development",
+      "percentage": 20
+     },
+     {
+      "name": "Advanced Lightning Web Component Development",
+      "percentage": 30
+     },
+     {
+      "name": "Data Management",
+      "percentage": 15
+     },
+     {
+      "name": "Error Handling and Diagnostics",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited B2B Commerce Developer Professional Exam Guide",
+    "articleId": "005298777",
+    "questions": 60,
+    "minutes": 75,
+    "passingScores": [
+     "68%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Checkout Flow Development",
+      "percentage": 10
+     },
+     {
+      "name": "Reference Implementations",
+      "percentage": 15
+     },
+     {
+      "name": "Basic Lightning Web Component Development",
+      "percentage": 20
+     },
+     {
+      "name": "Advanced Lightning Web Component Development",
+      "percentage": 30
+     },
+     {
+      "name": "Data Management",
+      "percentage": 15
+     },
+     {
+      "name": "Error Handling and Diagnostics",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "b2b-solution-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005299472&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "58%",
+     "duration": "120 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "58%",
+     "duration": "120 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Discovery and Customer Success",
+      "percentage": 25
+     },
+     {
+      "name": "Data Governance and Integration",
+      "percentage": 26
+     },
+     {
+      "name": "Design",
+      "percentage": 29
+     },
+     {
+      "name": "Delivery",
+      "percentage": 12
+     },
+     {
+      "name": "Operationalize the Solution",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified B2B Solution Architect Exam Guide",
+    "articleId": "005299472",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "58%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Summer '22",
+    "prerequisite": "Salesforce Certified Application Architect Certification",
+    "sections": [
+     {
+      "name": "Discovery and Customer Success",
+      "percentage": 25
+     },
+     {
+      "name": "Data Governance and Integration",
+      "percentage": 26
+     },
+     {
+      "name": "Design",
+      "percentage": 29
+     },
+     {
+      "name": "Delivery",
+      "percentage": 12
+     },
+     {
+      "name": "Operationalize the Solution",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "b2c-commerce-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298936&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Design/Discovery",
+      "percentage": 29
+     },
+     {
+      "name": "Build",
+      "percentage": 19
+     },
+     {
+      "name": "Monitoring/Troubleshooting",
+      "percentage": 14
+     },
+     {
+      "name": "Integrations and Customizations",
+      "percentage": 22
+     },
+     {
+      "name": "Launch",
+      "percentage": 16
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified B2C Commerce Architect Exam Guide",
+    "articleId": "005298936",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Spring '24",
+    "prerequisite": "Salesforce Certified B2C Commerce Developer certification",
+    "sections": [
+     {
+      "name": "Design/Discovery",
+      "percentage": 29
+     },
+     {
+      "name": "Build",
+      "percentage": 19
+     },
+     {
+      "name": "Monitoring/Troubleshooting",
+      "percentage": 14
+     },
+     {
+      "name": "Integrations and Customizations",
+      "percentage": 22
+     },
+     {
+      "name": "Launch",
+      "percentage": 16
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "b2c-commerce-developer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298941&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "B2C Commerce Setup",
+      "percentage": 11
+     },
+     {
+      "name": "Work With a B2C Site",
+      "percentage": 12
+     },
+     {
+      "name": "Data Management Using Business Manager Usage",
+      "percentage": 24
+     },
+     {
+      "name": "Application Development",
+      "percentage": 53
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified B2C Commerce Developer Exam Guide",
+    "articleId": "005298941",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "B2C Commerce Setup",
+      "percentage": 11
+     },
+     {
+      "name": "Work With a B2C Site",
+      "percentage": 12
+     },
+     {
+      "name": "Data Management Using Business Manager Usage",
+      "percentage": 24
+     },
+     {
+      "name": "Application Development",
+      "percentage": 53
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "b2c-solution-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298942&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "120 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "120 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Discovery and Customer Success",
+      "percentage": 27
+     },
+     {
+      "name": "Functional Capabilities and Business Value",
+      "percentage": 7
+     },
+     {
+      "name": "Architecture Design",
+      "percentage": 18
+     },
+     {
+      "name": "Data Models and Management",
+      "percentage": 25
+     },
+     {
+      "name": "Integration",
+      "percentage": 23
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified B2C Solution Architect Exam Guide",
+    "articleId": "005298942",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Winter '23",
+    "prerequisite": "Salesforce Certified Platform App Builder",
+    "sections": [
+     {
+      "name": "Discovery and Customer Success",
+      "percentage": 27
+     },
+     {
+      "name": "Functional Capabilities and Business Value",
+      "percentage": 7
+     },
+     {
+      "name": "Architecture Design",
+      "percentage": 18
+     },
+     {
+      "name": "Data Models and Management",
+      "percentage": 25
+     },
+     {
+      "name": "Integration",
+      "percentage": 23
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "business-analyst",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298939&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Customer Discovery",
+      "percentage": 17
+     },
+     {
+      "name": "Collaboration with Stakeholders",
+      "percentage": 23
+     },
+     {
+      "name": "Business Process Mapping",
+      "percentage": 12
+     },
+     {
+      "name": "Requirements",
+      "percentage": 18
+     },
+     {
+      "name": "User Stories",
+      "percentage": 18
+     },
+     {
+      "name": "Development Support and User Acceptance",
+      "percentage": 12
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Business Analyst Exam Guide",
+    "articleId": "005298939",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Customer Discovery",
+      "percentage": 17
+     },
+     {
+      "name": "Collaboration with Stakeholders",
+      "percentage": 23
+     },
+     {
+      "name": "Business Process Mapping",
+      "percentage": 12
+     },
+     {
+      "name": "Requirements",
+      "percentage": 18
+     },
+     {
+      "name": "User Stories",
+      "percentage": 18
+     },
+     {
+      "name": "Development Support and User Acceptance",
+      "percentage": 12
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "claude-certified-architect-foundations",
+   "guideUrl": null,
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": null,
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "720/1000",
+     "duration": "120 min",
+     "cost": "$125"
+    },
+    "sections": null
+   },
+   "officialGuide": null,
+   "verdict": "no-published-exam-facts"
+  },
+  {
+   "siteSlug": "claude-certified-architect-professional",
+   "guideUrl": null,
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": null,
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 65,
+     "passingScore": "720/1000",
+     "duration": "120 min",
+     "cost": "$175"
+    },
+    "sections": null
+   },
+   "officialGuide": null,
+   "verdict": "no-published-exam-facts"
+  },
+  {
+   "siteSlug": "claude-certified-associate",
+   "guideUrl": null,
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": null,
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "720/1000",
+     "duration": "120 min",
+     "cost": "$99"
+    },
+    "sections": null
+   },
+   "officialGuide": null,
+   "verdict": "no-published-exam-facts"
+  },
+  {
+   "siteSlug": "claude-certified-developer",
+   "guideUrl": null,
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": null,
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 53,
+     "passingScore": "720/1000",
+     "duration": "120 min",
+     "cost": "$125"
+    },
+    "sections": null
+   },
+   "officialGuide": null,
+   "verdict": "no-published-exam-facts"
+  },
+  {
+   "siteSlug": "communications-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298788&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 55,
+     "passingScore": "56%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 55,
+     "passingScore": "56%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 24
+     },
+     {
+      "name": "Planning and Design",
+      "percentage": 60
+     },
+     {
+      "name": "Delivery",
+      "percentage": 16
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited Agentforce Communications Professional Exam Guide",
+    "articleId": "005298788",
+    "questions": 55,
+    "minutes": 90,
+    "passingScores": [
+     "56%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 24
+     },
+     {
+      "name": "Planning and Design",
+      "percentage": 60
+     },
+     {
+      "name": "Delivery",
+      "percentage": 16
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "consumer-goods-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298797&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 33,
+     "passingScore": "64%",
+     "duration": "60 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 33,
+     "passingScore": "64%",
+     "duration": "60 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Data Setup",
+      "percentage": 36
+     },
+     {
+      "name": "Visit Execution",
+      "percentage": 36
+     },
+     {
+      "name": "Platform",
+      "percentage": 10
+     },
+     {
+      "name": "Visit Planning",
+      "percentage": 6
+     },
+     {
+      "name": "Integrations",
+      "percentage": 6
+     },
+     {
+      "name": "Analytics",
+      "percentage": 6
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited Agentforce Consumer Goods Professional Exam Guide",
+    "articleId": "005298797",
+    "questions": 33,
+    "minutes": 60,
+    "passingScores": [
+     "64%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Data Setup",
+      "percentage": 36
+     },
+     {
+      "name": "Visit Execution",
+      "percentage": 36
+     },
+     {
+      "name": "Platform",
+      "percentage": 10
+     },
+     {
+      "name": "Visit Planning",
+      "percentage": 6
+     },
+     {
+      "name": "Integrations",
+      "percentage": 6
+     },
+     {
+      "name": "Analytics",
+      "percentage": 6
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "consumer-goods-tpm-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298798&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 62,
+     "passingScore": "66%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 62,
+     "passingScore": "66%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 32
+     },
+     {
+      "name": "Design",
+      "percentage": 36
+     },
+     {
+      "name": "Implement",
+      "percentage": 32
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Consumer Goods Cloud Trade Promotion Management Accredited Professional Exam Guide",
+    "articleId": "005298798",
+    "questions": 62,
+    "minutes": 75,
+    "passingScores": [
+     "66%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 32
+     },
+     {
+      "name": "Design",
+      "percentage": 36
+     },
+     {
+      "name": "Implement",
+      "percentage": 32
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "contact-center-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298802&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "66%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "66%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 20
+     },
+     {
+      "name": "Design",
+      "percentage": 29
+     },
+     {
+      "name": "Implement",
+      "percentage": 41
+     },
+     {
+      "name": "Deploy",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Contact Center Accredited Professional Exam Guide",
+    "articleId": "005298802",
+    "questions": 60,
+    "minutes": 75,
+    "passingScores": [
+     "66%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 20
+     },
+     {
+      "name": "Design",
+      "percentage": 29
+     },
+     {
+      "name": "Implement",
+      "percentage": 41
+     },
+     {
+      "name": "Deploy",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "cpq-administrator",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298937&type=1&language=en_US",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "CPQ Platform",
+      "percentage": 23
+     },
+     {
+      "name": "Bundle Configurations",
+      "percentage": 17
+     },
+     {
+      "name": "Pricing",
+      "percentage": 16
+     },
+     {
+      "name": "Quote Templates",
+      "percentage": 7
+     },
+     {
+      "name": "Product Selection",
+      "percentage": 7
+     },
+     {
+      "name": "Orders, Contracts, Amendments, and Renewals",
+      "percentage": 15
+     },
+     {
+      "name": "Products",
+      "percentage": 11
+     },
+     {
+      "name": "Approvals",
+      "percentage": 4
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified CPQ Administrator Exam Guide",
+    "articleId": "005298937",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": null,
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "CPQ Platform",
+      "percentage": 23
+     },
+     {
+      "name": "Bundle Configurations",
+      "percentage": 17
+     },
+     {
+      "name": "Pricing",
+      "percentage": 16
+     },
+     {
+      "name": "Quote Templates",
+      "percentage": 7
+     },
+     {
+      "name": "Product Selection",
+      "percentage": 7
+     },
+     {
+      "name": "Orders, Contracts, Amendments, and Renewals",
+      "percentage": 15
+     },
+     {
+      "name": "Products",
+      "percentage": 11
+     },
+     {
+      "name": "Approvals",
+      "percentage": 4
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "cpq-billing-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298796&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 35,
+     "passingScore": "74%",
+     "duration": "60 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 35,
+     "passingScore": "74%",
+     "duration": "60 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Revenue Cloud Technical Design",
+      "percentage": 68
+     },
+     {
+      "name": "Revenue Cloud Implementation Management",
+      "percentage": 29
+     },
+     {
+      "name": "New Release Capabilities",
+      "percentage": 3
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "CPQ and Billing Consultant Accredited Professional Exam Guide",
+    "articleId": "005298796",
+    "questions": 35,
+    "minutes": 60,
+    "passingScores": [
+     "74%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Revenue Cloud Technical Design",
+      "percentage": 68
+     },
+     {
+      "name": "Revenue Cloud Implementation Management",
+      "percentage": 29
+     },
+     {
+      "name": "New Release Capabilities",
+      "percentage": 3
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "crm-analytics-einstein-discovery-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298935&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Admin/Configuration",
+      "percentage": 17
+     },
+     {
+      "name": "Data Layer",
+      "percentage": 23
+     },
+     {
+      "name": "Security",
+      "percentage": 16
+     },
+     {
+      "name": "Analytics Dashboard Design",
+      "percentage": 13
+     },
+     {
+      "name": "Analytics Dashboard Implementation",
+      "percentage": 19
+     },
+     {
+      "name": "Einstein Discovery",
+      "percentage": 12
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified CRM Analytics and Einstein Discovery Consultant Exam Guide",
+    "articleId": "005298935",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Admin/Configuration",
+      "percentage": 17
+     },
+     {
+      "name": "Data Layer",
+      "percentage": 23
+     },
+     {
+      "name": "Security",
+      "percentage": 16
+     },
+     {
+      "name": "Analytics Dashboard Design",
+      "percentage": 13
+     },
+     {
+      "name": "Analytics Dashboard Implementation",
+      "percentage": 19
+     },
+     {
+      "name": "Einstein Discovery",
+      "percentage": 12
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "data-360-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298940&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Solution Positioning",
+      "percentage": 14
+     },
+     {
+      "name": "Data 360 Setup and Administration",
+      "percentage": 13
+     },
+     {
+      "name": "Data Source Connection and Ingestion",
+      "percentage": 18
+     },
+     {
+      "name": "Harmonization and Unification",
+      "percentage": 17
+     },
+     {
+      "name": "Data Enhancements, Sharing, and Analysis",
+      "percentage": 18
+     },
+     {
+      "name": "Data Activations and Utilization",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Data 360 Consultant Exam Guide",
+    "articleId": "005298940",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": null,
+    "version": "Spring '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Solution Positioning",
+      "percentage": 14
+     },
+     {
+      "name": "Data 360 Setup and Administration",
+      "percentage": 13
+     },
+     {
+      "name": "Data Source Connection and Ingestion",
+      "percentage": 18
+     },
+     {
+      "name": "Harmonization and Unification",
+      "percentage": 17
+     },
+     {
+      "name": "Data Enhancements, Sharing, and Analysis",
+      "percentage": 18
+     },
+     {
+      "name": "Data Activations and Utilization",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "data-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298972&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "58%",
+     "duration": "105 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "58%",
+     "duration": "105 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Data Modeling/Database Design",
+      "percentage": 25
+     },
+     {
+      "name": "Master Data Management",
+      "percentage": 5
+     },
+     {
+      "name": "Salesforce Data Management",
+      "percentage": 25
+     },
+     {
+      "name": "Data Governance",
+      "percentage": 10
+     },
+     {
+      "name": "Large Data Volume Considerations",
+      "percentage": 20
+     },
+     {
+      "name": "Data Migration",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Data Architect Exam Guide",
+    "articleId": "005298972",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "58%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Spring '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Data Modeling/Database Design",
+      "percentage": 25
+     },
+     {
+      "name": "Master Data Management",
+      "percentage": 5
+     },
+     {
+      "name": "Salesforce Data Management",
+      "percentage": 25
+     },
+     {
+      "name": "Data Governance",
+      "percentage": 10
+     },
+     {
+      "name": "Large Data Volume Considerations",
+      "percentage": 20
+     },
+     {
+      "name": "Data Migration",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "dev-lifecycle-deployment-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298968&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Application Lifecycle Management",
+      "percentage": 8
+     },
+     {
+      "name": "Planning",
+      "percentage": 13
+     },
+     {
+      "name": "System Design",
+      "percentage": 15
+     },
+     {
+      "name": "Building",
+      "percentage": 14
+     },
+     {
+      "name": "Deploying",
+      "percentage": 14
+     },
+     {
+      "name": "Testing",
+      "percentage": 13
+     },
+     {
+      "name": "Releasing",
+      "percentage": 13
+     },
+     {
+      "name": "Operating",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Development Lifecycle and Deployment Architect Exam Guide",
+    "articleId": "005298968",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Spring '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Application Lifecycle Management",
+      "percentage": 8
+     },
+     {
+      "name": "Planning",
+      "percentage": 13
+     },
+     {
+      "name": "System Design",
+      "percentage": 15
+     },
+     {
+      "name": "Building",
+      "percentage": 14
+     },
+     {
+      "name": "Deploying",
+      "percentage": 14
+     },
+     {
+      "name": "Testing",
+      "percentage": 13
+     },
+     {
+      "name": "Releasing",
+      "percentage": 13
+     },
+     {
+      "name": "Operating",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "developer-1",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298965&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "Developer Fundamentals",
+      "percentage": 27
+     },
+     {
+      "name": "Process Automation and Logic",
+      "percentage": 28
+     },
+     {
+      "name": "User Interface",
+      "percentage": 25
+     },
+     {
+      "name": "Testing, Debugging, and Deployment",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Developer Exam Guide",
+    "articleId": "005298965",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "68%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Developer Fundamentals",
+      "percentage": 27
+     },
+     {
+      "name": "Process Automation and Logic",
+      "percentage": 28
+     },
+     {
+      "name": "User Interface",
+      "percentage": 25
+     },
+     {
+      "name": "Testing, Debugging, and Deployment",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "developer-2",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298967&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Advanced Developer Fundamentals",
+      "percentage": 15
+     },
+     {
+      "name": "Process Automation, Logic, and Integration",
+      "percentage": 27
+     },
+     {
+      "name": "User Interface",
+      "percentage": 20
+     },
+     {
+      "name": "Testing, Debugging, and Deployment",
+      "percentage": 20
+     },
+     {
+      "name": "Performance",
+      "percentage": 18
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Developer II Exam Guide",
+    "articleId": "005298967",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '24",
+    "prerequisite": "Salesforce Certified Platform Developer Certification",
+    "sections": [
+     {
+      "name": "Advanced Developer Fundamentals",
+      "percentage": 15
+     },
+     {
+      "name": "Process Automation, Logic, and Integration",
+      "percentage": 27
+     },
+     {
+      "name": "User Interface",
+      "percentage": 20
+     },
+     {
+      "name": "Testing, Debugging, and Deployment",
+      "percentage": 20
+     },
+     {
+      "name": "Performance",
+      "percentage": 18
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "education-cloud-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298934&type=1&language=en_US",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min",
+     "cost": "$200 (published registration fee)"
+    },
+    "sections": [
+     {
+      "name": "Domain Expertise",
+      "percentage": 18
+     },
+     {
+      "name": "Education Cloud Configuration",
+      "percentage": 22
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 18
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 19
+     },
+     {
+      "name": "Integration and Data Management",
+      "percentage": 16
+     },
+     {
+      "name": "Analytics",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Education Cloud Consultant Exam Guide",
+    "articleId": "005298934",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '24",
+    "prerequisite": "Salesforce Certified Platform Administrator Certification",
+    "sections": [
+     {
+      "name": "Domain Expertise",
+      "percentage": 18
+     },
+     {
+      "name": "Education Cloud Configuration",
+      "percentage": 22
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 18
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 19
+     },
+     {
+      "name": "Integration and Data Management",
+      "percentage": 16
+     },
+     {
+      "name": "Analytics",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "email-specialist",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298950&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Email Marketing Best Practices",
+      "percentage": 10
+     },
+     {
+      "name": "Content Creation and Delivery",
+      "percentage": 24
+     },
+     {
+      "name": "Marketing Automation",
+      "percentage": 26
+     },
+     {
+      "name": "Subscriber and Data Management",
+      "percentage": 26
+     },
+     {
+      "name": "Insights and Analytics",
+      "percentage": 14
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Engagement Specialist Exam Guide",
+    "articleId": "005298950",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '23",
+    "prerequisite": "None required; MKT 101 course attendance is highly recommended.",
+    "sections": [
+     {
+      "name": "Email Marketing Best Practices",
+      "percentage": 10
+     },
+     {
+      "name": "Content Creation and Delivery",
+      "percentage": 24
+     },
+     {
+      "name": "Marketing Automation",
+      "percentage": 26
+     },
+     {
+      "name": "Subscriber and Data Management",
+      "percentage": 26
+     },
+     {
+      "name": "Insights and Analytics",
+      "percentage": 14
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "email-specialist-practice-test",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298950&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "Not published",
+     "duration": "105 min",
+     "cost": "Practice only"
+    },
+    "sections": [
+     {
+      "name": "Email Marketing Best Practices",
+      "percentage": 10
+     },
+     {
+      "name": "Content Creation and Delivery",
+      "percentage": 24
+     },
+     {
+      "name": "Marketing Automation",
+      "percentage": 26
+     },
+     {
+      "name": "Subscriber and Data Management",
+      "percentage": 26
+     },
+     {
+      "name": "Insights and Analytics",
+      "percentage": 14
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Engagement Specialist Exam Guide",
+    "articleId": "005298950",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '23",
+    "prerequisite": "None required; MKT 101 course attendance is highly recommended.",
+    "sections": [
+     {
+      "name": "Email Marketing Best Practices",
+      "percentage": 10
+     },
+     {
+      "name": "Content Creation and Delivery",
+      "percentage": 24
+     },
+     {
+      "name": "Marketing Automation",
+      "percentage": 26
+     },
+     {
+      "name": "Subscriber and Data Management",
+      "percentage": 26
+     },
+     {
+      "name": "Insights and Analytics",
+      "percentage": 14
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "energy-utilities-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298810&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "60%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 50,
+     "passingScore": "60%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 13
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 36
+     },
+     {
+      "name": "Implementation",
+      "percentage": 38
+     },
+     {
+      "name": "Test and Deploy Energy and Utilities Cloud Solutions",
+      "percentage": 13
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Energy and Utilities Cloud Accredited Professional Exam Guide",
+    "articleId": "005298810",
+    "questions": 50,
+    "minutes": 75,
+    "passingScores": [
+     "60%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 13
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 36
+     },
+     {
+      "name": "Implementation",
+      "percentage": 38
+     },
+     {
+      "name": "Test and Deploy Energy and Utilities Cloud Applications and Solutions",
+      "percentage": 13
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "experience-cloud",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298944&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "62%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "62%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Experience Cloud Basics",
+      "percentage": 8
+     },
+     {
+      "name": "Sharing, Visibility, and Licensing",
+      "percentage": 17
+     },
+     {
+      "name": "Branding, Personalization, and Content",
+      "percentage": 15
+     },
+     {
+      "name": "Templates and Themes",
+      "percentage": 10
+     },
+     {
+      "name": "User Creation and Authentication",
+      "percentage": 13
+     },
+     {
+      "name": "Adoption and Analytics",
+      "percentage": 5
+     },
+     {
+      "name": "Administration, Setup, and Configuration",
+      "percentage": 25
+     },
+     {
+      "name": "Customization Considerations and Limitations",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Experience Cloud Consultant Exam Guide",
+    "articleId": "005298944",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "62%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '23",
+    "prerequisite": "Salesforce Certified Platform Administrator Certification",
+    "sections": [
+     {
+      "name": "Experience Cloud Basics",
+      "percentage": 8
+     },
+     {
+      "name": "Sharing, Visibility, and Licensing",
+      "percentage": 17
+     },
+     {
+      "name": "Branding, Personalization, and Content",
+      "percentage": 15
+     },
+     {
+      "name": "Templates and Themes",
+      "percentage": 10
+     },
+     {
+      "name": "User Creation and Authentication",
+      "percentage": 13
+     },
+     {
+      "name": "Adoption and Analytics",
+      "percentage": 5
+     },
+     {
+      "name": "Administration, Setup, and Configuration",
+      "percentage": 25
+     },
+     {
+      "name": "Customization Considerations and Limitations",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "field-service",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298947&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": "60 scored + up to 5 unscored",
+     "passingScore": "63%",
+     "duration": "105 min",
+     "cost": "US$200 + applicable taxes"
+    },
+    "sections": [
+     {
+      "name": "Managing Resources",
+      "percentage": 16
+     },
+     {
+      "name": "Managing Work Orders",
+      "percentage": 23
+     },
+     {
+      "name": "Managing Scheduling and Optimization",
+      "percentage": 28
+     },
+     {
+      "name": "Configuring Mobility",
+      "percentage": 10
+     },
+     {
+      "name": "Managing Inventory",
+      "percentage": 8
+     },
+     {
+      "name": "Managing Assets",
+      "percentage": 5
+     },
+     {
+      "name": "Configuring Maintenance Plans",
+      "percentage": 5
+     },
+     {
+      "name": "Permissions and Sharing",
+      "percentage": 5
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Field Service and Operations Consultant Exam Guide",
+    "articleId": "005298947",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '23",
+    "prerequisite": "Salesforce Certified Platform Administrator certification and Salesforce Certified Agentforce Service Consultant certification",
+    "sections": [
+     {
+      "name": "Managing Resources",
+      "percentage": 16
+     },
+     {
+      "name": "Managing Work Orders",
+      "percentage": 23
+     },
+     {
+      "name": "Managing Scheduling and Optimization",
+      "percentage": 28
+     },
+     {
+      "name": "Configuring Mobility",
+      "percentage": 10
+     },
+     {
+      "name": "Managing Inventory",
+      "percentage": 8
+     },
+     {
+      "name": "Managing Assets",
+      "percentage": 5
+     },
+     {
+      "name": "Configuring Maintenance Plans",
+      "percentage": 5
+     },
+     {
+      "name": "Permissions and Sharing",
+      "percentage": 5
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "financial-services-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298804&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "56%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 50,
+     "passingScore": "56%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 12
+     },
+     {
+      "name": "Define/Design",
+      "percentage": 42
+     },
+     {
+      "name": "Delivery",
+      "percentage": 46
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited Agentforce Financial Services Professional Exam Guide",
+    "articleId": "005298804",
+    "questions": 50,
+    "minutes": 75,
+    "passingScores": [
+     "56%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 12
+     },
+     {
+      "name": "Define/Design",
+      "percentage": 42
+     },
+     {
+      "name": "Delivery",
+      "percentage": 46
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "health-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298821&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 11
+     },
+     {
+      "name": "Design",
+      "percentage": 42
+     },
+     {
+      "name": "Implement",
+      "percentage": 42
+     },
+     {
+      "name": "Deploy",
+      "percentage": 5
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited Agentforce Health Professional Exam Guide",
+    "articleId": "005298821",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 11
+     },
+     {
+      "name": "Design",
+      "percentage": 42
+     },
+     {
+      "name": "Implement",
+      "percentage": 42
+     },
+     {
+      "name": "Deploy",
+      "percentage": 5
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "heroku-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298948&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Heroku Platform",
+      "percentage": 10
+     },
+     {
+      "name": "Data",
+      "percentage": 17
+     },
+     {
+      "name": "Security",
+      "percentage": 15
+     },
+     {
+      "name": "Heroku Enterprise",
+      "percentage": 28
+     },
+     {
+      "name": "Architect Applications",
+      "percentage": 15
+     },
+     {
+      "name": "Integrations",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Heroku Architect Exam Guide",
+    "articleId": "005298948",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Winter '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Heroku Platform",
+      "percentage": 10
+     },
+     {
+      "name": "Data",
+      "percentage": 17
+     },
+     {
+      "name": "Security",
+      "percentage": 15
+     },
+     {
+      "name": "Heroku Enterprise",
+      "percentage": 28
+     },
+     {
+      "name": "Architect Applications",
+      "percentage": 15
+     },
+     {
+      "name": "Integrations",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "heroku-developer-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298822&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Heroku Platform: Apps and Runtime",
+      "percentage": 12
+     },
+     {
+      "name": "Heroku Platform: Building and Deployment",
+      "percentage": 8
+     },
+     {
+      "name": "Heroku Platform: Operations",
+      "percentage": 12
+     },
+     {
+      "name": "Heroku Platform: Elements",
+      "percentage": 3
+     },
+     {
+      "name": "Continuous Delivery: Pipelines, Review Apps and CI",
+      "percentage": 10
+     },
+     {
+      "name": "Data: Key-Value Store, Postgres and Data Clips",
+      "percentage": 8
+     },
+     {
+      "name": "Data: Kafka and Add-ons",
+      "percentage": 8
+     },
+     {
+      "name": "Security: SSL, Certs and ACM",
+      "percentage": 13
+     },
+     {
+      "name": "Integrations: Heroku Connect, API and Webhooks",
+      "percentage": 13
+     },
+     {
+      "name": "Architecting Apps: Twelve-Factor Methodology",
+      "percentage": 13
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Heroku Developer Accredited Professional Exam Guide",
+    "articleId": "005298822",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "68%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Winter '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Heroku Platform: Apps and Runtime",
+      "percentage": 12
+     },
+     {
+      "name": "Heroku Platform: Building and Deployment",
+      "percentage": 8
+     },
+     {
+      "name": "Heroku Platform - Operations",
+      "percentage": 12
+     },
+     {
+      "name": "Heroku Platform - Elements",
+      "percentage": 3
+     },
+     {
+      "name": "Continuous Delivery - Pipelines, Review Apps and CI",
+      "percentage": 10
+     },
+     {
+      "name": "Data: Heroku Key-Value Store (KVS), Postgres, and Data Clips",
+      "percentage": 8
+     },
+     {
+      "name": "Data - Kafka & Add-ons",
+      "percentage": 8
+     },
+     {
+      "name": "Security - SSL, Certs and ACM",
+      "percentage": 13
+     },
+     {
+      "name": "Integrations - Heroku Connect, API and Webhooks",
+      "percentage": 13
+     },
+     {
+      "name": "Architecting Apps - Twelve-Factor Methodology",
+      "percentage": 13
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "identity-access-management-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298975&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "120 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "120 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Identity Management Concepts",
+      "percentage": 17
+     },
+     {
+      "name": "Accepting Third-Party Identity in Salesforce",
+      "percentage": 21
+     },
+     {
+      "name": "Salesforce as an Identity Provider",
+      "percentage": 17
+     },
+     {
+      "name": "Access Management Best Practices",
+      "percentage": 15
+     },
+     {
+      "name": "Salesforce Identity",
+      "percentage": 12
+     },
+     {
+      "name": "Community (Partner and Customer)",
+      "percentage": 18
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Identity and Access Management Architect Exam Guide",
+    "articleId": "005298975",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Summer '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Identity Management Concepts",
+      "percentage": 17
+     },
+     {
+      "name": "Accepting Third-Party Identity in Salesforce",
+      "percentage": 21
+     },
+     {
+      "name": "Salesforce as an Identity Provider",
+      "percentage": 17
+     },
+     {
+      "name": "Access Management Best Practices",
+      "percentage": 15
+     },
+     {
+      "name": "Salesforce Identity",
+      "percentage": 12
+     },
+     {
+      "name": "Community (Partner and Customer)",
+      "percentage": 18
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "industries-cpq-developer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298949&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Products",
+      "percentage": 20
+     },
+     {
+      "name": "Promotions and Discounts",
+      "percentage": 7
+     },
+     {
+      "name": "Pricing",
+      "percentage": 17
+     },
+     {
+      "name": "Rules",
+      "percentage": 12
+     },
+     {
+      "name": "APIs",
+      "percentage": 12
+     },
+     {
+      "name": "Ordering and Quoting",
+      "percentage": 12
+     },
+     {
+      "name": "Troubleshooting",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Industries CPQ Developer Exam Guide",
+    "articleId": "005298949",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '22",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Products",
+      "percentage": 20
+     },
+     {
+      "name": "Promotions and Discounts",
+      "percentage": 7
+     },
+     {
+      "name": "Pricing",
+      "percentage": 17
+     },
+     {
+      "name": "Rules",
+      "percentage": 12
+     },
+     {
+      "name": "APIs",
+      "percentage": 12
+     },
+     {
+      "name": "Ordering and Quoting",
+      "percentage": 12
+     },
+     {
+      "name": "Troubleshooting",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "integration-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298980&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Evaluate the Current System Landscape",
+      "percentage": 8
+     },
+     {
+      "name": "Evaluate Business Needs",
+      "percentage": 11
+     },
+     {
+      "name": "Translate Needs to Integration Requirements",
+      "percentage": 22
+     },
+     {
+      "name": "Design Integration Solutions",
+      "percentage": 28
+     },
+     {
+      "name": "Build Solution",
+      "percentage": 23
+     },
+     {
+      "name": "Maintain Integration",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Integration Architect Exam Guide",
+    "articleId": "005298980",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Summer '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Evaluate the Current System Landscape",
+      "percentage": 8
+     },
+     {
+      "name": "Evaluate Business Needs",
+      "percentage": 11
+     },
+     {
+      "name": "Translate Needs to Integration Requirements",
+      "percentage": 22
+     },
+     {
+      "name": "Design Integration Solutions",
+      "percentage": 28
+     },
+     {
+      "name": "Build Solution",
+      "percentage": 23
+     },
+     {
+      "name": "Maintain Integration",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "javascript-developer-i",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298945&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Variables, Types, and Collections",
+      "percentage": 23
+     },
+     {
+      "name": "Objects, Functions, and Classes",
+      "percentage": 25
+     },
+     {
+      "name": "Browser and Events",
+      "percentage": 17
+     },
+     {
+      "name": "Debugging and Error Handling",
+      "percentage": 7
+     },
+     {
+      "name": "Asynchronous Programming",
+      "percentage": 13
+     },
+     {
+      "name": "Server Side JavaScript",
+      "percentage": 8
+     },
+     {
+      "name": "Testing",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified JavaScript Developer Exam Guide",
+    "articleId": "005298945",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '22",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Variables, Types, and Collections",
+      "percentage": 23
+     },
+     {
+      "name": "Objects, Functions, and Classes",
+      "percentage": 25
+     },
+     {
+      "name": "Browser and Events",
+      "percentage": 17
+     },
+     {
+      "name": "Debugging and Error Handling",
+      "percentage": 7
+     },
+     {
+      "name": "Asynchronous Programming",
+      "percentage": 13
+     },
+     {
+      "name": "Server Side JavaScript",
+      "percentage": 8
+     },
+     {
+      "name": "Testing",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "loyalty-management-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298842&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "69%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 50,
+     "passingScore": "69%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Strategies and Design",
+      "percentage": 16
+     },
+     {
+      "name": "Loyalty Program and Process Configuration",
+      "percentage": 52
+     },
+     {
+      "name": "Integration",
+      "percentage": 22
+     },
+     {
+      "name": "On-Going Loyalty Management",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Loyalty Management Accredited Professional Exam Guide",
+    "articleId": "005298842",
+    "questions": 50,
+    "minutes": 75,
+    "passingScores": [
+     "69%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Strategies and Design",
+      "percentage": 16
+     },
+     {
+      "name": "Loyalty Program and Process Configuration",
+      "percentage": 52
+     },
+     {
+      "name": "Integration",
+      "percentage": 22
+     },
+     {
+      "name": "On-Going Loyalty Management",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "manufacturing-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298843&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "68%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 50,
+     "passingScore": "68%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 18
+     },
+     {
+      "name": "Design",
+      "percentage": 28
+     },
+     {
+      "name": "Configure and Build",
+      "percentage": 38
+     },
+     {
+      "name": "Validate and Deploy",
+      "percentage": 16
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Accredited Agentforce Manufacturing Professional Exam Guide",
+    "articleId": "005298843",
+    "questions": 50,
+    "minutes": 75,
+    "passingScores": [
+     "68%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 18
+     },
+     {
+      "name": "Design",
+      "percentage": 28
+     },
+     {
+      "name": "Configure and Build",
+      "percentage": 38
+     },
+     {
+      "name": "Validate and Deploy",
+      "percentage": 16
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-advanced-cross-channel-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298837&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "67%",
+     "duration": "60 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 40,
+     "passingScore": "67%",
+     "duration": "60 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Mobile (SMS and Push)",
+      "percentage": 13
+     },
+     {
+      "name": "Ad Studio",
+      "percentage": 10
+     },
+     {
+      "name": "Social Studio",
+      "percentage": 12
+     },
+     {
+      "name": "Distributed Marketing",
+      "percentage": 2
+     },
+     {
+      "name": "Einstein for Marketing Cloud",
+      "percentage": 23
+     },
+     {
+      "name": "Journey Orchestration",
+      "percentage": 25
+     },
+     {
+      "name": "Triggers",
+      "percentage": 7
+     },
+     {
+      "name": "Interaction Studio",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Marketing Cloud Advanced Cross Channel Accredited Professional Exam Guide",
+    "articleId": "005298837",
+    "questions": 40,
+    "minutes": 60,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Mobile (SMS/Push)",
+      "percentage": 13
+     },
+     {
+      "name": "Ad Studio",
+      "percentage": 10
+     },
+     {
+      "name": "Social Studio",
+      "percentage": 12
+     },
+     {
+      "name": "Distributed Marketing",
+      "percentage": 2
+     },
+     {
+      "name": "Einstein for Marketing Cloud",
+      "percentage": 23
+     },
+     {
+      "name": "Journey Orchestration",
+      "percentage": 25
+     },
+     {
+      "name": "Triggers",
+      "percentage": 7
+     },
+     {
+      "name": "Interaction Studio",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298946&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Discovery and Architecture",
+      "percentage": 16
+     },
+     {
+      "name": "Integration",
+      "percentage": 20
+     },
+     {
+      "name": "Account Configuration",
+      "percentage": 12
+     },
+     {
+      "name": "Automation",
+      "percentage": 20
+     },
+     {
+      "name": "Data Modeling and Management",
+      "percentage": 21
+     },
+     {
+      "name": "Messaging",
+      "percentage": 11
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Engagement Consultant Exam Guide",
+    "articleId": "005298946",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '24",
+    "prerequisite": "Salesforce Certified Marketing Cloud Engagement Administrator certification",
+    "sections": [
+     {
+      "name": "Discovery and Architecture",
+      "percentage": 16
+     },
+     {
+      "name": "Integration",
+      "percentage": 20
+     },
+     {
+      "name": "Account Configuration",
+      "percentage": 12
+     },
+     {
+      "name": "Automation",
+      "percentage": 20
+     },
+     {
+      "name": "Data Modeling and Management",
+      "percentage": 21
+     },
+     {
+      "name": "Messaging",
+      "percentage": 11
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-engagement-admin",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298952&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Digital Marketing Proficiency",
+      "percentage": 13
+     },
+     {
+      "name": "Subscriber Data Management",
+      "percentage": 18
+     },
+     {
+      "name": "Setup",
+      "percentage": 38
+     },
+     {
+      "name": "Channel Management",
+      "percentage": 16
+     },
+     {
+      "name": "Maintenance",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Engagement Administrator Exam Guide",
+    "articleId": "005298952",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Digital Marketing Proficiency",
+      "percentage": 13
+     },
+     {
+      "name": "Subscriber Data Management",
+      "percentage": 18
+     },
+     {
+      "name": "Setup",
+      "percentage": 38
+     },
+     {
+      "name": "Channel Management",
+      "percentage": 16
+     },
+     {
+      "name": "Maintenance",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-engagement-developer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298954&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Data Modeling",
+      "percentage": 14
+     },
+     {
+      "name": "Programmatic Languages",
+      "percentage": 35
+     },
+     {
+      "name": "API",
+      "percentage": 22
+     },
+     {
+      "name": "Data Management",
+      "percentage": 22
+     },
+     {
+      "name": "Security",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Engagement Developer Exam Guide",
+    "articleId": "005298954",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '22",
+    "prerequisite": "Salesforce Certified Marketing Cloud Engagement Specialist Certification",
+    "sections": [
+     {
+      "name": "Data Modeling",
+      "percentage": 14
+     },
+     {
+      "name": "Programmatic Languages",
+      "percentage": 35
+     },
+     {
+      "name": "API",
+      "percentage": 22
+     },
+     {
+      "name": "Data Management",
+      "percentage": 22
+     },
+     {
+      "name": "Security",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-engagement-foundations",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298962&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "65%",
+     "duration": "70 min"
+    },
+    "fee": "$75",
+    "retake": "Free",
+    "cardExamDetails": {
+     "questions": 40,
+     "passingScore": "65%",
+     "duration": "70 min",
+     "cost": "$75"
+    },
+    "sections": [
+     {
+      "name": "Marketing Concepts",
+      "percentage": 28
+     },
+     {
+      "name": "Marketing Cloud Engagement Basics",
+      "percentage": 22
+     },
+     {
+      "name": "Email Sending and Journeys",
+      "percentage": 22
+     },
+     {
+      "name": "Data Management",
+      "percentage": 18
+     },
+     {
+      "name": "Reporting and Analytics",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Engagement Foundations Exam Guide",
+    "articleId": "005298962",
+    "questions": 40,
+    "minutes": 70,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$75",
+    "retakeFee": "Free",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Marketing Concepts",
+      "percentage": 28
+     },
+     {
+      "name": "Marketing Cloud Engagement Basics",
+      "percentage": 22
+     },
+     {
+      "name": "Email Sending and Journeys",
+      "percentage": 22
+     },
+     {
+      "name": "Data Management",
+      "percentage": 18
+     },
+     {
+      "name": "Reporting and Analytics",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-intelligence-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298839&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "60%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 40,
+     "passingScore": "60%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "General Functionalities",
+      "percentage": 13
+     },
+     {
+      "name": "Data Integration Code Ability",
+      "percentage": 12
+     },
+     {
+      "name": "Mapping",
+      "percentage": 5
+     },
+     {
+      "name": "Data Update Permissions",
+      "percentage": 5
+     },
+     {
+      "name": "Harmonization Best Practices",
+      "percentage": 3
+     },
+     {
+      "name": "Vlookup",
+      "percentage": 5
+     },
+     {
+      "name": "Overarching Entities",
+      "percentage": 3
+     },
+     {
+      "name": "Data Fusion",
+      "percentage": 3
+     },
+     {
+      "name": "Calculated Dimensions & Measurements",
+      "percentage": 7
+     },
+     {
+      "name": "Harmonization Center",
+      "percentage": 13
+     },
+     {
+      "name": "CRM",
+      "percentage": 12
+     },
+     {
+      "name": "QA Ability",
+      "percentage": 9
+     },
+     {
+      "name": "Data Model",
+      "percentage": 5
+     },
+     {
+      "name": "Design Feasibility",
+      "percentage": 5
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Marketing Cloud Intelligence Accredited Professional Exam Guide",
+    "articleId": "005298839",
+    "questions": 40,
+    "minutes": 90,
+    "passingScores": [
+     "60%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "General Functionalities",
+      "percentage": 13
+     },
+     {
+      "name": "Data Integration Code Ability",
+      "percentage": 12
+     },
+     {
+      "name": "Mapping",
+      "percentage": 5
+     },
+     {
+      "name": "Data Update Permissions",
+      "percentage": 5
+     },
+     {
+      "name": "Harmonization Best Practices",
+      "percentage": 3
+     },
+     {
+      "name": "Vlookup",
+      "percentage": 5
+     },
+     {
+      "name": "Overarching Entities",
+      "percentage": 3
+     },
+     {
+      "name": "Data Fusion",
+      "percentage": 3
+     },
+     {
+      "name": "Calculated Dimensions & Measurements",
+      "percentage": 7
+     },
+     {
+      "name": "Harmonization Center",
+      "percentage": 13
+     },
+     {
+      "name": "CRM",
+      "percentage": 12
+     },
+     {
+      "name": "QA Ability",
+      "percentage": 9
+     },
+     {
+      "name": "Data Model",
+      "percentage": 5
+     },
+     {
+      "name": "Design Feasibility",
+      "percentage": 5
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-next-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005387657&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Platform Setup & Governance",
+      "percentage": 13
+     },
+     {
+      "name": "Consent",
+      "percentage": 13
+     },
+     {
+      "name": "Data Modeling, Identity Resolution & Segmentation",
+      "percentage": 25
+     },
+     {
+      "name": "Campaign Design, Flow Orchestration & Content",
+      "percentage": 30
+     },
+     {
+      "name": "Agentforce & AI Innovation",
+      "percentage": 11
+     },
+     {
+      "name": "Analytics & Performance Insights",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Next Consultant Exam Guide",
+    "articleId": "005387657",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "Summer '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Platform Setup & Governance",
+      "percentage": 13
+     },
+     {
+      "name": "Consent",
+      "percentage": 13
+     },
+     {
+      "name": "Data Modeling, Identity Resolution & Segmentation",
+      "percentage": 25
+     },
+     {
+      "name": "Campaign Design, Flow Orchestration & Content",
+      "percentage": 30
+     },
+     {
+      "name": "Agentforce & AI Innovation",
+      "percentage": 11
+     },
+     {
+      "name": "Analytics & Performance Insights",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "marketing-cloud-personalization-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298852&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "70%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 50,
+     "passingScore": "70%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Solution Overview",
+      "percentage": 16
+     },
+     {
+      "name": "Setup & Administration",
+      "percentage": 6
+     },
+     {
+      "name": "Data Integration",
+      "percentage": 14
+     },
+     {
+      "name": "Sitemap",
+      "percentage": 18
+     },
+     {
+      "name": "Segmentation",
+      "percentage": 18
+     },
+     {
+      "name": "Einstein Capabilities",
+      "percentage": 10
+     },
+     {
+      "name": "Activation",
+      "percentage": 18
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Marketing Cloud Personalization Accredited Professional Exam Guide",
+    "articleId": "005298852",
+    "questions": 50,
+    "minutes": 75,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Solution Overview",
+      "percentage": 16
+     },
+     {
+      "name": "Setup & Administration",
+      "percentage": 6
+     },
+     {
+      "name": "Data Integration",
+      "percentage": 14
+     },
+     {
+      "name": "Sitemap",
+      "percentage": 18
+     },
+     {
+      "name": "Segmentation",
+      "percentage": 18
+     },
+     {
+      "name": "Einstein Capabilities",
+      "percentage": 10
+     },
+     {
+      "name": "Activation",
+      "percentage": 18
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "media-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298844&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "66%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "66%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 27
+     },
+     {
+      "name": "Design",
+      "percentage": 53
+     },
+     {
+      "name": "Implement",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Media Cloud Accredited Professional Exam Guide",
+    "articleId": "005298844",
+    "questions": 60,
+    "minutes": 75,
+    "passingScores": [
+     "66%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 27
+     },
+     {
+      "name": "Design",
+      "percentage": 53
+     },
+     {
+      "name": "Implement",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-catalyst-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298963&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 45,
+     "passingScore": "70%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 45,
+     "passingScore": "70%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Apply Catalyst principles",
+      "percentage": 9
+     },
+     {
+      "name": "Leverage Catalyst Knowledge Hub",
+      "percentage": 7
+     },
+     {
+      "name": "Architect to Catalyst Principles",
+      "percentage": 27
+     },
+     {
+      "name": "Realize business outcomes with a Catalyst approach",
+      "percentage": 11
+     },
+     {
+      "name": "Implement a Center for Enablement (C4E)",
+      "percentage": 15
+     },
+     {
+      "name": "Position and reframe with Catalyst methodology",
+      "percentage": 11
+     },
+     {
+      "name": "Design composable solutions",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Catalyst Consultant Exam Guide",
+    "articleId": "005298963",
+    "questions": 45,
+    "minutes": 90,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Apply Catalyst principles",
+      "percentage": 9
+     },
+     {
+      "name": "Leverage Catalyst Knowledge Hub",
+      "percentage": 7
+     },
+     {
+      "name": "Architect to Catalyst Principles",
+      "percentage": 27
+     },
+     {
+      "name": "Realize business outcomes with a Catalyst approach",
+      "percentage": 11
+     },
+     {
+      "name": "Implement a Center for Enablement (C4E)",
+      "percentage": 15
+     },
+     {
+      "name": "Position and reframe with Catalyst methodology",
+      "percentage": 11
+     },
+     {
+      "name": "Design composable solutions",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-developer-i",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": "60 multiple-choice + up to 5 unscored",
+     "passingScore": "70%",
+     "duration": "120 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Creating Application Networks",
+      "percentage": 7
+     },
+     {
+      "name": "Designing APIs",
+      "percentage": 8
+     },
+     {
+      "name": "Accessing and Modifying Mule Events",
+      "percentage": 10
+     },
+     {
+      "name": "Structuring Mule Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Building API Implementation Interfaces",
+      "percentage": 7
+     },
+     {
+      "name": "Using Connectors",
+      "percentage": 10
+     },
+     {
+      "name": "Processing Records",
+      "percentage": 10
+     },
+     {
+      "name": "Transforming Data",
+      "percentage": 10
+     },
+     {
+      "name": "Routing Events",
+      "percentage": 8
+     },
+     {
+      "name": "Handling Errors",
+      "percentage": 8
+     },
+     {
+      "name": "Debugging and Troubleshooting Mule Applications",
+      "percentage": 5
+     },
+     {
+      "name": "Deploying and Managing APIs and Integrations",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Developer Exam Guide",
+    "articleId": "005298959",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Creating Application Networks",
+      "percentage": 7
+     },
+     {
+      "name": "Designing APIs",
+      "percentage": 8
+     },
+     {
+      "name": "Accessing and Modifying Mule Events",
+      "percentage": 10
+     },
+     {
+      "name": "Structuring Mule Applications",
+      "percentage": 10
+     },
+     {
+      "name": "Building API Implementation Interfaces",
+      "percentage": 7
+     },
+     {
+      "name": "Using Connectors",
+      "percentage": 10
+     },
+     {
+      "name": "Processing Records",
+      "percentage": 10
+     },
+     {
+      "name": "Transforming Data",
+      "percentage": 10
+     },
+     {
+      "name": "Routing Events",
+      "percentage": 8
+     },
+     {
+      "name": "Handling Errors",
+      "percentage": 8
+     },
+     {
+      "name": "Debugging and Troubleshooting Mule Applications",
+      "percentage": 5
+     },
+     {
+      "name": "Deploying and Managing APIs and Integrations",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-developer-ii",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298955&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Expose production-ready Anypoint Platform-managed APIs",
+      "percentage": 13
+     },
+     {
+      "name": "Implement maintainable and modular Mule applications and Maven builds",
+      "percentage": 25
+     },
+     {
+      "name": "Implement monitorable Mule applications",
+      "percentage": 15
+     },
+     {
+      "name": "Implement performant and reliable Mule applications",
+      "percentage": 27
+     },
+     {
+      "name": "Secure data at rest and in transit",
+      "percentage": 20
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Developer II Exam Guide",
+    "articleId": "005298955",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '24",
+    "prerequisite": "Salesforce Certified MuleSoft Developer certification",
+    "sections": [
+     {
+      "name": "Expose production-ready Anypoint Platform-managed APIs from Mule applications",
+      "percentage": 13
+     },
+     {
+      "name": "Implement maintainable and modular Mule applications and their Maven builds",
+      "percentage": 25
+     },
+     {
+      "name": "Implement monitorable Mule applications",
+      "percentage": 15
+     },
+     {
+      "name": "Implement performant and reliable Mule applications",
+      "percentage": 27
+     },
+     {
+      "name": "Secure data at rest and in transit",
+      "percentage": 20
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-hyperautomation-developer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298960&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Employ best practices when using hyperautomation",
+      "percentage": 20
+     },
+     {
+      "name": "Use Composer to automate data integrations",
+      "percentage": 12
+     },
+     {
+      "name": "Design, build, and manage MuleSoft RPA processes",
+      "percentage": 17
+     },
+     {
+      "name": "Use Salesforce Flow to build hyperautomation workflows",
+      "percentage": 13
+     },
+     {
+      "name": "Use Anypoint Platform to deliver and manage APIs",
+      "percentage": 15
+     },
+     {
+      "name": "Use Anypoint Platform to monitor hyperautomation API endpoints",
+      "percentage": 7
+     },
+     {
+      "name": "Use Anypoint Exchange to catalog, share, and reuse assets",
+      "percentage": 8
+     },
+     {
+      "name": "Use Salesforce Flow Orchestrator for multi-step workstreams",
+      "percentage": 8
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Hyperautomation Developer Exam Guide",
+    "articleId": "005298960",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Employ best practices when using hyperautomation",
+      "percentage": 20
+     },
+     {
+      "name": "Use Composer to automate data integrations in a hyperautomation project",
+      "percentage": 12
+     },
+     {
+      "name": "Design, build, and manage MuleSoft RPA processes used in hyperautomation",
+      "percentage": 17
+     },
+     {
+      "name": "Use Salesforce Flow to build hyperautomation workflows",
+      "percentage": 13
+     },
+     {
+      "name": "Use Anypoint platform to deliver, and manage APIs in a hyperautomation project",
+      "percentage": 15
+     },
+     {
+      "name": "Use Anypoint Platform to monitor hyperautomation API endpoints",
+      "percentage": 7
+     },
+     {
+      "name": "Use Anypoint Exchange to catalog (publish), share, discover, and reuse assets",
+      "percentage": 8
+     },
+     {
+      "name": "Use Salesforce Flow Orchestrator to build parallel, multi-user, multi-step workstreams",
+      "percentage": 8
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-integration-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298957&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": "60 scored + up to 5 unscored",
+     "passingScore": "70%",
+     "duration": "120 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Initiating integration solutions on the Anypoint Platform",
+      "percentage": 8
+     },
+     {
+      "name": "Designing for the runtime plane technology architecture",
+      "percentage": 15
+     },
+     {
+      "name": "Designing architecture using integration paradigms",
+      "percentage": 10
+     },
+     {
+      "name": "Designing and developing Mule applications",
+      "percentage": 15
+     },
+     {
+      "name": "Designing automated tests for Mule applications",
+      "percentage": 5
+     },
+     {
+      "name": "Designing integration solutions to meet persistence requirements",
+      "percentage": 10
+     },
+     {
+      "name": "Designing integration solutions to meet reliability requirements",
+      "percentage": 8
+     },
+     {
+      "name": "Designing integration solutions to meet performance requirements",
+      "percentage": 7
+     },
+     {
+      "name": "Designing integration solutions to meet security requirements",
+      "percentage": 8
+     },
+     {
+      "name": "Applying DevOps practices and operating integration solutions",
+      "percentage": 14
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Platform Integration Architect Exam Guide",
+    "articleId": "005298957",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": null,
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Initiating integration solutions on the Anypoint Platform",
+      "percentage": 8
+     },
+     {
+      "name": "Designing for the runtime plane technology architecture",
+      "percentage": 15
+     },
+     {
+      "name": "Designing architecture using integration paradigms",
+      "percentage": 10
+     },
+     {
+      "name": "Designing and developing Mule applications",
+      "percentage": 15
+     },
+     {
+      "name": "Designing automated tests for Mule applications",
+      "percentage": 5
+     },
+     {
+      "name": "Designing integration solutions to meet persistence requirements",
+      "percentage": 10
+     },
+     {
+      "name": "Designing integration solutions to meet reliability requirements",
+      "percentage": 8
+     },
+     {
+      "name": "Designing integration solutions to meet performance requirements",
+      "percentage": 7
+     },
+     {
+      "name": "Designing integration solutions to meet security requirements",
+      "percentage": 8
+     },
+     {
+      "name": "Applying DevOps practices and operating integration solutions",
+      "percentage": 14
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-integration-foundations",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298961&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "70%",
+     "duration": "70 min"
+    },
+    "fee": "$75",
+    "retake": "Free",
+    "cardExamDetails": {
+     "questions": 40,
+     "passingScore": "70%",
+     "duration": "70 min",
+     "cost": "$75"
+    },
+    "sections": [
+     {
+      "name": "Roles, responsibilities, and lifecycle of an integration project",
+      "percentage": 17
+     },
+     {
+      "name": "Essential integration concepts and terminology",
+      "percentage": 20
+     },
+     {
+      "name": "Common integration problems, use cases, and technical solutions",
+      "percentage": 17
+     },
+     {
+      "name": "Technical complexities and patterns in integration development",
+      "percentage": 18
+     },
+     {
+      "name": "Anypoint Platform for system integration",
+      "percentage": 18
+     },
+     {
+      "name": "Anypoint Platform for API management",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Integration Foundations Exam Guide",
+    "articleId": "005298961",
+    "questions": 40,
+    "minutes": 70,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$75",
+    "retakeFee": "Free",
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Identify the roles, responsibilities, and lifecycle of a integration project",
+      "percentage": 17
+     },
+     {
+      "name": "Recognize and interpret essential integration concepts and terminology",
+      "percentage": 20
+     },
+     {
+      "name": "Recognize common integration problems, use cases, and technical solutions",
+      "percentage": 17
+     },
+     {
+      "name": "Explain the common technical complexities and patterns in integration development",
+      "percentage": 18
+     },
+     {
+      "name": "Describe the components and benefits of Anypoint Platform for system integration",
+      "percentage": 18
+     },
+     {
+      "name": "Describe the components and benefits of Anypoint Platform for API management",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "mulesoft-platform-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298956&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "120 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Explaining application network basics",
+      "percentage": 7
+     },
+     {
+      "name": "Establishing organizational and platform foundations",
+      "percentage": 10
+     },
+     {
+      "name": "Designing and sharing APIs",
+      "percentage": 10
+     },
+     {
+      "name": "Designing APIs using System, Process, and Experience Layers",
+      "percentage": 12
+     },
+     {
+      "name": "Governing web APIs on Anypoint Platform",
+      "percentage": 17
+     },
+     {
+      "name": "Architecting and deploying API implementations",
+      "percentage": 11
+     },
+     {
+      "name": "Deploying API implementations to CloudHub",
+      "percentage": 11
+     },
+     {
+      "name": "Meeting API quality goals",
+      "percentage": 10
+     },
+     {
+      "name": "Monitoring and analyzing application networks",
+      "percentage": 12
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified MuleSoft Platform Architect Exam Guide",
+    "articleId": "005298956",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Spring '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Explaining application network basics",
+      "percentage": 7
+     },
+     {
+      "name": "Establishing organizational and platform foundations",
+      "percentage": 10
+     },
+     {
+      "name": "Designing and sharing APIs",
+      "percentage": 10
+     },
+     {
+      "name": "Designing APIs using System, Process, and Experience Layers",
+      "percentage": 12
+     },
+     {
+      "name": "Governing web APIs on Anypoint Platform",
+      "percentage": 17
+     },
+     {
+      "name": "Architecting and deploying API implementations",
+      "percentage": 11
+     },
+     {
+      "name": "Deploying API implementations to CloudHub",
+      "percentage": 11
+     },
+     {
+      "name": "Meeting API quality goals",
+      "percentage": 10
+     },
+     {
+      "name": "Monitoring and analyzing application networks",
+      "percentage": 12
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "net-zero-cloud-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298845&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 55,
+     "passingScore": "61%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 55,
+     "passingScore": "61%",
+     "duration": "75 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 24
+     },
+     {
+      "name": "Design",
+      "percentage": 31
+     },
+     {
+      "name": "Implementation",
+      "percentage": 45
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Net Zero Cloud Accredited Professional Exam Guide",
+    "articleId": "005298845",
+    "questions": 55,
+    "minutes": 75,
+    "passingScores": [
+     "61%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 24
+     },
+     {
+      "name": "Design",
+      "percentage": 31
+     },
+     {
+      "name": "Implementation",
+      "percentage": 45
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "nonprofit-cloud",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298958&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Nonprofit Implementation Strategy",
+      "percentage": 11
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 32
+     },
+     {
+      "name": "Agentforce Nonprofit Setup",
+      "percentage": 22
+     },
+     {
+      "name": "Agentforce Nonprofit Feature Configuration",
+      "percentage": 35
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Nonprofit Consultant Exam Guide",
+    "articleId": "005298958",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '25",
+    "prerequisite": "Salesforce Certified Administrator Certification",
+    "sections": [
+     {
+      "name": "Nonprofit Implementation Strategy",
+      "percentage": 11
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 32
+     },
+     {
+      "name": "Agentforce Nonprofit Setup",
+      "percentage": 22
+     },
+     {
+      "name": "Agentforce Nonprofit Feature Configuration",
+      "percentage": 35
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "nonprofit-success-pack-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298973&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Domain Expertise",
+      "percentage": 20
+     },
+     {
+      "name": "Nonprofit Cloud Product Configuration",
+      "percentage": 22
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 18
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 20
+     },
+     {
+      "name": "Integration and Data Management",
+      "percentage": 15
+     },
+     {
+      "name": "Analytics",
+      "percentage": 5
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Nonprofit Success Pack Consultant Exam Guide",
+    "articleId": "005298973",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '22",
+    "prerequisite": "Salesforce Administrator Certification",
+    "sections": [
+     {
+      "name": "Domain Expertise",
+      "percentage": 20
+     },
+     {
+      "name": "Nonprofit Cloud Product Configuration",
+      "percentage": 22
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 18
+     },
+     {
+      "name": "Solution Design",
+      "percentage": 20
+     },
+     {
+      "name": "Integration and Data Management",
+      "percentage": 15
+     },
+     {
+      "name": "Analytics",
+      "percentage": 5
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "omnistudio-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298970&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Omnistudio Fundamentals",
+      "percentage": 16
+     },
+     {
+      "name": "Flexcards",
+      "percentage": 18
+     },
+     {
+      "name": "Omniscripts",
+      "percentage": 17
+     },
+     {
+      "name": "Integration Procedures",
+      "percentage": 17
+     },
+     {
+      "name": "Data Mappers",
+      "percentage": 17
+     },
+     {
+      "name": "Best Fit Solutions",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Omnistudio Consultant Exam Guide",
+    "articleId": "005298970",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "Spring '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Omnistudio Fundamentals",
+      "percentage": 16
+     },
+     {
+      "name": "Flexcards",
+      "percentage": 18
+     },
+     {
+      "name": "Omniscripts",
+      "percentage": 17
+     },
+     {
+      "name": "Integration Procedures",
+      "percentage": 17
+     },
+     {
+      "name": "Data Mappers",
+      "percentage": 17
+     },
+     {
+      "name": "Best Fit Solutions",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "omnistudio-developer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298971&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Omnistudio Fundamentals",
+      "percentage": 18
+     },
+     {
+      "name": "Flexcards",
+      "percentage": 15
+     },
+     {
+      "name": "Omniscripts",
+      "percentage": 20
+     },
+     {
+      "name": "Integration Procedures",
+      "percentage": 15
+     },
+     {
+      "name": "Data Mappers",
+      "percentage": 17
+     },
+     {
+      "name": "Troubleshooting and Debugging",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Omnistudio Developer Exam Guide",
+    "articleId": "005298971",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "Spring '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Omnistudio Fundamentals",
+      "percentage": 18
+     },
+     {
+      "name": "Flexcards",
+      "percentage": 15
+     },
+     {
+      "name": "Omniscripts",
+      "percentage": 20
+     },
+     {
+      "name": "Integration Procedures",
+      "percentage": 15
+     },
+     {
+      "name": "Data Mappers",
+      "percentage": 17
+     },
+     {
+      "name": "Troubleshooting and Debugging",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "order-management-admin-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298855&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Order Management Basics",
+      "percentage": 17
+     },
+     {
+      "name": "Process Automation and Integrations",
+      "percentage": 27
+     },
+     {
+      "name": "Deployment and Debugging",
+      "percentage": 17
+     },
+     {
+      "name": "Data Model",
+      "percentage": 25
+     },
+     {
+      "name": "User Experience and Customization",
+      "percentage": 8
+     },
+     {
+      "name": "Advanced Topics",
+      "percentage": 6
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Order Management Administrator Accredited Professional Exam Guide",
+    "articleId": "005298855",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Order Management Basics",
+      "percentage": 17
+     },
+     {
+      "name": "Process Automation and Integrations",
+      "percentage": 27
+     },
+     {
+      "name": "Deployment and Debugging",
+      "percentage": 17
+     },
+     {
+      "name": "Data Model",
+      "percentage": 25
+     },
+     {
+      "name": "User Experience and Customization",
+      "percentage": 8
+     },
+     {
+      "name": "Advanced Topics",
+      "percentage": 6
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "order-management-developer-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298860&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Data Management",
+      "percentage": 17
+     },
+     {
+      "name": "Order Management Domain Knowledge",
+      "percentage": 17
+     },
+     {
+      "name": "Platform Integration",
+      "percentage": 13
+     },
+     {
+      "name": "Platform Development",
+      "percentage": 23
+     },
+     {
+      "name": "Data Reference Implementations & Frameworks",
+      "percentage": 10
+     },
+     {
+      "name": "Omnichannel Inventory",
+      "percentage": 13
+     },
+     {
+      "name": "Advanced Use Cases",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Order Management Developer Accredited Professional Exam Guide",
+    "articleId": "005298860",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Data Management",
+      "percentage": 17
+     },
+     {
+      "name": "Order Management Domain Knowledge",
+      "percentage": 17
+     },
+     {
+      "name": "Platform Integration",
+      "percentage": 13
+     },
+     {
+      "name": "Platform Development",
+      "percentage": 23
+     },
+     {
+      "name": "Data Reference Implementations & Frameworks",
+      "percentage": 10
+     },
+     {
+      "name": "Omnichannel Inventory",
+      "percentage": 13
+     },
+     {
+      "name": "Advanced Use Cases",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "pardot-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298951&type=1&language=en_US",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Evaluation",
+      "percentage": 17
+     },
+     {
+      "name": "Account Configuration",
+      "percentage": 20
+     },
+     {
+      "name": "Automating Business Processes",
+      "percentage": 17
+     },
+     {
+      "name": "Email Marketing",
+      "percentage": 10
+     },
+     {
+      "name": "Lead Management",
+      "percentage": 14
+     },
+     {
+      "name": "Personalizing the Prospect Experience",
+      "percentage": 8
+     },
+     {
+      "name": "Reporting, Metrics and Analytics",
+      "percentage": 11
+     },
+     {
+      "name": "Sales Emails and Alerts",
+      "percentage": 3
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Account Engagement Consultant Exam Guide",
+    "articleId": "005298951",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "68%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '23",
+    "prerequisite": "Salesforce Certified Marketing Cloud Account Engagement Specialist Certification",
+    "sections": [
+     {
+      "name": "Evaluation",
+      "percentage": 17
+     },
+     {
+      "name": "Account Configuration",
+      "percentage": 20
+     },
+     {
+      "name": "Automating Business Processes",
+      "percentage": 17
+     },
+     {
+      "name": "Email Marketing",
+      "percentage": 10
+     },
+     {
+      "name": "Lead Management",
+      "percentage": 14
+     },
+     {
+      "name": "Personalizing the Prospect Experience",
+      "percentage": 8
+     },
+     {
+      "name": "Reporting, Metrics and Analytics",
+      "percentage": 11
+     },
+     {
+      "name": "Sales Emails and Alerts",
+      "percentage": 3
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "pardot-specialist",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298953&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Visitors and Prospects",
+      "percentage": 8
+     },
+     {
+      "name": "Administration",
+      "percentage": 11
+     },
+     {
+      "name": "Account Engagement Forms, Form Handlers and Landing Pages",
+      "percentage": 20
+     },
+     {
+      "name": "Lead Management",
+      "percentage": 24
+     },
+     {
+      "name": "Email Marketing",
+      "percentage": 20
+     },
+     {
+      "name": "Engagement Studio",
+      "percentage": 17
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Marketing Cloud Account Engagement Specialist Exam Guide",
+    "articleId": "005298953",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '23",
+    "prerequisite": "None required; course attendance highly recommended.",
+    "sections": [
+     {
+      "name": "Visitors and Prospects",
+      "percentage": 8
+     },
+     {
+      "name": "Administration",
+      "percentage": 11
+     },
+     {
+      "name": "Account Engagement Forms, Form Handlers and Landing Pages",
+      "percentage": 20
+     },
+     {
+      "name": "Lead Management",
+      "percentage": 24
+     },
+     {
+      "name": "Email Marketing",
+      "percentage": 20
+     },
+     {
+      "name": "Engagement Studio",
+      "percentage": 17
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "platform-foundations",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298979&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "62%",
+     "duration": "70 min"
+    },
+    "fee": "$75",
+    "retake": "Free",
+    "cardExamDetails": null,
+    "sections": [
+     {
+      "name": "Salesforce Ecosystem",
+      "percentage": 32
+     },
+     {
+      "name": "Navigation",
+      "percentage": 28
+     },
+     {
+      "name": "Data Model",
+      "percentage": 25
+     },
+     {
+      "name": "Reports & Dashboards",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Foundations Exam Guide",
+    "articleId": "005298979",
+    "questions": 40,
+    "minutes": 70,
+    "passingScores": [
+     "62%"
+    ],
+    "registrationFee": "US$75",
+    "retakeFee": "Free",
+    "version": "Winter '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Salesforce Ecosystem",
+      "percentage": 32
+     },
+     {
+      "name": "Navigation",
+      "percentage": 28
+     },
+     {
+      "name": "Data Model",
+      "percentage": 25
+     },
+     {
+      "name": "Reports & Dashboards",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "process-automation-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298867&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "90 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "68%",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Automation Basics",
+      "percentage": 27
+     },
+     {
+      "name": "Tools and Best Practices",
+      "percentage": 32
+     },
+     {
+      "name": "Testing, Distribution, and Monitoring",
+      "percentage": 18
+     },
+     {
+      "name": "Integration",
+      "percentage": 23
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Process Automation Accredited Professional Exam Guide",
+    "articleId": "005298867",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "68%"
+    ],
+    "registrationFee": "US$150",
+    "retakeFee": "US$150",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Automation Basics",
+      "percentage": 27
+     },
+     {
+      "name": "Tools and Best Practices",
+      "percentage": 32
+     },
+     {
+      "name": "Testing, Distribution, and Monitoring",
+      "percentage": 18
+     },
+     {
+      "name": "Integration",
+      "percentage": 23
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "public-sector-solutions-ap",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298864&type=1&language=en_US",
+   "guideUrlSource": "weightage-comment",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "70%",
+     "duration": "75 min"
+    },
+    "fee": "$150",
+    "retake": "$150",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "Not published",
+     "duration": "90 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Product-Specific Systems Knowledge",
+      "percentage": 45
+     },
+     {
+      "name": "Product Configuration",
+      "percentage": 36
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 19
+     }
+    ]
+   },
+   "officialGuide": null,
+   "verdict": "guide-unavailable-historical"
+  },
+  {
+   "siteSlug": "public-sector-solutions-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005460902&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min"
+    },
+    "fee": "$150",
+    "retake": "$75",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "72%",
+     "duration": "105 min",
+     "cost": "$150"
+    },
+    "sections": [
+     {
+      "name": "Foundational Knowledge of the Product",
+      "percentage": 36
+     },
+     {
+      "name": "Product Configuration",
+      "percentage": 32
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 32
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Public Sector Solutions Consultant Exam Guide",
+    "articleId": "005460902",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "72%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "Winter '27",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Foundational Knowledge of the Product",
+      "percentage": 36
+     },
+     {
+      "name": "Product Configuration",
+      "percentage": 32
+     },
+     {
+      "name": "Implementation Strategies and Best Practices",
+      "percentage": 32
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "revenue-cloud-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298978&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min",
+     "cost": "US$200"
+    },
+    "sections": [
+     {
+      "name": "Agentforce Revenue Management Platform Concepts",
+      "percentage": 18
+     },
+     {
+      "name": "Implementation Readiness",
+      "percentage": 14
+     },
+     {
+      "name": "Catalog Management",
+      "percentage": 16
+     },
+     {
+      "name": "Configure, Price, Quote",
+      "percentage": 18
+     },
+     {
+      "name": "Contracts and Orders",
+      "percentage": 11
+     },
+     {
+      "name": "Asset Management",
+      "percentage": 16
+     },
+     {
+      "name": "Invoice Management",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Revenue Management Consultant Exam Guide",
+    "articleId": "005298978",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '25",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Agentforce Revenue Management Platform Concepts",
+      "percentage": 18
+     },
+     {
+      "name": "Implementation Readiness",
+      "percentage": 14
+     },
+     {
+      "name": "Catalog Management",
+      "percentage": 16
+     },
+     {
+      "name": "Configure, Price, Quote",
+      "percentage": 18
+     },
+     {
+      "name": "Contracts and Orders",
+      "percentage": 11
+     },
+     {
+      "name": "Asset Management",
+      "percentage": 16
+     },
+     {
+      "name": "Invoice Management",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "sales-cloud",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298976&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "73%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "73%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Sales Lifecycle",
+      "percentage": 20
+     },
+     {
+      "name": "Consulting and Implementation Strategies",
+      "percentage": 25
+     },
+     {
+      "name": "Practical Application of Agentforce Sales Expertise",
+      "percentage": 24
+     },
+     {
+      "name": "Data Management",
+      "percentage": 18
+     },
+     {
+      "name": "Predictive and Generative AI",
+      "percentage": 13
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Sales Consultant Exam Guide",
+    "articleId": "005298976",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "73%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '25",
+    "prerequisite": "Salesforce Administrator Certification",
+    "sections": [
+     {
+      "name": "Sales Lifecycle",
+      "percentage": 20
+     },
+     {
+      "name": "Consulting and Implementation Strategies",
+      "percentage": 25
+     },
+     {
+      "name": "Practical Application of Agentforce Sales Expertise",
+      "percentage": 24
+     },
+     {
+      "name": "Data Management",
+      "percentage": 18
+     },
+     {
+      "name": "Predictive and Generative AI",
+      "percentage": 13
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "sales-foundations",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298982&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "70%",
+     "duration": "105 min"
+    },
+    "fee": "$75",
+    "retake": "Free",
+    "cardExamDetails": {
+     "questions": 40,
+     "passingScore": "70%",
+     "duration": "105 min",
+     "cost": "$75"
+    },
+    "sections": [
+     {
+      "name": "Planning",
+      "percentage": 21
+     },
+     {
+      "name": "Customer Engagement",
+      "percentage": 15
+     },
+     {
+      "name": "Deal Management",
+      "percentage": 37
+     },
+     {
+      "name": "Pipeline Management",
+      "percentage": 12
+     },
+     {
+      "name": "Forecasting",
+      "percentage": 6
+     },
+     {
+      "name": "Customer Success",
+      "percentage": 9
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Sales Foundations Exam Guide",
+    "articleId": "005298982",
+    "questions": 40,
+    "minutes": 105,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$75",
+    "retakeFee": "Free",
+    "version": "Winter '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Planning",
+      "percentage": 21
+     },
+     {
+      "name": "Customer Engagement",
+      "percentage": 15
+     },
+     {
+      "name": "Deal Management",
+      "percentage": 37
+     },
+     {
+      "name": "Pipeline Management",
+      "percentage": 12
+     },
+     {
+      "name": "Forecasting",
+      "percentage": 6
+     },
+     {
+      "name": "Customer Success",
+      "percentage": 9
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "service-cloud",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298989&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "78%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "78%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Industry Knowledge",
+      "percentage": 12
+     },
+     {
+      "name": "Implementation Strategies",
+      "percentage": 12
+     },
+     {
+      "name": "Agentforce Service Solution Design",
+      "percentage": 15
+     },
+     {
+      "name": "Knowledge Management",
+      "percentage": 12
+     },
+     {
+      "name": "Intake and Interaction Channels",
+      "percentage": 13
+     },
+     {
+      "name": "Case Management",
+      "percentage": 13
+     },
+     {
+      "name": "Contact Center Analytics",
+      "percentage": 13
+     },
+     {
+      "name": "Integrations",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Agentforce Service Consultant Exam Guide",
+    "articleId": "005298989",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "78%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '25",
+    "prerequisite": "Salesforce Platform Administrator Certification",
+    "sections": [
+     {
+      "name": "Industry Knowledge",
+      "percentage": 12
+     },
+     {
+      "name": "Implementation Strategies",
+      "percentage": 12
+     },
+     {
+      "name": "Agentforce Service Solution Design",
+      "percentage": 15
+     },
+     {
+      "name": "Knowledge Management",
+      "percentage": 12
+     },
+     {
+      "name": "Intake and Interaction Channels",
+      "percentage": 13
+     },
+     {
+      "name": "Case Management",
+      "percentage": 13
+     },
+     {
+      "name": "Contact Center Analytics",
+      "percentage": 13
+     },
+     {
+      "name": "Integrations",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "sharing-visibility-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298977&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "58%",
+     "duration": "120 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "58%",
+     "duration": "120 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Permissions to Standard Objects, Custom Objects, and Fields",
+      "percentage": 27
+     },
+     {
+      "name": "Access to Records",
+      "percentage": 39
+     },
+     {
+      "name": "Access to Other Data",
+      "percentage": 16
+     },
+     {
+      "name": "Implications of Security Model Choice",
+      "percentage": 18
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Sharing and Visibility Architect Exam Guide",
+    "articleId": "005298977",
+    "questions": 60,
+    "minutes": 120,
+    "passingScores": [
+     "58%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Winter '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Permissions to Standard Objects, Custom Objects, and Fields",
+      "percentage": 27
+     },
+     {
+      "name": "Access to Records",
+      "percentage": 39
+     },
+     {
+      "name": "Access to Other Data",
+      "percentage": 16
+     },
+     {
+      "name": "Implications of Security Model Choice",
+      "percentage": 18
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "slack-administrator",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298990&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Governance, Security and Compliance",
+      "percentage": 22
+     },
+     {
+      "name": "App and AI Administration and Automations",
+      "percentage": 20
+     },
+     {
+      "name": "Fundamentals",
+      "percentage": 18
+     },
+     {
+      "name": "Workspace and Org Management",
+      "percentage": 17
+     },
+     {
+      "name": "User Lifecycle Management",
+      "percentage": 13
+     },
+     {
+      "name": "Enabling Slack Success (Analytics and Adoption)",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Slack Administrator Exam Guide",
+    "articleId": "005298990",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '26",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Fundamentals",
+      "percentage": 18
+     },
+     {
+      "name": "User Lifecycle Management",
+      "percentage": 13
+     },
+     {
+      "name": "Workspace and Org Management",
+      "percentage": 17
+     },
+     {
+      "name": "App and AI Administration and Automations",
+      "percentage": 20
+     },
+     {
+      "name": "Governance, Security and Compliance",
+      "percentage": 22
+     },
+     {
+      "name": "Enabling Slack Success (Analytics and Adoption)",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "slack-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298991&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Delivery and Migration",
+      "percentage": 17
+     },
+     {
+      "name": "Discovery",
+      "percentage": 10
+     },
+     {
+      "name": "Grid Design",
+      "percentage": 15
+     },
+     {
+      "name": "Policies and Settings",
+      "percentage": 22
+     },
+     {
+      "name": "Channel Strategy",
+      "percentage": 10
+     },
+     {
+      "name": "Governance Structure",
+      "percentage": 8
+     },
+     {
+      "name": "Learning and Enablement",
+      "percentage": 18
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Slack Consultant Exam Guide",
+    "articleId": "005298991",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Delivery and Migration",
+      "percentage": 17
+     },
+     {
+      "name": "Discovery",
+      "percentage": 10
+     },
+     {
+      "name": "Grid Design",
+      "percentage": 15
+     },
+     {
+      "name": "Policies and Settings",
+      "percentage": 22
+     },
+     {
+      "name": "Channel Strategy",
+      "percentage": 10
+     },
+     {
+      "name": "Governance Structure (Owner and Admin Roles)",
+      "percentage": 8
+     },
+     {
+      "name": "Learning and Enablement",
+      "percentage": 18
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "slack-developer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298987&type=1&language=en_US",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "67%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Apps in the Slack Platform",
+      "percentage": 7
+     },
+     {
+      "name": "Design the Interactive Flow of Your App",
+      "percentage": 20
+     },
+     {
+      "name": "Design Your Workflows: Spotlight on Slack\u2019s APIs",
+      "percentage": 13
+     },
+     {
+      "name": "Design a Great User Experience",
+      "percentage": 8
+     },
+     {
+      "name": "Design for Security",
+      "percentage": 19
+     },
+     {
+      "name": "Design for Scale",
+      "percentage": 9
+     },
+     {
+      "name": "Tools",
+      "percentage": 5
+     },
+     {
+      "name": "APIs for Managing Your Slack",
+      "percentage": 12
+     },
+     {
+      "name": "Distribute Your App",
+      "percentage": 7
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Slack Developer Exam Guide",
+    "articleId": "005298987",
+    "questions": 60,
+    "minutes": 90,
+    "passingScores": [
+     "67%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Summer '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Apps in the Slack Platform",
+      "percentage": 7
+     },
+     {
+      "name": "Design the Interactive Flow of Your App",
+      "percentage": 20
+     },
+     {
+      "name": "Design Your Workflows - Spotlight on Slack APIs",
+      "percentage": 13
+     },
+     {
+      "name": "Design a Great User Experience",
+      "percentage": 8
+     },
+     {
+      "name": "Design for Security",
+      "percentage": 19
+     },
+     {
+      "name": "Design for Scale",
+      "percentage": 9
+     },
+     {
+      "name": "Tools",
+      "percentage": 5
+     },
+     {
+      "name": "APIs for Managing Your Slack",
+      "percentage": 12
+     },
+     {
+      "name": "Distribute Your App",
+      "percentage": 7
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "strategy-designer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298981&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "70%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Value Design",
+      "percentage": 32
+     },
+     {
+      "name": "Tools and Artifacts",
+      "percentage": 23
+     },
+     {
+      "name": "Intangible Deliverables",
+      "percentage": 26
+     },
+     {
+      "name": "Leveraging Adjacent Roles/Skills",
+      "percentage": 19
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform Strategy Designer Exam Guide",
+    "articleId": "005298981",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "70%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Spring '23",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Value Design",
+      "percentage": 32
+     },
+     {
+      "name": "Tools and Artifacts",
+      "percentage": 23
+     },
+     {
+      "name": "Intangible Deliverables",
+      "percentage": 26
+     },
+     {
+      "name": "Leveraging Adjacent Roles/Skills",
+      "percentage": 19
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "system-architect",
+   "guideUrl": null,
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": null,
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": "No exam",
+     "passingScore": "N/A",
+     "duration": "N/A",
+     "cost": "Fees of the 4 exams"
+    },
+    "sections": null
+   },
+   "officialGuide": null,
+   "verdict": "no-published-exam-facts"
+  },
+  {
+   "siteSlug": "tableau-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298985&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 54,
+     "passingScore": "63%",
+     "duration": "105 min"
+    },
+    "fee": "$400",
+    "retake": "$200",
+    "cardExamDetails": {
+     "questions": 54,
+     "passingScore": "63%",
+     "duration": "105 min",
+     "cost": "$400"
+    },
+    "sections": [
+     {
+      "name": "Design a Tableau Infrastructure",
+      "percentage": 22
+     },
+     {
+      "name": "Deploy Tableau Server",
+      "percentage": 37
+     },
+     {
+      "name": "Monitor and Maintain a Tableau Deployment",
+      "percentage": 41
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Tableau Architect Exam Guide",
+    "articleId": "005298985",
+    "questions": 54,
+    "minutes": 105,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$400",
+    "retakeFee": "US$200",
+    "version": "Product Version 2024.2",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Design a Tableau Infrastructure",
+      "percentage": 22
+     },
+     {
+      "name": "Deploy Tableau Server",
+      "percentage": 37
+     },
+     {
+      "name": "Monitor and Maintain a Tableau Deployment",
+      "percentage": 41
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "tableau-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298993&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "63%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Evaluate Current State",
+      "percentage": 22
+     },
+     {
+      "name": "Plan and Prepare Data Connections",
+      "percentage": 22
+     },
+     {
+      "name": "Design and Troubleshoot Calculations and Workbooks",
+      "percentage": 40
+     },
+     {
+      "name": "Establish Governance and Support Published Content",
+      "percentage": 16
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Tableau Consultant Exam Guide",
+    "articleId": "005298993",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "63%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Product Version 2024.2",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Evaluate Current State",
+      "percentage": 22
+     },
+     {
+      "name": "Plan and Prepare Data Connections",
+      "percentage": 22
+     },
+     {
+      "name": "Design and Troubleshoot Calculations and Workbooks",
+      "percentage": 40
+     },
+     {
+      "name": "Establish Governance and Support Published Content",
+      "percentage": 16
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "tableau-data-analyst",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298984&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Connect To and Transform Data",
+      "percentage": 24
+     },
+     {
+      "name": "Explore and Analyze Data",
+      "percentage": 41
+     },
+     {
+      "name": "Create Content",
+      "percentage": 26
+     },
+     {
+      "name": "Publish and Manage Content on Tableau Server and Tableau Cloud",
+      "percentage": 9
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Tableau Data Analyst Exam Guide",
+    "articleId": "005298984",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Product Version 2024.2",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Connect To and Transform Data",
+      "percentage": 24
+     },
+     {
+      "name": "Explore and Analyze Data",
+      "percentage": 41
+     },
+     {
+      "name": "Create Content",
+      "percentage": 26
+     },
+     {
+      "name": "Publish and Manage Content on Tableau Server and Tableau Cloud",
+      "percentage": 9
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "tableau-desktop-foundations",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298988&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 40,
+     "passingScore": "48%",
+     "duration": "70 min"
+    },
+    "fee": "$75",
+    "retake": "Free",
+    "cardExamDetails": {
+     "questions": 40,
+     "passingScore": "48%",
+     "duration": "70 min",
+     "cost": "$75"
+    },
+    "sections": [
+     {
+      "name": "Connecting to and Preparing Data",
+      "percentage": 23
+     },
+     {
+      "name": "Exploring and Analyzing Data",
+      "percentage": 37
+     },
+     {
+      "name": "Sharing Insights",
+      "percentage": 25
+     },
+     {
+      "name": "Understanding Tableau Concepts",
+      "percentage": 15
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Tableau Desktop Foundations Exam Guide",
+    "articleId": "005298988",
+    "questions": 40,
+    "minutes": 70,
+    "passingScores": [
+     "48%",
+     "55%"
+    ],
+    "registrationFee": "US$75",
+    "retakeFee": "Free",
+    "version": "Product Version 2022.3",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Connecting to and Preparing Data",
+      "percentage": 23
+     },
+     {
+      "name": "Exploring and Analyzing Data",
+      "percentage": 37
+     },
+     {
+      "name": "Sharing Insights",
+      "percentage": 25
+     },
+     {
+      "name": "Understanding Tableau Concepts",
+      "percentage": 15
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "tableau-next-consultant",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005387158&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Data Setup",
+      "percentage": 20
+     },
+     {
+      "name": "Agentic Experiences",
+      "percentage": 25
+     },
+     {
+      "name": "Embedding, Cross-Cloud, & Interoperability",
+      "percentage": 20
+     },
+     {
+      "name": "Basic Setup & Admin",
+      "percentage": 10
+     },
+     {
+      "name": "Visualizations & Dashboards",
+      "percentage": 15
+     },
+     {
+      "name": "Managing Workspaces & Orgs",
+      "percentage": 10
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Tableau Next Consultant Exam Guide",
+    "articleId": "005387158",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": "July 262.11",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Data Setup",
+      "percentage": 20
+     },
+     {
+      "name": "Agentic Experiences",
+      "percentage": 25
+     },
+     {
+      "name": "Embedding, Cross-Cloud, & Interoperability",
+      "percentage": 20
+     },
+     {
+      "name": "Basic Setup & Admin",
+      "percentage": 10
+     },
+     {
+      "name": "Visualizations & Dashboards",
+      "percentage": 15
+     },
+     {
+      "name": "Managing Workspaces & Orgs",
+      "percentage": 10
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "tableau-server-administrator",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298998&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 50,
+     "passingScore": "64%",
+     "duration": "90 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 50,
+     "passingScore": "64%",
+     "duration": "90 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Preparation",
+      "percentage": 20
+     },
+     {
+      "name": "Install & Configure",
+      "percentage": 26
+     },
+     {
+      "name": "Administration",
+      "percentage": 36
+     },
+     {
+      "name": "Troubleshooting",
+      "percentage": 12
+     },
+     {
+      "name": "Migration & Upgrade",
+      "percentage": 6
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Tableau Server Administrator Exam Guide",
+    "articleId": "005298998",
+    "questions": 50,
+    "minutes": 90,
+    "passingScores": [
+     "64%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Product Version 2022.3",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Preparation",
+      "percentage": 20
+     },
+     {
+      "name": "Install & Configure",
+      "percentage": 26
+     },
+     {
+      "name": "Administration",
+      "percentage": 36
+     },
+     {
+      "name": "Troubleshooting",
+      "percentage": 12
+     },
+     {
+      "name": "Migration & Upgrade",
+      "percentage": 6
+     }
+    ]
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "technical-architect",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005299002&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": "Board exam",
+     "passingScore": "Board review",
+     "duration": "Board"
+    },
+    "fee": "$1,500",
+    "retake": "$750",
+    "cardExamDetails": {
+     "questions": "No MCQ exam",
+     "passingScore": "Board decision",
+     "duration": "Two stages",
+     "cost": "$6,000 ($1,500 Evaluation + $4,500 Review Board)"
+    },
+    "sections": null
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Technical Architect Evaluation Exam Guide",
+    "articleId": "005299002",
+    "questions": null,
+    "minutes": 135,
+    "passingScores": null,
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": null,
+    "prerequisite": null,
+    "sections": []
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "technical-architect-evaluation",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005299002&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": "Architecture scenario",
+     "passingScore": "Evaluator decision",
+     "duration": "135 min"
+    },
+    "fee": "$1,500",
+    "retake": "$750",
+    "cardExamDetails": {
+     "questions": "Scenario-based",
+     "passingScore": "Evaluator decision",
+     "duration": "135 min",
+     "cost": "$1,500"
+    },
+    "sections": null
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Technical Architect Evaluation Exam Guide",
+    "articleId": "005299002",
+    "questions": null,
+    "minutes": 135,
+    "passingScores": null,
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": null,
+    "prerequisite": null,
+    "sections": []
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "technical-architect-review-board",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298996&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": "Architecture scenario",
+     "passingScore": "Panel decision",
+     "duration": "265 min"
+    },
+    "fee": "$4,500",
+    "retake": "$2,250",
+    "cardExamDetails": {
+     "questions": "Scenario defence",
+     "passingScore": "Panel decision",
+     "duration": "265 min",
+     "cost": "$4,500"
+    },
+    "sections": null
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Technical Architect Review Board Exam Guide",
+    "articleId": "005298996",
+    "questions": null,
+    "minutes": 265,
+    "passingScores": null,
+    "registrationFee": null,
+    "retakeFee": null,
+    "version": null,
+    "prerequisite": null,
+    "sections": []
+   },
+   "verdict": "match"
+  },
+  {
+   "siteSlug": "ux-designer",
+   "guideUrl": "https://help.salesforce.com/s/articleView?id=005298974&language=en_US&type=1",
+   "guideUrlSource": "repo",
+   "repository": {
+    "logistics": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min"
+    },
+    "fee": "$200",
+    "retake": "$100",
+    "cardExamDetails": {
+     "questions": 60,
+     "passingScore": "65%",
+     "duration": "105 min",
+     "cost": "$200"
+    },
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 13
+     },
+     {
+      "name": "UX Fundamentals",
+      "percentage": 16
+     },
+     {
+      "name": "Human-Centered Design",
+      "percentage": 12
+     },
+     {
+      "name": "Declarative Design",
+      "percentage": 27
+     },
+     {
+      "name": "Testing",
+      "percentage": 11
+     },
+     {
+      "name": "Salesforce Lightning Design System (SLDS)",
+      "percentage": 21
+     }
+    ]
+   },
+   "officialGuide": {
+    "title": "Salesforce Certified Platform User Experience Designer Exam Guide",
+    "articleId": "005298974",
+    "questions": 60,
+    "minutes": 105,
+    "passingScores": [
+     "65%"
+    ],
+    "registrationFee": "US$200",
+    "retakeFee": "US$100",
+    "version": "Winter '24",
+    "prerequisite": "None",
+    "sections": [
+     {
+      "name": "Discovery",
+      "percentage": 13
+     },
+     {
+      "name": "UX Fundamentals",
+      "percentage": 16
+     },
+     {
+      "name": "Human-Centered Design",
+      "percentage": 12
+     },
+     {
+      "name": "Declarative Design",
+      "percentage": 27
+     },
+     {
+      "name": "Testing",
+      "percentage": 11
+     },
+     {
+      "name": "Salesforce Lightning Design System (SLDS)",
+      "percentage": 21
+     }
+    ]
+   },
+   "verdict": "match"
+  }
+ ]
+}

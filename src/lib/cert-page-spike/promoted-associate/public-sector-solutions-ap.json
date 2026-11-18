@@ -43,9 +43,9 @@
     "code": "AP",
     "description": "This exam covers configuring Public Sector Solutions for licensing and permitting, inspections, grants, benefits, case management, and constituent self-service.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "Not published",
-      "duration": "90 min",
+      "questions": 50,
+      "passingScore": "70%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [
