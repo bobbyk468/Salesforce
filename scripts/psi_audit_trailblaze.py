@@ -69,7 +69,7 @@ STATIC_URLS = [
     '/javascript-developer-i-study-guide',
     '/email-specialist-study-guide',
     '/tableau-data-analyst-study-guide',
-    '/revenue-cloud-consultant-study-guide',
+    '/revenue-management-consultant-study-guide',
     '/omnistudio-consultant-study-guide',
     '/mulesoft-developer-ii-study-guide',
     '/how-to-become-salesforce-developer',

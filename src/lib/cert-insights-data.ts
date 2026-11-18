@@ -255,7 +255,7 @@ export const CERT_INSIGHTS: Record<string, CertInsight> = {
     salaryRange: '$65,000–$90,000',
     worthIt: 'Good for career switchers starting from zero. Salary impact is low on its own. Treat it as a first step toward Admin or other credentials.',
   },
-  'revenue-cloud-consultant': {
+  'revenue-management-consultant': {
     difficulty: 4,
     difficultyNote: 'CPQ, Billing, and Revenue Lifecycle Management integration, complex product with multi-system dependencies. Real Revenue Cloud project experience is necessary.',
     salaryRange: '$98,000–$138,000',

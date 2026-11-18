@@ -66,7 +66,7 @@ export const CERT_KEYWORD_CLUSTERS: Record<string, CertKeywordCluster> = {
   'nonprofit-success-pack-consultant': { bare: "Nonprofit Success Pack (NPSP) Consultant", vendor: 'Salesforce', aliases: ["NP-Con-101", "NPSP Consultant"] },
   'omnistudio-consultant': { bare: "OmniStudio Consultant", vendor: 'Salesforce', aliases: ["Plat-Con-201"] },
   'public-sector-solutions-consultant': { bare: "Public Sector Solutions Consultant", vendor: 'Salesforce', aliases: ["PubSec-Con-201"] },
-  'revenue-cloud-consultant': { bare: "Revenue Management Consultant", vendor: 'Salesforce', aliases: ["Rev-Con-201", "Revenue Cloud Consultant"] },
+  'revenue-management-consultant': { bare: "Revenue Management Consultant", vendor: 'Salesforce', aliases: ["Rev-Con-201", "Revenue Cloud Consultant"] },
   'sales-cloud': { bare: "Agentforce Sales Consultant", vendor: 'Salesforce', aliases: ["Sales-Con-201", "CRT-251", "Sales Cloud Consultant"] },
   'service-cloud': { bare: "Agentforce Service Consultant", vendor: 'Salesforce', aliases: ["Service-Con-201", "CRT-261", "Service Cloud Consultant"] },
   'slack-consultant': { bare: "Slack Consultant", vendor: 'Salesforce', aliases: ["Slack-Con-201", "Slack Certified Consultant"] },

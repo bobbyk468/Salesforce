@@ -181,14 +181,14 @@ export const RETIREMENT_NEXT_STEPS: Record<string, { href: string; label: string
     { href: '/certifications/service-cloud', label: 'Agentforce Service Consultant (Service-Con-201)' },
   ],
   'cpq-administrator': [
-    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+    { href: '/certifications/revenue-management-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
   ],
   'cpq-billing-ap': [
-    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+    { href: '/certifications/revenue-management-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
   ],
   'industries-cpq-developer': [
     { href: '/certifications/omnistudio-developer', label: 'OmniStudio Developer (Plat-Dev-210)' },
-    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+    { href: '/certifications/revenue-management-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
   ],
   'education-cloud-consultant': [
     { href: '/certifications/administrator', label: 'Platform Administrator (Plat-Admn-201)' },
@@ -220,7 +220,7 @@ export const RETIREMENT_NEXT_STEPS: Record<string, { href: string; label: string
     { href: '/certifications/data-360-consultant', label: 'Data 360 Consultant (Data-Con-101)' },
   ],
   'media-cloud-ap': [
-    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+    { href: '/certifications/revenue-management-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
     { href: '/certifications/communications-cloud-ap', label: 'Agentforce Communications Professional' },
   ],
   'mulesoft-catalyst-consultant': [
@@ -235,7 +235,7 @@ export const RETIREMENT_NEXT_STEPS: Record<string, { href: string; label: string
   ],
   'order-management-admin-ap': [
     { href: '/certifications/b2b-commerce-admin-ap', label: 'B2B Commerce Administrator Accredited Professional' },
-    { href: '/certifications/revenue-cloud-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
+    { href: '/certifications/revenue-management-consultant', label: 'Revenue Management Consultant (Rev-Con-201)' },
   ],
   'order-management-developer-ap': [
     { href: '/certifications/b2b-commerce-developer-ap', label: 'B2B Commerce Developer Accredited Professional' },

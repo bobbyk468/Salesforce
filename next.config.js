@@ -143,6 +143,17 @@ const nextConfig = {
         destination: '/certifications/javascript-developer-i',
         permanent: true,
       },
+      // Revenue Cloud Consultant → Revenue Management Consultant. Salesforce
+      // renamed the credential: exam guide 005298978 is titled "Salesforce
+      // Certified Revenue Management Consultant" and the Consultant role page
+      // links /credentials/revenuemanagementconsultant. The exam facts did not
+      // change. The /cpq-admin-vs-revenue-cloud-consultant comparison page
+      // keeps its own URL; only this certification page moved.
+      {
+        source: '/certifications/revenue-cloud-consultant',
+        destination: '/certifications/revenue-management-consultant',
+        permanent: true,
+      },
       // Data Cloud Consultant → Data 360 Consultant (rebranded March 2026)
       // Changed to permanent 301 redirects; new canonical URLs use data-360 (2026 entity naming standard)
       // CAUTION: These are single-hop 301s — destinations must remain live pages.

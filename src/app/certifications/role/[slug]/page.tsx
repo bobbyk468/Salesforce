@@ -368,7 +368,7 @@ const ROLE_DECISION_DATA: Record<string, RoleDecisionItem[]> = {
   sales: [
     { audience: 'First sales-track credential', certification: 'Agentforce Sales Foundations (Sales-101)', why: 'The entry point. Core Sales Cloud objects, lead and opportunity handling, and Agentforce selling features, with no consultant-level scenario depth.', href: '/certifications/sales-foundations' },
     { audience: 'Implementing Sales Cloud for clients', certification: 'Agentforce Sales Consultant (Sales-Con-201)', why: 'The main sales consulting credential. Lead-to-cash design, territory management, forecasting, and sales process configuration. 60 scored questions, 105 minutes, 73% to pass.', href: '/certifications/sales-cloud' },
-    { audience: 'Quoting, pricing, and billing work', certification: 'Revenue Management Consultant (Rev-Con-201)', why: 'For revenue lifecycle projects: product and pricing models, quoting, contracts, amendments, and renewals across Revenue Cloud.', href: '/certifications/revenue-cloud-consultant' },
+    { audience: 'Quoting, pricing, and billing work', certification: 'Revenue Management Consultant (Rev-Con-201)', why: 'For revenue lifecycle projects: product and pricing models, quoting, contracts, amendments, and renewals across Revenue Cloud.', href: '/certifications/revenue-management-consultant' },
     { audience: 'CPQ administration', certification: 'CPQ Administrator (Sales-Admn-202)', why: 'The configuration-depth credential for Salesforce CPQ: product bundles, price rules, discount schedules, and quote templates. Pairs with the Sales Consultant cert on enterprise sales programmes.', href: '/certifications/cpq-administrator' },
   ],
 }
@@ -442,7 +442,7 @@ const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
  */
 const ROLE_CROSS_LISTED_CERTS: Record<string, string[]> = {
   marketing: ['marketing-cloud-consultant', 'pardot-consultant'],
-  sales: ['sales-cloud', 'revenue-cloud-consultant', 'cpq-administrator'],
+  sales: ['sales-cloud', 'revenue-management-consultant', 'cpq-administrator'],
 }
 
 /**

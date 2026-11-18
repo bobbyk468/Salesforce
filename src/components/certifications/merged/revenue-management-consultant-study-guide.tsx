@@ -1,4 +1,4 @@
-/* Ported from /revenue-cloud-consultant-study-guide, merged into /certifications/revenue-cloud-consultant in November 2026.
+/* Ported from /revenue-cloud-consultant-study-guide, merged into /certifications/revenue-management-consultant in November 2026.
  * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
  * header) was dropped because the hub page already provides it. */
 import Link from '@/components/AppLink'
@@ -18,14 +18,14 @@ import LastUpdated from '@/components/LastUpdated'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const slug = 'revenue-cloud-consultant'
+const slug = 'revenue-management-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Revenue Cloud Consultant study guide: 5 sections, billing schedules, pricing waterfall, 8-week plan. $200. Free practice.`
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Revenue Cloud Consultant', url: '/certifications/revenue-cloud-consultant' },
-  { name: 'Revenue Cloud Consultant Study Guide', url: '/revenue-cloud-consultant-study-guide' },
+  { name: 'Revenue Cloud Consultant', url: '/certifications/revenue-management-consultant' },
+  { name: 'Revenue Cloud Consultant Study Guide', url: '/revenue-management-consultant-study-guide' },
 ]
 
 const examSections = [
@@ -64,7 +64,7 @@ export default function RevenueCloudConsultantStudyGuideContent() {
     <div className="mt-12">
 
 
-      <CertInsightBlock certSlug="revenue-cloud-consultant" />
+      <CertInsightBlock certSlug="revenue-management-consultant" />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
@@ -186,7 +186,7 @@ export default function RevenueCloudConsultantStudyGuideContent() {
 
 
 
-      <DifficultyHeatmap slug="revenue-cloud-consultant" />
+      <DifficultyHeatmap slug="revenue-management-consultant" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Test yourself with free Revenue Cloud Consultant practice questions covering all 5 exam sections.</p>

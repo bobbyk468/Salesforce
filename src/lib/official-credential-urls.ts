@@ -83,7 +83,7 @@ export const OFFICIAL_CREDENTIAL_URLS: Record<string, string> = {
   'pardot-specialist': 'https://trailhead.salesforce.com/credentials/marketingcloudaccountengagementspecialist',
   'platform-foundations': 'https://trailhead.salesforce.com/credentials/platformfoundations',
   'process-automation-ap': 'https://trailhead.salesforce.com/credentials/processautomationaccreditedprofessional',
-  'revenue-cloud-consultant': 'https://trailhead.salesforce.com/credentials/revenuemanagementconsultant',
+  'revenue-management-consultant': 'https://trailhead.salesforce.com/credentials/revenuemanagementconsultant',
   'sharing-visibility-architect': 'https://trailhead.salesforce.com/credentials/platformsharingandvisibilityarchitect',
   'slack-administrator': 'https://trailhead.salesforce.com/credentials/slackadministrator',
   'slack-consultant': 'https://trailhead.salesforce.com/credentials/slackconsultant',

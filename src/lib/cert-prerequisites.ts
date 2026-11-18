@@ -252,8 +252,8 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
     notes: 'OmniStudio consulting for industry clouds',
   },
 
-  'revenue-cloud-consultant': {
-    slug: 'revenue-cloud-consultant',
+  'revenue-management-consultant': {
+    slug: 'revenue-management-consultant',
     noPrerequisite: true,
     recommendedPrerequisite: 'cpq-administrator',
     notes: 'Revenue Cloud (CPQ + Billing) consulting',

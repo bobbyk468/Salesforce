@@ -106,7 +106,7 @@
 /certifications/platform-foundations
 /certifications/process-automation-ap
 /certifications/public-sector-solutions-ap
-/certifications/revenue-cloud-consultant
+/certifications/revenue-management-consultant
 /certifications/sales-cloud
 /certifications/sales-foundations
 /certifications/service-cloud
@@ -237,8 +237,8 @@
 /privacy
 /process-automation-ap-exam-tips
 /public-sector-solutions-ap-exam-tips
-/revenue-cloud-consultant-exam-tips
-/revenue-cloud-consultant-study-guide
+/revenue-management-consultant-exam-tips
+/revenue-management-consultant-study-guide
 /sales-cloud-consultant-study-guide
 /sales-cloud-exam-tips
 /sales-cloud-vs-experience-cloud-consultant

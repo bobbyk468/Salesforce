@@ -123,7 +123,7 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     primaryName: 'Salesforce Certified Agentforce Sales Foundations',
     formerName: 'Salesforce Certified Sales Foundations',
   },
-  'revenue-cloud-consultant': {
+  'revenue-management-consultant': {
     primaryName: 'Salesforce Certified Revenue Management Consultant',
     formerName: 'Salesforce Certified Revenue Cloud Consultant',
   },

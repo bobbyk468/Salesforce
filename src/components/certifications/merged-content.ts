@@ -75,7 +75,7 @@ export const MERGED_CERT_CONTENT: Record<string, Array<() => Promise<{ default: 
   'pardot-specialist': [() => import('./merged/pardot-specialist-study-guide'), () => import('./merged/pardot-specialist-exam-tips')],
   'process-automation-ap': [() => import('./merged/process-automation-ap-exam-tips')],
   'public-sector-solutions-ap': [() => import('./merged/public-sector-solutions-ap-exam-tips')],
-  'revenue-cloud-consultant': [() => import('./merged/revenue-cloud-consultant-study-guide'), () => import('./merged/revenue-cloud-consultant-exam-tips')],
+  'revenue-management-consultant': [() => import('./merged/revenue-management-consultant-study-guide'), () => import('./merged/revenue-management-consultant-exam-tips')],
   'sales-cloud': [() => import('./merged/sales-cloud-consultant-study-guide')],
   'sales-foundations': [() => import('./merged/sales-foundations-exam-tips')],
   'service-cloud': [() => import('./merged/service-cloud-consultant-study-guide')],

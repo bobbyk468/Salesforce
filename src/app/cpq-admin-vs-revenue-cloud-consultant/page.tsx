@@ -49,7 +49,7 @@ function examFacts(slug: string) {
   return f
 }
 
-const revCon = examFacts('revenue-cloud-consultant')
+const revCon = examFacts('revenue-management-consultant')
 const cpqAdmin = examFacts('cpq-administrator')
 
 const breadcrumbItems = [
@@ -84,7 +84,7 @@ const faqItems = [
 export default function CpqAdminVsRevenueCloudConsultantPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/cpq-admin-vs-revenue-cloud-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/cpq-administrator', '/certifications/revenue-cloud-consultant']} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/cpq-admin-vs-revenue-cloud-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/cpq-administrator', '/certifications/revenue-management-consultant']} />
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
@@ -106,8 +106,8 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
       <WhichFirstBlock
         certA={{
           name: "Revenue Management Consultant",
-          certSlug: "revenue-cloud-consultant",
-          examTipsSlug: "certifications/revenue-cloud-consultant",
+          certSlug: "revenue-management-consultant",
+          examTipsSlug: "certifications/revenue-management-consultant",
           conditions: [
           "You design quoting, contracts, amendments, and renewals",
           "Your projects span the revenue lifecycle rather than one quoting tool",
@@ -128,8 +128,8 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
         }}
         recommendation={{
           certName: "Revenue Management Consultant",
-          certSlug: "revenue-cloud-consultant",
-          examTipsSlug: "certifications/revenue-cloud-consultant",
+          certSlug: "revenue-management-consultant",
+          examTipsSlug: "certifications/revenue-management-consultant",
           reason: "There is no longer a choice to weigh. Salesforce closed CPQ Administrator registration on 24 July 2026, 31 August 2026 was the last sitting, and the credential retires on 1 February 2027, so Revenue Management Consultant (Rev-Con-201) is the only quote-to-cash exam of the two you can book. It covers the lifecycle CPQ sits inside, so the study overlap is substantial if you already know CPQ.",
           careerPathSlug: "consultant-certification-path",
           careerPathLabel: "Consultant Certification Path",
@@ -140,7 +140,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
         {[
           {
             name: 'Revenue Management Consultant',
-            href: '/certifications/revenue-cloud-consultant',
+            href: '/certifications/revenue-management-consultant',
             badge: 'Take this one',
             badgeColor: 'bg-green-100 text-green-800',
             fee: revCon.fee, questions: String(revCon.questions), time: revCon.duration, passing: revCon.passingScore,
@@ -288,7 +288,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
         <h2 className="text-2xl font-bold mb-2">Start with Revenue Management Consultant</h2>
         <p className="text-white mb-6">Rev-Con-201 is the bookable quote-to-cash exam. The CPQ Administrator bank stays up as study material for its closed outline.</p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Link href="/certifications/revenue-cloud-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+          <Link href="/certifications/revenue-management-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Revenue Management Practice
           </Link>
           <Link href="/certifications/cpq-administrator" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">

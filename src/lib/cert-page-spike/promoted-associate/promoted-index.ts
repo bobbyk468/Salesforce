@@ -67,7 +67,7 @@ import pardotSpecialistJson from './pardot-specialist.json'
 import processAutomationApJson from './process-automation-ap.json'
 import publicSectorSolutionsApJson from './public-sector-solutions-ap.json'
 import publicSectorSolutionsConsultantJson from './public-sector-solutions-consultant.json'
-import revenueCloudConsultantJson from './revenue-cloud-consultant.json'
+import revenueCloudConsultantJson from './revenue-management-consultant.json'
 import salesCloudJson from './sales-cloud.json'
 import salesFoundationsJson from './sales-foundations.json'
 import serviceCloudJson from './service-cloud.json'
@@ -162,7 +162,7 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'process-automation-ap',
   'public-sector-solutions-ap',
   'public-sector-solutions-consultant',
-  'revenue-cloud-consultant',
+  'revenue-management-consultant',
   'sales-cloud',
   'sales-foundations',
   'service-cloud',
@@ -257,7 +257,7 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'process-automation-ap': validateAssociateSpikeBody(processAutomationApJson, 'process-automation-ap'),
   'public-sector-solutions-ap': validateAssociateSpikeBody(publicSectorSolutionsApJson, 'public-sector-solutions-ap'),
   'public-sector-solutions-consultant': validateAssociateSpikeBody(publicSectorSolutionsConsultantJson, 'public-sector-solutions-consultant'),
-  'revenue-cloud-consultant': validateAssociateSpikeBody(revenueCloudConsultantJson, 'revenue-cloud-consultant'),
+  'revenue-management-consultant': validateAssociateSpikeBody(revenueCloudConsultantJson, 'revenue-management-consultant'),
   'sales-cloud': validateAssociateSpikeBody(salesCloudJson, 'sales-cloud'),
   'sales-foundations': validateAssociateSpikeBody(salesFoundationsJson, 'sales-foundations'),
   'service-cloud': validateAssociateSpikeBody(serviceCloudJson, 'service-cloud'),

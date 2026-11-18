@@ -14,7 +14,7 @@ const BASE_URL =
 const TWENTY_QUESTION_PAGES = new Set([
   "platform-foundations", "administrator", "advanced-administrator", "app-builder",
   "agentforce-specialist", "developer-1", "developer-2", "marketing-cloud-consultant",
-  "nonprofit-cloud", "public-sector-solutions-consultant", "revenue-cloud-consultant",
+  "nonprofit-cloud", "public-sector-solutions-consultant", "revenue-management-consultant",
   "marketing-cloud-next-consultant", "application-architect", "system-architect",
 ]);
 
@@ -81,7 +81,7 @@ const CLUSTER_MAP = {
   "nonprofit-success-pack-consultant": { bare: "Nonprofit Success Pack (NPSP) Consultant", vendor: "Salesforce", aliases: ["NP-Con-101", "NPSP Consultant"] },
   "omnistudio-consultant": { bare: "OmniStudio Consultant", vendor: "Salesforce", aliases: ["Plat-Con-201"] },
   "public-sector-solutions-consultant": { bare: "Public Sector Solutions Consultant", vendor: "Salesforce", aliases: ["PubSec-Con-201"] },
-  "revenue-cloud-consultant": { bare: "Revenue Management Consultant", vendor: "Salesforce", aliases: ["Rev-Con-201", "Revenue Cloud Consultant"] },
+  "revenue-management-consultant": { bare: "Revenue Management Consultant", vendor: "Salesforce", aliases: ["Rev-Con-201", "Revenue Cloud Consultant"] },
   "sales-cloud": { bare: "Agentforce Sales Consultant", vendor: "Salesforce", aliases: ["Sales-Con-201", "CRT-251", "Sales Cloud Consultant"] },
   "service-cloud": { bare: "Agentforce Service Consultant", vendor: "Salesforce", aliases: ["Service-Con-201", "CRT-261", "Service Cloud Consultant"] },
   "slack-consultant": { bare: "Slack Consultant", vendor: "Salesforce", aliases: ["Slack-Con-201", "Slack Certified Consultant"] },
@@ -187,7 +187,7 @@ const PAGE_SPECS = {
   "nonprofit-success-pack-consultant": { title: ["Nonprofit Success Pack (NPSP) Consultant"], must: ["NP-Con-101", "2027", "67%", "105"], forbid: ["this exam remains active", "90-minute time limit"] },
   "omnistudio-consultant": { title: ["OmniStudio Consultant", "Plat-Con-201"], must: ["Plat-Con-201", "67%", "Flexcards", "Data Mappers", "Omnistudio Fundamentals", "Best Fit Solutions", "18%", "17%"], forbid: ["OmniStudio Overview and Digital Flows/FlexCards are 55%"] },
   "public-sector-solutions-consultant": { title: ["Public Sector Solutions Consultant", "PubSec-Con-201"], must: ["PubSec-Con-201", "72%", "Foundational Knowledge of the Product", "36%", "32%"], forbid: ["Passing score: Not published"] },
-  "revenue-cloud-consultant": { title: ["Revenue Management Consultant", "Rev-Con-201"], must: ["Rev-Con-201", "63%", "18%", "16%"], forbid: ["CPQ Configuration and Quoting/Contracts are 55%"] },
+  "revenue-management-consultant": { title: ["Revenue Management Consultant", "Rev-Con-201"], must: ["Rev-Con-201", "63%", "18%", "16%"], forbid: ["CPQ Configuration and Quoting/Contracts are 55%"] },
   "sales-cloud": { title: ["Agentforce Sales Consultant", "CRT-251"], must: ["Sales-Con-201", "CRT-251", "73%", "25%", "24%", "Predictive and Generative AI"], forbid: ["passing score of 65%"] },
   "service-cloud": { title: ["Agentforce Service Consultant", "CRT-261"], must: ["Service-Con-201", "CRT-261", "78%", "15%", "13%"], forbid: [] },
   "slack-consultant": { title: ["Slack Consultant", "Slack-Con-201"], must: ["Slack-Con-201", "67%", "90", "22%", "18%"], forbid: [] },
@@ -573,7 +573,7 @@ async function verifyHomepageAndRedirects() {
     ["/business-analyst-study-guide", "/certifications/business-analyst"],
     ["/nonprofit-cloud-consultant-study-guide", "/certifications/nonprofit-cloud"],
     ["/nonprofit-success-pack-consultant-study-guide", "/certifications/nonprofit-success-pack-consultant"],
-    ["/revenue-cloud-consultant-exam-tips", "/certifications/revenue-cloud-consultant"],
+    ["/revenue-management-consultant-exam-tips", "/certifications/revenue-management-consultant"],
     ["/certifications/platform-administrator", "/certifications/administrator"],
     ["/certifications/platform-app-builder", "/certifications/app-builder"],
     ["/certifications/platform-developer-1", "/certifications/developer-1"],

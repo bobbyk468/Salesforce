@@ -316,7 +316,7 @@ const ALL_95_CERTS = [
       ]
     },
     {
-      "slug": "revenue-cloud-consultant",
+      "slug": "revenue-management-consultant",
       "full": "Salesforce Certified Revenue Management Consultant",
       "short": "Revenue Management Consultant",
       "codes": [

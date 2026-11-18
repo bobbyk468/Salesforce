@@ -44,7 +44,7 @@ export const OFFICIAL_CERT_NAMES: Record<string, string> = {
   'nonprofit-cloud': 'Salesforce Certified Agentforce Nonprofit Consultant',
   'nonprofit-success-pack-consultant': 'Salesforce Certified Nonprofit Success Pack (NPSP) Consultant',
   'omnistudio-consultant': 'Salesforce Certified OmniStudio Consultant',
-  'revenue-cloud-consultant': 'Salesforce Certified Revenue Management Consultant',
+  'revenue-management-consultant': 'Salesforce Certified Revenue Management Consultant',
   'sales-cloud': 'Salesforce Certified Agentforce Sales Consultant',
   'service-cloud': 'Salesforce Certified Agentforce Service Consultant',
   'slack-consultant': 'Slack Certified Consultant',

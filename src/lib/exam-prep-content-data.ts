@@ -367,7 +367,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     focusAreas: ['Account Engagement Setup', 'Lead Management', 'Email and Engagement', 'Analytics and ROI'],
     studyStrategy: 'Use a Pardot/Account Engagement account. Configure scoring, automation, and at least one campaign. Align with the exam outline.',
   },
-  'revenue-cloud-consultant': {
+  'revenue-management-consultant': {
     ...DEFAULT_PREP,
     examTips: [
       'CPQ Configuration and Quoting/Contracts are 55%. Know product and price rules.',

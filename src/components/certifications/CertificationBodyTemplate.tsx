@@ -393,7 +393,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'nonprofit-success-pack-consultant' ? <NPSPMigrationDiagram /> : null}
         {slug === 'omnistudio-consultant' ? <OmniScriptUXPatternDiagram /> : null}
         {slug === 'pardot-consultant' ? <LeadScoringGradingDiagram /> : null}
-        {slug === 'revenue-cloud-consultant' ? <LeadToCashArchitectureDiagram /> : null}
+        {slug === 'revenue-management-consultant' ? <LeadToCashArchitectureDiagram /> : null}
         {slug === 'slack-consultant' ? <EnterpriseGridRolloutDiagram /> : null}
         {slug === 'tableau-consultant' ? <TableauDeploymentDiagram /> : null}
         {slug === 'application-architect' ? <ApplicationArchitectPyramidDiagram /> : null}

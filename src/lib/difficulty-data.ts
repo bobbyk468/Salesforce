@@ -179,7 +179,7 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
     { sectionName: 'Integration and Scripting', difficulty: 'Trap', tip: 'Integration procedures vs Apex, when to use which in OmniStudio context.' },
     { sectionName: 'Testing and Deployment', difficulty: 'Moderate', tip: 'Deployment and versioning, standard DevOps with OmniStudio specifics.' },
   ],
-  'revenue-cloud-consultant': [
+  'revenue-management-consultant': [
     { sectionName: 'Revenue Cloud Data Model', difficulty: 'Moderate', tip: 'CPQ and Billing object relationships, quote, contract, order, and invoice flow.' },
     { sectionName: 'CPQ Configuration', difficulty: 'Trap', tip: 'Product rules, configuration attributes, and price rules, order of execution matters.' },
     { sectionName: 'Quoting and Contracts', difficulty: 'Hard', tip: 'Contract lifecycle and renewal, scenario questions on amendments and renewals.' },

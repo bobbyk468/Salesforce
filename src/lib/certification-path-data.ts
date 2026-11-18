@@ -185,7 +185,7 @@ export const CERTIFICATION_PATHS: CertificationPath[] = [
         nodes: [
           { name: 'Experience Cloud Consultant', href: base('experience-cloud'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Platform Developer I', href: base('developer-1') }] },
           { name: 'Data Cloud Consultant', href: base('data-360-consultant'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Sales Cloud Consultant', href: base('sales-cloud') }] },
-          { name: 'Revenue Cloud Consultant', href: base('revenue-cloud-consultant'), prerequisites: [{ name: 'Sales Cloud Consultant', href: base('sales-cloud') }, { name: 'CPQ Administrator', href: base('cpq-administrator') }] },
+          { name: 'Revenue Cloud Consultant', href: base('revenue-management-consultant'), prerequisites: [{ name: 'Sales Cloud Consultant', href: base('sales-cloud') }, { name: 'CPQ Administrator', href: base('cpq-administrator') }] },
           { name: 'Field Service Consultant', href: base('field-service'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Service Cloud Consultant', href: base('service-cloud') }] },
           { name: 'Education Cloud Consultant', href: base('education-cloud-consultant'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Service Cloud Consultant', href: base('service-cloud') }] },
           { name: 'Nonprofit Cloud Consultant', href: base('nonprofit-cloud'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Sales Cloud Consultant', href: base('sales-cloud') }] },

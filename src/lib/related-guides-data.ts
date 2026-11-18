@@ -62,7 +62,7 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
       { href: '/marketing-cloud-admin-vs-developer', anchorText: 'Marketing Cloud Admin vs Developer' },
     ],
     'cpq-admin-vs-revenue-cloud-consultant': [
-      { href: '/certifications/revenue-cloud-consultant', anchorText: 'Revenue Cloud study guide' },
+      { href: '/certifications/revenue-management-consultant', anchorText: 'Revenue Cloud study guide' },
       { href: '/certifications/b2b-solution-architect', anchorText: 'B2B Solution Architect study guide' },
       { href: '/which-salesforce-certification-first', anchorText: 'Which cert first?' },
     ],

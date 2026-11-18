@@ -37,7 +37,7 @@ const hrefsInOrder = [
   '/certifications/nonprofit-cloud',
   '/certifications/nonprofit-success-pack-consultant',
   '/certifications/omnistudio-consultant',
-  '/certifications/revenue-cloud-consultant',
+  '/certifications/revenue-management-consultant',
   '/certifications/sales-cloud',
   '/certifications/service-cloud',
   '/certifications/slack-consultant',

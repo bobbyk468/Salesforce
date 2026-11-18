@@ -355,7 +355,7 @@ export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
     title: 'Public Sector Solutions Consultant (PubSec-Con-201) Guide',
     h1: 'Salesforce Certified Public Sector Solutions Consultant (PubSec-Con-201) Study Guide & Practice',
   },
-  'revenue-cloud-consultant': {
+  'revenue-management-consultant': {
     bare: 'Revenue Management Consultant',
     code: 'Rev-Con-201',
     former: ['Revenue Cloud Consultant', 'Agentforce Revenue Management Consultant'],

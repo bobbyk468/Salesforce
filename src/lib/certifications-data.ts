@@ -85,7 +85,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
       { name: 'Nonprofit Success Pack (NPSP)', href: '/certifications/nonprofit-success-pack-consultant' },
       { name: 'OmniStudio Consultant', href: '/certifications/omnistudio-consultant' },
       { name: 'Public Sector Solutions Consultant', href: '/certifications/public-sector-solutions-consultant' },
-      { name: 'Revenue Management Consultant', href: '/certifications/revenue-cloud-consultant' },
+      { name: 'Revenue Management Consultant', href: '/certifications/revenue-management-consultant' },
       { name: 'Agentforce Sales Consultant', href: '/certifications/sales-cloud' },
       { name: 'Agentforce Service Consultant', href: '/certifications/service-cloud' },
       { name: 'Slack Consultant', href: '/certifications/slack-consultant' },
@@ -167,7 +167,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
       // Duplicate listings across role hubs are intentional (Business Analyst
       // already appears under both Administrator and Consultant).
       { name: 'Agentforce Sales Consultant', href: '/certifications/sales-cloud' },
-      { name: 'Revenue Management Consultant', href: '/certifications/revenue-cloud-consultant' },
+      { name: 'Revenue Management Consultant', href: '/certifications/revenue-management-consultant' },
       { name: 'CPQ Administrator', href: '/certifications/cpq-administrator' },
     ],
   },
@@ -240,7 +240,7 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
     // Parent cert → related AP certs (improves internal linking depth for AP pages).
     'service-cloud': ['contact-center-ap', 'order-management-admin-ap', 'field-service'],
     'field-service': ['advanced-field-service-ap', 'service-cloud', 'contact-center-ap'],
-    'cpq-administrator': ['cpq-billing-ap', 'revenue-cloud-consultant', 'administrator'],
+    'cpq-administrator': ['cpq-billing-ap', 'revenue-management-consultant', 'administrator'],
     'marketing-cloud-consultant': ['marketing-cloud-personalization-ap', 'marketing-cloud-intelligence-ap', 'marketing-cloud-advanced-cross-channel-ap'],
     'heroku-architect': ['heroku-developer-ap', 'developer-1', 'developer-2'],
     'b2c-commerce-developer': ['b2b-commerce-developer-ap', 'b2b-commerce-admin-ap', 'b2c-solution-architect'],
@@ -249,7 +249,7 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
     // AP cert → related parent + sibling APs (bidirectional discovery).
     'contact-center-ap': ['service-cloud', 'order-management-admin-ap', 'advanced-field-service-ap'],
     'advanced-field-service-ap': ['field-service', 'contact-center-ap', 'service-cloud'],
-    'cpq-billing-ap': ['cpq-administrator', 'revenue-cloud-consultant', 'order-management-admin-ap'],
+    'cpq-billing-ap': ['cpq-administrator', 'revenue-management-consultant', 'order-management-admin-ap'],
     'process-automation-ap': ['administrator', 'advanced-administrator', 'app-builder'],
     'marketing-cloud-personalization-ap': ['marketing-cloud-consultant', 'marketing-cloud-intelligence-ap', 'data-360-consultant'],
     'marketing-cloud-intelligence-ap': ['marketing-cloud-consultant', 'marketing-cloud-personalization-ap', 'data-360-consultant'],
@@ -609,7 +609,7 @@ export const CERT_DIFFICULTY_LEVELS: Record<string, DifficultyLevel> = {
   'marketing-cloud-next-consultant': 'intermediate',
   'agentforce-life-sciences-consultant': 'intermediate',
   'data-360-consultant': 'intermediate',
-  'revenue-cloud-consultant': 'intermediate',
+  'revenue-management-consultant': 'intermediate',
   'crm-analytics-einstein-discovery-consultant': 'intermediate',
   'tableau-data-analyst': 'intermediate',
   'tableau-next-consultant': 'intermediate',

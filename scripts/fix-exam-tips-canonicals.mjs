@@ -44,7 +44,7 @@ const EXAM_TIPS_TO_CERT_SLUG = {
   'cpq-administrator-exam-tips': 'cpq-administrator',
   'data-cloud-consultant-exam-tips': 'data-cloud-consultant',
   'crm-analytics-exam-tips': 'crm-analytics-einstein-discovery-consultant',
-  'revenue-cloud-consultant-exam-tips': 'revenue-cloud-consultant',
+  'revenue-cloud-consultant-exam-tips': 'revenue-management-consultant',
   'marketing-cloud-engagement-developer-exam-tips': 'marketing-cloud-engagement-developer',
   'marketing-cloud-engagement-foundations-exam-tips': 'marketing-cloud-engagement-foundations',
   'b2c-commerce-developer-exam-tips': 'b2c-commerce-developer',

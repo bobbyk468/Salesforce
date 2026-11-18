@@ -1,4 +1,4 @@
-/* Ported from /revenue-cloud-consultant-exam-tips, merged into /certifications/revenue-cloud-consultant in November 2026.
+/* Ported from /revenue-cloud-consultant-exam-tips, merged into /certifications/revenue-management-consultant in November 2026.
  * Content is the original page copy. Page chrome (metadata, JSON-LD, H1
  * header) was dropped because the hub page already provides it. */
 import Link from '@/components/AppLink'
@@ -17,7 +17,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const slug = 'revenue-cloud-consultant'
+const slug = 'revenue-management-consultant'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
@@ -46,7 +46,7 @@ export const faqItems = [
     question: 'What concepts do most Revenue Cloud Consultant candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Revenue Cloud Consultant exam are: (1) CPQ Product Rules vs Revenue Cloud Contract Amendments: Different Lifecycles; (2) Asset-Based Ordering: Assets Drive Renewal and Amendment Logic; (3) Order vs Contract vs Subscription: Sequence Matters. Candidates are most confidently wrong on these. Learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
-  ...getConceptFaqs('revenue-cloud-consultant-exam-tips'),
+  ...getConceptFaqs('revenue-management-consultant-exam-tips'),
 ]
 
 export default function RevenueCloudConsultantExamTipsContent() {

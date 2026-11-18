@@ -89,7 +89,7 @@ const certificationCategories = [
       { name: 'Data 360 Consultant', href: '/certifications/data-360-consultant' },
       { name: 'CRM Analytics and Einstein Discovery', href: '/certifications/crm-analytics-einstein-discovery-consultant' },
       { name: 'Education Cloud Consultant', href: '/certifications/education-cloud-consultant' },
-      { name: 'Revenue Management Consultant', href: '/certifications/revenue-cloud-consultant' },
+      { name: 'Revenue Management Consultant', href: '/certifications/revenue-management-consultant' },
       { name: 'Nonprofit Cloud & NPSP', href: '/certifications/nonprofit-cloud' },
       { name: 'OmniStudio Consultant', href: '/certifications/omnistudio-consultant' },
       { name: 'Slack Consultant', href: '/certifications/slack-consultant' },

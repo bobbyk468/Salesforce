@@ -58,7 +58,7 @@ Trailblaze Prep is an independent Salesforce certification preparation resource.
 - [Salesforce Nonprofit Cloud Consultant](https://www.trailblazeprep.com/certifications/nonprofit-cloud): Nonprofit Cloud CRM implementation; free study guide
 - [Salesforce Nonprofit Success Pack (NPSP) Consultant](https://www.trailblazeprep.com/certifications/nonprofit-success-pack-consultant): NPSP configuration and nonprofit CRM; free practice questions
 - [Salesforce OmniStudio Consultant](https://www.trailblazeprep.com/certifications/omnistudio-consultant): OmniStudio consulting for industry clouds; free study guide
-- [Salesforce Revenue Cloud Consultant](https://www.trailblazeprep.com/certifications/revenue-cloud-consultant): Revenue Cloud (CPQ + Billing) consulting; free practice questions
+- [Salesforce Revenue Cloud Consultant](https://www.trailblazeprep.com/certifications/revenue-management-consultant): Revenue Cloud (CPQ + Billing) consulting; free practice questions
 - [Salesforce Education Cloud Consultant](https://www.trailblazeprep.com/certifications/education-cloud-consultant): Education sector CRM consulting; free study guide
 - [Salesforce Slack Consultant](https://www.trailblazeprep.com/certifications/slack-consultant): Slack enterprise consulting and integration; free practice questions
 - [Salesforce Business Analyst](https://www.trailblazeprep.com/certifications/business-analyst): Salesforce business analysis and requirements; free study guide

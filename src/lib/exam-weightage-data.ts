@@ -274,7 +274,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   // Verified 4 November 2026: help.salesforce.com/s/articleView?id=005298978
   // Agentforce Revenue Management Consultant. Already matched the guide; 63% to pass, 105 minutes.
   // 60 scored questions (plus up to five unscored), per the guide above.
-  'revenue-cloud-consultant': [
+  'revenue-management-consultant': [
     { name: 'Agentforce Revenue Management Platform Concepts', percentage: 18 },
     { name: 'Implementation Readiness', percentage: 14 },
     { name: 'Catalog Management', percentage: 16 },

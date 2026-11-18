@@ -234,7 +234,7 @@ export default function CpqAdminVsCpqBillingApPage() {
           <Link href="/certifications/cpq-billing-ap#practice-questions" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             CPQ &amp; Billing AP Practice Questions
           </Link>
-          <Link href="/certifications/revenue-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/revenue-management-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Revenue Management Consultant Study Guide
           </Link>
         </div>
