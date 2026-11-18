@@ -407,7 +407,7 @@ const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
   sales: [
     { label: 'Agentforce Sales Consultant (Sales-Con-201) Study Guide', href: '/certifications/sales-cloud', note: 'The flagship selling credential: section weightage, pass mark, and practice questions.' },
     { label: 'Sales Cloud vs Service Cloud', href: '/sales-cloud-vs-service-cloud', note: 'Decision page for the most common consultant-track fork on the revenue side.' },
-    { label: 'CPQ Administrator vs Revenue Management Consultant', href: '/cpq-admin-vs-revenue-cloud-consultant', note: 'Compares the two quote-to-cash credentials this hub recommends after Sales-Con-201.' },
+    { label: 'CPQ Administrator vs Revenue Management Consultant', href: '/cpq-admin-vs-revenue-management-consultant', note: 'Compares the two quote-to-cash credentials this hub recommends after Sales-Con-201.' },
     { label: 'Consultant Certification Path', href: '/consultant-certification-path', note: 'Where the consultant-level selling exams sit once you are past Sales-101.' },
   ],
   designer: [

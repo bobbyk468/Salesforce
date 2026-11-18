@@ -132,7 +132,7 @@
 /contact
 /contact-center-ap-exam-tips
 /cpq-admin-vs-cpq-billing-ap
-/cpq-admin-vs-revenue-cloud-consultant
+/cpq-admin-vs-revenue-management-consultant
 /cpq-administrator-exam-tips
 /cpq-administrator-study-guide
 /cpq-billing-ap-exam-tips

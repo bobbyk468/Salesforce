@@ -22,7 +22,7 @@ const UNDERLINKED_SLUGS = [
   'is-salesforce-certification-worth-it', 'education-cloud-vs-nonprofit-cloud-consultant',
   'salesforce-free-certification', 'how-to-become-salesforce-architect',
   'field-service-vs-service-cloud-consultant', 'pardot-specialist-vs-pardot-consultant',
-  'cpq-admin-vs-revenue-cloud-consultant', 'tableau-data-analyst-study-guide',
+  'cpq-admin-vs-revenue-management-consultant', 'tableau-data-analyst-study-guide',
   'app-builder-vs-developer-i', 'salesforce-certification-passing-score',
   'marketing-cloud-admin-vs-developer', 'mulesoft-developer-i-vs-integration-foundations',
   'salesforce-certification-validity', 'salesforce-exam-retake-policy',

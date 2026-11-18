@@ -111,7 +111,7 @@ STATIC_URLS = [
     '/marketing-cloud-engagement-admin-study-guide',
     '/b2c-commerce-developer-study-guide',
     '/pardot-specialist-vs-pardot-consultant',
-    '/cpq-admin-vs-revenue-cloud-consultant',
+    '/cpq-admin-vs-revenue-management-consultant',
     '/salesforce-certification-voucher',
     '/salesforce-exam-retake-policy',
     '/salesforce-certification-validity',

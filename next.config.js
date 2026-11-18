@@ -147,11 +147,21 @@ const nextConfig = {
       // renamed the credential: exam guide 005298978 is titled "Salesforce
       // Certified Revenue Management Consultant" and the Consultant role page
       // links /credentials/revenuemanagementconsultant. The exam facts did not
-      // change. The /cpq-admin-vs-revenue-cloud-consultant comparison page
-      // keeps its own URL; only this certification page moved.
+      // change. The CPQ Admin comparison page moved with it.
+      // CAUTION: single-hop 301s. The merged-page redirects for
+      // /revenue-cloud-consultant-exam-tips and -study-guide in
+      // redirects/merged-cert-pages.json point straight at
+      // /certifications/revenue-management-consultant, not at the old slug, so
+      // they do not chain through the redirect below. If this destination is
+      // ever renamed again, update those two entries in the same change.
       {
         source: '/certifications/revenue-cloud-consultant',
         destination: '/certifications/revenue-management-consultant',
+        permanent: true,
+      },
+      {
+        source: '/cpq-admin-vs-revenue-cloud-consultant',
+        destination: '/cpq-admin-vs-revenue-management-consultant',
         permanent: true,
       },
       // Data Cloud Consultant → Data 360 Consultant (rebranded March 2026)

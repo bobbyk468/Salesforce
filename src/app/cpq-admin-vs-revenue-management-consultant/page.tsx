@@ -11,21 +11,21 @@ import LastUpdated from '@/components/LastUpdated'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `CPQ Admin vs Revenue Cloud Consultant (${RELEASE_CURRENT})`
-const pageDescription = 'Compare CPQ Administrator and Revenue Cloud Consultant skills, difficulty, topic overlap, and fit for quote-to-cash roles.'
+const pageTitle = `CPQ Admin vs Revenue Management Consultant (${RELEASE_CURRENT})`
+const pageDescription = 'Compare CPQ Administrator and Revenue Management Consultant skills, difficulty, topic overlap, and fit for quote-to-cash roles.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
   alternates: {
-    canonical: `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant`,
-    languages: { 'en-US': `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant`, 'x-default': `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant` },
+    canonical: `${siteUrl}/cpq-admin-vs-revenue-management-consultant`,
+    languages: { 'en-US': `${siteUrl}/cpq-admin-vs-revenue-management-consultant`, 'x-default': `${siteUrl}/cpq-admin-vs-revenue-management-consultant` },
   },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
     type: 'article',
-    url: `${siteUrl}/cpq-admin-vs-revenue-cloud-consultant`,
+    url: `${siteUrl}/cpq-admin-vs-revenue-management-consultant`,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
@@ -55,7 +55,7 @@ const cpqAdmin = examFacts('cpq-administrator')
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'Certification Comparison', url: '/certification-comparison' },
-  { name: 'CPQ Admin vs Revenue Cloud Consultant', url: '/cpq-admin-vs-revenue-cloud-consultant' },
+  { name: 'CPQ Admin vs Revenue Management Consultant', url: '/cpq-admin-vs-revenue-management-consultant' },
 ]
 
 const faqItems = [
@@ -84,14 +84,14 @@ const faqItems = [
 export default function CpqAdminVsRevenueCloudConsultantPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/cpq-admin-vs-revenue-cloud-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/cpq-administrator', '/certifications/revenue-management-consultant']} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/cpq-admin-vs-revenue-management-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/cpq-administrator', '/certifications/revenue-management-consultant']} />
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Comparison</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          CPQ Administrator vs Revenue Cloud Consultant ({RELEASE_CURRENT})
+          CPQ Administrator vs Revenue Management Consultant ({RELEASE_CURRENT})
         </h1>
         <LastUpdated />
         <p className="text-lg text-gray-600">
@@ -282,7 +282,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
         </div>
       </section>
 
-      <RelatedGuides links={getRelatedGuides('cpq-admin-vs-revenue-cloud-consultant')} />
+      <RelatedGuides links={getRelatedGuides('cpq-admin-vs-revenue-management-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with Revenue Management Consultant</h2>

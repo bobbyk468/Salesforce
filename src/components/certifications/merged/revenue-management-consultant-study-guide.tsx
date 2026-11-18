@@ -180,7 +180,7 @@ export default function RevenueCloudConsultantStudyGuideContent() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
-          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant, which cert is right?</Link></li>
+          <li><Link href="/cpq-admin-vs-revenue-management-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Management Consultant, which cert is right?</Link></li>
         </ul>
       </div>
 
@@ -194,7 +194,7 @@ export default function RevenueCloudConsultantStudyGuideContent() {
           Start Free Practice Questions
         </Link>
         <p className="mt-4 text-sm text-white">
-          Compare paths: <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="inline-block py-1 underline hover:text-white font-medium">CPQ Admin vs Revenue Cloud Consultant</Link>
+          Compare paths: <Link href="/cpq-admin-vs-revenue-management-consultant" className="inline-block py-1 underline hover:text-white font-medium">CPQ Admin vs Revenue Management Consultant</Link>
         </p>
       </div>
     </div>

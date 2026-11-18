@@ -101,7 +101,7 @@ const coreSections: { heading: string; blurb: string; pages: { name: string; hre
       { name: 'Agentforce Specialist vs AI Associate (retired February 2026)', href: '/agentforce-specialist-vs-ai-associate' },
       { name: 'Platform Foundations vs AI Associate (retired February 2026)', href: '/platform-foundations-vs-ai-associate' },
       { name: 'CPQ Admin vs CPQ Billing AP', href: '/cpq-admin-vs-cpq-billing-ap' },
-      { name: 'CPQ Admin vs Revenue Cloud Consultant', href: '/cpq-admin-vs-revenue-cloud-consultant' },
+      { name: 'CPQ Admin vs Revenue Management Consultant', href: '/cpq-admin-vs-revenue-management-consultant' },
       { name: 'Business Analyst vs Strategy Designer', href: '/business-analyst-vs-strategy-designer' },
       { name: 'UX Designer vs Strategy Designer', href: '/ux-designer-vs-strategy-designer' },
     ],
