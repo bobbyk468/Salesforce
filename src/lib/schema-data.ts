@@ -315,6 +315,20 @@ export function getComparisonHubJsonLd({
   return article
 }
 
+/** schema.org salary shape: a yearly USD MonetaryAmountDistribution (estimatedSalary rejects PriceSpecification). */
+function getUsAnnualSalaryDistribution(median: number, minValue?: number, maxValue?: number) {
+  return {
+    '@type': 'MonetaryAmountDistribution',
+    name: 'base',
+    currency: 'USD',
+    duration: 'P1Y',
+    median,
+    ...(minValue && maxValue ? { minValue, maxValue } : {}),
+  }
+}
+
+const UNITED_STATES = { '@type': 'Country', name: 'United States' }
+
 /** Occupation JSON-LD for cert pages with salary range. Helps Google understand the economic value of the credential. */
 export function getOccupationJsonLd({
   jobTitle,
@@ -327,30 +341,18 @@ export function getOccupationJsonLd({
   medianSalary: number
   salaryRange?: { minSalary?: number; maxSalary?: number }
 }) {
-  const occupation: Record<string, unknown> = {
+  return {
     '@context': 'https://schema.org',
     '@type': 'Occupation',
     name: jobTitle,
     description,
-    estimatedSalary: {
-      '@type': 'PriceSpecification',
-      priceCurrency: 'USD',
-      price: medianSalary,
-    },
+    estimatedSalary: getUsAnnualSalaryDistribution(medianSalary, salaryRange?.minSalary, salaryRange?.maxSalary),
+    occupationLocation: UNITED_STATES,
     qualifications: 'Salesforce Professional Certification',
   }
-  if (salaryRange?.minSalary && salaryRange?.maxSalary) {
-    occupation.estimatedSalaryRange = {
-      '@type': 'PriceSpecification',
-      priceCurrency: 'USD',
-      minPrice: salaryRange.minSalary,
-      maxPrice: salaryRange.maxSalary,
-    }
-  }
-  return occupation
 }
 
-/** RoleOccupationAggregation JSON-LD: Aggregate salary data across a role cluster */
+/** Occupation JSON-LD for a role hub: the salary spread across the certifications in that role cluster. */
 export function getRoleOccupationAggregationJsonLd({
   roleTitle,
   certCount,
@@ -369,15 +371,12 @@ export function getRoleOccupationAggregationJsonLd({
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
   return {
     '@context': 'https://schema.org',
-    '@type': 'AggregateOffer',
-    name: `${roleTitle} Certification Cluster`,
-    description: `${certCount} Salesforce certifications in the ${roleTitle} path. Median salary: $${medianSalary.toLocaleString()}`,
+    '@type': 'Occupation',
+    name: `Salesforce ${roleTitle}`,
+    description: `Salary range across the ${certCount} Salesforce certifications in the ${roleTitle} path. Median salary: $${medianSalary.toLocaleString('en-US')}`,
     url,
-    offerCount: certCount,
-    priceCurrency: 'USD',
-    lowPrice: minSalary,
-    highPrice: maxSalary,
-    availability: 'InStock',
+    estimatedSalary: getUsAnnualSalaryDistribution(medianSalary, minSalary, maxSalary),
+    occupationLocation: UNITED_STATES,
   }
 }
 
