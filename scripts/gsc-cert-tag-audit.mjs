@@ -189,7 +189,7 @@ const reviewRows = [...rows].sort((a, b) => {
 const groupCounts = {}
 reviewRows.forEach((r) => (groupCounts[groupOf(r)] = (groupCounts[groupOf(r)] ?? 0) + 1))
 const descLed = rows.filter((r) => r.current_desc.startsWith('Free ')).length
-const over155 = rows.filter((r) => r.current_desc_len > 155)
+const over155 = rows.filter((r) => r.current_desc_len > 155 && r.current_desc.startsWith('Free '))
 const titleNoCode = rows.filter((r) => r.title_missing_code && r.status === 'active')
 const review = [
   '# Cert page tags after the 2026-11-20 change: review request',
@@ -204,7 +204,7 @@ const review = [
   '- **All 30 retired, exam-closed, transitioned and unverified credentials** keep their current description and their old H2 ("[Name] Practice Questions (With Explanations)"), as you recommended. That is more than the 5 you first named: your second reply extended it to all status credentials.',
   '- **The 5 credentials with no published question count** (Application Architect, System Architect, Technical Architect and the two CTA stages) keep their current composed description. They do get the new H2.',
   '- **Practice H2** "{Partial Name} Sample Questions & Practice Test" is live on every active credential.',
-  `- ${over155.length} descriptions are 156 to 160 characters (you said to leave 156 to 159): ${over155.map((r) => `\`${r.slug}\` ${r.current_desc_len}`).join(', ')}.`,
+  `- ${over155.length} new descriptions are 156 to 160 characters (you said to leave 156 to 159): ${over155.map((r) => `\`${r.slug}\` ${r.current_desc_len}`).join(', ')}.`,
   '',
   'Please review and answer:',
   '1. Do the live descriptions and H2s in the table below match what you approved? Flag any row that reads wrong or misleading.',
