@@ -9,10 +9,29 @@ import { getBreadcrumbListJsonLd, getFaqPageJsonLd, getWebPageJsonLd } from '@/l
 const siteUrl = 'https://www.trailblazeprep.com'
 const path = '/tools/score-calculator'
 
+const pageTitle = 'Salesforce Exam Score Calculator (2026) by Section'
+const pageDescription =
+  'Estimate your Salesforce exam score from the section percentages in your results email and compare it with the pass mark.'
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+
 export const metadata: Metadata = {
-  title: { absolute: 'Salesforce Exam Score Calculator (2026) by Section' },
-  description:
-    'Estimate your Salesforce exam score from the section percentages in your results email and compare it with the pass mark.',
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  // Without its own openGraph block this page inherited the root layout's,
+  // so og:url pointed at the homepage instead of the canonical.
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website',
+    url: `${siteUrl}${path}`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
   alternates: {
     canonical: `${siteUrl}${path}`,
     languages: { 'en-US': `${siteUrl}${path}`, 'x-default': `${siteUrl}${path}` },

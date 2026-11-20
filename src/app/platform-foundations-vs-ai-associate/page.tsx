@@ -10,6 +10,7 @@ const metadataTitle = 'Platform Foundations vs Retired AI Associate Guide'
 const description = 'Compare the learning goals of Platform Foundations and retired AI Associate, and find current study options.'
 const path = '/platform-foundations-vs-ai-associate'
 const url = `https://www.trailblazeprep.com${path}`
+const ogImageUrl = `https://www.trailblazeprep.com/og?t=${encodeURIComponent(metadataTitle)}`
 const faqItems = [{'question': 'Can I still take AI Associate?', 'answer': 'Salesforce retired AI Associate in February 2026. Check the issuer retirement notice and current learning catalog.'}, {'question': 'Is AI Associate a current prerequisite?', 'answer': 'Do not plan to earn a retired credential as a prerequisite. Check the current guide for the credential you intend to take.'}]
 
 export const metadata: Metadata = {
@@ -17,8 +18,11 @@ export const metadata: Metadata = {
     canonical: url,
     languages: { 'en-US': url, 'x-default': url },
   },
-  openGraph: { title: metadataTitle, description, url, type: 'article' },
-  twitter: { card: 'summary_large_image', title: metadataTitle, description },
+  openGraph: {
+    title: metadataTitle, description, url, type: 'article',
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: metadataTitle }],
+  },
+  twitter: { card: 'summary_large_image', title: metadataTitle, description, images: [{ url: ogImageUrl, alt: metadataTitle }] },
 }
 
 export default function ComparisonPage() {
