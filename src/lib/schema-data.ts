@@ -91,7 +91,7 @@ export function getArticleJsonLd({
         jobTitle: '14x Salesforce Certified Developer',
         sameAs: [
           'https://www.linkedin.com/in/krishna-mohan-879b94100/',
-          'https://trailblazer.me/id/krishnamohan',
+          'https://www.salesforce.com/trailblazer/krishnamohan?bc=OTH',
         ],
         knowsAbout: ['Salesforce Administration', 'Salesforce Development', 'Platform App Builder', 'Sales Cloud', 'Apex'],
       },
@@ -292,7 +292,7 @@ export function getComparisonHubJsonLd({
         jobTitle: '14x Salesforce Certified Developer',
         sameAs: [
           'https://www.linkedin.com/in/krishna-mohan-879b94100/',
-          'https://trailblazer.me/id/krishnamohan',
+          'https://www.salesforce.com/trailblazer/krishnamohan?bc=OTH',
         ],
         knowsAbout: ['Salesforce Administration', 'Salesforce Development', 'Platform App Builder', 'Sales Cloud', 'Apex'],
       },

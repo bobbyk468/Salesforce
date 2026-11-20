@@ -34,7 +34,7 @@ export default function ContentPageAuthor() {
           <p className="text-sm font-semibold text-gray-900">
             Editorial contact: {' '}
             <a
-              href="https://trailblazer.me/id/krishnamohan"
+              href="https://www.salesforce.com/trailblazer/krishnamohan?bc=OTH"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-block py-1 text-salesforce-blue underline hover:no-underline"
@@ -45,7 +45,7 @@ export default function ContentPageAuthor() {
           <p className="text-xs text-gray-500 mt-0.5">Salesforce certification learning content and practice questions.</p>
           <p className="text-xs text-gray-500 mt-2">
             <a
-              href="https://trailblazer.me/id/krishnamohan"
+              href="https://www.salesforce.com/trailblazer/krishnamohan?bc=OTH"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-block py-1 text-salesforce-blue underline hover:no-underline"

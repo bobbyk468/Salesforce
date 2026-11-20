@@ -2,6 +2,7 @@ import Link from '@/components/AppLink'
 import { DollarSign, RefreshCw, Calendar, ExternalLink } from 'lucide-react'
 import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 import { SLUG_TO_EXAM_GUIDE_URL } from '@/lib/cert-seo-data'
+import { OFFICIAL_CREDENTIAL_URLS, SALESFORCE_CERTIFICATION_CATALOG_URL } from '@/lib/official-credential-urls'
 import { hasUnverifiedClaudeExamDetails, isComponentOnlyCredential, isUnavailableCredentialExam } from '@/lib/credential-status'
 import { slugToDisplayName } from '@/lib/cert-seo-data'
 import { getCertKeywordCluster } from '@/lib/cert-keyword-clusters'
@@ -96,7 +97,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
               Check current {examCode ? `${certName} (${examCode})` : certName} credential and registration details with the issuer.
             </p>
             <a
-              href={SLUG_TO_EXAM_GUIDE_URL[slug] || 'https://trailhead.salesforce.com/credentials'}
+              href={SLUG_TO_EXAM_GUIDE_URL[slug] || OFFICIAL_CREDENTIAL_URLS[slug] || SALESFORCE_CERTIFICATION_CATALOG_URL}
               target="_blank"
               rel="nofollow noopener noreferrer"
               className="inline-flex items-center gap-2 py-1 text-salesforce-blue hover:text-salesforce-dark font-medium text-sm sm:text-base transition-colors"

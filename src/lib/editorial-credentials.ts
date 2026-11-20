@@ -21,7 +21,7 @@ export const REVIEWER_ID = `${SITE_URL}/#krishna-mohan`
 
 export const REVIEWER = {
   name: 'Krishna Mohan',
-  profileUrl: 'https://trailblazer.me/id/krishnamohan',
+  profileUrl: 'https://www.salesforce.com/trailblazer/krishnamohan?bc=OTH',
   linkedInUrl: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
 } as const
 

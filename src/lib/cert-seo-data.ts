@@ -365,6 +365,7 @@ export const EXAM_PRICING_URL = 'https://help.salesforce.com/s/articleView?id=00
 
 export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
   'public-sector-solutions-consultant': 'https://help.salesforce.com/s/articleView?id=005460902&language=en_US&type=1',
+  'consumer-goods-tpm-ap': 'https://help.salesforce.com/s/articleView?id=005298798&language=en_US&type=1',
   administrator: 'https://help.salesforce.com/s/articleView?id=005298966&language=en_US&type=1',
   'advanced-administrator': 'https://help.salesforce.com/s/articleView?id=005298969&language=en_US&type=1',
   'app-builder': 'https://help.salesforce.com/s/articleView?id=005298964&language=en_US&type=1',
