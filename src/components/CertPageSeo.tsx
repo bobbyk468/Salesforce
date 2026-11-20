@@ -7,7 +7,7 @@ import {
   getCertWebPageJsonLd,
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
-import { getFaqPageJsonLd, getLearningResourceJsonLd } from '@/lib/schema-data'
+import { getArticleJsonLd, getFaqPageJsonLd, getLearningResourceJsonLd } from '@/lib/schema-data'
 import { getCertKeywordCluster, getDumpsFaqItem } from '@/lib/cert-keyword-clusters'
 import CertDumpsComparison from '@/components/CertDumpsComparison'
 
@@ -61,6 +61,16 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       }
     : {}
   const webPageWithAliases = { ...webPageJsonLd, ...clusterJsonLd }
+  // These pages are editorial study content with a named author and dates, so
+  // they carry Article markup too. Its dates come from the WebPage so the two
+  // entities, and the visible "Last updated" line, cannot disagree.
+  const articleJsonLd = getArticleJsonLd({
+    headline: webPageJsonLd.name,
+    description: webPageJsonLd.description,
+    path: `/certifications/${slug}`,
+    datePublished: webPageJsonLd.datePublished,
+    dateModified: webPageJsonLd.dateModified,
+  })
   const learningResourceWithAliases = { ...learningResourceJsonLd, ...clusterJsonLd }
 
   return (
@@ -81,6 +91,14 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceWithAliases) }}
       />
+      {/* No recorded dates (the noindexed practice-test aliases): no Article,
+          rather than one Google flags for a missing datePublished. */}
+      {articleJsonLd.datePublished ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        />
+      ) : null}
       {/* Visible breadcrumb */}
       <nav data-nosnippet aria-label="Breadcrumb" className="mb-6">
         <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-600">

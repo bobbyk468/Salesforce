@@ -3035,12 +3035,13 @@ export function getCertWebPageJsonLd(
   const description = getCertMetaDescription(slug)
   const url = `${baseUrl}/certifications/${slug}`
   // Certification pages show a visible "Last updated" line, and Google's byline
-  // guidance wants a structured date that matches it. These pages emit WebPage
-  // rather than Article, so the dates belong here.
+  // guidance wants a structured date that matches it. The page's Article (see
+  // CertPageSeo) reuses these dates and points back here via the @id.
   const dates = pageDates[`/certifications/${slug}`]
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name: title,
     description,
     url,
