@@ -20,7 +20,7 @@
     "validate:perf": "node scripts/validate-performance.mjs",
     "validate:seo:lengths": "node scripts/validate-seo-lengths.mjs",
     "validate:all": "node scripts/validate-technical-seo.mjs && node scripts/validate-readability.mjs && node scripts/validate-seo-lengths.mjs",
-    "indexnow": "node scripts/submit-indexnow.mjs",
+    "indexnow": "node scripts/indexnow-submit.mjs",
     "bing:submit": "node scripts/submit-bing-urls.mjs",
     "verify:ahref": "node scripts/verify-ahref-fixes.mjs",
     "verify:gsc": "node scripts/verify-gsc-canonicals.mjs",

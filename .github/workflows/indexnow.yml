@@ -28,4 +28,4 @@ jobs:
           sleep 90
 
       - name: Submit URLs to IndexNow
-        run: node scripts/submit-indexnow.mjs
+        run: node scripts/indexnow-submit.mjs
