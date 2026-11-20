@@ -403,23 +403,6 @@ export function getRoleDifficultyProfileJsonLd({
     name: `${roleTitle} Path Difficulty Profile`,
     description: `${roleTitle} certifications by difficulty: ${easyCount} easy (${Math.round((easyCount/total)*100)}%), ${mediumCount} medium (${Math.round((mediumCount/total)*100)}%), ${hardCount} hard (${Math.round((hardCount/total)*100)}%)`,
     url,
-    subjectOf: [
-      {
-        '@type': 'Thing',
-        name: 'Easy Exams',
-        identifier: easyCount,
-      },
-      {
-        '@type': 'Thing',
-        name: 'Medium Exams',
-        identifier: mediumCount,
-      },
-      {
-        '@type': 'Thing',
-        name: 'Hard Exams',
-        identifier: hardCount,
-      },
-    ],
   }
 }
 
