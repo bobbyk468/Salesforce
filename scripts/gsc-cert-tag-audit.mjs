@@ -22,7 +22,7 @@ const jiti = createJiti(import.meta.url, { alias: { '@': join(ROOT, 'src') } })
 
 const { SPIKED_CERT_SLUGS } = await jiti.import('@/lib/cert-page-spike/registry')
 const { getCertKeywordCluster } = await jiti.import('@/lib/cert-keyword-clusters')
-const { getCertMetadata, getCertH1Text, getCertMetaDescription, getPublishedExamFacts, SLUG_TO_EXAM_COST } = await jiti.import('@/lib/cert-seo-data')
+const { getCertMetadata, getCertH1Text, getCertMetaDescription, getPublishedExamFacts, getCertPracticeQuestionsHeading, SLUG_TO_EXAM_COST } = await jiti.import('@/lib/cert-seo-data')
 const { getCredentialStatus, getCredentialCardNote } = await jiti.import('@/lib/credential-status')
 
 const len = (s) => [...s].length
@@ -110,6 +110,9 @@ function buildRow(slug) {
     current_h1_len: len(currentH1),
     current_desc: currentDesc,
     current_desc_len: len(currentDesc),
+    current_h2_practice: getCertPracticeQuestionsHeading(slug),
+    status: status?.kind ?? "active",
+    title_missing_code: c.codes.length > 0 && !c.codes.some((code) => title.includes(code)),
   }
 }
 
@@ -165,7 +168,75 @@ const md = [
 ].join('\n')
 writeFileSync(join(outDir, 'gsc-95-certs-audit.md'), md)
 
+// ---------------------------------------------------------------------------
+// Review document: the live state of every cert page after the 2026-11-20
+// description/H2 change, grouped for the H1 test, with the prompt for the reviewer.
+// ---------------------------------------------------------------------------
+const H1_TEST_COHORT = [
+  'advanced-administrator', 'platform-foundations', 'developer-2', 'javascript-developer-i', 'omnistudio-developer',
+  'experience-cloud', 'data-360-consultant', 'nonprofit-cloud', 'revenue-management-consultant', 'data-architect',
+  'integration-architect', 'ux-designer', 'mulesoft-integration-foundations', 'tableau-data-analyst', 'health-cloud-ap',
+]
+const H1_TEST_CONTROL = ['administrator', 'agentforce-specialist', 'app-builder', 'developer-1', 'sales-cloud', 'service-cloud', 'business-analyst']
+const groupOf = (r) =>
+  H1_TEST_COHORT.includes(r.slug) ? 'H1 test' : H1_TEST_CONTROL.includes(r.slug) ? 'Control' : r.status !== 'active' ? `Status: ${r.status}` : 'Active, later'
+const practiceLed = (r) => r.current_h2_practice === r.h2_practice
+const groupOrder = ['H1 test', 'Control', 'Active, later']
+const reviewRows = [...rows].sort((a, b) => {
+  const ga = groupOrder.indexOf(groupOf(a)), gb = groupOrder.indexOf(groupOf(b))
+  return (ga === -1 ? 9 : ga) - (gb === -1 ? 9 : gb) || groupOf(a).localeCompare(groupOf(b)) || a.slug.localeCompare(b.slug)
+})
+const groupCounts = {}
+reviewRows.forEach((r) => (groupCounts[groupOf(r)] = (groupCounts[groupOf(r)] ?? 0) + 1))
+const descLed = rows.filter((r) => r.current_desc.startsWith('Free ')).length
+const over155 = rows.filter((r) => r.current_desc_len > 155)
+const titleNoCode = rows.filter((r) => r.title_missing_code && r.status === 'active')
+const review = [
+  '# Cert page tags after the 2026-11-20 change: review request',
+  '',
+  '## Prompt',
+  '',
+  'You approved the dry-run table (`gsc-95-certs-audit`) on 2026-11-20. Step 1 of your rollout is now live on www.trailblazeprep.com: the practice-led meta description and the practice H2. The H1 and subtitle-strip change is NOT live yet; it is planned for the 15-page cohort from 2026-12-04.',
+  '',
+  'What was applied, per your adjustments:',
+  `- **Meta description**: ${descLed} active credentials now use "Free {name} ({code}) practice questions, sample test & study guide. {N} exam questions, {pass} to pass, {fee} fee, with explanations." with shorter variants to stay at or under 155 where possible (hard cap 160).`,
+  '- **Your trim of the two longest**: `dev-lifecycle-deployment-architect` is now 152. Your suggested edit ("with" to "plus", drop "exam ") left it at 160, because "with" and "plus" are the same length, so "& guide" was dropped instead. `consumer-goods-tpm-ap` is exam-closed, so it now keeps its current status copy instead.',
+  '- **All 30 retired, exam-closed, transitioned and unverified credentials** keep their current description and their old H2 ("[Name] Practice Questions (With Explanations)"), as you recommended. That is more than the 5 you first named: your second reply extended it to all status credentials.',
+  '- **The 5 credentials with no published question count** (Application Architect, System Architect, Technical Architect and the two CTA stages) keep their current composed description. They do get the new H2.',
+  '- **Practice H2** "{Partial Name} Sample Questions & Practice Test" is live on every active credential.',
+  `- ${over155.length} descriptions are 156 to 160 characters (you said to leave 156 to 159): ${over155.map((r) => `\`${r.slug}\` ${r.current_desc_len}`).join(', ')}.`,
+  '',
+  'Please review and answer:',
+  '1. Do the live descriptions and H2s in the table below match what you approved? Flag any row that reads wrong or misleading.',
+  '2. Is the group assignment right? `H1 test` = your 15-page cohort, `Control` = protected top pages (I added `administrator` to your 6, since you earlier excluded it from the first test group). Should anything move?',
+  '3. For the H1 test on 2026-12-04: confirm the "H1 for test" column, and whether the subtitle strip should ship at the same time as the H1 or separately.',
+  `4. ${titleNoCode.length} titles carry no exam code because the official name fills the 60-character budget: ${titleNoCode
+    .map((r) => `\`${r.slug}\` ("${r.title}")`)
+    .join(', ')}. Keep them name-only, or let these titles exceed 60 to fit the code?`,
+  '5. What GSC baseline should I export today (2026-11-20) so the description/H2 change and the later H1 change can be judged separately?',
+  '',
+  '## Summary',
+  '',
+  `- Cert pages: **${rows.length}**`,
+  ...Object.entries(groupCounts).map(([g, n]) => `- ${g}: ${n}`),
+  `- Practice-led description live: ${descLed} · new practice H2 live: ${rows.filter(practiceLed).length}`,
+  '',
+  '## All certification pages (live state)',
+  '',
+  '| # | Slug | Group | Title (len) | H1 now (len) | H1 for test (len) | Meta description now (len) | Practice H2 now |',
+  '|---|---|---|---|---|---|---|---|',
+  ...reviewRows.map(
+    (r, i) =>
+      `| ${i + 1} | \`${r.slug}\` | ${groupOf(r)} | ${mdCell(r.title)} (${r.title_len}) | ${mdCell(r.current_h1)} (${r.current_h1_len}) | ${
+        groupOf(r) === 'H1 test' ? `${mdCell(r.h1)} (${r.h1_len})` : '-'
+      } | ${mdCell(r.current_desc)} (${r.current_desc_len}) | ${mdCell(r.current_h2_practice)} |`,
+  ),
+  '',
+].join('\n')
+writeFileSync(join(outDir, 'gsc-95-certs-review.md'), review)
+
 console.log(`Rows: ${rows.length}${rows.length === 95 ? '' : ' (EXPECTED 95)'}`)
+console.log('Review groups:', groupCounts)
 console.log(`No flags: ${rows.length - flagged.length}`)
 console.log('Flag counts:', counts)
 console.log('Flagged:')
