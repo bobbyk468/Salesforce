@@ -909,18 +909,10 @@ function getCertMetaTitle(slug: string): string {
   // than the page body did.
   const cluster = getCertKeywordCluster(slug)
   if (cluster && !PRACTICE_TEST_TITLE_SLUGS.has(slug)) {
-    const provisional =
-      isRetiredCredential(slug) ||
-      isUnavailableCredentialExam(slug) ||
-      hasUnverifiedClaudeExamDetails(slug)
     return buildCertTitle({
       fullTitle: cluster.fullTitle,
       shortTitle: cluster.shortTitle,
       codes: cluster.examCodes,
-      // A closed or unverified exam must not be titled as one you can book.
-      suffixes: provisional
-        ? ['Questions & Study Notes', 'Questions & Notes', 'Questions']
-        : undefined,
     })
   }
   const registryTitle = getCertAlias(slug)?.title

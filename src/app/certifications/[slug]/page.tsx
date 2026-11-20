@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const base = getCertMetadata(slug)
     // The two legacy test aliases keep distinct, readable titles while their
     // noindex and parent canonical continue to identify the main exam page.
-    const testTitle = `${PRACTICE_TEST_TITLE_LABELS[slug]} Practice Test Guide (${RELEASE_YEAR})`
+    const testTitle = `${PRACTICE_TEST_TITLE_LABELS[slug]} Practice Test (${RELEASE_YEAR})`
     return {
       ...base,
       title: { absolute: testTitle },

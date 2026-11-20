@@ -29,17 +29,11 @@ export interface CertAlias {
 }
 
 /**
- * Upper bound for a certification page <title>.
- *
- * This was 60, the width Google usually renders before truncating. The title
- * now has to carry four things a candidate searches with -- the full official
- * credential name (so "Certified" is in it), the name without its issuer
- * prefix, the active and legacy exam codes, and "Questions & Study Guide" --
- * and those do not fit in 60 characters for any credential. `buildCertTitle`
- * spends the budget in that order and drops the least-searched part first, so
- * a long Accredited Professional name still produces a complete phrase.
+ * Upper bound for a certification page <title>: 60, the width Google usually
+ * renders before truncating. It was 80 while titles carried "Questions & Study
+ * Guide"; that suffix was dropped on 2026-11-20.
  */
-export const MAX_CERT_TITLE_LENGTH = 80
+export const MAX_CERT_TITLE_LENGTH = 60
 
 export const CERT_ALIAS_REGISTRY: Record<string, CertAlias> = {
   // Associate and Foundations
@@ -824,15 +818,19 @@ export function getCertIdentifiers(slug: string): { propertyID: string; value: s
 }
 
 /**
- * The certification page <title>, composed from the credential's own naming.
+ * The certification page <title>: the credential name and its exam code, and
+ * nothing else.
  *
- * Every one of the 95 certification pages has to answer the same query forms,
- * so the title names all of them rather than one: the full official credential
- * name (which carries "Certified" or "Accredited" where the issuer uses it),
- * the active and legacy exam codes, and the "questions" intent. Candidates are
- * tried longest-first and the first one inside MAX_CERT_TITLE_LENGTH wins, so
- * the codes go before the word "Study" and the issuer prefix goes before the
- * codes when a name is long.
+ * Titles used to end in "Questions & Study Guide" / "Questions & Study Notes"
+ * under an 80-character budget. As of 2026-11-20 they carry no filler words and
+ * stay inside MAX_CERT_TITLE_LENGTH (60), the width Google draws before it
+ * truncates or rewrites a title. The "questions" phrasings still live in the
+ * H1, the description and the body.
+ *
+ * Preference, among candidates that fit: the full official name ("Salesforce
+ * Certified ...") before the bare one, and a title with an exam code before
+ * one without. More codes are tried before fewer, so a short name keeps both
+ * its current and legacy code.
  *
  * `fullTitle` and `shortTitle` are passed in rather than recomputed here:
  * `cert-keyword-clusters` derives them, and the same two strings drive the
@@ -842,28 +840,8 @@ export function buildCertTitle(options: {
   fullTitle: string
   shortTitle: string
   codes: string[]
-  /**
-   * Trailing phrases, longest first. Retired and unverified credentials pass
-   * "Questions & Study Notes" so the title does not promise a bookable exam,
-   * while still answering the "... questions" query every page has to.
-   */
-  suffixes?: string[]
 }): string {
   const { fullTitle, shortTitle, codes } = options
-  const suffixes = options.suffixes ?? ['Questions & Study Guide', 'Questions & Guide', 'Questions']
-
-  /*
-   * Two exam codes are worth carrying, but not at the cost of pushing
-   * "Questions" past where Google stops drawing the title (about 600px, call
-   * it 65 characters). A multi-code title is therefore only taken while it
-   * stays inside MULTI_CODE_TITLE_LIMIT; past that the title falls back to a
-   * single code and spends the room on the credential name instead, so
-   * "Salesforce Certified Platform Administrator (Plat-Admn-201 / ADM-201)
-   * Questions" becomes "Salesforce Certified Platform Administrator (ADM-201)
-   * Questions & Study Guide" -- same intent, "Questions" 20 characters
-   * earlier. Every code stays in the H1, the description and Quick Facts.
-   */
-  const MULTI_CODE_TITLE_LIMIT = 65
 
   // The code a candidate types is usually the short legacy one (PD1,
   // ADM-201), while the code the issuer lists is the long current one
@@ -871,29 +849,21 @@ export function buildCertTitle(options: {
   // across the registry: the legacy codes are the short ones.
   const mostSearchedCode = [...codes].sort((a, b) => a.length - b.length)[0]
   const searchedPair = [...new Set([mostSearchedCode, codes[0]].filter(Boolean))]
-
-  // Multi-code groups, widest first, deduplicated and with the empty group
-  // dropped. The empty group used to be generated whenever a credential had a
-  // single code (so the "two codes" variant collapsed to nothing) and, sitting
-  // above the single-code variant, it won whenever the all-codes variant was
-  // too long -- dropping the code from the title altogether.
-  const multiCodeGroups = [
+  const codeGroups = [
     ...new Set(
       [
         codes.length > 1 ? codes.join(' / ') : '',
         searchedPair.length > 1 ? searchedPair.join(' / ') : '',
+        mostSearchedCode ?? '',
       ].filter(Boolean),
     ),
   ].map((group) => ` (${group})`)
-  const singleCodeGroup = mostSearchedCode ? [` (${mostSearchedCode})`] : []
 
   /**
    * Last-resort compaction for the few credential names that fill the budget
    * on their own. "Consumer Goods Cloud: Trade Promotion Management Accredited
-   * Professional" is 71 characters, so even "<name> Questions" overflowed and
-   * the title shipped past the limit. "AP" is how the designation is written
-   * in the catalogue, and "&" for "and" is the site's own house style in
-   * titles.
+   * Professional" is 71 characters. "AP" is how the designation is written in
+   * the catalogue, and "&" for "and" is the site's own house style in titles.
    */
   const compactShortTitle = shortTitle
     .replace(/\bAccredited Professional\b/i, 'AP')
@@ -901,66 +871,22 @@ export function buildCertTitle(options: {
     .replace(/\s{2,}/g, ' ')
     .trim()
 
-  /*
-   * Candidates in preference order, each with the limit that applies to it.
-   * The full credential name is tried before the bare one at every step, so
-   * "Certified" is only dropped once the name plus a single code no longer
-   * fits; a multi-code variant carries the tighter limit.
-   */
   const names = [...new Set([fullTitle, shortTitle, compactShortTitle])]
-  const candidates: { title: string; limit: number }[] = []
-  for (const name of names) {
-    for (const group of multiCodeGroups) {
-      for (const suffix of suffixes) {
-        candidates.push({ title: `${name}${group} ${suffix}`, limit: MULTI_CODE_TITLE_LIMIT })
-      }
-    }
-    for (const group of singleCodeGroup) {
-      for (const suffix of suffixes) {
-        candidates.push({ title: `${name}${group} ${suffix}`, limit: MAX_CERT_TITLE_LENGTH })
-      }
-    }
-    for (const suffix of suffixes) {
-      candidates.push({ title: `${name} ${suffix}`, limit: MAX_CERT_TITLE_LENGTH })
-    }
-  }
+  const candidates = names.flatMap((name) => [...codeGroups.map((group) => `${name}${group}`), name])
+  const fits = candidates.filter((title) => title.length <= MAX_CERT_TITLE_LENGTH)
 
-  const fits = candidates
-    .filter(({ title, limit }) => title.length <= limit)
-    .map(({ title }) => title)
-
-  /*
-   * Preference over the candidates that fit.
-   *
-   * `shortTitle` has to be present: for most credentials `fullTitle` contains
-   * it anyway, but where the issuer puts "Certified" inside its own name
-   * ("Tableau Certified Data Analyst", "Slack Certified Administrator") the
-   * full title does not contain the form a candidate types.
-   *
-   * Beyond that, two things are worth more than the "Salesforce Certified"
-   * prefix, because the full credential name is in the H1, the description and
-   * Quick Facts either way:
-   *
-   *  - "Questions" starting inside the visible window. A title whose
-   *    credential name alone runs 55 characters pushes the word past where
-   *    Google stops drawing, which is the whole point of the limit above.
-   *  - An exam code. The longest names crowd the code out of every
-   *    prefixed variant while the bare name still has room for it.
-   */
+  // `shortTitle` has to be present: where the issuer puts "Certified" inside
+  // its own name ("Tableau Certified Data Analyst") the full title does not
+  // contain the form a candidate types.
   const carriesCode = (title: string) =>
     codes.length === 0 || codes.some((code) => title.includes(code))
-  const questionsVisible = (title: string) => {
-    const at = title.indexOf('Questions')
-    return at >= 0 && at <= MULTI_CODE_TITLE_LIMIT
-  }
-  const named = fits.filter((candidate) => candidate.includes(shortTitle))
+  const named = fits.filter((title) => title.includes(shortTitle))
   return (
-    named.find((candidate) => questionsVisible(candidate) && carriesCode(candidate)) ??
-    named.find((candidate) => questionsVisible(candidate)) ??
-    named.find((candidate) => carriesCode(candidate)) ??
+    named.find(carriesCode) ??
+    fits.find(carriesCode) ??
     named[0] ??
-    fits.find((candidate) => candidate.includes(compactShortTitle)) ??
     fits[0] ??
-    `${compactShortTitle} ${suffixes[suffixes.length - 1]}`
+    // Nothing fits: take the shortest form rather than an arbitrary cut.
+    [...candidates].sort((a, b) => a.length - b.length)[0]
   )
 }

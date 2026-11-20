@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Validate route-specific title and description length ranges (content routes 50–60 / ≤130; certification pages 50–80 / ≤160). */
+/** Validate route-specific title and description length ranges (content routes 50–60 / ≤130; certification pages 20–60 / ≤160). */
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { parseDocument } from 'htmlparser2'
@@ -12,14 +12,14 @@ const DESC_MIN = 100
 const DESC_MAX = 130
 const HUB_DESC_MIN = 135
 const HUB_DESC_MAX = 158
-// Certification pages carry a wider budget than the rest of the site. Their
-// <title> has to name the full official credential name (so "Certified" is in
-// it), the exam codes and the "questions" intent, and their description has to
+// Certification pages share the 60-character title ceiling (their titles are
+// the credential name and exam code, which can run short, so the floor is
+// lower) but keep a wider description budget: the description has to
 // name the credential, the "<name> questions" and "<code> questions"
 // phrasings, and the question count, pass mark and fee. Neither fits the
 // 60/130 budget the content routes keep. 80 and 160 are what Google renders.
-const CERT_TITLE_MIN = 50
-const CERT_TITLE_MAX = 80
+const CERT_TITLE_MIN = 20
+const CERT_TITLE_MAX = 60
 const CERT_DESC_MIN = 100
 const CERT_DESC_MAX = 160
 const reportPath = process.argv.find((arg) => arg.startsWith('--report='))?.slice('--report='.length)

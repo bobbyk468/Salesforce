@@ -62,7 +62,7 @@ async function run() {
         : `${cert.path} returns HTTP 200`,
     );
     const title = (page.html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || '').trim();
-    assert(/Questions/i.test(title), `${cert.path} <title> includes "Questions" ("${title}")`);
+    assert(title.length <= 60 && !/Study Guide|Study Notes|Questions/i.test(title), `${cert.path} <title> is <= 60 chars with no filler words ("${title}")`);
     const text = stripTags(page.html).toLowerCase();
     const required = [
       cert.full, `${cert.full} dumps`, `${cert.full} questions`,

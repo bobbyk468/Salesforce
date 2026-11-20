@@ -276,12 +276,9 @@ async function verifySingleCertPage(slug) {
 
   const document = parseDocument(html, { withStartIndices: true });
   const rawTitle = content("head > title", document);
-  // Certification <title>s carry the full official credential name (so
-  // "Certified" is in it), the exam codes and the "questions" intent, which
-  // does not fit the 60 characters the content routes keep. The bound matches
-  // MAX_CERT_TITLE_LENGTH in src/lib/cert-alias-registry.ts.
-  assertCheck(rawTitle.length > 10 && rawTitle.length <= 80,
-    `[${slug}] <title> <= 80 chars`, `Found (${rawTitle.length} chars): "${rawTitle}"`);
+  // The bound matches MAX_CERT_TITLE_LENGTH in src/lib/cert-alias-registry.ts.
+  assertCheck(rawTitle.length > 10 && rawTitle.length <= 60,
+    `[${slug}] <title> <= 60 chars`, `Found (${rawTitle.length} chars): "${rawTitle}"`);
   assertCheck(selectAll("main h1", document).length === 1, `[${slug}] Exactly one H1`);
   const h2s = selectAll("main h2", document).map(DomUtils.textContent);
   assertCheck(h2s.length === new Set(h2s).size, `[${slug}] No duplicate H2s`);

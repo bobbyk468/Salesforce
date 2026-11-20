@@ -107,15 +107,16 @@ test('does not mistake an SVG accessibility title for a document title', () => {
   })
 })
 
-test('allows the wider title and description budget on certification pages only', () => {
+test('allows the wider description budget on certification pages only', () => {
   withFixture((cwd) => {
     const appDir = join(cwd, '.next', 'server', 'app', 'certifications')
     mkdirSync(appDir, { recursive: true })
     const head = (title, description) =>
       `<html><head><title>${title}</title><meta name="description" content="${description}"></head></html>`
-    // 75-character title and 150-character description: over the 60/130 the
-    // content routes keep, inside the 80/160 a certification page gets.
-    writeFileSync(join(appDir, 'developer-1.html'), head('T'.repeat(75), 'D'.repeat(150)))
+    // 30-character title and 150-character description: under the 50 floor and
+    // over the 130 description cap the content routes keep, inside the 20-60 /
+    // 160 a certification page gets.
+    writeFileSync(join(appDir, 'developer-1.html'), head('T'.repeat(30), 'D'.repeat(150)))
     const result = runValidator(cwd)
     assert.equal(result.status, 0, result.stdout + result.stderr)
     assert.match(result.stdout, /Violations: 0/)
@@ -128,7 +129,7 @@ test('still rejects an over-long title on a certification page', () => {
     mkdirSync(appDir, { recursive: true })
     writeFileSync(
       join(appDir, 'developer-1.html'),
-      `<html><head><title>${'T'.repeat(81)}</title><meta name="description" content="${'D'.repeat(150)}"></head></html>`,
+      `<html><head><title>${'T'.repeat(61)}</title><meta name="description" content="${'D'.repeat(150)}"></head></html>`,
     )
     const result = runValidator(cwd)
     assert.equal(result.status, 1)
