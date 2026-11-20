@@ -960,6 +960,8 @@ function getCertMetaTitle(slug: string): string {
  * (question count, pass mark, fee). 160 is what Google renders.
  */
 const CERT_DESC_MAX = 160
+/** SEO audits flag descriptions under 120; below that, buildCertClusterDescription tries fuller wordings. */
+const CERT_DESC_TARGET_MIN = 120
 
 /**
  * The certification description, composed from the credential's own naming
@@ -1004,7 +1006,19 @@ function buildCertClusterDescription(slug: string): string | undefined {
     `${shortTitle}: free ${askFull} with worked explanations and exam topics.`,
     `${shortTitle}: free ${askFull} with worked explanations.`,
   ].filter((candidate): candidate is string => Boolean(candidate))
-  return candidates.find((candidate) => candidate.length <= CERT_DESC_MAX)
+  const pick = candidates.find((candidate) => candidate.length <= CERT_DESC_MAX)
+  if (!pick || pick.length >= CERT_DESC_TARGET_MIN) return pick
+  // The first fit can come out short: long names push out the explanation tail,
+  // and credentials without an exam code or published format have little to say.
+  // Only then try fuller wordings, so descriptions that already fit stay unchanged.
+  const fuller = [
+    withFacts && askCode && `${fullTitle}: free ${askCode}. ${withFacts}, with worked explanations.`,
+    withFacts && `${fullTitle}: free ${asks}. ${withFacts}, with exam topics and worked explanations.`,
+    withFacts && askCode && `${fullTitle}: free ${askCode}. ${withFacts}, with exam topics and worked explanations.`,
+    withFacts && `${fullTitle}: free ${shortTitle} practice questions. ${withFacts}, with exam topics and worked explanations.`,
+    `${fullTitle}: free ${shortTitle} practice questions, exam topics and worked explanations.`,
+  ].filter((candidate): candidate is string => Boolean(candidate))
+  return fuller.find((c) => c.length >= CERT_DESC_TARGET_MIN && c.length <= CERT_DESC_MAX) ?? pick
 }
 
 /** Complete descriptions that avoid unverified exam logistics and preserve status notices. */

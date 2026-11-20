@@ -7,7 +7,7 @@ import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const title = 'Agentforce Specialist vs AI Associate (Retired)'
 const metadataTitle = 'Agentforce Specialist vs AI Associate (Retired) Guide'
-const description = 'Compare Agentforce Specialist with retired AI Associate and find current guidance for a Salesforce AI learning path.'
+const description = 'Compare Agentforce Specialist with the retired AI Associate: learning goals, what retirement means, and the current AI path.'
 const path = '/agentforce-specialist-vs-ai-associate'
 const url = `https://www.trailblazeprep.com${path}`
 const ogImageUrl = `https://www.trailblazeprep.com/og?t=${encodeURIComponent(metadataTitle)}`

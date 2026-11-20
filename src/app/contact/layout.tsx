@@ -6,7 +6,7 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const contactTitle = 'Contact Trailblaze Prep | Salesforce Certification Prep'
 const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(contactTitle)}`
 const contactDescription =
-  'Contact Trailblaze Prep about Salesforce exams, practice questions, study guides, or certification resources.'
+  'Contact Trailblaze Prep about Salesforce certification exams, practice questions, study guides, or resources via our message form.'
 
 export const metadata: Metadata = {
   title: { absolute: contactTitle },

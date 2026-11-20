@@ -15,7 +15,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `B2B vs B2C Solution Architect Certification (${RELEASE_CURRENT})`
-const pageDescription = `B2B vs B2C Solution Architect: exam format, skills, industry focus. Which architect cert to pursue in 2026.`
+const pageDescription = `B2B vs B2C Solution Architect: exam format, skills, industry focus, and key differences. Which architect cert to pursue in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

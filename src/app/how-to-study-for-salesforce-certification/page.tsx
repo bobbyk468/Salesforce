@@ -7,7 +7,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Study for a Salesforce Certification (${RELEASE_CURRENT})`
-const pageDescription = 'Build a Salesforce exam study plan using effective methods, Trailhead, hands-on practice, and mock exam review.'
+const pageDescription = 'Build a Salesforce exam study plan step by step with Trailhead, hands-on practice, and mock exam review, plus mistakes to avoid.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

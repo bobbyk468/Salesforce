@@ -9,7 +9,7 @@ import RoiCalculatorWidget from '@/components/RoiCalculatorWidget'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification ROI Calculator (${RELEASE_CURRENT})`
-const pageDescription = `Estimate certification return using Salesforce exam fees, retakes, study time, salary uplift, and payback period.`
+const pageDescription = `Estimate Salesforce certification ROI from exam fees, retakes, study time, and salary uplift, then work out your payback period.`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

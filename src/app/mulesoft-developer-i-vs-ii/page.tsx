@@ -15,7 +15,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'MuleSoft Developer I vs II: Which Exam Should You Take Next?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'MuleSoft Developer I vs II: exam difficulty, topics, prerequisites. Which cert to target next on your MuleSoft path..'
+  'MuleSoft Developer I vs II: exam difficulty, topics, prerequisites, and what Developer II adds, to pick which cert to target next.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -10,7 +10,7 @@ const metadataTitle = 'Become a Salesforce CTA: Career Path | Trailblaze Prep'
 const ctaTitle = 'Become a Salesforce CTA | Trailblaze Prep'
 const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const ctaDescription =
-  'Follow the Salesforce CTA path from foundational certifications through architecture prerequisites to board review.'
+  'Follow the Salesforce CTA path from Administrator and Developer foundations through domain architect credentials to board review.'
 
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },

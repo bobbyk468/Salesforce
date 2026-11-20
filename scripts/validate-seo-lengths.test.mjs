@@ -46,7 +46,7 @@ test('fails when the build directory contains no HTML pages', () => {
 
 test('passes valid title and description metadata', () => {
   withFixture((cwd) => {
-    writeHtml(cwd, `<html><head><title>${'T'.repeat(50)}</title><meta name="description" content="${'D'.repeat(100)}"></head></html>`)
+    writeHtml(cwd, `<html><head><title>${'T'.repeat(50)}</title><meta name="description" content="${'D'.repeat(120)}"></head></html>`)
     const result = runValidator(cwd)
     assert.equal(result.status, 0, result.stderr)
     assert.match(result.stdout, /Checked 1 pages\. Violations: 0/)
@@ -82,11 +82,11 @@ test('fails and reports metadata that exceeds the length limits', () => {
 
 test('rejects metadata below the chosen minimum lengths', () => {
   withFixture((cwd) => {
-    writeHtml(cwd, `<title>${'T'.repeat(49)}</title><meta name="description" content="${'D'.repeat(99)}">`)
+    writeHtml(cwd, `<title>${'T'.repeat(49)}</title><meta name="description" content="${'D'.repeat(119)}">`)
     const result = runValidator(cwd)
     assert.equal(result.status, 1)
     assert.match(result.stderr, /TITLE TOO SHORT \(49 chars\)/)
-    assert.match(result.stderr, /DESC TOO SHORT \(99 chars\)/)
+    assert.match(result.stderr, /DESC TOO SHORT \(119 chars\)/)
   })
 })
 
@@ -100,7 +100,7 @@ test('counts decoded HTML characters and accepts upper boundaries', () => {
 
 test('does not mistake an SVG accessibility title for a document title', () => {
   withFixture((cwd) => {
-    writeHtml(cwd, `<html><head><meta name="description" content="${'D'.repeat(100)}"></head><body><svg><title>${'T'.repeat(50)}</title></svg></body></html>`)
+    writeHtml(cwd, `<html><head><meta name="description" content="${'D'.repeat(120)}"></head><body><svg><title>${'T'.repeat(50)}</title></svg></body></html>`)
     const result = runValidator(cwd)
     assert.equal(result.status, 1)
     assert.match(result.stderr, /MISSING TITLE/)

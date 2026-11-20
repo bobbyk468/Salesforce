@@ -9,7 +9,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Associate Certification Cost (${RELEASE_CURRENT})`
-const pageDescription = `Compare Salesforce associate exam costs, formats, first credentials, and next steps after Platform Foundations.`
+const pageDescription = `Compare Salesforce associate exam costs, formats, and first credentials, plus the recommended path after Platform Foundations.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

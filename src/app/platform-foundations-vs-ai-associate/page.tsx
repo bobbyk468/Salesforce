@@ -7,7 +7,7 @@ import WhichFirstBlock from '@/components/WhichFirstBlock'
 
 const title = 'Platform Foundations vs AI Associate (Retired)'
 const metadataTitle = 'Platform Foundations vs Retired AI Associate Guide'
-const description = 'Compare the learning goals of Platform Foundations and retired AI Associate, and find current study options.'
+const description = 'Compare the learning goals of Platform Foundations and the retired AI Associate, what retirement means, and current study options.'
 const path = '/platform-foundations-vs-ai-associate'
 const url = `https://www.trailblazeprep.com${path}`
 const ogImageUrl = `https://www.trailblazeprep.com/og?t=${encodeURIComponent(metadataTitle)}`

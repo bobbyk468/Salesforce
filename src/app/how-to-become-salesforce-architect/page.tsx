@@ -10,7 +10,7 @@ import LastUpdated from '@/components/LastUpdated'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Become a Salesforce Architect (${RELEASE_CURRENT} Guide)`
-const pageDescription = `How to become a Salesforce Architect: path from ADM-201 to CTA. Timeline, certs, salary, study resources.`
+const pageDescription = `How to become a Salesforce Architect: the path from ADM-201 to CTA by stage, with timeline, certs, salary, and study resources.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

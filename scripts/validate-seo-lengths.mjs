@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** Validate route-specific title and description length ranges (content routes 50–60 / ≤130; certification pages 20–60 / ≤160). */
+/** Validate route-specific title and description length ranges (content routes 50–60 / 120–130; certification pages 20–60 / 120–160). */
 import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { parseDocument } from 'htmlparser2'
@@ -8,7 +8,7 @@ import { selectOne } from 'css-select'
 const BUILD_DIR = join(process.cwd(), '.next/server/app')
 const TITLE_MIN = 50
 const TITLE_MAX = 60
-const DESC_MIN = 100
+const DESC_MIN = 120
 const DESC_MAX = 130
 const HUB_DESC_MIN = 135
 const HUB_DESC_MAX = 158
@@ -20,7 +20,7 @@ const HUB_DESC_MAX = 158
 // 60/130 budget the content routes keep. 80 and 160 are what Google renders.
 const CERT_TITLE_MIN = 20
 const CERT_TITLE_MAX = 60
-const CERT_DESC_MIN = 100
+const CERT_DESC_MIN = 120
 const CERT_DESC_MAX = 160
 const reportPath = process.argv.find((arg) => arg.startsWith('--report='))?.slice('--report='.length)
 

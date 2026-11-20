@@ -16,7 +16,7 @@ const metadataTitle = 'ADM-201 vs App Builder: Compare Salesforce Exam Paths'
 const pageTitle = 'ADM-201 vs App Builder: Which Cert to Take First?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const pageDescription =
-  'Compare ADM-201 and DEV-402 by exam focus, difficulty, study time, and career fit to choose a Salesforce certification.'
+  'Compare ADM-201 and DEV-402 on exam focus, difficulty, study time, salary, and career fit to decide which cert to take first.'
 
 export const metadata: Metadata = {
   title: { absolute: metadataTitle },

@@ -8,7 +8,7 @@ import { CheckCircle2, XCircle } from 'lucide-react'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Register for a Salesforce Cert Exam (${RELEASE_CURRENT})`
-const pageDescription = `How to register for a Salesforce cert exam: Trailhead Academy setup, booking, online vs centre, exam day tips.`
+const pageDescription = `How to register for a Salesforce exam: Trailhead Academy setup, booking, online vs test centre, mistakes to avoid, exam day tips.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
