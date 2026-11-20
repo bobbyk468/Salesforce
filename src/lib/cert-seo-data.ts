@@ -1021,6 +1021,48 @@ function buildCertClusterDescription(slug: string): string | undefined {
   return fuller.find((c) => c.length >= CERT_DESC_TARGET_MIN && c.length <= CERT_DESC_MAX) ?? pick
 }
 
+/**
+ * Whether a credential takes the practice-led description and H2 (approved in
+ * the GSC review of reports/gsc-95-certs-audit, 2026-11-20): active exams only.
+ * Retired, exam-closed, transitioned and unverified credentials keep their
+ * status-led copy, so nobody clicks through expecting a bookable exam.
+ */
+function usesPracticeLedCopy(slug: string): boolean {
+  return !getCredentialStatus(slug)
+}
+
+const PRACTICE_DESC_TARGET_MAX = 155
+
+/**
+ * "Free {name} ({code}) practice questions, sample test & study guide. {facts}, with explanations."
+ * Front-loads the name a searcher types plus the practice phrasing (Google bolds
+ * the match), then the published question count, pass mark and fee. Undefined
+ * when there is no published question count, so the caller keeps the composed
+ * description (the composite Architects, the CTA stages without a format).
+ */
+function buildCertPracticeDescription(slug: string): string | undefined {
+  if (!usesPracticeLedCopy(slug)) return undefined
+  const cluster = getCertKeywordCluster(slug)
+  const facts = getPublishedExamFacts(slug)
+  if (!cluster || !facts || !/^\d/.test(String(facts.questions))) return undefined
+  const primaryCode = cluster.codes[0]
+  const name = primaryCode ? `${cluster.shortTitle} (${primaryCode})` : cluster.shortTitle
+  const pass = /^\d/.test(String(facts.passingScore)) ? `${facts.passingScore} to pass` : null
+  const fee = /^\$/.test(facts.fee ?? '') ? `${facts.fee} fee` : null
+  const factsWith = (questions: string) => [questions, pass, fee].filter(Boolean).join(', ')
+  const long = factsWith(`${facts.questions} exam questions`)
+  const variants = [
+    `Free ${name} practice questions, sample test & study guide. ${long}, with explanations.`,
+    `Free ${name} practice questions, sample test & guide. ${long}, with explanations.`,
+    `Free ${name} practice questions & guide. ${long}, with explanations.`,
+  ]
+  const fit =
+    variants.find((v) => v.length <= PRACTICE_DESC_TARGET_MAX) ??
+    variants.find((v) => v.length <= CERT_DESC_MAX) ??
+    `Free ${name} practice questions. ${factsWith(`${facts.questions} questions`)}, with explanations.`
+  return fit.length >= CERT_DESC_TARGET_MIN && fit.length <= CERT_DESC_MAX ? fit : undefined
+}
+
 /** Complete descriptions that avoid unverified exam logistics and preserve status notices. */
 export function getCertMetaDescription(slug: string): string {
   const certName = getCertPrimaryName(slug, slugToDisplayName(slug))
@@ -1040,6 +1082,8 @@ export function getCertMetaDescription(slug: string): string {
   // the hand-written map below, which named neither the full credential title
   // nor the "<code> questions" phrasing.
   if (!PRACTICE_TEST_TITLE_SLUGS.has(slug)) {
+    const practice = buildCertPracticeDescription(slug)
+    if (practice) return practice
     const composed = buildCertClusterDescription(slug)
     if (composed) return composed
   }
@@ -3005,8 +3049,14 @@ export function getCertExamWeightageHeading(slug: string): string {
   return `${primaryName} Exam Weightage by Section`
 }
 
-/** H2 for practice questions section: [Cert Name] Practice Questions (With Explanations) */
+/**
+ * H2 for the practice questions section: "{Partial Name} Sample Questions & Practice Test"
+ * (the "<name> sample questions" / "practice test" searches), or
+ * "[Cert Name] Practice Questions (With Explanations)" on status-led pages.
+ */
 export function getCertPracticeQuestionsHeading(slug: string): string {
+  const cluster = getCertKeywordCluster(slug)
+  if (cluster && usesPracticeLedCopy(slug)) return `${cluster.shortTitle} Sample Questions & Practice Test`
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   return `${primaryName} Practice Questions (With Explanations)`
 }
