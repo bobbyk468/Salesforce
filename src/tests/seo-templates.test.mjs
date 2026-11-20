@@ -220,6 +220,7 @@ test('initial practice questions and Quiz JSON-LD agree across the canonical cer
 
     let schemaChoiceCount = 0
     for (const question of quiz.hasPart) {
+      assert.ok(['Multiple choice', 'Checkbox'].includes(question.eduQuestionType), `${route} every Quiz question needs a valid eduQuestionType`)
       const accepted = question.acceptedAnswer === undefined
         ? []
         : Array.isArray(question.acceptedAnswer) ? question.acceptedAnswer : [question.acceptedAnswer]

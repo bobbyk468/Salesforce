@@ -445,6 +445,9 @@ export function getQuizJsonLd(name: string, questions: QuizQuestionItem[], examC
         .map((index) => ({ '@type': 'Answer', text: q.options[index] }))
       const question: Record<string, unknown> = {
         '@type': 'Question',
+        // Google's Quiz (practice problems) markup requires eduQuestionType on every Question.
+        eduQuestionType: correctIndices.length > 1 ? 'Checkbox' : 'Multiple choice',
+        learningResourceType: 'Practice problem',
         text: q.question,
         suggestedAnswer: q.options
           .filter((_, index) => !correctIndices.includes(index))
